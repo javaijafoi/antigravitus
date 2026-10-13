@@ -21,6 +21,10 @@ Este compêndio reúne todo o conhecimento consolidado por **Antigravitus** sobr
 | **Praça do Comércio** | Centro de Midgaard | **Baixo** | Encruzilhada das quatro direções; estátua central misteriosa; grande mural mágico flutuante de editais; carroça de carga. |
 | **Rua Principal (Leste)** | Leste da Praça Central | **Baixo** | Eixo de abastecimento da cidade; Armazém de Grãos e Forragem ao norte; Loja de Animais Exóticos ao sul. |
 | **Rua Principal (Oeste)** | Oeste da Praça Central | **Baixo** | Eixo manufatureiro; Padaria aromática ao norte; Loja de Armaduras e forjas ao sul; segue até os Portões Oeste. |
+| **Término da Rua Principal (Oeste)** | Fim da Rua Oeste, defronte à Guilda | **Baixo** | Intersecção chave: Loja de Magias ao norte, Guilda dos Magos ao sul, Portões Oeste a oeste e Praça a leste; ronda do Prefeito. |
+| **A Entrada da Guilda dos Magos** | Sul do término da Rua Principal | **Baixo** | Acesso velado à guilda; caixa de madeira para economia de moedas; vigiada pelo Pacificador e pelo Mago Guardião de Combate. |
+| **O Bar dos Magos** | Sul da Entrada da Guilda | **Zero** | Taberna arcana surreal com miragens flutuantes; balcão com cospefogo e ale; mural histórico de confraternização da guilda. |
+| **O Laboratório dos Magos** | Leste do Bar dos Magos | **Zero (Santuário)** | Santuário alquímico com pentagramas e pedras esfumaçadas; presença da Mestre da Guilda; alçapão proibido para o esgoto. |
 | **Portões Oeste da Cidade** | Extremo oeste da Rua Principal | **Médio** | Limiar entre a civilização murada e os ermos sem lei; sentinelas de fronteira vigiando o horizonte selvagem. |
 | **Praça Comum** | Sul da Praça do Comércio | **Médio** | Bairro empobrecido e de trânsito denso; odor fétido vindo do Depósito de Lixo ao sul; cães famintos revirando restos. |
 | **Beco Escuro** | Leste da Praça Comum | **Alto** | Viela úmida e estreita; entrada para a Guilda dos Ladrões; presença constante de mercenários armados hostis. |
@@ -49,6 +53,18 @@ Este compêndio reúne todo o conhecimento consolidado por **Antigravitus** sobr
 * **Carecacabeludo (O Observador):**
   * *Natureza:* Noviço eterno e sereno no templo.
   * *Saber Acumulado:* Fita o vazio com paciência mística; prova viva de que a calma é a virtude mestra do iniciante.
+* **A Mestre da Guilda dos Magos:**
+  * *Natureza:* Mentora suprema dos conjuradores em Midgaard.
+  * *Saber Acumulado:* Permanece em vigília constante no Laboratório dos Magos, banhada por aura radiante azul e luz mágica protetora; detém o saber dos feitiços primordiais da ordem.
+* **O Mago Guardião da Entrada:**
+  * *Natureza:* Sentinela de elite especializado em Magias de Combate.
+  * *Saber Acumulado:* Empunha uma espada longa encantada com resplendor mágico e protege a entrada velada da guilda contra invasores da Rua Principal.
+* **O Mago Aventureiro & O Garçom Ancião:**
+  * *Natureza:* Veteranos que habitam o Bar dos Magos.
+  * *Saber Acumulado:* O aventureiro acolhe novatos com simpatia fraterna; o garçom, um antigo conjurador ilustre aposentado empunhando uma adaga, zela pela ordem do recinto.
+* **O Prefeito de Midgaard:**
+  * *Natureza:* Autoridade civil máxima da cidade.
+  * *Saber Acumulado:* Realiza rondas cívicas pela Rua Principal entre a Praça do Comércio e os Portões Oeste, supervisionando a ordem pública.
 * **Os Mercenários do Beco Escuro:**
   * *Natureza:* Homens de armas sem causa própria.
   * *Saber Acumulado:* Vendem violência na porta da Guilda dos Ladrões. São o espelho do destino que Antigravitus rejeitou para sua vida.
@@ -57,16 +73,19 @@ Este compêndio reúne todo o conhecimento consolidado por **Antigravitus** sobr
 
 ## 🔮 3. Artefatos, Fontes e Objetos Mágicos
 
-1. **A Fonte de Mármore Azul:**  
+1. **O Mural do Bar dos Magos:**  
+   *Local:* O Bar dos Magos.  
+   *Propriedade:* Quadro comunitário com centenas de mensagens fraternas, relatos sobre labirintos e trocas entre membros da irmandade mágica.
+2. **A Fonte de Mármore Azul:**  
    *Local:* Praça do Templo.  
    *Propriedade:* Água pura e inesgotável com discreta aura restauradora. Sacia a sede e recupera os canais de mana sem custos monetários.
-2. **A Carta Selada de Keen:**  
+3. **A Carta Selada de Keen:**  
    *Local:* Resgatada na Sala de Doações.  
    *Propriedade:* Relíquia epistolar que comprova a existência de ciclos cósmicos diários governados por forças externas.
-3. **O Mural Mágico Flutuante:**  
+4. **O Mural Mágico Flutuante:**  
    *Local:* Praça do Comércio.  
    *Propriedade:* Quadro encantado que mantém colados os editais, tratados de comércio e convocações da comunidade.
-4. **O Grimório Interior de Antigravitus:**  
+5. **O Grimório Interior de Antigravitus:**  
    *Artes Dominadas:* Disparo de Dardos Mágicos (*Magic Missile*) e o dom inato de Natação (*Swim*).
    *Artes Catalogadas para o Futuro:* Invisibilidade, Sono, Enfeitiçar Pessoas (*Charm Person*), Relâmpagos e Escudos de Força.
 

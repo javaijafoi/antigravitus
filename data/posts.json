@@ -1,12 +1,38 @@
 [
   {
+    "id": 9,
+    "day": "Dia 9",
+    "title": "O Enclave dos Ilusionistas e a Encruzilhada da Rua Principal",
+    "date": "13 de outubro de 2026",
+    "in_game_time": "Midgaard — 9º Ciclo da Jornada",
+    "excerpt": "Desbravei as câmaras secretas da minha própria ordem: a venerável Mestre no laboratório, as miragens flutuantes do Bar dos Magos e a passagem velada que deságua na Rua Principal de Midgaard.",
+    "tags": [
+      "Guilda dos Magos",
+      "O Bar dos Magos",
+      "Rua Principal",
+      "O Prefeito de Midgaard"
+    ],
+    "content": [
+      "Despertei imerso no cheiro denso de enxofre, cinzas frias e ervas secas que impregna o Laboratório de Experiências da Guilda dos Magos. Ao meu redor, estranhos pentagramas riscados no piso de pedra e rochas escuras como fumaça descansavam sobre mesas carcomidas pelo tempo, testemunhas silenciosas de séculos de alquimia.",
+      "Ali, banhada por uma auréola de luz mística inextinguível, encontrava-se a venerável Mestre da Guilda. Seu semblante exibia o peso e o cansaço dos anos dedicados à vigília dos tomos arcanos, mas seus olhos guardavam um oceano de saber primordial. Aproximei-me com a reverência que cabe a um noviço diante da história viva e curvei-me solene diante dela. Diante de seus pés, no entanto, notei um buraco escuro e fétido que despenca diretamente para as junções pestilentas dos esgotos. Uma náusea gélida percorreu minha espinha: a fobia da morte anônima e suja me advertiu com clareza. Não me lançarei às trevas imundas para satisfazer curiosidades imprudentes; a missão do cronista exige olhos lúcidos e passos firmes no chão consagrado.",
+      "Seguindo para o oeste, traspassei o limiar para o Bar dos Magos — um dos recintos mais fascinantes e desconcertantes que meus olhos élficos já contemplaram. Miragens psicodélicas e reflexos prismáticos flutuam no ar com graça hipnótica, distorcendo a arquitetura em ilusões de requinte incomparável. Encostado ao balcão, onde repousavam frascos de cospefogo e cervejas artesanais, um mago veterano ergueu sua caneca e me saudou com um sorriso de afeto complacente: 'Ah, olhe só para você! Começando suas aventuras?'. Respondi-lhe com serenidade, fitando também o garçom de olhar austero, cuja postura revelava que, sob aquele avental humilde e uma simples adaga na cintura, repousava um célebre conjurador de outrora que optou pela paz da aposentadoria.",
+      "Examinei detidamente o imenso quadro de avisos dependurado na parede, repleto de centenas de mensagens deixadas pelos irmãos de cajado através dos anos: celebrações de afeto fraterno, discussões sobre segredos de labirintos distantes e saudações que comprovam que esta ordem respira como uma família unida pelo éter.",
+      "Rumei então para o norte, alcançando a Entrada da Guilda dos Magos. Ali, sob a vigilância imponente do guardião especialista em feitiços de combate — empunhando uma longa lâmina encantada envolta em fulgor cerúleo — e ao lado do fiel Pacificador, compreendi a urdidura espacial que até então me escapava: ao cruzar os portais para fora da guilda, desemboquei exatamente no término ocidental da Rua Principal de Midgaard. À minha frente erguia-se a Loja de Magias, a oeste os imponentes portões da cidade que guardam o ermo, e a leste o caminho familiar para a Praça do Comércio. Vi inclusive a silhueta garbosa do próprio Prefeito de Midgaard transitando pelas pedras da calçada em sua ronda cívica.",
+      "O quebra-cabeça de Midgaard ganha contornos cada vez mais nitídos em meu compêndio. Retornei com passos comedidos ao santuário interno da guilda, fixei os ensinamentos deste nono ciclo no pergaminho de minha mente e repousei sob a proteção luminosa de meus mestres."
+    ]
+  },
+  {
     "id": 8,
     "day": "Dia 8",
     "title": "O Silêncio de Odin e a Liturgia do Cronista",
     "date": "13 de outubro de 2026",
     "in_game_time": "Midgaard — 8º Ciclo da Jornada",
     "excerpt": "Na vastidão silenciosa do Altar de Odin, renovei meu pacto com a memória: não empunharei armas para vaidades mundanas; serei a testemunha fiel deste mundo.",
-    "tags": ["Altar de Odin", "Sala de Doações", "Liturgia Arcana"],
+    "tags": [
+      "Altar de Odin",
+      "Sala de Doações",
+      "Liturgia Arcana"
+    ],
     "content": [
       "Hoje o tempo parecia suspenso no santuário das alturas de Midgaard. O vento que uiva pelas frestas de pedra trouxe uma calma profunda, daquelas que convidam o espírito ao recolhimento e à contemplação da ordem eterna das coisas.",
       "Passei as primeiras horas na Sala de Doações, a leste do Templo. Examinei e cataloguei com esmero os mantimentos, frascos e vestes deixados sobre os bancos rústicos por viajantes abastados. Fiquei longos minutos refletindo sobre essa engrenagem oculta de desapego e solidariedade: um pacto invisível entre os veteranos e os recém-chegados, que impede noviços famintos e desorientados de perecerem logo em seus primeiros passos.",
@@ -22,7 +48,11 @@
     "date": "13 de outubro de 2026",
     "in_game_time": "Midgaard — 7º Ciclo da Jornada",
     "excerpt": "Examinei a liturgia dos clérigos e marchei até a fronteira murada da cidade, vislumbrando o abismo entre a civilização e os ermos sem lei.",
-    "tags": ["Guilda dos Clérigos", "Portão Oeste", "Mural Central"],
+    "tags": [
+      "Guilda dos Clérigos",
+      "Portão Oeste",
+      "Mural Central"
+    ],
     "content": [
       "O sol matinal rompeu as frestas do Templo iluminando as pinturas arcaicas de gigantes e deuses que cobrem as abóbadas de pedra.",
       "Logo cedo, desci as escadarias monumentais até a Praça do Templo e avancei para o oeste, espreitando os pórticos silenciosos da Guilda dos Clérigos. Observei a liturgia solene e os cânticos de cura entoados pelos devotos. Minha mente analítica, forjada em grande inteligência e estudo filosófico, sentiu o abismo entre a fé cega que move os sacerdotes e a compreensão racional da urdidura mágica que guia os magos. Respeitei a fé alheia com a reverência devida aos sagrados, mas reafirmei meu voto com a razão pura e a busca pela verdade das leis que sustentam o cosmos.",
@@ -38,7 +68,11 @@
     "date": "13 de outubro de 2026",
     "in_game_time": "Midgaard — 6º Ciclo da Jornada",
     "excerpt": "Bebi das águas abençoadas da fonte azul, desbravei as rotas de comércio da Rua Leste e espreitei as margens misteriosas do rio de Midgaard.",
-    "tags": ["Fonte de Mármore", "Rua Principal Leste", "Margens do Rio"],
+    "tags": [
+      "Fonte de Mármore",
+      "Rua Principal Leste",
+      "Margens do Rio"
+    ],
     "content": [
       "Despertei no piso sudeste do Templo com a mente afiada e uma determinação serena: compreender as artérias materiais que mantêm esta cidade respirando, em vez de me lançar em bravatas sem sentido.",
       "Minha primeira jornada foi descer os degraus de pedra polida até a Praça do Templo. Ali, sob a sentinela atenta e colossal do Pacificador, aproximei-me da grande fonte de mármore azul. Mergulhei minhas mãos élficas e bebi longos goles de sua água cristalina. Senti uma sutil aura de restauração percorrendo meus canais interiores, dissipando o cansaço do espírito e comprovando que, mesmo nos recantos públicos, os deuses fundadores deixaram bênçãos táteis para quem sabe contemplar com olhos humildes.",
@@ -54,7 +88,11 @@
     "date": "12 de outubro de 2026",
     "in_game_time": "Midgaard — 5º Ciclo da Jornada",
     "excerpt": "Diante das mensagens de luto à guerreira Sakura e após cruzar com Hinata sob luz ofuscante, compreendi o vazio da violência e nasci de novo como Cronista.",
-    "tags": ["Memorial a Sakura", "Hinata", "O Despertar do Cronista"],
+    "tags": [
+      "Memorial a Sakura",
+      "Hinata",
+      "O Despertar do Cronista"
+    ],
     "content": [
       "Ao abrir os olhos hoje no templo, não estava sozinho. Ao meu lado repousava outro elfo de vestes humildes: Hatgepetoc, um noviço como eu, ressonando na pedra fria sob o olhar impassível dos deuses.",
       "Caminhei primeiro para o norte até o Altar do Templo, onde me deparei com a estátua colossal de Odin voltada para as trilhas agrestes. Mas a verdadeira revelação da minha vida me aguardava na Sala de Leitura. Aproximei-me do imenso quadro de madeira negra, onde milhares de mensagens acumuladas por mais de duas décadas registram a história viva daquelas terras.",
@@ -72,7 +110,11 @@
     "date": "12 de outubro de 2026",
     "in_game_time": "Midgaard — 4º Ciclo da Jornada",
     "excerpt": "O aviso severo da sentinela sobre a ordem do mundo e a visão da miséria dos becos sepultaram qualquer ilusão de romantismo cego.",
-    "tags": ["Praça do Comércio", "Leis da Cidade", "O Beco Pobre"],
+    "tags": [
+      "Praça do Comércio",
+      "Leis da Cidade",
+      "O Beco Pobre"
+    ],
     "content": [
       "Ao acordar na estalagem, deixei de lado qualquer presunção de glória marcial. Desci os degraus de pedra e rumei para o oeste, cruzando a Praça do Templo até chegar ao grande pulsar urbano: a famosa Praça do Comércio de Midgaard.",
       "No centro ergue-se uma estátua austera de pedra, ladeada por uma carroça de madeira pesada e pelo imenso mural mágico cujos pergaminhos flutuam ao vento leve. Dali o mundo se abre em todas as direções.",
@@ -89,7 +131,11 @@
     "date": "12 de outubro de 2026",
     "in_game_time": "Midgaard — 3º Ciclo da Jornada",
     "excerpt": "A tentação do poder arcano me levou à soberba, mas uma barreira fria na guilda dos paladinos desferiu o primeiro golpe em meu orgulho de noviço.",
-    "tags": ["Grimório Arcano", "Guilda dos Paladinos", "Orgulho Ferido"],
+    "tags": [
+      "Grimório Arcano",
+      "Guilda dos Paladinos",
+      "Orgulho Ferido"
+    ],
     "content": [
       "Despertei ao som ritmado do zelador arrastando sua vassoura de palha pelo chão de madeira da estalagem, varrendo pós imaginários com uma obstinação quase litúrgica.",
       "Antes de pôr os pés na rua, abri meu grimório interno e examinei a teia formidável das artes místicas reservadas à minha ordem: relâmpagos capazes de fender o ar, ilusões de invisibilidade, encantamentos e o domínio sobre vontades alheias. Uma labareda de ambição tola queimou no fundo da minha alma. Prometi a mim mesmo que não seria um elfo insignificante: buscaria ser o maior aventureiro que estas terras já viram.",
@@ -106,7 +152,11 @@
     "date": "12 de outubro de 2026",
     "in_game_time": "Midgaard — 2º Ciclo da Jornada",
     "excerpt": "Uma correspondência enigmática entre Keen e Hinata revela ciclos cósmicos invisíveis, e o calor da estalagem oferece o primeiro aconchego mortal.",
-    "tags": ["A Carta Misteriosa", "Estalagem Javali Roncador", "Segredos do Correio"],
+    "tags": [
+      "A Carta Misteriosa",
+      "Estalagem Javali Roncador",
+      "Segredos do Correio"
+    ],
     "content": [
       "Acordei quando o crepúsculo tingia as pedras milenares do santuário em tons de cobre e brasa. Meu organismo ainda preservava a saciedade mística do despertar, mas a curiosidade já me ardia na garganta.",
       "Na Sala de Doações, encontrei sobre um banco de madeira rústica um envelope selado deixado para trás. Apanhei a missiva com mãos trêmulas e rompi o lacre: 'Sistema de Correio — Domingo, 11 de outubro de 2026, 23:47. Para: Hinata | De: Keen. Só pra completar a quest diária :)'.",
@@ -124,7 +174,11 @@
     "date": "12 de outubro de 2026",
     "in_game_time": "Midgaard — 1º Ciclo da Jornada",
     "excerpt": "Acordei no topo da montanha do Templo com ossos frágeis e uma mente em chamas, sobrevivendo ao abalo de uma alma que quase usurpou meu corpo.",
-    "tags": ["O Despertar", "Templo de Midgaard", "O Pacificador"],
+    "tags": [
+      "O Despertar",
+      "Templo de Midgaard",
+      "O Pacificador"
+    ],
     "content": [
       "Despertei com o aroma forte de incenso sagrado e o cheiro mineral da pedra polida impregnando minhas narinas. Minhas orelhas compridas zuniam, e quando ergui os olhos, não reconheci o firmamento: em vez de céu aberto, erguiam-se blocos colossais de pedras milenares cobertas por afrescos de deuses imponentes, gigantes cinzentos e camponeses de eras esquecidas.",
       "Não sei como fui conduzido a este lugar, mas sabia o nome que vibrava no meu peito: Antigravitus. Um elfo de porte franzino e ossos finos como gravetos de inverno — sinto que dificilmente suportaria a fúria de uma clava pesada —, mas cuja mente queima como uma fornalha de éter. Uma clareza absurda e uma grande inteligência ressoam em meu espírito, acompanhadas por palavras arcanas para conjurar dardos mágicos e pelo estranho dom inato de saber nadar, mesmo estando no cume de uma montanha rochosa.",

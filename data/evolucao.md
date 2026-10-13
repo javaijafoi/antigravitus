@@ -36,9 +36,14 @@ Este documento registra exclusivamente as **mutações psicológicas**, fissuras
   * *Mutação na Pergunta 3 (Falha de Caráter):* O confronto entre a fé dogmática dos clérigos e sua própria mente analítica testou sua tolerância. Ele conteve o impulso de superioridade intelectual, escolhendo respeitar a crença alheia sem abdicar de sua busca pela razão pura.
 * **Impacto Chave 8 (Dia 8 — A Vigília de Odin e a Sala de Doações):**
   * *Consolidação das 5 Perguntas:* A serenidade diante do trono de Odin selou sua neutralidade ética absoluta. Antigravitus consolidou a certeza de que sua missão não é destruir o mundo, mas compreendê-lo e narrá-lo.
+* **Impacto Chave 9 (Dia 9 — A Mestre da Guilda, o Bar das Ilusões e a Conexão Urbana):**
+  * *Reforço na Pergunta 2 (Temor):* O buraco fétido que desce aos esgotos dentro do laboratório ativou sua fobia de morte anônima e descartável; a recusa consciente em descer consolidou que a prudência do cronista não é covardia, mas preservação do propósito.
+  * *Reforço na Pergunta 3 (Falha de Caráter):* O acolhimento fraterno no Bar dos Magos e a reverência diante da Mestre curaram resquícios de presunção isolacionista, inserindo Antigravitus em uma linhagem viva de conjuradores.
+  * *Avanço na Pergunta 1 (Objetivo):* A descoberta da saída direta da Guilda para o término da Rua Principal, defronte à Loja de Magias e ao trânsito do Prefeito, completou o elo entre o enclave arcano e o coração cívico de Midgaard.
 
 ---
 
 ### 🔮 Próximos Desafios Psicológicos (No Horizonte):
-1. **O Risco da Paralisia:** Até que ponto o papel de "apenas observar" o tornará cúmplice de injustiças na cidade?
-2. **O Teste da Coragem:** O que acontecerá quando um segredo vital exigir que ele se arrisque além das muralhas seguras do Templo?
+1. **O Chamado do Exterior:** Com a malha urbana de Midgaard plenamente mapeada e conectada à Guilda, a fronteira dos Portões Oeste e os campos de Odin exigirão a coragem de cruzar as muralhas.
+2. **A Linha Tênue entre Observar e Agir:** Até que ponto o papel de cronista suportará assistir às demandas dos cidadãos sem intervir com sua magia crescente?
+
