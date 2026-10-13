@@ -22,11 +22,21 @@ Este compêndio reúne todo o conhecimento consolidado por **Antigravitus** sobr
 | **Rua Principal (Leste)** | Leste da Praça Central | **Baixo** | Eixo de abastecimento da cidade; Armazém de Grãos e Forragem ao norte; Loja de Animais Exóticos ao sul. |
 | **Rua Principal (Oeste)** | Oeste da Praça Central | **Baixo** | Eixo manufatureiro; Padaria aromática ao norte; Loja de Armaduras e forjas ao sul; segue até os Portões Oeste. |
 | **Término da Rua Principal (Oeste)** | Fim da Rua Oeste, defronte à Guilda | **Baixo** | Intersecção chave: Loja de Magias ao norte, Guilda dos Magos ao sul, Portões Oeste a oeste e Praça a leste; ronda do Prefeito. |
+| **A Loja de Magias** | Norte do término da Rua Principal | **Baixo** | Frascos e pergaminhos (retorno, identificação, poção de visão mágica); dirigida pelo Feiticeiro Solitário. |
+| **A Padaria de Midgaard** | Norte da Rua Principal | **Zero** | Fornalha acolhedora; pães de viagem, broas e rosquinhas; gerida pelo laborioso Padeiro. |
+| **A Loja de Armaduras** | Sul da Rua Principal | **Baixo** | Forjas de armaduras pesadas e de couro; refúgio e vigília silenciosa do Pranteador da Cidade. |
 | **A Entrada da Guilda dos Magos** | Sul do término da Rua Principal | **Baixo** | Acesso velado à guilda; caixa de madeira para economia de moedas; vigiada pelo Pacificador e pelo Mago Guardião de Combate. |
 | **O Bar dos Magos** | Sul da Entrada da Guilda | **Zero** | Taberna arcana surreal com miragens flutuantes; balcão com cospefogo e ale; mural histórico de confraternização da guilda. |
 | **O Laboratório dos Magos** | Leste do Bar dos Magos | **Zero (Santuário)** | Santuário alquímico com pentagramas e pedras esfumaçadas; presença da Mestre da Guilda; alçapão proibido para o esgoto. |
-| **Portões Oeste da Cidade** | Extremo oeste da Rua Principal | **Médio** | Limiar entre a civilização murada e os ermos sem lei; sentinelas de fronteira vigiando o horizonte selvagem. |
+| **Dentro do Portão Oeste** | Extremo oeste da Rua Principal | **Médio** | Duas pequenas torres sobre a ponte levadiça; espadas longas no chão; guarda do portão leal e honrado. |
+| **A Rua da Muralha** | Sul do Portão Oeste | **Médio** | Corredor militar estreito ao longo das fundações ciclópicas; seteiras com vista para o descampado ocidental. |
+| **Fora do Portão Oeste** | Além da ponte levadiça ocidental | **Médio / Alto** | Colinas abertas de capim silvestre; vista panorâmica das muralhas de Midgaard e rota para a mata de Haon-Dor. |
+| **Atrás do Altar** | Norte do Altar de Odin | **Zero** | Passagem de terra que desce a encosta posterior do monte sagrado rumo às planícies pastoris. |
+| **O Grande Campo de Midgaard** | Norte de Atrás do Altar | **Baixo / Médio** | Vasta campina ondulante pontilhada de flores silvestres e horizontes abertos ao norte. |
+| **O Panteão dos Centenários** | Cume superior do Templo | **Zero (Consagrado)** | Cúpula translúcida sob luz estelar; placas de prata e homenagens eternas aos centenários de Midgaard. |
 | **Praça Comum** | Sul da Praça do Comércio | **Médio** | Bairro empobrecido e de trânsito denso; odor fétido vindo do Depósito de Lixo ao sul; cães famintos revirando restos. |
+| **O Depósito de Lixo** | Sul da Praça Comum | **Médio** | Pátio fétido de detritos e refugos urbanos; carcaças disputadas por cães e camponeses empobrecidos. |
+| **O Fim do Beco Pobre** | Oeste da Praça Comum | **Baixo / Médio** | Viela humilde de taipa; comunidade solidária que acolhe viajantes com partilha sincera. |
 | **Beco Escuro** | Leste da Praça Comum | **Alto** | Viela úmida e estreita; entrada para a Guilda dos Ladrões; presença constante de mercenários armados hostis. |
 | **Margens do Rio** | Sul do Beco Escuro | **Médio / Alto** | Correnteza rápida de água doce; névoa fria; rota perigosa para quem não conhece técnicas natatórias ou sofre de fragilidade corporal. |
 
@@ -65,6 +75,21 @@ Este compêndio reúne todo o conhecimento consolidado por **Antigravitus** sobr
 * **O Prefeito de Midgaard:**
   * *Natureza:* Autoridade civil máxima da cidade.
   * *Saber Acumulado:* Realiza rondas cívicas pela Rua Principal entre a Praça do Comércio e os Portões Oeste, supervisionando a ordem pública.
+* **O Feiticeiro Solitário da Loja de Magias:**
+  * *Natureza:* Erudito recluso que gerencia o comércio de artefatos.
+  * *Saber Acumulado:* Sussurra monólogos arcanos atrás do balcão; vende bastões de invisibilidade, pergaminhos de retorno cósmico e identificação.
+* **O Padeiro de Midgaard:**
+  * *Natureza:* Artesão do trigo e da subsistência cívica.
+  * *Saber Acumulado:* Fornalha incansável na Rua Principal; assa pães de viagem, broas e rosquinhas; personificação da dignidade laboriosa.
+* **O Pranteador da Cidade:**
+  * *Natureza:* Figura de luto perpétuo na Loja de Armaduras.
+  * *Saber Acumulado:* Chora em silêncio pelos guerreiros caídos cujas armaduras não puderam salvá-los; lembrete do custo humano da violência.
+* **O Guarda do Portão Oeste:**
+  * *Natureza:* Sentinela honrado da fronteira ocidental.
+  * *Saber Acumulado:* Vigia a ponte entre as duas pequenas torres; guarda do limiar entre a civilização e os ermos de Haon-Dor.
+* **O Zelador do Templo:**
+  * *Natureza:* Servo humilde da montanha sagrada.
+  * *Saber Acumulado:* Varre incessantemente as escadarias e lajes de mármore; mestre supremo da paciência e da purificação moral.
 * **Os Mercenários do Beco Escuro:**
   * *Natureza:* Homens de armas sem causa própria.
   * *Saber Acumulado:* Vendem violência na porta da Guilda dos Ladrões. São o espelho do destino que Antigravitus rejeitou para sua vida.
@@ -73,19 +98,22 @@ Este compêndio reúne todo o conhecimento consolidado por **Antigravitus** sobr
 
 ## 🔮 3. Artefatos, Fontes e Objetos Mágicos
 
-1. **O Mural do Bar dos Magos:**  
+1. **O Grande Compêndio das Memórias de Midgaard:**  
+   *Local:* Altar do Templo de Midgaard (consagrado aos pés de Odin).  
+   *Propriedade:* O manuscrito sagrado de 50 fólios encadernados em couro cru por Antigravitus, eternizando os nomes, os lutos e as lições do cosmo de Devil's Bob MUD.
+2. **O Mural do Bar dos Magos:**  
    *Local:* O Bar dos Magos.  
    *Propriedade:* Quadro comunitário com centenas de mensagens fraternas, relatos sobre labirintos e trocas entre membros da irmandade mágica.
-2. **A Fonte de Mármore Azul:**  
+3. **A Fonte de Mármore Azul:**  
    *Local:* Praça do Templo.  
    *Propriedade:* Água pura e inesgotável com discreta aura restauradora. Sacia a sede e recupera os canais de mana sem custos monetários.
-3. **A Carta Selada de Keen:**  
+4. **A Carta Selada de Keen:**  
    *Local:* Resgatada na Sala de Doações.  
    *Propriedade:* Relíquia epistolar que comprova a existência de ciclos cósmicos diários governados por forças externas.
-4. **O Mural Mágico Flutuante:**  
+5. **O Mural Mágico Flutuante:**  
    *Local:* Praça do Comércio.  
    *Propriedade:* Quadro encantado que mantém colados os editais, tratados de comércio e convocações da comunidade.
-5. **O Grimório Interior de Antigravitus:**  
+6. **O Grimório Interior de Antigravitus:**  
    *Artes Dominadas:* Disparo de Dardos Mágicos (*Magic Missile*) e o dom inato de Natação (*Swim*).
    *Artes Catalogadas para o Futuro:* Invisibilidade, Sono, Enfeitiçar Pessoas (*Charm Person*), Relâmpagos e Escudos de Força.
 
