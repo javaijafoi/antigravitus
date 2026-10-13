@@ -1,0 +1,10 @@
+.DS_Store
+Thumbs.db
+node_modules/
+.vercel
+*.log
+
+.env
+publish_daily.py
+__pycache__/
+*.pyc

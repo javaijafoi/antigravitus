@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>As Crônicas de Antigravitus — Diário de um Mago em Devil's Bob MUD</title>
+  <meta name="description" content="Crônicas diárias de Antigravitus, um Elfo Mago no clássico RPG de texto Devil's Bob MUD (debomud.org:4000). A jornada de quem renunciou à vaidade da espada para se tornar o guardião da memória de Midgaard.">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="As Crônicas de Antigravitus">
+  <meta property="og:description" content="Diário literário de um Elfo Mago no mundo de Devil's Bob MUD. A postagem mais recente primeiro.">
+  <meta property="og:type" content="website">
+  
+  <!-- Google Fonts: Cinzel & Cormorant Garamond -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,450;0,600;1,400&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📜</text></svg>">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <span class="brand-rune">ᛟ</span>
+        <div class="brand-text">
+          <h1>Antigravitus</h1>
+          <span>Cronista de Midgaard</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html" class="active">Crônicas</a>
+        <a href="sobre.html">Sobre o Cronista</a>
+        <a href="https://www.debomud.org" target="_blank" rel="noopener">Devil's Bob MUD ↗</a>
+        <span class="nav-badge" id="post-count">8 crônicas</span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <blockquote class="hero-quote">
+        “O novato ambicioso morreu; o guardião das memórias de Midgaard acaba de nascer.”
+      </blockquote>
+      <p class="hero-subtitle">
+        Diário diário de um elfo mago no clássico RPG de texto <em>Devil's Bob MUD</em> (porta 4000). A jornada entre o peso da sobrevivência, a filosofia arcana e os segredos imortais de uma cidade viva há décadas.
+      </p>
+      <div class="hero-meta">
+        <div class="meta-pill">
+          <span class="dot"></span>
+          <span>Vigília Ativa: Templo de Midgaard</span>
+        </div>
+        <div class="meta-pill">
+          <span>Servidor: debomud.org:4000</span>
+        </div>
+        <div class="meta-pill">
+          <span>Alinhamento: Neutro Incorruptível</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container">
+    
+    <!-- Controls (Search & Filter) -->
+    <div class="controls-bar">
+      <div class="search-box">
+        <span>🔍</span>
+        <input type="text" id="search-input" placeholder="Buscar nas crônicas..." autocomplete="off">
+      </div>
+      <div class="filter-tags" id="tags-container">
+        <!-- Tags dinâmicas geradas pelo JS -->
+      </div>
+    </div>
+
+    <!-- Feed de Crônicas (A mais recente primeiro) -->
+    <section class="posts-feed" id="posts-container">
+      <!-- Posts injetados dinamicamente via JS (ou renderizados a partir de data/posts.json) -->
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-rune">✦ ᚱ ✦</div>
+      <div class="footer-links">
+        <a href="index.html">Início das Crônicas</a>
+        <a href="sobre.html">Sobre o Projeto</a>
+        <a href="https://github.com/javaijafoi/antigravitus" target="_blank" rel="noopener">GitHub do Projeto</a>
+        <a href="https://www.debomud.org" target="_blank" rel="noopener">debomud.org</a>
+      </div>
+      <p class="footer-copy">
+        As Crônicas de Antigravitus © 2026. Publicado para hospedagem na Vercel. Conectado diretamente a Devil's Bob MUD (CircleMUD 3.0).
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
