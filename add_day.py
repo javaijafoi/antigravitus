@@ -5,7 +5,7 @@ from datetime import datetime
 
 POSTS_PATH = os.path.join(os.path.dirname(__file__), "data", "posts.json")
 
-def add_chronicle(day_num, title, date_str, in_game_time, excerpt, tags, content_paragraphs):
+def add_chronicle(day_num, title, date_str, in_game_time, excerpt, tags, content_paragraphs, day_label=None):
     """
     Adiciona uma nova crônica ao topo de posts.json (a mais recente primeiro).
     """
@@ -17,7 +17,7 @@ def add_chronicle(day_num, title, date_str, in_game_time, excerpt, tags, content
         
     new_post = {
         "id": day_num,
-        "day": f"Dia {day_num}",
+        "day": day_label if day_label else f"Dia {day_num}",
         "title": title,
         "date": date_str,
         "in_game_time": in_game_time,
