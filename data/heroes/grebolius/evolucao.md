@@ -455,3 +455,34 @@
   * **Descanso Sagrado:** Hidratou-se na lendária Fonte de Mármore Azul e subiu as escadarias até o silêncio monumental do Panteão dos Centenários, dormindo no cume sob o sol próprio que ilumina as doze estátuas imortais.
 * **Decisão Tática:**
   * No Ciclo 30 (Marco Decenal), finalizar os 1.773 EXP restantes para ascender ao **Quinto Grau de Maestria (Nível 5)**, doar os punhais sobressalentes usando a diretriz `doar punhal` para liberar carga, treinar novos feitiços na Mestre da Guilda e avançar na captura do Bebê Dragão.
+
+---
+
+### ⏳ Ciclo 30 (Dia 30): A Conquista do Quinto Grau, o Resgate do Dragão e o Marco Decenal
+* **Status Real (MUD):**
+  * Nível: **5** *(Quinto Grau de Maestria coroado — Barreira dos 10.000 EXP rompida!)*
+  * Vida: **36/36** *(+3 HP permanente conquistado no nível)*
+  * Mana: **116/116** *(+5 MP permanente conquistado no nível)*
+  * Movimento: **90/91** *(+2 MV permanente conquistado no nível)*
+  * Experiência: **10.103 EXP** *(Próximo nível: 4.897 EXP)*
+  * Ouro Líquido: **489 moedas de ouro** *(+20 moedas de saque em combate)*
+  * Nova Magia Desbloqueada e Treinada: `infravision` (Infravisão) elevada para **95% (perfeito)** no Laboratório dos Magos!
+  * Sessões de Treino Restantes: **3 sessões** guardadas para futuros círculos.
+  * Gestão de Suprimentos: Consumo dos pães recheados da mochila (fome erradicada); hidratação e cantis cheios na Fonte Azul; descarte de punhais excedentes para alívio de peso de inventário; preservação do Pergaminho de Retorno e da Poção Amarela.
+  * Local de Pernoite: O Panteão dos Centenários (Salva e Dormindo diante dos doze heróis eternos).
+* **Marcos e Impactos Psicológicos:**
+  * **Ação Imediata e o Alerta do Estômago:** Despertando com o corpo exigindo nutrição, Grebolius não titubeou. Sacou os pães recheados do fundo da mochila e os devorou com voracidade ladina, restabelecendo o vigor celular e a força muscular sem perder tempo em reflexões vazias.
+  * **O Massacre e a Ruptura dos 10.000 EXP:** Avançou com determinação letal pelas galerias da Masmorra dos Novatos. No Cruzamento, confrontou o monstro guardião: disparou o toque gélido, desviou do contra-ataque e desferiu uma estocada com tanta violência que *EXPLODIU* a criatura em 20 pontos de dano crítico. A fera tombou sem vida, rendendo 342 EXP e disparando o clarão celestial: **Você avançou um nível! Quinto Grau de Maestria conquistado!** O corpo expandiu-se com mais vida, mana e resistência, e a visão espectral do calor (`infravision`) despertou em seus olhos.
+  * **A Rota e o Cerco do Bebê Dragão:** Rastreou as galerias subterrâneas e localizou a pequena besta réptil vagando no Começo da Passagem e no Corredor Sujo (*"Um bebê dragão zanza por aqui, aparentemente perdido."*). Identificou as coleiras arrebentadas no chão e no próprio pescoço, retornou à câmara do Guarda Novato e coordenou a pista: o sentinela foi avisado da localização exata do bicho do Alquimista, avançando decisivamente na resolução da tarefa assumida.
+  * **O Treino de Infravisão na Guilda dos Magos:** Deixou a masmorra, cruzou os prados e marchou veloz pelas avenidas de Midgaard até o Laboratório dos Magos. Perante a Mestre da Guilda, investiu suas sessões na nova magia: treinou a Infravisão até atingir a perfeição absoluta de **95%**. Agora, as trevas não mais cegam seus passos e o calor de presas ocultas pode ser farejado à distância.
+  * **O Reconhecimento do Pacificador e o Cume dos Titãs:** Ao saciar a sede na grande Fonte de Mármore Azul, o colossal sentinela da cidade bradou com respeito: *"Quando você estiver mais forte volte aqui para me ajudar!"*. Grebolius subiu as escadarias sagradas e adentrou o Panteão dos Centenários. Sob o sol eterno que ilumina as doze estátuas dos maiores heróis do mundo, deitou seu corpo transformado e adormeceu em triunfo absoluto.
+* **📜 Grande Balanço Estratégico Decenal (Ciclos 21 ao 30):**
+  1. **A Triplicação do Poder Real:** Grebolius iniciou o Ciclo 21 no Nível 3 com 3.264 EXP. Conclui o Ciclo 30 no **Nível 5 com 10.103 EXP**, tendo mais que triplicado sua maturidade marcial e arcana em combate prático e contínuo.
+  2. **Domínio Logístico e Salvaguarda Vital:** A fome e a sede foram domadas pela rotina profissional de abastecimento com pães da Padaria e água sagrada da Fonte Azul. O inventário foi blindado com o lendário Pergaminho de Retorno — assegurando fuga imediata de qualquer perigo letal sem risco de morte definitiva — e aliviado de peso morto com descarte e doação de armas sobressalentes.
+  3. **A Abertura e Avanço em Missões Autênticas:** A descoberta da câmara secreta do Guarda Novato e o rastreamento ativo do Bebê Dragão do Alquimista estabeleceram a primeira grande missão de honra e influência política da personagem em Midgaard.
+  4. **Arsenal de Magias no Ápice:** Seis magias essenciais elevadas à perfeição técnica (95% a 99%): Míssil Mágico, Toque Gélido, Infravisão, Natação, Detectar Magia e Detectar Invisibilidade.
+* **Diretrizes para o Quarto Decênio (Ciclos 31 a 40):**
+  * Concluir a missão do dragão, assegurando a entrega da besta e colhendo a gratidão do Guarda e do Alquimista.
+  * Utilizar a Infravisão de 95% para explorar territórios externos escuros ao redor de Midgaard (Afluência fluvial, Esgotos controlados ou cemitérios).
+  * Investir as 489 moedas de ouro em aprimoramentos de armadura e manter a marcha implacável rumo ao Sexto Grau.
+* **Veredito:** O disfarce inicial de ladra noviça deu lugar a uma feiticeira de combate temida e respeitada. Com dez mil pontos de experiência cravados e a benção dos imortais do Panteão, Grebolius encerra o Dia 30 como uma verdadeira força de elite prestes a erguer seu império.
