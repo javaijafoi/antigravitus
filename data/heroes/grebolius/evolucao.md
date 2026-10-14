@@ -160,6 +160,22 @@
   * Descobrir a invocação e comando exato para destravar o treino de magias com a mestre.
   * Expandir a caçada para os limites dos portões leste e oeste no próximo ciclo.
 
+---
+
+### ⏳ Ciclo 13 (Dia 13): A Maestria do Feitiço e o Arsenal Forjado
+* **Status Real (MUD):**
+  * Nível: 1 | Vida: 23/23 | Mana: 100/100 | Movimento: 83/84 | AC: 16
+  * Perícias: `magic missile` (55% - BOM), `swim` (55% - BOM).
+  * Novo Armamento: Espada Longa forjada militar (+2L).
+  * Local de Pernoite: O Panteão dos Centenários.
+* **Marcos e Impactos Psicológicos:**
+  * **O Desbloqueio Arcano:** A insistência quebrou a barreira: ao entoar as palavras do feitiço com ritmo próprio, a urdidura mística cedeu. O Projétil Mágico saltou para 55% de eficácia real. O disfarce de maga noviça tornou-se uma arma letal autêntica.
+  * **A Espada dos Guardas:** A pilhagem da espada longa militar no Portão Oeste sob os olhos dos sentinelas comprovou a sagacidade ladina de Grebolius: enquanto outros pagam ouro a ferreiros, ela aproveita a distração dos fortes.
+  * **Contato Social no Bar dos Magos:** A saudação irônica do mago aventureiro veterano confirmou que sua presença começou a ser notada nos corredores do poder de Midgaard.
+* **Decisão Tática:**
+  * Combinar o projétil arcano de longo alcance (55%) com o corte pesado da nova espada longa para os combates do Ciclo 14.
+
+
 
 
 
