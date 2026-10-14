@@ -386,3 +386,19 @@
   * **Consagração e Descanso:** Reabasteceu os cantis na lendária Fonte de Mármore Azul, saciou a sede e ascendeu ao Panteão dos Centenários, dormindo aos pés dos titãs com poder ampliado e letalidade renovada.
 * **Decisão Tática:**
   * No Ciclo 26, estrear a nova magia `chill touch` em combate real, testar tarefas e missões formais com NPCs influentes de Midgaard e avançar na rota da soberania com maestria de Grau 4.
+
+---
+
+### ⏳ Ciclo 26 (Dia 26): A Conquista das Provisões, a Sondagem de Aventuras e o Acampamento no Tabuleiro
+* **Status Real (MUD):**
+  * Nível: **4** | Vida: **33/33** | Mana: **111/111** | Movimento: **89/89** | AC: 17
+  * Experiência: **6.015 EXP** *(Próximo nível: 3.985 EXP)*
+  * Ouro Líquido: **469 moedas de ouro** *(24 moedas investidas na Padaria)*
+  * Provisões: 2 pães recheados consumidos (fome erradicada); 2 pães recheados em estoque na mochila.
+  * Local de Pernoite: O Grande Tabuleiro de Xadrez de Midgaard (Salva e Dormindo no portal monumental).
+* **Marcos e Impactos Psicológicos:**
+  * **Ação Logística na Padaria de Midgaard:** Sentindo o corpo cobrar o combustível vital após as longas marchas, Grebolius não hesitou nem perdeu tempo em contemplação. Desceu com passos firmes até a Padaria, inspecionou o balcão do Padeiro enfarinhado e adquiriu quatro pães recheados de boa qualidade. Devorou dois na hora, sentindo o calor e o vigor restabelecerem a plenitude de seus músculos, guardando os dois restantes na mochila para nunca mais flertar com a fraqueza orgânica.
+  * **O Teste Oficial do Sistema de Missões (`quest participar`):** Na Praça do Comércio, sob a estátua imponente e o mural mágico flutuante, executou o comando oficial de aventuras do mundo (`quest participar`). O jogo confirmou a prontidão do sistema com a mensagem: *"Mas não há nenhuma aventura acontecendo no momento!"*. A mecânica foi desvendada; ela agora sabe exatamente como responder ao chamado quando as tarefas dos Deuses e dos magistrados forem proclamadas.
+  * **Marcha Armada e Posição Avançada:** Cruzou novamente os prados verdejantes do Grande Campo até o portão de pedra de O Grande Tabuleiro de Xadrez de Midgaard. Estabeleceu seu posto de vigília junto às lajes monumentais, verificou suas armas mágicas e adormeceu com a mente afiada para a próxima investida.
+* **Decisão Tática:**
+  * No Ciclo 27, penetrar na Masmorra dos Novatos para abrir a câmara secreta do Guarda Novato em apuros e executar nova varredura de presas com o feitiço gélido *chill touch*.

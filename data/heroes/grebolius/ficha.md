@@ -9,9 +9,9 @@
 * **Título Honorífico:** o Aprendiz de Mago
 * **Raça / Aparência Real:** Mulher Goblin (disfarçada de jovem guerreiro com faixas e elmo abaixado)
 * **Classe Mecânica no MUD:** Mago (Magic-User)
-* **Grau / Nível Atual:** **4** *(Ascensão gloriosa ao Quarto Grau de Maestria após abates consecutivos)*
+* **Grau / Nível Atual:** **4** *(Quarto Grau de Maestria consolidado)*
 * **Alinhamento Moral:** 25 (Neutro Pragmático)
-* **Localização Atual:** O Panteão dos Centenários (Cume sagrado do Templo de Midgaard) — *Salvo e Dormindo com segurança máxima*
+* **Localização Atual:** O Grande Tabuleiro de Xadrez de Midgaard (Fronteira Oeste dos Campos) — *Salva e Dormindo junto ao portão colossal*
 
 ---
 
@@ -24,8 +24,8 @@
 
 * **Experiência Acumulada:** **6.015 EXP**
 * **Experiência Necessária p/ Grau 5:** 3.985 EXP
-* **Ouro Líquido:** **493 moedas de ouro**
-* **Condição Biológica:** Sede saciada na Fonte Azul; fôlego vital e energia mágica no ápice absoluto.
+* **Ouro Líquido:** **469 moedas de ouro** *(24 moedas investidas em 4 pães recheados na Padaria)*
+* **Condição Biológica:** Fome 100% saciada com pães recheados; cantis abastecidos com água da Fonte Azul; fôlego e vigor plenos.
 
 ---
 
@@ -47,7 +47,7 @@
 ---
 
 ## ✦ Habilidades Conhecidas e Treinos Concluídos
-* **Sessões de Treino Acumuladas:** **2 sessões de prática disponíveis** *(7 sessões consumidas no Laboratório dos Magos)*
+* **Sessões de Treino Acumuladas:** **2 sessões de prática disponíveis**
 * **Perícias e Encantamentos:**
   * `magic missile` (Míssil Mágico): **99%** (Grau: Perfeito / Letalidade Absoluta)
   * `chill touch` (Toque Gélido): **95%** (Grau: Perfeito / Nova Magia Combativa de Gelo)
@@ -70,9 +70,9 @@
 
 ---
 
-## ✦ Inventário Carregado (Tríade de Lâminas e Mochila)
-* **3x `um brilhante punhal de novato`** *(um empunhado + três reservas com aura mágica de velocidade)*
-* **`uma mochila`** *(mochila de lona para transporte de carga)*
+## ✦ Inventário Carregado (Tríade de Lâminas, Provisões e Mochila)
+* **4x `um brilhante punhal de novato`** *(um empunhado + quatro reservas com aura mágica de velocidade)*
+* **`uma mochila`** *(contendo 2x `um pão recheado` de reserva)*
 * `um gorro de couro` (proteção reserva)
 * 2x `cantil` *(ambos reabastecidos com água pura da Fonte Azul)*
 * `um anel arcano` (+2E)
@@ -80,5 +80,5 @@
 ---
 
 ## ✦ Ciclo e Postura Atual
-* **Estado:** Conclusão do Dia 25. Vitória avassaladora e evolução brutal: incursão inicial nas lajes do Tabuleiro de Xadrez, seguida por rápida varredura e triplo abate na Masmorra dos Novatos (dois Monstros Novatos e um Inseto Rastejante). Rompimento da marca dos 6.000 EXP e conquista do **Quarto Grau de Maestria (Nível 4)**. Treinamento intensivo na Mestre dos Magos alçando `chill touch`, `detect invisibility`, `detect magic` e `swim` para 95% (perfeito).
-* **Tática Operacional:** No próximo ciclo, testar em combate o recém-dominado feitiço gélido `chill touch`, explorar tarefas formais com NPCs influentes ou retornar ao Tabuleiro de Xadrez com poder ampliado.
+* **Estado:** Conclusão do Dia 26. Manobra logística e de reconhecimento: descida rápida à Padaria de Midgaard, compra e consumo de pães frescos cessando qualquer ameaça de fraqueza física, sondagem oficial do sistema de autoquests (`quest participar`) perante o mural da Praça do Comércio e marcha resoluta através dos prados até o portal d'O Grande Tabuleiro de Xadrez de Midgaard.
+* **Tática Operacional:** No próximo ciclo (Dia 27), explorar as salas da Masmorra dos Novatos para contactar o Guarda Novato em apuros na câmara secreta a oeste e executar nova rodada de abates com *chill touch*.
