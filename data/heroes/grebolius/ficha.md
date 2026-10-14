@@ -11,7 +11,7 @@
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **3** *(Ascensão fulminante após abater o Monstro Novato)*
 * **Alinhamento Moral:** 12 (Neutro Pragmático)
-* **Localização Atual:** O Panteão dos Centenários (Santuário Supremo de Midgaard) — *Dormindo*
+* **Localização Atual:** A Ponte Sobre o Rio (Extremo Oeste de Midgaard) — *Dormindo com segurança*
 
 ---
 
@@ -24,7 +24,7 @@
 
 * **Experiência Acumulada:** **3.264 EXP**
 * **Experiência Necessária p/ Grau 4:** 1.736 EXP
-* **Ouro Líquido:** **453 moedas de ouro** *(+20 moedas de ouro saqueadas do monstro novato)*
+* **Ouro Líquido:** **453 moedas de ouro**
 * **Condição Biológica:** Plenamente nutrida e hidratada (provisões intactas, estamina e mana expandidas).
 
 ---
@@ -81,5 +81,5 @@
 ---
 
 ## ✦ Ciclo e Postura Atual
-* **Estado:** Conclusão do Dia 20 (Segunda Reflexão Decenal). Posição segura e consolidada no Panteão dos Centenários (27/27 HP, 106/106 MP, 87/87 MV, 453 ouros e 3.264 EXP). Seis sessões de treino disponíveis aguardando investimento na Guilda dos Magos.
-* **Tática Operacional:** Ingressar no Ciclo III (Dias 21–30) sob a nova matriz de identidade: audácia calculada, destruição da covardia paralisante, domínio pleno da visão arcana e marcha implacável rumo ao Grau 4 de Maestria.
+* **Estado:** Conclusão do Dia 21 (Início do Ciclo III). Exploração ativa da cidade em busca de missões: sondagem junto ao Pacificador e descoberta do sistema de tarefas da cidade (`ajuda aventura`). Descoberta da sinistra Entrada da Guilda dos Necromantes e avanço pela Muralha Oeste até A Ponte Sobre o Rio.
+* **Tática Operacional:** No próximo ciclo, participar oficialmente das aventuras de tarefas automáticas para acumular ouro e honra marcial, além de descarregar as 6 práticas na Mestre dos Magos e rumar ao Grau 4 de Maestria.

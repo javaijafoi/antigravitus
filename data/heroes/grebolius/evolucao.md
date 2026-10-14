@@ -298,3 +298,19 @@
        - Desbravar os mistérios de O Grande Tabuleiro de Xadrez de Midgaard e as câmaras profundas dos novatos.
        - Marchar com determinação impiedosa rumo ao Quarto Grau de Maestria (Nível 4).
 * **Veredito:** O disfarce foi consolidado, a lâmina foi consagrada com sangue e a mana está domada. Grebolius entra no Ciclo III não mais como aprendiz errante, mas como uma ladra arcana predadora pronta para fundar o Reino Livre dos Goblins.
+
+---
+
+### ⏳ Ciclo 21 (Dia 21): A Procura por Missões, o Enclave dos Necromantes e a Ponte Sobre o Rio
+* **Status Real (MUD):**
+  * Nível: **3** | Vida: **27/27** | Mana: **106/106** | Movimento: **87/87** | AC: 17
+  * Experiência: **3.264 EXP** *(Próximo nível: 1.736 EXP)*
+  * Ouro Líquido: **453 moedas de ouro**
+  * Sistema de Aventuras Descoberto: Comandos de autoquest ativos (`ajuda aventura` e `aventura participar`).
+  * Local de Pernoite: A Ponte Sobre o Rio / Panteão dos Centenários (Salvo e Dormindo).
+* **Marcos e Impactos Psicológicos:**
+  * **A Sondagem Ativa por Tarefas e Missões:** Consciente de sua recém-adquirida força de Nível 3, Grebolius procurou serviços com os habitantes. Interagiu com o Pacificador na Praça Comum e descobriu os protocolos formais de aventura e tarefas da cidade (`ajuda aventura`).
+  * **O Território dos Necromantes:** Cruzando o Beco Pobre além dos mendigos e sentinelas, deparou-se com a tenebrosa Entrada da Guilda dos Necromantes. Ali, além de um aventureiro famoso em busca de glória, confrontou o guarda envolto em ossos colossais que vociferou: *"Só necromantes entram aqui."* A percepção de que Midgaard abriga redutos mágicos ainda mais sombrios que a Guilda dos Magos aguçou sua curiosidade clandestina.
+  * **A Conquista da Muralha Oeste e a Ponte do Rio:** Desbravou a Rua da Muralha Oeste, lendo inscrições antigas entalhadas na rocha, e avançou até A Ponte Sobre o Rio — onde a água ruge dez pés abaixo da fortificação urbana. A geografia externa de Midgaard desdobra-se diante de seus olhos.
+* **Decisão Tática:**
+  * No Ciclo 22, ativar o comando `aventura participar` para receber a primeira missão oficial de Midgaard, além de acessar a Mestre dos Magos para finalmente consumir as 6 sessões de prática.
