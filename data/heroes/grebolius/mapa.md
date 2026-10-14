@@ -77,7 +77,8 @@
 | **O Cruzamento** | **S** (Mais Corredor), **O** (Corredor Sujo) | Baixo | Entroncamento de túneis; punhais e vestes espalhadas. |
 | **Mais Corredor** | **N** (Cruzamento), **S** (Outro Canto), **O** (Pequena Sala [porta aberta]) | Baixo / **Chave** | Porta de madeira a oeste; corredor de passagem onde o Bebê Dragão transita livremente. |
 | **Uma Pequena Sala** | **N** (O Corredor Sujo [porta de madeira]), **L** (Mais Corredor) | Lore / **NPC em Apuros** | Covil do Guarda Novato; entrega da coleira concluída; elmos místicos e passagem secreta norte para o Corredor Sujo. |
-| **Um Outro Canto** | **N** (Mais Corredor), **O** (Corredor Iluminado) | **Atenção** | **Câmara de Monstros:** Bebê dragão (SUICÍDIO no Nv 1) e Coisa Assustadora. Porta a leste. |
+| **Um Outro Canto** | **N** (Mais Corredor), **L** (A Sala do Alquimista [porta aberta]), **O** (Corredor Iluminado) | **Atenção** | **Câmara de Monstros & Passagem:** Bebê dragão e monstro novato. Porta a leste leva ao laboratório do alquimista. |
+| **A Sala do Alquimista** | **O** (Um Outro Canto), **N** (Porta Norte), **D** (Escadaria Escura Subsolo) | Lore / **Autoquest** | Covil d'O Novato Alquimista (autoquest Limpando Monstros); fórmulas nas paredes, diabinho/mico e escada misteriosa. |
 | **Um Corredor Iluminado** | **L** (Um Outro Canto), **O** (Fim do Corredor) | Baixo | Fachos de luz projetando sombras no chão de pedra. |
 | **O Fim do Corredor** | **L** (Corredor Iluminado), **O** (Campo Aberto) | **Caça / Treino** | **Campo de Abate:** Presença do Monstro Novato (396 XP, 20 ouros e punhal encantado). |
 | **Um Campo Aberto** | **N** (Grande Campo de Midgaard), **L** (O Fim do Corredor) | Seguro / **Rota de Fuga** | **Elo Circular:** Clareira bucólica e fresca que conecta o fundo da masmorra direto aos prados de Midgaard. |

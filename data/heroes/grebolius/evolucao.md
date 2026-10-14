@@ -546,5 +546,24 @@
 * **Decisão Tática:**
   * No Ciclo 34, realizar nova incursão focada em abater mais duas presas na masmorra e explorar novas salas ao redor do Tabuleiro de Xadrez ou além dos portões, rompendo os 20.000 EXP rumo ao Sétimo Grau (`armor`).
 
+---
+
+### ⏳ Ciclo 34 (Dia 34): O Alívio de Carga na Sala de Doações e o Enclave do Novato Alquimista
+* **Status Real (MUD):**
+  * Nível: **6** *(17.649 EXP | Faltam 7.351 EXP para o Grau 7)*
+  * Vida: **41/41** | Mana: **122/122** | Movimento: **91/92** | AC: **16**
+  * Gestão de Carga: Doação cívica da veste de novato excedente na Sala de Doações (`donate veste`), otimizando o peso corporal e a velocidade de marcha.
+  * Exploração e Descoberta: Destrancamento e abertura da porta leste em Um Outro Canto (`open east`), revelando **A Sala do Alquimista**.
+  * Localização de Personagem de Missão: **O Novato Alquimista** identificado (patrono da autoquest *Limpando Monstros*), acompanhado de um diabinho brincalhão, cercado por pergaminhos de alquimia e uma escadaria de pedra que desce ao subsolo escuro.
+  * Local de Pernoite: O Panteão dos Centenários (Salva e Dormindo diante dos doze heróis eternos).
+* **Marcos e Impactos Psicológicos:**
+  * **A Disciplina da Desova e a Caridade Tática:** Ao amanhecer no Panteão, Grebolius desceu ao Templo de Midgaard e adentrou a Sala de Doações. Carregar armaduras extras das quais não necessita é peso morto desnecessário; com o comando cívico de doação (`donate veste`), depositou a túnica mágica excedente para amparar futuros aventureiros iniciantes, aliviando o fardo das costas com elegância e praticidade.
+  * **O Destrancar do Enclave Secreto:** Marchou de volta à Masmorra dos Novatos, cruzou o Corredor Sujo e alcançou Um Outro Canto. Em vez de apenas abater feras, examinou a sólida porta de carvalho entalhada na parede leste. Forçando o trinco com determinação ladina (`open east`), a pesada folha cedeu, desvelando *A Sala do Alquimista*.
+  * **O Covil dos Elixires e a Escada das Profundezas:** Diante de frascos borbulhantes e fórmulas místicas rabiscadas nas paredes de pedra, avistou a figura excêntrica d'O Novato Alquimista, acompanhado por um diabinho saltitante. A inspeção tática revelou o portal da cobiçada autoquest *Limpando Monstros*, além de uma escada que desce às trevas do subsolo da masmorra.
+  * **Retirada Estratégica e Recolhimento Sagrado:** Ciente de que reconhecimento sem planejamento é imprudência, registrou as coordenadas nos pergaminhos de mapa, cruzou o corredor oeste e emergiu pelo Campo Aberto. Saciou a sede na Fonte Azul e ascendeu novamente às abóbadas solenes do Panteão dos Centenários para salvar seu progresso e repousar em segurança absoluta.
+* **Decisão Tática:**
+  * No Ciclo 35, entrar n'A Sala do Alquimista, dialogar com o Novato Alquimista para ativar formalmente a autoquest *Limpando Monstros*, descer à escadaria ou patrulhar as galerias para abater as aberrações solicitadas, acumulando glória e experiência rumo aos 25.000 EXP.
+
+
 
 

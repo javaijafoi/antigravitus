@@ -79,12 +79,12 @@
 * **`um cantil`** *(cheio com água límpida da Fonte de Mármore Azul)*
 * **`um anel arcano`** (+2E)
 * **`uma mochila`** *(contendo: 4 punhais novatos reservas, 1 cantil reserva e 1 gorro de couro)*
-* `uma brilhante veste de novato` (reserva de saque)
 
 ---
 
 ## ✦ Ciclo e Postura Atual
-* **Estado:** Conclusão do Dia 33. Ofensiva letal nas galerias da Masmorra dos Novatos: dois monstros novatos abatidos com rajadas arcanas e estocadas críticas viscerais, ceifando mais de 2.600 pontos de experiência e 40 moedas de ouro. Experiência explodindo para **17.649 EXP** (restando 7.351 EXP para o Grau 7). Diálogo e estreitamento de laços com o Mago Aventureiro no Bar dos Magos pela autoquest Dicas Mágicas. Hidratação na Fonte Azul e repouso inviolável no Panteão dos Centenários.
-* **Tática Operacional:** Continuar os abates sistemáticos nas câmaras da masmorra, explorar as instruções arcanas do Mago Aventureiro e acelerar a marcha rumo aos 25.000 EXP para coroar o Nível 7 (`armor`).
+* **Estado:** Conclusão do Dia 34. Doação cívica da veste de novato excedente na Sala de Doações (`donate veste`), aliviando o peso de marcha. Reconhecimento avançado da Masmorra dos Novatos: destrancamento e abertura da porta leste em Um Outro Canto (`open east`), desvelando **A Sala do Alquimista** e o paradeiro d'O Novato Alquimista (gatilho da autoquest *Limpando Monstros*), fórmulas arcanas nas paredes e escadaria secreta para o subsolo. Retorno triunfal a Midgaard pelo Campo Aberto, hidratação na Fonte Azul e repouso inviolável no Panteão dos Centenários.
+* **Tática Operacional:** No próximo ciclo, interagir com o Novato Alquimista em sua câmara para ativar a autoquest Limpando Monstros, limpar as galerias inferiores e acumular experiência rumo ao Sétimo Grau (25.000 EXP).
+
 
 

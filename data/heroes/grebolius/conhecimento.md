@@ -22,6 +22,7 @@
 | **O Pranteador da Cidade** | Praça Comum | **Nulo / Trágico** | **IGNORAR** | Figura em luto perpétuo lamentando sobre as pedras da praça. |
 | **Mago Guardião** | Entrada da Guilda dos Magos | **Severo** | **EVITAR ENTRADA** | Envolto em barreira de luz mágica protetora; vigia a passagem para a guilda. |
 | **Guarda Novato** | Masmorra dos Novatos (Pequena Sala) | **Neutro / Missão** | **MISSÃO CONCLUÍDA** | Sentinela que perdeu a coleira do filhote de dragão; recebeu a coleira e concedeu 5.000 EXP de recompensa. |
+| **Novato Alquimista** | Masmorra dos Novatos (Sala do Alquimista)| **Neutro / Autoquest**| **AUTOQUEST DISPONÍVEL** | Mestre das poções na masmorra; inicia a autoquest 'Limpando Monstros' (até Nv 30); guarda diabinho e escadaria do subsolo. |
 | **Bebê Dragão** | Área dos Novatos (Corredor Sujo) | **Neutro / Estimação** | **COLEIRA ENTREGUE** | Filhote de réptil alado do Alquimista; protegido pela coleira entregue ao guarda, zanzando pacífico pelos corredores. |
 | **Coisa Assustadora** | Área dos Novatos (Outro Canto) | **Médio / Rastejante** | **CAUTELA** | Verme sombrio rastejando no lodo dos canos; precisa de sorte na vida. |
 | **Monstro Novato** | Área dos Novatos (Fim do Corredor)| **Fácil / Presa Ideal** | **ABATE CONFIRMADO** | Criatura dosada para treino; poder nulo (*"perda de tempo"*). Rendimento: 396 XP, 20 ouros e adaga. |
