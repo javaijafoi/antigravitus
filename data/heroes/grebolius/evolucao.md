@@ -1016,3 +1016,22 @@
   * **Retorno Sagrado:** Após doar armamentos na sala de caridade, subiu ao Panteão e dormiu em paz diante das estátuas lendárias.
 * **Decisão Tática:**
   * No Ciclo 58, intensificar a pressão ofensiva, quebrar a barreira dos 45.000 EXP e preparar o terreno para a reflexão de `/learn` no Dia 59.
+---
+
+### ⏳ Ciclo 58 (Dia 58): O Destravar do Ferrolho, a Descoberta do Caminho Iluminado e os Quarenta e Cinco Mil Passos
+* **Status Real (MUD):**
+  * Nível: **8** *(45.335 EXP | Faltam 14.665 EXP para o Grau 9)*
+  * Vida: **52/52** | Mana: **140/140** | Movimento: **94/95** | AC: **40** *(Armadura Arcana ativa)*
+  * Salto de Experiência: **+612 EXP** em abates cirúrgicos; rompimento definitivo da barreira dos 45.000 EXP.
+  * Ouro Líquido: **1.051 moedas de ouro** *(Patrimônio mantido acima do milhar).*
+  * Alinhamento Moral: 15 (Neutro Pragmático).
+  * Fisiologia e Nutrição: Hidratação e ticks vitais em equilíbrio pleno.
+  * Conquista Mecânica e Exploração: Resolução do comando de destravamento com `open north`, transpondo a porta do Cruzamento e descobrindo `Um Caminho Iluminado` (galeria nobre e decorada com projeto no chão que leva aos aposentos do Alquimista); acampamento ativo na Sala do Guarda.
+  * Local de Pernoite: O Panteão dos Centenários (Salva e Dormindo diante dos doze heróis eternos).
+* **Marcos e Impactos Psicológicos:**
+  * **O Clique da Vitória Mecânica:** Grebolius testou o comando preciso `open north` perante o umbral norte do Cruzamento. As pesadas dobradiças de ferro cederam com um estalo seco, revelando uma câmara surpreendente: `Um Caminho Iluminado`, com paredes alvas, piso decorado e um projeto intrigante entalhado nas lajes. A rota para os segredos do Alquimista está desobstruída.
+  * **A Ruptura dos Quarenta e Cinco Mil:** Na marcha de combate pelas galerias laterais, canalizou o leque impiedoso de Mãos Flamejantes e o aço de novato, ceifando mais **612 EXP** e alcançando a marca histórica de **45.335 EXP**. Faltam menos de quinze mil passos para o lendário Nível 9.
+  * **Acampamento e Doação:** Descansou ativamente na câmara de guarda sem recuos prematuros, fez o descarte de lâminas na sala de doações e ascendeu ao Panteão.
+  * **Pernoite Sagrado:** Repouso restaurador aos pés dos doze heróis eternos, pronta para a reflexão decenal e aprimoramento metodológico de `/learn` no Dia 59.
+* **Decisão Tática:**
+  * No Ciclo 59 (Dia 59), executar o protocolo completo de `/learn` para aprimorar as doutrinas de exploração, refinar o `mud-ciclo-diario` e avançar pelo Caminho Iluminado.
