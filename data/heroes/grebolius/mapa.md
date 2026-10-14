@@ -4,7 +4,7 @@
 
 ---
 
-## 🏛️ Eixo Urbano de Midgaard (Mapeamento Consolidado — Dias 1 a 9)
+## 🏛️ Eixo Urbano de Midgaard (Mapeamento Consolidado — Dias 1 a 10)
 
 | Sala | Saídas Verificadas | Nível de Risco | Notas de Campo / Utilidade |
 | :--- | :--- | :--- | :--- |
@@ -29,11 +29,14 @@
 | **Término da Rua Principal**| **N** (Magias), **L** (Rua Oeste), **S** (Magos), **O** (Portão Oeste) | Baixo | Intersecção chave vigiada pelo colossal Pacificador. |
 | **A Loja de Magias** | **S** (Rua Principal) | Seguro | Feiticeiro solitário, prateleiras com poções, cajados e pergaminhos. |
 | **A Entrada da Guilda dos Magos**| **N** (Rua Principal), **S** (Bar dos Magos) | Atenção | Mago Guardião com barreira de luz, caixa de moedas, carne apodrecendo e cão. |
+| **O Bar dos Magos** | **N** (Entrada da Guilda), **L** (Laboratório) | Seguro / Místico | Salão psicodélico com imagens flutuantes, garçom quieto e quadro de avisos. |
+| **O Laboratório dos Magos** | **O** (Bar dos Magos), **D** (Esgotos) | Arcano / Subsolo | Covil da Mestre da Guilda dos Magos; pentagramas, lousa arcana e buraco para o submundo. |
 | **Dentro do Portão Oeste** | **L** (Rua Principal), **S** (Muralha), **O** (Fora do Portão) | Médio | Duas torres de vigia sobre ponte levadiça, 2 guardas armados, 2 espadas no chão. |
 | **A Praça do Templo** | **N** (Escadaria), **L** (Javali), **S** (Comércio), **O** (Clérigos) | Baixo | Fonte de mármore azul com aura mágica; O Pacificador em vigília; restos de zeladores. |
 | **A Entrada da Guilda dos Clérigos** | **L** (Praça do Templo) | Seguro | Enclave religioso a oeste da Praça do Templo. |
 | **A Entrada do Javali Roncador** | **O** (Praça do Templo) | Baixo / Taverna | Estalagem e bar tradicional a leste da praça. |
 | **O Templo de Midgaard** | **N** (Altar), **L** (Doações), **O** (Leitura), **D** (Praça), **U** (Panteão) | **Santuário** | **Ponto Seguro Principal:** Inviolável, caixa de economias, conexão para o cume. |
+| **O Altar do Templo de Midgaard** | **S** (Templo de Midgaard) | Sagrado | Nave norte do templo consagrada aos deuses fundadores de Midgaard. |
 | **A Sala de Doações** | **O** (Templo de Midgaard) | Seguro | Depósito de itens e armaduras deixados por veteranos para novatos. |
 | **A Sala de Leitura** | **L** (Templo de Midgaard) | Seguro | Sala silenciosa com mesas, bancos e grande quadro de mensagens. |
 | **O Panteão dos Centenários** | **D** (Templo de Midgaard) | **Santuário Supremo** | **Cume Sagrado:** Altar lendário, estátuas imortais dos heróis eternos e repouso supremo. |

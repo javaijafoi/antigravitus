@@ -4,10 +4,11 @@
 
 ---
 
-## 👹 1. Bestiário, Mestres & Figuras de Midgaard (Dias 1 a 9)
+## 👹 1. Bestiário, Mestres & Figuras de Midgaard (Dias 1 a 10)
 
 | Alvo / Personagem | Localização Confirmada | Risco / Natureza | Veredito de Interação | Observações Táticas |
 | :--- | :--- | :--- | :--- | :--- |
+| **Mestre da Guilda dos Magos** | Laboratório dos Magos | **Colossal / Suprema** | **REVERÊNCIA / OBSERVAR** | Feiticeira lendária estudando grimórios sob intensa barreira de luz mágica. |
 | **Fido Bestial** | Rua Oeste / Beco Escuro | **Baixo / Abatido** | **PRESA DERROTADA** | Besta canina agressiva; eliminada com punhalada mortal no abdome no Ciclo 9. |
 | **Cachorros no Lixo** | Rua Leste / Padaria / Magos / Portão | **Baixo** | **PRESAS DE OPORTUNIDADE** | Vulneráveis, porém exigem precisão; atacar isolados sem sentinelas armados ao lado. |
 | **Winkan, o Engenheiro do Caos**| O Templo de Midgaard | **Incalculável / Mestre** | **REVERÊNCIA / OBSERVAR** | Veterano lendário em meditação profunda cercado por luz protetora ofuscante. |
@@ -27,7 +28,9 @@
 ## 🏰 2. Zonas Estratégicas Verificadas
 * **O Panteão dos Centenários (Santuário Supremo):** No cume sagrado acima do Templo. Altar das estátuas lendárias (Deck, Kara, Brandon, Wolf, Sakura, Tommyknocker, etc.), proteção divina absoluta contra qualquer agressão.
 * **O Templo de Midgaard (Santuário):** Ponto primordial de descanso inviolável e caixa para poupar moedas.
-* **Os Esgotos de Midgaard (Subsolo):** Entrada vertical a partir do Depósito de Lixo; labirinto subterrâneo para fuga e caça furtiva.
+* **O Laboratório dos Magos:** Enclave arcano de estudos profundos; abriga a Mestre da Guilda e uma passagem vertical para os esgotos subterrâneos.
+* **O Bar dos Magos:** Ponto de encontro arcano com imagens psicodélicas flutuando no ar.
+* **Os Esgotos de Midgaard (Subsolo):** Entrada vertical a partir do Depósito de Lixo e do Laboratório dos Magos; labirinto subterrâneo para fuga e caça furtiva.
 * **A Sala de Doações (Depósito de Armamento):** Na nave leste do Templo; fonte gratuita de vestes, punhais encantados e ferramentas úteis deixadas por veteranos.
 * **A Sala de Leitura:** Ala oeste do Templo; mesa de consulta, mural de avisos comunitário e ambiente pacífico.
 * **A Guilda dos Ladrões:** Ao sul do Beco Escuro; santuário primordial de treinamento e mestres de adaga de Grebolius.

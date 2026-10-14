@@ -113,6 +113,22 @@
 * **Decisão Tática:**
   * O Ciclo 10 marcará o primeiro ciclo decenal de reflexão estratégica obrigatória: avaliar se a velocidade de progressão e a escolha de armamento e guildas estão no caminho mais eficiente para a fundação do reino soberano.
 
+---
+
+### ⏳ Ciclo 10 (Dia 10): O Enclave Arcano e a Primeira Reflexão Estratégica Decenal
+* **Status de Campo:**
+  * Local de Repouso: O Panteão dos Centenários.
+  * Descoberta Nobre: Entrada no Bar dos Magos e no Laboratório Arcano. Contato visual com a Mestre da Guilda dos Magos e identificação do buraco que conecta o laboratório diretamente aos esgotos subterrâneos.
+* **📜 Grande Balanço Estratégico Decenal (Ciclos 1 ao 10):**
+  1. **Avaliação do Disfarce:** O estratagema masculino salvou Grebolius da escravidão ou violência vulgar de rua nos primeiros dias. Porém, os sentinelas das guildas não respeitam disfarces fracos; o respeito só será conquistado com letalidade incontestável.
+  2. **Avaliação de Combate:** A regra de só lutar com 100% de vitória garantida provou ser perfeita — o primeiro combate no Ciclo 9 rendeu maturidade pura sem ferimentos. No entanto, caçar presas fracas nas ruas urbanas é muito lento.
+  3. **Reorientação Operacional (Ciclos 11 a 20):**
+     * Descer ao labirinto dos Esgotos para colher riqueza e armas reais de criaturas subterrâneas.
+     * Cruzar os portões para os ermos exteriores de Midgaard.
+     * Forçar o treino com os mestres e acumular moedas de ouro para armamento de ponta.
+* **Veredito:** A ambição de libertar o povo goblin e alcançar a supremacia dos mestres permanece inabalável. A era da mera sobrevivência acabou; começa a era da expansão.
+
+
 
 
 
