@@ -22,10 +22,10 @@
 | **Pontos de Mana (MP)** | 122 | 122 | 100% |
 | **Estamina / Movimento (MV)** | 91 | 92 | 99% |
 
-* **Experiência Acumulada:** **21.035 EXP** *(+324 EXP obtidos em combate em Mais Corredor)*
-* **Experiência Necessária p/ Grau 7:** **3.965 EXP**
-* **Ouro Líquido:** **609 moedas de ouro** *(+20 moedas saqueadas do monstro abatido)*
-* **Condição Biológica:** Vigor absoluto; sede saciada na Fonte de Mármore Azul; cantil abastecido; apetite sinalizado a ser saciado no próximo despertar com provisões da mochila.
+* **Experiência Acumulada:** **21.287 EXP** *(+252 EXP obtidos em combate no Cruzamento)*
+* **Experiência Necessária p/ Grau 7:** **3.713 EXP**
+* **Ouro Líquido:** **629 moedas de ouro** *(+20 moedas saqueadas do monstro abatido)*
+* **Condição Biológica:** Vigor absoluto; fome erradicada com carne fresca na Sala de Doações; sede saciada na Fonte de Mármore Azul; fôlego pleno.
 
 ---
 
@@ -93,8 +93,9 @@
 ---
 
 ## ✦ Ciclo e Postura Atual
-* **Estado:** Conclusão do Dia 37. Doação cívica de veste e punhal excedentes na Sala de Doações, desvelando a conclusão oficial da missão **Altruísmo** (*"Missão completa! Você completou a missão Altruísmo!"*). Hidratação na Fonte Azul e contato de mentoria no Bar dos Magos. Ofensiva precisa em Mais Corredor, abatendo o monstro novato com rajada de Míssil Mágico e estocada crítica mortal, colhendo 324 EXP e 20 moedas de ouro. Experiência avançando para **21.035 EXP** (restando apenas 3.965 EXP para o Nível 7). Repouso inviolável no Panteão dos Centenários.
-* **Tática Operacional:** No Ciclo 38, consumir alimento da mochila para aplacar a fome, caçar as presas nas galerias para romper os 25.000 EXP (Nível 7), treinar a nova magia defensiva `armor` no Laboratório dos Magos e preparar o terreno para a rotina de `/learn` no Dia 39.
+* **Estado:** Conclusão do Dia 38. Nutrição biológica com carne fresca na Sala de Doações (`eat carne`), erradicando a fome acumulada e hidratando-se na Fonte Azul da Praça do Templo. Incursão cirúrgica na Masmorra dos Novatos: confronto mortal no Cruzamento com rajada de Míssil Mágico e dupla perfuração visceral (12 e 12 de dano), ceifando 252 EXP e 20 moedas de ouro. Experiência subindo para **21.287 EXP** (restando apenas 3.713 EXP para o Sétimo Grau). Repouso inviolável no Panteão dos Centenários.
+* **Tática Operacional:** No Ciclo 39 (dia "9" do ciclo decenal), executar obrigatoriamente a rotina de **/learn** para aprimorar e persistir a metodologia de jogo e automação do agente, realizar a caçada diária rumo aos 25.000 EXP e preparar o grande balanço decenal do Dia 40.
+
 
 
 
