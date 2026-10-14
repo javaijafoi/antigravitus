@@ -262,5 +262,22 @@
 * **Decisão Tática:**
   * No Ciclo 19, explorar a Guilda dos Magos para treinar as novas magias (`detect invisibility`, `detect magic`), testar o anel arcano (+2E) com a nova maturidade e conduzir nova incursão de caça.
 
+---
+
+### ⏳ Ciclo 19 (Dia 19): O Chamado da Guilda, a Estocada Mortal e a Tríade de Lâminas
+* **Status Real (MUD):**
+  * Nível: **3** | Vida: **27/27** | Mana: **106/106** | Movimento: **86/87** | AC: 17
+  * Experiência: **3.264 EXP** *(Próximo nível: 1.736 EXP)*
+  * Ouro Líquido: **453 moedas de ouro** *(+20 moedas de saque)*
+  * Sessões de Treino Disponíveis: **6 sessões de prática** prontas para investimento na Guilda.
+  * Arsenal: Tríade de `brilhante punhal de novato` com aura mística (1 empunhado + 2 reservas).
+  * Local de Pernoite: O Panteão dos Centenários (Salvo e Dormindo).
+* **Marcos e Impactos Psicológicos:**
+  * **O Reconhecimento da Guilda dos Magos:** Grebolius consultou a lousa mística da guilda e constatou a liberação de 6 sessões de prática acumuladas para elevar suas recém-desbloqueadas magias de visão arcana (`detect invisibility` e `detect magic`).
+  * **A Letalidade Cirúrgica em Combate:** Retornando à Área dos Novatos, abateu o Monstro Novato em segundos: disparo de Projétil Mágico seguido de esquiva fluida e perfuração letal no coração causando 18 de dano crítico. A presa caiu morta sem ferir a aventureira, rendendo mais 180 EXP, 20 ouros e o terceiro punhal místico.
+  * **A Preparação da Reflexão Decenal:** A aventureira aproxima-se do Dia 20 com a certeza de que a audácia e o aço forjaram uma identidade completamente nova e soberana.
+* **Decisão Tática:**
+  * No Ciclo 20 (Marco Decenal), conduzir a Segunda Reflexão Decenal, investir as sessões de treino com a Mestre dos Magos e consolidar a mutação em sua identidade.
+
 
 

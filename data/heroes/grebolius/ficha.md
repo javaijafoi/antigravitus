@@ -22,9 +22,9 @@
 | **Pontos de Mana (MP)** | 106 | 106 | 100% |
 | **Estamina / Movimento (MV)** | 87 | 87 | 100% |
 
-* **Experiência Acumulada:** **3.084 EXP**
-* **Experiência Necessária p/ Grau 4:** 1.916 EXP
-* **Ouro Líquido:** **433 moedas de ouro** *(+20 moedas de ouro saqueadas do monstro novato abatido)*
+* **Experiência Acumulada:** **3.264 EXP**
+* **Experiência Necessária p/ Grau 4:** 1.736 EXP
+* **Ouro Líquido:** **453 moedas de ouro** *(+20 moedas de ouro saqueadas do monstro novato)*
 * **Condição Biológica:** Plenamente nutrida e hidratada (provisões intactas, estamina e mana expandidas).
 
 ---
@@ -47,11 +47,12 @@
 ---
 
 ## ✦ Habilidades Conhecidas e Treinos Pendentes
+* **Sessões de Treino Acumuladas:** **6 sessões de prática disponíveis** *(liberadas com a ascensão ao Grau 3)*
 * **Perícias e Encantamentos:**
-  * `magic missile` (Projétil Mágico): **95%+** (Grau: Perfeito / Letalidade Comprovada)
+  * `magic missile` (Projétil Mágico): **97%+** (Grau: Perfeito / Letalidade Comprovada)
   * `swim` (Natação): **55%** (Grau: Bom / Sobrevivência em Águas)
-  * `detect invisibility` (Detectar Invisibilidade): **Desbloqueada** *(Grau 3 — Percepção mística desperta)*
-  * `detect magic` (Detectar Magia): **Desbloqueada** *(Grau 3 — Visão de auras arcanas desperta)*
+  * `detect invisibility` (Detectar Invisibilidade): **10%** *(Disponível para treino na guilda)*
+  * `detect magic` (Detectar Magia): **10%** *(Disponível para treino na guilda)*
 
 ---
 
@@ -68,8 +69,8 @@
 
 ---
 
-## ✦ Inventário Carregado (Mochila e Espólios Místicos)
-* **2x `um brilhante punhal de novato`** *(um empunhado + dois reservas com aura mágica de velocidade)*
+## ✦ Inventário Carregado (Tríade de Lâminas e Mochila)
+* **3x `um brilhante punhal de novato`** *(um empunhado + três reservas com aura mágica de velocidade)*
 * **`uma rosquinha malhada`** *(confeitaria energética de emergência guardada na mochila)*
 * **`uma mochila`** *(mochila de lona para transporte de carga)*
 * `um gorro de couro` (proteção reserva)
@@ -80,5 +81,5 @@
 ---
 
 ## ✦ Ciclo e Postura Atual
-* **Estado:** Triunfo marcial e espiritual do Dia 18. Fim da paralisia covarde: combate ofensivo frontal contra o Monstro Novato; vitória com saraivada de raios arcanos e punhal; salto direto do Nível 1 para o Nível 3; 3.084 EXP conquistados; desbloqueio das magias de detecção; descoberta do Grande Tabuleiro de Xadrez de Midgaard.
-* **Tática Operacional:** Com 27 HP e 106 MP, continuar a caçada ofensiva com coragem calculada, treinar novas magias na Guilda dos Magos e preparar o terreno para a Segunda Reflexão Decenal.
+* **Estado:** Consolidação marcial do Dia 19. Consulta na Guilda dos Magos revelando 6 sessões de prática prontas para investimento; segundo combate consecutivo contra o Monstro Novato resultando em execução rápida com dano crítico (18 de perfuração no coração); conquista do terceiro punhal místico e acúmulo de 453 ouros.
+* **Tática Operacional:** Preparar a Segunda Reflexão Decenal no Ciclo 20, consolidando a transformação de ratazana fujona em predadora de sangue frio rumo ao Grau 4 e à soberania goblin.
