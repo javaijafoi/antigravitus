@@ -7,7 +7,7 @@
 ## ✦ Identificação e Registro
 * **Nome de Registro no MUD:** Grebolius
 * **Título Honorífico:** o Aprendiz de Mago
-* **Raça / Aparência Real:** Mulher Goblin (disfarçada de jovem guerreiro com faixas e elmo abaixado)
+* **Raça / Aparência Real:** Mulher Goblin (disfarçada de jovem guerreiro com manto largo, capuz pesado e elmo abaixado)
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **8** *(Oitavo Grau de Maestria conquistado — Barreira dos 40.000 EXP rompida em triplo combate fatal!)*
 * **Alinhamento Moral:** 15 (Neutro Pragmático)
