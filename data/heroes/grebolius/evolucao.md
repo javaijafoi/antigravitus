@@ -402,3 +402,20 @@
   * **Marcha Armada e Posição Avançada:** Cruzou novamente os prados verdejantes do Grande Campo até o portão de pedra de O Grande Tabuleiro de Xadrez de Midgaard. Estabeleceu seu posto de vigília junto às lajes monumentais, verificou suas armas mágicas e adormeceu com a mente afiada para a próxima investida.
 * **Decisão Tática:**
   * No Ciclo 27, penetrar na Masmorra dos Novatos para abrir a câmara secreta do Guarda Novato em apuros e executar nova varredura de presas com o feitiço gélido *chill touch*.
+
+---
+
+### ⏳ Ciclo 27 (Dia 27): A Câmara Secreta, o Apelo do Guarda Novato e a Sombra do Dragão
+* **Status Real (MUD):**
+  * Nível: **4** | Vida: **33/33** | Mana: **111/111** | Movimento: **88/89** | AC: 17
+  * Experiência: **6.015 EXP** *(Próximo nível: 3.985 EXP)*
+  * Ouro Líquido: **469 moedas de ouro**
+  * Provisões: Cantis cheios de água cristalina da Fonte Azul; 2 pães recheados em estoque.
+  * Local de Pernoite: O Panteão dos Centenários (Salva e Dormindo sob a bênção dos doze heróis eternos).
+* **Marcos e Impactos Psicológicos:**
+  * **Incursão Determinada e Abertura da Câmara Secreta:** Despertando junto ao portão d'O Grande Tabuleiro de Xadrez, Grebolius marchou rapidamente pelas campinas até a Entrada da Área dos Novatos. Penetrou nos corredores subterrâneos e avançou direto até Mais Corredor. Ali, forçou a maçaneta e escancarou a porta de madeira batida a oeste (`open west`), adentrando em **Uma Pequena Sala**.
+  * **O Contato com o NPC e a Revelação da Missão:** Na sala secreta, encontrou o **Guarda Novato**, desesperado e atordoado. O sentinela confessou em pânico: *"Você viu esse dragão? O Mestre vai arrancar minha cabeça se eu não achá-lo! Ei, você poderia me dar uma mãozinha aqui?"*. Grebolius interrogou o guarda sobre a criatura, descobrindo que se trata do filhote de estimação do temível Alquimista de Midgaard.
+  * **O Vislumbre do Bebê Dragão:** Ao sair da câmara e retornar ao corredor principal, o ar estalou com passos pesados e escamas raspando nas pedras: o lendário **Bebê Dragão** emergiu das sombras ao sul! A visão do pequeno réptil cuspidor de fogo ao vivo confirmou a oportunidade de ouro: ajudar o guarda pode render o favor do Alquimista ou recompensas valiosas.
+  * **Retorno Estratégico e Descanso Sagrado:** Sem precipitar um combate suicida contra o dragão sem preparo específico, contornou pelo Campo Aberto, cruzou os prados rurais e alcançou a Praça do Templo. Reidratou-se com fartura nas águas místicas da Fonte de Mármore Azul e subiu as escadarias sagradas até o Panteão dos Centenários. Dormiu em paz absoluta diante das doze estátuas imortais (Allam, Kara, Brandon, Wacabayaxe, Tommyknocker, Deck, Wolf, Magnus, Jooh, Pedroportugal, Kosmo e Sakura).
+* **Decisão Tática:**
+  * No Ciclo 28, planejar a abordagem do Bebê Dragão (tentar capturá-lo com as coleiras espalhadas ou testar feitiços de contenção) para resolver a missão do Guarda Novato e consolidar sua fama entre os mestres de Midgaard.

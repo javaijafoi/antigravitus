@@ -11,7 +11,7 @@
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **4** *(Quarto Grau de Maestria consolidado)*
 * **Alinhamento Moral:** 25 (Neutro Pragmático)
-* **Localização Atual:** O Grande Tabuleiro de Xadrez de Midgaard (Fronteira Oeste dos Campos) — *Salva e Dormindo junto ao portão colossal*
+* **Localização Atual:** O Panteão dos Centenários (Cume sagrado do Templo de Midgaard) — *Salva e Dormindo sob o olhar das estátuas lendárias*
 
 ---
 
@@ -20,12 +20,12 @@
 | :--- | :---: | :---: | :---: |
 | **Pontos de Vida (HP)** | 33 | 33 | 100% |
 | **Pontos de Mana (MP)** | 111 | 111 | 100% |
-| **Estamina / Movimento (MV)** | 89 | 89 | 100% |
+| **Estamina / Movimento (MV)** | 88 | 89 | 99% |
 
 * **Experiência Acumulada:** **6.015 EXP**
 * **Experiência Necessária p/ Grau 5:** 3.985 EXP
-* **Ouro Líquido:** **469 moedas de ouro** *(24 moedas investidas em 4 pães recheados na Padaria)*
-* **Condição Biológica:** Fome 100% saciada com pães recheados; cantis abastecidos com água da Fonte Azul; fôlego e vigor plenos.
+* **Ouro Líquido:** **469 moedas de ouro**
+* **Condição Biológica:** Sede saciada na Fonte Azul; cantis reabastecidos; 2 pães recheados em estoque na mochila; energia plena.
 
 ---
 
@@ -80,5 +80,5 @@
 ---
 
 ## ✦ Ciclo e Postura Atual
-* **Estado:** Conclusão do Dia 26. Manobra logística e de reconhecimento: descida rápida à Padaria de Midgaard, compra e consumo de pães frescos cessando qualquer ameaça de fraqueza física, sondagem oficial do sistema de autoquests (`quest participar`) perante o mural da Praça do Comércio e marcha resoluta através dos prados até o portal d'O Grande Tabuleiro de Xadrez de Midgaard.
-* **Tática Operacional:** No próximo ciclo (Dia 27), explorar as salas da Masmorra dos Novatos para contactar o Guarda Novato em apuros na câmara secreta a oeste e executar nova rodada de abates com *chill touch*.
+* **Estado:** Conclusão do Dia 27. Incursão de investigação e contato na Masmorra dos Novatos: avanço pelas galerias, abertura da porta secreta a oeste de Mais Corredor e diálogo com o Guarda Novato em apuros, desesperado com o sumiço do bebê dragão do Alquimista (*"O Mestre vai arrancar minha cabeça se eu não achá-lo!"*). Vislumbre do pequeno dragão cruzando o corredor sul. Retorno triunfal pela Fonte Azul e pernoite no Panteão dos Centenários.
+* **Tática Operacional:** No próximo ciclo (Dia 28), rastrear a rota do Bebê Dragão pelos cantos da masmorra, avaliar as opções para subjugá-lo ou devolvê-lo ao guarda, ou expandir a caçada pelas Casas Pretas do Tabuleiro de Xadrez.
