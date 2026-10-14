@@ -56,6 +56,14 @@ def create_hero(slug, name, race_class="Guerreiro", rune="⚔️", avatar="🛡�
             "weapon": "Arma de Novato",
             "weapon_icon": rune or "🗡️",
             "sanctuary": "Templo de Midgaard"
+        },
+        "voice": {
+            "engine": "edge-tts",
+            "voice_id": "pt-BR-AntonioNeural",
+            "rate": "+0%",
+            "pitch": "+0Hz",
+            "style": "default",
+            "description": f"Voz narrativa de {name} ({race_class})"
         }
     }
 
@@ -64,7 +72,7 @@ def create_hero(slug, name, race_class="Guerreiro", rune="⚔️", avatar="🛡�
 
     # 2. Copia e hidrata os templates canônicos de _template
     template_dir = os.path.join(HEROES_DIR, "_template")
-    files_to_copy = ["identidade.md", "evolucao.md", "conhecimento.md", "mapa.md", "ficha.md"]
+    files_to_copy = ["identidade.md", "evolucao.md", "conhecimento.md", "mapa.md", "mapa.json", "ficha.md"]
     for fname in files_to_copy:
         src = os.path.join(template_dir, fname)
         dst = os.path.join(target_dir, fname)

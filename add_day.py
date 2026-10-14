@@ -50,6 +50,8 @@ def add_chronicle(day_num, title, date_str, in_game_time, excerpt, tags, content
         json.dump(posts, f, ensure_ascii=False, indent=2)
         
     print(f"[{hero_id.upper()}] Crônica do Dia {day_num} ('{title}') gravada em {posts_path}!")
+    if int(day_num) % 10 == 0:
+        print(f"⏳ MARCO DECENAL ALCANÇADO (Dia {day_num})! Lembre-se de atualizar e sincronizar o mapa interativo: data/heroes/{hero_id}/mapa.json e mapa.md")
 
     # Se for antigravitus, mantém o data/posts.json legado sincronizado
     if hero_id == "antigravitus":

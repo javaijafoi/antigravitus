@@ -20,18 +20,24 @@ antigravitus/
 │       │   ├── identidade.md     # As 5 Perguntas Capitais da alma
 │       │   ├── evolucao.md       # O Cinzel da Consciência (log ciclo a ciclo)
 │       │   ├── conhecimento.md   # Grimório de Midgaard (topografia e lore)
+│       │   ├── mapa.md           # Mapeamento consolidado das salas (a cada 10 ciclos)
+│       │   ├── mapa.json         # Dados do mapa topológico interativo (a cada 10 ciclos)
+│       │   ├── ficha.md          # Ficha viva em tempo real
 │       │   └── posts.json        # Base das crônicas do Antigravitus
 │       └── grebolius/            # Goblin Ladra (A Soberana dos Goblins)
 │           ├── hero.json         # Metadados e apresentação visual
 │           ├── identidade.md     # 5 Perguntas Capitais (enxutas)
 │           ├── evolucao.md       # Log de evolução rápido
 │           ├── conhecimento.md   # Compêndio de ameaças e treino
-│           ├── mapa.md           # Mapeamento simplificado de salas
+│           ├── mapa.md           # Mapeamento simplificado de salas (a cada 10 ciclos)
+│           ├── mapa.json         # Dados do mapa topológico interativo (a cada 10 ciclos)
 │           ├── ficha.md          # Ficha técnica viva do MUD
 │           └── posts.json        # Crônicas concisas (ordem crescente)
-├── css/style.css                 # Dark fantasy responsivo com Seletor de Heróis
-├── js/main.js                    # Engine multi-herói: renderização, busca e tags
+├── css/style.css                 # Dark fantasy responsivo com Seletor de Heróis e Mapa
+├── js/main.js                    # Engine multi-herói: crônicas, mapa interativo e ficha
 ├── index.html                    # Feed com seletor dinâmico de heróis
+├── mapa.html                     # Mapa topológico interativo por aventureiro
+├── ficha.html                    # Ficha técnica viva do personagem ativo
 ├── sobre.html                    # Perfil e matriz psicológica do herói ativo
 ├── create_hero.py                # Cria um novo herói do zero com 1 comando
 ├── add_day.py                    # Injeta crônicas (`--hero <slug>`)

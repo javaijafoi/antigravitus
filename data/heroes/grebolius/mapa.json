@@ -1,0 +1,973 @@
+{
+  "hero_id": "grebolius",
+  "hero_name": "Grebolius",
+  "sanctuary_id": "panteao_centenarios",
+  "last_updated_cycle": "Ciclo II (Dia 20)",
+  "total_rooms": 60,
+  "zones": [
+    "Midgaard Urbana",
+    "Monte Sagrado & Templo",
+    "Submundo dos Esgotos & Vazio",
+    "Campos & Área dos Novatos",
+    "O Grande Tabuleiro de Xadrez"
+  ],
+  "rooms": [
+    {
+      "id": "deposito_lixo",
+      "name": "O Depósito de Lixo",
+      "zone": "Midgaard Urbana",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "🗑️",
+      "coords": { "x": 480, "y": 500 },
+      "exits": {
+        "n": "praca_comum",
+        "d": "esgotos_entrada"
+      },
+      "npcs": ["Camponeses", "Cães no lixo"],
+      "notes": "Ponto de renascimento e fuga. Alçapão subterrâneo para os esgotos.",
+      "discovered_in": "Ciclo I (Dia 1)"
+    },
+    {
+      "id": "praca_comum",
+      "name": "A Praça Comum",
+      "zone": "Midgaard Urbana",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "🏚️",
+      "coords": { "x": 480, "y": 420 },
+      "exits": {
+        "n": "praca_comercio",
+        "s": "deposito_lixo",
+        "l": "beco_escuro",
+        "o": "beco_pobre"
+      },
+      "npcs": ["Pranteador", "Mercenários"],
+      "notes": "Bairro de trânsito denso; mercenários nas esquinas.",
+      "discovered_in": "Ciclo I (Dia 1)"
+    },
+    {
+      "id": "beco_escuro",
+      "name": "O Beco Escuro",
+      "zone": "Midgaard Urbana",
+      "risk": "Médio",
+      "risk_code": "medium",
+      "icon": "🗡️",
+      "coords": { "x": 580, "y": 420 },
+      "exits": {
+        "o": "praca_comum",
+        "s": "guilda_ladroes_entrada",
+        "l": "beco_continua"
+      },
+      "npcs": ["Mercenários Armados"],
+      "notes": "Viela sombria repleta de soldados sem bandeira; rota para o covil dos ladinos.",
+      "discovered_in": "Ciclo I (Dia 2)"
+    },
+    {
+      "id": "guilda_ladroes_entrada",
+      "name": "A Entrada da Guilda dos Ladrões",
+      "zone": "Midgaard Urbana",
+      "risk": "Médio",
+      "risk_code": "medium",
+      "icon": "🗝️",
+      "coords": { "x": 580, "y": 490 },
+      "exits": {
+        "n": "beco_escuro",
+        "l": "bar_ladroes"
+      },
+      "npcs": ["Ladrões Veteranos"],
+      "notes": "Covil dos ladinos; caixa de moedas; sentinela bloqueia acesso ao bar para novatos.",
+      "discovered_in": "Ciclo I (Dia 2)"
+    },
+    {
+      "id": "bar_ladroes",
+      "name": "O Bar dos Ladrões",
+      "zone": "Midgaard Urbana",
+      "risk": "Restrito",
+      "risk_code": "medium",
+      "icon": "🍷",
+      "coords": { "x": 670, "y": 490 },
+      "exits": {
+        "o": "guilda_ladroes_entrada"
+      },
+      "npcs": ["Mestres Renegados"],
+      "notes": "Reduto clandestino onde mestres vendem técnicas e punhais envenenados.",
+      "discovered_in": "Ciclo I (Dia 3)"
+    },
+    {
+      "id": "beco_pobre",
+      "name": "O Beco Pobre",
+      "zone": "Midgaard Urbana",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "🪵",
+      "coords": { "x": 380, "y": 420 },
+      "exits": {
+        "l": "praca_comum",
+        "o": "fim_beco_pobre"
+      },
+      "npcs": ["Mendigos", "Cães"],
+      "notes": "Aglomerado humilde de palha e taipa ligando a praça à muralha.",
+      "discovered_in": "Ciclo I (Dia 2)"
+    },
+    {
+      "id": "fim_beco_pobre",
+      "name": "O Fim do Beco Pobre",
+      "zone": "Midgaard Urbana",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "🍶",
+      "coords": { "x": 280, "y": 420 },
+      "exits": {
+        "l": "beco_pobre",
+        "s": "taverna_encardida",
+        "o": "guilda_necromantes"
+      },
+      "npcs": ["Pedintes"],
+      "notes": "Canto imundo defronte ao botequim de contrabandistas.",
+      "discovered_in": "Ciclo I (Dia 2)"
+    },
+    {
+      "id": "taverna_encardida",
+      "name": "A Taverna Encardida",
+      "zone": "Midgaard Urbana",
+      "risk": "Médio",
+      "risk_code": "medium",
+      "icon": "🍺",
+      "coords": { "x": 280, "y": 490 },
+      "exits": {
+        "n": "fim_beco_pobre"
+      },
+      "npcs": ["Filthy (Taverneiro)", "Marinheiros Renegados"],
+      "notes": "Covil dos fora-da-lei; Filthy vende aguardente e cospefogo.",
+      "discovered_in": "Ciclo I (Dia 2)"
+    },
+    {
+      "id": "guilda_necromantes",
+      "name": "A Entrada da Guilda dos Necromantes",
+      "zone": "Midgaard Urbana",
+      "risk": "Alto",
+      "risk_code": "danger",
+      "icon": "💀",
+      "coords": { "x": 180, "y": 420 },
+      "exits": {
+        "l": "fim_beco_pobre"
+      },
+      "npcs": ["Guarda Cadavérico de Ossos"],
+      "notes": "Aura opressiva de terror; guarda de ossos colossais protege a entrada: 'Só necromantes entram aqui'.",
+      "discovered_in": "Ciclo I (Dia 4)"
+    },
+    {
+      "id": "praca_comercio",
+      "name": "A Praça do Comércio",
+      "zone": "Midgaard Urbana",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "🏛️",
+      "coords": { "x": 480, "y": 340 },
+      "exits": {
+        "n": "praca_templo",
+        "s": "praca_comum",
+        "l": "rua_leste_1",
+        "o": "rua_oeste_1"
+      },
+      "npcs": ["Mercadores", "Carroça de Carga"],
+      "notes": "Encruzilhada das quatro direções de Midgaard. Estátua e mural mágico.",
+      "discovered_in": "Ciclo I (Dia 1)"
+    },
+    {
+      "id": "rua_leste_1",
+      "name": "Rua Principal (Leste I)",
+      "zone": "Midgaard Urbana",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "🛤️",
+      "coords": { "x": 600, "y": 340 },
+      "exits": {
+        "o": "praca_comercio",
+        "l": "rua_leste_2",
+        "n": "armazem",
+        "s": "loja_animais"
+      },
+      "npcs": ["Guarda Municipal"],
+      "notes": "Eixo de abastecimento oriental.",
+      "discovered_in": "Ciclo I (Dia 1)"
+    },
+    {
+      "id": "armazem",
+      "name": "O Armazém",
+      "zone": "Midgaard Urbana",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🌾",
+      "coords": { "x": 600, "y": 270 },
+      "exits": {
+        "s": "rua_leste_1"
+      },
+      "npcs": ["Merceeiro"],
+      "notes": "Suprimentos básicos de sobrevivência (tochas, lanternas, mochilas).",
+      "discovered_in": "Ciclo I (Dia 1)"
+    },
+    {
+      "id": "loja_animais",
+      "name": "A Loja de Animais",
+      "zone": "Midgaard Urbana",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🐕",
+      "coords": { "x": 600, "y": 410 },
+      "exits": {
+        "n": "rua_leste_1"
+      },
+      "npcs": ["Vendedor"],
+      "notes": "Canis e viveiros ao sul da Rua Leste.",
+      "discovered_in": "Ciclo I (Dia 1)"
+    },
+    {
+      "id": "rua_leste_2",
+      "name": "Rua Principal (Leste II)",
+      "zone": "Midgaard Urbana",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "⚔️",
+      "coords": { "x": 710, "y": 340 },
+      "exits": {
+        "o": "rua_leste_1",
+        "l": "portao_leste",
+        "n": "loja_armas",
+        "s": "guilda_guerreiros"
+      },
+      "npcs": ["Guarda da Cidade", "Cães no lixo"],
+      "notes": "Área de treino inicial e venda de armas.",
+      "discovered_in": "Ciclo I (Dia 1)"
+    },
+    {
+      "id": "loja_armas",
+      "name": "A Loja de Armas",
+      "zone": "Midgaard Urbana",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🗡️",
+      "coords": { "x": 710, "y": 270 },
+      "exits": {
+        "s": "rua_leste_2"
+      },
+      "npcs": ["Ferreiro"],
+      "notes": "Venda e reparo de adagas, espadas e lâminas militares.",
+      "discovered_in": "Ciclo I (Dia 1)"
+    },
+    {
+      "id": "guilda_guerreiros",
+      "name": "A Entrada da Guilda dos Guerreiros",
+      "zone": "Midgaard Urbana",
+      "risk": "Médio",
+      "risk_code": "medium",
+      "icon": "🏰",
+      "coords": { "x": 710, "y": 410 },
+      "exits": {
+        "n": "rua_leste_2"
+      },
+      "npcs": ["Sentinela Guerreiro"],
+      "notes": "Barreira de luz forte bloqueia intrusos.",
+      "discovered_in": "Ciclo I (Dia 2)"
+    },
+    {
+      "id": "portao_leste",
+      "name": "Dentro do Portão Leste",
+      "zone": "Midgaard Urbana",
+      "risk": "Alto",
+      "risk_code": "danger",
+      "icon": "🚪",
+      "coords": { "x": 820, "y": 340 },
+      "exits": {
+        "o": "rua_leste_2"
+      },
+      "npcs": ["8 Guardas de Elite"],
+      "notes": "Ponte levadiça fortificada e guarnição pesada.",
+      "discovered_in": "Ciclo I (Dia 3)"
+    },
+    {
+      "id": "rua_oeste_1",
+      "name": "A Rua Principal (Oeste)",
+      "zone": "Midgaard Urbana",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "🛤️",
+      "coords": { "x": 360, "y": 340 },
+      "exits": {
+        "l": "praca_comercio",
+        "o": "termino_rua_oeste",
+        "n": "padaria",
+        "s": "loja_armaduras"
+      },
+      "npcs": ["Guarda Municipal"],
+      "notes": "Eixo manufatureiro e forjas ocidentais.",
+      "discovered_in": "Ciclo I (Dia 1)"
+    },
+    {
+      "id": "padaria",
+      "name": "A Padaria",
+      "zone": "Midgaard Urbana",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🍞",
+      "coords": { "x": 360, "y": 270 },
+      "exits": {
+        "s": "rua_oeste_1"
+      },
+      "npcs": ["Padeiro", "Odif"],
+      "notes": "Alimentos básicos para viagens e masmorras.",
+      "discovered_in": "Ciclo I (Dia 1)"
+    },
+    {
+      "id": "loja_armaduras",
+      "name": "A Loja de Armaduras",
+      "zone": "Midgaard Urbana",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🛡️",
+      "coords": { "x": 360, "y": 410 },
+      "exits": {
+        "n": "rua_oeste_1"
+      },
+      "npcs": ["Armeiro"],
+      "notes": "Forjas de couros pesados e placas defensivas.",
+      "discovered_in": "Ciclo I (Dia 1)"
+    },
+    {
+      "id": "termino_rua_oeste",
+      "name": "Término da Rua Principal",
+      "zone": "Midgaard Urbana",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "⚖️",
+      "coords": { "x": 240, "y": 340 },
+      "exits": {
+        "l": "rua_oeste_1",
+        "o": "portao_oeste",
+        "n": "loja_magias",
+        "s": "guilda_magos"
+      },
+      "npcs": ["O Pacificador", "Prefeito"],
+      "notes": "Intersecção vital com presença do colosso Pacificador.",
+      "discovered_in": "Ciclo I (Dia 1)"
+    },
+    {
+      "id": "loja_magias",
+      "name": "A Loja de Magias",
+      "zone": "Midgaard Urbana",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🧪",
+      "coords": { "x": 240, "y": 270 },
+      "exits": {
+        "s": "termino_rua_oeste"
+      },
+      "npcs": ["Feiticeiro Solitário"],
+      "notes": "Pergaminhos arcanos, poções e varinhas mágicas.",
+      "discovered_in": "Ciclo I (Dia 1)"
+    },
+    {
+      "id": "guilda_magos",
+      "name": "A Entrada da Guilda dos Magos",
+      "zone": "Midgaard Urbana",
+      "risk": "Médio",
+      "risk_code": "medium",
+      "icon": "🔮",
+      "coords": { "x": 240, "y": 410 },
+      "exits": {
+        "n": "termino_rua_oeste",
+        "s": "bar_magos"
+      },
+      "npcs": ["Mago Guardião"],
+      "notes": "Barreira de luz e caixa de moedas da guilda arcana.",
+      "discovered_in": "Ciclo I (Dia 2)"
+    },
+    {
+      "id": "bar_magos",
+      "name": "O Bar dos Magos",
+      "zone": "Midgaard Urbana",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🍷",
+      "coords": { "x": 240, "y": 480 },
+      "exits": {
+        "n": "guilda_magos",
+        "l": "laboratorio_magos"
+      },
+      "npcs": ["Garçom", "Quadro de Avisos"],
+      "notes": "Salão psicodélico com imagens flutuantes.",
+      "discovered_in": "Ciclo I (Dia 2)"
+    },
+    {
+      "id": "laboratorio_magos",
+      "name": "O Laboratório dos Magos",
+      "zone": "Midgaard Urbana",
+      "risk": "Santuário",
+      "risk_code": "safe",
+      "icon": "✨",
+      "coords": { "x": 340, "y": 480 },
+      "exits": {
+        "o": "bar_magos",
+        "d": "esgotos_juncao"
+      },
+      "npcs": ["Mestre da Guilda dos Magos"],
+      "notes": "Covil de treino arcano; pentagramas e buraco no chão com escada para os esgotos.",
+      "discovered_in": "Ciclo I (Dia 3)"
+    },
+    {
+      "id": "portao_oeste",
+      "name": "Dentro do Portão Oeste",
+      "zone": "Midgaard Urbana",
+      "risk": "Médio",
+      "risk_code": "medium",
+      "icon": "🚪",
+      "coords": { "x": 120, "y": 340 },
+      "exits": {
+        "l": "termino_rua_oeste",
+        "s": "rua_muralha",
+        "o": "ponte_rio"
+      },
+      "npcs": ["2 Guardas Armados"],
+      "notes": "Torres de vigia sobre a ponte levadiça ocidental.",
+      "discovered_in": "Ciclo I (Dia 3)"
+    },
+    {
+      "id": "rua_muralha",
+      "name": "A Rua da Muralha (Oeste)",
+      "zone": "Midgaard Urbana",
+      "risk": "Médio",
+      "risk_code": "medium",
+      "icon": "🧱",
+      "coords": { "x": 120, "y": 410 },
+      "exits": {
+        "n": "portao_oeste",
+        "s": "ponte_rio"
+      },
+      "npcs": ["Sentinelas"],
+      "notes": "Parede defensiva oeste com inscrições rústicas gravadas na pedra.",
+      "discovered_in": "Ciclo I (Dia 4)"
+    },
+    {
+      "id": "ponte_rio",
+      "name": "A Ponte Sobre o Rio",
+      "zone": "Midgaard Urbana",
+      "risk": "Médio",
+      "risk_code": "medium",
+      "icon": "🌉",
+      "coords": { "x": 120, "y": 480 },
+      "exits": {
+        "n": "rua_muralha",
+        "s": "canto_afluencia"
+      },
+      "npcs": [],
+      "notes": "Ponte monumental de pedra sobre corredeiras profundas.",
+      "discovered_in": "Ciclo I (Dia 4)"
+    },
+    {
+      "id": "canto_afluencia",
+      "name": "O Canto Noroeste Da Afluência",
+      "zone": "Midgaard Urbana",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "🌊",
+      "coords": { "x": 120, "y": 550 },
+      "exits": {
+        "n": "ponte_rio"
+      },
+      "npcs": [],
+      "notes": "Área silvestre e fluvial além da muralha oeste.",
+      "discovered_in": "Ciclo I (Dia 5)"
+    },
+    {
+      "id": "praca_templo",
+      "name": "A Praça do Templo",
+      "zone": "Monte Sagrado & Templo",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "⛲",
+      "coords": { "x": 480, "y": 250 },
+      "exits": {
+        "s": "praca_comercio",
+        "u": "templo_midgaard"
+      },
+      "npcs": ["O Pacificador"],
+      "notes": "Fonte mágica azul restauradora para recarga de estamina e saciar a sede.",
+      "discovered_in": "Ciclo I (Dia 1)"
+    },
+    {
+      "id": "templo_midgaard",
+      "name": "O Templo de Midgaard",
+      "zone": "Monte Sagrado & Templo",
+      "risk": "Santuário",
+      "risk_code": "safe",
+      "icon": "⛪",
+      "coords": { "x": 480, "y": 170 },
+      "exits": {
+        "d": "praca_templo",
+        "u": "panteao_centenarios",
+        "n": "altar_templo",
+        "l": "sala_doacoes"
+      },
+      "npcs": ["Zelador"],
+      "notes": "Santuário inviolável com caixa de moedas; conexão para o altar sagrado e o cume.",
+      "discovered_in": "Ciclo I (Dia 1)"
+    },
+    {
+      "id": "altar_templo",
+      "name": "O Altar do Templo",
+      "zone": "Monte Sagrado & Templo",
+      "risk": "Sagrado",
+      "risk_code": "safe",
+      "icon": "📜",
+      "coords": { "x": 480, "y": 100 },
+      "exits": {
+        "s": "templo_midgaard",
+        "n": "atras_do_altar"
+      },
+      "npcs": ["Estátua de Odin"],
+      "notes": "Nave norte do templo consagrada aos deuses; saída norte dá acesso aos campos rurais.",
+      "discovered_in": "Ciclo I (Dia 2)"
+    },
+    {
+      "id": "sala_doacoes",
+      "name": "A Sala de Doações",
+      "zone": "Monte Sagrado & Templo",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🎁",
+      "coords": { "x": 580, "y": 170 },
+      "exits": {
+        "o": "templo_midgaard"
+      },
+      "npcs": [],
+      "notes": "Local de descarte e doação de itens excedentes para cumprimento de autoquest de altruísmo.",
+      "discovered_in": "Ciclo I (Dia 1)"
+    },
+    {
+      "id": "panteao_centenarios",
+      "name": "O Panteão dos Centenários",
+      "zone": "Monte Sagrado & Templo",
+      "risk": "Santuário",
+      "risk_code": "safe",
+      "icon": "👑",
+      "coords": { "x": 480, "y": 30 },
+      "exits": {
+        "d": "templo_midgaard"
+      },
+      "npcs": ["Estátuas dos Eternos"],
+      "notes": "Cume sagrado e repouso de Grebolius. Santuário supremo sob o céu aberto de Midgaard.",
+      "discovered_in": "Ciclo I (Dia 6)"
+    },
+    {
+      "id": "esgotos_juncao",
+      "name": "A Junção no Esgoto (Entrada)",
+      "zone": "Submundo dos Esgotos & Vazio",
+      "risk": "Alto",
+      "risk_code": "danger",
+      "icon": "🕳️",
+      "coords": { "x": 240, "y": 620 },
+      "exits": {
+        "n": "esgotos_curva",
+        "o": "esgotos_enorme"
+      },
+      "npcs": [],
+      "notes": "Fundo do buraco do Laboratório dos Magos. Queda sem retorno imediato.",
+      "discovered_in": "Ciclo II (Dia 11)"
+    },
+    {
+      "id": "esgotos_curva",
+      "name": "A Curva Regular",
+      "zone": "Submundo dos Esgotos & Vazio",
+      "risk": "Alto",
+      "risk_code": "danger",
+      "icon": "💧",
+      "coords": { "x": 240, "y": 550 },
+      "exits": {
+        "s": "esgotos_juncao",
+        "l": "esgotos_calma"
+      },
+      "npcs": [],
+      "notes": "Encanamentos úmidos com cheiro fétido de carniça.",
+      "discovered_in": "Ciclo II (Dia 11)"
+    },
+    {
+      "id": "esgotos_calma",
+      "name": "Uma Calma Junção de Canos",
+      "zone": "Submundo dos Esgotos & Vazio",
+      "risk": "Alto",
+      "risk_code": "danger",
+      "icon": "🫧",
+      "coords": { "x": 330, "y": 550 },
+      "exits": {
+        "o": "esgotos_curva"
+      },
+      "npcs": [],
+      "notes": "Silêncio profundo e goteiras nas trevas sob a cidade.",
+      "discovered_in": "Ciclo II (Dia 11)"
+    },
+    {
+      "id": "esgotos_enorme",
+      "name": "A Junção no Esgoto (Enorme)",
+      "zone": "Submundo dos Esgotos & Vazio",
+      "risk": "Letal",
+      "risk_code": "fatal",
+      "icon": "🐍",
+      "coords": { "x": 130, "y": 620 },
+      "exits": {
+        "l": "esgotos_juncao"
+      },
+      "npcs": ["Serpentes Venenosas Agressivas", "Larvas Carnívoras"],
+      "notes": "Canto da emboscada letal e coluna de ar; provocou a morte e a jornada de renascimento.",
+      "discovered_in": "Ciclo II (Dia 11)"
+    },
+    {
+      "id": "paraiso_plano",
+      "name": "O Paraíso (Plano Pós-Morte)",
+      "zone": "Submundo dos Esgotos & Vazio",
+      "risk": "Místico",
+      "risk_code": "safe",
+      "icon": "🌳",
+      "coords": { "x": 60, "y": 720 },
+      "exits": {
+        "l": "portal_paraiso"
+      },
+      "npcs": [],
+      "notes": "Plano etéreo com grama reluzente e árvore de metal onde se oculta um portal místico.",
+      "discovered_in": "Ciclo II (Dia 11)"
+    },
+    {
+      "id": "portal_paraiso",
+      "name": "Um Portal Escondido no Paraíso",
+      "zone": "Submundo dos Esgotos & Vazio",
+      "risk": "Místico",
+      "risk_code": "medium",
+      "icon": "🌀",
+      "coords": { "x": 160, "y": 720 },
+      "exits": {
+        "l": "caminho_vazio"
+      },
+      "npcs": [],
+      "notes": "Vórtice psicodélico que expulsa a alma de volta ao cosmos.",
+      "discovered_in": "Ciclo II (Dia 11)"
+    },
+    {
+      "id": "caminho_vazio",
+      "name": "Um Caminho no Vazio",
+      "zone": "Submundo dos Esgotos & Vazio",
+      "risk": "Alto",
+      "risk_code": "danger",
+      "icon": "🌌",
+      "coords": { "x": 260, "y": 720 },
+      "exits": {
+        "n": "fonte_vida"
+      },
+      "npcs": [],
+      "notes": "Vácuo sem gravidade; consome memórias antigas e sensações espirituais.",
+      "discovered_in": "Ciclo II (Dia 11)"
+    },
+    {
+      "id": "fonte_vida",
+      "name": "A Fonte da Vida",
+      "zone": "Submundo dos Esgotos & Vazio",
+      "risk": "Santuário",
+      "risk_code": "safe",
+      "icon": "✨",
+      "coords": { "x": 260, "y": 660 },
+      "exits": {
+        "s": "caminho_vazio"
+      },
+      "npcs": [],
+      "notes": "Câmara aromática pura; beber da fonte revive o corpo instantaneamente no Templo de Midgaard.",
+      "discovered_in": "Ciclo II (Dia 11)"
+    },
+    {
+      "id": "atras_do_altar",
+      "name": "Atrás do Altar",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "🌱",
+      "coords": { "x": 480, "y": -40 },
+      "exits": {
+        "s": "altar_templo",
+        "n": "grande_campo_sul"
+      },
+      "npcs": [],
+      "notes": "Trilha descendo a encosta do templo em direção aos descampados rurais.",
+      "discovered_in": "Ciclo II (Dia 14)"
+    },
+    {
+      "id": "grande_campo_sul",
+      "name": "O Grande Campo (Sul)",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "🌾",
+      "coords": { "x": 480, "y": -110 },
+      "exits": {
+        "s": "atras_do_altar",
+        "n": "grande_campo_bifurcacao"
+      },
+      "npcs": ["Pássaros silvestres"],
+      "notes": "Prado verdejante com brisa fresca soprando das montanhas.",
+      "discovered_in": "Ciclo II (Dia 14)"
+    },
+    {
+      "id": "grande_campo_bifurcacao",
+      "name": "O Grande Campo (Bifurcação)",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "🔀",
+      "coords": { "x": 480, "y": -180 },
+      "exits": {
+        "s": "grande_campo_sul",
+        "l": "entrada_novatos",
+        "o": "caminho_sujo_xadrez"
+      },
+      "npcs": [],
+      "notes": "Intersecção estratégica: saída a Leste leva à Área dos Novatos; saída a Oeste leva ao Grande Tabuleiro de Xadrez.",
+      "discovered_in": "Ciclo II (Dia 14)"
+    },
+    {
+      "id": "entrada_novatos",
+      "name": "A Entrada da Área dos Novatos",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🚪",
+      "coords": { "x": 620, "y": -180 },
+      "exits": {
+        "o": "grande_campo_bifurcacao",
+        "n": "comeco_passagem"
+      },
+      "npcs": [],
+      "notes": "Portal comemorativo de formatura novata gravado em pedra (Pina e Rimbaud, 2019).",
+      "discovered_in": "Ciclo II (Dia 14)"
+    },
+    {
+      "id": "comeco_passagem",
+      "name": "O Começo Da Passagem",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "🐾",
+      "coords": { "x": 620, "y": -250 },
+      "exits": {
+        "s": "entrada_novatos",
+        "l": "corredor_sujo"
+      },
+      "npcs": [],
+      "notes": "Ecos de criaturas nos túneis; vestes de novatos caídas no chão.",
+      "discovered_in": "Ciclo II (Dia 14)"
+    },
+    {
+      "id": "corredor_sujo",
+      "name": "O Corredor Sujo",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "🧱",
+      "coords": { "x": 720, "y": -250 },
+      "exits": {
+        "o": "comeco_passagem",
+        "l": "cruzamento_novatos"
+      },
+      "npcs": [],
+      "notes": "Paredes lodosas com ruídos de monstros ao sul.",
+      "discovered_in": "Ciclo II (Dia 14)"
+    },
+    {
+      "id": "cruzamento_novatos",
+      "name": "O Cruzamento",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "🔀",
+      "coords": { "x": 820, "y": -250 },
+      "exits": {
+        "o": "corredor_sujo",
+        "s": "mais_corredor"
+      },
+      "npcs": [],
+      "notes": "Entroncamento de corredores subterrâneos de treino.",
+      "discovered_in": "Ciclo II (Dia 14)"
+    },
+    {
+      "id": "mais_corredor",
+      "name": "Mais Corredor",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Médio",
+      "risk_code": "medium",
+      "icon": "🐲",
+      "coords": { "x": 820, "y": -180 },
+      "exits": {
+        "n": "cruzamento_novatos",
+        "s": "outro_canto",
+        "o": "pequena_sala_guarda"
+      },
+      "npcs": ["Bebê Dragão (Fugitivo)"],
+      "notes": "Porta de madeira a oeste; corredor de passagem do Bebê Dragão fugitivo.",
+      "discovered_in": "Ciclo II (Dia 14)"
+    },
+    {
+      "id": "pequena_sala_guarda",
+      "name": "Uma Pequena Sala",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🛡️",
+      "coords": { "x": 720, "y": -180 },
+      "exits": {
+        "l": "mais_corredor"
+      },
+      "npcs": ["Guarda Novato em Apuros"],
+      "notes": "Covil do Guarda Novato; entrega da coleira concluída com sucesso; elmo de novato místico.",
+      "discovered_in": "Ciclo II (Dia 14)"
+    },
+    {
+      "id": "outro_canto",
+      "name": "Um Outro Canto",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Médio",
+      "risk_code": "medium",
+      "icon": "🧪",
+      "coords": { "x": 820, "y": -110 },
+      "exits": {
+        "n": "mais_corredor",
+        "l": "sala_alquimista",
+        "o": "corredor_iluminado"
+      },
+      "npcs": ["Monstro Novato"],
+      "notes": "Câmara de monstros; porta leste dá acesso ao laboratório do Alquimista.",
+      "discovered_in": "Ciclo II (Dia 14)"
+    },
+    {
+      "id": "sala_alquimista",
+      "name": "A Sala do Alquimista",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "⚗️",
+      "coords": { "x": 920, "y": -110 },
+      "exits": {
+        "o": "outro_canto"
+      },
+      "npcs": ["O Novato Alquimista", "Diabinho"],
+      "notes": "Autoquest 'Limpando Monstros'; fórmulas rabiscadas e escada secreta para o subsolo.",
+      "discovered_in": "Ciclo II (Dia 14)"
+    },
+    {
+      "id": "corredor_iluminado",
+      "name": "Um Corredor Iluminado",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "🕯️",
+      "coords": { "x": 720, "y": -110 },
+      "exits": {
+        "l": "outro_canto",
+        "o": "fim_corredor_abate"
+      },
+      "npcs": [],
+      "notes": "Fachos de tocha projetando sombras nas pedras polidas.",
+      "discovered_in": "Ciclo II (Dia 14)"
+    },
+    {
+      "id": "fim_corredor_abate",
+      "name": "O Fim do Corredor",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Médio",
+      "risk_code": "medium",
+      "icon": "🎯",
+      "coords": { "x": 620, "y": -110 },
+      "exits": {
+        "l": "corredor_iluminado",
+        "o": "campo_aberto_elo"
+      },
+      "npcs": ["Monstro Novato de Elite"],
+      "notes": "Campo primordial de abate: fonte de 396 XP, 20 ouros e punhais mágicos.",
+      "discovered_in": "Ciclo II (Dia 14)"
+    },
+    {
+      "id": "campo_aberto_elo",
+      "name": "Um Campo Aberto",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🌾",
+      "coords": { "x": 550, "y": -110 },
+      "exits": {
+        "l": "fim_corredor_abate",
+        "n": "grande_campo_sul"
+      },
+      "npcs": [],
+      "notes": "Elo circular vital: clareira fresca que conecta o fundo da masmorra novata diretamente de volta aos campos de Midgaard.",
+      "discovered_in": "Ciclo II (Dia 14)"
+    },
+    {
+      "id": "caminho_sujo_xadrez",
+      "name": "O Caminho Sujo",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "🪵",
+      "coords": { "x": 340, "y": -180 },
+      "exits": {
+        "l": "grande_campo_bifurcacao",
+        "o": "grande_tabuleiro_portao"
+      },
+      "npcs": [],
+      "notes": "Trilha de terra batida ladeada por carvalhos antigos; portão enferrujado monumental a oeste.",
+      "discovered_in": "Ciclo II (Dia 18)"
+    },
+    {
+      "id": "grande_tabuleiro_portao",
+      "name": "O Grande Tabuleiro de Xadrez",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Médio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": { "x": 220, "y": -180 },
+      "exits": {
+        "l": "caminho_sujo_xadrez",
+        "o": "casa_branca_xadrez"
+      },
+      "npcs": [],
+      "notes": "Portão gigantesco de ferro em arco de pedra; abertura para o lendário tabuleiro monumental.",
+      "discovered_in": "Ciclo II (Dia 18)"
+    },
+    {
+      "id": "casa_branca_xadrez",
+      "name": "Uma Casa Branca",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Médio",
+      "risk_code": "medium",
+      "icon": "⬜",
+      "coords": { "x": 120, "y": -180 },
+      "exits": {
+        "l": "grande_tabuleiro_portao",
+        "n": "casa_preta_xadrez"
+      },
+      "npcs": ["Peões Caídos"],
+      "notes": "Quadrado titânico de mármore branco polido; carcaças de peões negros e espólios lendários.",
+      "discovered_in": "Ciclo II (Dia 18)"
+    },
+    {
+      "id": "casa_preta_xadrez",
+      "name": "Uma Casa Preta",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Alto",
+      "risk_code": "danger",
+      "icon": "⬛",
+      "coords": { "x": 120, "y": -250 },
+      "exits": {
+        "s": "casa_branca_xadrez"
+      },
+      "npcs": ["Peão Negro de Obsidiana"],
+      "notes": "Lajes de obsidiana e ébano; presença de Armadura de Peão Negro (+9L) e Espada do Peão Negro (+8L).",
+      "discovered_in": "Ciclo II (Dia 18)"
+    }
+  ]
+}

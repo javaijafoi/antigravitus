@@ -28,5 +28,13 @@
     "weapon": "Punhal de Novato (+ Escudo)",
     "weapon_icon": "🗡️",
     "sanctuary": "Panteão dos Centenários"
+  },
+  "voice": {
+    "engine": "edge-tts",
+    "voice_id": "pt-BR-FranciscaNeural",
+    "rate": "+6%",
+    "pitch": "+0Hz",
+    "style": "resolute",
+    "description": "Voz firme, ágil e assertiva de mulher goblin disfarçada em ascensão rápida"
   }
 }

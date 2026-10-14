@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa Interativo das Aventuras — As Crônicas de Devil's Bob MUD</title>
+  <meta name="description" content="Mapa topográfico interativo simplificado das aventuras e rotas desbravadas em Devil's Bob MUD (debomud.org:4000). Visualização por aventureiro atualizada a cada 10 ciclos.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,450;0,600;1,400&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗺️</text></svg>">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <span class="brand-rune">ᛟ</span>
+        <div class="brand-text">
+          <h1>Antigravitus</h1>
+          <span>Cronista de Midgaard</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <div class="hero-selector-wrap">
+          <label for="hero-select" class="hero-select-label">Herói:</label>
+          <select id="hero-select" class="hero-select" aria-label="Selecione o Herói">
+            <option value="antigravitus">🧙‍♂️ Antigravitus</option>
+            <option value="grebolius">🧌 Grebolius</option>
+          </select>
+        </div>
+        <a href="index.html" id="link-cronicas">Crônicas</a>
+        <a href="mapa.html" class="active" id="link-mapa">Mapa</a>
+        <a href="ficha.html" id="link-ficha">Ficha</a>
+        <a href="sobre.html" id="link-sobre">Sobre</a>
+        <a href="https://www.debomud.org" target="_blank" rel="noopener">Devil's Bob MUD ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container" style="margin-top: 2rem;">
+    <article class="map-page-card">
+      
+      <!-- Top Title & Cycle Info -->
+      <div class="map-header-top">
+        <div class="map-title-wrap">
+          <h2 id="map-hero-title">🗺️ Mapa Topológico de Antigravitus</h2>
+          <p id="map-hero-sub">Territórios explorados, santuários de repouso, rotas de fuga e zonas de perigo.</p>
+        </div>
+        <div class="map-cycle-tag" id="map-cycle-tag" title="Regra do Ciclo Decenal: sincronização obrigatória a cada 10 ciclos de exploração">
+          <span>⏳</span>
+          <span id="map-cycle-text">Consolidado a cada 10 ciclos</span>
+        </div>
+      </div>
+
+      <!-- Stats Ribbon -->
+      <section class="map-stats-ribbon" aria-label="Estatísticas de Exploração">
+        <div class="map-stat-card">
+          <div class="stat-val" id="stat-rooms-count">--</div>
+          <div class="stat-lbl">Salas Mapeadas</div>
+        </div>
+        <div class="map-stat-card">
+          <div class="stat-val" id="stat-zones-count">--</div>
+          <div class="stat-lbl">Zonas Desbravadas</div>
+        </div>
+        <div class="map-stat-card">
+          <div class="stat-val" id="stat-safe-count" style="color: #4ade80;">--</div>
+          <div class="stat-lbl">Santuários & Seguras</div>
+        </div>
+        <div class="map-stat-card">
+          <div class="stat-val" id="stat-danger-count" style="color: #f87171;">--</div>
+          <div class="stat-lbl">Zonas de Alto Risco</div>
+        </div>
+      </section>
+
+      <!-- Controls & Filters Toolbar -->
+      <div class="map-toolbar">
+        <div class="map-toolbar-group">
+          <!-- Live Search -->
+          <div class="map-search-box">
+            <span class="map-search-icon">🔍</span>
+            <input type="text" id="map-search" class="map-search-input" placeholder="Buscar sala, NPC ou perigo..." aria-label="Buscar salas">
+          </div>
+
+          <!-- Zone Filter -->
+          <select id="map-filter-zone" class="map-select-filter" aria-label="Filtrar por Zona">
+            <option value="all">Todas as Zonas</option>
+          </select>
+
+          <!-- Risk Filter -->
+          <select id="map-filter-risk" class="map-select-filter" aria-label="Filtrar por Nível de Risco">
+            <option value="all">Todos os Riscos</option>
+            <option value="safe">🛡️ Santuários & Seguros</option>
+            <option value="medium">⚠️ Médio Risco / Sentinelas</option>
+            <option value="danger">💀 Alto Risco / Emboscadas</option>
+          </select>
+        </div>
+
+        <div class="map-toolbar-group">
+          <!-- View Mode Toggle -->
+          <button class="map-btn-tool active" id="btn-view-visual" title="Modo Mapa Topológico Interativo">
+            <span>🗺️ Visual</span>
+          </button>
+          <button class="map-btn-tool" id="btn-view-table" title="Modo Tabela Tática de Rotas">
+            <span>📋 Tabela Tática</span>
+          </button>
+          <button class="map-btn-tool" id="btn-center-sanctuary" title="Centralizar visualização no Santuário ativo do herói">
+            <span>🎯 Santuário</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Visual Viewport (Interactive SVG Canvas) -->
+      <div class="map-canvas-wrap" id="map-canvas-wrap" tabindex="0" aria-label="Mapa Interativo: arraste para mover e use a roda do mouse para dar zoom">
+        
+        <!-- Floating Zoom / Pan Controls -->
+        <div class="map-floating-controls" aria-label="Controles de Zoom">
+          <button class="map-ctrl-btn" id="ctrl-zoom-in" title="Aumentar Zoom (+)">+</button>
+          <button class="map-ctrl-btn" id="ctrl-zoom-out" title="Diminuir Zoom (-)">−</button>
+          <button class="map-ctrl-btn" id="ctrl-zoom-reset" title="Restaurar Visão Geral (Reset)">⟲</button>
+        </div>
+
+        <!-- Legend Overlay -->
+        <div class="map-legend-box" aria-label="Legenda do Mapa">
+          <span class="legend-item"><span class="legend-dot sanctuary"></span> Santuário</span>
+          <span class="legend-item"><span class="legend-dot safe"></span> Seguro</span>
+          <span class="legend-item"><span class="legend-dot low"></span> Baixo Risco</span>
+          <span class="legend-item"><span class="legend-dot medium"></span> Alerta</span>
+          <span class="legend-item"><span class="legend-dot danger"></span> Alto Risco</span>
+        </div>
+
+        <!-- SVG Container for topological map -->
+        <svg id="map-svg" viewBox="0 0 1000 700">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="16" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="rgba(212, 163, 89, 0.45)" />
+            </marker>
+          </defs>
+          <g id="map-viewport-group">
+            <g id="map-edges-layer"></g>
+            <g id="map-nodes-layer"></g>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Alternative Tactical Table View -->
+      <div class="map-table-container" id="map-table-container">
+        <!-- Injetado dinamicamente via JS -->
+      </div>
+
+      <!-- Room Inspector Drawer (opens on room click) -->
+      <section class="map-room-inspector" id="map-room-inspector" aria-label="Inspetor de Sala Mapeada">
+        <div class="inspector-header">
+          <div class="inspector-title-row">
+            <span id="inspect-icon" style="font-size: 1.6rem;">⛪</span>
+            <div>
+              <h3 id="inspect-name">O Templo de Midgaard</h3>
+              <span id="inspect-zone" style="color: var(--text-muted); font-size: 0.85rem;">Monte Sagrado</span>
+            </div>
+            <span class="inspector-badge safe" id="inspect-risk-badge">Santuário</span>
+          </div>
+          <button class="inspector-close-btn" id="btn-close-inspector" title="Fechar inspetor">&times;</button>
+        </div>
+
+        <div class="inspector-body-grid">
+          <div>
+            <h4 style="font-family: var(--font-serif); font-size: 0.95rem; color: var(--accent-gold);">🧭 Saídas Verificadas (Clique para Navegar):</h4>
+            <div class="inspector-exits-wrap" id="inspect-exits">
+              <!-- Botões de saídas injetados via JS -->
+            </div>
+
+            <div style="margin-top: 1rem;">
+              <h4 style="font-family: var(--font-serif); font-size: 0.95rem; color: var(--accent-gold);">👥 Presença / NPCs Catalogados:</h4>
+              <div class="inspector-npcs-list" id="inspect-npcs">
+                <!-- NPCs injetados via JS -->
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h4 style="font-family: var(--font-serif); font-size: 0.95rem; color: var(--accent-gold);">📜 Notas de Campo & Estratégia de Sobrevivência:</h4>
+            <p class="inspector-notes" id="inspect-notes">Detalhes e registros do aventureiro sobre este local.</p>
+            <div style="margin-top: 0.75rem; font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);">
+              Descoberto em: <span id="inspect-discovered" style="color: var(--accent-gold);">Ciclo I</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="index.html" class="nav-action-btn" id="btn-back-cronicas" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+          ← Voltar para as Crônicas
+        </a>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-quote">
+        “As pedras esquecem as pegadas dos homens; mas a pena do cronista não esquece.”
+      </div>
+      <div class="footer-meta">
+        <span>Devil's Bob MUD • debomud.org:4000</span>
+        <span>•</span>
+        <span>Mapeamento Vivo por Aventureiro</span>
+        <span>•</span>
+        <span>Regra Decenal de Atualização</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

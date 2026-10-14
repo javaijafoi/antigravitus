@@ -1,0 +1,75 @@
+{
+  "hero_id": "[SLUG]",
+  "hero_name": "[NOME]",
+  "sanctuary_id": "templo_midgaard",
+  "last_updated_cycle": "Ciclo I (Dia 1)",
+  "total_rooms": 4,
+  "zones": [
+    "Monte Sagrado & Templo",
+    "Midgaard Urbana"
+  ],
+  "rooms": [
+    {
+      "id": "templo_midgaard",
+      "name": "O Templo de Midgaard",
+      "zone": "Monte Sagrado & Templo",
+      "risk": "Santuário",
+      "risk_code": "safe",
+      "icon": "⛪",
+      "coords": { "x": 500, "y": 250 },
+      "exits": {
+        "n": "altar_templo",
+        "d": "praca_templo"
+      },
+      "npcs": ["Zelador do Templo"],
+      "notes": "Ponto de repouso seguro primordial e santuário dos deuses.",
+      "discovered_in": "Ciclo I (Dia 1)"
+    },
+    {
+      "id": "altar_templo",
+      "name": "O Altar do Templo",
+      "zone": "Monte Sagrado & Templo",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "📜",
+      "coords": { "x": 500, "y": 170 },
+      "exits": {
+        "s": "templo_midgaard"
+      },
+      "npcs": ["Estátua de Odin"],
+      "notes": "Abside sagrada de oração e solenidade.",
+      "discovered_in": "Ciclo I (Dia 1)"
+    },
+    {
+      "id": "praca_templo",
+      "name": "A Praça do Templo",
+      "zone": "Monte Sagrado & Templo",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "⛲",
+      "coords": { "x": 500, "y": 350 },
+      "exits": {
+        "u": "templo_midgaard",
+        "s": "praca_comercio"
+      },
+      "npcs": ["O Pacificador"],
+      "notes": "Fonte restauradora de água mágica.",
+      "discovered_in": "Ciclo I (Dia 1)"
+    },
+    {
+      "id": "praca_comercio",
+      "name": "A Praça do Comércio",
+      "zone": "Midgaard Urbana",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "🏛️",
+      "coords": { "x": 500, "y": 450 },
+      "exits": {
+        "n": "praca_templo"
+      },
+      "npcs": ["Mercadores"],
+      "notes": "Centro cívico e encruzilhada de Midgaard.",
+      "discovered_in": "Ciclo I (Dia 1)"
+    }
+  ]
+}

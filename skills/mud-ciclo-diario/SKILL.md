@@ -50,11 +50,12 @@ Esta skill formaliza todas as regras de jogo, liturgia de encerramento e diretri
 
 ---
 
-## ⏳ 4. Ciclo Decenal (A cada 10 dias)
-* A cada 10 dias de jornada (Dias 10, 20, 30...):
+## ⏳ 4. Ciclo Decenal (A cada 10 ciclos / dias)
+* A cada 10 dias ou ciclos de jornada (Dias 10, 20, 30... / Ciclo I, II, III...):
   1. O herói faz uma **pausa reflexiva profunda** em seu diário, avaliando friamente se sua rota e escolhas estão acelerando sua chegada ao topo.
   2. Modificar de forma **sutil** o arquivo `data/heroes/<slug>/identidade.md`, incorporando as fissuras, aprendizados e novas táticas consolidadas.
   3. Aplicar as novas táticas imediatamente no ciclo decenal seguinte.
+  4. **Atualização Obrigatória do Mapa Interativo (A cada 10 ciclos):** Atualizar e sincronizar rigorosamente o mapa interativo do aventureiro (`data/heroes/<slug>/mapa.json` e `data/heroes/<slug>/mapa.md`) com todas as novas salas desbravadas, conexões, níveis de risco, NPCs e anotações táticas, mantendo o mapa visual do blog atualizado por aventureiro.
 
 ---
 

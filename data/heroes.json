@@ -29,6 +29,14 @@
       "weapon": "Cajado de Peregrino",
       "weapon_icon": "🪄",
       "sanctuary": "Templo de Midgaard"
+    },
+    "voice": {
+      "engine": "edge-tts",
+      "voice_id": "pt-BR-AntonioNeural",
+      "rate": "-3%",
+      "pitch": "-2Hz",
+      "style": "reflective",
+      "description": "Voz grave, serena e solene de cronista arcano com pausas reflexivas"
     }
   },
   {
@@ -61,6 +69,14 @@
       "weapon": "Punhal de Novato (+ Escudo)",
       "weapon_icon": "🗡️",
       "sanctuary": "Panteão dos Centenários"
+    },
+    "voice": {
+      "engine": "edge-tts",
+      "voice_id": "pt-BR-FranciscaNeural",
+      "rate": "+6%",
+      "pitch": "+0Hz",
+      "style": "resolute",
+      "description": "Voz firme, ágil e assertiva de mulher goblin disfarçada em ascensão rápida"
     }
   }
 ]

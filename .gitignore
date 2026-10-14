@@ -13,3 +13,4 @@ play_dia*.py
 mudclient.py
 *.session
 scripts/local/
+audio/test_samples/

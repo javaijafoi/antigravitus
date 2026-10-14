@@ -19,7 +19,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   const linkSobre = document.getElementById("link-sobre");
   const linkCronicas = document.getElementById("link-cronicas");
   const linkFicha = document.getElementById("link-ficha");
+  const linkMapa = document.getElementById("link-mapa");
   const fichaContainer = document.getElementById("ficha-container");
+  const mapCanvasWrap = document.getElementById("map-canvas-wrap");
   const btnBackCronicas = document.getElementById("btn-back-cronicas");
 
   const brandRuneEl = document.querySelector(".brand-rune");
@@ -146,6 +148,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (fichaContainer) {
       await loadFichaForHero(currentHero);
     }
+    if (mapCanvasWrap) {
+      await loadMapForHero(currentHero);
+    }
   }
 
   function renderHeroSelector() {
@@ -176,6 +181,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (fichaContainer) {
           await loadFichaForHero(currentHero);
         }
+        if (mapCanvasWrap) {
+          await loadMapForHero(currentHero);
+        }
       }
     });
   }
@@ -205,6 +213,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
     if (linkFicha) {
       linkFicha.href = `ficha.html?hero=${hero.id}`;
+    }
+    if (linkMapa) {
+      linkMapa.href = `mapa.html?hero=${hero.id}`;
     }
     if (btnBackCronicas) {
       btnBackCronicas.href = `index.html?hero=${hero.id}`;
@@ -571,6 +582,11 @@ document.addEventListener("DOMContentLoaded", async () => {
             <span>🏛️ ${post.in_game_time || ""}</span>
           </div>
 
+          <div class="post-narration-bar" id="narration-bar-${post.id}">
+            <span class="narration-badge">🎙️ Ouvir Capítulo</span>
+            <audio controls preload="none" src="audio/${currentHero.id}/dia_${String(post.id).padStart(2, '0')}.mp3" onerror="this.closest('.post-narration-bar').style.display='none';"></audio>
+          </div>
+
           <div class="post-body">
             ${(post.content || []).map(p => `<p>${p}</p>`).join("")}
           </div>
@@ -874,6 +890,548 @@ document.addEventListener("DOMContentLoaded", async () => {
     flushList();
     flushTable();
     return html;
+  }
+
+  // ============================================================
+  // MAPA INTERATIVO SIMPLIFICADO POR AVENTUREIRO
+  // ============================================================
+  let currentMapData = null;
+  let mapScale = 1.0;
+  let mapPanX = 0;
+  let mapPanY = 0;
+  let isMapDragging = false;
+  let dragStartX = 0;
+  let dragStartY = 0;
+  let activeSelectedRoomId = null;
+
+  async function loadMapForHero(hero) {
+    if (!mapCanvasWrap) return;
+
+    const mapHeroTitle = document.getElementById("map-hero-title");
+    const mapHeroSub = document.getElementById("map-hero-sub");
+    const mapCycleText = document.getElementById("map-cycle-text");
+    const statRooms = document.getElementById("stat-rooms-count");
+    const statZones = document.getElementById("stat-zones-count");
+    const statSafe = document.getElementById("stat-safe-count");
+    const statDanger = document.getElementById("stat-danger-count");
+    const zoneFilter = document.getElementById("map-filter-zone");
+    const riskFilter = document.getElementById("map-filter-risk");
+    const searchInput = document.getElementById("map-search");
+    const edgesLayer = document.getElementById("map-edges-layer");
+    const nodesLayer = document.getElementById("map-nodes-layer");
+    const viewportGroup = document.getElementById("map-viewport-group");
+    const inspectorEl = document.getElementById("map-room-inspector");
+    const tableContainer = document.getElementById("map-table-container");
+
+    if (mapHeroTitle) {
+      mapHeroTitle.textContent = `🗺️ Mapa Topológico de ${hero.name}`;
+    }
+    if (mapHeroSub) {
+      mapHeroSub.textContent = `Território explorado, rotas e santuários de ${hero.name} (${hero.title}).`;
+    }
+
+    try {
+      const res = await fetch(`data/heroes/${hero.id}/mapa.json`);
+      if (!res.ok) {
+        throw new Error(`Arquivo mapa.json não encontrado para ${hero.name}`);
+      }
+      currentMapData = await res.json();
+    } catch (e) {
+      console.warn("Erro ao carregar mapa.json:", e);
+      if (edgesLayer) edgesLayer.innerHTML = "";
+      if (nodesLayer) {
+        nodesLayer.innerHTML = `<text x="500" y="350" text-anchor="middle" fill="var(--text-muted)">Nenhum mapa catalogado ainda para ${hero.name}.</text>`;
+      }
+      return;
+    }
+
+    const { rooms = [], zones = [], sanctuary_id = "", last_updated_cycle = "A cada 10 ciclos" } = currentMapData;
+
+    // Atualiza indicadores
+    if (mapCycleText) mapCycleText.textContent = `Consolidado: ${last_updated_cycle}`;
+    if (statRooms) statRooms.textContent = rooms.length;
+    if (statZones) statZones.textContent = zones.length || new Set(rooms.map(r => r.zone)).size;
+    
+    const safeCount = rooms.filter(r => r.risk_code === "safe").length;
+    const dangerCount = rooms.filter(r => r.risk_code === "danger" || r.risk_code === "fatal").length;
+    if (statSafe) statSafe.textContent = safeCount;
+    if (statDanger) statDanger.textContent = dangerCount;
+
+    // Popula o seletor de zonas
+    if (zoneFilter) {
+      zoneFilter.innerHTML = '<option value="all">Todas as Zonas</option>';
+      const uniqueZones = zones.length > 0 ? zones : [...new Set(rooms.map(r => r.zone))];
+      uniqueZones.forEach(z => {
+        const opt = document.createElement("option");
+        opt.value = z;
+        opt.textContent = z;
+        zoneFilter.appendChild(opt);
+      });
+      zoneFilter.value = "all";
+    }
+
+    if (riskFilter) riskFilter.value = "all";
+    if (searchInput) searchInput.value = "";
+
+    // Mapa de busca rápida por ID
+    const roomMap = new Map();
+    rooms.forEach(r => roomMap.set(r.id, r));
+
+    // Renderiza Edges (Conexões)
+    function renderEdges() {
+      if (!edgesLayer) return;
+      edgesLayer.innerHTML = "";
+      const drawnConnections = new Set();
+
+      rooms.forEach(room => {
+        if (!room.coords || !room.exits) return;
+        Object.entries(room.exits).forEach(([dir, targetId]) => {
+          const target = roomMap.get(targetId);
+          if (!target || !target.coords) return;
+
+          const connKey = [room.id, targetId].sort().join("<->");
+          if (drawnConnections.has(connKey)) return;
+          drawnConnections.add(connKey);
+
+          const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+          line.setAttribute("x1", room.coords.x);
+          line.setAttribute("y1", room.coords.y);
+          line.setAttribute("x2", target.coords.x);
+          line.setAttribute("y2", target.coords.y);
+          line.setAttribute("class", "map-edge-line");
+          line.setAttribute("data-from", room.id);
+          line.setAttribute("data-to", targetId);
+          edgesLayer.appendChild(line);
+        });
+      });
+    }
+
+    // Renderiza Nodes (Salas)
+    function renderNodes() {
+      if (!nodesLayer) return;
+      nodesLayer.innerHTML = "";
+
+      rooms.forEach(room => {
+        if (!room.coords) return;
+        const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+        g.setAttribute("class", `map-room-node ${room.id === activeSelectedRoomId ? "selected" : ""}`);
+        g.setAttribute("id", `node-${room.id}`);
+        g.setAttribute("data-id", room.id);
+        g.setAttribute("data-zone", room.zone);
+        g.setAttribute("data-risk", room.risk_code || "low");
+
+        // Pulso se for santuário
+        if (room.id === sanctuary_id) {
+          const pulse = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+          pulse.setAttribute("class", "sanctuary-pulse-ring");
+          pulse.setAttribute("cx", room.coords.x);
+          pulse.setAttribute("cy", room.coords.y);
+          pulse.setAttribute("r", "26");
+          g.appendChild(pulse);
+        }
+
+        // Fundo do nó
+        const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+        rect.setAttribute("class", `map-node-bg risk-${room.risk_code || "low"} ${room.id === sanctuary_id ? "is-sanctuary" : ""}`);
+        rect.setAttribute("x", room.coords.x - 22);
+        rect.setAttribute("y", room.coords.y - 22);
+        rect.setAttribute("width", "44");
+        rect.setAttribute("height", "44");
+        rect.setAttribute("rx", "10");
+        rect.setAttribute("ry", "10");
+        g.appendChild(rect);
+
+        // Ícone
+        const icon = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        icon.setAttribute("class", "map-node-icon");
+        icon.setAttribute("x", room.coords.x);
+        icon.setAttribute("y", room.coords.y);
+        icon.textContent = room.icon || "📍";
+        g.appendChild(icon);
+
+        // Rótulo da sala
+        const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        label.setAttribute("class", "map-node-label");
+        label.setAttribute("x", room.coords.x);
+        label.setAttribute("y", room.coords.y + 36);
+        label.textContent = room.name;
+        g.appendChild(label);
+
+        // Evento de clique
+        g.addEventListener("click", (evt) => {
+          evt.stopPropagation();
+          inspectRoom(room);
+        });
+
+        nodesLayer.appendChild(g);
+      });
+    }
+
+    // Renderiza a Tabela Tática alternativa
+    function renderTable() {
+      if (!tableContainer) return;
+      tableContainer.innerHTML = rooms.map(r => {
+        const exitsList = r.exits
+          ? Object.entries(r.exits).map(([dir, tid]) => {
+              const tgt = roomMap.get(tid);
+              return `<button class="exit-btn" data-target="${tid}"><span>🧭 ${dir.toUpperCase()}</span>: ${tgt ? tgt.name : tid}</button>`;
+            }).join(" ")
+          : "<span style='color: var(--text-muted); font-size: 0.85rem;'>Nenhuma</span>";
+
+        const npcsList = r.npcs && r.npcs.length > 0
+          ? r.npcs.map(n => `<span class="npc-pill">${n}</span>`).join(" ")
+          : "<span style='color: var(--text-muted); font-size: 0.85rem;'>Nenhum catalogado</span>";
+
+        return `
+          <div class="tactical-room-card" id="card-${r.id}" data-id="${r.id}" data-zone="${r.zone}" data-risk="${r.risk_code || 'low'}">
+            <div class="tactical-card-header">
+              <div class="tactical-card-title">
+                <span>${r.icon || "📍"}</span>
+                <span>${r.name}</span>
+                <span style="font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-sans);">(${r.zone})</span>
+              </div>
+              <span class="inspector-badge ${r.risk_code || 'low'}">${r.risk || 'Normal'}</span>
+            </div>
+            <div style="margin: 0.4rem 0;">
+              <strong style="color: var(--accent-gold); font-size: 0.85rem; font-family: var(--font-sans);">Saídas:</strong>
+              <div style="display: inline-flex; flex-wrap: wrap; gap: 0.35rem; margin-left: 0.5rem;">${exitsList}</div>
+            </div>
+            <div style="margin: 0.4rem 0;">
+              <strong style="color: var(--accent-cyan); font-size: 0.85rem; font-family: var(--font-sans);">Presença / NPCs:</strong>
+              <span style="margin-left: 0.5rem;">${npcsList}</span>
+            </div>
+            <p style="font-size: 0.95rem; color: var(--text-primary); margin-top: 0.4rem;">${r.notes || ""}</p>
+          </div>
+        `;
+      }).join("");
+
+      tableContainer.onclick = (e) => {
+        const btn = e.target.closest(".exit-btn");
+        if (btn) {
+          const tid = btn.getAttribute("data-target");
+          const targetRoom = roomMap.get(tid);
+          if (targetRoom) {
+            centerOnRoom(targetRoom);
+            inspectRoom(targetRoom);
+            const btnVisual = document.getElementById("btn-view-visual");
+            if (btnVisual) btnVisual.click();
+          }
+        }
+      };
+    }
+
+    // Inspetor de Sala
+    function inspectRoom(room) {
+      if (!room) return;
+      activeSelectedRoomId = room.id;
+
+      // Destaca nó no SVG
+      if (nodesLayer) {
+        const allNodes = nodesLayer.querySelectorAll(".map-room-node");
+        allNodes.forEach(n => {
+          if (n.getAttribute("data-id") === room.id) {
+            n.classList.add("selected");
+          } else {
+            n.classList.remove("selected");
+          }
+        });
+      }
+
+      // Destaca conexões adjacentes
+      if (edgesLayer) {
+        const allEdges = edgesLayer.querySelectorAll(".map-edge-line");
+        allEdges.forEach(e => {
+          const from = e.getAttribute("data-from");
+          const to = e.getAttribute("data-to");
+          if (from === room.id || to === room.id) {
+            e.classList.add("highlight");
+          } else {
+            e.classList.remove("highlight");
+          }
+        });
+      }
+
+      if (!inspectorEl) return;
+      const inspectIcon = document.getElementById("inspect-icon");
+      const inspectName = document.getElementById("inspect-name");
+      const inspectZone = document.getElementById("inspect-zone");
+      const inspectBadge = document.getElementById("inspect-risk-badge");
+      const inspectExits = document.getElementById("inspect-exits");
+      const inspectNpcs = document.getElementById("inspect-npcs");
+      const inspectNotes = document.getElementById("inspect-notes");
+      const inspectDiscovered = document.getElementById("inspect-discovered");
+
+      if (inspectIcon) inspectIcon.textContent = room.icon || "📍";
+      if (inspectName) inspectName.textContent = room.name;
+      if (inspectZone) inspectZone.textContent = `${room.zone} • ID: ${room.id}`;
+      if (inspectBadge) {
+        inspectBadge.className = `inspector-badge ${room.risk_code || "low"}`;
+        inspectBadge.textContent = room.risk || "Normal";
+      }
+      if (inspectNotes) inspectNotes.textContent = room.notes || "Sem anotações de campo registradas.";
+      if (inspectDiscovered) inspectDiscovered.textContent = room.discovered_in || "Ciclo I";
+
+      // Saídas clicáveis
+      if (inspectExits) {
+        inspectExits.innerHTML = "";
+        const dirNames = { n: "Norte", s: "Sul", l: "Leste", o: "Oeste", u: "Cima (Up)", d: "Baixo (Down)" };
+        if (room.exits && Object.keys(room.exits).length > 0) {
+          Object.entries(room.exits).forEach(([dir, targetId]) => {
+            const targetRoom = roomMap.get(targetId);
+            const btn = document.createElement("button");
+            btn.className = "exit-btn";
+            btn.innerHTML = `<span>🧭 ${dirNames[dir] || dir.toUpperCase()}</span> → <strong>${targetRoom ? targetRoom.name : targetId}</strong>`;
+            btn.addEventListener("click", () => {
+              if (targetRoom) {
+                centerOnRoom(targetRoom);
+                inspectRoom(targetRoom);
+              }
+            });
+            inspectExits.appendChild(btn);
+          });
+        } else {
+          inspectExits.innerHTML = "<span style='color: var(--text-muted); font-size: 0.85rem;'>Sem saídas catalogadas.</span>";
+        }
+      }
+
+      // NPCs
+      if (inspectNpcs) {
+        inspectNpcs.innerHTML = "";
+        if (room.npcs && room.npcs.length > 0) {
+          room.npcs.forEach(npc => {
+            const span = document.createElement("span");
+            span.className = "npc-pill";
+            span.textContent = npc;
+            inspectNpcs.appendChild(span);
+          });
+        } else {
+          inspectNpcs.innerHTML = "<span style='color: var(--text-muted); font-size: 0.85rem;'>Nenhum NPC hostil ou habitante catalogado nesta sala.</span>";
+        }
+      }
+
+      inspectorEl.classList.add("active");
+    }
+
+    // Fechar inspetor
+    const btnCloseInspector = document.getElementById("btn-close-inspector");
+    if (btnCloseInspector) {
+      btnCloseInspector.onclick = () => {
+        if (inspectorEl) inspectorEl.classList.remove("active");
+        if (edgesLayer) {
+          edgesLayer.querySelectorAll(".map-edge-line").forEach(e => e.classList.remove("highlight"));
+        }
+        if (nodesLayer) {
+          nodesLayer.querySelectorAll(".map-room-node").forEach(n => n.classList.remove("selected"));
+        }
+      };
+    }
+
+    // Aplica matriz de transformação ao viewport
+    function applyTransform() {
+      if (viewportGroup) {
+        viewportGroup.setAttribute("transform", `translate(${mapPanX}, ${mapPanY}) scale(${mapScale})`);
+      }
+    }
+
+    function centerOnCoords(x, y, targetScale = 1.0) {
+      mapScale = targetScale;
+      mapPanX = 500 - x * mapScale;
+      mapPanY = 320 - y * mapScale;
+      applyTransform();
+    }
+
+    function centerOnRoom(room) {
+      if (!room || !room.coords) return;
+      centerOnCoords(room.coords.x, room.coords.y, Math.max(mapScale, 1.1));
+    }
+
+    // Filtros e busca em tempo real
+    function applyFilters() {
+      const q = (searchInput ? searchInput.value : "").trim().toLowerCase();
+      const selectedZone = zoneFilter ? zoneFilter.value : "all";
+      const selectedRisk = riskFilter ? riskFilter.value : "all";
+
+      rooms.forEach(room => {
+        const nodeEl = document.getElementById(`node-${room.id}`);
+        const cardEl = document.getElementById(`card-${room.id}`);
+
+        const matchSearch = !q ||
+          room.name.toLowerCase().includes(q) ||
+          room.id.toLowerCase().includes(q) ||
+          (room.notes && room.notes.toLowerCase().includes(q)) ||
+          (room.npcs && room.npcs.some(n => n.toLowerCase().includes(q)));
+
+        const matchZone = selectedZone === "all" || room.zone === selectedZone;
+        const matchRisk = selectedRisk === "all" ||
+          (selectedRisk === "safe" && room.risk_code === "safe") ||
+          (selectedRisk === "medium" && room.risk_code === "medium") ||
+          (selectedRisk === "danger" && (room.risk_code === "danger" || room.risk_code === "fatal"));
+
+        const isMatch = matchSearch && matchZone && matchRisk;
+
+        if (nodeEl) {
+          if (isMatch) {
+            nodeEl.style.opacity = "1";
+            nodeEl.style.pointerEvents = "auto";
+          } else {
+            nodeEl.style.opacity = "0.15";
+            nodeEl.style.pointerEvents = "none";
+          }
+        }
+
+        if (cardEl) {
+          cardEl.style.display = isMatch ? "block" : "none";
+        }
+      });
+    }
+
+    if (searchInput) searchInput.addEventListener("input", applyFilters);
+    if (zoneFilter) zoneFilter.addEventListener("change", applyFilters);
+    if (riskFilter) riskFilter.addEventListener("change", applyFilters);
+
+    // Controles de Modo de Visão
+    const btnViewVisual = document.getElementById("btn-view-visual");
+    const btnViewTable = document.getElementById("btn-view-table");
+
+    if (btnViewVisual && btnViewTable) {
+      btnViewVisual.onclick = () => {
+        btnViewVisual.classList.add("active");
+        btnViewTable.classList.remove("active");
+        if (mapCanvasWrap) mapCanvasWrap.style.display = "block";
+        if (tableContainer) tableContainer.classList.remove("active");
+      };
+
+      btnViewTable.onclick = () => {
+        btnViewTable.classList.add("active");
+        btnViewVisual.classList.remove("active");
+        if (mapCanvasWrap) mapCanvasWrap.style.display = "none";
+        if (tableContainer) tableContainer.classList.add("active");
+      };
+    }
+
+    // Zoom Controls
+    const btnZoomIn = document.getElementById("ctrl-zoom-in");
+    const btnZoomOut = document.getElementById("ctrl-zoom-out");
+    const btnZoomReset = document.getElementById("ctrl-zoom-reset");
+    const btnCenterSanctuary = document.getElementById("btn-center-sanctuary");
+
+    if (btnZoomIn) {
+      btnZoomIn.onclick = () => {
+        mapScale = Math.min(mapScale * 1.25, 3.5);
+        applyTransform();
+      };
+    }
+    if (btnZoomOut) {
+      btnZoomOut.onclick = () => {
+        mapScale = Math.max(mapScale / 1.25, 0.4);
+        applyTransform();
+      };
+    }
+    if (btnZoomReset) {
+      btnZoomReset.onclick = () => {
+        const sanctuary = roomMap.get(sanctuary_id) || rooms[0];
+        if (sanctuary) centerOnCoords(sanctuary.coords.x, sanctuary.coords.y, 1.0);
+      };
+    }
+    if (btnCenterSanctuary) {
+      btnCenterSanctuary.onclick = () => {
+        const sanctuary = roomMap.get(sanctuary_id) || rooms[0];
+        if (sanctuary) {
+          centerOnCoords(sanctuary.coords.x, sanctuary.coords.y, 1.25);
+          inspectRoom(sanctuary);
+        }
+      };
+    }
+
+    // Pan & Drag Handlers
+    mapCanvasWrap.onmousedown = (e) => {
+      if (e.target.closest(".map-room-node") || e.target.closest(".map-floating-controls") || e.target.closest(".map-legend-box")) return;
+      isMapDragging = true;
+      dragStartX = e.clientX - mapPanX;
+      dragStartY = e.clientY - mapPanY;
+      mapCanvasWrap.classList.add("is-dragging");
+    };
+
+    window.addEventListener("mousemove", (e) => {
+      if (!isMapDragging) return;
+      mapPanX = e.clientX - dragStartX;
+      mapPanY = e.clientY - dragStartY;
+      applyTransform();
+    });
+
+    window.addEventListener("mouseup", () => {
+      if (isMapDragging) {
+        isMapDragging = false;
+        mapCanvasWrap.classList.remove("is-dragging");
+      }
+    });
+
+    // Zoom via Roda do Mouse
+    mapCanvasWrap.onwheel = (e) => {
+      e.preventDefault();
+      const zoomFactor = e.deltaY < 0 ? 1.15 : 0.85;
+      const newScale = Math.max(0.35, Math.min(mapScale * zoomFactor, 3.5));
+
+      const rect = mapCanvasWrap.getBoundingClientRect();
+      const mouseX = e.clientX - rect.left;
+      const mouseY = e.clientY - rect.top;
+
+      mapPanX = mouseX - (mouseX - mapPanX) * (newScale / mapScale);
+      mapPanY = mouseY - (mouseY - mapPanY) * (newScale / mapScale);
+      mapScale = newScale;
+      applyTransform();
+    };
+
+    // Suporte a Touch para Mobile
+    let touchStartDist = 0;
+    mapCanvasWrap.ontouchstart = (e) => {
+      if (e.touches.length === 1) {
+        isMapDragging = true;
+        dragStartX = e.touches[0].clientX - mapPanX;
+        dragStartY = e.touches[0].clientY - mapPanY;
+      } else if (e.touches.length === 2) {
+        touchStartDist = Math.hypot(
+          e.touches[0].clientX - e.touches[1].clientX,
+          e.touches[0].clientY - e.touches[1].clientY
+        );
+      }
+    };
+
+    mapCanvasWrap.ontouchmove = (e) => {
+      if (e.touches.length === 1 && isMapDragging) {
+        mapPanX = e.touches[0].clientX - dragStartX;
+        mapPanY = e.touches[0].clientY - dragStartY;
+        applyTransform();
+      } else if (e.touches.length === 2) {
+        const currentDist = Math.hypot(
+          e.touches[0].clientX - e.touches[1].clientX,
+          e.touches[0].clientY - e.touches[1].clientY
+        );
+        if (touchStartDist > 0) {
+          const factor = currentDist / touchStartDist;
+          mapScale = Math.max(0.35, Math.min(mapScale * factor, 3.5));
+          touchStartDist = currentDist;
+          applyTransform();
+        }
+      }
+    };
+
+    mapCanvasWrap.ontouchend = () => {
+      isMapDragging = false;
+      touchStartDist = 0;
+    };
+
+    // Renderização inicial
+    renderEdges();
+    renderNodes();
+    renderTable();
+
+    // Centraliza no santuário inicial
+    const sanctuaryRoom = roomMap.get(sanctuary_id) || rooms[0];
+    if (sanctuaryRoom && sanctuaryRoom.coords) {
+      centerOnCoords(sanctuaryRoom.coords.x, sanctuaryRoom.coords.y, 1.05);
+      inspectRoom(sanctuaryRoom);
+    }
   }
 
   initHeroes();

@@ -46,12 +46,17 @@ Crie a seguinte pasta raiz:
 │   ├── identidade.md      # A alma: 5 perguntas e matriz operacional
 │   ├── evolucao.md        # O cinzel: log de mutações psicológicas ciclo a ciclo
 │   ├── conhecimento.md    # O grimório: mapa, NPCs, facções e regras do mundo
+│   ├── mapa.md            # Registro topográfico e saídas verificadas (a cada 10 ciclos)
+│   ├── mapa.json          # Dados do mapa interativo do aventureiro (a cada 10 ciclos)
+│   ├── ficha.md           # Ficha viva em tempo real
 │   └── posts.json         # Array de crônicas (mais recente no topo)
 ├── css/
 │   └── style.css          # Estilo dark fantasy responsivo (copiar do original)
 ├── js/
-│   └── main.js             # Engine de renderização de posts, busca e filtros
+│   └── main.js             # Engine de renderização de posts, mapas e filtros
 ├── index.html             # Feed principal das crônicas
+├── mapa.html              # Mapa interativo do aventureiro
+├── ficha.html             # Ficha viva do aventureiro
 ├── sobre.html             # Apresentação do herói e da matriz psicológica
 ├── add_day.py             # Script utilitário para injetar nova crônica
 ├── publish_daily.py       # (Opcional) Sincronização via GitHub API

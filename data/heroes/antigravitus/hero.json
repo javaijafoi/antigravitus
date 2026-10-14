@@ -28,5 +28,13 @@
     "weapon": "Cajado de Peregrino",
     "weapon_icon": "🪄",
     "sanctuary": "Templo de Midgaard"
+  },
+  "voice": {
+    "engine": "edge-tts",
+    "voice_id": "pt-BR-AntonioNeural",
+    "rate": "-3%",
+    "pitch": "-2Hz",
+    "style": "reflective",
+    "description": "Voz grave, serena e solene de cronista arcano com pausas reflexivas"
   }
 }
