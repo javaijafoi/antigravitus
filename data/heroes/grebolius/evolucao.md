@@ -189,3 +189,24 @@
   * A rota da Área dos Novatos agora é seu território de caça prioritário.
   * Continuar os abates seletivos para somar os 604 pontos restantes e ascender ao Segundo Grau de Maestria (Nível 2).
 
+---
+
+### ⏳ Ciclo 15 (Dia 15): O Descarte do Fardo, o Elmo Radiante e o Tesouro dos Mercadores
+* **Status Real (MUD):**
+  * Nível: 1 | Vida: 20/20 (Plena!) | Mana: 100/100 | Movimento: 84/84 | AC: 17
+  * Constituição: **10** | Força: 10 | Destreza: 15 | Inteligência: 17 | Sabedoria: 16
+  * Experiência: **396 EXP** (faltam 604 EXP para o Nível 2)
+  * Ouro Líquido: **613 moedas de ouro** *(salto financeiro gigantesco!)*
+  * Equipamento em Uso: Brilhante elmo de novato na cabeça (aura mística), coleira de dragão no pescoço, punhal de novato empunhado, escudo e vestes.
+  * Configurações: `wimpy 10` (trava de fuga ampliada para segurança contra críticos) e `autogold` ativo.
+  * Local de Pernoite: O Panteão dos Centenários (Salvo e Dormindo).
+* **Marcos e Impactos Psicológicos:**
+  * **A Reflexão do Fardo e da Força:** Grebolius compreendeu que seu corpo de ladra (Força 10) não foi feito para carregar picaretas pesadas ou espadas largas de guardas. Desfazer-se do peso morto devolveu sua velocidade natural e a capacidade de esquiva.
+  * **A Coroação com o Elmo Místico:** Ao remover o gorro rústico e afivelar o brilhante elmo de novato, sentiu a aura protetora blindar sua mente e cabeça, fortalecendo sua integridade.
+  * **O Império Financeiro Inicial (613 Moedas):** A liquidação cirúrgica no ferreiro (picareta por 120, lâmina por 120, espada militar por 240, adaga por 4) somada à venda do gorro no armeiro (75) e ao saque das 34 moedas caídas na Praça do Templo encheu seu bornal com 613 moedas de ouro. A mendicância acabou; Grebolius agora tem capital para suprimentos, pergaminhos e equipamentos.
+  * **A Prova de Fogo da Disciplina na Área dos Novatos:** Ao retornar ao Fim do Corredor, a presa anterior ainda não havia retornado e o filhote de dragão rondava a sala. A checagem de alvo evitou qualquer confronto com a criatura de vida abissal. A ladra retornou com fôlego intacto, provando que a soberania é construída com paciência e não com impulsividade cega.
+* **Decisão Tática:**
+  * Com 613 moedas no bolso, adquirir pergaminho de retorno (*Word of Recall*) e sacola de transporte assim que encontrar o mercador adequado.
+  * Aproveitar a leveza da mochila para explorar novas ramificações da Área dos Novatos e concluir a colheita dos 604 pontos restantes de maestria.
+
+

@@ -18,67 +18,63 @@
 ## ✦ Status Vitais
 | Recurso | Atual | Máximo | Porcentagem |
 | :--- | :---: | :---: | :---: |
-| **Pontos de Vida (HP)** | 23 | 23 | 100% |
+| **Pontos de Vida (HP)** | 20 | 20 | 100% |
 | **Pontos de Mana (MP)** | 100 | 100 | 100% |
-| **Estamina / Movimento (MV)** | 83 | 84 | 98% |
+| **Estamina / Movimento (MV)** | 84 | 84 | 100% |
 
 * **Experiência Acumulada:** 396 EXP
-* **Experiência Necessária p/ Grau 2:** 1.000 EXP (Faltam apenas 604 EXP)
-* **Ouro Líquido:** 20 moedas de ouro
+* **Experiência Necessária p/ Grau 2:** 1.000 EXP (Faltam 604 EXP)
+* **Ouro Líquido:** **613 moedas de ouro** *(venda de armas pesadas no ferreiro, gorro no armeiro e saque na praça)*
 
 ---
 
 ## ✦ Atributos Base
 * **Força (STR):** 10
 * **Destreza (DEX):** 15
-* **Constituição (CON):** 9
+* **Constituição (CON):** 10
 * **Inteligência (INT):** 17
 * **Sabedoria (WIS):** 16
 * **Carisma (CHA):** 9
 
 ### Métricas de Combate
-* **Classe de Armadura (AC):** 17 *(armadura de couro reforçado, veste de novato, escudo e coleira de dragão no pescoço)*
+* **Classe de Armadura (AC):** 17 *(elmo de novato místico, coleira de dragão no pescoço, veste de novato, braçadeiras, luvas, calça e escudo)*
 * **Bônus de Acerto (Hitroll):** +1
 * **Bônus de Dano (Damroll):** +1
-* **Configuração de Fuga (Wimpy):** 8 HP (Fuga automática ativa)
+* **Configuração de Fuga (Wimpy):** **10 HP** (Trava automática de segurança contra acertos críticos)
+* **Modo Automático:** `autogold` ativo
 
 ---
 
 ## ✦ Habilidades Conhecidas e Treinos Pendentes
-* **Sessões de Treino Acumuladas:** **0 sessões disponíveis** *(todas as 3 sessões do nível 1 investidas com perfeição)*
+* **Sessões de Treino Acumuladas:** **0 sessões disponíveis** *(plenamente investidas)*
 * **Perícias e Encantamentos:**
-  * `magic missile` (Projétil Mágico): **95%+** (Grau: Perfeito / Maestria Absoluta de Nível 1)
+  * `magic missile` (Projétil Mágico): **95%+** (Grau: Perfeito / Maestria de Nível 1)
   * `swim` (Natação): **55%** (Grau: Bom / Sobrevivência em Águas)
 
 ---
 
 ## ✦ Equipamento em Uso
+* **Cabeça:** `um brilhante elmo de novato` (aura mística protetora)
+* **No Pescoço:** `a coleira do dragão de estimação` (couro endurecido de proteção)
 * **Empunhado (Arma Principal):** `um brilhante punhal de novato` (aura mística de velocidade)
-* **Como Escudo:** `um escudo` (defesa rígida — bloqueio confirmado em batalha)
-* **No Pescoço:** `a coleira do dragão de estimação` (proteção reforçada, +1 AC)
-* **Cabeça:** `um gorro de couro`
-* **Corpo:** `uma brilhante veste de novato`
-* **Braços:** `um par de braçadeiras de couro`
-* **Mãos:** `um par de luvas de couro`
-* **Pernas:** `uma calça de couro`
+* **Como Escudo:** `um escudo` (defesa rígida — bloqueio confirmado)
+* **No Corpo:** `uma brilhante veste de novato`
+* **Nos Braços:** `um par de braçadeiras de couro`
+* **Nas Mãos:** `um par de luvas de couro`
+* **Nas Pernas:** `uma calça de couro`
 * **Como Luz:** `uma tocha`
 
 ---
 
-## ✦ Inventário Carregado
-* `um brilhante punhal de novato` (reserva encantada saqueada na carcaça do monstro)
-* **`uma espada longa (novo)(+2L)`** *(aço forjado militar do Portão Oeste)*
-* `uma adaga` (lâmina secundária leve)
-* `um brilhante elmo de novato` (aura mágica)
-* `um gorro de couro sobressalente`
-* 2x `cantil de couro` (reabastecidos)
-* `uma lâmina improvisada` (+3L)
-* `uma picareta` (+10L)
+## ✦ Inventário Carregado (Mochila Leve & Desimpedida)
+* `um brilhante punhal de novato` (reserva rápida encantada com aura)
+* `um gorro de couro` (proteção reserva simples)
+* 2x `cantil de couro` (reabastecidos com água pura)
 * `um bastão de folhas e galhos`
 * `um anel arcano` (+2E)
 
 ---
 
 ## ✦ Ciclo e Postura Atual
-* **Estado:** Triunfo do Dia 14 consumado. Descoberta e desbravamento da Área dos Novatos, primeiro monstro abatido com impacto arcano e golpe de adaga sem sofrer 1 ponto de dano.
-* **Tática Operacional:** Abrir combate com Projétil Mágico a 95% de precisão (10 de dano instantâneo), aparar ataques com o escudo e finalizar no peito da presa com o punhal novato.
+* **Estado:** Salto financeiro e ergonômico do Dia 15 consumado. Carga aliviada com a venda de picaretas e espadas pesadas nos artesãos de Midgaard; cofre recheado com 613 moedas de ouro; cabeça blindada pelo elmo de novato místico.
+* **Tática Operacional:** Manter a estamina leve, atacar presas seguras da Área dos Novatos com abertura de raio arcano e recuar com 10 HP ao menor risco.

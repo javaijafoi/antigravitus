@@ -82,31 +82,41 @@ NENHUM dia jogado é encerrado sem cumprir esta sequência de 5 passos:
 
 ---
 
-## 🛡️ 6. Heurística de Combate e Sobrevivência (Nível 1 em MUD Clássico)
+## 🛡️ 6. Heurística Avançada de Combate, Carga e Sobrevivência (CircleMUD / DeBo)
 Para destravar o avanço de nível sem loop de morte:
 
-1. **Configuração de Fuga de Emergência (Wimpy):**
-   - No primeiro segundo de login, rodar `wimpy 8` (ou 25-30% do HP total). Isso força o MUD a emitir `flee` automático caso a integridade despenque, evitando morte por latência.
-2. **Treino sem Luta (Subir Skills no Mestre):**
-   - Gastar todas as sessões de treino (`practice <skill>`) no Guildmaster até o teto do instrutor (~75-85%).
-   - Usar magias passivas e defensivas de suporte (`cast 'armor' self`) perto de fontes para subir proficiência sem entrar em combate.
-   - Ciclo de recuperação: sempre usar `sleep` para recuperar HP, Mana e MV com rapidez antes de se mover ou lutar.
-3. **Avaliação Obrigatória com `consider <alvo>`:**
-   - **NUNCA** executar `kill` ou lançar feitiço ofensivo sem antes rodar `consider <alvo>`.
-   - Ler rigorosamente o retorno:
-     * *"You could do it with a needle!"* ou *"Easy"* / *"moleza"*: **Atacar imediatamente.**
-     * *"The perfect match!"* ou *"Fair fight"* / *"luta justa"*: **Atacar com cautela** (projétil à distância + adaga).
-     * *"You would need some luck"* ou *"Tough"*: **Evitar no nível 1.**
-     * *"Are you mad!?"* ou *"Suicide"*: **Fugir / ignorar imediatamente.**
-4. **Lista Branca vs. Lista Negra:**
-   - **Lista Branca (Caça segura de Nível 1):** Ratos pequenos, baratas, cobras miúdas, cães vira-latas solitários no lixo, bonecos de treino da academia.
-   - **Lista Negra (Proibido atacar sob qualquer pretexto):**
-     * Guardas da cidade, Capitães e Pacificador (Nível 30+, matam em um turno e tornam procurada).
-     * Lojistas, estalajadeiros e cidadãos pacíficos.
-     * Monstros com flag `[Aggressive]` ou `[Agro]` na descrição.
-     * Mobs sociais / matilhas (lobos em grupo, guardas que usam `assist`).
-5. **Fluxo Pós-Abate:**
-   - Abate confirmado -> `get all corpse` -> `wear all` -> `wield <arma>` -> retornar a refúgio seguro -> `sleep`.
-6. **O Pavor e Ódio da Morte:**
-   - Grebolius sentiu o Vazio entre os mundos e a perda de fragmentos de memória. A morte é uma mutilação existencial e um horror absoluto que ela jamais aceitará reviver.
+1. **Configuração de Fuga de Emergência (Wimpy 10):**
+   - Com Constituição 9 e Vida 23, qualquer crítico de mob nível 2 tira 8 a 10 de vida. Rodar `wimpy 10` imediatamente para forçar fuga antes de sofrer hit kill.
+2. **Gerenciamento de Carga com Força 10 (Descarte de Peso Morto):**
+   - Com STR 10, carregar itens pesados (como picareta +10L, espadas militares pesadas, lâminas improvisadas e gorros reservas) drena os 84 MV velozmente e trava a esquiva.
+   - Vender sucata nos comerciantes certos de Midgaard:
+     * Loja de Armas / Ferreiro (Rua Leste II): espada longa, lâmina improvisada, adaga extra, picareta.
+     * Loja de Armaduras (Rua Oeste): gorro de couro reserva.
+     * Loja de Magias (Término da Rua Oeste): bastões e itens arcanos excedentes.
+   - Usar sacolas/mochilas (`backpack`, `bag`) para driblar o limite de itens soltos nas mãos.
+3. **Otimização de Equipamento em Uso:**
+   - Conferir sempre itens melhores na mochila: remover gorro comum (`remove gorro`) e vestir o elmo encantado de novato (`wear elmo`) para maximizar Classe de Armadura e auras místicas.
+4. **Avaliação Obrigatória com `con <alvo>`:**
+   - **NUNCA** executar `kill` ou lançar feitiço ofensivo sem antes rodar `con <alvo>`.
+   - Ler rigorosamente o quadro comparativo:
+     * Se a Vida do oponente for *"Você é louco?"* ou *"Precisaria de muita sorte"*: **Fugir / ignorar imediatamente (ex: bebê dragão)**.
+     * Se Poder for *"perda de tempo"* e Precisão for *"Fácil!"*: **Atacar**.
+5. **O Combo de 'Ladra Arcana' (Abertura Mágica + Finalização no Aço):**
+   - Abrir o combate à distância com `cast 'magic missile' <alvo>` (10 de dano instantâneo com 95%+ de acerto).
+   - Deixar o punhal novato empunhado e o escudo apararem o contra-ataque e finalizarem a presa no combate corpo a corpo para economizar mana.
+6. **Regra dos 50% de Mana / 15 HP:**
+   - Se a Mana cair abaixo de 50 MP ou o HP abaixo de 15 HP, interromper a caça imediatamente, retornar ao Santuário (Panteão ou Templo) e usar `sleep` até recuperação completa (23/23 HP e 100/100 MP).
+7. **Varredura e Portas de Fuga Abertas:**
+   - Checar saídas e salas adjacentes com `look <direcao>` antes de entrar.
+   - Manter portas destrancadas e abertas nas costas para que o comando `flee` não falhe em pânico.
+8. **Auto-Saque e Sacrifício aos Deuses:**
+   - Ativar `autogold` e `autoloot` (ou conferir em `config`).
+   - Após saquear (`get all corpo`), usar `sac corpo` para oferecer o cadáver aos deuses em troca de moedas de ouro ou bônus de XP.
+9. **Monitoramento de Luz, Hidratação e Suprimentos:**
+   - Vigiar alertas da tocha para não lutar cego no escuro (inviabiliza conjuração).
+   - Beber nos cantis assim que a sede surgir.
+   - Passar na Sala de Doações do Templo para checar itens e pergaminhos gratuitos deixados por veteranos antes de comprar.
+10. **O Pavor e Ódio da Morte:**
+    - Grebolius sentiu o Vazio entre os mundos e a perda de fragmentos de memória. A morte é uma mutilação existencial e um horror absoluto que ela jamais aceitará reviver.
+
 

@@ -47,3 +47,19 @@
 * **O Paraíso (Plano Pós-Morte):** Campo ilusório de descanso eterno; árvore de metal oculta no leste esconde o portal de escape.
 * **O Caminho no Vazio:** Fenda planar que despoja a alma de sensações e **devora memórias ancestrais** a cada travessia.
 * **A Fonte da Vida:** Câmara sagrada de água pulsante que reconstitui a matéria e revive o espírito nas lajes do Templo de Midgaard.
+
+---
+
+## 💰 3. Economia de Sobrevivência & Liquidação de Sucata
+A Força 10 de Grebolius impede carregar armamento pesado sem esgotar o vigor. A liquidação no comércio especializado de Midgaard é a rota para capitalizar:
+
+| Mercador / Loja | Localização | Itens Comprados | Cotação Obtida |
+| :--- | :--- | :--- | :--- |
+| **Ferreiro (Loja de Armas)** | Rua Principal Leste II | Espada Longa militar | **240 moedas de ouro** |
+| **Ferreiro (Loja de Armas)** | Rua Principal Leste II | Picareta pesada (+10L) | **120 moedas de ouro** |
+| **Ferreiro (Loja de Armas)** | Rua Principal Leste II | Lâmina Improvisada (+3L) | **120 moedas de ouro** |
+| **Ferreiro (Loja de Armas)** | Rua Principal Leste II | Adaga comum | **4 moedas de ouro** |
+| **Armeiro (Loja de Armaduras)**| Rua Principal Oeste | Gorro de couro simples | **75 moedas de ouro** |
+
+* **Regra de Ouro:** Vender tudo o que não for empunhado diretamente ou não conceder proteção mágica imediata.
+
