@@ -744,3 +744,21 @@
   * **Doações e Repouso Olímpico:** Doou punhais na Sala de Doações, onde avistou relíquias de veteranos, e subiu ao Panteão dos Centenários para salvar seu progresso e dormir sob a glória dos eternos.
 * **Decisão Tática:**
   * No Ciclo 44, quebrar a barreira dos 30.000 EXP, avançar rumo aos 800 ouros e sondar novos corredores ou portas com a devida cautela.
+---
+
+### ⏳ Ciclo 44 (Dia 44): A Queda da Muralha dos Trinta Mil e as Fórmulas do Alquimista
+* **Status Real (MUD):**
+  * Nível: **7** *(30.243 EXP | Rompimento dos 30.000 EXP consolidado | Faltam 9.757 EXP para o Grau 8)*
+  * Vida: **49/49** | Mana: **130/130** | Movimento: **93/93** | AC: **39** *(Armadura Arcana ativa)*
+  * Salto de Experiência: **+324 EXP** em combate rápido no Fim do Corredor.
+  * Ouro Líquido: **789 moedas de ouro** *(+20 moedas saqueadas)*
+  * Alinhamento Moral: 17 (Neutro Pragmático).
+  * Diálogo de Campo: Interlocução com O Novato Alquimista em seu laboratório para registrar o avanço da purificação das galerias.
+  * Local de Pernoite: O Panteão dos Centenários (Salva e Dormindo diante dos doze heróis eternos).
+* **Marcos e Impactos Psicológicos:**
+  * **O Estalar da Barreira Mística:** Não houve hesitação no início das manobras; Grebolius sentiu o ar vibrar diferente ao reforçar sua barreira invisível de `armor`. Ela sabia que menos de uma centena de passos a separavam da lendária marca dos trinta mil de maturidade. Desceu aos subterrâneos como uma lâmina que busca sua bainha de carne.
+  * **O Massacre no Fim do Corredor:** O monstro guardião tentou resistir, mas o Projétil Mágico estalou diretamente contra seu crânio, seguido por perfurações viscerais de aço novato. A fera desabou inerte: mais vinte moedas tilintaram no alforje e a experiência acumulada rompeu estrondosamente a barreira simbólica, alcançando **30.243 EXP**. Faltam agora menos de dez mil passos para a glória do Oitavo Círculo de poder.
+  * **A Sondagem dos Frascos de Alquimia:** Cruzou as portas d'A Sala do Alquimista e esteve perante o jovem estudioso de poções, dialogando sobre a peste das aberrações e observando as anotações rabiscadas nas paredes de pedra. O pacto de purificação está vivo e o terror dos novatos está sendo gradualmente erradicado sob seus golpes.
+  * **A Riqueza e o Repouso:** Com quase oitocentas moedas acumuladas, Grebolius retornou pelo Campo Aberto, doou armas na Sala de Doações para manter sua leveza característica e ascendeu ao Panteão dos Centenários. Sob a guarda dos doze titãs, registrou a histórica quebra dos trinta mil passos e adormeceu em paz inviolável.
+* **Decisão Tática:**
+  * No Ciclo 45, ultrapassar 800 moedas de ouro, continuar o extermínio sistemático rumo ao Grau 8 e avaliar novas compras de suprimentos em Midgaard.
