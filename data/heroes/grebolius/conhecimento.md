@@ -9,6 +9,7 @@
 | Alvo / Monstro | Localização Confirmada | Risco | Veredito de Combate | Observações Táticas |
 | :--- | :--- | :--- | :--- | :--- |
 | **Cachorros no Lixo** | Rua Leste / Padaria / Magos | **Baixo** | **ALVOS PRIMÁRIOS DE FARM** | Presas de oportunidade; atacar apenas quando não houver guardas alertas na mesma sala. |
+| **Omorfos, o Malandro** | Templo de Midgaard (em trânsito) | **Incalculável** | **FUGA / NUNCA CONFRONTAR** | Veterano em voo cercado por aura mágica multicolorida colossal. |
 | **Odif Laitseb** | A Padaria | **Mínimo / Estranho** | **OBSERVAR** | Criatura bizarra que anda de costas; não demonstra agressividade imediata. |
 | **Guarda da Cidade** | Rua Leste / Rua Oeste / Portão | **Mortal** | **NÃO PROVOCAR** | Patrulhas armadas da cidade. Não lutar perto deles. |
 | **O Pacificador** | Término da Rua Principal | **Colossal** | **NEUTRO / RESPEITO** | Gigante sentinela da ordem civil; rota de refúgio se algo der errado. |

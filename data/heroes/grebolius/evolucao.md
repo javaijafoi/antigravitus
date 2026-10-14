@@ -33,3 +33,17 @@
 * **Decisão Tática:**
   * Mapeou a Loja de Magias, a Entrada da Guilda dos Magos e o Portão Oeste.
   * Retornou ao cume do monte e estabeleceu o Templo de Midgaard como seu ponto sagrado de pernoite e economia de ouro.
+
+---
+
+### ⏳ Ciclo 4 (Dia 4): A Vigília Sagrada e a Aparição de Omorfos
+* **Status Real (MUD):**
+  * Local: O Templo de Midgaard (Santuário sagrado).
+  * Fome resolvida: carne consumida (`eat carne`). Cantil seco identificado (necessita reabastecimento na Fonte Azul).
+* **Mutação Mental:**
+  * Testemunhar o veterano *Omorfos* cruzando o ar com aura multicolorida cristalizou o abismo de poder. A fraqueza atual é inaceitável; o Nível 30 não é ambição, é sobrevivência e fundação de estado.
+* **Decisão Tática:**
+  * Manter o Templo como porto seguro inviolável.
+  * Prioridade para o próximo ciclo: descer à Praça do Templo para encher o cantil na Fonte Azul (`fill cantil fonte`) e iniciar investidas de EXP contra alvos solitários catalogados.
+
+
