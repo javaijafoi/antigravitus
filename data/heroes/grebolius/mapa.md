@@ -15,6 +15,8 @@
 | **A Entrada da Guilda dos Ladrões** | **N** (Beco Escuro), **L** (Bar dos Ladrões) | Sob Análise | Covil dos ladinos; caixa de moedas; sentinela bloqueia o bar a novatos. |
 | **O Bar dos Ladrões** | **O** (Entrada da Guilda) | Restrito | Reduto interno onde mestres renegados comercializam técnicas e golpes. |
 | **O Beco Pobre** | **L** (Praça Comum), **O** (Rua da Muralha) | Baixo / Miséria | Aglomerado de mendigos, palha e cães; rota de ligação para a muralha oeste. |
+| **O Fim do Beco Pobre** | **S** (Taverna Encardida), **L** (Praça Comum), **O** (Beco Pobre) | Baixo / Entulho | Canto imundo de Midgaard defronte à taverna dos marinheiros e contrabandistas. |
+| **A Taverna Encardida** | **N** (Fim do Beco Pobre) | Clandestino / Botequim | Covil dos renegados; Filthy servindo cospefogo e aguardente local; mendigos pedindo esmolas. |
 | **A Entrada da Guilda dos Necromantes** | **S** (Beco Pobre), **O** (Bar dos Necromantes) | Sombrio / Tensão | Aura opressiva de pavor; aventureiro buscando missões; guarda protegido por ossos colossais ("Só necromantes entram aqui"). |
 | **A Rua da Muralha (Oeste)** | **N** (Portão Oeste), **S** (Ponte Sobre o Rio), **L** (Beco Pobre) | Médio / Patrulha | Parede defensiva oeste da cidade com inscrições rústicas gravadas na pedra e sentinelas da cidade. |
 | **A Ponte Sobre o Rio** | **N** (Rua da Muralha), **S** (Canto Noroeste Da Afluência) | Místico / Limite Urbano | Ponte monumental de pedra sobre as corredeiras que mergulham dez pés abaixo da muralha oeste. |

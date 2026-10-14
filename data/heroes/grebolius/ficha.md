@@ -11,7 +11,7 @@
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **3** *(Ascensão fulminante após abater o Monstro Novato)*
 * **Alinhamento Moral:** 12 (Neutro Pragmático)
-* **Localização Atual:** O Beco Pobre (Oeste de Midgaard) — *Dormindo com segurança*
+* **Localização Atual:** O Panteão dos Centenários (Santuário Supremo de Midgaard) — *Dormindo com segurança*
 
 ---
 
@@ -25,7 +25,7 @@
 * **Experiência Acumulada:** **3.263 EXP**
 * **Experiência Necessária p/ Grau 4:** 1.737 EXP
 * **Ouro Líquido:** **453 moedas de ouro**
-* **Condição Biológica:** Plenamente nutrida e hidratada (provisões intactas, estamina e mana expandidas).
+* **Condição Biológica:** Hidratada na Fonte Azul; alerta orgânico de fome disparado (refeição necessária no próximo ciclo).
 
 ---
 
@@ -81,5 +81,5 @@
 ---
 
 ## ✦ Ciclo e Postura Atual
-* **Estado:** Conclusão do Dia 22. Incorporação da nova doutrina de soberania: múltiplos caminhos para o poder além do combate cego (tarefas, diplomacia, exploração geográfica e economia). Descoberta da rota sul de A Ponte Sobre o Rio rumo a *O Canto Noroeste Da Afluência* e mapeamento dos acessos da Taverna Encardida no Beco Pobre.
-* **Tática Operacional:** No próximo ciclo, explorar as margens da Afluência ou buscar contatos no submundo da Taverna Encardida para destravar serviços remunerados e segredos de Midgaard.
+* **Estado:** Conclusão do Dia 23. Penetração no antro da Taverna Encardida no Beco Pobre, conhecendo o balcão de Filthy e a oferta de bebidas fortes dos marinheiros. Sondagem da rota externa para a Afluência na Ponte Sobre o Rio e retorno ao Panteão dos Centenários sob o olhar das estátuas lendárias.
+* **Tática Operacional:** Alimentar o corpo no início do Ciclo 24 (sacando a rosquinha malhada ou visitando a Padaria) para manter o vigor físico inabalável antes de avançar na Afluência ou intermediar serviços na cidade.

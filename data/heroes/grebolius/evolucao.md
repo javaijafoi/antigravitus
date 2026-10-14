@@ -330,3 +330,17 @@
   * **A Sondagem dos Becos e da Taverna Encardida:** Mapeou as imediações da Taverna Encardida no Fim do Beco Pobre, observando a movimentação de guardas municipais e mendigos, consolidando sua presença nas veias clandestinas da cidade.
 * **Decisão Tática:**
   * No Ciclo 23, cruzar os muros em direção à Afluência para explorar seus segredos fluviais ou descer à Taverna Encardida para sondar contratos e trabalhos lucrativos sem risco desnecessário.
+
+---
+
+### ⏳ Ciclo 23 (Dia 23): O Cheiro da Taverna Encardida, a Passagem Fluvial e o Altar Eterno
+* **Status Real (MUD):**
+  * Nível: **3** | Vida: 27/27 | Mana: 106/106 | Movimento: 87/87 | AC: 17
+  * Experiência: 3.263 EXP | Ouro: 453 moedas | 6 práticas disponíveis
+  * Local de Pernoite: O Panteão dos Centenários (Salvo e Dormindo).
+* **Marcos e Impactos Psicológicos:**
+  * **A Infiltração na Taverna Encardida:** Grebolius empurrou as portas rangentes da velha taverna clandestina no Fim do Beco Pobre. O ar impregnado de fumaça, aguardente e suor revelou o balcão de *Filthy* e sua oferta de "Cospefogo" e especialidades locais entre mendigos e figuras do submundo. É o viveiro ideal para escutar conversas de contrabandistas.
+  * **O Reconhecimento da Margem Externa:** Marchou até a Ponte Sobre o Rio e espreitou a saída sul para a Afluência, sentindo a brisa úmida da correnteza e a vigilância dos guardas da muralha.
+  * **O Chamado da Fome e a Saciedade Sagrada:** O estômago cobrou tributo orgânico durante a marcha; Grebolius desceu à Fonte Azul, reabasteceu os cantis com água fresca e subiu a escadaria da montanha até o santuário supremo, repousando aos pés das estátuas imortais do Panteão.
+* **Decisão Tática:**
+  * Consumir parte das provisões de reserva (a rosquinha malhada na mochila) ou adquirir pães frescos na Padaria no próximo ciclo para manter o vigor orgânico em alta, avançando nas investigações da Afluência.
