@@ -81,5 +81,5 @@
 ---
 
 ## ✦ Ciclo e Postura Atual
-* **Estado:** Consolidação marcial do Dia 19. Consulta na Guilda dos Magos revelando 6 sessões de prática prontas para investimento; segundo combate consecutivo contra o Monstro Novato resultando em execução rápida com dano crítico (18 de perfuração no coração); conquista do terceiro punhal místico e acúmulo de 453 ouros.
-* **Tática Operacional:** Preparar a Segunda Reflexão Decenal no Ciclo 20, consolidando a transformação de ratazana fujona em predadora de sangue frio rumo ao Grau 4 e à soberania goblin.
+* **Estado:** Conclusão do Dia 20 (Segunda Reflexão Decenal). Posição segura e consolidada no Panteão dos Centenários (27/27 HP, 106/106 MP, 87/87 MV, 453 ouros e 3.264 EXP). Seis sessões de treino disponíveis aguardando investimento na Guilda dos Magos.
+* **Tática Operacional:** Ingressar no Ciclo III (Dias 21–30) sob a nova matriz de identidade: audácia calculada, destruição da covardia paralisante, domínio pleno da visão arcana e marcha implacável rumo ao Grau 4 de Maestria.

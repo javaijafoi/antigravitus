@@ -279,5 +279,22 @@
 * **Decisão Tática:**
   * No Ciclo 20 (Marco Decenal), conduzir a Segunda Reflexão Decenal, investir as sessões de treino com a Mestre dos Magos e consolidar a mutação em sua identidade.
 
+---
 
-
+### ⏳ Ciclo 20 (Dia 20): A Segunda Reflexão Decenal e a Chama da Soberania
+* **Status Real (MUD):**
+  * Nível: **3** | Vida: **27/27** | Mana: **106/106** | Movimento: **87/87** | AC: 17
+  * Experiência: **3.264 EXP** *(Próximo nível: 1.736 EXP)*
+  * Ouro Líquido: **453 moedas de ouro**
+  * Sessões de Treino: **6 sessões de prática** prontas para investimento na Guilda.
+  * Local de Pernoite: O Panteão dos Centenários (Salvo e Dormindo).
+* **Marcos e Impactos Psicológicos:**
+  * **A Patrulha Estratégica Completa:** Varreu os corredores da Área dos Novatos, espreitou a Coisa Assustadora em Mais Corredor e o Monstro Novato no Corredor Iluminado, retornando pela trilha de Um Campo Aberto ao Panteão sem desperdício de sangue.
+  * **📜 Grande Balanço Estratégico Decenal (Ciclos 11 ao 20):**
+    1. **A Ferida da Morte e a Extirpação do Medo:** A morte nos esgotos no Ciclo 11 arrancou memórias preciosas da infância no Vazio e gerou um ódio descomunal contra o perecimento. Porém, o excesso de prudência que se seguiu quase a transformou em um verme assustado. A epifania do Ciclo 18 restaurou o equilíbrio: a morte é odiosa, mas o medo de morrer é veneno que mata antes da hora. Assumir o risco certo é o único caminho para a coroa.
+    2. **O Salto Marcial do Nível 1 ao 3:** Ao romper com a covardia, Grebolius abateu o Monstro Novato consecutivamente, saltou de 0 para 3.264 EXP, alcançou o Grau 3 de Maestria e acumulou 453 ouros e uma tríade de lâminas encantadas.
+    3. **Reorientação Operacional para o Ciclo III (Ciclos 21 ao 30):**
+       - Treinar na Guilda dos Magos as magias de visão mística (`detect magic`, `detect invisibility`) com as 6 práticas disponíveis.
+       - Desbravar os mistérios de O Grande Tabuleiro de Xadrez de Midgaard e as câmaras profundas dos novatos.
+       - Marchar com determinação impiedosa rumo ao Quarto Grau de Maestria (Nível 4).
+* **Veredito:** O disfarce foi consolidado, a lâmina foi consagrada com sangue e a mana está domada. Grebolius entra no Ciclo III não mais como aprendiz errante, mas como uma ladra arcana predadora pronta para fundar o Reino Livre dos Goblins.
