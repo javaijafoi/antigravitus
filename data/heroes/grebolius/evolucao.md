@@ -780,3 +780,21 @@
   * **O Retorno Triunfante ao Panteão:** Doou as sobras na Sala de Doações para manter a mochila desimpedida e ascendeu ao Panteão dos Centenários, onde repousa no ápice de sua forma física e espiritual.
 * **Decisão Tática:**
   * No Ciclo 46, manter o ritmo de caçadas implacáveis para quebrar a faixa dos 34.000 EXP e planejar uma incursão rápida às casas do Tabuleiro de Xadrez ou ao subsolo do Alquimista.
+---
+
+### ⏳ Ciclo 46 (Dia 46): A Lâmina no Gotejar Escuro e o Avanço aos Trinta e Dois Mil e Quinhentos
+* **Status Real (MUD):**
+  * Nível: **7** *(32.563 EXP | Faltam apenas 7.437 EXP para o Grau 8)*
+  * Vida: **49/49** | Mana: **130/130** | Movimento: **93/93** | AC: **39** *(Armadura Arcana ativa)*
+  * Salto de Experiência: **+396 EXP** em combate cirúrgico no Fim do Corredor.
+  * Ouro Líquido: **829 moedas de ouro** *(+20 moedas saqueadas)*
+  * Alinhamento Moral: 15 (Neutro Pragmático).
+  * Manobra de Inventário: Doação ritualística de peças sobressalentes na Sala de Doações para assegurar leveza total de deslocamento.
+  * Local de Pernoite: O Panteão dos Centenários (Salva e Dormindo diante dos doze heróis eternos).
+* **Marcos e Impactos Psicológicos:**
+  * **O Ritmo Gélido das Galerias:** Grebolius desceu os degraus de pedra com a precisão de um felino que conhece cada rachadura do chão. O gotejar rítmico da água podre nos encanamentos do Corredor Sujo não mais incomoda seus sentidos; tornou-se o metrônomo de sua marcha marcial. A couraça invisível de `armor` ajustou-se à sua silhueta sem emitir um único ruído metálico.
+  * **O Abate Frio no Fim do Corredor:** No recôndito mais escuro, o monstro novato ergueu as presas, mas a investida foi aniquilada em segundos: um dardo arcano de impacto quebrou o centro de gravidade da fera e o punhal novato desferiu duas estocadas viscerais de dez pontos de impacto cada. Mais vinte moedas foram recolhidas do lodo e a experiência saltou para **32.563 EXP**.
+  * **A Disciplina do Desapego:** Subiu à Sala de Doações do Templo e desfez-se imediatamente de lâminas e couros repetidos. A goblin sabe que um alforje pesado é o convite mais rápido para o tropeço e a morte em combate de alto nível.
+  * **Repouso Inviolável:** Atingiu o Panteão dos Centenários com vigor pleno e a fortuna de **829 moedas de ouro**. Diante das doze estátuas sagradas, salvou seu progresso e adormeceu em serenidade imperial.
+* **Decisão Tática:**
+  * No Ciclo 47, acelerar o acúmulo de EXP para cruzar os 35.000 pontos e preparar a mente para a reflexão obrigatória de /learn no Dia 49.
