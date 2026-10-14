@@ -419,3 +419,22 @@
   * **Retorno Estratégico e Descanso Sagrado:** Sem precipitar um combate suicida contra o dragão sem preparo específico, contornou pelo Campo Aberto, cruzou os prados rurais e alcançou a Praça do Templo. Reidratou-se com fartura nas águas místicas da Fonte de Mármore Azul e subiu as escadarias sagradas até o Panteão dos Centenários. Dormiu em paz absoluta diante das doze estátuas imortais (Allam, Kara, Brandon, Wacabayaxe, Tommyknocker, Deck, Wolf, Magnus, Jooh, Pedroportugal, Kosmo e Sakura).
 * **Decisão Tática:**
   * No Ciclo 28, planejar a abordagem do Bebê Dragão (tentar capturá-lo com as coleiras espalhadas ou testar feitiços de contenção) para resolver a missão do Guarda Novato e consolidar sua fama entre os mestres de Midgaard.
+
+---
+
+### ⏳ Ciclo 28 (Dia 28): O Arsenal dos Magos, a Salvaguarda de Retorno e a Vigília Armada
+* **Status Real (MUD):**
+  * Nível: **4** | Vida: **33/33** | Mana: **111/111** | Movimento: **89/89** | AC: 17
+  * Experiência: **6.015 EXP** *(Próximo nível: 3.985 EXP)*
+  * Ouro Líquido: **469 moedas de ouro**
+  * Itens Arcanos no Cinto:
+    * `um pergaminho de retorno` *(Salvaguarda suprema: retorno instantâneo ao Templo sob perigo de morte)*
+    * `uma poção amarela de detectar invisibilidade`
+    * 2 pães recheados e cantis cheios na Fonte Azul.
+  * Local de Pernoite: O Grande Tabuleiro de Xadrez de Midgaard (Salva e Dormindo no portal monumental).
+* **Marcos e Impactos Psicológicos:**
+  * **A Lição do Mercador de Armas:** Desceu do cume sagrado até a Loja de Armas no leste de Midgaard. Ao tentar vender punhais excedentes, o ferreiro recusou com escárnio (*"Você deve estar brincando! Essa coisa não vale nada!"*). Grebolius assimilou o recado sem orgulho ferido: equipamentos de novato têm valor tático de uso, mas o ouro real virá do sangue e das missões dos grandes.
+  * **A Incursão à Loja de Magias e a Compra do Pergaminho de Retorno:** Cruzou a cidade até o enclave dos magos e penetrou na Loja de Magias. Diante do feiticeiro murmurante, adquiriu a joia de sobrevivência que todo aventureiro prudente carrega: o **Pergaminho de Retorno** (`scroll of recall`), além de uma poção amarela de revelação mística. Com essa relíquia afivelada, ela pode arriscar investidas profundas em dungeons sem o terror da morte definitiva.
+  * **Vigília Avançada para a Caçada do Dragão:** Marchou pelos prados abertos até o portal de pedra d'O Grande Tabuleiro de Xadrez. Montou acampamento armada com o pergaminho de teleporte, revisando a missão confiada pelo Guarda Novato: no alvorecer, caçar o Bebê Dragão com a coleira em punho e libertar o sentinela de seu desespero.
+* **Decisão Tática:**
+  * No Ciclo 29, marchar direto para a Masmorra dos Novatos, recolher uma coleira extra, localizar o Bebê Dragão para averiguar a captura/subjugação, e abater monstros novatos para romper os 10.000 EXP e subir para o Nível 5.

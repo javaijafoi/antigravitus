@@ -11,7 +11,7 @@
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **4** *(Quarto Grau de Maestria consolidado)*
 * **Alinhamento Moral:** 25 (Neutro Pragmático)
-* **Localização Atual:** O Panteão dos Centenários (Cume sagrado do Templo de Midgaard) — *Salva e Dormindo sob o olhar das estátuas lendárias*
+* **Localização Atual:** O Grande Tabuleiro de Xadrez de Midgaard (Fronteira Oeste dos Campos) — *Salva e Dormindo junto ao portal monumental*
 
 ---
 
@@ -20,12 +20,12 @@
 | :--- | :---: | :---: | :---: |
 | **Pontos de Vida (HP)** | 33 | 33 | 100% |
 | **Pontos de Mana (MP)** | 111 | 111 | 100% |
-| **Estamina / Movimento (MV)** | 88 | 89 | 99% |
+| **Estamina / Movimento (MV)** | 89 | 89 | 100% |
 
 * **Experiência Acumulada:** **6.015 EXP**
 * **Experiência Necessária p/ Grau 5:** 3.985 EXP
 * **Ouro Líquido:** **469 moedas de ouro**
-* **Condição Biológica:** Sede saciada na Fonte Azul; cantis reabastecidos; 2 pães recheados em estoque na mochila; energia plena.
+* **Condição Biológica:** Vigor e energia física no ápice; cantis reabastecidos; 2 pães recheados em estoque.
 
 ---
 
@@ -70,7 +70,9 @@
 
 ---
 
-## ✦ Inventário Carregado (Tríade de Lâminas, Provisões e Mochila)
+## ✦ Inventário Carregado (Arsenal Tático e Salvaguarda Arcana)
+* **`um pergaminho de retorno`** *(Salvaguarda de Teleporte: fuga instantânea ao Templo em caso de emboscada mortal)*
+* **`uma poção amarela de detectar invisibilidade`** *(Percepção sobrenatural alquímica)*
 * **4x `um brilhante punhal de novato`** *(um empunhado + quatro reservas com aura mágica de velocidade)*
 * **`uma mochila`** *(contendo 2x `um pão recheado` de reserva)*
 * `um gorro de couro` (proteção reserva)
@@ -80,5 +82,5 @@
 ---
 
 ## ✦ Ciclo e Postura Atual
-* **Estado:** Conclusão do Dia 27. Incursão de investigação e contato na Masmorra dos Novatos: avanço pelas galerias, abertura da porta secreta a oeste de Mais Corredor e diálogo com o Guarda Novato em apuros, desesperado com o sumiço do bebê dragão do Alquimista (*"O Mestre vai arrancar minha cabeça se eu não achá-lo!"*). Vislumbre do pequeno dragão cruzando o corredor sul. Retorno triunfal pela Fonte Azul e pernoite no Panteão dos Centenários.
-* **Tática Operacional:** No próximo ciclo (Dia 28), rastrear a rota do Bebê Dragão pelos cantos da masmorra, avaliar as opções para subjugá-lo ou devolvê-lo ao guarda, ou expandir a caçada pelas Casas Pretas do Tabuleiro de Xadrez.
+* **Estado:** Conclusão do Dia 28. Manobra tática de armamento e segurança: incursão à Loja de Armas para inspeção de mercado e avanço até a Loja de Magias no extremo oeste de Midgaard. Aquisição do vital **Pergaminho de Retorno** (`scroll of recall`) — o seguro de vida supremo para incursões profundas — e de uma poção mística de revelação. Marcha de reconhecimento exterior e vigília no portal d'O Grande Tabuleiro de Xadrez.
+* **Tática Operacional:** No Dia 29, marchar com o pergaminho de retorno afivelado e executar a varredura definitiva na Masmorra dos Novatos (abater monstros novatos e coisas assustadoras), rompendo os 10.000 EXP para ascender ao **Quinto Grau de Maestria (Nível 5)** e desbloquear novos feitiços na guilda.
