@@ -22,10 +22,10 @@
 | **Pontos de Mana (MP)** | 140 | 140 | 100% |
 | **Estamina / Movimento (MV)** | 94 | 95 | 99% |
 
-* **Experiência Acumulada:** **42.329 EXP** *(+378 EXP em combate | Barreira dos 42.000 consolidada)*
-* **Experiência Necessária p/ Grau 9:** **17.671 EXP** *(Meta: 60.000 EXP)*
-* **Ouro Líquido:** **1.031 moedas de ouro** *(Compra de 1 pão por 6 ouros + 20 ouros saqueados)*
-* **Condição Biológica:** Estômago saciado com pão recheado fresco; fôlego, mana e regeneração a 100% no tick vital.
+* **Experiência Acumulada:** **43.553 EXP** *(+1.224 EXP em tripla ofensiva | Barreira dos 43.500 rompida)*
+* **Experiência Necessária p/ Grau 9:** **16.447 EXP** *(Meta: 60.000 EXP)*
+* **Ouro Líquido:** **1.051 moedas de ouro** *(+20 ouros saqueados de despojos)*
+* **Condição Biológica:** Estômago saciado e hidratado; fôlego, mana (140/140) e regeneração a 100% no tick vital.
 
 ---
 
