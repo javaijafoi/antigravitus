@@ -22,10 +22,10 @@
 | **Pontos de Mana (MP)** | 130 | 130 | 100% |
 | **Estamina / Movimento (MV)** | 93 | 93 | 100% |
 
-* **Experiência Acumulada:** **35.117 EXP** *(+1.520 EXP em duplo abate | Barreira dos 35.000 superada!)*
-* **Experiência Necessária p/ Grau 8:** **4.883 EXP** *(Meta: 40.000 EXP)*
-* **Ouro Líquido:** **889 moedas de ouro** *(+40 moedas saqueadas em combate)*
-* **Condição Biológica:** Vigor absoluto; saciedade de sede na Fonte de Mármore Azul; fôlego e regeneração plenos.
+* **Experiência Acumulada:** **36.497 EXP** *(+1.380 EXP em combate no cinquentenário | Faltam apenas 3.503 EXP para o Grau 8!)*
+* **Experiência Necessária p/ Grau 8:** **3.503 EXP** *(Meta: 40.000 EXP)*
+* **Ouro Líquido:** **909 moedas de ouro** *(+20 moedas saqueadas | Barreira de 900 ouros rompida!)*
+* **Condição Biológica:** Alerta de fome orgânica registrado nas entranhas; prioridade de refeição reforçada na Padaria de Midgaard ou Sala de Doações no alvorecer do Ciclo 51.
 
 ---
 

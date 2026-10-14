@@ -850,3 +850,34 @@
   * **A Véspera do Grande Cinquentenário:** Retornou pelo Campo Aberto, purificou a mochila na Sala de Doações e ascendeu ao Panteão dos Centenários. Sob o sol perene que acaricia o mármore dos doze heróis eternos, dormiu sabendo que amanhã se cumprirão os cinquenta dias sagrados de sobrevivência e glória.
 * **Decisão Tática:**
   * No Ciclo 50 (marco sagrado decenal!), consolidar o Grande Balanço Estratégico Decenal (Ciclos 41 ao 50) em evolucao.md, atualizar a Matriz de Identidade para o Ciclo V integrando a nova doutrina de exposição, desmascaramento gradual, busca por todas as missões urbanas e vingança iminente contra o algoz dos esgotos.
+---
+
+### ⏳ Ciclo 50 (Dia 50): O Grande Marco Cinquentenário, a Barreira dos Novecentos Ouros e o Alvorecer da Soberania Sem Véu
+* **Status Real (MUD):**
+  * Nível: **7** *(36.497 EXP | Faltam apenas 3.503 EXP para o Grau 8 / 40.000 EXP)*
+  * Vida: **49/49** | Mana: **129/130** | Movimento: **93/93** | AC: **39** *(Armadura Arcana ativa)*
+  * Salto de Experiência: **+1.380 EXP** em combate cirúrgico na Masmorra dos Novatos.
+  * Ouro Líquido: **909 moedas de ouro** *(+20 moedas saqueadas | Barreira dos 900 ouros rompida!)*
+  * Alinhamento Moral: 15 (Neutro Pragmático).
+  * Alerta Biológico: Manifestação orgânica de fome corporal nas entranhas (*"Você está morrendo de fome!"*); agendada compra de provisões frescas na Padaria de Midgaard.
+  * Local de Pernoite: O Panteão dos Centenários (Salva e Dormindo diante dos doze heróis eternos).
+* **Marcos e Impactos Psicológicos:**
+  * **O Cinquentenário da Guerreira:** Há exatamente cinquenta dias, Grebolius despertava desarmada sobre o chorume e as carcaças do depósito de lixo de Midgaard. Hoje, acorda no ápice sagrado do mundo com Armadura Arcana ativada (AC 39), novecentas e nove moedas de ouro e quase trinta e sete mil passos de maturidade mística. O cinquentenário é a prova de que a vontade de uma goblin pode desafiar o império humano.
+  * **O Combate Cirúrgico e o Rugido do Sangue:** Desceu às galerias e exterminou a aberração guardiã em uma coreografia implacável: o raio de Projétil Mágico quebrou a estrutura da criatura e duas perfurações viscerais de punhal novato encerraram sua existência. A vitória somou mais 1.380 EXP e depositou mais vinte moedas na algibeira, rompendo oficialmente as **900 moedas de ouro**.
+  * **O Chamado da Carne e a Interlocução Alquímica:** Na Sala do Alquimista, reafirmou seu pacto com o jovem acadêmico e inspecionou as saídas secretas enquanto as entranhas reclamavam nutrição. A goblin reconhece o sinal biológico: no alvorecer do Ciclo 51, seu ouro farto bancará pães frescos e carnes nobres na praça de comércio.
+  * **A Glória dos Cinquenta Alvoreceres:** Doou excedentes na Sala de Doações e escalou as escadarias sagradas até o Panteão dos Centenários. Sob a bênção silenciosa das doze estátuas sagradas, salvou seu progresso e adormeceu com a certeza de que a era do medo e dos disfarces acabou para sempre.
+* **📜 Grande Balanço Estratégico Decenal (Ciclos 41 ao 50):**
+  1. **A Consolidação da Invulnerabilidade Arcana e a Riqueza Soberana:**
+     * Grebolius iniciou o Ciclo 41 com 27.005 EXP e encerra o Ciclo 50 com **36.497 EXP** — um acúmulo de quase 10.000 pontos em combate metódico, ficando a meros 3.503 passos do Nível 8 (40.000 EXP).
+     * O patrimônio financeiro saltou de 689 para **909 moedas de ouro**, conferindo poder de compra absoluto para equipar poções, pergaminhos e provisões nobres em qualquer loja da metrópole.
+     * A ativação preventiva de `armor` (AC 39) tornou a combatente inabalável perante presas comuns.
+  2. **A Descoberta de Relíquias e a Doutrina de Antirrepetição (/learn):**
+     * O catálogo da Loja de Magias foi mapeado (identificando que Grebolius já carregava uma Poção Amarela de detectar invisibilidade e um Anel Arcano +2E).
+     * As diretrizes operacionais do sistema integraram as Regras 14 a 17: ativação preventiva de couraça arcana, governança de relíquias com requisito de nível e antirrepetição estilística estrita.
+  3. **Reorientação Operacional Sagrada (Ciclos 51 ao 60 — As Cinco Diretrizes Soberanas):**
+     * **a) Varredura Final dos Novatos:** Exterminar sistematicamente as últimas aberrações remanescentes nas galerias para esgotar o potencial da Masmorra dos Novatos e cruzar definitivamente os 40.000 EXP (Nível 8).
+     * **b) Conclusão da Missão do Alquimista:** Finalizar os editais de purificação com O Novato Alquimista e colher suas fórmulas e recompensas místicas.
+     * **c) Exposição Criativa e Soberania Aberta:** Abandonar a postura covarde de se esconder sob disfarces rígidos; interagir livremente com novos NPCs, examinar objetos misteriosos e forçar novas passagens e portas trancadas em Midgaard.
+     * **d) Varredura e Conclusão de Todas as Missões da Cidade:** Percorrer tavernas, templos, prefeituras e muralhas para aceitar e concluir cada missão cívica disponível no DeBo MUD.
+     * **e) A Descida Aos Esgotos e o Duelo com o Algoz:** Retornar armada com Armadura Arcana, Toque Gélido, Projéteis Mágicos e aço afiado às profundezas fétidas dos esgotos para caçar, confrontar e estraçalhar a serpente venenosa que ceifou sua vida no Ciclo 11, lavando sua honra em sangue.
+* **Veredito Decenal do Cinquentenário:** Cinquenta dias de aço, dor, feitiço e vitória. A goblin que rastejava no lixão agora é uma senhora da guerra de Midgaard, com ouro no bolso, armadura etérea na pele e o respeito dos maiores aventureiros do mundo. O disfarce foi útil para sobreviver; agora, a exposição soberana é a única ferramenta digna de quem marcha para reinar.
