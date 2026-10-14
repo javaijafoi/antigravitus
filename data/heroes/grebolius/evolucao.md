@@ -602,6 +602,25 @@
 * **Decisão Tática:**
   * No Ciclo 37, doar a veste excedente na Sala de Doações para aliviar peso, caçar nas galerias para acumular os 4.289 EXP que restam, cruzar a barreira dos 25.000 EXP para coroar o Nível 7 e marchar imediatamente ao Laboratório dos Magos para treinar `armor`.
 
+---
+
+### ⏳ Ciclo 37 (Dia 37): A Conclusão d'Altruísmo e a Caçada Implacável em Mais Corredor
+* **Status Real (MUD):**
+  * Nível: **6** *(21.035 EXP | Faltam apenas 3.965 EXP para o Grau 7)*
+  * Vida: **41/41** | Mana: **122/122** | Movimento: **91/92** | AC: **16**
+  * Missão Oficial Concluída: **Altruísmo** coroada na Sala de Doações (*"Missão completa! Você completou a missão Altruísmo!"*).
+  * Ouro Líquido: **609 moedas de ouro** *(+20 moedas saqueadas)*
+  * Alívio de Carga: Doação da túnica mística e do punhal extra, aliviando o fardo das mãos e da mochila.
+  * Local de Pernoite: O Panteão dos Centenários (Salva e Dormindo diante dos doze heróis eternos).
+* **Marcos e Impactos Psicológicos:**
+  * **O Despertar e a Coroação de Altruísmo:** Grebolius desceu logo cedo à Sala de Doações para desovar as peças excedentes. Ao depositar a túnica mística nos cestos comunitários (`donate veste`), uma nuvem de fumaça resplandeceu e o mundo anunciou com reverência: *"Missão completa! Você completou a missão Altruísmo!"*. O desapego às tralhas materiais e a semeadura de recursos aos mais fracos renderam a Grebolius o reconhecimento de sua generosidade calculada. Em seguida, doou também a adaga sobressalente, aliviando seu peso de marcha.
+  * **A Hidratação e a Mentoria no Bar dos Magos:** Desceu à Praça do Templo para saciar a sede na Fonte Azul e desceu pela Rua Oeste até o Bar dos Magos. Perante as ilusões flutuantes, renovou sua presença diante do Mago Aventureiro, estreitando o elo com seu patrono da saga Dicas Mágicas.
+  * **A Caçada em Mais Corredor:** Marchou para a Masmorra dos Novatos. Em Mais Corredor, confrontou o monstro novato: rajada precisa de Míssil Mágico de 5 de dano, esquiva ágil contra o contra-ataque e duas perfurações viscerais destruidoras (13 e 8 de dano) que estraçalharam a fera. A presa tombou ensanguentada, rendendo 324 EXP e 20 moedas de ouro.
+  * **A Fronteira dos Três Mil Passos:** O avanço marcial empurrou a experiência para **21.035 EXP**, restando meros 3.965 pontos para romper o portal do Sétimo Grau (25.000 EXP). Embora o apetite biológico tenha se manifestado nas galerias, a disciplina imperou. Retornou pelo Campo Aberto e ascendeu ao Panteão dos Centenários para salvar seu progresso e repousar sob o olhar sereno dos doze imortais.
+* **Decisão Tática:**
+  * No Ciclo 38, consumir alimento da mochila para revigorar as entranhas, abater as presas restantes nas galerias para cruzar em definitivo os 25.000 EXP (Nível 7), marchar à Guilda dos Magos para treinar `armor` e pavimentar o terreno para a reflexão de `/learn` no Dia 39.
+
+
 
 
 

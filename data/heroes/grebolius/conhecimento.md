@@ -38,7 +38,7 @@
 * **O Laboratório dos Magos:** Enclave arcano de estudos profundos; abriga a Mestre da Guilda e uma passagem vertical para os esgotos subterrâneos.
 * **O Bar dos Magos:** Ponto de encontro arcano com imagens psicodélicas flutuando no ar.
 * **Os Esgotos de Midgaard (Subsolo):** Entrada vertical a partir do Depósito de Lixo e do Laboratório dos Magos; labirinto subterrâneo para fuga e caça furtiva.
-* **A Sala de Doações (Depósito de Armamento):** Na nave leste do Templo; fonte gratuita de vestes, punhais encantados e ferramentas úteis deixadas por veteranos.
+* **A Sala de Doações (Depósito de Armamento & Missão Altruísmo):** Na nave leste do Templo; fonte de suprimentos gratuitos e local onde a doação de itens excedentes concluiu formalmente a missão cívica **Altruísmo**.
 * **A Sala de Leitura:** Ala oeste do Templo; mesa de consulta, mural de avisos comunitário e ambiente pacífico.
 * **A Guilda dos Ladrões:** Ao sul do Beco Escuro; santuário primordial de treinamento e mestres de adaga de Grebolius.
 * **O Beco Escuro & Beco Pobre:** Artérias clandestinas a partir da Praça Comum; rotas ideais de fuga e infiltração furtiva.

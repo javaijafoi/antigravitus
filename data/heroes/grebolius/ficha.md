@@ -22,10 +22,10 @@
 | **Pontos de Mana (MP)** | 122 | 122 | 100% |
 | **Estamina / Movimento (MV)** | 91 | 92 | 99% |
 
-* **Experiência Acumulada:** **20.711 EXP** *(+1.520 EXP obtidos em duplo combate no Corredor Sujo e Mais Corredor)*
-* **Experiência Necessária p/ Grau 7:** **4.289 EXP**
-* **Ouro Líquido:** **589 moedas de ouro** *(+40 moedas saqueadas dos dois monstros abatidos)*
-* **Condição Biológica:** Vigor absoluto; sede saciada na Fonte de Mármore Azul; cantil abastecido; fôlego pleno.
+* **Experiência Acumulada:** **21.035 EXP** *(+324 EXP obtidos em combate em Mais Corredor)*
+* **Experiência Necessária p/ Grau 7:** **3.965 EXP**
+* **Ouro Líquido:** **609 moedas de ouro** *(+20 moedas saqueadas do monstro abatido)*
+* **Condição Biológica:** Vigor absoluto; sede saciada na Fonte de Mármore Azul; cantil abastecido; apetite sinalizado a ser saciado no próximo despertar com provisões da mochila.
 
 ---
 
@@ -43,6 +43,16 @@
 * **Bônus de Dano (Damroll):** +1
 * **Configuração de Fuga (Wimpy):** **6 HP** (Postura de bravura)
 * **Modo Automático:** `autogold` ativo
+
+---
+
+## ✦ Missões e Autoquests Oficiais
+* **Missões Concluídas:**
+  * **A Coleira do Dragão:** Concluída na Pequena Sala com Guarda Novato (+5.000 EXP e salto p/ Nv 6).
+  * **Altruísmo:** Concluída na Sala de Doações do Templo de Midgaard ao doar equipamentos excedentes.
+* **Autoquests Ativas:**
+  * **Dicas Mágicas:** Com o Mago Aventureiro no Bar dos Magos.
+  * **Limpando Monstros:** Com O Novato Alquimista na Sala do Alquimista.
 
 ---
 
@@ -78,15 +88,14 @@
 * **`um brilhante punhal de novato`** (aura mística reserva empunhável)
 * **`um cantil`** *(cheio com água límpida da Fonte de Mármore Azul)*
 * **`um anel arcano`** (+2E)
-* **`uma brilhante veste de novato`** *(despojo recolhido em combate)*
-* **`um brilhante punhal de novato`** *(despojo recolhido em combate)*
-* **`uma mochila`** *(capacidade máxima atingida — contendo armas reservas, cantil e gorro)*
+* **`uma mochila`** *(contendo: armas reservas, cantil e gorro)*
 
 ---
 
 ## ✦ Ciclo e Postura Atual
-* **Estado:** Conclusão do Dia 36. Ativação oficial da autoquest **Limpando Monstros** com O Novato Alquimista (`say sim` -> *"Você começa a participar da aventura"*). Leitura da placa da escadaria secreta e detecção de rosnados hostis no subsolo. Ofensiva fulminante nas galerias com duplo abate de monstros novatos no Corredor Sujo e Mais Corredor, rendendo 1.520 EXP e 40 moedas de ouro. Barreira dos vinte mil passos rompida com louvor (**20.711 EXP** acumulados | restando apenas 4.289 EXP para o Grau 7). Hidratação na Fonte Azul e repouso inviolável no Panteão dos Centenários.
-* **Tática Operacional:** No Ciclo 37, doar a veste sobressalente na Sala de Doações para aliviar a carga corporal, prosseguir com a caçada nas galerias para erradicar a distância de 4.289 EXP e alcançar o Nível 7 (25.000 EXP), marchando em seguida para a Guilda dos Magos para treinar `armor`.
+* **Estado:** Conclusão do Dia 37. Doação cívica de veste e punhal excedentes na Sala de Doações, desvelando a conclusão oficial da missão **Altruísmo** (*"Missão completa! Você completou a missão Altruísmo!"*). Hidratação na Fonte Azul e contato de mentoria no Bar dos Magos. Ofensiva precisa em Mais Corredor, abatendo o monstro novato com rajada de Míssil Mágico e estocada crítica mortal, colhendo 324 EXP e 20 moedas de ouro. Experiência avançando para **21.035 EXP** (restando apenas 3.965 EXP para o Nível 7). Repouso inviolável no Panteão dos Centenários.
+* **Tática Operacional:** No Ciclo 38, consumir alimento da mochila para aplacar a fome, caçar as presas nas galerias para romper os 25.000 EXP (Nível 7), treinar a nova magia defensiva `armor` no Laboratório dos Magos e preparar o terreno para a rotina de `/learn` no Dia 39.
+
 
 
 
