@@ -20,12 +20,12 @@
 | :--- | :---: | :---: | :---: |
 | **Pontos de Vida (HP)** | 41 | 41 | 100% |
 | **Pontos de Mana (MP)** | 122 | 122 | 100% |
-| **Estamina / Movimento (MV)** | 90 | 92 | 98% |
+| **Estamina / Movimento (MV)** | 91 | 92 | 99% |
 
-* **Experiência Acumulada:** **15.001 EXP** *(Ganho de 5.000 EXP via entrega da coleira do dragão)*
-* **Experiência Necessária p/ Grau 7:** 9.999 EXP
-* **Ouro Líquido:** **489 moedas de ouro**
-* **Condição Biológica:** Vigor absoluto; sede saciada na Fonte de Mármore Azul; comida fresca (laranja) armazenada na mochila para expedições.
+* **Experiência Acumulada:** **17.649 EXP** *(+2.648 EXP obtidos em abates viscerais de monstros)*
+* **Experiência Necessária p/ Grau 7:** **7.351 EXP**
+* **Ouro Líquido:** **529 moedas de ouro** *(+40 moedas saqueadas em combate)*
+* **Condição Biológica:** Vigor absoluto; sede saciada na Fonte de Mármore Azul; cantil abastecido; fôlego pleno.
 
 ---
 
@@ -78,11 +78,13 @@
 * **`um brilhante punhal de novato`** (aura mística reserva)
 * **`um cantil`** *(cheio com água límpida da Fonte de Mármore Azul)*
 * **`um anel arcano`** (+2E)
-* **`uma mochila`** *(contendo: 3 punhais novatos reservas, 1 cantil reserva e 1 gorro de couro; laranja consumida para erradicar a fome em marcha)*
+* **`uma mochila`** *(contendo: 4 punhais novatos reservas, 1 cantil reserva e 1 gorro de couro)*
+* `uma brilhante veste de novato` (reserva de saque)
 
 ---
 
 ## ✦ Ciclo e Postura Atual
-* **Estado:** Conclusão do Dia 32. Incursão de reconhecimento às galerias da Masmorra dos Novatos e ao Grande Campo exterior. Ativação de suprimentos: consumo tático da laranja armazenada na mochila e água límpida do cantil, restaurando o vigor celular. Consulta ao compêndio de Autoquests de Midgaard e ativação oficial da missão **Dicas Mágicas** junto ao Mago Aventureiro no Bar dos Magos (*"Você começa a participar da aventura"*). Repouso seguro e salvamento solene no Panteão dos Centenários.
-* **Tática Operacional:** Seguir as instruções e pistas arcanas do Mago Aventureiro para cumprir a autoquest Dicas Mágicas, acumular conhecimento de campo e caçar monstros de baixo risco até o Sétimo Grau de Maestria.
+* **Estado:** Conclusão do Dia 33. Ofensiva letal nas galerias da Masmorra dos Novatos: dois monstros novatos abatidos com rajadas arcanas e estocadas críticas viscerais, ceifando mais de 2.600 pontos de experiência e 40 moedas de ouro. Experiência explodindo para **17.649 EXP** (restando 7.351 EXP para o Grau 7). Diálogo e estreitamento de laços com o Mago Aventureiro no Bar dos Magos pela autoquest Dicas Mágicas. Hidratação na Fonte Azul e repouso inviolável no Panteão dos Centenários.
+* **Tática Operacional:** Continuar os abates sistemáticos nas câmaras da masmorra, explorar as instruções arcanas do Mago Aventureiro e acelerar a marcha rumo aos 25.000 EXP para coroar o Nível 7 (`armor`).
+
 

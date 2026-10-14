@@ -527,4 +527,24 @@
 * **Decisão Tática:**
   * No Ciclo 33, dialogar profundamente com o Mago Aventureiro para colher as instruções da missão Dicas Mágicas, executar as tarefas arcanas solicitadas e avançar em direção aos 25.000 EXP (Nível 7).
 
+---
+
+### ⏳ Ciclo 33 (Dia 33): A Fúria no Cruzamento, o Duplo Abate e o Salto para os Dezessete Mil
+* **Status Real (MUD):**
+  * Nível: **6** *(17.649 EXP | Restam apenas 7.351 EXP para o Grau 7)*
+  * Vida: **41/41** | Mana: **122/122** | Movimento: **91/92** | AC: **16**
+  * Ouro Líquido: **529 moedas de ouro** *(+40 moedas de ouro saqueadas)*
+  * Abates Confirmados: 2 Monstros Novatos eliminados cirurgicamente (Cruzamento e Outro Canto)
+  * Missão Oficial Ativa: **Dicas Mágicas** (diálogo e laço estreitado com o Mago Aventureiro no Bar)
+  * Local de Pernoite: O Panteão dos Centenários (Salva e Dormindo diante dos doze heróis eternos).
+* **Marcos e Impactos Psicológicos:**
+  * **O Vínculo com o Mago Aventureiro:** Grebolius desceu logo ao amanhecer ao Bar dos Magos para ouvir as palavras de seu mentor arcano. O Mago Aventureiro encheu o peito e observou a determinação da goblin sob o disfarce de aprendiz com evidente afeição, murmurando: *"Isso me lembra meus dias de iniciante..."*. A conexão entre o veterano e a futura soberana solidificou-se, estabelecendo uma ponte inestimável de conhecimento.
+  * **A Ofensiva Implacável na Masmorra:** Com o instinto predador em chamas, marchou direto para o coração da Masmorra dos Novatos. No Cruzamento, confrontou o primeiro monstro novato: disparou um Míssil Mágico certeiro, aparou o contra-ataque no escudo rígido e desferiu uma estocada crítica que EXPLODIU o abdome da criatura, ceifando mais de 1.900 pontos de experiência e 20 moedas de ouro.
+  * **O Segundo Abate em Outro Canto:** Sem perder o fôlego, penetrou em Um Outro Canto, onde o filhote de dragão assistia tranquilo da penumbra. Localizou a segunda aberração: novo impacto arcano de 13 de dano direto seguido de perfuração mortal. Outros 724 pontos de experiência e 20 moedas foram colhidos dos despojos.
+  * **A Explosão para os 17.649 EXP:** Os dois abates consecutivos catapultaram a experiência total para **17.649 EXP**, encurtando a distância para o Nível 7 para apenas 7.351 pontos. O poder marcial e arcano de Grebolius avança com velocidade avassaladora.
+  * **Disciplina e Recolhimento Sagrado:** Organizou o inventário guardando o novo punhal na mochila para manter as mãos ágeis, saciou a sede na Fonte Azul e retornou ao cume sagrado do Panteão dos Centenários. Sob a luz cálida do sol do teto sagrado, adormeceu em triunfo absoluto.
+* **Decisão Tática:**
+  * No Ciclo 34, realizar nova incursão focada em abater mais duas presas na masmorra e explorar novas salas ao redor do Tabuleiro de Xadrez ou além dos portões, rompendo os 20.000 EXP rumo ao Sétimo Grau (`armor`).
+
+
 
