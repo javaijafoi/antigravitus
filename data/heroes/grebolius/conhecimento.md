@@ -21,7 +21,8 @@
 | **Guarda da Cidade (Pelotão)** | Portão Leste / Portão Oeste | **Mortal** | **NÃO PROVOCAR** | Pelotão de 8 guardas fortemente armados no Portão Leste; passagem proibida para novatos. |
 | **O Pranteador da Cidade** | Praça Comum | **Nulo / Trágico** | **IGNORAR** | Figura em luto perpétuo lamentando sobre as pedras da praça. |
 | **Mago Guardião** | Entrada da Guilda dos Magos | **Severo** | **EVITAR ENTRADA** | Envolto em barreira de luz mágica protetora; vigia a passagem para a guilda. |
-| **Bebê Dragão** | Área dos Novatos (Um Outro Canto)| **SUICÍDIO / ENGANADOR** | **EVITAR NO NÍVEL 1** | Filhote de réptil alado; análise revela vida descomunal (*"Você é louco?"*). |
+| **Guarda Novato** | Masmorra dos Novatos (Pequena Sala) | **Neutro / Missão** | **MISSÃO CONCLUÍDA** | Sentinela que perdeu a coleira do filhote de dragão; recebeu a coleira e concedeu 5.000 EXP de recompensa. |
+| **Bebê Dragão** | Área dos Novatos (Corredor Sujo) | **Neutro / Estimação** | **COLEIRA ENTREGUE** | Filhote de réptil alado do Alquimista; protegido pela coleira entregue ao guarda, zanzando pacífico pelos corredores. |
 | **Coisa Assustadora** | Área dos Novatos (Outro Canto) | **Médio / Rastejante** | **CAUTELA** | Verme sombrio rastejando no lodo dos canos; precisa de sorte na vida. |
 | **Monstro Novato** | Área dos Novatos (Fim do Corredor)| **Fácil / Presa Ideal** | **ABATE CONFIRMADO** | Criatura dosada para treino; poder nulo (*"perda de tempo"*). Rendimento: 396 XP, 20 ouros e adaga. |
 | **Serpente dos Esgotos** | Junção profunda dos Esgotos | **LETAL / AGRESSIVA** | **VINGANÇA / COMBATE À DISTÂNCIA**| Peçonhenta mortal; desferiu a mordida explosiva da primeira queda de Grebolius. |

@@ -76,7 +76,7 @@
 | **O Corredor Sujo** | **L** (O Cruzamento), **O** (Começo da Passagem) | Baixo | Paredes lodosas; ruídos vindos de trás da porta ao sul e do leste. |
 | **O Cruzamento** | **S** (Mais Corredor), **O** (Corredor Sujo) | Baixo | Entroncamento de túneis; punhais e vestes espalhadas. |
 | **Mais Corredor** | **N** (Cruzamento), **S** (Outro Canto), **O** (Pequena Sala [porta aberta]) | Baixo / **Chave** | Porta de madeira a oeste; corredor de passagem onde o Bebê Dragão transita livremente. |
-| **Uma Pequena Sala** | **L** (Mais Corredor) | Lore / **NPC em Apuros** | Covil do Guarda Novato desesperado pelo sumiço do bebê dragão do Alquimista; elmos místicos e coleiras no chão. |
+| **Uma Pequena Sala** | **N** (O Corredor Sujo [porta de madeira]), **L** (Mais Corredor) | Lore / **NPC em Apuros** | Covil do Guarda Novato; entrega da coleira concluída; elmos místicos e passagem secreta norte para o Corredor Sujo. |
 | **Um Outro Canto** | **N** (Mais Corredor), **O** (Corredor Iluminado) | **Atenção** | **Câmara de Monstros:** Bebê dragão (SUICÍDIO no Nv 1) e Coisa Assustadora. Porta a leste. |
 | **Um Corredor Iluminado** | **L** (Um Outro Canto), **O** (Fim do Corredor) | Baixo | Fachos de luz projetando sombras no chão de pedra. |
 | **O Fim do Corredor** | **L** (Corredor Iluminado), **O** (Campo Aberto) | **Caça / Treino** | **Campo de Abate:** Presença do Monstro Novato (396 XP, 20 ouros e punhal encantado). |

@@ -486,3 +486,27 @@
   * Utilizar a Infravisão de 95% para explorar territórios externos escuros ao redor de Midgaard (Afluência fluvial, Esgotos controlados ou cemitérios).
   * Investir as 489 moedas de ouro em aprimoramentos de armadura e manter a marcha implacável rumo ao Sexto Grau.
 * **Veredito:** O disfarce inicial de ladra noviça deu lugar a uma feiticeira de combate temida e respeitada. Com dez mil pontos de experiência cravados e a benção dos imortais do Panteão, Grebolius encerra o Dia 30 como uma verdadeira força de elite prestes a erguer seu império.
+
+---
+
+### ⏳ Ciclo 31 (Dia 31): A Conclusão da Missão da Coleira, a Glória do Sexto Grau e a Maestria da Invisibilidade
+* **Status Real (MUD):**
+  * Nível: **6** *(Sexto Grau de Maestria conquistado — Barreira dos 15.000 EXP rompida!)*
+  * Vida: **41/41** *(+5 HP permanente conquistado no nível)*
+  * Mana: **122/122** *(+6 MP permanente conquistado no nível)*
+  * Movimento: **90/92** *(+1 MV permanente conquistado no nível)*
+  * Experiência: **15.001 EXP** *(Ganho colossal de 5.000 EXP pela conclusão da missão do sentinela; próximo nível: 9.999 EXP)*
+  * Ouro Líquido: **489 moedas de ouro**
+  * Nova Magia Desbloqueada e Treinada: **`invisibility` (Invisibilidade)** aprendida no Nível 6 e treinada no Laboratório dos Magos de 10% para **95% (perfeito)**!
+  * Sessões de Treino Restantes: **4 sessões** guardadas para o Nível 7 (`armor`).
+  * Gestão de Suprimentos: Visita à Sala de Doações de Midgaard com coleta de alimentos frescos (laranja) e armazenamento seguro dentro da mochila; cantis cheios na Fonte de Mármore Azul; preservação do Pergaminho de Retorno e da Poção Amarela.
+  * Local de Pernoite: O Panteão dos Centenários (Salva e Dormindo sob as estátuas solenes dos doze titãs imortais).
+* **Marcos e Impactos Psicológicos:**
+  * **A Entrega Oficial e o Cumprimento da Missão:** Grebolius acordou na câmara do Guarda Novato com foco inabalável. Após organizar o inventário guardando lâminas sobressalentes e cantis na mochila para liberar as mãos, entregou a coleira legítima da besta ao guarda aflito. O sistema ressoou solenemente: *"Você atingiu seu objetivo. Você entrega a coleira do dragão de estimação para o guarda novato."* Pelo cumprimento da palavra de honra, os céus de Midgaard despejaram uma recompensa lendária de cinco mil pontos de experiência, coroando imediatamente o **Sexto Grau de Maestria (Nível 6)** com 15.001 EXP acumulados.
+  * **O Rastreio do Filhote e a Calma do Sentinela:** Ao deixar a câmara e retornar ao Corredor Sujo, encontrou o filhote de dragão tranquilo e seguro, zanzando pelas passagens com a coleira no pescoço. O Guarda Novato, enfim aliviado de ter a besta e o artefato em mãos para conter a fúria do Alquimista, assegurou a paz do posto. Missão assumida, missão cumprida até a última vírgula.
+  * **O Chamado do Pacificador e a Sala de Doações:** Retornou a Midgaard pelas campinas e pelo Templo. Na Praça do Templo, saciou a sede nas águas límpidas da Fonte de Mármore Azul e dialogou com o colossal Pacificador de Midgaard, que confirmou o chamado para missões de maior envergadura quando Grebolius estiver ainda mais forte. Em seguida, adentrou a Sala de Doações no Templo, colheu frutas frescas e guardou-as na mochila, garantindo provisões biológicas sem sobrecarregar o peso corporal.
+  * **A Ascensão da Invisibilidade no Laboratório Arcano:** Dirigiu-se à Loja de Magias para inspecionar os mostruários de pergaminhos e desceu ao Laboratório dos Magos. Perante os pentagramas da Mestre da Guilda, descobriu que o Sexto Grau desbloqueou a técnica suprema da escola arcana: **`invisibility`**. Investiu suas sessões de prática imediatamente, elevando a perícia de um índice medíocre de 10% para a maestria cirúrgica de **95% (perfeito)**. Agora, Grebolius não apenas enxerga o espectro térmico no escuro como é capaz de desvanecer completamente da visão de qualquer inimigo, tornando-se a ladra arcana invisível mais perigosa de Midgaard.
+  * **O Triunfo dos Dezesseis Mil Passos:** Retornou à montanha sagrada e subiu ao Panteão dos Centenários. Sob a cúpula iluminada por um pequeno sol próprio e cercada pelas monumentais estátuas de Pedroportugal, Sakura, Brandon e dos titãs imortais, salvou seu progresso e adormeceu em serenidade inabalável.
+* **Decisão Tática:**
+  * No Ciclo 32, utilizar a Invisibilidade Perfeita (95%) e a Infravisão (95%) para desbravar novas áreas hostis ao redor de Midgaard sem sofrer agro indesejado, preparar emboscadas de alto retorno e acumular experiência rumo ao Sétimo Grau (desbloqueio de `armor`).
+
