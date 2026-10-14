@@ -74,6 +74,7 @@
 | **Um Outro Canto** | **N** (Mais Corredor), **O** (Corredor Iluminado) | **Atenção** | **Câmara de Monstros:** Bebê dragão (SUICÍDIO no Nv 1) e Coisa Assustadora. Porta a leste. |
 | **Um Corredor Iluminado** | **L** (Um Outro Canto), **O** (Fim do Corredor) | Baixo | Fachos de luz projetando sombras no chão de pedra. |
 | **O Fim do Corredor** | **L** (Corredor Iluminado), **O** (Campo Aberto) | **Caça / Treino** | **Campo de Abate:** Presença do Monstro Novato (396 XP, 20 ouros e punhal encantado). |
+| **Um Campo Aberto** | **N** (Grande Campo de Midgaard), **L** (O Fim do Corredor) | Seguro / **Rota de Fuga** | **Elo Circular:** Clareira bucólica e fresca que conecta o fundo da masmorra direto aos prados de Midgaard. |
 
 ---
 

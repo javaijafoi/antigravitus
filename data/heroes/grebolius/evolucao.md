@@ -227,5 +227,22 @@
   * Abrir o Ciclo 17 na Padaria de Midgaard para comprar pães e broas e abastecer a nova mochila.
   * Seguir para a Área dos Novatos alimentada e preparada para abater as presas rastejantes e alcançar os 1.000 pontos de maestria (Nível 2).
 
+---
+
+### ⏳ Ciclo 17 (Dia 17): O Banquete da Padaria, as Águas da Fonte Azul e o Elo Circular
+* **Status Real (MUD):**
+  * Nível: 1 | Vida: 20/20 | Mana: 100/100 | Movimento: 83/84 | AC: 17
+  * Ouro Líquido: **413 moedas de ouro** *(investimento de 170 moedas na Padaria: pão recheado [6], broa [13] e rosquinha malhada [151])*
+  * Condição Biológica: Plenamente nutrida e hidratada (estômago forrado, sede saciada na Fonte Azul e 2 cantis cheios).
+  * Provisões de Reserva: 1x `rosquinha malhada` na mochila, 2x `cantil` cheios de água benta.
+  * Local de Pernoite: O Panteão dos Centenários (Salvo e Dormindo).
+* **Marcos e Impactos Psicológicos:**
+  * **A Lição do Anel Arcano:** A tentativa de equipar o anel mágico evidenciou que artefatos de alto calibre exigem maturação arcana prévia. A ambição foi canalizada em paciência metódica.
+  * **O Banquete da Padaria:** Grebolius desceu à Rua Oeste e adquiriu alimentos frescos do padeiro. Devorou pão recheado e broa, recuperando sua integridade celular, e guardou a densa rosquinha malhada como reserva estratégica.
+  * **A Hidratação na Fonte Azul e o Domínio do Fardo:** Sacou água cristalina da Fonte de Mármore Azul, saciou a sede até o limite e encheu ambos os cantis.
+  * **A Descoberta de Um Campo Aberto (Rota Circular):** Ao atravessar O Fim do Corredor e empurrar a saída oeste, descobriu uma saída externa com trilha ao norte conectando diretamente ao Grande Campo de Midgaard. O complexo dos novatos agora possui um mapa fechado com rota de fuga circular.
+* **Decisão Tática:**
+  * No Ciclo 18, com estamina, provisões e hidratação perfeitas, emboscar o Monstro Novato e as criaturas rastejantes para drenar os 604 EXP restantes e romper para o Nível 2.
+
 
 

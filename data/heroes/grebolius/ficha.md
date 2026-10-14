@@ -24,8 +24,8 @@
 
 * **Experiência Acumulada:** 396 EXP
 * **Experiência Necessária p/ Grau 2:** 1.000 EXP (Faltam 604 EXP)
-* **Ouro Líquido:** **583 moedas de ouro** *(investimento de 30 moedas na compra da mochila de carga no Armazém)*
-* **Condição Biológica:** Fome despontando na vigília noturna (recursos financeiros abundantes para compra de pães).
+* **Ouro Líquido:** **413 moedas de ouro** *(investimento de 170 moedas na Padaria: pão recheado [6], broa [13] e rosquinha malhada [151])*
+* **Condição Biológica:** Plenamente nutrida e hidratada (estômago forrado, sede extinta na Fonte Azul de mármore e 2 cantis cheios).
 
 ---
 
@@ -67,16 +67,17 @@
 
 ---
 
-## ✦ Inventário Carregado (Mochila Adquirida)
-* **`uma mochila`** *(adquirida no Armazém de Midgaard para estocar suprimentos e driblar o limite de mãos)*
+## ✦ Inventário Carregado (Mochila e Suprimentos Plenos)
+* **`uma rosquinha malhada`** *(confeitaria energética de emergência guardada na mochila)*
+* **`uma mochila`** *(mochila de lona para carregar suprimentos e espólios)*
 * `um brilhante punhal de novato` (reserva rápida encantada com aura)
 * `um gorro de couro` (proteção reserva)
-* 2x `cantil de couro` (reabastecidos com água pura)
+* 2x `cantil` *(ambos reabastecidos com água pura da Fonte Azul)*
 * `um bastão de folhas e galhos`
-* `um anel arcano` (+2E)
+* `um anel arcano` (+2E, requer ascensão de grau para sintonização)
 
 ---
 
 ## ✦ Ciclo e Postura Atual
-* **Estado:** Salto logístico do Dia 16 consolidado. Aquisição da mochila no Armazém para carregar comida e itens; infiltração em Uma Pequena Sala e contato com o Guarda Novato; patrulha desimpedida na Área dos Novatos com preservação total de vida.
-* **Tática Operacional:** Abastecer provisões na Padaria no romper do Dia 17 e caçar as presas rastejantes da Área dos Novatos até destravar o Nível 2.
+* **Estado:** Salto logístico e geográfico do Dia 17 consumado. Fome saciada na Padaria com pão recheado e broa fresca; sede extinta na Fonte Azul com dois cantis abastecidos; descoberta de Um Campo Aberto revelando a rota de fuga circular que conecta o fundo da Área dos Novatos de volta ao Grande Campo de Midgaard.
+* **Tática Operacional:** Com recursos biológicos no ápice e rota de recuo mapeada, avançar nas próximas incursões para caçar as presas rastejantes e monstros novatos até selar os 1.000 EXP rumo ao Nível 2.
