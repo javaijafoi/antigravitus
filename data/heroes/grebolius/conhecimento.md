@@ -4,7 +4,7 @@
 
 ---
 
-## 👹 1. Bestiário, Mestres & Figuras de Midgaard (Dias 1 a 7)
+## 👹 1. Bestiário, Mestres & Figuras de Midgaard (Dias 1 a 8)
 
 | Alvo / Personagem | Localização Confirmada | Risco / Natureza | Veredito de Interação | Observações Táticas |
 | :--- | :--- | :--- | :--- | :--- |
@@ -13,7 +13,9 @@
 | **Carecacabeludo, o Preservador**| O Templo de Midgaard | **Alto / Guardião** | **NEUTRO** | Sentinela silencioso que vigia a nave sagrada do templo. |
 | **Omorfos, o Malandro** | Templo de Midgaard (em trânsito) | **Incalculável** | **FUGA / NUNCA CONFRONTAR** | Veterano em voo cercado por aura mágica multicolorida colossal. |
 | **O Pacificador** | Término da Rua / Praça do Templo | **Colossal** | **RESPEITO / ALIADO POTENCIAL** | Gigante sentinela da ordem civil; convidou Grebolius a ajudá-lo quando estiver forte. |
+| **Sentinela dos Ladrões** | Entrada da Guilda dos Ladrões | **Severo** | **HOSTILIDADE / HUMILHAÇÃO** | Vigia sombrio que barra a entrada para o bar dos renegados com desprezo a novatos. |
 | **Sentinela dos Guerreiros** | Entrada da Guilda dos Guerreiros | **Severo** | **HOSTILIDADE / HUMILHAÇÃO** | Bloqueia a passagem para o bar e mestres com desprezo violento. |
+| **Mercenários Armados** | O Beco Escuro (x5) | **Médio / Tensão** | **CAUTELA / EVITAR ATRITO** | Espadachins desempregados espreitando nas quinas; alianças futuras ou alvos de furto. |
 | **Guarda da Cidade (Pelotão)** | Portão Leste / Portão Oeste | **Mortal** | **NÃO PROVOCAR** | Pelotão de 8 guardas fortemente armados no Portão Leste; passagem proibida para novatos. |
 | **O Pranteador da Cidade** | Praça Comum | **Nulo / Trágico** | **IGNORAR** | Figura em luto perpétuo lamentando sobre as pedras da praça. |
 | **Mago Guardião** | Entrada da Guilda dos Magos | **Severo** | **EVITAR ENTRADA** | Envolto em barreira de luz mágica protetora; vigia a passagem para a guilda. |

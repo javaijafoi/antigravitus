@@ -87,6 +87,20 @@
   * Organizar os itens da mochila para liberar peso e mobilidade.
   * Ingressar formalmente na Guilda dos Ladrões no Ciclo 8 para iniciar o treinamento rigoroso com os mestres da clandestinidade.
 
+---
+
+### ⏳ Ciclo 8 (Dia 8): A Infiltração na Guilda dos Ladrões e a Barreira dos Renegados
+* **Status de Campo:**
+  * Local de Repouso: O Panteão dos Centenários.
+  * Condição Física: Pernas exaustas após varredura do anel de becos e praças; estamina gasta até restar apenas a subida sagrada.
+  * Domínio Prático: 3 sessões de treino disponíveis; técnicas rudimentares de combate e deslocamento aquático mapeadas.
+* **Marcos e Impactos Psicológicos:**
+  * **A Barreira no Bar dos Ladrões:** O sentinela na porta da guilda barrou a passagem com desdém, repetindo o padrão da Guilda dos Guerreiros. Isso solidificou que disfarce e audácia não substituem o poder bruto: em Midgaard, só passa quem impõe medo ou reverência.
+  * **A Ferocidade dos Becos:** A presença dos cinco mercenários armados no Beco Escuro confirmou que o submundo é um barril de pólvora pronto para explodir.
+* **Decisão Tática:**
+  * Romper a inércia: utilizar o Ciclo 9 para destravar o primeiro combate letal comprovado e abrir espaço com sangue para que os mestres das guildas sejam forçados a reconhecê-la.
+
+
 
 
 
