@@ -9,23 +9,23 @@
 * **Título Honorífico:** o Aprendiz de Mago
 * **Raça / Aparência Real:** Mulher Goblin (disfarçada de jovem guerreiro com faixas e elmo abaixado)
 * **Classe Mecânica no MUD:** Mago (Magic-User)
-* **Grau / Nível Atual:** **3** *(Ascensão fulminante após abater o Monstro Novato)*
-* **Alinhamento Moral:** 12 (Neutro Pragmático)
-* **Localização Atual:** O Grande Tabuleiro de Xadrez de Midgaard (Fronteira Oeste dos Campos) — *Dormindo com segurança*
+* **Grau / Nível Atual:** **4** *(Ascensão gloriosa ao Quarto Grau de Maestria após abates consecutivos)*
+* **Alinhamento Moral:** 25 (Neutro Pragmático)
+* **Localização Atual:** O Panteão dos Centenários (Cume sagrado do Templo de Midgaard) — *Salvo e Dormindo com segurança máxima*
 
 ---
 
 ## ✦ Status Vitais
 | Recurso | Atual | Máximo | Porcentagem |
 | :--- | :---: | :---: | :---: |
-| **Pontos de Vida (HP)** | 27 | 27 | 100% |
-| **Pontos de Mana (MP)** | 106 | 106 | 100% |
-| **Estamina / Movimento (MV)** | 87 | 87 | 100% |
+| **Pontos de Vida (HP)** | 33 | 33 | 100% |
+| **Pontos de Mana (MP)** | 111 | 111 | 100% |
+| **Estamina / Movimento (MV)** | 89 | 89 | 100% |
 
-* **Experiência Acumulada:** **3.263 EXP**
-* **Experiência Necessária p/ Grau 4:** 1.737 EXP
-* **Ouro Líquido:** **453 moedas de ouro**
-* **Condição Biológica:** Plenamente alimentada (rosquinha malhada consumida); fôlego vital e energia plenos.
+* **Experiência Acumulada:** **6.015 EXP**
+* **Experiência Necessária p/ Grau 5:** 3.985 EXP
+* **Ouro Líquido:** **493 moedas de ouro**
+* **Condição Biológica:** Sede saciada na Fonte Azul; fôlego vital e energia mágica no ápice absoluto.
 
 ---
 
@@ -46,13 +46,14 @@
 
 ---
 
-## ✦ Habilidades Conhecidas e Treinos Pendentes
-* **Sessões de Treino Acumuladas:** **6 sessões de prática disponíveis** *(liberadas com a ascensão ao Grau 3)*
+## ✦ Habilidades Conhecidas e Treinos Concluídos
+* **Sessões de Treino Acumuladas:** **2 sessões de prática disponíveis** *(7 sessões consumidas no Laboratório dos Magos)*
 * **Perícias e Encantamentos:**
-  * `magic missile` (Projétil Mágico): **97%+** (Grau: Perfeito / Letalidade Comprovada)
-  * `swim` (Natação): **55%** (Grau: Bom / Sobrevivência em Águas)
-  * `detect invisibility` (Detectar Invisibilidade): **10%** *(Disponível para treino na guilda)*
-  * `detect magic` (Detectar Magia): **10%** *(Disponível para treino na guilda)*
+  * `magic missile` (Míssil Mágico): **99%** (Grau: Perfeito / Letalidade Absoluta)
+  * `chill touch` (Toque Gélido): **95%** (Grau: Perfeito / Nova Magia Combativa de Gelo)
+  * `detect invisibility` (Detectar Invisibilidade): **95%** (Grau: Perfeito / Visão além do Velo)
+  * `detect magic` (Detectar Magia): **95%** (Grau: Perfeito / Sensibilidade Arcana)
+  * `swim` (Natação): **95%** (Grau: Perfeito / Domínio Aquático Completo)
 
 ---
 
@@ -74,11 +75,10 @@
 * **`uma mochila`** *(mochila de lona para transporte de carga)*
 * `um gorro de couro` (proteção reserva)
 * 2x `cantil` *(ambos reabastecidos com água pura da Fonte Azul)*
-* `um bastão de folhas e galhos`
 * `um anel arcano` (+2E)
 
 ---
 
 ## ✦ Ciclo e Postura Atual
-* **Estado:** Conclusão do Dia 24. Marcha de ação agressiva: consumo de provisões, passagem veloz pelo Grande Campo e rompimento dos portões de ferro forjado d'O Grande Tabuleiro de Xadrez de Midgaard. Descoberta e ocupação de Uma Casa Branca, com rotas abertas para as lajes pretas do monumento.
-* **Tática Operacional:** No próximo ciclo, avançar pelas casas do Tabuleiro para localizar presas ou segredos arcanos protegidos pelas peças de xadrez vivas.
+* **Estado:** Conclusão do Dia 25. Vitória avassaladora e evolução brutal: incursão inicial nas lajes do Tabuleiro de Xadrez, seguida por rápida varredura e triplo abate na Masmorra dos Novatos (dois Monstros Novatos e um Inseto Rastejante). Rompimento da marca dos 6.000 EXP e conquista do **Quarto Grau de Maestria (Nível 4)**. Treinamento intensivo na Mestre dos Magos alçando `chill touch`, `detect invisibility`, `detect magic` e `swim` para 95% (perfeito).
+* **Tática Operacional:** No próximo ciclo, testar em combate o recém-dominado feitiço gélido `chill touch`, explorar tarefas formais com NPCs influentes ou retornar ao Tabuleiro de Xadrez com poder ampliado.

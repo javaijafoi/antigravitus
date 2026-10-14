@@ -90,8 +90,8 @@
 | :--- | :--- | :--- | :--- |
 | **O Caminho Sujo** | **L** (Grande Campo Bifurcação), **O** (Grande Tabuleiro de Xadrez) | Baixo | Trilha de terra batida ladeada por carvalhos antigos; portão enferrujado a oeste. |
 | **O Grande Tabuleiro de Xadrez** | **L** (O Caminho Sujo), **O** (Uma Casa Branca) | Mistério / Épico | Portão gigantesco de ferro em arco de pedra; abertura para o interior do tabuleiro monumental. |
-| **Uma Casa Branca** | **N** (Casa Preta), **S** (Casa Preta), **O** (Casa Preta), **L** (Grande Tabuleiro) | Tensão Tática | Quadrado titânico de mármore branco polido; portão enferrujado a leste; cercado por casas pretas. |
-| **Uma Casa Preta** | Várias conexões | Desconhecido | Lajes de obsidiana e ébano onde peças vivas de xadrez se movem. |
+| **Uma Casa Branca** | **N** (Casa Preta), **S** (Casa Preta), **O** (Casa Preta), **L** (Grande Tabuleiro) | Tensão Tática | Quadrado titânico de mármore branco polido; portão enferrujado a leste; espólios de peões negros encontrados. |
+| **Uma Casa Preta** | **N** (Casa Branca), **S** (Casa Branca), **O** (Casa Branca) | Tensão Tática / Espólios | Lajes de obsidiana e ébano; presença de Armadura de Peão Negro (+9L) e Espada do Peão Negro (+8L) jogadas no chão (exigem maestria avançada para empunhar). |
 
 ---
 

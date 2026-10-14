@@ -359,3 +359,30 @@
   * **A Ruptura do Portão e a Invasão do Tabuleiro de Xadrez:** Sem perder tempo com divagações, cruzou o Grande Campo e empurrou as portas enferrujadas do arco de pedra, penetrando no lendário monumento: pisou diretamente em **Uma Casa Branca**, cercada por lajes de pedra escura que se estendem no horizonte. A invasão ao terreno mítico dos grandes mestres começou.
 * **Decisão Tática:**
   * No Ciclo 25, explorar as casas adjacentes do Tabuleiro para localizar peças vivas ou tesouros ancestrais, mantendo a vigilância para alvos perigosos.
+
+---
+
+### ⏳ Ciclo 25 (Dia 25): A Furiosa Caçada na Masmorra, o Toque Gélido e a Ascensão ao Quarto Grau
+* **Status Real (MUD):**
+  * Nível: **4** | Vida: **33/33** | Mana: **111/111** | Movimento: **89/89** | AC: 17
+  * Experiência: **6.015 EXP** *(Próximo nível: 3.985 EXP)*
+  * Ouro Líquido: **493 moedas de ouro**
+  * Práticas Restantes: **2 sessões** *(7 consumidas na Mestre da Guilda dos Magos)*
+  * Perícias Elevadas à Perfeição (95%+):
+    * `chill touch`: **95% (perfeito)** [Nova magia combativa de frio]
+    * `detect invisibility`: **95% (perfeito)**
+    * `detect magic`: **95% (perfeito)**
+    * `magic missile`: **99% (perfeito)**
+    * `swim`: **95% (perfeito)**
+  * Local de Pernoite: O Panteão dos Centenários (Salvo e Dormindo sob abrigo sagrado).
+* **Marcos e Impactos Psicológicos:**
+  * **A Lição do Tabuleiro e a Decisão pela Masmorra:** Explorando Uma Casa Branca e Casas Pretas, Grebolius encontrou armaduras e espadas pesadas de Peão Negro abandonadas no mármore. Constatou que tais armas e placas exigem maestria e força superiores. Em vez de frustração, sentiu a sede urgente de poder prático: abandonou o excesso de peso e rumou a passos largos para a Área dos Novatos para ceifar presas.
+  * **O Massacre Consecutivo e a Violência Eficiente:**
+    1. *Monstro Novato:* Disparo inicial de míssil mágico e estocada mortal no coração (14 de dano). Saqueou 20 moedas de ouro e acumulou experiência de abate.
+    2. *Inseto Rastejante:* Lançamento místico seguido de estocada que literalmente *EXPLODIU* a criatura em um golpe devastador de 24 de dano.
+    3. *Segundo Monstro Novato:* Execução rápida com míssil arcano e lâmina encantada. Abate rendeu 1.600 EXP direto + 360 EXP de dano + 20 moedas de ouro.
+  * **A Ascensão ao Quarto Grau de Maestria (Nível 4):** O éter cósmico explodiu dentro de seu peito ao desferir o golpe de misericórdia. O jogo proclamou a subida de nível: seus pulmões se dilataram (+6 de vida), suas reservas arcanas cresceram (+5 de mana, totalizando 111 de energia pura) e seus reflexos ganharam nova elasticidade (+2 de movimento). Além disso, a centelha do gelo despertou em suas mãos, concedendo-lhe o feitiço `chill touch`.
+  * **O Grande Treinamento no Laboratório dos Magos:** Descendo velozmente pelas ruas até o laboratório fumegante da Mestre da Guilda, investiu 7 sessões de prática acumuladas (usando a sintaxe de instrução sem aspas descoberta). Elevou `chill touch`, `detect invisibility`, `detect magic` e `swim` para impressionantes **95% (perfeito)**.
+  * **Consagração e Descanso:** Reabasteceu os cantis na lendária Fonte de Mármore Azul, saciou a sede e ascendeu ao Panteão dos Centenários, dormindo aos pés dos titãs com poder ampliado e letalidade renovada.
+* **Decisão Tática:**
+  * No Ciclo 26, estrear a nova magia `chill touch` em combate real, testar tarefas e missões formais com NPCs influentes de Midgaard e avançar na rota da soberania com maestria de Grau 4.
