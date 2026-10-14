@@ -46,4 +46,20 @@
   * Manter o Templo como porto seguro inviolável.
   * Prioridade para o próximo ciclo: descer à Praça do Templo para encher o cantil na Fonte Azul (`fill cantil fonte`) e iniciar investidas de EXP contra alvos solitários catalogados.
 
+---
+
+### ⏳ Ciclo 5 (Dia 5): A Fonte Azul e o Altar dos Centenários
+* **Status Real (MUD):**
+  * Local: O Panteão dos Centenários (Cume sagrado de Midgaard).
+  * Recursos: Cantil 100% abastecido com água cristalina na Fonte Azul (`fill cantil fonte`); sede saciada (`drink cantil`); 2x broa de milho em estoque.
+  * HP: 23/23 | Mana: 100/100 | Movimento: 83/84.
+* **Compreensão de Mecânica do MUD:**
+  * Descoberta técnica: as abreviações dos comandos cardeais no interpretador respeitam `e` (leste/east) e `w` (oeste/west) em vez de letras em português.
+* **Mutação Mental:**
+  * Estar no Panteão dos Centenários sob o olhar das estátuas lendárias (Deck, Kara, Brandon, Sakura, Wolf) desfez qualquer dúvida: eles também começaram do nada. A ambição pelo Nível 30 e pelo reino goblin foi forjada em aço.
+* **Decisão Tática:**
+  * Ponto de pernoite fixado no Panteão dos Centenários (`save` e `sleep`).
+  * Com água e comida garantidas, o próximo passo operacional é descer com foco cirúrgico (`e` até a Rua Leste II) para abater o primeiro cão no lixo isolado e colher EXP sem riscos.
+
+
 

@@ -19,7 +19,9 @@
 ---
 
 ## 🏰 2. Zonas Estratégicas Verificadas
+* **O Panteão dos Centenários (Santuário Supremo):** No cume sagrado acima do Templo. Altar das estátuas lendárias (Deck, Kara, Brandon, Wolf, Sakura, Tommyknocker, etc.), proteção divina absoluta contra qualquer agressão.
 * **O Templo de Midgaard (Santuário):** Ponto primordial de descanso inviolável (`sleep`) e caixa para poupar moedas.
+* **A Praça do Templo (Ponto de Água):** Fonte de mármore azul mágica para abastecer cantis sem custo (`fill cantil fonte`).
 * **Portão Oeste de Midgaard:** Ponto de saída para o além-muros e fonte de armas caídas (espadas longas novas avistadas no chão).
 * **Entrada da Guilda dos Magos:** Ponto de vigilância mágica e caixa de madeira secundária.
 * **Depósito de Lixo:** Rota veloz de fuga para o subsolo.
