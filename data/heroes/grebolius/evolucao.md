@@ -59,5 +59,20 @@
   * Ponto de pernoite fixado no Panteão dos Centenários.
   * Com água e comida garantidas, o próximo passo operacional é descer com foco marcial para treinar na guilda e abater a primeira presa no lixo para destravar sua força prática.
 
+---
+
+### ⏳ Ciclo 6 (Dia 6): A Convocação, a Humilhação e o Limite da Estamina
+* **Status de Campo:**
+  * Local de Repouso: O Panteão dos Centenários.
+  * Condição Física: Músculos em exaustão extrema; estamina drenada quase ao limite absoluto após marcha urbana completa, restando apenas o fôlego final para subir a montanha.
+  * Recursos: Inventário preservado intacto. Espada mágica avistada na Loja de Armas; arsenais e rotas de fuga mapeados.
+* **Marcos e Impactos Psicológicos:**
+  * **A Convocação do Pacificador:** O maior guardião de Midgaard falou diretamente com Grebolius, profetizando que ela retornará forte o bastante para lutar a seu lado. Isso transformou o senso de destino da ladra.
+  * **O Desprezo na Guilda dos Guerreiros:** A lança no peito e o escárnio do sentinela na porta do Bar dos Guerreiros gravaram a ferro quente que disfarce de homem não basta; é preciso poder marcial avassalador para derrubar portas e exigir respeito.
+* **Decisão Tática:**
+  * Manter a disciplina de exaustão: só dormir quando as pernas quase não sustentarem o corpo, deixando apenas o mínimo para recolher-se ao santuário.
+  * Foco prioritário para o próximo ciclo: encontrar a Guilda dos Ladrões ou instrutor clandestino nos becos para iniciar a prática formal de habilidades furtivas e de combate.
+
+
 
 
