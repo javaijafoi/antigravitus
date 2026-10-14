@@ -726,3 +726,21 @@
   * **A Marcha Rumo aos Trinta Mil:** A experiência atingiu **29.559 EXP**, restando uma fração minúscula para a barreira redonda dos trinta mil passos. Doou armamentos rústicos na Sala de Doações para preservar sua agilidade e recolheu-se ao Panteão dos Centenários, onde repousa com a serenidade dos que dominam segredos arcanos e riqueza em ascensão.
 * **Decisão Tática:**
   * No Ciclo 43, romper a barreira dos 30.000 EXP, equipar ou testar o anel arcano e planejar investida mais audaciosa nas câmaras ainda fechadas da masmorra.
+---
+
+### ⏳ Ciclo 43 (Dia 43): A Ambição do Anel Arcano, o Voo do Grifo Real e o Limiar dos Trinta Mil
+* **Status Real (MUD):**
+  * Nível: **7** *(29.919 EXP | Faltam apenas 81 EXP para romper 30.000 EXP e 10.081 para o Grau 8)*
+  * Vida: **49/49** | Mana: **130/130** | Movimento: **92/93** | AC: **39** *(Armadura Arcana ativa)*
+  * Salto de Experiência: **+360 EXP** em combate fulminante na Masmorra dos Novatos.
+  * Ouro Líquido: **769 moedas de ouro** *(+20 moedas saqueadas)*
+  * Teste de Equipamento Nobre: Tentativa de equipar o Anel Arcano (+2E); o MUD registrou que a relíquia exige maturidade arcana superior (*"Você não tem experiência para usar um anel arcano"*). A joia permanece guardada como troféu para os próximos círculos.
+  * Contato Visual Lendário: Presença imponente de Negelok no Templo de Midgaard, montado em seu colossal Grifo Real com aura multicolorida, acompanhado por Damasco, o Procurado.
+  * Local de Pernoite: O Panteão dos Centenários (Salva e Dormindo diante dos doze heróis eternos).
+* **Marcos e Impactos Psicológicos:**
+  * **O Pulso da Relíquia Proibida:** Grebolius tentou deslizar o Anel Arcano pelo dedo ossudo. O metal dourado emitiu uma faísca fria e recusou o encaixe: o artefato exige uma mente ainda mais calejada pelos mistérios do éter. Longe de se frustrar, a goblin sentiu o fogo da ambição redobrar — a joia que ela carrega já é a marca da rainha que ela será.
+  * **A Visão do Grifo e a Glória dos Titãs:** Ao descer pelas naves do Templo de Midgaard, deparou-se com uma cena estarrecedora: o lendário Negelok, flutuando montado em seu Grifo Real sob um turbilhão de luzes multicoloridas, ladeado pelo temido Damasco. Ver os verdadeiros soberanos do mundo operando a poucos metros confirmou sua fé: o poder real não é uma fábula humana, é uma realidade ao alcance de quem não teme a morte.
+  * **A Caçada do Limiar:** Com a Armadura Arcana zumbindo a 39 de blindagem, adentrou a masmorra e ceifou a presa novata com o Projétil Mágico e a lâmina rápida, colhendo 360 EXP e 20 moedas de ouro. A experiência estacionou em **29.919 EXP**, a míseros 81 passos da monumental fronteira dos trinta mil.
+  * **Doações e Repouso Olímpico:** Doou punhais na Sala de Doações, onde avistou relíquias de veteranos, e subiu ao Panteão dos Centenários para salvar seu progresso e dormir sob a glória dos eternos.
+* **Decisão Tática:**
+  * No Ciclo 44, quebrar a barreira dos 30.000 EXP, avançar rumo aos 800 ouros e sondar novos corredores ou portas com a devida cautela.

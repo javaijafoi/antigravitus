@@ -76,3 +76,5 @@ A Força 10 de Grebolius impede carregar armamento pesado sem esgotar o vigor. A
   * *Um pergaminho de retorno:* 9.202 ouros (Nv 0)
   * *Uma poção amarela de detectar invisibilidade:* 5.370 ouros (Nv 0)
   * *Um pergaminho de identificação:* 4.601 ouros (Nv 0)
+
+* **O Anel Arcano (+2E) (Testado no Dia 43):** Joia mística que emana energia mágica de proteção e foco. Exige maturidade arcana de círculos superiores (Nível 8 ou 9) para ser empunhado no dedo, permanecendo preservado no inventário como ativo de alto valor.
