@@ -209,4 +209,23 @@
   * Com 613 moedas no bolso, adquirir pergaminho de retorno (*Word of Recall*) e sacola de transporte assim que encontrar o mercador adequado.
   * Aproveitar a leveza da mochila para explorar novas ramificações da Área dos Novatos e concluir a colheita dos 604 pontos restantes de maestria.
 
+---
+
+### ⏳ Ciclo 16 (Dia 16): A Mochila do Armazém, a Revelação do Guarda e o Alerta da Fome
+* **Status Real (MUD):**
+  * Nível: 1 | Vida: 20/20 | Mana: 100/100 | Movimento: 84/84 | AC: 17
+  * Ouro Líquido: **583 moedas de ouro** *(investimento de 30 moedas na mochila)*
+  * Equipamento Novo: **Uma Mochila de Carga** adquirida no Armazém.
+  * Condição Biológica: Alerta orgânico de fome disparado no final da marcha.
+  * Local de Pernoite: O Panteão dos Centenários (Salvo e Dormindo).
+* **Marcos e Impactos Psicológicos:**
+  * **A Aquisição da Mochila de Carga:** Grebolius desceu ao Armazém da Rua Leste I e negociou com o merceeiro impaciente, comprando por 30 moedas de ouro uma mochila de lona resistente. Agora possui um recipiente próprio para armazenar provisões sem travar as mãos.
+  * **O Segredo de 'Uma Pequena Sala' e o Dragão Fugitivo:** Ao forçar a porta de madeira a oeste de Mais Corredor, Grebolius encontrou o Guarda Novato atordoado entre coleiras arrebentadas e elmos jogados, implorando por ajuda após a fuga do dragão. O enigma do bebê dragão zanzando pelos corredores foi desvendado: ele escapou da guarda e agora é um perigo solto.
+  * **A Vigilância dos Corredores e o Retorno a Winkan:** Observou a movimentação de insetos rastejantes nos túneis e retornou ao Templo, encontrando mais uma vez o venerável *Winkan, o Engenheiro do Caos* em profunda meditação sob sua barreira mágica.
+  * **O Despertar da Fome:** Pela primeira vez desde o início da caçada, o estômago cobrou tributo. Com quase seiscentas moedas no bolso, a fome não é uma ameaça, mas sim uma lembrança biológica de que o corpo precisa de comida fresca comprada na Padaria.
+* **Decisão Tática:**
+  * Abrir o Ciclo 17 na Padaria de Midgaard para comprar pães e broas e abastecer a nova mochila.
+  * Seguir para a Área dos Novatos alimentada e preparada para abater as presas rastejantes e alcançar os 1.000 pontos de maestria (Nível 2).
+
+
 

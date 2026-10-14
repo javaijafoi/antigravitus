@@ -24,7 +24,8 @@
 
 * **Experiência Acumulada:** 396 EXP
 * **Experiência Necessária p/ Grau 2:** 1.000 EXP (Faltam 604 EXP)
-* **Ouro Líquido:** **613 moedas de ouro** *(venda de armas pesadas no ferreiro, gorro no armeiro e saque na praça)*
+* **Ouro Líquido:** **583 moedas de ouro** *(investimento de 30 moedas na compra da mochila de carga no Armazém)*
+* **Condição Biológica:** Fome despontando na vigília noturna (recursos financeiros abundantes para compra de pães).
 
 ---
 
@@ -66,9 +67,10 @@
 
 ---
 
-## ✦ Inventário Carregado (Mochila Leve & Desimpedida)
+## ✦ Inventário Carregado (Mochila Adquirida)
+* **`uma mochila`** *(adquirida no Armazém de Midgaard para estocar suprimentos e driblar o limite de mãos)*
 * `um brilhante punhal de novato` (reserva rápida encantada com aura)
-* `um gorro de couro` (proteção reserva simples)
+* `um gorro de couro` (proteção reserva)
 * 2x `cantil de couro` (reabastecidos com água pura)
 * `um bastão de folhas e galhos`
 * `um anel arcano` (+2E)
@@ -76,5 +78,5 @@
 ---
 
 ## ✦ Ciclo e Postura Atual
-* **Estado:** Salto financeiro e ergonômico do Dia 15 consumado. Carga aliviada com a venda de picaretas e espadas pesadas nos artesãos de Midgaard; cofre recheado com 613 moedas de ouro; cabeça blindada pelo elmo de novato místico.
-* **Tática Operacional:** Manter a estamina leve, atacar presas seguras da Área dos Novatos com abertura de raio arcano e recuar com 10 HP ao menor risco.
+* **Estado:** Salto logístico do Dia 16 consolidado. Aquisição da mochila no Armazém para carregar comida e itens; infiltração em Uma Pequena Sala e contato com o Guarda Novato; patrulha desimpedida na Área dos Novatos com preservação total de vida.
+* **Tática Operacional:** Abastecer provisões na Padaria no romper do Dia 17 e caçar as presas rastejantes da Área dos Novatos até destravar o Nível 2.

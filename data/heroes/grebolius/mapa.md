@@ -69,7 +69,8 @@
 | **O Começo Da Passagem** | **L** (Corredor Sujo), **S** (Entrada Novatos) | Seguro / Loot | Eco de criaturas ao longe; abandono de coleiras de dragão e vestes novatas. |
 | **O Corredor Sujo** | **L** (O Cruzamento), **O** (Começo da Passagem) | Baixo | Paredes lodosas; ruídos vindos de trás da porta ao sul e do leste. |
 | **O Cruzamento** | **S** (Mais Corredor), **O** (Corredor Sujo) | Baixo | Entroncamento de túneis; punhais e vestes espalhadas. |
-| **Mais Corredor** | **N** (Cruzamento), **S** (Outro Canto), **O** (Pequena Sala [fechada]) | Baixo | Porta secreta ao oeste (`open west`); barulhos de rastejo ao sul. |
+| **Mais Corredor** | **N** (Cruzamento), **S** (Outro Canto), **O** (Pequena Sala [porta]) | Baixo | Porta de madeira a oeste (`open west`); trânsito de patrulha. |
+| **Uma Pequena Sala** | **L** (Mais Corredor) | Seguro / Lore | Covil do Guarda Novato em apuros buscando seu dragão fugitivo; elmos e coleiras no chão. |
 | **Um Outro Canto** | **N** (Mais Corredor), **O** (Corredor Iluminado) | **Atenção** | **Câmara de Monstros:** Bebê dragão (SUICÍDIO no Nv 1) e Coisa Assustadora. Porta a leste. |
 | **Um Corredor Iluminado** | **L** (Um Outro Canto), **O** (Fim do Corredor) | Baixo | Fachos de luz projetando sombras no chão de pedra. |
 | **O Fim do Corredor** | **L** (Corredor Iluminado), **O** (Campo Aberto) | **Caça / Treino** | **Campo de Abate:** Presença do Monstro Novato (396 XP, 20 ouros e punhal encantado). |
