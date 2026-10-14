@@ -22,10 +22,10 @@
 | **Pontos de Mana (MP)** | 122 | 122 | 100% |
 | **Estamina / Movimento (MV)** | 91 | 92 | 99% |
 
-* **Experiência Acumulada:** **21.287 EXP** *(+252 EXP obtidos em combate no Cruzamento)*
-* **Experiência Necessária p/ Grau 7:** **3.713 EXP**
-* **Ouro Líquido:** **629 moedas de ouro** *(+20 moedas saqueadas do monstro abatido)*
-* **Condição Biológica:** Vigor absoluto; fome erradicada com carne fresca na Sala de Doações; sede saciada na Fonte de Mármore Azul; fôlego pleno.
+* **Experiência Acumulada:** **24.317 EXP** *(+3.030 EXP obtidos em duplo combate no Começo da Passagem e Fim do Corredor)*
+* **Experiência Necessária p/ Grau 7:** **683 EXP** *(um único monstro separa Grebolius do Sétimo Grau!)*
+* **Ouro Líquido:** **669 moedas de ouro** *(+40 moedas saqueadas dos corpos)*
+* **Condição Biológica:** Vigor absoluto; sede saciada na Fonte de Mármore Azul; fôlego pleno.
 
 ---
 
@@ -57,7 +57,7 @@
 ---
 
 ## ✦ Habilidades Conhecidas e Treinos Concluídos
-* **Sessões de Treino Acumuladas:** **4 sessões de treino disponíveis** *(guardadas para o Nível 7 / `armor`)*
+* **Sessões de Treino Acumuladas:** **4 sessões de treino disponíveis** *(reservadas para a ascensão ao Nível 7 / `armor`)*
 * **Perícias e Encantamentos:**
   * `invisibility` (Invisibilidade): **95%** (Grau: Perfeito / Maestria Arcana de Ocultação — Desbloqueada no Nv 6 e treinada na Guilda dos Magos)
   * `infravision` (Infravisão): **95%** (Grau: Perfeito / Visão Noturna e Espectral Térmica)
@@ -88,13 +88,15 @@
 * **`um brilhante punhal de novato`** (aura mística reserva empunhável)
 * **`um cantil`** *(cheio com água límpida da Fonte de Mármore Azul)*
 * **`um anel arcano`** (+2E)
+* **`uma brilhante veste de novato`** *(despojo recolhido)*
 * **`uma mochila`** *(contendo: armas reservas, cantil e gorro)*
 
 ---
 
 ## ✦ Ciclo e Postura Atual
-* **Estado:** Conclusão do Dia 38. Nutrição biológica com carne fresca na Sala de Doações (`eat carne`), erradicando a fome acumulada e hidratando-se na Fonte Azul da Praça do Templo. Incursão cirúrgica na Masmorra dos Novatos: confronto mortal no Cruzamento com rajada de Míssil Mágico e dupla perfuração visceral (12 e 12 de dano), ceifando 252 EXP e 20 moedas de ouro. Experiência subindo para **21.287 EXP** (restando apenas 3.713 EXP para o Sétimo Grau). Repouso inviolável no Panteão dos Centenários.
-* **Tática Operacional:** No Ciclo 39 (dia "9" do ciclo decenal), executar obrigatoriamente a rotina de **/learn** para aprimorar e persistir a metodologia de jogo e automação do agente, realizar a caçada diária rumo aos 25.000 EXP e preparar o grande balanço decenal do Dia 40.
+* **Estado:** Conclusão do Dia 39 (dia sagrado "9" do ciclo decenal). Execução e consolidação do protocolo de aprendizado metodológico **/learn** (regras de overflow de mochila, aceitação de autoquests com `say sim` e nutrição). Ofensiva implacável nas extremidades da Masmorra dos Novatos: duplo abate devastador no Começo da Passagem e no Fim do Corredor com rajadas de Míssil Mágico (15 e 6 de dano) e perfurações viscerais letais (15 e 12 de dano), gerando mais de 3.000 EXP e 40 ouros. Experiência catapultada para **24.317 EXP** (restando apenas 683 EXP para o Nível 7). Repouso inviolável no Panteão dos Centenários.
+* **Tática Operacional:** No Ciclo 40 (marco decenal!), abater a última presa para coroar a ascensão ao Nível 7 (25.000 EXP), treinar `armor` no Laboratório dos Magos, realizar a pausa reflexiva estratégica decenal e atualizar `identidade.md`.
+
 
 
 
