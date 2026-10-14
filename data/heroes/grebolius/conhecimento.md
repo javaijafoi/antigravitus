@@ -115,3 +115,12 @@ A Força 10 de Grebolius impede carregar armamento pesado sem esgotar o vigor. A
   * *Uma atadura:* 300 ouros
   * *Cartão de crédito:* 60.000 ouros
   * *Álbum de figurinhas:* 15.000 ouros
+---
+
+## 🗺️ 5. Topografia Avançada & Segredos de Portais (Dias 58 e 59)
+* **Abertura de Portas e Ferrolhos no CircleMUD/DeBo:**
+  - Sintaxe canônica: **`open <direction>`** (ex: `open north`).
+  - Desobstrui portas fechadas em cruzamentos e masmorras, retornando *"Certo."*.
+* **A Ala Norte da Masmorra dos Novatos:**
+  - **Um Caminho Iluminado:** Acessada via `open north` a partir de *O Cruzamento*. Sala imaculada, paredes brancas, piso decorado com projetos de engenharia arcana.
+  - **A Sala da Estátua:** Localizada ao norte de *Um Caminho Iluminado*. Abriga uma monumental e artística estátua de pedra e uma passagem para o leste (`e`) que avança rumo aos laboratórios internos do Alquimista.

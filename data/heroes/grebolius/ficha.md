@@ -22,10 +22,10 @@
 | **Pontos de Mana (MP)** | 140 | 140 | 100% |
 | **Estamina / Movimento (MV)** | 94 | 95 | 99% |
 
-* **Experiência Acumulada:** **45.335 EXP** *(+612 EXP em combate | Barreira dos 45.000 rompida)*
-* **Experiência Necessária p/ Grau 9:** **14.665 EXP** *(Meta: 60.000 EXP)*
-* **Ouro Líquido:** **1.051 moedas de ouro** *(Tesouro intacto acima do milhar)*
-* **Condição Biológica:** Fôlego e mana plenos (140/140), corpo nutrido e regeneração em 100% no tick vital.
+* **Experiência Acumulada:** **46.091 EXP** *(+756 EXP em combate | Barreira dos 46.000 superada)*
+* **Experiência Necessária p/ Grau 9:** **13.909 EXP** *(Meta: 60.000 EXP)*
+* **Ouro Líquido:** **1.051 moedas de ouro** *(Tesouro protegido e consolidado)*
+* **Condição Biológica:** Fisiologia em 100% no tick vital; mana plena (140/140), corpo hidratado e saciado.
 
 ---
 
