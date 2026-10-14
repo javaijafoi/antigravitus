@@ -56,6 +56,7 @@ Esta skill formaliza todas as regras de jogo, liturgia de encerramento e diretri
   2. Modificar de forma **sutil** o arquivo `data/heroes/<slug>/identidade.md`, incorporando as fissuras, aprendizados e novas táticas consolidadas.
   3. Aplicar as novas táticas imediatamente no ciclo decenal seguinte.
   4. **Atualização Obrigatória do Mapa Interativo (A cada 10 ciclos):** Atualizar e sincronizar rigorosamente o mapa interativo do aventureiro (`data/heroes/<slug>/mapa.json` e `data/heroes/<slug>/mapa.md`) com todas as novas salas desbravadas, conexões, níveis de risco, NPCs e anotações táticas, mantendo o mapa visual do blog atualizado por aventureiro.
+  5. **Resumo Emocional do Ciclo com Alerta de Spoiler (A cada 10 ciclos):** Atualizar `data/heroes/<slug>/ciclos.json` com um resumo vibrante em 1 parágrafo focado no **emocionante e não no descritivo** (perigos extremos, traumas, perdas, reviravoltas ou consagração) para alimentar o bloco retrátil de spoilers no blog, permitindo aos leitores relembrar as façanhas do ciclo ou saltar com clareza.
 
 ---
 

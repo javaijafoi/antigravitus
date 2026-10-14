@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const fichaContainer = document.getElementById("ficha-container");
   const mapCanvasWrap = document.getElementById("map-canvas-wrap");
   const btnBackCronicas = document.getElementById("btn-back-cronicas");
+  const cycleSummaryContainer = document.getElementById("cycle-summary-container");
 
   const brandRuneEl = document.querySelector(".brand-rune");
   const brandTitleEl = document.querySelector(".brand-text h1");
@@ -110,6 +111,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   let currentHero = heroesList[0];
   let allPosts = [];
+  let allCycles = []; // Resumos dos ciclos do herói ativo (com spoilers)
   let activeCycle = 1; // Número do Ciclo ativo (cada ciclo = 1 página de 10 dias)
   let activeDay = null;
   let latestPostId = 0;
@@ -318,6 +320,18 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     allPosts = Array.isArray(posts) ? posts : [];
     
+    // Carrega resumos dos ciclos (com spoilers) do herói
+    allCycles = [];
+    const ciclosPath = `data/heroes/${hero.id}/ciclos.json`;
+    try {
+      const ciclosRes = await fetch(ciclosPath);
+      if (ciclosRes.ok) {
+        allCycles = await ciclosRes.json();
+      }
+    } catch (e) {
+      console.warn(`Fetch falhou para ${ciclosPath}`);
+    }
+    
     // Identifica o último dia publicado dinamicamente
     latestPostId = allPosts.reduce((max, p) => Math.max(max, p.id || 0), 0);
     const totalCycles = Math.max(1, Math.ceil(latestPostId / 10));
@@ -418,6 +432,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Renderiza toda a interface com base no ciclo e ordenação ativos
   function renderAllViews() {
     renderGridNavigation();
+    renderCycleSummary();
     renderFeed();
     renderPagination();
     updateFloatingDock();
@@ -532,6 +547,72 @@ document.addEventListener("DOMContentLoaded", async () => {
         jumpToPost(day);
       });
     });
+  }
+
+  // ============================================================
+  // BLOCO RETRÁTIL: RESUMO DO CICLO COM AVISO DE SPOILER
+  // ============================================================
+  function renderCycleSummary() {
+    if (!cycleSummaryContainer) return;
+
+    if (!Array.isArray(allCycles) || allCycles.length === 0) {
+      cycleSummaryContainer.innerHTML = "";
+      cycleSummaryContainer.style.display = "none";
+      return;
+    }
+
+    const cycleData = allCycles.find(c => c.cycle === activeCycle);
+    if (!cycleData || !cycleData.summary) {
+      cycleSummaryContainer.innerHTML = "";
+      cycleSummaryContainer.style.display = "none";
+      return;
+    }
+
+    cycleSummaryContainer.style.display = "block";
+    const startDay = cycleData.start_day || ((activeCycle - 1) * 10 + 1);
+    const endDay = cycleData.end_day || Math.min(activeCycle * 10, latestPostId);
+
+    cycleSummaryContainer.innerHTML = `
+      <div class="cycle-spoiler-card">
+        <details class="cycle-spoiler-details" id="cycle-spoiler-${activeCycle}">
+          <summary class="cycle-spoiler-summary">
+            <div class="cycle-spoiler-header-left">
+              <span class="spoiler-shield-icon" aria-hidden="true">⚠️</span>
+              <div class="spoiler-texts">
+                <span class="spoiler-tag">RESUMO DO CICLO ${toRoman(activeCycle)} • CONTÉM SPOILERS</span>
+                <span class="spoiler-prompt">Quer pular este bloco ou relembrar os feitos do ciclo? Clique para ver o resumo</span>
+              </div>
+            </div>
+            <div class="spoiler-action-badge">
+              <span class="spoiler-toggle-text">👁️ Revelar Resumo</span>
+              <span class="spoiler-arrow">▾</span>
+            </div>
+          </summary>
+          <div class="cycle-spoiler-content">
+            <div class="cycle-spoiler-quote-banner">
+              <div class="cycle-spoiler-badge">✦ O Legado do Ciclo ${toRoman(activeCycle)} (Dias ${startDay} a ${endDay})</div>
+              ${cycleData.title ? `<h4 class="cycle-spoiler-title">${escapeHtml(cycleData.title)}</h4>` : ""}
+              <p class="cycle-spoiler-text">${escapeHtml(cycleData.summary)}</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    `;
+
+    const detailsEl = cycleSummaryContainer.querySelector(".cycle-spoiler-details");
+    if (detailsEl) {
+      detailsEl.addEventListener("toggle", () => {
+        const textEl = detailsEl.querySelector(".spoiler-toggle-text");
+        const arrowEl = detailsEl.querySelector(".spoiler-arrow");
+        if (detailsEl.open) {
+          if (textEl) textEl.textContent = "🙈 Ocultar Resumo";
+          if (arrowEl) arrowEl.textContent = "▴";
+        } else {
+          if (textEl) textEl.textContent = "👁️ Revelar Resumo";
+          if (arrowEl) arrowEl.textContent = "▾";
+        }
+      });
+    }
   }
 
   // ============================================================

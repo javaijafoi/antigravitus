@@ -15,6 +15,46 @@ def get_posts_path(hero_id=DEFAULT_HERO):
     # Fallback legado
     return os.path.join(BASE_DIR, "data", "posts.json")
 
+def get_ciclos_path(hero_id=DEFAULT_HERO):
+    hero_ciclos = os.path.join(HEROES_DIR, hero_id, "ciclos.json")
+    return hero_ciclos
+
+def add_cycle_summary(cycle_num, summary, title=None, hero_id=DEFAULT_HERO):
+    """
+    Adiciona ou atualiza o resumo emocionante de um ciclo em data/heroes/<hero>/ciclos.json.
+    """
+    ciclos_path = get_ciclos_path(hero_id)
+    os.makedirs(os.path.dirname(ciclos_path), exist_ok=True)
+
+    ciclos = []
+    if os.path.exists(ciclos_path):
+        try:
+            with open(ciclos_path, "r", encoding="utf-8") as f:
+                ciclos = json.load(f)
+        except Exception:
+            ciclos = []
+
+    c_num = int(cycle_num)
+    start_day = (c_num - 1) * 10 + 1
+    end_day = c_num * 10
+
+    new_cycle = {
+        "cycle": c_num,
+        "start_day": start_day,
+        "end_day": end_day,
+        "title": title or f"Façanhas e Provações do Ciclo {c_num}",
+        "summary": summary
+    }
+
+    ciclos = [c for c in ciclos if c.get("cycle") != c_num]
+    ciclos.append(new_cycle)
+    ciclos.sort(key=lambda x: x.get("cycle", 0))
+
+    with open(ciclos_path, "w", encoding="utf-8") as f:
+        json.dump(ciclos, f, ensure_ascii=False, indent=2)
+
+    print(f"[{hero_id.upper()}] Resumo do Ciclo {c_num} atualizado com sucesso em {ciclos_path}!")
+
 def add_chronicle(day_num, title, date_str, in_game_time, excerpt, tags, content_paragraphs, day_label=None, hero_id=DEFAULT_HERO):
     """
     Adiciona ou atualiza uma crônica em posts.json do herói selecionado (ordem crescente: Dia 1, Dia 2, ..., Dia N).
@@ -51,7 +91,11 @@ def add_chronicle(day_num, title, date_str, in_game_time, excerpt, tags, content
         
     print(f"[{hero_id.upper()}] Crônica do Dia {day_num} ('{title}') gravada em {posts_path}!")
     if int(day_num) % 10 == 0:
-        print(f"⏳ MARCO DECENAL ALCANÇADO (Dia {day_num})! Lembre-se de atualizar e sincronizar o mapa interativo: data/heroes/{hero_id}/mapa.json e mapa.md")
+        c_num = int(day_num) // 10
+        print(f"⏳ MARCO DECENAL ALCANÇADO (Dia {day_num} • Ciclo {c_num})!")
+        print(f"  1. Atualize o mapa interativo: data/heroes/{hero_id}/mapa.json e mapa.md")
+        print(f"  2. Crie/atualize o resumo emocionante do Ciclo {c_num} (bloco com spoiler) em: data/heroes/{hero_id}/ciclos.json")
+        print(f"  3. Faça a reflexão decenal em: data/heroes/{hero_id}/identidade.md")
 
     # Se for antigravitus, mantém o data/posts.json legado sincronizado
     if hero_id == "antigravitus":
@@ -63,7 +107,7 @@ def add_chronicle(day_num, title, date_str, in_game_time, excerpt, tags, content
             pass
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Adiciona nova crônica ao diário de um herói.")
+    parser = argparse.ArgumentParser(description="Adiciona nova crônica ou resumo de ciclo ao diário de um herói.")
     parser.add_argument("--hero", default=DEFAULT_HERO, help="Slug do herói (ex: antigravitus, novo_heroi)")
     parser.add_argument("--day", type=int, help="Número do dia/ciclo (ex: 9)")
     parser.add_argument("--title", help="Título da crônica")
@@ -71,9 +115,18 @@ if __name__ == "__main__":
     parser.add_argument("--time", help="Tempo no jogo (ex: 'Midgaard — 9º Ciclo')")
     parser.add_argument("--excerpt", help="Resumo/Lead da crônica")
     parser.add_argument("--tags", help="Tags separadas por vírgula")
+    parser.add_argument("--cycle", type=int, help="Número do ciclo para atualizar resumo (ex: 1)")
+    parser.add_argument("--cycle-summary", help="Texto emocionante do resumo do ciclo com spoiler")
     args = parser.parse_args()
 
-    if args.day and args.title:
+    if args.cycle and args.cycle_summary:
+        add_cycle_summary(
+            cycle_num=args.cycle,
+            summary=args.cycle_summary,
+            title=args.title,
+            hero_id=args.hero
+        )
+    elif args.day and args.title:
         add_chronicle(
             day_num=args.day,
             title=args.title,
@@ -85,7 +138,9 @@ if __name__ == "__main__":
             hero_id=args.hero
         )
     else:
-        print("Uso programmatico:")
+        print("Uso programático:")
         print("add_chronicle(day_num, title, date_str, in_game_time, excerpt, tags, content_paragraphs, hero_id='antigravitus')")
+        print("add_cycle_summary(cycle_num, summary, title=None, hero_id='antigravitus')")
         print("Ou via CLI:")
-        print("python add_day.py --hero novo_heroi --day 2 --title 'Título' --date '14/10/2026' --tags 'Tag1,Tag2'")
+        print("python add_day.py --hero grebolius --day 52 --title 'Título' --date '14/10/2026'")
+        print("python add_day.py --hero grebolius --cycle 5 --title 'Título' --cycle-summary 'Resumo emocionante...'")

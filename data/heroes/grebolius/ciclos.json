@@ -1,0 +1,44 @@
+[
+  {
+    "cycle": 1,
+    "start_day": 1,
+    "end_day": 10,
+    "title": "O Disfarce no Lixo e a Invasão dos Arcanos",
+    "summary": "Jogada na lama fétida dos fundos da cidade, uma mulher goblin condenada ao extermínio pelo simples fato de existir precisou enfaixar o peito em trapos, calçar botas de defunto e forjar uma identidade masculina de guerreiro para não ter a garganta cortada nas ruas de Midgaard. Rejeitada e cuspida pela Guilda dos Ladrões, ela engoliu o ódio, invadiu a Guilda dos Magos e arrancou a fórceps os segredos arcanos do fogo e da adaga, jurando nas entranhas que um dia faria toda a nobreza humana se ajoelhar perante a rainha que nascia no esgoto."
+  },
+  {
+    "cycle": 2,
+    "start_day": 11,
+    "end_day": 20,
+    "title": "A Picada Mortal da Serpente e o Retorno pelo Ódio",
+    "summary": "O terror da morte cobrou seu preço com dentes venenosos: emboscada nas trevas do esgoto, Grebolius sentiu o veneno de uma serpente monstruosa paralisar seus pulmões e arrancar sua consciência em uma agonia brutal que quase apagou sua alma. Renascida dos mortos pela Fonte da Vida com a carne em chamas e a mente ferida, ela não chorou sua desgraça: transformou o trauma em um ódio incandescente, treinou até o desmaio físico absoluto e gravou na própria alma que aquela serpente pagaria cada gota com a própria cabeça decapitada."
+  },
+  {
+    "cycle": 3,
+    "start_day": 21,
+    "end_day": 30,
+    "title": "O Quinto Grau de Maestria e o Resgate do Dragão",
+    "summary": "Galgando círculos de poder a golpes rápidos e feitiços fulminantes, Grebolius rasgou o submundo até conquistar o lendário Quinto Grau de maestria, erguendo-se como um terror silencioso nas pontes e enclaves proibidos. Em um ato de ousadia visceral que abalou as masmorras, resgatou o filhote de dragão das profundezas, consolidando sua lenda clandestina e provando que a ladra desprezada agora detinha o poder de dobrar o destino e salvar ou aniquilar quem cruzasse seu caminho."
+  },
+  {
+    "cycle": 4,
+    "start_day": 31,
+    "end_day": 40,
+    "title": "O Véu da Invisibilidade e a Chuva de Ouro",
+    "summary": "Atingindo o Sexto e Sétimo Graus sob o domínio avassalador do Manto Arcano e do Véu da Invisibilidade, Grebolius deixou de ser uma fugitiva encurralada para se tornar uma força implacável e fantasmagórica. Com o cinto tilintando centenas de moedas de ouro pilhadas e feitiços capazes de estraçalhar armaduras de ferro, a goblin desafiou as leis humanas e consolidou a certeza inabalável de que seu Reino Livre não era mais um delírio, mas um império que logo seria erguido em sangue e glória."
+  },
+  {
+    "cycle": 5,
+    "start_day": 41,
+    "end_day": 50,
+    "title": "A Soberania Sem Véu e o Voto de Decapitação",
+    "summary": "O rugido do cinquentenário quebrou as últimas correntes do medo: Grebolius baniu para sempre a covardia do disfarce, ergueu o queixo blindada por uma armadura mágica inquebrável e encarou paladinos, magos e grifos de igual para igual sob o sol do meio-dia. Proclamando a Soberania Sem Véu, acumulou riquezas soberanas, limpou masmorras inteiras e jurou descer ao esgoto não mais como uma presa trêmula, mas como a Soberana que vai arrancar a cabeça de seu antigo carrasco."
+  },
+  {
+    "cycle": 6,
+    "start_day": 51,
+    "end_day": 60,
+    "title": "A Marcha Livre e a Preparação para o Acerto de Contas (Em Andamento)",
+    "summary": "Com a coroa invisível brilhando em sua fronte e milhares de passos marchados pelos cantos mais selvagens de Midgaard, Grebolius inicia a fase final de sua consagração guerreira. Dominando rituais de acampamento e mapeando os últimos bastiões de perigo, a ladra arcana prepara o terreno para a guerra definitiva: o acerto de contas contra seus carrascos e o alvorecer inegociável do trono que jurou conquistar."
+  }
+]

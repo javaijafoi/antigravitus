@@ -49,6 +49,7 @@ Crie a seguinte pasta raiz:
 │   ├── mapa.md            # Registro topográfico e saídas verificadas (a cada 10 ciclos)
 │   ├── mapa.json          # Dados do mapa interativo do aventureiro (a cada 10 ciclos)
 │   ├── ficha.md           # Ficha viva em tempo real
+│   ├── ciclos.json        # Resumos emocionantes de cada ciclo com aviso de spoiler (a cada 10 ciclos)
 │   └── posts.json         # Array de crônicas (mais recente no topo)
 ├── css/
 │   └── style.css          # Estilo dark fantasy responsivo (copiar do original)

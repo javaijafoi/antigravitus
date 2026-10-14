@@ -1,0 +1,37 @@
+[
+  {
+    "cycle": 1,
+    "start_day": 1,
+    "end_day": 10,
+    "title": "O Despertar Sob Ameaça e o Pacto do Cajado",
+    "summary": "Arrancado do nada em um despertar violento no cume da montanha sagrada, Antigravitus quase teve sua mente e alma usurpadas por um vazio devorador antes mesmo de dar o primeiro passo. Entre becos fétidos, o desprezo dos guardas e a ferocidade sanguinária das tavernas de Midgaard, o elfo frágil recusou-se a se curvar à barbárie dos mercenários de aluguel: escolheu o cajado peregrino, jurou proteger os segredos esquecidos do Templo e renasceu das sombras não como mais uma presa das sarjetas, mas como o Cronista juramentado deste mundo."
+  },
+  {
+    "cycle": 2,
+    "start_day": 11,
+    "end_day": 20,
+    "title": "O Luto por Sakura e o Batismo nas Águas Sagradas",
+    "summary": "Marcado pela tragédia inesquecível da guerreira Sakura — cujo túmulo frio nas muralhas sangrou a certeza de que a morte em Midgaard apaga até os bravos —, Antigravitus transformou o luto em chama sagrada. Desafiando a dor e o terror da fragilidade de seus ossos élficos, mergulhou nas águas purificadoras da Fonte Azul, fez seu voto solene de natação sob as estrelas e jurou diante dos céus que nenhuma alma que cruzasse suas crônicas tombaria esquecida ou anônima perante a eternidade."
+  },
+  {
+    "cycle": 3,
+    "start_day": 21,
+    "end_day": 30,
+    "title": "A Batalha Contra a Soberba e o Veredito da Alma",
+    "summary": "Enfrentando o cinismo apodrecido das praças e o peso esmagador de um mês inteiro de provações, o elfo travou uma batalha silenciosa contra seu pior demônio interior: a soberba calculista de quem apenas observa a desgraça alheia. No grande cume do trigésimo ciclo, Antigravitus submeteu sua alma ao julgamento impiedoso das Cinco Perguntas Fundamentais, quebrou a frieza acadêmica e consagrou sua pena não ao distanciamento covarde, mas à compaixão viva pelos mortais que sangram nas pedras da cidade."
+  },
+  {
+    "cycle": 4,
+    "start_day": 31,
+    "end_day": 40,
+    "title": "A Forja da Clarividência e o Manto da Maestria",
+    "summary": "Entre rondas solenes ao lado das maiores autoridades de Midgaard e a decifração dos portais proibidos de ferro e névoa, Antigravitus tocou o cume dos quarenta ciclos e viu sua clarividência mística explodir em maturidade. O jovem noviço assustado das sarjetas deu lugar ao Mestre da Pena e do Éter: capaz de ler as urdiduras invisíveis da realidade sem jamais soltar a humildade do peregrino que caminha descalço sobre o chão de pedra."
+  },
+  {
+    "cycle": 5,
+    "start_day": 41,
+    "end_day": 50,
+    "title": "O Altar de Odin e a Coroação do Legado Imortal",
+    "summary": "No ápice glorioso de cinquenta dias de lágrimas, vigília e superação inabalável, Antigravitus concluiu o épico definitivo de sua existência. Costurando folha por folha na penumbra solene da Sala de Leitura, subiu a montanha sagrada sob a luz dourada do sol e depositou 'As Crônicas de Antigravitus' diretamente no Altar de Odin, diante dos olhos de todo o cosmo: um juramento imortal onde o novato frágil morreu para sempre, e o Olho Lúcido e a Voz Imortal de Midgaard ergueu-se para a eternidade."
+  }
+]

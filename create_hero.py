@@ -72,7 +72,7 @@ def create_hero(slug, name, race_class="Guerreiro", rune="⚔️", avatar="🛡�
 
     # 2. Copia e hidrata os templates canônicos de _template
     template_dir = os.path.join(HEROES_DIR, "_template")
-    files_to_copy = ["identidade.md", "evolucao.md", "conhecimento.md", "mapa.md", "mapa.json", "ficha.md"]
+    files_to_copy = ["identidade.md", "evolucao.md", "conhecimento.md", "mapa.md", "mapa.json", "ficha.md", "ciclos.json"]
     for fname in files_to_copy:
         src = os.path.join(template_dir, fname)
         dst = os.path.join(target_dir, fname)
