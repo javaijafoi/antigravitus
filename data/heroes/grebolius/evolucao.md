@@ -762,3 +762,21 @@
   * **A Riqueza e o Repouso:** Com quase oitocentas moedas acumuladas, Grebolius retornou pelo Campo Aberto, doou armas na Sala de Doações para manter sua leveza característica e ascendeu ao Panteão dos Centenários. Sob a guarda dos doze titãs, registrou a histórica quebra dos trinta mil passos e adormeceu em paz inviolável.
 * **Decisão Tática:**
   * No Ciclo 45, ultrapassar 800 moedas de ouro, continuar o extermínio sistemático rumo ao Grau 8 e avaliar novas compras de suprimentos em Midgaard.
+---
+
+### ⏳ Ciclo 45 (Dia 45): O Portão do Tabuleiro Titânico, a Fortuna de Oitocentos Ouros e a Marca dos Trinta e Dois Mil
+* **Status Real (MUD):**
+  * Nível: **7** *(32.167 EXP | Faltam apenas 7.833 EXP para o Grau 8)*
+  * Vida: **49/49** | Mana: **130/130** | Movimento: **93/93** | AC: **39** *(Armadura Arcana ativa)*
+  * Salto Monumental de Experiência: **+1.924 EXP** em combate fulminante nas galerias subterrâneas.
+  * Ouro Líquido: **809 moedas de ouro** *(+20 moedas saqueadas | Barreira de 800 ouros superada!)*
+  * Alinhamento Moral: 16 (Neutro Pragmático).
+  * Exploração Externa Conduzida: Marcha pelas campinas rurais até O Caminho Sujo e inspeção visual do gigantesco portão aberto d'O Grande Tabuleiro de Xadrez de Midgaard.
+  * Local de Pernoite: O Panteão dos Centenários (Salva e Dormindo diante dos doze heróis eternos).
+* **Marcos e Impactos Psicológicos:**
+  * **O Vento dos Carvalhos e o Portal dos Titãs:** Grebolius rompeu a rotina das masmorras e marchou a oeste da bifurcação rural. Sentiu o vento puro fustigar seu rosto ao pisar no Caminho Sujo e vislumbrou a silhueta colossal do Grande Tabuleiro de Xadrez: um portão monumental de ferro fundido aberto para os mistérios das casas pretas e brancas. A goblin memorizou as rotas de acesso sem se precipitar — cada área nova deve ser abordada com planejamento cirúrgico.
+  * **O Massacre e a Conquista de Quase Dois Mil Passos:** Retornou à Masmorra dos Novatos com a Armadura Arcana ativada. No confronto com a aberração subterrânea, desferiu uma combinação devastadora de magia de impacto e estocadas profundas que renderam espantosos **+1.924 EXP**. A experiência acumulada atingiu **32.167 EXP**, reduzindo a distância para o Nível 8 a menos de oito mil pontos.
+  * **A Marca das Oitocentas Moedas:** O saque final depositou mais vinte moedas no alforje, rompendo a cobiçada marca de **809 moedas de ouro**. Grebolius agora possui lastro financeiro suficiente para bancar os mais caros pergaminhos e equipamentos de Midgaard.
+  * **O Retorno Triunfante ao Panteão:** Doou as sobras na Sala de Doações para manter a mochila desimpedida e ascendeu ao Panteão dos Centenários, onde repousa no ápice de sua forma física e espiritual.
+* **Decisão Tática:**
+  * No Ciclo 46, manter o ritmo de caçadas implacáveis para quebrar a faixa dos 34.000 EXP e planejar uma incursão rápida às casas do Tabuleiro de Xadrez ou ao subsolo do Alquimista.
