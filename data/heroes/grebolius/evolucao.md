@@ -691,3 +691,20 @@
      * **Resolução da Autoquest Limpando Monstros:** Coordenar com O Novato Alquimista o extermínio de pragas para resgatar novas fórmulas ou artefatos arcanos.
      * **Aquisições de Alto Valor:** Utilizar a fortuna de 689 ouros para equipar pergaminhos adicionais de retorno, poções de cura imediata e bolsas especializadas nas lojas da Rua Principal de Midgaard.
 * **Veredito Decenal:** A fugitiva goblin que há quarenta dias acordava sobre o chorume do lixão de Midgaard não existe mais. Em seu lugar caminha uma feiticeira marcial do Sétimo Círculo, coberta por armadura mística e aço veloz, respeitada pelos sentinelas da cidade e abrigada entre as lendas imortais do Panteão. O disfarce foi aperfeiçoado, o método tornou-se infalível e a marcha para a libertação de seu povo entra agora em sua fase mais grandiosa.
+---
+
+### ⏳ Ciclo 41 (Dia 41): A Couraça Vibrante, o Eco de Negelok e o Massacre Duplo
+* **Status Real (MUD):**
+  * Nível: **7** *(29.307 EXP | Faltam 10.693 EXP para o Grau 8)*
+  * Vida: **49/49** | Mana: **130/130** | Movimento: **92/93** | AC: **39** *(manto de Armor ativo)*
+  * Salto de Experiência: **+2.302 EXP** obtidos em duplo abate cirúrgico na Masmorra dos Novatos.
+  * Ouro Líquido: **729 moedas de ouro** *(+40 moedas saqueadas)*
+  * Rumor Arcano Coletado: Registro nos ares de Midgaard da voz de Negelok (*"para conseguir detect invisi compre a poção amarela lá da loja de magia"*).
+  * Local de Pernoite: O Panteão dos Centenários (Salva e Dormindo diante dos doze heróis eternos).
+* **Marcos e Impactos Psicológicos:**
+  * **O Zumbido da Couraça Etérea:** Grebolius não acordou como aprendiz frágil; despertou sentindo a barreira invisível de `armor` zumbir contra as fibras da túnica. Antes mesmo de pisar na terra úmida, canalizou a mana recém-expandida e reforçou o encantamento: sua Classe de Armadura manteve-se no ápice de 39 pontos, blindando o corpo contra qualquer dente ou garra de novato.
+  * **O Eco dos Veteranos e a Dica da Poção Amarela:** Durante a marcha rápida pelas imediações da masmorra, as correntes místicas trouxeram a transmissão em voz alta do veterano Negelok, ecoando sobre os telhados da capital: a cobiçada capacidade de enxergar o invisível pode ser adquirida em frascos na Loja de Magia através da lendária Poção Amarela. A informação foi arquivada imediatamente na mente calculista da goblin para futuras aquisições com sua reserva de ouro.
+  * **O Duplo Combate Fulminante:** Sem perder tempo, penetrou nas câmaras da Masmorra dos Novatos. No primeiro confronto, disparou o Projétil Mágico com fúria exata e abriu a guarda da besta com estocadas viscerais de seu punhal novato (+360 EXP de dano, 20 ouros). Não satisfeita, avançou pelas galerias até encurralar o segundo monstro, estilhaçando-o em outro duelo impecável (+1.600 EXP de vitória e +342 EXP de dano adicional, mais 20 ouros).
+  * **A Barreira dos Vinte e Nove Mil Rompida:** O avanço foi avassalador: a experiência saltou para **29.307 EXP**. Restam agora pouco mais de dez mil passos para o Oitavo Círculo de mestria. Descartou peças excedentes na Sala de Doações para manter a mochila imaculadamente leve e ascendeu de volta ao Panteão dos Centenários para salvar e descansar entre os imortais.
+* **Decisão Tática:**
+  * No Ciclo 42, avançar a caçada pelas câmaras da masmorra, explorar as cercanias do Grande Tabuleiro de Xadrez e planejar a visita à Loja de Magia para adquirir a poção amarela ou insumos arcanos.

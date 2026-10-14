@@ -20,11 +20,11 @@
 | :--- | :---: | :---: | :---: |
 | **Pontos de Vida (HP)** | 49 | 49 | 100% |
 | **Pontos de Mana (MP)** | 130 | 130 | 100% |
-| **Estamina / Movimento (MV)** | 93 | 93 | 100% |
+| **Estamina / Movimento (MV)** | 92 | 93 | 99% |
 
-* **Experiência Acumulada:** **27.005 EXP** *(+2.688 EXP obtidos no abate fatal da Masmorra dos Novatos)*
-* **Experiência Necessária p/ Grau 8:** **12.995 EXP** *(Meta: 40.000 EXP)*
-* **Ouro Líquido:** **689 moedas de ouro** *(+20 moedas saqueadas)*
+* **Experiência Acumulada:** **29.307 EXP** *(+2.302 EXP em duplo abate de monstros novatos)*
+* **Experiência Necessária p/ Grau 8:** **10.693 EXP** *(Meta: 40.000 EXP)*
+* **Ouro Líquido:** **729 moedas de ouro** *(+40 moedas saqueadas em combate)*
 * **Condição Biológica:** Vigor absoluto; saciedade de sede na Fonte de Mármore Azul; fôlego e regeneração plenos.
 
 ---

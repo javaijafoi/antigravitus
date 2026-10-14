@@ -65,3 +65,5 @@ A Força 10 de Grebolius impede carregar armamento pesado sem esgotar o vigor. A
 
 * **Regra de Ouro:** Vender tudo o que não for empunhado diretamente ou não conceder proteção mágica imediata.
 
+
+* **A Poção Amarela da Loja de Magia (Dica de Negelok - Dia 41):** Frasco alquímico vendido pelo mago mercador na Loja de Magias da Rua Principal Oeste. Concede o poder de detecção de invisibilidade a quem a bebe, permitindo enxergar seres e objetos ocultos sem necessidade de gasto contínuo de mana.
