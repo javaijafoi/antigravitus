@@ -21,6 +21,9 @@
 | **Guarda da Cidade (Pelotão)** | Portão Leste / Portão Oeste | **Mortal** | **NÃO PROVOCAR** | Pelotão de 8 guardas fortemente armados no Portão Leste; passagem proibida para novatos. |
 | **O Pranteador da Cidade** | Praça Comum | **Nulo / Trágico** | **IGNORAR** | Figura em luto perpétuo lamentando sobre as pedras da praça. |
 | **Mago Guardião** | Entrada da Guilda dos Magos | **Severo** | **EVITAR ENTRADA** | Envolto em barreira de luz mágica protetora; vigia a passagem para a guilda. |
+| **Bebê Dragão** | Área dos Novatos (Um Outro Canto)| **SUICÍDIO / ENGANADOR** | **EVITAR NO NÍVEL 1** | Filhote de réptil alado; análise revela vida descomunal (*"Você é louco?"*). |
+| **Coisa Assustadora** | Área dos Novatos (Outro Canto) | **Médio / Rastejante** | **CAUTELA** | Verme sombrio rastejando no lodo dos canos; precisa de sorte na vida. |
+| **Monstro Novato** | Área dos Novatos (Fim do Corredor)| **Fácil / Presa Ideal** | **ABATE CONFIRMADO** | Criatura dosada para treino; poder nulo (*"perda de tempo"*). Rendimento: 396 XP, 20 ouros e adaga. |
 | **Serpente dos Esgotos** | Junção profunda dos Esgotos | **LETAL / AGRESSIVA** | **VINGANÇA / COMBATE À DISTÂNCIA**| Peçonhenta mortal; desferiu a mordida explosiva da primeira queda de Grebolius. |
 | **Larva dos Esgotos** | Junção profunda dos Esgotos | **Médio / Parasita** | **CAUTELA / EXECUÇÃO** | Criatura rastejante que infesta os canos lamacentos sob a cidade. |
 | **Padeiro / Merceeiro / Ferreiro**| Oficinas e Lojas de Midgaard | **Neutro** | **COMÉRCIO / ESPIONAGEM** | Fornecedores de pão, ferramentas, armaduras e armas forjadas. |

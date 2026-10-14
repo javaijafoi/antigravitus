@@ -79,3 +79,34 @@ NENHUM dia jogado é encerrado sem cumprir esta sequência de 5 passos:
      git push origin main
      ```
    - Respeitar estritamente o isolamento de credenciais locais (nunca alterar configs globais de git).
+
+---
+
+## 🛡️ 6. Heurística de Combate e Sobrevivência (Nível 1 em MUD Clássico)
+Para destravar o avanço de nível sem loop de morte:
+
+1. **Configuração de Fuga de Emergência (Wimpy):**
+   - No primeiro segundo de login, rodar `wimpy 8` (ou 25-30% do HP total). Isso força o MUD a emitir `flee` automático caso a integridade despenque, evitando morte por latência.
+2. **Treino sem Luta (Subir Skills no Mestre):**
+   - Gastar todas as sessões de treino (`practice <skill>`) no Guildmaster até o teto do instrutor (~75-85%).
+   - Usar magias passivas e defensivas de suporte (`cast 'armor' self`) perto de fontes para subir proficiência sem entrar em combate.
+   - Ciclo de recuperação: sempre usar `sleep` para recuperar HP, Mana e MV com rapidez antes de se mover ou lutar.
+3. **Avaliação Obrigatória com `consider <alvo>`:**
+   - **NUNCA** executar `kill` ou lançar feitiço ofensivo sem antes rodar `consider <alvo>`.
+   - Ler rigorosamente o retorno:
+     * *"You could do it with a needle!"* ou *"Easy"* / *"moleza"*: **Atacar imediatamente.**
+     * *"The perfect match!"* ou *"Fair fight"* / *"luta justa"*: **Atacar com cautela** (projétil à distância + adaga).
+     * *"You would need some luck"* ou *"Tough"*: **Evitar no nível 1.**
+     * *"Are you mad!?"* ou *"Suicide"*: **Fugir / ignorar imediatamente.**
+4. **Lista Branca vs. Lista Negra:**
+   - **Lista Branca (Caça segura de Nível 1):** Ratos pequenos, baratas, cobras miúdas, cães vira-latas solitários no lixo, bonecos de treino da academia.
+   - **Lista Negra (Proibido atacar sob qualquer pretexto):**
+     * Guardas da cidade, Capitães e Pacificador (Nível 30+, matam em um turno e tornam procurada).
+     * Lojistas, estalajadeiros e cidadãos pacíficos.
+     * Monstros com flag `[Aggressive]` ou `[Agro]` na descrição.
+     * Mobs sociais / matilhas (lobos em grupo, guardas que usam `assist`).
+5. **Fluxo Pós-Abate:**
+   - Abate confirmado -> `get all corpse` -> `wear all` -> `wield <arma>` -> retornar a refúgio seguro -> `sleep`.
+6. **O Pavor e Ódio da Morte:**
+   - Grebolius sentiu o Vazio entre os mundos e a perda de fragmentos de memória. A morte é uma mutilação existencial e um horror absoluto que ela jamais aceitará reviver.
+

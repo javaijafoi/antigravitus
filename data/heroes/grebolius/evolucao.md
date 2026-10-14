@@ -172,15 +172,20 @@
   * **O Desbloqueio Arcano:** A insistência quebrou a barreira: ao entoar as palavras do feitiço com ritmo próprio, a urdidura mística cedeu. O Projétil Mágico saltou para 55% de eficácia real. O disfarce de maga noviça tornou-se uma arma letal autêntica.
   * **A Espada dos Guardas:** A pilhagem da espada longa militar no Portão Oeste sob os olhos dos sentinelas comprovou a sagacidade ladina de Grebolius: enquanto outros pagam ouro a ferreiros, ela aproveita a distração dos fortes.
   * **Contato Social no Bar dos Magos:** A saudação irônica do mago aventureiro veterano confirmou que sua presença começou a ser notada nos corredores do poder de Midgaard.
+### ⏳ Ciclo 14 (Dia 14): O Batismo Arcano, a Área dos Novatos e o Primeiro Sangue Místico
+* **Status Real (MUD):**
+  * Nível: 1 | Vida: 23/23 (100% Intacta!) | Mana: 100/100 | Movimento: 83/84 | AC: 17 (+1 Coleira)
+  * Experiência: **396 EXP** (faltam apenas 604 EXP para o Nível 2)
+  * Moedas de Ouro: 20 moedas saqueadas
+  * Perícias: `magic missile` refinado para **95%+ (Perfeito)** no laboratório e aprimorado em combate; `swim` 55%.
+  * Novo Equipamento: Coleira do Dragão de Estimação (pescoço, +1 AC), punhal novato reserva e 20 moedas de ouro.
+  * Local de Pernoite: O Panteão dos Centenários (Salvo e Dormindo).
+* **Marcos e Impactos Psicológicos:**
+  * **O Voo do Raio Arcano (95%+):** A Mestre da Guilda dos Magos esgotou seu treinamento: o Projétil Mágico foi elevado à perfeição técnica antes de qualquer luta.
+  * **A Descoberta da Rota dos Novatos:** Cruzando o Altar e a vastidão do Grande Campo de Midgaard, Grebolius decifrou o caminho para a Área dos Novatos e a lendária inscrição de formatura de Pina e Rimbaud (2019).
+  * **A Prudência que Salva a Vida:** Ao inspecionar as câmaras com frieza analítica, o comando de avaliação revelou que o bebê dragão possuía vitalidade descomunal (*"Você é louco?"*), evitando um massacre precoce.
+  * **O Abate Perfeito sem Dano:** Diante do Monstro Novato, Grebolius abriu combate disparando um raio arcano que estalou com impacto 10 de dano, bloqueou o contra-ataque com o escudo de couro e cravou o punhal no peito da besta, abatendo-a instantaneamente. Ganhou 396 pontos de maturidade marcial e 20 moedas de ouro sem perder 1 único ponto de vida.
 * **Decisão Tática:**
-  * Combinar o projétil arcano de longo alcance (55%) com o corte pesado da nova espada longa para os combates do Ciclo 14.
-
-
-
-
-
-
-
-
-
+  * A rota da Área dos Novatos agora é seu território de caça prioritário.
+  * Continuar os abates seletivos para somar os 604 pontos restantes e ascender ao Segundo Grau de Maestria (Nível 2).
 

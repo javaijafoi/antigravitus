@@ -58,8 +58,27 @@
 
 ---
 
+## 🌲 O Grande Campo de Midgaard & A Área dos Novatos (Descobertas do Dia 14)
+
+| Sala | Saídas Verificadas | Nível de Risco | Notas de Campo / Recursos |
+| :--- | :--- | :--- | :--- |
+| **Atrás do Altar** | **N** (Grande Campo), **S** (Altar do Templo) | Baixo | Trilha suja saindo da abside do templo em direção ao campo aberto. |
+| **O Grande Campo (Sul)** | **N** (Grande Campo Meio), **S** (Atrás do Altar) | Baixo | Prado verde, brisa fresca, pássaros cantando; rota rural de Midgaard. |
+| **O Grande Campo (Bifurcação)**| **N** (Norte), **L** (Área dos Novatos), **S** (Campo Sul), **O** (Caminho Sujo) | Baixo / **Chave** | **Intersecção Estratégica:** Saída a Leste leva à Área dos Novatos. |
+| **A Entrada da Área dos Novatos** | **N** (O Começo da Passagem), **O** (Grande Campo) | Seguro | Portal de entrada para novatos; inscrição de formatura de Pina e Rimbaud (2019). |
+| **O Começo Da Passagem** | **L** (Corredor Sujo), **S** (Entrada Novatos) | Seguro / Loot | Eco de criaturas ao longe; abandono de coleiras de dragão e vestes novatas. |
+| **O Corredor Sujo** | **L** (O Cruzamento), **O** (Começo da Passagem) | Baixo | Paredes lodosas; ruídos vindos de trás da porta ao sul e do leste. |
+| **O Cruzamento** | **S** (Mais Corredor), **O** (Corredor Sujo) | Baixo | Entroncamento de túneis; punhais e vestes espalhadas. |
+| **Mais Corredor** | **N** (Cruzamento), **S** (Outro Canto), **O** (Pequena Sala [fechada]) | Baixo | Porta secreta ao oeste (`open west`); barulhos de rastejo ao sul. |
+| **Um Outro Canto** | **N** (Mais Corredor), **O** (Corredor Iluminado) | **Atenção** | **Câmara de Monstros:** Bebê dragão (SUICÍDIO no Nv 1) e Coisa Assustadora. Porta a leste. |
+| **Um Corredor Iluminado** | **L** (Um Outro Canto), **O** (Fim do Corredor) | Baixo | Fachos de luz projetando sombras no chão de pedra. |
+| **O Fim do Corredor** | **L** (Corredor Iluminado), **O** (Campo Aberto) | **Caça / Treino** | **Campo de Abate:** Presença do Monstro Novato (396 XP, 20 ouros e punhal encantado). |
+
+---
+
 ## 🧭 Legenda de Navegação
 * `[Santuário]` = Seguro para dormir sem risco de morte sob abrigo inviolável.
-* `[Treino]` = Presas fracas (animais de rua) para prática inicial com armas.
-* `[Atenção]` = Guardas fortemente armados ou magos com barreiras místicas.
+* `[Treino]` / `[Caça]` = Criaturas dosadas para combate seguro com ganho real de maestria e espólios.
+* `[Atenção]` = Guardas fortemente armados ou monstros com vida desproporcional (ex: bebê dragão).
 * `[LETAL]` = Criaturas agressivas com veneno devastador (ex: serpentes do esgoto).
+
