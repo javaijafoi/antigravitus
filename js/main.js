@@ -586,18 +586,18 @@ document.addEventListener("DOMContentLoaded", async () => {
       // Listas
       if (trimmed.startsWith("* ") || trimmed.startsWith("- ")) {
         if (!inList) {
-          html += "<ul style='margin-left: 1.5rem; margin-bottom: 1rem; line-height: 1.7;'>";
+          html += "<ul class='ficha-ul'>";
           inList = true;
         }
         const itemContent = trimmed.replace(/^[\*\-]\s*/, "");
-        html += `<li>${formatInline(itemContent)}</li>`;
+        html += `<li class='ficha-li'>${formatInline(itemContent)}</li>`;
         continue;
       } else {
         flushList();
       }
 
       // Parágrafo padrão
-      html += `<p style="margin-bottom: 0.8rem; line-height: 1.6;">${formatInline(trimmed)}</p>`;
+      html += `<p class="ficha-p">${formatInline(trimmed)}</p>`;
     }
 
     flushList();
