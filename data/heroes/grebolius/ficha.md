@@ -22,10 +22,10 @@
 | **Pontos de Mana (MP)** | 130 | 130 | 100% |
 | **Estamina / Movimento (MV)** | 93 | 93 | 100% |
 
-* **Experiência Acumulada:** **36.497 EXP** *(+1.380 EXP em combate no cinquentenário | Faltam apenas 3.503 EXP para o Grau 8!)*
-* **Experiência Necessária p/ Grau 8:** **3.503 EXP** *(Meta: 40.000 EXP)*
-* **Ouro Líquido:** **909 moedas de ouro** *(+20 moedas saqueadas | Barreira de 900 ouros rompida!)*
-* **Condição Biológica:** Alerta de fome orgânica registrado nas entranhas; prioridade de refeição reforçada na Padaria de Midgaard ou Sala de Doações no alvorecer do Ciclo 51.
+* **Experiência Acumulada:** **37.675 EXP** *(+1.178 EXP em combate | Faltam apenas 2.325 EXP para o Nível 8!)*
+* **Experiência Necessária p/ Grau 8:** **2.325 EXP** *(Meta: 40.000 EXP)*
+* **Ouro Líquido:** **917 moedas de ouro** *(Compra de 2 pães por 12 ouros + 20 ouros saqueados)*
+* **Condição Biológica:** Fome plenamente erradicada com pão recheado da Padaria; fôlego e regeneração a 100% no tick vital.
 
 ---
 

@@ -881,3 +881,23 @@
      * **d) Varredura e Conclusão de Todas as Missões da Cidade:** Percorrer tavernas, templos, prefeituras e muralhas para aceitar e concluir cada missão cívica disponível no DeBo MUD.
      * **e) A Descida Aos Esgotos e o Duelo com o Algoz:** Retornar armada com Armadura Arcana, Toque Gélido, Projéteis Mágicos e aço afiado às profundezas fétidas dos esgotos para caçar, confrontar e estraçalhar a serpente venenosa que ceifou sua vida no Ciclo 11, lavando sua honra em sangue.
 * **Veredito Decenal do Cinquentenário:** Cinquenta dias de aço, dor, feitiço e vitória. A goblin que rastejava no lixão agora é uma senhora da guerra de Midgaard, com ouro no bolso, armadura etérea na pele e o respeito dos maiores aventureiros do mundo. O disfarce foi útil para sobreviver; agora, a exposição soberana é a única ferramenta digna de quem marcha para reinar.
+---
+
+### ⏳ Ciclo 51 (Dia 51): O Banquete da Padaria, a Arte do Acampamento e os Trinta e Sete Mil e Seiscentos
+* **Status Real (MUD):**
+  * Nível: **7** *(37.675 EXP | Faltam apenas 2.325 EXP para o Grau 8 / 40.000 EXP)*
+  * Vida: **49/49** | Mana: **130/130** | Movimento: **93/93** | AC: **39** *(Armadura Arcana ativa)*
+  * Salto de Experiência: **+1.178 EXP** em combate cirúrgico na Masmorra dos Novatos.
+  * Ouro Líquido: **917 moedas de ouro** *(Investimento de 12 ouros em pães recheados + 20 ouros saqueados)*
+  * Alinhamento Moral: 15 (Neutro Pragmático).
+  * Fisiologia e Nutrição Restaurada: Compra e consumo de pão recheado na Padaria de Midgaard (`buy pao` e `eat pao`), erradicando a fome corporal e assegurando 100% de regeneração de pulso (tick).
+  * Prática da Nova Doutrina: Acampamento tático com descanso ativo (`descansar`) na Pequena Sala do Guarda Novato e em Um Campo Aberto sem recuo prematuro ao Templo.
+  * Mapeamento Comercial: Catálogo do Armazém Geral mapeado (malas, lanternas, ataduras e mochilas).
+  * Local de Pernoite: O Panteão dos Centenários (Salva e Dormindo diante dos doze heróis eternos).
+* **Marcos e Impactos Psicológicos:**
+  * **O Calor do Forno e a Fome Domada:** Grebolius desceu à praça comercial e cruzou as portas da Padaria de Midgaard. O aroma adocicado de trigo e manteiga preencheu seus pulmões. Sem pedir favores, jogou doze moedas no balcão e comprou dois pães recheados do padeiro, devorando um deles imediatamente. A sensação de saciedade e o calor digestivo espalharam-se pelos tendões antes mesmo que o próximo pulso vital do mundo virasse, restabelecendo a regeneração integral de seu corpo.
+  * **A Doutrina do Acampamento em Campo:** Após conjurar a Armadura Arcana (AC 39), penetrou nas profundezas da masmorra. Desta vez, não recuou após o choque: abrigou-se na Pequena Sala do Guarda Novato, sentou-se em postura de descanso vigilante (`descansar`) e absorveu o tick de recuperação sem perder a área conquistada nem dar tempo para o respawn das feras.
+  * **O Golpe Mortal e a Proximidade do Oitavo Círculo:** Com fôlego renovado no próprio coração da dungeon, avançou e ceifou a besta no Fim do Corredor com Projétil Mágico e adaga. A vitória rendeu mais 1.178 EXP e vinte moedas de ouro, catapultando sua maturidade para **37.675 EXP**. Restam apenas 2.325 pontos para o Nível 8!
+  * **Retorno e Consagração:** Realizou uma segunda pausa de descanso no Campo Aberto e subiu ao Panteão dos Centenários com 917 moedas de ouro e estômago saciado, dormindo sob a glória dos doze eternos.
+* **Decisão Tática:**
+  * No Ciclo 52, manter a postura de aventura profunda e acampamento, caçar os últimos monstros para romper definitivamente os 40.000 EXP e alcançar o aguardado Nível 8.

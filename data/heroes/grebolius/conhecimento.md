@@ -78,3 +78,40 @@ A Força 10 de Grebolius impede carregar armamento pesado sem esgotar o vigor. A
   * *Um pergaminho de identificação:* 4.601 ouros (Nv 0)
 
 * **O Anel Arcano (+2E) (Testado no Dia 43):** Joia mística que emana energia mágica de proteção e foco. Exige maturidade arcana de círculos superiores (Nível 8 ou 9) para ser empunhado no dedo, permanecendo preservado no inventário como ativo de alto valor.
+
+
+---
+
+## 🍗 4. Fisiologia de Combate, Ticks e a Arte do Acampamento
+
+### O Timing Perfeito (Regra do Pulso / Tick)
+* **Pulsos do Servidor:** No DeBo MUD, a virada do ciclo vital ocorre a cada **45 a 60 segundos** (o *tick* do mundo).
+* **Gatilho de Saciedade:** No momento exato em que o corpo manifesta fome ou sede (*"Você está com fome/sede"* ou *"Você está morrendo de fome!"*), é imperativo consumir comida e bebida **imediatamente** (`eat <alimento>` e `drink <recipiente>`). Se o tick virar com o estômago vazio, a regeneração de Vida, Mana e Movimento despenca pela metade ou trava completamente.
+* **O Truque do Sleep-Ticking:** Não permanecer deitado por longos minutos desnecessários em áreas hostis. Ao notar a proximidade do pulso (mudanças de clima ou mensagens), ficar em pé, deitar (`dormir`) segundos antes do tick bater e levantar-se (`acordar`) assim que o influxo de Vida/Mana subir. Obtém-se o multiplicador máximo de cura sem ficar vulnerável a emboscadas.
+
+### Tier List de Nutrição e Saciedade
+* **Tier S (Peso Zero / Autossuficiência):** Feitiço `create food` (Criar Comida) — conjura cogumelos mágicos que saciam o estômago com custo irrisório de mana e peso zero.
+* **Tier A (Drops e Coletas):** Frutas mágicas e Rações de Viagem colhidas na Sala de Doações (`l doacoes`) ou de monstros. Ração de viagem possui alta durabilidade, não apodrece rápido e entrega máxima saciedade por peso.
+* **Tier B (Padaria de Midgaard):** Localizada na Rua Principal Oeste (2 sul, 1 oeste, 1 norte do Templo). Compra de 3 a 5 pães ou tortas frescas (`buy pao`), mantidos rigorosamente dentro da mochila (`put pao mochila`) para não onerar os pontos de movimento (MV).
+
+### Otimização de Líquidos e Recipientes
+* **O Fim do Cantil Pequeno:** Cantis comuns secam em 2 ou 3 goles, forçando retiradas constantes. O objetivo de longo prazo é portar um **odre grande** ou **barril portátil** adquirido no Armazém Geral (Rua Principal Leste I), capaz de dezenas de goles ininterruptos.
+* **Magia Create Water:** Permite recarregar recipientes diretamente em campo sem necessidade de retorno à Fonte de Mármore Azul.
+
+### A Doutrina do Acampamento em Campo (Não Recuar a Toda Hora)
+* **O Custo do Recuo Prematuro:** Voltar ao Templo a cada duas lutas gasta preciosos pontos de movimento (MV) e dá tempo para o *reset* (respawn) da masmorra, impedindo o avanço até câmaras profundas ou chefes.
+* **Salas Seguras na Masmorra (Campgrounds):**
+  * *A Entrada da Área dos Novatos* (zona pacífica de transição).
+  * *Uma Pequena Sala do Guarda Novato* (comporta fechada, presença de NPC aliado).
+  * *Um Campo Aberto* (área arejada sem patrulhas agressivas).
+* **Descanso Tático:** Utilizar `descansar` (`rest`) para recuperação rápida mantendo a visão de quem entra na sala, reservando `dormir` apenas para salas trancadas ou seguras.
+* **Uso de Mobília:** Se houver camas, sofás ou fogueiras na sala, interagir ao descansar (`dormir cama` ou `descansar banco`) para multiplicar o fator de recuperação do tick.
+
+* **Catálogo Oficial do Armazém Geral (Mapeado no Dia 51):**
+  * *Uma mochila:* 30 ouros
+  * *Uma mala:* 75 ouros
+  * *Uma lanterna:* 75 ouros
+  * *Uma tocha:* 15 ouros
+  * *Uma atadura:* 300 ouros
+  * *Cartão de crédito:* 60.000 ouros
+  * *Álbum de figurinhas:* 15.000 ouros
