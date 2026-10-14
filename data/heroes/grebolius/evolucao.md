@@ -997,3 +997,22 @@
   * **Repouso Imponente:** Após o descanso tático na guarita e retorno triunfal pelo campo, ascendeu ao cume do templo e dormiu sob o manto sagrado do Panteão.
 * **Decisão Tática:**
   * No Ciclo 57, forçar a abertura da porta ao norte do Cruzamento (`abrir porta norte`), adentrar a Sala do Alquimista, dialogar com o NPC e avançar rumo aos 46.000 EXP.
+---
+
+### ⏳ Ciclo 57 (Dia 57): O Trevo dos Campos, a Sondagem das Dobradiças e a Marcha até 44.700 EXP
+* **Status Real (MUD):**
+  * Nível: **8** *(44.723 EXP | Faltam 15.277 EXP para o Grau 9)*
+  * Vida: **52/52** | Mana: **140/140** | Movimento: **94/95** | AC: **40** *(Armadura Arcana ativa)*
+  * Salto de Experiência: **+342 EXP** em combate fulminante de Mãos Flamejantes e punhal novato.
+  * Ouro Líquido: **1.051 moedas de ouro** *(Patrimônio mantido acima do milhar).*
+  * Alinhamento Moral: 15 (Neutro Pragmático).
+  * Fisiologia e Nutrição: Hidratação na Fonte Azul e gestão de ticks preventivos.
+  * Tática e Exploração: Testes de abertura direcional nas passagens subterrâneas; combate no Corredor Iluminado; acampamento com descanso ativo na Pequena Sala do Guarda; doação cívica e repouso.
+  * Local de Pernoite: O Panteão dos Centenários (Salva e Dormindo diante dos doze heróis eternos).
+* **Marcos e Impactos Psicológicos:**
+  * **A Fragrância dos Campos Exteriores:** Antes de descer às sombras da masmorra, Grebolius respirou o ar limpo do Grande Campo, sentindo o aroma de trevo e terra fértil. A terra livre é o objetivo supremo; o sangue nas catacumbas é apenas o preço da passagem.
+  * **A Sondagem das Passagens Subterrâneas:** Ao cruzar o labirinto dos novatos, investigou as portas ao norte e ao oeste, mapeando a mecânica de portais do servidor. O domínio do território se faz pela persistência topográfica.
+  * **O Ataque Ígneo no Corredor:** No Corredor Iluminado, liberou o poder de `burning hands` em rajada letal contra a aberração da caverna, colhendo mais **342 EXP** e elevando o acúmulo histórico para **44.723 EXP**. Faltam pouco mais de quinze mil passos para o Nível 9.
+  * **Retorno Sagrado:** Após doar armamentos na sala de caridade, subiu ao Panteão e dormiu em paz diante das estátuas lendárias.
+* **Decisão Tática:**
+  * No Ciclo 58, intensificar a pressão ofensiva, quebrar a barreira dos 45.000 EXP e preparar o terreno para a reflexão de `/learn` no Dia 59.
