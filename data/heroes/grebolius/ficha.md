@@ -9,7 +9,7 @@
 * **Título Honorífico:** o Aprendiz de Mago
 * **Raça / Aparência Real:** Mulher Goblin (disfarçada de jovem guerreiro com faixas e elmo abaixado)
 * **Classe Mecânica no MUD:** Mago (Magic-User)
-* **Grau / Nível Atual:** **7** *(Sétimo Grau de Maestria conquistado — Barreira dos 25.000 EXP rompida em combate letal na Masmorra dos Novatos)*
+* **Grau / Nível Atual:** **8** *(Oitavo Grau de Maestria conquistado — Barreira dos 40.000 EXP rompida em triplo combate fatal!)*
 * **Alinhamento Moral:** 15 (Neutro Pragmático)
 * **Localização Atual:** O Panteão dos Centenários (Cume sagrado do Templo de Midgaard) — *Salva e Dormindo sob o olhar solene das doze estátuas lendárias*
 
@@ -18,13 +18,13 @@
 ## ✦ Status Vitais
 | Recurso | Atual | Máximo | Porcentagem |
 | :--- | :---: | :---: | :---: |
-| **Pontos de Vida (HP)** | 49 | 49 | 100% |
-| **Pontos de Mana (MP)** | 130 | 130 | 100% |
-| **Estamina / Movimento (MV)** | 93 | 93 | 100% |
+| **Pontos de Vida (HP)** | 52 | 52 | 100% |
+| **Pontos de Mana (MP)** | 140 | 140 | 100% |
+| **Estamina / Movimento (MV)** | 94 | 95 | 99% |
 
-* **Experiência Acumulada:** **37.675 EXP** *(+1.178 EXP em combate | Faltam apenas 2.325 EXP para o Nível 8!)*
-* **Experiência Necessária p/ Grau 8:** **2.325 EXP** *(Meta: 40.000 EXP)*
-* **Ouro Líquido:** **917 moedas de ouro** *(Compra de 2 pães por 12 ouros + 20 ouros saqueados)*
+* **Experiência Acumulada:** **41.339 EXP** *(+3.664 EXP em triplo massacre de monstros novatos)*
+* **Experiência Necessária p/ Grau 9:** **18.661 EXP** *(Meta: 60.000 EXP)*
+* **Ouro Líquido:** **977 moedas de ouro** *(+60 moedas saqueadas em três corpos | Rumo aos 1.000 ouros!)*
 * **Condição Biológica:** Fome plenamente erradicada com pão recheado da Padaria; fôlego e regeneração a 100% no tick vital.
 
 ---
@@ -57,7 +57,7 @@
 ---
 
 ## ✦ Habilidades Conhecidas e Treinos Concluídos
-* **Sessões de Treino Utilizadas:** Treino completo da magia `armor` na Guilda dos Magos até instrução máxima.
+* **Sessões de Treino Disponíveis:** **8 sessões de treino acumuladas** *(reservadas para treinar Burning Hands a 95%)*
 * **Perícias e Encantamentos:**
   * `armor` (Armadura Mística): **95%** (Grau: Instruído / Perfeito — Redução maciça de dano físico e barreira invisível protetora)
   * `invisibility` (Invisibilidade): **95%** (Grau: Perfeito / Maestria Arcana de Ocultação — Desbloqueada no Nv 6)

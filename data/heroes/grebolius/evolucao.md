@@ -901,3 +901,23 @@
   * **Retorno e Consagração:** Realizou uma segunda pausa de descanso no Campo Aberto e subiu ao Panteão dos Centenários com 917 moedas de ouro e estômago saciado, dormindo sob a glória dos doze eternos.
 * **Decisão Tática:**
   * No Ciclo 52, manter a postura de aventura profunda e acampamento, caçar os últimos monstros para romper definitivamente os 40.000 EXP e alcançar o aguardado Nível 8.
+---
+
+### ⏳ Ciclo 52 (Dia 52): O Triplo Massacre, a Ascensão ao Oitavo Grau e as Chamas de Burning Hands
+* **Status Real (MUD):**
+  * Nível: **8** *(Oitavo Grau de Maestria conquistado — Barreira dos 40.000 EXP rompida!)*
+  * Vida: **52/52** *(+3 HP permanente conquistado no nível)*
+  * Mana: **140/140** *(+10 MP permanente conquistado no nível)*
+  * Movimento: **95/95** *(+2 MV permanente conquistado no nível)*
+  * Experiência: **41.339 EXP** *(+3.664 EXP em triplo abate | Próximo nível: 18.661 EXP)*
+  * Ouro Líquido: **977 moedas de ouro** *(+60 moedas saqueadas de três carcaças | A 23 ouros do milhar!)*
+  * Alinhamento Moral: 15 (Neutro Pragmático).
+  * Nova Magia Desbloqueada: `burning hands` (Mãos Flamejantes), com **8 sessões de treino acumuladas** disponíveis perante a Mestre da Guilda dos Magos.
+  * Local de Pernoite: O Panteão dos Centenários (Salva e Dormindo diante dos doze heróis eternos).
+* **Marcos e Impactos Psicológicos:**
+  * **O Triplo Expurgo nas Galerias:** Grebolius desceu às profundezas da Masmorra dos Novatos decidida a não deixar pedra sobre pedra. Em uma caçada implacável, abateu três monstros novatos em sequência: o primeiro no Começo da Passagem, o segundo no Cruzamento e o terceiro no Fim do Corredor. O MUD estremeceu com a notificação sagrada: *"Você sobe de nível! Você avançou para o Nível 8!"*.
+  * **A Expansão da Matéria e do Éter:** A ascensão concedeu +3 de Vida (atingindo 52 HP), +10 de Mana (atingindo monumentais 140 MP) e +2 de Movimento (95 MV). A maturidade de combate saltou para estarrecedores **41.339 EXP**, enterrando a barreira dos quarenta mil.
+  * **A Visita Triunfal ao Laboratório dos Magos:** Marchou de volta à metrópole e penetrou no Laboratório dos Magos. Ao consultar o catálogo de práticas perante a Mestre da Guilda, constatou a abertura dos arcanos de fogo: o feitiço `burning hands` despertou em sua mente, acompanhado por 8 sessões de prática acumuladas para elevar a chama ao patamar letal.
+  * **O Quase Milhar de Ouro e o Repouso dos Mestres:** Com 60 moedas recolhidas dos três corpos abatidos, sua fortuna cravou **977 moedas de ouro**. Doou armamentos sobressalentes na Sala de Doações e escalou até o cume sagrado do Panteão dos Centenários, onde repousa com o peito estufado de poder no Oitavo Círculo de mestria.
+* **Decisão Tática:**
+  * No Ciclo 53, investir as sessões de treino para elevar `burning hands` a 95% no Laboratório dos Magos, ultrapassar a barreira de 1.000 moedas de ouro e continuar a varredura das câmaras subterrâneas.
