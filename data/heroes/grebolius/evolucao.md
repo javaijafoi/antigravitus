@@ -128,6 +128,23 @@
      * Forçar o treino com os mestres e acumular moedas de ouro para armamento de ponta.
 * **Veredito:** A ambição de libertar o povo goblin e alcançar a supremacia dos mestres permanece inabalável. A era da mera sobrevivência acabou; começa a era da expansão.
 
+---
+
+### ⏳ Ciclo 11 (Dia 11): A Primeira Morte, a Ferida na Alma e a Fonte da Vida
+* **Status Real (MUD):**
+  * Nível: 1 | Vida: 23/23 | Mana: 52/100 | Movimento: 54/84
+  * Experiência: 0 EXP *(72 pontos perdidos com a morte nos esgotos)*
+  * Classe de Armadura: 16 *(rearmada com conjunto completo de couro, escudo rígido e punhal encantado)*
+  * Local de Pernoite: O Panteão dos Centenários.
+* **Marcos e Impactos Psicológicos:**
+  * **O Bote da Serpente:** A emboscada na junção profunda dos esgotos despedaçou a ilusão de invulnerabilidade. A mordida letal da serpente ensinou na prática que a escuridão exige cautela absoluta e ataques antes da aproximação.
+  * **O Pavor do Vazio e a Mutilação das Memórias:** A experiência no Caminho no Vazio foi a mais aterradora de sua vida. Sentir fragmentos de sua infância, canções de guerra e rostos de seu clã sendo devorados pelo vácuo gerou um **ódio mortal e visceral contra a morte**. Morrer não é um recomeço; é uma mutilação da mente e do espírito.
+  * **A Recusa do Paraíso:** A repulsa violenta à paz celestial e a busca pelo portal secreto na árvore metálica confirmaram sua vocação soberana: ela não aceita o repouso enquanto seu povo viver acorrentado.
+  * **A Fonte da Vida:** A ressurreição milagrosa pela água pura e o despertar nos mármores do Templo marcaram o renascimento de uma predadora muito mais cautelosa, fria e implacável.
+* **Decisão Tática:**
+  * Estudar magia na Mestre da Guilda com foco imediato em projéteis de longo alcance para neutralizar alvos à distância, mas **NUNCA soltar a adaga**.
+  * Caçar a serpente dos esgotos para vingar a própria morte e recuperar a honra de sua lâmina.
+
 
 
 

@@ -43,7 +43,23 @@
 
 ---
 
+## 🕳️ O Submundo dos Esgotos & O Limiar do Vazio (Descobertas do Dia 11)
+
+| Sala | Saídas Verificadas | Nível de Risco | Notas de Campo / Perigo |
+| :--- | :--- | :--- | :--- |
+| **A Junção no Esgoto (Entrada)** | **N** (Curva Regular), **S** (Junção Regular), **O** (Enorme Junção) | Alto | Fundo do buraco do Laboratório dos Magos. Não há subida direta. |
+| **A Curva Regular** | **S** (Junção no Esgoto), **L** (Calma Junção) | Alto | Encanamentos úmidos e gotejantes; cheiro de decomposição. |
+| **Uma Calma Junção de Canos** | **O** (Curva Regular) | Alto | Silêncio enganador sob a cidade. |
+| **A Junção no Esgoto (Enorme)**| **N** (Intersecção), **L** (Junção), **S** (Curva), **O** (Poço Escuro) | **LETAL / EMBOSCADA** | **Canto da Queda:** Coluna de ar no teto; presença de serpentes venenosas agressivas e larvas. |
+| **O Paraíso (Plano Pós-Morte)**| **N, S, L, O** (Campos infinitos) | Etéreo / Ilusório | Descanso enganador. Árvore de metal ao leste com portal oculto. |
+| **Um Portal Escondido no Paraíso** | **L** (Entrada no Vórtice) | Místico | Portal psicodélico que expulsa a alma de volta ao cosmos. |
+| **Um Caminho no Vazio** | **N** (Extensão do Caminho) | **DEVORADOR DE MEMÓRIA**| Vácuo sem gravidade; consome memórias antigas e sensações do espírito. |
+| **A Fonte da Vida** | **S** (Vazio), **Beber Fonte** (Retorno) | Milagroso | Câmara aromática e pura; beber da fonte revive o corpo instantaneamente no Templo. |
+
+---
+
 ## 🧭 Legenda de Navegação
 * `[Santuário]` = Seguro para dormir sem risco de morte sob abrigo inviolável.
 * `[Treino]` = Presas fracas (animais de rua) para prática inicial com armas.
 * `[Atenção]` = Guardas fortemente armados ou magos com barreiras místicas.
+* `[LETAL]` = Criaturas agressivas com veneno devastador (ex: serpentes do esgoto).

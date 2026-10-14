@@ -21,6 +21,8 @@
 | **Guarda da Cidade (Pelotão)** | Portão Leste / Portão Oeste | **Mortal** | **NÃO PROVOCAR** | Pelotão de 8 guardas fortemente armados no Portão Leste; passagem proibida para novatos. |
 | **O Pranteador da Cidade** | Praça Comum | **Nulo / Trágico** | **IGNORAR** | Figura em luto perpétuo lamentando sobre as pedras da praça. |
 | **Mago Guardião** | Entrada da Guilda dos Magos | **Severo** | **EVITAR ENTRADA** | Envolto em barreira de luz mágica protetora; vigia a passagem para a guilda. |
+| **Serpente dos Esgotos** | Junção profunda dos Esgotos | **LETAL / AGRESSIVA** | **VINGANÇA / COMBATE À DISTÂNCIA**| Peçonhenta mortal; desferiu a mordida explosiva da primeira queda de Grebolius. |
+| **Larva dos Esgotos** | Junção profunda dos Esgotos | **Médio / Parasita** | **CAUTELA / EXECUÇÃO** | Criatura rastejante que infesta os canos lamacentos sob a cidade. |
 | **Padeiro / Merceeiro / Ferreiro**| Oficinas e Lojas de Midgaard | **Neutro** | **COMÉRCIO / ESPIONAGEM** | Fornecedores de pão, ferramentas, armaduras e armas forjadas. |
 
 ---
@@ -39,3 +41,6 @@
 * **A Loja de Armas:** Eixo Leste II; ferraria com catálogo de combate e lâmina mágica brilhante no mostruário.
 * **Portão Leste & Portão Oeste de Midgaard:** Pontos de saída para o além-muros, vigiados dia e noite por pesada infantaria urbana.
 * **Depósito de Lixo:** Rota veloz de fuga para o subsolo.
+* **O Paraíso (Plano Pós-Morte):** Campo ilusório de descanso eterno; árvore de metal oculta no leste esconde o portal de escape.
+* **O Caminho no Vazio:** Fenda planar que despoja a alma de sensações e **devora memórias ancestrais** a cada travessia.
+* **A Fonte da Vida:** Câmara sagrada de água pulsante que reconstitui a matéria e revive o espírito nas lajes do Templo de Midgaard.
