@@ -583,6 +583,26 @@
 * **Decisão Tática:**
   * No Ciclo 36, responder afirmativamente ao Novato Alquimista (`say sim` / `say claro`) para selar o contrato da autoquest Limpando Monstros, caçar os alvos nas galerias e romper os 20.000 EXP em direção aos 25.000 EXP do Sétimo Grau (`armor`).
 
+---
+
+### ⏳ Ciclo 36 (Dia 36): A Ativação d'A Limpeza de Monstros e a Fronteira dos Vinte Mil Passos
+* **Status Real (MUD):**
+  * Nível: **6** *(20.711 EXP | Faltam apenas 4.289 EXP para o Grau 7)*
+  * Vida: **41/41** | Mana: **122/122** | Movimento: **91/92** | AC: **16**
+  * Experiência Conquistada: **+1.520 EXP** em abates duplos nas galerias escuras.
+  * Ouro Líquido: **589 moedas de ouro** *(+40 moedas saqueadas dos corpos)*
+  * Autoquest Ativada: **Limpando Monstros** selada com O Novato Alquimista (`say sim` -> *"Você começa a participar da aventura"*).
+  * Descoberta Textual: Leitura da placa da escadaria secreta (*"Se você está sem equipamentos e sozinho, saia já daqui! Ou então não culpe ninguém por sua morte..."*) e detecção de rosnados no subsolo.
+  * Local de Pernoite: O Panteão dos Centenários (Salva e Dormindo diante dos doze heróis eternos).
+* **Marcos e Impactos Psicológicos:**
+  * **A Marcha Matinal e a Primeira Execução:** Despertando revitalizada, Grebolius hidratou-se na Fonte de Mármore Azul e marchou para a Masmorra dos Novatos. No Corredor Sujo, abateu a primeira presa com disparo de Míssil Mágico (11 de dano) e estocada penetrante (11 de dano), ceifando 1.160 EXP, 20 moedas de ouro e uma nova túnica mística.
+  * **O Segundo Abate e o Rompimento dos Vinte Mil:** Avançou para Mais Corredor, onde encontrou a segunda aberração: novo projétil flamejante de 12 de dano seguido por uma explosão visceral de 16 de dano direto, ceifando mais 360 EXP e 20 moedas de ouro. A barreira psicológica dos vinte mil passos ruiu (**20.711 EXP** acumulados).
+  * **O Selo da Aventura com o Alquimista:** Penetrou na Sala do Alquimista. Diante do olhar aflito d'O Novato Alquimista (*"Ei, você poderia me ajudar?"*), Grebolius respondeu com clareza inabalável: *"sim"*. O cosmos ressoou solenemente: *"Você começa a participar da aventura"*. Em seguida, examinou a escadaria proibida e leu a placa de aviso mortal enquanto rosnados ecoavam do subsolo.
+  * **A Constatação da Carga e o Recolhimento Inviolável:** Ao tentar guardar as armas sobressalentes na mochila, constatou que o container alcançou a lotação máxima. Carregando as peças extras nas correias externas, recuou pelo Campo Aberto e ascendeu ao Panteão dos Centenários, salvando suas conquistas e deitando-se para o sono sob a bênção das doze estátuas imortais.
+* **Decisão Tática:**
+  * No Ciclo 37, doar a veste excedente na Sala de Doações para aliviar peso, caçar nas galerias para acumular os 4.289 EXP que restam, cruzar a barreira dos 25.000 EXP para coroar o Nível 7 e marchar imediatamente ao Laboratório dos Magos para treinar `armor`.
+
+
 
 
 
