@@ -798,3 +798,20 @@
   * **Repouso Inviolável:** Atingiu o Panteão dos Centenários com vigor pleno e a fortuna de **829 moedas de ouro**. Diante das doze estátuas sagradas, salvou seu progresso e adormeceu em serenidade imperial.
 * **Decisão Tática:**
   * No Ciclo 47, acelerar o acúmulo de EXP para cruzar os 35.000 pontos e preparar a mente para a reflexão obrigatória de /learn no Dia 49.
+---
+
+### ⏳ Ciclo 47 (Dia 47): A Presença de Valgren, a Patrulha do Silêncio e a Masmorra Purificada
+* **Status Real (MUD):**
+  * Nível: **7** *(32.563 EXP | Faltam 7.437 EXP para o Grau 8)*
+  * Vida: **49/49** | Mana: **130/130** | Movimento: **93/93** | AC: **39** *(Armadura Arcana ativa)*
+  * Ouro Líquido: **829 moedas de ouro**.
+  * Alinhamento Moral: 15 (Neutro Pragmático).
+  * Encontro Nobre no Templo e Panteão: Presença de Valgren, o Guerreiro da Luz, dividindo os espaços sagrados com Grebolius.
+  * Reconhecimento Tático: Patrulha completa de todas as câmaras da Masmorra dos Novatos; constatação de que as galerias foram temporariamente purificadas por suas investidas contínuas.
+  * Local de Pernoite: O Panteão dos Centenários (Salva e Dormindo diante dos doze heróis eternos).
+* **Marcos e Impactos Psicológicos:**
+  * **O Guerreiro da Luz e a Nobreza Compartilhada:** Grebolius cruzou caminhos com Valgren, o Guerreiro da Luz, tanto nas naves do Templo quanto no topo do Panteão. O veterano empunhava a luz da justiça, mas não desconfiou do disfarce da goblin: o porte firme, a Armadura Arcana invisível e o olhar destemido de Grebolius impuseram o respeito mútuo reservado aos verdadeiros aventureiros de Midgaard.
+  * **A Masmorra Sob o Domínio do Silêncio:** Desceu pelas galerias habituais e encontrou os corredores desertos. O expurgo dos ciclos anteriores foi tão fulminante que as aberrações novatas temem brotar do lodo. Visitou a Pequena Sala do Guarda Novato, reafirmou a vigilância contra perigos répteis e inspecionou as saídas secretas sem encontrar oposição.
+  * **A Serenidade da Predadora:** Mesmo sem o derramamento de sangue do dia, a marcha serviu para consolidar o domínio territorial de Grebolius sobre toda a extensão subterrânea. De volta ao santuário sagrado, descansou sabendo que o terror das masmorras agora é ela.
+* **Decisão Tática:**
+  * No Ciclo 48, realizar caçada externa ou aguardar a repopulação das galerias para avançar na EXP rumo aos 40.000 pontos.
