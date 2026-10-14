@@ -708,3 +708,21 @@
   * **A Barreira dos Vinte e Nove Mil Rompida:** O avanço foi avassalador: a experiência saltou para **29.307 EXP**. Restam agora pouco mais de dez mil passos para o Oitavo Círculo de mestria. Descartou peças excedentes na Sala de Doações para manter a mochila imaculadamente leve e ascendeu de volta ao Panteão dos Centenários para salvar e descansar entre os imortais.
 * **Decisão Tática:**
   * No Ciclo 42, avançar a caçada pelas câmaras da masmorra, explorar as cercanias do Grande Tabuleiro de Xadrez e planejar a visita à Loja de Magia para adquirir a poção amarela ou insumos arcanos.
+---
+
+### ⏳ Ciclo 42 (Dia 42): O Santuário dos Tomos, o Catálogo Arcano e a Lâmina Vigilante
+* **Status Real (MUD):**
+  * Nível: **7** *(29.559 EXP | Faltam 10.441 EXP para o Grau 8)*
+  * Vida: **49/49** | Mana: **130/130** | Movimento: **92/93** | AC: **39** *(Armadura Arcana ativa)*
+  * Salto de Experiência: **+252 EXP** em combate fulminante na Masmorra dos Novatos.
+  * Ouro Líquido: **749 moedas de ouro** *(+20 moedas saqueadas)*
+  * Alinhamento Moral: 19 (Neutro Pragmático).
+  * Descoberta Mercantil Oficial: Mapeamento completo do inventário do Feiticeiro da Loja de Magias (Pergaminhos de Retorno por 9.202 ouros, Identificação por 4.601 ouros, e a cobiçada Poção Amarela por 5.370 ouros).
+  * Inventário Identificado: Verificação de que Grebolius já carrega em sua posse uma autêntica Poção Amarela de detectar invisibilidade e um precioso Anel Arcano (+2E).
+  * Local de Pernoite: O Panteão dos Centenários (Salva e Dormindo diante dos doze heróis eternos).
+* **Marcos e Impactos Psicológicos:**
+  * **O Olhar sobre as Prateleiras Proibidas:** Ao invés de rumar direto para as valas de sangue, Grebolius desviou seus passos até o término da Rua Principal Oeste e transpôs a soleira pesada d'A Loja de Magias. Diante do olhar telepático e frio do Feiticeiro lojista, inspecionou os rolos de papiro e frascos fosforescentes: catalogou os preços das relíquias da cidade e constatou, com um sorriso ladino, que o frasco amarelado que repousa em sua mochila é a exata Poção de Detectar Invisibilidade avaliada em mais de cinco mil moedas de ouro.
+  * **A Proteção Arcana Inabalável:** Com a mente expandida pela certeza de seu patrimônio, conjurou o manto de `armor` e marchou para os túneis subterrâneos. A couraça invisível manteve seu AC no patamar de 39 pontos, tornando o choque com o monstro guardião quase um exercício de precisão cirúrgica: um míssil luminoso, estocadas viscerais de punhal e mais vinte moedas somadas ao montante.
+  * **A Marcha Rumo aos Trinta Mil:** A experiência atingiu **29.559 EXP**, restando uma fração minúscula para a barreira redonda dos trinta mil passos. Doou armamentos rústicos na Sala de Doações para preservar sua agilidade e recolheu-se ao Panteão dos Centenários, onde repousa com a serenidade dos que dominam segredos arcanos e riqueza em ascensão.
+* **Decisão Tática:**
+  * No Ciclo 43, romper a barreira dos 30.000 EXP, equipar ou testar o anel arcano e planejar investida mais audaciosa nas câmaras ainda fechadas da masmorra.

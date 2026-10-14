@@ -10,7 +10,7 @@
 * **Raça / Aparência Real:** Mulher Goblin (disfarçada de jovem guerreiro com faixas e elmo abaixado)
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **7** *(Sétimo Grau de Maestria conquistado — Barreira dos 25.000 EXP rompida em combate letal na Masmorra dos Novatos)*
-* **Alinhamento Moral:** 22 (Neutro Pragmático)
+* **Alinhamento Moral:** 19 (Neutro Pragmático)
 * **Localização Atual:** O Panteão dos Centenários (Cume sagrado do Templo de Midgaard) — *Salva e Dormindo sob o olhar solene das doze estátuas lendárias*
 
 ---
@@ -22,9 +22,9 @@
 | **Pontos de Mana (MP)** | 130 | 130 | 100% |
 | **Estamina / Movimento (MV)** | 92 | 93 | 99% |
 
-* **Experiência Acumulada:** **29.307 EXP** *(+2.302 EXP em duplo abate de monstros novatos)*
-* **Experiência Necessária p/ Grau 8:** **10.693 EXP** *(Meta: 40.000 EXP)*
-* **Ouro Líquido:** **729 moedas de ouro** *(+40 moedas saqueadas em combate)*
+* **Experiência Acumulada:** **29.559 EXP** *(+252 EXP em combate cirúrgico na masmorra)*
+* **Experiência Necessária p/ Grau 8:** **10.441 EXP** *(Meta: 40.000 EXP)*
+* **Ouro Líquido:** **749 moedas de ouro** *(+20 moedas saqueadas em combate)*
 * **Condição Biológica:** Vigor absoluto; saciedade de sede na Fonte de Mármore Azul; fôlego e regeneração plenos.
 
 ---

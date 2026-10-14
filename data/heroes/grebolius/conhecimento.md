@@ -67,3 +67,12 @@ A Força 10 de Grebolius impede carregar armamento pesado sem esgotar o vigor. A
 
 
 * **A Poção Amarela da Loja de Magia (Dica de Negelok - Dia 41):** Frasco alquímico vendido pelo mago mercador na Loja de Magias da Rua Principal Oeste. Concede o poder de detecção de invisibilidade a quem a bebe, permitindo enxergar seres e objetos ocultos sem necessidade de gasto contínuo de mana.
+
+* **Catálogo Oficial da Loja de Magias de Midgaard (Mapeado no Dia 42):**
+  * *Um pergaminho portador de tempestades:* 574.999 ouros (Nv 1)
+  * *Um pergaminho de remover maldições:* 8.509 ouros (Nv 0)
+  * *Um cajado retorcido:* 14.570 ouros (Nv 38)
+  * *Um bastão cinza de invisibilidade:* 92.233 ouros (Nv 29)
+  * *Um pergaminho de retorno:* 9.202 ouros (Nv 0)
+  * *Uma poção amarela de detectar invisibilidade:* 5.370 ouros (Nv 0)
+  * *Um pergaminho de identificação:* 4.601 ouros (Nv 0)
