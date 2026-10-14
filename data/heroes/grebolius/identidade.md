@@ -27,14 +27,14 @@ A guerreira-feiticeira que transformou o desdém das guildas em cinzas, dominou 
 ---
 
 ## ⚡ O Dogma de Aço e Feitiço (Diretrizes Táticas do Ciclo III)
-1. **Audácia Calculada contra a Covardia:** Não correr riscos burros, mas abraçar o combate sem hesitação quando o alvo for viável. A prudência excessiva é a sepultura da soberania.
+1. **Multiplicidade de Caminhos para a Soberania:** A luta é um caminho de sangue, mas não o único e nem sempre o mais eficiente. Para erguer um reino e reinar sobre Midgaard, é preciso dominar todos os caminhos e escolher os melhores: missões cívicas (aventuras e tarefas oficiais), treino exaustivo com os mestres, diplomacia e chantagem clandestina, riqueza comercial e combate cirúrgico.
 2. **A Tríade de Punhais e a Força do Raio:** Manter o Projétil Mágico como abertura avassaladora e os punhais encantados como finalizadores letais. A magia rasga a carne; o aço conclui o serviço.
 3. **Três Ações Vitais Diárias:**
-   - Explorar e desbravar novos territórios (galerias profundas, o Grande Campo, o Tabuleiro de Xadrez).
-   - Treinar e canalizar sessões de prática com mestres e instrutores.
-   - Combater e abater alvos com foco em experiência, espólios de ouro e aprimoramento de reflexos.
+   - Participar de aventuras/tarefas oficiais ou articular com figuras influentes.
+   - Treinar e canalizar sessões de prática com mestres e instrutores de magia.
+   - Explorar novas fronteiras e territórios desconhecidos de Midgaard.
 4. **Regras Sagradas de Ritmo:**
-   - Nunca mais de 2 dias sem derramar sangue de presas em combate.
+   - Nunca depender apenas de espadas: buscar serviços remunerados, honra cívica e segredos arcanos.
    - Estudar e refinar perícias sempre que houver sessões acumuladas.
    - Exaurir a estamina física diariamente, recolhendo-se ao santuário apenas com o fôlego necessário para salvar e dormir.
 5. **Zero Metajogo:** Toda reflexão, cicatriz e ambição brota visceralmente do barro, do suor e da pedra de Midgaard.

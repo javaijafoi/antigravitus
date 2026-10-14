@@ -314,3 +314,19 @@
   * **A Conquista da Muralha Oeste e a Ponte do Rio:** Desbravou a Rua da Muralha Oeste, lendo inscrições antigas entalhadas na rocha, e avançou até A Ponte Sobre o Rio — onde a água ruge dez pés abaixo da fortificação urbana. A geografia externa de Midgaard desdobra-se diante de seus olhos.
 * **Decisão Tática:**
   * No Ciclo 22, ativar o comando `aventura participar` para receber a primeira missão oficial de Midgaard, além de acessar a Mestre dos Magos para finalmente consumir as 6 sessões de prática.
+
+---
+
+### ⏳ Ciclo 22 (Dia 22): A Mutação Doutrinária, os Rumores da Afluência e a Diplomacia das Sombras
+* **Status Real (MUD):**
+  * Nível: **3** | Vida: **27/27** | Mana: **106/106** | Movimento: **87/87** | AC: 17
+  * Experiência: **3.263 EXP** *(Próximo nível: 1.737 EXP)*
+  * Ouro Líquido: **453 moedas de ouro**
+  * Nova Fronteira Mapeada: *O Canto Noroeste Da Afluência* ao sul de A Ponte Sobre o Rio.
+  * Local de Pernoite: O Beco Pobre / Muralha Oeste (Salvo e Dormindo).
+* **Marcos e Impactos Psicológicos:**
+  * **A Ruptura do Dogma do Combate Cego:** Grebolius compreendeu que a espada e o raio são apenas uma das muitas ferramentas de soberania. Um líder que só sabe sangrar presas termina cercado e exausto; uma rainha goblin precisa dominar os múltiplos caminhos do poder — articular missões, colher informações, dominar a economia de Midgaard e escolher cirurgicamente onde e quando agir.
+  * **O Aventureiro da Muralha e a Passagem da Afluência:** Encontrou novamente o grande aventureiro veterano rondando a Rua da Muralha à procura de missões. Ao inspecionar as saídas de A Ponte Sobre o Rio, descobriu a passagem ao sul que leva diretamente a *O Canto Noroeste Da Afluência*, uma nova região fluvial fora dos muros de Midgaard.
+  * **A Sondagem dos Becos e da Taverna Encardida:** Mapeou as imediações da Taverna Encardida no Fim do Beco Pobre, observando a movimentação de guardas municipais e mendigos, consolidando sua presença nas veias clandestinas da cidade.
+* **Decisão Tática:**
+  * No Ciclo 23, cruzar os muros em direção à Afluência para explorar seus segredos fluviais ou descer à Taverna Encardida para sondar contratos e trabalhos lucrativos sem risco desnecessário.

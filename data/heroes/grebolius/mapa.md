@@ -17,7 +17,8 @@
 | **O Beco Pobre** | **L** (Praça Comum), **O** (Rua da Muralha) | Baixo / Miséria | Aglomerado de mendigos, palha e cães; rota de ligação para a muralha oeste. |
 | **A Entrada da Guilda dos Necromantes** | **S** (Beco Pobre), **O** (Bar dos Necromantes) | Sombrio / Tensão | Aura opressiva de pavor; aventureiro buscando missões; guarda protegido por ossos colossais ("Só necromantes entram aqui"). |
 | **A Rua da Muralha (Oeste)** | **N** (Portão Oeste), **S** (Ponte Sobre o Rio), **L** (Beco Pobre) | Médio / Patrulha | Parede defensiva oeste da cidade com inscrições rústicas gravadas na pedra e sentinelas da cidade. |
-| **A Ponte Sobre o Rio** | **N** (Rua da Muralha) | Místico / Limite Urbano | Ponte monumental de pedra sobre as corredeiras que mergulham dez pés abaixo da muralha oeste. |
+| **A Ponte Sobre o Rio** | **N** (Rua da Muralha), **S** (Canto Noroeste Da Afluência) | Místico / Limite Urbano | Ponte monumental de pedra sobre as corredeiras que mergulham dez pés abaixo da muralha oeste. |
+| **O Canto Noroeste Da Afluência** | **N** (Ponte Sobre o Rio) | Exploração Externa | Área fluvial e silvestre estendendo-se além da muralha oeste de Midgaard. |
 | **A Praça do Comércio** | **N** (Templo), **L** (Rua Leste), **S** (Comum), **O** (Rua Oeste) | Baixo | Centro da cidade. Estátua, carroça de carga e mural mágico flutuante. |
 | **Rua Principal (Leste I)** | **N** (Armazém), **L** (Rua Leste II), **S** (Animais), **O** (Comércio) | Baixo | Guarda da cidade em patrulha. |
 | **O Armazém** | **S** (Rua Leste I) | Seguro | Merceeiro impaciente; suprimentos (ataduras, lanternas, tochas, mochilas). |

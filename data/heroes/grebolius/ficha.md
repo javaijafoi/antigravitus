@@ -11,7 +11,7 @@
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **3** *(Ascensão fulminante após abater o Monstro Novato)*
 * **Alinhamento Moral:** 12 (Neutro Pragmático)
-* **Localização Atual:** A Ponte Sobre o Rio (Extremo Oeste de Midgaard) — *Dormindo com segurança*
+* **Localização Atual:** O Beco Pobre (Oeste de Midgaard) — *Dormindo com segurança*
 
 ---
 
@@ -22,8 +22,8 @@
 | **Pontos de Mana (MP)** | 106 | 106 | 100% |
 | **Estamina / Movimento (MV)** | 87 | 87 | 100% |
 
-* **Experiência Acumulada:** **3.264 EXP**
-* **Experiência Necessária p/ Grau 4:** 1.736 EXP
+* **Experiência Acumulada:** **3.263 EXP**
+* **Experiência Necessária p/ Grau 4:** 1.737 EXP
 * **Ouro Líquido:** **453 moedas de ouro**
 * **Condição Biológica:** Plenamente nutrida e hidratada (provisões intactas, estamina e mana expandidas).
 
@@ -81,5 +81,5 @@
 ---
 
 ## ✦ Ciclo e Postura Atual
-* **Estado:** Conclusão do Dia 21 (Início do Ciclo III). Exploração ativa da cidade em busca de missões: sondagem junto ao Pacificador e descoberta do sistema de tarefas da cidade (`ajuda aventura`). Descoberta da sinistra Entrada da Guilda dos Necromantes e avanço pela Muralha Oeste até A Ponte Sobre o Rio.
-* **Tática Operacional:** No próximo ciclo, participar oficialmente das aventuras de tarefas automáticas para acumular ouro e honra marcial, além de descarregar as 6 práticas na Mestre dos Magos e rumar ao Grau 4 de Maestria.
+* **Estado:** Conclusão do Dia 22. Incorporação da nova doutrina de soberania: múltiplos caminhos para o poder além do combate cego (tarefas, diplomacia, exploração geográfica e economia). Descoberta da rota sul de A Ponte Sobre o Rio rumo a *O Canto Noroeste Da Afluência* e mapeamento dos acessos da Taverna Encardida no Beco Pobre.
+* **Tática Operacional:** No próximo ciclo, explorar as margens da Afluência ou buscar contatos no submundo da Taverna Encardida para destravar serviços remunerados e segredos de Midgaard.
