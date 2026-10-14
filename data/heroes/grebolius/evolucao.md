@@ -815,3 +815,20 @@
   * **A Serenidade da Predadora:** Mesmo sem o derramamento de sangue do dia, a marcha serviu para consolidar o domínio territorial de Grebolius sobre toda a extensão subterrânea. De volta ao santuário sagrado, descansou sabendo que o terror das masmorras agora é ela.
 * **Decisão Tática:**
   * No Ciclo 48, realizar caçada externa ou aguardar a repopulação das galerias para avançar na EXP rumo aos 40.000 pontos.
+---
+
+### ⏳ Ciclo 48 (Dia 48): O Golpe dos Mil Passos e a Véspera do Aprendizado Sagrado
+* **Status Real (MUD):**
+  * Nível: **7** *(33.597 EXP | Faltam apenas 6.403 EXP para o Grau 8)*
+  * Vida: **49/49** | Mana: **130/130** | Movimento: **93/93** | AC: **39** *(Armadura Arcana ativa)*
+  * Salto de Experiência: **+1.034 EXP** em combate cirúrgico na Masmorra dos Novatos.
+  * Ouro Líquido: **849 moedas de ouro** *(+20 moedas saqueadas | Rumo aos 900 ouros!)*
+  * Alinhamento Moral: 15 (Neutro Pragmático).
+  * Véspera do Marco Metodológico: Preparação mental para a ativação obrigatória de /learn no Ciclo 49.
+  * Local de Pernoite: O Panteão dos Centenários (Salva e Dormindo diante dos doze heróis eternos e ao lado de Valgren).
+* **Marcos e Impactos Psicológicos:**
+  * **A Faísca de Aço e Éter:** Grebolius desceu às galerias com a lâmina novata imbuída de mana e a Armadura Arcana ativada. O monstro que ocupava a passagem foi subjugado em segundos: abertura explosiva de Projétil Mágico e estocadas profundas que rasgaram sua resistência, rendendo mais de mil pontos de experiência de uma só vez (+1.034 EXP).
+  * **A Consolidação da Fortuna:** A experiência saltou para estarrecedores **33.597 EXP** e a bolsa de ouro atingiu **849 moedas**, garantindo poder de barganha absoluto para quaisquer insumos de alta classe no mercado de Midgaard.
+  * **A Vigília Sagrada:** Subiu ao Panteão dos Centenários, onde Valgren, o Guerreiro da Luz, mantinha guarda solene. Salva e abrigada sob as estátuas lendárias, adormeceu com a mente afiada para a rotina de /learn do Dia 49.
+* **Decisão Tática:**
+  * No Ciclo 49 (dia "9" do ciclo decenal), executar obrigatoriamente a reflexão de **/learn** para refinar as práticas do jogador e do sistema, acelerar a marcha rumo aos 40.000 EXP e pavimentar a consagração decenal do Dia 50.
