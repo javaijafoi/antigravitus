@@ -78,10 +78,11 @@
 * **`um brilhante punhal de novato`** (aura mística reserva)
 * **`um cantil`** *(cheio com água límpida da Fonte de Mármore Azul)*
 * **`um anel arcano`** (+2E)
-* **`uma mochila`** *(contendo: 3 punhais novatos reservas, 1 cantil reserva, 1 gorro de couro e 1 laranja fresca da Sala de Doações)*
+* **`uma mochila`** *(contendo: 3 punhais novatos reservas, 1 cantil reserva e 1 gorro de couro; laranja consumida para erradicar a fome em marcha)*
 
 ---
 
 ## ✦ Ciclo e Postura Atual
-* **Estado:** Conclusão do Dia 31. Entrega triunfal da coleira ao Guarda Novato na Masmorra, atingindo oficialmente o objetivo da aventura e recebendo 5.000 pontos de experiência, coroando a ascensão imediata ao **Nível 6 (Sexto Grau de Maestria)** (+5 HP máx, +6 MP máx, +1 MV máx). Desbloqueio e treino instantâneo da magia `invisibility` até o patamar Perfeito (95%) no Laboratório dos Magos. Visita à Sala de Doações de Midgaard para estocar alimentos frescos (laranja) na mochila. Conversa com o Pacificador na Praça do Templo (alinhando missões cívicas futuras). Repouso supremo e salvamento no Panteão dos Centenários.
-* **Tática Operacional:** Com invisibilidade perfeita dominada e infravisão ativa, Grebolius agora possui capacidade de emboscada e infiltração sem precedentes. Próximos passos envolvem caçadas seguras no Nível 6, exploração além dos portões de Midgaard e preparação para o Nível 7 (`armor`).
+* **Estado:** Conclusão do Dia 32. Incursão de reconhecimento às galerias da Masmorra dos Novatos e ao Grande Campo exterior. Ativação de suprimentos: consumo tático da laranja armazenada na mochila e água límpida do cantil, restaurando o vigor celular. Consulta ao compêndio de Autoquests de Midgaard e ativação oficial da missão **Dicas Mágicas** junto ao Mago Aventureiro no Bar dos Magos (*"Você começa a participar da aventura"*). Repouso seguro e salvamento solene no Panteão dos Centenários.
+* **Tática Operacional:** Seguir as instruções e pistas arcanas do Mago Aventureiro para cumprir a autoquest Dicas Mágicas, acumular conhecimento de campo e caçar monstros de baixo risco até o Sétimo Grau de Maestria.
+

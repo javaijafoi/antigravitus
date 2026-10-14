@@ -510,3 +510,21 @@
 * **Decisão Tática:**
   * No Ciclo 32, utilizar a Invisibilidade Perfeita (95%) e a Infravisão (95%) para desbravar novas áreas hostis ao redor de Midgaard sem sofrer agro indesejado, preparar emboscadas de alto retorno e acumular experiência rumo ao Sétimo Grau (desbloqueio de `armor`).
 
+---
+
+### ⏳ Ciclo 32 (Dia 32): O Rastro dos Ermos, a Nutrição da Mochila e o Despertar das Dicas Mágicas
+* **Status Real (MUD):**
+  * Nível: **6** *(15.001 EXP | Próximo nível: 9.999 EXP)*
+  * Vida: **41/41** | Mana: **122/122** | Movimento: **91/92** | AC: **16**
+  * Missão Oficial Ativa: **Dicas Mágicas** (iniciada com o Mago Aventureiro no Bar dos Magos)
+  * Suprimentos: Laranja consumida da mochila; cantil saciado na Fonte Azul; armas reservas preservadas.
+  * Local de Pernoite: O Panteão dos Centenários (Salva e Dormindo diante dos doze heróis eternos).
+* **Marcos e Impactos Psicológicos:**
+  * **A Marcha Pelas Galerias e o Sinal Biológico:** Grebolius desceu as montanhas e penetrou nas galerias da Masmorra dos Novatos e nos prados abertos. Ao percorrer os corredores úmidos, o corpo cobrou o desgaste da marcha com pontadas de fome. Aplicando a nova doutrina de suprimentos, sacou a fruta fresca colhida na Sala de Doações diretamente do fundo da mochila (`eat laranja`) e engoliu a água cristalina do cantil (`drink cantil`): o vigor orgânico foi restabelecido em segundos, provando na prática a superioridade de carregar mantimentos leves em containers.
+  * **O Desvelar das Autoquests de Midgaard:** Em consulta aos registros arcanos da cidade (`autoquest lista`), descobriu as três grandes sagas ativas para seu patamar de poder: *Novela dos Novatos*, *Limpando Monstros* (Alquimista) e *Dicas Mágicas*.
+  * **O Encontro e o Pacto com o Mago Aventureiro:** Rumo ao Bar dos Magos, interpelou o experiente feiticeiro que bebe silencioso ao balcão. Diante do questionamento do veterano (*"Começando suas aventuras?"*), Grebolius confirmou com frieza: *"sim"*. O sistema celestial ressoou: *"Você começa a participar da aventura."* O Mago Aventureiro acolheu a pupila goblin com entusiasmo: *"Muito bem! Sempre me alegro ao ver iniciantes nas artes mágicas."* Uma nova e nobre trilha de sabedoria e poder foi oficialmente iniciada.
+  * **Recolhimento Vitorioso:** Subiu ao Panteão dos Centenários sob o olhar vigilante dos heróis imortais, salvou seu progresso e adormeceu nutrida, serena e pronta para desvendar os segredos do mago.
+* **Decisão Tática:**
+  * No Ciclo 33, dialogar profundamente com o Mago Aventureiro para colher as instruções da missão Dicas Mágicas, executar as tarefas arcanas solicitadas e avançar em direção aos 25.000 EXP (Nível 7).
+
+
