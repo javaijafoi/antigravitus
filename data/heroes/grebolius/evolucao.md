@@ -921,3 +921,22 @@
   * **O Quase Milhar de Ouro e o Repouso dos Mestres:** Com 60 moedas recolhidas dos três corpos abatidos, sua fortuna cravou **977 moedas de ouro**. Doou armamentos sobressalentes na Sala de Doações e escalou até o cume sagrado do Panteão dos Centenários, onde repousa com o peito estufado de poder no Oitavo Círculo de mestria.
 * **Decisão Tática:**
   * No Ciclo 53, investir as sessões de treino para elevar `burning hands` a 95% no Laboratório dos Magos, ultrapassar a barreira de 1.000 moedas de ouro e continuar a varredura das câmaras subterrâneas.
+---
+
+### ⏳ Ciclo 53 (Dia 53): A Consagração de Burning Hands (95%), a Incineração de 32 de Dano e a Conquista de Mil Ouros
+* **Status Real (MUD):**
+  * Nível: **8** *(41.951 EXP | Faltam 18.049 EXP para o Grau 9)*
+  * Vida: **52/52** | Mana: **115/140** | Movimento: **95/95** | AC: **40** *(Armadura Arcana ativa)*
+  * Salto de Experiência: **+612 EXP** em duplo combate de fogo nas galerias subterrâneas.
+  * Ouro Líquido: **1.017 moedas de ouro** *(+40 moedas saqueadas | Marco histórico de 1.000 ouros superado!)*
+  * Alinhamento Moral: 15 (Neutro Pragmático).
+  * Maestria Arcana de Fogo: Treino completo de `burning hands` perante a Mestre da Guilda dos Magos, elevando a perícia de 10% para **95% (Perfeito)**, restando 6 sessões guardadas.
+  * Teste Bélico Letal: Primeira conjuração em combate de `cast 'burning hands' monstro`, desferindo esmagadores **32 pontos de dano ígneo direto** e incinerando a fera instantaneamente.
+  * Local de Pernoite: O Panteão dos Centenários (Salva e Dormindo diante dos doze heróis eternos).
+* **Marcos e Impactos Psicológicos:**
+  * **O Despertar da Chama Viva:** Grebolius desceu ao Laboratório dos Magos logo ao amanhecer e dedicou suas sessões de treino à nova fórmula ígnea. Diante dos pentagramas de carvão, a Mestre dos Magos orientou a canalização até que as mãos da goblin ardessem em chamas azuladas sem queimar a própria pele: *"Você agora está instruído nessa área. Você já está instruído nessa área."* A maestria de `burning hands` saltou para **95%**.
+  * **O Batismo de Fogo nas Profundezas:** Com a Armadura Arcana zumbindo em 40 pontos de defesa, penetrou na masmorra e testou a nova arma arcana contra a aberração guardiã. O resultado foi estarrecedor: um leque de chamas incandescentes irrompeu de suas pequenas mãos goblins, cravando **32 pontos de dano brutal** no peito do monstro e incinerando-o em cinzas fumegantes. Nunca uma magia sua havia gerado tamanha destruição de impacto direto.
+  * **O Milhar de Ouro Conquistado:** Com mais quarenta moedas saqueadas dos corpos carbonizados, sua fortuna atingiu a mítica barreira de **1.017 moedas de ouro**. A ex-mendiga dos lixões de Midgaard é agora detentora de patrimônio nobre, capaz de financiar armas, armaduras pesadas e exércitos para o clã goblin.
+  * **O Cume dos Vencedores:** Realizou pausa de acampamento em campo, doou os despojos ordinários na Sala de Doações e escalou ao Panteão dos Centenários. Sob a luz dos doze titãs, dormiu sabendo que agora carrega o fogo dos dragões na ponta dos dedos.
+* **Decisão Tática:**
+  * No Ciclo 54, manter a ofensiva com Burning Hands e punhal, explorar novas passagens e consolidar a varredura das galerias.

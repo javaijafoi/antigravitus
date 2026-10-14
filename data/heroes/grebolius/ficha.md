@@ -22,9 +22,9 @@
 | **Pontos de Mana (MP)** | 140 | 140 | 100% |
 | **Estamina / Movimento (MV)** | 94 | 95 | 99% |
 
-* **Experiência Acumulada:** **41.339 EXP** *(+3.664 EXP em triplo massacre de monstros novatos)*
-* **Experiência Necessária p/ Grau 9:** **18.661 EXP** *(Meta: 60.000 EXP)*
-* **Ouro Líquido:** **977 moedas de ouro** *(+60 moedas saqueadas em três corpos | Rumo aos 1.000 ouros!)*
+* **Experiência Acumulada:** **41.951 EXP** *(+612 EXP em combate ígneo devastador)*
+* **Experiência Necessária p/ Grau 9:** **18.049 EXP** *(Meta: 60.000 EXP)*
+* **Ouro Líquido:** **1.017 moedas de ouro** *(+40 moedas saqueadas | Barreira de 1.000 ouros rompida!)*
 * **Condição Biológica:** Fome plenamente erradicada com pão recheado da Padaria; fôlego e regeneração a 100% no tick vital.
 
 ---
@@ -38,7 +38,7 @@
 * **Carisma (CHA):** 9
 
 ### Métricas de Combate
-* **Classe de Armadura (AC):** 16 *(base com conjunto completo de couro, escudo rígido e elmo místico)* / **39** *(sob efeito da conjuração de `armor`)*
+* **Classe de Armadura (AC):** 16 *(base)* / **40** *(sob efeito de `armor` no Nível 8)*
 * **Bônus de Acerto (Hitroll):** 0
 * **Bônus de Dano (Damroll):** +1
 * **Configuração de Fuga (Wimpy):** **6 HP** (Postura de bravura)
@@ -57,7 +57,7 @@
 ---
 
 ## ✦ Habilidades Conhecidas e Treinos Concluídos
-* **Sessões de Treino Disponíveis:** **8 sessões de treino acumuladas** *(reservadas para treinar Burning Hands a 95%)*
+* **Sessões de Treino Disponíveis:** **6 sessões de treino acumuladas** *(após treinar Burning Hands)*
 * **Perícias e Encantamentos:**
   * `armor` (Armadura Mística): **95%** (Grau: Instruído / Perfeito — Redução maciça de dano físico e barreira invisível protetora)
   * `invisibility` (Invisibilidade): **95%** (Grau: Perfeito / Maestria Arcana de Ocultação — Desbloqueada no Nv 6)
