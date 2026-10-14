@@ -893,9 +893,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   // ============================================================
-  // MAPA INTERATIVO SIMPLIFICADO POR AVENTUREIRO
+  // MAPA INTERATIVO SIMPLIFICADO POR AVENTUREIRO (COM CAMADAS)
   // ============================================================
   let currentMapData = null;
+  let currentActiveLayer = "superficie";
   let mapScale = 1.0;
   let mapPanX = 0;
   let mapPanY = 0;
@@ -914,6 +915,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const statZones = document.getElementById("stat-zones-count");
     const statSafe = document.getElementById("stat-safe-count");
     const statDanger = document.getElementById("stat-danger-count");
+    const layersTabsEl = document.getElementById("map-layers-tabs");
     const zoneFilter = document.getElementById("map-filter-zone");
     const riskFilter = document.getElementById("map-filter-risk");
     const searchInput = document.getElementById("map-search");
@@ -945,7 +947,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       return;
     }
 
-    const { rooms = [], zones = [], sanctuary_id = "", last_updated_cycle = "A cada 10 ciclos" } = currentMapData;
+    const { rooms = [], zones = [], layers = [], sanctuary_id = "", last_updated_cycle = "A cada 10 ciclos" } = currentMapData;
 
     // Atualiza indicadores
     if (mapCycleText) mapCycleText.textContent = `Consolidado: ${last_updated_cycle}`;
@@ -956,6 +958,85 @@ document.addEventListener("DOMContentLoaded", async () => {
     const dangerCount = rooms.filter(r => r.risk_code === "danger" || r.risk_code === "fatal").length;
     if (statSafe) statSafe.textContent = safeCount;
     if (statDanger) statDanger.textContent = dangerCount;
+
+    // Mapa de busca rápida por ID
+    const roomMap = new Map();
+    rooms.forEach(r => roomMap.set(r.id, r));
+
+    // Determina camada inicial (a do santuário do herói ou a primeira disponível)
+    const sanctuaryRoom = roomMap.get(sanctuary_id);
+    if (sanctuaryRoom && sanctuaryRoom.layer) {
+      currentActiveLayer = sanctuaryRoom.layer;
+    } else if (layers.length > 0) {
+      currentActiveLayer = layers[0].id;
+    } else {
+      currentActiveLayer = "all";
+    }
+
+    // Renderiza a barra de abas de camadas
+    function renderLayersTabs() {
+      if (!layersTabsEl) return;
+      layersTabsEl.innerHTML = "";
+
+      const defaultLayers = layers.length > 0 ? layers : [
+        { id: "superficie", name: "🏛️ Superfície Urbana" }
+      ];
+
+      defaultLayers.forEach(l => {
+        const count = rooms.filter(r => r.layer === l.id).length;
+        const btn = document.createElement("button");
+        btn.className = `layer-tab-btn ${currentActiveLayer === l.id ? "active" : ""}`;
+        btn.setAttribute("data-layer", l.id);
+        btn.innerHTML = `<span>${l.name}</span><span class="layer-room-count">${count}</span>`;
+        btn.addEventListener("click", () => {
+          switchLayer(l.id);
+        });
+        layersTabsEl.appendChild(btn);
+      });
+
+      // Aba "Ver Todas as Camadas"
+      const allBtn = document.createElement("button");
+      allBtn.className = `layer-tab-btn ${currentActiveLayer === "all" ? "active" : ""}`;
+      allBtn.setAttribute("data-layer", "all");
+      allBtn.innerHTML = `<span>🌐 Ver Todas</span><span class="layer-room-count">${rooms.length}</span>`;
+      allBtn.addEventListener("click", () => {
+        switchLayer("all");
+      });
+      layersTabsEl.appendChild(allBtn);
+    }
+
+    function switchLayer(layerId) {
+      currentActiveLayer = layerId;
+
+      // Atualiza botões de aba
+      if (layersTabsEl) {
+        layersTabsEl.querySelectorAll(".layer-tab-btn").forEach(btn => {
+          if (btn.getAttribute("data-layer") === layerId) {
+            btn.classList.add("active");
+          } else {
+            btn.classList.remove("active");
+          }
+        });
+      }
+
+      renderMapForCurrentLayer();
+
+      // Centraliza na camada ativa
+      const activeRooms = currentActiveLayer === "all" ? rooms : rooms.filter(r => r.layer === currentActiveLayer);
+      if (activeRooms.length > 0) {
+        const hasSanctuary = activeRooms.find(r => r.id === sanctuary_id);
+        if (hasSanctuary) {
+          centerOnCoords(hasSanctuary.coords.x, hasSanctuary.coords.y, 0.95);
+          inspectRoom(hasSanctuary);
+        } else {
+          // Centroide da camada
+          const avgX = activeRooms.reduce((acc, r) => acc + (r.coords ? r.coords.x : 0), 0) / activeRooms.length;
+          const avgY = activeRooms.reduce((acc, r) => acc + (r.coords ? r.coords.y : 0), 0) / activeRooms.length;
+          centerOnCoords(avgX, avgY, 0.9);
+          inspectRoom(activeRooms[0]);
+        }
+      }
+    }
 
     // Popula o seletor de zonas
     if (zoneFilter) {
@@ -973,19 +1054,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (riskFilter) riskFilter.value = "all";
     if (searchInput) searchInput.value = "";
 
-    // Mapa de busca rápida por ID
-    const roomMap = new Map();
-    rooms.forEach(r => roomMap.set(r.id, r));
-
     // Renderiza Edges (Conexões)
-    function renderEdges() {
+    function renderEdges(visibleRooms) {
       if (!edgesLayer) return;
       edgesLayer.innerHTML = "";
       const drawnConnections = new Set();
+      const visibleSet = new Set(visibleRooms.map(r => r.id));
 
-      rooms.forEach(room => {
+      visibleRooms.forEach(room => {
         if (!room.coords || !room.exits) return;
         Object.entries(room.exits).forEach(([dir, targetId]) => {
+          // Só desenha aresta se o nó de destino estiver visível nesta camada
+          if (!visibleSet.has(targetId)) return;
           const target = roomMap.get(targetId);
           if (!target || !target.coords) return;
 
@@ -1006,12 +1086,55 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
     }
 
+    // Formata o rótulo da sala em até 2 linhas e fundo pill
+    function appendRoomLabel(g, room) {
+      const name = room.name || room.id;
+      const words = name.split(" ");
+      let lines = [name];
+
+      if (name.length > 15 && words.length > 1) {
+        const mid = Math.ceil(words.length / 2);
+        lines = [words.slice(0, mid).join(" "), words.slice(mid).join(" ")];
+      }
+
+      const lineHeight = 13;
+      const totalHeight = lines.length * lineHeight + 6;
+      const maxLen = Math.max(...lines.map(l => l.length));
+      const pillWidth = Math.max(50, Math.min(maxLen * 7.2 + 14, 200));
+
+      // Fundo Pill para contraste impecável e sem overlap de texto
+      const bgRect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+      bgRect.setAttribute("class", "map-label-bg");
+      bgRect.setAttribute("x", room.coords.x - pillWidth / 2);
+      bgRect.setAttribute("y", room.coords.y + 24);
+      bgRect.setAttribute("width", pillWidth);
+      bgRect.setAttribute("height", totalHeight);
+      bgRect.setAttribute("rx", "5");
+      bgRect.setAttribute("ry", "5");
+      g.appendChild(bgRect);
+
+      // Texto com tspans
+      const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+      text.setAttribute("class", "map-node-label");
+      text.setAttribute("x", room.coords.x);
+      text.setAttribute("y", room.coords.y + 36);
+
+      lines.forEach((line, idx) => {
+        const tspan = document.createElementNS("http://www.w3.org/2000/svg", "tspan");
+        tspan.setAttribute("x", room.coords.x);
+        if (idx > 0) tspan.setAttribute("dy", `${lineHeight}px`);
+        tspan.textContent = line;
+        text.appendChild(tspan);
+      });
+      g.appendChild(text);
+    }
+
     // Renderiza Nodes (Salas)
-    function renderNodes() {
+    function renderNodes(visibleRooms) {
       if (!nodesLayer) return;
       nodesLayer.innerHTML = "";
 
-      rooms.forEach(room => {
+      visibleRooms.forEach(room => {
         if (!room.coords) return;
         const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
         g.setAttribute("class", `map-room-node ${room.id === activeSelectedRoomId ? "selected" : ""}`);
@@ -1019,6 +1142,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         g.setAttribute("data-id", room.id);
         g.setAttribute("data-zone", room.zone);
         g.setAttribute("data-risk", room.risk_code || "low");
+        g.setAttribute("data-layer", room.layer || "superficie");
 
         // Pulso se for santuário
         if (room.id === sanctuary_id) {
@@ -1026,7 +1150,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           pulse.setAttribute("class", "sanctuary-pulse-ring");
           pulse.setAttribute("cx", room.coords.x);
           pulse.setAttribute("cy", room.coords.y);
-          pulse.setAttribute("r", "26");
+          pulse.setAttribute("r", "28");
           g.appendChild(pulse);
         }
 
@@ -1049,13 +1173,48 @@ document.addEventListener("DOMContentLoaded", async () => {
         icon.textContent = room.icon || "📍";
         g.appendChild(icon);
 
-        // Rótulo da sala
-        const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
-        label.setAttribute("class", "map-node-label");
-        label.setAttribute("x", room.coords.x);
-        label.setAttribute("y", room.coords.y + 36);
-        label.textContent = room.name;
-        g.appendChild(label);
+        // Transição de Camada (Portal / Escadas) se a sala levar a outra camada
+        if (room.exits) {
+          const crossExit = Object.values(room.exits).find(targetId => {
+            const tgt = roomMap.get(targetId);
+            return tgt && tgt.layer && tgt.layer !== room.layer;
+          });
+
+          if (crossExit) {
+            const target = roomMap.get(crossExit);
+            const portalG = document.createElementNS("http://www.w3.org/2000/svg", "g");
+            portalG.setAttribute("class", "map-portal-badge");
+            portalG.setAttribute("transform", `translate(${room.coords.x + 16}, ${room.coords.y - 18})`);
+            
+            const pCirc = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            pCirc.setAttribute("r", "10");
+            pCirc.setAttribute("fill", "#0a0d14");
+            pCirc.setAttribute("stroke", "#5ec4d6");
+            pCirc.setAttribute("stroke-width", "1.5");
+            portalG.appendChild(pCirc);
+
+            const pTxt = document.createElementNS("http://www.w3.org/2000/svg", "text");
+            pTxt.setAttribute("text-anchor", "middle");
+            pTxt.setAttribute("dominant-baseline", "central");
+            pTxt.setAttribute("font-size", "11");
+            pTxt.textContent = "🪜";
+            portalG.appendChild(pTxt);
+
+            portalG.addEventListener("click", (e) => {
+              e.stopPropagation();
+              if (target && target.layer) {
+                switchLayer(target.layer);
+                centerOnRoom(target);
+                inspectRoom(target);
+              }
+            });
+
+            g.appendChild(portalG);
+          }
+        }
+
+        // Rótulo protegido em pill
+        appendRoomLabel(g, room);
 
         // Evento de clique
         g.addEventListener("click", (evt) => {
@@ -1067,14 +1226,26 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
     }
 
+    function renderMapForCurrentLayer() {
+      const visibleRooms = currentActiveLayer === "all"
+        ? rooms
+        : rooms.filter(r => r.layer === currentActiveLayer);
+
+      renderEdges(visibleRooms);
+      renderNodes(visibleRooms);
+      renderTable(visibleRooms);
+      applyFilters();
+    }
+
     // Renderiza a Tabela Tática alternativa
-    function renderTable() {
+    function renderTable(visibleRooms = rooms) {
       if (!tableContainer) return;
-      tableContainer.innerHTML = rooms.map(r => {
+      tableContainer.innerHTML = visibleRooms.map(r => {
         const exitsList = r.exits
           ? Object.entries(r.exits).map(([dir, tid]) => {
               const tgt = roomMap.get(tid);
-              return `<button class="exit-btn" data-target="${tid}"><span>🧭 ${dir.toUpperCase()}</span>: ${tgt ? tgt.name : tid}</button>`;
+              const crossBadge = tgt && tgt.layer !== r.layer ? ` <small style="color: var(--accent-cyan);">(🪜 ${tgt.layer})</small>` : "";
+              return `<button class="exit-btn" data-target="${tid}"><span>🧭 ${dir.toUpperCase()}</span>: ${tgt ? tgt.name : tid}${crossBadge}</button>`;
             }).join(" ")
           : "<span style='color: var(--text-muted); font-size: 0.85rem;'>Nenhuma</span>";
 
@@ -1083,12 +1254,12 @@ document.addEventListener("DOMContentLoaded", async () => {
           : "<span style='color: var(--text-muted); font-size: 0.85rem;'>Nenhum catalogado</span>";
 
         return `
-          <div class="tactical-room-card" id="card-${r.id}" data-id="${r.id}" data-zone="${r.zone}" data-risk="${r.risk_code || 'low'}">
+          <div class="tactical-room-card" id="card-${r.id}" data-id="${r.id}" data-zone="${r.zone}" data-risk="${r.risk_code || 'low'}" data-layer="${r.layer || 'superficie'}">
             <div class="tactical-card-header">
               <div class="tactical-card-title">
                 <span>${r.icon || "📍"}</span>
                 <span>${r.name}</span>
-                <span style="font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-sans);">(${r.zone})</span>
+                <span style="font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-sans);">(${r.zone} • Camada: ${r.layer || 'superfície'})</span>
               </div>
               <span class="inspector-badge ${r.risk_code || 'low'}">${r.risk || 'Normal'}</span>
             </div>
@@ -1111,6 +1282,9 @@ document.addEventListener("DOMContentLoaded", async () => {
           const tid = btn.getAttribute("data-target");
           const targetRoom = roomMap.get(tid);
           if (targetRoom) {
+            if (targetRoom.layer && targetRoom.layer !== currentActiveLayer && currentActiveLayer !== "all") {
+              switchLayer(targetRoom.layer);
+            }
             centerOnRoom(targetRoom);
             inspectRoom(targetRoom);
             const btnVisual = document.getElementById("btn-view-visual");
@@ -1163,7 +1337,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       if (inspectIcon) inspectIcon.textContent = room.icon || "📍";
       if (inspectName) inspectName.textContent = room.name;
-      if (inspectZone) inspectZone.textContent = `${room.zone} • ID: ${room.id}`;
+      if (inspectZone) inspectZone.textContent = `${room.zone} • Camada: ${room.layer || 'superfície'}`;
       if (inspectBadge) {
         inspectBadge.className = `inspector-badge ${room.risk_code || "low"}`;
         inspectBadge.textContent = room.risk || "Normal";
@@ -1180,9 +1354,14 @@ document.addEventListener("DOMContentLoaded", async () => {
             const targetRoom = roomMap.get(targetId);
             const btn = document.createElement("button");
             btn.className = "exit-btn";
-            btn.innerHTML = `<span>🧭 ${dirNames[dir] || dir.toUpperCase()}</span> → <strong>${targetRoom ? targetRoom.name : targetId}</strong>`;
+            const layerNotice = targetRoom && targetRoom.layer !== room.layer ? ` <small style="color: var(--accent-cyan);">(🪜 ${targetRoom.layer})</small>` : "";
+            btn.innerHTML = `<span>🧭 ${dirNames[dir] || dir.toUpperCase()}</span> → <strong>${targetRoom ? targetRoom.name : targetId}</strong>${layerNotice}`;
             btn.addEventListener("click", () => {
               if (targetRoom) {
+                // Se a sala estiver em outra camada, muda de camada automaticamente
+                if (targetRoom.layer && targetRoom.layer !== currentActiveLayer && currentActiveLayer !== "all") {
+                  switchLayer(targetRoom.layer);
+                }
                 centerOnRoom(targetRoom);
                 inspectRoom(targetRoom);
               }
@@ -1235,6 +1414,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     function centerOnCoords(x, y, targetScale = 1.0) {
       mapScale = targetScale;
+      // Centraliza na caixa de visualização do SVG (com base na resolução de 1000x700)
       mapPanX = 500 - x * mapScale;
       mapPanY = 320 - y * mapScale;
       applyTransform();
@@ -1242,7 +1422,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     function centerOnRoom(room) {
       if (!room || !room.coords) return;
-      centerOnCoords(room.coords.x, room.coords.y, Math.max(mapScale, 1.1));
+      centerOnCoords(room.coords.x, room.coords.y, Math.max(mapScale, 0.95));
     }
 
     // Filtros e busca em tempo real
@@ -1323,21 +1503,24 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
     if (btnZoomOut) {
       btnZoomOut.onclick = () => {
-        mapScale = Math.max(mapScale / 1.25, 0.4);
+        mapScale = Math.max(mapScale / 1.25, 0.3);
         applyTransform();
       };
     }
     if (btnZoomReset) {
       btnZoomReset.onclick = () => {
         const sanctuary = roomMap.get(sanctuary_id) || rooms[0];
-        if (sanctuary) centerOnCoords(sanctuary.coords.x, sanctuary.coords.y, 1.0);
+        if (sanctuary) centerOnCoords(sanctuary.coords.x, sanctuary.coords.y, 0.95);
       };
     }
     if (btnCenterSanctuary) {
       btnCenterSanctuary.onclick = () => {
         const sanctuary = roomMap.get(sanctuary_id) || rooms[0];
         if (sanctuary) {
-          centerOnCoords(sanctuary.coords.x, sanctuary.coords.y, 1.25);
+          if (sanctuary.layer && sanctuary.layer !== currentActiveLayer && currentActiveLayer !== "all") {
+            switchLayer(sanctuary.layer);
+          }
+          centerOnCoords(sanctuary.coords.x, sanctuary.coords.y, 1.15);
           inspectRoom(sanctuary);
         }
       };
@@ -1345,7 +1528,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     // Pan & Drag Handlers
     mapCanvasWrap.onmousedown = (e) => {
-      if (e.target.closest(".map-room-node") || e.target.closest(".map-floating-controls") || e.target.closest(".map-legend-box")) return;
+      if (e.target.closest(".map-room-node") || e.target.closest(".map-floating-controls") || e.target.closest(".map-legend-box") || e.target.closest(".map-portal-badge")) return;
       isMapDragging = true;
       dragStartX = e.clientX - mapPanX;
       dragStartY = e.clientY - mapPanY;
@@ -1370,7 +1553,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     mapCanvasWrap.onwheel = (e) => {
       e.preventDefault();
       const zoomFactor = e.deltaY < 0 ? 1.15 : 0.85;
-      const newScale = Math.max(0.35, Math.min(mapScale * zoomFactor, 3.5));
+      const newScale = Math.max(0.25, Math.min(mapScale * zoomFactor, 3.5));
 
       const rect = mapCanvasWrap.getBoundingClientRect();
       const mouseX = e.clientX - rect.left;
@@ -1409,7 +1592,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         );
         if (touchStartDist > 0) {
           const factor = currentDist / touchStartDist;
-          mapScale = Math.max(0.35, Math.min(mapScale * factor, 3.5));
+          mapScale = Math.max(0.25, Math.min(mapScale * factor, 3.5));
           touchStartDist = currentDist;
           applyTransform();
         }
@@ -1421,17 +1604,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       touchStartDist = 0;
     };
 
-    // Renderização inicial
-    renderEdges();
-    renderNodes();
-    renderTable();
-
-    // Centraliza no santuário inicial
-    const sanctuaryRoom = roomMap.get(sanctuary_id) || rooms[0];
-    if (sanctuaryRoom && sanctuaryRoom.coords) {
-      centerOnCoords(sanctuaryRoom.coords.x, sanctuaryRoom.coords.y, 1.05);
-      inspectRoom(sanctuaryRoom);
-    }
+    // Inicialização da barra de camadas e renderização
+    renderLayersTabs();
+    switchLayer(currentActiveLayer);
   }
 
   initHeroes();

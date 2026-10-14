@@ -4,6 +4,9 @@
   "sanctuary_id": "templo_midgaard",
   "last_updated_cycle": "Ciclo I (Dia 1)",
   "total_rooms": 4,
+  "layers": [
+    { "id": "superficie", "name": "🏛️ Superfície de Midgaard", "description": "Templo e praças de Midgaard." }
+  ],
   "zones": [
     "Monte Sagrado & Templo",
     "Midgaard Urbana"
@@ -12,11 +15,12 @@
     {
       "id": "templo_midgaard",
       "name": "O Templo de Midgaard",
+      "layer": "superficie",
       "zone": "Monte Sagrado & Templo",
       "risk": "Santuário",
       "risk_code": "safe",
       "icon": "⛪",
-      "coords": { "x": 500, "y": 250 },
+      "coords": { "x": 600, "y": 250 },
       "exits": {
         "n": "altar_templo",
         "d": "praca_templo"
@@ -28,11 +32,12 @@
     {
       "id": "altar_templo",
       "name": "O Altar do Templo",
+      "layer": "superficie",
       "zone": "Monte Sagrado & Templo",
       "risk": "Seguro",
       "risk_code": "safe",
       "icon": "📜",
-      "coords": { "x": 500, "y": 170 },
+      "coords": { "x": 600, "y": 100 },
       "exits": {
         "s": "templo_midgaard"
       },
@@ -43,11 +48,12 @@
     {
       "id": "praca_templo",
       "name": "A Praça do Templo",
+      "layer": "superficie",
       "zone": "Monte Sagrado & Templo",
       "risk": "Baixo",
       "risk_code": "low",
       "icon": "⛲",
-      "coords": { "x": 500, "y": 350 },
+      "coords": { "x": 600, "y": 420 },
       "exits": {
         "u": "templo_midgaard",
         "s": "praca_comercio"
@@ -59,11 +65,12 @@
     {
       "id": "praca_comercio",
       "name": "A Praça do Comércio",
+      "layer": "superficie",
       "zone": "Midgaard Urbana",
       "risk": "Baixo",
       "risk_code": "low",
       "icon": "🏛️",
-      "coords": { "x": 500, "y": 450 },
+      "coords": { "x": 600, "y": 620 },
       "exits": {
         "n": "praca_templo"
       },

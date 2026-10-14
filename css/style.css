@@ -1508,6 +1508,77 @@ footer.site-footer {
   margin-top: 0.25rem;
 }
 
+/* Camadas / Andares Bar */
+.map-layers-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.layers-label {
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  color: var(--accent-gold);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.layers-tabs-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.layer-tab-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 0.4rem 0.85rem;
+  border-radius: 20px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: var(--transition);
+}
+
+.layer-tab-btn:hover {
+  background: var(--bg-card-hover);
+  color: var(--accent-gold);
+  border-color: var(--border-highlight);
+}
+
+.layer-tab-btn.active {
+  background: rgba(229, 179, 100, 0.18);
+  color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 10px rgba(229, 179, 100, 0.25);
+  font-weight: 600;
+}
+
+.layer-room-count {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 0.1rem 0.4rem;
+  border-radius: 10px;
+  color: var(--text-muted);
+}
+
+.layer-tab-btn.active .layer-room-count {
+  color: var(--accent-gold);
+  background: rgba(229, 179, 100, 0.15);
+}
+
 /* Controls Toolbar */
 .map-toolbar {
   display: flex;
@@ -1681,18 +1752,20 @@ footer.site-footer {
   stroke-width: 3;
 }
 
+.map-label-bg {
+  fill: rgba(10, 13, 20, 0.92);
+  stroke: rgba(42, 52, 73, 0.7);
+  stroke-width: 1px;
+}
+
 .map-node-label {
   fill: var(--text-primary);
   font-family: var(--font-sans);
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 600;
   text-anchor: middle;
   pointer-events: none;
-  paint-order: stroke;
-  stroke: #07090e;
-  stroke-width: 3px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  letter-spacing: 0.02em;
 }
 
 .map-node-icon {
@@ -1700,6 +1773,16 @@ footer.site-footer {
   text-anchor: middle;
   dominant-baseline: central;
   pointer-events: none;
+}
+
+.map-portal-badge {
+  cursor: pointer;
+  filter: drop-shadow(0 0 6px rgba(94, 196, 214, 0.5));
+  transition: transform 0.2s ease;
+}
+
+.map-portal-badge:hover {
+  transform: scale(1.15);
 }
 
 /* Pulsing Sanctuary Ring */
