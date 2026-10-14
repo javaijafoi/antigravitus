@@ -13,7 +13,7 @@
 | **A Praça do Comércio** | **N** (Templo), **L** (Rua Leste), **S** (Comum), **O** (Rua Oeste) | Baixo | Centro da cidade. Estátua, carroça de carga e mural mágico flutuante. |
 | **Rua Principal (Leste I)** | **N** (Armazém), **L** (Rua Leste II), **S** (Animais), **O** (Comércio) | Baixo | Guarda da cidade em patrulha. |
 | **O Armazém** | **S** (Rua Leste I) | Seguro | Merceeiro atrás do balcão; provisões fechadas. |
-| **Rua Principal (Leste II)**| **N** (Armas), **L** (Portão Leste), **S** (Guerreiros), **O** (Rua Leste I) | Baixo / Farm | **Área de Farm:** Presença de cães no lixo e guarda municipal. |
+| **Rua Principal (Leste II)**| **N** (Armas), **L** (Portão Leste), **S** (Guerreiros), **O** (Rua Leste I) | Baixo / Treino | **Área de Treino:** Presença de cães no lixo e guarda municipal. |
 | **A Rua Principal (Oeste)** | **N** (Padaria), **L** (Comércio), **S** (Armaduras) | Baixo | Eixo de oficinas artesanais; guarda municipal de vigia. |
 | **A Padaria** | **S** (Rua Oeste) | Seguro | Padeiro enfarinhado, cão no lixo, Odif e massa de pão. |
 | **A Loja de Armaduras** | **N** (Rua Oeste) | Seguro | Forjas de couros pesados e placas de metal. |
@@ -28,6 +28,6 @@
 ---
 
 ## 🧭 Legenda de Navegação
-* `[Santuário]` = Seguro para dormir sem risco de morte (`save` + `sleep`).
-* `[Farm]` = Presas fracas (cães de rua) para treino inicial.
-* `[Atenção]` = Guardas pesados ou magos com barreiras mágicas.
+* `[Santuário]` = Seguro para dormir sem risco de morte sob abrigo inviolável.
+* `[Treino]` = Presas fracas (animais de rua) para prática inicial com armas.
+* `[Atenção]` = Guardas fortemente armados ou magos com barreiras místicas.

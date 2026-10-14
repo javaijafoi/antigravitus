@@ -55,19 +55,19 @@ document.addEventListener("DOMContentLoaded", async () => {
       rune: "🧌",
       avatar: "🗡️",
       race_class: "Goblin Ladra (Passa por Homem)",
-      role: "Fundadora do Futuro Reino Goblin (Meta: Nível 30)",
+      role: "Fundadora do Futuro Reino Goblin (O Ápice do Poder)",
       alignment: "Pragmática / Focada em Velocidade",
-      quote: "“Mulher goblin precisa esconder o rosto e lutar pelo dobro para ser ouvida. Meu destino é o Nível 30, rápido e sem fraqueza.”",
-      subtitle: "Diário enxuto de ascensão implacável. Mulher goblin fingindo ser homem para conquistar respeito, mapear cada canto e libertar seu povo.",
-      vigilia: "Meta: Nível 30 • Ritmo: Velocidade Máxima",
+      quote: "“Mulher goblin precisa esconder o rosto e lutar pelo dobro para ser ouvida. Meu destino é o ápice do poder supremo, rápido e sem fraqueza.”",
+      subtitle: "Diário de ascensão implacável. Mulher goblin fingindo ser homem para conquistar respeito, desbravar cada recanto e libertar seu povo.",
+      vigilia: "Meta: O Ápice da Força • Ritmo: Velocidade Máxima",
       server: "debomud.org:4000",
       folder: "data/heroes/grebolius",
       questions: {
-        q1: "Atingir o Nível 30 o mais rápido possível e fundar um Reino Livre para os goblins, pondo fim à opressão histórica através do poder bruto.",
+        q1: "Alcançar o ápice do poder dos grandes mestres o mais rápido possível e fundar um Reino Livre para os goblins, pondo fim à opressão histórica através de uma força inquestionável.",
         q2: "Ter sua identidade feminina descoberta antes da hora, perder tempo e morrer fraca como mais um cadáver sem valor numa sarjeta.",
-        q3: "Frieza extrema e impaciência violenta com qualquer coisa que não acelere seu ganho de EXP e poder.",
-        q4: "Sacrifica sono (só dorme desmaiada de exaustão), vaidade, dor e laços afetivos; jamais a meta de Lvl 30 ou o cálculo prudente de combate.",
-        q5: "Ser a Soberana que quebrou as correntes dos goblins e provou que uma mulher de sua raça pode subjugar Midgaard."
+        q3: "Frieza extrema e impaciência violenta com qualquer coisa que não acelere seu aprendizado marcial e poder real.",
+        q4: "Sacrifica sono (só dorme desmaiada de exaustão), vaidade, dor e laços afetivos; jamais a busca pela força suprema ou o cálculo prudente de combate.",
+        q5: "Ser a Soberana que quebrou as correntes dos goblins e provou que uma mulher de sua raça pode subjugar as lendas de Midgaard."
       }
     }
   ];
