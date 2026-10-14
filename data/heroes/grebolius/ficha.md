@@ -22,9 +22,9 @@
 | **Pontos de Mana (MP)** | 122 | 122 | 100% |
 | **Estamina / Movimento (MV)** | 91 | 92 | 99% |
 
-* **Experiência Acumulada:** **17.649 EXP** *(+2.648 EXP obtidos em abates viscerais de monstros)*
-* **Experiência Necessária p/ Grau 7:** **7.351 EXP**
-* **Ouro Líquido:** **529 moedas de ouro** *(+40 moedas saqueadas em combate)*
+* **Experiência Acumulada:** **19.191 EXP** *(+1.542 EXP obtidos em combate cirúrgico no Cruzamento)*
+* **Experiência Necessária p/ Grau 7:** **5.809 EXP**
+* **Ouro Líquido:** **549 moedas de ouro** *(+20 moedas saqueadas do monstro abatido)*
 * **Condição Biológica:** Vigor absoluto; sede saciada na Fonte de Mármore Azul; cantil abastecido; fôlego pleno.
 
 ---
@@ -78,13 +78,14 @@
 * **`um brilhante punhal de novato`** (aura mística reserva)
 * **`um cantil`** *(cheio com água límpida da Fonte de Mármore Azul)*
 * **`um anel arcano`** (+2E)
-* **`uma mochila`** *(contendo: 4 punhais novatos reservas, 1 cantil reserva e 1 gorro de couro)*
+* **`uma mochila`** *(contendo: 5 punhais novatos reservas, 1 cantil reserva e 1 gorro de couro)*
 
 ---
 
 ## ✦ Ciclo e Postura Atual
-* **Estado:** Conclusão do Dia 34. Doação cívica da veste de novato excedente na Sala de Doações (`donate veste`), aliviando o peso de marcha. Reconhecimento avançado da Masmorra dos Novatos: destrancamento e abertura da porta leste em Um Outro Canto (`open east`), desvelando **A Sala do Alquimista** e o paradeiro d'O Novato Alquimista (gatilho da autoquest *Limpando Monstros*), fórmulas arcanas nas paredes e escadaria secreta para o subsolo. Retorno triunfal a Midgaard pelo Campo Aberto, hidratação na Fonte Azul e repouso inviolável no Panteão dos Centenários.
-* **Tática Operacional:** No próximo ciclo, interagir com o Novato Alquimista em sua câmara para ativar a autoquest Limpando Monstros, limpar as galerias inferiores e acumular experiência rumo ao Sétimo Grau (25.000 EXP).
+* **Estado:** Conclusão do Dia 35. Ofensiva letal no Cruzamento da Masmorra dos Novatos: monstro novato aniquilado com rajada de míssil mágico (7 de dano) e perfuração mortal crítica (18 de dano), gerando 1.542 pontos de experiência e 20 moedas de ouro. Experiência catapultada para **19.191 EXP** (restando apenas 5.809 EXP para o Grau 7). Incursão n'A Sala do Alquimista: diálogo estabelecido com O Novato Alquimista, que solicitou auxílio formal (*"Ei, você poderia me ajudar?"*). Armazenamento tático do punhal de despojo na mochila, hidratação na Fonte Azul e repouso inviolável no Panteão dos Centenários.
+* **Tática Operacional:** No próximo ciclo, responder afirmativamente ao Novato Alquimista para selar o contrato da autoquest Limpando Monstros, limpar as presas restantes nas galerias para romper os 20.000 EXP e avançar rumo aos 25.000 EXP (Nível 7 / `armor`).
+
 
 
 

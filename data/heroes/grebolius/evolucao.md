@@ -564,6 +564,26 @@
 * **Decisão Tática:**
   * No Ciclo 35, entrar n'A Sala do Alquimista, dialogar com o Novato Alquimista para ativar formalmente a autoquest *Limpando Monstros*, descer à escadaria ou patrulhar as galerias para abater as aberrações solicitadas, acumulando glória e experiência rumo aos 25.000 EXP.
 
+---
+
+### ⏳ Ciclo 35 (Dia 35): O Abate Explosivo no Cruzamento e o Pacto com o Alquimista
+* **Status Real (MUD):**
+  * Nível: **6** *(19.191 EXP | Faltam apenas 5.809 EXP para o Grau 7)*
+  * Vida: **41/41** | Mana: **122/122** | Movimento: **91/92** | AC: **16**
+  * Experiência Conquistada: **+1.542 EXP** em combate fulminante de dois turnos.
+  * Ouro Líquido: **549 moedas de ouro** *(+20 moedas saqueadas)*
+  * Contato de Autoquest: **O Novato Alquimista** solicitou ajuda formal (*"Ei, você poderia me ajudar?"*) na Sala do Alquimista para a saga *Limpando Monstros*.
+  * Armazenamento Tático: 5º punhal de novato guardado na mochila para preservar a agilidade corporal.
+  * Local de Pernoite: O Panteão dos Centenários (Salva e Dormindo diante dos doze heróis eternos).
+* **Marcos e Impactos Psicológicos:**
+  * **O Despertar e a Nutrição Hídrica:** Grebolius desceu as escadarias sagradas ao amanhecer, visitou a Sala de Doações para inspecionar os mostruários e saciou a sede na colossal Fonte de Mármore Azul na Praça do Templo, partindo com o corpo revigorado e fôlego pleno.
+  * **O Combate Relâmpago no Cruzamento:** Adentrando a Masmorra dos Novatos, deparou-se com um monstro novato no Cruzamento. Sem titubear, desferiu um Míssil Mágico cirúrgico causando 7 de dano à distância; a criatura investiu desesperada, mas Grebolius contra-atacou com uma perfuração mortal devastadora de 18 de dano direto, explodindo a defesa inimiga e ceifando o monstro em segundos. O abate rendeu 1.542 pontos de experiência e 20 moedas de ouro, catapultando o total para impressionantes **19.191 EXP**.
+  * **O Diálogo no Covil dos Elixires:** Cruzou as câmaras até Um Outro Canto, abriu a porta leste e adentrou A Sala do Alquimista. Diante dos frascos luminosos e das anotações nas paredes, interpelou O Novato Alquimista. O estudioso, impressionado com a presença marcial da aprendiz sob o disfarce de mercenário, estendeu a mão: *"Ei, você poderia me ajudar?"*. A autoquest *Limpando Monstros* abriu oficialmente seu portal de ativação.
+  * **A Guarda do Despojo e a Retirada Soberana:** Recolheu a adaga sobressalente do monstro abatido e guardou-a cuidadosamente na mochila (`put punhal mochila`), evitando peso solto. Retornou pelo Campo Aberto, subiu as montanhas até o cume sagrado do Panteão dos Centenários, salvou suas memórias e adormeceu sob o olhar imortal das estátuas.
+* **Decisão Tática:**
+  * No Ciclo 36, responder afirmativamente ao Novato Alquimista (`say sim` / `say claro`) para selar o contrato da autoquest Limpando Monstros, caçar os alvos nas galerias e romper os 20.000 EXP em direção aos 25.000 EXP do Sétimo Grau (`armor`).
+
+
 
 
 
