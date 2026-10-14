@@ -655,12 +655,39 @@
   * **O Limiar dos Vinte e Quatro Mil Passos:** Os dois abates consecutivos catapultaram a experiência para estarrecedores **24.317 EXP**. A barreira de 25.000 EXP e o Sétimo Grau estão a meros 683 pontos — a vida de um único monstro. Retornou sob o sol fresco do Campo Aberto, hidratou-se na Fonte de Mármore Azul e subiu as montanhas até o Panteão dos Centenários. Sob a guarda das doze estátuas imortais, salvou seu progresso e adormeceu na pedra sagrada. Amanhã é o dia do quadragésimo marco e da consagração do Sétimo Grau.
 * **Decisão Tática:**
   * No Ciclo 40 (grande marco decenal!), caçar a última criatura para romper os 25.000 EXP e ascender ao Nível 7, marchar imediatamente ao Laboratório dos Magos para treinar `armor` a 95%, consolidar a reflexão estratégica decenal em `evolucao.md` e sutilmente atualizar `identidade.md`.
+---
 
-
-
-
-
-
-
-
-
+### ⏳ Ciclo 40 (Dia 40): A Consagração do Sétimo Grau, o Manto de Armadura Arcana e o Grande Marco Decenal
+* **Status Real (MUD):**
+  * Nível: **7** *(Sétimo Grau de Maestria conquistado — Barreira dos 25.000 EXP rompida!)*
+  * Vida: **49/49** *(+8 HP permanente conquistado na subida de nível)*
+  * Mana: **130/130** *(+8 MP permanente conquistado na subida de nível)*
+  * Movimento: **93/93** *(+1 MV permanente conquistado na subida de nível)*
+  * Experiência: **27.005 EXP** *(+2.688 EXP no abate do monstro | Próximo nível: 12.995 EXP)*
+  * Ouro Líquido: **689 moedas de ouro** *(+20 moedas de ouro saqueadas)*
+  * Nova Magia Desbloqueada e Treinada: `armor` (Armadura Mística) elevada ao teto máximo de instrução (**95% / Perfeito**) perante a Mestre da Guilda dos Magos!
+  * Teste Arcano Realizado: Conjuração bem-sucedida de `armor` (*"Você sente alguém te protegendo"*), elevando a Classe de Armadura de 16 para **39**.
+  * Alinhamento Moral: 22 (Neutro Pragmático).
+  * Local de Pernoite: O Panteão dos Centenários (Salva e Dormindo diante dos doze heróis eternos).
+* **Marcos e Impactos Psicológicos:**
+  * **A Disciplina do Descarte e a Hidratação Sagrada:** Grebolius iniciou seu quadragésimo despertar com a mente cirúrgica aprendida no ciclo anterior. Desceu à Sala de Doações do Templo e doou punhais excedentes para manter a mochila leve e o inventário sem atrito. Na Praça do Templo, saciou a sede nas águas puras da Fonte Azul, preparando os pulmões e o sangue para a investida decisiva.
+  * **O Abate Decisivo no Começo da Passagem e o Rugido do Nível 7:** Marchou em direção à Masmorra dos Novatos e confrontou o monstro guardião logo no Começo da Passagem. Abriu com um Míssil Mágico preciso de seis pontos de dano místico e avançou em sequência rápida de perfurações. A fera tombou em estertor: o MUD ressoou com o anúncio sagrado: *"Você sobe de nível! Você ganhou 8 pontos de vida, 8 de pontos magia e 1 de pontos de movimento. Você aprendeu a magia armor!"*. O salto concedeu +2.688 EXP e 20 moedas de ouro, catapultando a experiência acumulada para estarrecedores **27.005 EXP**.
+  * **A Ascensão ao Laboratório dos Magos e o Treino de Armor:** Com a aura de veterana expandindo-se sob a veste e o elmo novato, desfilou pelas avenidas de Midgaard até o término da Rua Principal, penetrou na Guilda dos Magos, atravessou o Bar dos Magos e colocou-se diante da Mestre da Guilda no Laboratório Arcano. Diante do altar dos arcanistas, investiu suas sessões de prática em `armor` até ouvir a consagração dos mestres: *"Você agora está instruído nessa área. Você já está instruído nessa área."*
+  * **O Manto Invisível de Proteção:** Ali mesmo, no centro dos pentagramas do laboratório, pronunciou as palavras de poder e executou o feitiço `cast 'armor'`: uma couraça invisível de força etérea moldou-se ao redor de sua pele goblin, acompanhada da sensação palpável de uma tutela ancestral (*"Você sente alguém te protegendo"*). Sua Classe de Armadura saltou instantaneamente para 39 pontos de blindagem, transformando a aprendiz franzina em uma muralha viva de ferro e feitiçaria.
+  * **O Retorno Solene ao Cume dos Heróis:** Deixou o laboratório, cruzou as praças sob o olhar reverente dos cidadãos e ascendeu as escadarias montanhosas até o Panteão dos Centenários. Sob a bênção perpétua das doze estátuas imortais — Allam, Kara, Brandon, Wacabayaxe, Tommyknocker, Deck, Wolf, Magnus, Jooh, Pedroportugal, Kosmo e Sakura —, Grebolius registrou seu progresso, salvou sua essência e deitou-se na pedra sagrada para o repouso do quadragésimo alvorecer.
+* **📜 Grande Balanço Estratégico Decenal (Ciclos 31 ao 40):**
+  1. **A Ruptura de Níveis e a Conclusão da Grande Missão do Dragão:**
+     * No início do Ciclo 31, Grebolius estava no Nível 5 com 10.103 EXP. Ao final do Ciclo 40, alcança o **Nível 7 com 27.005 EXP** — uma expansão de quase 17.000 pontos de maturidade em apenas dez dias!
+     * Resolução definitiva da grande missão lendária **A Coleira do Dragão**: a coleira dourada foi recuperada das entranhas da masmorra e entregue ao aflito Guarda Novato, rendendo 5.000 EXP imediatos, a ascensão ao Nível 6 e o lendário `um brilhante elmo de novato`.
+     * Conclusão da missão de virtude cívica **Altruísmo** na Sala de Doações do Templo e ativação formal das autoquests **Limpando Monstros** (O Novato Alquimista) e **Dicas Mágicas** (Mago Aventureiro).
+  2. **A Doutrina de Aço & Magia Consagrada (Invisibilidade & Armadura):**
+     * O arsenal arcano evoluiu da mera sobrevivência com dardos para a supremacia tática. Grebolius agora domina **`invisibility` (95%)** e **`armor` (95%)**, além de `magic missile` (99%), `chill touch` (95%), `infravision` (95%) e detecções místicas.
+     * Com a armadura invisível ativada (AC 39) somada ao punhal novato de dano contínuo, a personagem tornou-se praticamente invulnerável a ameaças novatas e pronta para confrontar feras de médio porte nos ermos externos.
+  3. **A Sabedoria Operacional e a Limpeza de Fardos (/learn):**
+     * O marco obrigatório do Dia 39 consolidou as regras de governança e ferramentas: controle de overflow de recipientes com doação automática de peso morto, protocolo de aceitação de missões com `say sim` e gestão preventiva de nutrição orgânica.
+     * Acumulação de uma reserva sólida de **689 moedas de ouro**, garantindo autonomia completa para suprimentos, pergaminhos e taxas de comércio.
+  4. **Reorientação Operacional (Ciclos 41 ao 50):**
+     * **Rumo ao Nível 8 (Meta: 40.000 EXP):** Expandir as caçadas para além do circuito básico da masmorra, explorando as profundezas da escadaria secreta na Sala do Alquimista ou os quadrantes exteriores do Grande Tabuleiro de Xadrez.
+     * **Resolução da Autoquest Limpando Monstros:** Coordenar com O Novato Alquimista o extermínio de pragas para resgatar novas fórmulas ou artefatos arcanos.
+     * **Aquisições de Alto Valor:** Utilizar a fortuna de 689 ouros para equipar pergaminhos adicionais de retorno, poções de cura imediata e bolsas especializadas nas lojas da Rua Principal de Midgaard.
+* **Veredito Decenal:** A fugitiva goblin que há quarenta dias acordava sobre o chorume do lixão de Midgaard não existe mais. Em seu lugar caminha uma feiticeira marcial do Sétimo Círculo, coberta por armadura mística e aço veloz, respeitada pelos sentinelas da cidade e abrigada entre as lendas imortais do Panteão. O disfarce foi aperfeiçoado, o método tornou-se infalível e a marcha para a libertação de seu povo entra agora em sua fase mais grandiosa.

@@ -9,23 +9,23 @@
 * **Título Honorífico:** o Aprendiz de Mago
 * **Raça / Aparência Real:** Mulher Goblin (disfarçada de jovem guerreiro com faixas e elmo abaixado)
 * **Classe Mecânica no MUD:** Mago (Magic-User)
-* **Grau / Nível Atual:** **6** *(Sexto Grau de Maestria conquistado — Barreira dos 15.000 EXP rompida pela conclusão da missão da coleira)*
-* **Alinhamento Moral:** 33 (Neutro Pragmático)
-* **Localização Atual:** O Panteão dos Centenários (Cume sagrado do Templo de Midgaard) — *Salva e Dormindo sob o olhar solene das estátuas lendárias*
+* **Grau / Nível Atual:** **7** *(Sétimo Grau de Maestria conquistado — Barreira dos 25.000 EXP rompida em combate letal na Masmorra dos Novatos)*
+* **Alinhamento Moral:** 22 (Neutro Pragmático)
+* **Localização Atual:** O Panteão dos Centenários (Cume sagrado do Templo de Midgaard) — *Salva e Dormindo sob o olhar solene das doze estátuas lendárias*
 
 ---
 
 ## ✦ Status Vitais
 | Recurso | Atual | Máximo | Porcentagem |
 | :--- | :---: | :---: | :---: |
-| **Pontos de Vida (HP)** | 41 | 41 | 100% |
-| **Pontos de Mana (MP)** | 122 | 122 | 100% |
-| **Estamina / Movimento (MV)** | 91 | 92 | 99% |
+| **Pontos de Vida (HP)** | 49 | 49 | 100% |
+| **Pontos de Mana (MP)** | 130 | 130 | 100% |
+| **Estamina / Movimento (MV)** | 93 | 93 | 100% |
 
-* **Experiência Acumulada:** **24.317 EXP** *(+3.030 EXP obtidos em duplo combate no Começo da Passagem e Fim do Corredor)*
-* **Experiência Necessária p/ Grau 7:** **683 EXP** *(um único monstro separa Grebolius do Sétimo Grau!)*
-* **Ouro Líquido:** **669 moedas de ouro** *(+40 moedas saqueadas dos corpos)*
-* **Condição Biológica:** Vigor absoluto; sede saciada na Fonte de Mármore Azul; fôlego pleno.
+* **Experiência Acumulada:** **27.005 EXP** *(+2.688 EXP obtidos no abate fatal da Masmorra dos Novatos)*
+* **Experiência Necessária p/ Grau 8:** **12.995 EXP** *(Meta: 40.000 EXP)*
+* **Ouro Líquido:** **689 moedas de ouro** *(+20 moedas saqueadas)*
+* **Condição Biológica:** Vigor absoluto; saciedade de sede na Fonte de Mármore Azul; fôlego e regeneração plenos.
 
 ---
 
@@ -38,7 +38,7 @@
 * **Carisma (CHA):** 9
 
 ### Métricas de Combate
-* **Classe de Armadura (AC):** 16 *(elmo novato místico, veste novato, braçadeiras, luvas, calça e escudo)*
+* **Classe de Armadura (AC):** 16 *(base com conjunto completo de couro, escudo rígido e elmo místico)* / **39** *(sob efeito da conjuração de `armor`)*
 * **Bônus de Acerto (Hitroll):** 0
 * **Bônus de Dano (Damroll):** +1
 * **Configuração de Fuga (Wimpy):** **6 HP** (Postura de bravura)
@@ -48,7 +48,7 @@
 
 ## ✦ Missões e Autoquests Oficiais
 * **Missões Concluídas:**
-  * **A Coleira do Dragão:** Concluída na Pequena Sala com Guarda Novato (+5.000 EXP e salto p/ Nv 6).
+  * **A Coleira do Dragão:** Concluída na Pequena Sala com Guarda Novato (+5.000 EXP e elmo místico novato).
   * **Altruísmo:** Concluída na Sala de Doações do Templo de Midgaard ao doar equipamentos excedentes.
 * **Autoquests Ativas:**
   * **Dicas Mágicas:** Com o Mago Aventureiro no Bar dos Magos.
@@ -57,9 +57,10 @@
 ---
 
 ## ✦ Habilidades Conhecidas e Treinos Concluídos
-* **Sessões de Treino Acumuladas:** **4 sessões de treino disponíveis** *(reservadas para a ascensão ao Nível 7 / `armor`)*
+* **Sessões de Treino Utilizadas:** Treino completo da magia `armor` na Guilda dos Magos até instrução máxima.
 * **Perícias e Encantamentos:**
-  * `invisibility` (Invisibilidade): **95%** (Grau: Perfeito / Maestria Arcana de Ocultação — Desbloqueada no Nv 6 e treinada na Guilda dos Magos)
+  * `armor` (Armadura Mística): **95%** (Grau: Instruído / Perfeito — Redução maciça de dano físico e barreira invisível protetora)
+  * `invisibility` (Invisibilidade): **95%** (Grau: Perfeito / Maestria Arcana de Ocultação — Desbloqueada no Nv 6)
   * `infravision` (Infravisão): **95%** (Grau: Perfeito / Visão Noturna e Espectral Térmica)
   * `magic missile` (Míssil Mágico): **99%** (Grau: Perfeito / Letalidade Absoluta)
   * `chill touch` (Toque Gélido): **95%** (Grau: Perfeito / Ofensiva de Congelamento)
@@ -81,26 +82,11 @@
 
 ---
 
-## ✦ Inventário Carregado (Arsenal Tático e Salvaguarda Arcana)
-* **`um pergaminho de retorno`** *(Salvaguarda Suprema: retorno instantâneo ao Templo em caso de emboscada mortal)*
-* **`uma poção amarela de detectar invisibilidade`** *(Percepção sobrenatural alquímica)*
-* **`uma brilhante espada de novato`** (aura mística)
-* **`um brilhante punhal de novato`** (aura mística reserva empunhável)
-* **`um cantil`** *(cheio com água límpida da Fonte de Mármore Azul)*
-* **`um anel arcano`** (+2E)
-* **`uma brilhante veste de novato`** *(despojo recolhido)*
-* **`uma mochila`** *(contendo: armas reservas, cantil e gorro)*
-
----
-
-## ✦ Ciclo e Postura Atual
-* **Estado:** Conclusão do Dia 39 (dia sagrado "9" do ciclo decenal). Execução e consolidação do protocolo de aprendizado metodológico **/learn** (regras de overflow de mochila, aceitação de autoquests com `say sim` e nutrição). Ofensiva implacável nas extremidades da Masmorra dos Novatos: duplo abate devastador no Começo da Passagem e no Fim do Corredor com rajadas de Míssil Mágico (15 e 6 de dano) e perfurações viscerais letais (15 e 12 de dano), gerando mais de 3.000 EXP e 40 ouros. Experiência catapultada para **24.317 EXP** (restando apenas 683 EXP para o Nível 7). Repouso inviolável no Panteão dos Centenários.
-* **Tática Operacional:** No Ciclo 40 (marco decenal!), abater a última presa para coroar a ascensão ao Nível 7 (25.000 EXP), treinar `armor` no Laboratório dos Magos, realizar a pausa reflexiva estratégica decenal e atualizar `identidade.md`.
-
-
-
-
-
-
-
-
+## ✦ Inventário e Suprimentos
+* `um cantil` (água potável da fonte)
+* `(x2) um brilhante punhal de novato` (reserva de emergência)
+* `uma brilhante veste de novato` (reserva de vestimenta)
+* `uma brilhante espada de novato` (arma novata reserva)
+* `um pergaminho de retorno` (salvaguarda de retorno ao Templo)
+* `uma tocha` (reserva de iluminação)
+* `uma mochila` (armazenamento organizado)
