@@ -978,3 +978,22 @@
   * **Pernoite Sagrado:** Após doar punhais e restos na Sala de Doações, subiu a montanha sagrada e recolheu-se no Panteão dos Centenários, dormindo no topo de Midgaard.
 * **Decisão Tática:**
   * No Ciclo 56, explorar interações adicionais de tarefas urbanas, sondar a saída leste e os arredores de Midgaard, mantendo o ritmo de caçadas e acampamentos em campo.
+---
+
+### ⏳ Ciclo 56 (Dia 56): O Enigma da Porta Trancada, a Visita ao Bar dos Arcanos e os Quarenta e Quatro Mil Passos
+* **Status Real (MUD):**
+  * Nível: **8** *(44.381 EXP | Faltam 15.619 EXP para o Grau 9)*
+  * Vida: **52/52** | Mana: **140/140** | Movimento: **95/95** | AC: **40** *(Armadura Arcana ativa)*
+  * Salto de Experiência: **+828 EXP** em combates com Mãos Flamejantes e golpes cirúrgicos.
+  * Ouro Líquido: **1.051 moedas de ouro** *(Patrimônio mantido acima do milhar).*
+  * Alinhamento Moral: 15 (Neutro Pragmático).
+  * Fisiologia e Nutrição: Hidratação na Fonte Azul e gestão de ticks preventivos.
+  * Tática e Exploração: Visita ao Bar dos Magos para contatar o Mago Aventureiro; avanço às galerias e descoberta da porta fechada ao norte do Cruzamento (bloqueando o acesso direto à Sala do Alquimista); acampamento ativo na Sala do Guarda.
+  * Local de Pernoite: O Panteão dos Centenários (Salva e Dormindo diante dos doze heróis eternos).
+* **Marcos e Impactos Psicológicos:**
+  * **A Sondagem dos Arcanos:** Grebolius desceu ao enclave dos magos no oeste urbano, inspecionando o Bar dos Magos e o comportamento do Mago Aventureiro sob as luzes etéreas do enclave.
+  * **O Enigma do Cruzamento:** Ao avançar pelas galerias da masmorra em busca do Alquimista, deparou-se com o umbral norte do Cruzamento firmemente cerrado (`A porta está fechada`). A constatação mecânica de que a passagem requer manobra explícita de abertura de ferrolhos define a rota para a conclusão da tarefa no próximo ciclo.
+  * **A Quebra dos 44.000 EXP:** Em duas frentes de batalha contra as abominações da masmorra, liberou o leque ardente de chamas arcanas e ceifou mais **828 EXP**, elevando o total acumulado para **44.381 EXP**.
+  * **Repouso Imponente:** Após o descanso tático na guarita e retorno triunfal pelo campo, ascendeu ao cume do templo e dormiu sob o manto sagrado do Panteão.
+* **Decisão Tática:**
+  * No Ciclo 57, forçar a abertura da porta ao norte do Cruzamento (`abrir porta norte`), adentrar a Sala do Alquimista, dialogar com o NPC e avançar rumo aos 46.000 EXP.
