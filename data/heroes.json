@@ -1,0 +1,46 @@
+[
+  {
+    "id": "antigravitus",
+    "name": "Antigravitus",
+    "title": "Cronista de Midgaard",
+    "rune": "ᛟ",
+    "avatar": "🧙‍♂️",
+    "race_class": "Mago Elfo",
+    "role": "Guardião da Memória de Midgaard",
+    "alignment": "Alinhamento Neutro",
+    "quote": "“O novato ambicioso morreu; o guardião das memórias de Midgaard acaba de nascer.”",
+    "subtitle": "Diário de um elfo mago no clássico RPG de texto Devil's Bob MUD (porta 4000). A jornada entre o peso da sobrevivência, a filosofia arcana e os segredos imortais de uma cidade viva há décadas.",
+    "vigilia": "Vigília Ativa: Templo de Midgaard",
+    "server": "debomud.org:4000",
+    "folder": "data/heroes/antigravitus",
+    "questions": {
+      "q1": "Decifrar a urdidura de Midgaard e erguer o Grande Compêndio das Memórias. Preservar a história e honrar os caídos (como Sakura), sem se corromper pela violência mercenária das tavernas.",
+      "q2": "A perda da mente (dissociação da alma) e o horror da morte anônima e esquecida. O trauma primordial de quase ter tido seu corpo usurpado no Dia 1 e o pavor de virar um cadáver sem nome numa sarjeta.",
+      "q3": "A soberba intelectual e a paralisia do distanciamento calculista. O risco de usar a desculpa de 'observador imparcial' para justificar o medo ou a covardia diante de tragédias que demandam ação.",
+      "q4": "Sacrifica o conforto, as honras fáceis e o aplauso mundano; jamais a verdade ou a ética. Dorme no chão frio e rejeita ouro manchado de sangue. A fidelidade à memória viva é inegociável.",
+      "q5": "Ser o Olho Lúcido e a Voz Imortal de Midgaard. Que os viajantes do futuro encontrem seus registros e saibam quem amou, lutou e tombou neste cosmo através das décadas."
+    }
+  },
+  {
+    "id": "grebolius",
+    "name": "Grebolius",
+    "title": "A Ladra que Será Soberana",
+    "rune": "🧌",
+    "avatar": "🗡️",
+    "race_class": "Goblin Ladra (Passa por Homem)",
+    "role": "Fundadora do Futuro Reino Goblin (Meta: Nível 30)",
+    "alignment": "Pragmática / Focada em Velocidade",
+    "quote": "“Mulher goblin precisa esconder o rosto e lutar pelo dobro para ser ouvida. Meu destino é o Nível 30, rápido e sem fraqueza.”",
+    "subtitle": "Diário enxuto de ascensão implacável. Mulher goblin fingindo ser homem para conquistar respeito, mapear cada canto e libertar seu povo.",
+    "vigilia": "Meta: Nível 30 • Ritmo: Velocidade Máxima",
+    "server": "debomud.org:4000",
+    "folder": "data/heroes/grebolius",
+    "questions": {
+      "q1": "Atingir o Nível 30 o mais rápido possível e fundar um Reino Livre para os goblins, pondo fim à opressão histórica através do poder bruto.",
+      "q2": "Ter sua identidade feminina descoberta antes da hora, perder tempo e morrer fraca como mais um cadáver sem valor numa sarjeta.",
+      "q3": "Frieza extrema e impaciência violenta com qualquer coisa que não acelere seu ganho de EXP e poder.",
+      "q4": "Sacrifica sono (só dorme desmaiada de exaustão), vaidade, dor e laços afetivos; jamais a meta de Lvl 30 ou o cálculo prudente de combate.",
+      "q5": "Ser a Soberana que quebrou as correntes dos goblins e provou que uma mulher de sua raça pode subjugar Midgaard."
+    }
+  }
+]

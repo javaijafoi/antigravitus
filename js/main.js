@@ -1,161 +1,212 @@
-// Script do Blog de Antigravitus
-document.addEventListener("DOMContentLoaded", () => {
+// Engine Multi-Herói — Crônicas de Devil's Bob MUD
+document.addEventListener("DOMContentLoaded", async () => {
+  const heroSelect = document.getElementById("hero-select");
   const postsContainer = document.getElementById("posts-container");
   const searchInput = document.getElementById("search-input");
   const tagsContainer = document.getElementById("tags-container");
   const postCountEl = document.getElementById("post-count");
+  const linkSobre = document.getElementById("link-sobre");
+  const linkCronicas = document.getElementById("link-cronicas");
 
-  let allPosts = [];
-  let activeTag = "todos";
+  const brandRuneEl = document.querySelector(".brand-rune");
+  const brandTitleEl = document.querySelector(".brand-text h1");
+  const brandSubEl = document.querySelector(".brand-text span");
+  const heroQuoteEl = document.querySelector(".hero-quote");
+  const heroSubtitleEl = document.querySelector(".hero-subtitle");
+  const metaPills = document.querySelectorAll(".hero-meta .meta-pill");
 
-  // Fallback embutido com as 8 crônicas caso fetch falhe em visualização local direta
-  const fallbackPosts = [
+  const aboutAvatarEl = document.getElementById("about-avatar");
+  const aboutNameEl = document.getElementById("about-name");
+  const aboutSubEl = document.getElementById("about-sub");
+  const aboutIntroEl = document.getElementById("about-intro-p");
+  const q1El = document.getElementById("q1-text");
+  const q2El = document.getElementById("q2-text");
+  const q3El = document.getElementById("q3-text");
+  const q4El = document.getElementById("q4-text");
+  const q5El = document.getElementById("q5-text");
+
+  let heroesList = [
     {
-      id: 8,
-      day: "Dia 8",
-      title: "O Silêncio de Odin e a Liturgia do Cronista",
-      date: "13 de outubro de 2026",
-      in_game_time: "Midgaard — 8º Ciclo da Jornada",
-      tags: ["Altar de Odin", "Sala de Doações", "Liturgia Arcana"],
-      content: [
-        "Hoje o tempo parecia suspenso no santuário das alturas de Midgaard. O vento que uiva pelas frestas de pedra trouxe uma calma profunda, daquelas que convidam o espírito ao recolhimento e à contemplação da ordem eterna das coisas.",
-        "Passei as primeiras horas na Sala de Doações, a leste do Templo. Examinei e cataloguei com esmero os mantimentos, frascos e vestes deixados sobre os bancos rústicos por viajantes abastados. Fiquei longos minutos refletindo sobre essa engrenagem oculta de desapego e solidariedade: um pacto invisível entre os veteranos e os recém-chegados, que impede noviços famintos e desorientados de perecerem logo em seus primeiros passos.",
-        "Ao meio-dia, caminhei ao norte até o Altar do Templo. Ali me deparei novamente com a imponente estátua de mármore de Odin, o Rei dos Deuses. Sob o olhar austero dos corvos de pedra Hugin e Munin pousados em seu trono, e com os lobos Gere e Freke a seus pés, prostrei-me em silêncio. Renovei meu juramento sagrado: não empunharei cajados nem convocarei relâmpagos para alimentar a vaidade mundana das tavernas; serei o cronista fiel deste cosmo, guardando a memória dos que caminham e dos que tombaram.",
-        "Ao cair da tarde, consultei as correntes da minha própria alma e os mistérios do meu grimório interior. Sinto minha vitalidade equilibrada e a energia mágica fluindo límpida como água da nascente. Meu alinhamento moral permanece incorruptível e perfeitamente neutro diante do caos, e meu espírito segue livre das seduções de sangue dos mercenários que rondam as esquinas sombrias.",
-        "Sentei-me no chão consagrado, fechei os olhos sob o perfume de incenso milenar e permiti que o descanso embalasse o oitavo ciclo de minha existência."
-      ]
+      id: "antigravitus",
+      name: "Antigravitus",
+      title: "Cronista de Midgaard",
+      rune: "ᛟ",
+      avatar: "🧙‍♂️",
+      race_class: "Mago Elfo",
+      role: "Guardião da Memória de Midgaard",
+      alignment: "Alinhamento Neutro",
+      quote: "“O novato ambicioso morreu; o guardião das memórias de Midgaard acaba de nascer.”",
+      subtitle: "Diário de um elfo mago no clássico RPG de texto Devil's Bob MUD (porta 4000). A jornada entre o peso da sobrevivência, a filosofia arcana e os segredos imortais de uma cidade viva há décadas.",
+      vigilia: "Vigília Ativa: Templo de Midgaard",
+      server: "debomud.org:4000",
+      folder: "data/heroes/antigravitus",
+      questions: {
+        q1: "Decifrar a urdidura de Midgaard e erguer o Grande Compêndio das Memórias. Preservar a história e honrar os caídos (como Sakura), sem se corromper pela violência mercenária das tavernas.",
+        q2: "A perda da mente (dissociação da alma) e o horror da morte anônima e esquecida. O trauma primordial de quase ter tido seu corpo usurpado no Dia 1 e o pavor de virar um cadáver sem nome numa sarjeta.",
+        q3: "A soberba intelectual e a paralisia do distanciamento calculista. O risco de usar a desculpa de 'observador imparcial' para justificar o medo ou a covardia diante de tragédias que demandam ação.",
+        q4: "Sacrifica o conforto, as honras fáceis e o aplauso mundano; jamais a verdade ou a ética. Dorme no chão frio e rejeita ouro manchado de sangue. A fidelidade à memória viva é inegociável.",
+        q5: "Ser o Olho Lúcido e a Voz Imortal de Midgaard. Que os viajantes do futuro encontrem seus registros e saibam quem amou, lutou e tombou neste cosmo através das décadas."
+      }
     },
     {
-      id: 7,
-      day: "Dia 7",
-      title: "O Dilema da Fé e os Portões Ocidentais",
-      date: "13 de outubro de 2026",
-      in_game_time: "Midgaard — 7º Ciclo da Jornada",
-      tags: ["Guilda dos Clérigos", "Portão Oeste", "Mural Central"],
-      content: [
-        "O sol matinal rompeu as frestas do Templo iluminando as pinturas arcaicas de gigantes e deuses que cobrem as abóbadas de pedra.",
-        "Logo cedo, desci as escadarias monumentais até a Praça do Templo e avancei para o oeste, espreitando os pórticos silenciosos da Guilda dos Clérigos. Observei a liturgia solene e os cânticos de cura entoados pelos devotos. Minha mente analítica, forjada em grande inteligência e estudo filosófico, sentiu o abismo entre a fé cega que move os sacerdotes e a compreensão racional da urdidura mágica que guia os magos. Respeitei a fé alheia com a reverência devida aos sagrados, mas reafirmei meu voto com a razão pura e a busca pela verdade das leis que sustentam o cosmos.",
-        "À tarde, atravessei a movimentada Praça do Comércio e marchei por toda a extensão da Rua Principal Oeste. Passei pelo calor sufocante da Padaria e pelo bater pesado dos martelos na Loja de Armaduras, avançando até alcançar os limites fortificados do Portão Oeste de Midgaard. Pela primeira vez encarei os sentinelas de armadura pesada que guardam a fronteira e contemplei a vastidão silenciosa das colinas exteriores. Compreendi com nitidez o limiar exato entre a segurança acolhedora das muralhas e a selvageria dos ermos sem lei.",
-        "Antes de recolher-me, retornei à praça central e dediquei horas ao grande mural mágico flutuante. Copiei em meus pergaminhos editais de viagens, avisos de guildas e recados deixados por aventureiros de terras distantes, alimentando o arquivo histórico de Midgaard com as vozes e anseios dos viajantes.",
-        "Subi a montanha sagrada, sentei-me em silêncio no santuário e salvei as lições do dia no éter da minha mente."
-      ]
-    },
-    {
-      id: 6,
-      day: "Dia 6",
-      title: "As Águas da Fonte Azul e o Eco do Rio",
-      date: "13 de outubro de 2026",
-      in_game_time: "Midgaard — 6º Ciclo da Jornada",
-      tags: ["Fonte de Mármore", "Rua Principal Leste", "Margens do Rio"],
-      content: [
-        "Despertei no piso sudeste do Templo com a mente afiada e uma determinação serena: compreender as artérias materiais que mantêm esta cidade respirando, em vez de me lançar em bravatas sem sentido.",
-        "Minha primeira jornada foi descer os degraus de pedra polida até a Praça do Templo. Ali, sob a sentinela atenta e colossal do Pacificador, aproximei-me da grande fonte de mármore azul. Mergulhei minhas mãos élficas e bebi longos goles de sua água cristalina. Senti uma sutil aura de restauração percorrendo meus canais interiores, dissipando o cansaço do espírito e comprovando que, mesmo nos recantos públicos, os deuses fundadores deixaram bênçãos táteis para quem sabe contemplar com olhos humildes.",
-        "Em seguida, rumei ao sul, cruzei a Praça do Comércio e segui pela Rua Principal a leste. Mapeei com rigor o Armazém de Provisões ao norte e o exótico entreposto da Loja de Animais ao sul, observando como o comércio mundano de cereais secos, fardos de feno e bestas de carga é o verdadeiro alicerce invisível que sustenta os bravos guerreiros que marcham para as guerras distantes.",
-        "Ao entardecer, cruzei a Praça Comum e enveredei com discrição pelo Beco Escuro. Desviei dos mercenários de olhos gélidos encostados às paredes úmidas e continuei marchando para o leste até alcançar a descida íngreme para as Margens do Rio. O cheiro de água doce, lodo e brisa fria misturou-se à fumaça das lareiras urbanas. Fiquei longos minutos observando a correnteza veloz do rio que corta Midgaard, medindo a força das correntes antes de recuar com cautela para a segurança do templo.",
-        "Ajoelhei-me nas lajes familiares, entoei a prece de fixação das memórias e repousei meus ossos cansados sob o teto sagrado."
-      ]
-    },
-    {
-      id: 5,
-      day: "Dia 5",
-      title: "O Mural dos Caídos, o Encontro com Hinata e o Novo Destino",
-      date: "12 de outubro de 2026",
-      in_game_time: "Midgaard — 5º Ciclo da Jornada",
-      tags: ["Memorial a Sakura", "Hinata", "O Despertar do Cronista"],
-      content: [
-        "Ao abrir os olhos hoje no templo, não estava sozinho. Ao meu lado repousava outro elfo de vestes humildes: Hatgepetoc, um noviço como eu, ressonando na pedra fria sob o olhar impassível dos deuses.",
-        "Caminhei primeiro para o norte até o Altar do Templo, onde me deparei com a estátua colossal de Odin voltada para as trilhas agrestes. Mas a verdadeira revelação da minha vida me aguardava na Sala de Leitura. Aproximei-me do imenso quadro de madeira negra, onde milhares de mensagens acumuladas por mais de duas décadas registram a história viva daquelas terras.",
-        "Comecei a ler os pergaminhos mais recentes. E o que li tocou meu coração com a força de um trovão: não eram anúncios de conquistas fáceis nem jactâncias de ouro, mas o lamento cru e doloroso de veteranos respeitados — Enkil, Peppe, Vega, Kosmo, Winkan — velando uma valorosa companheira que partiu para o repouso eterno: 'Adeus, Sakura', 'Somente quem carrega cicatrizes sabe o peso das feridas', 'Para Sakura, o amor da minha vida'.",
-        "Ali, diante daquelas tábuas manchadas de lágrimas etéreas, compreendi que Midgaard não é um mero pátio de combate para empilhar cabeças e alimentar vaidades fugazes. É um relicário de vidas verdadeiras, de laços forjados no perigo e de perdas profundas que ecoam através das eras.",
-        "Desci à cidade com o peso dessa epifania no peito. No Beco Escuro, fétido e sombrio, vi mercenários armados vendendo suas vidas por algumas moedas na porta da Guilda dos Ladrões. Vi o aço polido das forjas sendo vendido a peso de fortunas para alimentar carnificinas sem propósito.",
-        "Compreendi tudo com uma lucidez avassaladora: a ambição cega de ser 'o maior aventureiro' termina na sarjeta mercenária ou como mais um nome fúnebre pregado na madeira do mural. Renunciei para sempre a esse caminho raso. Abraço a partir de hoje um destino completamente novo: serei o Cronista Arcano e o Guardião da Memória de Midgaard. Usarei minha inteligência e capacidade de observação para preservar as histórias dos que lutam, proteger a memória dos caídos e decifrar as regras invisíveis deste universo.",
-        "E como se o destino selasse meu voto, ao retornar ao santuário do Templo, topei frente a frente com Hinata, a Guerreira de Elite — a própria destinatária da carta misteriosa do meu segundo dia. Ela reluzia em uma barreira de luz dourada tão brilhante que quase ofuscou meus olhos élficos. Ela me fitou por um breve e solene segundo antes de marchar resoluta para o sul. O elfo noviço e tolo morreu; o sábio das memórias acaba de nascer."
-      ]
-    },
-    {
-      id: 4,
-      day: "Dia 4",
-      title: "A Tapeçaria de Midgaard e a Lei dos Homens",
-      date: "12 de outubro de 2026",
-      in_game_time: "Midgaard — 4º Ciclo da Jornada",
-      tags: ["Praça do Comércio", "Leis da Cidade", "O Beco Pobre"],
-      content: [
-        "Ao acordar na estalagem, deixei de lado qualquer presunção de glória marcial. Desci os degraus de pedra e rumei para o oeste, cruzando a Praça do Templo até chegar ao grande pulsar urbano: a famosa Praça do Comércio de Midgaard.",
-        "No centro ergue-se uma estátua austera de pedra, ladeada por uma carroça de madeira pesada e pelo imenso mural mágico cujos pergaminhos flutuam ao vento leve. Dali o mundo se abre em todas as direções.",
-        "Percorri a Rua Principal a leste e depois a oeste. O aroma de feno e cevada misturava-se ao calor da lenha da Padaria e ao cheiro metálico da armaria. Mas o momento que marcou meu dia ocorreu quando cruzei o caminho de uma sentinela da guarda urbana. O homem cravou os olhos em mim através da fresta do elmo e proferiu uma ordem com voz de ferro: 'Lembre-se de seguir as regras.'",
-        "Aquelas palavras soaram em meu espírito como um mandamento fundamental. A magia e a ousadia dos homens são vastas, mas todas operam sob as leis invioláveis tecidas pelos artesãos primordiais que sustentam o cosmos. Quebrar essas regras é atrair a ruína.",
-        "Para o sul, desci até a Praça Comum. O contraste com o fausto do templo foi doloroso: camponeses transitando cabisbaixos entre o Beco Pobre e o Beco Escuro, cães magros revirando lixo e um odor sufocante que subia dos depósitos da cidade. Percebi que o heroísmo romântico das canções de bardo nada diz sobre a lama que sustenta as fundações das cidades.",
-        "Exausto pelo peso do mundo, subi de volta ao santuário sagrado. Recolhi-me na paz suave da Sala de Leitura, onde a música antiga flui das pedras, e ali adormeci consciente de que este mundo é bem mais complexo e austero do que eu supunha."
-      ]
-    },
-    {
-      id: 3,
-      day: "Dia 3",
-      title: "O Pomo da Ambição e a Humilhação do Guarda",
-      date: "12 de outubro de 2026",
-      in_game_time: "Midgaard — 3º Ciclo da Jornada",
-      tags: ["Grimório Arcano", "Guilda dos Paladinos", "Orgulho Ferido"],
-      content: [
-        "Despertei ao som ritmado do zelador arrastando sua vassoura de palha pelo chão de madeira da estalagem, varrendo pós imaginários com uma obstinação quase litúrgica.",
-        "Antes de pôr os pés na rua, abri meu grimório interno e examinei a teia formidável das artes místicas reservadas à minha ordem: relâmpagos capazes de fender o ar, ilusões de invisibilidade, encantamentos e o domínio sobre vontades alheias. Uma labareda de ambição tola queimou no fundo da minha alma. Prometi a mim mesmo que não seria um elfo insignificante: buscaria ser o maior aventureiro que estas terras já viram.",
-        "O mundo de Devil's Bob, no entanto, é implacável com a empáfia dos recém-chegados.",
-        "Imbuído de uma vaidade apressada, rumei ao sul em direção ao pórtico reluzente da Guilda dos Paladinos. Tentei avançar com passo arrogante em direção ao recinto dos cavaleiros sagrados. O sentinela de guarda nem sequer desembainhou a espada: com um único olhar altivo e um gesto de absoluto desdém, barrou meu caminho, e suas palavras cortaram o ar como lâminas de gelo: 'O guarda te humilha e não deixa você passar.'",
-        "Aquilo foi mais doloroso que um ferimento físico; foi um soco impiedoso no orgulho do noviço franzino. Tentei insistir, e a vergonha apenas se repetiu, fria e humilhante. Recuei com o rosto ardendo em brasas para o saguão da estalagem, onde o Pacificador me fitou com sua serenidade de montanha e repetiu seu conselho prudente: 'Quando você estiver mais forte, volte aqui para me ajudar!'",
-        "Sentei-me no banco tosco para acalmar os ânimos. Ali nasceu a primeira semente da dúvida: será que a grandeza de uma mente brilhante está mesmo em mendigar o respeito de guardas e guerreiros brutos, ou em encontrar um caminho inteiramente singular?"
-      ]
-    },
-    {
-      id: 2,
-      day: "Dia 2",
-      title: "A Carta dos Outros Mundos e o Javali Roncador",
-      date: "12 de outubro de 2026",
-      in_game_time: "Midgaard — 2º Ciclo da Jornada",
-      tags: ["A Carta Misteriosa", "Estalagem Javali Roncador", "Segredos do Correio"],
-      content: [
-        "Acordei quando o crepúsculo tingia as pedras milenares do santuário em tons de cobre e brasa. Meu organismo ainda preservava a saciedade mística do despertar, mas a curiosidade já me ardia na garganta.",
-        "Na Sala de Doações, encontrei sobre um banco de madeira rústica um envelope selado deixado para trás. Apanhei a missiva com mãos trêmulas e rompi o lacre: 'Sistema de Correio — Domingo, 11 de outubro de 2026, 23:47. Para: Hinata | De: Keen. Só pra completar a quest diária :)'.",
-        "Fiquei imóvel encarando aquelas linhas por longos minutos. Quem eram Keen e Hinata? E o que significava essa menção a uma busca diária imposta por forças cósmicas de um calendário muito além das nossas eras conhecidas? Guardei a carta dentro da túnica como uma relíquia misteriosa de forças que transcendem nossa compreensão.",
-        "Deixei o templo e desci as escadarias até a Praça. Ao leste, empurrei os pesados umbrais de carvalho da Estalagem Javali Roncador. O ar quente, pesado de poeira e fumo antigo, misturava-se ao cheiro acolhedor de lenha estalando na lareira.",
-        "No bar, bêbados alegres entoavam canções desafinadas, o taverneiro manejava suas canecas com paciência infinita e, perto do balcão, zumbia um animal de estimação bizarro: o Filhote de Aglandiir, uma mosca gigantesca que realizava voos rasantes sobre as bebidas. Pela primeira vez desde que cheguei a este mundo, senti o abraço caloroso do convívio mortal.",
-        "Ao sul, contemplei a entrada da Guilda dos Paladinos, de onde emanava uma radiância dourada e celestial tão imponente que me fez recuar em respeitosa reverência.",
-        "Com a noite já alta sobre Midgaard, acomodei-me nos bancos de madeira junto ao calor da lareira da estalagem, entoei as palavras para fixar minhas memórias e permiti que o rumor das tavernas embalasse meu sono."
-      ]
-    },
-    {
-      id: 1,
-      day: "Dia 1",
-      title: "O Despertar na Montanha Sagrada",
-      date: "12 de outubro de 2026",
-      in_game_time: "Midgaard — 1º Ciclo da Jornada",
-      tags: ["O Despertar", "Templo de Midgaard", "O Pacificador"],
-      content: [
-        "Despertei com o aroma forte de incenso sagrado e o cheiro mineral da pedra polida impregnando minhas narinas. Minhas orelhas compridas zuniam, e quando ergui os olhos, não reconheci o firmamento: em vez de céu aberto, erguiam-se blocos colossais de pedras milenares cobertas por afrescos de deuses imponentes, gigantes cinzentos e camponeses de eras esquecidas.",
-        "Não sei como fui conduzido a este lugar, mas sabia o nome que vibrava no meu peito: Antigravitus. Um elfo de porte franzino e ossos finos como gravetos de inverno — sinto que dificilmente suportaria a fúria de uma clava pesada —, mas cuja mente queima como uma fornalha de éter. Uma clareza absurda e uma grande inteligência ressoam em meu espírito, acompanhadas por palavras arcanas para conjurar dardos mágicos e pelo estranho dom inato de saber nadar, mesmo estando no cume de uma montanha rochosa.",
-        "Examinei meus poucos bens: vestes simples de couro curtido, um gorro modesto, escudo rústico e uma adaga amolada na cinta. Na sacola, provisões secas de viagem, um cantil d'água e uma tocha ainda apagada.",
-        "Logo nos primeiros instantes de consciência, um cataclismo etéreo quase despedaçou minha existência: senti uma rajada cósmica violenta, como se outra alma tentasse habitar à força a mesma casca de carne. As próprias paredes do santuário pareceram estremecer ao som de um alerta sobrenatural: 'Esse corpo foi usurpado!'. Minha determinação, porém, resistiu ao choque; dominei as rédeas da minha própria consciência, expulsei a presença invasora e me mantive inteiro, com o sopro da vida pulsando no peito e as energias arcanas preservadas.",
-        "Ao recompor o fôlego, percebi figuras enigmáticas no santuário: Carecacabeludo, o Observador de olhar sereno; bancos na Sala de Doações repletos de banquetes intactos deixados por benfeitores anônimos; e na Sala de Leitura, a majestosa Losilly montada sobre um dragonete rubro cujas ventas fumegavam.",
-        "Desci a grandiosa escadaria de mármore até a Praça do Templo de Midgaard. O vento fresco tocou meu rosto, a água da fonte azul borbulhava sob uma aura misteriosa e a imponente sentinela conhecida como O Pacificador patrulhava as pedras. Ao passar por mim, o guerreiro veterano mediu meu porte franzino de noviço e aconselhou: 'Quando você estiver mais forte, volte aqui para me ajudar!'.",
-        "Senti a tentação de descer às ruelas barulhentas do comércio, mas a prudência falou mais alto. Para quem acabou de nascer no mundo, a noite das vielas pode ser a última. Subi de volta ao santuário, proferi as preces para gravar minhas memórias no tecido da realidade e fechei os olhos.",
-        "O primeiro dia terminou. O cronista de Midgaard começou a respirar."
-      ]
+      id: "grebolius",
+      name: "Grebolius",
+      title: "A Ladra que Será Soberana",
+      rune: "🧌",
+      avatar: "🗡️",
+      race_class: "Goblin Ladra (Passa por Homem)",
+      role: "Fundadora do Futuro Reino Goblin (Meta: Nível 30)",
+      alignment: "Pragmática / Focada em Velocidade",
+      quote: "“Mulher goblin precisa esconder o rosto e lutar pelo dobro para ser ouvida. Meu destino é o Nível 30, rápido e sem fraqueza.”",
+      subtitle: "Diário enxuto de ascensão implacável. Mulher goblin fingindo ser homem para conquistar respeito, mapear cada canto e libertar seu povo.",
+      vigilia: "Meta: Nível 30 • Ritmo: Velocidade Máxima",
+      server: "debomud.org:4000",
+      folder: "data/heroes/grebolius",
+      questions: {
+        q1: "Atingir o Nível 30 o mais rápido possível e fundar um Reino Livre para os goblins, pondo fim à opressão histórica através do poder bruto.",
+        q2: "Ter sua identidade feminina descoberta antes da hora, perder tempo e morrer fraca como mais um cadáver sem valor numa sarjeta.",
+        q3: "Frieza extrema e impaciência violenta com qualquer coisa que não acelere seu ganho de EXP e poder.",
+        q4: "Sacrifica sono (só dorme desmaiada de exaustão), vaidade, dor e laços afetivos; jamais a meta de Lvl 30 ou o cálculo prudente de combate.",
+        q5: "Ser a Soberana que quebrou as correntes dos goblins e provou que uma mulher de sua raça pode subjugar Midgaard."
+      }
     }
   ];
 
-  // Carrega os posts (tenta fetch em data/posts.json primeiro, usa fallback se offline/local)
-  async function loadPosts() {
+  let currentHero = heroesList[0];
+  let allPosts = [];
+  let activeTag = "todos";
+
+  // 1. Carrega lista de heróis do arquivo central heroes.json
+  async function initHeroes() {
     try {
-      const res = await fetch("data/posts.json");
+      const res = await fetch("data/heroes.json");
       if (res.ok) {
-        allPosts = await res.json();
-      } else {
-        allPosts = fallbackPosts;
+        const data = await res.json();
+        if (Array.isArray(data) && data.length > 0) {
+          heroesList = data;
+        }
       }
     } catch (e) {
-      allPosts = fallbackPosts;
+      console.warn("Usando catálogo local embutido de heróis.");
     }
 
-    // Garante ordenação da mais recente primeiro (ID decrescente)
-    allPosts.sort((a, b) => b.id - a.id);
+    // Determina o herói ativo via URL, localStorage ou padrão
+    const urlParams = new URLSearchParams(window.location.search);
+    const heroParam = urlParams.get("hero");
+    const storedHero = localStorage.getItem("active_hero");
+    const targetHeroId = heroParam || storedHero || "antigravitus";
+
+    currentHero = heroesList.find(h => h.id === targetHeroId) || heroesList[0];
+    localStorage.setItem("active_hero", currentHero.id);
+
+    renderHeroSelector();
+    applyHeroContext(currentHero);
+
+    if (postsContainer) {
+      await loadPostsForHero(currentHero);
+    }
+  }
+
+  function renderHeroSelector() {
+    if (!heroSelect) return;
+    heroSelect.innerHTML = heroesList
+      .map(h => `<option value="${h.id}" ${h.id === currentHero.id ? "selected" : ""}>${h.avatar || "⚔️"} ${h.name}</option>`)
+      .join("");
+
+    heroSelect.value = currentHero.id;
+
+    heroSelect.addEventListener("change", async (e) => {
+      const selectedId = e.target.value;
+      const found = heroesList.find(h => h.id === selectedId);
+      if (found) {
+        currentHero = found;
+        localStorage.setItem("active_hero", currentHero.id);
+        
+        // Atualiza a URL sem recarregar totalmente a página
+        const newUrl = new URL(window.location.href);
+        newUrl.searchParams.set("hero", currentHero.id);
+        window.history.pushState({}, "", newUrl);
+
+        applyHeroContext(currentHero);
+        if (postsContainer) {
+          activeTag = "todos";
+          if (searchInput) searchInput.value = "";
+          await loadPostsForHero(currentHero);
+        }
+      }
+    });
+  }
+
+  function applyHeroContext(hero) {
+    if (brandRuneEl) brandRuneEl.textContent = hero.rune || "ᛟ";
+    if (brandTitleEl) brandTitleEl.textContent = hero.name;
+    if (brandSubEl) brandSubEl.textContent = hero.title;
+
+    if (heroQuoteEl && hero.quote) {
+      heroQuoteEl.textContent = hero.quote;
+    }
+    if (heroSubtitleEl && hero.subtitle) {
+      heroSubtitleEl.textContent = hero.subtitle;
+    }
+    if (metaPills && metaPills.length > 0 && hero.vigilia) {
+      const vigiliaSpan = metaPills[0].querySelector("span:last-child");
+      if (vigiliaSpan) vigiliaSpan.textContent = hero.vigilia;
+    }
+
+    // Links de navegação preservando o herói
+    if (linkSobre) {
+      linkSobre.href = `sobre.html?hero=${hero.id}`;
+    }
+    if (linkCronicas) {
+      linkCronicas.href = `index.html?hero=${hero.id}`;
+    }
+
+    // Página Sobre
+    if (aboutAvatarEl && hero.avatar) aboutAvatarEl.textContent = hero.avatar;
+    if (aboutNameEl && hero.name) aboutNameEl.textContent = hero.name;
+    if (aboutSubEl) {
+      const parts = [hero.race_class, hero.role, hero.alignment].filter(Boolean);
+      aboutSubEl.textContent = parts.join(" • ");
+    }
+    if (aboutIntroEl) {
+      aboutIntroEl.innerHTML = `A personalidade de <strong>${hero.name}</strong> não é reescrita do zero a cada dia; ela é <strong>esculpida e desafiada</strong> diante da realidade. Suas escolhas emergem da tensão viva entre cinco perguntas fundamentais:`;
+    }
+
+    if (hero.questions) {
+      if (q1El) q1El.innerHTML = `<strong>${hero.questions.q1}</strong>`;
+      if (q2El) q2El.innerHTML = `<strong>${hero.questions.q2}</strong>`;
+      if (q3El) q3El.innerHTML = `<strong>${hero.questions.q3}</strong>`;
+      if (q4El) q4El.innerHTML = `<strong>${hero.questions.q4}</strong>`;
+      if (q5El) q5El.innerHTML = `<strong>${hero.questions.q5}</strong>`;
+    }
+
+    document.title = `${hero.name} — ${hero.title} | Devil's Bob MUD`;
+  }
+
+  // 2. Carrega posts específicos do herói ativo (ORDENAÇÃO CRESCENTE SEMPRE)
+  async function loadPostsForHero(hero) {
+    let posts = [];
+    const heroPath = `data/heroes/${hero.id}/posts.json`;
+
+    try {
+      const res = await fetch(heroPath);
+      if (res.ok) {
+        posts = await res.json();
+      } else {
+        // Fallback para antigravitus no path antigo data/posts.json
+        const fallbackRes = await fetch("data/posts.json");
+        if (fallbackRes.ok && hero.id === "antigravitus") {
+          posts = await fallbackRes.json();
+        }
+      }
+    } catch (e) {
+      console.warn(`Fetch falhou para ${heroPath}, tentando fallback.`);
+    }
+
+    allPosts = Array.isArray(posts) ? posts : [];
+    
+    // Regra: Os blogs SEMPRE são ordenados em ORDEM CRESCENTE (Dia 1, Dia 2, Dia 3...)
+    allPosts.sort((a, b) => (a.id || 0) - (b.id || 0));
 
     renderTags();
     renderPosts(allPosts);
@@ -202,8 +253,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const matchesQuery =
         !query ||
         post.title.toLowerCase().includes(query) ||
-        post.day.toLowerCase().includes(query) ||
-        post.content.some(paragraph => paragraph.toLowerCase().includes(query)) ||
+        (post.day && post.day.toLowerCase().includes(query)) ||
+        (post.content && post.content.some(paragraph => paragraph.toLowerCase().includes(query))) ||
         (post.tags && post.tags.some(t => t.toLowerCase().includes(query)));
 
       return matchesTag && matchesQuery;
@@ -220,10 +271,10 @@ document.addEventListener("DOMContentLoaded", () => {
       postsContainer.innerHTML = `
         <div class="post-card" style="text-align: center; padding: 3rem;">
           <p style="font-family: var(--font-serif); font-size: 1.3rem; color: var(--accent-gold);">
-            Nenhuma crônica encontrada para esta busca.
+            Nenhuma crônica registrada para ${currentHero.name} ainda.
           </p>
           <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.5rem;">
-            Tente outro termo ou selecione todas as crônicas.
+            Use <code>python add_day.py --hero ${currentHero.id}</code> para registrar o próximo ciclo.
           </p>
         </div>
       `;
@@ -235,23 +286,23 @@ document.addEventListener("DOMContentLoaded", () => {
         post => `
       <article class="post-card" id="post-${post.id}">
         <header class="post-header">
-          <span class="post-day-badge">${post.day}</span>
+          <span class="post-day-badge">${post.day || `Dia ${post.id}`}</span>
           <div class="post-dates">
-            <span>${post.date}</span>
+            <span>${post.date || ""}</span>
           </div>
         </header>
 
         <h2 class="post-title">${post.title}</h2>
         <div class="post-location">
-          <span>🏛️ ${post.in_game_time}</span>
+          <span>🏛️ ${post.in_game_time || ""}</span>
         </div>
 
         <div class="post-body">
-          ${post.content.map(p => `<p>${p}</p>`).join("")}
+          ${(post.content || []).map(p => `<p>${p}</p>`).join("")}
         </div>
 
         <div class="post-signature">
-          — Antigravitus, Cronista e Mago de Midgaard
+          — ${currentHero.name}, ${currentHero.title || "Aventureiro"}
         </div>
 
         ${
@@ -274,5 +325,5 @@ document.addEventListener("DOMContentLoaded", () => {
     searchInput.addEventListener("input", filterAndRender);
   }
 
-  loadPosts();
+  initHeroes();
 });

@@ -26,8 +26,15 @@
         </div>
       </a>
       <nav class="main-nav">
-        <a href="index.html">Crônicas</a>
-        <a href="sobre.html" class="active">Sobre o Cronista</a>
+        <div class="hero-selector-wrap">
+          <label for="hero-select" class="hero-select-label">Herói:</label>
+          <select id="hero-select" class="hero-select" aria-label="Selecione o Herói">
+            <option value="antigravitus">🧙‍♂️ Antigravitus</option>
+            <option value="grebolius">🧌 Grebolius</option>
+          </select>
+        </div>
+        <a href="index.html" id="link-cronicas">Crônicas</a>
+        <a href="sobre.html" class="active" id="link-sobre">Sobre</a>
         <a href="https://www.debomud.org" target="_blank" rel="noopener">Devil's Bob MUD ↗</a>
       </nav>
     </div>
@@ -37,42 +44,42 @@
   <main class="container">
     <article class="about-card">
       <div class="about-header">
-        <div class="about-avatar">🧙‍♂️</div>
-        <h2>Antigravitus</h2>
-        <p>Mago Elfo • Guardião da Memória de Midgaard • Alinhamento Neutro</p>
+        <div class="about-avatar" id="about-avatar">🧙‍♂️</div>
+        <h2 id="about-name">Antigravitus</h2>
+        <p id="about-sub">Mago Elfo • Guardião da Memória de Midgaard • Alinhamento Neutro</p>
       </div>
 
       <!-- Seção 1: As 5 Perguntas Capitais da Identidade -->
       <section class="about-section">
         <h3>✦ A Matriz das 5 Perguntas Essenciais</h3>
-        <p>
-          A personalidade de Antigravitus não é reescrita do zero a cada dia; ela é <strong>esculpida e desafiada</strong> diante da realidade. Suas escolhas emergem da tensão viva entre cinco perguntas fundamentais:
+        <p id="about-intro-p">
+          A personalidade deste herói não é reescrita do zero a cada dia; ela é <strong>esculpida e desafiada</strong> diante da realidade. Suas escolhas emergem da tensão viva entre cinco perguntas fundamentais:
         </p>
 
         <div style="display: flex; flex-direction: column; gap: 1.25rem; margin: 1.5rem 0;">
           <div class="stat-box" style="border-left: 3px solid var(--accent-gold);">
             <h4 style="color: var(--accent-gold);">1. Qual é o objetivo principal dele?</h4>
-            <p><strong>Decifrar a urdidura de Midgaard e erguer o Grande Compêndio das Memórias.</strong> Preservar a história e honrar os caídos (como Sakura), sem se corromper pela violência mercenária das tavernas.</p>
+            <p id="q1-text"><strong>Decifrar a urdidura de Midgaard e erguer o Grande Compêndio das Memórias.</strong> Preservar a história e honrar os caídos (como Sakura), sem se corromper pela violência mercenária das tavernas.</p>
           </div>
 
           <div class="stat-box" style="border-left: 3px solid #e06c75;">
             <h4 style="color: #e06c75;">2. O que ele mais teme?</h4>
-            <p><strong>A perda da mente (dissociação da alma) e o horror da morte anônima e esquecida.</strong> O trauma primordial de quase ter tido seu corpo usurpado no Dia 1 e o pavor de virar um cadáver sem nome numa sarjeta.</p>
+            <p id="q2-text"><strong>A perda da mente (dissociação da alma) e o horror da morte anônima e esquecida.</strong> O trauma primordial de quase ter tido seu corpo usurpado no Dia 1 e o pavor de virar um cadáver sem nome numa sarjeta.</p>
           </div>
 
           <div class="stat-box" style="border-left: 3px solid #d19a66;">
             <h4 style="color: #d19a66;">3. Qual é a maior falha de caráter dele?</h4>
-            <p><strong>A soberba intelectual e a paralisia do distanciamento calculista.</strong> O risco de usar a desculpa de "observador imparcial" para justificar o medo ou a covardia diante de tragédias que demandam ação.</p>
+            <p id="q3-text"><strong>A soberba intelectual e a paralisia do distanciamento calculista.</strong> O risco de usar a desculpa de "observador imparcial" para justificar o medo ou a covardia diante de tragédias que demandam ação.</p>
           </div>
 
           <div class="stat-box" style="border-left: 3px solid var(--accent-cyan);">
             <h4 style="color: var(--accent-cyan);">4. O que ele está disposto a sacrificar para vencer?</h4>
-            <p><strong>Sacrifica o conforto, as honras fáceis e o aplauso mundano; jamais a verdade ou a ética.</strong> Dorme no chão frio e rejeita ouro manchado de sangue. A fidelidade à memória viva é inegociável.</p>
+            <p id="q4-text"><strong>Sacrifica o conforto, as honras fáceis e o aplauso mundano; jamais a verdade ou a ética.</strong> Dorme no chão frio e rejeita ouro manchado de sangue. A fidelidade à memória viva é inegociável.</p>
           </div>
 
           <div class="stat-box" style="border-left: 3px solid #98c379;">
             <h4 style="color: #98c379;">5. Que marca ou legado ele quer deixar?</h4>
-            <p><strong>Ser o Olho Lúcido e a Voz Imortal de Midgaard.</strong> Que os viajantes do futuro encontrem seus registros e saibam quem amou, lutou e tombou neste cosmo através das décadas.</p>
+            <p id="q5-text"><strong>Ser o Olho Lúcido e a Voz Imortal de Midgaard.</strong> Que os viajantes do futuro encontrem seus registros e saibam quem amou, lutou e tombou neste cosmo através das décadas.</p>
           </div>
         </div>
       </section>
@@ -140,5 +147,6 @@
     </div>
   </footer>
 
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,22 @@
+{
+  "id": "grebolius",
+  "name": "Grebolius",
+  "title": "A Ladra que Será Soberana",
+  "rune": "🧌",
+  "avatar": "🗡️",
+  "race_class": "Goblin Ladra (Passa por Homem)",
+  "role": "Fundadora do Futuro Reino Goblin (Meta: Nível 30)",
+  "alignment": "Pragmática / Focada em Velocidade",
+  "quote": "“Mulher goblin precisa esconder o rosto e lutar pelo dobro para ser ouvida. Meu destino é o Nível 30, rápido e sem fraqueza.”",
+  "subtitle": "Diário enxuto de ascensão implacável. Mulher goblin fingindo ser homem para conquistar respeito, mapear cada canto e libertar seu povo.",
+  "vigilia": "Meta: Nível 30 • Ritmo: Velocidade Máxima",
+  "server": "debomud.org:4000",
+  "accent_color": "#2bd685",
+  "questions": {
+    "q1": "Atingir o Nível 30 o mais rápido possível e fundar um Reino Livre para os goblins, pondo fim à opressão histórica através do poder bruto.",
+    "q2": "Ter sua identidade feminina descoberta antes da hora, perder tempo e morrer fraca como mais um cadáver sem valor numa sarjeta.",
+    "q3": "Frieza extrema e impaciência violenta com qualquer coisa que não acelere seu ganho de EXP e poder.",
+    "q4": "Sacrifica sono (só dorme desmaiada de exaustão), vaidade, dor e laços afetivos; jamais a meta de Lvl 30 ou o cálculo prudente de combate.",
+    "q5": "Ser a Soberana que quebrou as correntes dos goblins e provou que uma mulher de sua raça pode subjugar Midgaard."
+  }
+}

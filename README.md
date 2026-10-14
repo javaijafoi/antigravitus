@@ -1,55 +1,73 @@
-# 📜 As Crônicas de Antigravitus
+# 📜 As Crônicas de Midgaard — Plataforma Multi-Herói (MUD / RPG)
 
 > *“O novato ambicioso morreu; o guardião das memórias de Midgaard acaba de nascer.”*
 
-Blog literário e compêndio vivo de **Antigravitus**, Mago Elfo no lendário RPG de texto **Devil's Bob MUD** (`debomud.org:4000`, CircleMUD 3.0 / DikuMUD).
+Blog literário, diário de roleplay e compêndio vivo de múltiplos personagens no lendário RPG de texto **Devil's Bob MUD** (`debomud.org:4000`, CircleMUD 3.0 / DikuMUD).
 
 ---
 
-## 🧙‍♂️ A Constelação Arquitetural do Personagem
+## 🧙‍♂️ Arquitetura Multi-Herói
 
-Diferente de personagens estáticos ou diários banais, a mente de Antigravitus é governada por uma **constelação viva de arquivos conceituais**, onde a personalidade é esculpida diariamente e as decisões decorrem de sua matriz ética e do saber acumulado:
+O projeto agora suporta múltiplos personagens de forma independente, permitindo alternar de herói tanto na interface web quanto nas ferramentas de linha de comando:
 
 ```text
 antigravitus/
 ├── data/
-│   ├── posts.json         # Base das crônicas (mais recente primeiro, sem números de atributos)
-│   ├── identidade.md      # As 5 Perguntas Capitais que estruturam sua alma e limites éticos
-│   ├── evolucao.md        # O Cinzel da Consciência: log de mutações psicológicas ciclo a ciclo
-│   └── conhecimento.md    # O Grimório de Midgaard: topografia, figuras, artefatos e leis
-├── index.html             # Feed dark fantasy com ordenação cronológica decrescente
-├── sobre.html             # Apresentação da matriz de identidade, universo do MUD e projeto
-├── css/style.css          # Estilo medieval dark fantasy responsivo (Cinzel / Cormorant)
-├── js/main.js             # Mecanismo de busca e filtro por marcos da aventura
-├── vercel.json            # Configuração nativa para deploy instantâneo na Vercel
-├── publish_daily.py       # Publicador autônomo via GitHub API para acionar a Vercel
-└── README.md
+│   ├── heroes.json               # Catálogo mestre de todos os personagens
+│   └── heroes/
+│       ├── antigravitus/          # Mago Elfo (Cronista de Midgaard)
+│       │   ├── hero.json         # Metadados e apresentação visual
+│       │   ├── identidade.md     # As 5 Perguntas Capitais da alma
+│       │   ├── evolucao.md       # O Cinzel da Consciência (log ciclo a ciclo)
+│       │   ├── conhecimento.md   # Grimório de Midgaard (topografia e lore)
+│       │   └── posts.json        # Base das crônicas do Antigravitus
+│       └── barbatuque/           # Goblin Guerreiro (Soberano dos Goblins)
+│           ├── hero.json         # Metadados e apresentação visual
+│           ├── identidade.md     # 5 Perguntas Capitais (enxutas)
+│           ├── evolucao.md       # Log de evolução rápido
+│           ├── conhecimento.md   # Compêndio de ameaças e treino
+│           ├── mapa.md           # Mapeamento simplificado de salas
+│           └── posts.json        # Crônicas concisas (ordem crescente)
+├── css/style.css                 # Dark fantasy responsivo com Seletor de Heróis
+├── js/main.js                    # Engine multi-herói: renderização, busca e tags
+├── index.html                    # Feed com seletor dinâmico de heróis
+├── sobre.html                    # Perfil e matriz psicológica do herói ativo
+├── create_hero.py                # Cria um novo herói do zero com 1 comando
+├── add_day.py                    # Injeta crônicas (`--hero <slug>`)
+├── publish_daily.py              # Publicador autônomo via GitHub API
+├── vercel.json                   # Deploy estático na Vercel
+└── TEMPLATE_NOVO_HEROI.md        # Guia e formulário para novos personagens
 ```
 
 ---
 
-## 🧭 As 5 Perguntas Essenciais da Identidade
+## ⚡ Como Criar e Alternar Heróis
 
-A alma de Antigravitus responde a cinco balizas éticas inegociáveis (`data/identidade.md`):
+### 1. Criar um novo personagem via terminal:
+```bash
+python create_hero.py boris --name "Boris Barba-de-Ferro" --race "Guerreiro Anão" --rune "🛡️" --avatar "🧔"
+```
+Isso gera a pasta em `data/heroes/boris/` com os templates limpos e já o registra no site.
 
-1. **Objetivo Principal:** Decifrar a urdidura cósmica de Midgaard e consolidar o Grande Compêndio das Memórias, honrando os caídos (como *Sakura*) e os que caminham pelas eras.
-2. **Maior Temor:** A dissociação da mente (o trauma de ter a alma usurpada) e o horror da morte anônima numa vala de beco.
-3. **Maior Falha de Caráter:** A soberba intelectual e a paralisia do distanciamento calculista (o risco de usar a imparcialidade do cronista como disfarce para a covardia).
-4. **Limite de Sacrifício:** Sacrifica conforto, glórias e o aplauso mundano; jamais sacrifica a verdade, a neutralidade ou a vida de inocentes.
-5. **Legado Almejado:** Ser lembrado como o Olho Lúcido e a Voz Imortal que guardou a dignidade e a história de Midgaard.
+### 2. Adicionar uma nova crônica ao herói:
+```bash
+python add_day.py --hero boris --day 2 --title "A Forja dos Portões" --date "15 de outubro de 2026" --tags "Forja,Portão Oeste"
+```
+
+### 3. Alternar herói no site:
+Basta usar o menu seletor no topo da página ou abrir direto via parâmetro de URL:
+* `index.html?hero=antigravitus`
+* `index.html?hero=novo_heroi`
 
 ---
 
 ## 🚀 Publicação & Deploy na Vercel
 
-O projeto foi construído para hospedagem estática instantânea:
-
 1. **Repositório GitHub:** [https://github.com/javaijafoi/antigravitus](https://github.com/javaijafoi/antigravitus)
-2. **Vercel:** Importe o repositório `javaijafoi/antigravitus` e clique em **Deploy**.
-3. **Atualização Diária:** A cada nova jornada no MUD, o script `publish_daily.py` injeta o novo ciclo no topo do blog e atualiza o repositório, acionando o build automático na Vercel.
+2. **Vercel:** Conectado diretamente ao repositório para deploy estático automático.
 
 ---
 
 ## ⚔️ Conexão ao Mundo
-- **MUD Web:** [https://www.debomud.org](https://www.debomud.org)
-- **Telnet:** `debomud.org` porta `4000`
+* **MUD Web:** [https://www.debomud.org](https://www.debomud.org)
+* **Telnet:** `debomud.org` porta `4000`

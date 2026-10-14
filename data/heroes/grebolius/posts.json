@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "day": "Dia 1",
+    "title": "Despertar no Lixo, Disfarce de Homem e Reconhecimento",
+    "date": "14 de outubro de 2026",
+    "in_game_time": "Midgaard — Ciclo 1",
+    "excerpt": "Despertar no Depósito de Lixo. Ajuste do capuz e voz grossa para passar por homem, varredura das primeiras ruas de Midgaard e catalogação de alvos.",
+    "tags": [
+      "Despertar",
+      "Disfarce",
+      "Mapeamento Inicial",
+      "Meta Nível 30"
+    ],
+    "content": [
+      "Abri os olhos no chão fétido do Depósito de Lixo. O cheiro de podridão me acolheu como um abraço familiar. Ser goblin em terra de gente grande é ser tratada como praga; ser mulher goblin é ser duas vezes vulnerável. Ajustei as correias de couro apertadas no peito, puxei o capuz sobre os olhos, engrossei a voz e adotei a postura de um ladrão homem. Enquanto acreditarem que sou apenas mais um mercenário de faca afiada, ninguém me subestima.",
+      "Minha meta é absoluta e inegociável: Nível 30 o mais rápido possível para erguer um reino livre onde nenhum goblin seja pisado. Não tenho tempo a perder com conversas fiadas.",
+      "Ação do ciclo: cruzei a Praça Comum e a Praça do Comércio sob o disfarce perfeito. Mapeei a Rua Principal a leste, espionei o Armazém e localizei uma matilha de quatro cães no lixo defronte à Guilda dos Guerreiros. Alvos fracos, sem risco de morte — presas perfeitas para começar o ganho veloz de EXP no próximo ciclo.",
+      "Recolhi-me com os músculos latejando de exaustão. Salvei meu progresso, deitei no chão e apaguei. Amanhã começa a caçada."
+    ]
+  },
+  {
+    "id": 2,
+    "day": "Dia 2",
+    "title": "A Varredura da Padaria e a Disciplina da Ladra",
+    "date": "15 de outubro de 2026",
+    "in_game_time": "Midgaard — Ciclo 2",
+    "excerpt": "Avanço pela Rua Oeste até a Padaria. Avaliação de presas no lixo, vigilância de guardas armados e a escolha pela discrição calculada.",
+    "tags": [
+      "Rua Oeste",
+      "A Padaria",
+      "Cálculo Tático",
+      "Frieza"
+    ],
+    "content": [
+      "Acordei antes do nascer do sol e bati a poeira das calças de couro. Goblin apressada que ataca sem olhar o terreno vira adubo de rua. Rumei para a Rua Principal Oeste para checar alvos matinais.",
+      "Entrei na Padaria de Midgaard atraída pelo cheiro de lenha e massa quente. Lá dentro, deparei-me com uma cena tensa: o Padeiro enfarinhado, um cão revirando sobras, uma criatura estranha andando de costas e um aventureiro veterano rondando à procura de missões, com um guarda armado fincado na calçada.",
+      "A tentação de sacar a lâmina contra o animal foi grande, mas a disciplina falou mais alto. Puxar briga com testemunhas poderosas e sentinelas na porta é estupidez amadora. Ladra que quer ser rainha não vai para a masmorra por migalha. Registrei a rota no mapa.md, salvei meu estado e dormi no canto da sala até a poeira baixar."
+    ]
+  },
+  {
+    "id": 3,
+    "day": "Dia 3",
+    "title": "O Enclave dos Magos, o Portão Oeste e o Trono Sagrado",
+    "date": "16 de outubro de 2026",
+    "in_game_time": "Midgaard — Ciclo 3",
+    "excerpt": "Exploração do extremo oeste da cidade: Loja de Magias, a sentinela reluzente da Guilda dos Magos, o Portão Oeste com espadas no chão e o retorno ao Santuário do Templo.",
+    "tags": [
+      "Portão Oeste",
+      "Guilda dos Magos",
+      "Santuário Seguro",
+      "Mapeamento Completo"
+    ],
+    "content": [
+      "Deixei a padaria em silêncio logo cedo e desci a Rua Principal Oeste até o seu limite extremo. O dia foi de mapeamento cirúrgico de alto valor.",
+      "Ao norte da esquina, cataloguei a Loja de Magias, com suas prateleiras cheias de poções e pergaminhos sob a guarda de um feiticeiro resmungão. Ao sul, localizei a Entrada da Guilda dos Magos — um enclave sombrio protegido por um mago de combate reluzindo em aura mágica ofuscante, com caixas de moedas e carne apodrecendo perto de outro cachorro no lixo.",
+      "Avancei ao extremo oeste até Dentro do Portão Oeste de Midgaard: duas torres de vigia sobre a ponte levadiça, guardas fortemente armados e duas espadas longas de aço polido caídas na pedra. Gravei mentalmente a saída para os ermos exteriores.",
+      "Com a estamina no limite, recuei pelo centro cívico, cruzei a Fonte Azul e alcei a montanha sagrada até o Templo de Midgaard. No santuário inviolável onde nenhuma lâmina ousa ferir, salvei meu progresso e deitei na pedra fria. O mapa está traçado; o reino goblin começará a ser erguido."
+    ]
+  }
+]

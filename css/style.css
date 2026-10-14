@@ -139,10 +139,53 @@ nav.main-nav a.active::after {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   height: 2px;
   background: var(--accent-gold);
-  box-shadow: 0 0 8px var(--accent-gold);
+}
+
+/* Seletor de Heróis */
+.hero-selector-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(18, 22, 30, 0.95);
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  transition: var(--transition);
+}
+
+.hero-selector-wrap:hover {
+  border-color: var(--accent-gold);
+}
+
+.hero-select-label {
+  font-family: var(--font-serif);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hero-select {
+  background: transparent;
+  border: none;
+  color: var(--accent-gold);
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  padding-right: 0.25rem;
+}
+
+.hero-select option {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  padding: 0.5rem;
 }
 
 .nav-badge {
