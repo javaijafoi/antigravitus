@@ -78,6 +78,15 @@
 
 ---
 
+## ♟️ O Grande Tabuleiro de Xadrez de Midgaard (Descoberta do Dia 18)
+
+| Sala | Saídas Verificadas | Nível de Risco | Notas de Campo / Recursos |
+| :--- | :--- | :--- | :--- |
+| **O Caminho Sujo** | **L** (Grande Campo Bifurcação), **O** (Grande Tabuleiro de Xadrez) | Baixo | Trilha de terra batida ladeada por carvalhos antigos; portão enferrujado a oeste. |
+| **O Grande Tabuleiro de Xadrez** | **L** (O Caminho Sujo), **O** (Interior do Tabuleiro) | Mistério / Épico | Portão gigantesco de ferro em arco de pedra; lajes monumentais alternadas em ébano e alabastro. |
+
+---
+
 ## 🧭 Legenda de Navegação
 * `[Santuário]` = Seguro para dormir sem risco de morte sob abrigo inviolável.
 * `[Treino]` / `[Caça]` = Criaturas dosadas para combate seguro com ganho real de maestria e espólios.

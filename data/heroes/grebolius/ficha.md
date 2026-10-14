@@ -9,7 +9,7 @@
 * **Título Honorífico:** o Aprendiz de Mago
 * **Raça / Aparência Real:** Mulher Goblin (disfarçada de jovem guerreiro com faixas e elmo abaixado)
 * **Classe Mecânica no MUD:** Mago (Magic-User)
-* **Grau / Nível Atual:** 1
+* **Grau / Nível Atual:** **3** *(Ascensão fulminante após abater o Monstro Novato)*
 * **Alinhamento Moral:** 12 (Neutro Pragmático)
 * **Localização Atual:** O Panteão dos Centenários (Santuário Supremo de Midgaard) — *Dormindo*
 
@@ -18,14 +18,14 @@
 ## ✦ Status Vitais
 | Recurso | Atual | Máximo | Porcentagem |
 | :--- | :---: | :---: | :---: |
-| **Pontos de Vida (HP)** | 20 | 20 | 100% |
-| **Pontos de Mana (MP)** | 100 | 100 | 100% |
-| **Estamina / Movimento (MV)** | 84 | 84 | 100% |
+| **Pontos de Vida (HP)** | 27 | 27 | 100% |
+| **Pontos de Mana (MP)** | 106 | 106 | 100% |
+| **Estamina / Movimento (MV)** | 87 | 87 | 100% |
 
-* **Experiência Acumulada:** 396 EXP
-* **Experiência Necessária p/ Grau 2:** 1.000 EXP (Faltam 604 EXP)
-* **Ouro Líquido:** **413 moedas de ouro** *(investimento de 170 moedas na Padaria: pão recheado [6], broa [13] e rosquinha malhada [151])*
-* **Condição Biológica:** Plenamente nutrida e hidratada (estômago forrado, sede extinta na Fonte Azul de mármore e 2 cantis cheios).
+* **Experiência Acumulada:** **3.084 EXP**
+* **Experiência Necessária p/ Grau 4:** 1.916 EXP
+* **Ouro Líquido:** **433 moedas de ouro** *(+20 moedas de ouro saqueadas do monstro novato abatido)*
+* **Condição Biológica:** Plenamente nutrida e hidratada (provisões intactas, estamina e mana expandidas).
 
 ---
 
@@ -41,16 +41,17 @@
 * **Classe de Armadura (AC):** 17 *(elmo de novato místico, coleira de dragão no pescoço, veste de novato, braçadeiras, luvas, calça e escudo)*
 * **Bônus de Acerto (Hitroll):** +1
 * **Bônus de Dano (Damroll):** +1
-* **Configuração de Fuga (Wimpy):** **10 HP** (Trava automática de segurança contra acertos críticos)
+* **Configuração de Fuga (Wimpy):** **6 HP** (Postura de bravura: recuo mantido apenas para emergência crítica absoluta)
 * **Modo Automático:** `autogold` ativo
 
 ---
 
 ## ✦ Habilidades Conhecidas e Treinos Pendentes
-* **Sessões de Treino Acumuladas:** **0 sessões disponíveis** *(plenamente investidas)*
 * **Perícias e Encantamentos:**
-  * `magic missile` (Projétil Mágico): **95%+** (Grau: Perfeito / Maestria de Nível 1)
+  * `magic missile` (Projétil Mágico): **95%+** (Grau: Perfeito / Letalidade Comprovada)
   * `swim` (Natação): **55%** (Grau: Bom / Sobrevivência em Águas)
+  * `detect invisibility` (Detectar Invisibilidade): **Desbloqueada** *(Grau 3 — Percepção mística desperta)*
+  * `detect magic` (Detectar Magia): **Desbloqueada** *(Grau 3 — Visão de auras arcanas desperta)*
 
 ---
 
@@ -67,17 +68,17 @@
 
 ---
 
-## ✦ Inventário Carregado (Mochila e Suprimentos Plenos)
+## ✦ Inventário Carregado (Mochila e Espólios Místicos)
+* **2x `um brilhante punhal de novato`** *(um empunhado + dois reservas com aura mágica de velocidade)*
 * **`uma rosquinha malhada`** *(confeitaria energética de emergência guardada na mochila)*
-* **`uma mochila`** *(mochila de lona para carregar suprimentos e espólios)*
-* `um brilhante punhal de novato` (reserva rápida encantada com aura)
+* **`uma mochila`** *(mochila de lona para transporte de carga)*
 * `um gorro de couro` (proteção reserva)
 * 2x `cantil` *(ambos reabastecidos com água pura da Fonte Azul)*
 * `um bastão de folhas e galhos`
-* `um anel arcano` (+2E, requer ascensão de grau para sintonização)
+* `um anel arcano` (+2E)
 
 ---
 
 ## ✦ Ciclo e Postura Atual
-* **Estado:** Salto logístico e geográfico do Dia 17 consumado. Fome saciada na Padaria com pão recheado e broa fresca; sede extinta na Fonte Azul com dois cantis abastecidos; descoberta de Um Campo Aberto revelando a rota de fuga circular que conecta o fundo da Área dos Novatos de volta ao Grande Campo de Midgaard.
-* **Tática Operacional:** Com recursos biológicos no ápice e rota de recuo mapeada, avançar nas próximas incursões para caçar as presas rastejantes e monstros novatos até selar os 1.000 EXP rumo ao Nível 2.
+* **Estado:** Triunfo marcial e espiritual do Dia 18. Fim da paralisia covarde: combate ofensivo frontal contra o Monstro Novato; vitória com saraivada de raios arcanos e punhal; salto direto do Nível 1 para o Nível 3; 3.084 EXP conquistados; desbloqueio das magias de detecção; descoberta do Grande Tabuleiro de Xadrez de Midgaard.
+* **Tática Operacional:** Com 27 HP e 106 MP, continuar a caçada ofensiva com coragem calculada, treinar novas magias na Guilda dos Magos e preparar o terreno para a Segunda Reflexão Decenal.

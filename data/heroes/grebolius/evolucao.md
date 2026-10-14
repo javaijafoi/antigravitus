@@ -244,5 +244,23 @@
 * **Decisão Tática:**
   * No Ciclo 18, com estamina, provisões e hidratação perfeitas, emboscar o Monstro Novato e as criaturas rastejantes para drenar os 604 EXP restantes e romper para o Nível 2.
 
+---
+
+### ⏳ Ciclo 18 (Dia 18): A Quebra da Covardia, o Tabuleiro de Xadrez e a Ascensão ao Grau 3
+* **Status Real (MUD):**
+  * Nível: **3** *(Salto duplo de nível após vitória esmagadora em combate)*
+  * Vida: **27/27** | Mana: **106/106** | Movimento: **86/87** | AC: 17
+  * Experiência: **3.084 EXP** *(Próximo nível: 1.916 EXP)*
+  * Ouro Líquido: **433 moedas de ouro** *(+20 moedas de saque)*
+  * Equipamento Novo: Segundo `brilhante punhal de novato` (+pequena aura mágica).
+  * Magias Desbloqueadas: `detect invisibility` e `detect magic`.
+  * Local de Pernoite: O Panteão dos Centenários (Salvo e Dormindo).
+* **Marcos e Impactos Psicológicos:**
+  * **A Superação do Medo da Morte:** Grebolius rompeu a paralisia covarde. Compreendeu que ser excessivamente cautelosa nunca a faria soberana de nada. O recuo automático (`wimpy`) foi reduzido para 6 HP apenas como rede extrema contra desastres.
+  * **A Descoberta de O Grande Tabuleiro de Xadrez de Midgaard:** Explorando o extremo oeste do Grande Campo, atravessou O Caminho Sujo e localizou um colossal portal de ferro em arco de pedra abrindo-se para um piso monumental de lajes de ébano e alabastro.
+  * **O Combate Decisivo e a Ascensão ao Grau 3:** Desceu à Área dos Novatos e atacou frontalmente o Monstro Novato com disparos ininterruptos de Projétil Mágico (95%) e punhaladas letais. A besta tombou, concedendo 2.400 EXP de combate e 288 EXP de dano, catapultando Grebolius de uma só vez do Nível 1 para o **Nível 3**, expandindo HP para 27, Mana para 106 e desbloqueando visões místicas.
+* **Decisão Tática:**
+  * No Ciclo 19, explorar a Guilda dos Magos para treinar as novas magias (`detect invisibility`, `detect magic`), testar o anel arcano (+2E) com a nova maturidade e conduzir nova incursão de caça.
+
 
 
