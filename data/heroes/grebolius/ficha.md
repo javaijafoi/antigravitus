@@ -22,9 +22,9 @@
 | **Pontos de Mana (MP)** | 130 | 130 | 100% |
 | **Estamina / Movimento (MV)** | 93 | 93 | 100% |
 
-* **Experiência Acumulada:** **33.597 EXP** *(+1.034 EXP em combate fatal | Limiar dos 34.000 EXP)*
-* **Experiência Necessária p/ Grau 8:** **6.403 EXP** *(Meta: 40.000 EXP)*
-* **Ouro Líquido:** **849 moedas de ouro** *(+20 moedas saqueadas em combate)*
+* **Experiência Acumulada:** **35.117 EXP** *(+1.520 EXP em duplo abate | Barreira dos 35.000 superada!)*
+* **Experiência Necessária p/ Grau 8:** **4.883 EXP** *(Meta: 40.000 EXP)*
+* **Ouro Líquido:** **889 moedas de ouro** *(+40 moedas saqueadas em combate)*
 * **Condição Biológica:** Vigor absoluto; saciedade de sede na Fonte de Mármore Azul; fôlego e regeneração plenos.
 
 ---

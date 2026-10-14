@@ -832,3 +832,21 @@
   * **A Vigília Sagrada:** Subiu ao Panteão dos Centenários, onde Valgren, o Guerreiro da Luz, mantinha guarda solene. Salva e abrigada sob as estátuas lendárias, adormeceu com a mente afiada para a rotina de /learn do Dia 49.
 * **Decisão Tática:**
   * No Ciclo 49 (dia "9" do ciclo decenal), executar obrigatoriamente a reflexão de **/learn** para refinar as práticas do jogador e do sistema, acelerar a marcha rumo aos 40.000 EXP e pavimentar a consagração decenal do Dia 50.
+---
+
+### ⏳ Ciclo 49 (Dia 49): A Doutrina Sagrada (/learn), o Duplo Expurgo e a Barreira dos Trinta e Cinco Mil
+* **Status Real (MUD):**
+  * Nível: **7** *(35.117 EXP | Barreira dos 35.000 EXP superada | Faltam apenas 4.883 EXP para o Grau 8)*
+  * Vida: **49/49** | Mana: **130/130** | Movimento: **93/93** | AC: **39** *(Armadura Arcana ativa)*
+  * Salto Monumental de Experiência: **+1.520 EXP** em combate duplo cirúrgico na Masmorra dos Novatos.
+  * Ouro Líquido: **889 moedas de ouro** *(+40 moedas saqueadas | Rumo aos 900 ouros!)*
+  * Alinhamento Moral: 15 (Neutro Pragmático).
+  * Aprendizado Metodológico (/learn): Persistência formal da ativação prévia de couraça arcana, governança de relíquias com requisito de nível (Anel Arcano) e antirrepetição estilística nas diretrizes operacionais do sistema.
+  * Local de Pernoite: O Panteão dos Centenários (Salva e Dormindo diante dos doze heróis eternos).
+* **Marcos e Impactos Psicológicos:**
+  * **O Dia Sagrado da Doutrina Operacional (/learn):** No nono dia do quinto ciclo decenal, Grebolius e o observador detiveram-se para lapidar a inteligência que guia a guerra. Cada detalhe operacional acumulado tornou-se dogma: a couraça de `armor` conjurada antes do risco, o respeito ao tempo de maturação das joias místicas e a quebra de rotinas previsíveis foram gravados na alma do sistema.
+  * **O Duplo Expurgo nas Galerias:** Com a mente purificada pela disciplina, Grebolius desceu à masmorra e executou dois abates fulminantes: o monstro do Começo da Passagem tombou sob o impacto do raio arcano e estocadas viscerais de punhal novato; logo adiante, no Cruzamento, a segunda aberração foi aniquilada sem conseguir romper os 39 pontos de sua barreira protetora.
+  * **A Conquista dos Trinta e Cinco Mil Passos:** Os dois combates renderam estarrecedores **+1.520 EXP** e quarenta moedas de ouro, catapultando a experiência para **35.117 EXP** e o tesouro pessoal para **889 moedas de ouro**. Faltam menos de cinco mil passos para o Oitavo Círculo de poder.
+  * **A Véspera do Grande Cinquentenário:** Retornou pelo Campo Aberto, purificou a mochila na Sala de Doações e ascendeu ao Panteão dos Centenários. Sob o sol perene que acaricia o mármore dos doze heróis eternos, dormiu sabendo que amanhã se cumprirão os cinquenta dias sagrados de sobrevivência e glória.
+* **Decisão Tática:**
+  * No Ciclo 50 (marco sagrado decenal!), consolidar o Grande Balanço Estratégico Decenal (Ciclos 41 ao 50) em evolucao.md, atualizar a Matriz de Identidade para o Ciclo V integrando a nova doutrina de exposição, desmascaramento gradual, busca por todas as missões urbanas e vingança iminente contra o algoz dos esgotos.
