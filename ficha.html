@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ficha do Personagem — As Crônicas de Devil's Bob MUD</title>
+  <meta name="description" content="Ficha técnica viva do personagem em Devil's Bob MUD. Status vitais, atributos, equipamentos e perícias sincronizados diretamente com o servidor.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,450;0,600;1,400&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📜</text></svg>">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <span class="brand-rune">ᛟ</span>
+        <div class="brand-text">
+          <h1>Antigravitus</h1>
+          <span>Cronista de Midgaard</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <div class="hero-selector-wrap">
+          <label for="hero-select" class="hero-select-label">Herói:</label>
+          <select id="hero-select" class="hero-select" aria-label="Selecione o Herói">
+            <option value="antigravitus">🧙‍♂️ Antigravitus</option>
+            <option value="grebolius">🧌 Grebolius</option>
+          </select>
+        </div>
+        <a href="index.html" id="link-cronicas">Crônicas</a>
+        <a href="ficha.html" class="active" id="link-ficha">Ficha</a>
+        <a href="sobre.html" id="link-sobre">Sobre</a>
+        <a href="https://www.debomud.org" target="_blank" rel="noopener">Devil's Bob MUD ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <article class="about-card">
+      <div class="about-header">
+        <div class="about-avatar" id="about-avatar">🧌</div>
+        <h2 id="about-name">Ficha do Personagem</h2>
+        <p id="about-sub">Status Vitais • Atributos • Equipamento • Perícias</p>
+      </div>
+
+      <!-- Ficha Renderizada -->
+      <section class="about-section" id="ficha-container">
+        <div style="text-align: center; padding: 2rem; color: var(--text-secondary);">
+          Carregando ficha viva do personagem direto do repositório...
+        </div>
+      </section>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="index.html" id="btn-back-cronicas" class="post-day-badge" style="font-size: 1rem; padding: 0.6rem 1.5rem; text-decoration: none;">
+          ← Voltar para as Crônicas
+        </a>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-rune">✦ ᚱ ✦</div>
+      <div class="footer-links">
+        <a href="index.html">Início das Crônicas</a>
+        <a href="ficha.html">Ficha Técnica</a>
+        <a href="sobre.html">Sobre o Projeto</a>
+        <a href="https://github.com/javaijafoi/antigravitus" target="_blank" rel="noopener">GitHub do Projeto</a>
+        <a href="https://www.debomud.org" target="_blank" rel="noopener">debomud.org</a>
+      </div>
+      <p class="footer-copy">
+        As Crônicas de Devil's Bob MUD © 2026. Ficha viva sincronizada com o Git.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

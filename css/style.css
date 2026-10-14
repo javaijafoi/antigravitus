@@ -615,3 +615,48 @@ footer.site-footer {
     max-width: 100%;
   }
 }
+
+/* Ficha Viva & Stats Table */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1.25rem 0;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+}
+
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  text-align: left;
+  background: var(--bg-card);
+}
+
+.stats-table th {
+  background: var(--bg-secondary);
+  color: var(--accent-gold);
+  padding: 0.75rem 1rem;
+  font-family: var(--font-cinzel);
+  font-weight: 600;
+  border-bottom: 2px solid var(--border-color);
+  letter-spacing: 0.05em;
+}
+
+.stats-table td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+}
+
+.stats-table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.content-divider {
+  border: 0;
+  height: 1px;
+  background: var(--border-subtle);
+  margin: 1.75rem 0;
+}

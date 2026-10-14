@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   const postCountEl = document.getElementById("post-count");
   const linkSobre = document.getElementById("link-sobre");
   const linkCronicas = document.getElementById("link-cronicas");
+  const linkFicha = document.getElementById("link-ficha");
+  const fichaContainer = document.getElementById("ficha-container");
+  const btnBackCronicas = document.getElementById("btn-back-cronicas");
 
   const brandRuneEl = document.querySelector(".brand-rune");
   const brandTitleEl = document.querySelector(".brand-text h1");
@@ -105,6 +108,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (postsContainer) {
       await loadPostsForHero(currentHero);
     }
+    if (fichaContainer) {
+      await loadFichaForHero(currentHero);
+    }
   }
 
   function renderHeroSelector() {
@@ -133,6 +139,9 @@ document.addEventListener("DOMContentLoaded", async () => {
           if (searchInput) searchInput.value = "";
           await loadPostsForHero(currentHero);
         }
+        if (fichaContainer) {
+          await loadFichaForHero(currentHero);
+        }
       }
     });
   }
@@ -159,6 +168,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
     if (linkCronicas) {
       linkCronicas.href = `index.html?hero=${hero.id}`;
+    }
+    if (linkFicha) {
+      linkFicha.href = `ficha.html?hero=${hero.id}`;
+    }
+    if (btnBackCronicas) {
+      btnBackCronicas.href = `index.html?hero=${hero.id}`;
     }
 
     // Página Sobre
@@ -319,6 +334,142 @@ document.addEventListener("DOMContentLoaded", async () => {
     `
       )
       .join("");
+  }
+
+  // 4. Carrega e renderiza a ficha viva do herói ativo
+  async function loadFichaForHero(hero) {
+    if (!fichaContainer) return;
+    fichaContainer.innerHTML = `<div style="text-align: center; padding: 2rem; color: var(--text-secondary);">Carregando ficha de ${hero.name}...</div>`;
+    
+    try {
+      const res = await fetch(`data/heroes/${hero.id}/ficha.md`);
+      if (!res.ok) {
+        fichaContainer.innerHTML = `<p style="color: var(--text-secondary); text-align: center;">Ficha viva não encontrada para ${hero.name}.</p>`;
+        return;
+      }
+      const md = await res.text();
+      fichaContainer.innerHTML = renderMarkdownToHtml(md);
+    } catch (e) {
+      fichaContainer.innerHTML = `<p style="color: #e06c75; text-align: center;">Erro ao carregar a ficha do personagem: ${e.message}</p>`;
+    }
+  }
+
+  function renderMarkdownToHtml(md) {
+    // Parser limpo e seguro para a ficha de personagem
+    const lines = md.split("\n");
+    let html = "";
+    let inList = false;
+    let inTable = false;
+    let tableRows = [];
+
+    function flushList() {
+      if (inList) {
+        html += "</ul>";
+        inList = false;
+      }
+    }
+
+    function flushTable() {
+      if (inTable) {
+        if (tableRows.length > 0) {
+          html += "<div class='table-responsive'><table class='stats-table'>";
+          tableRows.forEach((row, idx) => {
+            const cells = row.split("|").slice(1, -1).map(c => c.trim());
+            if (idx === 0) {
+              html += "<thead><tr>" + cells.map(c => `<th>${formatInline(c)}</th>`).join("") + "</tr></thead><tbody>";
+            } else if (idx === 1 && cells[0].includes("---")) {
+              // divisor da tabela, ignorar
+            } else {
+              html += "<tr>" + cells.map(c => `<td>${formatInline(c)}</td>`).join("") + "</tr>";
+            }
+          });
+          html += "</tbody></table></div>";
+        }
+        tableRows = [];
+        inTable = false;
+      }
+    }
+
+    function formatInline(text) {
+      return text
+        .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+        .replace(/\*(.*?)\*/g, "<em>$1</em>")
+        .replace(/`([^`]+)`/g, "<code>$1</code>");
+    }
+
+    for (let line of lines) {
+      const trimmed = line.trim();
+
+      // Linha vazia
+      if (!trimmed) {
+        flushList();
+        flushTable();
+        continue;
+      }
+
+      // Separador
+      if (trimmed === "---") {
+        flushList();
+        flushTable();
+        html += "<hr class='content-divider'>";
+        continue;
+      }
+
+      // Tabela
+      if (trimmed.startsWith("|") && trimmed.endsWith("|")) {
+        flushList();
+        inTable = true;
+        tableRows.push(trimmed);
+        continue;
+      } else {
+        flushTable();
+      }
+
+      // Blockquote
+      if (trimmed.startsWith(">")) {
+        flushList();
+        const quoteContent = trimmed.replace(/^>\s*/, "");
+        html += `<blockquote class="hero-quote" style="margin: 1.5rem 0; font-size: 1.05rem;">${formatInline(quoteContent)}</blockquote>`;
+        continue;
+      }
+
+      // Headers
+      if (trimmed.startsWith("# ")) {
+        flushList();
+        html += `<h2 style="font-family: var(--font-cinzel); color: var(--accent-gold); margin-top: 1.5rem;">${formatInline(trimmed.replace(/^#\s*/, ""))}</h2>`;
+        continue;
+      }
+      if (trimmed.startsWith("## ")) {
+        flushList();
+        html += `<h3 style="font-family: var(--font-cinzel); color: var(--accent-gold); margin-top: 1.8rem; margin-bottom: 0.8rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.3rem;">${formatInline(trimmed.replace(/^##\s*/, ""))}</h3>`;
+        continue;
+      }
+      if (trimmed.startsWith("### ")) {
+        flushList();
+        html += `<h4 style="color: var(--text-primary); margin-top: 1.2rem; margin-bottom: 0.5rem;">${formatInline(trimmed.replace(/^###\s*/, ""))}</h4>`;
+        continue;
+      }
+
+      // Listas
+      if (trimmed.startsWith("* ") || trimmed.startsWith("- ")) {
+        if (!inList) {
+          html += "<ul style='margin-left: 1.5rem; margin-bottom: 1rem; line-height: 1.7;'>";
+          inList = true;
+        }
+        const itemContent = trimmed.replace(/^[\*\-]\s*/, "");
+        html += `<li>${formatInline(itemContent)}</li>`;
+        continue;
+      } else {
+        flushList();
+      }
+
+      // Parágrafo padrão
+      html += `<p style="margin-bottom: 0.8rem; line-height: 1.6;">${formatInline(trimmed)}</p>`;
+    }
+
+    flushList();
+    flushTable();
+    return html;
   }
 
   if (searchInput) {
