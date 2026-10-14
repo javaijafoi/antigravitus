@@ -89,7 +89,9 @@
 | Sala | Saídas Verificadas | Nível de Risco | Notas de Campo / Recursos |
 | :--- | :--- | :--- | :--- |
 | **O Caminho Sujo** | **L** (Grande Campo Bifurcação), **O** (Grande Tabuleiro de Xadrez) | Baixo | Trilha de terra batida ladeada por carvalhos antigos; portão enferrujado a oeste. |
-| **O Grande Tabuleiro de Xadrez** | **L** (O Caminho Sujo), **O** (Interior do Tabuleiro) | Mistério / Épico | Portão gigantesco de ferro em arco de pedra; lajes monumentais alternadas em ébano e alabastro. |
+| **O Grande Tabuleiro de Xadrez** | **L** (O Caminho Sujo), **O** (Uma Casa Branca) | Mistério / Épico | Portão gigantesco de ferro em arco de pedra; abertura para o interior do tabuleiro monumental. |
+| **Uma Casa Branca** | **N** (Casa Preta), **S** (Casa Preta), **O** (Casa Preta), **L** (Grande Tabuleiro) | Tensão Tática | Quadrado titânico de mármore branco polido; portão enferrujado a leste; cercado por casas pretas. |
+| **Uma Casa Preta** | Várias conexões | Desconhecido | Lajes de obsidiana e ébano onde peças vivas de xadrez se movem. |
 
 ---
 

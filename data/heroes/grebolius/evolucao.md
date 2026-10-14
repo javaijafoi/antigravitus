@@ -344,3 +344,18 @@
   * **O Chamado da Fome e a Saciedade Sagrada:** O estômago cobrou tributo orgânico durante a marcha; Grebolius desceu à Fonte Azul, reabasteceu os cantis com água fresca e subiu a escadaria da montanha até o santuário supremo, repousando aos pés das estátuas imortais do Panteão.
 * **Decisão Tática:**
   * Consumir parte das provisões de reserva (a rosquinha malhada na mochila) ou adquirir pães frescos na Padaria no próximo ciclo para manter o vigor orgânico em alta, avançando nas investigações da Afluência.
+
+---
+
+### ⏳ Ciclo 24 (Dia 24): A Invasão do Tabuleiro dos Titãs e a Casa Branca
+* **Status Real (MUD):**
+  * Nível: **3** | Vida: 27/27 | Mana: 106/106 | Movimento: 87/87 | AC: 17
+  * Experiência: 3.263 EXP | 6 práticas disponíveis
+  * Nova Fronteira Mapeada: **Uma Casa Branca** e **Uma Casa Preta** dentro de *O Grande Tabuleiro de Xadrez de Midgaard*.
+  * Local de Pernoite: O Grande Tabuleiro de Xadrez de Midgaard (Salvo e Dormindo).
+* **Marcos e Impactos Psicológicos:**
+  * **Nutrição e Ação Imediata:** Grebolius devorou a rosquinha malhada guardada na mochila, extirpando a fome e recuperando a energia plena dos músculos antes de iniciar a marcha.
+  * **O Vislumbre de Wacabayaxe:** Ao descer no Templo, presenciou o titã lendário *Wacabayaxe* em meditação profunda, envolvido por uma colossal aura multicolorida que fez o ar vibrar.
+  * **A Ruptura do Portão e a Invasão do Tabuleiro de Xadrez:** Sem perder tempo com divagações, cruzou o Grande Campo e empurrou as portas enferrujadas do arco de pedra, penetrando no lendário monumento: pisou diretamente em **Uma Casa Branca**, cercada por lajes de pedra escura que se estendem no horizonte. A invasão ao terreno mítico dos grandes mestres começou.
+* **Decisão Tática:**
+  * No Ciclo 25, explorar as casas adjacentes do Tabuleiro para localizar peças vivas ou tesouros ancestrais, mantendo a vigilância para alvos perigosos.

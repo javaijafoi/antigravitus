@@ -11,7 +11,7 @@
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **3** *(Ascensão fulminante após abater o Monstro Novato)*
 * **Alinhamento Moral:** 12 (Neutro Pragmático)
-* **Localização Atual:** O Panteão dos Centenários (Santuário Supremo de Midgaard) — *Dormindo com segurança*
+* **Localização Atual:** O Grande Tabuleiro de Xadrez de Midgaard (Fronteira Oeste dos Campos) — *Dormindo com segurança*
 
 ---
 
@@ -25,7 +25,7 @@
 * **Experiência Acumulada:** **3.263 EXP**
 * **Experiência Necessária p/ Grau 4:** 1.737 EXP
 * **Ouro Líquido:** **453 moedas de ouro**
-* **Condição Biológica:** Hidratada na Fonte Azul; alerta orgânico de fome disparado (refeição necessária no próximo ciclo).
+* **Condição Biológica:** Plenamente alimentada (rosquinha malhada consumida); fôlego vital e energia plenos.
 
 ---
 
@@ -71,7 +71,6 @@
 
 ## ✦ Inventário Carregado (Tríade de Lâminas e Mochila)
 * **3x `um brilhante punhal de novato`** *(um empunhado + três reservas com aura mágica de velocidade)*
-* **`uma rosquinha malhada`** *(confeitaria energética de emergência guardada na mochila)*
 * **`uma mochila`** *(mochila de lona para transporte de carga)*
 * `um gorro de couro` (proteção reserva)
 * 2x `cantil` *(ambos reabastecidos com água pura da Fonte Azul)*
@@ -81,5 +80,5 @@
 ---
 
 ## ✦ Ciclo e Postura Atual
-* **Estado:** Conclusão do Dia 23. Penetração no antro da Taverna Encardida no Beco Pobre, conhecendo o balcão de Filthy e a oferta de bebidas fortes dos marinheiros. Sondagem da rota externa para a Afluência na Ponte Sobre o Rio e retorno ao Panteão dos Centenários sob o olhar das estátuas lendárias.
-* **Tática Operacional:** Alimentar o corpo no início do Ciclo 24 (sacando a rosquinha malhada ou visitando a Padaria) para manter o vigor físico inabalável antes de avançar na Afluência ou intermediar serviços na cidade.
+* **Estado:** Conclusão do Dia 24. Marcha de ação agressiva: consumo de provisões, passagem veloz pelo Grande Campo e rompimento dos portões de ferro forjado d'O Grande Tabuleiro de Xadrez de Midgaard. Descoberta e ocupação de Uma Casa Branca, com rotas abertas para as lajes pretas do monumento.
+* **Tática Operacional:** No próximo ciclo, avançar pelas casas do Tabuleiro para localizar presas ou segredos arcanos protegidos pelas peças de xadrez vivas.
