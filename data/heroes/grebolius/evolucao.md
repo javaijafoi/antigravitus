@@ -438,3 +438,20 @@
   * **Vigília Avançada para a Caçada do Dragão:** Marchou pelos prados abertos até o portal de pedra d'O Grande Tabuleiro de Xadrez. Montou acampamento armada com o pergaminho de teleporte, revisando a missão confiada pelo Guarda Novato: no alvorecer, caçar o Bebê Dragão com a coleira em punho e libertar o sentinela de seu desespero.
 * **Decisão Tática:**
   * No Ciclo 29, marchar direto para a Masmorra dos Novatos, recolher uma coleira extra, localizar o Bebê Dragão para averiguar a captura/subjugação, e abater monstros novatos para romper os 10.000 EXP e subir para o Nível 5.
+
+---
+
+### ⏳ Ciclo 29 (Dia 29): A Tempestade na Masmorra, o Cerco do Filhote e o Limiar do Quinto Grau
+* **Status Real (MUD):**
+  * Nível: **4** | Vida: **33/33** | Mana: **111/111** | Movimento: **89/89** | AC: 17
+  * Experiência: **8.227 EXP** *(Salto formidável: restam apenas 1.773 EXP para o Grau 5)*
+  * Ouro Líquido: **469 moedas de ouro**
+  * Arsenal: Pergaminho de Retorno, Poção de Revelação, 7 punhais novatos mágicos, provisões plenas.
+  * Local de Pernoite: O Panteão dos Centenários (Salva e Dormindo diante dos heróis eternos).
+* **Marcos e Impactos Psicológicos:**
+  * **Ofensiva Contínua e Abates Fulminantes:** Grebolius invadiu as profundezas da Masmorra dos Novatos sem um pingo de hesitação. Combinando o estalo frio de *chill touch* com rajadas arcanas e punhaladas letais, desfez aberrações e guardiões nos corredores, ceifando mais de 2.200 EXP em uma única incursão. A experiência total explodiu para **8.227 EXP**, deixando-a a apenas 1.773 pontos do Quinto Grau.
+  * **O Cerco e o Estudo do Bebê Dragão:** Rastreou as galerias de Mais Corredor e Um Outro Canto, recolhendo coleiras de couro e confrontando o rastro do filhote réptil. Na câmara do Guarda Novato, reafirmou seu pacto de resgate: o sentinela aguarda o retorno da besta alada para não perder a cabeça para o Alquimista.
+  * **Saque e Disciplina Arcana:** Encheu os bolsos com sete punhais encantados e ouro saqueado dos corpos. Desceu até a Guilda dos Magos para rever os pentagramas da Mestre, confirmando a retenção de suas duas práticas para o salto iminente de Nível 5.
+  * **Descanso Sagrado:** Hidratou-se na lendária Fonte de Mármore Azul e subiu as escadarias até o silêncio monumental do Panteão dos Centenários, dormindo no cume sob o sol próprio que ilumina as doze estátuas imortais.
+* **Decisão Tática:**
+  * No Ciclo 30 (Marco Decenal), finalizar os 1.773 EXP restantes para ascender ao **Quinto Grau de Maestria (Nível 5)**, doar os punhais sobressalentes usando a diretriz `doar punhal` para liberar carga, treinar novos feitiços na Mestre da Guilda e avançar na captura do Bebê Dragão.

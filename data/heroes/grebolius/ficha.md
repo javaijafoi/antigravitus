@@ -9,9 +9,9 @@
 * **Título Honorífico:** o Aprendiz de Mago
 * **Raça / Aparência Real:** Mulher Goblin (disfarçada de jovem guerreiro com faixas e elmo abaixado)
 * **Classe Mecânica no MUD:** Mago (Magic-User)
-* **Grau / Nível Atual:** **4** *(Quarto Grau de Maestria consolidado)*
-* **Alinhamento Moral:** 25 (Neutro Pragmático)
-* **Localização Atual:** O Grande Tabuleiro de Xadrez de Midgaard (Fronteira Oeste dos Campos) — *Salva e Dormindo junto ao portal monumental*
+* **Grau / Nível Atual:** **4** *(Quarto Grau de Maestria consolidado — No limiar do Grau 5)*
+* **Alinhamento Moral:** 23 (Neutro Pragmático)
+* **Localização Atual:** O Panteão dos Centenários (Cume sagrado do Templo de Midgaard) — *Salva e Dormindo sob o olhar das estátuas lendárias*
 
 ---
 
@@ -22,10 +22,10 @@
 | **Pontos de Mana (MP)** | 111 | 111 | 100% |
 | **Estamina / Movimento (MV)** | 89 | 89 | 100% |
 
-* **Experiência Acumulada:** **6.015 EXP**
-* **Experiência Necessária p/ Grau 5:** 3.985 EXP
+* **Experiência Acumulada:** **8.227 EXP** *(Salto formidável: restam apenas 1.773 EXP para o Grau 5)*
+* **Experiência Necessária p/ Grau 5:** 1.773 EXP
 * **Ouro Líquido:** **469 moedas de ouro**
-* **Condição Biológica:** Vigor e energia física no ápice; cantis reabastecidos; 2 pães recheados em estoque.
+* **Condição Biológica:** Vigor pleno; sede saciada na Fonte Azul; cantis reabastecidos; provisões em estoque na mochila.
 
 ---
 
@@ -71,9 +71,9 @@
 ---
 
 ## ✦ Inventário Carregado (Arsenal Tático e Salvaguarda Arcana)
-* **`um pergaminho de retorno`** *(Salvaguarda de Teleporte: fuga instantânea ao Templo em caso de emboscada mortal)*
+* **`um pergaminho de retorno`** *(Salvaguarda de Teleporte: retorno instantâneo ao Templo em caso de emboscada mortal)*
 * **`uma poção amarela de detectar invisibilidade`** *(Percepção sobrenatural alquímica)*
-* **4x `um brilhante punhal de novato`** *(um empunhado + quatro reservas com aura mágica de velocidade)*
+* **7x `um brilhante punhal de novato`** *(um empunhado + seis reservas com aura mágica de velocidade saheadas de abates)*
 * **`uma mochila`** *(contendo 2x `um pão recheado` de reserva)*
 * `um gorro de couro` (proteção reserva)
 * 2x `cantil` *(ambos reabastecidos com água pura da Fonte Azul)*
@@ -82,5 +82,5 @@
 ---
 
 ## ✦ Ciclo e Postura Atual
-* **Estado:** Conclusão do Dia 28. Manobra tática de armamento e segurança: incursão à Loja de Armas para inspeção de mercado e avanço até a Loja de Magias no extremo oeste de Midgaard. Aquisição do vital **Pergaminho de Retorno** (`scroll of recall`) — o seguro de vida supremo para incursões profundas — e de uma poção mística de revelação. Marcha de reconhecimento exterior e vigília no portal d'O Grande Tabuleiro de Xadrez.
-* **Tática Operacional:** No Dia 29, marchar com o pergaminho de retorno afivelado e executar a varredura definitiva na Masmorra dos Novatos (abater monstros novatos e coisas assustadoras), rompendo os 10.000 EXP para ascender ao **Quinto Grau de Maestria (Nível 5)** e desbloquear novos feitiços na guilda.
+* **Estado:** Conclusão do Dia 29. Ofensiva massiva e avanço fulminante na Masmorra dos Novatos: múltiplos abates com rajadas arcanas e lâmina mágica, saltando a experiência acumulada para impressionantes **8.227 EXP** (a um passo do Nível 5). Investigação nas câmaras onde o Bebê Dragão do Alquimista transita e diálogo tático na câmara do Guarda Novato. Retorno pelo Campo Aberto, reabastecimento na Fonte de Mármore Azul e repouso inviolável no Panteão dos Centenários.
+* **Tática Operacional:** No Dia 30 (Marco Decenal), finalizar a caçada para romper a marca dos 10.000 EXP e ascender ao **Quinto Grau de Maestria (Nível 5)**, doar os punhais excedentes para a sala de doações via comando `doar`, treinar as novas magias de Nível 5 no Laboratório dos Magos e avançar na missão do dragão.
