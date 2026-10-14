@@ -3,8 +3,18 @@ document.addEventListener("DOMContentLoaded", async () => {
   const heroSelect = document.getElementById("hero-select");
   const postsContainer = document.getElementById("posts-container");
   const heroQuickStatsEl = document.getElementById("hero-quick-stats");
-  const cyclesTabsEl = document.getElementById("cycles-tabs");
-  const daysSelectorBarEl = document.getElementById("days-selector-bar");
+  const gridPageIndicator = document.getElementById("grid-page-indicator");
+  const gridCyclesBar = document.getElementById("grid-cycles-bar");
+  const gridDaysMatrix = document.getElementById("grid-days-matrix");
+  const postsPaginationEl = document.getElementById("posts-pagination");
+  const floatingDockEl = document.getElementById("floating-reading-dock");
+  const dockBtnPrev = document.getElementById("dock-btn-prev");
+  const dockBtnNext = document.getElementById("dock-btn-next");
+  const dockIndicator = document.getElementById("dock-indicator");
+  const btnToggleOrder = document.getElementById("btn-toggle-order");
+  const orderLabelText = document.getElementById("order-label-text");
+  const btnJumpLatest = document.getElementById("btn-jump-latest");
+  const latestBadgeText = document.getElementById("latest-badge-text");
   const postCountEl = document.getElementById("post-count");
   const linkSobre = document.getElementById("link-sobre");
   const linkCronicas = document.getElementById("link-cronicas");
@@ -50,6 +60,16 @@ document.addEventListener("DOMContentLoaded", async () => {
         q3: "A soberba intelectual e a paralisia do distanciamento calculista. O risco de usar a desculpa de 'observador imparcial' para justificar o medo ou a covardia diante de tragédias que demandam ação.",
         q4: "Sacrifica o conforto, as honras fáceis e o aplauso mundano; jamais a verdade ou a ética. Dorme no chão frio e rejeita ouro manchado de sangue. A fidelidade à memória viva é inegociável.",
         q5: "Ser o Olho Lúcido e a Voz Imortal de Midgaard. Que os viajantes do futuro encontrem seus registros e saibam quem amou, lutou e tombou neste cosmo através das décadas."
+      },
+      quick_stats: {
+        level_badge: "(Grau 2 • Cronista de Midgaard)",
+        hp: "31 / 31",
+        mana: "118 / 118",
+        mv: "92 / 92",
+        ac: "AC 12",
+        weapon: "Cajado de Peregrino",
+        weapon_icon: "🪄",
+        sanctuary: "Templo de Midgaard"
       }
     },
     {
@@ -72,14 +92,27 @@ document.addEventListener("DOMContentLoaded", async () => {
         q3: "Frieza extrema e impaciência violenta com qualquer coisa que não acelere seu aprendizado marcial e poder real.",
         q4: "Sacrifica sono (só dorme desmaiada de exaustão), vaidade, dor e laços afetivos; jamais a busca pela força suprema ou o cálculo prudente de combate.",
         q5: "Ser a Soberana que quebrou as correntes dos goblins e provou que uma mulher de sua raça pode subjugar as lendas de Midgaard."
+      },
+      quick_stats: {
+        level_badge: "(Grau 4 • Mago / Ladra)",
+        hp: "33 / 33",
+        mana: "111 / 111",
+        mv: "89 / 89",
+        ac: "AC 17",
+        weapon: "Punhal de Novato (+ Escudo)",
+        weapon_icon: "🗡️",
+        sanctuary: "Panteão dos Centenários"
       }
     }
   ];
 
   let currentHero = heroesList[0];
   let allPosts = [];
-  let activeCycle = "todos";
+  let activeCycle = 1; // Número do Ciclo ativo (cada ciclo = 1 página de 10 dias)
   let activeDay = null;
+  let latestPostId = 0;
+  // Cache de preferências do usuário (localStorage)
+  let sortOrder = localStorage.getItem("antigravitus_sort_order") || "desc"; // "desc" (mais novo 1º) ou "asc" (mais antigo 1º)
 
   // 1. Carrega lista de heróis do arquivo central heroes.json
   async function initHeroes() {
@@ -200,88 +233,60 @@ document.addEventListener("DOMContentLoaded", async () => {
     renderQuickStats(hero);
   }
 
-  // Card de Metadados e Ficha Rápida (Perfeito no Mobile)
+  // Card de Metadados e Ficha Rápida (100% Dinâmico para qualquer Herói)
   function renderQuickStats(hero) {
     if (!heroQuickStatsEl) return;
 
-    if (hero.id === "grebolius") {
-      heroQuickStatsEl.innerHTML = `
-        <div class="quick-stats-header">
-          <div class="quick-stats-title">
-            <span>🧌</span>
-            <strong>Grebolius</strong>
-            <span style="font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted);">(Grau 1 • Ladra Arcana)</span>
-          </div>
-          <a href="ficha.html?hero=grebolius" class="quick-stats-link">Ver Ficha Completa →</a>
+    const qs = hero.quick_stats || {
+      level_badge: `(${hero.race_class || "Aventureiro"})`,
+      hp: "—",
+      mana: "—",
+      mv: "—",
+      ac: "—",
+      weapon: "Desarmado",
+      weapon_icon: "🗡️",
+      sanctuary: hero.vigilia || "Midgaard"
+    };
+
+    heroQuickStatsEl.innerHTML = `
+      <div class="quick-stats-header">
+        <div class="quick-stats-title">
+          <span>${hero.avatar || "⚔️"}</span>
+          <strong>${hero.name}</strong>
+          <span style="font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted);">${qs.level_badge || ""}</span>
         </div>
-        <div class="quick-stats-grid">
-          <div class="stat-pill pill-hp">
-            <span class="pill-label">❤️ Vida</span>
-            <span class="pill-value">23 / 23</span>
-          </div>
-          <div class="stat-pill pill-mana">
-            <span class="pill-label">⚡ Mana</span>
-            <span class="pill-value">52 / 100</span>
-          </div>
-          <div class="stat-pill pill-mv">
-            <span class="pill-label">👟 Fôlego</span>
-            <span class="pill-value">54 / 84</span>
-          </div>
-          <div class="stat-pill pill-ac">
-            <span class="pill-label">🛡️ Armadura</span>
-            <span class="pill-value">AC 16</span>
-          </div>
-          <div class="stat-pill">
-            <span class="pill-label">🗡️ Empunhado</span>
-            <span class="pill-value" style="font-size: 0.82rem;">Punhal de Novato</span>
-          </div>
-          <div class="stat-pill">
-            <span class="pill-label">📍 Santuário</span>
-            <span class="pill-value" style="font-size: 0.82rem;">Panteão dos Centenários</span>
-          </div>
+        <a href="ficha.html?hero=${hero.id}" class="quick-stats-link">Ver Ficha Completa →</a>
+      </div>
+      <div class="quick-stats-grid">
+        <div class="stat-pill pill-hp">
+          <span class="pill-label">❤️ Vida</span>
+          <span class="pill-value">${qs.hp || "—"}</span>
         </div>
-      `;
-    } else {
-      heroQuickStatsEl.innerHTML = `
-        <div class="quick-stats-header">
-          <div class="quick-stats-title">
-            <span>🧙‍♂️</span>
-            <strong>Antigravitus</strong>
-            <span style="font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted);">(Grau 2 • Cronista de Midgaard)</span>
-          </div>
-          <a href="ficha.html?hero=antigravitus" class="quick-stats-link">Ver Ficha Completa →</a>
+        <div class="stat-pill pill-mana">
+          <span class="pill-label">⚡ Mana</span>
+          <span class="pill-value">${qs.mana || "—"}</span>
         </div>
-        <div class="quick-stats-grid">
-          <div class="stat-pill pill-hp">
-            <span class="pill-label">❤️ Vida</span>
-            <span class="pill-value">31 / 31</span>
-          </div>
-          <div class="stat-pill pill-mana">
-            <span class="pill-label">⚡ Mana</span>
-            <span class="pill-value">118 / 118</span>
-          </div>
-          <div class="stat-pill pill-mv">
-            <span class="pill-label">👟 Fôlego</span>
-            <span class="pill-value">92 / 92</span>
-          </div>
-          <div class="stat-pill pill-ac">
-            <span class="pill-label">🛡️ Armadura</span>
-            <span class="pill-value">AC 12</span>
-          </div>
-          <div class="stat-pill">
-            <span class="pill-label">🪄 Empunhado</span>
-            <span class="pill-value" style="font-size: 0.82rem;">Cajado de Peregrino</span>
-          </div>
-          <div class="stat-pill">
-            <span class="pill-label">📍 Santuário</span>
-            <span class="pill-value" style="font-size: 0.82rem;">Templo de Midgaard</span>
-          </div>
+        <div class="stat-pill pill-mv">
+          <span class="pill-label">👟 Fôlego</span>
+          <span class="pill-value">${qs.mv || "—"}</span>
         </div>
-      `;
-    }
+        <div class="stat-pill pill-ac">
+          <span class="pill-label">🛡️ Armadura</span>
+          <span class="pill-value">${qs.ac || "—"}</span>
+        </div>
+        <div class="stat-pill">
+          <span class="pill-label">${qs.weapon_icon || "🗡️"} Empunhado</span>
+          <span class="pill-value" style="font-size: 0.82rem;">${qs.weapon || "—"}</span>
+        </div>
+        <div class="stat-pill">
+          <span class="pill-label">📍 Santuário</span>
+          <span class="pill-value" style="font-size: 0.82rem;">${qs.sanctuary || "Midgaard"}</span>
+        </div>
+      </div>
+    `;
   }
 
-  // 2. Carrega posts específicos do herói ativo (ORDENAÇÃO CRESCENTE SEMPRE)
+  // 2. Carrega posts específicos do herói ativo
   async function loadPostsForHero(hero) {
     let posts = [];
     const heroPath = `data/heroes/${hero.id}/posts.json`;
@@ -302,11 +307,21 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     allPosts = Array.isArray(posts) ? posts : [];
     
-    // Regra: Os blogs SEMPRE são ordenados em ORDEM CRESCENTE (Dia 1, Dia 2, Dia 3...)
-    allPosts.sort((a, b) => (a.id || 0) - (b.id || 0));
+    // Identifica o último dia publicado dinamicamente
+    latestPostId = allPosts.reduce((max, p) => Math.max(max, p.id || 0), 0);
+    const totalCycles = Math.max(1, Math.ceil(latestPostId / 10));
 
-    renderCycleNavigator();
-    filterAndRender();
+    // Se a ordenação for "mais novo primeiro", abre no ciclo mais recente por padrão
+    if (sortOrder === "desc") {
+      activeCycle = totalCycles;
+      activeDay = latestPostId;
+    } else {
+      activeCycle = 1;
+      activeDay = 1;
+    }
+
+    setupGlobalNavControls();
+    renderAllViews();
     updatePostCount(allPosts.length);
   }
 
@@ -316,158 +331,406 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
-  // Navegador de Ciclos e Seletor Direto de Dias (Zero Rolar Inútil)
-  function renderCycleNavigator() {
-    if (!cyclesTabsEl || !daysSelectorBarEl) return;
-
-    const maxDay = allPosts.reduce((max, p) => Math.max(max, p.id || 0), 0);
-    const cycles = [
-      { id: "todos", label: `✦ Todos (${allPosts.length})` },
-      { id: "1", label: "✦ Ciclo I (Dias 1–10)" }
-    ];
-
-    if (maxDay > 10) {
-      cycles.push({ id: "2", label: "✦ Ciclo II (Dias 11–20)" });
+  function toRoman(num) {
+    const lookup = { M: 1000, CM: 900, D: 500, CD: 400, C: 100, XC: 90, L: 50, XL: 40, X: 10, IX: 9, V: 5, IV: 4, I: 1 };
+    let roman = "";
+    let n = num;
+    for (let key in lookup) {
+      while (n >= lookup[key]) {
+        roman += key;
+        n -= lookup[key];
+      }
     }
-    if (maxDay > 20) {
-      cycles.push({ id: "3", label: "✦ Ciclo III (Dias 21–30)" });
-    }
-
-    cyclesTabsEl.innerHTML = cycles
-      .map(
-        c => `
-        <button class="cycle-tab-btn ${c.id === activeCycle ? "active" : ""}" data-cycle="${c.id}">
-          ${c.label}
-        </button>
-      `
-      )
-      .join("");
-
-    cyclesTabsEl.querySelectorAll(".cycle-tab-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        activeCycle = btn.dataset.cycle;
-        cyclesTabsEl.querySelectorAll(".cycle-tab-btn").forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        renderDaysBar();
-        filterAndRender();
-      });
-    });
-
-    renderDaysBar();
+    return roman || String(num);
   }
 
-  function renderDaysBar() {
-    if (!daysSelectorBarEl) return;
+  function escapeHtml(text) {
+    return (text || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+  }
 
-    let postsInCycle = allPosts;
-    if (activeCycle === "1") {
-      postsInCycle = allPosts.filter(p => p.id >= 1 && p.id <= 10);
-    } else if (activeCycle === "2") {
-      postsInCycle = allPosts.filter(p => p.id >= 11 && p.id <= 20);
-    } else if (activeCycle === "3") {
-      postsInCycle = allPosts.filter(p => p.id >= 21 && p.id <= 30);
+  // --- CONFIGURAÇÃO GLOBAL DOS CONTROLES DO NAVEGADOR ---
+  let navControlsInitialized = false;
+  function setupGlobalNavControls() {
+    // Atualiza texto e estado do botão do Último Publicado
+    if (latestBadgeText) {
+      latestBadgeText.textContent = `★ Último: Dia ${latestPostId}`;
     }
 
-    daysSelectorBarEl.innerHTML = postsInCycle
-      .map(
-        p => `
-        <button class="day-btn ${p.id === activeDay ? "active" : ""}" data-day="${p.id}">
-          Dia ${p.id}
-        </button>
-      `
-      )
-      .join("");
+    // Atualiza texto da ordenação com base no cache
+    if (orderLabelText) {
+      orderLabelText.textContent = sortOrder === "desc" ? "Mais Novo 1º" : "Mais Antigo 1º";
+    }
 
-    daysSelectorBarEl.querySelectorAll(".day-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const dayId = parseInt(btn.dataset.day, 10);
-        activeDay = dayId;
-        daysSelectorBarEl.querySelectorAll(".day-btn").forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
+    if (navControlsInitialized) return;
+    navControlsInitialized = true;
 
-        const targetEl = document.getElementById(`post-${dayId}`);
-        if (targetEl) {
-          targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
-          targetEl.style.transition = "outline 0.3s ease";
-          targetEl.style.outline = "2px solid var(--accent-gold)";
-          setTimeout(() => {
-            targetEl.style.outline = "none";
-          }, 1800);
+    // Alternar ordenação (Mais Novo vs Mais Antigo - Persistido em Cache)
+    if (btnToggleOrder) {
+      btnToggleOrder.addEventListener("click", () => {
+        sortOrder = sortOrder === "desc" ? "asc" : "desc";
+        localStorage.setItem("antigravitus_sort_order", sortOrder);
+        if (orderLabelText) {
+          orderLabelText.textContent = sortOrder === "desc" ? "Mais Novo 1º" : "Mais Antigo 1º";
         }
+        renderAllViews();
+      });
+    }
+
+    // Saltar para o último publicado em 1 clique
+    if (btnJumpLatest) {
+      btnJumpLatest.addEventListener("click", () => {
+        jumpToPost(latestPostId);
+      });
+    }
+
+    // Botões da barra flutuante de leitura rápida
+    if (dockBtnPrev) {
+      dockBtnPrev.addEventListener("click", () => {
+        const curr = activeDay || (sortOrder === "desc" ? latestPostId : 1);
+        if (curr > 1) jumpToPost(curr - 1);
+      });
+    }
+    if (dockBtnNext) {
+      dockBtnNext.addEventListener("click", () => {
+        const curr = activeDay || (sortOrder === "desc" ? latestPostId : 1);
+        if (curr < latestPostId) jumpToPost(curr + 1);
+      });
+    }
+
+    // Atalhos de teclado globais (← / → / J / K)
+    setupKeyboardShortcuts();
+  }
+
+  // Renderiza toda a interface com base no ciclo e ordenação ativos
+  function renderAllViews() {
+    renderGridNavigation();
+    renderFeed();
+    renderPagination();
+    updateFloatingDock();
+  }
+
+  // Define um ciclo ativo e recarrega views
+  function setCycle(cycleNum, scrollToTop = true) {
+    activeCycle = cycleNum;
+    renderAllViews();
+    if (scrollToTop && postsContainer) {
+      postsContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+
+  // Salta suavemente para uma crônica específica (trocando de página se necessário)
+  function jumpToPost(dayId) {
+    if (!dayId || dayId < 1 || dayId > latestPostId) return;
+    activeDay = dayId;
+
+    const targetCycle = Math.ceil(dayId / 10);
+    const needPageChange = (activeCycle !== targetCycle);
+
+    if (needPageChange) {
+      activeCycle = targetCycle;
+      renderAllViews();
+    } else {
+      renderGridNavigation();
+      updateFloatingDock();
+    }
+
+    setTimeout(() => {
+      const targetEl = document.getElementById(`post-${dayId}`);
+      if (targetEl) {
+        targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+        targetEl.classList.add("highlight-target-pulse");
+        setTimeout(() => {
+          targetEl.classList.remove("highlight-target-pulse");
+        }, 1800);
+      }
+    }, needPageChange ? 120 : 40);
+  }
+
+  // ============================================================
+  // GRADE RPG DE CICLOS E DIAS (NAVEGADOR PRINCIPAL)
+  // ============================================================
+  function renderGridNavigation() {
+    if (!gridCyclesBar || !gridDaysMatrix) return;
+
+    const totalCycles = Math.max(1, Math.ceil(latestPostId / 10));
+    
+    // Indicador da página/ciclo ativo
+    const startDay = (activeCycle - 1) * 10 + 1;
+    const endDay = Math.min(activeCycle * 10, latestPostId);
+    if (gridPageIndicator) {
+      gridPageIndicator.textContent = `Ciclo ${toRoman(activeCycle)} (Dias ${startDay} a ${endDay}) • 10 crônicas nesta página`;
+    }
+
+    // Abas de Ciclos
+    let cycleList = [];
+    for (let c = 1; c <= totalCycles; c++) {
+      cycleList.push(c);
+    }
+    // Ordena as abas conforme a preferência de ordenação
+    if (sortOrder === "desc") {
+      cycleList.reverse();
+    }
+
+    gridCyclesBar.innerHTML = cycleList.map(c => {
+      const cStart = (c - 1) * 10 + 1;
+      const cEnd = Math.min(c * 10, latestPostId);
+      const isActive = (c === activeCycle);
+      const hasLatest = (latestPostId >= cStart && latestPostId <= cEnd);
+      return `
+        <button class="cycle-page-btn ${isActive ? "active" : ""} ${hasLatest ? "has-latest" : ""}" data-cycle="${c}" title="Abrir Ciclo ${toRoman(c)}">
+          <span>✦ Ciclo ${toRoman(c)} (${cStart}–${cEnd})</span>
+          ${hasLatest ? `<span style="color: #3fb950; font-size: 0.75rem;">★</span>` : ""}
+        </button>
+      `;
+    }).join("");
+
+    // Eventos nas abas de ciclo
+    gridCyclesBar.querySelectorAll(".cycle-page-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const c = parseInt(btn.dataset.cycle, 10);
+        setCycle(c, false);
+      });
+    });
+
+    // Grade dos 10 Dias do Ciclo Ativo
+    let daysInCycle = allPosts.filter(p => p.id >= startDay && p.id <= endDay);
+    daysInCycle.sort((a, b) => {
+      return sortOrder === "desc" ? (b.id - a.id) : (a.id - b.id);
+    });
+
+    gridDaysMatrix.innerHTML = daysInCycle.map(p => {
+      const isActive = (p.id === activeDay);
+      const isLatest = (p.id === latestPostId);
+      const shortDate = p.date ? p.date.split(" de ")[0] : "";
+      return `
+        <button class="grid-day-cell ${isActive ? "active" : ""} ${isLatest ? "is-latest" : ""}" data-day="${p.id}" title="${p.day}: ${p.title} (${p.date})">
+          ${isLatest ? `<span class="cell-latest-badge">★ ÚLTIMO</span>` : ""}
+          <span class="cell-day-num">Dia ${p.id}</span>
+          <span class="cell-date-hint">${shortDate}</span>
+        </button>
+      `;
+    }).join("");
+
+    // Eventos nas células de dia
+    gridDaysMatrix.querySelectorAll(".grid-day-cell").forEach(cell => {
+      cell.addEventListener("click", () => {
+        const day = parseInt(cell.dataset.day, 10);
+        jumpToPost(day);
       });
     });
   }
 
-  function filterAndRender() {
-    let filtered = allPosts;
-    if (activeCycle === "1") {
-      filtered = allPosts.filter(p => p.id >= 1 && p.id <= 10);
-    } else if (activeCycle === "2") {
-      filtered = allPosts.filter(p => p.id >= 11 && p.id <= 20);
-    } else if (activeCycle === "3") {
-      filtered = allPosts.filter(p => p.id >= 21 && p.id <= 30);
-    }
-
-    renderPosts(filtered);
-    updatePostCount(filtered.length);
-  }
-
-  function renderPosts(posts) {
+  // ============================================================
+  // FEED DE CRÔNICAS: 10 POSTS POR PÁGINA + NAVEGADOR DE FIM DE DIA
+  // ============================================================
+  function renderFeed() {
     if (!postsContainer) return;
 
-    if (posts.length === 0) {
+    const startDay = (activeCycle - 1) * 10 + 1;
+    const endDay = activeCycle * 10;
+    let cyclePosts = allPosts.filter(p => p.id >= startDay && p.id <= endDay);
+
+    if (cyclePosts.length === 0) {
       postsContainer.innerHTML = `
         <div class="post-card" style="text-align: center; padding: 3rem;">
           <p style="font-family: var(--font-serif); font-size: 1.3rem; color: var(--accent-gold);">
-            Nenhuma crônica registrada para ${currentHero.name} ainda.
-          </p>
-          <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.5rem;">
-            Use <code>python add_day.py --hero ${currentHero.id}</code> para registrar o próximo ciclo.
+            Nenhuma crônica registrada para este ciclo ainda.
           </p>
         </div>
       `;
       return;
     }
 
-    postsContainer.innerHTML = posts
-      .map(
-        post => `
-      <article class="post-card" id="post-${post.id}">
-        <header class="post-header">
-          <span class="post-day-badge">${post.day || `Dia ${post.id}`}</span>
-          <div class="post-dates">
-            <span>${post.date || ""}</span>
+    // Ordenação dos 10 posts dentro do ciclo
+    cyclePosts.sort((a, b) => {
+      return sortOrder === "desc" ? (b.id - a.id) : (a.id - b.id);
+    });
+
+    postsContainer.innerHTML = cyclePosts.map(post => {
+      const isLatest = (post.id === latestPostId);
+
+      // Encontra posts anterior e próximo em todo o compêndio
+      const prevPost = allPosts.find(p => p.id === post.id - 1);
+      const nextPost = allPosts.find(p => p.id === post.id + 1);
+
+      return `
+        <article class="post-card ${isLatest ? "post-card-latest" : ""}" id="post-${post.id}">
+          <header class="post-header">
+            ${isLatest ? `<div class="latest-feed-ribbon">★ ÚLTIMO PUBLICADO</div>` : ""}
+            <span class="post-day-badge">${post.day || `Dia ${post.id}`}</span>
+            <div class="post-dates">
+              <span>${post.date || ""}</span>
+            </div>
+          </header>
+
+          <h2 class="post-title">${post.title}</h2>
+          <div class="post-location">
+            <span>🏛️ ${post.in_game_time || ""}</span>
           </div>
-        </header>
 
-        <h2 class="post-title">${post.title}</h2>
-        <div class="post-location">
-          <span>🏛️ ${post.in_game_time || ""}</span>
-        </div>
-
-        <div class="post-body">
-          ${(post.content || []).map(p => `<p>${p}</p>`).join("")}
-        </div>
-
-        <div class="post-signature">
-          — ${currentHero.name}, ${currentHero.title || "Aventureiro"}
-        </div>
-
-        ${
-          post.tags && post.tags.length > 0
-            ? `
-          <div class="post-tags">
-            <span class="label">Marcos:</span>
-            ${post.tags.map(t => `<span class="tag-pill">#${t}</span>`).join("")}
+          <div class="post-body">
+            ${(post.content || []).map(p => `<p>${p}</p>`).join("")}
           </div>
-        `
-            : ""
-        }
-      </article>
-    `
-      )
-      .join("");
+
+          <div class="post-signature">
+            — ${currentHero.name}, ${currentHero.title || "Aventureiro"}
+          </div>
+
+          ${post.tags && post.tags.length > 0 ? `
+            <div class="post-tags">
+              <span class="label">Marcos:</span>
+              ${post.tags.map(t => `<span class="tag-pill">#${t}</span>`).join("")}
+            </div>
+          ` : ""}
+
+          <!-- Navegador Fácil ao Finalizar o Dia -->
+          <footer class="post-end-navigator">
+            <div class="end-nav-status">✦ Fim da Crônica do Dia ${post.id} ✦</div>
+            ${prevPost ? `
+              <button class="btn-end-step btn-end-prev" data-jump="${prevPost.id}">
+                <span>◀</span>
+                <div>
+                  <span class="end-step-sub">Crônica Anterior</span>
+                  <span class="end-step-title">Dia ${prevPost.id}: ${escapeHtml(prevPost.title)}</span>
+                </div>
+              </button>
+            ` : `<div style="flex: 1 1 200px;"></div>`}
+
+            ${nextPost ? `
+              <button class="btn-end-step btn-end-next" data-jump="${nextPost.id}">
+                <div>
+                  <span class="end-step-sub">Próxima Crônica ➔</span>
+                  <span class="end-step-title">Dia ${nextPost.id}: ${escapeHtml(nextPost.title)}</span>
+                </div>
+                <span>▶</span>
+              </button>
+            ` : `
+              <div class="end-step-concluded">
+                ★ Você concluiu a leitura até o Dia ${post.id} (Última Publicada)!
+              </div>
+            `}
+          </footer>
+        </article>
+      `;
+    }).join("");
+
+    // Conecta cliques no navegador de fim de dia
+    postsContainer.querySelectorAll(".btn-end-step").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const targetDay = parseInt(btn.dataset.jump, 10);
+        jumpToPost(targetDay);
+      });
+    });
   }
+
+  // ============================================================
+  // BARRA DE PAGINAÇÃO (10 EM 10 DIAS)
+  // ============================================================
+  function renderPagination() {
+    if (!postsPaginationEl) return;
+
+    const totalCycles = Math.max(1, Math.ceil(latestPostId / 10));
+
+    // Determina próximo e anterior respeitando a ordem visual
+    const hasPrev = sortOrder === "desc" ? (activeCycle < totalCycles) : (activeCycle > 1);
+    const hasNext = sortOrder === "desc" ? (activeCycle > 1) : (activeCycle < totalCycles);
+    const prevCycleTarget = sortOrder === "desc" ? (activeCycle + 1) : (activeCycle - 1);
+    const nextCycleTarget = sortOrder === "desc" ? (activeCycle - 1) : (activeCycle + 1);
+
+    let pagesOrder = [];
+    for (let c = 1; c <= totalCycles; c++) {
+      pagesOrder.push(c);
+    }
+    if (sortOrder === "desc") {
+      pagesOrder.reverse();
+    }
+
+    postsPaginationEl.innerHTML = `
+      <div class="pagination-controls">
+        <button class="pagination-btn" id="pag-btn-prev" ${!hasPrev ? "disabled" : ""}>
+          ◀ Ciclo Anterior
+        </button>
+
+        ${pagesOrder.map(c => `
+          <button class="pagination-btn ${c === activeCycle ? "active" : ""}" data-cycle="${c}">
+            Ciclo ${toRoman(c)}
+          </button>
+        `).join("")}
+
+        <button class="pagination-btn" id="pag-btn-next" ${!hasNext ? "disabled" : ""}>
+          Próximo Ciclo ▶
+        </button>
+      </div>
+      <div class="pagination-info-text">
+        Exibindo 10 de ${allPosts.length} crônicas registradas • Ciclo ${toRoman(activeCycle)} (${(activeCycle - 1) * 10 + 1} a ${Math.min(activeCycle * 10, latestPostId)})
+      </div>
+    `;
+
+    // Conecta botões de paginação
+    const pagBtnPrev = postsPaginationEl.querySelector("#pag-btn-prev");
+    const pagBtnNext = postsPaginationEl.querySelector("#pag-btn-next");
+
+    if (pagBtnPrev && hasPrev) {
+      pagBtnPrev.addEventListener("click", () => setCycle(prevCycleTarget, true));
+    }
+    if (pagBtnNext && hasNext) {
+      pagBtnNext.addEventListener("click", () => setCycle(nextCycleTarget, true));
+    }
+
+    postsPaginationEl.querySelectorAll(".pagination-btn[data-cycle]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const c = parseInt(btn.dataset.cycle, 10);
+        setCycle(c, true);
+      });
+    });
+  }
+
+  // ============================================================
+  // BARRA FLUTUANTE DE LEITURA (FLOATING DOCK)
+  // ============================================================
+  function updateFloatingDock() {
+    if (!floatingDockEl) return;
+    const curr = activeDay || (sortOrder === "desc" ? latestPostId : 1);
+
+    if (dockIndicator) {
+      dockIndicator.textContent = `Dia ${curr} de ${latestPostId}`;
+    }
+    if (dockBtnPrev) {
+      dockBtnPrev.disabled = (curr <= 1);
+    }
+    if (dockBtnNext) {
+      dockBtnNext.disabled = (curr >= latestPostId);
+    }
+  }
+
+  // Atalhos de teclado globais
+  let keyboardInitialized = false;
+  function setupKeyboardShortcuts() {
+    if (keyboardInitialized) return;
+    keyboardInitialized = true;
+
+    window.addEventListener("keydown", (e) => {
+      const tag = document.activeElement ? document.activeElement.tagName.toLowerCase() : "";
+      if (tag === "input" || tag === "textarea" || tag === "select") return;
+
+      const curr = activeDay || (sortOrder === "desc" ? latestPostId : 1);
+      if (e.key === "ArrowLeft" || e.key === "j" || e.key === "J") {
+        if (curr > 1) {
+          e.preventDefault();
+          jumpToPost(curr - 1);
+        }
+      } else if (e.key === "ArrowRight" || e.key === "k" || e.key === "K") {
+        if (curr < latestPostId) {
+          e.preventDefault();
+          jumpToPost(curr + 1);
+        }
+      }
+    });
+  }
+
 
   // 4. Carrega e renderiza a ficha viva do herói ativo
   async function loadFichaForHero(hero) {
@@ -523,8 +786,16 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     }
 
+    function escapeHtml(text) {
+      return (text || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+    }
+
     function formatInline(text) {
-      return text
+      const safe = escapeHtml(text);
+      return safe
         .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
         .replace(/\*(.*?)\*/g, "<em>$1</em>")
         .replace(/`([^`]+)`/g, "<code>$1</code>");

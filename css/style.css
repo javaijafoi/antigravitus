@@ -336,41 +336,147 @@ nav.main-nav a.active::after {
 .pill-mv .pill-value { color: #d29922; }
 .pill-ac .pill-value { color: var(--accent-gold); }
 
-/* Navegador de Leitura por Ciclos e Dias */
-.reading-nav-panel {
+/* ============================================================
+   NAVEGADOR OFICIAL: GRADE RPG COM CICLOS E DIAS
+   Paginação de 10 em 10 + Navegador de Encerramento do Dia
+   ============================================================ */
+
+.grid-nav-container {
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  padding: 1rem 1.25rem;
-  margin-bottom: 2rem;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2.25rem;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
-  gap: 0.85rem;
+  gap: 1.15rem;
+  transition: var(--transition);
 }
 
-.cycles-header {
+.grid-nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.grid-nav-title-wrap {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+}
+
+.grid-icon {
+  font-size: 1.6rem;
+}
+
+.grid-title {
+  font-family: var(--font-cinzel);
+  font-size: 1.15rem;
+  color: var(--accent-gold);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.grid-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.grid-actions-group {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
   flex-wrap: wrap;
 }
 
-.cycles-label, .days-label {
-  font-family: var(--font-cinzel);
-  font-size: 0.8rem;
-  color: var(--accent-gold);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+.nav-action-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   white-space: nowrap;
 }
 
-.cycles-tabs {
-  display: flex;
-  gap: 0.4rem;
-  flex-wrap: wrap;
+.nav-action-btn:hover {
+  border-color: var(--accent-gold);
+  transform: translateY(-1px);
 }
 
-.cycle-tab-btn {
+/* Botão de Ordenação */
+.order-toggle-btn {
+  color: var(--accent-cyan);
+  border-color: rgba(94, 196, 214, 0.3);
+}
+
+.order-toggle-btn:hover {
+  background: rgba(94, 196, 214, 0.1);
+  border-color: var(--accent-cyan);
+}
+
+.order-toggle-btn .btn-icon {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Destaque do Último Publicado (Beacon Pulsante) */
+.latest-beacon-btn {
+  background: linear-gradient(135deg, rgba(229, 179, 100, 0.18), rgba(229, 179, 100, 0.05));
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold);
+  font-weight: 600;
+  position: relative;
+  box-shadow: 0 0 12px rgba(229, 179, 100, 0.25);
+}
+
+.latest-beacon-btn:hover {
+  background: rgba(229, 179, 100, 0.28);
+  box-shadow: 0 0 16px rgba(229, 179, 100, 0.4);
+}
+
+.beacon-pulse {
+  width: 8px;
+  height: 8px;
+  background-color: #3fb950;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(63, 185, 80, 0.7);
+  animation: beacon-ping 1.8s infinite;
+  display: inline-block;
+}
+
+@keyframes beacon-ping {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(63, 185, 80, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(63, 185, 80, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(63, 185, 80, 0); }
+}
+
+@keyframes pulse-mini {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.05); }
+}
+
+/* Abas dos Ciclos (Páginas de 10) */
+.grid-cycles-bar {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.cycle-page-btn {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   color: var(--text-secondary);
@@ -380,63 +486,367 @@ nav.main-nav a.active::after {
   font-size: 0.82rem;
   cursor: pointer;
   transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   white-space: nowrap;
 }
 
-.cycle-tab-btn:hover {
+.cycle-page-btn:hover {
   border-color: var(--accent-gold);
   color: var(--accent-gold);
 }
 
-.cycle-tab-btn.active {
-  background: rgba(229, 179, 100, 0.12);
+.cycle-page-btn.active {
+  background: rgba(229, 179, 100, 0.15);
   border-color: var(--accent-gold);
   color: var(--accent-gold);
   font-weight: 600;
+  box-shadow: 0 0 12px rgba(229, 179, 100, 0.25);
 }
 
-.days-nav-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  border-top: 1px solid var(--border-subtle);
-  padding-top: 0.75rem;
+.cycle-page-btn.has-latest {
+  border-color: rgba(63, 185, 80, 0.5);
 }
 
-.days-selector-bar {
-  display: flex;
-  gap: 0.4rem;
-  overflow-x: auto;
-  padding-bottom: 0.3rem;
-  scrollbar-width: thin;
-  scrollbar-color: var(--border-color) transparent;
-  -webkit-overflow-scrolling: touch;
+/* Grade dos 10 Dias do Ciclo Ativo */
+.grid-days-matrix {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+  gap: 0.65rem;
+  padding-top: 0.25rem;
 }
 
-.day-btn {
+.grid-day-cell {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 0.4rem;
   color: var(--text-secondary);
-  padding: 0.3rem 0.7rem;
-  border-radius: 99px;
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
   cursor: pointer;
   transition: var(--transition);
-  white-space: nowrap;
-  flex-shrink: 0;
+  position: relative;
+  min-height: 60px;
 }
 
-.day-btn:hover {
+.grid-day-cell:hover {
   border-color: var(--accent-cyan);
-  color: var(--accent-cyan);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-.day-btn.active {
+.grid-day-cell.active {
+  background: rgba(229, 179, 100, 0.12);
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  font-weight: 700;
+  box-shadow: 0 0 12px rgba(229, 179, 100, 0.35);
+}
+
+.cell-day-num {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.cell-date-hint {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.grid-day-cell.is-latest {
+  border-color: #3fb950;
+  background: rgba(63, 185, 80, 0.12);
+  box-shadow: 0 0 10px rgba(63, 185, 80, 0.3);
+}
+
+.grid-day-cell.is-latest .cell-latest-badge {
+  position: absolute;
+  top: -7px;
+  right: -4px;
+  background: #238636;
+  color: #ffffff;
+  font-size: 0.55rem;
+  font-weight: 700;
+  padding: 0.1rem 0.35rem;
+  border-radius: 99px;
+  letter-spacing: 0.04em;
+}
+
+/* ============================================================
+   NAVEGADOR DE ENCERRAMENTO DO DIA (FIM DO POST)
+   Facilita avançar para o próximo dia ao terminar a leitura
+   ============================================================ */
+
+.post-end-navigator {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background: rgba(18, 23, 34, 0.5);
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px dashed var(--border-color);
+}
+
+.end-nav-status {
+  font-family: var(--font-cinzel);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0.35rem;
+}
+
+.btn-end-step {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.65rem 1.15rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  flex: 1 1 200px;
+}
+
+.btn-end-step:hover {
+  border-color: var(--accent-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.btn-end-next {
+  background: linear-gradient(135deg, rgba(229, 179, 100, 0.18), rgba(229, 179, 100, 0.06));
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  font-weight: 600;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.btn-end-next:hover {
+  background: rgba(229, 179, 100, 0.28);
+  box-shadow: 0 0 15px rgba(229, 179, 100, 0.35);
+}
+
+.btn-end-prev {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.end-step-sub {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+}
+
+.end-step-title {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 0.92rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 280px;
+}
+
+.end-step-concluded {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(63, 185, 80, 0.15);
+  border: 1px solid #3fb950;
+  color: #3fb950;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  justify-content: center;
+  width: 100%;
+}
+
+/* ============================================================
+   BARRA DE PAGINAÇÃO INFERIOR DO FEED (10 EM 10)
+   ============================================================ */
+
+.posts-pagination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 2.5rem 0 4rem;
+  padding: 1.5rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pagination-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+.pagination-btn.active {
   background: var(--accent-gold);
   border-color: var(--accent-gold);
   color: #0b0d12;
   font-weight: 700;
+  box-shadow: 0 0 10px rgba(229, 179, 100, 0.4);
+}
+
+.pagination-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.pagination-info-text {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* ============================================================
+   BARRA FLUTUANTE DE LEITURA (FLOATING DOCK)
+   ============================================================ */
+
+.floating-reading-dock {
+  position: fixed;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(14, 18, 26, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  padding: 0.4rem 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  transition: var(--transition);
+}
+
+.floating-reading-dock:hover {
+  border-color: var(--accent-gold);
+}
+
+.dock-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.dock-btn:hover:not(:disabled) {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+.dock-btn.dock-btn-next {
+  color: var(--accent-gold);
+  font-weight: 600;
+  border-color: rgba(229, 179, 100, 0.4);
+}
+
+.dock-btn.dock-btn-next:hover {
+  background: var(--accent-gold);
+  color: #0b0d12;
+}
+
+.dock-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.dock-indicator {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent-gold);
+  white-space: nowrap;
+  padding: 0 0.35rem;
+}
+
+/* Ribbon do Último Publicado dentro do Feed de Crônicas */
+.post-card.post-card-latest {
+  border-color: rgba(63, 185, 80, 0.4);
+  box-shadow: 0 0 20px rgba(63, 185, 80, 0.15), var(--shadow-card);
+  position: relative;
+}
+
+.latest-feed-ribbon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: linear-gradient(90deg, #238636, #2ea043);
+  color: #ffffff;
+  padding: 0.25rem 0.85rem;
+  border-radius: 99px;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 2px 8px rgba(35, 134, 54, 0.4);
+  animation: pulse-mini 2.5s infinite;
+}
+
+/* Animação de realce ao saltar para o post */
+.highlight-target-pulse {
+  outline: 3px solid var(--accent-gold) !important;
+  box-shadow: 0 0 25px rgba(229, 179, 100, 0.5) !important;
+  transition: outline 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Feed of Posts */

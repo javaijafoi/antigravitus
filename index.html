@@ -80,26 +80,59 @@
       <!-- Metadados da Ficha Viva injetados via JS -->
     </section>
 
-    <!-- Navegador de Leitura por Ciclos e Dias -->
-    <nav class="reading-nav-panel" aria-label="Navegador de Ciclos e Dias">
-      <div class="cycles-header">
-        <span class="cycles-label">Ciclos:</span>
-        <div class="cycles-tabs" id="cycles-tabs">
-          <!-- Abas de ciclos geradas dinamicamente via JS -->
+    <!-- Navegador de Leitura Oficial: Grade RPG com Paginação de 10 Dias -->
+    <nav class="grid-nav-container" aria-label="Navegador de Ciclos e Dias">
+      <div class="grid-nav-header">
+        <div class="grid-nav-title-wrap">
+          <span class="grid-icon">📅</span>
+          <div>
+            <h3 class="grid-title">Grade de Ciclos e Dias</h3>
+            <span class="grid-subtitle" id="grid-page-indicator">Ciclo V (Dias 41–50) • 10 crônicas por página</span>
+          </div>
+        </div>
+
+        <div class="grid-actions-group">
+          <!-- Botão de Ordenação (Mais Novo vs Mais Antigo - Persistido em Cache) -->
+          <button class="nav-action-btn order-toggle-btn" id="btn-toggle-order" title="Alternar ordem das crônicas (Salvo no cache local)">
+            <span class="btn-icon">⇅</span>
+            <span id="order-label-text">Mais Novo 1º</span>
+          </button>
+
+          <!-- Destaque do Último Publicado (Salto de 1 Clique) -->
+          <button class="nav-action-btn latest-beacon-btn" id="btn-jump-latest" title="Saltar diretamente para a crônica mais recente">
+            <span class="beacon-pulse"></span>
+            <span id="latest-badge-text">★ Último Publicado</span>
+          </button>
         </div>
       </div>
-      <div class="days-nav-wrapper">
-        <span class="days-label">Saltar p/ Dia:</span>
-        <div class="days-selector-bar" id="days-selector-bar">
-          <!-- Botões rápidos de cada dia do ciclo ativo gerados via JS -->
-        </div>
+
+      <!-- Abas dos Ciclos (Cada aba = Página de 10 dias) -->
+      <div class="grid-cycles-bar" id="grid-cycles-bar">
+        <!-- Injetado dinamicamente via JS -->
+      </div>
+
+      <!-- Grade de Selos dos 10 Dias da Página Ativa -->
+      <div class="grid-days-matrix" id="grid-days-matrix">
+        <!-- Injetado dinamicamente via JS -->
       </div>
     </nav>
 
-    <!-- Feed de Crônicas (A mais recente primeiro) -->
+    <!-- Feed de Crônicas (Apenas 10 posts por página) -->
     <section class="posts-feed" id="posts-container">
-      <!-- Posts injetados dinamicamente via JS (ou renderizados a partir de data/posts.json) -->
+      <!-- Posts injetados dinamicamente via JS -->
     </section>
+
+    <!-- Barra de Paginação Inferior (10 em 10 dias) -->
+    <div class="posts-pagination" id="posts-pagination">
+      <!-- Injetado dinamicamente via JS -->
+    </div>
+
+    <!-- Barra Flutuante de Leitura Rápida -->
+    <aside class="floating-reading-dock" id="floating-reading-dock" aria-label="Navegador Rápido de Leitura">
+      <button class="dock-btn" id="dock-btn-prev" title="Dia anterior">◀ Anterior</button>
+      <span class="dock-indicator" id="dock-indicator">Dia -- de --</span>
+      <button class="dock-btn dock-btn-next" id="dock-btn-next" title="Próximo dia">Próximo Dia ▶</button>
+    </aside>
 
   </main>
 

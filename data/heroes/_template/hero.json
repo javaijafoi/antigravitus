@@ -1,0 +1,32 @@
+{
+  "id": "[SLUG]",
+  "name": "[NOME]",
+  "title": "[TITULO]",
+  "rune": "[RUNA]",
+  "avatar": "[AVATAR]",
+  "race_class": "[RACA_CLASSE]",
+  "role": "Desbravador de Midgaard",
+  "alignment": "Neutro",
+  "quote": "“O destino de [NOME] é forjado a cada escolha no aço e na pedra.”",
+  "subtitle": "Diário de [NOME] ([RACA_CLASSE]) pelas terras de debomud.org:4000.",
+  "vigilia": "Vigília Ativa: Templo de Midgaard",
+  "server": "debomud.org:4000",
+  "accent_color": "#e5b364",
+  "questions": {
+    "q1": "Qual é a sua grande busca e ambição?",
+    "q2": "Qual o seu maior temor e pesadelo?",
+    "q3": "Qual a sua maior fraqueza ou vício?",
+    "q4": "O que você sacrifica e o que é inegociável?",
+    "q5": "Que marca ou legado deseja deixar em Midgaard?"
+  },
+  "quick_stats": {
+    "level_badge": "(Grau 1 • [RACA_CLASSE])",
+    "hp": "20 / 20",
+    "mana": "50 / 50",
+    "mv": "80 / 80",
+    "ac": "AC 20",
+    "weapon": "Arma Inicial",
+    "weapon_icon": "🗡️",
+    "sanctuary": "Templo de Midgaard"
+  }
+}

@@ -21,12 +21,13 @@ antigravitus/
 │       │   ├── evolucao.md       # O Cinzel da Consciência (log ciclo a ciclo)
 │       │   ├── conhecimento.md   # Grimório de Midgaard (topografia e lore)
 │       │   └── posts.json        # Base das crônicas do Antigravitus
-│       └── barbatuque/           # Goblin Guerreiro (Soberano dos Goblins)
+│       └── grebolius/            # Goblin Ladra (A Soberana dos Goblins)
 │           ├── hero.json         # Metadados e apresentação visual
 │           ├── identidade.md     # 5 Perguntas Capitais (enxutas)
 │           ├── evolucao.md       # Log de evolução rápido
 │           ├── conhecimento.md   # Compêndio de ameaças e treino
 │           ├── mapa.md           # Mapeamento simplificado de salas
+│           ├── ficha.md          # Ficha técnica viva do MUD
 │           └── posts.json        # Crônicas concisas (ordem crescente)
 ├── css/style.css                 # Dark fantasy responsivo com Seletor de Heróis
 ├── js/main.js                    # Engine multi-herói: renderização, busca e tags

@@ -17,7 +17,7 @@ def get_posts_path(hero_id=DEFAULT_HERO):
 
 def add_chronicle(day_num, title, date_str, in_game_time, excerpt, tags, content_paragraphs, day_label=None, hero_id=DEFAULT_HERO):
     """
-    Adiciona uma nova crônica ao topo de posts.json do herói selecionado (a mais recente primeiro).
+    Adiciona ou atualiza uma crônica em posts.json do herói selecionado (ordem crescente: Dia 1, Dia 2, ..., Dia N).
     """
     posts_path = get_posts_path(hero_id)
     os.makedirs(os.path.dirname(posts_path), exist_ok=True)

@@ -19,6 +19,16 @@
       "q3": "A soberba intelectual e a paralisia do distanciamento calculista. O risco de usar a desculpa de 'observador imparcial' para justificar o medo ou a covardia diante de tragédias que demandam ação.",
       "q4": "Sacrifica o conforto, as honras fáceis e o aplauso mundano; jamais a verdade ou a ética. Dorme no chão frio e rejeita ouro manchado de sangue. A fidelidade à memória viva é inegociável.",
       "q5": "Ser o Olho Lúcido e a Voz Imortal de Midgaard. Que os viajantes do futuro encontrem seus registros e saibam quem amou, lutou e tombou neste cosmo através das décadas."
+    },
+    "quick_stats": {
+      "level_badge": "(Grau 2 • Cronista de Midgaard)",
+      "hp": "31 / 31",
+      "mana": "118 / 118",
+      "mv": "92 / 92",
+      "ac": "AC 12",
+      "weapon": "Cajado de Peregrino",
+      "weapon_icon": "🪄",
+      "sanctuary": "Templo de Midgaard"
     }
   },
   {
@@ -41,6 +51,16 @@
       "q3": "Frieza extrema e impaciência violenta com qualquer coisa que não acelere seu aprendizado marcial e poder real.",
       "q4": "Sacrifica sono (só dorme desmaiada de exaustão), vaidade, dor e laços afetivos; jamais a busca pela força suprema ou o cálculo prudente de combate.",
       "q5": "Ser a Soberana que quebrou as correntes dos goblins e provou que uma mulher de sua raça pode subjugar as lendas de Midgaard."
+    },
+    "quick_stats": {
+      "level_badge": "(Grau 4 • Mago / Ladra)",
+      "hp": "33 / 33",
+      "mana": "111 / 111",
+      "mv": "89 / 89",
+      "ac": "AC 17",
+      "weapon": "Punhal de Novato (+ Escudo)",
+      "weapon_icon": "🗡️",
+      "sanctuary": "Panteão dos Centenários"
     }
   }
 ]

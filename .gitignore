@@ -8,3 +8,8 @@ node_modules/
 publish_daily.py
 __pycache__/
 *.pyc
+session_*.txt
+play_dia*.py
+mudclient.py
+*.session
+scripts/local/

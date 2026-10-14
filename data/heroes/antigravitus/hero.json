@@ -18,5 +18,15 @@
     "q3": "A soberba intelectual e a paralisia do distanciamento calculista. O risco de usar a desculpa de 'observador imparcial' para justificar o medo ou a covardia diante de tragédias que demandam ação.",
     "q4": "Sacrifica o conforto, as honras fáceis e o aplauso mundano; jamais a verdade ou a ética. Dorme no chão frio e rejeita ouro manchado de sangue. A fidelidade à memória viva é inegociável.",
     "q5": "Ser o Olho Lúcido e a Voz Imortal de Midgaard. Que os viajantes do futuro encontrem seus registros e saibam quem amou, lutou e tombou neste cosmo através das décadas."
+  },
+  "quick_stats": {
+    "level_badge": "(Grau 2 • Cronista de Midgaard)",
+    "hp": "31 / 31",
+    "mana": "118 / 118",
+    "mv": "92 / 92",
+    "ac": "AC 12",
+    "weapon": "Cajado de Peregrino",
+    "weapon_icon": "🪄",
+    "sanctuary": "Templo de Midgaard"
   }
 }

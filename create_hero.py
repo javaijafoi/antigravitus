@@ -4,6 +4,12 @@ import sys
 import argparse
 import shutil
 
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 HEROES_DIR = os.path.join(DATA_DIR, "heroes")
@@ -19,7 +25,7 @@ def create_hero(slug, name, race_class="Guerreiro", rune="⚔️", avatar="🛡�
 
     os.makedirs(target_dir, exist_ok=True)
 
-    # 1. Cria hero.json
+    # 1. Cria hero.json com quick_stats e perguntas base
     hero_meta = {
         "id": slug,
         "name": name,
@@ -33,20 +39,46 @@ def create_hero(slug, name, race_class="Guerreiro", rune="⚔️", avatar="🛡�
         "subtitle": f"Crônicas diárias de {name} ({race_class}) pelas terras de {server}.",
         "vigilia": "Vigília Ativa: Praça de Midgaard",
         "server": server,
-        "folder": f"data/heroes/{slug}"
+        "folder": f"data/heroes/{slug}",
+        "questions": {
+            "q1": f"Decifrar os segredos de Midgaard e honrar o caminho de {race_class}.",
+            "q2": "A morte anônima e esquecida em sarjetas hostis.",
+            "q3": "Impulsividade e excesso de confiança diante de ameaças desconhecidas.",
+            "q4": "Sacrifica o conforto e as honras fáceis; jamais sua honra ou verdade.",
+            "q5": f"Que o nome de {name} ecoe nas lendas e memórias de Midgaard."
+        },
+        "quick_stats": {
+            "level_badge": f"(Grau 1 • {race_class})",
+            "hp": "20 / 20",
+            "mana": "50 / 50",
+            "mv": "80 / 80",
+            "ac": "AC 20",
+            "weapon": "Arma de Novato",
+            "weapon_icon": rune or "🗡️",
+            "sanctuary": "Templo de Midgaard"
+        }
     }
 
     with open(os.path.join(target_dir, "hero.json"), "w", encoding="utf-8") as f:
         json.dump(hero_meta, f, ensure_ascii=False, indent=2)
 
-    # 2. Copia ou gera templates base
-    template_dir = os.path.join(HEROES_DIR, "novo_heroi")
-    for fname in ["identidade.md", "evolucao.md", "conhecimento.md"]:
+    # 2. Copia e hidrata os templates canônicos de _template
+    template_dir = os.path.join(HEROES_DIR, "_template")
+    files_to_copy = ["identidade.md", "evolucao.md", "conhecimento.md", "mapa.md", "ficha.md"]
+    for fname in files_to_copy:
         src = os.path.join(template_dir, fname)
         dst = os.path.join(target_dir, fname)
         if os.path.exists(src):
             with open(src, "r", encoding="utf-8") as f_in:
-                content = f_in.read().replace("Novo Herói", name).replace("[NOME]", name)
+                content = (
+                    f_in.read()
+                    .replace("[NOME]", name)
+                    .replace("[SLUG]", slug)
+                    .replace("[RACA_CLASSE]", race_class)
+                    .replace("[RUNA]", rune)
+                    .replace("[AVATAR]", avatar)
+                    .replace("[TITULO]", title)
+                )
             with open(dst, "w", encoding="utf-8") as f_out:
                 f_out.write(content)
 
@@ -82,7 +114,7 @@ def create_hero(slug, name, race_class="Guerreiro", rune="⚔️", avatar="🛡�
     with open(HEROES_JSON, "w", encoding="utf-8") as f:
         json.dump(heroes_list, f, ensure_ascii=False, indent=2)
 
-    print(f"🎉 Herói '{name}' ({slug}) criado com sucesso em: {target_dir}")
+    print(f"[SUCESSO] Herói '{name}' ({slug}) criado com sucesso em: {target_dir}")
     print(f"Catálogo atualizado em: {HEROES_JSON}")
     return True
 
