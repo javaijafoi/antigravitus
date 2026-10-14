@@ -145,6 +145,22 @@
   * Estudar magia na Mestre da Guilda com foco imediato em projéteis de longo alcance para neutralizar alvos à distância, mas **NUNCA soltar a adaga**.
   * Caçar a serpente dos esgotos para vingar a própria morte e recuperar a honra de sua lâmina.
 
+---
+
+### ⏳ Ciclo 12 (Dia 12): O Chamado do Pacificador e o Muro Arcano
+* **Status Real (MUD):**
+  * Nível: 1 | Vida: 23/23 | Mana: 100/100 | Movimento: 82/84 | AC: 16
+  * Experiência: 0 EXP
+  * Local de Pernoite: O Panteão dos Centenários.
+* **Marcos e Impactos Psicológicos:**
+  * **O Reconhecimento do Pacificador:** O sentinela supremo da cidade a chamou formalmente: *"Quando você estiver mais forte volte aqui para me ajudar!"*. Grebolius assimilou o recado: o gigante civil reconheceu sua resiliência e não a tratou como ralé.
+  * **A Barreira da Mestre dos Magos:** A tentativa de prática diante da Mestre dos Magos revelou a arrogância dos acadêmicos de Midgaard. Grebolius não se intimidou: o aço na mão resolve de perto, e as fórmulas mágicas serão arrancadas por teimosia ladina.
+  * **Varredura Marcial da Rua Leste:** Patrulhou a Rua Principal até a Guilda dos Guerreiros e a Loja de Armas, presenciando o trânsito do aventureiro Keen e consolidando sua calma tática.
+* **Decisão Tática:**
+  * Descobrir a invocação e comando exato para destravar o treino de magias com a mestre.
+  * Expandir a caçada para os limites dos portões leste e oeste no próximo ciclo.
+
+
 
 
 
