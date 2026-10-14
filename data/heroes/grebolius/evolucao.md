@@ -73,6 +73,21 @@
   * Manter a disciplina de exaustão: só dormir quando as pernas quase não sustentarem o corpo, deixando apenas o mínimo para recolher-se ao santuário.
   * Foco prioritário para o próximo ciclo: encontrar a Guilda dos Ladrões ou instrutor clandestino nos becos para iniciar a prática formal de habilidades furtivas e de combate.
 
+---
+
+### ⏳ Ciclo 7 (Dia 7): O Arsenal das Doações e o Covil Encontrado
+* **Status de Campo:**
+  * Local de Repouso: O Panteão dos Centenários.
+  * Recursos & Armamento: Capacidade máxima de carga atingida após saque na Sala de Doações — punhal de novato com aura mágica, elmo de combate encantado, veste cerimonial, anel arcano e ferramentas pesadas.
+  * Condição Física: Pernas e ombros esgotados pelo peso dos espólios e pela marcha pelas artérias clandestinas.
+* **Marcos e Impactos Psicológicos:**
+  * **A Descoberta da Guilda dos Ladrões:** A localização confirmada ao sul do Beco Escuro é o ponto de virada definitivo. Grebolius agora sabe exatamente onde fica o santuário das adagas e do treino de sombras.
+  * **A Visão de Winkan:** Testemunhar *Winkan, o Engenheiro do Caos* em meditação sob barreira de luz pura demonstrou a escala de poder arcano que os mestres dominam.
+* **Decisão Tática:**
+  * Organizar os itens da mochila para liberar peso e mobilidade.
+  * Ingressar formalmente na Guilda dos Ladrões no Ciclo 8 para iniciar o treinamento rigoroso com os mestres da clandestinidade.
+
+
 
 
 

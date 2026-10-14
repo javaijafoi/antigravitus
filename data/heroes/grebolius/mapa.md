@@ -4,13 +4,14 @@
 
 ---
 
-## 🏛️ Eixo Urbano de Midgaard (Mapeamento Consolidado — Dias 1 a 6)
+## 🏛️ Eixo Urbano de Midgaard (Mapeamento Consolidado — Dias 1 a 7)
 
 | Sala | Saídas Verificadas | Nível de Risco | Notas de Campo / Utilidade |
 | :--- | :--- | :--- | :--- |
 | **O Depósito de Lixo** | **N** (Praça Comum), **D** (Esgotos) | Mínimo | Ponto de partida. Rota subterrânea de fuga. |
-| **A Praça Comum** | **N** (Comércio), **L** (Beco Escuro), **S** (Lixo), **O** (Beco Pobre) | Baixo | Trânsito denso; aventureiros em ronda. |
-| **O Beco Escuro** | **O** (Praça Comum) | Médio / Sombra | Viela sombria ideal para furtividade, esconderijo e rotas clandestinas. |
+| **A Praça Comum** | **N** (Comércio), **L** (Beco Escuro), **S** (Lixo), **O** (Beco Pobre) | Baixo | Trânsito denso; pranteador e mercenários. |
+| **O Beco Escuro** | **O** (Praça Comum), **S** (Guilda dos Ladrões), **L** (Beco) | Médio / Sombra | Viela sombria repleta de mercenários armados; rota para a guilda dos ladinos. |
+| **A Entrada da Guilda dos Ladrões** | **N** (Beco Escuro) | Sob Análise | Covil dos ladinos de Midgaard; ponto nevrálgico de treino e furtividade. |
 | **O Beco Pobre** | **L** (Praça Comum) | Baixo / Miséria | Aglomerado de necessitados e palha; rota secundária de fuga. |
 | **A Praça do Comércio** | **N** (Templo), **L** (Rua Leste), **S** (Comum), **O** (Rua Oeste) | Baixo | Centro da cidade. Estátua, carroça de carga e mural mágico flutuante. |
 | **Rua Principal (Leste I)** | **N** (Armazém), **L** (Rua Leste II), **S** (Animais), **O** (Comércio) | Baixo | Guarda da cidade em patrulha. |
@@ -31,6 +32,8 @@
 | **A Entrada da Guilda dos Clérigos** | **L** (Praça do Templo) | Seguro | Enclave religioso a oeste da Praça do Templo. |
 | **A Entrada do Javali Roncador** | **O** (Praça do Templo) | Baixo / Taverna | Estalagem e bar tradicional a leste da praça. |
 | **O Templo de Midgaard** | **N** (Altar), **L** (Doações), **O** (Leitura), **D** (Praça), **U** (Panteão) | **Santuário** | **Ponto Seguro Principal:** Inviolável, caixa de economias, conexão para o cume. |
+| **A Sala de Doações** | **O** (Templo de Midgaard) | Seguro | Depósito de itens e armaduras deixados por veteranos para novatos. |
+| **A Sala de Leitura** | **L** (Templo de Midgaard) | Seguro | Sala silenciosa com mesas, bancos e grande quadro de mensagens. |
 | **O Panteão dos Centenários** | **D** (Templo de Midgaard) | **Santuário Supremo** | **Cume Sagrado:** Altar lendário, estátuas imortais dos heróis eternos e repouso supremo. |
 
 ---
