@@ -4,11 +4,12 @@
 
 ---
 
-## 🏛️ Eixo Urbano de Midgaard (Mapeamento Consolidado — Dias 1 a 8)
+## 🏛️ Eixo Urbano de Midgaard (Mapeamento Consolidado — Dias 1 a 9)
 
 | Sala | Saídas Verificadas | Nível de Risco | Notas de Campo / Utilidade |
 | :--- | :--- | :--- | :--- |
 | **O Depósito de Lixo** | **N** (Praça Comum), **D** (Esgotos) | Mínimo | Ponto de partida. Rota subterrânea de fuga. |
+| **Os Esgotos de Midgaard (Entrada)** | **U** (Depósito de Lixo), **D** (Fundo) | Médio / Subsolo | Abóbada gotejante e fétida sob o lixo; labirinto subterrâneo. |
 | **A Praça Comum** | **N** (Comércio), **L** (Beco Escuro), **S** (Lixo), **O** (Beco Pobre) | Baixo | Trânsito denso; pranteador e mercenários. |
 | **O Beco Escuro** | **O** (Praça Comum), **S** (Guilda dos Ladrões), **L** (Beco) | Médio / Sombra | Viela sombria repleta de mercenários armados; rota para a guilda dos ladinos. |
 | **A Entrada da Guilda dos Ladrões** | **N** (Beco Escuro), **L** (Bar dos Ladrões) | Sob Análise | Covil dos ladinos; caixa de moedas; sentinela bloqueia o bar a novatos. |

@@ -100,6 +100,20 @@
 * **Decisão Tática:**
   * Romper a inércia: utilizar o Ciclo 9 para destravar o primeiro combate letal comprovado e abrir espaço com sangue para que os mestres das guildas sejam forçados a reconhecê-la.
 
+---
+
+### ⏳ Ciclo 9 (Dia 9): O Primeiro Sangue e o Salto da Predadora
+* **Status de Campo:**
+  * Local de Repouso: O Panteão dos Centenários.
+  * Experiência & Vitalidade: Primeiro combate letal registrado com sucesso absoluto — dano mortal devastador desferido com o punhal encantado, sem sofrer um único arranhão em retaliação.
+  * Progresso Marcial: Salto expressivo na maturidade e precisão de combate; a sensação de hesitação foi completamente extirpada.
+* **Marcos e Impactos Psicológicos:**
+  * **A Punhalada Mortal:** Derrubar o fido bestial com um golpe explosivo e ouvi-lo sucumbir provou na prática a eficácia do cálculo de combate: quando a vitória é matematicamente garantida antes do primeiro passo, o confronto torna-se uma execução cirúrgica.
+  * **O Vislumbre dos Esgotos:** A descida até a boca dos esgotos sob o lixo confirmou a existência de uma malha subterrânea que servirá como artéria de fuga e caça no futuro.
+* **Decisão Tática:**
+  * O Ciclo 10 marcará o primeiro ciclo decenal de reflexão estratégica obrigatória: avaliar se a velocidade de progressão e a escolha de armamento e guildas estão no caminho mais eficiente para a fundação do reino soberano.
+
+
 
 
 
