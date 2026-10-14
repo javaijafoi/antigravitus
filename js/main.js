@@ -2,8 +2,9 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const heroSelect = document.getElementById("hero-select");
   const postsContainer = document.getElementById("posts-container");
-  const searchInput = document.getElementById("search-input");
-  const tagsContainer = document.getElementById("tags-container");
+  const heroQuickStatsEl = document.getElementById("hero-quick-stats");
+  const cyclesTabsEl = document.getElementById("cycles-tabs");
+  const daysSelectorBarEl = document.getElementById("days-selector-bar");
   const postCountEl = document.getElementById("post-count");
   const linkSobre = document.getElementById("link-sobre");
   const linkCronicas = document.getElementById("link-cronicas");
@@ -77,7 +78,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   let currentHero = heroesList[0];
   let allPosts = [];
-  let activeTag = "todos";
+  let activeCycle = "todos";
+  let activeDay = null;
 
   // 1. Carrega lista de heróis do arquivo central heroes.json
   async function initHeroes() {
@@ -135,8 +137,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         applyHeroContext(currentHero);
         if (postsContainer) {
-          activeTag = "todos";
-          if (searchInput) searchInput.value = "";
+          activeCycle = "todos";
           await loadPostsForHero(currentHero);
         }
         if (fichaContainer) {
@@ -196,6 +197,88 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     document.title = `${hero.name} — ${hero.title} | Devil's Bob MUD`;
+    renderQuickStats(hero);
+  }
+
+  // Card de Metadados e Ficha Rápida (Perfeito no Mobile)
+  function renderQuickStats(hero) {
+    if (!heroQuickStatsEl) return;
+
+    if (hero.id === "grebolius") {
+      heroQuickStatsEl.innerHTML = `
+        <div class="quick-stats-header">
+          <div class="quick-stats-title">
+            <span>🧌</span>
+            <strong>Grebolius</strong>
+            <span style="font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted);">(Grau 1 • Ladra Arcana)</span>
+          </div>
+          <a href="ficha.html?hero=grebolius" class="quick-stats-link">Ver Ficha Completa →</a>
+        </div>
+        <div class="quick-stats-grid">
+          <div class="stat-pill pill-hp">
+            <span class="pill-label">❤️ Vida</span>
+            <span class="pill-value">23 / 23</span>
+          </div>
+          <div class="stat-pill pill-mana">
+            <span class="pill-label">⚡ Mana</span>
+            <span class="pill-value">52 / 100</span>
+          </div>
+          <div class="stat-pill pill-mv">
+            <span class="pill-label">👟 Fôlego</span>
+            <span class="pill-value">54 / 84</span>
+          </div>
+          <div class="stat-pill pill-ac">
+            <span class="pill-label">🛡️ Armadura</span>
+            <span class="pill-value">AC 16</span>
+          </div>
+          <div class="stat-pill">
+            <span class="pill-label">🗡️ Empunhado</span>
+            <span class="pill-value" style="font-size: 0.82rem;">Punhal de Novato</span>
+          </div>
+          <div class="stat-pill">
+            <span class="pill-label">📍 Santuário</span>
+            <span class="pill-value" style="font-size: 0.82rem;">Panteão dos Centenários</span>
+          </div>
+        </div>
+      `;
+    } else {
+      heroQuickStatsEl.innerHTML = `
+        <div class="quick-stats-header">
+          <div class="quick-stats-title">
+            <span>🧙‍♂️</span>
+            <strong>Antigravitus</strong>
+            <span style="font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted);">(Grau 2 • Cronista de Midgaard)</span>
+          </div>
+          <a href="ficha.html?hero=antigravitus" class="quick-stats-link">Ver Ficha Completa →</a>
+        </div>
+        <div class="quick-stats-grid">
+          <div class="stat-pill pill-hp">
+            <span class="pill-label">❤️ Vida</span>
+            <span class="pill-value">31 / 31</span>
+          </div>
+          <div class="stat-pill pill-mana">
+            <span class="pill-label">⚡ Mana</span>
+            <span class="pill-value">118 / 118</span>
+          </div>
+          <div class="stat-pill pill-mv">
+            <span class="pill-label">👟 Fôlego</span>
+            <span class="pill-value">92 / 92</span>
+          </div>
+          <div class="stat-pill pill-ac">
+            <span class="pill-label">🛡️ Armadura</span>
+            <span class="pill-value">AC 12</span>
+          </div>
+          <div class="stat-pill">
+            <span class="pill-label">🪄 Empunhado</span>
+            <span class="pill-value" style="font-size: 0.82rem;">Cajado de Peregrino</span>
+          </div>
+          <div class="stat-pill">
+            <span class="pill-label">📍 Santuário</span>
+            <span class="pill-value" style="font-size: 0.82rem;">Templo de Midgaard</span>
+          </div>
+        </div>
+      `;
+    }
   }
 
   // 2. Carrega posts específicos do herói ativo (ORDENAÇÃO CRESCENTE SEMPRE)
@@ -208,7 +291,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (res.ok) {
         posts = await res.json();
       } else {
-        // Fallback para antigravitus no path antigo data/posts.json
         const fallbackRes = await fetch("data/posts.json");
         if (fallbackRes.ok && hero.id === "antigravitus") {
           posts = await fallbackRes.json();
@@ -223,8 +305,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Regra: Os blogs SEMPRE são ordenados em ORDEM CRESCENTE (Dia 1, Dia 2, Dia 3...)
     allPosts.sort((a, b) => (a.id || 0) - (b.id || 0));
 
-    renderTags();
-    renderPosts(allPosts);
+    renderCycleNavigator();
+    filterAndRender();
     updatePostCount(allPosts.length);
   }
 
@@ -234,46 +316,97 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
-  function renderTags() {
-    if (!tagsContainer) return;
-    const tagSet = new Set();
-    allPosts.forEach(p => (p.tags || []).forEach(t => tagSet.add(t)));
+  // Navegador de Ciclos e Seletor Direto de Dias (Zero Rolar Inútil)
+  function renderCycleNavigator() {
+    if (!cyclesTabsEl || !daysSelectorBarEl) return;
 
-    const tags = ["todos", ...Array.from(tagSet)];
-    tagsContainer.innerHTML = tags
+    const maxDay = allPosts.reduce((max, p) => Math.max(max, p.id || 0), 0);
+    const cycles = [
+      { id: "todos", label: `✦ Todos (${allPosts.length})` },
+      { id: "1", label: "✦ Ciclo I (Dias 1–10)" }
+    ];
+
+    if (maxDay > 10) {
+      cycles.push({ id: "2", label: "✦ Ciclo II (Dias 11–20)" });
+    }
+    if (maxDay > 20) {
+      cycles.push({ id: "3", label: "✦ Ciclo III (Dias 21–30)" });
+    }
+
+    cyclesTabsEl.innerHTML = cycles
       .map(
-        tag => `
-        <button class="tag-btn ${tag === activeTag ? "active" : ""}" data-tag="${tag}">
-          ${tag === "todos" ? "✦ Todas as Crônicas" : `#${tag}`}
+        c => `
+        <button class="cycle-tab-btn ${c.id === activeCycle ? "active" : ""}" data-cycle="${c.id}">
+          ${c.label}
         </button>
       `
       )
       .join("");
 
-    tagsContainer.querySelectorAll(".tag-btn").forEach(btn => {
+    cyclesTabsEl.querySelectorAll(".cycle-tab-btn").forEach(btn => {
       btn.addEventListener("click", () => {
-        activeTag = btn.dataset.tag;
-        tagsContainer.querySelectorAll(".tag-btn").forEach(b => b.classList.remove("active"));
+        activeCycle = btn.dataset.cycle;
+        cyclesTabsEl.querySelectorAll(".cycle-tab-btn").forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
+        renderDaysBar();
         filterAndRender();
+      });
+    });
+
+    renderDaysBar();
+  }
+
+  function renderDaysBar() {
+    if (!daysSelectorBarEl) return;
+
+    let postsInCycle = allPosts;
+    if (activeCycle === "1") {
+      postsInCycle = allPosts.filter(p => p.id >= 1 && p.id <= 10);
+    } else if (activeCycle === "2") {
+      postsInCycle = allPosts.filter(p => p.id >= 11 && p.id <= 20);
+    } else if (activeCycle === "3") {
+      postsInCycle = allPosts.filter(p => p.id >= 21 && p.id <= 30);
+    }
+
+    daysSelectorBarEl.innerHTML = postsInCycle
+      .map(
+        p => `
+        <button class="day-btn ${p.id === activeDay ? "active" : ""}" data-day="${p.id}">
+          Dia ${p.id}
+        </button>
+      `
+      )
+      .join("");
+
+    daysSelectorBarEl.querySelectorAll(".day-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const dayId = parseInt(btn.dataset.day, 10);
+        activeDay = dayId;
+        daysSelectorBarEl.querySelectorAll(".day-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const targetEl = document.getElementById(`post-${dayId}`);
+        if (targetEl) {
+          targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+          targetEl.style.transition = "outline 0.3s ease";
+          targetEl.style.outline = "2px solid var(--accent-gold)";
+          setTimeout(() => {
+            targetEl.style.outline = "none";
+          }, 1800);
+        }
       });
     });
   }
 
   function filterAndRender() {
-    const query = (searchInput?.value || "").toLowerCase().trim();
-
-    const filtered = allPosts.filter(post => {
-      const matchesTag = activeTag === "todos" || (post.tags && post.tags.includes(activeTag));
-      const matchesQuery =
-        !query ||
-        post.title.toLowerCase().includes(query) ||
-        (post.day && post.day.toLowerCase().includes(query)) ||
-        (post.content && post.content.some(paragraph => paragraph.toLowerCase().includes(query))) ||
-        (post.tags && post.tags.some(t => t.toLowerCase().includes(query)));
-
-      return matchesTag && matchesQuery;
-    });
+    let filtered = allPosts;
+    if (activeCycle === "1") {
+      filtered = allPosts.filter(p => p.id >= 1 && p.id <= 10);
+    } else if (activeCycle === "2") {
+      filtered = allPosts.filter(p => p.id >= 11 && p.id <= 20);
+    } else if (activeCycle === "3") {
+      filtered = allPosts.filter(p => p.id >= 21 && p.id <= 30);
+    }
 
     renderPosts(filtered);
     updatePostCount(filtered.length);
@@ -470,10 +603,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     flushList();
     flushTable();
     return html;
-  }
-
-  if (searchInput) {
-    searchInput.addEventListener("input", filterAndRender);
   }
 
   initHeroes();

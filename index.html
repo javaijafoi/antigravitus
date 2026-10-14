@@ -75,16 +75,26 @@
   <!-- Main Content -->
   <main class="container">
     
-    <!-- Controls (Search & Filter) -->
-    <div class="controls-bar">
-      <div class="search-box">
-        <span>🔍</span>
-        <input type="text" id="search-input" placeholder="Buscar nas crônicas..." autocomplete="off">
+    <!-- Card de Metadados e Status Vivos (Otimizado p/ Mobile) -->
+    <section class="hero-quick-stats" id="hero-quick-stats">
+      <!-- Metadados da Ficha Viva injetados via JS -->
+    </section>
+
+    <!-- Navegador de Leitura por Ciclos e Dias -->
+    <nav class="reading-nav-panel" aria-label="Navegador de Ciclos e Dias">
+      <div class="cycles-header">
+        <span class="cycles-label">Ciclos:</span>
+        <div class="cycles-tabs" id="cycles-tabs">
+          <!-- Abas de ciclos geradas dinamicamente via JS -->
+        </div>
       </div>
-      <div class="filter-tags" id="tags-container">
-        <!-- Tags dinâmicas geradas pelo JS -->
+      <div class="days-nav-wrapper">
+        <span class="days-label">Saltar p/ Dia:</span>
+        <div class="days-selector-bar" id="days-selector-bar">
+          <!-- Botões rápidos de cada dia do ciclo ativo gerados via JS -->
+        </div>
       </div>
-    </div>
+    </nav>
 
     <!-- Feed de Crônicas (A mais recente primeiro) -->
     <section class="posts-feed" id="posts-container">
