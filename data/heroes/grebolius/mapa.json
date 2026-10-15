@@ -2,8 +2,8 @@
   "hero_id": "grebolius",
   "hero_name": "Grebolius",
   "sanctuary_id": "panteao_centenarios",
-  "last_updated_cycle": "Ciclo IX (Dia 84; doações úteis, modo batedor e mapeamento da Área dos Novatos)",
-  "total_rooms": 80,
+  "last_updated_cycle": "Ciclo IX (Dia 89; Modo Dungeon, limpeza dos novatos e consolidação decenal)",
+  "total_rooms": 86,
   "layers": [
     {
       "id": "superficie",
@@ -1092,15 +1092,13 @@
       },
       "exits": {
         "n": "canto_corredor",
-        "s": "a_entrada"
+        "s": "a_entrada",
+        "l": "sala_no_canto"
       },
       "npcs": [],
       "notes": "Passagem estreita leste-oeste cruza com passagem ampla norte-sul. Clima de ruína e ar pesado.",
       "discovered_in": "Ciclo VII (Dia 63)",
       "unresolved_exits": {
-        "l": {
-          "description": "Uma Sala no Canto"
-        },
         "o": {
           "description": "Uma Longa Passagem Leste-Oeste"
         }
@@ -1119,16 +1117,12 @@
         "y": 780
       },
       "exits": {
-        "s": "cruzamento_corredores"
+        "s": "cruzamento_corredores",
+        "l": "outra_curva"
       },
       "npcs": [],
       "notes": "Paredes acinzentadas com rachaduras brotando fungos verdes. Ruídos inquietantes ao redor.",
-      "discovered_in": "Ciclo VII (Dia 63)",
-      "unresolved_exits": {
-        "l": {
-          "description": "Outra Curva"
-        }
-      }
+      "discovered_in": "Ciclo VII (Dia 63)"
     },
     {
       "id": "curva_passagem",
@@ -1143,16 +1137,12 @@
         "y": 600
       },
       "exits": {
-        "n": "a_entrada"
+        "n": "a_entrada",
+        "l": "ramificacao_ao_sul"
       },
       "npcs": [],
       "notes": "Ambiente nauseante com odor fétido de carniça e morte recente.",
-      "discovered_in": "Ciclo VII (Dia 63)",
-      "unresolved_exits": {
-        "l": {
-          "description": "Uma Ramificação ao Sul"
-        }
-      }
+      "discovered_in": "Ciclo VII (Dia 63)"
     },
     {
       "id": "uma_passagem",
@@ -1167,19 +1157,13 @@
         "y": 660
       },
       "exits": {
-        "l": "a_entrada"
+        "l": "a_entrada",
+        "n": "uma_grande_sala",
+        "s": "uma_sala_enorme"
       },
       "npcs": [],
       "notes": "Passagem estreita e nojenta revestida de fungos viscosos nas paredes.",
-      "discovered_in": "Ciclo VII (Dia 63)",
-      "unresolved_exits": {
-        "n": {
-          "description": "Uma Grande Sala"
-        },
-        "s": {
-          "description": "Uma Sala Enorme"
-        }
-      }
+      "discovered_in": "Ciclo VII (Dia 63)"
     },
     {
       "id": "corredor_iluminado",
@@ -1538,11 +1522,9 @@
         "x": 1300,
         "y": -300
       },
-      "exits": {},
-      "unresolved_exits": {
-        "l": {
-          "description": "Arco a leste visto no Dia 59; destino exato não confirmado por travessia documentada."
-        }
+      "exits": {
+        "s": "caminho_iluminado_norte",
+        "l": "o_salao"
       },
       "npcs": [],
       "notes": "Descoberta ao norte de Um Caminho Iluminado no Dia 59. O arco a leste é pista para investigação; não foi convertido em conexão confirmada com o Alquimista.",
@@ -1831,6 +1813,156 @@
       ],
       "notes": "Bar interno restrito da Guilda dos Necromantes a oeste da entrada. Entrada bloqueada para não-necromantes pelo guarda com barreira de ossos.",
       "discovered_in": "Ciclo 9 (Dia 82)"
+    },
+    {
+      "id": "o_salao",
+      "name": "O Salão",
+      "layer": "novatos",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Médio / Escola",
+      "risk_code": "medium",
+      "icon": "🖼️",
+      "coords": {
+        "x": 1360,
+        "y": -300
+      },
+      "exits": {
+        "o": "sala_estatua"
+      },
+      "unresolved_exits": {
+        "l": {
+          "description": "A Escadaria Norte"
+        }
+      },
+      "npcs": [],
+      "notes": "Saguão adornado por imagens, figuras e finas decorações nas paredes ao longo de toda a passagem, contrastando com o lodo inferior.",
+      "discovered_in": "Ciclo IX (Dia 85)"
+    },
+    {
+      "id": "sala_no_canto",
+      "name": "Uma Sala no Canto",
+      "layer": "novatos",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Médio / Subsolo",
+      "risk_code": "medium",
+      "icon": "📐",
+      "coords": {
+        "x": 1580,
+        "y": 720
+      },
+      "exits": {
+        "o": "cruzamento_corredores"
+      },
+      "unresolved_exits": {
+        "n": {
+          "description": "Outro Canto"
+        }
+      },
+      "npcs": [],
+      "notes": "Cruzamento angular entre corredores subterrâneos; brisa com cheiro fétido sopra da passagem ao norte, com despojos do Minotauro pelo chão.",
+      "discovered_in": "Ciclo IX (Dia 86)"
+    },
+    {
+      "id": "outra_curva",
+      "name": "Outra Curva",
+      "layer": "novatos",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Médio / Subsolo",
+      "risk_code": "medium",
+      "icon": "↩️",
+      "coords": {
+        "x": 1580,
+        "y": 780
+      },
+      "exits": {
+        "o": "canto_corredor"
+      },
+      "unresolved_exits": {
+        "s": {
+          "description": "Uma Ramificação da Passagem"
+        }
+      },
+      "npcs": [],
+      "notes": "Passagem subterrânea que faz curva ao sul nas catacumbas, forrada de resíduos e chifres de minotauro.",
+      "discovered_in": "Ciclo IX (Dia 86)"
+    },
+    {
+      "id": "uma_grande_sala",
+      "name": "Uma Grande Sala",
+      "layer": "novatos",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Médio / Hostil",
+      "risk_code": "medium",
+      "icon": "🏟️",
+      "coords": {
+        "x": 1460,
+        "y": 720
+      },
+      "exits": {
+        "s": "uma_passagem"
+      },
+      "unresolved_exits": {
+        "l": {
+          "description": "Uma Longa Passagem Leste-Oeste"
+        }
+      },
+      "npcs": [
+        "Diabinho",
+        "Novato Zumbi Descarnado"
+      ],
+      "notes": "Ampla câmara subterrânea oval nas catacumbas, infestada por diabinhos e novatos zumbis descarnados.",
+      "discovered_in": "Ciclo IX (Dia 87)"
+    },
+    {
+      "id": "uma_sala_enorme",
+      "name": "Uma Sala Enorme",
+      "layer": "novatos",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Médio / Hostil",
+      "risk_code": "medium",
+      "icon": "🕳️",
+      "coords": {
+        "x": 1460,
+        "y": 600
+      },
+      "exits": {
+        "n": "uma_passagem"
+      },
+      "unresolved_exits": {
+        "l": {
+          "description": "Vasta escuridão que se estende ao leste tanto quanto a luz alcança"
+        }
+      },
+      "npcs": [],
+      "notes": "Recinto colossal das catacumbas sem paredes visíveis imediatas, causando vertigem e sensação de vulnerabilidade.",
+      "discovered_in": "Ciclo IX (Dia 87)"
+    },
+    {
+      "id": "ramificacao_ao_sul",
+      "name": "Uma Ramificação ao Sul",
+      "layer": "novatos",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Médio / Hostil",
+      "risk_code": "medium",
+      "icon": "🌿",
+      "coords": {
+        "x": 1580,
+        "y": 600
+      },
+      "exits": {
+        "o": "curva_passagem",
+        "s": "uma_sala_enorme"
+      },
+      "unresolved_exits": {
+        "l": {
+          "description": "Mais Outro Canto"
+        }
+      },
+      "npcs": [
+        "Novato Zumbi Descarnado"
+      ],
+      "notes": "Galeria das catacumbas com fungos viçosos nas paredes e forte odor de morte, com saída sul para Uma Sala Enorme.",
+      "discovered_in": "Ciclo IX (Dia 88)"
     }
   ],
   "last_updated_day": 84,

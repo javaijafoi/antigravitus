@@ -2,8 +2,8 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 84,
-    "source": "Sessão ao vivo em debomud.org:4000 (Dia 84): resgate de doações úteis (uma escura capa de novato equipada sobre o corpo, bracelete de conchas e 3 pergaminhos de sabedoria); ativação do Modo Batedor com wimpy 33 (teto máximo de 50% do HP do servidor); mapeamento completo da Escola de Novatos (Piso Superior) e Catacumbas Subterrâneas (avistamento do Grande Minotauro e zumbis descarnados); retorno seguro ao Templo de Midgaard e pernoite em sono reparador (sleep) salvo.",
+    "day": 89,
+    "source": "Sessão ao vivo em debomud.org:4000 (Dias 85 a 89): incursão em Modo Dungeon na Escola de Novatos e Catacumbas Subterrâneas, cartografia de O Salão, Uma Sala no Canto, Outra Curva, Uma Grande Sala, Uma Sala Enorme e Uma Ramificação ao Sul; rondas de limpeza e abate de mortos-vivos; consolidação do ciclo decenal no Altar de Odin e Templo de Midgaard; sono reparador (sleep) e salvamento de estado.",
     "verification": "live",
     "live_verified": true
   },
@@ -34,7 +34,7 @@
     "current": 152101,
     "next_level": 200000
   },
-  "gold": 2642,
+  "gold": 2636,
   "attributes": {
     "STR": 10,
     "DEX": 15,
@@ -51,14 +51,15 @@
   },
   "hitroll": 0,
   "damroll": 1,
-  "wimpy": 13,
+  "wimpy": 17,
   "training_sessions": 15,
   "operational_mode": {
     "current": "padrao",
     "description": "Modo Padrão: Exploração equilibrada com cautela tática e Wimpy documental (~25%).",
     "wimpy_profile": {
-      "padrao": 13,
-      "batedor": 33
+      "padrao": 17,
+      "batedor": 33,
+      "dungeon": 17
     },
     "rules": {
       "batedor": "Mapeamento em invisibilidade; coleta de oportunidade de itens no chão/doações permitida; evasão total de combate (zero engajamento, fuga imediata no 1º turno)."
@@ -77,8 +78,8 @@
     "name": "O Panteão dos Centenários"
   },
   "last_event": {
-    "day": 84,
-    "summary": "Expedição do Dia 84: coleta e equipamento de uma escura capa de novato das doações, ativação do Modo Batedor com wimpy 33, mapeamento detalhado da Escola dos Novatos e incursão nas Catacumbas Subterrâneas avistando o Grande Minotauro, retornando em segurança ao Templo de Midgaard para dormir e salvar."
+    "day": 89,
+    "summary": "Ciclo Decenal (Dias 85 a 89) em Modo Dungeon: limpeza e cartografia da Área dos Novatos (O Salão na escola superior, Uma Sala no Canto, Outra Curva, Uma Grande Sala, Uma Sala Enorme e Uma Ramificação ao Sul nas Catacumbas Subterrâneas). Eliminação de mortos-vivos, ronda cerimonial no Altar de Odin e Templo de Midgaard, pernoite formal em sono reparador (sleep) e salvamento de estado."
   },
   "next_objective": {
     "mission_id": "problemas-agricolas",
@@ -237,8 +238,8 @@
       },
       {
         "name": "um brilhante punhal de novato",
-        "quantity": 4,
-        "source": "Confirmado ao vivo no inventário no Dia 82 (4 reservas após empunhar o quinto)"
+        "quantity": 5,
+        "source": "Confirmado ao vivo no inventário no Dia 89 (5 reservas após empunhar o sexto)"
       },
       {
         "name": "uma brilhante espada de novato",
@@ -278,7 +279,7 @@
     "15 sessões de treino resguardadas para círculos superiores (9 magias básicas em proficiência plena de 95%-99%).",
     "Pergaminho de retorno entregue ao Mago Aventureiro no Bar dos Magos.",
     "Patrono de Problemas Agrícolas revelado: O Pacificador.",
-    "Dia 83 formalmente concluído: descansando e dormindo (sleep) Dentro do Portão Oeste sob a proteção do Pacificador e sentinelas municipais com atalhos salvos."
+    "Ciclo Decenal (Dias 85 a 89) concluído com Modo Dungeon, cartografia das catacumbas e escola superior, descanso e sono reparador (sleep) no Templo de Midgaard sob o Altar de Odin com atalhos salvos."
   ],
   "uncertainties": [
     "O anel arcano (+2E) segue exigindo nível ou condição mágica superior.",

@@ -299,4 +299,21 @@ Para evitar sobrecarga de inventário e otimizar tempo e recursos, **fica abolid
   - A exploração pura sem agressão permitiu mapear todas as câmaras, saídas e posições de predadores sem atrair combate desfavorável nem quebrar a compostura, retornando com integridade física e mana preservadas para o Templo de Midgaard.
   - **Coleta de Oportunidade Sem Combate:** O batedor está autorizado a recolher itens, recipientes, doações ou equipamentos úteis caídos pelo chão das salas durante o reconhecimento (`get <item>`), desde que respeitada a capacidade de carga e sob a regra estrita de NUNCA iniciar ou sustentar batalhas.
 
+---
 
+## 13. Modo Dungeon, Limpeza da Área dos Novatos e o Marco Decenal (Dias 85 a 89)
+* **Doutrina do Modo Dungeon (`wimpy 17`):**
+  - Diferente do Modo Batedor (foco estrito em evasão sem combate), o Modo Dungeon combina blindagem arcana ativa (`cast 'armor'`), combate preventivo à distância com projéteis arcanos (`magic missile`, `chill touch`) e calibração de retirada automática em 25% da vitalidade (`wimpy 17`).
+  - Permite a desinfestação sistemática de câmaras subterrâneas, abate de novatos descarnados (zumbis) e controle de agressividade territorial sem risco fatal.
+* **Novas Câmaras Cartografadas:**
+  - **Piso Superior da Escola de Novatos:**
+    - *O Salão (a leste da Sala da Estátua):* Saguão decorado com belas figuras e finos adornos que contrastam com a umidade do piso térreo. Conexões: Oeste (*A Sala da Estátua*) e Leste (*A Escadaria Norte*).
+  - **Catacumbas Subterrâneas (Subsolo):**
+    - *Uma Sala no Canto (a leste de Um Cruzamento de Corredores):* Cruzamento angular com brisa fétida vinda do norte; saídas para Oeste (*Um Cruzamento de Corredores*) e Norte (*Outro Canto*).
+    - *Outra Curva (a leste de Um Canto no Corredor):* Curva descendente da galeria em direção ao sul; saídas para Oeste (*Um Canto no Corredor*) e Sul (*Uma Ramificação da Passagem*).
+    - *Uma Grande Sala (ao norte de Uma Passagem):* Ampla câmara oval subterrânea infestada por diabinhos e novatos zumbis; saídas para Sul (*Uma Passagem*) e Leste (*Uma Longa Passagem Leste-Oeste*).
+    - *Uma Sala Enorme (ao sul de Uma Passagem e ao sul de Uma Ramificação):* Caverna colossal de limites indistintos na escuridão, estendendo-se a perder de vista para o leste; conexões confirmadas ao Norte (*Uma Passagem*) e ao Norte/Oeste via *Uma Ramificação ao Sul*.
+    - *Uma Ramificação ao Sul (a leste de Uma Curva na Passagem):* Galeria coberta de fungos viçosos na alvenaria com a carcaça do grande Minotauro tombado; saídas para Oeste (*Uma Curva na Passagem*), Sul (*Uma Sala Enorme*) e Leste (*Mais Outro Canto*).
+* **Consolidação do Marco Decenal no Templo de Midgaard (Dia 89):**
+  - O encerramento do nono decênio de aventuras em Midgaard foi celebrado com uma ronda solene de recolhimento no Templo e reverência no Altar de Odin, diante do trono majestoso do Pai de Todos ladeado por Hugin, Munin, Gere e Freke.
+  - A conferência do inventário e das arcas de doações confirma Grebolius plenamente equipada com manto místico sobre o corpo, vestes encantadas, punhal novato empunhado e mente afiada, pronta para os horizontes do nonagésimo dia e a iminência do centenário.

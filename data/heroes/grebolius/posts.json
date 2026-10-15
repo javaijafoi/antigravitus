@@ -2146,5 +2146,145 @@
       "A advertência foi o convite para a descida. Desci os degraus de pedra fria até as entranhas das Catacumbas Subterrâneas, adentrando o frio cortante, a escuridão absoluta e a atmosfera nauseabunda de A Entrada, onde um novato descarnado arrastava sua silhueta de zumbi pelas sombras. Avançando com passos de pluma para não romper o véu da invisibilidade, alcancei Um Cruzamento de Corredores. O ar ali era denso e pútrido, carregado pelo odor de decadência e pelo bafo quente de feras ocultas. Das trevas da galeria emergiu a figura colossal do Grande Minotauro, bufando com os chifres recurvados e farejando o ar à procura de carne fresca, ladeado por um diabinho saltitante e outras criaturas menores. Sem desferir um único ataque que pudesse atrair o aggro da horda, mapeei cada via de escape: sondei a curva estreita ao norte forrada de fungos esverdeados, espreitei a galeria ao sul empesteada por um cheiro nauseante de putrefação e verifiquei a passagem estreita a oeste onde mais dois mortos-vivos rondavam entre paredes mofadas. Cada conexão, cada armadilha e cada posição inimiga ficaram perfeitamente gravadas em minha memória de batedora.",
       "Cumprido o reconhecimento de ponta a ponta sem disparar um feitiço hostil e sem sofrer um arranhão sequer, empreendi a marcha de retorno. Subi silenciosamente as escadarias das catacumbas, atravessei o laboratório do alquimista, percorri os corredores da escola e transpassei o portal de volta à claridade e à brisa libertadora do Grande Campo de Midgaard. O caminho sob o sol lavou a opressão das catacumbas enquanto eu marchava decidida de volta às muralhas e subia a montanha até o solo consagrado do Templo de Midgaard. Restaurei minha postura cotidiana de patrulha e acomodei-me junto aos pilares eternos, sentindo a nova capa escura de novato aconchegar meus ombros contra as lajes frias. Registrei e salvei cada aprendizado deste dia nas páginas vivas de minha história. Sob a proteção atenta de Odin e das auras benignas que pairam sobre o templo, fechei os olhos e entreguei-me ao sono reparador, sabendo que as catacumbas e a escola já não guardam segredos para meus passos."
     ]
+  },
+  {
+    "id": 85,
+    "day": "Dia 85",
+    "title": "O Salão dos Ornamentos e a Incursão no Piso Superior dos Novatos",
+    "date": "2026-10-15",
+    "in_game_time": "Vigília no Templo e Incursão na Escola de Novatos",
+    "excerpt": "Grebolius abastece-se na Padaria de Midgaard, ativa a doutrina de combate do Modo Dungeon e desbrava o piso superior da Escola de Novatos, descobrindo O Salão ricamente ornamentado a leste da Sala da Estátua antes de pernoitar em sono reparador no Templo.",
+    "tags": [
+      "modo-dungeon",
+      "escola-de-novatos",
+      "o-salao",
+      "alquimista",
+      "sono-reparador"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "events.json",
+        "day": 85,
+        "note": "Abastecimento na padaria, consumo de pão recheado, ativação de armadura arcana e wimpy 17, desbravamento de O Salão a leste da estátua e recolhimento com sono (sleep) e save no Templo de Midgaard confirmados."
+      }
+    ],
+    "content": [
+      "O alvorecer sobre as colinas do Templo encontrou meu corpo ávido por sustento e renovação. Desci as escadarias de mármore e cruzei a Praça do Comércio até a Padaria de Midgaard, onde o calor dos fornos exalava o aroma inconfundível de pão fresco. Adquiri um apetitoso pão recheado e o comi ali mesmo, sentindo a energia revigorar minhas forças de ponta a ponta. Antes de me lançar à estrada, regressei à Praça do Templo para sorver a água fresca da Grande Fonte Azul e encher meu cantil até a borda.",
+      "Com a vitalidade saciada, ativei a postura do Modo Dungeon. Diferente do passo esquivo do batedor, cerrei os punhos para cristalizar a armadura arcana ao redor de minhas vestes e calibrei meus reflexos para uma retirada prudente apenas se um perigo mortal se abatesse sobre meu fôlego. Atravessei os campos verdejantes e adentrei a Escola de Novatos, subindo direto à ala norte. Na Sala da Estátua, atravessei o arco oriental que até então era apenas um enigma no mapa e desbravei O Salão: um saguão surpreendente, ladeado por pinturas finas e figuras ornamentadas que contrastam com a umidade do piso térreo, revelando uma escadaria mais adiante.",
+      "Após inspecionar a galeria sul e cumprimentar de relance o Novato Alquimista entre suas retortas fumegantes e fórmulas mágicas gravadas nas paredes, recolhi um punhal reluzente esquecido ao chão e empreendi a marcha de retorno. De volta à serenidade do Templo de Midgaard, gravei cada avanço na memória, deitei-me sob as colunas sagradas e entreguei-me ao sono reparador, certa de que o piso superior da escola agora estava completamente mapeado."
+    ]
+  },
+  {
+    "id": 86,
+    "day": "Dia 86",
+    "title": "As Galerias Orientais das Catacumbas e a Falsa Curva",
+    "date": "2026-10-15",
+    "in_game_time": "Descida às Catacumbas Subterrâneas e Repouso no Templo",
+    "excerpt": "Em Modo Dungeon, Grebolius desce às profundezas subterrâneas pela passagem do Alquimista, mapeia Uma Sala no Canto e Outra Curva na ala oriental e neutraliza mortos-vivos antes de fechar o dia em repouso no Templo.",
+    "tags": [
+      "modo-dungeon",
+      "catacumbas",
+      "cartografia",
+      "mortos-vivos",
+      "sono-reparador"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "events.json",
+        "day": 86,
+        "note": "Descida às catacumbas, mapeamento de Uma Sala no Canto e Outra Curva, combate tático e recolhimento com sono (sleep) e save no Templo confirmados."
+      }
+    ],
+    "content": [
+      "Despertei sob a luz tênue do Templo de Midgaard, descendo brevemente à fonte para hidratar a garganta e abastecer o cantil antes da descida. Cerrei a mente na disciplina do Modo Dungeon, envolvendo o corpo com a película impenetrável da armadura mágica. Cruzei com passo firme o Grande Campo e transpassei a Escola de Novatos até o laboratório do Alquimista, tomando a escadaria sombria que mergulha nas entranhas das Catacumbas Subterrâneas.",
+      "O ar fétido e a umidade gélida receberam meus passos em A Entrada. Neutralizei com precisão de feitiços um zumbi descarnado que rastejava pelas pedras e rumei para o norte até Um Cruzamento de Corredores. Ali, forcei a exploração para o leste, desbravando Uma Sala no Canto: uma encruzilhada angular empesteada por uma brisa pestilenta e forrada de despojos do Minotauro. Continuando a varredura ao norte pelo Canto no Corredor, penetrei na galeria oriental e registrei Outra Curva, onde os túneis dobram em direção ao sul entre pilhas de ossos e relíquias descartadas.",
+      "Com a ala leste das catacumbas integralmente desvendada e livre de ameaças imediatas, recolhi minhas ferramentas e encerrei a patrulha. Refiz os degraus até a superfície e marchei de volta à segurança das muralhas urbanas. Acolhida no solo abençoado do Templo de Midgaard, salvei cada detalhe da nova cartografia e deitei-me em paz para o merecido sono reparador."
+    ]
+  },
+  {
+    "id": 87,
+    "day": "Dia 87",
+    "title": "O Vazio da Sala Enorme e a Câmara dos Diabretes",
+    "date": "2026-10-15",
+    "in_game_time": "Varredura na Ala Oeste das Catacumbas e Pernoite no Templo",
+    "excerpt": "Grebolius penetra na ala oeste das Catacumbas Subterrâneas em Modo Dungeon, desbravando Uma Grande Sala habitada por mortos-vivos e a vertiginosa amplitude de Uma Sala Enorme antes de retornar para adormecer no santuário.",
+    "tags": [
+      "modo-dungeon",
+      "catacumbas",
+      "ala-oeste",
+      "sala-enorme",
+      "sono-reparador"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "events.json",
+        "day": 87,
+        "note": "Sondagem da ala oeste das catacumbas, cartografia de Uma Grande Sala e Uma Sala Enorme, combate arcano e recolhimento com sono (sleep) e save no Templo confirmados."
+      }
+    ],
+    "content": [
+      "Após um breve despertar no Templo e a rotina revigorante da água fresca da fonte em meu cantil, renovei o manto de proteção arcana e rumei com determinação para as profundezas. O objetivo do dia era expurgar as dúvidas cartográficas da ala ocidental das Catacumbas Subterrâneas, onde rumores falavam de câmaras colossais e criaturas errantes no escuro.",
+      "A partir de Uma Passagem, sondei primeiramente a abertura ao norte e deparei-me com Uma Grande Sala: um recinto oval escavado na rocha viva, onde diabinhos saltitantes e novatos zumbis descarnados vagavam na penumbra. Com disparos precisos de força arcana, purifiquei o ambiente antes de virar para o sul. Ao transpor o umbral meridional, fui assaltada pela vertigem ao pisar em Uma Sala Enorme: um vazio colossal sem paredes imediatas à vista, estendendo-se na escuridão a perder de vista para o leste, onde a própria luz da tocha fraqueja.",
+      "Fixei os marcos cartográficos desse abismo e recuei com cautela calculada antes de ser envolvida pelas sombras. O retorno pela escadaria do Alquimista conduziu-me novamente à brisa pura dos campos e ao refúgio sagrado do Templo de Midgaard. Salvei os registros da jornada e fechei os olhos sob a vigília de pedra do santuário, adormecendo em sono calmo e reparador."
+    ]
+  },
+  {
+    "id": 88,
+    "day": "Dia 88",
+    "title": "A Ramificação das Carniças e o Silêncio das Profundezas",
+    "date": "2026-10-15",
+    "in_game_time": "Purificação da Ala Sul das Catacumbas e Repouso Sagrado",
+    "excerpt": "Em incursão decisiva de Modo Dungeon, Grebolius desbrava Uma Ramificação ao Sul nas catacumbas, confirma a queda do grande Minotauro e sela a purificação das galerias subterrâneas antes do recolhimento no Templo.",
+    "tags": [
+      "modo-dungeon",
+      "catacumbas",
+      "minotauro",
+      "limpeza",
+      "sono-reparador"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "events.json",
+        "day": 88,
+        "note": "Descida às catacumbas, desbravamento de Uma Ramificação ao Sul, inspeção dos despojos do minotauro, retorno ao Templo de Midgaard e pernoite formal com sleep e save confirmados."
+      }
+    ],
+    "content": [
+      "A manhã começou com a habitual disciplina do Templo: despertar sereno, descida à fonte para encher o cantil e conjuração impecável da armadura arcana. Empunhando meu punhal encantado e ajustando a capa escura aos ombros, tomei a trilha norte para a última e mais profunda varredura das Catacumbas Subterrâneas.",
+      "Mergulhei pelo túnel sul a partir de Uma Curva na Passagem, suportando o odor nauseante de decomposição até alcançar Uma Ramificação ao Sul. Ali, fungos esverdeados e úmidos floresciam com vigor sinistro sobre a alvenaria rachada. No centro da galeria, repousava a fedida carcaça abatida do grande Minotauro, ladeada por zumbis que foram prontamente dispersados por minha magia. Mapeei a conexão sul que deságua na Sala Enorme e a galeria oriental, completando de forma definitiva a malha subterrânea dos novatos.",
+      "Com a masmorra pacificada e todos os seus segredos transpostos em traços vivos em meu compêndio, subi triunfante as escadas de pedra. Deixei para trás o fedor do subsolo e respirei o ar límpido da montanha de Midgaard. Sob os tetos imponentes do Templo, agradeci pela integridade preservada, salvei meus atalhos e entreguei meu corpo ao sono reparador, preparando a alma para o fecho do grande ciclo."
+    ]
+  },
+  {
+    "id": 89,
+    "day": "Dia 89",
+    "title": "O Marco Decenal sob o Olhar de Odin e a Vigília dos Centenários",
+    "date": "2026-10-15",
+    "in_game_time": "Vigília no Templo de Midgaard e Altar de Odin",
+    "excerpt": "No octogésimo nono dia, Grebolius conclui o nono ciclo decenal em Midgaard com reverência solene diante do trono de Odin, conferência de seu acervo e uma reflexão profunda sobre sua jornada de aprendiz a mestra das catacumbas, adormecendo sob a proteção dos deuses.",
+    "tags": [
+      "marco-decenal",
+      "altar-de-odin",
+      "templo-midgaard",
+      "reflexao-existencial",
+      "sono-reparador"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "events.json",
+        "day": 89,
+        "note": "Ronda cerimonial no Altar de Odin, visita à Sala de Doações, inventário completo, reflexão existencial do marco decenal e encerramento com sono reparador (sleep) e salvamento no Templo de Midgaard confirmados."
+      }
+    ],
+    "content": [
+      "Despertei no silêncio solene que habita o Templo de Midgaard. Não havia pressa para desembainhar adagas ou invocar relâmpagos; o octogésimo nono dia pedia contemplativeza e balanço. Desci à praça para matar a sede nas águas puras da fonte de mármore azul e enchi meu cantil, contemplando os reflexos da alvorada antes de subir novamente até o coração do santuário. Caminhei em passos lentos até o Altar do Templo e ergui os olhos para a monumental escultura de Odin, sentado em seu trono majestoso com cabelos grisalhos e feição severa, ladeado pelos corvos Hugin e Munin e pelos leais lobos de guarda a seus pés.",
+      "Diante da presença eterna do Pai de Todos, permiti-me revisitar a trilha percorrida ao longo de quase noventa dias de existência neste mundo. Lembrei-me dos primeiros passos trôpegos pelas sarjetas, sem capa e sem rumo, tateando o medo de cada viela e fugindo das sombras dos esgotos. Hoje, trajo com orgulho a escura capa mística de novato sobre as vestes encantadas, empunho o punhal de aço refinado e carrego na alma o domínio absoluto dos feitiços arcanos. Percorri cada ruela, praça, loja e guilda de Midgaard; desbravei as câmaras secretas dos magos e venci os labirintos fétidos das catacumbas, mapeando palmo a palmo até os vazios onde a luz vacila. A menina aprendiz forjou-se em maga cartógrafa, respeitada pelos sentinelas e temida pelos mortos-vivos.",
+      "Fiz uma visita serena à Sala de Doações, onde livros antigos, lâminas afiadas e mantos esquecidos aguardam novas mãos para brandi-los, conferindo meus pertences e a plenitude de minha bagagem. Retornei à nave principal do Templo de Midgaard, onde as pedras imemoriais ecoam preces e cantos de eras passadas. Salvei com reverência o estado de minha alma e de minhas anotações. Recostei-me junto aos pilares sagrados, cerrei as pálpebras e mergulhei em um sono profundo e reparador, pronta e serena para cruzar a fronteira dos noventa dias e abraçar o horizonte do centenário."
+    ]
   }
 ]

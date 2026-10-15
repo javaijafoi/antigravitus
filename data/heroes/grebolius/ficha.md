@@ -1,6 +1,6 @@
 # 🧌 Ficha Atual de Grebolius (Último Estado Registrado)
 
-> Referência: Dia 84. Estado verificado em sessão; consultar a origem registrada.
+> Referência: Dia 89. Estado verificado em sessão; consultar a origem registrada.
 > Este documento reúne o último estado e as missões registrados; as incertezas aparecem ao final.
 
 ## ✦ Identificação e Registro
@@ -11,7 +11,7 @@
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **11**
 * **Alinhamento Moral:** 222 (Bom)
-* **Localização Atual:** O Templo de Midgaard (último registro: Dia 84)
+* **Localização Atual:** O Templo de Midgaard (último registro: Dia 89)
 * **Acampamento Registrado:** O Laboratório dos Magos
 * **Santuário de Referência:** O Panteão dos Centenários
 
@@ -26,7 +26,7 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 
 * **Experiência Acumulada:** **152.101 EXP**
 * **Experiência Necessária p/ Grau 12:** **47.899 EXP** (Meta: 200.000 EXP)
-* **Ouro Líquido:** **2.642 moedas de ouro** (valor documental)
+* **Ouro Líquido:** **2.636 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 10
@@ -41,7 +41,7 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 Classe de armadura 16 verificada ao vivo no Nível 11 com equipamento completo.
 * **Bônus de Acerto (Hitroll):** 0
 * **Bônus de Dano (Damroll):** +1
-* **Configuração de Fuga (Wimpy):** **13 HP** (referência de 25%; não garante fuga antes de golpe letal)
+* **Configuração de Fuga (Wimpy):** **17 HP** (referência de 25%; não garante fuga antes de golpe letal)
 
 ## ✦ Missões e Autoquests Oficiais
 * **A Coleira do Dragão — Concluída:** Entregar a coleira ao Guarda Novato.
@@ -49,7 +49,7 @@ Classe de armadura 16 verificada ao vivo no Nível 11 com equipamento completo.
 * **Altruísmo — Concluída:** Doar equipamento excedente na Sala de Doações.
   * Próximo passo: Nenhuma tarefa nova inferida a partir da conclusão.
 * **Limpando Monstros — Ativa:** Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.
-  * Próximo passo: Reconhecimento em Modo Batedor efetuado no Dia 84: o Novato Alquimista renovou o pedido de ajuda em seu laboratório, e as catacumbas revelaram a presença ativa do Grande Minotauro e de novatos zumbis descarnados.
+  * Próximo passo: Incursões em Modo Dungeon concluídas com sucesso (Dias 85 a 88), limpando mortos-vivos e desbravando todas as câmaras ocultas das Catacumbas Subterrâneas e Escola Superior.
 * **Dicas Mágicas — Ativa:** Entregar um pergaminho de retorno ao Mago Aventureiro no Bar dos Magos (item já presente na mochila desde o Dia 28).
   * Próximo passo: Pergaminho de retorno entregue com sucesso ao Mago Aventureiro no Bar dos Magos no Dia 83; acompanhar o próximo conselho místico.
 * **Novela dos Novatos — Descoberta:** Aventura narrativa para recém-chegados (Até o nível 30, iniciada com: o novato esperto).
@@ -89,7 +89,7 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 * `um cantil` (x1) — Confirmado ao vivo no inventário no Dia 82
 * `uma tocha` (x1) — Confirmado ao vivo no inventário no Dia 82
 * `uma brilhante veste de novato` (x2) — Confirmado ao vivo no inventário no Dia 82 (2 reservas após vestir a terceira)
-* `um brilhante punhal de novato` (x4) — Confirmado ao vivo no inventário no Dia 82 (4 reservas após empunhar o quinto)
+* `um brilhante punhal de novato` (x5) — Confirmado ao vivo no inventário no Dia 89 (5 reservas após empunhar o sexto)
 * `uma brilhante espada de novato` (x1) — Confirmado ao vivo no inventário no Dia 82
 * `uma poção amarela de detectar invisibilidade` (x1) — Confirmado ao vivo no inventário no Dia 82
 * `uma mochila` (x1) — Confirmado ao vivo no inventário no Dia 82
@@ -104,7 +104,7 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 * 15 sessões de treino resguardadas para círculos superiores (9 magias básicas em proficiência plena de 95%-99%).
 * Pergaminho de retorno entregue ao Mago Aventureiro no Bar dos Magos.
 * Patrono de Problemas Agrícolas revelado: O Pacificador.
-* Dia 83 formalmente concluído: descansando e dormindo (sleep) Dentro do Portão Oeste sob a proteção do Pacificador e sentinelas municipais com atalhos salvos.
+* Ciclo Decenal (Dias 85 a 89) concluído com Modo Dungeon, cartografia das catacumbas e escola superior, descanso e sono reparador (sleep) no Templo de Midgaard sob o Altar de Odin com atalhos salvos.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
 **Iniciar formalmente Problemas Agrícolas com O Pacificador e avançar Dicas Mágicas**
@@ -112,7 +112,7 @@ Dialogar com O Pacificador ali mesmo no Portão Oeste para ativar a autoquest Pr
 * O anel arcano (+2E) segue reservado para círculos superiores de poder.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessão ao vivo em debomud.org:4000 (Dia 84): resgate de doações úteis (uma escura capa de novato equipada sobre o corpo, bracelete de conchas e 3 pergaminhos de sabedoria); ativação do Modo Batedor com wimpy 33 (teto máximo de 50% do HP do servidor); mapeamento completo da Escola de Novatos (Piso Superior) e Catacumbas Subterrâneas (avistamento do Grande Minotauro e zumbis descarnados); retorno seguro ao Templo de Midgaard e pernoite em sono reparador (sleep) salvo..
+Fonte do estado: Sessão ao vivo em debomud.org:4000 (Dias 85 a 89): incursão em Modo Dungeon na Escola de Novatos e Catacumbas Subterrâneas, cartografia de O Salão, Uma Sala no Canto, Outra Curva, Uma Grande Sala, Uma Sala Enorme e Uma Ramificação ao Sul; rondas de limpeza e abate de mortos-vivos; consolidação do ciclo decenal no Altar de Odin e Templo de Midgaard; sono reparador (sleep) e salvamento de estado..
 * O anel arcano (+2E) segue exigindo nível ou condição mágica superior.
 * Novos feitiços superiores dependem de livros arcanos ou mestres especializados.
 * O renascimento desequipa todas as peças para a mochila; o protocolo pós-morte exige `wear all` imediato para restaurar os 67 HP máximos concedidos pela veste e a AC 16.
