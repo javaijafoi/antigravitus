@@ -2,8 +2,8 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 73,
-    "source": "Sessão ao vivo em debomud.org:4000; travessia do Grande Campo até Midgaard Urbana, compra e consumo de 2 pães recheados (-12 moedas), restauração plena de vitais (61 HP, 160 Mana, 99 MV), saldo de 2.495 moedas de ouro e repouso em A Loja de Armaduras.",
+    "day": 74,
+    "source": "Sessão ao vivo em debomud.org:4000; travessia urbana por Midgaard até O Depósito de Lixo, reconhecimento da entrada dos Esgotos, vitais intactos (61 HP, 160 Mana, 99 MV), saldo de 2.495 moedas de ouro e acampamento na borda da fenda.",
     "verification": "live",
     "live_verified": true
   },
@@ -53,12 +53,12 @@
   "wimpy": 13,
   "training_sessions": 6,
   "location": {
-    "room_id": "loja_armaduras",
-    "name": "A Loja de Armaduras"
+    "room_id": "deposito_lixo",
+    "name": "O Depósito de Lixo"
   },
   "camp": {
-    "room_id": "loja_armaduras",
-    "name": "A Loja de Armaduras"
+    "room_id": "deposito_lixo",
+    "name": "O Depósito de Lixo"
   },
   "sanctuary": {
     "room_id": "panteao_centenarios",

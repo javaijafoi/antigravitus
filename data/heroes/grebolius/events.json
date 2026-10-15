@@ -278,5 +278,19 @@
         "note": "Entrada em Midgaard, compra e consumo de pão na padaria e repouso na Loja de Armaduras confirmados ao vivo no servidor debomud.org:4000."
       }
     ]
+  },
+  {
+    "id": "ronda-urbana-deposito-lixo-dia74",
+    "day": 74,
+    "type": "exploration",
+    "summary": "Expedição urbana partindo da Loja de Armaduras, cruzando a Praça do Comércio e a Praça Comum de Midgaard até alcançar O Depósito de Lixo no extremo sul da cidade. Reconhecimento da entrada e alçapão dos Esgotos de Midgaard, vitais mantidos em nível pleno (61 HP, 160 Mana, 99 MV), saldo estável em 2.495 moedas de ouro e acampamento vigilante diante da fenda dos esgotos para a incursão do Dia 75.",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 74,
+        "note": "Travessia urbana até o Depósito de Lixo confirmada ao vivo no servidor debomud.org:4000."
+      }
+    ]
   }
 ]

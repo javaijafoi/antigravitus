@@ -1,6 +1,6 @@
 # 🧌 Ficha Atual de Grebolius (Último Estado Registrado)
 
-> Referência: Dia 73. Estado verificado em sessão; consultar a origem registrada.
+> Referência: Dia 74. Estado verificado em sessão; consultar a origem registrada.
 > Este documento reúne o último estado e as missões registrados; as incertezas aparecem ao final.
 
 ## ✦ Identificação e Registro
@@ -10,8 +10,8 @@
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **10**
 * **Alinhamento Moral:** 339 (Bom)
-* **Localização Atual:** A Loja de Armaduras (último registro: Dia 73)
-* **Acampamento Registrado:** A Loja de Armaduras
+* **Localização Atual:** O Depósito de Lixo (último registro: Dia 74)
+* **Acampamento Registrado:** O Depósito de Lixo
 * **Santuário de Referência:** O Panteão dos Centenários
 
 O acampamento indica onde houve repouso; não comprova proteção absoluta contra agressão.
@@ -99,7 +99,7 @@ Cumprir a ordem direta do Alquimista de encontrar e abater os insetos rastejante
 * O anel arcano (+2E) segue exigindo nível superior (Nível 11+).
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessão ao vivo em debomud.org:4000; travessia do Grande Campo até Midgaard Urbana, compra e consumo de 2 pães recheados (-12 moedas), restauração plena de vitais (61 HP, 160 Mana, 99 MV), saldo de 2.495 moedas de ouro e repouso em A Loja de Armaduras..
+Fonte do estado: Sessão ao vivo em debomud.org:4000; travessia urbana por Midgaard até O Depósito de Lixo, reconhecimento da entrada dos Esgotos, vitais intactos (61 HP, 160 Mana, 99 MV), saldo de 2.495 moedas de ouro e acampamento na borda da fenda..
 * O anel arcano (+2E) exige Nível 11 ou superior para uso (testado e recusado no Nível 10).
 * A placa de perigo em 'A Entrada' alerta sobre a morte para quem desce desacompanhado ou desequipado.
 * Locais exatos dos insetos rastejantes nas catacumbas além das câmaras já mapeadas.

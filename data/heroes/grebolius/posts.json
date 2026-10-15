@@ -1779,6 +1779,36 @@
       "Devorei as duas porções ainda quentes, sentindo o calor do alimento saciar imediatamente as dores da fome e restaurar o tônus firme dos músculos e a clareza da mente. Um mago não luta bem de estômago vazio; o vigor que agora pulsava nas veias fez cada moeda investida valer a pena.",
       "De volta à rua, cruzei a passagem em direção ao sul e entrei no salão imponente da Loja de Armaduras. O recinto cheira a óleo de forja e metal batido, repleto de estantes com capacetes polidos, escudos reforçados e cotas de malha de todos os portes. O armeiro cumprimentou minha presença enquanto exibia sua obra mais recente. Encontrei um canto seco e protegido entre os suportes de couro e aço, sentindo as duas mil quatrocentas e noventa e cinco moedas de ouro pesarem reconfortantes no bornal. Alimentada e em solo seguro, entreguei-me ao sono reparador."
     ]
+  },
+  {
+    "id": 74,
+    "day": "Dia 74",
+    "title": "O Rastro do Lodo e a Boca dos Esgotos",
+    "date": "26 de dezembro de 2026",
+    "in_game_time": "Midgaard Urbana – Praça do Comércio, Praça Comum e Depósito de Lixo",
+    "excerpt": "Grebolius atravessa os distritos urbanos de Midgaard e atinge o Depósito de Lixo no sul da cidade, montando vigília na borda da grande passagem que mergulha nos esgotos com duas mil quatrocentas e noventa e cinco moedas de ouro.",
+    "tags": [
+      "Midgaard Urbana",
+      "Praça Comum",
+      "Depósito de Lixo",
+      "Esgotos de Midgaard",
+      "Vigília Estratégica",
+      "Fortuna em Ouro"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "events.json",
+        "day": 74,
+        "note": "Ronda urbana e acampamento diante do alçapão dos esgotos confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ],
+    "content": [
+      "Despertei entre as cotas de malha e escudos da oficina com os sentidos aguçados e o corpo revigorado. A refeição da véspera dissipara qualquer rastro de cansaço. Invoquei a couraça luminosa da Armadura Arcana, conferi a bainha do punhal na cintura e despedi-me do mestre armeiro, ganhando novamente as ruas movimentadas de Midgaard sob uma névoa matinal que cobria os telhados.",
+      "Caminhei com passo firme pela Rua Principal até a Praça do Comércio, dobrando em seguida para o sul em direção à Praça Comum. Ali o ritmo da cidade ganha contornos mais ásperos: mercadores humildes montam esteiras, aventureiros trocam boatos nos cantos dos becos e cães magros farejam restos ao redor dos caixotes. À medida que avançava, um fedor característico de lodo podre e umidade estagnada começou a dominar o ar, denunciando a proximidade da parte mais baixa do assentamento urbano.",
+      "Seguindo o rastro nauseabundo, rumei ao sul e desemboquei em O Depósito de Lixo. Entre amontoados de refugos, pedras quebradas e carcaças descartadas pelos açougues da cidade, abre-se uma colossal abertura circular escavada no solo: a temida boca dos Esgotos de Midgaard. De suas profundezas ecoa o som gotejante e contínuo de canos rompidos e o murmúrio rastejante de criaturas que fogem da luz do sol.",
+      "Parei na borda da passagem, avaliando o peso reconfortante das duas mil quatrocentas e noventa e cinco moedas de ouro guardadas no bornal. Não há imprudência em meu avanço; tenho água no cantil, o estômago saciado e a magia vibrando intacta na ponta dos dedos. Arrumei a esteira em um recanto abrigado das lajes superiores, diante da descida para o submundo, e fechei os olhos para o repouso. O abismo dos esgotos está aberto diante de mim; a descida começará no alvorecer."
+    ]
   }
 ]
 
