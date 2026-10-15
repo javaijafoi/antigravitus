@@ -11,7 +11,7 @@
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **8** *(Oitavo Grau de Maestria conquistado — Barreira dos 40.000 EXP rompida em triplo combate fatal!)*
 * **Alinhamento Moral:** 15 (Neutro Pragmático)
-* **Localização Atual:** O Panteão dos Centenários (Cume sagrado do Templo de Midgaard) — *Salva e Dormindo sob o olhar solene das doze estátuas lendárias*
+* **Localização Atual:** O Laboratório dos Magos (Enclave Arcano de Midgaard) — *Salva e Dormindo sobre os pentagramas de pedra, rompendo em definitivo a dependência do Templo*
 
 ---
 
@@ -22,10 +22,10 @@
 | **Pontos de Mana (MP)** | 140 | 140 | 100% |
 | **Estamina / Movimento (MV)** | 94 | 95 | 99% |
 
-* **Experiência Acumulada:** **46.091 EXP** *(+756 EXP em combate | Barreira dos 46.000 superada)*
-* **Experiência Necessária p/ Grau 9:** **13.909 EXP** *(Meta: 60.000 EXP)*
-* **Ouro Líquido:** **1.051 moedas de ouro** *(Tesouro protegido e consolidado)*
-* **Condição Biológica:** Fisiologia em 100% no tick vital; mana plena (140/140), corpo hidratado e saciado.
+* **Experiência Acumulada:** **45.170 EXP** *(Consolidação do Grau 8 após travessia do Vazio e resgate místico)*
+* **Experiência Necessária p/ Grau 9:** **14.830 EXP** *(Meta: 60.000 EXP)*
+* **Ouro Líquido:** **1.051 moedas de ouro** *(Tesouro protegido e mantido no alforje)*
+* **Condição Biológica:** Saciada após consumo de pão recheado; 2 pães reservas na mochila; hidratação, fôlego e mana a 100% no tick do mundo.
 
 ---
 
@@ -41,7 +41,7 @@
 * **Classe de Armadura (AC):** 16 *(base)* / **40** *(sob efeito de `armor` no Nível 8)*
 * **Bônus de Acerto (Hitroll):** 0
 * **Bônus de Dano (Damroll):** +1
-* **Configuração de Fuga (Wimpy):** **6 HP** (Postura de bravura)
+* **Configuração de Fuga (Wimpy):** **12 HP** (Aventureira ousada; `armor` sempre ativo)
 * **Modo Automático:** `autogold` ativo
 
 ---
@@ -90,3 +90,4 @@
 * `um pergaminho de retorno` (salvaguarda de retorno ao Templo)
 * `uma tocha` (reserva de iluminação)
 * `uma mochila` (armazenamento organizado)
+

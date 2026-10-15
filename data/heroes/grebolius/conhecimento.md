@@ -124,3 +124,9 @@ A Força 10 de Grebolius impede carregar armamento pesado sem esgotar o vigor. A
 * **A Ala Norte da Masmorra dos Novatos:**
   - **Um Caminho Iluminado:** Acessada via `open north` a partir de *O Cruzamento*. Sala imaculada, paredes brancas, piso decorado com projetos de engenharia arcana.
   - **A Sala da Estátua:** Localizada ao norte de *Um Caminho Iluminado*. Abriga uma monumental e artística estátua de pedra e uma passagem para o leste (`e`) que avança rumo aos laboratórios internos do Alquimista.
+* **O Grande Tabuleiro de Xadrez de Midgaard:**
+  - Localização: A oeste de *Um Campo Aberto*, após os portões enferrujados.
+  - Ameaças: **O Cavaleiro Branco** (alta letalidade, ataques perfurantes brutais, armadura impenetrável para ataques comuns de nível 8). Exige preparação extrema ou cautela de evasão.
+  - Espólios observados: Armaduras da Torre Branca (+9L) e Lanças do Cavaleiro Branco (+7L).
+* **O Buraco do Laboratório dos Magos:**
+  - Fossa circular aberta no assoalho de pedra do laboratório que exala o odor de esgotos e águas subterrâneas, servindo de conexão direta com o submundo da cidade.

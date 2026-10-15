@@ -1055,3 +1055,23 @@
   * **Repouso Solene:** Retornou à superfície, realizou as doações no templo e adormeceu no Panteão dos Centenários sob a vigília dos doze titãs imortais.
 * **Decisão Tática:**
   * No Ciclo 60 (Grande Marco Decenal), avançar pela saída leste da Sala da Estátua para culminar a missão do Alquimista, explorar os acessos aos esgotos e preparar a grande reflexão estratégica do sexto decênio.
+---
+
+### ⏳ Ciclo 60 (Dia 60): O Grande Marco do Sexto Decênio — O Tabuleiro dos Titãs, a Segunda Travessia do Vazio e a Quebra do Hábito do Templo
+* **Status Real (MUD):**
+  * Nível: **8** *(45.170 EXP | Faltam 14.830 EXP para o lendário Nível 9)*
+  * Vida: **52/52** | Mana: **140/140** | Movimento: **95/95** | AC: **40** *(Armadura Arcana ativa)*
+  * Equipamento em Uso: Conjunto completo (elmo encantado novato, veste brilhante, escudo de ferro, braçadeiras, calça de couro, luvas reforçadas, tocha acesa e punhal reluzente empunhado).
+  * Ouro Líquido: **1.051 moedas de ouro** *(Patrimônio sólido acima de um milhar).*
+  * Alinhamento Moral: 15 (Neutro Pragmático).
+  * Fisiologia e Nutrição: Combate imediato da fome com ingestão de pão recheado; compra de 2 provisões frescas na Padaria e estocagem protegida na mochila.
+  * Local de Pernoite: **O Laboratório dos Magos** (Salva e Dormindo aos pés dos pentagramas, defronte ao buraco dos esgotos e à Mestre da Guilda — rompendo para sempre a mania de recuo ao Templo).
+* **Marcos e Impactos Psicológicos:**
+  * **O Confronto no Grande Tabuleiro de Xadrez:** Explorando as fronteiras além do campo aberto, Grebolius deparou-se com o colossal Tabuleiro de Xadrez de Midgaard. Desafiou as casas de mármore e confrontou o monumental Cavaleiro Branco. A troca de golpes revelou o impacto estarrecedor das forças cósmicas da cidade, provando que a ambição da goblin exige cada gota de ferro e mana.
+  * **A Segunda Recusa do Paraíso e a Travessia do Vazio:** Ao tombar no tabuleiro, despertou no campo idílico do Paraíso. Com a fúria soberana ardendo no peito, recusou a ilusão de paz eterna, rastreou o fluxo de energia mágica em direção ao norte, transpôs o portal de metal e cruzou a frieza do Caminho no Vazio. Na Fonte da Vida, bebeu o influxo cósmico e renasceu no plano material com sua carne refeita e todo o seu equipamento intacto.
+  * **A Varredura e o Vínculo com o Alquimista:** Penetrou novamente n'A Sala do Alquimista, selando o compromisso de purificação da aventura *Limpando Monstros*, mapeando o alçapão subterrâneo com placa de aviso e varrendo as abominações remanescentes das galerias.
+  * **A Ruptura Definitiva do Hábito do Templo:** Rejeitou categoricamente o retorno dependente e infantil ao Santuário dos Centenários. Após reabastecer suprimentos na padaria e na fonte, marchou para as entranhas da Guilda dos Magos e estabeleceu seu acampamento de guerra diretamente no **Laboratório dos Magos**, adormecendo diante do buraco fétido que conecta seu destino às profundezas dos esgotos.
+* **A Sexta Grande Reflexão Estratégica Decenal (Grebolius):**
+  1. *O Fim da Dependência Sagrada:* O Templo serviu de berço quando eu era uma fugitiva frágil; agora sou uma maga de guerra de Nível 8. O mundo é o meu território: durmo onde a batalha exigir, seja em tabuleiros de pedra, estalagens rústicas ou laboratórios arcanos.
+  2. *A Imunidade pelo Aço e pelo Fogo:* Com AC 40 e Mãos Flamejantes a 95%, as pragas comuns não me tocam. O revés contra o titã de xadrez apenas calibrou o tamanho dos impérios que me esperam.
+  3. *A Rota para o Sétimo Decênio:* Entrar na escadaria do Alquimista, mergulhar no buraco dos esgotos para caçar e decapitar a serpente algoz, e marchar rumo aos 60.000 EXP para coroar o Nível 9.

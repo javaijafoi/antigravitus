@@ -38,7 +38,14 @@
     "cycle": 6,
     "start_day": 51,
     "end_day": 60,
-    "title": "A Marcha Livre e a Preparação para o Acerto de Contas (Em Andamento)",
-    "summary": "Com a coroa invisível brilhando em sua fronte e milhares de passos marchados pelos cantos mais selvagens de Midgaard, Grebolius inicia a fase final de sua consagração guerreira. Dominando rituais de acampamento e mapeando os últimos bastiões de perigo, a ladra arcana prepara o terreno para a guerra definitiva: o acerto de contas contra seus carrascos e o alvorecer inegociável do trono que jurou conquistar."
+    "title": "A Marcha Livre, o Desafio dos Titãs e a Ruptura com o Santuário",
+    "summary": "Rompendo com a segurança infantil do Templo, Grebolius desafiou os limites urbanos ao enfrentar o Cavaleiro Branco no lendário Tabuleiro de Xadrez, atravessou o Vazio pela segunda vez recusando o repouso da morte e retornou mais forte e resoluta. Dominando a magia de Mãos Flamejantes e a blindagem arcana no Oitavo Grau, varreu as pragas da Masmorra dos Novatos, avançou no pacto do Alquimista e estabeleceu seu acampamento de guerra diretamente sobre os pentagramas do Laboratório dos Magos, fixando a fronteira imediata para a descida de extermínio aos esgotos."
+  },
+  {
+    "cycle": 7,
+    "start_day": 61,
+    "end_day": 70,
+    "title": "A Descida aos Esgotos e a Decapitação do Algoz (Em Andamento)",
+    "summary": "Com a base avançada fixada diante do buraco subterrâneo dos Magos, Grebolius inicia o sétimo decênio marchando diretamente para as entranhas pestilentas dos esgotos de Midgaard para caçar, confrontar e decapitar a serpente venenosa que ceifou sua vida no passado, lavando sua honra em sangue e alçando voo rumo aos círculos superiores de poder."
   }
 ]

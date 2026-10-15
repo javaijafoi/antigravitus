@@ -17,9 +17,10 @@ Esta skill formaliza todas as regras de jogo, liturgia de encerramento e diretri
   - **Diplomacia Clandestina e Informação:** Conversar com NPCs, mercadores e veteranos para descobrir fraquezas de inimigos e segredos da cidade.
   - **Comércio e Economia:** Negociar espólios, acumular ouro e equipar-se com o melhor que Midgaard tem a oferecer.
   - **Combate Seletivo e Cirúrgico:** Lutar quando necessário, com foco cirúrgico em alvos de alto retorno e baixo risco inútil.
-* **Aproveitamento Total de Recursos:** Se a guilda dos ladrões fechou as portas e os guardas a humilham, ela **não lamenta**: ela usurpa e domina todo e qualquer poder que conseguir (guilda dos magos, venenos, artefatos, alianças cívicas e magia proibida) para se fortalecer e esmagar quem a desprezou.
-* **Toda Missão Assumida Deve Ser Concluída:** Jamais abandonar tarefas cívicas ou pedidos de NPCs (como a missão do Bebê Dragão e do Guarda Novato). Por mais demorada ou complexa que seja a busca, uma futura soberana governa pela honra de sua palavra e pela recompensa estratégica que consolida alianças e poder.
-* **Disfarce Ativo:** Manter a postura dura de guerreiro novato para proteger sua identidade de mulher goblin até que seu poder militar seja incontestável.
+* **Aproveitamento Total de Recursos:** Se a guilda dos ladrões fechou as portas e os guardas a humilham, ela **não lamenta**: ela aproveita todo e qualquer poder que conseguir (guilda dos magos, venenos, artefatos, alianças cívicas e magia) e transforma a rejeição em aventura.
+* **Toda Missão Assumida Deve Ser Concluída e Catalogada:** Jamais abandonar tarefas cívicas ou pedidos de NPCs (como a missão do Bebê Dragão e do Guarda Novato). Toda missão descoberta entra em `missoes.md` e segue até a entrega; a palavra dada é o que consolida alianças.
+* **Disfarce como Ferramenta Tática:** Manter a postura de guerreiro novato quando proteger sua identidade de mulher goblin for útil. É uma escolha de cada situação, não um dever diário.
+* **Pano de Fundo:** O sonho do Reino Livre dos Goblins e a dívida contra a serpente do Dia 11 continuam como arcos de longo prazo. Valem como missões entre as outras, nunca como justificativa para farm ou vingança cega.
 
 ---
 
@@ -27,17 +28,19 @@ Esta skill formaliza todas as regras de jogo, liturgia de encerramento e diretri
 1. **Extensão e Profundidade (Dias 5x mais longos):**
    * As crônicas devem ser densas, detalhadas, exploratórias e imersivas (cerca de 5 vezes maiores que relatos básicos).
 2. **Ação Contínua e a Grande Empresa (Fim da Síndrome do Novato Complacente):**
-   * **Grebolius é uma agente de ação e ambição soberana:** Dias sem avanço real, sem resolução de pendências ou sem desbravar novos limites devem ser **extintos**.
-   * ❌ **Loop Burocrático Proibido:** É terminantemente vedado resumir o dia ao script mecânico: *acordar -> beber na fonte -> castar armadura -> matar 1 monstro novato no corredor -> doar punhal no templo -> dormir*. Isso foi útil para sobreviver no Nível 1 com 23 HP; no Nível 8 com AC 40 e 1.000 moedas, é puro desperdício e estagnação.
+   * **Grebolius é uma aventureira curiosa e ousada:** Dias sem avanço real, sem resolução de pendências ou sem desbravar algo novo devem ser **extintos**.
+   * ❌ **Loop Burocrático Proibido:** É terminantemente vedado resumir o dia ao script mecânico: *acordar -> beber na fonte -> castar armadura -> matar 1 monstro novato no corredor -> doar punhal no templo -> dormir*. Ela não é uma "gamer farmando mob".
    * Micro-hábitos de sobrevivência (saciar sede/fome, ligar armadura mágica) são **preparação preliminar automática**, nunca o tema ou o clímax do dia.
-   * Cada dia jogado DEVE girar em torno de uma **Grande Empresa Tangível**:
-     - Concluir ou avançar em missões ativas (Alquimista, Bar dos Magos, Esgotos);
-     - Consumir sessões de treino para dominar novas magias;
-     - Investir o ouro acumulado em poder real (equipamentos, grimórios, alianças);
-     - Mapear territórios inéditos e enfrentar ameaças condizentes com seu patamar.
-3. **Equilíbrio de Guerra e Soberania:**
-   * Alternar inteligentemente entre missões/autoquests, caça ativa de monstros na Área dos Novatos e treino intensivo.
-   * Manter ritmo implacável rumo ao próximo patamar de poder.
+   * Cada dia jogado DEVE girar em torno de **um fio de aventura** (missão ou mistério), consultando `data/heroes/<slug>/missoes.md` e `plano_aventureira.md` quando existirem:
+     - Concluir ou avançar missões ativas (Alquimista, Bar dos Magos...);
+     - Descobrir e catalogar missões novas, falando com NPCs, lendo placas e testando `autoquest`;
+     - Investigar mistérios (guildas hostis, Beco Escuro, convites de NPCs poderosos);
+     - Consumir sessões de treino e investir o ouro em itens e magias úteis à aventura;
+     - Mapear territórios inéditos.
+3. **Equilíbrio de Aventura:**
+   * Prioridade: missões e exploração. Treino e comércio sustentam a aventura.
+   * Luta é meio, não fim: serve a uma missão, pista, item ou história. Repetir mobs só por EXP não é tema de um dia.
+   * Criatividade é bem-vinda: invisibilidade para espionar, conversa, furto astuto, alianças, testar mecânicas e arriscar lutas calculadas (ver §6.6).
 
 ---
 
@@ -45,14 +48,15 @@ Esta skill formaliza todas as regras de jogo, liturgia de encerramento e diretri
 
 Antes de gerar qualquer script ou comando para o dia, o agente DEVE conceber a jornada em 4 etapas mentais obrigatórias:
 
-1. **A Grande Ambição Ativa (O Vetor Estratégico):**
-   * Qual fronteira do mundo ou objetivo de soberania Grebolius está empurrando para a frente hoje?
+1. **O Fio de Aventura Ativo (O Vetor Estratégico):**
+   * Que missão, mistério ou fronteira do mundo Grebolius está empurrando para a frente hoje? Consultar `missoes.md`.
    * *Exemplos prioritários:*
-     - **Conclusão de Quests:** Romper a porta norte e alcançar o Alquimista para entregar "Limpando Monstros"; ou ir ao Bar dos Magos desvendar "Dicas Mágicas".
-     - **Consumo de Treinos:** Ir à Guilda dos Magos alocar as 6 sessões de treino pendentes em novas magias de círculos superiores.
-     - **Governança do Tesouro:** Usar o patrimônio de 1.050 moedas para comprar itens nobres, elixires ou grimórios, em vez de acumular moedas passivas e pegar lixo do chão.
-     - **A Vingança de Sangue:** Incursão aos Esgotos de Midgaard para caçar e decapitar a Serpente Venenosa (o algoz do Dia 11).
-     - **Expansão Territorial:** Ultrapassar os portões da cidade rumo à Floresta Élfica, Cemitério ou Estradas Reais.
+     - **Conclusão de Quests:** alcançar o Alquimista para entregar "Limpando Monstros"; ir ao Bar dos Magos desvendar "Dicas Mágicas".
+     - **Novas Missões:** conversar com NPCs ainda não explorados, ler placas, testar `autoquest` e catalogar o que surgir.
+     - **Mistérios:** guildas hostis, Beco Escuro, convite do Pacificador.
+     - **Treino e Tesouro:** usar sessões de treino pendentes e o ouro acumulado (valores atuais na `ficha.md`) em magias e itens úteis à aventura.
+     - **Expansão Territorial:** Floresta Élfica, Cemitério ou Estradas Reais.
+     - **Arcos de fundo (ocasionais):** a dívida contra a Serpente Venenosa do Dia 11, tratada como missão e não como obsessão.
 
 2. **A Missão do Dia (The Day's Enterprise):**
    * O dia DEVE ter um **tema unificador** e uma narrativa com início, meio, complicação e clímax.
@@ -71,12 +75,14 @@ Antes de gerar qualquer script ou comando para o dia, o agente DEVE conceber a j
      - Ouro foi transformado em poder real ou uma vingança foi consumada.
 4. **Gestão de Estamina (Limiar do Movimento):**
    * O dia de exploração deve ir até quase o esgotamento total dos pontos de movimento (`MV`), deixando apenas a margem estritamente suficiente para retornar a um santuário seguro.
-5. **Zero Metajogo e Ausência de Números em Prosa (Imersão Orgânica):**
-   * **NUNCA** citar valores numéricos de atributos ou recursos ("27 medidas de vida", "106 de mana", "453 moedas"). Os números pertencem exclusivamente à ficha técnica (`ficha.md`).
-   * **Proibido repetir fórmulas mecânicas:** Não repetir a cada dia o mesmo resumo de status se nada mudou. O que não mudou, não precisa de inventário exaustivo.
-   * **Sensações Corporais Diluídas:** Expressar estado físico e místico por sensações orgânicas: sentir-se desperta e disposta, com músculos aquecidos, ou então exausta, dolorida, desvitalizada, com a mente zumbindo de fadiga ou com o pulso místico acelerado.
-   * **Marcar apenas os grandes saltos:** Destacar enfaticamente quando houver ascensão de nível (salto de grau de poder), descoberta inédita ou conquista monumental. No dia a dia comum, a narrativa deve fluir orgânica e diluída, focando em acontecimentos, diálogos, cenários e reflexões.
-   * **NUNCA** citar nomes de arquivos técnicos como `mapa.md`, `posts.json`, `evolucao.md`, `ficha.md`.
+5. **Zero Metajogo, Rotinas Subentendidas e Ausência de Números em Prosa:**
+    * **Rotinas Subentendidas:** Micro-ações mecânicas repetitivas (beber da fonte, comer ração, conjurar `armor`) tornam-se implícitas após estabelecidas. NUNCA narrar essas rotinas a cada dia como se fossem rituais solenes; estão subentendidas na rotina prática da aventureira.
+    * **Menção de Recursos Apenas em Marcos Decisivos:** NUNCA citar valores numéricos de EXP ganha ("mais 450 de experiência"), saldo de moedas de ouro ou passos nos títulos e textos do dia a dia. Somente citar recursos em **grandes marcos**:
+      - Subida de grau / ascensão de nível;
+      - Grandes compras ou gastos massivos (troca de equipamento, grimórios, artefatos);
+      - Espólio lendário ou conquista monumental.
+    * No dia a dia comum, a narrativa flui de modo orgânico, focada em acontecimentos, exploração, diálogos e cenários. Os números exatos pertencem estritamente à `ficha.md`.
+    * **NUNCA** citar nomes de arquivos técnicos (`mapa.md`, `posts.json`, `ficha.md`, etc.).
 6. **Protocolo Obrigatório de Subida de Nível & Recursos:**
    * **Treino Imediato na Guilda:** Ao avançar de grau, ir imediatamente ao mestre da guilda (`practice <magia>`) e alocar as sessões de treino para maximizar a nova habilidade desbloqueada (ex: Nv 5 `infravision`, Nv 6 `invisibility`, Nv 7 `armor`).
    * **Revisão de Equipamentos:** Verificar se os equipamentos em uso são os melhores disponíveis; doar ou vender excedentes.
@@ -111,6 +117,7 @@ NENHUM dia jogado é encerrado sem cumprir esta sequência de 5 passos:
    - Atualizar `data/heroes/<slug>/evolucao.md` com as mutações de comportamento e combates.
    - Atualizar `data/heroes/<slug>/conhecimento.md` com criaturas, perigos e rotas decifradas.
    - Atualizar `data/heroes/<slug>/ficha.md` com os status vitais e inventário atuais.
+   - Atualizar `data/heroes/<slug>/missoes.md` (se o herói tiver catálogo): novas missões entram como 🔎, aceitas como ▶️, entregues como ✅, sempre com NPC, local, objetivo e recompensa.
 4. **Atualizar Feed Geral e Index:**
    - Manter `data/posts.json` ou feed integrado sincronizado.
 5. **Subir em Produção Imediatamente (Git & Vercel):**
@@ -127,8 +134,8 @@ NENHUM dia jogado é encerrado sem cumprir esta sequência de 5 passos:
 ## 🛡️ 6. Heurística Avançada de Combate, Carga e Sobrevivência (CircleMUD / DeBo)
 Para destravar o avanço de nível sem loop de morte:
 
-1. **Configuração de Fuga de Emergência (Wimpy 10):**
-   - Com Constituição 9 e Vida 23, qualquer crítico de mob nível 2 tira 8 a 10 de vida. Rodar `wimpy 10` imediatamente para forçar fuga antes de sofrer hit kill.
+1. **Configuração de Fuga de Emergência:**
+   - Rodar `wimpy 12` ao iniciar a sessão (detalhes e justificativa no item 6). O valor vigente fica em `ficha.md`.
 2. **Gerenciamento de Carga com Força 10 (Descarte de Peso Morto):**
    - Com STR 10, carregar itens pesados (como picareta +10L, espadas militares pesadas, lâminas improvisadas e gorros reservas) drena os 84 MV velozmente e trava a esquiva.
    - Vender sucata nos comerciantes certos de Midgaard:
@@ -146,9 +153,10 @@ Para destravar o avanço de nível sem loop de morte:
 5. **O Combo de 'Ladra Arcana' (Abertura Mágica + Finalização no Aço):**
    - Abrir o combate à distância com `cast 'magic missile' <alvo>` (10 de dano instantâneo com 95%+ de acerto).
    - Deixar o punhal novato empunhado e o escudo apararem o contra-ataque e finalizarem a presa no combate corpo a corpo para economizar mana.
-6. **Coragem em Batalha e Limiar de Fuga Inteligente:**
-   - Não recuar por arranhões superficiais. Grebolius combate até a destruição da presa, usando toda a sua mana e sua adaga.
-   - Manter `wimpy 6` ou `wimpy 8` apenas como rede de emergência extrema contra dano massivo inesperado, mas lutar com bravura e determinação de quem vai governar.
+6. **Risco Calculado e Fuga (Wimpy 12):**
+   - `wimpy 12` é o padrão. Dá margem para fugir de um golpe forte e ainda permite arriscar lutas que valham a história (missão, pista, item, aliado).
+   - Não recuar por arranhões, mas também não lutar "até a destruição" por teimosia: se a luta não serve a uma missão ou a uma boa história, contornar (invisibilidade, conversa, furto, desvio).
+   - Mudar o valor de wimpy só por decisão explícita e registrada na `ficha.md`.
 7. **Varredura e Portas de Fuga Abertas:**
    - Checar saídas e salas adjacentes com `look <direcao>` antes de entrar.
    - Manter portas destrancadas e abertas nas costas para que qualquer recuo tático seja desimpedido.
@@ -178,9 +186,9 @@ Para destravar o avanço de nível sem loop de morte:
     - NUNCA manter excesso de armas ou vestes nas mãos: doar imediatamente na Sala de Doações (`donate <item>`), o que também aciona e conclui autoquests cívicas secretas (ex: missão *Altruísmo*).
 14. **Dia "9" do Ciclo Decenal (Obrigatório /learn):**
     - Todo dia "9" de cada dezena (Dia 9, 19, 29, 39, 49, etc.), o agente DEVE acionar a reflexão de aprendizado metodológico (`/learn`) para registrar melhorias na automação, nos scripts do bot e nas heurísticas de sobrevivência, consolidando a inteligência operacional do sistema antes do marco decenal da personagem.
-15. **Ativação Preventiva de Couraça Arcana (`cast 'armor'`):**
-    - Sempre que Grebolius estiver sob risco de combate ou prestes a entrar em áreas de masmorra, conjurar proativamente `cast 'armor'` na Praça do Templo ou no santuário antes de descer.
-    - Isso eleva a Classe de Armadura base para 39 pontos de densidade mística, reduzindo o impacto de danos físicos a quase zero contra ameaças comuns e protegendo integralmente a vida da personagem contra emboscadas.
+15. **`cast 'armor'` é Rotina, não Decisão:**
+    - `armor` fica ativo o tempo todo em que Grebolius estiver fora de santuário, e é reconjurado ao expirar, antes de qualquer risco ou masmorra.
+    - Com a couraça sempre ligada, ela pode assumir riscos criativos maiores (ver item 6).
 16. **Aberturas Orgânicas e Variadas nas Crônicas (Antirrepetição Estrita):**
     - **NUNCA** iniciar crônicas com fórmulas repetitivas do tipo *"O [ordinal] despertar/alvorecer..."*, *"O silêncio do panteão..."* ou narração burocrática de descida de escadas e hidratação.
     - **SEMPRE** iniciar com elementos imersivos, sensoriais e vivos: o zumbido de uma magia na pele, o aroma acre de reagentes alquímicos, o vento fustigando as folhas de carvalhos na zona rural, a observação tática de heróis veteranos (como Negelok em seu Grifo ou Valgren) ou o choque súbito de um combate in media res.
@@ -208,6 +216,6 @@ Para destravar o avanço de nível sem loop de morte:
     - A masmorra é dividida pelo Cruzamento central:
       * Ala Sul / Sudoeste: corredores lodosos, câmara de vigia do guarda, covis de monstros e aberrações rastejantes.
       * Ala Norte (acesso via `open north`): *Um Caminho Iluminado*, piso decorado com projetos alquímicos, levando diretamente aos aposentos e missões do Alquimista.
-24. **Sinergia Tática de Grau 8 (Burning Hands a 95% + AC 40):**
-    - Sob efeito de `armor` (AC 40), o dano sofrido contra novatos é reduzido a zero.
-    - O leque ígneo de `burning hands` treinado a 95% desfere até 32 pontos de dano térmico direto, aniquilando monstros em 1 ou 2 turnos e permitindo varreduras rápidas e seguras.
+24. **Sinergia Tática de `armor` + `burning hands`:**
+    - Sob efeito de `armor`, o dano sofrido contra novatos é praticamente nulo; `burning hands` treinado aniquila monstros fracos em 1 ou 2 turnos.
+    - Valores atuais (AC, dano, graus) vivem **somente** em `ficha.md`. Esta skill não os repete.
