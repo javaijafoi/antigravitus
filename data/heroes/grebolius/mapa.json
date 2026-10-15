@@ -1671,10 +1671,10 @@
       }
     }
   ],
-  "last_updated_day": 74,
+  "last_updated_day": 75,
   "verification": "live",
-  "current_location_id": "deposito_lixo",
-  "camp_id": "deposito_lixo",
+  "current_location_id": "sala_alquimista",
+  "camp_id": "sala_alquimista",
   "reconciliation_notes": [
     "Posições gráficas são esquemáticas, não distâncias do mundo.",
     "Revisão inclui descobertas narradas até o Dia 60; não houve verificação ao vivo de todas as rotas antigas.",

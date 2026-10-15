@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 74,
+  "as_of_day": 75,
   "verification": "live",
   "items": [
     {
@@ -45,9 +45,9 @@
       "type": "official",
       "status": "active",
       "accepted_day": 36,
-      "last_progress_day": 70,
+      "last_progress_day": 75,
       "objective": "Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.",
-      "next_step": "Avançar nas galerias profundas para rastrear os insetos rastejantes da ordem do Alquimista e acumular recursos para novos treinos arcanos.",
+      "next_step": "A praga dos insetos rastejantes foi erradicada em Uma Pequena Sala e comunicada ao Alquimista; manter patrulha ativa nas catacumbas para acumular recursos e novos conhecimentos arcanos.",
       "evidence": [
         {
           "document": "posts.json",
@@ -113,6 +113,11 @@
           "document": "posts.json",
           "day": 71,
           "note": "Ronda pelos corredores da Escola de Novatos em busca dos insetos rastejantes e eliminação de novato zumbi nas catacumbas (+2.756 EXP e saldo de 2.507 moedas de ouro)."
+        },
+        {
+          "document": "posts.json",
+          "day": 75,
+          "note": "Extermínio de 3 insetos rastejantes em Uma Pequena Sala e comunicação do triunfo ao Novato Alquimista confirmados em sessão ao vivo (+2.532 EXP -> 109.749 EXP)."
         }
       ]
     },

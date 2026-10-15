@@ -1809,6 +1809,38 @@
       "Seguindo o rastro nauseabundo, rumei ao sul e desemboquei em O Depósito de Lixo. Entre amontoados de refugos, pedras quebradas e carcaças descartadas pelos açougues da cidade, abre-se uma colossal abertura circular escavada no solo: a temida boca dos Esgotos de Midgaard. De suas profundezas ecoa o som gotejante e contínuo de canos rompidos e o murmúrio rastejante de criaturas que fogem da luz do sol.",
       "Parei na borda da passagem, avaliando o peso reconfortante das duas mil quatrocentas e noventa e cinco moedas de ouro guardadas no bornal. Não há imprudência em meu avanço; tenho água no cantil, o estômago saciado e a magia vibrando intacta na ponta dos dedos. Arrumei a esteira em um recanto abrigado das lajes superiores, diante da descida para o submundo, e fechei os olhos para o repouso. O abismo dos esgotos está aberto diante de mim; a descida começará no alvorecer."
     ]
+  },
+  {
+    "id": 75,
+    "day": "Dia 75",
+    "title": "A Água da Fonte Azul e o Extermínio dos Rastejantes",
+    "date": "27 de dezembro de 2026",
+    "in_game_time": "Midgaard – Praça do Templo, Grandes Campos, Escola de Novatos e Sala do Alquimista",
+    "excerpt": "Em incursão ao vivo, Grebolius sacia a sede na fonte azul sob a bênção do Pacificador, marcha pelos campos de volta à escola e abate três insetos rastejantes na Pequena Sala, cumprindo a ordem do Alquimista com duas mil quatrocentas e noventa e cinco moedas de ouro.",
+    "tags": [
+      "Tempo Real",
+      "Praça do Templo",
+      "Fonte de Mármore Azul",
+      "Escola de Novatos",
+      "Uma Pequena Sala",
+      "Limpando Monstros",
+      "Insetos Rastejantes",
+      "Fortuna em Ouro"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "events.json",
+        "day": 75,
+        "note": "Sessão interativa em tempo real com eliminação de 3 insetos rastejantes e entrega da mensagem ao Alquimista confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ],
+    "content": [
+      "Despertei com a mente lúcida nas pedras do depósito e renovei a couraça luminosa da Armadura Arcana antes de qualquer outro movimento. Tomei o rumo norte pelas calçadas de Midgaard, cruzando a Praça Comum e a Praça do Comércio até desembocar na ampla Praça do Templo. Ali, onde o Pacificador mantém seu posto vigilante e me saudou com um aceno sereno, inclinei-me sobre a monumental fonte de mármore azul. A água cristalina que borbulha de suas entranhas saciou de imediato a secura que arranhava minha garganta e encheu meu cantil de viagem até a borda.",
+      "Com as forças restauradas e provisões no ponto, subi as escadarias sagradas, cruzei o Altar de Odin e ganhei novamente a imensidão aberta dos Grandes Campos. Uma suave brisa rural acompanhou meus passos enquanto uma carroça de madeira cruzava o horizonte em direção ao sul. Alcancei a bifurcação dos caminhos e rumei para o portal de pedra que marca o acesso oriental à escola de treinamento, determinada a encerrar de uma vez por todas a pendência dos insetos que empesteavam o laboratório.",
+      "Adentrei as passagens da escola, abri a pesada porta ao sul e invadi Uma Pequena Sala. O cenário era de pura infestação: bem aos pés do guarda novato atônito, três criaturas assustadoras rastejavam pelo chão úmido em círculos ameaçadores. Não hesitei um instante sequer. Teci no ar os símbolos do míssil mágico; rajadas sucessivas de energia pura e estocadas certeiras com o punhal brilhante perfuraram as carapaças das três bestas rastejantes. Uma a uma, tombaram sem vida sobre as pedras manchadas, arrancando um suspiro aliviado e sinceros agradecimentos da sentinela que ali vigiava.",
+      "Com o caminho limpo e o coração sereno, refiz o itinerário pelas portas do corredor até retornar à Sala do Alquimista. Diante das retortas fumegantes e das paredes rabiscadas de fórmulas, encarei o velho mestre e proclamei em voz alta que sua praga rastejante havia sido exterminada. Ele pestanejou, absorto em seus pós azedos, antes de resmungar novos pedidos de auxílio. Acomodei-me junto às bancadas, sentindo o peso magnífico de duas mil quatrocentas e noventa e cinco moedas de ouro aconchegadas no cinto e uma clareza mágica que só o dever cumprido proporciona. A dívida dos insetos está paga."
+    ]
   }
 ]
 

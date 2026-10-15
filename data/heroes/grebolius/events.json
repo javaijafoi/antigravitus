@@ -292,5 +292,19 @@
         "note": "Travessia urbana até o Depósito de Lixo confirmada ao vivo no servidor debomud.org:4000."
       }
     ]
+  },
+  {
+    "id": "sessao-tempo-real-abate-insetos-dia75",
+    "day": 75,
+    "type": "quest_milestone",
+    "summary": "Expedição em tempo real (Dia 75): ascensão do Depósito de Lixo até a Praça do Templo, diálogo com o Pacificador, saciação da sede e reabastecimento do cantil na fonte de mármore azul. Travessia dos Grandes Campos e entrada na Escola de Novatos. Localização e extermínio de 3 insetos rastejantes em Uma Pequena Sala com projéteis arcanos sob o elogio do guarda novato (+2.532 EXP acumulada, alcançando 109.749 EXP). Retorno ao laboratório e comunicação do triunfo ao Alquimista. Saldo intacto em 2.495 moedas de ouro e repouso seguro na Sala do Alquimista.",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 75,
+        "note": "Sessão interativa em tempo real com eliminação de 3 insetos rastejantes e avanço para 109.749 EXP confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ]
   }
 ]

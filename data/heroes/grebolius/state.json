@@ -2,8 +2,8 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 74,
-    "source": "Sessão ao vivo em debomud.org:4000; travessia urbana por Midgaard até O Depósito de Lixo, reconhecimento da entrada dos Esgotos, vitais intactos (61 HP, 160 Mana, 99 MV), saldo de 2.495 moedas de ouro e acampamento na borda da fenda.",
+    "day": 75,
+    "source": "Sessão ao vivo em debomud.org:4000 (Tempo Real); jornada urbana do Depósito à Praça do Templo, saciação e enchimento do cantil na fonte azul, retorno à Escola de Novatos e aniquilação de 3 insetos rastejantes na Pequena Sala (+2.532 EXP -> 109.749 EXP), entrega do aviso ao Alquimista, saldo de 2.495 moedas de ouro e repouso na Sala do Alquimista.",
     "verification": "live",
     "live_verified": true
   },
@@ -12,7 +12,7 @@
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
   "alignment": {
-    "value": 339,
+    "value": 325,
     "label": "Bom"
   },
   "vitals": {
@@ -30,7 +30,7 @@
     }
   },
   "experience": {
-    "current": 107217,
+    "current": 109749,
     "next_level": 150000
   },
   "gold": 2495,
@@ -53,12 +53,12 @@
   "wimpy": 13,
   "training_sessions": 6,
   "location": {
-    "room_id": "deposito_lixo",
-    "name": "O Depósito de Lixo"
+    "room_id": "sala_alquimista",
+    "name": "A Sala do Alquimista"
   },
   "camp": {
-    "room_id": "deposito_lixo",
-    "name": "O Depósito de Lixo"
+    "room_id": "sala_alquimista",
+    "name": "A Sala do Alquimista"
   },
   "sanctuary": {
     "room_id": "panteao_centenarios",

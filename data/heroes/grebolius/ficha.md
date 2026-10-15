@@ -1,6 +1,6 @@
 # 🧌 Ficha Atual de Grebolius (Último Estado Registrado)
 
-> Referência: Dia 74. Estado verificado em sessão; consultar a origem registrada.
+> Referência: Dia 75. Estado verificado em sessão; consultar a origem registrada.
 > Este documento reúne o último estado e as missões registrados; as incertezas aparecem ao final.
 
 ## ✦ Identificação e Registro
@@ -9,9 +9,9 @@
 * **Raça / Aparência Real:** Mulher goblin; aventureira sem véu
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **10**
-* **Alinhamento Moral:** 339 (Bom)
-* **Localização Atual:** O Depósito de Lixo (último registro: Dia 74)
-* **Acampamento Registrado:** O Depósito de Lixo
+* **Alinhamento Moral:** 325 (Bom)
+* **Localização Atual:** A Sala do Alquimista (último registro: Dia 75)
+* **Acampamento Registrado:** A Sala do Alquimista
 * **Santuário de Referência:** O Panteão dos Centenários
 
 O acampamento indica onde houve repouso; não comprova proteção absoluta contra agressão.
@@ -23,8 +23,8 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 | **Pontos de Mana (MP)** | 160 | 160 | 100% |
 | **Estamina / Movimento (MV)** | 99 | 99 | 100% |
 
-* **Experiência Acumulada:** **107.217 EXP**
-* **Experiência Necessária p/ Grau 11:** **42.783 EXP** (Meta: 150.000 EXP)
+* **Experiência Acumulada:** **109.749 EXP**
+* **Experiência Necessária p/ Grau 11:** **40.251 EXP** (Meta: 150.000 EXP)
 * **Ouro Líquido:** **2.495 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
@@ -48,7 +48,7 @@ Valores verificados ao vivo no servidor (AC 16 sem armadura, AC 41 com 'armor' n
 * **Altruísmo — Concluída:** Doar equipamento excedente na Sala de Doações.
   * Próximo passo: Nenhuma tarefa nova inferida a partir da conclusão.
 * **Limpando Monstros — Ativa:** Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.
-  * Próximo passo: Avançar nas galerias profundas para rastrear os insetos rastejantes da ordem do Alquimista e acumular recursos para novos treinos arcanos.
+  * Próximo passo: A praga dos insetos rastejantes foi erradicada em Uma Pequena Sala e comunicada ao Alquimista; manter patrulha ativa nas catacumbas para acumular recursos e novos conhecimentos arcanos.
 * **Dicas Mágicas — Ativa:** Descobrir o próximo passo informado pelo Mago Aventureiro.
   * Próximo passo: Consultar o NPC e o estado da tarefa; registrar a instrução obtida sem presumir recompensa.
 
@@ -99,7 +99,7 @@ Cumprir a ordem direta do Alquimista de encontrar e abater os insetos rastejante
 * O anel arcano (+2E) segue exigindo nível superior (Nível 11+).
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessão ao vivo em debomud.org:4000; travessia urbana por Midgaard até O Depósito de Lixo, reconhecimento da entrada dos Esgotos, vitais intactos (61 HP, 160 Mana, 99 MV), saldo de 2.495 moedas de ouro e acampamento na borda da fenda..
+Fonte do estado: Sessão ao vivo em debomud.org:4000 (Tempo Real); jornada urbana do Depósito à Praça do Templo, saciação e enchimento do cantil na fonte azul, retorno à Escola de Novatos e aniquilação de 3 insetos rastejantes na Pequena Sala (+2.532 EXP -> 109.749 EXP), entrega do aviso ao Alquimista, saldo de 2.495 moedas de ouro e repouso na Sala do Alquimista..
 * O anel arcano (+2E) exige Nível 11 ou superior para uso (testado e recusado no Nível 10).
 * A placa de perigo em 'A Entrada' alerta sobre a morte para quem desce desacompanhado ou desequipado.
 * Locais exatos dos insetos rastejantes nas catacumbas além das câmaras já mapeadas.
