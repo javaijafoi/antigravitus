@@ -1749,6 +1749,36 @@
       "A vastidão do Grande Campo de Midgaard se descortinou diante de meus olhos em um tapete verde ondulante salpicado de carvalhos frondosos. O sol aquecia a pele do rosto enquanto pássaros cortavam o céu azul, gorjeando em liberdade. Ao sul, desenhava-se a silhueta imponente das muralhas e torres da cidade; ao norte e a oeste, o horizonte parecia não ter fim. Respirei fundo, sentindo os pulmões se expandirem com uma pureza que quase me fez esquecer os horrores travados contra mortos-vivos no escuro.",
       "Minhas botas cortaram o barro e a grama úmida em uma longa caminhada de reconhecimento pelos caminhos rurais. O peso das duas mil quinhentas e sete moedas de ouro que carrego na cintura tilintava a cada passada com a firmeza de quem não depende de favores de guildas nem de esmolas de patrulheiros. Ao entardecer, quando as sombras começaram a alongar-se pelos pastos, sentei-me sobre a relva densa sob a copa de uma árvore solitária. O céu aberto foi meu teto; adormeci ouvindo o sussurro do vento nos campos, pronta para alcançar as muralhas de Midgaard no primeiro raio da manhã."
     ]
+  },
+  {
+    "id": 73,
+    "day": "Dia 73",
+    "title": "O Aroma da Fornada e o Abrigo dos Armeiros",
+    "date": "25 de dezembro de 2026",
+    "in_game_time": "Midgaard Urbana – Praça do Templo, Padaria e Loja de Armaduras",
+    "excerpt": "Grebolius cruza os campos rurais e adentra as ruas de Midgaard, comprando dois pães recheados do padeiro para estancar a fome antes de recolher-se entre escudos e cotas de malha na Loja de Armaduras com duas mil quatrocentas e noventa e cinco moedas de ouro.",
+    "tags": [
+      "Midgaard Urbana",
+      "Padaria de Midgaard",
+      "Provisões",
+      "Loja de Armaduras",
+      "Praça do Templo",
+      "Fortuna em Ouro"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "events.json",
+        "day": 73,
+        "note": "Chegada à cidade, compra e consumo de pão na padaria e repouso na Loja de Armaduras confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ],
+    "content": [
+      "O orvalho da manhã cobria a relva quando despertei sob a copa da árvore no Grande Campo. Reanimei as defesas invisíveis da Armadura Arcana e pus os pés na trilha principal rumo ao sul. A silhueta de Midgaard aproximou-se rapidamente; logo ultrapassei as muralhas exteriores e alcancei a movimentada Praça do Templo, onde o Pacificador permanecia de guarda e a monumental fonte de mármore azul borbulhava com suave esplendor místico.",
+      "O apetite voraz que me perseguia desde as catacumbas não permitia delongas. O vento urbano soprou o aroma inconfundível de trigo assado e massa fresca, guiando-me direto para a Rua Principal e o calor acolhedor da Padaria de Midgaard. O mestre padeiro, com o rosto marcado de farinha branca e olhar apressado, atendeu prontamente ao meu pedido: adquiri dois pães recheados pagando doze moedas de ouro, retiradas de minhas algibeiras sem qualquer hesitação.",
+      "Devorei as duas porções ainda quentes, sentindo o calor do alimento saciar imediatamente as dores da fome e restaurar o tônus firme dos músculos e a clareza da mente. Um mago não luta bem de estômago vazio; o vigor que agora pulsava nas veias fez cada moeda investida valer a pena.",
+      "De volta à rua, cruzei a passagem em direção ao sul e entrei no salão imponente da Loja de Armaduras. O recinto cheira a óleo de forja e metal batido, repleto de estantes com capacetes polidos, escudos reforçados e cotas de malha de todos os portes. O armeiro cumprimentou minha presença enquanto exibia sua obra mais recente. Encontrei um canto seco e protegido entre os suportes de couro e aço, sentindo as duas mil quatrocentas e noventa e cinco moedas de ouro pesarem reconfortantes no bornal. Alimentada e em solo seguro, entreguei-me ao sono reparador."
+    ]
   }
 ]
 

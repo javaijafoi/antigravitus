@@ -264,5 +264,19 @@
         "note": "Marcha do subsolo para o Grande Campo de Midgaard confirmada ao vivo no servidor debomud.org:4000."
       }
     ]
+  },
+  {
+    "id": "peregrinacao-midgaard-padaria-dia73",
+    "day": 73,
+    "type": "exploration",
+    "summary": "Jornada do Grande Campo através da Praça do Templo até Midgaard Urbana. Visita à Padaria de Midgaard onde adquiriu dois pães recheados por 12 moedas de ouro, consumindo-os de imediato para aplacar a fome severa. Restabelecimento pleno dos recursos vitais (vida, mana e estamina plenas), saldo financeiro de 2.495 moedas de ouro e repouso seguro em A Loja de Armaduras.",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 73,
+        "note": "Entrada em Midgaard, compra e consumo de pão na padaria e repouso na Loja de Armaduras confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ]
   }
 ]

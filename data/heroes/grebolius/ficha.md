@@ -1,6 +1,6 @@
 # 🧌 Ficha Atual de Grebolius (Último Estado Registrado)
 
-> Referência: Dia 72. Estado verificado em sessão; consultar a origem registrada.
+> Referência: Dia 73. Estado verificado em sessão; consultar a origem registrada.
 > Este documento reúne o último estado e as missões registrados; as incertezas aparecem ao final.
 
 ## ✦ Identificação e Registro
@@ -10,8 +10,8 @@
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **10**
 * **Alinhamento Moral:** 339 (Bom)
-* **Localização Atual:** O Grande Campo (Norte) (último registro: Dia 72)
-* **Acampamento Registrado:** O Grande Campo (Norte)
+* **Localização Atual:** A Loja de Armaduras (último registro: Dia 73)
+* **Acampamento Registrado:** A Loja de Armaduras
 * **Santuário de Referência:** O Panteão dos Centenários
 
 O acampamento indica onde houve repouso; não comprova proteção absoluta contra agressão.
@@ -20,12 +20,12 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 | Recurso | Atual | Máximo | Porcentagem |
 | :--- | :---: | :---: | :---: |
 | **Pontos de Vida (HP)** | 61 | 61 | 100% |
-| **Pontos de Mana (MP)** | 151 | 160 | 94% |
+| **Pontos de Mana (MP)** | 160 | 160 | 100% |
 | **Estamina / Movimento (MV)** | 99 | 99 | 100% |
 
 * **Experiência Acumulada:** **107.217 EXP**
 * **Experiência Necessária p/ Grau 11:** **42.783 EXP** (Meta: 150.000 EXP)
-* **Ouro Líquido:** **2.507 moedas de ouro** (valor documental)
+* **Ouro Líquido:** **2.495 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 10
@@ -99,7 +99,7 @@ Cumprir a ordem direta do Alquimista de encontrar e abater os insetos rastejante
 * O anel arcano (+2E) segue exigindo nível superior (Nível 11+).
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessão ao vivo em debomud.org:4000; ascensão aos níveis superiores e marcha pelos descampados de O Grande Campo de Midgaard e Um Caminho Dentre os Campos, preservando 2.507 moedas de ouro e 107.217 EXP..
+Fonte do estado: Sessão ao vivo em debomud.org:4000; travessia do Grande Campo até Midgaard Urbana, compra e consumo de 2 pães recheados (-12 moedas), restauração plena de vitais (61 HP, 160 Mana, 99 MV), saldo de 2.495 moedas de ouro e repouso em A Loja de Armaduras..
 * O anel arcano (+2E) exige Nível 11 ou superior para uso (testado e recusado no Nível 10).
 * A placa de perigo em 'A Entrada' alerta sobre a morte para quem desce desacompanhado ou desequipado.
 * Locais exatos dos insetos rastejantes nas catacumbas além das câmaras já mapeadas.

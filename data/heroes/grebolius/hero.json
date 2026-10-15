@@ -22,15 +22,15 @@
   "quick_stats": {
     "level_badge": "(Grau 10 • Mago; estilo ladra arcana)",
     "hp": "61 / 61",
-    "mana": "151 / 160",
+    "mana": "160 / 160",
     "mv": "99 / 99",
     "ac": "AC 16 (41 com armor; registro)",
     "weapon": "Punhal de Novato (+ Escudo)",
     "weapon_icon": "🗡️",
     "sanctuary": "O Panteão dos Centenários",
-    "location": "O Grande Campo (Norte)",
-    "camp": "O Grande Campo (Norte)",
-    "as_of_day": 72,
+    "location": "A Loja de Armaduras",
+    "camp": "A Loja de Armaduras",
+    "as_of_day": 73,
     "verification": "live"
   },
   "voice": {
