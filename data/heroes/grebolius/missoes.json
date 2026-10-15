@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 67,
+  "as_of_day": 68,
   "verification": "live",
   "items": [
     {
@@ -45,9 +45,9 @@
       "type": "official",
       "status": "active",
       "accepted_day": 36,
-      "last_progress_day": 67,
+      "last_progress_day": 68,
       "objective": "Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.",
-      "next_step": "Localizar o covil dos insetos rastejantes nas galerias profundas para satisfazer o pedido do Alquimista e testar as novas magias do Nível 9.",
+      "next_step": "Investigar as novas passagens reveladas ao sul ('Mais Outro Canto' e ramificação da passagem) para encontrar os insetos rastejantes.",
       "evidence": [
         {
           "document": "posts.json",
@@ -93,6 +93,11 @@
           "document": "posts.json",
           "day": 67,
           "note": "Ronda profunda pelas catacumbas e galerias superiores com aniquilação de mais um monstro novato (+324 EXP, +20 moedas, +1 punhal)."
+        },
+        {
+          "document": "posts.json",
+          "day": 68,
+          "note": "Sondagem cartográfica nas catacumbas revelando novas ramificações ocultas e aniquilação de monstro novato (+1.542 EXP, +20 moedas)."
         }
       ]
     },

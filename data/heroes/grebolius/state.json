@@ -2,8 +2,8 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 67,
-    "source": "Sessão ao vivo em debomud.org:4000; teste de equipamento do anel arcano no Nível 9, patrulha extensiva e eliminação de monstro novato.",
+    "day": 68,
+    "source": "Sessão ao vivo em debomud.org:4000; sondagem profunda das catacumbas revelando novas ramificações, combate vitorioso e avanço de experiência.",
     "verification": "live",
     "live_verified": true
   },
@@ -12,7 +12,7 @@
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
   "alignment": {
-    "value": 159,
+    "value": 150,
     "label": "Um Pouco Bom"
   },
   "vitals": {
@@ -30,10 +30,10 @@
     }
   },
   "experience": {
-    "current": 62576,
+    "current": 64118,
     "next_level": 100000
   },
-  "gold": 1326,
+  "gold": 1346,
   "attributes": {
     "STR": 10,
     "DEX": 15,
@@ -65,13 +65,13 @@
     "name": "O Panteão dos Centenários"
   },
   "last_event": {
-    "day": 67,
-    "summary": "Teste do anel arcano no Nível 9 com recusa de uso ('Você não tem experiência'), patrulha profunda pelas catacumbas e galerias superiores com aniquilação de um monstro novato (+324 EXP, +20 moedas, +1 punhal), consumo de pão e repouso na Sala do Alquimista."
+    "day": 68,
+    "summary": "Sondagem cartográfica nas catacumbas identificando saídas ocultas em Uma Ramificação ao Sul, Uma Sala no Canto e Outra Curva, aniquilação de um monstro novato no corredor superior (+1.542 EXP, +20 moedas) e repouso na Sala do Alquimista."
   },
   "next_objective": {
     "mission_id": "limpando-monstros",
-    "title": "Localizar o ninho dos insetos rastejantes nas galerias profundas",
-    "next_step": "Avançar nas ramificações subterrâneas inexploradas para localizar os insetos rastejantes da ordem do Alquimista e acumular recursos para novos treinos.",
+    "title": "Mapear as novas ramificações profundas e cumprir a reflexão do Dia 69",
+    "next_step": "Investigar as passagens reveladas ao sul ('Mais Outro Canto' e a ramificação da passagem) e preparar o encerramento do ciclo com a reflexão existencial do Dia 69.",
     "missing_preparation": [
       "Alcançar o Nível 10 para tentar novamente equipar o anel arcano (+2E)."
     ]
@@ -236,19 +236,19 @@
   "evidence": [
     {
       "document": "events.json",
-      "day": 67,
-      "note": "Sessão, teste do anel e combate confirmados ao vivo no servidor debomud.org:4000."
+      "day": 68,
+      "note": "Sessão, exploração cartográfica e combate confirmados ao vivo no servidor debomud.org:4000."
     },
     {
       "document": "posts.json",
-      "day": 67,
-      "note": "Crônica do Dia 67 baseada em fatos ao vivo."
+      "day": 68,
+      "note": "Crônica do Dia 68 baseada em fatos ao vivo."
     }
   ],
   "narrative_style": "ladra arcana",
   "weapon_summary": "Punhal de Novato (+ Escudo)",
   "migration": {
     "method": "sessão ao vivo e conferência direta no servidor",
-    "verified_on": "Dia 67"
+    "verified_on": "Dia 68"
   }
 }

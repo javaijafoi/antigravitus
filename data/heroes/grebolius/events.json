@@ -194,5 +194,19 @@
         "note": "Sessão, teste do anel e combate confirmados ao vivo no servidor debomud.org:4000."
       }
     ]
+  },
+  {
+    "id": "descoberta-ramificacoes-e-combate-dia68",
+    "day": 68,
+    "type": "exploration",
+    "summary": "Sondagem cartográfica nas catacumbas revelando novas conexões: saída leste para 'Mais Outro Canto' e saída sul em 'Uma Ramificação ao Sul'; saída norte para 'Outro Canto' em 'Uma Sala no Canto'; e saída sul para 'Uma Ramificação da Passagem' em 'Outra Curva'. Patrulha superior com aniquilação de um monstro novato (+1.542 EXP, +20 moedas de ouro). Saldo líquido elevado para 1.346 moedas de ouro e experiência acumulada de 64.118 EXP.",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 68,
+        "note": "Descoberta de novas saídas e combate confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ]
   }
 ]

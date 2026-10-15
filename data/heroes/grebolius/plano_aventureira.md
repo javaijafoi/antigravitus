@@ -31,11 +31,12 @@ Superar roteiros curtos e estáticos. A estamina alta (95 MV) é a energia da jo
 - **Dias ativos e proveitosos:** Explorar, patrulhar, caçar e mapear gastando a estamina de forma produtiva ao longo de dezenas de passos (40 a 70 passos), em vez de encerrar a sessão após breves caminhadas de 5 ou 10 passos.
 - **Avançar enquanto MV > 25-30:** A aventureira patrulha galerias, avança em corredores ou viaja para reabastecer provisões e buscar pistas enquanto tiver estamina.
 - **Abate de mob não aborta o dia:** Eliminar um inimigo ou cumprir uma etapa de missão intermediária não encerra a jornada prematuramente se ainda houver fôlego; a exploração e as tarefas continuam.
+- **Pausa de Recuperação em Campo (HP/Mana):** Desgaste em combate com queda de HP (< 35) ou Mana (< 40) não encerra a expedição nem força o regresso para casa. A aventureira realiza uma pausa tática (`rest` / sentar e vigiar) em sala segura por alguns ticks para recompor vida e mana antes de prosseguir.
 - **Retorno e encerramento seguro somente se:**
-  1. A estamina atingir a margem de retorno seguro (`MV <= 25-30`).
-  2. Integridade vital cair para menos de 35 HP ou mana para menos de 40 MN (reserva tática).
+  1. A estamina atingir a margem de retorno seguro (`MV <= 25-30`), exaurindo o fôlego útil do dia.
+  2. Impossibilidade de recuperação em campo (emboscada contínua, dano persistente ou ausência de abrigo seguro).
   3. Mochila saturada de espólios de valor que exijam guardar/vender.
-  4. Anomalia hostil grave ou emboscada que imponha retirada.
+  4. Anomalia hostil grave, bloqueio ou perigo mortal iminente.
 
 ## 3. Jogar e registrar com continuidade
 1. Escolher um fio para a expedição e as condições para interrompê-la.

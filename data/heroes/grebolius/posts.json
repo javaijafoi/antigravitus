@@ -1598,8 +1598,39 @@
       "Para aproveitar o restante do fôlego, subi a escadaria e cruzei a porta leste em direção às galerias superiores da masmorra. Minha insistência foi recompensada: no meio do corredor enlameado, um monstro novato rugiu ao notar minha aproximação. A batalha foi rápida e implacável. Canalizei projéteis mágicos que detonaram em cheio contra o peito da fera, abrindo brechas para que minha lâmina cravasse três estocadas fatais que a atiraram ao chão em estertor. Saquei vinte moedas de ouro de sua carcaça e mais um brilhante punhal de novato que agora se junta à minha coleção.",
       "De volta à Sala do Alquimista, comi mais um pão recheado para selar a jornada com o estômago aquecido. O velho Alquimista continua balbuciando suas advertências sobre insetos rastejantes, mas eu me deito com a certeza de quem domina o terreno e acumula mais de mil e trezentas e vinte moedas douradas em suas algibeiras."
     ]
+  },
+  {
+    "id": 68,
+    "day": "Dia 68",
+    "title": "As Ramificações Secretas, o Eco do Sul e o Golpe do Relâmpago",
+    "date": "20 de dezembro de 2026",
+    "in_game_time": "Midgaard – As Fendas Ocultas das Catacumbas e Corredores",
+    "excerpt": "Em uma sondagem minuciosa nas profundezas, Grebolius descobre novas saídas secretas ao sul e a leste nas catacumbas, expurgando outro monstro novato nas galerias superiores com magia afiada.",
+    "tags": [
+      "Cartografia Subterrânea",
+      "Ramificações Secretas",
+      "Catacumbas Profundas",
+      "Combate Mortal",
+      "Fartura de Moedas",
+      "Astúcia Goblin"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "events.json",
+        "day": 68,
+        "note": "Descoberta de novas conexões nas catacumbas e combate confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ],
+    "content": [
+      "Despertei sentindo a couraça mística da Armadura Arcana pulsar com vigor sobre minhas roupas. O corpo está descansado e a respiração ampla do novo grau conquistado me dava uma disposição furiosa para empurrar o mapa além das paredes conhecidas. Desci a escada de A Entrada com a determinação de quem não aceita mais becos sem saída: em vez de apenas cruzar as salas habituais, decidi esquadrinhar cada fissura nas lajes fétidas do subsolo.",
+      "Mergulhei na Curva ao sul e alcancei Uma Ramificação ao Sul. Ali, sob o fedor nauseante de matéria morta e a carcaça de couro do Minotauro, examinei a rocha com olhos aguçados: a passagem não terminava ali. Havia uma trilha oculta abrindo caminho para Mais Outro Canto a leste e uma fresta profunda descendo ainda mais ao sul. Avancei com passos felinos pelas novas lajes úmidas, ouvindo os estalos secos de criaturas invisíveis nas paredes. Ao norte, repeti a façanha: inspecionei Uma Sala no Canto e descobri que o corredor se desdobra para Outro Canto, enquanto de Outra Curva desce uma passagem ramificada que corta o coração das trevas. As catacumbas são muito mais vastas do que o Alquimista imagina.",
+      "Para coroar a jornada e drenar as energias em combate real, subi às galerias superiores da masmorra dos novatos. Não demorou: no corredor lamoso, um monstro novato rugiu e investiu de garras abertas. Plantei as botas no chão e conjurei uma saraivada implacável de projéteis luminosos que castigaram sua couraça, desferindo em seguida uma estocada mortal que silenciou seu grito na poeira. Vasculhei a carcaça e retirei vinte moedas de ouro reluzentes, guardando o espólio com a frieza de quem sabe o preço de cada vitória.",
+      "Voltei para o laboratório do Alquimista com o corpo calejado pelo esforço contínuo e a mente satisfeita. Tentei comer mais um pedaço de pão, mas o corpo já estava plenamente saciado. O Alquimista repetiu seu velho refrão sobre os insetos rastejantes, mas agora eu conheço as fendas secretas do sul e sei exatamente para onde apontar a lâmina. Deitei para repousar contando mais de mil e trezentas e quarenta moedas de ouro que pesam docemente nas minhas algibeiras."
+    ]
   }
 ]
+
 
 
 

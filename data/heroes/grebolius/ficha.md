@@ -1,6 +1,6 @@
 # 🧌 Ficha Atual de Grebolius (Último Estado Registrado)
 
-> Referência: Dia 67. Estado verificado em sessão; consultar a origem registrada.
+> Referência: Dia 68. Estado verificado em sessão; consultar a origem registrada.
 > Este documento reúne o último estado e as missões registrados; as incertezas aparecem ao final.
 
 ## ✦ Identificação e Registro
@@ -9,8 +9,8 @@
 * **Raça / Aparência Real:** Mulher goblin; aventureira sem véu
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **9**
-* **Alinhamento Moral:** 159 (Um Pouco Bom)
-* **Localização Atual:** A Sala do Alquimista (último registro: Dia 67)
+* **Alinhamento Moral:** 150 (Um Pouco Bom)
+* **Localização Atual:** A Sala do Alquimista (último registro: Dia 68)
 * **Acampamento Registrado:** A Sala do Alquimista
 * **Santuário de Referência:** O Panteão dos Centenários
 
@@ -23,9 +23,9 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 | **Pontos de Mana (MP)** | 150 | 150 | 100% |
 | **Estamina / Movimento (MV)** | 97 | 97 | 100% |
 
-* **Experiência Acumulada:** **62.576 EXP**
-* **Experiência Necessária p/ Grau 10:** **37.424 EXP** (Meta: 100.000 EXP)
-* **Ouro Líquido:** **1.326 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **64.118 EXP**
+* **Experiência Necessária p/ Grau 10:** **35.882 EXP** (Meta: 100.000 EXP)
+* **Ouro Líquido:** **1.346 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 10
@@ -48,7 +48,7 @@ Valores verificados ao vivo no servidor (AC 16 sem armadura, AC 40 com 'armor').
 * **Altruísmo — Concluída:** Doar equipamento excedente na Sala de Doações.
   * Próximo passo: Nenhuma tarefa nova inferida a partir da conclusão.
 * **Limpando Monstros — Ativa:** Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.
-  * Próximo passo: Localizar o covil dos insetos rastejantes nas galerias profundas para satisfazer o pedido do Alquimista e testar as novas magias do Nível 9.
+  * Próximo passo: Investigar as novas passagens reveladas ao sul ('Mais Outro Canto' e ramificação da passagem) para encontrar os insetos rastejantes.
 * **Dicas Mágicas — Ativa:** Descobrir o próximo passo informado pelo Mago Aventureiro.
   * Próximo passo: Consultar o NPC e o estado da tarefa; registrar a instrução obtida sem presumir recompensa.
 
@@ -95,12 +95,12 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 * Nível 9 consolidado com vitais plenos (57 HP, 150 Mana, 97 MV).
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
-**Localizar o ninho dos insetos rastejantes nas galerias profundas**
-Avançar nas ramificações subterrâneas inexploradas para localizar os insetos rastejantes da ordem do Alquimista e acumular recursos para novos treinos.
+**Mapear as novas ramificações profundas e cumprir a reflexão do Dia 69**
+Investigar as passagens reveladas ao sul ('Mais Outro Canto' e a ramificação da passagem) e preparar o encerramento do ciclo com a reflexão existencial do Dia 69.
 * Alcançar o Nível 10 para tentar novamente equipar o anel arcano (+2E).
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessão ao vivo em debomud.org:4000; teste de equipamento do anel arcano no Nível 9, patrulha extensiva e eliminação de monstro novato..
+Fonte do estado: Sessão ao vivo em debomud.org:4000; sondagem profunda das catacumbas revelando novas ramificações, combate vitorioso e avanço de experiência..
 * O anel arcano (+2E) exige Nível 10 ou superior para uso.
 * A placa de perigo em 'A Entrada' alerta sobre a morte para quem desce desacompanhado ou desequipado.
 * Locais exatos dos insetos rastejantes nas catacumbas além das câmaras já mapeadas.

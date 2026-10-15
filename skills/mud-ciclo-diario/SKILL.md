@@ -45,11 +45,13 @@ A exploração de novas rotas, áreas desconhecidas ou desvios do itinerário ha
 - **Gasto Ativo e Aproveitamento da Estamina (MV):** Os dias têm que ser proveitosos e a estamina deve ser gasta ao máximo no dia a dia, explorando e avançando. Andar em terreno padrão consome apenas 1 a 2 MV por passo; portanto, sessões curtas de 5 a 10 passos gastam quase nada e a regeneração passiva recupera tudo antes de dormir. A expedição deve gastar o fôlego ativamente (40 a 70 passos úteis por jornada) patrulhando setores, mapeando câmaras, caçando alvos ou viajando para comprar provisões.
   - **Avançar enquanto houver estamina:** A personagem explora, patrulha, mapeia e viaja continuamente enquanto seu fôlego estiver acima da reserva de segurança (`MV > 25-30`).
   - **Abate ou objetivo intermediário NÃO encerra o dia:** Matar um monstro ou cumprir uma etapa de missão NÃO significa ir dormir se a estamina ainda estiver alta. A aventureira segue ativa aproveitando o dia até esgotar a estamina planejada.
-  - **Critérios para iniciar a rota de retorno e repouso:**
-    1. A estamina atingir a margem de retorno seguro (`MV <= 25-30`).
-    2. A integridade vital cair abaixo de 35 HP (muito antes do limite de `wimpy 13`) ou a mana cair abaixo de 40 MN (reserva para `armor` e magias de fuga).
-    3. Mochila cheia de espólios valiosos que precisem ser guardados/vendidos.
-    4. Anomalia crítica, emboscada ou perigo hostil grave que recomende retirada.
+  - **Diferença entre Pausa Tática e Retorno Definitivo:**
+    - **Pausa de Recuperação em Campo (HP/Mana):** Queda de HP (< 35) ou Mana (< 40) após combates NÃO exige retorno ao acampamento. A aventureira faz uma pausa tática (`rest` / sentar e vigiar) em sala limpa ou recua 1 passo para um cômodo seguro por 2 a 3 ticks (ingerindo pão ou água se necessário) para recuperar HP e Mana antes de retomar a marcha.
+    - **Critérios para Rota de Retorno Definitivo e Encerramento do Dia:**
+      1. A estamina diária atingir a margem de retorno seguro (`MV <= 25-30`), indicando que o fôlego do dia foi aproveitado ao máximo.
+      2. Inviabilidade de recuperação em campo (ex.: perigo contínuo na área, veneno sem cura, emboscada grave ou ausência de sala segura para descansar).
+      3. Mochila cheia de espólios valiosos que precisem ser guardados/vendidos.
+      4. Anomalia crítica, jogador hostil ou bloqueio insuperável que imponha retirada.
 - **Pausa tática diante de anomalia:** Se houver personagem jogador (player), NPC/mob inesperado fora da rota prevista, dano imprevisto ou bloqueio de saída: o script **NÃO desconecta**; ele pausa a marcha automática, mantém a conexão aberta e passa o controle para o agente. O agente assume e joga em tempo real até normalizar a situação. Uma vez normalizado, o agente decide entre **retomar o script original** ou **adaptar o restante do dia com um novo roteiro** (se a ocorrência alterou os recursos, a rota ou a meta), respeitando sempre o teto de até 3 conexões.
 
 ### Referência de Grebolius
