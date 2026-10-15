@@ -2,38 +2,38 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 65,
-    "source": "Sessão ao vivo em debomud.org:4000; expedição de abastecimento a Midgaard (Padaria e Templo) e circuito de combate triplo nas catacumbas sob A Entrada.",
+    "day": 66,
+    "source": "Sessão ao vivo em debomud.org:4000; ronda extensiva nas catacumbas e corredores dos novatos, eliminação de zumbi e monstro novato e ascensão confirmada ao Nível 9.",
     "verification": "live",
     "live_verified": true
   },
-  "level": 8,
+  "level": 9,
   "mechanical_class": "Mago (Magic-User)",
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
   "alignment": {
-    "value": 159,
+    "value": 169,
     "label": "Um Pouco Bom"
   },
   "vitals": {
     "hp": {
-      "current": 52,
-      "max": 52
+      "current": 57,
+      "max": 57
     },
     "mana": {
-      "current": 140,
-      "max": 140
+      "current": 150,
+      "max": 150
     },
     "mv": {
-      "current": 95,
-      "max": 95
+      "current": 97,
+      "max": 97
     }
   },
   "experience": {
-    "current": 59554,
-    "next_level": 60000
+    "current": 62252,
+    "next_level": 100000
   },
-  "gold": 1251,
+  "gold": 1306,
   "attributes": {
     "STR": 10,
     "DEX": 15,
@@ -65,13 +65,13 @@
     "name": "O Panteão dos Centenários"
   },
   "last_event": {
-    "day": 65,
-    "summary": "Expedição a Midgaard para compra de pães na Padaria e abastecimento de água na Fonte do Templo, seguida de circuito intensivo de patrulha nas catacumbas com aniquilação de dois novatos zumbis e um monstro novato (+3.400 EXP, +60 moedas líquidas) e descanso alimentado na Sala do Alquimista."
+    "day": 66,
+    "summary": "Patrulha em dois andares com aniquilação de um novato zumbi em Uma Grande Sala e um monstro novato no corredor superior (+2.698 EXP, +55 moedas líquidas), ascensão confirmada ao Nível 9 (+5 HP, +10 Mana, +2 MV) e repouso saciado na Sala do Alquimista."
   },
   "next_objective": {
     "mission_id": "limpando-monstros",
-    "title": "Localizar o ninho dos insetos rastejantes e alcançar o Grau 9",
-    "next_step": "Buscar as frestas profundas onde os insetos rastejantes se escondem para cumprir a ordem do Alquimista e acumular os 446 EXP restantes para o Nível 9.",
+    "title": "Localizar o ninho dos insetos rastejantes e consolidar os poderes do Grau 9",
+    "next_step": "Explorar as fendas inexploradas das catacumbas para abater o inseto rastejante exigido pelo Alquimista e testar as capacidades ampliadas do Nível 9.",
     "missing_preparation": [
       "Identificar requisitos de nível para equipar o anel arcano (+2E)."
     ]
@@ -176,8 +176,13 @@
     "recorded": [
       {
         "name": "um pão recheado",
-        "quantity": 3,
-        "source": "Comprado na Padaria de Midgaard no Dia 65"
+        "quantity": 2,
+        "source": "Comprado na Padaria de Midgaard no Dia 65; 1 consumido no Dia 66"
+      },
+      {
+        "name": "um brilhante punhal de novato",
+        "quantity": 6,
+        "source": "Confirmado ao vivo no inventário no Dia 66 (1 despojado de monstro novato)"
       },
       {
         "name": "uma brilhante veste de novato",
@@ -187,11 +192,6 @@
       {
         "name": "um cantil",
         "quantity": 1,
-        "source": "Confirmado ao vivo no inventário no Dia 61"
-      },
-      {
-        "name": "um brilhante punhal de novato",
-        "quantity": 5,
         "source": "Confirmado ao vivo no inventário no Dia 61"
       },
       {
@@ -218,37 +218,37 @@
     "pending_verification": [
       {
         "name": "anel arcano (+2E)",
-        "last_seen_day": 65,
-        "reason": "Confirmado na posse no Dia 61/62/63/64/65, mas o servidor informou 'Você não tem experiência para usar um anel arcano'; requisitos de nível e bônus reais não confirmados."
+        "last_seen_day": 66,
+        "reason": "Confirmado na posse no Dia 61 a 66; requisitos de uso para o Nível 9 a serem testados."
       }
     ]
   },
   "conditions": [
     "Armadura mística (armor) ativa e verificada.",
-    "Alimentada com pão recheado e cantil abastecido na fonte do Templo (fome saciada).",
-    "Estamina plena (95 MV), mana máxima (140 MN) e vitalidade completa (52 HP) após patrulha tripla vitoriosa."
+    "Alimentada e saciada com pão recheado e cantil abastecido.",
+    "Nível 9 alcançado com expansão de capacidade (57 HP, 150 Mana, 97 MV)."
   ],
   "uncertainties": [
-    "O anel arcano (+2E) está na mochila, mas exige nível maior que 8.",
+    "Requisitos exatos para equipar o anel arcano (+2E) no Nível 9.",
     "A placa de perigo em 'A Entrada' alerta sobre a morte para quem desce desacompanhado ou desequipado.",
     "Locais exatos dos insetos rastejantes nas catacumbas além das câmaras já mapeadas."
   ],
   "evidence": [
     {
       "document": "events.json",
-      "day": 65,
-      "note": "Sessão de abastecimento e combate triplo verificada ao vivo no servidor debomud.org:4000."
+      "day": 66,
+      "note": "Avanço ao Nível 9 e combates confirmados ao vivo no servidor debomud.org:4000."
     },
     {
       "document": "posts.json",
-      "day": 65,
-      "note": "Crônica do Dia 65 baseada em fatos ao vivo."
+      "day": 66,
+      "note": "Crônica do Dia 66 baseada em fatos ao vivo."
     }
   ],
   "narrative_style": "ladra arcana",
   "weapon_summary": "Punhal de Novato (+ Escudo)",
   "migration": {
     "method": "sessão ao vivo e conferência direta no servidor",
-    "verified_on": "Dia 65"
+    "verified_on": "Dia 66"
   }
 }

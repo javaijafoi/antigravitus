@@ -166,5 +166,19 @@
         "note": "Sessão de abastecimento e combate triplo confirmada ao vivo no servidor debomud.org:4000."
       }
     ]
+  },
+  {
+    "id": "ascensao-grau-9-e-patrulha-dupla",
+    "day": 66,
+    "type": "level_up",
+    "summary": "Ronda extensiva em dois andares (subsolo das catacumbas e galerias superiores dos novatos). Eliminação de um novato zumbi em Uma Grande Sala (+35 moedas), conquistando o avanço formal para o Nível 9 (+5 HP máx, +10 Mana máx, +2 MV máx). Extensão da patrulha aos corredores superiores com abate de um monstro novato (+20 moedas, +1 punhal brilhante). Consumo de 1 pão recheado mantendo saciedade plena, saldo líquido elevado para 1.306 moedas de ouro e experiência acumulada de 62.252 EXP.",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 66,
+        "note": "Avanço ao Nível 9 e combates confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ]
   }
 ]

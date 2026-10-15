@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 65,
+  "as_of_day": 66,
   "verification": "live",
   "items": [
     {
@@ -45,9 +45,9 @@
       "type": "official",
       "status": "active",
       "accepted_day": 36,
-      "last_progress_day": 65,
+      "last_progress_day": 66,
       "objective": "Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.",
-      "next_step": "Localizar o covil dos insetos rastejantes nas galerias profundas para satisfazer o pedido do Alquimista e obter 446 EXP restantes para o Nível 9.",
+      "next_step": "Localizar o covil dos insetos rastejantes nas galerias profundas para satisfazer o pedido do Alquimista e testar as novas magias do Nível 9.",
       "evidence": [
         {
           "document": "posts.json",
@@ -83,6 +83,11 @@
           "document": "posts.json",
           "day": 65,
           "note": "Reiteração da ordem pelo Alquimista ('Vá lá, mate um desses insetos rastejantes, e volte aqui em seguida'), patrulha tripla de extermínio com abate de 2 novatos zumbis e 1 monstro novato nas catacumbas."
+        },
+        {
+          "document": "posts.json",
+          "day": 66,
+          "note": "Nova ronda em dois andares: abate de um novato zumbi (conquistando o avanço formal para Nível 9) e um monstro novato nas galerias superiores."
         }
       ]
     },

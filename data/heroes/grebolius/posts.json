@@ -1538,6 +1538,37 @@
       "De barriga cheia, cantil transbordando e com uma disposição ardente correndo pelas veias, fiz o caminho de volta pelos campos e mergulhei nas profundezas escuras de A Entrada. Desta vez não haveria passeio tímido: decidi varrer cada galeria, cruzamento e alcova daquelas catacumbas até cansar as botas. Na Grande Sala a oeste, surpreendi um novato zumbi cambaleando entre entulhos; abri fogo com dardos luminosos que despedaçaram sua carne fétida e finalizei com um golpe cirúrgico do punhal, recolhendo trinta e cinco moedas de ouro de suas vestes. Rumei então para o norte, alcançando a Longa Passagem Leste-Oeste, onde outro morto-vivo tentou me barrar o avanço; uma nova saraivada de projéteis mágicos o prostrou sem vida, rendendo-me outras trinta e cinco moedas douradas.",
       "Ainda cheia de fôlego e atenta aos menores ruídos, rumei ao sul e adentrei a passagem bifurcada onde a velha pele do Minotauro jaz esquecida. Ali, um monstro novato saltou das sombras pronto para me abocanhar; desviei com agilidade, fustiguei-o com magia à queima-roupa e cravei a adaga em seu flanco, tombando-o de vez. Despojei a criatura de mais vinte moedas de ouro e de uma resistente veste de novato que agora carrego comigo. Percorri os corredores restantes em patrulha minuciosa até sentir as pernas pesadas e o suor da labuta me avisar que o dia tinha sido explorado até o limite. Subi a escadaria de volta ao laboratório, deixei o Alquimista a par da ronda concluída e deitei ao lado das bancadas com a satisfação genuína de quem comeu feito rainha, limpou três ameaças e carrega mais de mil e duzentas moedas reluzindo nas algibeiras."
     ]
+  },
+  {
+    "id": 66,
+    "day": "Dia 66",
+    "title": "A Centelha do Salto, a Ronda Dupla e a Expansão do Vigor",
+    "date": "18 de dezembro de 2026",
+    "in_game_time": "Midgaard – Catacumbas Profundas e Galerias dos Novatos",
+    "excerpt": "Em patrulha expansiva pelas catacumbas e corredores superiores, Grebolius aniquila um novato zumbi e um monstro novato, experimentando uma intensa mutação de vigor místico e corporal que expande suas reservas arcanas e seu fôlego.",
+    "tags": [
+      "Ascensão Arcana",
+      "Catacumbas Subterrâneas",
+      "Corredores dos Novatos",
+      "Combate Triunfante",
+      "Fartura de Moedas",
+      "Vigor Goblin"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "events.json",
+        "day": 66,
+        "note": "Avanço de nível e combates confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ],
+    "content": [
+      "Despertei com o corpo repousado e o estômago ainda confortado pela fartura do dia anterior. Bastou um gole de água fresca do cantil e o sussurro breve do encanto da Armadura Arcana para que meus membros estalassem, prontos para a ação. Não esperei os resmungos do Alquimista: desci imediatamente pela escadaria para escanear a umidade escura de A Entrada, determinada a vasculhar cada palmo de pedra antes que qualquer criatura pudesse respirar em paz sob nossos pés.",
+      "Cortei direto para a Grande Sala a oeste. No centro da abóbada desolada, um novato zumbi arrastava sua podridão contra os escombros. Cerrei os punhos e disparei uma torrente de projéteis luminosos que perfuraram sua ossatura apodrecida com estalos secos; o morto tentou uma investida cega, mas desviei com um passo leve e enterrei o punhal brilhante até o cabo em sua garganta. No exato instante em que o cadáver desabou inerte no chão lodoso, um estrondo místico vibrou dentro do meu peito: senti como se uma barreira invisível se rompesse em minhas têmporas, abrindo espaço para um mar muito mais profundo de energia mágica, enquanto meus ossos ganhavam uma firmeza nova e meus pulmões pareciam se expandir, puxando o ar com uma amplitude que eu nunca havia experimentado antes. A maestria arcana amadureceu nas minhas veias. Recolhi trinta e cinco moedas de ouro do corpo do zumbi e admirei o brilho metálico na palma da mão com um sorriso afiado.",
+      "Subi a escadaria de volta e forcei a porta oeste do laboratório para estender a ronda às galerias superiores da masmorra. Nos corredores úmidos onde o lodo escorre pelas paredes de pedra bruta, dei de cara com um monstro novato feroz. O confronto foi fulminante: conjurei dardos arcanos que explodiram contra sua carne dura, enquanto minha lâmina encontrava suas brechas defensivas com uma precisão cirúrgica. A besta tombou sem vida, deixando mais vinte moedas de ouro e outro punhal novato reluzente que recolhi sem pestanejar. Com os bolsos retinindo, desci uma segunda vez ao subsolo e patrulhei as passagens laterais até sentir a fadiga natural do esforço me convidar ao descanso.",
+      "Retornei à Sala do Alquimista, mastiguei com calma mais um dos pães recheados que guardava na mochila e acomodei minhas costas contra a parede de pedra. O Alquimista segue em sua obsessão com os insetos rastejantes, mas eu deito hoje sabendo que meus passos estão cada vez mais pesados e difíceis de deter, com mais de mil e trezentas moedas de ouro tilintando no cinto e uma força nova queimando no sangue."
+    ]
   }
 ]
+
 
