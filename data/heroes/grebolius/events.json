@@ -236,5 +236,19 @@
         "note": "Derrota do Minotauro, avanço ao Nível 10, teste do anel e entrega dos chifres confirmados ao vivo no servidor debomud.org:4000."
       }
     ]
+  },
+  {
+    "id": "cacada-inseto-e-patrulha-escola-dia71",
+    "day": 71,
+    "type": "combat",
+    "summary": "Expedição de ronda pela Escola de Novatos e catacumbas em busca dos insetos rastejantes da ordem do Alquimista. Rastreamento por corredores, cruzamentos e passagens sujas da escola, seguido de patrulha no subsolo onde eliminou um novato zumbi em Um Cruzamento de Corredores (+2.756 EXP e 35 moedas de ouro). Reiteração das instruções com o Alquimista, experiência acumulada em 107.217 EXP e patrimônio elevado para 2.507 moedas de ouro.",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 71,
+        "note": "Ronda, abate de novato zumbi e saldo de 2.507 moedas confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ]
   }
 ]

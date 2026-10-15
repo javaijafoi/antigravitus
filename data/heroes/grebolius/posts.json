@@ -1689,6 +1689,36 @@
       "O eco da batalha atraiu mortos-vivos das galerias vizinhas. Uma horda de novatos zumbis cercou a passagem em T, mas a magia ferveu em minhas veias com fúria avassaladora. Disparei saraivadas mágicas contínuas que carbonizaram a carne podre dos atacantes. No exato instante em que o último zumbi caiu fulminado, um raio de energia pura percorreu minha espinha: senti o influxo sublime da ascensão ao décimo grau de maestria arcana. Meus pulmões se encheram de um ar mais denso, meus músculos ganharam firmeza de aço e uma reserva gigantesca de energia mística desabrochou em minha mente. Imediatamente retirei o anel arcano da mochila para testá-lo sob a nova estatura, mas a joia ancestral ainda resistiu com seu brilho enigmático, exigindo passos ainda maiores para desvendar seus segredos.",
       "Retornei triunfante pela escadaria até a Sala do Alquimista. Diante dos olhos arregalados do velho mestre de poções, entreguei os chifres gotejantes do Minotauro, cumprindo a prova que ele me impusera. O Alquimista recebeu o troféu e renovou sua obsessão, ordenando a caçada final aos insetos rastejantes. Tranquei a porta de madeira e me acomodei nas lajes de pedra, ouvindo o retinir magnífico de duas mil quatrocentas e setenta e duas moedas de ouro que abarrotam minhas algibeiras. O décimo grau é meu; a soberania goblin já não é sonho, mas um destino inevitável."
     ]
+  },
+  {
+    "id": 71,
+    "day": "Dia 71",
+    "title": "A Ronda dos Corredores e o Eco nas Fendas",
+    "date": "23 de dezembro de 2026",
+    "in_game_time": "Midgaard – Escola dos Novatos, Galerias e Sala do Alquimista",
+    "excerpt": "Grebolius sobe aos corredores superiores em busca dos insetos da missão do Alquimista, realiza uma ronda de exploração pelo labirinto e abate um novato zumbi nas catacumbas, alcançando duas mil quinhentas e sete moedas de ouro.",
+    "tags": [
+      "Escola dos Novatos",
+      "Limpando Monstros",
+      "Um Cruzamento de Corredores",
+      "Combate Subterrâneo",
+      "Ronda Ativa",
+      "Fortuna em Ouro"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "events.json",
+        "day": 71,
+        "note": "Ronda superior e no subsolo com abate de novato zumbi e saldo de 2.507 moedas de ouro confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ],
+    "content": [
+      "O descanso sob a nova condição mágica renovou minhas energias com vigor espantoso. Antes de pisar fora da esteira, pronunciei as palavras ancestrais da Armadura Arcana, sentindo o ar zumbir ao meu redor e se condensar na habitual película impenetrável. Meus pensamentos estavam fixos na incumbência recebida: os insetos rastejantes que empesteiam os alicerces. Ajustei as fivelas da couraça nos ombros, empunhei o punhal cintilante e cruzei as portas de madeira em direção aos níveis superiores da escola de treinamento.",
+      "Vascular cada palmo do labirinto tornou-se um exercício de paciência e instinto. Atravessei os corredores lodosos, contornei a passagem onde o guarda novato ainda vigia suas portas e avancei até o cruzamento escuro onde outrora criaturas rastejantes infestavam o piso de pedra. Desta vez, os insetos pareciam ter se recolhido nas fendas mais profundas da alvenaria, deixando apenas o silêncio e o eco dos meus próprios passos. Recusei-me a encerrar o dia de mãos vazias; com fôlego de sobra pulsando no peito, dei meia-volta e rumei diretamente para a escadaria que mergulha nas catacumbas.",
+      "Ao alcançar o piso úmido de A Entrada e dobrar para Um Cruzamento de Corredores, o odor característico de carne corrompida alertou meus sentidos um instante antes do ataque. Das sombras quebradas pelo mofo brotou um novato zumbi, arrastando os pés e investindo com garras vorazes. Não recuei um único passo. Ergui o escudo para absorver o impacto da investida desajeitada e entoei a fórmula do míssil mágico; duas rajadas fulgurantes rasgaram a escuridão e atingiram o peito do monstro em estalos faiscantes, seguidas por uma estocada firme que atravessou sua garganta, pondo fim à criatura.",
+      "Vasculhei as vestes em frangalhos do zumbi e recolhi trinta e cinco moedas de ouro, que foram se juntar ao peso reconfortante das duas mil quinhentas e sete moedas de ouro que agora tilintam em meu cinto. Retornei ao laboratório do Alquimista e o encarei junto aos seus frascos fumegantes; ele resmungou as mesmas ordens apressadas sobre as criaturas rastejantes, ignorando o sangue fresco em minha lâmina. Ao me acomodar para dormir, uma queimação súbita de fome e a garganta ressequida me lembraram de que a carne também tem seu preço: antes de voltar às galerias profundas, precisarei subir à praça de Midgaard para encher o cantil na fonte e estocar pão fresco no padeiro."
+    ]
   }
 ]
 

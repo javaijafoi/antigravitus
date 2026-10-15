@@ -1,6 +1,6 @@
 # 🧌 Ficha Atual de Grebolius (Último Estado Registrado)
 
-> Referência: Dia 70. Estado verificado em sessão; consultar a origem registrada.
+> Referência: Dia 71. Estado verificado em sessão; consultar a origem registrada.
 > Este documento reúne o último estado e as missões registrados; as incertezas aparecem ao final.
 
 ## ✦ Identificação e Registro
@@ -9,8 +9,8 @@
 * **Raça / Aparência Real:** Mulher goblin; aventureira sem véu
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **10**
-* **Alinhamento Moral:** 329 (Bom)
-* **Localização Atual:** A Sala do Alquimista (último registro: Dia 70)
+* **Alinhamento Moral:** 339 (Bom)
+* **Localização Atual:** A Sala do Alquimista (último registro: Dia 71)
 * **Acampamento Registrado:** A Sala do Alquimista
 * **Santuário de Referência:** O Panteão dos Centenários
 
@@ -20,12 +20,12 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 | Recurso | Atual | Máximo | Porcentagem |
 | :--- | :---: | :---: | :---: |
 | **Pontos de Vida (HP)** | 61 | 61 | 100% |
-| **Pontos de Mana (MP)** | 160 | 160 | 100% |
+| **Pontos de Mana (MP)** | 138 | 160 | 86% |
 | **Estamina / Movimento (MV)** | 99 | 99 | 100% |
 
-* **Experiência Acumulada:** **104.461 EXP**
-* **Experiência Necessária p/ Grau 11:** **45.539 EXP** (Meta: 150.000 EXP)
-* **Ouro Líquido:** **2.472 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **107.217 EXP**
+* **Experiência Necessária p/ Grau 11:** **42.783 EXP** (Meta: 150.000 EXP)
+* **Ouro Líquido:** **2.507 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 10
@@ -36,8 +36,8 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 * **Carisma (CHA):** 9
 
 ### Métricas de Combate
-* **Classe de Armadura (AC):** 16 (base) / **40** (com `armor`, conforme registro)
-Valores verificados ao vivo no servidor (AC 16 sem armadura, AC 40 com 'armor').
+* **Classe de Armadura (AC):** 16 (base) / **41** (com `armor`, conforme registro)
+Valores verificados ao vivo no servidor (AC 16 sem armadura, AC 41 com 'armor' no Nível 10).
 * **Bônus de Acerto (Hitroll):** 0
 * **Bônus de Dano (Damroll):** +1
 * **Configuração de Fuga (Wimpy):** **13 HP** (referência de 25%; não garante fuga antes de golpe letal)
@@ -99,7 +99,7 @@ Cumprir a ordem direta do Alquimista de encontrar e abater os insetos rastejante
 * O anel arcano (+2E) segue exigindo nível superior (Nível 11+).
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessão ao vivo em debomud.org:4000; ronda superior e profunda com abate do Grande Minotauro (+7.072 EXP, +95 moedas e chifres), avanço formal para Nível 10 (+4 HP, +10 Mana, +2 MV), teste do anel arcano (+2E), entrega dos chifres ao Alquimista e ampliação do saldo para 2.472 moedas de ouro..
+Fonte do estado: Sessão ao vivo em debomud.org:4000; ronda superior pela Escola de Novatos e subsolo com abate de novato zumbi (+2.756 EXP e +35 moedas), elevando a experiência para 107.217 EXP e o saldo para 2.507 moedas de ouro..
 * O anel arcano (+2E) exige Nível 11 ou superior para uso (testado e recusado no Nível 10).
 * A placa de perigo em 'A Entrada' alerta sobre a morte para quem desce desacompanhado ou desequipado.
 * Locais exatos dos insetos rastejantes nas catacumbas além das câmaras já mapeadas.

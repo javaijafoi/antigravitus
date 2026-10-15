@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 70,
+  "as_of_day": 71,
   "verification": "live",
   "items": [
     {
@@ -108,6 +108,11 @@
           "document": "posts.json",
           "day": 70,
           "note": "Derrota do Grande Minotauro renascido, obtenção e entrega dos chifres ao Novato Alquimista, avanço ao Nível 10 e patrimônio de 2.472 moedas de ouro."
+        },
+        {
+          "document": "posts.json",
+          "day": 71,
+          "note": "Ronda pelos corredores da Escola de Novatos em busca dos insetos rastejantes e eliminação de novato zumbi nas catacumbas (+2.756 EXP e saldo de 2.507 moedas de ouro)."
         }
       ]
     },
