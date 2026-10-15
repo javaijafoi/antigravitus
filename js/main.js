@@ -862,14 +862,16 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Parser limpo e seguro para a ficha de personagem
     const lines = md.split("\n");
     let html = "";
-    let inList = false;
+    let listStack = []; // pilha de níveis de lista
     let inTable = false;
     let tableRows = [];
+    let inCodeBlock = false;
+    let codeBlockContent = [];
 
     function flushList() {
-      if (inList) {
+      while (listStack.length > 0) {
         html += "</ul>";
-        inList = false;
+        listStack.pop();
       }
     }
 
@@ -904,6 +906,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     function formatInline(text) {
       const safe = escapeHtml(text);
       return safe
+        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
         .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
         .replace(/\*(.*?)\*/g, "<em>$1</em>")
         .replace(/`([^`]+)`/g, "<code>$1</code>");
@@ -911,6 +914,26 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     for (let line of lines) {
       const trimmed = line.trim();
+
+      // Bloco de código com cerca tripla (```)
+      if (trimmed.startsWith("```")) {
+        flushList();
+        flushTable();
+        if (inCodeBlock) {
+          html += `<pre class="ficha-pre"><code>${escapeHtml(codeBlockContent.join("\n"))}</code></pre>`;
+          codeBlockContent = [];
+          inCodeBlock = false;
+        } else {
+          inCodeBlock = true;
+          codeBlockContent = [];
+        }
+        continue;
+      }
+
+      if (inCodeBlock) {
+        codeBlockContent.push(line);
+        continue;
+      }
 
       // Linha vazia
       if (!trimmed) {
@@ -962,13 +985,25 @@ document.addEventListener("DOMContentLoaded", async () => {
         continue;
       }
 
-      // Listas
-      if (trimmed.startsWith("* ") || trimmed.startsWith("- ")) {
-        if (!inList) {
-          html += "<ul class='ficha-ul'>";
-          inList = true;
+      // Listas com suporte a indentação (aninhamento)
+      const listMatch = line.match(/^(\s*)([\*\-])\s+(.*)$/);
+      if (listMatch) {
+        const indentLength = listMatch[1].length;
+        const level = Math.floor(indentLength / 2) + 1;
+        const itemContent = listMatch[3];
+
+        if (listStack.length < level) {
+          while (listStack.length < level) {
+            html += "<ul class='ficha-ul'>";
+            listStack.push(true);
+          }
+        } else if (listStack.length > level) {
+          while (listStack.length > level) {
+            html += "</ul>";
+            listStack.pop();
+          }
         }
-        const itemContent = trimmed.replace(/^[\*\-]\s*/, "");
+
         html += `<li class='ficha-li'>${formatInline(itemContent)}</li>`;
         continue;
       } else {
@@ -979,6 +1014,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       html += `<p class="ficha-p">${formatInline(trimmed)}</p>`;
     }
 
+    if (inCodeBlock) {
+      html += `<pre class="ficha-pre"><code>${escapeHtml(codeBlockContent.join("\n"))}</code></pre>`;
+    }
     flushList();
     flushTable();
     return html;

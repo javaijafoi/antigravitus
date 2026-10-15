@@ -22,9 +22,12 @@
 
 | NPC | Localização (`room_id`) | Função / Serviço | Interações & Comandos | Status / Última Auditoria |
 | :--- | :--- | :--- | :--- | :--- |
-| **Mestre da Guilda dos Magos** | `laboratorio_magos` | Treinadora Suprema da Guilda de Magos | `practice` (abre lista de magias conhecidas e disponíveis para treino com sessões). | Auditado Dia 81 (15 treinos em estoque). Protegida por barreira de luz. |
-| **Mago Aventureiro** | `bar_magos` | Mentor / Doador de Autoquest (*Dicas Mágicas*) | `autoquest`, `'sim`, `'não`. Pede a entrega de um *pergaminho de retorno*. | Auditado Dia 80. Missão ativa aguardando 9.202 moedas. |
-| **Winkan, o Engenheiro do Caos** | `templo_midgaard` | Veterano Lendário de Midgaard | Em meditação profunda sob luz ofuscante. Não oferece diálogo mecânico ativo. | Auditado historicamente. Figura de respeito. |
+| **Mestre da Guilda dos Magos** | `laboratorio_magos` | Treinadora Suprema da Guilda de Magos | `practice` (abre lista de magias conhecidas e disponíveis para treino com sessões). | Auditado Dia 82 (15 treinos em estoque). Protegida por barreira de luz. |
+| **Mago Aventureiro** | `bar_magos` | Mentor / Doador de Autoquest (*Dicas Mágicas*) | `autoquest`, `'sim`, `'não`, `give pergaminho mago`. Pede a entrega de um *pergaminho de retorno*. | Auditado Dia 82. Missão ativa. |
+| **Winkan, o Engenheiro do Caos** | `sala_leitura` | Veterano Lendário de Midgaard | Em meditação profunda sob aura de poder e serenidade na Sala de Leitura. | Auditado ao vivo no Dia 82 na Sala de Leitura. |
+| **Losilly, a Urdidura** | `sala_leitura` | Heroína Lendária de Midgaard | Equipada com raio de luz (+4E), coleiras de dragão, armadura de cristal (+1E) e bolsa de Pellinore. | Auditada ao vivo no Dia 82 na Sala de Leitura. |
+| **Clérigo Guardião** | `guilda_clerigos_entrada` | Sentinela do Enclave Sagrado | Cota de malha prateada e maça polida; vigia o portal de alabastro dos clérigos. | Auditado Dia 82. |
+| **Zelador de Midgaard** | `praca_templo` / `entrada_javali` | Auxiliar Cívico e Zelador da Cidade | Varrendo pacientemente as lajes ao redor da Fonte de Mármore Azul. | Auditado Dia 82. |
 | **Carecacabeludo, o Preservador**| `templo_midgaard` | Guardião Sagrado da Nave Central | Sentinela cerimonial. Vigilância pacífica. | Auditado historicamente. Neutro. |
 | **Aiko, a Instruída** | `corredor_sujo` (Masmorra dos Novatos) | Aventureira Observadora / Guia | Presente no corredor das catacumbas. Diálogos informativos a conferir. | Auditada Dia 51. Neutra e pacífica. |
 
@@ -113,13 +116,88 @@
 
 ---
 
+### F. O Bar do Javali Roncador
+* **NPC Responsável:** O Taverneiro do Javali (`bar_javali` — Ala Leste da Praça do Templo, dentro da Estalagem).
+* **Função:** Fornecimento de bebidas tradicionais, cerveja ale, cospefogo e recipientes maiores de cerveja.
+* **Comandos:** `list`, `buy <item>`.
+* **Catálogo de Preços (Auditado no Dia 82):**
+  | Item | Preço | Nível | Utilidade / Observação |
+  | :--- | :---: | :---: | :--- |
+  | **Uma garrafa de especialidade local** | 22 ouros | Nv 0 | Bebida regional da estalagem. |
+  | **Uma garrafa de cospefogo** | 55 ouros | Nv 0 | Aguardente forte e destilada. |
+  | **Uma garrafa de cerveja ale** | 11 ouros | Nv 0 | Bebida de cevada de baixo custo. |
+  | **Uma garrafa de cerveja** | 22 ouros | Nv 0 | Cerveja comum de taberna. |
+  | **Um barril de cerveja** | 330 ouros | Nv 0 | **Recipiente massivo de líquido.** Maior reservatório comercial da cidade. |
+
+---
+
+### G. A Loja de Animais
+* **NPC Responsável:** O Garoto da Loja de Animais (`loja_animais` — Rua Principal Leste I, 1 sul).
+* **Função:** Venda de mascotes, guardas caninos e montarias treinadas; funciona também como estábulo.
+* **Comandos:** `list`, `buy <animal>`.
+* **Catálogo de Animais (Auditado no Dia 82):**
+  | Animal | Preço | Porte / Função |
+  | :--- | :---: | :--- |
+  | **Um gatinho** | 300 ouros | Pequeno felino doméstico. |
+  | **Um cachorrinho** | 300 ouros | Filhote de guarda. |
+  | **Um beagle** | 300 ouros | Cão rastreador de pequeno porte. |
+  | **Um rottweiler** | 900 ouros | Cão de guarda robusto e musculoso. |
+  | **Um lobo** | 1.800 ouros | Predador treinado de grande porte para combate e patrulha. |
+
+---
+
+### H. O Correio de Midgaard
+* **NPC Responsável:** O Carteiro de Midgaard (`correio_midgaard` — Entrada do Javali Roncador, 1 norte).
+* **Função:** Sistema postal oficial do reino; envio e recebimento de correspondência entre jogadores.
+* **Comandos:** `mail <destinatário>`, `check`.
+* **Status:** Auditado no Dia 82. O Carteiro veste uniforme rústico com teias-de-aranha; avisa prontamente quando não há correspondência pendente.
+
+---
+
+### I. A Recepção da Estalagem Javali Roncador
+* **NPC Responsável:** A Recepcionista (`recepcao_javali` — Entrada do Javali Roncador, 1 cima).
+* **Função:** Aluguel de quartos e leitos para aventureiros sem guilda ou santuário garantido salvarem seus pertences.
+* **Comandos:** `look`, diálogo sobre quartos.
+
+---
+
+### J. O Bar dos Magos
+* **NPC Responsável:** O Garçom dos Magos (`bar_magos` — Entrada da Guilda dos Magos, 1 sul).
+* **Função:** Bebidas para aprendizes e mestres arcanos em ambiente com ilusões flutuantes.
+* **Catálogo (Auditado no Dia 82):** Garrafa de cerveja ale (10 ouros), Garrafa de cospefogo (50 ouros). Garçom empunha adaga amolada.
+
+---
+
+### K. A Taverna Encardida
+* **NPC Responsável:** Filthy (`taverna_encardida` — Sul do Fim do Beco Pobre).
+* **Função:** Ponto de encontro de renegados e marinheiros no submundo de Midgaard; ambiente fétido e imundo.
+* **Comandos:** `list`, `buy <item>`.
+* **Catálogo (Auditado no Dia 82):**
+  | Item | Preço | Nível | Utilidade / Observação |
+  | :--- | :---: | :---: | :--- |
+  | **Uma garrafa de especialidade local** | 20 ouros | Nv 0 | Bebida regional barata. |
+  | **Uma garrafa de cospefogo** | 50 ouros | Nv 0 | Aguardente pura do submundo. |
+* **Outros Habitantes:** Dois mendigos pedindo esmolas e cães farejando entulho.
+
+---
+
+### L. Outras Figuras Notáveis e Autoridades de Midgaard
+* **O Prefeito de Midgaard** (`praca_comercio`): Autoridade máxima cívica; transita pela praça central fiscalizando o comércio e os murais.
+* **Negelok, o Super Uper Duper** (`templo_midgaard`): Veterano supremo voando montado em O Grifo Real, cercado por uma aura multicolorida.
+* **O Pranteador da Cidade** (`beco_escuro`): Figura trágica chorando silenciosamente na viela leste.
+* **Mercenários Urbanos** (`beco_escuro`): Guerreiros de aluguel reunidos junto a espadas curtas e portais mágicos.
+* **Guarda da Guilda dos Necromantes** (`guilda_necromantes`): Sentinela temível protegido por enormes ossos; humilha e proíbe terminantemente a entrada de não-necromantes ao Bar dos Necromantes ("Só necromantes entram aqui").
+
+---
+
 ## 📜 3. NPCs de Missões e Alianças
 
 | NPC | Localização (`room_id`) | Missão Vinculada | Diálogos & Condições | Histórico e Desfecho |
 | :--- | :--- | :--- | :--- | :--- |
 | **Guarda Novato** | `pequena_sala` (Masmorra dos Novatos) | *A Coleira do Dragão* | Recebe a coleira perdida do bebê dragão. | **Concluída no Dia 31**. Recompensa concedida: 5.000 EXP. |
 | **Novato Alquimista** | `sala_alquimista` (Masmorra dos Novatos) | *Limpando Monstros* | Diálogos: `'sim`, `'não`, `autoquest`. Recompensa por insetos e chifres de minotauro. | **Ativa**. Entregas recorrentes devem ser tratadas de forma calejada e rotineira. |
-| **O Pacificador** | `praca_templo` / `entrada_estalagem` | Ordem Urbana / Aliança Cívica | Diálogo pacífico; convida Grebolius a prestar auxílio quando estiver mais forte. | Vigia colossal. Aliado neutro em caso de invasão. |
+| **O Pacificador** | `praca_templo` / `termino_rua_oeste` / `portao_oeste` | Ordem Urbana / Aliança Cívica | Diálogo pacífico; vigia colossal das muralhas e praças. | Aliado neutro garantidor da paz pública. |
+| **Mago Aventureiro** | `bar_magos` | *Dicas Mágicas* (Autoquest exclusiva) | Diálogo de instruções para jovens magos. | Disponível para o nível de Grebolius (1-29). |
 
 ---
 
@@ -131,6 +209,7 @@
 | **Mago Guardião** | `entrada_guilda_magos` | Sentinela Protetor | Protegido por luz ofuscante; permite passagem para o Laboratório e Bar. |
 | **Sentinela dos Ladrões** | `entrada_guilda_ladroes` | Hostil / Bloqueador | Vigia sombrio; desdenha de magos e novatos. Não forçar entrada. |
 | **Sentinela dos Guerreiros** | `entrada_guilda_guerreiros` | Hostil / Bloqueador | Brutamontes armado; barra novatos sem treinamento marcial. |
+| **Guarda Necromante** | `entrada_guilda_necromantes` | Bloqueador Opressor | Protegido por ossos; barra e humilha invasores. |
 
 ---
 
@@ -142,4 +221,5 @@
 | **Ciclo 6** | Dia 51 | Merceeiro (Armazém Geral) | Mapeamento de recipientes e confirmação de ausência de odres/barris. |
 | **Ciclo 8** | Dia 80 | Armeiro (Loja de Armaduras) e Mago Aventureiro | Mapeamento de peças de bronze (1.750 a 18.000) e requisitos de Dicas Mágicas. |
 | **Ciclo 9** | Dia 81 | Padeiro (Padaria) e Mestre da Guilda | Reconfirmação de pães a 6 moedas e 15 sessões de treino acumuladas. |
+| **Ciclo 9** | Dia 82 | Auditoria Urbana Geral Completa (100% Midgaard) | Taverneiro do Javali (barris de cerveja 330 ouros), Carteiro (serviço postal), Garoto dos Animais (lobos e cães), Winkan e Losilly (Sala de Leitura), Clérigo Guardião, Filthy (Taverna Encardida), Prefeito de Midgaard, Negelok em Grifo Real, Pranteador, Mercenários, Guarda Necromante (ossos), Odin (Hugin, Munin, Gere, Freke), 12 heróis do Panteão e Matriz Completa de Autoquests (`autoquest todas`). |
 | **Ciclo 9** | Dia 90+ | *Aguardando próxima auditoria* | Checagem programada para início do Ciclo 10. |

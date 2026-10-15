@@ -1,0 +1,48 @@
+{
+  "id": "grebolius",
+  "name": "Grebolius",
+  "title": "A Ladra e Soberana dos Goblins",
+  "rune": "🧌",
+  "avatar": "🗡️",
+  "race_class": "Mulher Goblin • Mago (estilo ladra arcana)",
+  "role": "Fundadora do Futuro Reino Goblin • Aventureira Sem Véu",
+  "alignment": "Neutro Pragmático",
+  "quote": "“Chega de me esconder sob trapos de novato. Vou trocar este equipamento, andar de cabeça erguida e fazer Midgaard conhecer a verdadeira força de uma mulher goblin.”",
+  "subtitle": "Diário de uma mulher goblin sem véu: missões, mistérios e a ambição de preparar um Reino Livre para seu povo.",
+  "vigilia": "Fio da jornada: missões, descobertas e preparo",
+  "server": "debomud.org:4000",
+  "accent_color": "#2bd685",
+  "questions": {
+    "q1": "Desbravar Midgaard, cumprir compromissos e preparar o Reino Livre dos Goblins. Conhecimento e poder servem a essa jornada.",
+    "q2": "A morte que ameaça sua memória e o risco de perder o futuro que deseja construir. O custo da segunda morte ainda não está explicado nos registros.",
+    "q3": "Audácia e orgulho que podem confundir ambição com capacidade diante de ameaças desconhecidas.",
+    "q4": "Disposta a sacrificar conforto e discrição; preserva como valores declarados a dignidade goblin, sua palavra e o futuro livre de seu povo. A vingança pode entrar em tensão com esses valores.",
+    "q5": "Ser a aventureira goblin que abriu caminho para um povo livre. Trata-se de um legado pretendido, ainda em construção."
+  },
+  "quick_stats": {
+    "level_badge": "(Grau 8 • Mago; estilo ladra arcana)",
+    "hp": "52 / 52",
+    "mana": "140 / 140",
+    "mv": "95 / 95",
+    "ac": "AC 16 (40 com armor; registro)",
+    "weapon": "Punhal de Novato (+ Escudo)",
+    "weapon_icon": "🗡️",
+    "sanctuary": "O Panteão dos Centenários",
+    "location": "A Sala do Alquimista",
+    "camp": "A Sala do Alquimista",
+    "as_of_day": 61,
+    "verification": "live"
+  },
+  "voice": {
+    "engine": "edge-tts",
+    "voice_id": "pt-BR-FranciscaNeural",
+    "rate": "+6%",
+    "pitch": "+0Hz",
+    "style": "resolute",
+    "description": "Voz firme, ágil e assertiva de mulher goblin aventureira em busca de soberania"
+  },
+  "folder": "data/heroes/grebolius",
+  "evidence_policy": {
+    "legacy_through_day": 60
+  }
+}

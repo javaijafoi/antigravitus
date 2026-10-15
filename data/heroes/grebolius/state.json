@@ -2,12 +2,13 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 81,
-    "source": "Sessão ao vivo em tempo real no servidor debomud.org:4000 (Dia 81); incursão profunda nos Esgotos de Midgaard sem dormir, queima ativa de mana e estamina (MV) com alimentação e pausas táticas em campo, eliminação de dois pequenos morcegos (+17.368 EXP total), avanço triunfal ao Nível 11 (67 HP, 170 Mana, 101 MV), combate letal contra a serpente dos esgotos, passagem pelo Paraíso e Caminho no Vazio, ressurreição milagrosa na Fonte da Vida com inventário e patrimônio intactos (2.642 moedas), reequipamento completo (AC 16) e conferência de treinamento na Guilda dos Magos com 15 sessões acumuladas, repousando no Laboratório dos Magos.",
+    "day": 82,
+    "source": "Sessão ao vivo em tempo real no servidor debomud.org:4000 (Dia 82); auditoria urbana completa de 100% dos setores civis e submundo de Midgaard sem dormir (apenas pausas táticas sentado com rest para fôlego). Verificação do Altar de Odin, Panteão dos Centenários, Sala de Leitura com Winkan e Losilly, Sala de Doações, Complexo do Javali Roncador (Correio, Bar com barril e Recepção), Guildas (Clérigos, Magos, Guerreiros, Ladrões e Necromantes), todas as lojas da Rua Principal, Submundo (Beco Escuro, Pranteador, Bar dos Ladrões, Fim do Beco Pobre, Taverna Encardida com Filthy, Beco Pobre e Depósito de Lixo com alçapão subterrâneo para os esgotos). Descoberta da Matriz de Autoquests (50+ catalogadas, 4 imediatas: Dicas Mágicas, Novela dos Novatos, Limpando Monstros e Problemas Agrícolas). Presença do Prefeito na Praça e Negelok voando em Grifo Real no Templo. Repousando acordada e sentada (rest) no Templo de Midgaard com vitais plenos (67 HP, 170 Mana, 101 MV) e 15 treinos em estoque.",
     "verification": "live",
     "live_verified": true
   },
   "level": 11,
+  "mechanical_race": "Elfo",
   "mechanical_class": "Mago (Magic-User)",
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
@@ -61,8 +62,8 @@
     }
   },
   "location": {
-    "room_id": "laboratorio_magos",
-    "name": "O Laboratório dos Magos"
+    "room_id": "templo_midgaard",
+    "name": "O Templo de Midgaard"
   },
   "camp": {
     "room_id": "laboratorio_magos",
@@ -73,13 +74,13 @@
     "name": "O Panteão dos Centenários"
   },
   "last_event": {
-    "day": 81,
-    "summary": "Incursão profunda nos Esgotos de Midgaard no Dia 81: operação em tempo real sem dormir, exploração de mais de vinte galerias subterrâneas, extermínio de morcegos nos eixos de ar com alcance do Nível 11, confronto sangrento contra a serpente, passagem pelo Paraíso e retorno glorioso pela Fonte da Vida com ouro e itens intactos, seguido de treino e repouso na Guilda dos Magos."
+    "day": 82,
+    "summary": "Auditoria urbana completa de Midgaard no Dia 82: 100% de cobertura civil e submundo sem dormir. Mapeamento do Altar de Odin, Panteão dos Centenários, Sala de Leitura, Javali Roncador, oficinas comerciais, becos do submundo, Taverna Encardida com Filthy, alçapão subterrâneo do Depósito de Lixo e Matriz Completa de Autoquests do reino, repousando acordada e sentada (rest) no Templo de Midgaard."
   },
   "next_objective": {
     "mission_id": "dicas-magicas",
-    "title": "Juntar recursos para adquirir o pergaminho de retorno e trocar de equipamento",
-    "next_step": "Economizar recursos para atingir o marco inicial de cinco mil moedas e a meta de dez mil moedas de ouro para comprar o pergaminho de retorno (9.202 moedas) e novas peças de proteção.",
+    "title": "Iniciar a progressão pelas 4 autoquests do Grau 11 e avançar rumo à serpente",
+    "next_step": "Ativar Dicas Mágicas no Bar dos Magos, e em paralelo progredir em Limpando Monstros, Novela dos Novatos e Problemas Agrícolas para acumulação de EXP e ouro, preparando o abate da serpente via superioridade arcana à distância.",
     "missing_preparation": [
       "O anel arcano (+2E) segue reservado para círculos superiores de poder."
     ]
@@ -213,61 +214,63 @@
   "inventory": {
     "recorded": [
       {
+        "name": "um cantil",
+        "quantity": 1,
+        "source": "Confirmado ao vivo no inventário no Dia 82"
+      },
+      {
+        "name": "uma tocha",
+        "quantity": 1,
+        "source": "Confirmado ao vivo no inventário no Dia 82"
+      },
+      {
         "name": "uma brilhante veste de novato",
         "quantity": 2,
-        "source": "Confirmado ao vivo no inventário no Dia 81 (2 reservas após vestir a terceira)"
+        "source": "Confirmado ao vivo no inventário no Dia 82 (2 reservas após vestir a terceira)"
       },
       {
         "name": "um brilhante punhal de novato",
         "quantity": 4,
-        "source": "Confirmado ao vivo no inventário no Dia 81 (4 reservas após empunhar o quinto)"
-      },
-      {
-        "name": "um pão recheado",
-        "quantity": 3,
-        "source": "Comprado na Padaria de Midgaard no Dia 81; 2 consumidos durante a expedição no esgoto"
-      },
-      {
-        "name": "um cantil",
-        "quantity": 1,
-        "source": "Confirmado ao vivo no inventário no Dia 81 (abastecido na fonte azul)"
+        "source": "Confirmado ao vivo no inventário no Dia 82 (4 reservas após empunhar o quinto)"
       },
       {
         "name": "uma brilhante espada de novato",
         "quantity": 1,
-        "source": "Confirmado ao vivo no inventário no Dia 81"
+        "source": "Confirmado ao vivo no inventário no Dia 82"
       },
       {
         "name": "uma poção amarela de detectar invisibilidade",
         "quantity": 1,
-        "source": "Confirmado ao vivo no inventário no Dia 81"
+        "source": "Confirmado ao vivo no inventário no Dia 82"
       },
       {
         "name": "um pergaminho de retorno",
         "quantity": 1,
-        "source": "Confirmado ao vivo no inventário no Dia 81"
+        "source": "Confirmado ao vivo no inventário no Dia 82"
       },
       {
         "name": "uma mochila",
         "quantity": 1,
-        "source": "Confirmado ao vivo no inventário no Dia 81"
+        "source": "Confirmado ao vivo no inventário no Dia 82"
       },
       {
         "name": "um anel arcano (+2E)",
         "quantity": 1,
-        "source": "Confirmado ao vivo no inventário no Dia 81"
+        "source": "Confirmado ao vivo no inventário no Dia 82"
       }
     ],
     "pending_verification": []
   },
   "conditions": [
-    "Nível 11 conquistado com vitais ampliados (67 HP, 170 Mana, 101 MV).",
+    "Nível 11 conquistado com vitais plenos (67 HP, 170 Mana, 101 MV).",
     "15 sessões de treino acumuladas na Guilda dos Magos.",
-    "Sobrevivência e retorno milagroso pela Fonte da Vida com inventário e ouro intactos."
+    "Auditoria urbana de 100% de Midgaard concluída e validada ao vivo no servidor.",
+    "Descansando acordada e sentada (rest) no Templo de Midgaard sob a guarda do Pacificador e relíquias sagradas."
   ],
   "uncertainties": [
     "O anel arcano (+2E) segue exigindo nível ou condição mágica superior.",
-    "Novos feitiços superiores dependem de livros arcanos ou mestres especializados."
+    "Novos feitiços superiores dependem de livros arcanos ou mestres especializados.",
+    "O renascimento desequipa todas as peças para a mochila; o protocolo pós-morte exige `wear all` imediato para restaurar os 67 HP máximos concedidos pela veste e a AC 16."
   ],
   "evidence": [
     {

@@ -10,6 +10,8 @@ sys.path.insert(0, str(ROOT / 'scripts'))
 
 from scripts import sync_hero
 
+FIXTURES_DIR = Path(__file__).resolve().parent / 'test_fixtures'
+
 class SyncHeroTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
@@ -17,7 +19,7 @@ class SyncHeroTests(unittest.TestCase):
         for relative in ['data/heroes.json'] + [f'data/heroes/grebolius/{name}' for name in ['state.json','hero.json','missoes.json','posts.json','ficha.md']]:
             target = self.root / relative
             target.parent.mkdir(parents=True,exist_ok=True)
-            target.write_bytes((sync_hero.ROOT_DIR / relative).read_bytes())
+            target.write_bytes((FIXTURES_DIR / relative).read_bytes())
 
     def tearDown(self):
         self.temp.cleanup()

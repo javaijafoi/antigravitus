@@ -40,15 +40,23 @@ A exploração de novas rotas, áreas desconhecidas ou desvios do itinerário ha
 
 ### Fluxo de Conexão e Execução em Jogo
 
-- **Cadência Operacional (Tempo Real vs. Script Autônomo):**
-  - **Dias com final 5 e final 0 (5, 10, 15, 20, 25, 30, ...): Tempo Real (Interativo).** Nesses dias, jogar comando a comando via conexão interativa contínua (`live_session.py`), sem script enlatado da rota. A IA avalia cada resposta do MUD em tempo de execução, reagindo a salas, mobs, perigos, portas e oportunidades táticas ao vivo.
-  - **Demais dias (finais 1, 2, 3, 4, 6, 7, 8, 9): Modo Script Autônomo (Batch).** Execução programada da rota para máxima eficiência de tokens e execução rápida, preservando a pausa tática para o agente assumir caso ocorra anomalia.
+- **Cadência Operacional (Modo Criativo vs. Script Autônomo):**
+  - **Modo Criativo (Ao Vivo / Modelo Direto):** Executado via `python scripts/local/creative_runner.py --hero grebolius --day <N>`. O Modelo de IA assume diretamente os comandos turno a turno pelo chat através de uma bridge telnet interativa, com liberdade inventiva para olhar por ângulos não explorados no modo automatizado.
+    - **Gatilhos de Ativação:**
+      1. Invocação direta pelo usuário ("Modo Criativo", "ao vivo", ou dias decenais 5 e 0).
+      2. **Handoff pós-quest/dungeon:** Quando uma missão ou dungeon com rota traçada é concluída e a personagem ainda dispõe de estamina (`MV > 25-30`), o script não encerra; faz handoff imediato para o Modo Criativo sem fechar a conexão.
+      3. Quando a personagem não estiver em rota traçada e for oportuno explorar sem script rígido.
+    - **Postura da IA no Modo Criativo (Curiosidade Arcano-Detetive):**
+      - **Inventividade e Novos Ângulos:** Examinar detalhes finos de cenário (`look <objeto>`, `read`, `search`), interagir com NPCs (`ask`, `whisper`, `say`), inspecionar affordances (alavancas, alçapões, passagens secretas) e investigar mistérios da campanha (ex: Livro de Antigravitus, segredos arcanos, pistas de dungeons).
+      - **Balizas de Sobrevivência:** Monitoramento rigoroso de fôlego (`MV > 25`), vida e mana. Pausa tática (`rest_tactical` ou recuo) se a saúde cair. Nunca arriscar combate cego contra alvos desconhecidos sem inspecionar.
+      - **Fechamento e Reconciliação:** Encerramento seguro via `done` / `exit_session` (levantar, `save`, verificar resposta, `rest` e desconectar), gerando automaticamente o log da sessão e `session_dia<N>_evidence.json` para reconciliação editorial e crônica.
+  - **Modo Script Autônomo (Batch):** Execução programada da rota para máxima eficiência de tokens e execução rápida em rotas conhecidas, preservando a pausa tática para o agente assumir caso ocorra anomalia.
   - **Dias com final 9 (9, 19, 29, 39, ...): Reflexão Pessoal e Existencial.** O dia encerra um ciclo decenal e traz na crônica a reflexão psicológica/existencial da heroína, estritamente sem jargão de regras e sem números de ficha (apenas moedas de ouro).
 - **Teto rígido de conexões:** No máximo **3 conexões** ao MUD por dia. É proibido fatiar o dia em 6, 7 ou 8 logins/logouts artificiais.
 - **Fluxo contínuo automático:** Se as salas, rotas e saídas forem as esperadas para o plano do dia, o script avança normalmente e sem hesitação.
 - **Gasto Ativo e Aproveitamento da Estamina (MV):** Os dias têm que ser proveitosos e a estamina deve ser gasta ao máximo no dia a dia, explorando e avançando. Andar em terreno padrão consome apenas 1 a 2 MV por passo; portanto, sessões curtas de 5 a 10 passos gastam quase nada e a regeneração passiva recupera tudo antes de dormir. A expedição deve gastar o fôlego ativamente (40 a 70 passos úteis por jornada) patrulhando setores, mapeando câmaras, caçando alvos ou viajando para comprar provisões.
   - **Avançar enquanto houver estamina:** A personagem explora, patrulha, mapeia e viaja continuamente enquanto seu fôlego estiver acima da reserva de segurança (`MV > 25-30`).
-  - **Abate ou objetivo intermediário NÃO encerra o dia:** Matar um monstro ou cumprir uma etapa de missão NÃO significa ir dormir se a estamina ainda estiver alta. A aventureira segue ativa aproveitando o dia até esgotar a estamina planejada.
+  - **Abate ou objetivo intermediário NÃO encerra o dia:** Matar um monstro ou cumprir uma etapa de missão NÃO significa ir dormir se a estamina ainda estiver alta. A aventureira segue ativa aproveitando o dia até esgotar a estamina planejada (fazendo handoff para Modo Criativo para explorar).
   - **Diferença entre Pausa Tática e Retorno Definitivo:**
     - **Pausa de Recuperação em Campo (HP/Mana):** Queda de HP (< 35) ou Mana (< 40) após combates NÃO exige retorno ao acampamento. A aventureira faz uma pausa tática (`rest` / sentar e vigiar) em sala limpa ou recua 1 passo para um cômodo seguro por 2 a 3 ticks (ingerindo pão ou água se necessário) para recuperar HP e Mana antes de retomar a marcha.
     - **Critérios para Rota de Retorno Definitivo e Encerramento do Dia:**

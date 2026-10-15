@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "hero_id": "grebolius",
+  "as_of": {
+    "day": 61,
+    "source": "Sessão ao vivo em debomud.org:4000; combate e estado verificados no servidor.",
+    "verification": "live",
+    "live_verified": true
+  },
+  "level": 8,
+  "mechanical_class": "Mago (Magic-User)",
+  "honorific": "o Aprendiz de Mago",
+  "appearance": "Mulher goblin; aventureira sem véu",
+  "alignment": {
+    "value": 73,
+    "label": "Neutro Pragmático"
+  },
+  "vitals": {
+    "hp": {
+      "current": 52,
+      "max": 52
+    },
+    "mana": {
+      "current": 140,
+      "max": 140
+    },
+    "mv": {
+      "current": 95,
+      "max": 95
+    }
+  },
+  "experience": {
+    "current": 48606,
+    "next_level": 60000
+  },
+  "gold": 1121,
+  "attributes": {
+    "STR": 10,
+    "DEX": 15,
+    "CON": 10,
+    "INT": 17,
+    "WIS": 16,
+    "CHA": 9
+  },
+  "armor": {
+    "base": 16,
+    "with_armor": 40,
+    "effect_verified": true,
+    "note": "Valores verificados ao vivo no servidor no Dia 61 (AC 16 sem armadura, AC 40 com 'armor')."
+  },
+  "hitroll": 0,
+  "damroll": 1,
+  "wimpy": 13,
+  "training_sessions": 6,
+  "location": {
+    "room_id": "sala_alquimista",
+    "name": "A Sala do Alquimista"
+  },
+  "camp": {
+    "room_id": "sala_alquimista",
+    "name": "A Sala do Alquimista"
+  },
+  "sanctuary": {
+    "room_id": "panteao_centenarios",
+    "name": "O Panteão dos Centenários"
+  },
+  "last_event": {
+    "day": 61,
+    "summary": "Marcha pelos campos, infiltração na Masmorra dos Novatos, eliminação dos novatos zumbis na Sala do Alquimista, obtenção dos chifres do Minotauro e acampamento ao lado do Alquimista."
+  },
+  "next_objective": {
+    "mission_id": "limpando-monstros",
+    "title": "Completar a autoquest do Alquimista",
+    "next_step": "Entregar ou apresentar os chifres do Minotauro e os espólios ao Alquimista ou descer a escadaria da sala.",
+    "missing_preparation": [
+      "Examinar a placa pregada na escadaria inferior da Sala do Alquimista.",
+      "Identificar requisitos de nível para equipar o anel arcano (+2E)."
+    ]
+  },
+  "skills": [
+    {
+      "id": "armor",
+      "name": "Armadura Mística",
+      "proficiency": 95,
+      "source": {
+        "document": "ficha.md",
+        "day": 60,
+        "note": "Valor migrado da ficha anterior à geração; hash original em migration.original_sha256."
+      }
+    },
+    {
+      "id": "invisibility",
+      "name": "Invisibilidade",
+      "proficiency": 95,
+      "source": {
+        "document": "ficha.md",
+        "day": 60,
+        "note": "Valor migrado da ficha anterior à geração; hash original em migration.original_sha256."
+      }
+    },
+    {
+      "id": "infravision",
+      "name": "Infravisão",
+      "proficiency": 95,
+      "source": {
+        "document": "ficha.md",
+        "day": 60,
+        "note": "Valor migrado da ficha anterior à geração; hash original em migration.original_sha256."
+      }
+    },
+    {
+      "id": "magic missile",
+      "name": "Míssil Mágico",
+      "proficiency": 99,
+      "source": {
+        "document": "ficha.md",
+        "day": 60,
+        "note": "Valor migrado da ficha anterior à geração; hash original em migration.original_sha256."
+      }
+    },
+    {
+      "id": "chill touch",
+      "name": "Toque Gélido",
+      "proficiency": 90,
+      "source": {
+        "document": "ficha.md",
+        "day": 60,
+        "note": "Valor migrado da ficha anterior à geração; hash original em migration.original_sha256."
+      }
+    },
+    {
+      "id": "burning hands",
+      "name": "Mãos Flamejantes",
+      "proficiency": 95,
+      "source": {
+        "document": "posts.json",
+        "day": 53,
+        "note": "Treino no Dia 53 narrado na crônica e registrado em evolucao.md."
+      }
+    }
+  ],
+  "equipment": [
+    {
+      "slot": "Cabeça",
+      "name": "um brilhante elmo de novato"
+    },
+    {
+      "slot": "Empunhado (Arma Principal)",
+      "name": "um brilhante punhal de novato"
+    },
+    {
+      "slot": "Como Escudo",
+      "name": "um escudo"
+    },
+    {
+      "slot": "No Corpo",
+      "name": "uma brilhante veste de novato"
+    },
+    {
+      "slot": "Nos Braços",
+      "name": "um par de braçadeiras de couro"
+    },
+    {
+      "slot": "Nas Mãos",
+      "name": "um par de luvas de couro"
+    },
+    {
+      "slot": "Nas Pernas",
+      "name": "uma calça de couro"
+    },
+    {
+      "slot": "Como Luz",
+      "name": "uma tocha"
+    }
+  ],
+  "inventory": {
+    "recorded": [
+      {
+        "name": "um cantil",
+        "quantity": 1,
+        "source": "Confirmado ao vivo no inventário no Dia 61"
+      },
+      {
+        "name": "um brilhante punhal de novato",
+        "quantity": 5,
+        "source": "Confirmado ao vivo no inventário no Dia 61"
+      },
+      {
+        "name": "uma brilhante espada de novato",
+        "quantity": 1,
+        "source": "Confirmado ao vivo no inventário no Dia 61"
+      },
+      {
+        "name": "uma poção amarela de detectar invisibilidade",
+        "quantity": 1,
+        "source": "Confirmado ao vivo no inventário no Dia 61"
+      },
+      {
+        "name": "um pergaminho de retorno",
+        "quantity": 1,
+        "source": "Confirmado ao vivo no inventário no Dia 61"
+      },
+      {
+        "name": "uma mochila",
+        "quantity": 1,
+        "source": "Confirmado ao vivo no inventário no Dia 61"
+      },
+      {
+        "name": "os chifres do Minotauro",
+        "quantity": 1,
+        "source": "Espólio do novato zumbi abatido na Sala do Alquimista no Dia 61"
+      },
+      {
+        "name": "um pão recheado",
+        "quantity": 1,
+        "source": "Provisão restante após consumo no Dia 61"
+      }
+    ],
+    "pending_verification": [
+      {
+        "name": "anel arcano (+2E)",
+        "last_seen_day": 61,
+        "reason": "Confirmado na posse no Dia 61, mas o servidor informou 'Você não tem experiência para usar um anel arcano'; requisitos de nível e bônus reais não confirmados."
+      }
+    ]
+  },
+  "conditions": [
+    "Saciada e hidratada no Dia 61 com pão recheado e cantil.",
+    "Armadura mística (armor) ativa e verificada.",
+    "Autogold confirmado em funcionamento no servidor (35 moedas coletadas por zumbi)."
+  ],
+  "uncertainties": [
+    "O anel arcano (+2E) está na mochila, mas o servidor informou 'Você não tem experiência para usar um anel arcano' (exige nível maior que 8).",
+    "A escadaria descendente na Sala do Alquimista leva a 'A Entrada', com aviso em placa pregada ainda não decifrada."
+  ],
+  "evidence": [
+    {
+      "document": "events.json",
+      "day": 61,
+      "note": "Sessão e combate verificados ao vivo no servidor debomud.org:4000."
+    },
+    {
+      "document": "posts.json",
+      "day": 61,
+      "note": "Crônica do Dia 61 baseada em fatos ao vivo."
+    }
+  ],
+  "narrative_style": "ladra arcana",
+  "weapon_summary": "Punhal de Novato (+ Escudo)",
+  "migration": {
+    "method": "sessão ao vivo e conferência direta no servidor",
+    "verified_on": "Dia 61"
+  }
+}

@@ -4,9 +4,9 @@
   "title": "A Ladra e Soberana dos Goblins",
   "rune": "🧌",
   "avatar": "🗡️",
-  "race_class": "Mulher Goblin • Mago (estilo ladra arcana)",
+  "race_class": "Mulher Goblin (Elfo Mago mecânico; estilo ladra arcana)",
   "role": "Fundadora do Futuro Reino Goblin • Aventureira Sem Véu",
-  "alignment": "Neutro Pragmático",
+  "alignment": "Bom (222/325 no MUD; postura Neutro Pragmático)",
   "quote": "“Chega de me esconder sob trapos de novato. Vou trocar este equipamento, andar de cabeça erguida e fazer Midgaard conhecer a verdadeira força de uma mulher goblin.”",
   "subtitle": "Diário de uma mulher goblin sem véu: missões, mistérios e a ambição de preparar um Reino Livre para seu povo.",
   "vigilia": "Fio da jornada: missões, descobertas e preparo",
@@ -28,9 +28,9 @@
     "weapon": "Punhal de Novato (+ Escudo)",
     "weapon_icon": "🗡️",
     "sanctuary": "O Panteão dos Centenários",
-    "location": "O Laboratório dos Magos",
+    "location": "O Templo de Midgaard",
     "camp": "O Laboratório dos Magos",
-    "as_of_day": 81,
+    "as_of_day": 82,
     "verification": "live"
   },
   "voice": {

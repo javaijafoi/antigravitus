@@ -6,6 +6,10 @@ from pathlib import Path
 import re
 import sys
 
+for _stream in (sys.stdout, sys.stderr):
+    if hasattr(_stream, "reconfigure"):
+        _stream.reconfigure(encoding="utf-8", errors="replace")
+
 ROOT_DIR = Path(__file__).resolve().parents[1]
 STATUS = {'discovered':'Descoberta', 'active':'Ativa', 'completed':'Concluída', 'blocked':'Bloqueada', 'deferred':'Adiada', 'abandoned':'Abandonada'}
 
@@ -72,7 +76,9 @@ def render_ficha(hero, state, missions):
         '> Este documento reúne o último estado e as missões registrados; as incertezas aparecem ao final.', '',
         '## ✦ Identificação e Registro',
         bullet('Nome de Registro no MUD', hero['name']), bullet('Título Honorífico',state['honorific']),
-        bullet('Raça / Aparência Real',state['appearance']), bullet('Classe Mecânica no MUD',state['mechanical_class']),
+        bullet('Raça / Aparência Narrativa',state['appearance']),
+        bullet('Raça Mecânica no MUD', state.get('mechanical_race', 'Não registrada')),
+        bullet('Classe Mecânica no MUD',state['mechanical_class']),
         bullet('Grau / Nível Atual',f"**{state['level']}**"),
         bullet('Alinhamento Moral',f"{state['alignment']['value']} ({state['alignment']['label']})"),
         bullet('Localização Atual',state['location']['name'] + f' (último registro: Dia {day})'),
@@ -159,4 +165,7 @@ def main(argv=None):
         return 1
 
 if __name__ == '__main__':
+    for _stream in (sys.stdout, sys.stderr):
+        if hasattr(_stream, "reconfigure"):
+            _stream.reconfigure(encoding="utf-8", errors="replace")
     raise SystemExit(main())

@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "hero_id": "grebolius",
+  "as_of_day": 61,
+  "verification": "live",
+  "items": [
+    {
+      "id": "coleira-dragao",
+      "title": "A Coleira do Dragão",
+      "type": "official",
+      "status": "completed",
+      "accepted_day": null,
+      "last_progress_day": 31,
+      "objective": "Entregar a coleira ao Guarda Novato.",
+      "next_step": "Nenhum avanço novo registrado; preservar a conclusão e conferir a cronologia 30/31 se houver log.",
+      "reward": "5.000 EXP e elmo místico conforme ficha anterior.",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 31,
+          "note": "Entrega e conclusão narradas; o Dia 30 já descreve uma entrega, com cronologia ambígua."
+        }
+      ]
+    },
+    {
+      "id": "altruismo",
+      "title": "Altruísmo",
+      "type": "official",
+      "status": "completed",
+      "accepted_day": null,
+      "last_progress_day": 37,
+      "objective": "Doar equipamento excedente na Sala de Doações.",
+      "next_step": "Nenhuma tarefa nova inferida a partir da conclusão.",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 37,
+          "note": "Conclusão da missão relatada."
+        }
+      ]
+    },
+    {
+      "id": "limpando-monstros",
+      "title": "Limpando Monstros",
+      "type": "official",
+      "status": "active",
+      "accepted_day": 36,
+      "last_progress_day": 61,
+      "objective": "Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.",
+      "next_step": "Apresentar ou entregar os chifres do Minotauro e outros espólios colhidos ao Alquimista ou descer a escadaria da sala.",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 36,
+          "note": "Aceite formal narrado."
+        },
+        {
+          "document": "posts.json",
+          "day": 60,
+          "note": "Promessa renovada, sem nova conclusão comprovada."
+        },
+        {
+          "document": "posts.json",
+          "day": 61,
+          "note": "Combate fatal contra novatos zumbis na Sala do Alquimista e obtenção dos chifres do Minotauro."
+        }
+      ]
+    },
+    {
+      "id": "dicas-magicas",
+      "title": "Dicas Mágicas",
+      "type": "official",
+      "status": "active",
+      "accepted_day": 32,
+      "last_progress_day": 32,
+      "objective": "Descobrir o próximo passo informado pelo Mago Aventureiro.",
+      "next_step": "Consultar o NPC e o estado da tarefa; registrar a instrução obtida sem presumir recompensa.",
+      "blocker": "Objetivo de conclusão e progresso atual não documentados.",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 32,
+          "note": "Início formal da tarefa narrado."
+        }
+      ]
+    },
+    {
+      "id": "vinganca-serpente",
+      "title": "Vingança de Sangue: O Algoz do Esgoto",
+      "type": "personal",
+      "status": "deferred",
+      "accepted_day": null,
+      "last_progress_day": 60,
+      "objective": "Preparar a caçada à serpente que matou Grebolius no Dia 11.",
+      "next_step": "Reconhecer riscos, acesso, recursos e retirada antes de decidir pelo confronto.",
+      "blocker": "Sem confirmação de margem de combate ou retorno seguro pelo acesso do Laboratório.",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 11,
+          "note": "Primeira morte e juramento de vingança."
+        },
+        {
+          "document": "posts.json",
+          "day": 60,
+          "note": "Intenção de caçar reafirmada; confronto futuro não executado."
+        }
+      ],
+      "planning_note": "Adiamento de planejamento por preparo não verificado; não representa um recuo novo executado no jogo."
+    },
+    {
+      "id": "convite-pacificador",
+      "title": "Convite do Pacificador",
+      "type": "investigation",
+      "status": "discovered",
+      "accepted_day": null,
+      "last_progress_day": 31,
+      "objective": "Esclarecer as condições do convite registrado.",
+      "next_step": "Perguntar quais serviços estão disponíveis; só registrar aliança ou missão quando houver resposta que as confirme.",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 31,
+          "note": "Convite renovado conforme narrativa."
+        }
+      ]
+    },
+    {
+      "id": "guildas-hostis",
+      "title": "Mistério das Guildas Hostis",
+      "type": "investigation",
+      "status": "discovered",
+      "accepted_day": null,
+      "last_progress_day": 8,
+      "objective": "Entender as restrições de acesso às guildas.",
+      "next_step": "Ler as restrições e consultar NPCs; não presumir que invisibilidade contorna exigência de classe.",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 8,
+          "note": "Barreira na Guilda dos Ladrões registrada."
+        }
+      ]
+    },
+    {
+      "id": "mercenarios-beco",
+      "title": "Mercenários do Beco Escuro",
+      "type": "investigation",
+      "status": "discovered",
+      "accepted_day": null,
+      "last_progress_day": null,
+      "objective": "Investigar possibilidades de interação com os mercenários catalogados.",
+      "next_step": "Observar ou dialogar sem iniciar furto ou combate por hipótese de recompensa.",
+      "evidence": [
+        {
+          "document": "conhecimento.md",
+          "day": 60,
+          "note": "Compêndio reúne contatos encontrados; dia específico não identificado."
+        }
+      ]
+    },
+    {
+      "id": "reino-livre",
+      "title": "Primeiro passo do Reino Livre",
+      "type": "personal",
+      "status": "discovered",
+      "accepted_day": null,
+      "last_progress_day": 50,
+      "objective": "Buscar uma primeira oportunidade concreta ligada ao futuro do povo goblin.",
+      "next_step": "Investigar contatos, abrigo ou recursos que o mundo realmente oferecer; nenhuma fundação ou aliança foi registrada.",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 50,
+          "note": "Aspiração reafirmada; não há reino fundado nos registros."
+        }
+      ]
+    }
+  ]
+}

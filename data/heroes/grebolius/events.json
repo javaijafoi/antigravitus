@@ -390,5 +390,19 @@
         "note": "Incursão nos esgotos, extermínio de morcegos, avanço ao Nível 11, morte para a serpente, ressurreição na Fonte da Vida e repouso na Guilda dos Magos confirmados ao vivo no servidor debomud.org:4000."
       }
     ]
+  },
+  {
+    "id": "auditoria-urbana-midgaard-altar-dia82",
+    "day": 82,
+    "type": "exploration",
+    "summary": "Auditoria urbana e cartográfica completa de Midgaard no Dia 82: despertar no Templo de Midgaard com vitais plenos (67 HP, 170 Mana, 101 MV) e inventário com 15 treinos intactos. Mapeamento de 100% da malha urbana civil e subterrânea: análise dos tomos na Sala de Doações (lenda de animate plant no livro vermelho e anel dos gigantes); visita à Sala de Leitura com Winkan e Losilly; contemplação do Altar de Odin (Hugin, Munin, Gere, Freke) e do legado perene de Antigravitus; ascensão ao Panteão dos Centenários. Descoberta e catalogação do complexo do Javali Roncador (Correio com carteiro, Bar com barris de 330 ouros, Recepção) e Guilda dos Clérigos. Varredura comercial das oficinas (Padaria, Armaduras, Magias, Armazém, Animais, Armas e Guerreiros). Incursão completa pelo submundo: Beco Escuro com o Pranteador e mercenários, Entrada dos Ladrões com caixa bancária e Bar dos Ladrões, Fim do Beco Pobre, Taverna Encardida com Filthy (cospefogo e especialidade) e mendigos, Entrada dos Necromantes com guarda bloqueador de ossos, e Depósito de Lixo com alçapão direto para a Junção Quádrupla dos Esgotos. Catalogação da matriz de autoquests (50+ catalogadas, revelando 4 imediatas: Dicas Mágicas, Novela dos Novatos, Limpando Monstros e Problemas Agrícolas). Presença do Prefeito na Praça do Comércio e Negelok voando em Grifo Real no Templo. Encerramento acordada, descansando sentada (rest) no Templo de Midgaard, com estado salvo.",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 82,
+        "note": "Auditoria de 100% dos setores urbanos e submundo de Midgaard, catalogação de todos os NPCs, menus e matriz de autoquests confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ]
   }
 ]

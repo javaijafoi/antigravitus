@@ -10,11 +10,11 @@
 | :--- | :--- | :--- | :--- |
 | **O Depósito de Lixo** | **N** (Praça Comum), **D** (Esgotos) | Mínimo | Ponto de partida. Rota subterrânea de fuga. |
 | **Os Esgotos de Midgaard (Entrada)** | **U** (Depósito de Lixo), **D** (Fundo) | Médio / Subsolo | Abóbada gotejante e fétida sob o lixo; labirinto subterrâneo. |
-| **A Praça Comum** | **N** (Comércio), **L** (Beco Escuro), **S** (Lixo), **O** (Beco Pobre) | Baixo | Trânsito denso; pranteador e mercenários. |
+| **A Praça Comum** | **N** (Comércio), **L** (Beco Escuro), **S** (Lixo), **O** (Fim do Beco Pobre) | Baixo | Trânsito denso; pranteador e mercenários. |
 | **O Beco Escuro** | **O** (Praça Comum), **S** (Guilda dos Ladrões), **L** (Beco) | Médio / Sombra | Viela sombria repleta de mercenários armados; rota para a guilda dos ladinos. |
 | **A Entrada da Guilda dos Ladrões** | **N** (Beco Escuro), **L** (Bar dos Ladrões) | Sob Análise | Covil dos ladinos; caixa de moedas; sentinela bloqueia o bar a novatos. |
 | **O Bar dos Ladrões** | **O** (Entrada da Guilda) | Restrito | Reduto interno onde mestres renegados comercializam técnicas e golpes. |
-| **O Beco Pobre** | **L** (Praça Comum), **O** (Rua da Muralha) | Baixo / Miséria | Aglomerado de mendigos, palha e cães; rota de ligação para a muralha oeste. |
+| **O Beco Pobre** | **L** (Fim do Beco Pobre), **N** (Guilda dos Necromantes), **O** (Rua da Muralha) | Baixo / Miséria | Aglomerado de mendigos, palha e cães; rota de ligação para a muralha oeste e entrada dos necromantes. |
 | **O Fim do Beco Pobre** | **S** (Taverna Encardida), **L** (Praça Comum), **O** (Beco Pobre) | Baixo / Entulho | Canto imundo de Midgaard defronte à taverna dos marinheiros e contrabandistas. |
 | **A Taverna Encardida** | **N** (Fim do Beco Pobre) | Clandestino / Botequim | Covil dos renegados; Filthy servindo cospefogo e aguardente local; mendigos pedindo esmolas. |
 | **A Entrada da Guilda dos Necromantes** | **S** (Beco Pobre), **O** (Bar dos Necromantes) | Sombrio / Tensão | Aura opressiva de pavor; aventureiro buscando missões; guarda protegido por ossos colossais ("Só necromantes entram aqui"). |
@@ -40,7 +40,10 @@
 | **Dentro do Portão Oeste** | **L** (Rua Principal), **S** (Muralha), **O** (Fora do Portão) | Médio | Duas torres de vigia sobre ponte levadiça, 2 guardas armados, 2 espadas no chão. |
 | **A Praça do Templo** | **N** (Escadaria), **L** (Javali), **S** (Comércio), **O** (Clérigos) | Baixo | Fonte de mármore azul com aura mágica; O Pacificador em vigília; restos de zeladores. |
 | **A Entrada da Guilda dos Clérigos** | **L** (Praça do Templo) | Seguro | Enclave religioso a oeste da Praça do Templo. |
-| **A Entrada do Javali Roncador** | **O** (Praça do Templo) | Baixo / Taverna | Estalagem e bar tradicional a leste da praça. |
+| **A Entrada do Javali Roncador** | **O** (Praça do Templo), **N** (Correio), **L** (Bar do Javali), **U** (Recepção) | Seguro | Estalagem tradicional a leste da praça; vestíbulo de madeira e móveis antigos. |
+| **O Correio de Midgaard** | **S** (Entrada do Javali) | Seguro | Agência postal do reino; carteiro metódico gerenciando correspondência de jogadores. |
+| **O Bar do Javali Roncador** | **O** (Entrada do Javali) | Baixo / Taverna | Bar e taberna popular; taverneiro vendendo especialidades locais, cervejas e barris de cerveja (330 ouros). |
+| **A Recepção da Estalagem** | **D** (Entrada do Javali) | Seguro | Mezanino silencioso; recepcionista gerenciando aluguéis de quartos e salvamento de pertences. |
 | **O Templo de Midgaard** | **N** (Altar), **L** (Doações), **O** (Leitura), **D** (Praça), **U** (Panteão) | **Santuário** | **Ponto Seguro Principal:** Inviolável, caixa de economias, conexão para o cume. |
 | **O Altar do Templo de Midgaard** | **S** (Templo de Midgaard) | Sagrado | Nave norte do templo consagrada aos deuses fundadores de Midgaard. |
 | **A Sala de Doações** | **O** (Templo de Midgaard) | Seguro | Depósito de itens e armaduras deixados por veteranos para novatos. |

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 81,
+  "as_of_day": 82,
   "verification": "live",
   "items": [
     {
@@ -147,10 +147,15 @@
       "type": "official",
       "status": "active",
       "accepted_day": 32,
-      "last_progress_day": 80,
-      "objective": "Adquirir um pergaminho de retorno na Loja de Magias de Midgaard e entregá-lo ao Mago Aventureiro no Bar dos Magos.",
-      "next_step": "Economizar recursos para atingir a meta financeira de dez mil moedas de ouro para comprar o pergaminho de retorno (9.202 moedas) na Loja de Magias e entregá-lo ao mentor.",
+      "last_progress_day": 81,
+      "objective": "Entregar um pergaminho de retorno ao Mago Aventureiro no Bar dos Magos (item já presente na mochila desde o Dia 28).",
+      "next_step": "Reativar a missão no Mago Aventureiro (Bar dos Magos) devido ao cancelamento por morte no Dia 81 e em seguida entregá-lo com 'give pergaminho mago', pois o pergaminho de retorno já está na mochila desde o Dia 28 (sem necessidade de juntar 10.000 moedas para compra).",
       "evidence": [
+        {
+          "document": "posts.json",
+          "day": 28,
+          "note": "Aquisição do pergaminho de retorno na Loja de Magias, mantido guardado na mochila."
+        },
         {
           "document": "posts.json",
           "day": 32,
@@ -159,7 +164,12 @@
         {
           "document": "posts.json",
           "day": 80,
-          "note": "Interação com o Mago Aventureiro no Bar dos Magos, lição e demonstração de meditação (+5.527 EXP) e recebimento da instrução formal de entregar um pergaminho de retorno."
+          "note": "Interação com o Mago Aventureiro no Bar dos Magos, lição e demonstração de meditação (+5.527 EXP) e instrução formal de entrega do pergaminho de retorno."
+        },
+        {
+          "document": "posts.json",
+          "day": 81,
+          "note": "Morte na serpente dos esgotos com cancelamento das autoquests ativas; posse do pergaminho de retorno confirmada viva no inventário após ressurreição."
         }
       ]
     },
@@ -169,9 +179,9 @@
       "type": "personal",
       "status": "deferred",
       "accepted_day": null,
-      "last_progress_day": 81,
+      "last_progress_day": 82,
       "objective": "Preparar a caçada à serpente que matou Grebolius no Dia 11.",
-      "next_step": "A serpente revelou-se letal mais uma vez com mordidas brutais de até 22 de dano; nova tentativa exigirá feitiços superiores e equipamentos de alto nível (metas de 5k e 10k de ouro).",
+      "next_step": "Reconhecimento urbano e submundo concluídos no Dia 82. O plano tático prioriza o avanço de poder pelas 4 autoquests do Grau 11 e o combate à distância com Projéteis Mágicos e manto de invisibilidade, descartando corpo a corpo e usando wimpy 40 para fuga automática.",
       "blocker": "Sem confirmação de margem de combate ou retorno seguro pelo acesso do Laboratório.",
       "evidence": [
         {
@@ -188,6 +198,11 @@
           "document": "posts.json",
           "day": 81,
           "note": "Confronto fatal em Uma Intersecção Lamacenta; a serpente sobrepujou as defesas e causou a segunda morte de Grebolius, seguida de ressurreição na Fonte da Vida."
+        },
+        {
+          "document": "posts.json",
+          "day": 82,
+          "note": "Formulação da doutrina tática de combate à distância e descoberta do alçapão subterrâneo do lixão."
         }
       ],
       "planning_note": "Adiamento de planejamento por preparo não verificado; não representa um recuo novo executado no jogo."
@@ -257,6 +272,40 @@
           "document": "posts.json",
           "day": 50,
           "note": "Aspiração reafirmada; não há reino fundado nos registros."
+        }
+      ]
+    },
+    {
+      "id": "novela-dos-novatos",
+      "title": "Novela dos Novatos",
+      "type": "official",
+      "status": "discovered",
+      "accepted_day": null,
+      "last_progress_day": 82,
+      "objective": "Aventura automática para recém-chegados (Níveis 1-30, encarnações 1-3, todas as classes e raças).",
+      "next_step": "Localizar o NPC iniciador em Midgaard e aceitar formalmente com respostas afirmativas.",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 82,
+          "note": "Descoberta via comando nativo autoquest todas no servidor debomud.org:4000."
+        }
+      ]
+    },
+    {
+      "id": "problemas-agricolas",
+      "title": "Problemas Agrícolas",
+      "type": "official",
+      "status": "discovered",
+      "accepted_day": null,
+      "last_progress_day": 82,
+      "objective": "Aventura automática rural (Níveis 10-40, encarnações 1-4, exceto necromantes, todas as raças).",
+      "next_step": "Investigar as áreas rurais ou portões de Midgaard para encontrar o fazendeiro requisitante.",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 82,
+          "note": "Descoberta via comando nativo autoquest todas no servidor debomud.org:4000."
         }
       ]
     }

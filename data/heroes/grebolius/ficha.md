@@ -1,16 +1,17 @@
 # 🧌 Ficha Atual de Grebolius (Último Estado Registrado)
 
-> Referência: Dia 81. Estado verificado em sessão; consultar a origem registrada.
+> Referência: Dia 82. Estado verificado em sessão; consultar a origem registrada.
 > Este documento reúne o último estado e as missões registrados; as incertezas aparecem ao final.
 
 ## ✦ Identificação e Registro
 * **Nome de Registro no MUD:** Grebolius
 * **Título Honorífico:** o Aprendiz de Mago
-* **Raça / Aparência Real:** Mulher goblin; aventureira sem véu
+* **Raça / Aparência Narrativa:** Mulher goblin; aventureira sem véu
+* **Raça Mecânica no MUD:** Elfo
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **11**
 * **Alinhamento Moral:** 222 (Bom)
-* **Localização Atual:** O Laboratório dos Magos (último registro: Dia 81)
+* **Localização Atual:** O Templo de Midgaard (último registro: Dia 82)
 * **Acampamento Registrado:** O Laboratório dos Magos
 * **Santuário de Referência:** O Panteão dos Centenários
 
@@ -49,8 +50,12 @@ Classe de armadura 16 verificada ao vivo no Nível 11 com equipamento completo.
   * Próximo passo: Nenhuma tarefa nova inferida a partir da conclusão.
 * **Limpando Monstros — Ativa:** Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.
   * Próximo passo: A praga dos insetos rastejantes foi erradicada em Uma Pequena Sala e comunicada ao Alquimista; manter patrulha ativa nas catacumbas para acumular recursos e novos conhecimentos arcanos.
-* **Dicas Mágicas — Ativa:** Adquirir um pergaminho de retorno na Loja de Magias de Midgaard e entregá-lo ao Mago Aventureiro no Bar dos Magos.
-  * Próximo passo: Economizar recursos para atingir a meta financeira de dez mil moedas de ouro para comprar o pergaminho de retorno (9.202 moedas) na Loja de Magias e entregá-lo ao mentor.
+* **Dicas Mágicas — Ativa:** Entregar um pergaminho de retorno ao Mago Aventureiro no Bar dos Magos (item já presente na mochila desde o Dia 28).
+  * Próximo passo: Reativar a missão no Mago Aventureiro (Bar dos Magos) devido ao cancelamento por morte no Dia 81 e em seguida entregá-lo com 'give pergaminho mago', pois o pergaminho de retorno já está na mochila desde o Dia 28 (sem necessidade de juntar 10.000 moedas para compra).
+* **Novela dos Novatos — Descoberta:** Aventura automática para recém-chegados (Níveis 1-30, encarnações 1-3, todas as classes e raças).
+  * Próximo passo: Localizar o NPC iniciador em Midgaard e aceitar formalmente com respostas afirmativas.
+* **Problemas Agrícolas — Descoberta:** Aventura automática rural (Níveis 10-40, encarnações 1-4, exceto necromantes, todas as raças).
+  * Próximo passo: Investigar as áreas rurais ou portões de Midgaard para encontrar o fazendeiro requisitante.
 
 Objetivos pessoais e investigações ficam separados das autoquests no catálogo de missões.
 
@@ -80,29 +85,31 @@ Equipamento conforme os últimos documentos disponíveis; conferir no próximo a
 
 ## ✦ Inventário e Suprimentos
 Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
-* `uma brilhante veste de novato` (x2) — Confirmado ao vivo no inventário no Dia 81 (2 reservas após vestir a terceira)
-* `um brilhante punhal de novato` (x4) — Confirmado ao vivo no inventário no Dia 81 (4 reservas após empunhar o quinto)
-* `um pão recheado` (x3) — Comprado na Padaria de Midgaard no Dia 81; 2 consumidos durante a expedição no esgoto
-* `um cantil` (x1) — Confirmado ao vivo no inventário no Dia 81 (abastecido na fonte azul)
-* `uma brilhante espada de novato` (x1) — Confirmado ao vivo no inventário no Dia 81
-* `uma poção amarela de detectar invisibilidade` (x1) — Confirmado ao vivo no inventário no Dia 81
-* `um pergaminho de retorno` (x1) — Confirmado ao vivo no inventário no Dia 81
-* `uma mochila` (x1) — Confirmado ao vivo no inventário no Dia 81
-* `um anel arcano (+2E)` (x1) — Confirmado ao vivo no inventário no Dia 81
+* `um cantil` (x1) — Confirmado ao vivo no inventário no Dia 82
+* `uma tocha` (x1) — Confirmado ao vivo no inventário no Dia 82
+* `uma brilhante veste de novato` (x2) — Confirmado ao vivo no inventário no Dia 82 (2 reservas após vestir a terceira)
+* `um brilhante punhal de novato` (x4) — Confirmado ao vivo no inventário no Dia 82 (4 reservas após empunhar o quinto)
+* `uma brilhante espada de novato` (x1) — Confirmado ao vivo no inventário no Dia 82
+* `uma poção amarela de detectar invisibilidade` (x1) — Confirmado ao vivo no inventário no Dia 82
+* `um pergaminho de retorno` (x1) — Confirmado ao vivo no inventário no Dia 82
+* `uma mochila` (x1) — Confirmado ao vivo no inventário no Dia 82
+* `um anel arcano (+2E)` (x1) — Confirmado ao vivo no inventário no Dia 82
 
 ### Pendências de inventário
 
 ## ✦ Condições Registradas
-* Nível 11 conquistado com vitais ampliados (67 HP, 170 Mana, 101 MV).
+* Nível 11 conquistado com vitais plenos (67 HP, 170 Mana, 101 MV).
 * 15 sessões de treino acumuladas na Guilda dos Magos.
-* Sobrevivência e retorno milagroso pela Fonte da Vida com inventário e ouro intactos.
+* Auditoria urbana de 100% de Midgaard concluída e validada ao vivo no servidor.
+* Descansando acordada e sentada (rest) no Templo de Midgaard sob a guarda do Pacificador e relíquias sagradas.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
-**Juntar recursos para adquirir o pergaminho de retorno e trocar de equipamento**
-Economizar recursos para atingir o marco inicial de cinco mil moedas e a meta de dez mil moedas de ouro para comprar o pergaminho de retorno (9.202 moedas) e novas peças de proteção.
+**Iniciar a progressão pelas 4 autoquests do Grau 11 e avançar rumo à serpente**
+Ativar Dicas Mágicas no Bar dos Magos, e em paralelo progredir em Limpando Monstros, Novela dos Novatos e Problemas Agrícolas para acumulação de EXP e ouro, preparando o abate da serpente via superioridade arcana à distância.
 * O anel arcano (+2E) segue reservado para círculos superiores de poder.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessão ao vivo em tempo real no servidor debomud.org:4000 (Dia 81); incursão profunda nos Esgotos de Midgaard sem dormir, queima ativa de mana e estamina (MV) com alimentação e pausas táticas em campo, eliminação de dois pequenos morcegos (+17.368 EXP total), avanço triunfal ao Nível 11 (67 HP, 170 Mana, 101 MV), combate letal contra a serpente dos esgotos, passagem pelo Paraíso e Caminho no Vazio, ressurreição milagrosa na Fonte da Vida com inventário e patrimônio intactos (2.642 moedas), reequipamento completo (AC 16) e conferência de treinamento na Guilda dos Magos com 15 sessões acumuladas, repousando no Laboratório dos Magos..
+Fonte do estado: Sessão ao vivo em tempo real no servidor debomud.org:4000 (Dia 82); auditoria urbana completa de 100% dos setores civis e submundo de Midgaard sem dormir (apenas pausas táticas sentado com rest para fôlego). Verificação do Altar de Odin, Panteão dos Centenários, Sala de Leitura com Winkan e Losilly, Sala de Doações, Complexo do Javali Roncador (Correio, Bar com barril e Recepção), Guildas (Clérigos, Magos, Guerreiros, Ladrões e Necromantes), todas as lojas da Rua Principal, Submundo (Beco Escuro, Pranteador, Bar dos Ladrões, Fim do Beco Pobre, Taverna Encardida com Filthy, Beco Pobre e Depósito de Lixo com alçapão subterrâneo para os esgotos). Descoberta da Matriz de Autoquests (50+ catalogadas, 4 imediatas: Dicas Mágicas, Novela dos Novatos, Limpando Monstros e Problemas Agrícolas). Presença do Prefeito na Praça e Negelok voando em Grifo Real no Templo. Repousando acordada e sentada (rest) no Templo de Midgaard com vitais plenos (67 HP, 170 Mana, 101 MV) e 15 treinos em estoque..
 * O anel arcano (+2E) segue exigindo nível ou condição mágica superior.
 * Novos feitiços superiores dependem de livros arcanos ou mestres especializados.
+* O renascimento desequipa todas as peças para a mochila; o protocolo pós-morte exige `wear all` imediato para restaurar os 67 HP máximos concedidos pela veste e a AC 16.

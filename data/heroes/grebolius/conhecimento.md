@@ -204,3 +204,45 @@ Para evitar sobrecarga de inventário e otimizar tempo e recursos, **fica abolid
   - **Sinergia Tática (Batedor Precede Dungeon):** Como o Modo Dungeon se fundamenta em eficiência e mitigação de risco, **o Modo Batedor deve sempre preceder o Modo Dungeon** ao explorar novas alas ou após mudanças de cenário. Primeiro mapeia-se as salas, saídas e predadores em segurança invisível; depois, executa-se o Modo Dungeon com o melhor plano de rota e combate.
 
 
+
+
+---
+
+## 9. Descobertas Urbanas e Sabedoria Consolidada (Auditoria do Dia 82)
+* **A Lenda Druídica do Livro Vermelho (Sala de Doações):**
+  - O livro vermelho (+29L) preserva o registro da lenda de um druida solitário cercado por um exército orc que invocou a vida nas árvores.
+  - A magia *'animate plant'* transforma árvores em **Ent Ancião** quando conjurada em florestas, ou em um **Ent Broto** quando lançada em qualquer outro terreno.
+* **O Anel Dourado e as Relíquias dos Gigantes:**
+  - O grande anel arcano que emana energia dourada (+2E) traz entalhada a imagem de um ser colossal que aparenta ser um gigante destruindo carros de guerra.
+* **O Barril de Cerveja do Javali Roncador (Solução de Carga Hídrica):**
+  - Confirmado à venda no Bar do Javali Roncador por **330 moedas de ouro**. É o maior reservatório de líquido disponível no comércio civil de Midgaard.
+* **A Estátua de Odin e o Legado Eterno de Antigravitus:**
+  - A estátua colossal no Altar do Templo de Midgaard retrata Odin em seu trono com longos cabelos acinzentados, olhar severo, os corvos **Hugin e Munin** pousados no topo do trono e os lobos **Gere e Freke** descansando a seus pés.
+  - O tomo físico depositado no Dia 50 foi consumido pelo ciclo natural de faxina do servidor; contudo, a essência do juramento de Antigravitus permanece viva nos registros imperecíveis do projeto.
+* **A Doutrina Goblin de Enfrentamento da Serpente:**
+  - A serpente dos esgotos possui dano massivo incompatível com o combate corpo a corpo de magos.
+  - O plano de vitória de Grebolius descarta armaduras pesadas e apoia-se em:
+    1. Camuflagem prévia com `invisibility` para aproximação e posicionamento sem aggro imediato;
+    2. Ataque à distância com rajadas contínuas de Projéteis Mágicos (*magic missile*);
+    3. Fuga mecânica preventiva configurada em `wimpy 40` (Modo Batedor);
+    4. Acumulação metódica de moedas de ouro em masmorras seguras para adquirir o Pergaminho de Retorno (9.202 moedas) e artefatos de identificação antes de ingressar no covil subterrâneo.
+
+---
+
+## 10. Topologia do Submundo e Matriz Geral de Autoquests (Auditoria Completa do Dia 82)
+* **Acesso Subterrâneo Alternativo (Alçapão do Depósito de Lixo):**
+  - A saída inferior (`d`) de `deposito_lixo` desce diretamente para *A Junção Quádrupla Abaixo do Depósito de Lixo* nos esgotos de Midgaard.
+  - Esta passagem oferece uma alternativa tática para infiltração e resgate subterrâneo sem cruzar o buraco estreito do Laboratório dos Magos.
+* **O Submundo Clandestino de Filthy e a Taverna Encardida:**
+  - Situada ao sul do Fim do Beco Pobre, a Taverna Encardida opera à margem da lei civil. Filthy comercializa aguardente pura (*cospefogo* por 50 ouros e *especialidade local* por 20 ouros).
+  - Ponto de convivência com mendigos desprovidos de moedas e marinheiros forasteiros.
+* **O Bloqueio Necromântico:**
+  - A Entrada da Guilda dos Necromantes liga-se ao norte do Beco Pobre. O guarda necromante protegido por barreira colossal de ossos barra terminantemente o avanço a oeste em direção ao Bar dos Necromantes ("Só necromantes entram aqui"), humilhando qualquer conjurador que não professe a magia das trevas.
+* **Matriz de Autoquests do Reino (`autoquest todas` / `autoquest listar`):**
+  - Mapeado o funcionamento do sistema nativo de missões autônomas. As autoquests exigem respostas diretas (`sim` / `não`) ao interagir com mestres de aventura.
+  - Para o perfil de Grebolius (Grau 11, Mago Elfo, 1ª Encarnação, Alinhamento Bom), há 4 autoquests abertas e perfeitamente adequadas para ganho de poder e Pontos de Aventura:
+    1. **Dicas Mágicas (Níveis 1-29, apenas Magos):** Aprendizado com o Mago Aventureiro no Bar dos Magos.
+    2. **Novela dos Novatos (Níveis 1-30, todas as classes):** Cadeia narrativa de suporte aos recém-chegados.
+    3. **Limpando Monstros (Níveis 1-30, todas as classes):** Eliminação de pragas e entrega de materiais ao Alquimista.
+    4. **Problemas Agrícolas (Níveis 10-40, exceto Necromantes):** Auxílio nas cercanias rurais de Midgaard.
+  - Essas 4 missões constituem o roteiro prioritário para subir de nível e acumular tesouros antes de qualquer confronto letal contra a grande serpente.

@@ -2,8 +2,8 @@
   "hero_id": "grebolius",
   "hero_name": "Grebolius",
   "sanctuary_id": "panteao_centenarios",
-  "last_updated_cycle": "Ciclo IX (Dia 81; incursao nos esgotos e retorno ao laboratorio)",
-  "total_rooms": 73,
+  "last_updated_cycle": "Ciclo IX (Dia 82; auditoria urbana total e mapeamento de Midgaard)",
+  "total_rooms": 80,
   "layers": [
     {
       "id": "superficie",
@@ -93,7 +93,8 @@
         "d": "praca_templo",
         "u": "panteao_centenarios",
         "n": "altar_templo",
-        "l": "sala_doacoes"
+        "l": "sala_doacoes",
+        "o": "sala_leitura"
       },
       "npcs": [
         "Zelador"
@@ -134,7 +135,9 @@
       },
       "exits": {
         "s": "praca_comercio",
-        "u": "templo_midgaard"
+        "u": "templo_midgaard",
+        "l": "entrada_javali",
+        "o": "guilda_clerigos_entrada"
       },
       "npcs": [
         "O Pacificador"
@@ -394,7 +397,8 @@
       },
       "exits": {
         "n": "portao_oeste",
-        "s": "ponte_rio"
+        "s": "ponte_rio",
+        "l": "beco_pobre"
       },
       "npcs": [
         "Sentinelas"
@@ -611,7 +615,7 @@
         "n": "praca_comercio",
         "s": "deposito_lixo",
         "l": "beco_escuro",
-        "o": "beco_pobre"
+        "o": "fim_beco_pobre"
       },
       "npcs": [
         "Pranteador",
@@ -640,7 +644,7 @@
         "Camponeses",
         "Cães no lixo"
       ],
-      "notes": "Ponto de renascimento e fuga. Alçapão subterrâneo para os esgotos.",
+      "notes": "Depósito de lixo fétido ao sul da Praça Comum. Saída baixo (d) conecta diretamente à Junção Quádrupla Abaixo do Depósito de Lixo nos esgotos.",
       "discovered_in": "Ciclo I (Dia 1)"
     },
     {
@@ -660,7 +664,9 @@
         "s": "guilda_ladroes_entrada"
       },
       "npcs": [
-        "Mercenários Armados"
+        "Pranteador da cidade",
+        "Mercenários",
+        "Cães no lixo"
       ],
       "notes": "Viela sombria com mercenários; rota para o covil dos ladinos.",
       "discovered_in": "Ciclo I (Dia 2)"
@@ -682,7 +688,8 @@
         "l": "bar_ladroes"
       },
       "npcs": [
-        "Ladrões Veteranos"
+        "Guarda da cidade",
+        "Cães no lixo"
       ],
       "notes": "Covil dos ladinos; caixa de moedas; sentinela bloqueia o bar.",
       "discovered_in": "Ciclo I (Dia 2)"
@@ -721,8 +728,9 @@
         "y": 1350
       },
       "exits": {
-        "l": "praca_comum",
-        "o": "fim_beco_pobre"
+        "l": "fim_beco_pobre",
+        "n": "guilda_necromantes",
+        "o": "rua_muralha"
       },
       "npcs": [
         "Mendigos",
@@ -744,9 +752,9 @@
         "y": 1350
       },
       "exits": {
-        "l": "beco_pobre",
+        "l": "praca_comum",
         "s": "taverna_encardida",
-        "o": "guilda_necromantes"
+        "o": "beco_pobre"
       },
       "npcs": [
         "Pedintes"
@@ -770,10 +778,10 @@
         "n": "fim_beco_pobre"
       },
       "npcs": [
-        "Filthy (Taverneiro)",
-        "Marinheiros Renegados"
+        "Filthy",
+        "Mendigos"
       ],
-      "notes": "Covil dos fora-da-lei; Filthy vende cospefogo e aguardente.",
+      "notes": "Taverna suja e fétida. Filthy vende especialidade local (20 ouros) e cospefogo (50 ouros).",
       "discovered_in": "Ciclo I (Dia 2)"
     },
     {
@@ -789,12 +797,13 @@
         "y": 1350
       },
       "exits": {
-        "l": "fim_beco_pobre"
+        "s": "beco_pobre",
+        "o": "bar_necromantes"
       },
       "npcs": [
-        "Guarda de Ossos"
+        "Guarda Necromante (com barreira de ossos)"
       ],
-      "notes": "Aura opressiva; ossos colossais bloqueiam entrada: Só necromantes entram.",
+      "notes": "Entrada da guilda dos necromantes. Guarda protegido por enormes ossos bloqueia passagem a oeste para o Bar dos Necromantes.",
       "discovered_in": "Ciclo I (Dia 4)"
     },
     {
@@ -1669,11 +1678,164 @@
         "document": "posts.json",
         "day": 61
       }
+    },
+    {
+      "id": "sala_leitura",
+      "name": "A Sala de Leitura",
+      "layer": "superficie",
+      "zone": "Monte Sagrado & Templo",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "📚",
+      "coords": {
+        "x": 340,
+        "y": 250
+      },
+      "exits": {
+        "l": "templo_midgaard"
+      },
+      "npcs": [
+        "Winkan, o Engenheiro do Caos",
+        "Losilly, a Urdidura"
+      ],
+      "notes": "Reduto pacífico e silencioso com mesas de estudo e quadro de recados. Local onde Antigravitus costurou suas crônicas.",
+      "discovered_in": "Ciclo IX (Dia 82)"
+    },
+    {
+      "id": "entrada_javali",
+      "name": "A Entrada da Estalagem Javali Roncador",
+      "layer": "superficie",
+      "zone": "Midgaard Urbana",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🐗",
+      "coords": {
+        "x": 860,
+        "y": 410
+      },
+      "exits": {
+        "o": "praca_templo",
+        "n": "correio_midgaard",
+        "l": "bar_javali",
+        "u": "recepcao_javali"
+      },
+      "npcs": [
+        "Zelador",
+        "O Pacificador"
+      ],
+      "notes": "Vestíbulo de madeira rústica e móveis antigos. Dá acesso ao correio, bar e recepção da estalagem.",
+      "discovered_in": "Ciclo IX (Dia 82)"
+    },
+    {
+      "id": "correio_midgaard",
+      "name": "O Correio de Midgaard",
+      "layer": "superficie",
+      "zone": "Midgaard Urbana",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "✉️",
+      "coords": {
+        "x": 860,
+        "y": 280
+      },
+      "exits": {
+        "s": "entrada_javali"
+      },
+      "npcs": [
+        "O Carteiro de Midgaard"
+      ],
+      "notes": "Agência postal com escaninhos de madeira e correspondência do reino. Carteiro de uniforme empoeirado.",
+      "discovered_in": "Ciclo IX (Dia 82)"
+    },
+    {
+      "id": "bar_javali",
+      "name": "O Bar do Javali Roncador",
+      "layer": "superficie",
+      "zone": "Midgaard Urbana",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "🍺",
+      "coords": {
+        "x": 1080,
+        "y": 410
+      },
+      "exits": {
+        "o": "entrada_javali"
+      },
+      "npcs": [
+        "Taverneiro do Javali"
+      ],
+      "notes": "Taverna tradicional com bebidas locais, cerveja ale, cospefogo e barris de cerveja por 330 ouros.",
+      "discovered_in": "Ciclo IX (Dia 82)"
+    },
+    {
+      "id": "recepcao_javali",
+      "name": "A Recepção da Estalagem",
+      "layer": "superficie",
+      "zone": "Midgaard Urbana",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🛎️",
+      "coords": {
+        "x": 860,
+        "y": 500
+      },
+      "exits": {
+        "d": "entrada_javali"
+      },
+      "npcs": [
+        "Recepcionista da Estalagem"
+      ],
+      "notes": "Mezanino de hospedagem onde aventureiros sem santuário alugam leitos e salvam seus pertences.",
+      "discovered_in": "Ciclo IX (Dia 82)"
+    },
+    {
+      "id": "guilda_clerigos_entrada",
+      "name": "A Entrada da Guilda dos Clérigos",
+      "layer": "superficie",
+      "zone": "Monte Sagrado & Templo",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🕊️",
+      "coords": {
+        "x": 340,
+        "y": 410
+      },
+      "exits": {
+        "l": "praca_templo"
+      },
+      "npcs": [
+        "Clérigo Guardião",
+        "Sentinela da Guilda"
+      ],
+      "notes": "Portal de alabastro com aroma de mirra. Guardião de cota de malha prateada vigia o templo sacerdotal.",
+      "discovered_in": "Ciclo IX (Dia 82)"
+    },
+    {
+      "id": "bar_necromantes",
+      "name": "O Bar dos Necromantes",
+      "layer": "superficie",
+      "zone": "Midgaard Urbana",
+      "risk": "Alto",
+      "risk_code": "high",
+      "icon": "💀",
+      "coords": {
+        "x": 250,
+        "y": 1480
+      },
+      "exits": {
+        "l": "guilda_necromantes"
+      },
+      "npcs": [
+        "Necromantes"
+      ],
+      "notes": "Bar interno restrito da Guilda dos Necromantes a oeste da entrada. Entrada bloqueada para não-necromantes pelo guarda com barreira de ossos.",
+      "discovered_in": "Ciclo 9 (Dia 82)"
     }
   ],
   "last_updated_day": 81,
   "verification": "live",
-  "current_location_id": "laboratorio_magos",
+  "current_location_id": "templo_midgaard",
   "camp_id": "laboratorio_magos",
   "reconciliation_notes": [
     "Posições gráficas são esquemáticas, não distâncias do mundo.",
