@@ -160,5 +160,17 @@ A Força 10 e a carga registrada pedem atenção a peso e movimento; o custo exa
 * **Economia de Combate (XP vs. Ouro):**
   - Mobs selvagens de esgoto (ratos, morcegos, larvas) dropam **zero moedas de ouro**, embora morcegos forneçam picos expressivos de experiência (6.000 a 10.000 EXP cada).
   - A acumulação de riqueza para as metas de 5.000 e 10.000 moedas de ouro deve focar nos humanoides das catacumbas: **Novatos Zumbis** (30-35 ouros), **Monstros Novatos** (20 ouros + punhais) e o **Grande Minotauro** (95 ouros + chifres e pele avaliados em 200 ouros).
+* **Mecânica de Armadura e Invisibilidade (Duração e Quebra):**
+  - **`armor`**: Eleva a Classe de Armadura (+25 na AC). Custo ~21 Mana. Duração de ~24 ticks de MUD (~25 a 30 minutos em tempo real). Ao expirar, o servidor envia: *"Você se sente menos protegido."*
+  - **`invisibility`**: Impede que criaturas comuns vejam a heroína, anulando agressividade (*aggro*) automática. Custo ~18 Mana. Duração de ~24 ticks. Ao expirar, avisa: *"Você se torna visível novamente."*
+  - **Quebra da Invisibilidade**: Quebra imediatamente ao desferir qualquer golpe ou magia ofensiva. **NÃO quebra ao caminhar, explorar ou olhar salas**. Predadores com visão arcana (*detect invisibility*) ignoram a camuflagem.
+* **Dinâmica de Gasto e Recuperação de Movimento (MV) e Mana:**
+  - Gasto: 1 MV em piso urbano/masmorra de pedra; 2 a 4+ MV em lama, esgotos ou água. Com 101 MV no Grau 11, Grebolius tem autonomia de 40 a 90 salas contínuas.
+  - Recuperação rápida por sono: `sleep` multiplica a regeneração em 3x a 4x em relação a ficar em pé. Em 3 a 4 ticks dormindo (~3 a 5 min reais), restaura 100% de MV (0 a 101) e toda a Mana.
+  - Fator limitante: Fome e sede anulam quase totalmente a recuperação natural. Para dormir e curar rápido, a personagem precisa estar alimentada e saciada.
+* **Provisões e Recipientes de Líquido (Investigação de Cantil Maior):**
+  - Ração ideal: **Pão Recheado da Padaria** (apenas 6 moedas de ouro, peso desprezível). 6 a 8 pães garantem autonomia para múltiplas paradas de sono em campo.
+  - Recipientes de Líquido: O Armazém de Midgaard **NÃO vende odres maiores nem barris portáteis** (tentativa documentada no Dia 51 retornou que o comerciante não tem o item em estoque).
+  - A solução viável e comprovada para ampliar a autonomia de água em campo é carregar **um segundo cantil** (ou garrafas compradas em tavernas e abastecidas na Fonte Azul: `fill garrafa fonte`), dobrando os goles disponíveis sem depender de recipientes exóticos inexistentes.
 
 

@@ -31,20 +31,27 @@ Desbravar novas rotas ou áreas desconhecidas deve estar fundamentado em um dest
 - **Dias com final 9 (9, 19, 29, 39, ...): Reflexão Pessoal e Existencial.** O dia encerra um ciclo decenal e traz na crônica a reflexão psicológica/existencial da heroína, estritamente sem jargão de regras e sem números de ficha (apenas moedas de ouro).
 
 ### Gasto Ativo e Aproveitamento da Estamina (MV)
-Superar roteiros curtos e estáticos. A estamina alta (95 MV) é a energia da jornada:
-- **Dias ativos e proveitosos:** Explorar, patrulhar, caçar e mapear gastando a estamina de forma produtiva ao longo de dezenas de passos (40 a 70 passos), em vez de encerrar a sessão após breves caminhadas de 5 ou 10 passos.
-- **Avançar enquanto MV > 25-30:** A aventureira patrulha galerias, avança em corredores ou viaja para reabastecer provisões e buscar pistas enquanto tiver estamina.
-- **Abate de mob não aborta o dia:** Eliminar um inimigo ou cumprir uma etapa de missão intermediária não encerra a jornada prematuramente se ainda houver fôlego; a exploração e as tarefas continuam.
-- **Pausa de Recuperação em Campo (HP/Mana):** Desgaste em combate com queda de HP (< 35) ou Mana (< 40) não encerra a expedição nem força o regresso para casa. A aventureira realiza uma pausa tática (`rest` / sentar e vigiar) em sala segura por alguns ticks para recompor vida e mana antes de prosseguir.
+Superar roteiros curtos e estáticos. A estamina alta (101 MV no Grau 11) é o motor da exploração:
+- **Dias ativos e proveitosos:** Explorar, patrulhar, caçar e mapear gastando a estamina de forma produtiva ao longo de dezenas de passos (40 a 90 passos), em vez de encerrar a sessão após breves caminhadas.
+- **Incursões de Mapeamento com Batedor Furtivo (Stealth Scout):**
+  - Descarregar peso morto na base (armazenar punhais/vestes excedentes para aliviar Força 10).
+  - Levar carga alimentar eficiente: 6 a 8 pães recheados da padaria (leves e baratos) + cantil(is) cheios de água.
+  - Ativar `armor` e `invisibility` antes da marcha. A invisibilidade não quebra ao andar e previne aggro de mobs comuns.
+  - Andar e mapear sala a sala até a margem de segurança de estamina (`MV ~ 15-20`).
+- **Recuperação Eficiente em Campo (Sono vs. Fome):**
+  - Para restaurar 100% de MV e Mana sem voltar para casa: encontrar uma sala vazia/segura (sem mobs agressivos nem fluxo de patrulha, checada com `scan` e `look`).
+  - Comer pão e beber água para manter o estômago saciado (fome e sede travam a regeneração).
+  - Renovar `armor` e `invisibility` antes de deitar se a duração (~24 ticks) estiver acabando.
+  - Executar `sleep` por 3 a 4 ticks (~3 a 5 min reais) para recarregar todos os vitais (0 a 101 MV e 170 Mana), despertar (`wake`), levantar (`stand`) e retomar a marcha.
 - **Retorno e encerramento seguro somente se:**
-  1. A estamina atingir a margem de retorno seguro (`MV <= 25-30`), exaurindo o fôlego útil do dia.
+  1. A estamina atingir a margem de retorno seguro e não houver abrigo viável para dormir em campo.
   2. Impossibilidade de recuperação em campo (emboscada contínua, dano persistente ou ausência de abrigo seguro).
   3. Mochila saturada de espólios de valor que exijam guardar/vender.
   4. Anomalia hostil grave, bloqueio ou perigo mortal iminente.
 
 ### Protocolo Tático de Exploração e Engajamento (Anti-Morte)
 - **Reconhecimento prévio:** Em áreas perigosas ou labirintos fechados (como esgotos), espiar saídas com `look <direção>` (`look n`, `look s`, `look e`, `look w`) e usar `scan` para mapear salas vizinhas antes do avanço.
-- **Invisibilidade de batedor:** Usar `invisibility` para caminhar por zonas de predadores sem disparar aggro automático, permitindo avaliar a sala em segurança.
+- **Invisibilidade de batedor:** Usar `invisibility` para caminhar por zonas de predadores sem disparar aggro automático, permitindo avaliar a sala em segurança. Lembrar que a invisibilidade quebra no primeiro golpe ou magia agressiva.
 - **Avaliação de risco obrigatória (`consider <alvo>`):** Proibido atacar mobs desconhecidos sem rodar `consider <alvo>`. Se houver alerta de massacre ou alto risco, abortar o ataque.
 - **Recuo imediato:** A maioria dos predadores não ataca instantaneamente na entrada da sala. Ao avistar mob perigoso sem estar engajado, dar o passo de volta imediatamente (ex.: `s`). Se atacado, acionar `flee` imediatamente.
 
