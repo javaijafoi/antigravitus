@@ -78,33 +78,33 @@ document.addEventListener("DOMContentLoaded", async () => {
     {
       id: "grebolius",
       name: "Grebolius",
-      title: "A Ladra que Será Soberana",
+      title: "A Ladra e Soberana dos Goblins",
       rune: "🧌",
       avatar: "🗡️",
-      race_class: "Goblin Ladra (Passa por Homem)",
-      role: "Fundadora do Futuro Reino Goblin (O Ápice do Poder)",
+      race_class: "Mulher Goblin (Maga / Ladra)",
+      role: "Fundadora do Futuro Reino Goblin • Aventureira Sem Véu",
       alignment: "Pragmática / Focada em Velocidade",
-      quote: "“Mulher goblin precisa esconder o rosto e lutar pelo dobro para ser ouvida. Meu destino é o ápice do poder supremo, rápido e sem fraqueza.”",
-      subtitle: "Diário de ascensão implacável. Mulher goblin fingindo ser homem para conquistar respeito, desbravar cada recanto e libertar seu povo.",
+      quote: "“Chega de me esconder sob trapos de novato. Vou trocar este equipamento, andar de cabeça erguida e fazer Midgaard conhecer a verdadeira força de uma mulher goblin.”",
+      subtitle: "Diário de uma aventureira goblin sem medo. Deixando os disfarces para trás para desbravar mistérios, cumprir missões e forjar o Reino Livre.",
       vigilia: "Meta: O Ápice da Força • Ritmo: Velocidade Máxima",
       server: "debomud.org:4000",
       folder: "data/heroes/grebolius",
       questions: {
         q1: "Alcançar o ápice do poder dos grandes mestres o mais rápido possível e fundar um Reino Livre para os goblins, pondo fim à opressão histórica através de uma força inquestionável.",
-        q2: "Ter sua identidade feminina descoberta antes da hora, perder tempo e morrer fraca como mais um cadáver sem valor numa sarjeta.",
+        q2: "Perder o ímpeto da descoberta e deixar sem vingança a dívida de sangue contraída contra a Serpente Venenosa dos esgotos.",
         q3: "Frieza extrema e impaciência violenta com qualquer coisa que não acelere seu aprendizado marcial e poder real.",
         q4: "Sacrifica sono (só dorme desmaiada de exaustão), vaidade, dor e laços afetivos; jamais a busca pela força suprema ou o cálculo prudente de combate.",
         q5: "Ser a Soberana que quebrou as correntes dos goblins e provou que uma mulher de sua raça pode subjugar as lendas de Midgaard."
       },
       quick_stats: {
-        level_badge: "(Grau 4 • Mago / Ladra)",
-        hp: "33 / 33",
-        mana: "111 / 111",
-        mv: "89 / 89",
-        ac: "AC 17",
+        level_badge: "(Grau 8 • Mago / Ladra)",
+        hp: "52 / 52",
+        mana: "140 / 140",
+        mv: "94 / 95",
+        ac: "AC 16 (40 com armor)",
         weapon: "Punhal de Novato (+ Escudo)",
         weapon_icon: "🗡️",
-        sanctuary: "Panteão dos Centenários"
+        sanctuary: "Laboratório dos Magos (Acampamento em Campo)"
       }
     }
   ];
