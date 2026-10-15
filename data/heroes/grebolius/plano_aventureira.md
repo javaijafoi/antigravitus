@@ -42,6 +42,12 @@ Superar roteiros curtos e estáticos. A estamina alta (95 MV) é a energia da jo
   3. Mochila saturada de espólios de valor que exijam guardar/vender.
   4. Anomalia hostil grave, bloqueio ou perigo mortal iminente.
 
+### Protocolo Tático de Exploração e Engajamento (Anti-Morte)
+- **Reconhecimento prévio:** Em áreas perigosas ou labirintos fechados (como esgotos), espiar saídas com `look <direção>` (`look n`, `look s`, `look e`, `look w`) e usar `scan` para mapear salas vizinhas antes do avanço.
+- **Invisibilidade de batedor:** Usar `invisibility` para caminhar por zonas de predadores sem disparar aggro automático, permitindo avaliar a sala em segurança.
+- **Avaliação de risco obrigatória (`consider <alvo>`):** Proibido atacar mobs desconhecidos sem rodar `consider <alvo>`. Se houver alerta de massacre ou alto risco, abortar o ataque.
+- **Recuo imediato:** A maioria dos predadores não ataca instantaneamente na entrada da sala. Ao avistar mob perigoso sem estar engajado, dar o passo de volta imediatamente (ex.: `s`). Se atacado, acionar `flee` imediatamente.
+
 ## 3. Jogar e registrar com continuidade
 1. Escolher um fio para a expedição e as condições para interrompê-la.
 2. Explorar, observar e interagir segundo o risco. Lutar por defesa, passagem ou objetivo; não há cota mínima de ações, salas novas ou combates.

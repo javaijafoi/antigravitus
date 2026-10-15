@@ -144,3 +144,21 @@ A Força 10 e a carga registrada pedem atenção a peso e movimento; o custo exa
 * **Comportamento e Espólios do Alquimista:** O laboratório sofre infestações periódicas de novatos zumbis; do corpo de uma das criaturas foram extraídos **os chifres do Minotauro**. O Alquimista esbraveja pedindo silêncio aos monstros e suspira sobre suas fórmulas.
 * **Escadaria Descendente:** No interior da Sala do Alquimista há uma escada descendo para *A Entrada*, com uma enorme placa pregada que exige leitura e avaliação de risco prévia.
 
+---
+
+## 8. Doutrina Tática de Reconhecimento e Sobrevivência (Lições dos Dias 80 e 81)
+* **A Serpente dos Esgotos e o Risco de Zone 70 (Sala #7008 - Uma Intersecção Lamacenta):**
+  - A serpente dos esgotos possui dano massivo (mordidas brutais de 18 a 22 de dano por turno, nível estimado entre 12 e 15). Contra um mago em vestes de novato (67 HP, AC 16), o combate frontal é letal em 3 turnos.
+  - O mob não ataca no milissegundo de entrada: há uma janela de 1 a 2 turnos de observação antes do bote. Ao avistar a serpente (ou qualquer predador similar, como o aligátor dos esgotos), o recuo imediato para a sala anterior (comando de direção livre, ex.: `s`) é 100% eficaz para evitar o combate.
+* **Protocolo de Espionagem Periférica (`look <direção>` e `scan`):**
+  - **`look <direção>`** (`look n`, `look s`, `look e`, `look w`): Espia a saída e a câmara adjacente antes de entrar, permitindo detectar portas, abismos ou anomalias.
+  - **`scan`** (ou `escanear`): Mapeia o perímetro em busca de criaturas nas salas vizinhas.
+* **Invisibilidade como Escudo de Reconhecimento:**
+  - A magia `invisibility` quebra na primeira ação hostil (`cast` ou golpe), mas é essencial para batedores: permite transitar por câmaras com mobs agressivos normais sem atrair aggro, analisar as saídas e sair sem sofrer ataques.
+* **Obrigatoriedade do Comando `consider <alvo>`:**
+  - Proibido engajar qualquer mob desconhecido sem rodar `consider <alvo>` (ou `comparar <alvo>`). O sistema compara os níveis do herói e do monstro; se a resposta indicar massacre iminente ou combate arriscado, a ordem é recuo imediato.
+* **Economia de Combate (XP vs. Ouro):**
+  - Mobs selvagens de esgoto (ratos, morcegos, larvas) dropam **zero moedas de ouro**, embora morcegos forneçam picos expressivos de experiência (6.000 a 10.000 EXP cada).
+  - A acumulação de riqueza para as metas de 5.000 e 10.000 moedas de ouro deve focar nos humanoides das catacumbas: **Novatos Zumbis** (30-35 ouros), **Monstros Novatos** (20 ouros + punhais) e o **Grande Minotauro** (95 ouros + chifres e pele avaliados em 200 ouros).
+
+
