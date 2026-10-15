@@ -98,12 +98,12 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 ### Pendências de inventário
 
 ## ✦ Condições Registradas
-* Dia 91: dormindo no Templo de Midgaard, com 67/67 HP, 170/170 mana e 101/101 MV no último score.
-* Pão consumido e água bebida; alertas de fome e sede ausentes da ficha final. Dois pães e cantil reabastecido para a próxima saída.
+* Dia 93: dormindo no Templo de Midgaard, com 87/87 HP, 170/170 mana e 101/101 MV no score final.
+* Três pães recheados e um cantil com água no inventário para a próxima saída.
 * Problemas Agrícolas ativa: fazendeiro pede 10 invasores do milharal; contador e conclusão não confirmados.
-* Armadura arcana ativa no último score; duração futura depende do servidor.
-* 15 treinos preservados do registro anterior; não houve treino nesta continuação.
-* Save respondeu "Salvando os seus atalhos." antes e depois de dormir; socket encerrado sem nova conexão.
+* Armadura arcana ativa no score final (17 horas); duração futura depende do servidor.
+* 15 treinos preservados do registro anterior; não houve treino no Dia 93.
+* Save respondeu "Salvando os seus atalhos." antes e depois de dormir no Templo de Midgaard.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
 **Prosseguir com o pedido do fazendeiro no milharal**
@@ -113,10 +113,10 @@ Retomar a viagem a Jareth e à fazenda por trechos confirmados; avaliar invasore
 
 ## ✦ Origem e Incertezas
 Fonte do estado: Conferência ao vivo no encerramento do Dia 93 no Templo de Midgaard: score tudo, inventário, equipamentos, postura dormindo e save confirmados; evidence/dia93.json..
-* O anel arcano (+2E) segue exigindo nível ou condição mágica superior.
+* O anel arcano (+2E) foi vendido no Dia 92 por 500 moedas por exigir nível 90 e 3ª encarnação.
 * Novos feitiços superiores dependem de livros arcanos ou mestres especializados.
-* O renascimento desequipa todas as peças para a mochila; o protocolo pós-morte exige `wear all` imediato para restaurar os 67 HP máximos concedidos pela veste e a AC 16.
+* O renascimento desequipa todas as peças para a mochila; o protocolo pós-morte exige `wear all` imediato para restaurar os bônus de HP e AC do equipamento.
 * Saldo do Dia 90: 2636; primeiro saldo completo preservado no Dia 91: 630. A causa da diferença de 2006 moedas não é comprovada pelos registros consultados.
 * XP documental do Dia 90: 152101; observado no Dia 91: 152098. A diferença de 3 não foi atribuída a fuga, morte ou outro evento sem comprovante.
-* Armadura base 19 calculada por 44 observado menos efeito +25; não houve medição direta após expirar o efeito.
+* Armadura base 25 calculada por 50 observado menos efeito +25.
 * Contador de abates da missão não informado pelo servidor; não presumir 0/10 nem conclusão.

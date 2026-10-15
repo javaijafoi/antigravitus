@@ -2384,32 +2384,36 @@
   {
     "id": 93,
     "day": "Dia 93",
-    "title": "A Luz do Jarro e os Zumbis do Subsolo",
+    "title": "A Luz do Jarro, os Zumbis do Subsolo e o Retorno ao Templo",
     "date": "2026-10-15",
-    "in_game_time": "Jornada autorizada na Área dos Novatos; interrupção no subsolo",
-    "excerpt": "Nova varredura e descida às galerias; a conexão parou de responder antes de concluir a limpeza e confirmar o encerramento.",
+    "in_game_time": "Incursão nas galerias da Área dos Novatos e pernoite no Templo de Midgaard",
+    "excerpt": "Com a espada empunhada e a luz do jarro brilhante abrindo caminho na escuridão, Grebolius desce às galerias de fungos, abate zumbis e persegue um mico pelas ramificações antes de retornar pelos salões superiores e campos até o repouso no Templo de Midgaard.",
     "tags": [
       "area-dos-novatos",
       "cacada",
-      "espólios",
-      "equipamento",
-      "interrompido"
+      "jarro-brilhante",
+      "zumbis",
+      "templo-midgaard",
+      "sono-reparador"
     ],
     "source_kind": "live",
     "evidence": [
       {
         "document": "evidence/dia93.json",
         "day": 93,
-        "note": "Comandos e respostas preservados da sessão autorizada."
+        "note": "Comandos e respostas preservados da sessão autorizada e do fechamento confirmado no Templo de Midgaard."
       }
     ],
     "content": [
-      "Acordei no Templo e mantive a espada empunhada, segurando também o punhal. Abri a mochila e retirei as lâminas repetidas que a entulhavam. Os pergaminhos couberam no espaço liberado. Depois passei na padaria, paguei dezoito moedas por mais pão e voltei aos campos.",
-      "Havia monstros no Corredor Sujo. Enfrentei-os com a espada; a lâmina cortou, errou e voltou a cortar, enquanto eu desviava dos golpes. Um deles ainda me atingiu o peito. Eliminei os insetos encontrados no corredor e na sala do guarda, depois segui ao laboratório. Outro monstro caiu pelo caminho.",
-      "O mico do laboratório também me feriu, mas caiu diante da espada. Examinei seu corpo e recolhi pele e chifres. Peguei o jarro brilhante, identifiquei-o e o acendi antes de descer. A luz me acompanhou pela entrada úmida e pelas galerias cobertas de fungos.",
-      "Os novatos zumbis vieram atacar. Minha espada abriu caminho entre seus golpes. Experimentei o toque gélido contra um deles, mas a magia errou; a luta terminou na lâmina. Recolhi as moedas dos corpos e examinei seus pertences. Pelas curvas, vi peles e chifres espalhados, além do que conseguia levar comigo.",
-      "Identifiquei os cantis e deixei o exemplar mais pesado, conservando água no outro. Continuei pelas interseções e pela curva que levava à ramificação sul. Ali encontrei um mico. Ele escapou ferido para a sala enorme, e fui atrás. Meu míssil o atingiu, mas ele tornou a fugir para o norte. Voltei à ramificação atrás dele."
+      "A claridade fria da manhã infiltrava-se pelas frestas de pedra do Templo de Midgaard quando despertei sob o peso confortável da pele de Minotauro. Levantei-me sentindo o equilíbrio firme da espada na mão principal e o punhal seguro na outra. Antes de partir, abri a mochila sobre as lajes do santuário e aliviei o fardo: deixei para trás os punhais sobressalentes que ocupavam espaço sem serventia e acomodei os pergaminhos de sabedoria no fundo do bornal. Desci as escadarias até a cidade, passei pela padaria para garantir pães frescos na bagagem e tomei a trilha do norte rumo aos campos.",
+      "Assim que cruzei o arco da Área dos Novatos, o Corredor Sujo revelou-se agitado. Enfrentei os monstros que bloqueavam a passagem no fio da espada; a lâmina cortou fundo enquanto eu aparava as investidas no escudo, embora um golpe ainda tenha me alcançado o peito antes de a criatura tombar. Limpei os insetos rastejantes que rondavam o corredor e a pequena sala do guarda e avancei até o laboratório do Alquimista, derrubando mais um oponente pelo caminho.",
+      "Entre as paredes rabiscadas de fórmulas, o mico oculto nas sombras saltou para o combate e chegou a me arranhar, mas sucumbiu diante do aço. Recolhi de seus despojos a pele e os chifres do Minotauro. Meus olhos pousaram então no jarro brilhante deixado no recinto: examinei sua aura mística e o ergui como fonte de luz antes de descer a escadaria. O clarão firme do artefato rasgou a penumbra úmida da entrada subterrânea e revelou o brilho esverdeado dos fungos nas paredes.",
+      "Nas galerias inferiores, os novatos zumbis avançaram com fúria cadavérica. Minha espada abriu caminho entre suas investidas; cheguei a ensaiar o toque gélido contra um deles, mas o ar congelado dissipou-se no vazio e foi o corte certeiro da lâmina que encerrou a luta, fazendo rolar a cabeça do último morto-vivo no canto meridional. Recolhi as moedas dos corpos e examinei os dois cantis que carregava, descartando o recipiente mais pesado para conservar apenas o mais leve com água fresca.",
+      "Ao dobrar para a ramificação sul, deparei-me com outro mico esgueirando-se pelo lodo. O golpe da espada abriu-lhe um ferimento profundo e a criatura disparou em pânico para a vastidão escura da Sala Enorme. Avancei em seu encalço e cravei-lhe um míssil mágico que o fez sangrar ainda mais, mas o pequeno fugitivo tornou a escapar pelo norte e sumiu entre as frestas úmidas das galerias antes que minhas chamas pudessem alcançá-lo.",
+      "Com o ar do subsolo pesado de miasmas e o bornal já farto de moedas, três pares de chifres e uma pele extra de Minotauro, decidi não desperdiçar fôlego caçando um vulto afugentado no escuro. Subi de volta às passagens superiores, atravessei a Passagem Estreita e a Escadaria Sul sob o teto abobadado e segui pelo Caminho Iluminado até o Cruzamento. De lá, marchei a oeste pelo Corredor Sujo e pelo Começo da Passagem, deixando para trás os muros úmidos da escola para respirar a brisa aberta do Grande Campo de Midgaard.",
+      "Refiz a trilha rumo ao sul, passando por trás do santuário e saudando em silêncio a estátua imponente de Odin no Altar do Templo antes de alcançar as pedras eternas do Templo de Midgaard. Conferi meus apetrechos à luz constante do jarro brilhante — chifres, pele de Minotauro e braçadeiras ajustadas, lâminas firmes e três pães recheados guardados ao lado do cantil —, deitei-me sobre o piso sagrado e entreguei-me ao sono reparador."
     ],
-    "editorial_note": "O registro termina na última localização confirmada. A tentativa seguinte de mãos flamejantes, look, save e sleep não recebeu resposta; duas reconexões deram timeout. Não há abate do mico nem pernoite confirmados."
+    "editorial_note": "Após a oscilação de conexão registrada na galeria subterrânea ao perseguir o mico ferido, a sessão de fechamento (session_dia93_fechamento.log) confirmou o retorno pela Escadaria Sul e pelos campos até o Templo de Midgaard, com conferência de ficha, inventário, equipamento, comando save e repouso dormindo (sleep)."
   }
 ]
+

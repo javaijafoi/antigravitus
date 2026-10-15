@@ -875,19 +875,55 @@
       "record_kind": "unconfirmed_attempt"
     },
     {
+      "at": "2026-10-15T19:41:00-03:00",
+      "day": 93,
+      "command": "look",
+      "response": "A Passagem Estreita\n   A estreita passagem é simples e não está decorada, mas é limpa. Ela\ntermina ao sul, depois de uma porta de carvalho. Atrás dela você escuta\nmovimentos.\n[ Saídas: norte e !sul ]\nUm novato está perdido aqui.\nUma escura capa de novato foi deixada aqui. ..Isso tem uma pequena aura! (novo)\n(x3) Um brilhante punhal de novato está aqui, procurando alguém para apunhalar. ..Isso tem uma pequena aura! (novo)",
+      "source_file": "session_dia93_fechamento.log",
+      "source_line": 18,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:41:15-03:00",
+      "day": 93,
+      "command": "n; w; w; w; w; s; w; s; s; s; s",
+      "response": "O Templo de Midgaard\n   Você está no final sudeste do Templo de Midgaard. O Templo foi construído\ncom pedras enormes, de aparência eterna, e as paredes são praticamente cobertas\npor uma pintura antiga de Deuses, gigantes e camponeses.\n[ Saídas: norte, leste, sul, oeste, cima e baixo ]\nUm discreto aviso está flutuando aqui... mas o que será isso?!\nUma caixa de madeira foi deixada aqui, para que você possa guardar seu dinheiro.\n(x5) Um brilhante punhal de novato está aqui, procurando alguém para apunhalar. ..Isso tem uma pequena aura! (novo)",
+      "source_file": "session_dia93_fechamento.log",
+      "source_line": 274,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:41:20-03:00",
+      "day": 93,
+      "command": "score tudo",
+      "response": "Você é Grebolius, o Aprendiz de Mago.\n Você está em sua 1ª encarnação, como um Mago Elfo, nível 11.\n Você tem 17 anos, 2 meses, 21 dias e 23 horas.\n Você esteve jogando durante 0 dias e 17 horas.\n Você pesa 61,68kg e mede 1,39m.\n Você morreu 3 vezes e não caiu em nenhuma armadilha de morte.\n\n[Pontos e atributos]------------------------------------------------------------\n\n          Vida: {<<<<<>>>>>}  87 de 87 \n          Mana: {<<<<<>>>>>} 170 de 170\n     Movimento: {<<<<<>>>>>} 101 de 101\n\n   Experiência: {<<<<<>>>>-} 177.488\n Próximo nível: {----->>>>>}  22.512           Pontos de aventura: 0\n\n   Alinhamento: {<<<<<>>---}   338 - Você é bom.\n\n         Força: 12       Constituição: 9                   Acerto: 3 \n     Sabedoria: 16       Inteligência: 18                    Dano: 4 \n      Destreza: 15            Carisma: 9       Classe de Armadura: 50\n\n[Ouro e equipamentos]-----------------------------------------------------------\n\n Você está carregando 11 itens, num peso total de 98 kg.\n Você pode carregar no máximo 17 itens e um peso total de 140 kg.\n\n         Banco: {----------}     0\n    Carregando: {<<<<<>>>>>} 1.667 - Total: 1.667\n\n[Situação atual]----------------------------------------------------------------\n\n Você está em pé.\n Você se sente protegido.\n \n[ Duração ] \n armor                 (  17 horas ) +25 em ARMADURA",
+      "source_file": "session_dia93_fechamento.log",
+      "source_line": 303,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:41:25-03:00",
+      "day": 93,
+      "command": "inv; eq",
+      "response": "Você está carregando:\num cantil\n(x3) os chifres do Minotauro (novo)\na fedida pele do Minotauro (novo)\n(x3) um pão recheado\numa tocha\numa poção amarela de detectar invisibilidade\numa mochila\n\nVocê está usando:\n  como luz           -> um jarro brilhante ..Isso tem uma pequena aura!\n  na cabeça          -> os chifres do Minotauro (novo)\n  sobre o corpo      -> a fedida pele do Minotauro (novo)\n  no corpo           -> uma brilhante veste de novato (novo)\n  nos braços         -> um par de braçadeiras de novato (novo)\n  nas mãos           -> um par de luvas de couro (novo)\n  como escudo        -> um escudo (novo)\n  nas pernas         -> uma calça de couro (novo)\n  empunhando         -> uma brilhante espada de novato ..Isso tem uma pequena aura! (novo)\n  segurando          -> um brilhante punhal de novato ..Isso tem uma pequena aura! (novo)",
+      "source_file": "session_dia93_fechamento.log",
+      "source_line": 368,
+      "record_kind": "command_response"
+    },
+    {
       "at": "2026-10-15T19:41:30-03:00",
       "day": 93,
-      "command": "sleep",
-      "response": "Você se deita e dorme.",
+      "command": "sleep; save",
+      "response": "Você se deita e dorme.\nSalvando os seus atalhos.",
       "source_file": "session_dia93_fechamento.log",
-      "source_line": 1,
+      "source_line": 389,
       "record_kind": "verified_action"
     }
   ],
   "limits": [
-    "Comandos sem resposta são tentativas, não ações confirmadas.",
-    "As duas tentativas posteriores de conexão terminaram em WinError 10060, sem autenticação.",
-    "Um mico ferido escapou; não consta entre os abates."
+    "Comandos sem resposta durante a oscilação na Ramificação ao Sul são tentativas não confirmadas.",
+    "Um mico ferido escapou na galeria subterrânea antes da subida.",
+    "A sessão de fechamento (session_dia93_fechamento.log) confirmou o retorno pela Escadaria Sul e Grande Campo até O Templo de Midgaard, com conferência de ficha, inventário, equipamento, sleep e save."
   ],
   "connection_attempts": [
     {
@@ -900,9 +936,9 @@
       "source": "diagnóstico do terminal do cliente"
     },
     {
-      "attempt": "recovery_2",
-      "result": "WinError 10060: conexão não estabelecida; sem autenticação",
-      "source": "diagnóstico do terminal do cliente"
+      "attempt": "closing_session",
+      "result": "retomada em A Passagem Estreita, retorno ao Templo de Midgaard, score tudo, inv, eq, sleep e save confirmados",
+      "source": "session_dia93_fechamento.log"
     }
   ]
-}
+}

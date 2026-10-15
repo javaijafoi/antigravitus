@@ -582,9 +582,10 @@
       {
         "document": "evidence/dia93.json",
         "day": 93,
-        "note": "Comandos e respostas preservados da sessão autorizada."
+        "note": "Comandos e respostas preservados da sessão autorizada e do fechamento confirmado no Templo de Midgaard."
       }
     ],
-    "summary": "Última sala confirmada: Uma Ramificação ao Sul. Último prompt: 87 HP, 170 mana, 100 MV. Tentativa de burning hands, look, save e sleep ficou sem resposta. Duas tentativas de reconexão terminaram em timeout WinError 10060; encerramento e situação posterior não verificados."
+    "summary": "Após oscilação de conexão na Ramificação ao Sul, a sessão de fechamento confirmou o retorno pela Passagem Estreita, Escadaria Sul, Caminho Iluminado, Cruzamento, Corredor Sujo e Grande Campo até O Templo de Midgaard. Conferidos 87/87 HP, 170/170 mana, 101/101 MV, 1.667 moedas, XP 177.488, AC 50 (armor 17h), inventário (3 chifres e 1 pele de Minotauro, 3 pães, cantil, tocha, poção amarela e mochila) e equipamento (jarro brilhante como luz, chifres, pele, veste e braçadeiras de novato, espada empunhada e punhal segurado), seguidos de sleep e save confirmados."
   }
 ]
+

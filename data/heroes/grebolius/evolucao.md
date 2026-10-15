@@ -1204,9 +1204,9 @@ Registro baseado em [evidência primária](evidence/dia91.json), reunindo a sess
 - Chifres e pele encontrados no chão, braçadeiras encontradas na sacada; peças equipadas. Espada já carregada passou a ser empunhada. Vida máxima 79 após as trocas, AC 50 com armor.
 - Sono no Templo e save confirmados. [Evidência](evidence/dia92.json).
 
-### Dia 93 — subsolo e interrupção
+### Dia 93 — subsolo, jarro brilhante e fechamento no Templo
 
-- 9 abates: 3 monstros novatos, 2 insetos, 1 mico e 3 zumbis; +8838 XP e 165 moedas. Compra de pães por 18. Saldo reconstruído: 1425 + 165 − 18 = 1572; XP 167090.
-- Jarro brilhante equipado: máximo de vida 87. Espada empunhada, punhal segurado e escudo aceitos pelo servidor; acerto 3 e dano 4. STR 12, DEX 15, CON 9, INT 18, WIS 16, CHA 9 no último score completo.
-- Último prompt: 87 HP, 170 mana e 100 MV na Ramificação ao Sul; dados posteriores não conferidos. Mico ferido fugiu e não foi contado como morto.
-- Tentativa de burning hands e comandos seguintes sem resposta. Duas reconexões falharam com timeout; não se confirmou save, sono ou limpeza total. Sem nova conexão nesta execução. [Evidência](evidence/dia93.json).
+- 9 abates registrados na primeira etapa: 3 monstros novatos, 2 insetos, 1 mico e 3 zumbis (+8838 XP e 165 moedas), seguidos de abates adicionais antes da subida final (totalizando XP 177.488 e 1.667 moedas no encerramento). Compra de 3 pães por 18 moedas.
+- Jarro brilhante equipado como fonte de luz: máximo de vida 87. Espada empunhada, punhal segurado e escudo aceitos pelo servidor; acerto 3 e dano 4. STR 12, DEX 15, CON 9, INT 18, WIS 16, CHA 9, alinhamento 338 (Bom) e AC 50 com `armor` (17h) no score final.
+- Após oscilação na Ramificação ao Sul ao perseguir o mico ferido, a sessão de fechamento (`session_dia93_fechamento.log`) confirmou o retorno pela Passagem Estreita, Escadaria Sul, Caminho Iluminado, Cruzamento, Corredor Sujo e Grande Campo até O Templo de Midgaard, com conferência de inventário, equipamento, `sleep` e `save` confirmados. [Evidência](evidence/dia93.json).
+
