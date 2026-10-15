@@ -116,3 +116,7 @@ O antigo resumo antecipado do ciclo 7 foi retirado de `ciclos.json`: não há cr
 4. Escolher entre confrontar a serpente, preparar mais recursos ou adiar. Vitória, decapitação e subida de nível não estão garantidas.
 
 Se surgir uma oportunidade real ligada ao Reino Livre ou um compromisso efetivamente assumido, avaliar como ela pesa diante da vingança. O plano não cria esse encontro nem decide a escolha antes de acontecer.
+
+## Prioridade após a interrupção do Dia 93
+
+Em nova sessão autorizada, verificar primeiro o estado real: última posição respondida foi Uma Ramificação ao Sul, com mico ferido ainda sem desfecho. Não supor save, sono ou conservação dos efeitos. Confirmar comida, água, equipamento e retirada. A ordem atual do usuário foi caçar na Área dos Novatos por até dois dias; esse limite foi atingido, com o segundo dia interrompido. Explorações ou nova conexão posteriores precisam de nova autorização. Não tratar as missões oficiais como concluídas por causa da contagem de abates.

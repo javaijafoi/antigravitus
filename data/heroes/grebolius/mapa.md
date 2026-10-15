@@ -141,3 +141,28 @@
 - **Perigo:** líder azul avaliado com alerta de vida “Você é LOUCO!”. Sala limpa, casa ou gramado não comprovam proteção para dormir.
 - **Pernoite final:** Templo de Midgaard; o Laboratório deixa de ser o acampamento corrente. Panteão permanece referência histórica de santuário.
 - Coordenadas do mapa são esquemáticas; componentes sem ligação representam limites da evidência, não trajetos impossíveis.
+
+## Reconferência dos Dias 92–93 — área parcial, sessão interrompida
+
+O mapa estruturado recebeu somente as travessias efetivas da sessão, com fonte por sala. A posição mais recente é **Uma Ramificação ao Sul**, anterior à interrupção; o último pernoite confirmado continua no Templo, Dia 92.
+
+- Dia 93: O Corredor Sujo → S → Uma Pequena Sala.
+- Dia 92: O Salão → L → A Escadaria Norte.
+- Dia 92: A Escadaria Norte → U → A Sacada (norte).
+- Dia 92: A Sacada (norte) → S → A Sacada (sul).
+- Dia 92: A Sacada (sul) → D → A Escadaria Sul.
+- Dia 92: A Escadaria Sul → O → Um Caminho Iluminado (leste do Cruzamento).
+- Dia 92: Um Caminho Iluminado (leste do Cruzamento) → O → O Cruzamento.
+- Dia 92: A Sala do Alquimista → N → A Passagem Estreita.
+- Dia 92: A Passagem Estreita → S → A Sala do Alquimista.
+- Dia 93: Outra Curva → S → Uma Ramificação da Passagem.
+- Dia 93: Uma Ramificação da Passagem → S → Uma Interseção Das Passagens.
+- Dia 93: Uma Interseção Das Passagens → S → Mais Outro Canto.
+- Dia 93: Mais Outro Canto → O → Uma Ramificação ao Sul.
+- Dia 93: Uma Ramificação ao Sul → O → Uma Curva na Passagem.
+- Dia 93: Uma Curva na Passagem → L → Uma Ramificação ao Sul.
+- Dia 93: Uma Ramificação ao Sul → S → Uma Sala Enorme.
+- Dia 93: Uma Sala Enorme → N → Uma Ramificação ao Sul.
+- Dia 92: Um Campo Aberto → N → O Grande Campo (Bifurcação).
+
+Na Pequena Sala, a grade para baixo estava trancada. Na Ramificação da Passagem, o texto fala em leste, mas as saídas exibidas são norte, sul e oeste. Saídas não percorridas não receberam destinos presumidos. A ocupação varia e um mico fugiu sem abate confirmado; não declarar limpeza total ou permanente. [Fontes: Dia 92](evidence/dia92.json) e [Dia 93](evidence/dia93.json).

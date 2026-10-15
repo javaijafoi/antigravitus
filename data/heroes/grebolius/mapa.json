@@ -2,8 +2,8 @@
   "hero_id": "grebolius",
   "hero_name": "Grebolius",
   "sanctuary_id": "panteao_centenarios",
-  "last_updated_cycle": "Ciclo X (Dia 91; fazenda reconhecida e pernoite no Templo)",
-  "total_rooms": 95,
+  "last_updated_cycle": "Ciclo X (Dia 93; caçada interrompida)",
+  "total_rooms": 104,
   "layers": [
     {
       "id": "superficie",
@@ -930,11 +930,17 @@
       },
       "exits": {
         "o": "comeco_passagem",
-        "l": "cruzamento_novatos"
+        "l": "cruzamento_novatos",
+        "s": "pequena_sala_guarda"
       },
       "npcs": [],
       "notes": "Paredes lodosas com ruídos de monstros nas proximidades.",
-      "discovered_in": "Ciclo II (Dia 14)"
+      "discovered_in": "Ciclo II (Dia 14)",
+      "source": {
+        "document": "evidence/dia93.json",
+        "day": 93,
+        "note": "Comandos e respostas preservados da sessão autorizada."
+      }
     },
     {
       "id": "cruzamento_novatos",
@@ -965,6 +971,11 @@
             "day": 58
           }
         }
+      },
+      "source": {
+        "document": "evidence/dia92.json",
+        "day": 92,
+        "note": "Comandos e respostas preservados da sessão autorizada."
       }
     },
     {
@@ -1008,7 +1019,7 @@
       "npcs": [
         "Guarda Novato em Apuros"
       ],
-      "notes": "Covil do Guarda Novato; entrega de coleira concluída com sucesso.",
+      "notes": "Covil do Guarda Novato; entrega de coleira concluída com sucesso. Dia 92: saída baixo vista, grade trancada; open down recusado. Destino não confirmado.",
       "discovered_in": "Ciclo II (Dia 14)"
     },
     {
@@ -1048,7 +1059,8 @@
       },
       "exits": {
         "o": "outro_canto",
-        "d": "a_entrada"
+        "d": "a_entrada",
+        "n": "passagem_estreita"
       },
       "npcs": [
         "O Novato Alquimista",
@@ -1060,6 +1072,11 @@
         "n": {
           "description": "Porta norte aberta no Dia 62 revelando um iluminado corredor."
         }
+      },
+      "source": {
+        "document": "evidence/dia92.json",
+        "day": 92,
+        "note": "Comandos e respostas preservados da sessão autorizada."
       }
     },
     {
@@ -1148,7 +1165,12 @@
       },
       "npcs": [],
       "notes": "Ambiente nauseante com odor fétido de carniça e morte recente.",
-      "discovered_in": "Ciclo VII (Dia 63)"
+      "discovered_in": "Ciclo VII (Dia 63)",
+      "source": {
+        "document": "evidence/dia93.json",
+        "day": 93,
+        "note": "Comandos e respostas preservados da sessão autorizada."
+      }
     },
     {
       "id": "uma_passagem",
@@ -1227,11 +1249,16 @@
       },
       "exits": {
         "l": "fim_corredor_abate",
-        "n": "grande_campo_sul"
+        "n": "grande_campo_bifurcacao"
       },
       "npcs": [],
       "notes": "Elo circular vital: conecta a masmorra de volta aos campos de Midgaard.",
-      "discovered_in": "Ciclo II (Dia 14)"
+      "discovered_in": "Ciclo II (Dia 14)",
+      "source": {
+        "document": "evidence/dia92.json",
+        "day": 92,
+        "note": "Comandos e respostas preservados da sessão autorizada."
+      }
     },
     {
       "id": "caminho_sujo_xadrez",
@@ -1833,7 +1860,8 @@
         "y": -300
       },
       "exits": {
-        "o": "sala_estatua"
+        "o": "sala_estatua",
+        "l": "escadaria_norte"
       },
       "unresolved_exits": {
         "l": {
@@ -1842,7 +1870,12 @@
       },
       "npcs": [],
       "notes": "Saguão adornado por imagens, figuras e finas decorações nas paredes ao longo de toda a passagem, contrastando com o lodo inferior.",
-      "discovered_in": "Ciclo IX (Dia 85)"
+      "discovered_in": "Ciclo IX (Dia 85)",
+      "source": {
+        "document": "evidence/dia92.json",
+        "day": 92,
+        "note": "Comandos e respostas preservados da sessão autorizada."
+      }
     },
     {
       "id": "sala_no_canto",
@@ -1881,7 +1914,8 @@
         "y": 780
       },
       "exits": {
-        "o": "canto_corredor"
+        "o": "canto_corredor",
+        "s": "ramificacao_passagem"
       },
       "unresolved_exits": {
         "s": {
@@ -1890,7 +1924,12 @@
       },
       "npcs": [],
       "notes": "Passagem subterrânea que faz curva ao sul nas catacumbas, forrada de resíduos e chifres de minotauro.",
-      "discovered_in": "Ciclo IX (Dia 86)"
+      "discovered_in": "Ciclo IX (Dia 86)",
+      "source": {
+        "document": "evidence/dia93.json",
+        "day": 93,
+        "note": "Comandos e respostas preservados da sessão autorizada."
+      }
     },
     {
       "id": "uma_grande_sala",
@@ -1932,7 +1971,7 @@
         "y": 600
       },
       "exits": {
-        "n": "uma_passagem"
+        "n": "ramificacao_ao_sul"
       },
       "unresolved_exits": {
         "l": {
@@ -1941,7 +1980,12 @@
       },
       "npcs": [],
       "notes": "Recinto colossal das catacumbas sem paredes visíveis imediatas, causando vertigem e sensação de vulnerabilidade.",
-      "discovered_in": "Ciclo IX (Dia 87)"
+      "discovered_in": "Ciclo IX (Dia 87)",
+      "source": {
+        "document": "evidence/dia93.json",
+        "day": 93,
+        "note": "Comandos e respostas preservados da sessão autorizada."
+      }
     },
     {
       "id": "ramificacao_ao_sul",
@@ -1968,7 +2012,12 @@
         "Novato Zumbi Descarnado"
       ],
       "notes": "Galeria das catacumbas com fungos viçosos nas paredes e forte odor de morte, com saída sul para Uma Sala Enorme.",
-      "discovered_in": "Ciclo IX (Dia 88)"
+      "discovered_in": "Ciclo IX (Dia 88)",
+      "source": {
+        "document": "evidence/dia93.json",
+        "day": 93,
+        "note": "Comandos e respostas preservados da sessão autorizada."
+      }
     },
     {
       "id": "fazenda_fim_estrada",
@@ -2199,9 +2248,225 @@
         "day": 91,
         "note": "Trechos literais do servidor, linhas dos registros anteriores e ações da continuação autorizada; sem referências circulares."
       }
+    },
+    {
+      "id": "escadaria_norte",
+      "name": "A Escadaria Norte",
+      "layer": "novatos",
+      "zone": "Área dos Novatos — galerias superiores",
+      "risk": "Ocupação variável",
+      "risk_code": "medium",
+      "icon": "🧭",
+      "coords": {
+        "x": 1750,
+        "y": 200
+      },
+      "exits": {
+        "u": "sacada_norte"
+      },
+      "npcs": [],
+      "notes": "Posição gráfica esquemática. Somente travessias observadas nesta jornada foram acrescentadas.",
+      "discovered_in": "Reconferência ao vivo (Dia 92); sem presumir primeira descoberta histórica.",
+      "source": {
+        "document": "evidence/dia92.json",
+        "day": 92,
+        "note": "Comandos e respostas preservados da sessão autorizada."
+      }
+    },
+    {
+      "id": "sacada_norte",
+      "name": "A Sacada (norte)",
+      "layer": "novatos",
+      "zone": "Área dos Novatos — galerias superiores",
+      "risk": "Ocupação variável",
+      "risk_code": "medium",
+      "icon": "🧭",
+      "coords": {
+        "x": 1950,
+        "y": 200
+      },
+      "exits": {
+        "s": "sacada_sul"
+      },
+      "npcs": [],
+      "notes": "Posição gráfica esquemática. Somente travessias observadas nesta jornada foram acrescentadas.",
+      "discovered_in": "Reconferência ao vivo (Dia 92); sem presumir primeira descoberta histórica.",
+      "source": {
+        "document": "evidence/dia92.json",
+        "day": 92,
+        "note": "Comandos e respostas preservados da sessão autorizada."
+      }
+    },
+    {
+      "id": "sacada_sul",
+      "name": "A Sacada (sul)",
+      "layer": "novatos",
+      "zone": "Área dos Novatos — galerias superiores",
+      "risk": "Ocupação variável",
+      "risk_code": "medium",
+      "icon": "🧭",
+      "coords": {
+        "x": 1950,
+        "y": 380
+      },
+      "exits": {
+        "d": "escadaria_sul"
+      },
+      "npcs": [],
+      "notes": "Posição gráfica esquemática. Somente travessias observadas nesta jornada foram acrescentadas.",
+      "discovered_in": "Reconferência ao vivo (Dia 92); sem presumir primeira descoberta histórica.",
+      "source": {
+        "document": "evidence/dia92.json",
+        "day": 92,
+        "note": "Comandos e respostas preservados da sessão autorizada."
+      }
+    },
+    {
+      "id": "escadaria_sul",
+      "name": "A Escadaria Sul",
+      "layer": "novatos",
+      "zone": "Área dos Novatos — galerias superiores",
+      "risk": "Ocupação variável",
+      "risk_code": "medium",
+      "icon": "🧭",
+      "coords": {
+        "x": 1750,
+        "y": 380
+      },
+      "exits": {
+        "o": "caminho_iluminado_leste"
+      },
+      "npcs": [],
+      "notes": "Posição gráfica esquemática. Somente travessias observadas nesta jornada foram acrescentadas.",
+      "discovered_in": "Reconferência ao vivo (Dia 92); sem presumir primeira descoberta histórica.",
+      "source": {
+        "document": "evidence/dia92.json",
+        "day": 92,
+        "note": "Comandos e respostas preservados da sessão autorizada."
+      }
+    },
+    {
+      "id": "caminho_iluminado_leste",
+      "name": "Um Caminho Iluminado (leste do Cruzamento)",
+      "layer": "novatos",
+      "zone": "Área dos Novatos — galerias superiores",
+      "risk": "Ocupação variável",
+      "risk_code": "medium",
+      "icon": "🧭",
+      "coords": {
+        "x": 1550,
+        "y": 380
+      },
+      "exits": {
+        "o": "cruzamento_novatos"
+      },
+      "npcs": [],
+      "notes": "Posição gráfica esquemática. Somente travessias observadas nesta jornada foram acrescentadas.",
+      "discovered_in": "Reconferência ao vivo (Dia 92); sem presumir primeira descoberta histórica.",
+      "source": {
+        "document": "evidence/dia92.json",
+        "day": 92,
+        "note": "Comandos e respostas preservados da sessão autorizada."
+      }
+    },
+    {
+      "id": "passagem_estreita",
+      "name": "A Passagem Estreita",
+      "layer": "novatos",
+      "zone": "Área dos Novatos — galerias superiores",
+      "risk": "Ocupação variável",
+      "risk_code": "medium",
+      "icon": "🧭",
+      "coords": {
+        "x": 1750,
+        "y": 560
+      },
+      "exits": {
+        "s": "sala_alquimista"
+      },
+      "npcs": [],
+      "notes": "Posição gráfica esquemática. Somente travessias observadas nesta jornada foram acrescentadas.",
+      "discovered_in": "Reconferência ao vivo (Dia 92); sem presumir primeira descoberta histórica.",
+      "source": {
+        "document": "evidence/dia92.json",
+        "day": 92,
+        "note": "Comandos e respostas preservados da sessão autorizada."
+      }
+    },
+    {
+      "id": "ramificacao_passagem",
+      "name": "Uma Ramificação da Passagem",
+      "layer": "novatos",
+      "zone": "Área dos Novatos — subsolo",
+      "risk": "Verificar ocupantes; zumbis agressivos no subsolo",
+      "risk_code": "medium",
+      "icon": "🧭",
+      "coords": {
+        "x": 1950,
+        "y": 900
+      },
+      "exits": {
+        "s": "intersecao_passagens"
+      },
+      "npcs": [],
+      "notes": "Posição gráfica esquemática. Somente travessias observadas nesta jornada foram acrescentadas. Descrição menciona ramal leste, mas painel exibe norte, sul e oeste. Não foi criado destino a leste.",
+      "discovered_in": "Reconferência ao vivo (Dia 93); sem presumir primeira descoberta histórica.",
+      "source": {
+        "document": "evidence/dia93.json",
+        "day": 93,
+        "note": "Comandos e respostas preservados da sessão autorizada."
+      }
+    },
+    {
+      "id": "intersecao_passagens",
+      "name": "Uma Interseção Das Passagens",
+      "layer": "novatos",
+      "zone": "Área dos Novatos — subsolo",
+      "risk": "Verificar ocupantes; zumbis agressivos no subsolo",
+      "risk_code": "medium",
+      "icon": "🧭",
+      "coords": {
+        "x": 1950,
+        "y": 1080
+      },
+      "exits": {
+        "s": "mais_outro_canto"
+      },
+      "npcs": [],
+      "notes": "Posição gráfica esquemática. Somente travessias observadas nesta jornada foram acrescentadas.",
+      "discovered_in": "Reconferência ao vivo (Dia 93); sem presumir primeira descoberta histórica.",
+      "source": {
+        "document": "evidence/dia93.json",
+        "day": 93,
+        "note": "Comandos e respostas preservados da sessão autorizada."
+      }
+    },
+    {
+      "id": "mais_outro_canto",
+      "name": "Mais Outro Canto",
+      "layer": "novatos",
+      "zone": "Área dos Novatos — subsolo",
+      "risk": "Verificar ocupantes; zumbis agressivos no subsolo",
+      "risk_code": "medium",
+      "icon": "🧭",
+      "coords": {
+        "x": 1950,
+        "y": 1260
+      },
+      "exits": {
+        "o": "ramificacao_ao_sul"
+      },
+      "npcs": [],
+      "notes": "Posição gráfica esquemática. Somente travessias observadas nesta jornada foram acrescentadas.",
+      "discovered_in": "Reconferência ao vivo (Dia 93); sem presumir primeira descoberta histórica.",
+      "source": {
+        "document": "evidence/dia93.json",
+        "day": 93,
+        "note": "Comandos e respostas preservados da sessão autorizada."
+      }
     }
   ],
-  "last_updated_day": 91,
+  "last_updated_day": 93,
   "verification": "live",
   "current_location_id": "templo_midgaard",
   "camp_id": "templo_midgaard",
@@ -2210,6 +2475,7 @@
     "Revisão inclui descobertas narradas até o Dia 60; não houve verificação ao vivo de todas as rotas antigas.",
     "Saídas inversas não foram deduzidas. Saídas sem destino conhecido permanecem pendentes.",
     "Campo Aberto versus Caminho Sujo: referências antigas divergem sobre o acesso ao Tabuleiro; não foi criada uma conexão nova por suposição.",
-    "Dia 91: fazenda é uma cartografia parcial. Trechos entre Jareth, floresta, estrada e casa não foram completados por suposição; ausência de aresta não significa ausência de passagem. Entroncamento Jareth separado do Caminho homônimo; pernoite atual no Templo."
+    "Dia 91: fazenda é uma cartografia parcial. Trechos entre Jareth, floresta, estrada e casa não foram completados por suposição; ausência de aresta não significa ausência de passagem. Entroncamento Jareth separado do Caminho homônimo; pernoite atual no Templo.",
+    "Dias 92–93: novas arestas são travessias reais; mapa permanece parcial. Posição final é última resposta anterior à interrupção; camp mantém último pernoite confirmado do Dia 92. Grade trancada e partes da masmorra continuam pendentes."
   ]
 }

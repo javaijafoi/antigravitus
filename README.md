@@ -100,3 +100,7 @@ python publish_daily.py --publish --push --message "Revisa registros documentais
 O primeiro comando **simula** após validar. `--publish` cria um único commit local da revisão; `--push` explícito envia pelo destino Git já configurado. O publicador não cria repositórios, não envia um arquivo por commit e não altera identidade ou credenciais globais. Alterações já preparadas no índice Git bloqueiam uma nova publicação para preservar a revisão do usuário. O `.gitignore` e uma lista de caminhos permitidos excluem sessões, logs, arquivos locais e credenciais.
 
 Repositório: [javaijafoi/antigravitus](https://github.com/javaijafoi/antigravitus). Se o repositório estiver conectado à Vercel, o envio pode acionar o deploy configurado. Esta revisão local não executou publicação ou deploy.
+
+## Referências da máquina
+
+[Guia prático e manuais](maquina/README.md): comandos úteis, diferenças do DeBo, tips, informações, magias e história do mundo. A base orienta a operação sem atribuir conhecimento ou acontecimentos à personagem.

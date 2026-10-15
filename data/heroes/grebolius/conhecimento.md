@@ -355,3 +355,15 @@ Para evitar sobrecarga de inventário e otimizar tempo e recursos, **fica abolid
 - O classificador do cliente marcou combate/menu em respostas normais de ficha e ajuda. Não registrar morte ou combate com base nesses rótulos quando a transcrição mostra a personagem em pé, caminhando ou dormindo. Defeito do motor anotado, sem alteração de código nesta tarefa.
 - A sessão começou com fome e sede apesar dos atributos quase completos. Conferir nutrição e água separadamente dos números de HP, mana e movimento.
 - Saldo 630 observado antes das compras; saldo 612 depois. Diferenças anteriores de dinheiro e XP permanecem pendentes, sem inventar perdas ou compras.
+
+## Dias 92–93 — achados e limites observados
+
+- No salão e nas sacadas havia equipamento abandonado. Identify documentou os chifres (+2 força), pele (+15 vida) e braçadeiras de novato (+1 inteligência). As trocas custaram os bônus da capa (+1 sabedoria), elmo (+1 constituição) e braçadeiras de couro (+3 vida); ganho não é melhoria em todos os atributos.
+- O guia de equipamento de Jooh foi lido no mundo (introdução e capítulo inicial). A sugestão do jarro foi conferida: luz equipada e +8 vida máxima. Outras indicações continuam referências, sem rotas visitadas ou itens adquiridos por inferência.
+- Espada empunhada e punhal segurado foram aceitos junto do escudo. A identificação mostrou espada 4D8, +3 dano e +3 acerto; punhal 5D5, +1 dano. Os bônus observados na ficha não provam que todos os ataques futuros acertarão.
+- Ouro era recolhido automaticamente dos abates com moedas; os corpos ainda precisavam de inspeção para itens. Peles e chifres apareceram também em corpos de micos e zumbis; a origem anterior dos itens nesses corpos não foi estabelecida.
+- Micos fogem feridos e podem atravessar salas; fuga não é abate. Zumbis atacaram sem uma iniciativa prévia de Grebolius.
+- A grade da sala do guarda estava trancada. A descrição da Ramificação da Passagem menciona leste, mas as saídas mostradas não incluem leste.
+- O registro do Dia 93 termina sem resposta e sem encerramento confirmado. Não atribuir esse fato técnico a um acontecimento mágico ou a sentimentos da personagem.
+
+Fontes: [Dia 92](evidence/dia92.json), [Dia 93](evidence/dia93.json). Comparação de abordagens na camada da máquina, fora da crônica.

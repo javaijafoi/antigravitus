@@ -29,3 +29,7 @@ Estados: 🔎 Descoberta | ▶️ Ativa | ⏸️ Adiada | ⛔ Bloqueada | ✅ Co
 - **Limite:** não há contador de abates ou conclusão oficial confirmado. A avaliação do líder azul contém alerta de vida “Você é LOUCO!”; não confundir precisão favorável com combate seguro.
 - **Próximo passo:** voltar preparado, avaliar invasores comuns e confirmar o avanço com o fazendeiro. O pernoite final ocorreu no Templo de Midgaard, com água e dois pães.
 - **Fonte primária:** [dossiê do Dia 91](evidence/dia91.json). Esta seção atualiza o estado corrente sem reescrever os registros anteriores.
+
+## Dias 92–93 — foco autorizado na Área dos Novatos
+
+19 abates confirmados (7 monstros novatos, 6 insetos, 3 micos e 3 zumbis). Isso é progresso observado de combate, não uma confirmação oficial de conclusão de Limpando Monstros. Problemas Agrícolas não teve avanço nesta jornada. O Dia 93 terminou em interrupção da conexão, com mico ferido e áreas não conferidas; retomar exige primeiro verificar o estado real. Ver [Dia 92](evidence/dia92.json) e [Dia 93](evidence/dia93.json).

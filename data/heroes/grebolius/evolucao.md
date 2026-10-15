@@ -1196,3 +1196,17 @@ Registro baseado em [evidência primária](evidence/dia91.json), reunindo a sess
 - **Reconciliação financeira:** 630 moedas observadas antes das compras desta continuação; 630 − 18 = 612. O registro anterior do Dia 90 tinha 2.636; a diferença precedente de 2.006 permanece sem causa comprovada.
 - **Reconciliação de XP:** valor anterior 152.101 versus 152.098 observado; não atribuir a diferença de três pontos a uma causa sem evidência.
 - **Próxima jornada:** retomar Problemas Agrícolas com avaliação de alvos e confirmação do contador; nenhuma recompensa ou transformação emocional foi acrescentada.
+
+### Dia 92 — caçada e equipamento
+
+- 10 abates: 4 monstros novatos, 4 insetos e 2 micos; +6154 XP e 80 moedas de combate.
+- Receitas de venda: anel 500, capa 50, braçadeiras 37, chifres 50 e maça 120; total 757. Comida: 24. Saldo 612 + 757 + 80 − 24 = 1425. Vendas incluem patrimônio anterior, não apenas saque novo.
+- Chifres e pele encontrados no chão, braçadeiras encontradas na sacada; peças equipadas. Espada já carregada passou a ser empunhada. Vida máxima 79 após as trocas, AC 50 com armor.
+- Sono no Templo e save confirmados. [Evidência](evidence/dia92.json).
+
+### Dia 93 — subsolo e interrupção
+
+- 9 abates: 3 monstros novatos, 2 insetos, 1 mico e 3 zumbis; +8838 XP e 165 moedas. Compra de pães por 18. Saldo reconstruído: 1425 + 165 − 18 = 1572; XP 167090.
+- Jarro brilhante equipado: máximo de vida 87. Espada empunhada, punhal segurado e escudo aceitos pelo servidor; acerto 3 e dano 4. STR 12, DEX 15, CON 9, INT 18, WIS 16, CHA 9 no último score completo.
+- Último prompt: 87 HP, 170 mana e 100 MV na Ramificação ao Sul; dados posteriores não conferidos. Mico ferido fugiu e não foi contado como morto.
+- Tentativa de burning hands e comandos seguintes sem resposta. Duas reconexões falharam com timeout; não se confirmou save, sono ou limpeza total. Sem nova conexão nesta execução. [Evidência](evidence/dia93.json).

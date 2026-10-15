@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 91,
+  "as_of_day": 93,
   "verification": "live",
   "items": [
     {
@@ -45,9 +45,9 @@
       "type": "official",
       "status": "active",
       "accepted_day": 36,
-      "last_progress_day": 88,
+      "last_progress_day": 93,
       "objective": "Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.",
-      "next_step": "Incursões de combate e varredura concluídas com sucesso (Dias 85 a 88), limpando mortos-vivos e desbravando todas as câmaras ocultas das Catacumbas Subterrâneas e Escola Superior.",
+      "next_step": "Retomar conferindo o estado real após a interrupção. Foram confirmados 19 abates nos Dias 92–93, mas não houve validação de conclusão pelo Alquimista. Conferir ramais restantes, grade trancada e mico ferido; não declarar a área limpa.",
       "evidence": [
         {
           "document": "posts.json",
@@ -163,6 +163,16 @@
           "document": "posts.json",
           "day": 88,
           "note": "Incursão na ala sul das Catacumbas: cartografia de Uma Ramificação ao Sul, averiguação dos despojos do minotauro e patrulha de contenção."
+        },
+        {
+          "document": "evidence/dia92.json",
+          "day": 92,
+          "note": "Comandos e respostas preservados da sessão autorizada."
+        },
+        {
+          "document": "evidence/dia93.json",
+          "day": 93,
+          "note": "Comandos e respostas preservados da sessão autorizada."
         }
       ]
     },
@@ -335,7 +345,7 @@
       "accepted_day": 90,
       "last_progress_day": 91,
       "objective": "Eliminar 10 monstros invasores do milharal conforme pedido do fazendeiro; resgate da família e conclusão oficial ainda não confirmados.",
-      "next_step": "Retomar a viagem a Jareth e à fazenda por trechos confirmados; avaliar invasores comuns antes de combater. O fazendeiro pede 10 abates; conferir progresso e próxima etapa com ele. Evitar o líder azul enquanto a avaliação indicar perigo desproporcional.",
+      "next_step": "Pedido anterior preservado; esta caçada priorizou os novatos a pedido do usuário. Conferir andamento oficial e preparação antes de retomar a fazenda; sem progresso novo nesta missão.",
       "evidence": [
         {
           "document": "posts.json",

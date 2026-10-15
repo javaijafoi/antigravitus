@@ -1,0 +1,1741 @@
+{
+  "hero_id": "grebolius",
+  "day": 92,
+  "source_kind": "server_log",
+  "recorded_on": "2026-10-15",
+  "sources": [
+    {
+      "file": "hunt_dias92_93_20261015_185906.jsonl",
+      "sha256": "fa15f73ddfd0211d2a682c4e5dca3e34385e4db8dc81f5c03133cdaf01a83813"
+    }
+  ],
+  "summary": {
+    "kills": 10,
+    "kill_details": [
+      {
+        "name": "O monstro novato",
+        "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+        "source_line": 54
+      },
+      {
+        "name": "Um inseto rastejante",
+        "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+        "source_line": 66
+      },
+      {
+        "name": "O monstro novato",
+        "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+        "source_line": 104
+      },
+      {
+        "name": "O monstro novato",
+        "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+        "source_line": 106
+      },
+      {
+        "name": "Um inseto rastejante",
+        "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+        "source_line": 108
+      },
+      {
+        "name": "Um inseto rastejante",
+        "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+        "source_line": 109
+      },
+      {
+        "name": "O monstro novato",
+        "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+        "source_line": 110
+      },
+      {
+        "name": "Um inseto rastejante",
+        "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+        "source_line": 117
+      },
+      {
+        "name": "O mico",
+        "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+        "source_line": 130
+      },
+      {
+        "name": "O mico",
+        "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+        "source_line": 136
+      }
+    ],
+    "combat_gold": 80,
+    "xp": 6154,
+    "movement_commands": 64
+  },
+  "closure_verified": true,
+  "records": [
+    {
+      "at": "2026-10-15T18:59:22.425822-03:00",
+      "day": 92,
+      "command": "",
+      "response": "66hp 168mn 99mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 1,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T18:59:23.231125-03:00",
+      "day": 92,
+      "command": "wake",
+      "response": "Você acorda e se senta.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 2,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T18:59:24.032170-03:00",
+      "day": 92,
+      "command": "stand",
+      "response": "Você se levanta.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 3,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T18:59:24.833446-03:00",
+      "day": 92,
+      "command": "wimpy 17",
+      "response": "Certo, você irá se acovardar se você ficar abaixo de 17 pontos de vida.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 4,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T18:59:28.910238-03:00",
+      "day": 92,
+      "command": "score tudo",
+      "response": "\n Você é Grebolius, o Aprendiz de Mago.\n Você está em sua 1ª encarnação, como um Mago Elfo, nível 11.\n Você tem 17 anos, 2 meses, 20 dias e 14 horas.\n Você esteve jogando durante 0 dias e 16 horas.\n Você pesa 61,68kg e mede 1,39m.\n Você morreu 3 vezes e não caiu em nenhuma armadilha de morte.\n\n[Pontos e atributos]------------------------------------------------------------\n\n          Vida: {<<<<<>>>>>}  67 de 67 \n          Mana: {<<<<<>>>>>} 170 de 170\n     Movimento: {<<<<<>>>>>} 101 de 101\n\n   Experiência: {<<<<<>>>--} 152.098\n Próximo nível: {<<<<<>>>>>}  47.902           Pontos de aventura: 0\n\n   Alinhamento: {<<<<<>----}   222 - Você é um pouco bom.\n\n         Força: 10       Constituição: 10                  Acerto: 0 \n     Sabedoria: 17       Inteligência: 17                    Dano: 1 \n      Destreza: 15            Carisma: 9       Classe de Armadura: 19\n\n[Ouro e equipamentos]-----------------------------------------------------------\n\n Você está carregando 11 itens, num peso total de 84 kg.\n Você pode carregar no máximo 17 itens e um peso total de 115 kg.\n\n         Banco: {----------}   0\n    Carregando: {<<<<<>>>>>} 612 - Total: 612\n\n[Situação atual]----------------------------------------------------------------\n\n Você está em pé.\n Você está morrendo de fome!\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 5,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T18:59:30.163081-03:00",
+      "day": 92,
+      "command": "look",
+      "response": "O Templo de Midgaard\n   Você está no final sudeste do Templo de Midgaard. O Templo foi construído\ncom pedras enormes, de aparência eterna, e as paredes são praticamente cobertas\npor uma pintura antiga de Deuses, gigantes e camponeses.\n   Pedras enormes levam-lhe para baixo, passando pelo portão do Templo,\ndescendo pela enorme montanha onde o Templo foi construído, até chegar na Praça\ndo Templo.\n   A oeste está a Sala de Leitura. A Sala de Doações fica em uma pequena\nsala a leste.\n[ Saídas: norte, leste, sul, oeste, cima e baixo ]\nUm discreto aviso está flutuando aqui... mas o que será isso?!\nUma caixa de madeira foi deixada aqui, para que você possa guardar seu dinheiro.\n\n67hp 170mn 101mv > \nBarlow chegou do oeste.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 6,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T18:59:31.415497-03:00",
+      "day": 92,
+      "command": "inv",
+      "response": "Você está carregando:\num cantil\num bracelete de conchas (novo)(+44L)\n(x3) um pergaminho de sabedoria\numa tocha\numa brilhante espada de novato ..Isso tem uma pequena aura! (novo)\numa poção amarela de detectar invisibilidade\numa mochila\num brilhante punhal de novato ..Isso tem uma pequena aura! (novo)\num anel arcano ..Isso tem uma pequena aura! (novo)(+2E)\n\n67hp 170mn 101mv > \nVocê está morrendo de fome! (-1hp, -2mn e -2mv)\nVocê solta um gemido agudo ao sentir seu corpo consumindo a si próprio pela falta de alimento... [-1]\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 7,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T18:59:32.667573-03:00",
+      "day": 92,
+      "command": "eq",
+      "response": "\nBarlow vai para oeste.\n\n67hp 170mn 101mv > Você está usando:\n  na cabeça          -> um brilhante elmo de novato ..Isso tem uma pequena aura! (novo)\n  sobre o corpo      -> uma escura capa de novato ..Isso tem uma pequena aura! (novo)\n  no corpo           -> uma brilhante veste de novato (novo)\n  nos braços         -> um par de braçadeiras de couro (novo)\n  nas mãos           -> um par de luvas de couro (novo)\n  como escudo        -> um escudo (novo)\n  nas pernas         -> uma calça de couro (novo)\n  empunhando         -> um brilhante punhal de novato ..Isso tem uma pequena aura! (novo)\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 8,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T18:59:44.587620-03:00",
+      "day": 92,
+      "command": "d",
+      "response": "\nBrandon aparece no meio da sala.\n\n67hp 170mn 101mv > A Praça do Templo\n   Você está na Praça do Templo de Midgaard. Uma grande escada de mármore\nleva-lhe até o Templo. Ao oeste está a Entrada da Guilda dos Clérigos, e\num velho bar está a leste. Sul daqui fica a Praça do Comércio, o centro de\nMidgaard.\n[ Saídas: norte, leste, sul, oeste e cima ]\nUm grande e famoso aventureiro está aqui, procurando alguma missão.\nO Pacificador está aqui, pronto para evitar qualquer confusão.\nUm zelador está andando por aqui, limpando tudo.\nUm zelador está andando por aqui, limpando tudo.\nVocê vê uma enorme fonte feita de mármore azul... ..Isso tem uma pequena aura!\n\n67hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 9,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T18:59:58.791333-03:00",
+      "day": 92,
+      "command": "fill cantil fonte",
+      "response": "\nMarceus chegou do sul.\n\n67hp 170mn 100mv > \nDICA: Para recitar um pergaminho, utilize o comando RECITAR.\n\n67hp 170mn 101mv > \nMarceus vai para norte.\n\n67hp 170mn 101mv > \nO Pacificador diz: 'Ei, quer fazer uma boa ação hoje? '\n\n67hp 170mn 101mv > Você enche um cantil a partir de a grande fonte com agua cristalina.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 10,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:00:00.043657-03:00",
+      "day": 92,
+      "command": "drink cantil",
+      "response": "Você bebe água cristalina.\nVocê está morrendo de fome!\nVocê não sente mais sede.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 11,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:00:01.296190-03:00",
+      "day": 92,
+      "command": "s",
+      "response": "A Praça do Comércio\n   Você está na Praça do Comércio, a famosa praça de Midgaard. Uma grande e\ndiferente estátua se encontra no meio da praça. Há caminhos para todas as\ndireções: ao norte fica a Praça do Templo, ao sul fica a Praça Comum, ao leste\ne oeste segue a Rua Principal.\n[ Saídas: norte, leste, sul e oeste ]\nUm grande mural, repleto de papéis colados, flutua magicamente aqui.\n\n67hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 12,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:00:13.081309-03:00",
+      "day": 92,
+      "command": "w",
+      "response": "A Rua Principal\n   Você está na Rua Principal, passando no meio de Midgaard. Sul daqui\nfica a Loja de Armaduras, e a Padaria fica ao norte. Leste daqui você vê\na Praça do Comércio.\n[ Saídas: norte, leste, sul e oeste ]\n\n67hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 13,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:00:28.118601-03:00",
+      "day": 92,
+      "command": "n",
+      "response": "A Padaria\n   Você está dentro de uma pequena padaria. Um delicioso aroma enche a sala.\nOs pães estão minuciosamente organizados no balcão, e aparentam ser de boa qualidade.\nUma deliciosa massa de pão está no balcão, dando sopa. Um pequeno recado está na\nparede e há uma grande placa feita de pão de forma pendurada na parede, contendo o\nslogan da loja. \n[ Saídas: sul ]\nUm cachorro está procurando no lixo alguma coisa para comer.\nO padeiro olha apressado para você, enquanto tira farinha do rosto com uma das\nmãos.\nUma asséptica atadura branca foi deixada aqui.\n\n67hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 14,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:00:37.757828-03:00",
+      "day": 92,
+      "command": "buy 4 pao",
+      "response": "O padeiro falou por telepatia com você: 'São 24 moedas.'\nVocê comprou um pão recheado (x 4).\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 15,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:00:39.009361-03:00",
+      "day": 92,
+      "command": "eat pao",
+      "response": "Você come um pão recheado.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 16,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:00:40.261483-03:00",
+      "day": 92,
+      "command": "put all.pergaminho mochila",
+      "response": "Um pergaminho de sabedoria não cabe em uma mochila.\nUm pergaminho de sabedoria não cabe em uma mochila.\nUm pergaminho de sabedoria não cabe em uma mochila.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 17,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:00:41.514474-03:00",
+      "day": 92,
+      "command": "put bracelete mochila",
+      "response": "Você coloca um bracelete de conchas em uma mochila.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 18,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:00:42.766780-03:00",
+      "day": 92,
+      "command": "put espada mochila",
+      "response": "Uma brilhante espada de novato não cabe em uma mochila.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 19,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:00:44.018498-03:00",
+      "day": 92,
+      "command": "put anel mochila",
+      "response": "Um anel arcano não cabe em uma mochila.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 20,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:00:45.270404-03:00",
+      "day": 92,
+      "command": "inv",
+      "response": "Você está carregando:\n(x3) um pão recheado\num cantil\n(x3) um pergaminho de sabedoria\numa tocha\numa brilhante espada de novato ..Isso tem uma pequena aura! (novo)\numa poção amarela de detectar invisibilidade\numa mochila\num brilhante punhal de novato ..Isso tem uma pequena aura! (novo)\num anel arcano ..Isso tem uma pequena aura! (novo)(+2E)\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 21,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:00:57.317319-03:00",
+      "day": 92,
+      "command": "s",
+      "response": "\nDICA: Tem dúvida sobre alguma coisa? O comando AJUDA existe para isso. Basta digitar AJUDA seguido por um tópico.\n\n67hp 170mn 101mv > A Rua Principal\n   Você está na Rua Principal, passando no meio de Midgaard. Sul daqui\nfica a Loja de Armaduras, e a Padaria fica ao norte. Leste daqui você vê\na Praça do Comércio.\n[ Saídas: norte, leste, sul e oeste ]\nUm cachorro está procurando no lixo alguma coisa para comer.\n\n67hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 22,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:01:04.993017-03:00",
+      "day": 92,
+      "command": "w",
+      "response": "Rua Principal\n   Você está no fim da Rua Principal de Midgaard. Ao sul você vê a Entrada\nda Guilda dos Magos. A rua continua a leste para a Praça do Comércio.\nA Loja de Magias fica ao norte, e para oeste ficam os portões da cidade.\n[ Saídas: norte, leste, sul e oeste ]\n(x2) Uma brilhante malha branca está jogada aqui. (novo)(+1E)\n\n67hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 23,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:01:14.028596-03:00",
+      "day": 92,
+      "command": "n",
+      "response": "A Loja de Magias\n   Atrás do balcão você vê vários itens, colocados em prateleiras. A maioria é\nde bastões e cajados, mas há também poções.\n[ Saídas: sul ]\nUm feiticeiro caminha por atrás do balcão, falando sozinho.\n\n67hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 24,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:01:21.659224-03:00",
+      "day": 92,
+      "command": "value anel",
+      "response": "O feiticeiro falou por telepatia com você: 'Eu não compro esse tipo de coisa.'\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 25,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:01:22.911780-03:00",
+      "day": 92,
+      "command": "list",
+      "response": " ##   Disponível   Item                                         Preço Nível Enc.\n--------------------------------------------------------------------------------\n  1)      1       Um pergaminho portador de tempestades       574.999     1   1\n  2)  Ilimitado   Um pergaminho de remover maldições            8.509     0   1\n  3)  Ilimitado   Um cajado retorcido                          14.570    38   1\n  4)  Ilimitado   Um bastão cinza de invisibilidade            92.233    29   1\n  5)  Ilimitado   Um pergaminho de retorno                      9.202     0   1\n  6)  Ilimitado   Uma poção amarela de detectar invisibilidade    5.370     0   1\n  7)  Ilimitado   Um pergaminho de identificação                4.601     0   1\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 26,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:01:24.166154-03:00",
+      "day": 92,
+      "command": "value pergaminho",
+      "response": "O feiticeiro falou por telepatia com você: 'Eu não compro esse tipo de coisa.'\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 27,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:01:33.693344-03:00",
+      "day": 92,
+      "command": "cast 'armor'",
+      "response": "Certo.\nSua magia falha e desaparece.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 28,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:01:34.946619-03:00",
+      "day": 92,
+      "command": "score tudo",
+      "response": "\n Você é Grebolius, o Aprendiz de Mago.\n Você está em sua 1ª encarnação, como um Mago Elfo, nível 11.\n Você tem 17 anos, 2 meses, 20 dias e 15 horas.\n Você esteve jogando durante 0 dias e 16 horas.\n Você pesa 61,68kg e mede 1,39m.\n Você morreu 3 vezes e não caiu em nenhuma armadilha de morte.\n\n[Pontos e atributos]------------------------------------------------------------\n\n          Vida: {<<<<<>>>>>}  67 de 67 \n          Mana: {<<<<<>>>>>} 170 de 170\n     Movimento: {<<<<<>>>>>} 101 de 101\n\n   Experiência: {<<<<<>>>--} 152.098\n Próximo nível: {<<<<<>>>>>}  47.902           Pontos de aventura: 0\n\n   Alinhamento: {<<<<<>----}   222 - Você é um pouco bom.\n\n         Força: 10       Constituição: 10                  Acerto: 0 \n     Sabedoria: 17       Inteligência: 17                    Dano: 1 \n      Destreza: 15            Carisma: 9       Classe de Armadura: 19\n\n[Ouro e equipamentos]-----------------------------------------------------------\n\n Você está carregando 13 itens, num peso total de 98 kg.\n Você pode carregar no máximo 17 itens e um peso total de 115 kg.\n\n         Banco: {----------}   0\n    Carregando: {<<<<<>>>>>} 588 - Total: 588\n\n[Situação atual]----------------------------------------------------------------\n\n Você está em pé.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 29,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:01:36.199228-03:00",
+      "day": 92,
+      "command": "s",
+      "response": "Rua Principal\n   Você está no fim da Rua Principal de Midgaard. Ao sul você vê a Entrada\nda Guilda dos Magos. A rua continua a leste para a Praça do Comércio.\nA Loja de Magias fica ao norte, e para oeste ficam os portões da cidade.\n[ Saídas: norte, leste, sul e oeste ]\n(x2) Uma brilhante malha branca está jogada aqui. (novo)(+1E)\n\n67hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 30,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:01:43.968150-03:00",
+      "day": 92,
+      "command": "cast 'armor' grebolius",
+      "response": "Certo.\nVocê sente alguém te protegendo.\n\n67hp 152mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 31,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:01:45.220286-03:00",
+      "day": 92,
+      "command": "e",
+      "response": "A Rua Principal\n   Você está na Rua Principal, passando no meio de Midgaard. Sul daqui\nfica a Loja de Armaduras, e a Padaria fica ao norte. Leste daqui você vê\na Praça do Comércio.\n[ Saídas: norte, leste, sul e oeste ]\nUm cachorro está procurando no lixo alguma coisa para comer.\n\n67hp 159mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 32,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:01:52.518178-03:00",
+      "day": 92,
+      "command": "s",
+      "response": "\nDICA: Se você encontrar um erro ortográfico no jogo que precise ser corrigido, utilize o comando ERRATA para reportá-lo.\n\n67hp 165mn 101mv > A Loja de Armaduras\n   A Loja de Armaduras tem todos os tipos de armadura. Você vê capacetes,\nescudos e mais armaduras. Ao norte está a Rua Principal. Na parede há um\nrecado.\n[ Saídas: norte ]\nUm cachorro está procurando no lixo alguma coisa para comer.\nUm cachorro está procurando no lixo alguma coisa para comer.\nUm armeiro está aqui, exibindo sua última armadura.\n(x2) Um pedaço de carne está jogado aqui, esperando apodrecer.\n\n67hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 33,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:01:59.789732-03:00",
+      "day": 92,
+      "command": "value anel",
+      "response": "O armeiro falou por telepatia com você: 'Vou te pagar 500 moedas por isso!'\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 34,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:02:01.543157-03:00",
+      "day": 92,
+      "command": "list",
+      "response": " ##   Disponível   Item                                         Preço Nível Enc.\n--------------------------------------------------------------------------------\n  1)      1       O elmo de Theocoles                          19.000    65   6\n  2)      1       Os chifres do Minotauro                         100     0   1\n  3)      1       A fedida pele do Minotauro                      100     0   1\n  4)      2       Uma calça remendada                              20     2   1\n  5)  Ilimitado   Um par de braçadeiras de couro                   75     0   1\n  6)  Ilimitado   Um par de braçadeiras de bronze               1.750     0   1\n  7)  Ilimitado   Uma calça de couro                              150     0   1\n  8)  Ilimitado   Um par de perneiras de bronze                 3.500     0   1\n  9)  Ilimitado   Um gorro de couro                               150     0   1\n 10)  Ilimitado   Um elmo de bronze                             3.500     0   1\n 11)  Ilimitado   Um par de luvas de couro                         75     0   1\n 12)  Ilimitado   Um par de manoplas de bronze                  1.750     0   1\n 13)  Ilimitado   Um peitoral de bronze                         7.000     0   1\n 14)  Ilimitado   Uma jaqueta de malha                          1.000     0   1\n 15)  Ilimitado   Uma jaqueta de couro enfeitada                  500     0   1\n 16)  Ilimitado   Uma jaqueta de couro                            200     0   1\n 17)  Ilimitado   Um escudo                                       100     0   1\n 18)  Ilimitado   Uma cota de malha                             2.500     0   1\n 19)  Ilimitado   Um peitoral                                  18.000     0   1\n\n[ Aperte ENTER para continuar, S para sair ou número da página ( 1 de 2 )     ] 67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 35,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:02:13.379116-03:00",
+      "day": 92,
+      "command": "sell anel",
+      "response": "O armeiro falou por telepatia com você: 'Você receberá 500 moedas por isso!'\nO lojista agora possui um anel arcano.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 36,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:02:14.631788-03:00",
+      "day": 92,
+      "command": "identify escudo",
+      "response": "Você não tem nenhum escudo.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 37,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:02:15.883749-03:00",
+      "day": 92,
+      "command": "identify luvas",
+      "response": "Você não tem nenhum luvas.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 38,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:02:17.135936-03:00",
+      "day": 92,
+      "command": "identify braçadeiras",
+      "response": "Você não tem nenhum braçadeiras.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 39,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:02:28.160165-03:00",
+      "day": 92,
+      "command": "n",
+      "response": "A Rua Principal\n   Você está na Rua Principal, passando no meio de Midgaard. Sul daqui\nfica a Loja de Armaduras, e a Padaria fica ao norte. Leste daqui você vê\na Praça do Comércio.\n[ Saídas: norte, leste, sul e oeste ]\nUm cachorro está procurando no lixo alguma coisa para comer.\n\n67hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 40,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:02:35.564832-03:00",
+      "day": 92,
+      "command": "e",
+      "response": "A Praça do Comércio\n   Você está na Praça do Comércio, a famosa praça de Midgaard. Uma grande e\ndiferente estátua se encontra no meio da praça. Há caminhos para todas as\ndireções: ao norte fica a Praça do Templo, ao sul fica a Praça Comum, ao leste\ne oeste segue a Rua Principal.\n[ Saídas: norte, leste, sul e oeste ]\nUm grande mural, repleto de papéis colados, flutua magicamente aqui.\n\n67hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 41,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:02:42.696734-03:00",
+      "day": 92,
+      "command": "n",
+      "response": "A Praça do Templo\n   Você está na Praça do Templo de Midgaard. Uma grande escada de mármore\nleva-lhe até o Templo. Ao oeste está a Entrada da Guilda dos Clérigos, e\num velho bar está a leste. Sul daqui fica a Praça do Comércio, o centro de\nMidgaard.\n[ Saídas: norte, leste, sul, oeste e cima ]\nUm zelador está andando por aqui, limpando tudo.\nUm grande e famoso aventureiro está aqui, procurando alguma missão.\nO Pacificador está aqui, pronto para evitar qualquer confusão.\nUm zelador está andando por aqui, limpando tudo.\nVocê vê uma enorme fonte feita de mármore azul... ..Isso tem uma pequena aura!\n\n67hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 42,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:02:49.964013-03:00",
+      "day": 92,
+      "command": "u",
+      "response": "\nO zelador vai para leste.\nDICA: Se você possui uma idéia que possa melhorar nosso mundo, use o comando IDÉIA para sugerí-la.\n\n67hp 170mn 101mv > O Templo de Midgaard\n   Você está no final sudeste do Templo de Midgaard. O Templo foi construído\ncom pedras enormes, de aparência eterna, e as paredes são praticamente cobertas\npor uma pintura antiga de Deuses, gigantes e camponeses.\n   Pedras enormes levam-lhe para baixo, passando pelo portão do Templo,\ndescendo pela enorme montanha onde o Templo foi construído, até chegar na Praça\ndo Templo.\n   A oeste está a Sala de Leitura. A Sala de Doações fica em uma pequena\nsala a leste.\n[ Saídas: norte, leste, sul, oeste, cima e baixo ]\nUm discreto aviso está flutuando aqui... mas o que será isso?!\nUma caixa de madeira foi deixada aqui, para que você possa guardar seu dinheiro.\n\n67hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 43,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:02:57.504555-03:00",
+      "day": 92,
+      "command": "n",
+      "response": "O Altar do Templo\n   Você está no altar do templo, na parte norte do Templo de\nMidgaard. Você vê um enorme altar feito de mármore em sua frente e\natrás de você há uma estátua de Odin, o Rei dos Deuses.\nAo norte, o caminho leva para o campo.\n[ Saídas: norte e sul ]\n\n67hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 44,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:03:05.440977-03:00",
+      "day": 92,
+      "command": "n",
+      "response": "Atrás do Altar\n   Você está em um caminho sujo que leva para longe do Altar do Templo, que\nfica ao sul daqui. Ao norte, o caminho continua através do belo campo de\nMidgaard.\n[ Saídas: norte e sul ]\n\n67hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 45,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:03:13.405383-03:00",
+      "day": 92,
+      "command": "n",
+      "response": "O Grande Campo de Midgaard\n   Você está andando num caminho selvagem, através de lodo, musgo e barro.\nVocê vê o horizonte ao Norte, Leste e Oeste. Ao sul, a ocupada cidade de\nMidgaard. Tudo a sua volta é saudavelmente verde, e há algumas árvores ocupando\no caminho. O Sol bate em seu rosto e um vento bagunça o seu cabelo.\nPássaros voam acima de você, e você sente que poderia deitar na grama e ficar\naqui para sempre, cercado de beleza por todos os lados. O caminho continua para\no norte, através do campo.\n[ Saídas: norte e sul ]\n\n67hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 46,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:03:20.750393-03:00",
+      "day": 92,
+      "command": "n",
+      "response": "O Grande Campo de Midgaard\n   Você está andando num caminho selvagem, através de lodo, musgo e\nbarro. Você vê o horizonte ao Norte, Leste e Oeste. Ao Sul, a ocupada\ncidade de Midgaard. Tudo em sua volta é saudavelmente verde, e há\nalgumas árvores ocupando o caminho. O Sol bate em seu rosto e um vento\nbagunça o seu cabelo. Pássaros voam acima de você, e você sente que poderia\ndeitar na grama e ficar aqui para sempre, cercado de beleza por todos os lados.\nO Caminho continua para o norte, através do campo.\n[ Saídas: norte, leste, sul e oeste ]\n\n67hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 47,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:03:29.498470-03:00",
+      "day": 92,
+      "command": "e",
+      "response": "A Entrada da Área dos Novatos\n   Ahhh... a entrada para a área dos novatos! Esse é bem o lugar que\nvocê estava procurando. Bem, quando estiver afim, poderá entrar ao norte.\nUma inscrição foi gravada na passagem de entrada para a área.\n[ Saídas: norte e oeste ]\nUm brilhante punhal de novato está aqui, procurando alguém para apunhalar. ..Isso tem uma pequena aura! (novo)\n(x3) Uma brilhante veste de novato está aqui, procurando um corpo para abraçar. (novo)\n\n67hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 48,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:03:37.791661-03:00",
+      "day": 92,
+      "command": "n",
+      "response": "O Começo Da Passagem\n   Você está entrando em um longo corredor, podendo escutar o som de\ncriaturas por perto, mas sem poder contar exatamente a origem do som.\nUma saída ao leste te leva ao corredor, e ao sul retorna para a entrada.\n[ Saídas: leste e sul ]\nO monstro novato está aqui. MATE-O! MATE-O!\nUm brilhante punhal de novato está aqui, procurando alguém para apunhalar. ..Isso tem uma pequena aura! (novo)\n(x6) Uma brilhante veste de novato está aqui, procurando um corpo para abraçar. (novo)\n\n67hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 49,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:03:46.703467-03:00",
+      "day": 92,
+      "command": "look monstro",
+      "response": "Que estranha e pequena criatura. Ele aparenta ser inofensivo, mas você\nnão pode confirmar isso. Ele não tem mais do que 4 pés de altura, mas\naparenta ser bem musculoso... será que você deve perguntar se ele\nprecisa de ajuda? Não... mate-o!\nO monstro novato está com saúde perfeita.\n\nO monstro novato está usando:\n  segurando          -> um brilhante punhal de novato ..Isso tem uma pequena aura! (novo)\n\n67hp 170mn 101mv > \nDICA: Temos uma página no Facebook: fb.com/DeBoMUD\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 50,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:03:47.955123-03:00",
+      "day": 92,
+      "command": "consider monstro",
+      "response": "\n             Você  Oponente\n   Nível:     11   Fácil!\n    Vida:     67   É uma perda de tempo\n   Poder:     21   É uma perda de tempo\nPrecisão:     15   Fácil!\nArmadura:     44   Você vence, mas com dificuldades\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 51,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:03:49.207405-03:00",
+      "day": 92,
+      "command": "score tudo",
+      "response": "\n Você é Grebolius, o Aprendiz de Mago.\n Você está em sua 1ª encarnação, como um Mago Elfo, nível 11.\n Você tem 17 anos, 2 meses, 20 dias e 17 horas.\n Você esteve jogando durante 0 dias e 16 horas.\n Você pesa 61,68kg e mede 1,39m.\n Você morreu 3 vezes e não caiu em nenhuma armadilha de morte.\n\n[Pontos e atributos]------------------------------------------------------------\n\n          Vida: {<<<<<>>>>>}  67 de 67 \n          Mana: {<<<<<>>>>>} 170 de 170\n     Movimento: {<<<<<>>>>>} 101 de 101\n\n   Experiência: {<<<<<>>>--} 152.098\n Próximo nível: {<<<<<>>>>>}  47.902           Pontos de aventura: 0\n\n   Alinhamento: {<<<<<>----}   222 - Você é um pouco bom.\n\n         Força: 10       Constituição: 10                  Acerto: 0 \n     Sabedoria: 17       Inteligência: 17                    Dano: 1 \n      Destreza: 15            Carisma: 9       Classe de Armadura: 44\n\n[Ouro e equipamentos]-----------------------------------------------------------\n\n Você está carregando 12 itens, num peso total de 84 kg.\n Você pode carregar no máximo 17 itens e um peso total de 115 kg.\n\n         Banco: {----------}     0\n    Carregando: {<<<<<>>>>>} 1.088 - Total: 1.088\n\n[Situação atual]----------------------------------------------------------------\n\n Você está em pé.\n Você se sente protegido.\n \n[ Duração ] \n armor                 (  23 horas ) +25 em ARMADURA\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 52,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:03:59.842881-03:00",
+      "day": 92,
+      "command": "cast 'magic missile' monstro",
+      "response": "Certo.\nVocê observa com orgulho seu míssil mágico atingir o monstro novato! [2]\n{-<<<<>>>>>} o monstro novato                             Grebolius {<<<<<>>>>>}\n\n67hp 160mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 53,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:04:09.779728-03:00",
+      "day": 92,
+      "command": "cast 'burning hands' monstro",
+      "response": "\nVocê usa seu escudo para bloquear o ataque do monstro novato!\nVocê tenta cravar sua arma no monstro novato, que escapa rapidamente.\n{-<<<<>>>>>} o monstro novato                             Grebolius {<<<<<>>>>>}\n\n67hp 160mn 101mv > \nVocê se abaixa para desviar do golpe do monstro novato.\nVocê MUTILA o monstro novato com sua perfuração mortal! [9]\n{----->>>>>} o monstro novato                             Grebolius {<<<<<>>>>>}\n\n67hp 160mn 101mv > \nVocê se abaixa para desviar do golpe do monstro novato.\nVocê crava um brilhante punhal de novato no coração do monstro novato, e se diverte enquanto ele cai sem vida!\nO monstro novato está morto!\nVocê recebe 360 pontos de experiência pelo dano causado.\nSeu sangue congela ao ouvir o grito de morte do monstro novato.\nVocê pega um punhado de moedas de ouro de dentro do corpo de o monstro novato.\nHavia 20 moedas.\n\n67hp 160mn 101mv > Em que você deseja lançar a magia?\n\n67hp 167mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 54,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:04:20.146189-03:00",
+      "day": 92,
+      "command": "look in corpo",
+      "response": "corpo (na sala): \num brilhante punhal de novato ..Isso tem uma pequena aura! (novo)\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 55,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:04:21.399762-03:00",
+      "day": 92,
+      "command": "get all corpo",
+      "response": "Você pega um brilhante punhal de novato de dentro do corpo de o monstro novato.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 56,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:04:22.651929-03:00",
+      "day": 92,
+      "command": "identify 2.punhal",
+      "response": "Você se sente informado:\nObjeto: 'um brilhante punhal de novato' Tipo: ARMA\nO item é: BRILHO MÁGICO NOBITS \nPeso: 1, Valor: 0, Aluguel: 0, Nível: 0, Encarnação: 1\nPode ser vestido em: PEGAR EMPUNHAR SEGURAR \nDano: 5D5 tendo um dano médio de: 15.0.\nTipo de dano: PERFURAR\n\nIsto pode te afetar :\n   Modifica: DANO por 1\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 57,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:04:23.903726-03:00",
+      "day": 92,
+      "command": "score tudo",
+      "response": "\n Você é Grebolius, o Aprendiz de Mago.\n Você está em sua 1ª encarnação, como um Mago Elfo, nível 11.\n Você tem 17 anos, 2 meses, 20 dias e 18 horas.\n Você esteve jogando durante 0 dias e 16 horas.\n Você pesa 61,68kg e mede 1,39m.\n Você morreu 3 vezes e não caiu em nenhuma armadilha de morte.\n\n[Pontos e atributos]------------------------------------------------------------\n\n          Vida: {<<<<<>>>>>}  67 de 67 \n          Mana: {<<<<<>>>>>} 170 de 170\n     Movimento: {<<<<<>>>>>} 101 de 101\n\n   Experiência: {<<<<<>>>--} 152.458\n Próximo nível: {<<<<<>>>>>}  47.542           Pontos de aventura: 0\n\n   Alinhamento: {<<<<<>----}   209 - Você é um pouco bom.\n\n         Força: 10       Constituição: 10                  Acerto: 0 \n     Sabedoria: 17       Inteligência: 17                    Dano: 1 \n      Destreza: 15            Carisma: 9       Classe de Armadura: 44\n\n[Ouro e equipamentos]-----------------------------------------------------------\n\n Você está carregando 13 itens, num peso total de 85 kg.\n Você pode carregar no máximo 17 itens e um peso total de 115 kg.\n\n         Banco: {----------}     0\n    Carregando: {<<<<<>>>>>} 1.108 - Total: 1.108\n\n[Situação atual]----------------------------------------------------------------\n\n Você está em pé.\n Você se sente protegido.\n \n[ Duração ] \n armor                 (  23 horas ) +25 em ARMADURA\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 58,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:04:25.155885-03:00",
+      "day": 92,
+      "command": "e",
+      "response": "O Corredor Sujo\n   Você continua caminhando pelo corredor. Aqui não há nada diferente,\nmas você tem certeza de que escutou barulhos vindo detrás da porta ao sul, e\ntambém ao leste. Há muito lodo nas paredes daqui... não poderiam ter chamado\nalguém para limpar este lugar? O que os novatos irão pensar? Bem, você pode\ncontinuar no corredor indo para o leste ou oeste.\n[ Saídas: leste, !sul e oeste ]\nUma coisa assustadora está aqui, rastejando pelo chão até seu pé.\n(x10) Um brilhante punhal de novato está aqui, procurando alguém para apunhalar. ..Isso tem uma pequena aura! (novo)\n(x5) Uma brilhante veste de novato está aqui, procurando um corpo para abraçar. (novo)\n\n67hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 59,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:04:33.082336-03:00",
+      "day": 92,
+      "command": "look coisa",
+      "response": "\nUm inseto rastejante vai para leste.\n\n67hp 170mn 101mv > Você não está vendo nada parecido com isso.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 60,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:04:34.334139-03:00",
+      "day": 92,
+      "command": "consider coisa",
+      "response": "Comparar sua força com a de quem?\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 61,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:04:43.457810-03:00",
+      "day": 92,
+      "command": "e",
+      "response": "O Cruzamento\n   Você chegou no cruzamento entre duas passagens. Ao norte e ao leste,\na passagem fica mais clara, e a parte escura continua pelo caminho ao sul.\n[ Saídas: !norte, !leste, sul e oeste ]\nUma coisa assustadora está aqui, rastejando pelo chão até seu pé.\nUma novata está aqui, falando muito.\n(x14) Um brilhante punhal de novato está aqui, procurando alguém para apunhalar. ..Isso tem uma pequena aura! (novo)\n(x4) Uma brilhante veste de novato está aqui, procurando um corpo para abraçar. (novo)\n\n67hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 62,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:04:50.634664-03:00",
+      "day": 92,
+      "command": "look inseto",
+      "response": "\nDICA: De tempos em tempos os deuses realizam aventuras no jogo. São as chamadas quests. Diversão e prêmios garantidos.\n\n67hp 170mn 101mv > ECA! Se eles limpassem esse lugar, talvez ele não atraísse vermes como\nesse pequeno inseto de seis pernas, marrom e repugnante.\nUm inseto rastejante está com saúde perfeita.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 63,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:04:51.888157-03:00",
+      "day": 92,
+      "command": "consider inseto",
+      "response": "\n             Você  Oponente\n   Nível:     11   Fácil!\n    Vida:     67   É uma perda de tempo\n   Poder:     21   É uma perda de tempo\nPrecisão:     15   Fácil!\nArmadura:     44   Você vence, mas com dificuldades\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 64,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:05:06.262198-03:00",
+      "day": 92,
+      "command": "kill inseto",
+      "response": "Você EXPLODE um inseto rastejante com sua perfuração mortal! [18]\n{------>>>>} um inseto rastejante                         Grebolius {<<<<<>>>>>}\n\n67hp 170mn 101mv > \nUm inseto rastejante golpeia sua cabeça. [-4]\nVocê ESTRAÇALHA um inseto rastejante com sua perfuração mortal! [14]\nUm inseto rastejante está incapacitado e morrerá lentamente, se não for ajudado.\n{----------} um inseto rastejante                         Grebolius {<<<<<>>>>-}\n\n63hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 65,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:05:15.715599-03:00",
+      "day": 92,
+      "command": "look",
+      "response": "\nVocê fura um inseto rastejante com tanta força, que você o vê cair sem vida no chão...\nUm inseto rastejante está morto!\nVocê recebe 1.600 pontos de experiência pelo combate.\nVocê recebe 432 pontos de experiência pelo dano causado.\nSeu sangue congela ao ouvir o grito de morte de um inseto rastejante.\nVocê não encontra moeda dentro do corpo de um inseto rastejante.\n\n63hp 170mn 101mv > O Cruzamento\n   Você chegou no cruzamento entre duas passagens. Ao norte e ao leste,\na passagem fica mais clara, e a parte escura continua pelo caminho ao sul.\n[ Saídas: !norte, !leste, sul e oeste ]\nUma novata está aqui, falando muito.\nO corpo de um inseto rastejante está jogado aqui, com claros sinais de perfurações.\n(x14) Um brilhante punhal de novato está aqui, procurando alguém para apunhalar. ..Isso tem uma pequena aura! (novo)\n(x4) Uma brilhante veste de novato está aqui, procurando um corpo para abraçar. (novo)\nHá um pouco de sangue aqui.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 66,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:05:26.772434-03:00",
+      "day": 92,
+      "command": "look in corpo",
+      "response": "corpo (na sala): \n Nada.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 67,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:05:28.024797-03:00",
+      "day": 92,
+      "command": "open north",
+      "response": "Certo.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 68,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:05:29.276512-03:00",
+      "day": 92,
+      "command": "n",
+      "response": "Um Caminho Iluminado\n   Uau! Que diferença se comparada a lúgubre passagem ao sul! Quem\nquer que mantenha essa sala deve mesmo agradar os novatos. As paredes\ne o chão são limpos, e belamente decorados. Você percebe também um\ninteressante projeto no chão.\n[ Saídas: norte e sul ]\n(x2) Um brilhante punhal de novato está aqui, procurando alguém para apunhalar. ..Isso tem uma pequena aura! (novo)\n\n67hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 69,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:05:36.064450-03:00",
+      "day": 92,
+      "command": "n",
+      "response": "A Sala da Estátua\n   Aqui, o corredor entra em uma pequena sala. Saídas seguem ao sul e ao\nleste, e você vê uma magnífica, enorme (e lindamente acabada) estátua\nao norte.\n[ Saídas: leste e sul ]\n\n67hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 70,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:05:43.526858-03:00",
+      "day": 92,
+      "command": "e",
+      "response": "O Salão\n   Enquanto você continua a seguir pelo saguão, você percebe imagens,\nfiguras, e outras finas decorações adornando as paredes por toda a\npassagem. Parece bem diferente da lúgubre passagem a qual você havia\nadentrado anteriormente.\n[ Saídas: leste e oeste ]\n(x2) A fedida pele do grande Minotauro está jogada aqui. (novo)\nOs chifres do grande Minotauro foram deixados aqui. (novo)\n\n67hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 71,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:05:53.251092-03:00",
+      "day": 92,
+      "command": "get chifres",
+      "response": "\nDICA: Digite EQUIPAMENTO para ver uma lista dos itens que você está vestindo.\n\n67hp 170mn 101mv > Você pega os chifres do Minotauro.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 72,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:05:54.502976-03:00",
+      "day": 92,
+      "command": "identify chifres",
+      "response": "Você se sente informado:\nObjeto: 'os chifres do Minotauro' Tipo: ARMADURA\nO item é: MÁGICO ANTI-CLERIGO NOBITS \nPeso: 8, Valor: 100, Aluguel: 0, Nível: 0, Encarnação: 1\nPode ser vestido em: PEGAR CABEÇA \nMelhora sua armadura por 4.\n\nIsto pode te afetar :\n   Modifica: FORÇA por 2\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 73,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:05:55.757031-03:00",
+      "day": 92,
+      "command": "get pele",
+      "response": "Você pega a fedida pele do Minotauro.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 74,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:05:57.008508-03:00",
+      "day": 92,
+      "command": "identify pele",
+      "response": "Você se sente informado:\nObjeto: 'a fedida pele do Minotauro' Tipo: ARMADURA\nO item é: ANTI-CLERIGO NOBITS \nPeso: 6, Valor: 100, Aluguel: 0, Nível: 0, Encarnação: 1\nPode ser vestido em: PEGAR CORPO SOBRE \nMelhora sua armadura por 6.\n\nIsto pode te afetar :\n   Modifica: MÁX-VIDA por 15\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 75,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:06:07.185073-03:00",
+      "day": 92,
+      "command": "remove elmo",
+      "response": "Você pára de usar um brilhante elmo de novato.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 76,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:06:08.436531-03:00",
+      "day": 92,
+      "command": "identify elmo",
+      "response": "Você se sente informado:\nObjeto: 'um brilhante elmo de novato' Tipo: ARMADURA\nO item é: BRILHO NOBITS \nPeso: 4, Valor: 0, Aluguel: 0, Nível: 0, Encarnação: 1\nPode ser vestido em: PEGAR CABEÇA \nMelhora sua armadura por 3.\n\nIsto pode te afetar :\n   Modifica: CONSTITUIÇÃO por 1\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 77,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:06:09.688107-03:00",
+      "day": 92,
+      "command": "wear chifres",
+      "response": "Você coloca os chifres do Minotauro na sua cabeça.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 78,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:06:10.939868-03:00",
+      "day": 92,
+      "command": "remove capa",
+      "response": "Você pára de usar uma escura capa de novato.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 79,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:06:12.191793-03:00",
+      "day": 92,
+      "command": "identify capa",
+      "response": "Você se sente informado:\nObjeto: 'uma escura capa de novato' Tipo: ARMADURA\nO item é: BRILHO MÁGICO NOBITS \nPeso: 2, Valor: 100, Aluguel: 0, Nível: 0, Encarnação: 1\nPode ser vestido em: PEGAR SOBRE \nMelhora sua armadura por 3.\n\nIsto pode te afetar :\n   Modifica: SABEDORIA por 1\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 80,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:06:13.444249-03:00",
+      "day": 92,
+      "command": "wear pele",
+      "response": "Você veste a fedida pele do Minotauro sobre o corpo.\n\n67hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 81,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:06:14.696807-03:00",
+      "day": 92,
+      "command": "score tudo",
+      "response": "\n Você é Grebolius, o Aprendiz de Mago.\n Você está em sua 1ª encarnação, como um Mago Elfo, nível 11.\n Você tem 17 anos, 2 meses, 20 dias e 19 horas.\n Você esteve jogando durante 0 dias e 16 horas.\n Você pesa 61,68kg e mede 1,39m.\n Você morreu 3 vezes e não caiu em nenhuma armadilha de morte.\n\n[Pontos e atributos]------------------------------------------------------------\n\n          Vida: {<<<<<>>>>>}  80 de 82 \n          Mana: {<<<<<>>>>>} 170 de 170\n     Movimento: {<<<<<>>>>>} 101 de 101\n\n   Experiência: {<<<<<>>>--} 154.490\n Próximo nível: {-<<<<>>>>>}  45.510           Pontos de aventura: 0\n\n   Alinhamento: {<<<<<>----}   211 - Você é um pouco bom.\n\n         Força: 12       Constituição: 9                   Acerto: 0 \n     Sabedoria: 16       Inteligência: 17                    Dano: 1 \n      Destreza: 15            Carisma: 9       Classe de Armadura: 48\n\n[Ouro e equipamentos]-----------------------------------------------------------\n\n Você está carregando 15 itens, num peso total de 91 kg.\n Você pode carregar no máximo 17 itens e um peso total de 140 kg.\n\n         Banco: {----------}     0\n    Carregando: {<<<<<>>>>>} 1.108 - Total: 1.108\n\n[Situação atual]----------------------------------------------------------------\n\n Você está em pé.\n Você se sente protegido.\n \n[ Duração ] \n armor                 (  21 horas ) +25 em ARMADURA\n\n80hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 82,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:06:37.956871-03:00",
+      "day": 92,
+      "command": "wimpy 25",
+      "response": "Certo, você irá se acovardar se você ficar abaixo de 25 pontos de vida.\n\n82hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 83,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:06:39.208962-03:00",
+      "day": 92,
+      "command": "drop all.punhal",
+      "response": "Você solta um brilhante punhal de novato.\nVocê solta um brilhante punhal de novato.\n\n82hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 84,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:06:40.461339-03:00",
+      "day": 92,
+      "command": "drop elmo",
+      "response": "Você solta um brilhante elmo de novato.\n\n82hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 85,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:06:41.713055-03:00",
+      "day": 92,
+      "command": "e",
+      "response": "A Escadaria Norte\n   Aqui, o saguão abre em uma ampla sala, com um alto teto abobadado.\nAgora que se aproximou melhor, você pode ver que a escadaria leva acima\npara uma sacada de visão privilegiada da área. Ao sul a sala continua, e\noutra escadaria é visível igualmente parecida com a encontrada a sua frente.\n[ Saídas: sul, oeste e cima ]\n(x3) Um brilhante punhal de novato está aqui, procurando alguém para apunhalar. ..Isso tem uma pequena aura! (novo)\n(x2) Uma brilhante veste de novato está aqui, procurando um corpo para abraçar. (novo)\n\n82hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 86,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:06:48.622267-03:00",
+      "day": 92,
+      "command": "u",
+      "response": "\nDICA: Digite SOCIAIS para ver os comandos sociais disponíveis. Sociais são comandos que dão um toque especial ao jogo.\n\n82hp 170mn 101mv > A Sacada\n   Ao observar daqui é possível perder de vista o olhar. Construída em\num semi-círculo em volta da cúpula da sala, a sacada permite que você veja\no exterior para quase todas as direções. Observando ao norte, você pode ver\no Grande Campo ao norte de Midgaard continuando através das Montanhas\nDragonhelm ao norte.\n[ Saídas: sul e baixo ]\n\n82hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 87,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:06:56.351349-03:00",
+      "day": 92,
+      "command": "s",
+      "response": "A Sacada\n   Ao observar daqui é possível perder de vista o olhar. Construída em\num semi-círculo em volta da cúpula da sala, a sacada permite que você veja\no exterior para quase todas as direções. Observando ao sul, você pode ver\na grande cidade de Midgaard livre ao sudoeste.\n[ Saídas: norte e baixo ]\nUm novato esta aqui e ele aparenta estar bem confiante.\nUm par de braçadeiras de novato foi deixado aqui. (novo)\n(x2) Uma bela maça de novato foi deixada aqui, esperando um dono que a mereça. ..Isso tem uma pequena aura! (novo)\nUma brilhante veste de novato está aqui, procurando um corpo para abraçar. (novo)\n\n82hp 170mn 100mv > \nO novato esperto questiona: 'Por favor, você pode me ajudar?'\n\n82hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 88,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:07:04.640272-03:00",
+      "day": 92,
+      "command": "get braçadeiras",
+      "response": "Você pega um par de braçadeiras de novato.\n\n82hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 89,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:07:05.894390-03:00",
+      "day": 92,
+      "command": "identify braçadeiras",
+      "response": "Você se sente informado:\nObjeto: 'um par de braçadeiras de novato' Tipo: ARMADURA\nO item é: NOBITS NOBITS \nPeso: 3, Valor: 400, Aluguel: 0, Nível: 0, Encarnação: 1\nPode ser vestido em: PEGAR BRAÇOS \nMelhora sua armadura por 4.\n\nIsto pode te afetar :\n   Modifica: INTELIGÊNCIA por 1\n\n82hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 90,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:07:07.145910-03:00",
+      "day": 92,
+      "command": "get maça",
+      "response": "Você pega uma brilhante maça de novato.\n\n82hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 91,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:07:08.397897-03:00",
+      "day": 92,
+      "command": "identify maça",
+      "response": "Você se sente informado:\nObjeto: 'uma brilhante maça de novato' Tipo: ARMA\nO item é: BRILHO MÁGICO NOBITS \nPeso: 8, Valor: 300, Aluguel: 0, Nível: 0, Encarnação: 1\nPode ser vestido em: PEGAR EMPUNHAR \nDano: 2D6 tendo um dano médio de: 7.0.\nTipo de dano: ESMAGAR\n\nIsto pode te afetar :\n   Modifica: ARMADURA por -2\n\n82hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 92,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:07:21.329502-03:00",
+      "day": 92,
+      "command": "remove braçadeiras",
+      "response": "Você pára de usar um par de braçadeiras de couro.\n\n82hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 93,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:07:22.581305-03:00",
+      "day": 92,
+      "command": "identify braçadeiras",
+      "response": "Você se sente informado:\nObjeto: 'um par de braçadeiras de couro' Tipo: ARMADURA\nO item é: NOBITS NOBITS \nPeso: 4, Valor: 75, Aluguel: 10, Nível: 0, Encarnação: 1\nPode ser vestido em: PEGAR BRAÇOS \nMelhora sua armadura por 2.\n\nIsto pode te afetar :\n   Modifica: MÁX-VIDA por 3\n\n82hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 94,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:07:23.834028-03:00",
+      "day": 92,
+      "command": "wear 2.braçadeiras",
+      "response": "Você veste um par de braçadeiras de novato nos seus braços.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 95,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:07:25.085711-03:00",
+      "day": 92,
+      "command": "eq",
+      "response": "Você está usando:\n  na cabeça          -> os chifres do Minotauro (novo)\n  sobre o corpo      -> a fedida pele do Minotauro (novo)\n  no corpo           -> uma brilhante veste de novato (novo)\n  nos braços         -> um par de braçadeiras de novato (novo)\n  nas mãos           -> um par de luvas de couro (novo)\n  como escudo        -> um escudo (novo)\n  nas pernas         -> uma calça de couro (novo)\n  empunhando         -> um brilhante punhal de novato ..Isso tem uma pequena aura! (novo)\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 96,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:07:26.337801-03:00",
+      "day": 92,
+      "command": "d",
+      "response": "A Escadaria Sul\n   Aqui, o saguão abre em uma ampla sala, com um alto teto abobadado.\nAgora que se aproximou melhor, você pode ver que a escadaria leva acima\npara uma sacada de visão privilegiada da área. Ao norte a sala continua, e\noutra escadaria é visível igualmente parecida com a encontrada a sua frente.\n[ Saídas: norte, sul, oeste e cima ]\nUm novato está aqui, perturbando você.\nUm novato está aqui, parecendo muito confuso.\nUma brilhante veste de novato está aqui, procurando um corpo para abraçar. (novo)\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 97,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:07:34.121390-03:00",
+      "day": 92,
+      "command": "w",
+      "response": "Um Caminho Iluminado\n   Uau! Que diferença se comparada a lúgubre passagem ao sul! Quem\nquer que mantenha essa sala deve mesmo agradar os novatos. As paredes\ne o chão são limpos, e belamente decorados. Você percebe também um\ninteressante projeto no chão.\n[ Saídas: leste e !oeste ]\n(x2) Um brilhante punhal de novato está aqui, procurando alguém para apunhalar. ..Isso tem uma pequena aura! (novo)\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 98,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:07:42.884335-03:00",
+      "day": 92,
+      "command": "open west",
+      "response": "Certo.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 99,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:07:44.136550-03:00",
+      "day": 92,
+      "command": "w",
+      "response": "O Cruzamento\n   Você chegou no cruzamento entre duas passagens. Ao norte e ao leste,\na passagem fica mais clara, e a parte escura continua pelo caminho ao sul.\n[ Saídas: !norte, leste, sul e oeste ]\nUma novata está aqui, falando muito.\nO corpo de um inseto rastejante está jogado aqui, com claros sinais de perfurações.\n(x14) Um brilhante punhal de novato está aqui, procurando alguém para apunhalar. ..Isso tem uma pequena aura! (novo)\n(x4) Uma brilhante veste de novato está aqui, procurando um corpo para abraçar. (novo)\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 100,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:07:53.668937-03:00",
+      "day": 92,
+      "command": "s",
+      "response": "\nDICA: Os deuses são os responsáveis pela criação e manutenção de nosso jogo. Respeite-os, pois é graças a eles que este mundo existe.\n\n79hp 170mn 101mv > Mais Corredor\n   Oh! Mais dessa incômoda passagem. Talvez haja algo mais emocionante\natrás daquela porta ao oeste? Ou você pode continuar investigando pelos\ncorredores ao norte e ao sul.\n[ Saídas: norte, sul e !oeste ]\nO monstro novato está aqui. MATE-O! MATE-O!\nO monstro novato está aqui. MATE-O! MATE-O!\nO dragão de estimação de alguém fugiu e deixou sua coleira aqui. (novo)\n(x30) Um brilhante punhal de novato está aqui, procurando alguém para apunhalar. ..Isso tem uma pequena aura! (novo)\n(x2) Uma brilhante veste de novato está aqui, procurando um corpo para abraçar. (novo)\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 101,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:08:01.985117-03:00",
+      "day": 92,
+      "command": "consider monstro",
+      "response": "\n             Você  Oponente\n   Nível:     11   Fácil!\n    Vida:     79   É uma perda de tempo\n   Poder:     21   É uma perda de tempo\nPrecisão:     15   Fácil!\nArmadura:     50   Você vence, mas com dificuldades\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 102,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:08:03.237793-03:00",
+      "day": 92,
+      "command": "cast 'burning hands' monstro",
+      "response": "Certo.\nVocê queima o monstro novato com suas pequenas mãos quentes!   [12]\n{------>>>>} o monstro novato                             Grebolius {<<<<<>>>>>}\n\n79hp 149mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 103,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:08:10.361917-03:00",
+      "day": 92,
+      "command": "look",
+      "response": "\nVocê se abaixa para desviar do golpe do monstro novato.\nVocê ESTRAÇALHA o monstro novato com sua perfuração mortal! [12]\nO monstro novato está incapacitado e morrerá lentamente, se não for ajudado.\n{----------} o monstro novato                             Grebolius {<<<<<>>>>>}\n\n79hp 149mn 101mv > \nVocê fura o monstro novato com tanta força, que você o vê cair sem vida no chão...\nO monstro novato está morto!\nVocê recebe 324 pontos de experiência pelo dano causado.\nSeu sangue congela ao ouvir o grito de morte do monstro novato.\nVocê pega um punhado de moedas de ouro de dentro do corpo de o monstro novato.\nHavia 20 moedas.\n\n79hp 149mn 101mv > Mais Corredor\n   Oh! Mais dessa incômoda passagem. Talvez haja algo mais emocionante\natrás daquela porta ao oeste? Ou você pode continuar investigando pelos\ncorredores ao norte e ao sul.\n[ Saídas: norte, sul e !oeste ]\nO monstro novato está aqui. MATE-O! MATE-O!\nO corpo de o monstro novato está jogado aqui, com claros sinais de perfurações.\nO dragão de estimação de alguém fugiu e deixou sua coleira aqui. (novo)\n(x30) Um brilhante punhal de novato está aqui, procurando alguém para apunhalar. ..Isso tem uma pequena aura! (novo)\n(x2) Uma brilhante veste de novato está aqui, procurando um corpo para abraçar. (novo)\nHá um pouco de sangue aqui.\n\n79hp 155mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 104,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:08:19.629739-03:00",
+      "day": 92,
+      "command": "kill monstro",
+      "response": "Você EXPLODE o monstro novato com sua perfuração mortal! [18]\nOs ferimentos do monstro novato estão sangrando MUITO!\n{--------->} o monstro novato                             Grebolius {<<<<<>>>>>}\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 105,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:08:27.849913-03:00",
+      "day": 92,
+      "command": "open west",
+      "response": "\nVocê facilmente desvia do ataque do monstro novato enquanto ele tenta acertar você!\nVocê fura o monstro novato com tanta força, que você o vê cair sem vida no chão...\nO monstro novato está morto!\nVocê recebe 378 pontos de experiência pelo dano causado.\nSeu sangue congela ao ouvir o grito de morte do monstro novato.\nVocê pega um punhado de moedas de ouro de dentro do corpo de o monstro novato.\nHavia 20 moedas.\n\n79hp 170mn 101mv > Certo.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 106,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:08:29.101807-03:00",
+      "day": 92,
+      "command": "w",
+      "response": "Uma Pequena Sala\n   Hmmm... essa é uma pequena sala interessante. Ah, há também uma\npequena e curiosa criatura encarando você. Ela aparenta estar um\npouco surpresa com sua intervenção. Você pode sair pelas portas ao\nnorte e ao leste, ou ficar e incomodá-la um pouco mais.\n[ Saídas: !norte, leste e !baixo ]\nUma coisa assustadora está aqui, rastejando pelo chão até seu pé.\nO monstro novato está aqui. MATE-O! MATE-O!\nUma coisa assustadora está aqui, rastejando pelo chão até seu pé.\nO guarda novato está aqui imaginando para onde fora aquele dragão.\n(x2) Um brilhante elmo de novato está aqui, procurando uma cabeça para vestir. ..Isso tem uma pequena aura! (novo)\nUma brilhante veste de novato está aqui, procurando um corpo para abraçar. (novo)\n(x5) O dragão de estimação de alguém fugiu e deixou sua coleira aqui. (novo)\n(x2) Um brilhante punhal de novato está aqui, procurando alguém para apunhalar. ..Isso tem uma pequena aura! (novo)\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 107,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:08:38.768645-03:00",
+      "day": 92,
+      "command": "kill inseto",
+      "response": "\nO guarda novato exclama: 'Muito bem, obrigado pela ajuda!'\n\n79hp 170mn 101mv > Você EXPLODE um inseto rastejante com sua perfuração mortal! [22]\nOs ferimentos de um inseto rastejante estão sangrando MUITO!\n{-------->>} um inseto rastejante                         Grebolius {<<<<<>>>>>}\n\n79hp 170mn 101mv > \nUm inseto rastejante tenta acertar você, que desvia facilmente.\nVocê crava um brilhante punhal de novato no coração de um inseto rastejante, e se diverte enquanto ele cai sem vida!\nUm inseto rastejante está morto!\nVocê recebe 486 pontos de experiência pelo dano causado.\nSeu sangue congela ao ouvir o grito de morte de um inseto rastejante.\nVocê não encontra moeda dentro do corpo de um inseto rastejante.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 108,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:08:46.286180-03:00",
+      "day": 92,
+      "command": "kill inseto",
+      "response": "\nO guarda novato exclama: 'Muito bem, obrigado pela ajuda!'\n\n79hp 170mn 101mv > Você EXPLODE um inseto rastejante com sua perfuração mortal! [28]\nUm inseto rastejante está imóvel, mas logo irá se recuperar.\n{----------} um inseto rastejante                         Grebolius {<<<<<>>>>>}\n\n79hp 170mn 101mv > \nVocê fura um inseto rastejante com tanta força, que você o vê cair sem vida no chão...\nUm inseto rastejante está morto!\nVocê recebe 432 pontos de experiência pelo dano causado.\nSeu sangue congela ao ouvir o grito de morte de um inseto rastejante.\nVocê não encontra moeda dentro do corpo de um inseto rastejante.\nDICA: Tem dúvida sobre alguma coisa? O comando AJUDA existe para isso. Basta digitar AJUDA seguido por um tópico.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 109,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:08:56.815575-03:00",
+      "day": 92,
+      "command": "kill monstro",
+      "response": "\nO guarda novato exclama: 'Muito bem, obrigado pela ajuda!'\n\n79hp 170mn 101mv > Você EXPLODE o monstro novato com sua perfuração mortal! [21]\nO monstro novato está imóvel, mas logo irá se recuperar.\n{----------} o monstro novato                             Grebolius {<<<<<>>>>>}\n\n79hp 170mn 101mv > \nVocê fura o monstro novato com tanta força, que você o vê cair sem vida no chão...\nO monstro novato está morto!\nVocê recebe 378 pontos de experiência pelo dano causado.\nSeu sangue congela ao ouvir o grito de morte do monstro novato.\nVocê pega um punhado de moedas de ouro de dentro do corpo de o monstro novato.\nHavia 20 moedas.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 110,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:09:06.069217-03:00",
+      "day": 92,
+      "command": "look down",
+      "response": "\nO guarda novato exclama: 'Muito bem, obrigado pela ajuda!'\n\n79hp 170mn 101mv > Uma escada de mão segue para baixo em meio a escuridão.\nA grade está fechada.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 111,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:09:07.322142-03:00",
+      "day": 92,
+      "command": "open down",
+      "response": "Parece estar trancada.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 112,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:09:08.573557-03:00",
+      "day": 92,
+      "command": "d",
+      "response": "A grade está fechada.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 113,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:09:17.483746-03:00",
+      "day": 92,
+      "command": "e",
+      "response": "Mais Corredor\n   Oh! Mais dessa incômoda passagem. Talvez haja algo mais emocionante\natrás daquela porta ao oeste? Ou você pode continuar investigando pelos\ncorredores ao norte e ao sul.\n[ Saídas: norte, sul e oeste ]\n(x2) O corpo de o monstro novato está jogado aqui, com claros sinais de perfurações.\nO dragão de estimação de alguém fugiu e deixou sua coleira aqui. (novo)\n(x30) Um brilhante punhal de novato está aqui, procurando alguém para apunhalar. ..Isso tem uma pequena aura! (novo)\n(x2) Uma brilhante veste de novato está aqui, procurando um corpo para abraçar. (novo)\nHá um pouco de sangue aqui.\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 114,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:09:27.664639-03:00",
+      "day": 92,
+      "command": "s",
+      "response": "Um Outro Canto\n   Outro canto na passagem, e tão sujo quanto o resto desse\nlugar (talvez até mais?). Há uma porta ao leste que leva\natravés... aonde será que ela leva? Ah, e o corredor continua\nao oeste e ao norte.\n[ Saídas: norte, !leste e oeste ]\nUma coisa assustadora está aqui, rastejando pelo chão até seu pé.\n(x13) Um brilhante punhal de novato está aqui, procurando alguém para apunhalar. ..Isso tem uma pequena aura! (novo)\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 115,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:09:35.918708-03:00",
+      "day": 92,
+      "command": "kill inseto",
+      "response": "\nVocê está ficando com fome.\n\n79hp 170mn 101mv > Você ESTRAÇALHA um inseto rastejante com sua perfuração mortal! [16]\n{------>>>>} um inseto rastejante                         Grebolius {<<<<<>>>>>}\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 116,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:09:43.717214-03:00",
+      "day": 92,
+      "command": "eat pao",
+      "response": "\nUm inseto rastejante erra um poderoso soco.\nVocê DESTRÓI um inseto rastejante com sua perfuração mortal! [11]\nOs ferimentos de um inseto rastejante estão sangrando MUITO!\n{--------->} um inseto rastejante                         Grebolius {<<<<<>>>>>}\n\n79hp 170mn 101mv > \nVocê se abaixa para desviar do golpe de um inseto rastejante.\nVocê crava um brilhante punhal de novato no coração de um inseto rastejante, e se diverte enquanto ele cai sem vida!\nUm inseto rastejante está morto!\nVocê recebe 522 pontos de experiência pelo dano causado.\nSeu sangue congela ao ouvir o grito de morte de um inseto rastejante.\nVocê não encontra moeda dentro do corpo de um inseto rastejante.\n\n79hp 170mn 101mv > Você come um pão recheado.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 117,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:09:44.969287-03:00",
+      "day": 92,
+      "command": "open east",
+      "response": "Certo.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 118,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:09:46.221149-03:00",
+      "day": 92,
+      "command": "e",
+      "response": "A Sala do Alquimista\n   Dezenas de garrafas e frascos estão jogados aqui, mas todos\naparentando ser inúteis. Qualquer que seja o alquimista que esteja\ntrabalhando aqui, é um verdadeiro adepto dessa arte. Há muitas\nfórmulas e magias escritas nas paredes também... ele não poderia ter\ncomprado papel? Há uma porta ao norte, e também um escuro caminho em\numa escada levando para baixo, com uma enorme placa pregada perto, que\nvocê deveria ler...\n[ Saídas: !norte, oeste e baixo ]\nAlgo parecido com um diabinho (um mico talvez) está andando por aqui.\nO Novato Alquimista está aqui, tentando misturar algo.\nUm jarro com um líquido brilhante está aqui, iluminando o seu dia. ..Isso tem uma pequena aura!\nUm brilhante punhal de novato está aqui, procurando alguém para apunhalar. ..Isso tem uma pequena aura! (novo)\n\n79hp 170mn 100mv > \nDICA: Para desabilitar essas dicas, simplesmente digite DICAS.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 119,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:09:56.259223-03:00",
+      "day": 92,
+      "command": "read placa",
+      "response": "\nO Novato Alquimista questiona: 'Ei, você poderia me ajudar?'\n\n79hp 170mn 101mv > A placa perto da escada mostra:\nSe você está sem equipamentos e sozinho, saia já daqui!\nOu então não culpe ninguém por sua morte...\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 120,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:09:57.513268-03:00",
+      "day": 92,
+      "command": "look mico",
+      "response": "Verde, com a forma de algum humanóide, com um rabo longo e com ponta.\nÉ difícil dizer porquê antes que você possa ter uma boa visão dele, ele\nse atira de volta nas sombras.\nO mico está com saúde perfeita.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 121,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:09:58.766201-03:00",
+      "day": 92,
+      "command": "consider mico",
+      "response": "\n             Você  Oponente\n   Nível:     11   Fácil!\n    Vida:     79   É uma perda de tempo\n   Poder:     21   É uma perda de tempo\nPrecisão:     15   Você vence, mas com dificuldades\nArmadura:     50   Você vence, mas com dificuldades\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 122,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:10:00.018730-03:00",
+      "day": 92,
+      "command": "look jarro",
+      "response": "Nada mais do que um jarro brilhante. ..Isso tem uma pequena aura!\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 123,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:10:11.630637-03:00",
+      "day": 92,
+      "command": "kill mico",
+      "response": "\nO mico vai para oeste.\n\n79hp 170mn 101mv > Essa pessoa não está aqui.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 124,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:10:20.830584-03:00",
+      "day": 92,
+      "command": "open north",
+      "response": "Certo.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 125,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:10:22.083695-03:00",
+      "day": 92,
+      "command": "n",
+      "response": "A Passagem Estreita\n   A estreita passagem é simples e não está decorada, mas é limpa. Ela\ntermina ao sul, depois de uma porta de carvalho. Atrás dela você escuta\nmovimentos.\n[ Saídas: norte e sul ]\nUm novato está aqui, parecendo muito confuso.\nUm novato está aqui, perturbando você.\nUm novato está perdido aqui.\nUma escura capa de novato foi deixada aqui. ..Isso tem uma pequena aura! (novo)\n(x3) Um brilhante punhal de novato está aqui, procurando alguém para apunhalar. ..Isso tem uma pequena aura! (novo)\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 126,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:10:38.138160-03:00",
+      "day": 92,
+      "command": "s",
+      "response": "A Sala do Alquimista\n   Dezenas de garrafas e frascos estão jogados aqui, mas todos\naparentando ser inúteis. Qualquer que seja o alquimista que esteja\ntrabalhando aqui, é um verdadeiro adepto dessa arte. Há muitas\nfórmulas e magias escritas nas paredes também... ele não poderia ter\ncomprado papel? Há uma porta ao norte, e também um escuro caminho em\numa escada levando para baixo, com uma enorme placa pregada perto, que\nvocê deveria ler...\n[ Saídas: norte, oeste e baixo ]\nO Novato Alquimista está aqui, tentando misturar algo.\nUm jarro com um líquido brilhante está aqui, iluminando o seu dia. ..Isso tem uma pequena aura!\nUm brilhante punhal de novato está aqui, procurando alguém para apunhalar. ..Isso tem uma pequena aura! (novo)\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 127,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:10:45.887234-03:00",
+      "day": 92,
+      "command": "w",
+      "response": "Um Outro Canto\n   Outro canto na passagem, e tão sujo quanto o resto desse\nlugar (talvez até mais?). Há uma porta ao leste que leva\natravés... aonde será que ela leva? Ah, e o corredor continua\nao oeste e ao norte.\n[ Saídas: norte, leste e oeste ]\nAlgo parecido com um diabinho (um mico talvez) está andando por aqui.\nO corpo de um inseto rastejante está jogado aqui, com claros sinais de perfurações.\n(x13) Um brilhante punhal de novato está aqui, procurando alguém para apunhalar. ..Isso tem uma pequena aura! (novo)\nHá um pouco de sangue aqui.\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 128,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:10:53.637624-03:00",
+      "day": 92,
+      "command": "kill mico",
+      "response": "\nDICA: Use o comando COVARDE para programar que seu personagem fuja automaticamente de uma luta quando sua vida ficar abaixo de um determinado ponto.\n\n79hp 170mn 101mv > Você EXPLODE o mico com sua perfuração mortal! [27]\n{------->>>} o mico                                       Grebolius {<<<<<>>>>>}\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 129,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:11:01.341796-03:00",
+      "day": 92,
+      "command": "look in corpo",
+      "response": "\nVocê se abaixa para desviar do golpe do mico.\nVocê DESTRÓI o mico com sua perfuração mortal! [13]\nO mico está incapacitado e morrerá lentamente, se não for ajudado.\n{----------} o mico                                       Grebolius {<<<<<>>>>>}\n\n79hp 170mn 101mv > \nVocê fura o mico com tanta força, que você o vê cair sem vida no chão...\nO mico está morto!\nVocê recebe 612 pontos de experiência pelo dano causado.\nSeu sangue congela ao ouvir o grito de morte do mico.\nVocê não encontra moeda dentro do corpo de o mico.\n\n79hp 170mn 101mv > corpo (na sala): \nos chifres do Minotauro (novo)\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 130,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:11:11.936963-03:00",
+      "day": 92,
+      "command": "get all corpo",
+      "response": "Você pega os chifres do Minotauro de dentro do corpo de o mico.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 131,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:11:13.189538-03:00",
+      "day": 92,
+      "command": "w",
+      "response": "Um Corredor Iluminado\n   O corredor continua ao leste e ao oeste... e parece estar\nbastante iluminado ao oeste.\n[ Saídas: leste e oeste ]\n(x2) Um brilhante punhal de novato está aqui, procurando alguém para apunhalar. ..Isso tem uma pequena aura! (novo)\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 132,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:11:21.119533-03:00",
+      "day": 92,
+      "command": "w",
+      "response": "O Fim do Corredor\n    Ahhh... finalmente, o fim do corredor! Você pode sair em direção ao\nar fresco ao oeste, ou seguir ao leste e ter certeza de que você não\nperdeu nada.\n[ Saídas: leste e oeste ]\nAlgo parecido com um diabinho (um mico talvez) está andando por aqui.\n(x3) Um brilhante punhal de novato está aqui, procurando alguém para apunhalar. ..Isso tem uma pequena aura! (novo)\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 133,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:11:30.371190-03:00",
+      "day": 92,
+      "command": "kill mico",
+      "response": "Você MUTILA o mico com sua perfuração mortal! [16]\n{----->>>>>} o mico                                       Grebolius {<<<<<>>>>>}\n\n79hp 170mn 101mv > \nO mico tenta acertar você, que desvia facilmente.\nVocê MUTILA o mico com sua perfuração mortal! [16]\nOs ferimentos do mico estão sangrando MUITO!\nO mico entra em pânico, e tenta fugir!\nO mico vai para leste.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 134,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:11:38.563271-03:00",
+      "day": 92,
+      "command": "e",
+      "response": "Um Corredor Iluminado\n   O corredor continua ao leste e ao oeste... e parece estar\nbastante iluminado ao oeste.\n[ Saídas: leste e oeste ]\nAlgo parecido com um diabinho (um mico talvez) está andando por aqui.\n(x2) Um brilhante punhal de novato está aqui, procurando alguém para apunhalar. ..Isso tem uma pequena aura! (novo)\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 135,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:11:46.181690-03:00",
+      "day": 92,
+      "command": "kill mico",
+      "response": "Você fura o mico com tanta força, que você o vê cair sem vida no chão...\nO mico está morto!\nVocê recebe 630 pontos de experiência pelo dano causado.\nSeu sangue congela ao ouvir o grito de morte do mico.\nVocê não encontra moeda dentro do corpo de o mico.\n{----------} o mico                                       Grebolius {<<<<<>>>>>}\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 136,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:11:55.047664-03:00",
+      "day": 92,
+      "command": "look in corpo",
+      "response": "\nDICA: Jareth possui um cassino. Passe lá se quiser tentar a sorte grande.\n\n79hp 170mn 101mv > corpo (na sala): \num cantil\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 137,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:11:56.299351-03:00",
+      "day": 92,
+      "command": "get all corpo",
+      "response": "Você pega um cantil de dentro do corpo de o mico.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 138,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:11:57.551265-03:00",
+      "day": 92,
+      "command": "w",
+      "response": "O Fim do Corredor\n    Ahhh... finalmente, o fim do corredor! Você pode sair em direção ao\nar fresco ao oeste, ou seguir ao leste e ter certeza de que você não\nperdeu nada.\n[ Saídas: leste e oeste ]\n(x3) Um brilhante punhal de novato está aqui, procurando alguém para apunhalar. ..Isso tem uma pequena aura! (novo)\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 139,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:12:04.686422-03:00",
+      "day": 92,
+      "command": "w",
+      "response": "Um Campo Aberto\n   Finalmente, você está em um campo aberto... é tão bom respirar ar fresco\nnovamente! Você pode voltar para aquele lugar fechado e fedido ao leste, ou\npegar a saída ao norte que aparenta levar a um grande campo.\n[ Saídas: norte e leste ]\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 140,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:12:15.669596-03:00",
+      "day": 92,
+      "command": "n",
+      "response": "O Grande Campo de Midgaard\n   Você está andando num caminho selvagem, através de lodo, musgo e\nbarro. Você vê o horizonte ao Norte, Leste e Oeste. Ao Sul, a ocupada\ncidade de Midgaard. Tudo em sua volta é saudavelmente verde, e há\nalgumas árvores ocupando o caminho. O Sol bate em seu rosto e um vento\nbagunça o seu cabelo. Pássaros voam acima de você, e você sente que poderia\ndeitar na grama e ficar aqui para sempre, cercado de beleza por todos os lados.\nO Caminho continua para o norte, através do campo.\n[ Saídas: norte, leste, sul e oeste ]\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 141,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:12:25.122350-03:00",
+      "day": 92,
+      "command": "s",
+      "response": "O Grande Campo de Midgaard\n   Você está andando num caminho selvagem, através de lodo, musgo e barro.\nVocê vê o horizonte ao Norte, Leste e Oeste. Ao sul, a ocupada cidade de\nMidgaard. Tudo a sua volta é saudavelmente verde, e há algumas árvores ocupando\no caminho. O Sol bate em seu rosto e um vento bagunça o seu cabelo.\nPássaros voam acima de você, e você sente que poderia deitar na grama e ficar\naqui para sempre, cercado de beleza por todos os lados. O caminho continua para\no norte, através do campo.\n[ Saídas: norte e sul ]\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 142,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:12:32.772826-03:00",
+      "day": 92,
+      "command": "s",
+      "response": "Atrás do Altar\n   Você está em um caminho sujo que leva para longe do Altar do Templo, que\nfica ao sul daqui. Ao norte, o caminho continua através do belo campo de\nMidgaard.\n[ Saídas: norte e sul ]\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 143,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:12:40.104657-03:00",
+      "day": 92,
+      "command": "s",
+      "response": "O Altar do Templo\n   Você está no altar do templo, na parte norte do Templo de\nMidgaard. Você vê um enorme altar feito de mármore em sua frente e\natrás de você há uma estátua de Odin, o Rei dos Deuses.\nAo norte, o caminho leva para o campo.\n[ Saídas: norte e sul ]\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 144,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:12:47.828840-03:00",
+      "day": 92,
+      "command": "s",
+      "response": "\nDICA: Digite AJUDA MAPA para conferir os mapas das cidades natais. Informações de áreas e lugares são sempre bem-vindas.\n\n79hp 170mn 101mv > O Templo de Midgaard\n   Você está no final sudeste do Templo de Midgaard. O Templo foi construído\ncom pedras enormes, de aparência eterna, e as paredes são praticamente cobertas\npor uma pintura antiga de Deuses, gigantes e camponeses.\n   Pedras enormes levam-lhe para baixo, passando pelo portão do Templo,\ndescendo pela enorme montanha onde o Templo foi construído, até chegar na Praça\ndo Templo.\n   A oeste está a Sala de Leitura. A Sala de Doações fica em uma pequena\nsala a leste.\n[ Saídas: norte, leste, sul, oeste, cima e baixo ]\nUm discreto aviso está flutuando aqui... mas o que será isso?!\nUma caixa de madeira foi deixada aqui, para que você possa guardar seu dinheiro.\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 145,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:13:04.204786-03:00",
+      "day": 92,
+      "command": "d",
+      "response": "A Praça do Templo\n   Você está na Praça do Templo de Midgaard. Uma grande escada de mármore\nleva-lhe até o Templo. Ao oeste está a Entrada da Guilda dos Clérigos, e\num velho bar está a leste. Sul daqui fica a Praça do Comércio, o centro de\nMidgaard.\n[ Saídas: norte, leste, sul, oeste e cima ]\nUm zelador está andando por aqui, limpando tudo.\nO Pacificador está aqui, pronto para evitar qualquer confusão.\nUm zelador está andando por aqui, limpando tudo.\nUm zelador está andando por aqui, limpando tudo.\nUm grande e famoso aventureiro está aqui, procurando alguma missão.\nVocê vê uma enorme fonte feita de mármore azul... ..Isso tem uma pequena aura!\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 146,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:13:14.407800-03:00",
+      "day": 92,
+      "command": "fill cantil fonte",
+      "response": "\nO Pacificador vai para leste.\n\n79hp 170mn 101mv > Você enche um cantil a partir de a grande fonte com agua cristalina.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 147,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:13:15.660259-03:00",
+      "day": 92,
+      "command": "drink cantil",
+      "response": "Você bebe água cristalina.\nVocê não sente mais sede.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 148,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:13:16.912952-03:00",
+      "day": 92,
+      "command": "s",
+      "response": "A Praça do Comércio\n   Você está na Praça do Comércio, a famosa praça de Midgaard. Uma grande e\ndiferente estátua se encontra no meio da praça. Há caminhos para todas as\ndireções: ao norte fica a Praça do Templo, ao sul fica a Praça Comum, ao leste\ne oeste segue a Rua Principal.\n[ Saídas: norte, leste, sul e oeste ]\nUm grande mural, repleto de papéis colados, flutua magicamente aqui.\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 149,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:13:26.808678-03:00",
+      "day": 92,
+      "command": "w",
+      "response": "A Rua Principal\n   Você está na Rua Principal, passando no meio de Midgaard. Sul daqui\nfica a Loja de Armaduras, e a Padaria fica ao norte. Leste daqui você vê\na Praça do Comércio.\n[ Saídas: norte, leste, sul e oeste ]\nUm cachorro está procurando no lixo alguma coisa para comer.\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 150,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:13:34.170881-03:00",
+      "day": 92,
+      "command": "s",
+      "response": "A Loja de Armaduras\n   A Loja de Armaduras tem todos os tipos de armadura. Você vê capacetes,\nescudos e mais armaduras. Ao norte está a Rua Principal. Na parede há um\nrecado.\n[ Saídas: norte ]\nUm cachorro está procurando no lixo alguma coisa para comer.\nUm armeiro está aqui, exibindo sua última armadura.\n(x2) Um pedaço de carne está jogado aqui, esperando apodrecer.\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 151,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:13:44.924612-03:00",
+      "day": 92,
+      "command": "sell capa",
+      "response": "O armeiro falou por telepatia com você: 'Você receberá 50 moedas por isso!'\nO lojista agora possui uma escura capa de novato.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 152,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:13:46.176612-03:00",
+      "day": 92,
+      "command": "sell braçadeiras",
+      "response": "O armeiro falou por telepatia com você: 'Você receberá 37 moedas por isso!'\nO lojista agora possui um par de braçadeiras de couro.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 153,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:13:47.429742-03:00",
+      "day": 92,
+      "command": "sell chifres",
+      "response": "\nDICA: Jogadores inconvenientes e que incomodem os outros jogadores serão severamente punidos. Seja educado e faça um amigo!\n\n79hp 170mn 101mv > O armeiro falou por telepatia com você: 'Você receberá 50 moedas por isso!'\nO lojista agora possui os chifres do Minotauro.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 154,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:13:48.682673-03:00",
+      "day": 92,
+      "command": "value maça",
+      "response": "O armeiro falou por telepatia com você: 'Eu compro apenas armaduras... Vá embora!'\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 155,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:13:49.934642-03:00",
+      "day": 92,
+      "command": "inv",
+      "response": "Você está carregando:\num cantil\numa brilhante maça de novato ..Isso tem uma pequena aura! (novo)\n(x2) um pão recheado\num cantil\n(x3) um pergaminho de sabedoria\numa tocha\numa brilhante espada de novato ..Isso tem uma pequena aura! (novo)\numa poção amarela de detectar invisibilidade\numa mochila\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 156,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:14:03.239857-03:00",
+      "day": 92,
+      "command": "n",
+      "response": "A Rua Principal\n   Você está na Rua Principal, passando no meio de Midgaard. Sul daqui\nfica a Loja de Armaduras, e a Padaria fica ao norte. Leste daqui você vê\na Praça do Comércio.\n[ Saídas: norte, leste, sul e oeste ]\nUm cachorro está procurando no lixo alguma coisa para comer.\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 157,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:14:13.426116-03:00",
+      "day": 92,
+      "command": "e",
+      "response": "\nUm fido bestial vai para oeste.\n\n79hp 170mn 101mv > A Praça do Comércio\n   Você está na Praça do Comércio, a famosa praça de Midgaard. Uma grande e\ndiferente estátua se encontra no meio da praça. Há caminhos para todas as\ndireções: ao norte fica a Praça do Templo, ao sul fica a Praça Comum, ao leste\ne oeste segue a Rua Principal.\n[ Saídas: norte, leste, sul e oeste ]\nUm grande mural, repleto de papéis colados, flutua magicamente aqui.\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 158,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:14:21.489466-03:00",
+      "day": 92,
+      "command": "e",
+      "response": "Rua Principal\n   Você está na Rua Principal passando no meio da cidade. Ao norte está o\nArmazém, enquanto a Rua Principal continua a leste. Ao oeste você vê a\nPraça do Comércio, e ao sul fica a Loja de Animais.\n[ Saídas: norte, leste, sul e oeste ]\nO livro \"Equipamentos para Primeira Encarnação\", de Jooh, jaz aqui.\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 159,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:14:30.144701-03:00",
+      "day": 92,
+      "command": "read livro",
+      "response": "\nVocê sente uma mão invisível tocar seu ombro. Ao olhar para trás, não parece haver ninguém.\nSerá que você está ficando louco? Digite AJUDA ANDARILHO para entender melhor.\n\n79hp 170mn 101mv > Introdução:\nO objetivo deste guia é apenas contribuir com sugestões de vestimentas e armas\npara aqueles que estão iniciando suas aventuras, indicando também sua\nlocalização. De antemão, já aviso que este livro traz apenas indicações, para\naqueles em busca de ideias de equipamentos em sua primeira encarnação.\nDependendo de sua classe, raça, ou alinhamento, podem haver itens com atributos\nmelhores do que aqueles indicados aqui, ou ainda algum que você não possa\nutilizar. Todos os equipamentos aqui propostos são apenas uma sugestão, com o\nintuito de direcionar jogadores iniciantes por onde começar. Também não estão\nincluídos neste guia equipamentos raros (os chamados \"itens de reset\"), mas\napenas aqueles facilmente disponíveis no jogo a qualquer momento.\nA partir de um primeiro conselho se inicia o desenvolvimento de um aventureiro\ncorajoso, pronto a desbravar os perigos e desafios do mundo de Devil's Bob.\nEspero poder ajudá-los!\nDito isso...\nPara passar para a próxima página, digite LER INICIAIS\n\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 160,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:14:31.397143-03:00",
+      "day": 92,
+      "command": "e",
+      "response": "Rua Principal\n   Na Rua Principal, você vê ao norte a Loja de Armas e ao sul está \na Guilda dos Guerreiros. Ao leste você sai da cidade e ao oeste a rua\nleva para a Praça do Comércio.\n[ Saídas: norte, leste, sul e oeste ]\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 161,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:14:41.115636-03:00",
+      "day": 92,
+      "command": "n",
+      "response": "A Loja de Armas\n   Você está dentro de uma loja de armas. Vários tipos de armas brilhantes\ne afiadas estão expostas nas paredes. Você vê um recado atrás do balcão.\n[ Saídas: sul ]\nUm cachorro está procurando no lixo alguma coisa para comer.\nUm ferreiro está aqui.\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 162,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:14:49.808136-03:00",
+      "day": 92,
+      "command": "value maça",
+      "response": "\nDICA: Se ouvir o termo MOB, entenda por Monstro ou Criatura. Uma criatura é um personagem controlado pelo jogo.\n\n79hp 170mn 101mv > O ferreiro falou por telepatia com você: 'Vou te pagar 120 moedas por isso!'\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 163,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:14:51.062524-03:00",
+      "day": 92,
+      "command": "sell maça",
+      "response": "O ferreiro falou por telepatia com você: 'Aqui, lhe darei 120 moedas por isso.'\nO lojista agora possui uma brilhante maça de novato.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 164,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:14:52.313893-03:00",
+      "day": 92,
+      "command": "identify espada",
+      "response": "Você se sente informado:\nObjeto: 'uma brilhante espada de novato' Tipo: ARMA\nO item é: BRILHO MÁGICO ANTI-DT \nPeso: 4, Valor: 0, Aluguel: 0, Nível: 0, Encarnação: 1\nPode ser vestido em: PEGAR EMPUNHAR \nDano: 4D8 tendo um dano médio de: 18.0.\nTipo de dano: CORTAR\n\nIsto pode te afetar :\n   Modifica: DANO por 3\n   Modifica: ACERTO por 3\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 165,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:14:53.566091-03:00",
+      "day": 92,
+      "command": "value espada",
+      "response": "O ferreiro falou por telepatia com você: 'Você deve estar brincando! Essa coisa não vale nada!'\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 166,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:15:04.710856-03:00",
+      "day": 92,
+      "command": "remove punhal",
+      "response": "Você pára de usar um brilhante punhal de novato.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 167,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:15:05.963283-03:00",
+      "day": 92,
+      "command": "wield espada",
+      "response": "Você empunha uma brilhante espada de novato.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 168,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:15:07.215337-03:00",
+      "day": 92,
+      "command": "eq",
+      "response": "Você está usando:\n  na cabeça          -> os chifres do Minotauro (novo)\n  sobre o corpo      -> a fedida pele do Minotauro (novo)\n  no corpo           -> uma brilhante veste de novato (novo)\n  nos braços         -> um par de braçadeiras de novato (novo)\n  nas mãos           -> um par de luvas de couro (novo)\n  como escudo        -> um escudo (novo)\n  nas pernas         -> uma calça de couro (novo)\n  empunhando         -> uma brilhante espada de novato ..Isso tem uma pequena aura! (novo)\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 169,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:15:08.467283-03:00",
+      "day": 92,
+      "command": "score tudo",
+      "response": "\n Você é Grebolius, o Aprendiz de Mago.\n Você está em sua 1ª encarnação, como um Mago Elfo, nível 11.\n Você tem 17 anos, 2 meses, 21 dias e 2 horas.\n Você esteve jogando durante 0 dias e 16 horas.\n Você pesa 61,68kg e mede 1,39m.\n Você morreu 3 vezes e não caiu em nenhuma armadilha de morte.\n\n[Pontos e atributos]------------------------------------------------------------\n\n          Vida: {<<<<<>>>>>}  79 de 79 \n          Mana: {<<<<<>>>>>} 170 de 170\n     Movimento: {<<<<<>>>>>} 101 de 101\n\n   Experiência: {<<<<<>>>--} 158.252\n Próximo nível: {--<<<>>>>>}  41.748           Pontos de aventura: 0\n\n   Alinhamento: {<<<<<>----}   259 - Você é um pouco bom.\n\n         Força: 12       Constituição: 9                   Acerto: 3 \n     Sabedoria: 16       Inteligência: 18                    Dano: 3 \n      Destreza: 15            Carisma: 9       Classe de Armadura: 50\n\n[Ouro e equipamentos]-----------------------------------------------------------\n\n Você está carregando 11 itens, num peso total de 113 kg.\n Você pode carregar no máximo 17 itens e um peso total de 140 kg.\n\n         Banco: {----------}     0\n    Carregando: {<<<<<>>>>>} 1.425 - Total: 1.425\n\n[Situação atual]----------------------------------------------------------------\n\n Você está em pé.\n Você se sente protegido.\n \n[ Duração ] \n armor                 (  14 horas ) +25 em ARMADURA\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 170,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:15:09.719651-03:00",
+      "day": 92,
+      "command": "s",
+      "response": "Rua Principal\n   Na Rua Principal, você vê ao norte a Loja de Armas e ao sul está \na Guilda dos Guerreiros. Ao leste você sai da cidade e ao oeste a rua\nleva para a Praça do Comércio.\n[ Saídas: norte, leste, sul e oeste ]\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 171,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:15:18.155904-03:00",
+      "day": 92,
+      "command": "w",
+      "response": "Rua Principal\n   Você está na Rua Principal passando no meio da cidade. Ao norte está o\nArmazém, enquanto a Rua Principal continua a leste. Ao oeste você vê a\nPraça do Comércio, e ao sul fica a Loja de Animais.\n[ Saídas: norte, leste, sul e oeste ]\nO Pacificador está aqui, pronto para evitar qualquer confusão.\nO livro \"Equipamentos para Primeira Encarnação\", de Jooh, jaz aqui.\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 172,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:15:25.892911-03:00",
+      "day": 92,
+      "command": "read iniciais",
+      "response": "\nO Pacificador diz: 'Ei, quer fazer uma boa ação hoje? '\n\n79hp 170mn 101mv > Capítulo 1 - Itens Iniciais:\n*Nível 1 ao 25*\nComo luz: um jarro brilhante. (Zona dos Novatos)\nNa cabeça: um brilhante elmo de novato. (Zona dos Novatos)\nNo rosto: uma máscara de couro verde. (A Floresta de Khanjar)\nNa orelha esquerda: um diminuto brinco de novato. (Aventura \"Novela dos Novatos\")\nNa orelha direita: um brinco minúsculo. (Floresta dos Kobolds)\nNo pescoço: um colar com uma pedra púrpura. (Aventura \"Uma Lição em Gargamel\")\nNo pescoço: o colar de Azrael. (Vila dos Smurfs)\nSobre o corpo: uma escura capa de novato. (Zona dos Novatos)\nNo corpo: uma brilhante malha de aço. (Cidade dos Drows)\nNos braços: um par de braçadeiras de novato. (Zona dos Novatos)\nNas mãos: um par de luvas de anão. (Reino dos Anões)\nNo pulso esquerdo: um rosário. (Notre Dame)\nNo pulso direito: um rosário. (Notre Dame)\nNo dedo esquerdo: um anel de concha marinha. (Torre da Magia)\nNo dedo direito: um anel de concha marinha. (Torre da Magia)\nComo escudo: um escudo de escamas. (Sundhaven)\nNa cintura: um belo cinturão de rodeio. (Aventura \"Problemas Agrícolas\")\nNas pernas: um par de perneiras de bronze. (Midgaard)\nNos pés: um par de sapatos de cristal. (A Catedral de Cristal)\nEmpunhando: uma brilhante espada de novato. (Aventura \"Ninguém Segura Esse Bebê\").\nSegurando: um brilhante punhal de novato. (Zona dos Novatos)\nPara passar para a próxima página, digite LER BÁSICOS\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 173,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:15:27.145662-03:00",
+      "day": 92,
+      "command": "w",
+      "response": "A Praça do Comércio\n   Você está na Praça do Comércio, a famosa praça de Midgaard. Uma grande e\ndiferente estátua se encontra no meio da praça. Há caminhos para todas as\ndireções: ao norte fica a Praça do Templo, ao sul fica a Praça Comum, ao leste\ne oeste segue a Rua Principal.\n[ Saídas: norte, leste, sul e oeste ]\nUm grande mural, repleto de papéis colados, flutua magicamente aqui.\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 174,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:15:38.820611-03:00",
+      "day": 92,
+      "command": "n",
+      "response": "A Praça do Templo\n   Você está na Praça do Templo de Midgaard. Uma grande escada de mármore\nleva-lhe até o Templo. Ao oeste está a Entrada da Guilda dos Clérigos, e\num velho bar está a leste. Sul daqui fica a Praça do Comércio, o centro de\nMidgaard.\n[ Saídas: norte, leste, sul, oeste e cima ]\nUm zelador está andando por aqui, limpando tudo.\nUm zelador está andando por aqui, limpando tudo.\nUm grande e famoso aventureiro está aqui, procurando alguma missão.\nVocê vê uma enorme fonte feita de mármore azul... ..Isso tem uma pequena aura!\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 175,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:15:47.625820-03:00",
+      "day": 92,
+      "command": "fill cantil fonte",
+      "response": "\nDICA: Para desabilitar essas dicas, simplesmente digite DICAS.\n\n79hp 170mn 101mv > Você enche um cantil a partir de a grande fonte com agua cristalina.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 176,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:15:48.878131-03:00",
+      "day": 92,
+      "command": "drink cantil",
+      "response": "Você bebe água cristalina.\nVocê não sente mais sede.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 177,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:15:50.132703-03:00",
+      "day": 92,
+      "command": "eat pao",
+      "response": "Você come um pão recheado.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 178,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:15:51.384659-03:00",
+      "day": 92,
+      "command": "u",
+      "response": "O Templo de Midgaard\n   Você está no final sudeste do Templo de Midgaard. O Templo foi construído\ncom pedras enormes, de aparência eterna, e as paredes são praticamente cobertas\npor uma pintura antiga de Deuses, gigantes e camponeses.\n   Pedras enormes levam-lhe para baixo, passando pelo portão do Templo,\ndescendo pela enorme montanha onde o Templo foi construído, até chegar na Praça\ndo Templo.\n   A oeste está a Sala de Leitura. A Sala de Doações fica em uma pequena\nsala a leste.\n[ Saídas: norte, leste, sul, oeste, cima e baixo ]\nUm discreto aviso está flutuando aqui... mas o que será isso?!\nUma caixa de madeira foi deixada aqui, para que você possa guardar seu dinheiro.\n\n79hp 170mn 100mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 179,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:16:03.985489-03:00",
+      "day": 92,
+      "command": "save",
+      "response": "Salvando os seus atalhos.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 180,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:16:05.237420-03:00",
+      "day": 92,
+      "command": "sleep",
+      "response": "Você se deita e dorme.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 181,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:16:06.488924-03:00",
+      "day": 92,
+      "command": "score tudo",
+      "response": "\n Você é Grebolius, o Aprendiz de Mago.\n Você está em sua 1ª encarnação, como um Mago Elfo, nível 11.\n Você tem 17 anos, 2 meses, 21 dias e 3 horas.\n Você esteve jogando durante 0 dias e 16 horas.\n Você pesa 61,68kg e mede 1,39m.\n Você morreu 3 vezes e não caiu em nenhuma armadilha de morte.\n\n[Pontos e atributos]------------------------------------------------------------\n\n          Vida: {<<<<<>>>>>}  79 de 79 \n          Mana: {<<<<<>>>>>} 170 de 170\n     Movimento: {<<<<<>>>>>} 101 de 101\n\n   Experiência: {<<<<<>>>--} 158.252\n Próximo nível: {--<<<>>>>>}  41.748           Pontos de aventura: 0\n\n   Alinhamento: {<<<<<>----}   259 - Você é um pouco bom.\n\n         Força: 12       Constituição: 9                   Acerto: 3 \n     Sabedoria: 16       Inteligência: 18                    Dano: 3 \n      Destreza: 15            Carisma: 9       Classe de Armadura: 50\n\n[Ouro e equipamentos]-----------------------------------------------------------\n\n Você está carregando 10 itens, num peso total de 109 kg.\n Você pode carregar no máximo 17 itens e um peso total de 140 kg.\n\n         Banco: {----------}     0\n    Carregando: {<<<<<>>>>>} 1.425 - Total: 1.425\n\n[Situação atual]----------------------------------------------------------------\n\n Você está dormindo.\n Você se sente protegido.\n \n[ Duração ] \n armor                 (  13 horas ) +25 em ARMADURA\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 182,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:16:31.491722-03:00",
+      "day": 92,
+      "command": "__WAIT__ 25",
+      "response": "",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 183,
+      "record_kind": "server_receive"
+    },
+    {
+      "at": "2026-10-15T19:16:32.744213-03:00",
+      "day": 92,
+      "command": "save",
+      "response": "Salvando os seus atalhos.\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 184,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T19:16:33.996445-03:00",
+      "day": 92,
+      "command": "inv",
+      "response": "Você está carregando:\num cantil\num brilhante punhal de novato ..Isso tem uma pequena aura! (novo)\num pão recheado\num cantil\n(x3) um pergaminho de sabedoria\numa tocha\numa poção amarela de detectar invisibilidade\numa mochila\n\n79hp 170mn 101mv > ",
+      "source_file": "hunt_dias92_93_20261015_185906.jsonl",
+      "source_line": 185,
+      "record_kind": "command_response"
+    }
+  ],
+  "limits": [
+    "Pernoite e save confirmados no Templo; a mesma conexão foi mantida para o dia seguinte."
+  ]
+}

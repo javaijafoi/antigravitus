@@ -544,5 +544,47 @@
       }
     ],
     "summary": "Continuação em uma única conexão adicional autorizada: despertar nos campos com fome e sede, água bebida do cantil, retorno por saídas observadas, reabastecimento do cantil na fonte, compra de 3 pães a 6 moedas e consumo de 1. Consulta aos avisos da padaria e ajuda de autoquests. Fim no Templo de Midgaard, dormindo; 67/67 HP, 170/170 mana, 101/101 MV, 612 moedas, 2 pães, XP 152098 e wimpy 17. Save responde \"Salvando os seus atalhos.\"; conexão fechada. Problemas Agrícolas permanece ativa."
+  },
+  {
+    "id": "cacada-novatos-dia92-session",
+    "day": 92,
+    "type": "session",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "evidence/dia92.json",
+        "day": 92,
+        "note": "Comandos e respostas preservados da sessão autorizada."
+      }
+    ],
+    "summary": "Caçada superior: 4 monstros novatos, 4 insetos e 2 micos abatidos. 80 moedas de combate e 6154 XP. Alimentação e água atendidas; anel vendido por 500; demais vendas 257; compra de comida 24. Saldo 1425. Chifres, pele e braçadeiras encontrados e equipados; espada do inventário empunhada. Save e sono no Templo confirmados."
+  },
+  {
+    "id": "cacada-novatos-dia93-combat",
+    "day": 93,
+    "type": "combat",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "evidence/dia93.json",
+        "day": 93,
+        "note": "Comandos e respostas preservados da sessão autorizada."
+      }
+    ],
+    "summary": "Segunda caçada: 3 monstros novatos, 2 insetos, 1 mico e 3 zumbis abatidos. 165 moedas de combate e 8838 XP. Pães comprados por 18; saldo reconstituído 1572. Jarro brilhante equipado, vida máxima 87. Mico ferido fugiu repetidamente; abate não confirmado."
+  },
+  {
+    "id": "cacada-novatos-dia93-session",
+    "day": 93,
+    "type": "session",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "evidence/dia93.json",
+        "day": 93,
+        "note": "Comandos e respostas preservados da sessão autorizada."
+      }
+    ],
+    "summary": "Última sala confirmada: Uma Ramificação ao Sul. Último prompt: 87 HP, 170 mana, 100 MV. Tentativa de burning hands, look, save e sleep ficou sem resposta. Duas tentativas de reconexão terminaram em timeout WinError 10060; encerramento e situação posterior não verificados."
   }
 ]

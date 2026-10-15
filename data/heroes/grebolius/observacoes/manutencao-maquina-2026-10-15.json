@@ -1,0 +1,171 @@
+{
+  "date": "2026-10-15",
+  "scope": "consulta técnica posterior ao encerramento do Dia 91; sem novo dia narrativo",
+  "source_kind": "server_log",
+  "source_records": [
+    {
+      "file": "maquina_tip_identify_20261015_181720.jsonl",
+      "sha256": "f721f670ae86603b173015e5b1f67423cf5641eb8a27ab0bbb76139aefe4740c"
+    },
+    {
+      "file": "maquina_tip_identify_20261015_184005.jsonl",
+      "sha256": "f3697b0cbe6a7c1e98ded07c98bca09c48d73a3361bf26f7586ce87e7e87c5a0"
+    }
+  ],
+  "observations": [
+    "Tips habilitado; Identify sem redução de ouro ou mana no nível 11.",
+    "Dois pães consumidos e água bebida; inventário final sem pão.",
+    "AC 19 medida sem efeito armor listado; dormindo no Templo, sem deslocamentos ou combates.",
+    "Sem confirmação de conclusão ou cancelamento de Problemas Agrícolas; seção ausente nos scores técnicos.",
+    "Save confirmado pela resposta literal; conexão encerrada."
+  ],
+  "commands": [
+    {
+      "command": "score tudo",
+      "at": "2026-10-15T18:18:03.770763-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 6,
+      "response": "Você é Grebolius, o Aprendiz de Mago.\n Você está em sua 1ª encarnação, como um Mago Elfo, nível 11.\n Você tem 17 anos, 2 meses, 19 dias e 4 horas.\n Você esteve jogando durante 0 dias e 15 horas.\n Você pesa 61,68kg e mede 1,39m.\n Você morreu 3 vezes e não caiu em nenhuma armadilha de morte.\n\n[Pontos e atributos]------------------------------------------------------------\n\n          Vida: {<<<<<>>>>>}  67 de 67 \n          Mana: {<<<<<>>>>>} 170 de 170\n     Movimento: {<<<<<>>>>>} 101 de 101\n\n   Experiência: {<<<<<>>>--} 152.098\n Próximo nível: {<<<<<>>>>>}  47.902           Pontos de aventura: 0\n\n   Alinhamento: {<<<<<>----}   222 - Você é um pouco bom.\n\n         Força: 10       Constituição: 10                  Acerto: 0 \n     Sabedoria: 17       Inteligência: 17                    Dano: 1 \n      Destreza: 15            Carisma: 9       Classe de Armadura: 44\n\n[Ouro e equipamentos]-----------------------------------------------------------\n\n Você está carregando 13 itens, num peso total de 101 kg.\n Você pode carregar no máximo 17 itens e um peso total de 115 kg.\n\n         Banco: {----------}   0\n    Carregando: {<<<<<>>>>>} 612 - Total: 612\n\n[Situação atual]----------------------------------------------------------------\n\n Você está em pé.\n Você se sente protegido.\n \n[ Duração ] \n armor                 (   5 horas ) +25 em ARMADURA"
+    },
+    {
+      "command": "tips",
+      "at": "2026-10-15T18:18:22.429484-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 8,
+      "response": "Você verá as dicas do jogo."
+    },
+    {
+      "command": "score tudo",
+      "at": "2026-10-15T18:19:05.145815-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 10,
+      "response": "Você é Grebolius, o Aprendiz de Mago.\n Você está em sua 1ª encarnação, como um Mago Elfo, nível 11.\n Você tem 17 anos, 2 meses, 19 dias e 5 horas.\n Você esteve jogando durante 0 dias e 15 horas.\n Você pesa 61,68kg e mede 1,39m.\n Você morreu 3 vezes e não caiu em nenhuma armadilha de morte.\n\n[Pontos e atributos]------------------------------------------------------------\n\n          Vida: {<<<<<>>>>>}  67 de 67 \n          Mana: {<<<<<>>>>>} 170 de 170\n     Movimento: {<<<<<>>>>>} 101 de 101\n\n   Experiência: {<<<<<>>>--} 152.098\n Próximo nível: {<<<<<>>>>>}  47.902           Pontos de aventura: 0\n\n   Alinhamento: {<<<<<>----}   222 - Você é um pouco bom.\n\n         Força: 10       Constituição: 10                  Acerto: 0 \n     Sabedoria: 17       Inteligência: 17                    Dano: 1 \n      Destreza: 15            Carisma: 9       Classe de Armadura: 44\n\n[Ouro e equipamentos]-----------------------------------------------------------\n\n Você está carregando 13 itens, num peso total de 101 kg.\n Você pode carregar no máximo 17 itens e um peso total de 115 kg.\n\n         Banco: {----------}   0\n    Carregando: {<<<<<>>>>>} 612 - Total: 612\n\n[Situação atual]----------------------------------------------------------------\n\n Você está em pé.\n Você se sente protegido.\n \n[ Duração ] \n armor                 (   4 horas ) +25 em ARMADURA"
+    },
+    {
+      "command": "identify anel",
+      "at": "2026-10-15T18:20:07.409441-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 14,
+      "response": "DICA: O mundo de Devil's Bob possui regras feitas para organizar o jogo. Digite DIRETRIZES para vê-las. Respeite e obedeça.\n\nVocê se sente informado:\nObjeto: 'um anel arcano' Tipo: ARMADURA\nO item é: BRILHO ABENÇOADO ANTI-MAU NOBITS \nPeso: 14, Valor: 1000, Aluguel: 3, Nível: 90, Encarnação: 3\nPode ser vestido em: PEGAR DEDO \nMelhora sua armadura por 0.\n\nIsto pode te afetar :\n   Modifica: INTELIGÊNCIA por 1\n   Modifica: SABEDORIA por 1\n   Modifica: CONSTITUIÇÃO por 1\n   Modifica: MÁX-MANA por 116"
+    },
+    {
+      "command": "score tudo",
+      "at": "2026-10-15T18:20:08.911858-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 15,
+      "response": "Você é Grebolius, o Aprendiz de Mago.\n Você está em sua 1ª encarnação, como um Mago Elfo, nível 11.\n Você tem 17 anos, 2 meses, 19 dias e 6 horas.\n Você esteve jogando durante 0 dias e 15 horas.\n Você pesa 61,68kg e mede 1,39m.\n Você morreu 3 vezes e não caiu em nenhuma armadilha de morte.\n\n[Pontos e atributos]------------------------------------------------------------\n\n          Vida: {<<<<<>>>>>}  67 de 67 \n          Mana: {<<<<<>>>>>} 170 de 170\n     Movimento: {<<<<<>>>>>} 101 de 101\n\n   Experiência: {<<<<<>>>--} 152.098\n Próximo nível: {<<<<<>>>>>}  47.902           Pontos de aventura: 0\n\n   Alinhamento: {<<<<<>----}   222 - Você é um pouco bom.\n\n         Força: 10       Constituição: 10                  Acerto: 0 \n     Sabedoria: 17       Inteligência: 17                    Dano: 1 \n      Destreza: 15            Carisma: 9       Classe de Armadura: 44\n\n[Ouro e equipamentos]-----------------------------------------------------------\n\n Você está carregando 13 itens, num peso total de 101 kg.\n Você pode carregar no máximo 17 itens e um peso total de 115 kg.\n\n         Banco: {----------}   0\n    Carregando: {<<<<<>>>>>} 612 - Total: 612\n\n[Situação atual]----------------------------------------------------------------\n\n Você está em pé.\n Você se sente protegido.\n \n[ Duração ] \n armor                 (   3 horas ) +25 em ARMADURA"
+    },
+    {
+      "command": "sleep",
+      "at": "2026-10-15T18:25:22.710261-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 93,
+      "response": "Você se deita e dorme."
+    },
+    {
+      "command": "eat pao",
+      "at": "2026-10-15T18:31:55.424391-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 268,
+      "response": "Você come um pão recheado."
+    },
+    {
+      "command": "drink cantil",
+      "at": "2026-10-15T18:31:56.927447-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 269,
+      "response": "Você bebe água cristalina.\nVocê não sente mais sede."
+    },
+    {
+      "command": "sleep",
+      "at": "2026-10-15T18:31:58.429765-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 270,
+      "response": "Você se deita e dorme."
+    },
+    {
+      "command": "score tudo",
+      "at": "2026-10-15T18:41:18.631044-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 3,
+      "response": "Você é Grebolius, o Aprendiz de Mago.\n Você está em sua 1ª encarnação, como um Mago Elfo, nível 11.\n Você tem 17 anos, 2 meses, 19 dias e 23 horas.\n Você esteve jogando durante 0 dias e 16 horas.\n Você pesa 61,68kg e mede 1,39m.\n Você morreu 3 vezes e não caiu em nenhuma armadilha de morte.\n\n[Pontos e atributos]------------------------------------------------------------\n\n          Vida: {<<<<<>>>>>}  67 de 67 \n          Mana: {<<<<<>>>>>} 170 de 170\n     Movimento: {<<<<<>>>>>} 101 de 101\n\n   Experiência: {<<<<<>>>--} 152.098\n Próximo nível: {<<<<<>>>>>}  47.902           Pontos de aventura: 0\n\n   Alinhamento: {<<<<<>----}   222 - Você é um pouco bom.\n\n         Força: 10       Constituição: 10                  Acerto: 0 \n     Sabedoria: 17       Inteligência: 17                    Dano: 1 \n      Destreza: 15            Carisma: 9       Classe de Armadura: 19\n\n[Ouro e equipamentos]-----------------------------------------------------------\n\n Você está carregando 12 itens, num peso total de 92 kg.\n Você pode carregar no máximo 17 itens e um peso total de 115 kg.\n\n         Banco: {----------}   0\n    Carregando: {<<<<<>>>>>} 612 - Total: 612\n\n[Situação atual]----------------------------------------------------------------\n\n Você está dormindo.\n Você está ficando com fome."
+    },
+    {
+      "command": "inv",
+      "at": "2026-10-15T18:41:20.136097-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 4,
+      "response": "Você está carregando:\num cantil\num pão recheado\num bracelete de conchas (novo)(+44L)\n(x3) um pergaminho de sabedoria\numa tocha\numa brilhante espada de novato ..Isso tem uma pequena aura! (novo)\numa poção amarela de detectar invisibilidade\numa mochila\num brilhante punhal de novato ..Isso tem uma pequena aura! (novo)\num anel arcano ..Isso tem uma pequena aura! (novo)(+2E)"
+    },
+    {
+      "command": "eat pao",
+      "at": "2026-10-15T18:42:44.389434-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 74,
+      "response": "Você come um pão recheado."
+    },
+    {
+      "command": "drink cantil",
+      "at": "2026-10-15T18:42:45.891577-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 75,
+      "response": "Você bebe água cristalina.\nVocê não sente mais sede."
+    },
+    {
+      "command": "tips",
+      "at": "2026-10-15T18:42:47.393406-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 76,
+      "response": "DICA: Você pode utilizar o comando SAÍDAS para ver as saídas disponíveis em sua sala.\nVocê não verá mais as dicas do jogo."
+    },
+    {
+      "command": "tips",
+      "at": "2026-10-15T18:44:58.403491-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 77,
+      "response": "Você verá as dicas do jogo."
+    },
+    {
+      "command": "score tudo",
+      "at": "2026-10-15T18:45:02.909870-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 80,
+      "response": "Você é Grebolius, o Aprendiz de Mago.\n Você está em sua 1ª encarnação, como um Mago Elfo, nível 11.\n Você tem 17 anos, 2 meses, 20 dias e 2 horas.\n Você esteve jogando durante 0 dias e 16 horas.\n Você pesa 61,68kg e mede 1,39m.\n Você morreu 3 vezes e não caiu em nenhuma armadilha de morte.\n\n[Pontos e atributos]------------------------------------------------------------\n\n          Vida: {<<<<<>>>>>}  67 de 67 \n          Mana: {<<<<<>>>>>} 170 de 170\n     Movimento: {<<<<<>>>>>} 101 de 101\n\n   Experiência: {<<<<<>>>--} 152.098\n Próximo nível: {<<<<<>>>>>}  47.902           Pontos de aventura: 0\n\n   Alinhamento: {<<<<<>----}   222 - Você é um pouco bom.\n\n         Força: 10       Constituição: 10                  Acerto: 0 \n     Sabedoria: 17       Inteligência: 17                    Dano: 1 \n      Destreza: 15            Carisma: 9       Classe de Armadura: 19\n\n[Ouro e equipamentos]-----------------------------------------------------------\n\n Você está carregando 11 itens, num peso total de 84 kg.\n Você pode carregar no máximo 17 itens e um peso total de 115 kg.\n\n         Banco: {----------}   0\n    Carregando: {<<<<<>>>>>} 612 - Total: 612\n\n[Situação atual]----------------------------------------------------------------\n\n Você está em pé."
+    },
+    {
+      "command": "inv",
+      "at": "2026-10-15T18:45:04.412703-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 81,
+      "response": "Você está carregando:\num cantil\num bracelete de conchas (novo)(+44L)\n(x3) um pergaminho de sabedoria\numa tocha\numa brilhante espada de novato ..Isso tem uma pequena aura! (novo)\numa poção amarela de detectar invisibilidade\numa mochila\num brilhante punhal de novato ..Isso tem uma pequena aura! (novo)\num anel arcano ..Isso tem uma pequena aura! (novo)(+2E)"
+    },
+    {
+      "command": "save",
+      "at": "2026-10-15T18:45:05.915138-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 82,
+      "response": "Salvando os seus atalhos."
+    },
+    {
+      "command": "sleep",
+      "at": "2026-10-15T18:45:07.417251-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 83,
+      "response": "Você se deita e dorme."
+    },
+    {
+      "command": "score tudo",
+      "at": "2026-10-15T18:45:08.920234-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 84,
+      "response": "Você é Grebolius, o Aprendiz de Mago.\n Você está em sua 1ª encarnação, como um Mago Elfo, nível 11.\n Você tem 17 anos, 2 meses, 20 dias e 2 horas.\n Você esteve jogando durante 0 dias e 16 horas.\n Você pesa 61,68kg e mede 1,39m.\n Você morreu 3 vezes e não caiu em nenhuma armadilha de morte.\n\n[Pontos e atributos]------------------------------------------------------------\n\n          Vida: {<<<<<>>>>>}  67 de 67 \n          Mana: {<<<<<>>>>>} 170 de 170\n     Movimento: {<<<<<>>>>>} 101 de 101\n\n   Experiência: {<<<<<>>>--} 152.098\n Próximo nível: {<<<<<>>>>>}  47.902           Pontos de aventura: 0\n\n   Alinhamento: {<<<<<>----}   222 - Você é um pouco bom.\n\n         Força: 10       Constituição: 10                  Acerto: 0 \n     Sabedoria: 17       Inteligência: 17                    Dano: 1 \n      Destreza: 15            Carisma: 9       Classe de Armadura: 19\n\n[Ouro e equipamentos]-----------------------------------------------------------\n\n Você está carregando 11 itens, num peso total de 84 kg.\n Você pode carregar no máximo 17 itens e um peso total de 115 kg.\n\n         Banco: {----------}   0\n    Carregando: {<<<<<>>>>>} 612 - Total: 612\n\n[Situação atual]----------------------------------------------------------------\n\n Você está dormindo."
+    },
+    {
+      "command": "save",
+      "at": "2026-10-15T18:45:10.422002-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 85,
+      "response": "Salvando os seus atalhos."
+    }
+  ]
+}

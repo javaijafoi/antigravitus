@@ -2348,5 +2348,68 @@
       "Na parede, o recado explicava as compras, e a placa anunciava: “Padaria de Midgaard: Entre e viaje no viagem.” Li também as orientações sobre as aventuras oferecidas pelo reino. Depois atravessei a Praça do Comércio e subi de volta ao Templo.",
       "Recolhi-me entre as pedras antigas de Midgaard e adormeci alimentada, com água e provisões guardadas. A família do fazendeiro continuava à espera, e os invasores não tinham sido vencidos. O pedido ficava para a próxima partida."
     ]
+  },
+  {
+    "id": 92,
+    "day": "Dia 92",
+    "title": "Chifres, Pele e Moedas",
+    "date": "2026-10-15",
+    "in_game_time": "Jornada autorizada na Área dos Novatos; pernoite no Templo",
+    "excerpt": "Caçada pelos corredores dos novatos, venda do anel e dos excedentes, troca de equipamento e pernoite confirmado no Templo.",
+    "tags": [
+      "area-dos-novatos",
+      "cacada",
+      "espólios",
+      "equipamento",
+      "pernoite"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "evidence/dia92.json",
+        "day": 92,
+        "note": "Comandos e respostas preservados da sessão autorizada."
+      }
+    ],
+    "content": [
+      "Despertei no Templo com a fome me apertando. Desci à fonte, enchi o cantil e fui à padaria. Deixei vinte e quatro moedas pelos pães, comi e guardei o restante. Na loja de magias, o feiticeiro recusou meu anel; o armeiro aceitou comprá-lo por quinhentas moedas. O objeto exigia de mim uma condição que eu ainda não alcançara. A comida e o espaço livre tinham uso imediato.",
+      "A proteção falhou quando tentei lançá-la na loja. Na rua, invoquei-a novamente e senti a presença que me resguardava. Cruzei o Templo, passei pelo altar e atravessei os campos até a entrada dos novatos. No começo da passagem, examinei o monstro que segurava um punhal e o enfrentei. Meu míssil o atingiu; a lâmina terminou o combate. Recolhi vinte moedas e examinei o punhal deixado no corpo.",
+      "No Cruzamento, um inseto me acertou a cabeça antes de cair. Continuei pelo caminho iluminado, pela sala da estátua e pelo salão. Ali encontrei chifres e uma pele de Minotauro abandonados. Examinei as peças, troquei o elmo pelos chifres e vesti a pele sobre a roupa. A capa antiga ficou guardada. Nas sacadas, recolhi braçadeiras e uma maça; as braçadeiras também substituíram as de couro.",
+      "Voltei aos corredores sujos. Queimei um monstro com as mãos e finalizei-o com o punhal; contra outro, fui direto à lâmina. Na pequena sala do guarda, eliminei insetos e outro monstro. Uma grade fechava a escada escura: tentei abri-la, mas estava trancada. O guarda continuou em seu posto.",
+      "O laboratório tinha fórmulas nas paredes e uma placa de aviso junto à descida. Li o alerta, examinei o mico que se escondia nas sombras e segui pelas passagens. Enfrentei os micos encontrados no caminho; um fugiu, e fui atrás dele até confirmar sua queda. Examinei os corpos e recolhi o que encontrei neles. Pelo fim do corredor, saí ao campo aberto e retornei a Midgaard.",
+      "Vendi a capa, as braçadeiras de couro e os chifres sobressalentes ao armeiro. O ferreiro comprou a maça. Identifiquei a espada que já carregava e passei a empunhá-la, conservando o punhal. Na rua, li a introdução e as indicações iniciais de um livro sobre equipamento. O jarro brilhante do laboratório estava entre as sugestões.",
+      "Bebi novamente na fonte, comi e subi ao Templo. Deitei-me no Templo. A caça havia rendido moedas e equipamento; as passagens de baixo ainda aguardavam."
+    ]
+  },
+  {
+    "id": 93,
+    "day": "Dia 93",
+    "title": "A Luz do Jarro e os Zumbis do Subsolo",
+    "date": "2026-10-15",
+    "in_game_time": "Jornada autorizada na Área dos Novatos; interrupção no subsolo",
+    "excerpt": "Nova varredura e descida às galerias; a conexão parou de responder antes de concluir a limpeza e confirmar o encerramento.",
+    "tags": [
+      "area-dos-novatos",
+      "cacada",
+      "espólios",
+      "equipamento",
+      "interrompido"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "evidence/dia93.json",
+        "day": 93,
+        "note": "Comandos e respostas preservados da sessão autorizada."
+      }
+    ],
+    "content": [
+      "Acordei no Templo e mantive a espada empunhada, segurando também o punhal. Abri a mochila e retirei as lâminas repetidas que a entulhavam. Os pergaminhos couberam no espaço liberado. Depois passei na padaria, paguei dezoito moedas por mais pão e voltei aos campos.",
+      "Havia monstros no Corredor Sujo. Enfrentei-os com a espada; a lâmina cortou, errou e voltou a cortar, enquanto eu desviava dos golpes. Um deles ainda me atingiu o peito. Eliminei os insetos encontrados no corredor e na sala do guarda, depois segui ao laboratório. Outro monstro caiu pelo caminho.",
+      "O mico do laboratório também me feriu, mas caiu diante da espada. Examinei seu corpo e recolhi pele e chifres. Peguei o jarro brilhante, identifiquei-o e o acendi antes de descer. A luz me acompanhou pela entrada úmida e pelas galerias cobertas de fungos.",
+      "Os novatos zumbis vieram atacar. Minha espada abriu caminho entre seus golpes. Experimentei o toque gélido contra um deles, mas a magia errou; a luta terminou na lâmina. Recolhi as moedas dos corpos e examinei seus pertences. Pelas curvas, vi peles e chifres espalhados, além do que conseguia levar comigo.",
+      "Identifiquei os cantis e deixei o exemplar mais pesado, conservando água no outro. Continuei pelas interseções e pela curva que levava à ramificação sul. Ali encontrei um mico. Ele escapou ferido para a sala enorme, e fui atrás. Meu míssil o atingiu, mas ele tornou a fugir para o norte. Voltei à ramificação atrás dele."
+    ],
+    "editorial_note": "O registro termina na última localização confirmada. A tentativa seguinte de mãos flamejantes, look, save e sleep não recebeu resposta; duas reconexões deram timeout. Não há abate do mico nem pernoite confirmados."
   }
 ]

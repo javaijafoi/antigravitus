@@ -7,6 +7,14 @@ description: "Continuar uma sessão autorizada do Devil's Bob MUD e reconciliar 
 
 Use esta skill para uma sessão autorizada em `debomud.org:4000` ou para revisar os registros da campanha. Uma solicitação de edição de arquivos não autoriza jogar, enviar comandos ao servidor ou publicar. A skill orienta o método; os acontecimentos vêm das evidências da sessão e dos documentos identificados como fontes.
 
+## Referências da máquina
+
+Consultar [maquina/README.md](../../maquina/README.md) e o [dicionário prático](../../maquina/dicionario_comandos.md) conforme a intenção da sessão. Essa camada conhece referências que Grebolius pode desconhecer: não transfere lore, magias ou comandos para lembranças e acontecimentos da personagem.
+
+Antes de jogar, analisar as tips capturadas na sessão anterior; se não houver, registrar a lacuna. Durante uma conexão autorizada, manter `tips` ligado, lendo a resposta do toggle antes de repetir. Consolidar dicas novas em `maquina/tips.md`. Conferir inventário, comida, água e proteção antes de partir.
+
+Usar a ajuda local para escolher verbos adequados aos objetos e criaturas observados. Ao testar um comando e obter resultado diferente do manual, atualizar a orientação prática e `maquina/verificacoes.md` com data, contexto, resposta e fonte; preservar o original importado. Ajuda consultada não equivale a execução bem-sucedida nem habilidade aprendida.
+
 ## 1. Evidência antes da prosa
 
 Antes de escrever, separar:

@@ -2,10 +2,10 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 91,
+    "day": 93,
     "verification": "live",
     "live_verified": true,
-    "source": "Conferência ao vivo na continuação autorizada do Dia 91: ficha completa, inventário, equipamento, postura dormindo no Templo e respostas de save; evidence/dia91.json. Campos sem nova medição preservam sua fonte anterior."
+    "source": "Conferência ao vivo no encerramento do Dia 93 no Templo de Midgaard: score tudo, inventário, equipamentos, postura dormindo e save confirmados; evidence/dia93.json."
   },
   "level": 11,
   "mechanical_race": "Elfo",
@@ -13,13 +13,13 @@
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
   "alignment": {
-    "value": 222,
+    "value": 338,
     "label": "Bom"
   },
   "vitals": {
     "hp": {
-      "current": 67,
-      "max": 67
+      "current": 87,
+      "max": 87
     },
     "mana": {
       "current": 170,
@@ -31,27 +31,27 @@
     }
   },
   "experience": {
-    "current": 152098,
+    "current": 177488,
     "next_level": 200000
   },
-  "gold": 612,
+  "gold": 1667,
   "attributes": {
-    "STR": 10,
+    "STR": 12,
     "DEX": 15,
-    "CON": 10,
-    "INT": 17,
-    "WIS": 17,
+    "CON": 9,
+    "INT": 18,
+    "WIS": 16,
     "CHA": 9
   },
   "armor": {
-    "base": 19,
-    "with_armor": 44,
+    "base": 25,
+    "with_armor": 50,
     "effect_verified": true,
-    "note": "Dia 91: AC 44 observada com armor +25 ativo (5 horas no score final). Base 19 calculada por subtração; não medida diretamente sem o efeito. Duração futura não presumida."
+    "note": "Dia 93: AC 50 observada com armor (+25) ativo (17 horas no score final)."
   },
-  "hitroll": 0,
-  "damroll": 1,
-  "wimpy": 17,
+  "hitroll": 3,
+  "damroll": 4,
+  "wimpy": 13,
   "training_sessions": 15,
   "operational_mode": {
     "current": "padrao",
@@ -184,92 +184,132 @@
   ],
   "equipment": [
     {
-      "slot": "Cabeça",
-      "name": "um brilhante elmo de novato"
+      "slot": "como luz",
+      "item": "um jarro brilhante",
+      "name": "um jarro brilhante"
     },
     {
-      "slot": "Sobre o Corpo",
-      "name": "uma escura capa de novato"
+      "slot": "na cabeça",
+      "item": "os chifres do Minotauro",
+      "name": "os chifres do Minotauro"
     },
     {
-      "slot": "Empunhado (Arma Principal)",
-      "name": "um brilhante punhal de novato"
+      "slot": "sobre o corpo",
+      "item": "a fedida pele do Minotauro",
+      "name": "a fedida pele do Minotauro"
     },
     {
-      "slot": "Como Escudo",
-      "name": "um escudo"
-    },
-    {
-      "slot": "No Corpo",
+      "slot": "no corpo",
+      "item": "uma brilhante veste de novato",
       "name": "uma brilhante veste de novato"
     },
     {
-      "slot": "Nos Braços",
-      "name": "um par de braçadeiras de couro"
+      "slot": "nos braços",
+      "item": "um par de braçadeiras de novato",
+      "name": "um par de braçadeiras de novato"
     },
     {
-      "slot": "Nas Mãos",
+      "slot": "nas mãos",
+      "item": "um par de luvas de couro",
       "name": "um par de luvas de couro"
     },
     {
-      "slot": "Nas Pernas",
+      "slot": "como escudo",
+      "item": "um escudo",
+      "name": "um escudo"
+    },
+    {
+      "slot": "nas pernas",
+      "item": "uma calça de couro",
       "name": "uma calça de couro"
+    },
+    {
+      "slot": "empunhando",
+      "item": "uma brilhante espada de novato",
+      "name": "uma brilhante espada de novato"
+    },
+    {
+      "slot": "segurando",
+      "item": "um brilhante punhal de novato",
+      "name": "um brilhante punhal de novato"
     }
   ],
   "inventory": {
-    "recorded": [
-      {
-        "name": "um pão recheado",
-        "quantity": 2,
-        "source": "Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json."
-      },
+    "items": [
       {
         "name": "um cantil",
         "quantity": 1,
-        "source": "Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json."
+        "source": "evidence/dia93.json"
       },
       {
-        "name": "um bracelete de conchas",
-        "quantity": 1,
-        "source": "Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json."
-      },
-      {
-        "name": "um pergaminho de sabedoria",
+        "name": "os chifres do Minotauro",
         "quantity": 3,
-        "source": "Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json."
+        "source": "evidence/dia93.json"
+      },
+      {
+        "name": "a fedida pele do Minotauro",
+        "quantity": 1,
+        "source": "evidence/dia93.json"
+      },
+      {
+        "name": "um pão recheado",
+        "quantity": 3,
+        "source": "evidence/dia93.json"
       },
       {
         "name": "uma tocha",
         "quantity": 1,
-        "source": "Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json."
-      },
-      {
-        "name": "uma brilhante espada de novato",
-        "quantity": 1,
-        "source": "Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json."
+        "source": "evidence/dia93.json"
       },
       {
         "name": "uma poção amarela de detectar invisibilidade",
         "quantity": 1,
-        "source": "Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json."
+        "source": "evidence/dia93.json"
       },
       {
         "name": "uma mochila",
         "quantity": 1,
-        "source": "Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json."
-      },
-      {
-        "name": "um brilhante punhal de novato",
-        "quantity": 1,
-        "source": "Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json."
-      },
-      {
-        "name": "um anel arcano (+2E)",
-        "quantity": 1,
-        "source": "Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json."
+        "source": "evidence/dia93.json"
       }
     ],
-    "pending_verification": []
+    "pending_verification": [],
+    "recorded": [
+      {
+        "name": "um cantil",
+        "quantity": 1,
+        "source": "evidence/dia93.json"
+      },
+      {
+        "name": "os chifres do Minotauro",
+        "quantity": 3,
+        "source": "evidence/dia93.json"
+      },
+      {
+        "name": "a fedida pele do Minotauro",
+        "quantity": 1,
+        "source": "evidence/dia93.json"
+      },
+      {
+        "name": "um pão recheado",
+        "quantity": 3,
+        "source": "evidence/dia93.json"
+      },
+      {
+        "name": "uma tocha",
+        "quantity": 1,
+        "source": "evidence/dia93.json"
+      },
+      {
+        "name": "uma poção amarela de detectar invisibilidade",
+        "quantity": 1,
+        "source": "evidence/dia93.json"
+      },
+      {
+        "name": "uma mochila",
+        "quantity": 1,
+        "source": "evidence/dia93.json"
+      }
+    ]
   },
   "conditions": [
     "Dia 91: dormindo no Templo de Midgaard, com 67/67 HP, 170/170 mana e 101/101 MV no último score.",
@@ -303,10 +343,15 @@
       "document": "evidence/dia91.json",
       "day": 91,
       "note": "Trechos literais do servidor, linhas dos registros anteriores e ações da continuação autorizada; sem referências circulares."
+    },
+    {
+      "document": "evidence/dia93.json",
+      "day": 93,
+      "note": "Comandos e respostas preservados da sessão autorizada e encerramento ao vivo."
     }
   ],
   "narrative_style": "ladra arcana",
-  "weapon_summary": "Punhal de Novato (+ Escudo)",
+  "weapon_summary": "Espada de Novato + Punhal segurado + Escudo",
   "migration": {
     "method": "sessão ao vivo e conferência direta no servidor",
     "verified_on": "Dia 91 (ficha, inventário, equipamento e encerramento; habilidades e treinos mantêm fontes anteriores)"
