@@ -8,7 +8,7 @@
   "role": "Guardião da Memória de Midgaard",
   "alignment": "Alinhamento Neutro",
   "quote": "“O novato ambicioso morreu; o guardião das memórias de Midgaard acaba de nascer.”",
-  "subtitle": "Diário diário de um elfo mago no clássico RPG de texto Devil's Bob MUD (porta 4000). A jornada entre o peso da sobrevivência, a filosofia arcana e os segredos imortais de uma cidade viva há décadas.",
+  "subtitle": "Diário de um elfo mago no clássico RPG de texto Devil's Bob MUD (porta 4000). A jornada entre o peso da sobrevivência, a filosofia arcana e os segredos imortais de uma cidade viva há décadas.",
   "vigilia": "Vigília Ativa: Templo de Midgaard",
   "server": "debomud.org:4000",
   "accent_color": "#e5b364",
@@ -36,5 +36,9 @@
     "pitch": "-2Hz",
     "style": "reflective",
     "description": "Voz grave, serena e solene de cronista arcano com pausas reflexivas"
+  },
+  "folder": "data/heroes/antigravitus",
+  "evidence_policy": {
+    "legacy_through_day": 50
   }
 }

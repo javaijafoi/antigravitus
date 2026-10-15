@@ -1,262 +1,78 @@
-# 📋 Boilerplate: Projeto Crônicas de Herói (MUD / RPG)
+# Criar uma nova campanha sem inventar seu histórico
 
-Guia e template limpo para clonar a arquitetura de **Antigravitus** e criar o compêndio/blog vivo de um novo personagem.
+## 1. Concepção proposta
 
----
+Estes campos definem uma proposta de personagem. Não são prova de eventos ou mecânicas no servidor.
 
-## 🧭 Fase 1: As Perguntas de Concepção do Novo Herói
+- Nome, título, runa e aparência: a definir pelo autor.
+- Raça e estilo narrativo: a definir; registrar a classe mecânica separadamente quando observada no MUD.
+- Objetivo: o que deseja alcançar?
+- Temor: o que teme perder?
+- Falha: que traço pode levá-la a uma decisão ruim?
+- Limite: o que aceita sacrificar e o que deseja preservar?
+- Legado: como gostaria de ser lembrada?
+- Tom: que espaço haverá para ação, curiosidade, humor, dúvida e relações?
 
-Preencha este formulário para definir o DNA do novo herói antes de gerar os arquivos:
+Um mentor, rival, trauma, abrigo ou aliança só entra no histórico se foi estabelecido pelo autor como premissa ou ocorreu na sessão. Marcar a origem claramente. Não presumir que NPCs e regras de outro herói valem para este.
 
-### 1. Ficha Básica
-* **Nome do Herói:** `[Ex: Vaelen, Kaelen, Boris, Lyra]`
-* **Raça e Classe:** `[Ex: Anão Guerreiro, Ladino Humano, Clériga Elfa]`
-* **Título / Alcunha:** `[Ex: O Martelo de Ferro, O Olho das Sombras]`
-* **Alinhamento Moral:** `[Ex: Leal e Bom, Neutro Puro, Caótico e Neutro]`
-* **Runa / Emoji Símbolo:** `[Ex: ᛏ, ⚔️, 🛡️, 🌙, 🩸]`
-* **Universo / Servidor:** `[Ex: Devil's Bob MUD (debomud.org:4000), D&D, Tormenta]`
-* **Frase Lema (Quote de abertura):** `["..."]`
+## 2. Gerar o rascunho
 
-### 2. A Matriz das 5 Perguntas Capitais (Psicologia)
-1. **Qual é o objetivo principal dele?** *(Desejo externo e grande busca)*
-   * `-> Resposta:`
-2. **O que ele mais teme?** *(Trauma primordial, insegurança que paralisa ou faz errar)*
-   * `-> Resposta:`
-3. **Qual é a maior falha de caráter dele?** *(Defeito moral a superar para amadurecer)*
-   * `-> Resposta:`
-4. **O que ele está disposto a sacrificar?** *(O que aceita perder vs. sua linha ética inegociável)*
-   * `-> Resposta:`
-5. **Que legado almeja deixar?** *(O que dirão sobre ele quando a jornada terminar)*
-   * `-> Resposta:`
+```bash
+python create_hero.py boris --name "Boris Barba-de-Ferro" --race "Guerreiro Anão" --rune "🛡️" --avatar "🧔"
+```
 
-### 3. Cenário e Ponto de Partida
-* **Local de nascimento/despertar:** `[Ex: Templo, Taverna decadente, Prisão]`
-* **Primeiro contato / Mentor / Rival:** `[Nome e função]`
-* **Tom narrativo:** `[Ex: Dark fantasy introspectivo, Épico militar, Sarcástico e urbano]`
-
----
-
-## 📂 Fase 2: Estrutura de Arquivos do Projeto
-
-Crie a seguinte pasta raiz:
+O comando cria `data/heroes/boris/` e sua entrada em `data/heroes.json` com `record_status: draft`. O rascunho tem ficha sem valores não observados, mapa sem salas e listas vazias de crônicas, eventos, resumos e missões. Não cria um Dia 1 fictício. Não sobrescreve personagens existentes.
 
 ```text
-[nome-do-heroi]/
-├── data/
-│   ├── identidade.md      # A alma: 5 perguntas e matriz operacional
-│   ├── evolucao.md        # O cinzel: log de mutações psicológicas ciclo a ciclo
-│   ├── conhecimento.md    # O grimório: mapa, NPCs, facções e regras do mundo
-│   ├── mapa.md            # Registro topográfico e saídas verificadas (a cada 10 ciclos)
-│   ├── mapa.json          # Dados do mapa interativo do aventureiro (a cada 10 ciclos)
-│   ├── ficha.md           # Ficha viva em tempo real
-│   ├── ciclos.json        # Resumos emocionantes de cada ciclo com aviso de spoiler (a cada 10 ciclos)
-│   └── posts.json         # Array de crônicas (ordem crescente: Dia 1 primeiro)
-├── css/
-│   └── style.css          # Estilo dark fantasy responsivo (copiar do original)
-├── js/
-│   └── main.js             # Engine de renderização de posts, mapas e filtros
-├── index.html             # Feed principal das crônicas
-├── mapa.html              # Mapa interativo do aventureiro
-├── ficha.html             # Ficha viva do aventureiro
-├── sobre.html             # Apresentação do herói e da matriz psicológica
-├── add_day.py             # Script utilitário para injetar nova crônica
-├── publish_daily.py       # (Opcional) Sincronização via GitHub API
-├── vercel.json            # Deploy estático na Vercel
-└── README.md              # Documentação e manifesto
+data/heroes/<id>/
+├── hero.json          apresentação e cartões; sincronizado com o catálogo
+├── identidade.md     concepção e matriz de decisão
+├── evolucao.md       evolução apoiada no que aconteceu
+├── conhecimento.md   fatos, hipóteses e dúvidas
+├── mapa.md           explicação de rotas e incertezas
+├── mapa.json         salas e saídas documentadas
+├── ficha.md          rascunho; depois será derivada do estado
+├── missoes.md        guia de leitura das missões
+├── missoes.json      oficiais, investigações e objetivos pessoais
+├── events.json       fatos selecionados com fonte
+├── ciclos.json       resumos de blocos já concluídos
+└── posts.json        crônicas reais
 ```
 
----
+## 3. Primeira observação
 
-## 📄 Fase 3: Templates Prontos dos Arquivos
+Registre dentro de `observacoes/` uma nota factual, sem senhas ou credenciais. Observe nível, classe, vitais, recursos, equipamento, habilidades, localização e condições. Não complete lacunas por analogia.
 
-### 1. `data/identidade.md`
-```markdown
-# ᛟ A Alma de [NOME] — Matriz de Identidade
+Crie `state.json` seguindo a estrutura da Grebolius, preenchendo **cada valor com a evidência deste novo herói**. O contrato inclui `schema_version`, `hero_id`, `as_of` (dia, fonte, verificação e `live_verified`), `vitals`, nível, classe mecânica, ouro, XP, armadura, wimpy, treinos, habilidades, equipamento, inventário, localização, acampamento e santuário. Os campos editoriais adicionais exigidos pelo gerador também devem representar este herói. Se ainda faltar observação suficiente, conserve o rascunho em vez de copiar números e passado de outra pessoa.
 
-> *"[INSIRA UMA FRASE DE IMPACTO DO HERÓI]"*
+O inventário separa `recorded` de `pending_verification`. `verification: documental` e `live_verified: false` identificam reconciliação com documentos; `verification: live` identifica sessão conferida. A confirmação se refere ao instantâneo registrado, sem prometer que ainda seja atual.
 
-Esta matriz é o motor psicológico de [NOME]. Ela não é estática; ela é desafiada a cada ciclo.
+## 4. Registrar o dia real
 
----
+Prepare o texto da crônica em UTF-8 e uma lista JSON de fontes. Exemplo de estrutura a preencher após a sessão:
 
-## 1. Qual é o objetivo principal dele?
-**[OBJETIVO PRINCIPAL]**  
-[Detalhamento da busca central, desejos e motivações].
-
----
-
-## 2. O que ele mais teme?
-**[MAIOR TEMOR]**  
-[Detalhamento da fobia psicológica, trauma ou fraqueza interna].
-
----
-
-## 3. Qual é a maior falha de caráter dele?
-**[MAIOR FALHA]**  
-[Detalhamento do vício, arrogância, covardia, fúria ou desconfiança].
-
----
-
-## 4. O que ele está disposto a sacrificar para vencer?
-**[LIMITES DE SACRIFÍCIO]**  
-Sacrifica: [o que ele aceita perder].  
-Jamais sacrifica: [o limite ético inegociável].
-
----
-
-## 5. Que marca ou legado ele quer deixar?
-**[LEGADO ALMEJADO]**  
-[Como deseja ser lembrado pelas próximas eras].
-
----
-
-## ⚖️ Matriz de Decisão Operacional
-$$\text{Ação Diária} = f(\text{Objetivo}, \text{Filtro de Temor}, \text{Desafio da Falha}) + \text{Saber Acumulado}$$
-
-* **Diante do conflito:** [Como reage].
-* **Diante do desconhecido/segredos:** [Como investiga].
-* **Diante de outros viajantes/aliados:** [Postura social].
-```
-
----
-
-### 2. `data/evolucao.md`
-```markdown
-# 📜 O Cinzel da Consciência — Log de Metamorfose de [NOME]
-
-> *"A alma não nasce pronta; ela é desbastada golpe a golpe pelas pedras do mundo."*
-
-Este documento registra as mutações psicológicas, quebras de crença e refinamento das 5 perguntas essenciais.
-
----
-
-### ⏳ Ciclo 1 (Dia 1): O Ponto de Partida
-* **Estado Inicial:** [Ilusão ou motivação com a qual iniciou a jornada].
-* **Impacto Chave:** [O primeiro grande acontecimento].
-  * *Mutação na Pergunta [X]:* [Como a percepção foi alterada].
-```
-
----
-
-### 3. `data/conhecimento.md`
-```markdown
-# 🗺️ O Grimório do Mundo — Saber Acumulado de [NOME]
-
-> *"Caminhar sem conhecer o chão é cortejar a sepultura."*
-
-## 🏛️ 1. Topografia e Locais Notáveis
-
-| Localidade | Posição Relativa | Nível de Perigo | Utilidade Prática & Saber Estratégico |
-| :--- | :--- | :--- | :--- |
-| **Ponto Seguro** | Centro | **Zero (Santuário)** | Descanso e recuperação. |
-| **Zona de Risco** | Arredores | **Médio / Alto** | Fontes de recursos e perigos. |
-
----
-
-## 👥 2. Figuras Notáveis e Facções
-
-* **[Nome do NPC]:**
-  * *Posto/Papel:* [Função no mundo].
-  * *Relação com [NOME]:* [Aliado, neutro, mentor ou hostil].
-```
-
----
-
-### 4. `data/posts.json`
 ```json
 [
-  {
-    "id": 1,
-    "day": "Dia 1",
-    "title": "O Despertar e o Primeiro Passo",
-    "date": "14 de outubro de 2026",
-    "in_game_time": "Ciclo 1 — O Despertar",
-    "excerpt": "O momento em que meus olhos se abriram para este mundo e o primeiro sopro de desafio atingiu meu peito.",
-    "tags": [
-      "Início da Jornada",
-      "Primeiro Ciclo",
-      "Despertar"
-    ],
-    "content": [
-      "Parágrafo 1 da crônica contando o início da aventura...",
-      "Parágrafo 2 detalhando a primeira decisão tomada...",
-      "Parágrafo 3 com a reflexão moral e encerramento do dia."
-    ]
-  }
+  {"document": "observacoes/sessao-1.md", "day": 1, "note": "O que esta nota realmente comprova."}
 ]
 ```
 
----
-
-### 5. `add_day.py`
-```python
-import json
-import os
-
-POSTS_PATH = os.path.join(os.path.dirname(__file__), "data", "posts.json")
-
-def add_chronicle(day_num, title, date_str, in_game_time, excerpt, tags, content_paragraphs, day_label=None):
-    """
-    Adiciona nova crônica no topo de data/posts.json mantendo ordenação crescente (Dia 1, Dia 2, ...).
-    """
-    if os.path.exists(POSTS_PATH):
-        with open(POSTS_PATH, "r", encoding="utf-8") as f:
-            posts = json.load(f)
-    else:
-        posts = []
-
-    new_post = {
-        "id": day_num,
-        "day": day_label if day_label else f"Dia {day_num}",
-        "title": title,
-        "date": date_str,
-        "in_game_time": in_game_time,
-        "excerpt": excerpt,
-        "tags": tags,
-        "content": content_paragraphs
-    }
-
-    # Remove duplicata caso já exista
-    posts = [p for p in posts if p.get("id") != day_num]
-    posts.append(new_post)
-    posts.sort(key=lambda x: x.get("id", 0))
-
-    with open(POSTS_PATH, "w", encoding="utf-8") as f:
-        json.dump(posts, f, ensure_ascii=False, indent=2)
-
-    print(f"Crônica do Dia {day_num} ('{title}') adicionada com sucesso!")
-
-if __name__ == "__main__":
-    print("Script de adição de crônicas diárias.")
+```bash
+python add_day.py --hero boris --day 1 --title "TÍTULO REAL" --date "DATA REAL" --time "REFERÊNCIA REAL NO JOGO" --content-file "cronica.txt" --evidence-file "fontes.json" --source-kind live
+python scripts/sync_hero.py --hero boris
+python scripts/check_project.py
 ```
 
----
+O caminho da fonte é relativo à pasta do herói e precisa existir. A crônica relata a sessão; intenções futuras são identificadas como intenções. O registro do primeiro dia encerra `record_status: draft`, e a ficha precisa satisfazer as checagens normais. Uma alteração deliberada em dia existente exige `--replace`, preservando os fatos.
 
-### 6. `vercel.json`
-```json
-{
-  "cleanUrls": true,
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
-      ]
-    }
-  ]
-}
-```
+## 5. Continuidade e leitura
 
----
+Antes da sessão seguinte, escolha um objetivo verificável, uma pendência e critérios de preparação/retirada. Depois, registre a diferença efetivamente produzida: pista, caminho, recurso, relação ou decisão. Não fabrique três cenas para cumprir um formato.
 
-## ⚡ Passo a Passo para Subir um Novo Herói
+Cada resumo em `ciclos.json` contém `cycle`, `start_day`, `end_day`, `title` e `summary`. Só entra após os dez dias correspondentes estarem documentados. Não antecipe vitórias ou movimentos no resumo seguinte.
 
-1. **Copiar arquivos base de front-end:**
-   * Copie `css/style.css` e `js/main.js` deste projeto (eles já cuidam da busca, badges de tag, modal e layout responsivo).
-   * Em `index.html` e `sobre.html`, faça a substituição das menções de `Antigravitus` pelo nome, runa e biografia do novo herói.
-2. **Definir o herói:** Responda as perguntas da Fase 1 e preencha `data/identidade.md`.
-3. **Inicializar crônicas:** Limpe `data/posts.json` deixando apenas o post inaugural (Dia 1).
-4. **Deploy:** Suba no GitHub e conecte à Vercel com 1 clique (deploy estático automático).
+Mapeie apenas saídas documentadas. Uma saída não implica automaticamente retorno, e local de repouso não comprova proteção. Diferencie onde está, onde acampou e qual santuário usa como referência.
+
+## 6. Publicação
+
+Consulte o [README](README.md) para validação e publicação opcional. `python publish_daily.py` apenas simula; `--publish` cria um commit local após validar, e `--push` explícito envia ao destino já configurado. Não publique o rascunho como uma aventura que já aconteceu.

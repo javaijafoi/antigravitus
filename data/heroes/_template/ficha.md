@@ -1,47 +1,12 @@
-# [RUNA] Ficha Atual de [NOME] (Estado Vivo)
+# [RUNA] Ficha de [NOME] — rascunho
 
-> *Ficha viva sincronizada com o estado direto do MUD (debomud.org:4000). Sem histórico de versões anteriores.*
+**Origem: template. Nenhuma observação de jogo registrada.**
 
----
+- Nome proposto: [NOME]
+- Título proposto: [TITULO]
+- Raça / estilo proposto: [RACA_CLASSE]
+- Classe mecânica, nível, vitais, ouro, experiência, treinos e wimpy: a observar.
+- Equipamento, inventário, habilidades, localização e santuário: a observar.
 
-## ✦ Identificação e Registro
-* **Nome de Registro no MUD:** [NOME]
-* **Título Honorífico:** [TITULO]
-* **Raça / Aparência:** [RACA_CLASSE]
-* **Classe Mecânica no MUD:** [RACA_CLASSE]
-* **Grau / Nível Atual:** **1** *(Início da Jornada)*
-* **Alinhamento Moral:** 0 (Neutro)
-* **Localização Atual:** Templo de Midgaard — *Em Repouso Seguro*
+Após a primeira sessão, registrar os valores realmente vistos e suas fontes. Criar `state.json` a partir da observação, conservando a estrutura usada pela Grebolius e alterando cada valor segundo a evidência. Gerar a ficha com `python scripts/sync_hero.py --hero [SLUG]`. Não copiar os números ou itens de outra personagem.
 
----
-
-## ✦ Status Vitais
-| Recurso | Atual | Máximo | Porcentagem |
-| :--- | :---: | :---: | :---: |
-| **Pontos de Vida (HP)** | 20 | 20 | 100% |
-| **Pontos de Mana (MP)** | 50 | 50 | 100% |
-| **Estamina / Movimento (MV)** | 80 | 80 | 100% |
-
-* **Experiência Acumulada:** **0 EXP**
-* **Ouro Líquido:** **0 moedas de ouro**
-
----
-
-## ✦ Atributos Base
-* **Força (STR):** 10
-* **Destreza (DEX):** 10
-* **Constituição (CON):** 10
-* **Inteligência (INT):** 10
-* **Sabedoria (WIS):** 10
-* **Carisma (CHA):** 10
-
----
-
-## ✦ Equipamento em Uso
-* **Empunhado:** Arma inicial de novato
-* **Corpo:** Veste de novato
-
----
-
-## ✦ Ciclo e Postura Atual
-* **Estado:** Despertar e primeiros passos em Midgaard.

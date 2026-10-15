@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mapa Interativo das Aventuras — As Crônicas de Devil's Bob MUD</title>
-  <meta name="description" content="Mapa topográfico interativo simplificado das aventuras e rotas desbravadas em Devil's Bob MUD (debomud.org:4000). Visualização por aventureiro atualizada a cada 10 ciclos.">
+  <meta name="description" content="Mapa documental das salas, rotas e perigos registrados pelos aventureiros em Devil's Bob MUD (debomud.org:4000).">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,16 +21,15 @@
       <a href="index.html" class="brand">
         <span class="brand-rune">ᛟ</span>
         <div class="brand-text">
-          <h1>Antigravitus</h1>
-          <span>Cronista de Midgaard</span>
+          <h1>Crônicas de Midgaard</h1>
+          <span>Diários de aventureiros</span>
         </div>
       </a>
       <nav class="main-nav">
         <div class="hero-selector-wrap">
           <label for="hero-select" class="hero-select-label">Herói:</label>
           <select id="hero-select" class="hero-select" aria-label="Selecione o Herói">
-            <option value="antigravitus">🧙‍♂️ Antigravitus</option>
-            <option value="grebolius">🧌 Grebolius</option>
+            <option value="">Carregando aventureiros…</option>
           </select>
         </div>
         <a href="index.html" id="link-cronicas">Crônicas</a>
@@ -44,17 +43,18 @@
 
   <!-- Main Content -->
   <main class="container" style="margin-top: 2rem;">
+    <p id="load-status" class="load-status" role="status" hidden></p>
     <article class="map-page-card">
       
       <!-- Top Title & Cycle Info -->
       <div class="map-header-top">
         <div class="map-title-wrap">
-          <h2 id="map-hero-title">🗺️ Mapa Topológico de Antigravitus</h2>
+          <h2 id="map-hero-title">🗺️ Mapa das Aventuras</h2>
           <p id="map-hero-sub">Territórios explorados, santuários de repouso, rotas de fuga e zonas de perigo.</p>
         </div>
-        <div class="map-cycle-tag" id="map-cycle-tag" title="Regra do Ciclo Decenal: sincronização obrigatória a cada 10 ciclos de exploração">
+        <div class="map-cycle-tag" id="map-cycle-tag" title="Data de consolidação dos documentos; sem verificação ao vivo">
           <span>⏳</span>
-          <span id="map-cycle-text">Consolidado a cada 10 ciclos</span>
+          <span id="map-cycle-text">Carregando registro…</span>
         </div>
       </div>
 
@@ -117,8 +117,11 @@
           <button class="map-btn-tool" id="btn-view-table" title="Modo Tabela Tática de Rotas">
             <span>📋 Tabela Tática</span>
           </button>
-          <button class="map-btn-tool" id="btn-center-sanctuary" title="Centralizar visualização no Santuário ativo do herói">
-            <span>🎯 Santuário</span>
+          <button class="map-btn-tool" id="btn-center-location" title="Centralizar na última posição registrada nos documentos">
+            <span>📍 Posição registrada</span>
+          </button>
+          <button class="map-btn-tool" id="btn-center-sanctuary" title="Centralizar no santuário de referência, que pode diferir da posição registrada">
+            <span>🎯 Santuário de referência</span>
           </button>
         </div>
       </div>
@@ -135,7 +138,10 @@
 
         <!-- Legend Overlay -->
         <div class="map-legend-box" aria-label="Legenda do Mapa">
-          <span class="legend-item"><span class="legend-dot sanctuary"></span> Santuário</span>
+          <span class="legend-item"><span class="legend-dot current-location"></span> Posição registrada</span>
+          <span class="legend-item"><span class="legend-dot camp"></span> Acampamento</span>
+          <span class="legend-item"><span class="legend-dot sanctuary"></span> Santuário de referência</span>
+          <span class="legend-item">→ Sentido único registrado</span>
           <span class="legend-item"><span class="legend-dot safe"></span> Seguro</span>
           <span class="legend-item"><span class="legend-dot low"></span> Baixo Risco</span>
           <span class="legend-item"><span class="legend-dot medium"></span> Alerta</span>
@@ -146,7 +152,7 @@
         <svg id="map-svg" viewBox="0 0 1000 700">
           <defs>
             <marker id="arrow" viewBox="0 0 10 10" refX="16" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-              <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="rgba(212, 163, 89, 0.45)" />
+              <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#e5b364" />
             </marker>
           </defs>
           <g id="map-viewport-group">
@@ -177,7 +183,7 @@
 
         <div class="inspector-body-grid">
           <div>
-            <h4 style="font-family: var(--font-serif); font-size: 0.95rem; color: var(--accent-gold);">🧭 Saídas Verificadas (Clique para Navegar):</h4>
+            <h4 style="font-family: var(--font-serif); font-size: 0.95rem; color: var(--accent-gold);">🧭 Saídas registradas (clique nos destinos para navegar no mapa):</h4>
             <div class="inspector-exits-wrap" id="inspect-exits">
               <!-- Botões de saídas injetados via JS -->
             </div>
@@ -218,9 +224,9 @@
       <div class="footer-meta">
         <span>Devil's Bob MUD • debomud.org:4000</span>
         <span>•</span>
-        <span>Mapeamento Vivo por Aventureiro</span>
+        <span>Mapeamento documental por aventureiro</span>
         <span>•</span>
-        <span>Regra Decenal de Atualização</span>
+        <span>Conferir mudanças e rotas no jogo</span>
       </div>
     </div>
   </footer>

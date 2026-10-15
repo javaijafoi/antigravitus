@@ -42,74 +42,14 @@ document.addEventListener("DOMContentLoaded", async () => {
   const q4El = document.getElementById("q4-text");
   const q5El = document.getElementById("q5-text");
 
-  let heroesList = [
-    {
-      id: "antigravitus",
-      name: "Antigravitus",
-      title: "Cronista de Midgaard",
-      rune: "ᛟ",
-      avatar: "🧙‍♂️",
-      race_class: "Mago Elfo",
-      role: "Guardião da Memória de Midgaard",
-      alignment: "Alinhamento Neutro",
-      quote: "“O novato ambicioso morreu; o guardião das memórias de Midgaard acaba de nascer.”",
-      subtitle: "Diário de um elfo mago no clássico RPG de texto Devil's Bob MUD (porta 4000). A jornada entre o peso da sobrevivência, a filosofia arcana e os segredos imortais de uma cidade viva há décadas.",
-      vigilia: "Vigília Ativa: Templo de Midgaard",
-      server: "debomud.org:4000",
-      folder: "data/heroes/antigravitus",
-      questions: {
-        q1: "Decifrar a urdidura de Midgaard e erguer o Grande Compêndio das Memórias. Preservar a história e honrar os caídos (como Sakura), sem se corromper pela violência mercenária das tavernas.",
-        q2: "A perda da mente (dissociação da alma) e o horror da morte anônima e esquecida. O trauma primordial de quase ter tido seu corpo usurpado no Dia 1 e o pavor de virar um cadáver sem nome numa sarjeta.",
-        q3: "A soberba intelectual e a paralisia do distanciamento calculista. O risco de usar a desculpa de 'observador imparcial' para justificar o medo ou a covardia diante de tragédias que demandam ação.",
-        q4: "Sacrifica o conforto, as honras fáceis e o aplauso mundano; jamais a verdade ou a ética. Dorme no chão frio e rejeita ouro manchado de sangue. A fidelidade à memória viva é inegociável.",
-        q5: "Ser o Olho Lúcido e a Voz Imortal de Midgaard. Que os viajantes do futuro encontrem seus registros e saibam quem amou, lutou e tombou neste cosmo através das décadas."
-      },
-      quick_stats: {
-        level_badge: "(Grau 2 • Cronista de Midgaard)",
-        hp: "31 / 31",
-        mana: "118 / 118",
-        mv: "92 / 92",
-        ac: "AC 12",
-        weapon: "Cajado de Peregrino",
-        weapon_icon: "🪄",
-        sanctuary: "Templo de Midgaard"
-      }
-    },
-    {
-      id: "grebolius",
-      name: "Grebolius",
-      title: "A Ladra e Soberana dos Goblins",
-      rune: "🧌",
-      avatar: "🗡️",
-      race_class: "Mulher Goblin (Maga / Ladra)",
-      role: "Fundadora do Futuro Reino Goblin • Aventureira Sem Véu",
-      alignment: "Pragmática / Focada em Velocidade",
-      quote: "“Chega de me esconder sob trapos de novato. Vou trocar este equipamento, andar de cabeça erguida e fazer Midgaard conhecer a verdadeira força de uma mulher goblin.”",
-      subtitle: "Diário de uma aventureira goblin sem medo. Deixando os disfarces para trás para desbravar mistérios, cumprir missões e forjar o Reino Livre.",
-      vigilia: "Meta: O Ápice da Força • Ritmo: Velocidade Máxima",
-      server: "debomud.org:4000",
-      folder: "data/heroes/grebolius",
-      questions: {
-        q1: "Alcançar o ápice do poder dos grandes mestres o mais rápido possível e fundar um Reino Livre para os goblins, pondo fim à opressão histórica através de uma força inquestionável.",
-        q2: "Perder o ímpeto da descoberta e deixar sem vingança a dívida de sangue contraída contra a Serpente Venenosa dos esgotos.",
-        q3: "Frieza extrema e impaciência violenta com qualquer coisa que não acelere seu aprendizado marcial e poder real.",
-        q4: "Sacrifica sono (só dorme desmaiada de exaustão), vaidade, dor e laços afetivos; jamais a busca pela força suprema ou o cálculo prudente de combate.",
-        q5: "Ser a Soberana que quebrou as correntes dos goblins e provou que uma mulher de sua raça pode subjugar as lendas de Midgaard."
-      },
-      quick_stats: {
-        level_badge: "(Grau 8 • Mago / Ladra)",
-        hp: "52 / 52",
-        mana: "140 / 140",
-        mv: "94 / 95",
-        ac: "AC 16 (40 com armor)",
-        weapon: "Punhal de Novato (+ Escudo)",
-        weapon_icon: "🗡️",
-        sanctuary: "Laboratório dos Magos (Acampamento em Campo)"
-      }
-    }
-  ];
-
-  let currentHero = heroesList[0];
+  // O catálogo central é a única fonte de perfis; não há ficha histórica de reserva.
+  let heroesList = [];
+  let currentHero = null;
+  let currentState = null;
+  let heroLoadVersion = 0;
+  let audioManifest = { heroes: {} };
+  let postsLoadError = false;
+  let mapListenersController = null;
   let allPosts = [];
   let allCycles = []; // Resumos dos ciclos do herói ativo (com spoilers)
   let activeCycle = 1; // Número do Ciclo ativo (cada ciclo = 1 página de 10 dias)
@@ -122,14 +62,26 @@ document.addEventListener("DOMContentLoaded", async () => {
   async function initHeroes() {
     try {
       const res = await fetch("data/heroes.json");
-      if (res.ok) {
-        const data = await res.json();
-        if (Array.isArray(data) && data.length > 0) {
-          heroesList = data;
-        }
-      }
+      if (!res.ok) throw new Error("Catálogo indisponível");
+      const data = await res.json();
+      if (!Array.isArray(data) || !data.length || data.some(h => !h.id || !h.name)) throw new Error("Catálogo inválido");
+      heroesList = data;
     } catch (e) {
-      console.warn("Usando catálogo local embutido de heróis.");
+      showLoadStatus("Não foi possível carregar o catálogo de aventureiros. Abra o projeto por um servidor local e recarregue a página.");
+      if (heroSelect) heroSelect.disabled = true;
+      if (postsContainer) postsContainer.textContent = "Crônicas indisponíveis enquanto o catálogo não carregar.";
+      if (fichaContainer) fichaContainer.textContent = "Não foi possível carregar a ficha.";
+      return;
+    }
+
+    // O manifesto contém apenas gravações presentes no projeto. Sua ausência não impede a leitura.
+    try {
+      const res = await fetch("audio/manifest.json");
+      if (!res.ok) throw new Error("Manifesto indisponível");
+      audioManifest = await res.json();
+    } catch (e) {
+      audioManifest = { heroes: {} };
+      showLoadStatus("O catálogo de áudio não carregou. As crônicas continuam disponíveis em texto.");
     }
 
     // Determina o herói ativo via URL, localStorage ou padrão
@@ -139,20 +91,34 @@ document.addEventListener("DOMContentLoaded", async () => {
     const targetHeroId = heroParam || storedHero || "antigravitus";
 
     currentHero = heroesList.find(h => h.id === targetHeroId) || heroesList[0];
-    localStorage.setItem("active_hero", currentHero.id);
-
     renderHeroSelector();
-    applyHeroContext(currentHero);
+    await activateHero(currentHero);
+  }
 
+  function showLoadStatus(message) {
+    const el = document.getElementById("load-status");
+    if (el) { el.textContent = message; el.hidden = !message; }
+  }
+
+  async function activateHero(hero) {
+    const version = ++heroLoadVersion;
+    currentHero = hero;
+    currentState = null;
     if (postsContainer) {
-      await loadPostsForHero(currentHero);
+      allPosts = [];
+      allCycles = [];
+      latestPostId = 0;
+      activeDay = null;
+      postsLoadError = false;
+      renderAllViews();
     }
-    if (fichaContainer) {
-      await loadFichaForHero(currentHero);
-    }
-    if (mapCanvasWrap) {
-      await loadMapForHero(currentHero);
-    }
+    localStorage.setItem("active_hero", hero.id);
+    applyHeroContext(hero);
+    const tasks = [loadStateForHero(hero, version)];
+    if (postsContainer) tasks.push(loadPostsForHero(hero, version));
+    if (fichaContainer) tasks.push(loadFichaForHero(hero, version));
+    if (mapCanvasWrap) tasks.push(loadMapForHero(hero, version));
+    await Promise.all(tasks);
   }
 
   function renderHeroSelector() {
@@ -167,25 +133,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       const selectedId = e.target.value;
       const found = heroesList.find(h => h.id === selectedId);
       if (found) {
-        currentHero = found;
-        localStorage.setItem("active_hero", currentHero.id);
-        
         // Atualiza a URL sem recarregar totalmente a página
         const newUrl = new URL(window.location.href);
-        newUrl.searchParams.set("hero", currentHero.id);
+        newUrl.searchParams.set("hero", found.id);
         window.history.pushState({}, "", newUrl);
-
-        applyHeroContext(currentHero);
-        if (postsContainer) {
-          activeCycle = "todos";
-          await loadPostsForHero(currentHero);
-        }
-        if (fichaContainer) {
-          await loadFichaForHero(currentHero);
-        }
-        if (mapCanvasWrap) {
-          await loadMapForHero(currentHero);
-        }
+        await activateHero(found);
       }
     });
   }
@@ -205,6 +157,18 @@ document.addEventListener("DOMContentLoaded", async () => {
       const vigiliaSpan = metaPills[0].querySelector("span:last-child");
       if (vigiliaSpan) vigiliaSpan.textContent = hero.vigilia;
     }
+    const alignmentEl = document.getElementById("hero-alignment");
+    if (alignmentEl) alignmentEl.textContent = hero.alignment || "Orientação não registrada";
+    const serverEl = document.getElementById("hero-server");
+    if (serverEl) serverEl.textContent = `Servidor: ${hero.server || "não registrado"}`;
+
+    // Marca e links do rodapé também preservam a seleção do aventureiro.
+    document.querySelectorAll('a.brand, .footer-links a[href], a.post-day-badge[href]').forEach(link => {
+      const href = link.getAttribute("href");
+      if (/^(index|mapa|ficha|sobre)\.html(?:\?|$)/.test(href || "")) {
+        link.href = `${href.split("?")[0]}?hero=${encodeURIComponent(hero.id)}`;
+      }
+    });
 
     // Links de navegação preservando o herói
     if (linkSobre) {
@@ -241,6 +205,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (q4El) q4El.innerHTML = `<strong>${hero.questions.q4}</strong>`;
       if (q5El) q5El.innerHTML = `<strong>${hero.questions.q5}</strong>`;
     }
+    document.querySelectorAll("[data-hero-document]").forEach(el => {
+      el.textContent = `data/heroes/${hero.id}/${el.dataset.heroDocument}`;
+    });
 
     document.title = `${hero.name} — ${hero.title} | Devil's Bob MUD`;
     renderQuickStats(hero);
@@ -250,16 +217,28 @@ document.addEventListener("DOMContentLoaded", async () => {
   function renderQuickStats(hero) {
     if (!heroQuickStatsEl) return;
 
-    const qs = hero.quick_stats || {
+    const qs = { ...(hero.quick_stats || {
       level_badge: `(${hero.race_class || "Aventureiro"})`,
       hp: "—",
       mana: "—",
       mv: "—",
       ac: "—",
-      weapon: "Desarmado",
+      weapon: "—",
       weapon_icon: "🗡️",
-      sanctuary: hero.vigilia || "Midgaard"
-    };
+      sanctuary: "—"
+    }) };
+    const state = currentState;
+    if (state) {
+      qs.level_badge = `(Nível ${state.level ?? "—"} • ${state.mechanical_class || hero.race_class || "Classe não registrada"})`;
+      ["hp", "mana", "mv"].forEach(key => {
+        const value = state.vitals && state.vitals[key];
+        if (value) qs[key] = `${value.current ?? "—"} / ${value.max ?? "—"}`;
+      });
+    }
+    const registeredLocation = state?.location?.name || qs.location;
+    const registeredCamp = state?.camp?.name || qs.camp;
+    const locationLabel = registeredLocation ? "Posição registrada" : registeredCamp ? "Acampamento registrado" : "Santuário de referência";
+    const locationName = registeredLocation || registeredCamp || state?.sanctuary?.name || qs.sanctuary || "—";
 
     heroQuickStatsEl.innerHTML = `
       <div class="quick-stats-header">
@@ -292,45 +271,78 @@ document.addEventListener("DOMContentLoaded", async () => {
           <span class="pill-value" style="font-size: 0.82rem;">${qs.weapon || "—"}</span>
         </div>
         <div class="stat-pill">
-          <span class="pill-label">📍 Santuário</span>
-          <span class="pill-value" style="font-size: 0.82rem;">${qs.sanctuary || "Midgaard"}</span>
+          <span class="pill-label">📍 ${locationLabel}</span>
+          <span class="pill-value" style="font-size: 0.82rem;">${escapeHtml(locationName)}</span>
         </div>
       </div>
+      <p class="document-status">${state ? `Registro documental até o Dia ${state.as_of.day}; conferir mudanças no jogo.` : "Dados do catálogo documental; sem consulta ao servidor nesta página."}</p>
     `;
   }
 
+  async function loadStateForHero(hero, version) {
+    const panel = document.getElementById("adventure-status");
+    if (panel) { panel.hidden = false; panel.textContent = "Carregando situação documental…"; }
+    try {
+      const res = await fetch(`data/heroes/${hero.id}/state.json`);
+      if (version !== heroLoadVersion) return;
+      if (res.status === 404) {
+        if (panel) panel.hidden = true;
+        return;
+      }
+      if (!res.ok) throw new Error("Estado indisponível");
+      const state = await res.json();
+      if (version !== heroLoadVersion) return;
+      if (state.hero_id !== hero.id || !state.as_of || !state.next_objective) throw new Error("Estado inválido");
+      currentState = state;
+      renderQuickStats(hero);
+      if (!panel) return;
+      const preparation = state.next_objective.missing_preparation || [];
+      panel.innerHTML = `
+        <div class="adventure-status-heading"><h2>Próxima expedição</h2><span class="document-status">Documental · Dia ${state.as_of.day}</span></div>
+        <p class="document-status">Consolidado dos registros; sem verificação ao vivo.</p>
+        <dl class="adventure-status-grid">
+          <div><dt>Objetivo proposto</dt><dd>${escapeHtml(state.next_objective.title)}</dd><dd>${escapeHtml(state.next_objective.next_step)}</dd></div>
+          <div><dt>Pendências de preparação</dt><dd>${preparation.length ? `<ul>${preparation.map(item => `<li>${escapeHtml(item)}</li>`).join("")}</ul>` : "Nenhuma pendência documental listada; conferir no jogo."}</dd></div>
+          <div><dt>Último evento registrado · Dia ${state.last_event?.day ?? state.as_of.day}</dt><dd>${escapeHtml(state.last_event?.summary || "Sem resumo registrado.")}</dd><dd>Posição: ${escapeHtml(state.location?.name || "não registrada")}<br>Acampamento: ${escapeHtml(state.camp?.name || "não registrado")}<br>Santuário de referência: ${escapeHtml(state.sanctuary?.name || "não registrado")}</dd></div>
+        </dl>`;
+    } catch (e) {
+      if (version !== heroLoadVersion) return;
+      if (panel) { panel.hidden = false; panel.textContent = "Não foi possível carregar a situação documental. Consulte a ficha e os registros antes da próxima expedição."; }
+    }
+  }
+
   // 2. Carrega posts específicos do herói ativo
-  async function loadPostsForHero(hero) {
+  async function loadPostsForHero(hero, version) {
     let posts = [];
+    let cycles = [];
+    let failed = false;
     const heroPath = `data/heroes/${hero.id}/posts.json`;
+    postsContainer.textContent = `Carregando crônicas de ${hero.name}…`;
 
     try {
       const res = await fetch(heroPath);
       if (res.ok) {
         posts = await res.json();
-      } else {
-        const fallbackRes = await fetch("data/posts.json");
-        if (fallbackRes.ok && hero.id === "antigravitus") {
-          posts = await fallbackRes.json();
-        }
-      }
+      } else throw new Error("Crônicas indisponíveis");
+      if (!Array.isArray(posts)) throw new Error("Formato inválido");
     } catch (e) {
-      console.warn(`Fetch falhou para ${heroPath}, tentando fallback.`);
+      failed = true;
     }
-
-    allPosts = Array.isArray(posts) ? posts : [];
     
     // Carrega resumos dos ciclos (com spoilers) do herói
-    allCycles = [];
     const ciclosPath = `data/heroes/${hero.id}/ciclos.json`;
     try {
       const ciclosRes = await fetch(ciclosPath);
       if (ciclosRes.ok) {
-        allCycles = await ciclosRes.json();
+        cycles = await ciclosRes.json();
       }
     } catch (e) {
       console.warn(`Fetch falhou para ${ciclosPath}`);
     }
+    if (version !== heroLoadVersion) return;
+    allPosts = failed ? [] : posts;
+    allCycles = Array.isArray(cycles) ? cycles : [];
+    postsLoadError = failed;
     
     // Identifica o último dia publicado dinamicamente
     latestPostId = allPosts.reduce((max, p) => Math.max(max, p.id || 0), 0);
@@ -348,6 +360,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     setupGlobalNavControls();
     renderAllViews();
     updatePostCount(allPosts.length);
+    if (failed && postCountEl) postCountEl.textContent = "Crônicas indisponíveis";
   }
 
   function updatePostCount(count) {
@@ -370,10 +383,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   function escapeHtml(text) {
-    return (text || "")
+    return String(text ?? "")
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;");
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
   }
 
   // --- CONFIGURAÇÃO GLOBAL DOS CONTROLES DO NAVEGADOR ---
@@ -381,8 +395,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   function setupGlobalNavControls() {
     // Atualiza texto e estado do botão do Último Publicado
     if (latestBadgeText) {
-      latestBadgeText.textContent = `★ Último: Dia ${latestPostId}`;
+      latestBadgeText.textContent = latestPostId ? `★ Último: Dia ${latestPostId}` : "Nenhuma crônica carregada";
     }
+    if (btnJumpLatest) btnJumpLatest.disabled = !latestPostId;
 
     // Atualiza texto da ordenação com base no cache
     if (orderLabelText) {
@@ -629,7 +644,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       postsContainer.innerHTML = `
         <div class="post-card" style="text-align: center; padding: 3rem;">
           <p style="font-family: var(--font-serif); font-size: 1.3rem; color: var(--accent-gold);">
-            Nenhuma crônica registrada para este ciclo ainda.
+            ${postsLoadError ? "Não foi possível carregar as crônicas. Recarregue a página para tentar novamente." : "Nenhuma crônica registrada para este ciclo ainda."}
           </p>
         </div>
       `;
@@ -647,6 +662,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       // Encontra posts anterior e próximo em todo o compêndio
       const prevPost = allPosts.find(p => p.id === post.id - 1);
       const nextPost = allPosts.find(p => p.id === post.id + 1);
+      const audioSrc = audioManifest.heroes?.[currentHero.id]?.[String(post.id)];
 
       return `
         <article class="post-card ${isLatest ? "post-card-latest" : ""}" id="post-${post.id}">
@@ -663,10 +679,11 @@ document.addEventListener("DOMContentLoaded", async () => {
             <span>🏛️ ${post.in_game_time || ""}</span>
           </div>
 
-          <div class="post-narration-bar" id="narration-bar-${post.id}">
+          ${audioSrc ? `<div class="post-narration-bar" id="narration-bar-${post.id}">
             <span class="narration-badge">🎙️ Ouvir Capítulo</span>
-            <audio controls preload="none" src="audio/${currentHero.id}/dia_${String(post.id).padStart(2, '0')}.mp3" onerror="this.closest('.post-narration-bar').style.display='none';"></audio>
-          </div>
+            <audio controls preload="none" src="${escapeHtml(audioSrc)}"></audio>
+            <span class="audio-error" hidden>Gravação indisponível; o capítulo pode ser lido abaixo.</span>
+          </div>` : ""}
 
           <div class="post-body">
             ${(post.content || []).map(p => `<p>${p}</p>`).join("")}
@@ -721,6 +738,13 @@ document.addEventListener("DOMContentLoaded", async () => {
         jumpToPost(targetDay);
       });
     });
+    postsContainer.querySelectorAll("audio").forEach(player => {
+      player.addEventListener("error", () => {
+        player.hidden = true;
+        const message = player.parentElement.querySelector(".audio-error");
+        if (message) message.hidden = false;
+      });
+    });
   }
 
   // ============================================================
@@ -728,6 +752,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   // ============================================================
   function renderPagination() {
     if (!postsPaginationEl) return;
+    if (!allPosts.length) { postsPaginationEl.innerHTML = ""; return; }
 
     const totalCycles = Math.max(1, Math.ceil(latestPostId / 10));
 
@@ -762,7 +787,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         </button>
       </div>
       <div class="pagination-info-text">
-        Exibindo 10 de ${allPosts.length} crônicas registradas • Ciclo ${toRoman(activeCycle)} (${(activeCycle - 1) * 10 + 1} a ${Math.min(activeCycle * 10, latestPostId)})
+        Exibindo ${allPosts.filter(post => post.id >= (activeCycle - 1) * 10 + 1 && post.id <= activeCycle * 10).length} de ${allPosts.length} crônicas registradas • Ciclo ${toRoman(activeCycle)} (${(activeCycle - 1) * 10 + 1} a ${Math.min(activeCycle * 10, latestPostId)})
       </div>
     `;
 
@@ -830,20 +855,23 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
   // 4. Carrega e renderiza a ficha viva do herói ativo
-  async function loadFichaForHero(hero) {
+  async function loadFichaForHero(hero, version) {
     if (!fichaContainer) return;
     fichaContainer.innerHTML = `<div style="text-align: center; padding: 2rem; color: var(--text-secondary);">Carregando ficha de ${hero.name}...</div>`;
     
     try {
       const res = await fetch(`data/heroes/${hero.id}/ficha.md`);
+      if (version !== heroLoadVersion) return;
       if (!res.ok) {
         fichaContainer.innerHTML = `<p style="color: var(--text-secondary); text-align: center;">Ficha viva não encontrada para ${hero.name}.</p>`;
         return;
       }
       const md = await res.text();
+      if (version !== heroLoadVersion) return;
       fichaContainer.innerHTML = renderMarkdownToHtml(md);
     } catch (e) {
-      fichaContainer.innerHTML = `<p style="color: #e06c75; text-align: center;">Erro ao carregar a ficha do personagem: ${e.message}</p>`;
+      if (version !== heroLoadVersion) return;
+      fichaContainer.textContent = "Não foi possível carregar a ficha documental do personagem. Recarregue a página para tentar novamente.";
     }
   }
 
@@ -986,8 +1014,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   let dragStartY = 0;
   let activeSelectedRoomId = null;
 
-  async function loadMapForHero(hero) {
+  async function loadMapForHero(hero, version) {
     if (!mapCanvasWrap) return;
+    if (mapListenersController) mapListenersController.abort();
+    mapListenersController = new AbortController();
+    const mapSignal = mapListenersController.signal;
+    activeSelectedRoomId = null;
+    isMapDragging = false;
 
     const mapHeroTitle = document.getElementById("map-hero-title");
     const mapHeroSub = document.getElementById("map-hero-sub");
@@ -1005,6 +1038,24 @@ document.addEventListener("DOMContentLoaded", async () => {
     const viewportGroup = document.getElementById("map-viewport-group");
     const inspectorEl = document.getElementById("map-room-inspector");
     const tableContainer = document.getElementById("map-table-container");
+    // Descarta ações ligadas ao herói anterior mesmo se o próximo carregamento falhar.
+    mapCanvasWrap.classList.remove("is-dragging");
+    ["onmousedown", "onwheel", "ontouchstart", "ontouchmove", "ontouchend"].forEach(key => { mapCanvasWrap[key] = null; });
+    ["ctrl-zoom-in", "ctrl-zoom-out", "ctrl-zoom-reset", "btn-center-location", "btn-center-sanctuary"].forEach(id => {
+      const button = document.getElementById(id);
+      if (button) button.onclick = null;
+    });
+    if (searchInput) searchInput.oninput = null;
+    if (zoneFilter) zoneFilter.onchange = null;
+    if (riskFilter) riskFilter.onchange = null;
+    if (tableContainer) tableContainer.onclick = null;
+    if (inspectorEl) inspectorEl.classList.remove("active");
+    if (edgesLayer) edgesLayer.innerHTML = "";
+    if (nodesLayer) nodesLayer.innerHTML = "";
+    if (tableContainer) tableContainer.textContent = "Carregando mapa documental…";
+    if (layersTabsEl) layersTabsEl.innerHTML = "";
+    [statRooms, statZones, statSafe, statDanger].forEach(el => { if (el) el.textContent = "—"; });
+    if (mapCycleText) mapCycleText.textContent = "Carregando registro…";
 
     if (mapHeroTitle) {
       mapHeroTitle.textContent = `🗺️ Mapa Topológico de ${hero.name}`;
@@ -1018,20 +1069,38 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (!res.ok) {
         throw new Error(`Arquivo mapa.json não encontrado para ${hero.name}`);
       }
-      currentMapData = await res.json();
+      const data = await res.json();
+      if (version !== heroLoadVersion) return;
+      if (!Array.isArray(data.rooms)) throw new Error("Formato de mapa inválido");
+      currentMapData = data;
     } catch (e) {
+      if (version !== heroLoadVersion) return;
       console.warn("Erro ao carregar mapa.json:", e);
       if (edgesLayer) edgesLayer.innerHTML = "";
       if (nodesLayer) {
-        nodesLayer.innerHTML = `<text x="500" y="350" text-anchor="middle" fill="var(--text-muted)">Nenhum mapa catalogado ainda para ${hero.name}.</text>`;
+        nodesLayer.innerHTML = `<text x="500" y="350" text-anchor="middle" fill="var(--text-muted)">Não foi possível carregar o mapa de ${escapeHtml(hero.name)}.</text>`;
       }
+      if (tableContainer) tableContainer.textContent = "Mapa indisponível. Recarregue a página para tentar novamente.";
+      if (mapCycleText) mapCycleText.textContent = "Registro indisponível";
       return;
     }
 
-    const { rooms = [], zones = [], layers = [], sanctuary_id = "", last_updated_cycle = "A cada 10 ciclos" } = currentMapData;
+    const { rooms = [], zones = [], layers = [], sanctuary_id = "", current_location_id = "", camp_id = "", last_updated_cycle = "data não informada", last_updated_day } = currentMapData;
+    const dirNames = { n: "Norte", s: "Sul", l: "Leste", o: "Oeste", e: "Leste", w: "Oeste", u: "Cima", d: "Baixo" };
+    const serverCommands = { l: "e", o: "w" };
+    function exitLabel(room, dir) {
+      const meta = room.exit_metadata?.[dir];
+      const direction = `${dirNames[dir] || dir.toUpperCase()} · comando ${serverCommands[dir] || dir}`;
+      const warning = meta?.one_way ? " · sentido único registrado" : "";
+      const door = meta?.command ? ` · ${meta.command}` : "";
+      return `${direction}${warning}${door}`;
+    }
+    function roomRole(room) {
+      return [room.id === current_location_id ? "Posição registrada" : "", room.id === camp_id ? "Acampamento" : "", room.id === sanctuary_id ? "Santuário de referência" : ""].filter(Boolean).join(" · ");
+    }
 
     // Atualiza indicadores
-    if (mapCycleText) mapCycleText.textContent = `Consolidado: ${last_updated_cycle}`;
+    if (mapCycleText) mapCycleText.textContent = `Documental: ${last_updated_day ? `Dia ${last_updated_day} · ` : ""}${last_updated_cycle}`;
     if (statRooms) statRooms.textContent = rooms.length;
     if (statZones) statZones.textContent = zones.length || new Set(rooms.map(r => r.zone)).size;
     
@@ -1044,8 +1113,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     const roomMap = new Map();
     rooms.forEach(r => roomMap.set(r.id, r));
 
-    // Determina camada inicial (a do santuário do herói ou a primeira disponível)
-    const sanctuaryRoom = roomMap.get(sanctuary_id);
+    // A posição registrada guia a abertura; santuário não implica presença atual.
+    const sanctuaryRoom = roomMap.get(current_location_id) || roomMap.get(camp_id) || roomMap.get(sanctuary_id);
     if (sanctuaryRoom && sanctuaryRoom.layer) {
       currentActiveLayer = sanctuaryRoom.layer;
     } else if (layers.length > 0) {
@@ -1105,7 +1174,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       // Centraliza na camada ativa
       const activeRooms = currentActiveLayer === "all" ? rooms : rooms.filter(r => r.layer === currentActiveLayer);
       if (activeRooms.length > 0) {
-        const hasSanctuary = activeRooms.find(r => r.id === sanctuary_id);
+        const hasSanctuary = activeRooms.find(r => r.id === current_location_id) || activeRooms.find(r => r.id === camp_id) || activeRooms.find(r => r.id === sanctuary_id);
         if (hasSanctuary) {
           centerOnCoords(hasSanctuary.coords.x, hasSanctuary.coords.y, 0.95);
           inspectRoom(hasSanctuary);
@@ -1150,7 +1219,8 @@ document.addEventListener("DOMContentLoaded", async () => {
           const target = roomMap.get(targetId);
           if (!target || !target.coords) return;
 
-          const connKey = [room.id, targetId].sort().join("<->");
+          const isOneWay = Boolean(room.exit_metadata?.[dir]?.one_way);
+          const connKey = isOneWay ? `${room.id}->${targetId}` : [room.id, targetId].sort().join("<->");
           if (drawnConnections.has(connKey)) return;
           drawnConnections.add(connKey);
 
@@ -1162,6 +1232,13 @@ document.addEventListener("DOMContentLoaded", async () => {
           line.setAttribute("class", "map-edge-line");
           line.setAttribute("data-from", room.id);
           line.setAttribute("data-to", targetId);
+          if (isOneWay) {
+            line.classList.add("is-one-way");
+            line.setAttribute("marker-end", "url(#arrow)");
+            const title = document.createElementNS("http://www.w3.org/2000/svg", "title");
+            title.textContent = `${room.name} → ${target.name}: ${exitLabel(room, dir)}`;
+            line.appendChild(title);
+          }
           edgesLayer.appendChild(line);
         });
       });
@@ -1224,11 +1301,14 @@ document.addEventListener("DOMContentLoaded", async () => {
         g.setAttribute("data-zone", room.zone);
         g.setAttribute("data-risk", room.risk_code || "low");
         g.setAttribute("data-layer", room.layer || "superficie");
+        const title = document.createElementNS("http://www.w3.org/2000/svg", "title");
+        title.textContent = `${room.name}${roomRole(room) ? ` · ${roomRole(room)}` : ""}`;
+        g.appendChild(title);
 
-        // Pulso se for santuário
-        if (room.id === sanctuary_id) {
+        // O pulso identifica a posição documental, não uma consulta ao jogo.
+        if (room.id === current_location_id) {
           const pulse = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-          pulse.setAttribute("class", "sanctuary-pulse-ring");
+          pulse.setAttribute("class", "sanctuary-pulse-ring current-location-ring");
           pulse.setAttribute("cx", room.coords.x);
           pulse.setAttribute("cy", room.coords.y);
           pulse.setAttribute("r", "28");
@@ -1237,7 +1317,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         // Fundo do nó
         const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-        rect.setAttribute("class", `map-node-bg risk-${room.risk_code || "low"} ${room.id === sanctuary_id ? "is-sanctuary" : ""}`);
+        rect.setAttribute("class", `map-node-bg risk-${room.risk_code || "low"} ${room.id === sanctuary_id ? "is-sanctuary" : ""} ${room.id === camp_id ? "is-camp" : ""} ${room.id === current_location_id ? "is-current-location" : ""}`);
         rect.setAttribute("x", room.coords.x - 22);
         rect.setAttribute("y", room.coords.y - 22);
         rect.setAttribute("width", "44");
@@ -1326,7 +1406,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           ? Object.entries(r.exits).map(([dir, tid]) => {
               const tgt = roomMap.get(tid);
               const crossBadge = tgt && tgt.layer !== r.layer ? ` <small style="color: var(--accent-cyan);">(🪜 ${tgt.layer})</small>` : "";
-              return `<button class="exit-btn" data-target="${tid}"><span>🧭 ${dir.toUpperCase()}</span>: ${tgt ? tgt.name : tid}${crossBadge}</button>`;
+              return `<button class="exit-btn" data-target="${tid}"><span>🧭 ${escapeHtml(exitLabel(r, dir))}</span>: ${tgt ? tgt.name : tid}${crossBadge}</button>`;
             }).join(" ")
           : "<span style='color: var(--text-muted); font-size: 0.85rem;'>Nenhuma</span>";
 
@@ -1340,6 +1420,7 @@ document.addEventListener("DOMContentLoaded", async () => {
               <div class="tactical-card-title">
                 <span>${r.icon || "📍"}</span>
                 <span>${r.name}</span>
+                ${roomRole(r) ? `<span class="map-room-role">${roomRole(r)}</span>` : ""}
                 <span style="font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-sans);">(${r.zone} • Camada: ${r.layer || 'superfície'})</span>
               </div>
               <span class="inspector-badge ${r.risk_code || 'low'}">${r.risk || 'Normal'}</span>
@@ -1418,7 +1499,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       if (inspectIcon) inspectIcon.textContent = room.icon || "📍";
       if (inspectName) inspectName.textContent = room.name;
-      if (inspectZone) inspectZone.textContent = `${room.zone} • Camada: ${room.layer || 'superfície'}`;
+      if (inspectZone) inspectZone.textContent = `${room.zone} • Camada: ${room.layer || 'superfície'}${roomRole(room) ? ` • ${roomRole(room)}` : ""}`;
       if (inspectBadge) {
         inspectBadge.className = `inspector-badge ${room.risk_code || "low"}`;
         inspectBadge.textContent = room.risk || "Normal";
@@ -1429,14 +1510,14 @@ document.addEventListener("DOMContentLoaded", async () => {
       // Saídas clicáveis
       if (inspectExits) {
         inspectExits.innerHTML = "";
-        const dirNames = { n: "Norte", s: "Sul", l: "Leste", o: "Oeste", u: "Cima (Up)", d: "Baixo (Down)" };
         if (room.exits && Object.keys(room.exits).length > 0) {
           Object.entries(room.exits).forEach(([dir, targetId]) => {
             const targetRoom = roomMap.get(targetId);
             const btn = document.createElement("button");
             btn.className = "exit-btn";
             const layerNotice = targetRoom && targetRoom.layer !== room.layer ? ` <small style="color: var(--accent-cyan);">(🪜 ${targetRoom.layer})</small>` : "";
-            btn.innerHTML = `<span>🧭 ${dirNames[dir] || dir.toUpperCase()}</span> → <strong>${targetRoom ? targetRoom.name : targetId}</strong>${layerNotice}`;
+            btn.innerHTML = `<span>🧭 ${escapeHtml(exitLabel(room, dir))}</span> → <strong>${targetRoom ? targetRoom.name : targetId}</strong>${layerNotice}`;
+            if (room.exit_metadata?.[dir]?.note) btn.title = room.exit_metadata[dir].note;
             btn.addEventListener("click", () => {
               if (targetRoom) {
                 // Se a sala estiver em outra camada, muda de camada automaticamente
@@ -1450,8 +1531,14 @@ document.addEventListener("DOMContentLoaded", async () => {
             inspectExits.appendChild(btn);
           });
         } else {
-          inspectExits.innerHTML = "<span style='color: var(--text-muted); font-size: 0.85rem;'>Sem saídas catalogadas.</span>";
+          inspectExits.innerHTML = "<span style='color: var(--text-muted); font-size: 0.85rem;'>Sem destinos de saída confirmados nos registros.</span>";
         }
+        Object.entries(room.unresolved_exits || {}).forEach(([dir, pending]) => {
+          const label = document.createElement("span");
+          label.className = "exit-pending";
+          label.textContent = `${dirNames[dir] || dir.toUpperCase()} · comando ${serverCommands[dir] || dir} → Destino pendente: ${pending.description || "saída ainda sem destino confirmado"}`;
+          inspectExits.appendChild(label);
+        });
       }
 
       // NPCs
@@ -1546,9 +1633,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
     }
 
-    if (searchInput) searchInput.addEventListener("input", applyFilters);
-    if (zoneFilter) zoneFilter.addEventListener("change", applyFilters);
-    if (riskFilter) riskFilter.addEventListener("change", applyFilters);
+    if (searchInput) searchInput.oninput = applyFilters;
+    if (zoneFilter) zoneFilter.onchange = applyFilters;
+    if (riskFilter) riskFilter.onchange = applyFilters;
 
     // Controles de Modo de Visão
     const btnViewVisual = document.getElementById("btn-view-visual");
@@ -1575,6 +1662,17 @@ document.addEventListener("DOMContentLoaded", async () => {
     const btnZoomOut = document.getElementById("ctrl-zoom-out");
     const btnZoomReset = document.getElementById("ctrl-zoom-reset");
     const btnCenterSanctuary = document.getElementById("btn-center-sanctuary");
+    const btnCenterLocation = document.getElementById("btn-center-location");
+    if (btnCenterLocation) {
+      btnCenterLocation.disabled = !roomMap.has(current_location_id);
+      btnCenterLocation.onclick = () => {
+        const room = roomMap.get(current_location_id);
+        if (!room) return;
+        if (room.layer && room.layer !== currentActiveLayer && currentActiveLayer !== "all") switchLayer(room.layer);
+        centerOnCoords(room.coords.x, room.coords.y, 1.15);
+        inspectRoom(room);
+      };
+    }
 
     if (btnZoomIn) {
       btnZoomIn.onclick = () => {
@@ -1590,13 +1688,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
     if (btnZoomReset) {
       btnZoomReset.onclick = () => {
-        const sanctuary = roomMap.get(sanctuary_id) || rooms[0];
-        if (sanctuary) centerOnCoords(sanctuary.coords.x, sanctuary.coords.y, 0.95);
+        switchLayer(currentActiveLayer);
       };
     }
     if (btnCenterSanctuary) {
+      btnCenterSanctuary.disabled = !roomMap.has(sanctuary_id);
       btnCenterSanctuary.onclick = () => {
-        const sanctuary = roomMap.get(sanctuary_id) || rooms[0];
+        const sanctuary = roomMap.get(sanctuary_id);
         if (sanctuary) {
           if (sanctuary.layer && sanctuary.layer !== currentActiveLayer && currentActiveLayer !== "all") {
             switchLayer(sanctuary.layer);
@@ -1621,14 +1719,14 @@ document.addEventListener("DOMContentLoaded", async () => {
       mapPanX = e.clientX - dragStartX;
       mapPanY = e.clientY - dragStartY;
       applyTransform();
-    });
+    }, { signal: mapSignal });
 
     window.addEventListener("mouseup", () => {
       if (isMapDragging) {
         isMapDragging = false;
         mapCanvasWrap.classList.remove("is-dragging");
       }
-    });
+    }, { signal: mapSignal });
 
     // Zoom via Roda do Mouse
     mapCanvasWrap.onwheel = (e) => {
@@ -1690,5 +1788,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     switchLayer(currentActiveLayer);
   }
 
+  window.addEventListener("popstate", () => {
+    const heroId = new URLSearchParams(window.location.search).get("hero");
+    const hero = heroesList.find(item => item.id === heroId) || heroesList[0];
+    if (!hero) return;
+    if (heroSelect) heroSelect.value = hero.id;
+    activateHero(hero);
+  });
   initHeroes();
 });

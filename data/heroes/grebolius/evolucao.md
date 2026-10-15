@@ -1075,3 +1075,44 @@
   1. *O Fim da Dependência Sagrada:* O Templo serviu de berço quando eu era uma fugitiva frágil; agora sou uma maga de guerra de Nível 8. O mundo é o meu território: durmo onde a batalha exigir, seja em tabuleiros de pedra, estalagens rústicas ou laboratórios arcanos.
   2. *A Imunidade pelo Aço e pelo Fogo:* Com AC 40 e Mãos Flamejantes a 95%, as pragas comuns não me tocam. O revés contra o titã de xadrez apenas calibrou o tamanho dos impérios que me esperam.
   3. *A Rota para o Sétimo Decênio:* Entrar na escadaria do Alquimista, mergulhar no buraco dos esgotos para caçar e decapitar a serpente algoz, e marchar rumo aos 60.000 EXP para coroar o Nível 9.
+
+---
+
+## Reconciliação editorial após o Dia 60 — sem nova sessão
+
+As entradas acima foram preservadas como histórico, inclusive seus instantâneos e interpretações. A orientação vigente está em `identidade.md` e `plano_aventureira.md`; os dados consolidados em `state.json` têm origem documental e não foram conferidos ao vivo nesta revisão.
+
+| Ponto | Evidência e tratamento |
+| :--- | :--- |
+| Local entre Dias 30 e 31 | O Dia 30 termina com repouso no Panteão; o Dia 31 narra despertar na câmara secreta da masmorra. Não há registro suficiente para fixar uma transição. Preservar a lacuna, sem inventar viagem, pernoite ou horário. |
+| Coleira nos Dias 30 e 31 | Ambos descrevem colocá-la sobre a mesa do guarda; o Dia 31 relata a conclusão. Conclusão preservada no catálogo, data exata da entrega pendente de log. Não pressupor duas entregas ou duas recompensas. |
+| Primeira e segunda mortes | O Dia 11 narra perda de lembranças da mãe e do clã. O Dia 60 registra a segunda morte e uma voz desdenhosa, sem explicar novo custo memorial ou emocional. Não acrescentar perdas, recuperação de memórias ou diagnóstico de negação; não declarar superação do trauma como fato. |
+| Limpando Monstros | Convite no Dia 35, aceite narrado no Dia 36 e promessa renovada no Dia 60. O catálogo distingue aceite de retomada; não presume reinício, conclusão ou contagem dos abates. |
+| Movimento no encerramento | Esta entrada do Dia 60 informa 95/95; a ficha anterior informava 94/95. São instantâneos documentais divergentes, sem horário que comprove sequência. A consolidação usa a evolução do Dia 60 e mantém a divergência como pendência de conferência. |
+| Anel arcano | Guardado no Dia 43, ausente do inventário posterior. Posse atual, bônus e requisito exato a conferir. Não tratá-lo como perdido, equipado ou disponível sem evidência. |
+| Proteção e acampamento | “Imunidade”, “inquebrável” e a rejeição definitiva do Templo são expressões históricas da personagem, não garantias mecânicas. Laboratório é o último acampamento registrado; Panteão permanece referência histórica de santuário. Reavaliar risco e saída no próximo descanso. |
+| Próximo ciclo | Não existem crônicas dos Dias 61–70 neste conjunto. O resumo antecipado do ciclo 7 foi retirado; suas possibilidades estão no plano futuro. A serpente ainda não foi derrotada nestes registros. |
+
+A próxima sessão pode resolver as pendências com respostas reais do MUD. Até lá, nenhuma lacuna foi preenchida com acontecimento novo e nenhuma mudança emocional posterior foi atribuída a Grebolius por esta revisão.
+
+---
+
+### ⏳ Ciclo 61 (Dia 61): A Trilha de Barumafir, a Fúria dos Zumbis e o Troféu do Minotauro
+* **Status Real (MUD - Verificação ao Vivo):**
+  * Nível: **8** *(48.606 EXP | Faltam 11.394 EXP para o Grau 9)*
+  * Vida: **52/52** | Mana: **140/140** | Movimento: **95/95**
+  * Classe de Armadura: **16** base / **40** com `armor` ativo *(verificado ao vivo no servidor)*
+  * Salto de Experiência: **+3.436 EXP** em combates mortais contra novatos zumbis e dano cirúrgico.
+  * Ouro Líquido: **1.121 moedas de ouro** *(+70 moedas saqueadas das carcaças dos zumbis pelo autogold).*
+  * Alinhamento Moral: **73** (Neutro Pragmático).
+  * Fisiologia e Nutrição: Nutrição no tick com pão recheado e hidratação com cantil cristalino.
+  * Inventário e Troféus: Posse do `anel arcano (+2E)` confirmada na mochila (servidor retornou requisito de nível para equipar); obtenção de `os chifres do Minotauro` como espólio raro.
+  * Local de Pernoite: **A Sala do Alquimista** (Salva com `save` e descansando com `rest` ao lado dos alambiques e da escadaria descendente).
+* **Marcos e Impactos Psicológicos:**
+  * **A Verificação do Anel Místico:** Ao despertar no Laboratório Arcano, tentou equipar a joia guardada desde o quadragésimo terceiro dia. A resposta do mundo foi taxativa: a substância do anel requer uma mente com círculos arcanos mais maduros. A recusa gerou disciplina: a magia tem seu tempo de maturação.
+  * **A Grande Marcha Setentrional:** Transpondo o pórtico norte de Midgaard, avançou pelo Grande Campo além das rotas familiares. Descobriu a encruzilhada da Vila Residencial, cruzou com meio-elfos e halflings na trilha dos campos e mapeou a cerca de pedra da **Taverna do Barumafir**, assentada na soleira da floresta iluminada.
+  * **Invasão da Sala do Alquimista e Combate Sangrento:** Retornando veloz à Masmorra dos Novatos, abriu o ferrolho oriental de Um Outro Canto (`open east`) e penetrou no laboratório. Foi recebida pelo avanço cego de novatos zumbis descarnados. Sem recuar, bloqueou com o escudo e estraçalhou os monstros com estocadas letais do punhal de novato, arrancando **chifres de minotauro** de um dos corpos.
+  * **O Desabafo do Alquimista e o Novo Acampamento:** O tumulto fez o Alquimista berrar histericamente com a imundície dos zumbis antes de suspirar cansado sobre suas fórmulas. Estabeleceu acampamento no próprio laboratório, guardando a posição ao lado da escada que desce às entranhas subterrâneas.
+* **Decisão Tática:**
+  * No Dia 62, apresentar os chifres e investigar as fórmulas ou a placa pregada na escadaria que desce para 'A Entrada', mantendo o acampamento avançado em campo e a caçada por missões ativas.
+

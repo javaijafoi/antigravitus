@@ -5,36 +5,31 @@
   "rune": "[RUNA]",
   "avatar": "[AVATAR]",
   "race_class": "[RACA_CLASSE]",
-  "role": "Desbravador de Midgaard",
-  "alignment": "Neutro",
-  "quote": "“O destino de [NOME] é forjado a cada escolha no aço e na pedra.”",
-  "subtitle": "Diário de [NOME] ([RACA_CLASSE]) pelas terras de debomud.org:4000.",
-  "vigilia": "Vigília Ativa: Templo de Midgaard",
+  "role": "A definir",
+  "alignment": "A definir",
+  "quote": "Identidade em preparação.",
+  "subtitle": "Campanha em preparação; nenhuma sessão registrada.",
+  "vigilia": "Ponto de partida a observar",
   "server": "debomud.org:4000",
-  "accent_color": "#e5b364",
+  "folder": "data/heroes/[SLUG]",
+  "record_status": "draft",
+  "evidence_policy": {"legacy_through_day": 0},
   "questions": {
-    "q1": "Qual é a sua grande busca e ambição?",
-    "q2": "Qual o seu maior temor e pesadelo?",
-    "q3": "Qual a sua maior fraqueza ou vício?",
-    "q4": "O que você sacrifica e o que é inegociável?",
-    "q5": "Que marca ou legado deseja deixar em Midgaard?"
+    "q1": "A definir.",
+    "q2": "A definir.",
+    "q3": "A definir.",
+    "q4": "A definir.",
+    "q5": "A definir."
   },
   "quick_stats": {
-    "level_badge": "(Grau 1 • [RACA_CLASSE])",
-    "hp": "20 / 20",
-    "mana": "50 / 50",
-    "mv": "80 / 80",
-    "ac": "AC 20",
-    "weapon": "Arma Inicial",
-    "weapon_icon": "🗡️",
-    "sanctuary": "Templo de Midgaard"
-  },
-  "voice": {
-    "engine": "edge-tts",
-    "voice_id": "pt-BR-AntonioNeural",
-    "rate": "+0%",
-    "pitch": "+0Hz",
-    "style": "default",
-    "description": "Configuração vocal do herói para narração dos capítulos"
+    "level_badge": "(Grau a verificar)",
+    "hp": "Não verificado",
+    "mana": "Não verificado",
+    "mv": "Não verificado",
+    "ac": "Não verificado",
+    "weapon": "Não verificado",
+    "weapon_icon": "[RUNA]",
+    "sanctuary": "Não verificado"
   }
 }
+

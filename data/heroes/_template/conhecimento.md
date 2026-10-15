@@ -1,19 +1,6 @@
-# 📖 Grimório do Saber de [NOME]
+# Conhecimento de [NOME]
 
-> *Compêndio prático de locais seguros, perigos confirmados, mestres e leis de Midgaard.*
+**Nenhum local, mestre, perigo ou mecânica foi observado por esta personagem.**
 
----
+Para cada descoberta, anotar dia, fonte, alcance e dúvida pendente. Rotas e segurança de outros heróis são pistas a conferir; não constituem conhecimento confirmado desta jornada.
 
-## 1. Topografia Segura & Abrigos
-* **Templo de Midgaard:** Ponto de respawn e santuário protegido pelos deuses. Local seguro para descansar e dormir (`sleep`).
-* **Fonte de Água:** Praça central de Midgaard. Ponto vital para saciar a sede e encher cantis.
-
----
-
-## 2. Mestres e Treinadores
-* **Guildas de Classe:** Locais onde mestres refinam perícias (`practice`) e acolhem novos membros.
-
----
-
-## 3. Ameaças Decifradas
-* **Área dos Novatos:** Território inicial para os primeiros testes de combate. Exige atenção a monstros agressivos e recuo preventivo.

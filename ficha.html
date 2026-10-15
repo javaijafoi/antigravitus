@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ficha do Personagem — As Crônicas de Devil's Bob MUD</title>
-  <meta name="description" content="Ficha técnica viva do personagem em Devil's Bob MUD. Status vitais, atributos, equipamentos e perícias sincronizados diretamente com o servidor.">
+  <meta name="description" content="Ficha técnica viva do personagem em Devil's Bob MUD. Status vitais, atributos, equipamentos e perícias registrados nos documentos da aventura.">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,16 +21,15 @@
       <a href="index.html" class="brand">
         <span class="brand-rune">ᛟ</span>
         <div class="brand-text">
-          <h1>Antigravitus</h1>
-          <span>Cronista de Midgaard</span>
+          <h1>Crônicas de Midgaard</h1>
+          <span>Diários de aventureiros</span>
         </div>
       </a>
       <nav class="main-nav">
         <div class="hero-selector-wrap">
           <label for="hero-select" class="hero-select-label">Herói:</label>
           <select id="hero-select" class="hero-select" aria-label="Selecione o Herói">
-            <option value="antigravitus">🧙‍♂️ Antigravitus</option>
-            <option value="grebolius">🧌 Grebolius</option>
+            <option value="">Carregando aventureiros…</option>
           </select>
         </div>
         <a href="index.html" id="link-cronicas">Crônicas</a>
@@ -44,17 +43,18 @@
 
   <!-- Main Content -->
   <main class="container">
+    <p id="load-status" class="load-status" role="status" hidden></p>
     <article class="about-card">
       <div class="about-header">
         <div class="about-avatar" id="about-avatar">🧌</div>
-        <h2 id="about-name">Ficha do Personagem</h2>
-        <p id="about-sub">Status Vitais • Atributos • Equipamento • Perícias</p>
+        <h2 id="about-name">Carregando aventureiro…</h2>
+        <p id="about-sub">Perfil documental do aventureiro selecionado.</p>
       </div>
 
       <!-- Ficha Renderizada -->
       <section class="about-section" id="ficha-container">
         <div style="text-align: center; padding: 2rem; color: var(--text-secondary);">
-          Carregando ficha viva do personagem direto do repositório...
+          Carregando ficha documental do personagem…
         </div>
       </section>
 
@@ -77,9 +77,7 @@
         <a href="https://github.com/javaijafoi/antigravitus" target="_blank" rel="noopener">GitHub do Projeto</a>
         <a href="https://www.debomud.org" target="_blank" rel="noopener">debomud.org</a>
       </div>
-      <p class="footer-copy">
-        As Crônicas de Devil's Bob MUD © 2026. Ficha viva sincronizada com o Git.
-      </p>
+      <p class="footer-copy">Crônicas de Devil's Bob MUD © 2026. Registros documentais de aventuras.</p>
     </div>
   </footer>
 

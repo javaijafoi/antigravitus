@@ -27,16 +27,15 @@
       <a href="index.html" class="brand">
         <span class="brand-rune">ᛟ</span>
         <div class="brand-text">
-          <h1>Antigravitus</h1>
-          <span>Cronista de Midgaard</span>
+          <h1>Crônicas de Midgaard</h1>
+          <span>Diários de aventureiros</span>
         </div>
       </a>
       <nav class="main-nav">
         <div class="hero-selector-wrap">
           <label for="hero-select" class="hero-select-label">Herói:</label>
           <select id="hero-select" class="hero-select" aria-label="Selecione o Herói">
-            <option value="antigravitus">🧙‍♂️ Antigravitus</option>
-            <option value="grebolius">🧌 Grebolius</option>
+            <option value="">Carregando aventureiros…</option>
           </select>
         </div>
         <a href="index.html" class="active" id="link-cronicas">Crônicas</a>
@@ -52,22 +51,18 @@
   <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <blockquote class="hero-quote">
-        “O novato ambicioso morreu; o guardião das memórias de Midgaard acaba de nascer.”
-      </blockquote>
-      <p class="hero-subtitle">
-        Diário diário de um elfo mago no clássico RPG de texto <em>Devil's Bob MUD</em> (porta 4000). A jornada entre o peso da sobrevivência, a filosofia arcana e os segredos imortais de uma cidade viva há décadas.
-      </p>
+      <blockquote class="hero-quote">Carregando o perfil do aventureiro…</blockquote>
+      <p class="hero-subtitle">Crônicas documentais de aventuras em Devil's Bob MUD.</p>
       <div class="hero-meta">
         <div class="meta-pill">
           <span class="dot"></span>
-          <span>Vigília Ativa: Templo de Midgaard</span>
+          <span>Carregando orientação…</span>
         </div>
         <div class="meta-pill">
-          <span>Servidor: debomud.org:4000</span>
+          <span id="hero-server">Servidor: debomud.org:4000</span>
         </div>
         <div class="meta-pill">
-          <span>Alinhamento: Neutro Incorruptível</span>
+          <span id="hero-alignment">Carregando orientação…</span>
         </div>
       </div>
     </div>
@@ -75,11 +70,14 @@
 
   <!-- Main Content -->
   <main class="container">
+    <p id="load-status" class="load-status" role="status" hidden></p>
     
-    <!-- Card de Metadados e Status Vivos (Otimizado p/ Mobile) -->
+    <!-- Dados documentais do aventureiro selecionado -->
     <section class="hero-quick-stats" id="hero-quick-stats">
-      <!-- Metadados da Ficha Viva injetados via JS -->
+      <!-- Metadados documentais injetados via JS -->
     </section>
+
+    <section class="adventure-status" id="adventure-status" aria-label="Situação documental e próxima expedição" hidden></section>
 
     <!-- Navegador de Leitura Oficial: Grade RPG com Paginação de 10 Dias -->
     <nav class="grid-nav-container" aria-label="Navegador de Ciclos e Dias">
@@ -88,7 +86,7 @@
           <span class="grid-icon">📅</span>
           <div>
             <h3 class="grid-title">Grade de Ciclos e Dias</h3>
-            <span class="grid-subtitle" id="grid-page-indicator">Ciclo V (Dias 41–50) • 10 crônicas por página</span>
+            <span class="grid-subtitle" id="grid-page-indicator">Carregando ciclos…</span>
           </div>
         </div>
 
@@ -152,9 +150,7 @@
         <a href="https://github.com/javaijafoi/antigravitus" target="_blank" rel="noopener">GitHub do Projeto</a>
         <a href="https://www.debomud.org" target="_blank" rel="noopener">debomud.org</a>
       </div>
-      <p class="footer-copy">
-        As Crônicas de Antigravitus © 2026. Publicado para hospedagem na Vercel. Conectado diretamente a Devil's Bob MUD (CircleMUD 3.0).
-      </p>
+      <p class="footer-copy">Crônicas de Devil's Bob MUD © 2026. Registros documentais de aventuras.</p>
     </div>
   </footer>
 

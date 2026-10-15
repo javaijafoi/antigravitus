@@ -1,0 +1,114 @@
+[
+  {
+    "id": "primeira-morte",
+    "day": 11,
+    "type": "death",
+    "summary": "Primeira morte nos esgotos e retorno pela Fonte da Vida.",
+    "source_kind": "document",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 11,
+        "note": "Migração de registro preexistente; não é transcrição nova do servidor."
+      }
+    ]
+  },
+  {
+    "id": "dicas-aceite",
+    "day": 32,
+    "type": "quest",
+    "summary": "Início de Dicas Mágicas narrado no Bar dos Magos.",
+    "source_kind": "document",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 32,
+        "note": "Migração de registro preexistente; não é transcrição nova do servidor."
+      }
+    ]
+  },
+  {
+    "id": "limpando-aceite",
+    "day": 36,
+    "type": "quest",
+    "summary": "Aceite de Limpando Monstros narrado na Sala do Alquimista.",
+    "source_kind": "document",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 36,
+        "note": "Migração de registro preexistente; não é transcrição nova do servidor."
+      }
+    ]
+  },
+  {
+    "id": "anel-guardado",
+    "day": 43,
+    "type": "inventory",
+    "summary": "Anel guardado naquele dia; presença no inventário atual ainda não confirmada.",
+    "source_kind": "document",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 43,
+        "note": "Migração de registro preexistente; não é transcrição nova do servidor."
+      }
+    ]
+  },
+  {
+    "id": "fogo-treinado",
+    "day": 53,
+    "type": "training",
+    "summary": "Treino de Mãos Flamejantes registrado a 95%.",
+    "source_kind": "document",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 53,
+        "note": "Migração de registro preexistente; não é transcrição nova do servidor."
+      }
+    ]
+  },
+  {
+    "id": "segunda-morte",
+    "day": 60,
+    "type": "death",
+    "summary": "Segunda morte narrada no confronto com o Cavaleiro Branco; retorno pela Fonte da Vida.",
+    "source_kind": "document",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 60,
+        "note": "Migração de registro preexistente; não é transcrição nova do servidor."
+      }
+    ]
+  },
+  {
+    "id": "acampamento-laboratorio",
+    "day": 60,
+    "type": "camp",
+    "summary": "Repouso e salvamento registrados no Laboratório dos Magos.",
+    "source_kind": "document",
+    "evidence": [
+      {
+        "document": "evolucao.md",
+        "day": 60,
+        "note": "Migração de registro preexistente; não é transcrição nova do servidor."
+      }
+    ]
+  },
+  {
+    "id": "expedicao-sala-alquimista",
+    "day": 61,
+    "type": "combat",
+    "summary": "Exploração dos campos externos, infiltração na Masmorra dos Novatos, aniquilação de novatos zumbis na Sala do Alquimista, obtenção dos chifres do Minotauro e acampamento ao lado do Alquimista.",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 61,
+        "note": "Sessão executada e confirmada ao vivo no servidor debomud.org:4000."
+      }
+    ]
+  }
+]

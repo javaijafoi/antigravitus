@@ -1,146 +1,157 @@
+"""Registra crônicas reais, com fonte explícita e proteção contra substituição acidental."""
+import argparse
 import json
 import os
+from pathlib import Path
+import re
 import sys
-import argparse
+from scripts.check_project import validate_cycles, validate_evidence, validate_posts
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-HEROES_DIR = os.path.join(BASE_DIR, "data", "heroes")
+BASE_DIR = Path(__file__).resolve().parent
+HEROES_DIR = BASE_DIR / "data" / "heroes"
 DEFAULT_HERO = "antigravitus"
 
+
+def hero_directory(hero_id):
+    if not isinstance(hero_id, str) or not re.fullmatch(r"[a-z0-9][a-z0-9_-]*", hero_id):
+        raise ValueError("Identificador de herói inválido.")
+    directory = Path(HEROES_DIR) / hero_id
+    if not directory.is_dir():
+        raise ValueError(f"Herói '{hero_id}' não encontrado; crie o herói antes de registrar sua jornada.")
+    return directory
+
+
 def get_posts_path(hero_id=DEFAULT_HERO):
-    # Se existir a pasta específica do herói, usa ela
-    hero_posts = os.path.join(HEROES_DIR, hero_id, "posts.json")
-    if os.path.exists(hero_posts) or os.path.exists(os.path.join(HEROES_DIR, hero_id)):
-        return hero_posts
-    # Fallback legado
-    return os.path.join(BASE_DIR, "data", "posts.json")
+    return hero_directory(hero_id) / "posts.json"
+
 
 def get_ciclos_path(hero_id=DEFAULT_HERO):
-    hero_ciclos = os.path.join(HEROES_DIR, hero_id, "ciclos.json")
-    return hero_ciclos
+    return hero_directory(hero_id) / "ciclos.json"
 
-def add_cycle_summary(cycle_num, summary, title=None, hero_id=DEFAULT_HERO):
-    """
-    Adiciona ou atualiza o resumo emocionante de um ciclo em data/heroes/<hero>/ciclos.json.
-    """
-    ciclos_path = get_ciclos_path(hero_id)
-    os.makedirs(os.path.dirname(ciclos_path), exist_ok=True)
 
-    ciclos = []
-    if os.path.exists(ciclos_path):
-        try:
-            with open(ciclos_path, "r", encoding="utf-8") as f:
-                ciclos = json.load(f)
-        except Exception:
-            ciclos = []
+def read_list(path):
+    data = json.loads(path.read_text(encoding="utf-8-sig")) if path.is_file() else []
+    if not isinstance(data, list) or any(not isinstance(item, dict) for item in data):
+        raise ValueError(f"{path} deve ser lista de objetos; o arquivo existente foi preservado.")
+    return data
 
-    c_num = int(cycle_num)
-    start_day = (c_num - 1) * 10 + 1
-    end_day = c_num * 10
 
-    new_cycle = {
-        "cycle": c_num,
-        "start_day": start_day,
-        "end_day": end_day,
-        "title": title or f"Façanhas e Provações do Ciclo {c_num}",
-        "summary": summary
-    }
+def write_json(path, value):
+    temporary = path.with_name(path.name + ".tmp")
+    try:
+        temporary.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        os.replace(temporary, path)
+    finally:
+        if temporary.exists():
+            temporary.unlink()
 
-    ciclos = [c for c in ciclos if c.get("cycle") != c_num]
-    ciclos.append(new_cycle)
-    ciclos.sort(key=lambda x: x.get("cycle", 0))
 
-    with open(ciclos_path, "w", encoding="utf-8") as f:
-        json.dump(ciclos, f, ensure_ascii=False, indent=2)
+def add_cycle_summary(cycle_num, summary, title=None, hero_id=DEFAULT_HERO, *, replace=False):
+    path = get_ciclos_path(hero_id)
+    cycles = read_list(path)
+    if not isinstance(cycle_num, int) or isinstance(cycle_num, bool) or cycle_num < 1:
+        raise ValueError("Número do ciclo deve ser inteiro positivo.")
+    posts = read_list(get_posts_path(hero_id))
+    days = [p.get("id") for p in posts if isinstance(p.get("id"), int) and not isinstance(p.get("id"), bool)]
+    if any(cycle.get("cycle") == cycle_num for cycle in cycles) and not replace:
+        raise ValueError(f"Ciclo {cycle_num} já existe. Use --replace somente para uma correção editorial deliberada.")
+    item = {"cycle": cycle_num, "start_day": (cycle_num - 1) * 10 + 1, "end_day": cycle_num * 10,
+            "title": title or f"Ciclo {cycle_num}", "summary": summary}
+    errors, _ = validate_cycles(hero_id, [item], max(days, default=0))
+    if errors:
+        raise ValueError("\n".join(errors))
+    cycles = [cycle for cycle in cycles if cycle.get("cycle") != cycle_num] + [item]
+    if any(not isinstance(cycle.get("cycle"), int) for cycle in cycles):
+        raise ValueError("Arquivo de ciclos contém IDs inválidos; confira antes de escrever.")
+    cycles.sort(key=lambda cycle: cycle["cycle"])
+    write_json(path, cycles)
+    return item
 
-    print(f"[{hero_id.upper()}] Resumo do Ciclo {c_num} atualizado com sucesso em {ciclos_path}!")
 
-def add_chronicle(day_num, title, date_str, in_game_time, excerpt, tags, content_paragraphs, day_label=None, hero_id=DEFAULT_HERO):
-    """
-    Adiciona ou atualiza uma crônica em posts.json do herói selecionado (ordem crescente: Dia 1, Dia 2, ..., Dia N).
-    """
-    posts_path = get_posts_path(hero_id)
-    os.makedirs(os.path.dirname(posts_path), exist_ok=True)
+def add_chronicle(day_num, title, date_str, in_game_time, excerpt, tags, content_paragraphs,
+                  day_label=None, hero_id=DEFAULT_HERO, *, evidence=None, source_kind=None, replace=False):
+    path = get_posts_path(hero_id)
+    posts = read_list(path)
+    if not isinstance(day_num, int) or isinstance(day_num, bool) or day_num < 1:
+        raise ValueError("Dia deve ser inteiro positivo.")
+    if any(post.get("id") == day_num for post in posts) and not replace:
+        raise ValueError(f"Dia {day_num} já existe. Use --replace somente para uma correção editorial deliberada.")
+    if source_kind not in ("documental", "live"):
+        raise ValueError("Informe source_kind='documental' ou 'live'; a origem não deve ser presumida.")
+    if isinstance(tags, str):
+        tags = [tag.strip() for tag in tags.split(",") if tag.strip()]
+    if isinstance(content_paragraphs, str):
+        content_paragraphs = [part.strip() for part in re.split(r"\n\s*\n", content_paragraphs) if part.strip()]
+    item = {"id": day_num, "day": day_label or f"Dia {day_num}", "title": title, "date": date_str,
+            "in_game_time": in_game_time, "excerpt": excerpt, "tags": tags,
+            "content": content_paragraphs, "source_kind": source_kind, "evidence": evidence}
+    # Um post isolado não permite inferir ordem nem continuidade da coleção.
+    errors, _ = validate_posts(hero_id, [item], hero_dir=path.parent)
+    errors.extend(validate_evidence(evidence, f"Dia {day_num}", day_num, path.parent))
+    if errors:
+        raise ValueError("\n".join(dict.fromkeys(errors)))
+    posts = [post for post in posts if post.get("id") != day_num] + [item]
+    if any(not isinstance(post.get("id"), int) or isinstance(post.get("id"), bool) for post in posts):
+        raise ValueError("posts.json contém IDs inválidos; o arquivo existente foi preservado.")
+    # Antigravitus conserva sua ordem histórica decrescente; novos heróis usam crescente.
+    descending = hero_id == "antigravitus" and len(posts) > 1 and posts[0]["id"] > posts[1]["id"]
+    posts.sort(key=lambda post: post["id"], reverse=descending)
+    write_json(path, posts)
+    legacy = Path(BASE_DIR) / "data" / "posts.json"
+    if hero_id == "antigravitus" and legacy.is_file():
+        write_json(legacy, posts)
+    # O primeiro fato real encerra o estado de template nos dois catálogos.
+    local_path = path.parent / "hero.json"
+    if local_path.is_file():
+        local = json.loads(local_path.read_text(encoding="utf-8-sig"))
+        if isinstance(local, dict) and local.get("record_status") == "draft":
+            local["record_status"] = "documental"
+            catalog_path = Path(BASE_DIR) / "data" / "heroes.json"
+            catalog = read_list(catalog_path)
+            catalog = [local if hero.get("id") == hero_id else hero for hero in catalog]
+            write_json(local_path, local)
+            write_json(catalog_path, catalog)
+    print(f"[{hero_id}] Crônica do Dia {day_num} registrada com fonte {source_kind}.")
+    if day_num % 10 == 0:
+        print("Marco decenal: consolide mapa, missões, estado e resumo somente com fatos já observados.")
+    return item
 
-    if os.path.exists(posts_path):
-        with open(posts_path, "r", encoding="utf-8") as f:
-            posts = json.load(f)
-    else:
-        posts = []
-        
-    new_post = {
-        "id": int(day_num),
-        "day": day_label if day_label else f"Dia {day_num}",
-        "title": title,
-        "date": date_str,
-        "in_game_time": in_game_time,
-        "excerpt": excerpt,
-        "tags": tags if isinstance(tags, list) else [t.strip() for t in tags.split(",")],
-        "content": content_paragraphs if isinstance(content_paragraphs, list) else [content_paragraphs]
-    }
-    
-    # Remove se já existia com o mesmo ID
-    posts = [p for p in posts if p.get("id") != int(day_num)]
-    
-    # Insere e ordena sempre em ordem crescente (Dia 1, Dia 2, Dia 3...)
-    posts.append(new_post)
-    posts.sort(key=lambda x: x.get("id", 0), reverse=False)
-    
-    with open(posts_path, "w", encoding="utf-8") as f:
-        json.dump(posts, f, ensure_ascii=False, indent=2)
-        
-    print(f"[{hero_id.upper()}] Crônica do Dia {day_num} ('{title}') gravada em {posts_path}!")
-    if int(day_num) % 10 == 0:
-        c_num = int(day_num) // 10
-        print(f"⏳ MARCO DECENAL ALCANÇADO (Dia {day_num} • Ciclo {c_num})!")
-        print(f"  1. Atualize o mapa interativo: data/heroes/{hero_id}/mapa.json e mapa.md")
-        print(f"  2. Crie/atualize o resumo emocionante do Ciclo {c_num} (bloco com spoiler) em: data/heroes/{hero_id}/ciclos.json")
-        print(f"  3. Faça a reflexão decenal em: data/heroes/{hero_id}/identidade.md")
 
-    # Se for antigravitus, mantém o data/posts.json legado sincronizado
-    if hero_id == "antigravitus":
-        legacy_path = os.path.join(BASE_DIR, "data", "posts.json")
-        try:
-            with open(legacy_path, "w", encoding="utf-8") as f:
-                json.dump(posts, f, ensure_ascii=False, indent=2)
-        except Exception:
-            pass
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--hero", default=DEFAULT_HERO)
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument("--day", type=int)
+    group.add_argument("--cycle", type=int)
+    parser.add_argument("--title", required=True)
+    parser.add_argument("--date", help="Data real da sessão; não é preenchida com uma data fixa.")
+    parser.add_argument("--time", help="Referência temporal real dentro do jogo.")
+    parser.add_argument("--excerpt")
+    parser.add_argument("--tags", default="Jornada")
+    parser.add_argument("--content-file", type=Path, help="UTF-8, com parágrafos separados por linha em branco.")
+    parser.add_argument("--evidence-file", type=Path, help="JSON: [{document, day, note}], caminhos relativos à pasta do herói.")
+    parser.add_argument("--source-kind", choices=("documental", "live"))
+    parser.add_argument("--cycle-summary")
+    parser.add_argument("--replace", action="store_true", help="Permite substituir explicitamente um dia ou ciclo existente.")
+    args = parser.parse_args()
+    try:
+        if args.cycle is not None:
+            if not args.cycle_summary:
+                parser.error("--cycle requer --cycle-summary.")
+            add_cycle_summary(args.cycle, args.cycle_summary, args.title, args.hero, replace=args.replace)
+        else:
+            if not all((args.date, args.time, args.content_file, args.evidence_file, args.source_kind)):
+                parser.error("--day requer --date, --time, --content-file, --evidence-file e --source-kind.")
+            add_chronicle(args.day, args.title, args.date, args.time, args.excerpt or args.title,
+                          args.tags, args.content_file.read_text(encoding="utf-8-sig"), hero_id=args.hero,
+                          evidence=json.loads(args.evidence_file.read_text(encoding="utf-8-sig")),
+                          source_kind=args.source_kind, replace=args.replace)
+    except (ValueError, OSError) as exc:
+        parser.exit(1, f"Erro: {exc}\n")
+    return 0
+
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Adiciona nova crônica ou resumo de ciclo ao diário de um herói.")
-    parser.add_argument("--hero", default=DEFAULT_HERO, help="Slug do herói (ex: antigravitus, novo_heroi)")
-    parser.add_argument("--day", type=int, help="Número do dia/ciclo (ex: 9)")
-    parser.add_argument("--title", help="Título da crônica")
-    parser.add_argument("--date", help="Data real (ex: '14 de outubro de 2026')")
-    parser.add_argument("--time", help="Tempo no jogo (ex: 'Midgaard — 9º Ciclo')")
-    parser.add_argument("--excerpt", help="Resumo/Lead da crônica")
-    parser.add_argument("--tags", help="Tags separadas por vírgula")
-    parser.add_argument("--cycle", type=int, help="Número do ciclo para atualizar resumo (ex: 1)")
-    parser.add_argument("--cycle-summary", help="Texto emocionante do resumo do ciclo com spoiler")
-    args = parser.parse_args()
-
-    if args.cycle and args.cycle_summary:
-        add_cycle_summary(
-            cycle_num=args.cycle,
-            summary=args.cycle_summary,
-            title=args.title,
-            hero_id=args.hero
-        )
-    elif args.day and args.title:
-        add_chronicle(
-            day_num=args.day,
-            title=args.title,
-            date_str=args.date or "14 de outubro de 2026",
-            in_game_time=args.time or f"Midgaard — {args.day}º Ciclo",
-            excerpt=args.excerpt or args.title,
-            tags=args.tags.split(",") if args.tags else ["Jornada"],
-            content_paragraphs=["Conteúdo registrado via CLI."],
-            hero_id=args.hero
-        )
-    else:
-        print("Uso programático:")
-        print("add_chronicle(day_num, title, date_str, in_game_time, excerpt, tags, content_paragraphs, hero_id='antigravitus')")
-        print("add_cycle_summary(cycle_num, summary, title=None, hero_id='antigravitus')")
-        print("Ou via CLI:")
-        print("python add_day.py --hero grebolius --day 52 --title 'Título' --date '14/10/2026'")
-        print("python add_day.py --hero grebolius --cycle 5 --title 'Título' --cycle-summary 'Resumo emocionante...'")
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.exit(main())

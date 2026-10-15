@@ -21,16 +21,15 @@
       <a href="index.html" class="brand">
         <span class="brand-rune">ᛟ</span>
         <div class="brand-text">
-          <h1>Antigravitus</h1>
-          <span>Cronista de Midgaard</span>
+          <h1>Crônicas de Midgaard</h1>
+          <span>Diários de aventureiros</span>
         </div>
       </a>
       <nav class="main-nav">
         <div class="hero-selector-wrap">
           <label for="hero-select" class="hero-select-label">Herói:</label>
           <select id="hero-select" class="hero-select" aria-label="Selecione o Herói">
-            <option value="antigravitus">🧙‍♂️ Antigravitus</option>
-            <option value="grebolius">🧌 Grebolius</option>
+            <option value="">Carregando aventureiros…</option>
           </select>
         </div>
         <a href="index.html" id="link-cronicas">Crônicas</a>
@@ -44,11 +43,12 @@
 
   <!-- Main Content -->
   <main class="container">
+    <p id="load-status" class="load-status" role="status" hidden></p>
     <article class="about-card">
       <div class="about-header">
         <div class="about-avatar" id="about-avatar">🧙‍♂️</div>
-        <h2 id="about-name">Antigravitus</h2>
-        <p id="about-sub">Mago Elfo • Guardião da Memória de Midgaard • Alinhamento Neutro</p>
+        <h2 id="about-name">Carregando aventureiro…</h2>
+        <p id="about-sub">Perfil documental do aventureiro selecionado.</p>
       </div>
 
       <!-- Seção 1: As 5 Perguntas Capitais da Identidade -->
@@ -60,28 +60,28 @@
 
         <div style="display: flex; flex-direction: column; gap: 1.25rem; margin: 1.5rem 0;">
           <div class="stat-box" style="border-left: 3px solid var(--accent-gold);">
-            <h4 style="color: var(--accent-gold);">1. Qual é o objetivo principal dele?</h4>
-            <p id="q1-text"><strong>Decifrar a urdidura de Midgaard e erguer o Grande Compêndio das Memórias.</strong> Preservar a história e honrar os caídos (como Sakura), sem se corromper pela violência mercenária das tavernas.</p>
+            <h4 style="color: var(--accent-gold);">1. Qual é o objetivo principal?</h4>
+            <p id="q1-text">Carregando orientação do perfil…</p>
           </div>
 
           <div class="stat-box" style="border-left: 3px solid #e06c75;">
-            <h4 style="color: #e06c75;">2. O que ele mais teme?</h4>
-            <p id="q2-text"><strong>A perda da mente (dissociação da alma) e o horror da morte anônima e esquecida.</strong> O trauma primordial de quase ter tido seu corpo usurpado no Dia 1 e o pavor de virar um cadáver sem nome numa sarjeta.</p>
+            <h4 style="color: #e06c75;">2. Qual é o maior temor?</h4>
+            <p id="q2-text">Carregando orientação do perfil…</p>
           </div>
 
           <div class="stat-box" style="border-left: 3px solid #d19a66;">
-            <h4 style="color: #d19a66;">3. Qual é a maior falha de caráter dele?</h4>
-            <p id="q3-text"><strong>A soberba intelectual e a paralisia do distanciamento calculista.</strong> O risco de usar a desculpa de "observador imparcial" para justificar o medo ou a covardia diante de tragédias que demandam ação.</p>
+            <h4 style="color: #d19a66;">3. Qual é a maior falha de caráter?</h4>
+            <p id="q3-text">Carregando orientação do perfil…</p>
           </div>
 
           <div class="stat-box" style="border-left: 3px solid var(--accent-cyan);">
-            <h4 style="color: var(--accent-cyan);">4. O que ele está disposto a sacrificar para vencer?</h4>
-            <p id="q4-text"><strong>Sacrifica o conforto, as honras fáceis e o aplauso mundano; jamais a verdade ou a ética.</strong> Dorme no chão frio e rejeita ouro manchado de sangue. A fidelidade à memória viva é inegociável.</p>
+            <h4 style="color: var(--accent-cyan);">4. Que sacrifícios aceita para vencer?</h4>
+            <p id="q4-text">Carregando orientação do perfil…</p>
           </div>
 
           <div class="stat-box" style="border-left: 3px solid #98c379;">
-            <h4 style="color: #98c379;">5. Que marca ou legado ele quer deixar?</h4>
-            <p id="q5-text"><strong>Ser o Olho Lúcido e a Voz Imortal de Midgaard.</strong> Que os viajantes do futuro encontrem seus registros e saibam quem amou, lutou e tombou neste cosmo através das décadas.</p>
+            <h4 style="color: #98c379;">5. Que marca ou legado deseja deixar?</h4>
+            <p id="q5-text">Carregando orientação do perfil…</p>
           </div>
         </div>
       </section>
@@ -96,19 +96,19 @@
           <div class="stat-box">
             <h4>Matriz de Identidade</h4>
             <p style="font-size: 0.95rem; color: var(--text-secondary);">
-              <code>data/identidade.md</code>: As 5 perguntas capitais que ancoram o propósito, os limites éticos e as motivações de Antigravitus.
+              <code data-hero-document="identidade.md">identidade.md</code>: As 5 perguntas capitais que ancoram o propósito, os limites éticos e as motivações do aventureiro selecionado.
             </p>
           </div>
           <div class="stat-box">
             <h4>O Cinzel da Evolução</h4>
             <p style="font-size: 0.95rem; color: var(--text-secondary);">
-              <code>data/evolucao.md</code>: O log cirúrgico que audita as mutações psicológicas, fissuras de crença e o amadurecimento diário.
+              <code data-hero-document="evolucao.md">evolucao.md</code>: O log cirúrgico que audita as mutações psicológicas, fissuras de crença e o amadurecimento diário.
             </p>
           </div>
           <div class="stat-box">
             <h4>Grimório do Saber</h4>
             <p style="font-size: 0.95rem; color: var(--text-secondary);">
-              <code>data/conhecimento.md</code>: O compêndio de topografia segura, figuras históricas, artefatos e leis que orientam suas decisões.
+              <code data-hero-document="conhecimento.md">conhecimento.md</code>: O compêndio de topografia segura, figuras históricas, artefatos e leis que orientam suas decisões.
             </p>
           </div>
         </div>
@@ -143,9 +143,7 @@
         <a href="https://github.com/javaijafoi/antigravitus" target="_blank" rel="noopener">GitHub do Projeto</a>
         <a href="https://www.debomud.org" target="_blank" rel="noopener">debomud.org</a>
       </div>
-      <p class="footer-copy">
-        As Crônicas de Antigravitus © 2026. Hospedado na Vercel.
-      </p>
+      <p class="footer-copy">Crônicas de Devil's Bob MUD © 2026. Registros documentais de aventuras.</p>
     </div>
   </footer>
 

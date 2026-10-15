@@ -1,150 +1,100 @@
 ---
 name: mud-ciclo-diario
-description: Protocolo completo de jogabilidade, liturgia de encerramento e diretrizes operacionais para o Devil's Bob MUD. Estruturado em 3 camadas (Projeto, Referência Técnica MUD e Persona Grebolius), com ritmo narrativo rico, ausência de metajogo em prosa, combate agressivo com wimpy dinâmico de 25%, acampamento em campo e deploy contínuo em produção.
+description: "Continuar uma sessão autorizada do Devil's Bob MUD e reconciliar seus registros e crônicas, preservando evidências, continuidade e a doutrina de exploração de Grebolius. Não autoriza jogar nem publicar por si só."
 ---
 
-# ⚔️ Modus Operandi do Devil's Bob MUD & Projeto Crônicas
+# Devil's Bob MUD — sessão, memória e crônica
 
-Esta skill é a **fonte única e soberana de verdade** para qualquer agente que continue a campanha no Devil's Bob MUD (`debomud.org:4000`) e a publicação das crônicas no projeto. Ela é estruturada em **3 camadas modulares**:
+Use esta skill para uma sessão autorizada em `debomud.org:4000` ou para revisar os registros da campanha. Uma solicitação de edição de arquivos não autoriza jogar, enviar comandos ao servidor ou publicar. A skill orienta o método; os acontecimentos vêm das evidências da sessão e dos documentos identificados como fontes.
 
-1. **Camada 1: Diretrizes de Projeto & Liturgia Diária** (regras universais de código, integridade, narrativa e deploy).
-2. **Camada 2: Referência Técnica do CircleMUD / DeBo** (sintaxe canônica de comandos, portas, nutrição, ticks e bot).
-3. **Camada 3: Persona & Doutrina de Grebolius — Aventureira Sem Véu** (doutrina de aço e magia, wimpy dinâmico, caçada calculada e missões ativas).
+## 1. Evidência antes da prosa
 
----
+Antes de escrever, separar:
 
-## 🏛️ CAMADA 1: Diretrizes de Projeto & Liturgia Diária
+- **Fato com fonte:** resposta do servidor ou acontecimento explicitamente registrado em documento. Uma crônica antiga é evidência documental, não uma transcrição de comando nem uma nova conferência ao vivo.
+- **Crença da personagem:** interpretação, bravata, medo ou ambição presentes no relato. “Sou invulnerável” não comprova imunidade; diálogo não comprova aliança.
+- **Plano ou hipótese:** ação pretendida, mecânica sugerida ou resultado possível. Não registrar como ocorrido, concluído ou confirmado.
 
-### 1.1. Ausência Total de Metajogo na Prosa Narrativa
-* **Zero Metajogo em Prosa:** É terminantemente proibido citar dados numéricos de metajogo (ex: *"ganhou 450 de experiência"*, *"atingiu 46.000 EXP"*, *"minha armadura subiu para AC 40"*, *"restam 12 HP de wimpy"*) nos títulos, resumos ou corpos das crônicas diárias.
-* **Dados Frios Pertencem à Ficha:** Números exatos de HP, Mana, MV, EXP, moedas de ouro, atributos e estatísticas pertencem exclusivamente a `data/heroes/<slug>/ficha.md`.
-* **Prosa Orgânica e Sensorial:** A narrativa deve fluir com imersão sensorial de alta literatura fantástica: o impacto dos golpes, o aroma de poções e enxofre, a pressão do ar, o peso do aço e os diálogos com os habitantes do mundo.
-* **Proibido Citar Arquivos de Código:** NUNCA citar nomes de arquivos técnicos (`ficha.md`, `posts.json`, `mapa.md`, `main.js`) dentro do texto da crônica.
+Registrar primeiro o que aconteceu, a fonte e o grau de certeza em `data/heroes/<slug>/events.json`, conforme o esquema existente. Usar `source_kind=server_log` apenas quando houver resposta real do servidor; registros migrados de documentos usam `source_kind=document` e sua referência. Não inventar transcrições, horários ou comandos executados. Manter o evento e o dia de jogo distintos da data de revisão editorial.
 
-### 1.2. O Protocolo da Grande Empresa (Fim da Síndrome do Novato Complacente)
-* **Aventureira Ousada:** Dias sem avanço real, sem desbravar novos caminhos ou sem interagir com missões devem ser extintos.
-* ❌ **Loop Burocrático Proibido:** É vetado resumir o dia ao roteiro mecânico: *acordar -> beber na fonte -> conjurar armadura -> bater em 1 mob inofensivo -> doar punhal no templo -> dormir*.
-* **Rotinas Subentendidas:** Micro-hábitos (saciar sede/fome, ligar `armor`) são preparação preliminar automática; nunca são o clímax do dia.
-* **O Fio de Aventura do Dia:** Cada dia deve ter início, meio, complicação e clímax centrados em um objetivo tangível:
-  - Avançar ou concluir missões ativas de `data/heroes/<slug>/missoes.md`.
-  - Investigar mistérios de Midgaard, conversar com NPCs, explorar novas saídas ou descer a masmorras inexploradas.
-  - Aperfeiçoar magias na guilda gastando treinos acumulados e adquirir novos equipamentos com o ouro ganho.
+Atualizar estado e missões com essas evidências antes de elaborar a crônica. Fonte ausente ou divergente pede uma pendência explícita, não uma cena de ligação inventada.
 
-### 1.3. Gestão Contínua do Catálogo de Missões (`missoes.md`)
-* Toda missão descoberta ou assumida DEVE ser catalogada imediatamente em `data/heroes/<slug>/missoes.md`.
-* Estados canônicos: `🔎 Descoberta`, `▶️ Ativa`, `✅ Concluída`.
-* Cada entrada registra: Missão, Status, NPC / Local, Objetivo, Recompensa e Notas táticas.
-* Nenhuma missão assumida é esquecida: a aventureira cumpre sua palavra e extrai o valor de cada tarefa.
+### Continuidade e voz
 
-### 1.4. Gestão da Ficha Viva (`ficha.md`)
-* O arquivo `data/heroes/<slug>/ficha.md` reflete o **estado vivo presente** do personagem (sem histórico de versões anteriores).
-* Mantém atualizados: HP/Mana/MV, Nível, Experiência, Ouro, Atributos, Equipamentos em uso, Inventário, Perícias e Missões ativas.
+- Nunca acrescentar recompensa, diálogo, relação, promessa, deslocamento, perda de memória, vitória ou desfecho que não esteja sustentado pela sessão. Não concluir uma missão por ter ocorrido um combate próximo ao NPC.
+- Preservar emoções e fatos das crônicas históricas. Só corrigir um acontecimento se uma fonte o resolver; enquanto não houver fonte, acrescentar nota editorial fora da voz da personagem. Não diagnosticar negação nem declarar trauma superado para reparar uma divergência.
+- Para novas crônicas, números mecânicos de HP, mana, movimento, XP, armadura, treino e dano pertencem aos registros técnicos. Escrevê-los por extenso como “passos de maturidade” continua sendo relatório numérico. Não citar arquivos técnicos dentro da narrativa.
+- Descrever ações e sensações apoiadas no ocorrido, com espaço para humor, curiosidade, tensão e silêncio. Não exigir clímax, vitória épica, descoberta nova, número mínimo de cenas ou três combates. Preparação, bloqueio e recuo podem ser o resultado real de uma sessão.
+- Uma sessão pode avançar uma pista ou descartar uma hipótese; não fabricar mudança de personalidade ou consequência emocional para cumprir uma cota narrativa.
 
-### 1.5. O Ciclo Decenal (A cada 10 dias / ciclos: Dias 10, 20, 30, 40, 50, 60...)
-* **Pausa Reflexiva Profunda:** O herói faz uma pausa reflexiva em seu diário, avaliando suas escolhas e sua evolução psicológica.
-* **Atualização de `identidade.md`:** Refinar a matriz de identidade, integrando cicatrizes, novas convicções e ambições consolidadas.
-* **Atualização do Mapa Interativo (`mapa.json` e `mapa.md`):** Mapear com precisão todas as novas salas, conexões, níveis de risco e notas táticas descobertas na dezena.
-* **Registro em `ciclos.json`:** Adicionar a sinopse emocionante do ciclo recém-concluído.
+## 2. Objetivo da expedição e risco
 
-### 1.6. O Dia "9" do Ciclo Decenal: Acionamento Obrigatório do `/learn`
-* Em todo dia finalizado em 9 (Dias 9, 19, 29, 39, 49, 59, etc.), o agente DEVE acionar a reflexão de aprendizado metodológico (`/learn`) para registrar lições aprendidas, melhorias nos scripts de automação do bot e heurísticas de sobrevivência.
+Consultar identidade, plano e missões do herói. Para Grebolius, a prioridade vigente é **missão ou descoberta → decisão e consequência reais → progressão como resultado**. A ambição por poder permanece uma característica, sem impor extermínio de toda criatura vencível ou repetição de monstros por XP.
 
-### 1.7. Liturgia Obrigatória de Encerramento Diário
-NENHUM dia jogado é finalizado sem cumprir rigorosamente estes 5 passos sequenciais:
-1. **Salvar no Jogo:** Executar o comando `save` no MUD.
-2. **Repousar com Segurança:** Repousar em um local seguro (acampamento protegido na dungeon ou santuário urbano) com `sleep` ou `rest`.
-3. **Atualizar Registros do Herói:**
-   - Inserir a nova crônica em `data/heroes/<slug>/posts.json` (mantendo a ordenação **estritamente crescente** por `id`).
-   - Atualizar `data/heroes/<slug>/mapa.md` com novos cômodos e passagens.
-   - Atualizar `data/heroes/<slug>/evolucao.md` com as mutações de postura e marcos de combate.
-   - Atualizar `data/heroes/<slug>/conhecimento.md` com criaturas, NPCs e rotas decifradas.
-   - Atualizar `data/heroes/<slug>/ficha.md` com status vitais, inventário e perícias atuais.
-   - Atualizar `data/heroes/<slug>/missoes.md` com novas descobertas, avanços e conclusões.
-   - Sincronizar `data/heroes.json` e `data/heroes/<slug>/hero.json` com os status atuais (`quick_stats`).
-4. **Validar Integridade do Projeto:**
-   - Executar o script de validação: `python scripts/check_project.py`.
-   - Corrigir imediatamente qualquer inconsistência apontada antes de prosseguir.
-5. **Publicar em Produção (Git & Deploy):**
-   - Executar commit e push para o repositório oficial:
-     ```powershell
-     git add .
-     git commit -m "cronica: Dia X - <Titulo> (<Heroi>)"
-     git push origin main
-     ```
-   - **Isolamento de Credenciais:** Nunca executar `git config --global`. Usar exclusivamente as credenciais locais do repositório.
+Escolher um objetivo verificável e as condições para interromper a tentativa. Antes de entrar em área desconhecida ou enfrentar alvo:
 
----
+1. Conferir vida, mana, movimento, provisões, equipamento e efeitos ativos. Não contar com item que só conste de registro antigo ou magia não aprendida.
+2. Avaliar a ameaça e o dano observado. `con <alvo>` é uma referência local útil, sem garantir vitória. Não testar dano arriscando um golpe potencialmente letal só para completar o registro.
+3. Confirmar saída utilizável e retorno; conexão de descida pode não ter subida. Não usar invisibilidade como garantia de fuga, ausência de detecção ou acesso a guilda.
+4. Conferir margem para sobreviver e agir; se recursos ou retorno forem insuficientes, preparar melhor, contornar ou adiar. Não há obrigação de iniciar combate porque o alvo parece vencível.
 
-## 🧭 CAMADA 2: Referência Técnica do CircleMUD / DeBo MUD
+### Referência de Grebolius
 
-### 2.1. Mecânica Canônica de Portas e Passagens (`open <direction>`)
-* **Sintaxe Homologada:** Para abrir qualquer porta fechada ou destrancada em uma saída, usar estritamente **`open <direction>`** (ex: `open north`, `open south`, `open east`, `open west`, `open up`, `open down`).
-* ❌ **Erros Comuns:**
-  - `abrir porta norte` -> O servidor responde *"Como?!?"*.
-  - `open door north` -> O servidor responde *"Não vejo nenhum door aqui"*.
+- Mulher goblin **sem disfarce**, de classe mecânica **Mago**. “Ladra arcana” descreve astúcia e estilo, não furto, apunhalada especial ou habilidades de outra classe.
+- `wimpy 13` é a configuração documental vigente para 52 HP máximos. A regra anterior de aproximadamente 25% é uma heurística, **não uma fórmula de fuga segura**: considerar dano por golpe, vida restante, mana, movimento e saída. Só alterar o valor no jogo durante sessão autorizada e registrar a resposta.
+- Conferir `armor` antes do risco; custo, duração, efeito e renovação dependem do que o servidor mostrar. Não pressupor atividade contínua, AC imutável ou imunidade. O mesmo vale para `invisibility` e demais magias.
+- Último acampamento documental: Laboratório dos Magos, Dia 60. Panteão dos Centenários é uma referência histórica de santuário. Sala limpa, porta fechada, mobília ou NPC conhecido não garantem segurança. Escolher descanso ou retorno conforme as condições observadas, sem tratar o santuário como fraqueza.
+- Saldo documental de 1.051 moedas e seis treinos requer conferência. O catálogo antigo cobra 9.202 pelo pergaminho de retorno e 5.370 pela poção amarela; não planejar essas compras com o saldo registrado. Escolher treino e compra conforme necessidade, disponibilidade, preço, peso e requisitos atuais.
+- O anel guardado no Dia 43 está ausente da ficha posterior. Posse, requisito de uso e bônus são pendências; não tratá-lo como equipado, perdido ou disponível sem conferir.
+- Reino Livre e vingança contra a serpente são objetivos pessoais futuros. Procurar oportunidades que o mundo oferecer, sem criar seguidores, abrigo, acordos ou segredo da serpente. Confronto, decapitação e nível seguinte não são desfechos predefinidos.
 
-### 2.2. Sintaxe Rigorosa de Comandos no MUD
-* **Navegação Oeste:** SEMPRE enviar `w`. NUNCA enviar `o`, pois no CircleMUD `o` aciona o comando `order` (ordenar servos/mascotes).
-* **Consumo de Alimento:** Usar `eat <comida>` (ex: `eat pao`, `eat carne`). `comer` não é interpretado.
-* **Consumo de Bebida:** Usar `drink <recipiente>` (ex: `drink cantil`, `drink fonte`).
-* **Comércio com Lojistas:** Comandos exclusivamente em inglês: `list` (consultar mercadorias) e `buy <item>` (comprar).
-* **Treino de Magias e Habilidades:** Na guilda apropriada, usar `practice <magia_em_ingles>` (ex: `practice invisibility`, `practice armor`, `practice 'burning hands'`).
-* **Sistema de Autoquest:** Comandos `autoquest` e `ajuda autoquest`. Ao ser abordado por um NPC com pedido de ajuda (*"Ei, você poderia me ajudar?"*), responder com `say sim`.
+## 3. Memória e documentos do projeto
 
-### 2.3. A Regra do Tick e Otimização de Sobrevivência (Pulsos de 45–60 segundos)
-* **Sincronia do Tick:** O cálculo de fome, sede e regeneração de HP/Mana/MV é processado simultaneamente na virada do tick do servidor.
-* **Gatilho Imediato:** Ao surgir a mensagem *"Você está com fome"* ou *"Você está com sede"*, ingerir comida e água no mesmo instante. Se o tick virar com fome/sede, a taxa de regeneração cai drasticamente ou é zerada.
-* **Sleep-Ticking e Descanso:**
-  - Para recuperação rápida entre batalhas, usar `rest` (descansar) mantendo a vigilância do ambiente.
-  - Para cura acelerada, usar `sleep` (dormir) em salas seguras. Se houver mobília (cama, banco, sofá), interagir com ela (`descansar banco`, `dormir cama`) para multiplicar o fator de cura do tick.
+Consultar a estrutura existente antes de editar. Para Grebolius:
 
-### 2.4. Doutrina do Acampamento em Campo (Não Recuar Prematuramente)
-* **Fim do Recuo Excessivo ao Templo:** Não voltar ao Templo a cada 1 ou 2 combates banais. Isso consome pontos de movimento (`MV`) e dá tempo para que as masmorras sofram respawn.
-* **Salas Seguras na Própria Área:** Identificar salas pacíficas ou já limpas dentro da própria dungeon (ex: Entrada da Área dos Novatos, Aposentos do Alquimista, Laboratório dos Magos) e utilizá-las como posto avançado de acampamento e repouso.
+| Arquivo | Responsabilidade |
+| :--- | :--- |
+| `state.json` | Estado estruturado com fonte, dia e indicação de conferência ao vivo. Migração documental mantém `as_of.live_verified=false` até haver conferência real. |
+| `events.json` | Eventos com origem e certeza; distingue o que veio do servidor e o que foi consolidado de documentos. |
+| `ficha.md`, `hero.json`, `data/heroes.json` | O gerador deriva ficha e `quick_stats` do estado e espelha o perfil no catálogo. O texto de identidade em `hero.json` é editorial: reconciliá-lo com `identidade.md` antes de sincronizar. |
+| `missoes.json` | Tipo, estado, evidências, bloqueios e próximos passos das tarefas e objetivos. |
+| `missoes.md` | Guia editorial complementar; manter títulos e estados coerentes com o JSON. |
+| `identidade.md`, `plano_aventureira.md` | Orientação atual e possibilidades futuras, sem converter intenções em fatos. |
+| `conhecimento.md`, `mapa.md`, `mapa.json` | Conhecimento e topografia com origem, riscos e incertezas; distinguir posição, acampamento e santuário. |
+| `evolucao.md` | Histórico de instantâneos e interpretações de cada dia. Preservar entradas antigas; anexar reconciliação quando uma divergência continuar aberta. |
+| `posts.json` | Crônicas baseadas na sessão; não preencher lacunas históricas por invenção. |
+| `ciclos.json` | Resumos de dias já registrados. Planos futuros ficam no plano, não em resumo histórico antecipado. |
 
-### 2.5. Organização Estrita de Inventário (Regra da Mochila)
-* **Carga e Força:** Manter a carga corporal otimizada para evitar exaustão de pontos de movimento (`MV`).
-* **Armazenamento:** Itens duplicatas, rações extras e poções devem ficar guardados dentro da mochila (`put <item> mochila`).
-* **Slots Livres:** Deixar sempre de 3 a 5 espaços livres no inventário corporal para receber itens de missões, chaves e recompensas.
-* **Descarte Virtuoso:** Em caso de mochila lotada (*"não cabe em uma mochila"*), doar o excesso na Sala de Doações do Templo (`donate <item>`) para liberar peso e acionar autoquests cívicas secretas.
-* **Preservação de Itens com Tag `(+2E)`:** Itens mágicos com exigência de nível futuro JAMAIS devem ser descartados ou doados; guardá-los na mochila para equipar ao atingir o nível exigido.
+### Missões
 
-### 2.6. Encerramento Confiável de Conexão no Bot (`client.close()`)
-* A biblioteca do bot (`DeboClient`) implementa o método `.close()` para encerramento do socket de rede.
-* NUNCA invocar `.disconnect()`, evitando exceções do tipo `AttributeError`.
+Distinguir **tarefa oficial**, **investigação** e **objetivo pessoal**. Registrar descoberta, aceite, retomada, progresso e conclusão separadamente, com fonte e dia. Estados disponíveis: descoberta, ativa, adiada, bloqueada, concluída e abandonada, conforme o esquema do projeto. Toda entrada deve permitir saber o próximo passo verificável, o bloqueio e a condição de conclusão; objetivo ou recompensa desconhecidos ficam como desconhecidos.
 
----
+Para Grebolius, “Limpando Monstros” foi descoberta no Dia 35, aceita no Dia 36 e retomada nos relatos do Dia 60. Isso não comprova um segundo aceite ou reinício. “Dicas Mágicas” tem início narrado no Dia 32. Vingança não é uma autoquest confirmada. Convite, conversa, doação ou morte de monstro não criam nova recompensa ou aliança por inferência.
 
-## 🧌 CAMADA 3: Persona & Doutrina de Grebolius — Aventureira Sem Véu
+### Fechamento e conferência
 
-### 3.1. Identidade: Aventureira Sem Véu
-* **Fim do Disfarce de Homem:** Grebolius abandonou em definitivo os trapos e o manto de disfarce que a faziam passar por um guerreiro novato. Ela assume abertamente sua raça e seu gênero: uma **mulher goblin aventureira**, astuta e destemida perante Midgaard.
-* **Orgulho e Ambição:** Não aceita humilhações. Transforma a hostilidade das guildas humanas em determinação para desvendar todos os segredos do mundo.
-* **Visão de Longo Prazo:** O sonho do **Reino Livre dos Goblins** e a dívida de sangue contra a **Serpente Venenosa dos Esgotos** (algoz do Dia 11) permanecem como grandes arcos de fundo, a serem preparados e executados com maestria tática.
+Quando uma sessão tiver ocorrido dentro do escopo autorizado:
 
-### 3.2. Aço e Magia Inseparáveis
-* **A Adaga Primordial:** Grebolius estuda magia com voracidade para obter vantagens à distância e emboscadas, mas **NUNCA larga sua lâmina**. O punhal de novato empunhado e o escudo na mão secundária são a base de sua velocidade e defesa.
-* **`armor` como Segunda Pele:** A couraça arcana (`cast 'armor'`) é uma rotina automática e deve permanecer ativa 100% do tempo em que estiver fora de santuários. Com AC maximizada (AC 40 no Nível 8), seu dano sofrido contra oponentes comuns é drasticamente reduzido.
+1. Salvar no MUD com `save` e verificar a resposta. Escolher repouso e encerramento conforme segurança observada. Não declarar `save`, repouso ou local confirmado se a ação falhou ou a sessão foi interrompida.
+2. Registrar evidências e atualizar estado, eventos, missões, mapa e conhecimento. Adicionar a crônica na convenção de IDs do herói; não reordenar silenciosamente arquivos históricos de outro herói.
+3. Gerar os derivados de Grebolius com `python scripts/sync_hero.py --hero grebolius`. Conferir sem escrita com `python scripts/sync_hero.py --hero grebolius --check`.
+4. Executar `python scripts/check_project.py`; resolver erros ou relatar a limitação restante. Validação estrutural não prova mecânicas do servidor nem coerência emocional.
+5. Nos marcos de dez dias, consolidar somente o ciclo realmente ocorrido e atualizar identidade e mapa segundo novas evidências. Dias terminados em 9 podem incluir reflexão de método; usar `/learn` apenas se a ferramenta existir e couber no escopo, sem fingir sua execução.
 
-### 3.3. Wimpy Dinâmico (25% do HP Máximo)
-* **Fórmula de Fuga Segura:** O valor de `wimpy` deve ser fixado em aproximadamente **25% dos pontos de vida máximos**:
-  $$\text{Wimpy} = \lfloor \text{HP}_{\text{máx}} \times 0.25 \rfloor$$
-* **Valor Vigente no Nível 8:** Com 52 HP máximos, o wimpy deve estar configurado estritamente em **`wimpy 13`** (`wimpy 13`).
-* **Recálculo Automático:** A cada subida de nível e ganho de vida, o valor é recalculado, aplicado no jogo e atualizado na `ficha.md`.
+### Publicação
 
-### 3.4. Combate Agressivo, Decisivo e Seletivo
-* **Luta Ativa:** Grebolius combate **todas** as criaturas em que há chance razoável de vitória. Ela não recua por mero receio; sangra, testa seus feitiços e conquista o terreno.
-* **Avaliação Prévia com `con <alvo>`:** Antes de iniciar o combate contra criaturas desconhecidas, rodar `con <alvo>`:
-  - Se a avaliação indicar perigo suicida (*"Você é louco?"* ou *"Precisaria de muita sorte"*): contornar, usar invisibilidade ou recuar.
-  - Se a criatura estiver ao alcance: atacar com confiança.
-* **Filtro de Desperdício:** Ignorar apenas criaturas extremamente triviais que já não concedem experiência nem itens úteis, evitando perda de tempo com combates vazios.
-* **O Combo Ladra Arcana:**
-  1. Abertura à distância: `cast 'magic missile' <alvo>` ou `cast 'chill touch' <alvo>`.
-  2. Finalização no aço e fogo: punhal e escudo no combate corpo a corpo, complementados por `cast 'burning hands' <alvo>` para aniquilar oponentes rapidamente.
-  3. Pós-combate: saquear com `get all corpo` e oferecer o corpo aos deuses com `sac corpo`.
+Publicar somente quando o usuário tiver solicitado ou autorizado a publicação no contexto da tarefa e após a validação. Edição local não implica commit, push ou deploy. Revisar o diff, selecionar arquivos pertinentes por caminho explícito e preparar uma atualização completa; não usar `git add .` indiscriminadamente nem publicar arquivo por arquivo em estados intermediários. Preservar credenciais locais, sem alterar configuração global. Se publicação não estiver no escopo, entregar a revisão local com seu resumo.
 
-### 3.5. A Grande Caçada por Missões
-* Cada jornada deve perseguir o catálogo de missões ativas:
-  - **Limpando Monstros:** Auxiliar o Novato Alquimista na Área dos Novatos.
-  - **Dicas Mágicas:** Investigar com o Mago Aventureiro no Bar dos Magos.
-  - **Exploração e Novos Encontros:** Falar com o Pacificador, explorar os Becos Escuros, infiltrar-se em guildas fechadas com `invisibility` e localizar a entrada segura dos esgotos para preparar a vingança contra a serpente.
+## 4. Referência local de comandos e mecânicas
+
+Estas referências provêm dos registros do projeto, não substituem a ajuda nem a resposta atual do servidor:
+
+- **Portas:** `open north` abriu a passagem no Cruzamento no Dia 58. `open <direction>` pode servir para outras portas, mas bloqueio, tranca e requisito precisam de resposta local. Os registros anteriores anotam falhas com `abrir porta norte` e `open door north`.
+- **Oeste:** usar `w`; o registro do cliente alerta que `o` pode acionar `order`.
+- **Consumo e comércio:** `eat <comida>`, `drink <recipiente>`, `list`, `buy <item>`. Conferir item, preço e resposta.
+- **Treino:** `practice <magia_em_ingles>`, por exemplo `practice 'burning hands'`, apenas se a magia estiver disponível e o treino for pertinente.
+- **Autoquests:** `autoquest` e `ajuda autoquest`; `say sim` quando o NPC tiver feito um convite e a decisão for aceitar. Guardar o objetivo real e a mensagem de aceite.
+- **Combate e espólios:** `cast 'magic missile' <alvo>`, `cast 'chill touch' <alvo>`, `cast 'burning hands' <alvo>`, `get all corpo` e `sac corpo` são referências anteriores, não uma sequência obrigatória. Conferir habilidade, mana, alvo e finalidade dos objetos antes de agir.
+- **Inventário:** `put <item> mochila` organiza itens, sem comprovar redução do peso total. Preservar itens de missão ou de uso futuro até entender finalidade e requisitos; a tag `(+2E)` não basta para inferir um bônus ou nível exato.
+- **Ticks e descanso:** 45–60 segundos, penalidades exatas de fome/sede e multiplicadores de `rest`, `sleep` ou mobília são hipóteses herdadas até medição ou ajuda do servidor. Não assumir que “sleep-ticking” evita emboscada. Comandos como `dormir cama` e `descansar banco` precisam de confirmação local.
+- **Bot:** os registros anteriores indicam `.close()` para encerrar o socket de `DeboClient` e falha com `.disconnect()`. Conferir a implementação disponível antes de usar; esta referência não comprova a API de outra versão do cliente.

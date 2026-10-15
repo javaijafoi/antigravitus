@@ -5,7 +5,6 @@ node_modules/
 *.log
 
 .env
-publish_daily.py
 __pycache__/
 *.pyc
 session_*.txt

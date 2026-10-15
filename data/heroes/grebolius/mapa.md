@@ -1,12 +1,12 @@
 # 🗺️ Mapa Operacional de Grebolius (Mapeamento Simplificado)
 
-> *“Cada sala pisada é uma rota salva. Saídas, ameaças e pontos de fuga.”*
+> Reconciliação documental até o Dia 60. As saídas abaixo são registros históricos e precisam de confirmação no jogo; não houve nova exploração nesta revisão. Localização e acampamento registrados: Laboratório dos Magos. Santuário de referência: Panteão dos Centenários.
 
 ---
 
 ## 🏛️ Eixo Urbano de Midgaard (Mapeamento Consolidado — Dias 1 a 10)
 
-| Sala | Saídas Verificadas | Nível de Risco | Notas de Campo / Utilidade |
+| Sala | Saídas Registradas | Nível de Risco | Notas de Campo / Utilidade |
 | :--- | :--- | :--- | :--- |
 | **O Depósito de Lixo** | **N** (Praça Comum), **D** (Esgotos) | Mínimo | Ponto de partida. Rota subterrânea de fuga. |
 | **Os Esgotos de Midgaard (Entrada)** | **U** (Depósito de Lixo), **D** (Fundo) | Médio / Subsolo | Abóbada gotejante e fétida sob o lixo; labirinto subterrâneo. |
@@ -51,7 +51,7 @@
 
 ## 🕳️ O Submundo dos Esgotos & O Limiar do Vazio (Descobertas do Dia 11)
 
-| Sala | Saídas Verificadas | Nível de Risco | Notas de Campo / Perigo |
+| Sala | Saídas Registradas | Nível de Risco | Notas de Campo / Perigo |
 | :--- | :--- | :--- | :--- |
 | **A Junção no Esgoto (Entrada)** | **N** (Curva Regular), **S** (Junção Regular), **O** (Enorme Junção) | Alto | Fundo do buraco do Laboratório dos Magos. Não há subida direta. |
 | **A Curva Regular** | **S** (Junção no Esgoto), **L** (Calma Junção) | Alto | Encanamentos úmidos e gotejantes; cheiro de decomposição. |
@@ -66,7 +66,7 @@
 
 ## 🌲 O Grande Campo de Midgaard & A Área dos Novatos (Descobertas do Dia 14)
 
-| Sala | Saídas Verificadas | Nível de Risco | Notas de Campo / Recursos |
+| Sala | Saídas Registradas | Nível de Risco | Notas de Campo / Recursos |
 | :--- | :--- | :--- | :--- |
 | **Atrás do Altar** | **N** (Grande Campo), **S** (Altar do Templo) | Baixo | Trilha suja saindo da abside do templo em direção ao campo aberto. |
 | **O Grande Campo (Sul)** | **N** (Grande Campo Meio), **S** (Atrás do Altar) | Baixo | Prado verde, brisa fresca, pássaros cantando; rota rural de Midgaard. |
@@ -74,7 +74,7 @@
 | **A Entrada da Área dos Novatos** | **N** (O Começo da Passagem), **O** (Grande Campo) | Seguro | Portal de entrada para novatos; inscrição de formatura de Pina e Rimbaud (2019). |
 | **O Começo Da Passagem** | **L** (Corredor Sujo), **S** (Entrada Novatos) | Seguro / Loot | Eco de criaturas ao longe; abandono de coleiras de dragão e vestes novatas. |
 | **O Corredor Sujo** | **L** (O Cruzamento), **O** (Começo da Passagem) | Baixo | Paredes lodosas; ruídos vindos de trás da porta ao sul e do leste. |
-| **O Cruzamento** | **S** (Mais Corredor), **O** (Corredor Sujo) | Baixo | Entroncamento de túneis; punhais e vestes espalhadas. |
+| **O Cruzamento** | **N** (Um Caminho Iluminado; porta), **S** (Mais Corredor), **O** (Corredor Sujo) | Baixo | Entroncamento de túneis; punhais e vestes espalhadas. |
 | **Mais Corredor** | **N** (Cruzamento), **S** (Outro Canto), **O** (Pequena Sala [porta aberta]) | Baixo / **Chave** | Porta de madeira a oeste; corredor de passagem onde o Bebê Dragão transita livremente. |
 | **Uma Pequena Sala** | **N** (O Corredor Sujo [porta de madeira]), **L** (Mais Corredor) | Lore / **NPC em Apuros** | Covil do Guarda Novato; entrega da coleira concluída; elmos místicos e passagem secreta norte para o Corredor Sujo. |
 | **Um Outro Canto** | **N** (Mais Corredor), **L** (A Sala do Alquimista [porta aberta]), **O** (Corredor Iluminado) | **Atenção** | **Câmara de Monstros & Passagem:** Bebê dragão e monstro novato. Porta a leste leva ao laboratório do alquimista. |
@@ -87,7 +87,7 @@
 
 ## ♟️ O Grande Tabuleiro de Xadrez de Midgaard (Descoberta do Dia 18)
 
-| Sala | Saídas Verificadas | Nível de Risco | Notas de Campo / Recursos |
+| Sala | Saídas Registradas | Nível de Risco | Notas de Campo / Recursos |
 | :--- | :--- | :--- | :--- |
 | **O Caminho Sujo** | **L** (Grande Campo Bifurcação), **O** (Grande Tabuleiro de Xadrez) | Baixo | Trilha de terra batida ladeada por carvalhos antigos; portão enferrujado a oeste. |
 | **O Grande Tabuleiro de Xadrez** | **L** (O Caminho Sujo), **O** (Uma Casa Branca) | Mistério / Épico | Portão gigantesco de ferro em arco de pedra; abertura para o interior do tabuleiro monumental. |
@@ -97,8 +97,26 @@
 ---
 
 ## 🧭 Legenda de Navegação
-* `[Santuário]` = Seguro para dormir sem risco de morte sob abrigo inviolável.
+* `[Santuário]` = Santuário indicado nos registros; verificar proteção antes de dormir.
 * `[Treino]` / `[Caça]` = Criaturas dosadas para combate seguro com ganho real de maestria e espólios.
 * `[Atenção]` = Guardas fortemente armados ou monstros com vida desproporcional (ex: bebê dragão).
 * `[LETAL]` = Criaturas agressivas com veneno devastador (ex: serpentes do esgoto).
 
+
+
+## Reconciliação documental — descobertas até o Dia 61
+
+| Sala / região | Registro e saída | Cuidado / origem |
+| :--- | :--- | :--- |
+| Um Caminho Iluminado | Norte do Cruzamento, após `open north`; avança ao norte para A Sala da Estátua | Dias 58–59. Saída inversa não deduzida. |
+| A Sala da Estátua | Arco a leste observado | Dia 59. Destino exato do arco pendente de travessia confirmada. |
+| Laboratório dos Magos | Saída a oeste para o Bar dos Magos e buraco descendente para os esgotos | Dias 60–61. Acampamento de partida da jornada. |
+| O Grande Campo (Norte) | Norte da Bifurcação; desvio a oeste para Vila Residencial e norte para trilha entre campos | Dia 61. Conexão campestre setentrional. |
+| Estrada Pavimentada / Taverna do Barumafir | Limite dos campos a leste do caminho; portão da Taverna do Barumafir e trilha para a borda da floresta | Dia 61. Rota descoberta ao vivo em debomud.org:4000. |
+| A Sala do Alquimista | Leste de Um Outro Canto, aberta com `open east`. Alquimista, fórmulas, escada descendente para A Entrada | Dia 61. Acampamento estabelecido após aniquilação de novatos zumbis. |
+
+- No mapa interativo, a posição e o acampamento são separados do santuário de referência.
+- `O`/`L` são legendas em português: os comandos correspondentes do servidor são `w`/`e`.
+- Portas e passagens conhecidas de mão única são anotadas; caminhos de volta não são inventados.
+- Acesso ao Tabuleiro: notas antigas citam Campo Aberto e Caminho Sujo de formas distintas. Manter a divergência como pendência até consultar um registro preciso ou o jogo.
+- As saídas antigas sem destino conhecido e as restrições de guilda continuam pendentes; a revisão não comprova que invisibilidade as contorne.

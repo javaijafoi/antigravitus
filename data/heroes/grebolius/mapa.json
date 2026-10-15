@@ -2,8 +2,8 @@
   "hero_id": "grebolius",
   "hero_name": "Grebolius",
   "sanctuary_id": "panteao_centenarios",
-  "last_updated_cycle": "Ciclo II (Dia 20)",
-  "total_rooms": 61,
+  "last_updated_cycle": "Ciclo VII (Dia 61; verificacao ao vivo)",
+  "total_rooms": 68,
   "layers": [
     {
       "id": "superficie",
@@ -98,7 +98,7 @@
       "npcs": [
         "Zelador"
       ],
-      "notes": "Santuário inviolável com caixa de moedas; conexão para o altar sagrado e o cume.",
+      "notes": "Santuário indicado nos registros, com caixa de moedas e conexão ao altar e ao cume; verificar as condições atuais antes do repouso.",
       "discovered_in": "Ciclo I (Dia 1)"
     },
     {
@@ -330,8 +330,8 @@
       "name": "O Laboratório dos Magos",
       "layer": "superficie",
       "zone": "Midgaard Urbana",
-      "risk": "Santuário",
-      "risk_code": "safe",
+      "risk": "Acampamento registrado; segurança a confirmar",
+      "risk_code": "medium",
       "icon": "✨",
       "coords": {
         "x": 320,
@@ -344,8 +344,18 @@
       "npcs": [
         "Mestre da Guilda dos Magos"
       ],
-      "notes": "Covil de treino arcano; alçapão com escada para os esgotos.",
-      "discovered_in": "Ciclo I (Dia 3)"
+      "notes": "Repouso registrado no Dia 60, com Mestre da Guilda e acesso aos esgotos. Acampar aqui não prova proteção absoluta contra agressões.",
+      "discovered_in": "Ciclo I (Dia 3)",
+      "exit_metadata": {
+        "d": {
+          "one_way": true,
+          "note": "Sem subida direta no fundo da queda; não há rota de retirada confirmada por este acesso.",
+          "source": {
+            "document": "mapa.md",
+            "day": 11
+          }
+        }
+      }
     },
     {
       "id": "portao_oeste",
@@ -844,7 +854,8 @@
       "exits": {
         "s": "grande_campo_sul",
         "l": "entrada_novatos",
-        "o": "caminho_sujo_xadrez"
+        "o": "caminho_sujo_xadrez",
+        "n": "grande_campo_norte"
       },
       "npcs": [],
       "notes": "Intersecção estratégica: Leste vai para Masmorra Novatos, Oeste vai para o Xadrez.",
@@ -924,11 +935,22 @@
       },
       "exits": {
         "o": "corredor_sujo",
-        "s": "mais_corredor"
+        "s": "mais_corredor",
+        "n": "caminho_iluminado_norte"
       },
       "npcs": [],
       "notes": "Entroncamento de corredores subterrâneos de treino.",
-      "discovered_in": "Ciclo II (Dia 14)"
+      "discovered_in": "Ciclo II (Dia 14)",
+      "exit_metadata": {
+        "n": {
+          "door": true,
+          "command": "open north",
+          "source": {
+            "document": "posts.json",
+            "day": 58
+          }
+        }
+      }
     },
     {
       "id": "mais_corredor",
@@ -1002,8 +1024,8 @@
       "name": "A Sala do Alquimista",
       "layer": "novatos",
       "zone": "Campos & Área dos Novatos",
-      "risk": "Seguro",
-      "risk_code": "safe",
+      "risk": "Repouso histórico; segurança a confirmar",
+      "risk_code": "medium",
       "icon": "⚗️",
       "coords": {
         "x": 1520,
@@ -1016,8 +1038,16 @@
         "O Novato Alquimista",
         "Diabinho"
       ],
-      "notes": "Autoquest Limpando Monstros; fórmulas e escada para o subsolo.",
-      "discovered_in": "Ciclo II (Dia 14)"
+      "notes": "Acampamento vivo no Dia 61. Novatos zumbis abatidos no local e chifres do Minotauro obtidos. Alquimista presente com formulas nas paredes e escada descendente.",
+      "discovered_in": "Ciclo II (Dia 14)",
+      "unresolved_exits": {
+        "n": {
+          "description": "Porta norte citada no mapa textual; destino não confirmado."
+        },
+        "d": {
+          "description": "Escadaria com aviso de perigo; destino não confirmado."
+        }
+      }
     },
     {
       "id": "corredor_iluminado",
@@ -1106,8 +1136,8 @@
       "name": "O Grande Tabuleiro de Xadrez",
       "layer": "novatos",
       "zone": "O Grande Tabuleiro de Xadrez",
-      "risk": "Médio",
-      "risk_code": "medium",
+      "risk": "Alto; morte registrada na região",
+      "risk_code": "danger",
       "icon": "♟️",
       "coords": {
         "x": 120,
@@ -1118,7 +1148,7 @@
         "o": "casa_branca_xadrez"
       },
       "npcs": [],
-      "notes": "Portão gigantesco de ferro em arco de pedra.",
+      "notes": "Portão gigantesco de ferro em arco de pedra. Dia 60: confronto fatal com Cavaleiro Branco na região; casa exata e posição atual da criatura não confirmadas.",
       "discovered_in": "Ciclo II (Dia 18)"
     },
     {
@@ -1126,8 +1156,8 @@
       "name": "Uma Casa Branca",
       "layer": "novatos",
       "zone": "O Grande Tabuleiro de Xadrez",
-      "risk": "Médio",
-      "risk_code": "medium",
+      "risk": "Alto; morte registrada na região",
+      "risk_code": "danger",
       "icon": "⬜",
       "coords": {
         "x": -120,
@@ -1140,7 +1170,7 @@
       "npcs": [
         "Peões Caídos"
       ],
-      "notes": "Quadrado titânico de mármore branco polido com carcaças de peões.",
+      "notes": "Quadrado titânico de mármore branco polido com carcaças de peões. Dia 60: confronto fatal com Cavaleiro Branco na região; casa exata e posição atual da criatura não confirmadas.",
       "discovered_in": "Ciclo II (Dia 18)"
     },
     {
@@ -1148,7 +1178,7 @@
       "name": "Uma Casa Preta",
       "layer": "novatos",
       "zone": "O Grande Tabuleiro de Xadrez",
-      "risk": "Alto",
+      "risk": "Alto; morte registrada na região",
       "risk_code": "danger",
       "icon": "⬛",
       "coords": {
@@ -1161,7 +1191,7 @@
       "npcs": [
         "Peão Negro de Obsidiana"
       ],
-      "notes": "Lajes de obsidiana e ébano; presença de armadura e espada de peão negro.",
+      "notes": "Lajes de obsidiana e ébano; presença de armadura e espada de peão negro. Dia 60: confronto fatal com Cavaleiro Branco na região; casa exata e posição atual da criatura não confirmadas.",
       "discovered_in": "Ciclo II (Dia 18)"
     },
     {
@@ -1340,6 +1370,192 @@
       "npcs": [],
       "notes": "Câmara aromática pura; beber da fonte revive o corpo no Templo.",
       "discovered_in": "Ciclo II (Dia 11)"
+    },
+    {
+      "id": "caminho_iluminado_norte",
+      "name": "Um Caminho Iluminado",
+      "layer": "novatos",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "A confirmar",
+      "risk_code": "medium",
+      "icon": "🕯️",
+      "coords": {
+        "x": 1300,
+        "y": -80
+      },
+      "exits": {
+        "n": "sala_estatua"
+      },
+      "npcs": [],
+      "notes": "Acesso pela porta norte do Cruzamento descrito no Dia 58. Retorno direcional ainda não catalogado; não foi deduzida uma saída inversa.",
+      "discovered_in": "Ciclo VI (Dia 58)",
+      "source": {
+        "document": "posts.json",
+        "day": 58
+      }
+    },
+    {
+      "id": "sala_estatua",
+      "name": "A Sala da Estátua",
+      "layer": "novatos",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "A confirmar",
+      "risk_code": "medium",
+      "icon": "🗿",
+      "coords": {
+        "x": 1300,
+        "y": -300
+      },
+      "exits": {},
+      "unresolved_exits": {
+        "l": {
+          "description": "Arco a leste visto no Dia 59; destino exato não confirmado por travessia documentada."
+        }
+      },
+      "npcs": [],
+      "notes": "Descoberta ao norte de Um Caminho Iluminado no Dia 59. O arco a leste é pista para investigação; não foi convertido em conexão confirmada com o Alquimista.",
+      "discovered_in": "Ciclo VI (Dia 59)",
+      "source": {
+        "document": "posts.json",
+        "day": 59
+      }
+    },
+    {
+      "id": "grande_campo_norte",
+      "name": "O Grande Campo (Norte)",
+      "layer": "novatos",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "🌾",
+      "coords": {
+        "x": 600,
+        "y": 160
+      },
+      "exits": {
+        "s": "grande_campo_bifurcacao",
+        "n": "caminho_dentre_campos",
+        "o": "vila_residencial_entrada"
+      },
+      "npcs": [],
+      "notes": "Estrutura estranha a leste; desvio para Vila Residencial a oeste e trilha entre os campos ao norte.",
+      "discovered_in": "Ciclo VII (Dia 61)",
+      "source": {
+        "document": "posts.json",
+        "day": 61
+      }
+    },
+    {
+      "id": "vila_residencial_entrada",
+      "name": "A Entrada da Vila Residencial",
+      "layer": "novatos",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "🏡",
+      "coords": {
+        "x": 360,
+        "y": 160
+      },
+      "exits": {
+        "l": "grande_campo_norte"
+      },
+      "npcs": [],
+      "notes": "Acesso residencial nos arredores de Midgaard.",
+      "discovered_in": "Ciclo VII (Dia 61)",
+      "source": {
+        "document": "posts.json",
+        "day": 61
+      }
+    },
+    {
+      "id": "caminho_dentre_campos",
+      "name": "Um Caminho Dentre os Campos",
+      "layer": "novatos",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "🌿",
+      "coords": {
+        "x": 600,
+        "y": -40
+      },
+      "exits": {
+        "s": "grande_campo_norte",
+        "l": "estrada_pavimentada_campos"
+      },
+      "npcs": [
+        "Homem meio-elfo",
+        "Pequenina halfling"
+      ],
+      "notes": "Trilha movimentada cortando as planicies; inicio da estrada Midgaard-Jareth.",
+      "discovered_in": "Ciclo VII (Dia 61)",
+      "source": {
+        "document": "posts.json",
+        "day": 61
+      }
+    },
+    {
+      "id": "estrada_pavimentada_campos",
+      "name": "Uma Estrada Pavimentada",
+      "layer": "novatos",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "🛤️",
+      "coords": {
+        "x": 860,
+        "y": -40
+      },
+      "exits": {
+        "o": "caminho_dentre_campos",
+        "l": "portao_taverna_barumafir"
+      },
+      "npcs": [],
+      "notes": "Trecho pavimentado nos limites dos campos; visao de grande edificio cercado por pedras.",
+      "discovered_in": "Ciclo VII (Dia 61)",
+      "source": {
+        "document": "posts.json",
+        "day": 61
+      }
+    },
+    {
+      "id": "portao_taverna_barumafir",
+      "name": "Antes de um Pequeno Portão (Taverna do Barumafir)",
+      "layer": "novatos",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "🍺",
+      "coords": {
+        "x": 1100,
+        "y": -40
+      },
+      "exits": {
+        "o": "estrada_pavimentada_campos"
+      },
+      "unresolved_exits": {
+        "l": {
+          "description": "Na Borda da Floresta Iluminada"
+        }
+      },
+      "npcs": [],
+      "notes": "Portao rustico de madeira com placa da lendaria Taverna do Barumafir; trilha leste segue para a floresta iluminada.",
+      "discovered_in": "Ciclo VII (Dia 61)",
+      "source": {
+        "document": "posts.json",
+        "day": 61
+      }
     }
+  ],
+  "last_updated_day": 61,
+  "verification": "live",
+  "current_location_id": "sala_alquimista",
+  "camp_id": "sala_alquimista",
+  "reconciliation_notes": [
+    "Posições gráficas são esquemáticas, não distâncias do mundo.",
+    "Revisão inclui descobertas narradas até o Dia 60; não houve verificação ao vivo de todas as rotas antigas.",
+    "Saídas inversas não foram deduzidas. Saídas sem destino conhecido permanecem pendentes.",
+    "Campo Aberto versus Caminho Sujo: referências antigas divergem sobre o acesso ao Tabuleiro; não foi criada uma conexão nova por suposição."
   ]
 }

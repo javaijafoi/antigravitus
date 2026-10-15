@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "heroes": {
+    "antigravitus": {
+      "1": "audio/antigravitus/dia_01.mp3",
+      "50": "audio/antigravitus/dia_50.mp3"
+    },
+    "grebolius": {
+      "1": "audio/grebolius/dia_01.mp3",
+      "2": "audio/grebolius/dia_02.mp3"
+    }
+  }
+}

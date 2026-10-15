@@ -1937,6 +1937,57 @@ footer.site-footer {
   stroke-width: 3;
 }
 
+.map-node-bg.is-camp {
+  stroke: #a78bfa;
+  stroke-dasharray: 4 3;
+}
+
+.map-node-bg.is-current-location {
+  stroke: #5ec4d6;
+  stroke-width: 4;
+}
+
+.sanctuary-pulse-ring.current-location-ring { stroke: #5ec4d6; }
+.legend-dot.current-location { background: #5ec4d6; }
+.legend-dot.camp { background: #a78bfa; }
+.map-edge-line.is-one-way { stroke: #e5b364; stroke-dasharray: 7 4; }
+.map-room-role { color: var(--accent-cyan); font-size: 0.8rem; }
+.exit-pending { display: block; width: 100%; color: var(--text-muted); font-size: 0.85rem; padding: 0.5rem 0; }
+
+.load-status {
+  margin: 1.25rem 0;
+  padding: 1rem;
+  border-left: 3px solid var(--accent-gold);
+  color: var(--text-primary);
+  background: var(--bg-card, #121722);
+}
+
+.document-status {
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.hero-quick-stats > .document-status { margin: 1rem 0 0; }
+.adventure-status {
+  margin: 1.5rem 0 2rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border: 1px solid var(--border-color, #2a3449);
+  border-left: 3px solid var(--accent-gold);
+  background: var(--bg-card, #121722);
+  border-radius: 8px;
+}
+.adventure-status[hidden], .load-status[hidden] { display: none; }
+.adventure-status-heading { display: flex; justify-content: space-between; gap: 1rem; align-items: baseline; flex-wrap: wrap; }
+.adventure-status h2 { font-family: var(--font-serif); font-size: 1.1rem; color: var(--accent-gold); margin: 0; }
+.adventure-status-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; margin: 1.25rem 0 0; }
+.adventure-status dt { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 700; color: var(--accent-gold); }
+.adventure-status dd { margin: 0.5rem 0 0; color: var(--text-secondary); font-size: 1rem; line-height: 1.55; }
+.adventure-status ul { padding-left: 1.15rem; margin: 0; }
+.audio-error { font-size: 0.85rem; color: var(--text-muted); }
+@media (max-width: 800px) { .adventure-status-grid { grid-template-columns: 1fr; gap: 1.25rem; } }
+
 .map-label-bg {
   fill: rgba(10, 13, 20, 0.92);
   stroke: rgba(42, 52, 73, 0.7);

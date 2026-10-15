@@ -1,12 +1,6 @@
-# ⚡ O Cinzel da Consciência: Log de Evolução Psicológica de [NOME]
+# Evolução de [NOME]
 
-> *“Nenhum herói permanece intacto após o primeiro sangue derramado sobre as pedras de Midgaard.”*
+**Rascunho de campanha; nenhum acontecimento registrado.**
 
-Este documento registra exclusivamente as **mutações internas, fissuras de crença e amadurecimento tático** de [NOME], ciclo a ciclo.
+Registrar mudanças somente após a sessão, com dia e fonte. Separar o que aconteceu, a interpretação da personagem e a decisão para a próxima expedição. Uma reação emocional sugerida não é um acontecimento confirmado.
 
----
-
-### Ciclo 1 (Dia 1) — O Primeiro Despertar
-* **Estado Inicial:** Despertar em Midgaard como [RACA_CLASSE]. Sentidos atentos e sobrevivência como prioridade absoluta.
-* **Fissura / Desafio:** O confronto direto com a realidade implacável das ruas e dos monstros iniciais.
-* **Conclusão Operacional:** Ajustar passos, garantir abrigo seguro e acumular recursos básicos com prudência máxima.

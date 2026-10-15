@@ -1385,5 +1385,36 @@
       "Não perdi um segundo lamentando a queda. Vesti a couraça etérea da Armadura Arcana, ajustei o elmo de novato e desci à praça para devorar a massa quente de um pão recheado, sentindo o calor vital correr pelas veias antes que a fome cobrasse tributo. Marchei pela masmorra dos novatos até o laboratório do alquimista, renovando a promessa de purificação das galerias e contemplando a escadaria que desce ao desconhecido. Mas o maior divisor de águas deste sexagésimo dia foi a destruição do meu próprio hábito covarde: recusei a subida confortável até o cume do templo.",
       "Guerreira que aspira ao trono não corre para debaixo das saias dos deuses a cada pôr do sol. Atravessei a porta da Guilda dos Magos e entrei no Laboratório Arcano. Diante dos frascos fumegantes, sob os pentagramas entalhados no piso e com o olhar vigilante da Mestre da Guilda cravado em minhas costas, sentei-me à beira do buraco negro que desce aos esgotos. É dali que sobe o fedor podre do meu passado; é para lá que descerei no próximo alvorecer para arrancar a cabeça da serpente e limpar o subsolo. Deitei meu corpo sobre a pedra fria e fechei os olhos sob o zumbido das runas. Sessenta dias se passaram: a goblin que tremia no lixo morreu; a soberana sem trono já dorme onde os mestres pisam."
     ]
+  },
+  {
+    "id": 61,
+    "day": "Dia 61",
+    "title": "A Trilha de Barumafir, a Fúria dos Zumbis e o Troféu do Minotauro",
+    "date": "13 de dezembro de 2026",
+    "in_game_time": "Midgaard – Os Campos do Norte e a Sala do Alquimista",
+    "excerpt": "Despertando no Laboratório Arcano com a constatação dos limites do anel místico, Grebolius marcha pelas campinas setentrionais descobrindo a trilha da lendária Taverna do Barumafir, antes de invadir a câmara do Alquimista, aniquilar novatos zumbis em combate impiedoso de lâmina e arrancar os chifres do Minotauro.",
+    "tags": [
+      "Exploração Campestre",
+      "Taverna do Barumafir",
+      "Masmorra dos Novatos",
+      "A Sala do Alquimista",
+      "Combate Decisivo",
+      "Chifres do Minotauro",
+      "Acampamento em Campo"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "events.json",
+        "day": 61,
+        "note": "Sessão e combate executados ao vivo no servidor debomud.org:4000."
+      }
+    ],
+    "content": [
+      "Despertei com as costas coladas às pedras escuras do Laboratório dos Magos, sentindo o zumbido das runas correr pela espinha como uma descarga elétrica. Antes de erguer o corpo, retirei da algibeira o anel arcano que guardava com zelo. Ao tentar deslizá-lo no dedo, a substância da joia repeliu minha carne com um tremor sutil: minha mente ainda precisa amadurecer e expandir seus círculos de poder para que aquela trama mágica aceite meu comando. Guardei o artefato sem frustração; a disciplina não se apressa diante do aço ou do feitiço. Erguer-me, vestir a couraça invisível da proteção arcana, mastigar o pão temperado e sorver a água fresca do cantil foram gestos fluidos de quem já respira a rotina das expedições sem hesitar.",
+      "Cruzei a soleira da guilda e ganhei as ruas ensolaradas de Midgaard, contornando a praça e atravessando o pórtico norte para além dos muros sagrados. O Grande Campo abriu-se diante de mim em uma imensidão de gramíneas ondulantes e terra batida. Guiada pelo instinto de desbravar novas fronteiras, rumei para o norte muito além das rotas costumeiras. Descobri a bifurcação que conduz à Vila Residencial e avancei pela estrada de pedra entre os campos, cruzando com camponeses meio-elfos e uma pequenina halfling apressada. Mais a leste, diante de uma cerca rústica de pedras empilhadas, deparei-me com uma placa de madeira tosca gravada à faca: a entrada da Taverna do Barumafir, debruçada sobre a borda da floresta iluminada. Guardei na memória cada marco topográfico daquela nova rota comercial.",
+      "Girei nos calcanhares com o sangue em brasa: minha dívida de hoje era sob a terra. Desci a passos largos até a fenda da Área dos Novatos, engoli a penumbra dos corredores sujos e alcancei o canto esquecido onde a pesada folha de madeira bloqueava a ala leste. Pronunciei a palavra de abertura com firmeza; o ferrolho rangeu e arrombei a passagem com o ombro. O ar denso e azedo de enxofre da Sala do Alquimista me recebeu em cheio, mas antes que meus olhos pudessem se acostumar aos frascos e fórmulas rabiscadas nas paredes, fui atacada pela silhueta grotesca de um novato zumbi, a carne descarnada rangendo em fúria decadente.",
+      "O choque foi instantâneo e brutal. Meu escudo aparou as garras podres da criatura enquanto o punhal de novato encontrou o vazio entre as costelas em uma estocada implacável. Duas vezes o aço perfurou carne e osso; quando o monstro tombou inerte em um estertor agudo, saqueei suas algibeiras e arranquei de sua carcaça um troféu inacreditável: os chifres curvados e pesados do Minotauro. O Alquimista, assustado com o sangue que espirrou sobre suas mesas de vidro, esbravejou histericamente mandando os nojentos se calarem antes de soltar um longo suspiro de cansaço. Limpei a lâmina nas vestes do caído, guardei o ouro e estendi meu manto ao lado dos alambiques e da escadaria que mergulha no abismo. Esta noite meu acampamento é aqui, onde a alquimia e a morte se misturam."
+    ]
   }
 ]

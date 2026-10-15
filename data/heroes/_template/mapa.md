@@ -1,23 +1,6 @@
-# 🗺️ Mapeamento de Rotas e Salas de [NOME]
+# Mapa de [NOME]
 
-> *Registro topográfico de coordenadas e saídas exploradas diretamente no MUD.*
+**Jornada ainda não iniciada — Dia 0, template sem salas observadas.**
 
----
+Adicionar apenas salas e saídas apoiadas em observações ou documentos identificados. Registrar conexões de mão única como observadas, sem completar automaticamente a saída inversa. Distinguir localização, acampamento e santuário. Coordenadas são convenções de desenho, sem prova de distância no MUD.
 
-## 🏛️ Eixo Central de Midgaard
-```text
-[Atrás do Altar]
-       |
-[Templo de Midgaard] (d=Altar, u=Panteão)
-       |
-[Praça Central de Midgaard] --- (e) --- [Rua Leste]
-       |
-  (w) [Rua Oeste]
-```
-
----
-
-## 🧭 Saídas e Rotas Seguras
-* **Do Templo para a Praça:** `s` (sul)
-* **Da Praça para o Templo:** `n` (norte)
-* **Para Repousar:** Templo de Midgaard (`rest` / `sleep`)
