@@ -26,6 +26,16 @@ Desbravar novas rotas ou áreas desconhecidas deve estar fundamentado em um dest
 2. **Combate ao tédio (dois dias seguidos de repetição):** Se passar dois dias consecutivos nas mesmas rotinas mecânicas sem novidade, a inquietação goblin exige explorar uma nova frente no mapa.
 3. **Marcos decenais do ciclo:** Dias redondos (10, 20, 30, 40, 50, 60, 70...) exigem expansão proposital de fronteiras e desafio a zonas inexploradas.
 
+### Autonomia por Orçamento de Recursos (Estamina e Reservas)
+Superar roteiros curtos e estáticos. A estamina alta (95 MV) é o orçamento da marcha:
+- **Explorar enquanto MV > 30:** Avançar, patrulhar e mapear galerias enquanto houver fôlego superior a 30 MV.
+- **Retorno e encerramento obrigatório somente se:**
+  1. Estamina cair para o limite de retorno seguro (`MV <= 30`).
+  2. Integridade vital cair para menos de 35 HP ou mana para menos de 40 MN (reserva tática).
+  3. Alvo da autoquest/missão for abatido (retornar para entrega imediata).
+  4. Mochila saturada de espólios de valor.
+  5. Anomalia hostil que exija retirada.
+
 ## 3. Jogar e registrar com continuidade
 1. Escolher um fio para a expedição e as condições para interrompê-la.
 2. Explorar, observar e interagir segundo o risco. Lutar por defesa, passagem ou objetivo; não há cota mínima de ações, salas novas ou combates.

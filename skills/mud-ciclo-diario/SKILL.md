@@ -41,6 +41,14 @@ A exploração de novas rotas, áreas desconhecidas ou desvios do itinerário ha
 
 - **Teto rígido de conexões:** No máximo **3 conexões** ao MUD por dia. É proibido fatiar o dia em 6, 7 ou 8 logins/logouts artificiais.
 - **Fluxo contínuo automático:** Se as salas, rotas e saídas forem as esperadas para o plano do dia, o script avança normalmente e sem hesitação.
+- **Autonomia por Orçamento de Recursos (Estamina / Vida / Mana):** Em vez de um roteiro estático e curto ("anda 3 salas e para"), a expedição usa a estamina (MV) alta da personagem (95 máx) como orçamento real de exploração e viagem. Andar em terreno padrão consome apenas 1 a 2 MV por passo.
+  - **Avançar enquanto MV > 30:** A personagem continua explorando, patrulhando e mapeando enquanto tiver margem de movimento.
+  - **Parar ou retornar somente se:**
+    1. A estamina cair para a reserva de retorno seguro (`MV <= 30`).
+    2. A integridade vital cair abaixo de 35 HP (muito antes do limite emergencial de `wimpy 13`) ou a mana cair abaixo de 40 MN (reserva para `armor` e magias de fuga).
+    3. O objetivo da autoquest/missão imediata for atingido (ex.: abater o monstro/inseto e retornar para entregar o progresso ao NPC).
+    4. A mochila estiver cheia de espólios valiosos ou houver necessidade de vender/guardar.
+    5. Ocorrer anomalia crítica ou perigo grave que recomende retirada.
 - **Pausa tática diante de anomalia:** Se houver personagem jogador (player), NPC/mob inesperado fora da rota prevista, dano imprevisto ou bloqueio de saída: o script **NÃO desconecta**; ele pausa a marcha automática, mantém a conexão aberta e passa o controle para o agente. O agente assume e joga em tempo real até normalizar a situação. Uma vez normalizado, o agente decide entre **retomar o script original** ou **adaptar o restante do dia com um novo roteiro** (se a ocorrência alterou os recursos, a rota ou a meta), respeitando sempre o teto de até 3 conexões.
 
 ### Referência de Grebolius
