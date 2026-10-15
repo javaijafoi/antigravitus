@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 78,
+  "as_of_day": 79,
   "verification": "live",
   "items": [
     {
@@ -133,6 +133,11 @@
           "document": "posts.json",
           "day": 78,
           "note": "Peregrinação até a Padaria de Midgaard com compra e consumo de pães recheados, hidratação na fonte azul e múltiplos combates na Escola de Novatos (+3.648 EXP -> 130.297 EXP) e repouso em Mais Corredor."
+        },
+        {
+          "document": "posts.json",
+          "day": 79,
+          "note": "Ronda nas alas da Escola de Novatos com combate (+1.282 EXP -> 131.579 EXP) e ascensão ao Panteão dos Centenários para meditação de encerramento do Ciclo VIII."
         }
       ]
     },

@@ -348,5 +348,19 @@
         "note": "Compra de pães, saciação da fome na padaria, hidratação na fonte azul e combates confirmados ao vivo no servidor debomud.org:4000."
       }
     ]
+  },
+  {
+    "id": "fechamento-ciclo-e-ascensao-panteao-dia79",
+    "day": 79,
+    "type": "milestone",
+    "summary": "Fechamento do Ciclo VIII (Dia 79): consumo do pão recheado e hidratação com água do cantil, seguido por patrulha resoluta pelas passagens da Escola de Novatos com combate decisivo (+1.282 EXP acumulada, alcançando 131.579 EXP) e saque de novos equipamentos. Marcha pelos Grandes Campos sob a luz aberta do dia, travessia solene pelo Templo de Midgaard e ascensão grandiosa ao Panteão dos Centenários. Realização da reflexão existencial do nono dia entre as estátuas dos imortais, patrimônio consolidado em 2.566 moedas de ouro e repouso seguro no Santuário Supremo sob vitais plenos.",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 79,
+        "note": "Ronda, combate, travessia dos campos e ascensão ao Panteão dos Centenários confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ]
   }
 ]

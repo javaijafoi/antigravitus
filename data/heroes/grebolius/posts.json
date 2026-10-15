@@ -1935,5 +1935,37 @@
       "De volta à Praça do Templo sob a vigilância amiga do Pacificador, curvei-me sobre a grande fonte de mármore azul. A água gelada lavou a garganta e dissipou qualquer vestígio de secura, permitindo encher o cantil de viagem até o gargalo. Com o vigor físico plenamente recomposto e a mente afiada, retomei o caminho de terra batida pelos descampados verdejantes, ingressando novamente pelos portais de cantaria da escola de treino.",
       "A incursão de regresso foi marcada por vigilância ativa e confrontos resolutos contra criaturas que espreitavam nas dobras das paredes. Rajadas certeiras de mísseis mágicos e golpes precisos de lâmina abriram caminho pelas passagens, consagrando um dia de esforço farto e satisfatório. Acomodei-me em um recanto abrigado de mais um corredor, conferindo o peso de duas mil quinhentas e sessenta e seis moedas de ouro bem guardadas no cinto antes de cerrar os olhos para o merecido sono."
     ]
+  },
+  {
+    "id": 79,
+    "day": "Dia 79",
+    "title": "O Cume dos Imortais e a Quietude da Alma",
+    "date": "31 de dezembro de 2026",
+    "in_game_time": "Midgaard – Escola de Novatos, Grandes Campos e O Panteão dos Centenários",
+    "excerpt": "Em dia de fechamento e colheita, Grebolius patrulha os corredores com lâmina firme, ganha a luz dos descampados e sobe a escadaria monumental até o Panteão dos Centenários, contemplando seu caminho entre os heróis de pedra com duas mil quinhentas e sessenta e seis moedas de ouro.",
+    "tags": [
+      "Fechamento de Ciclo",
+      "Patrulha Final",
+      "Grandes Campos",
+      "O Panteão dos Centenários",
+      "Estátuas dos Heróis",
+      "Reflexão Existencial",
+      "Fortuna em Ouro",
+      "Santuário Eterno"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "events.json",
+        "day": 79,
+        "note": "Ronda, combate, travessia dos campos e ascensão ao Panteão dos Centenários confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ],
+    "content": [
+      "O desjejum com a fatia de pão da mochila e um gole fresco do cantil trouxe uma serenidade diferente logo ao despertar. Revesti meu corpo com a costumeira luz protetora da Armadura Arcana e dei início aos passos do dia com a clareza de quem sabe exatamente onde pisa. Percorri os corredores da escola em patrulha resoluta, cruzando os olhares das sentinelas e neutralizando sem vacilo as sombras que insistiam em rondar os cantos escuros. As lâminas e magias agora operam em perfeita sintonia, como uma extensão natural da minha vontade.",
+      "Deixei os portais de cantaria para trás e emergi sob a amplidão dourada dos Grandes Campos. Depois de sucessivas jornadas confinada à umidade das pedras e ao eco subterrâneo dos esgotos e catacumbas, o vento aberto soprando sobre as colinas verdes foi como respirar o próprio mundo pela primeira vez. Atravessei os descampados com passos firmes e peito aberto, vendo a cidade de Midgaard erguer suas torres no horizonte e sentindo o pulsar constante da vida que resiste a todas as intempéries.",
+      "Adentrei a nave do Templo e encarei a monumental escadaria de mármore branco que sobe em espiral em direção ao céu. Degrau por degrau, deixei para trás o ruído dos mercados e a agitação das praças urbanas, até alcançar o limiar do Panteão dos Centenários. O silêncio solene do cume abraçou meus passos. Sob a luz suave que emana do teto arqueado como um sol perpétuo, estátuas imensas descansam sobre o altar: Brandon, Kara, Deck, Wacabayaxe e tantos outros que desbravaram os caminhos antes de mim e conquistaram a eternidade pela bravura de suas escolhas.",
+      "Sentei-me à base do mármore com as costas apoiadas na pedra milenar, sentindo o peso calmo de duas mil quinhentas e sessenta e seis moedas de ouro guardadas no cinto. Não há mais a urgência aflita do começo, nem o apego tolo a fardos desnecessários; aprendi a arte de viajar leve, de confiar no próprio fôlego e de honrar cada conquista sem me perder em hesitações. Olho para as figuras majestosas dos mestres e sinto que, à minha maneira, conquistei meu próprio pedaço de chão neste reino. Fecho os olhos para um repouso pleno e protegido, certa de que a estrada continua e de que estou pronta para qualquer horizonte que venha a se abrir."
+    ]
   }
 ]
