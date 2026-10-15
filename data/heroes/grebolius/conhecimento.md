@@ -246,3 +246,18 @@ Para evitar sobrecarga de inventário e otimizar tempo e recursos, **fica abolid
     3. **Limpando Monstros (Níveis 1-30, todas as classes):** Eliminação de pragas e entrega de materiais ao Alquimista.
     4. **Problemas Agrícolas (Níveis 10-40, exceto Necromantes):** Auxílio nas cercanias rurais de Midgaard.
   - Essas 4 missões constituem o roteiro prioritário para subir de nível e acumular tesouros antes de qualquer confronto letal contra a grande serpente.
+
+---
+
+## 11. Mestres de Autoquests, Limite de Treino de Novato e os Confins de Haon-Dor (Sessão Criativa do Dia 83)
+* **Patronos das Autoquests Revelados Oficialmente (`autoquest listar`):**
+  - **Problemas Agrícolas (até nível 40):** O patrono iniciador é **O Pacificador** (o vigia monumental do Portão Oeste e Praça do Templo). O diálogo deve ser travado diretamente com ele para início da missão.
+  - **Novela dos Novatos (até nível 30):** O patrono iniciador é **o novato esperto**, habitante das praças e encruzilhadas civis.
+  - **Limpando Monstros (até nível 30):** Iniciada com o **Novato Alquimista** no laboratório da Masmorra dos Novatos.
+  - **Dicas Mágicas (até nível 29):** Iniciada com o **Mago Aventureiro** no Bar dos Magos. No Dia 83, Grebolius realizou a entrega formal do Pergaminho de Retorno ao patrono.
+* **O Teto Prático das Magias de Aprendiz (15 Treinos em Reserva):**
+  - A conferência formal com a Mestre da Guilda dos Magos no Laboratório comprovou que os nove feitiços dominados por Grebolius (`armor`, `burning hands`, `chill touch`, `detect invisibility`, `detect magic`, `infravision`, `invisibility`, `magic missile`, `swim`) já se encontram no ápice prático permitido para aprendizes (95% a 99% - perfeição).
+  - As 15 sessões de treino acumuladas não podem ser despendidas de imediato porque feitiços superiores e mais destrutivos exigem círculos de experiência e níveis mais avançados para serem liberados pela Mestre. O tesouro de treinos segue resguardado como capital imediato para a próxima ascensão.
+* **A Estrada das Planícies e os Horizontes de Haon-Dor:**
+  - Além das portas pesadas do Portão Oeste, a poeirenta *Estrada Através das Planícies* rasga as campinas gramíneas em direção à imensa e perigosa floresta de Haon-Dor.
+  - O vislumbre das copas distantes dialoga diretamente com a lenda druídica de *animate plant* do Livro Vermelho: as matas além dos muros abrigam vida selvagem, caçadores e segredos botânicos profundos que demandarão feitiços e poder consolidado quando a hora chegar.

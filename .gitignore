@@ -13,3 +13,4 @@ mudclient.py
 *.session
 scripts/local/
 audio/test_samples/
+.agents/

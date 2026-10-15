@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 82,
+  "as_of_day": 83,
   "verification": "live",
   "items": [
     {
@@ -147,9 +147,9 @@
       "type": "official",
       "status": "active",
       "accepted_day": 32,
-      "last_progress_day": 81,
+      "last_progress_day": 83,
       "objective": "Entregar um pergaminho de retorno ao Mago Aventureiro no Bar dos Magos (item já presente na mochila desde o Dia 28).",
-      "next_step": "Reativar a missão no Mago Aventureiro (Bar dos Magos) devido ao cancelamento por morte no Dia 81 e em seguida entregá-lo com 'give pergaminho mago', pois o pergaminho de retorno já está na mochila desde o Dia 28 (sem necessidade de juntar 10.000 moedas para compra).",
+      "next_step": "Pergaminho de retorno entregue com sucesso ao Mago Aventureiro no Bar dos Magos no Dia 83; acompanhar o próximo conselho místico.",
       "evidence": [
         {
           "document": "posts.json",
@@ -170,6 +170,11 @@
           "document": "posts.json",
           "day": 81,
           "note": "Morte na serpente dos esgotos com cancelamento das autoquests ativas; posse do pergaminho de retorno confirmada viva no inventário após ressurreição."
+        },
+        {
+          "document": "posts.json",
+          "day": 83,
+          "note": "Entrega física do pergaminho de retorno comprovada no log ao vivo session_dia83.log."
         }
       ]
     },
@@ -281,14 +286,19 @@
       "type": "official",
       "status": "discovered",
       "accepted_day": null,
-      "last_progress_day": 82,
-      "objective": "Aventura automática para recém-chegados (Níveis 1-30, encarnações 1-3, todas as classes e raças).",
-      "next_step": "Localizar o NPC iniciador em Midgaard e aceitar formalmente com respostas afirmativas.",
+      "last_progress_day": 83,
+      "objective": "Aventura narrativa para recém-chegados (Até o nível 30, iniciada com: o novato esperto).",
+      "next_step": "Localizar o novato esperto pelas praças de Midgaard para iniciar o encadeamento.",
       "evidence": [
         {
           "document": "posts.json",
           "day": 82,
           "note": "Descoberta via comando nativo autoquest todas no servidor debomud.org:4000."
+        },
+        {
+          "document": "posts.json",
+          "day": 83,
+          "note": "Patrono o novato esperto confirmado pelo comando autoquest listar no Dia 83."
         }
       ]
     },
@@ -298,14 +308,19 @@
       "type": "official",
       "status": "discovered",
       "accepted_day": null,
-      "last_progress_day": 82,
-      "objective": "Aventura automática rural (Níveis 10-40, encarnações 1-4, exceto necromantes, todas as raças).",
-      "next_step": "Investigar as áreas rurais ou portões de Midgaard para encontrar o fazendeiro requisitante.",
+      "last_progress_day": 83,
+      "objective": "Auxílio nas cercanias rurais de Midgaard (Até o nível 40, iniciada com: O Pacificador).",
+      "next_step": "Dialogar diretamente com O Pacificador no Portão Oeste de Midgaard para iniciar formalmente a missão.",
       "evidence": [
         {
           "document": "posts.json",
           "day": 82,
           "note": "Descoberta via comando nativo autoquest todas no servidor debomud.org:4000."
+        },
+        {
+          "document": "posts.json",
+          "day": 83,
+          "note": "Patrono O Pacificador confirmado pelo comando autoquest listar no Dia 83."
         }
       ]
     }

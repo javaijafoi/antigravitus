@@ -404,5 +404,19 @@
         "note": "Auditoria de 100% dos setores urbanos e submundo de Midgaard, catalogação de todos os NPCs, menus e matriz de autoquests confirmados ao vivo no servidor debomud.org:4000."
       }
     ]
+  },
+  {
+    "id": "expedicao-criativa-planicies-dicas-dia83",
+    "day": 83,
+    "type": "exploration",
+    "summary": "Expedição do Modo Criativo e fechamento formal do Dia 83: descida ao Laboratório dos Magos para consulta arcana com a Mestre da Guilda, constatando proficiência plena nas nove artes iniciais (95%-99%) e preservação de 15 sessões de treino para círculos superiores. No Bar dos Magos, entrega formal do pergaminho de retorno ao Mago Aventureiro e catalogação oficial dos patronos de autoquest (Problemas Agrícolas com O Pacificador, Novela dos Novatos com o novato esperto). Expedição além das muralhas ocidentais pela poeirenta Estrada das Planícies com vislumbre de Haon-Dor, patrulha pelas corredeiras do rio na muralha oeste e retorno para o interior da cidade. Fechamento formal do dia com salvamento e pernoite em sono reparador (sleep) Dentro do Portão Oeste sob a proteção do Pacificador e guardas municipais.",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 83,
+        "note": "Sessão ao vivo em debomud.org:4000: conferência arcana, entrega do pergaminho, patronos de autoquest, planícies de Haon-Dor e fechamento formal com sono reparador (sleep) e save no Portão Oeste confirmados."
+      }
+    ]
   }
 ]
