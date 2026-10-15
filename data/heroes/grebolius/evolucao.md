@@ -1150,7 +1150,7 @@ A próxima sessão pode resolver as pendências com respostas reais do MUD. Até
   * Inventário e Equipamento: Provisão de pão consumida com sucesso; tocha, cantil, mochila, punhais e espada em prontidão.
   * Local de Pernoite: **A Sala do Alquimista** (Salva com `save` e descansando com `rest`).
 * **Marcos e Impactos Psicológicos:**
-  * **O Banquete da Autonomia e o Fôlego Intacto:** Iniciou o dia devorando o último pão recheado e sorvendo a água fresca do cantil, neutralizando a fraqueza física antes de calçar as botas. Sob a couraça de Armadura Arcana, operou sob a nova doutrina de orçamento por recursos, explorando com serenidade.
+  * **O Banquete da Autonomia e o Fôlego Intacto:** Iniciou o dia devorando o último pão recheado e sorvendo a água fresca do cantil, neutralizando a fraqueza física antes de calçar as botas. Sob a couraça de Armadura Arcana e mais confiante no próprio fôlego, explorou as galerias subterrâneas com serenidade e passo firme.
   * **A Cartografia do Labirinto Subterrâneo:** Desceu a escadaria até A Entrada e varreu sistematicamente os quatro pontos cardeais das catacumbas:
     1. **Norte (Um Cruzamento de Corredores):** Ampla intersecção em ruínas e ar decadente, com ramificações para o leste (Uma Sala no Canto) e oeste (Uma Longa Passagem Leste-Oeste).
     2. **Extremo Norte (Um Canto no Corredor):** Paredes cinzentas gotejantes brotando fungos verdes, com sussurros de criaturas ocultas e curva a leste.
