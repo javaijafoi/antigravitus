@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 80,
+  "as_of_day": 81,
   "verification": "live",
   "items": [
     {
@@ -169,9 +169,9 @@
       "type": "personal",
       "status": "deferred",
       "accepted_day": null,
-      "last_progress_day": 60,
+      "last_progress_day": 81,
       "objective": "Preparar a caçada à serpente que matou Grebolius no Dia 11.",
-      "next_step": "Reconhecer riscos, acesso, recursos e retirada antes de decidir pelo confronto.",
+      "next_step": "A serpente revelou-se letal mais uma vez com mordidas brutais de até 22 de dano; nova tentativa exigirá feitiços superiores e equipamentos de alto nível (metas de 5k e 10k de ouro).",
       "blocker": "Sem confirmação de margem de combate ou retorno seguro pelo acesso do Laboratório.",
       "evidence": [
         {
@@ -183,6 +183,11 @@
           "document": "posts.json",
           "day": 60,
           "note": "Intenção de caçar reafirmada; confronto futuro não executado."
+        },
+        {
+          "document": "posts.json",
+          "day": 81,
+          "note": "Confronto fatal em Uma Intersecção Lamacenta; a serpente sobrepujou as defesas e causou a segunda morte de Grebolius, seguida de ressurreição na Fonte da Vida."
         }
       ],
       "planning_note": "Adiamento de planejamento por preparo não verificado; não representa um recuo novo executado no jogo."

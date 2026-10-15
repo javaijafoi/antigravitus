@@ -1,6 +1,6 @@
 # 🧌 Ficha Atual de Grebolius (Último Estado Registrado)
 
-> Referência: Dia 80. Estado verificado em sessão; consultar a origem registrada.
+> Referência: Dia 81. Estado verificado em sessão; consultar a origem registrada.
 > Este documento reúne o último estado e as missões registrados; as incertezas aparecem ao final.
 
 ## ✦ Identificação e Registro
@@ -8,10 +8,10 @@
 * **Título Honorífico:** o Aprendiz de Mago
 * **Raça / Aparência Real:** Mulher goblin; aventureira sem véu
 * **Classe Mecânica no MUD:** Mago (Magic-User)
-* **Grau / Nível Atual:** **10**
-* **Alinhamento Moral:** 185 (Bom)
-* **Localização Atual:** O Panteão dos Centenários (último registro: Dia 80)
-* **Acampamento Registrado:** O Panteão dos Centenários
+* **Grau / Nível Atual:** **11**
+* **Alinhamento Moral:** 222 (Bom)
+* **Localização Atual:** O Laboratório dos Magos (último registro: Dia 81)
+* **Acampamento Registrado:** O Laboratório dos Magos
 * **Santuário de Referência:** O Panteão dos Centenários
 
 O acampamento indica onde houve repouso; não comprova proteção absoluta contra agressão.
@@ -19,13 +19,13 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 ## ✦ Status Vitais
 | Recurso | Atual | Máximo | Porcentagem |
 | :--- | :---: | :---: | :---: |
-| **Pontos de Vida (HP)** | 61 | 61 | 100% |
-| **Pontos de Mana (MP)** | 160 | 160 | 100% |
-| **Estamina / Movimento (MV)** | 99 | 99 | 100% |
+| **Pontos de Vida (HP)** | 67 | 67 | 100% |
+| **Pontos de Mana (MP)** | 170 | 170 | 100% |
+| **Estamina / Movimento (MV)** | 101 | 101 | 100% |
 
-* **Experiência Acumulada:** **137.106 EXP**
-* **Experiência Necessária p/ Grau 11:** **12.894 EXP** (Meta: 150.000 EXP)
-* **Ouro Líquido:** **2.666 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **152.101 EXP**
+* **Experiência Necessária p/ Grau 12:** **47.899 EXP** (Meta: 200.000 EXP)
+* **Ouro Líquido:** **2.642 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 10
@@ -37,7 +37,7 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 
 ### Métricas de Combate
 * **Classe de Armadura (AC):** 16 (base) / **41** (com `armor`, conforme registro)
-Valores verificados ao vivo no servidor (AC 16 sem armadura, AC 41 com 'armor' no Nível 10).
+Classe de armadura 16 verificada ao vivo no Nível 11 com equipamento completo.
 * **Bônus de Acerto (Hitroll):** 0
 * **Bônus de Dano (Damroll):** +1
 * **Configuração de Fuga (Wimpy):** **13 HP** (referência de 25%; não garante fuga antes de golpe letal)
@@ -55,14 +55,17 @@ Valores verificados ao vivo no servidor (AC 16 sem armadura, AC 41 com 'armor' n
 Objetivos pessoais e investigações ficam separados das autoquests no catálogo de missões.
 
 ## ✦ Habilidades Conhecidas e Treinos Concluídos
-* **Sessões de Treino Disponíveis:** **12 sessões de treino acumuladas**
+* **Sessões de Treino Disponíveis:** **15 sessões de treino acumuladas**
 Percentuais são registros de proficiência; não garantem acerto, imunidade ou acesso a guildas.
-* `armor` (Armadura Mística): **95%**
+* `armor` (Armadura Mística): **99%**
 * `invisibility` (Invisibilidade): **95%**
 * `infravision` (Infravisão): **95%**
 * `magic missile` (Míssil Mágico): **99%**
-* `chill touch` (Toque Gélido): **90%**
-* `burning hands` (Mãos Flamejantes): **95%**
+* `chill touch` (Toque Gélido): **95%**
+* `burning hands` (Mãos Flamejantes): **99%**
+* `detect invisibility` (Detectar Invisibilidade): **95%**
+* `detect magic` (Detectar Magia): **95%**
+* `swim` (Nadar): **95%**
 
 ## ✦ Equipamento em Uso
 Equipamento conforme os últimos documentos disponíveis; conferir no próximo acesso ao MUD.
@@ -77,30 +80,29 @@ Equipamento conforme os últimos documentos disponíveis; conferir no próximo a
 
 ## ✦ Inventário e Suprimentos
 Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
-* `uma brilhante veste de novato` (x2) — Confirmado ao vivo no inventário no Dia 79 (1 adicional despojada de monstro novato)
-* `um brilhante punhal de novato` (x4) — Confirmado ao vivo no inventário no Dia 79 (1 adicional despojado de monstro novato)
-* `um pão recheado` (x1) — Comprado na Padaria de Midgaard no Dia 78; mantido na mochila
-* `um cantil` (x1) — Confirmado ao vivo no inventário no Dia 70 (cheio na fonte azul no Dia 78)
-* `uma brilhante espada de novato` (x1) — Confirmado ao vivo no inventário no Dia 70
-* `uma poção amarela de detectar invisibilidade` (x1) — Confirmado ao vivo no inventário no Dia 70
-* `um pergaminho de retorno` (x1) — Confirmado ao vivo no inventário no Dia 70
-* `uma mochila` (x1) — Confirmado ao vivo no inventário no Dia 70
-* `um anel arcano (+2E)` (x1) — Confirmado ao vivo no inventário no Dia 70 (recusado no Nível 10; exige Nível 11 ou superior)
+* `uma brilhante veste de novato` (x2) — Confirmado ao vivo no inventário no Dia 81 (2 reservas após vestir a terceira)
+* `um brilhante punhal de novato` (x4) — Confirmado ao vivo no inventário no Dia 81 (4 reservas após empunhar o quinto)
+* `um pão recheado` (x3) — Comprado na Padaria de Midgaard no Dia 81; 2 consumidos durante a expedição no esgoto
+* `um cantil` (x1) — Confirmado ao vivo no inventário no Dia 81 (abastecido na fonte azul)
+* `uma brilhante espada de novato` (x1) — Confirmado ao vivo no inventário no Dia 81
+* `uma poção amarela de detectar invisibilidade` (x1) — Confirmado ao vivo no inventário no Dia 81
+* `um pergaminho de retorno` (x1) — Confirmado ao vivo no inventário no Dia 81
+* `uma mochila` (x1) — Confirmado ao vivo no inventário no Dia 81
+* `um anel arcano (+2E)` (x1) — Confirmado ao vivo no inventário no Dia 81
 
 ### Pendências de inventário
 
 ## ✦ Condições Registradas
-* Armadura mística (armor) ativa e verificada.
-* Nível 10 conquistado com vitais ampliados (61 HP, 160 Mana, 99 MV).
-* Fechamento do Ciclo VIII concluído com meditação existencial no Panteão dos Centenários.
+* Nível 11 conquistado com vitais ampliados (67 HP, 170 Mana, 101 MV).
+* 15 sessões de treino acumuladas na Guilda dos Magos.
+* Sobrevivência e retorno milagroso pela Fonte da Vida com inventário e ouro intactos.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
 **Juntar recursos para adquirir o pergaminho de retorno e trocar de equipamento**
 Economizar recursos para atingir o marco inicial de cinco mil moedas e a meta de dez mil moedas de ouro para comprar o pergaminho de retorno (9.202 moedas) e novas peças de proteção.
-* O anel arcano (+2E) segue exigindo nível superior (Nível 11+).
+* O anel arcano (+2E) segue reservado para círculos superiores de poder.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessão em tempo real no servidor debomud.org:4000; conferência e treino de magias na Guilda dos Magos (12 sessões preservadas), avanço na autoquest 'Dicas Mágicas' com lição de meditação (+5.527 EXP -> 137.106 EXP), pesquisa de preços nas lojas de Midgaard (saldo de 2.666 moedas insuficiente para pergaminho e armaduras de bronze, fixando metas em 5k e 10k), patrulha pelas planícies a oeste e repouso no Panteão dos Centenários sob vitais plenos (61 HP, 160 Mana, 99 MV)..
-* O anel arcano (+2E) exige Nível 11 ou superior para uso (testado e recusado no Nível 10).
-* A placa de perigo em 'A Entrada' alerta sobre a morte para quem desce desacompanhado ou desequipado.
-* Locais exatos dos insetos rastejantes nas catacumbas além das câmaras já mapeadas.
+Fonte do estado: Sessão ao vivo em tempo real no servidor debomud.org:4000 (Dia 81); incursão profunda nos Esgotos de Midgaard sem dormir, queima ativa de mana e estamina (MV) com alimentação e pausas táticas em campo, eliminação de dois pequenos morcegos (+17.368 EXP total), avanço triunfal ao Nível 11 (67 HP, 170 Mana, 101 MV), combate letal contra a serpente dos esgotos, passagem pelo Paraíso e Caminho no Vazio, ressurreição milagrosa na Fonte da Vida com inventário e patrimônio intactos (2.642 moedas), reequipamento completo (AC 16) e conferência de treinamento na Guilda dos Magos com 15 sessões acumuladas, repousando no Laboratório dos Magos..
+* O anel arcano (+2E) segue exigindo nível ou condição mágica superior.
+* Novos feitiços superiores dependem de livros arcanos ou mestres especializados.

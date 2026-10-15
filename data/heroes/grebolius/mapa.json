@@ -2,7 +2,7 @@
   "hero_id": "grebolius",
   "hero_name": "Grebolius",
   "sanctuary_id": "panteao_centenarios",
-  "last_updated_cycle": "Ciclo IX (Dia 80; verificacao ao vivo)",
+  "last_updated_cycle": "Ciclo IX (Dia 81; incursao nos esgotos e retorno ao laboratorio)",
   "total_rooms": 73,
   "layers": [
     {
@@ -1671,10 +1671,10 @@
       }
     }
   ],
-  "last_updated_day": 80,
+  "last_updated_day": 81,
   "verification": "live",
-  "current_location_id": "panteao_centenarios",
-  "camp_id": "panteao_centenarios",
+  "current_location_id": "laboratorio_magos",
+  "camp_id": "laboratorio_magos",
   "reconciliation_notes": [
     "Posições gráficas são esquemáticas, não distâncias do mundo.",
     "Revisão inclui descobertas narradas até o Dia 60; não houve verificação ao vivo de todas as rotas antigas.",

@@ -2001,5 +2001,43 @@
       "Deixei a guilda e rumei diretamente às lojas da Rua Principal para examinar o mercado, e foi ali que a realidade cobrou seu choque. Ao conferir as prateleiras de pergaminhos e, logo adiante, as estantes pesadas da Loja de Armaduras repletas de peitorais e perneiras de bronze reluzente, percebi a verdadeira distância que separa uma iniciante de uma guerreira devidamente paramentada. O pergaminho exigido e as peças capazes de substituir meus velhos trajes não se compram com trocados de algibeira: exigem fortunas na casa dos milhares. Minha bolsa atual mal alcança a metade do necessário para os itens mais simples. Ali mesmo, diante das vitrines de ferro e veludo, tracei meu novo objetivo de vida. É hora de equipar meu corpo para perigos reais, e isso exige disciplina implacável: meu primeiro grande marco será reunir cinco mil moedas de ouro, marchando sem trégua até quebrar o teto de dez mil moedas para garantir o pergaminho do mago e a armadura que mereço.",
       "Com a meta cravada no horizonte, marchei para fora das muralhas da cidade pelo portão oeste. Avancei pelas estradas de terra batida que cruzam as planícies abertas em direção à imensa floresta de Haon-Dor, deixando as pernas trabalharem no ritmo constante do esforço físico até que o suor lavasse qualquer hesitação e a respiração ritmada consumisse o excesso de energia do dia. Retornei a Midgaard pelo mesmo caminho, saciei a sede nas águas puras da fonte de mármore azul e alcei os degraus até o topo supremo do Panteão. Deitada sobre a pedra fria aos pés dos imortais, fecho os olhos sabendo exatamente o que buscar: a meta dos cinco mil começou a pulsar, e o caminho para o trono exige riqueza tanto quanto magia."
     ]
+  },
+  {
+    "id": 81,
+    "day": "Dia 81",
+    "title": "O Desafio das Galerias Negras, o Abismo da Serpente e a Água da Renascença",
+    "date": "2 de janeiro de 2027",
+    "in_game_time": "Midgaard – Das Galerias Urbanas aos Esgotos Profundos e ao Laboratório dos Magos",
+    "excerpt": "Em incursão extrema sem sono pelos Esgotos de Midgaard, Grebolius consome suas reservas em exploração contínua, derrota morcegos no Eixo atingindo o décimo primeiro círculo de poder, tomba em combate visceral contra a serpente subterrânea e renasce miraculosamente através da Fonte da Vida, recolhendo-se à Guilda dos Magos.",
+    "tags": [
+      "Incursão ao Vivo",
+      "Esgotos de Midgaard",
+      "Exploração Extrema",
+      "O Eixo",
+      "Ascensão Arcana",
+      "Décimo Primeiro Círculo",
+      "A Serpente dos Esgotos",
+      "Morte e Transcendência",
+      "O Paraíso Mecânico",
+      "A Fonte da Vida",
+      "Ressurreição Perfeita",
+      "Guilda dos Magos",
+      "Marcos de Fortuna"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "events.json",
+        "day": 81,
+        "note": "Incursão profunda nos esgotos, combate e eliminação de morcegos no Eixo, avanço de nível, confronto fatal contra a serpente, passagem pelo Paraíso e Fonte da Vida, e retorno ao Laboratório dos Magos confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ],
+    "content": [
+      "A fresta escura escavada no chão do depósito de lixo exalava uma umidade fétida e pesada, quase palpável, que parecia desafiar a determinação de qualquer caminhante da superfície. Antes que o sol do novo dia tocasse as pedras da praça, tomei uma decisão irrevogável: não haveria retorno fácil ou concessão ao cansaço. Desci as encostas do templo até o balcão da padaria e a bacia de mármore azul para me abastecer de pães frescos e água límpida, traçando no íntimo uma diretriz austera. A expedição ao subterrâneo seria levada ao extremo absoluto de resistência; cada gota de energia mística seria despendida, cada palmo de fôlego seria exigido em marcha contínua e nenhum repouso em leito macio seria tolerado enquanto restasse uma única fagulha de vigor para empurrar as trevas.",
+      "Mergulhei pela abertura circular sob os detritos e pisei no lodo espesso da Junção Quádrupla. O labirinto de concreto ramificava-se em todas as direções, um emaranhado úmido de canos esquecidos onde o eco de goteiras solitárias dita o ritmo do silêncio. Recusei qualquer tentação de recuar: forcei a passagem por galerias lodosas, curvas encharcadas e junções esquecidas, enfrentando a lama pesada que tentava prender minhas botas a cada passada. Quando o corpo ameaçava fraquejar sob o esforço contínuo ou o fluxo arcano diminuía após as primeiras escaramuças contra roedores rastejantes, recusei o sono. Acomodava-me sentada sobre as lajes frias apenas o tempo suficiente para mastigar uma ração de pão, sorver a água fresca do cantil e buscar no recolhimento meditativo a clareza para erguer-me de novo e prosseguir vasculhando as artérias escuras da cidade.",
+      "Minha persistência encontrou sua maior provação ao atingir o poço vertical conhecido como O Eixo. No alto da coluna de pedra e ferro, criaturas aladas de guinchos estridentes guardavam a escuridão. O embate contra os pequenos morcegos foi vertiginoso: rajadas de labaredas brotaram dos meus dedos, iluminando as paredes musgosas em clarões alaranjados, enquanto projéteis arcanos perseguiam as bestas pelo ar confinante. Após uma manobra arriscada de retirada e retorno pela escadaria estreita, desferi a estocada final que abateu a última das criaturas. No instante em que o corpo do morcego tocou o chão inerte, senti uma convulsão mística percorrer minha espinha: as fronteiras do meu poder se romperam com um estalo avassalador, alargando a capacidade mágica de meus pensamentos e fortalecendo meus músculos para um patamar de resistência que consagrou minha ascensão ao décimo primeiro círculo de maestria.",
+      "Com a vitalidade renovada pela vitória, não hesitei em me aprofundar ainda mais nas entranhas lamacentas do sistema de esgotos. Desemboquei em uma intersecção fétida onde uma larva asquerosa rastejava na sujeira e uma serpente esguia, de escamas luzidias e olhar carregado de pura malícia, ergueu o capelo em minha direção. O confronto foi impiedoso. Canalizei feitiços flamejantes e enterrei a lâmina na carne da fera, mas a velocidade do réptil foi avassaladora. Duas investidas rasgaram minhas defesas antes que eu pudesse recompor a guarda; antes que o reflexo de recuo pudesse me salvar, uma mordida fulminante e certeira atingiu minha jugular. O calor do sangue lavou meu pescoço, o chão lamacento subiu em vertigem e o mundo físico apagou-se em um estertor gelado.",
+      "Despertei sob uma luz suave em meio a campos verdejantes que cantavam a falsa doçura do descanso eterno. Recusei a ilusão: forcei meu caminho até a árvore de metal e atravessei o portal cintilante, marchando pelas profundezas insondáveis de Um Caminho no Vazio até alcançar a câmara imaculada da Fonte da Vida. Ao sorver da água translúcida que pulsa nas pedras sagradas, meu espírito foi puxado de volta ao altar do Templo de Midgaard em plena ressurreição. Meus equipamentos e as mais de duas mil e seiscentas moedas de ouro permaneciam milagrosamente intocados. Revesti cada peça da minha vestimenta defensiva, desci à Guilda dos Magos para prestar contas e conferir meus avanços diante da Mestre no Laboratório subterrâneo e, com a meta de alcançar os marcos de cinco e dez mil moedas cada vez mais viva no horizonte, deitei-me finalmente no chão de pedra para um sono profundo e merecido."
+    ]
   }
 ]

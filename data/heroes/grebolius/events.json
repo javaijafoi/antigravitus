@@ -376,5 +376,19 @@
         "note": "Treino na Guilda dos Magos, avanço na autoquest Dicas Mágicas, pesquisa nas lojas e repouso no Panteão confirmados ao vivo no servidor debomud.org:4000."
       }
     ]
+  },
+  {
+    "id": "incursao-esgotos-nivel-11-fonte-vida-dia81",
+    "day": 81,
+    "type": "combat",
+    "summary": "Incursão profunda e implacável nos Esgotos de Midgaard no Dia 81: operação em tempo real sem dormir até o esgotamento dos limites, queima ativa de mana e estamina através de dezenas de túneis lodosos, uso de pausas táticas de meditação e alimentação no subterrâneo. Batalha tensa contra ratos de esgoto com recuos estratégicos, seguida pelo extermínio decisivo de dois pequenos morcegos no Eixo de ventilação com labaredas arcanas e mísseis mágicos (+17.368 EXP combinados), coroando o avanço formal para o Nível 11 (67 HP, 170 Mana, 101 MV). Confronto visceral contra a terrível serpente dos esgotos, culminando em morte sangrenta, travessia cósmica pelo Paraíso e Caminho no Vazio, e retorno milagroso através da Fonte da Vida com ouro intacto (2.642 moedas) e todo o equipamento preservado. Reequipamento completo em Midgaard e conferência de treinamento na Guilda dos Magos com 15 sessões acumuladas, repousando no Laboratório dos Magos.",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 81,
+        "note": "Incursão nos esgotos, extermínio de morcegos, avanço ao Nível 11, morte para a serpente, ressurreição na Fonte da Vida e repouso na Guilda dos Magos confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ]
   }
 ]

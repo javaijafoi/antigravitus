@@ -20,17 +20,17 @@
     "q5": "Ser a aventureira goblin que abriu caminho para um povo livre. Trata-se de um legado pretendido, ainda em construção."
   },
   "quick_stats": {
-    "level_badge": "(Grau 10 • Mago; estilo ladra arcana)",
-    "hp": "61 / 61",
-    "mana": "160 / 160",
-    "mv": "99 / 99",
+    "level_badge": "(Grau 11 • Mago; estilo ladra arcana)",
+    "hp": "67 / 67",
+    "mana": "170 / 170",
+    "mv": "101 / 101",
     "ac": "AC 16 (41 com armor; registro)",
     "weapon": "Punhal de Novato (+ Escudo)",
     "weapon_icon": "🗡️",
     "sanctuary": "O Panteão dos Centenários",
-    "location": "O Panteão dos Centenários",
-    "camp": "O Panteão dos Centenários",
-    "as_of_day": 80,
+    "location": "O Laboratório dos Magos",
+    "camp": "O Laboratório dos Magos",
+    "as_of_day": 81,
     "verification": "live"
   },
   "voice": {

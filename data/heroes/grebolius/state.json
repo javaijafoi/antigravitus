@@ -2,38 +2,38 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 80,
-    "source": "Sessão em tempo real no servidor debomud.org:4000; conferência e treino de magias na Guilda dos Magos (12 sessões preservadas), avanço na autoquest 'Dicas Mágicas' com lição de meditação (+5.527 EXP -> 137.106 EXP), pesquisa de preços nas lojas de Midgaard (saldo de 2.666 moedas insuficiente para pergaminho e armaduras de bronze, fixando metas em 5k e 10k), patrulha pelas planícies a oeste e repouso no Panteão dos Centenários sob vitais plenos (61 HP, 160 Mana, 99 MV).",
+    "day": 81,
+    "source": "Sessão ao vivo em tempo real no servidor debomud.org:4000 (Dia 81); incursão profunda nos Esgotos de Midgaard sem dormir, queima ativa de mana e estamina (MV) com alimentação e pausas táticas em campo, eliminação de dois pequenos morcegos (+17.368 EXP total), avanço triunfal ao Nível 11 (67 HP, 170 Mana, 101 MV), combate letal contra a serpente dos esgotos, passagem pelo Paraíso e Caminho no Vazio, ressurreição milagrosa na Fonte da Vida com inventário e patrimônio intactos (2.642 moedas), reequipamento completo (AC 16) e conferência de treinamento na Guilda dos Magos com 15 sessões acumuladas, repousando no Laboratório dos Magos.",
     "verification": "live",
     "live_verified": true
   },
-  "level": 10,
+  "level": 11,
   "mechanical_class": "Mago (Magic-User)",
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
   "alignment": {
-    "value": 185,
+    "value": 222,
     "label": "Bom"
   },
   "vitals": {
     "hp": {
-      "current": 61,
-      "max": 61
+      "current": 67,
+      "max": 67
     },
     "mana": {
-      "current": 160,
-      "max": 160
+      "current": 170,
+      "max": 170
     },
     "mv": {
-      "current": 99,
-      "max": 99
+      "current": 101,
+      "max": 101
     }
   },
   "experience": {
-    "current": 137106,
-    "next_level": 150000
+    "current": 152101,
+    "next_level": 200000
   },
-  "gold": 2666,
+  "gold": 2642,
   "attributes": {
     "STR": 10,
     "DEX": 15,
@@ -46,45 +46,45 @@
     "base": 16,
     "with_armor": 41,
     "effect_verified": true,
-    "note": "Valores verificados ao vivo no servidor (AC 16 sem armadura, AC 41 com 'armor' no Nível 10)."
+    "note": "Classe de armadura 16 verificada ao vivo no Nível 11 com equipamento completo."
   },
   "hitroll": 0,
   "damroll": 1,
   "wimpy": 13,
-  "training_sessions": 12,
+  "training_sessions": 15,
   "location": {
-    "room_id": "panteao_centenarios",
-    "name": "O Panteão dos Centenários"
+    "room_id": "laboratorio_magos",
+    "name": "O Laboratório dos Magos"
   },
   "camp": {
-    "room_id": "panteao_centenarios",
-    "name": "O Panteão dos Centenários"
+    "room_id": "laboratorio_magos",
+    "name": "O Laboratório dos Magos"
   },
   "sanctuary": {
     "room_id": "panteao_centenarios",
     "name": "O Panteão dos Centenários"
   },
   "last_event": {
-    "day": 80,
-    "summary": "Sessão ao vivo em tempo real no Dia 80: conferência de magias na guilda com 12 sessões preservadas, avanço na autoquest 'Dicas Mágicas' ao aprender meditação (+5.527 EXP -> 137.106 EXP), levantamento de custos na Loja de Magias e de Armaduras fixando marcos de 5.000 e 10.000 moedas, e repouso no Panteão dos Centenários."
+    "day": 81,
+    "summary": "Incursão profunda nos Esgotos de Midgaard no Dia 81: operação em tempo real sem dormir, exploração de mais de vinte galerias subterrâneas, extermínio de morcegos nos eixos de ar com alcance do Nível 11, confronto sangrento contra a serpente, passagem pelo Paraíso e retorno glorioso pela Fonte da Vida com ouro e itens intactos, seguido de treino e repouso na Guilda dos Magos."
   },
   "next_objective": {
     "mission_id": "dicas-magicas",
     "title": "Juntar recursos para adquirir o pergaminho de retorno e trocar de equipamento",
     "next_step": "Economizar recursos para atingir o marco inicial de cinco mil moedas e a meta de dez mil moedas de ouro para comprar o pergaminho de retorno (9.202 moedas) e novas peças de proteção.",
     "missing_preparation": [
-      "O anel arcano (+2E) segue exigindo nível superior (Nível 11+)."
+      "O anel arcano (+2E) segue reservado para círculos superiores de poder."
     ]
   },
   "skills": [
     {
       "id": "armor",
       "name": "Armadura Mística",
-      "proficiency": 95,
+      "proficiency": 99,
       "source": {
         "document": "ficha.md",
-        "day": 60,
-        "note": "Valor migrado da ficha anterior à geração; hash original em migration.original_sha256."
+        "day": 81,
+        "note": "Proficiência perfeita confirmada com comando practice na Guilda dos Magos no Dia 81."
       }
     },
     {
@@ -93,8 +93,8 @@
       "proficiency": 95,
       "source": {
         "document": "ficha.md",
-        "day": 60,
-        "note": "Valor migrado da ficha anterior à geração; hash original em migration.original_sha256."
+        "day": 81,
+        "note": "Proficiência perfeita confirmada com comando practice na Guilda dos Magos no Dia 81."
       }
     },
     {
@@ -103,8 +103,8 @@
       "proficiency": 95,
       "source": {
         "document": "ficha.md",
-        "day": 60,
-        "note": "Valor migrado da ficha anterior à geração; hash original em migration.original_sha256."
+        "day": 81,
+        "note": "Proficiência perfeita confirmada com comando practice na Guilda dos Magos no Dia 81."
       }
     },
     {
@@ -113,28 +113,58 @@
       "proficiency": 99,
       "source": {
         "document": "ficha.md",
-        "day": 60,
-        "note": "Valor migrado da ficha anterior à geração; hash original em migration.original_sha256."
+        "day": 81,
+        "note": "Proficiência perfeita confirmada com comando practice na Guilda dos Magos no Dia 81."
       }
     },
     {
       "id": "chill touch",
       "name": "Toque Gélido",
-      "proficiency": 90,
+      "proficiency": 95,
       "source": {
         "document": "ficha.md",
-        "day": 60,
-        "note": "Valor migrado da ficha anterior à geração; hash original em migration.original_sha256."
+        "day": 81,
+        "note": "Proficiência perfeita confirmada com comando practice na Guilda dos Magos no Dia 81."
       }
     },
     {
       "id": "burning hands",
       "name": "Mãos Flamejantes",
+      "proficiency": 99,
+      "source": {
+        "document": "ficha.md",
+        "day": 81,
+        "note": "Proficiência perfeita confirmada com comando practice na Guilda dos Magos no Dia 81."
+      }
+    },
+    {
+      "id": "detect invisibility",
+      "name": "Detectar Invisibilidade",
       "proficiency": 95,
       "source": {
-        "document": "posts.json",
-        "day": 53,
-        "note": "Treino no Dia 53 narrado na crônica e registrado em evolucao.md."
+        "document": "ficha.md",
+        "day": 81,
+        "note": "Proficiência perfeita confirmada com comando practice na Guilda dos Magos no Dia 81."
+      }
+    },
+    {
+      "id": "detect magic",
+      "name": "Detectar Magia",
+      "proficiency": 95,
+      "source": {
+        "document": "ficha.md",
+        "day": 81,
+        "note": "Proficiência perfeita confirmada com comando practice na Guilda dos Magos no Dia 81."
+      }
+    },
+    {
+      "id": "swim",
+      "name": "Nadar",
+      "proficiency": 95,
+      "source": {
+        "document": "ficha.md",
+        "day": 81,
+        "note": "Proficiência perfeita confirmada com comando practice na Guilda dos Magos no Dia 81."
       }
     }
   ],
@@ -177,77 +207,76 @@
       {
         "name": "uma brilhante veste de novato",
         "quantity": 2,
-        "source": "Confirmado ao vivo no inventário no Dia 79 (1 adicional despojada de monstro novato)"
+        "source": "Confirmado ao vivo no inventário no Dia 81 (2 reservas após vestir a terceira)"
       },
       {
         "name": "um brilhante punhal de novato",
         "quantity": 4,
-        "source": "Confirmado ao vivo no inventário no Dia 79 (1 adicional despojado de monstro novato)"
+        "source": "Confirmado ao vivo no inventário no Dia 81 (4 reservas após empunhar o quinto)"
       },
       {
         "name": "um pão recheado",
-        "quantity": 1,
-        "source": "Comprado na Padaria de Midgaard no Dia 78; mantido na mochila"
+        "quantity": 3,
+        "source": "Comprado na Padaria de Midgaard no Dia 81; 2 consumidos durante a expedição no esgoto"
       },
       {
         "name": "um cantil",
         "quantity": 1,
-        "source": "Confirmado ao vivo no inventário no Dia 70 (cheio na fonte azul no Dia 78)"
+        "source": "Confirmado ao vivo no inventário no Dia 81 (abastecido na fonte azul)"
       },
       {
         "name": "uma brilhante espada de novato",
         "quantity": 1,
-        "source": "Confirmado ao vivo no inventário no Dia 70"
+        "source": "Confirmado ao vivo no inventário no Dia 81"
       },
       {
         "name": "uma poção amarela de detectar invisibilidade",
         "quantity": 1,
-        "source": "Confirmado ao vivo no inventário no Dia 70"
+        "source": "Confirmado ao vivo no inventário no Dia 81"
       },
       {
         "name": "um pergaminho de retorno",
         "quantity": 1,
-        "source": "Confirmado ao vivo no inventário no Dia 70"
+        "source": "Confirmado ao vivo no inventário no Dia 81"
       },
       {
         "name": "uma mochila",
         "quantity": 1,
-        "source": "Confirmado ao vivo no inventário no Dia 70"
+        "source": "Confirmado ao vivo no inventário no Dia 81"
       },
       {
         "name": "um anel arcano (+2E)",
         "quantity": 1,
-        "source": "Confirmado ao vivo no inventário no Dia 70 (recusado no Nível 10; exige Nível 11 ou superior)"
+        "source": "Confirmado ao vivo no inventário no Dia 81"
       }
     ],
     "pending_verification": []
   },
   "conditions": [
-    "Armadura mística (armor) ativa e verificada.",
-    "Nível 10 conquistado com vitais ampliados (61 HP, 160 Mana, 99 MV).",
-    "Fechamento do Ciclo VIII concluído com meditação existencial no Panteão dos Centenários."
+    "Nível 11 conquistado com vitais ampliados (67 HP, 170 Mana, 101 MV).",
+    "15 sessões de treino acumuladas na Guilda dos Magos.",
+    "Sobrevivência e retorno milagroso pela Fonte da Vida com inventário e ouro intactos."
   ],
   "uncertainties": [
-    "O anel arcano (+2E) exige Nível 11 ou superior para uso (testado e recusado no Nível 10).",
-    "A placa de perigo em 'A Entrada' alerta sobre a morte para quem desce desacompanhado ou desequipado.",
-    "Locais exatos dos insetos rastejantes nas catacumbas além das câmaras já mapeadas."
+    "O anel arcano (+2E) segue exigindo nível ou condição mágica superior.",
+    "Novos feitiços superiores dependem de livros arcanos ou mestres especializados."
   ],
   "evidence": [
     {
       "document": "events.json",
-      "day": 80,
-      "note": "Treino na guilda, avanço na autoquest Dicas Mágicas (+5.527 EXP), levantamento de custos de armaduras e pergaminhos e repouso no Panteão confirmados ao vivo no servidor debomud.org:4000."
+      "day": 81,
+      "note": "Incursão nos esgotos, abate de morcegos, avanço ao Nível 11, morte e ressurreição na Fonte da Vida confirmados ao vivo no servidor debomud.org:4000."
     },
     {
       "document": "posts.json",
-      "day": 80,
-      "note": "Crônica do Dia 80 baseada na sessão ao vivo em tempo real."
+      "day": 81,
+      "note": "Crônica do Dia 81 baseada na sessão ao vivo em tempo real."
     }
   ],
   "narrative_style": "ladra arcana",
   "weapon_summary": "Punhal de Novato (+ Escudo)",
   "migration": {
     "method": "sessão ao vivo e conferência direta no servidor",
-    "verified_on": "Dia 70"
+    "verified_on": "Dia 81"
   }
 }
