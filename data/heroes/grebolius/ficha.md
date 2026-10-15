@@ -1,6 +1,6 @@
 # 🧌 Ficha Atual de Grebolius (Último Estado Registrado)
 
-> Referência: Dia 75. Estado verificado em sessão; consultar a origem registrada.
+> Referência: Dia 76. Estado verificado em sessão; consultar a origem registrada.
 > Este documento reúne o último estado e as missões registrados; as incertezas aparecem ao final.
 
 ## ✦ Identificação e Registro
@@ -9,8 +9,8 @@
 * **Raça / Aparência Real:** Mulher goblin; aventureira sem véu
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **10**
-* **Alinhamento Moral:** 325 (Bom)
-* **Localização Atual:** A Sala do Alquimista (último registro: Dia 75)
+* **Alinhamento Moral:** 368 (Bom)
+* **Localização Atual:** A Sala do Alquimista (último registro: Dia 76)
 * **Acampamento Registrado:** A Sala do Alquimista
 * **Santuário de Referência:** O Panteão dos Centenários
 
@@ -23,9 +23,9 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 | **Pontos de Mana (MP)** | 160 | 160 | 100% |
 | **Estamina / Movimento (MV)** | 99 | 99 | 100% |
 
-* **Experiência Acumulada:** **109.749 EXP**
-* **Experiência Necessária p/ Grau 11:** **40.251 EXP** (Meta: 150.000 EXP)
-* **Ouro Líquido:** **2.495 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **124.247 EXP**
+* **Experiência Necessária p/ Grau 11:** **25.753 EXP** (Meta: 150.000 EXP)
+* **Ouro Líquido:** **2.590 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 10
@@ -84,6 +84,8 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 * `uma poção amarela de detectar invisibilidade` (x1) — Confirmado ao vivo no inventário no Dia 70
 * `um pergaminho de retorno` (x1) — Confirmado ao vivo no inventário no Dia 70
 * `uma mochila` (x1) — Confirmado ao vivo no inventário no Dia 70
+* `a fedida pele do Minotauro` (x1) — Despojada do Grande Minotauro nas catacumbas no Dia 76
+* `os chifres do Minotauro` (x1) — Despojados do Grande Minotauro nas catacumbas no Dia 76
 * `um anel arcano (+2E)` (x1) — Confirmado ao vivo no inventário no Dia 70 (recusado no Nível 10; exige Nível 11 ou superior)
 
 ### Pendências de inventário
@@ -99,7 +101,7 @@ Cumprir a ordem direta do Alquimista de encontrar e abater os insetos rastejante
 * O anel arcano (+2E) segue exigindo nível superior (Nível 11+).
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessão ao vivo em debomud.org:4000 (Tempo Real); jornada urbana do Depósito à Praça do Templo, saciação e enchimento do cantil na fonte azul, retorno à Escola de Novatos e aniquilação de 3 insetos rastejantes na Pequena Sala (+2.532 EXP -> 109.749 EXP), entrega do aviso ao Alquimista, saldo de 2.495 moedas de ouro e repouso na Sala do Alquimista..
+Fonte do estado: Sessão automatizada (batch) com retorno seguro ao laboratório em debomud.org:4000; ronda profunda nas catacumbas e ramificações subterrâneas com abate do Grande Minotauro (+95 moedas de ouro, chifres e pele do Minotauro), 1 inseto rastejante e 1 novato zumbi (+14.498 EXP -> 124.247 EXP), saldo elevado para 2.590 moedas de ouro e repouso na Sala do Alquimista..
 * O anel arcano (+2E) exige Nível 11 ou superior para uso (testado e recusado no Nível 10).
 * A placa de perigo em 'A Entrada' alerta sobre a morte para quem desce desacompanhado ou desequipado.
 * Locais exatos dos insetos rastejantes nas catacumbas além das câmaras já mapeadas.

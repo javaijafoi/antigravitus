@@ -306,5 +306,19 @@
         "note": "Sessão interativa em tempo real com eliminação de 3 insetos rastejantes e avanço para 109.749 EXP confirmados ao vivo no servidor debomud.org:4000."
       }
     ]
+  },
+  {
+    "id": "patrulha-profunda-catacumbas-dia76",
+    "day": 76,
+    "type": "combat",
+    "summary": "Incursão profunda pelas catacumbas sob a Sala do Alquimista com elevado dispêndio de fôlego em marcha subterrânea: travessia de Um Cruzamento de Corredores, Um Canto no Corredor, Outra Curva, Uma Ramificação da Passagem, Uma Interseção Das Passagens e Mais Outro Canto. Confronto e aniquilação do Grande Minotauro renascido (+95 moedas de ouro, pele e chifres de Minotauro), seguido pela eliminação de um inseto rastejante e um novato zumbi (+14.498 EXP acumulada, atingindo 124.247 EXP). Retorno tático ao laboratório, saldo financeiro elevado para 2.590 moedas de ouro e repouso na Sala do Alquimista.",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 76,
+        "note": "Ronda profunda, combate contra Minotauro, inseto e zumbi e saldo de 2.590 moedas confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ]
   }
 ]

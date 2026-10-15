@@ -1841,9 +1841,36 @@
       "Adentrei as passagens da escola, abri a pesada porta ao sul e invadi Uma Pequena Sala. O cenário era de pura infestação: bem aos pés do guarda novato atônito, três criaturas assustadoras rastejavam pelo chão úmido em círculos ameaçadores. Não hesitei um instante sequer. Teci no ar os símbolos do míssil mágico; rajadas sucessivas de energia pura e estocadas certeiras com o punhal brilhante perfuraram as carapaças das três bestas rastejantes. Uma a uma, tombaram sem vida sobre as pedras manchadas, arrancando um suspiro aliviado e sinceros agradecimentos da sentinela que ali vigiava.",
       "Com o caminho limpo e o coração sereno, refiz o itinerário pelas portas do corredor até retornar à Sala do Alquimista. Diante das retortas fumegantes e das paredes rabiscadas de fórmulas, encarei o velho mestre e proclamei em voz alta que sua praga rastejante havia sido exterminada. Ele pestanejou, absorto em seus pós azedos, antes de resmungar novos pedidos de auxílio. Acomodei-me junto às bancadas, sentindo o peso magnífico de duas mil quatrocentas e noventa e cinco moedas de ouro aconchegadas no cinto e uma clareza mágica que só o dever cumprido proporciona. A dívida dos insetos está paga."
     ]
+  },
+  {
+    "id": 76,
+    "day": "Dia 76",
+    "title": "O Rugido nas Catacumbas e a Fenda dos Labirintos",
+    "date": "28 de dezembro de 2026",
+    "in_game_time": "Subsolo de Midgaard – Catacumbas, Cruzamento, Outra Curva e Sala do Alquimista",
+    "excerpt": "Em longa e vigorosa incursão ao subsolo, Grebolius enfrenta e aniquila o Grande Minotauro renascido, expurga um inseto rastejante e um novato zumbi nas galerias profundas e consolida seu tesouro em duas mil quinhentas e noventa moedas de ouro.",
+    "tags": [
+      "Catacumbas",
+      "Grande Minotauro",
+      "Combate Subterrâneo",
+      "Inseto Rastejante",
+      "Novato Zumbi",
+      "Exploração Profunda",
+      "Fortuna em Ouro"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "events.json",
+        "day": 76,
+        "note": "Ronda profunda, combate contra Minotauro, inseto e zumbi e saldo de 2.590 moedas confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ],
+    "content": [
+      "Despertei entre as vidrarias e anotações mágicas do laboratório sentindo a mente focada e os membros ágeis. Bebi um longo gole da água límpida guardada no cantil, tracei os arcos etéreos da Armadura Arcana ao redor do peito e apontei meus passos para o alçapão aberto na pedra. Descer ao subsolo escuro já não traz hesitação: a lâmina está afiada, a magia responde ao menor comando dos dedos e o ritmo do mundo subterrâneo começa a me soar familiar.",
+      "Ao pisar nas lajes frias do cruzamento de corredores, deparei-me de pronto com uma presença ameaçadora: o Grande Minotauro rondava as sombras, bufando pesadamente à minha espera. O embate foi rápido e decisivo. Ergui o broquel de carvalho para conter o avanço bruto da besta, esquivei de suas investidas desordenadas e projetei saraivadas incandescentes de mísseis arcanos em seu flanco. Uma estocada precisa do punhal brilhante encerrou o combate. Recolhi de seu corpo a couraça de couro áspero e os chifres curvos, além de juntar noventa e cinco moedas de ouro que tilintaram com brilho limpo no chão de pedra.",
+      "Com a passagem desimpedida, embrenhei-me pelos labirintos mais profundos para exigir o máximo de minhas pernas. Atravessei as paredes cobertas de fungos de um canto estreito, fulminando um inseto rastejante que tentou aproximar-se das minhas botas, e contornei a curva escura onde um novato zumbi desabou sem vida após ser atingido de pleno pela magia. Continuei marchando por ramificações e interseções silenciosas até a curva isolada de mais outro canto, sentindo o esforço físico vigoroso queimar nos músculos a cada passo desbravado.",
+      "Saciada a sede de movimento e esgotado o fôlego da jornada subterrânea, parei para respirar fundo e recuperar o ritmo do coração na calmaria das galerias. Retornei com passos firmes pelas mesmas passagens de pedra até alcançar a escadaria e emergir na luz acolhedora do laboratório do Alquimista. Com duas mil quinhentas e noventa moedas de ouro pesando confortavelmente no bornal e o espírito enriquecido por mais um dia de vitórias, deitei-me sobre a esteira para um merecido descanso."
+    ]
   }
 ]
-
-
-
-
