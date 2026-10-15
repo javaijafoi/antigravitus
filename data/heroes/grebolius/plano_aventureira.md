@@ -60,17 +60,17 @@ Superar roteiros curtos e estáticos. A estamina alta (101 MV no Grau 11) é o m
 ## 3. Matriz de Modos Operacionais (Overrides de Comportamento)
 Os modos operacionais definem a postura tática, a alocação de risco, a gestão de inventário e os gatilhos de recuo/fuga para cada dia de expedição. Eles dão override no comportamento padrão:
 
-1. **Modo Padrão (Equilibrado):**
-   - **Postura:** Exploração balanceada, patrulha rotineira e treino.
+1. **Modo Padrão (Equilibrado & Mapeamento de NPCs):**
+   - **Postura:** Exploração balanceada, patrulha rotineira, treino e conhecimento urbano.
+   - **Mapeamento e Auditoria de NPCs ([npcs.md](file:///c:/Users/alura/Downloads/antigravitus/data/heroes/grebolius/npcs.md)):** É no Modo Padrão que a heroína sonda e mapeia os NPCs (possibilidades, o que vendem, quanto custa, treinos e opções de diálogo). A checagem de novidades em lojas é uma pendência maleável ao longo do ciclo (conferida organicamente quando a rota cruzar com o NPC, sem desvios forçados).
    - **Combate:** Engaja presas conhecidas e seguras com `consider` prévio; recua se o risco for médio/alto.
    - **Wimpy:** Configuração padrão (~25%, atualmente 13-17 HP).
    - **Logística:** Carga intermediária, retorno ao santuário/laboratório para pernoite.
 
-2. **Modo Aventura (Foco na Missão & Mapeamento de NPCs):**
-   - **Objetivo:** Concluir a autoquest ou missão ativa designada.
-   - **Postura:** Foco estrito no objetivo da missão; ignora o que não for relevante ao redor.
-   - **Mapeamento e Auditoria de NPCs ([npcs.md](file:///c:/Users/alura/Downloads/antigravitus/data/heroes/grebolius/npcs.md)):** Ao encontrar figuras e comerciantes, sonda suas possibilidades (comandos contextuais como `list`, `practice`, `autoquest`, `'sim`, `'não`). A checagem de novidades em lojas é uma pendência maleável por ciclo: é conferida organicamente quando a rota cruzar com o NPC, sem desvios forçados.
-   - **Combate:** Abate apenas mobs fracos necessários para abrir caminho ou cumprir requisito; desvia de qualquer mob arriscado.
+2. **Modo Aventura (Foco Exclusivo na Missão — Sem Dispersão):**
+   - **Objetivo:** Concluir a autoquest ou missão ativa designada. Foco total em resolver o problema dado.
+   - **Postura Direta:** Não fica "brisando", não passeia em lojas nem fica mapeando NPCs fora do escopo da quest. Toda ação serve à missão.
+   - **Combate Mínimo:** Abate apenas mobs fracos estritamente necessários para abrir caminho ou cumprir a tarefa; desvia de qualquer confronto supérfluo ou perigoso.
    - **Gestão de Bloqueios:** Se encontrar um obstáculo intransponível (falta de nível, monstro forte demais bloqueando passagem, falta de ouro para item de entrega), anota a pendência específica em `missoes.json` e na crônica, encerra o dia em segurança e sugere para o dia seguinte a transição para o modo adequado (ex.: Modo Dungeon para farmar ouro/EXP).
 
 3. **Modo Dungeon (Limpeza, Pilhagem Máxima & Saque Inteligente):**

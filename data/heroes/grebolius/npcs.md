@@ -1,11 +1,11 @@
 # 👥 Catálogo Oficial de NPCs de Midgaard e Masmorras — Grebolius
 
 > Este documento é o compêndio estruturado de todas as figuras, comerciantes, mestres e sentinelas encontrados por Grebolius no mundo de Devil's Bob MUD.  
-> Sua finalidade é subsidiar o **Modo Aventura** com informações consolidadas de comércio, diálogos, requisitos de quests e controle de auditoria cíclica (uma verificação por ciclo decenal).
+> Sua finalidade é subsidiar o herói no **Modo Padrão** com informações consolidadas de comércio, diálogos, requisitos de quests e controle de auditoria cíclica (uma verificação maleável por ciclo). No Modo Aventura, o herói não dispersa e foca exclusivamente na quest ativa.
 
 ---
 
-## ✦ Regra Operacional de Sondagem e Auditoria (Modo Aventura)
+## ✦ Regra Operacional de Sondagem e Auditoria (Modo Padrão)
 
 1. **Sondagem no Primeiro Contato:**
    - Ao encontrar um NPC pela primeira vez, o herói não ataca. Executa `look <npc>` e comandos diagnósticos contextuais:
