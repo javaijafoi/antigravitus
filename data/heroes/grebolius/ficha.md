@@ -1,6 +1,6 @@
 # 🧌 Ficha Atual de Grebolius (Último Estado Registrado)
 
-> Referência: Dia 68. Estado verificado em sessão; consultar a origem registrada.
+> Referência: Dia 69. Estado verificado em sessão; consultar a origem registrada.
 > Este documento reúne o último estado e as missões registrados; as incertezas aparecem ao final.
 
 ## ✦ Identificação e Registro
@@ -9,8 +9,8 @@
 * **Raça / Aparência Real:** Mulher goblin; aventureira sem véu
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **9**
-* **Alinhamento Moral:** 150 (Um Pouco Bom)
-* **Localização Atual:** A Sala do Alquimista (último registro: Dia 68)
+* **Alinhamento Moral:** 260 (Um Pouco Bom)
+* **Localização Atual:** A Sala do Alquimista (último registro: Dia 69)
 * **Acampamento Registrado:** A Sala do Alquimista
 * **Santuário de Referência:** O Panteão dos Centenários
 
@@ -23,9 +23,9 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 | **Pontos de Mana (MP)** | 150 | 150 | 100% |
 | **Estamina / Movimento (MV)** | 97 | 97 | 100% |
 
-* **Experiência Acumulada:** **64.118 EXP**
-* **Experiência Necessária p/ Grau 10:** **35.882 EXP** (Meta: 100.000 EXP)
-* **Ouro Líquido:** **1.346 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **84.599 EXP**
+* **Experiência Necessária p/ Grau 10:** **15.401 EXP** (Meta: 100.000 EXP)
+* **Ouro Líquido:** **2.252 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 10
@@ -48,7 +48,7 @@ Valores verificados ao vivo no servidor (AC 16 sem armadura, AC 40 com 'armor').
 * **Altruísmo — Concluída:** Doar equipamento excedente na Sala de Doações.
   * Próximo passo: Nenhuma tarefa nova inferida a partir da conclusão.
 * **Limpando Monstros — Ativa:** Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.
-  * Próximo passo: Investigar as novas passagens reveladas ao sul ('Mais Outro Canto' e ramificação da passagem) para encontrar os insetos rastejantes.
+  * Próximo passo: Avançar para o Nível 10 para tentar equipar o anel arcano (+2E) e continuar vasculhando as fendas profundas das catacumbas em busca dos insetos rastejantes.
 * **Dicas Mágicas — Ativa:** Descobrir o próximo passo informado pelo Mago Aventureiro.
   * Próximo passo: Consultar o NPC e o estado da tarefa; registrar a instrução obtida sem presumir recompensa.
 
@@ -77,30 +77,29 @@ Equipamento conforme os últimos documentos disponíveis; conferir no próximo a
 
 ## ✦ Inventário e Suprimentos
 Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
-* `um pão recheado` (x1) — Comprado na Padaria de Midgaard no Dia 65; 1 consumido no Dia 67
-* `um brilhante punhal de novato` (x7) — Confirmado ao vivo no inventário no Dia 67 (1 despojado de monstro novato)
-* `uma brilhante veste de novato` (x1) — Despojada de monstro novato nas catacumbas no Dia 65
-* `um cantil` (x1) — Confirmado ao vivo no inventário no Dia 61
-* `uma brilhante espada de novato` (x1) — Confirmado ao vivo no inventário no Dia 61
-* `uma poção amarela de detectar invisibilidade` (x1) — Confirmado ao vivo no inventário no Dia 61
-* `um pergaminho de retorno` (x1) — Confirmado ao vivo no inventário no Dia 61
-* `uma mochila` (x1) — Confirmado ao vivo no inventário no Dia 61
+* `um brilhante punhal de novato` (x7) — Confirmado ao vivo no inventário no Dia 69
+* `uma brilhante veste de novato` (x1) — Despojada de monstro novato nas catacumbas no Dia 65; confirmada ao vivo no Dia 69
+* `um cantil` (x1) — Confirmado ao vivo no inventário no Dia 69
+* `uma brilhante espada de novato` (x1) — Confirmado ao vivo no inventário no Dia 69
+* `uma poção amarela de detectar invisibilidade` (x1) — Confirmado ao vivo no inventário no Dia 69
+* `um pergaminho de retorno` (x1) — Confirmado ao vivo no inventário no Dia 69
+* `uma mochila` (x1) — Confirmado ao vivo no inventário no Dia 69
+* `um anel arcano (+2E)` (x1) — Confirmado ao vivo no inventário no Dia 69 (requer Nível 10 para equipar)
 
 ### Pendências de inventário
-* **anel arcano (+2E)** — último registro: Dia 67. Testado no Nível 9 no Dia 67 e recusado pelo servidor ('Você não tem experiência para usar um anel arcano'); exige Nível 10 ou superior.
 
 ## ✦ Condições Registradas
 * Armadura mística (armor) ativa e verificada.
-* Alimentada e saciada com pão recheado e cantil abastecido.
-* Nível 9 consolidado com vitais plenos (57 HP, 150 Mana, 97 MV).
+* Alimentada e saciada (último pão consumido no Dia 69) e cantil abastecido.
+* Nível 9 consolidado com vitais plenos (57 HP, 150 Mana, 97 MV) a 15.401 EXP do Nível 10.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
-**Mapear as novas ramificações profundas e cumprir a reflexão do Dia 69**
-Investigar as passagens reveladas ao sul ('Mais Outro Canto' e a ramificação da passagem) e preparar o encerramento do ciclo com a reflexão existencial do Dia 69.
-* Alcançar o Nível 10 para tentar novamente equipar o anel arcano (+2E).
+**Alcançar o Nível 10 e equipar o anel arcano (+2E)**
+Acumular os 15.401 EXP restantes para atingir o Nível 10, equipar o anel arcano (+2E) e aprofundar a caçada aos insetos rastejantes nas câmaras mais profundas.
+* Restam 15.401 pontos de experiência para o Nível 10.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessão ao vivo em debomud.org:4000; sondagem profunda das catacumbas revelando novas ramificações, combate vitorioso e avanço de experiência..
+Fonte do estado: Sessão ao vivo em debomud.org:4000; incursão profunda nas fendas das catacumbas além de Outra Curva, combate em série contra novatos zumbis, ampliação da fortuna para 2.252 moedas de ouro e reflexão de 9 dias na Sala do Alquimista..
 * O anel arcano (+2E) exige Nível 10 ou superior para uso.
 * A placa de perigo em 'A Entrada' alerta sobre a morte para quem desce desacompanhado ou desequipado.
 * Locais exatos dos insetos rastejantes nas catacumbas além das câmaras já mapeadas.

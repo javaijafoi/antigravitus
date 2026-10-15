@@ -208,5 +208,19 @@
         "note": "Descoberta de novas saídas e combate confirmados ao vivo no servidor debomud.org:4000."
       }
     ]
+  },
+  {
+    "id": "incursao-fendas-profundas-e-reflexao-dia69",
+    "day": 69,
+    "type": "milestone",
+    "summary": "Incursão profunda pelas fendas subterrâneas das catacumbas além de Outra Curva, mapeando Uma Ramificação da Passagem e Uma Interseção Das Passagens. Eliminação em série de 6 novatos zumbis com mísseis arcanos e punhal (+20.481 EXP acumulada, alcançando 84.599 EXP; +210 moedas de saque, elevando o patrimônio para 2.252 moedas de ouro). Consumo do último pão recheado e realização da reflexão existencial de 9 dias na Sala do Alquimista.",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 69,
+        "note": "Incursão profunda, múltiplos abates e saldo de 2.252 moedas confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ]
   }
 ]

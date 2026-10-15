@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 68,
+  "as_of_day": 69,
   "verification": "live",
   "items": [
     {
@@ -45,9 +45,9 @@
       "type": "official",
       "status": "active",
       "accepted_day": 36,
-      "last_progress_day": 68,
+      "last_progress_day": 69,
       "objective": "Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.",
-      "next_step": "Investigar as novas passagens reveladas ao sul ('Mais Outro Canto' e ramificação da passagem) para encontrar os insetos rastejantes.",
+      "next_step": "Avançar para o Nível 10 para tentar equipar o anel arcano (+2E) e continuar vasculhando as fendas profundas das catacumbas em busca dos insetos rastejantes.",
       "evidence": [
         {
           "document": "posts.json",
@@ -98,6 +98,11 @@
           "document": "posts.json",
           "day": 68,
           "note": "Sondagem cartográfica nas catacumbas revelando novas ramificações ocultas e aniquilação de monstro novato (+1.542 EXP, +20 moedas)."
+        },
+        {
+          "document": "posts.json",
+          "day": 69,
+          "note": "Incursão profunda no labirinto das catacumbas, mapeamento de Uma Interseção Das Passagens e aniquilação de 6 novatos zumbis (+20.481 EXP acumulada, elevando patrimônio para 2.252 moedas de ouro)."
         }
       ]
     },

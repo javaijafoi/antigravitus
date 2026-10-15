@@ -2,8 +2,8 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 68,
-    "source": "Sessão ao vivo em debomud.org:4000; sondagem profunda das catacumbas revelando novas ramificações, combate vitorioso e avanço de experiência.",
+    "day": 69,
+    "source": "Sessão ao vivo em debomud.org:4000; incursão profunda nas fendas das catacumbas além de Outra Curva, combate em série contra novatos zumbis, ampliação da fortuna para 2.252 moedas de ouro e reflexão de 9 dias na Sala do Alquimista.",
     "verification": "live",
     "live_verified": true
   },
@@ -12,7 +12,7 @@
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
   "alignment": {
-    "value": 150,
+    "value": 260,
     "label": "Um Pouco Bom"
   },
   "vitals": {
@@ -30,10 +30,10 @@
     }
   },
   "experience": {
-    "current": 64118,
+    "current": 84599,
     "next_level": 100000
   },
-  "gold": 1346,
+  "gold": 2252,
   "attributes": {
     "STR": 10,
     "DEX": 15,
@@ -65,15 +65,15 @@
     "name": "O Panteão dos Centenários"
   },
   "last_event": {
-    "day": 68,
-    "summary": "Sondagem cartográfica nas catacumbas identificando saídas ocultas em Uma Ramificação ao Sul, Uma Sala no Canto e Outra Curva, aniquilação de um monstro novato no corredor superior (+1.542 EXP, +20 moedas) e repouso na Sala do Alquimista."
+    "day": 69,
+    "summary": "Incursão profunda pelas fendas subterrâneas além de Outra Curva mapeando Uma Ramificação da Passagem e Uma Interseção Das Passagens, combate com eliminação de 6 novatos zumbis (+20.481 EXP, saldo elevado para 2.252 moedas de ouro), consumo do último pão e reflexão existencial na Sala do Alquimista."
   },
   "next_objective": {
     "mission_id": "limpando-monstros",
-    "title": "Mapear as novas ramificações profundas e cumprir a reflexão do Dia 69",
-    "next_step": "Investigar as passagens reveladas ao sul ('Mais Outro Canto' e a ramificação da passagem) e preparar o encerramento do ciclo com a reflexão existencial do Dia 69.",
+    "title": "Alcançar o Nível 10 e equipar o anel arcano (+2E)",
+    "next_step": "Acumular os 15.401 EXP restantes para atingir o Nível 10, equipar o anel arcano (+2E) e aprofundar a caçada aos insetos rastejantes nas câmaras mais profundas.",
     "missing_preparation": [
-      "Alcançar o Nível 10 para tentar novamente equipar o anel arcano (+2E)."
+      "Restam 15.401 pontos de experiência para o Nível 10."
     ]
   },
   "skills": [
@@ -175,58 +175,52 @@
   "inventory": {
     "recorded": [
       {
-        "name": "um pão recheado",
-        "quantity": 1,
-        "source": "Comprado na Padaria de Midgaard no Dia 65; 1 consumido no Dia 67"
-      },
-      {
         "name": "um brilhante punhal de novato",
         "quantity": 7,
-        "source": "Confirmado ao vivo no inventário no Dia 67 (1 despojado de monstro novato)"
+        "source": "Confirmado ao vivo no inventário no Dia 69"
       },
       {
         "name": "uma brilhante veste de novato",
         "quantity": 1,
-        "source": "Despojada de monstro novato nas catacumbas no Dia 65"
+        "source": "Despojada de monstro novato nas catacumbas no Dia 65; confirmada ao vivo no Dia 69"
       },
       {
         "name": "um cantil",
         "quantity": 1,
-        "source": "Confirmado ao vivo no inventário no Dia 61"
+        "source": "Confirmado ao vivo no inventário no Dia 69"
       },
       {
         "name": "uma brilhante espada de novato",
         "quantity": 1,
-        "source": "Confirmado ao vivo no inventário no Dia 61"
+        "source": "Confirmado ao vivo no inventário no Dia 69"
       },
       {
         "name": "uma poção amarela de detectar invisibilidade",
         "quantity": 1,
-        "source": "Confirmado ao vivo no inventário no Dia 61"
+        "source": "Confirmado ao vivo no inventário no Dia 69"
       },
       {
         "name": "um pergaminho de retorno",
         "quantity": 1,
-        "source": "Confirmado ao vivo no inventário no Dia 61"
+        "source": "Confirmado ao vivo no inventário no Dia 69"
       },
       {
         "name": "uma mochila",
         "quantity": 1,
-        "source": "Confirmado ao vivo no inventário no Dia 61"
+        "source": "Confirmado ao vivo no inventário no Dia 69"
+      },
+      {
+        "name": "um anel arcano (+2E)",
+        "quantity": 1,
+        "source": "Confirmado ao vivo no inventário no Dia 69 (requer Nível 10 para equipar)"
       }
     ],
-    "pending_verification": [
-      {
-        "name": "anel arcano (+2E)",
-        "last_seen_day": 67,
-        "reason": "Testado no Nível 9 no Dia 67 e recusado pelo servidor ('Você não tem experiência para usar um anel arcano'); exige Nível 10 ou superior."
-      }
-    ]
+    "pending_verification": []
   },
   "conditions": [
     "Armadura mística (armor) ativa e verificada.",
-    "Alimentada e saciada com pão recheado e cantil abastecido.",
-    "Nível 9 consolidado com vitais plenos (57 HP, 150 Mana, 97 MV)."
+    "Alimentada e saciada (último pão consumido no Dia 69) e cantil abastecido.",
+    "Nível 9 consolidado com vitais plenos (57 HP, 150 Mana, 97 MV) a 15.401 EXP do Nível 10."
   ],
   "uncertainties": [
     "O anel arcano (+2E) exige Nível 10 ou superior para uso.",
@@ -236,19 +230,19 @@
   "evidence": [
     {
       "document": "events.json",
-      "day": 68,
-      "note": "Sessão, exploração cartográfica e combate confirmados ao vivo no servidor debomud.org:4000."
+      "day": 69,
+      "note": "Incursão profunda, múltiplos combates e saldo de 2.252 moedas confirmados ao vivo no servidor debomud.org:4000."
     },
     {
       "document": "posts.json",
-      "day": 68,
-      "note": "Crônica do Dia 68 baseada em fatos ao vivo."
+      "day": 69,
+      "note": "Crônica do Dia 69 com reflexão existencial baseada em fatos ao vivo."
     }
   ],
   "narrative_style": "ladra arcana",
   "weapon_summary": "Punhal de Novato (+ Escudo)",
   "migration": {
     "method": "sessão ao vivo e conferência direta no servidor",
-    "verified_on": "Dia 68"
+    "verified_on": "Dia 69"
   }
 }

@@ -1628,6 +1628,36 @@
       "Para coroar a jornada e drenar as energias em combate real, subi às galerias superiores da masmorra dos novatos. Não demorou: no corredor lamoso, um monstro novato rugiu e investiu de garras abertas. Plantei as botas no chão e conjurei uma saraivada implacável de projéteis luminosos que castigaram sua couraça, desferindo em seguida uma estocada mortal que silenciou seu grito na poeira. Vasculhei a carcaça e retirei vinte moedas de ouro reluzentes, guardando o espólio com a frieza de quem sabe o preço de cada vitória.",
       "Voltei para o laboratório do Alquimista com o corpo calejado pelo esforço contínuo e a mente satisfeita. Tentei comer mais um pedaço de pão, mas o corpo já estava plenamente saciado. O Alquimista repetiu seu velho refrão sobre os insetos rastejantes, mas agora eu conheço as fendas secretas do sul e sei exatamente para onde apontar a lâmina. Deitei para repousar contando mais de mil e trezentas e quarenta moedas de ouro que pesam docemente nas minhas algibeiras."
     ]
+  },
+  {
+    "id": 69,
+    "day": "Dia 69",
+    "title": "O Labirinto das Fendas Profundas, a Pira dos Mortos e o Peso do Ouro",
+    "date": "21 de dezembro de 2026",
+    "in_game_time": "Midgaard – Catacumbas Profundas e a Sala do Alquimista",
+    "excerpt": "Incursão profunda pelas passagens subterrâneas recém-descobertas das catacumbas, aniquilando múltiplos mortos-vivos com mísseis mágicos e celebrando uma fortuna em ouro com reflexão existencial.",
+    "tags": [
+      "Fendas Profundas",
+      "Labirinto Subterrâneo",
+      "Extermínio de Mortos-Vivos",
+      "Magia Fulminante",
+      "Fortuna Goblin",
+      "Reflexão Existencial"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "events.json",
+        "day": 69,
+        "note": "Incursão nas fendas profundas das catacumbas, múltiplos combates e saldo de 2.252 moedas confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ],
+    "content": [
+      "Acordei antes que a primeira réstia de penumbra mudasse na Sala do Alquimista. Mastiguei o último pão recheado da mochila com a calma deliberada de quem sabe que o estômago abastecido sustenta a coragem, bebi um gole generoso do cantil e entoei a fórmula ancestral da Armadura Arcana. A pele formigou com o manto invisível de proteção. Não havia hesitação: as novas passagens vislumbradas no dia anterior chamavam como um desafio que eu não deixaria sem resposta.",
+      "Desci a escadaria até A Entrada e avancei pelas entranhas da masmorra, cruzando para o norte e mergulhando pela ramificação sombria que se abre além de Outra Curva. O que encontrei não foi um simples corredor, mas um labirinto esquecido de lodo e fungos esmeralda: a passagem desdobrou-se em uma ampla interseção subterrânea que se comunicava com câmaras ainda mais escuras e a visão sinistra de um reflexo avermelhado ao longe. Ali, as trevas guardavam emboscadas. Vários novatos zumbis ergueram suas carcaças descarnadas contra mim, mas a resposta mágica foi impiedosa. Disparei saraivadas incandescentes de mísseis arcanos que explodiram em fagulhas contra os peitos apodrecidos das criaturas, enquanto meu punhal feria com precisão as articulações que restavam. Uma a uma, as aberrações desabaram na poeira lúgubre, e de cada uma delas recolhi as moedas reluzentes que deixavam para trás.",
+      "Com as passagens pacificadas e o peso reconfortante do metal tinindo no cinto, refiz o caminho pelos corredores gélidos e subi de volta a escadaria até o abrigo de vidro e pergaminhos do Alquimista. Tranquei a porta de madeira e sentei-me no chão de lajes frias, deixando as costas repousarem contra os tijolos úmidos.",
+      "Hoje é um desses momentos em que a mente exige silêncio para olhar para trás. Lembro-me de quando despertei jogada no depósito de lixo de Midgaard, com a garganta seca, sem um único tostão no bolso e fingindo ser alguém que não era apenas para não ser esmagada na sarjeta. Hoje, olho para as fórmulas mágicas rabiscadas nas paredes deste laboratório e sei que a magia não é mais um mistério distante, mas uma força que corre no meu próprio sangue. O anel arcano que repousa na minha mochila continua me desafiando, mas sinto que a barreira final que me separa de seu poder está por um fio. Tenho em minhas mãos duas mil duzentas e cinquenta e duas moedas de ouro que tilintam a cada respiração, um tesouro erguido com sangue, frieza e coragem. Ninguém mais pode dizer a esta goblin onde ela pode ou não pisar. O meu Reino Livre já está nascendo, entalhado pedra a pedra na escuridão."
+    ]
   }
 ]
 
