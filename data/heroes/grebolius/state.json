@@ -59,6 +59,9 @@
     "wimpy_profile": {
       "padrao": 13,
       "batedor": 33
+    },
+    "rules": {
+      "batedor": "Mapeamento em invisibilidade; coleta de oportunidade de itens no chão/doações permitida; evasão total de combate (zero engajamento, fuga imediata no 1º turno)."
     }
   },
   "location": {

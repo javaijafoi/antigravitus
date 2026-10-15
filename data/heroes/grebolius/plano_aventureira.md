@@ -84,8 +84,9 @@ Os modos operacionais definem a postura tática, a alocação de risco, a gestã
 4. **Modo Batedor (Stealth Scout / Mapeamento Máximo):**
    - **Objetivo:** Mapear o maior número possível de salas da área/zona sem combate.
    - **Camuflagem:** `invisibility` e `armor` mantidos 100% ativos; batedor avança consumindo o MV em dezenas de salas.
+   - **Coleta de Oportunidade (Ground Looting):** Permitido pegar coisas úteis pelo caminho se encontrar (`get <item>` / `get all.<item>`), desde que respeitada a capacidade de carga e sob a condição inegociável de NUNCA engajar em batalha.
    - **Postura de Combate & Fuga:** Evita 100% dos combates possíveis. Zero combate voluntário. Se sofrer aggro inesperado (criatura com visão arcana), executa **`flee` imediatamente no 1º turno**.
-   - **Rede de Segurança Mecânica:** **Wimpy elevado para 60% do HP máximo** (`wimpy 40` no Grau 11) para garantir disparo automático de fuga caso a conexão ou comando falhe. Ao desativar o modo, restaura o Wimpy para o padrão (~25%).
+   - **Rede de Segurança Mecânica:** **Wimpy no limite máximo permitido pelo servidor (50% do HP)** (`wimpy 33` no Grau 11) para garantir disparo automático de fuga caso a conexão ou comando falhe. Ao desativar o modo, restaura o Wimpy para o padrão (~25%).
    - **Logística e Sono em Campo:** Carga ultra-leve (6 a 8 pães recheados da padaria + 1 ou 2 cantis cheios na Fonte Azul). Ao sobrar 15-20 MV, escolhe uma sala vazia e segura (checada com `scan` e `look`), come, bebe e usa `sleep` por 3 a 4 ticks (~3 a 5 min) para recarga total de MV e Mana, acordando para prosseguir.
 
 5. **Regra de Seleção & Sinergia Tática (Batedor Precede Dungeon):**
