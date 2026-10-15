@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 62,
+  "as_of_day": 63,
   "verification": "live",
   "items": [
     {
@@ -45,9 +45,9 @@
       "type": "official",
       "status": "active",
       "accepted_day": 36,
-      "last_progress_day": 62,
+      "last_progress_day": 63,
       "objective": "Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.",
-      "next_step": "Matar um inseto rastejante na masmorra inferior ('A Entrada' e além) e retornar ao Alquimista conforme a ordem verbal recebida.",
+      "next_step": "Localizar o ninho dos insetos rastejantes nas câmaras além dos corredores iniciais (Uma Grande Sala, Uma Sala Enorme, Longa Passagem) e retornar ao Alquimista.",
       "evidence": [
         {
           "document": "posts.json",
@@ -68,6 +68,11 @@
           "document": "posts.json",
           "day": 62,
           "note": "Entrega dos chifres do Minotauro ao Alquimista e recebimento da instrução verbal direta: 'Vá lá, mate um desses insetos rastejantes, e volte aqui em seguida'."
+        },
+        {
+          "document": "posts.json",
+          "day": 63,
+          "note": "Sondagem cartográfica viva de 4 galerias (Cruzamento, Canto, Curva e Passagem) buscando os insetos da autoquest."
         }
       ]
     },

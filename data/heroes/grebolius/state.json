@@ -2,8 +2,8 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 62,
-    "source": "Sessão ao vivo em debomud.org:4000; combate, entrega de itens e estado verificados no servidor.",
+    "day": 63,
+    "source": "Sessão ao vivo em debomud.org:4000; exploração de galerias e estado verificados no servidor.",
     "verification": "live",
     "live_verified": true
   },
@@ -21,7 +21,7 @@
       "max": 52
     },
     "mana": {
-      "current": 118,
+      "current": 140,
       "max": 140
     },
     "mv": {
@@ -65,13 +65,13 @@
     "name": "O Panteão dos Centenários"
   },
   "last_event": {
-    "day": 62,
-    "summary": "Entrega dos chifres do Minotauro ao Alquimista, decifração da placa da escadaria, abate de novato zumbi na sala, recebimento da ordem de caçar insetos rastejantes e reconhecimento de 'A Entrada'."
+    "day": 63,
+    "summary": "Consumo de provisões, descida a A Entrada e mapeamento vivo de 4 novas galerias subterrâneas (Cruzamento, Canto, Curva e Passagem) na busca pelos insetos rastejantes da autoquest, com retorno seguro à Sala do Alquimista."
   },
   "next_objective": {
     "mission_id": "limpando-monstros",
-    "title": "Caçar inseto rastejante na masmorra inferior",
-    "next_step": "Descer pela escadaria para 'A Entrada', localizar e abater um inseto rastejante e retornar à Sala do Alquimista.",
+    "title": "Localizar e abater inseto rastejante nas câmaras profundas",
+    "next_step": "Avançar a partir de Uma Passagem ou Um Cruzamento rumo a 'Uma Grande Sala', 'Uma Sala Enorme' ou 'Uma Longa Passagem Leste-Oeste' para encontrar o inseto rastejante.",
     "missing_preparation": [
       "Levar tocha ou conferir iluminação nas galerias abaixo de 'A Entrada'.",
       "Identificar requisitos de nível para equipar o anel arcano (+2E)."
@@ -204,47 +204,43 @@
         "name": "uma mochila",
         "quantity": 1,
         "source": "Confirmado ao vivo no inventário no Dia 61"
-      },
-      {
-        "name": "um pão recheado",
-        "quantity": 1,
-        "source": "Provisão restante após consumo no Dia 61"
       }
     ],
     "pending_verification": [
       {
         "name": "anel arcano (+2E)",
-        "last_seen_day": 62,
-        "reason": "Confirmado na posse no Dia 61/62, mas o servidor informou 'Você não tem experiência para usar um anel arcano'; requisitos de nível e bônus reais não confirmados."
+        "last_seen_day": 63,
+        "reason": "Confirmado na posse no Dia 61/62/63, mas o servidor informou 'Você não tem experiência para usar um anel arcano'; requisitos de nível e bônus reais não confirmados."
       }
     ]
   },
   "conditions": [
     "Armadura mística (armor) ativa e verificada.",
-    "Autogold confirmado em funcionamento no servidor (35 moedas coletadas por zumbi).",
-    "Fome e sede registradas durante o combate no Dia 62; requer provisões no próximo início de jornada."
+    "Autogold confirmado em funcionamento no servidor.",
+    "Saciada e hidratada no início do Dia 63 com pão recheado e cantil.",
+    "Estamina (95 MV) e mana (140 MN) plenamente preservadas após patrulha subterrânea."
   ],
   "uncertainties": [
     "O anel arcano (+2E) está na mochila, mas exige nível maior que 8.",
     "A placa de perigo em 'A Entrada' alerta sobre a morte para quem desce desacompanhado ou desequipado.",
-    "Profundidade e saídas dos corredores além de 'A Entrada' (Norte, Sul, Oeste) ainda não mapeadas."
+    "Locais exatos dos insetos rastejantes nas câmaras além dos corredores iniciais (Uma Grande Sala, Uma Sala Enorme, etc.)."
   ],
   "evidence": [
     {
       "document": "events.json",
-      "day": 62,
-      "note": "Sessão, combate e entrega de itens verificados ao vivo no servidor debomud.org:4000."
+      "day": 63,
+      "note": "Sessão de exploração e cartografia verificada ao vivo no servidor debomud.org:4000."
     },
     {
       "document": "posts.json",
-      "day": 62,
-      "note": "Crônica do Dia 62 baseada em fatos ao vivo."
+      "day": 63,
+      "note": "Crônica do Dia 63 baseada em fatos ao vivo."
     }
   ],
   "narrative_style": "ladra arcana",
   "weapon_summary": "Punhal de Novato (+ Escudo)",
   "migration": {
     "method": "sessão ao vivo e conferência direta no servidor",
-    "verified_on": "Dia 62"
+    "verified_on": "Dia 63"
   }
 }

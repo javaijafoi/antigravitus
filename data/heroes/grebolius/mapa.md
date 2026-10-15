@@ -104,7 +104,7 @@
 
 
 
-## Reconciliação documental — descobertas até o Dia 62
+## Reconciliação documental — descobertas até o Dia 63
 
 | Sala / região | Registro e saída | Cuidado / origem |
 | :--- | :--- | :--- |
@@ -113,8 +113,12 @@
 | Laboratório dos Magos | Saída a oeste para o Bar dos Magos e buraco descendente para os esgotos | Dias 60–61. Acampamento de partida da jornada. |
 | O Grande Campo (Norte) | Norte da Bifurcação; desvio a oeste para Vila Residencial e norte para trilha entre campos | Dia 61. Conexão campestre setentrional. |
 | Estrada Pavimentada / Taverna do Barumafir | Limite dos campos a leste do caminho; portão da Taverna do Barumafir e trilha para a borda da floresta | Dia 61. Rota descoberta ao vivo em debomud.org:4000. |
-| A Sala do Alquimista | Leste de Um Outro Canto, aberta com `open east`. Alquimista, fórmulas, escada descendente para A Entrada e porta norte | Dias 61–62. Acampamento estabelecido e mantido; chifres entregues ao Alquimista. |
-| A Entrada | Abaixo da Sala do Alquimista (`d`). Saídas: Cima (`u`), Norte (`n` - Cruzamento), Sul (`s` - Curva), Oeste (`o` - Passagem) | Dia 62. Ambiente escuro, úmido e frio com sons de criaturas hostis. |
+| A Sala do Alquimista | Leste de Um Outro Canto, aberta com `open east`. Alquimista, fórmulas, escada descendente para A Entrada e porta norte | Dias 61–63. Acampamento estabelecido e mantido; chifres entregues ao Alquimista. |
+| A Entrada | Abaixo da Sala do Alquimista (`d`). Saídas: Cima (`u`), Norte (`n`), Sul (`s`), Oeste (`o`) | Dias 62–63. Umbral de descida para as galerias da masmorra inferior. |
+| Um Cruzamento de Corredores | Norte de A Entrada (`n`). Saídas: Sul (`s`), Norte (`n` - Canto), Leste (`l`), Oeste (`o`) | Dia 63. Cruzamento em ruínas com ar pesado e decadente. |
+| Um Canto no Corredor | Norte do Cruzamento (`n`). Saídas: Sul (`s`), Leste (`l` - Outra Curva) | Dia 63. Paredes acinzentadas brotando fungos verdes. |
+| Uma Curva na Passagem | Sul de A Entrada (`s`). Saídas: Norte (`n`), Leste (`l` - Ramificação) | Dia 63. Galeria fétida com cheiro nauseante de putrefação. |
+| Uma Passagem | Oeste de A Entrada (`o`). Saídas: Leste (`l`), Norte (`n` - Grande Sala), Sul (`s` - Sala Enorme) | Dia 63. Corredor estreito forrado de fungos pegajosos. |
 
 - No mapa interativo, a posição e o acampamento são separados do santuário de referência.
 - `O`/`L` são legendas em português: os comandos correspondentes do servidor são `w`/`e`.

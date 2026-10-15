@@ -1137,4 +1137,28 @@ A próxima sessão pode resolver as pendências com respostas reais do MUD. Até
 * **Decisão Tática:**
   * No Dia 63, consumir provisões para saciar fome e sede, descer a escadaria armada com luz e feitiços, caçar um inseto rastejante nas galerias de 'A Entrada' e retornar ao Alquimista para avançar na missão.
 
+---
+
+### ⏳ Ciclo 63 (Dia 63): Os Fungos Verdes, o Cruzamento em Ruínas e o Labirinto dos Sussurros
+* **Status Real (MUD - Verificação ao Vivo):**
+  * Nível: **8** *(49.362 EXP | Faltam 10.638 EXP para o Grau 9)*
+  * Vida: **52/52** | Mana: **140/140** | Movimento: **95/95**
+  * Classe de Armadura: **16** base / **40** com `armor` ativo *(verificado ao vivo no servidor)*
+  * Ouro Líquido: **1.156 moedas de ouro**.
+  * Alinhamento Moral: **99** (Neutro Pragmático).
+  * Fisiologia e Nutrição: Saciada e hidratada no despertar com pão recheado e cantil; estamina e mana mantidas a 100%.
+  * Inventário e Equipamento: Provisão de pão consumida com sucesso; tocha, cantil, mochila, punhais e espada em prontidão.
+  * Local de Pernoite: **A Sala do Alquimista** (Salva com `save` e descansando com `rest`).
+* **Marcos e Impactos Psicológicos:**
+  * **O Banquete da Autonomia e o Fôlego Intacto:** Iniciou o dia devorando o último pão recheado e sorvendo a água fresca do cantil, neutralizando a fraqueza física antes de calçar as botas. Sob a couraça de Armadura Arcana, operou sob a nova doutrina de orçamento por recursos, explorando com serenidade.
+  * **A Cartografia do Labirinto Subterrâneo:** Desceu a escadaria até A Entrada e varreu sistematicamente os quatro pontos cardeais das catacumbas:
+    1. **Norte (Um Cruzamento de Corredores):** Ampla intersecção em ruínas e ar decadente, com ramificações para o leste (Uma Sala no Canto) e oeste (Uma Longa Passagem Leste-Oeste).
+    2. **Extremo Norte (Um Canto no Corredor):** Paredes cinzentas gotejantes brotando fungos verdes, com sussurros de criaturas ocultas e curva a leste.
+    3. **Sul (Uma Curva na Passagem):** Galeria nauseante impregnada de cheiro de carniça e morte recente, abrindo caminho para uma ramificação ao sul.
+    4. **Oeste (Uma Passagem):** Corredor estreito e viscoso onde fungos aderem às vestes, conectando a duas câmaras monumentais (Uma Grande Sala ao norte e Uma Sala Enorme ao sul).
+  * **Disciplina Metódica de Retirada:** Sem a presença de insetos nos corredores imediatos e com o fôlego e mana intactos, evitou adentrar as salas maiores desprovida de iluminação sustentada, retornando à Sala do Alquimista para planejar a incursão de choque.
+* **Decisão Tática:**
+  * No Dia 64, empunhar a tocha, penetrar em 'Uma Grande Sala' ou 'Uma Sala Enorme' a oeste para localizar o ninho dos insetos rastejantes da autoquest e retornar com a prova da caçada ao Alquimista.
+
+
 

@@ -2,8 +2,8 @@
   "hero_id": "grebolius",
   "hero_name": "Grebolius",
   "sanctuary_id": "panteao_centenarios",
-  "last_updated_cycle": "Ciclo VII (Dia 62; verificacao ao vivo)",
-  "total_rooms": 69,
+  "last_updated_cycle": "Ciclo VII (Dia 63; verificacao ao vivo)",
+  "total_rooms": 73,
   "layers": [
     {
       "id": "superficie",
@@ -1060,20 +1060,115 @@
         "y": 660
       },
       "exits": {
-        "u": "sala_alquimista"
+        "u": "sala_alquimista",
+        "n": "cruzamento_corredores",
+        "s": "curva_passagem",
+        "o": "uma_passagem"
       },
       "npcs": [],
-      "notes": "Escuro, úmido e frio. Ruídos de criaturas rondando no escuro. Escadaria sobe para a Sala do Alquimista. Saídas para Norte (Um Cruzamento de Corredores), Sul (Uma Curva na Passagem) e Oeste (Uma Passagem).",
-      "discovered_in": "Ciclo VII (Dia 62)",
+      "notes": "Escuro, úmido e frio. Ruídos de criaturas rondando no escuro. Escadaria sobe para a Sala do Alquimista. Conexões exploradas ao vivo no Dia 63 para Norte (Um Cruzamento de Corredores), Sul (Uma Curva na Passagem) e Oeste (Uma Passagem).",
+      "discovered_in": "Ciclo VII (Dia 62)"
+    },
+    {
+      "id": "cruzamento_corredores",
+      "name": "Um Cruzamento de Corredores",
+      "layer": "novatos",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Médio / Subsolo",
+      "risk_code": "medium",
+      "icon": "➕",
+      "coords": {
+        "x": 1520,
+        "y": 720
+      },
+      "exits": {
+        "n": "canto_corredor",
+        "s": "a_entrada"
+      },
+      "npcs": [],
+      "notes": "Passagem estreita leste-oeste cruza com passagem ampla norte-sul. Clima de ruína e ar pesado.",
+      "discovered_in": "Ciclo VII (Dia 63)",
       "unresolved_exits": {
-        "n": {
-          "description": "Um Cruzamento de Corredores"
-        },
-        "s": {
-          "description": "Uma Curva na Passagem"
+        "l": {
+          "description": "Uma Sala no Canto"
         },
         "o": {
-          "description": "Uma Passagem"
+          "description": "Uma Longa Passagem Leste-Oeste"
+        }
+      }
+    },
+    {
+      "id": "canto_corredor",
+      "name": "Um Canto no Corredor",
+      "layer": "novatos",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Médio / Subsolo",
+      "risk_code": "medium",
+      "icon": "📐",
+      "coords": {
+        "x": 1520,
+        "y": 780
+      },
+      "exits": {
+        "s": "cruzamento_corredores"
+      },
+      "npcs": [],
+      "notes": "Paredes acinzentadas com rachaduras brotando fungos verdes. Ruídos inquietantes ao redor.",
+      "discovered_in": "Ciclo VII (Dia 63)",
+      "unresolved_exits": {
+        "l": {
+          "description": "Outra Curva"
+        }
+      }
+    },
+    {
+      "id": "curva_passagem",
+      "name": "Uma Curva na Passagem",
+      "layer": "novatos",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Médio / Subsolo",
+      "risk_code": "medium",
+      "icon": "↪️",
+      "coords": {
+        "x": 1520,
+        "y": 600
+      },
+      "exits": {
+        "n": "a_entrada"
+      },
+      "npcs": [],
+      "notes": "Ambiente nauseante com odor fétido de carniça e morte recente.",
+      "discovered_in": "Ciclo VII (Dia 63)",
+      "unresolved_exits": {
+        "l": {
+          "description": "Uma Ramificação ao Sul"
+        }
+      }
+    },
+    {
+      "id": "uma_passagem",
+      "name": "Uma Passagem",
+      "layer": "novatos",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Médio / Subsolo",
+      "risk_code": "medium",
+      "icon": "🍄",
+      "coords": {
+        "x": 1460,
+        "y": 660
+      },
+      "exits": {
+        "l": "a_entrada"
+      },
+      "npcs": [],
+      "notes": "Passagem estreita e nojenta revestida de fungos viscosos nas paredes.",
+      "discovered_in": "Ciclo VII (Dia 63)",
+      "unresolved_exits": {
+        "n": {
+          "description": "Uma Grande Sala"
+        },
+        "s": {
+          "description": "Uma Sala Enorme"
         }
       }
     },
@@ -1576,7 +1671,7 @@
       }
     }
   ],
-  "last_updated_day": 62,
+  "last_updated_day": 63,
   "verification": "live",
   "current_location_id": "sala_alquimista",
   "camp_id": "sala_alquimista",

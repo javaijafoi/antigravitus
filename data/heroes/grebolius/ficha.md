@@ -1,6 +1,6 @@
 # 🧌 Ficha Atual de Grebolius (Último Estado Registrado)
 
-> Referência: Dia 62. Estado verificado em sessão; consultar a origem registrada.
+> Referência: Dia 63. Estado verificado em sessão; consultar a origem registrada.
 > Este documento reúne o último estado e as missões registrados; as incertezas aparecem ao final.
 
 ## ✦ Identificação e Registro
@@ -10,7 +10,7 @@
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **8**
 * **Alinhamento Moral:** 99 (Neutro Pragmático)
-* **Localização Atual:** A Sala do Alquimista (último registro: Dia 62)
+* **Localização Atual:** A Sala do Alquimista (último registro: Dia 63)
 * **Acampamento Registrado:** A Sala do Alquimista
 * **Santuário de Referência:** O Panteão dos Centenários
 
@@ -20,7 +20,7 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 | Recurso | Atual | Máximo | Porcentagem |
 | :--- | :---: | :---: | :---: |
 | **Pontos de Vida (HP)** | 52 | 52 | 100% |
-| **Pontos de Mana (MP)** | 118 | 140 | 84% |
+| **Pontos de Mana (MP)** | 140 | 140 | 100% |
 | **Estamina / Movimento (MV)** | 95 | 95 | 100% |
 
 * **Experiência Acumulada:** **49.362 EXP**
@@ -48,7 +48,7 @@ Valores verificados ao vivo no servidor (AC 16 sem armadura, AC 40 com 'armor').
 * **Altruísmo — Concluída:** Doar equipamento excedente na Sala de Doações.
   * Próximo passo: Nenhuma tarefa nova inferida a partir da conclusão.
 * **Limpando Monstros — Ativa:** Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.
-  * Próximo passo: Matar um inseto rastejante na masmorra inferior ('A Entrada' e além) e retornar ao Alquimista conforme a ordem verbal recebida.
+  * Próximo passo: Localizar o ninho dos insetos rastejantes nas câmaras além dos corredores iniciais (Uma Grande Sala, Uma Sala Enorme, Longa Passagem) e retornar ao Alquimista.
 * **Dicas Mágicas — Ativa:** Descobrir o próximo passo informado pelo Mago Aventureiro.
   * Próximo passo: Consultar o NPC e o estado da tarefa; registrar a instrução obtida sem presumir recompensa.
 
@@ -83,24 +83,24 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 * `uma poção amarela de detectar invisibilidade` (x1) — Confirmado ao vivo no inventário no Dia 61
 * `um pergaminho de retorno` (x1) — Confirmado ao vivo no inventário no Dia 61
 * `uma mochila` (x1) — Confirmado ao vivo no inventário no Dia 61
-* `um pão recheado` (x1) — Provisão restante após consumo no Dia 61
 
 ### Pendências de inventário
-* **anel arcano (+2E)** — último registro: Dia 62. Confirmado na posse no Dia 61/62, mas o servidor informou 'Você não tem experiência para usar um anel arcano'; requisitos de nível e bônus reais não confirmados.
+* **anel arcano (+2E)** — último registro: Dia 63. Confirmado na posse no Dia 61/62/63, mas o servidor informou 'Você não tem experiência para usar um anel arcano'; requisitos de nível e bônus reais não confirmados.
 
 ## ✦ Condições Registradas
 * Armadura mística (armor) ativa e verificada.
-* Autogold confirmado em funcionamento no servidor (35 moedas coletadas por zumbi).
-* Fome e sede registradas durante o combate no Dia 62; requer provisões no próximo início de jornada.
+* Autogold confirmado em funcionamento no servidor.
+* Saciada e hidratada no início do Dia 63 com pão recheado e cantil.
+* Estamina (95 MV) e mana (140 MN) plenamente preservadas após patrulha subterrânea.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
-**Caçar inseto rastejante na masmorra inferior**
-Descer pela escadaria para 'A Entrada', localizar e abater um inseto rastejante e retornar à Sala do Alquimista.
+**Localizar e abater inseto rastejante nas câmaras profundas**
+Avançar a partir de Uma Passagem ou Um Cruzamento rumo a 'Uma Grande Sala', 'Uma Sala Enorme' ou 'Uma Longa Passagem Leste-Oeste' para encontrar o inseto rastejante.
 * Levar tocha ou conferir iluminação nas galerias abaixo de 'A Entrada'.
 * Identificar requisitos de nível para equipar o anel arcano (+2E).
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessão ao vivo em debomud.org:4000; combate, entrega de itens e estado verificados no servidor..
+Fonte do estado: Sessão ao vivo em debomud.org:4000; exploração de galerias e estado verificados no servidor..
 * O anel arcano (+2E) está na mochila, mas exige nível maior que 8.
 * A placa de perigo em 'A Entrada' alerta sobre a morte para quem desce desacompanhado ou desequipado.
-* Profundidade e saídas dos corredores além de 'A Entrada' (Norte, Sul, Oeste) ainda não mapeadas.
+* Locais exatos dos insetos rastejantes nas câmaras além dos corredores iniciais (Uma Grande Sala, Uma Sala Enorme, etc.).

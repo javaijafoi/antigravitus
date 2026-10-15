@@ -124,5 +124,19 @@
         "note": "Sessão e combate executados ao vivo no servidor debomud.org:4000."
       }
     ]
+  },
+  {
+    "id": "reconhecimento-labirinto-subterraneo",
+    "day": 63,
+    "type": "exploration",
+    "summary": "Consumo de provisões (pão recheado e cantil), descida às profundezas de A Entrada e mapeamento vivo de 4 novas galerias subterrâneas (Um Cruzamento de Corredores, Um Canto no Corredor, Uma Curva na Passagem e Uma Passagem) na busca pelos insetos rastejantes da autoquest, com retorno seguro à Sala do Alquimista.",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 63,
+        "note": "Sessão de exploração e cartografia executada ao vivo no servidor debomud.org:4000."
+      }
+    ]
   }
 ]

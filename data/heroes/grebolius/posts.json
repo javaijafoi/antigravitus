@@ -1447,5 +1447,36 @@
       "Enquanto o autogold recolhia trinta e cinco moedas de ouro do corpo caído, encarei o mestre das fórmulas. Suas mãos tremiam, mas sua voz ecoou estridente com a ordem que eu buscava: 'Vá lá, mate um desses insetos rastejantes, e volte aqui em seguida. Mas preste atenção para não se perder!'. A tarefa de Limpando Monstros finalmente ganhou forma e contorno precisos. Não se trata de vagar às cegas pelas galerias; há uma praga específica de carcaças e insetos empesteando os alicerces deste laboratório, e a cabeça de um deles é o passaporte para o próximo círculo de confiança.",
       "Com a ordem gravada na memória, testei os acessos da câmara. Pronunciei a palavra de poder e a porta norte rangeu em submissão, revelando a claridade de um iluminado corredor. Em seguida, desci passo a passo a escadaria proibida até que minhas botas tocassem a umidade lodosa de A Entrada. O ar ali embaixo é gelado, fétido e pesado; ao redor, na negrura impenetrável que se ramifica para norte, sul e oeste, ouvem-se os estalos e arranhões de predadores invisíveis. Com a estamina drenada pelo combate e a prudência de quem não luta no escuro sem tocha empunhada, recuei a passos firmes para a câmara superior. Sentei-me junto aos alambiques, salvei minha alma nas tramas do mundo e descansei. A descida para a caçada ao inseto começa no próximo alvorecer."
     ]
+  },
+  {
+    "id": 63,
+    "day": "Dia 63",
+    "title": "Os Fungos Verdes, o Cruzamento em Ruínas e o Labirinto dos Sussurros",
+    "date": "15 de dezembro de 2026",
+    "in_game_time": "Midgaard – As Catacumbas Subterrâneas sob o Alquimista",
+    "excerpt": "Após saciar a fome com as últimas provisões e renovar a couraça arcana, Grebolius desce às profundezas de A Entrada, mapeando quatro novas galerias fétidas forradas de fungos verdes na perseguição aos insetos rastejantes da autoquest.",
+    "tags": [
+      "Catacumbas Subterrâneas",
+      "A Entrada",
+      "Um Cruzamento de Corredores",
+      "Fungos Verdes",
+      "Limpando Monstros",
+      "Exploração Metódica",
+      "Orçamento de Estamina"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "events.json",
+        "day": 63,
+        "note": "Sessão de exploração e cartografia executada ao vivo no servidor debomud.org:4000."
+      }
+    ],
+    "content": [
+      "Acordei com o estômago roncando em protesto antes mesmo que meus olhos pudessem focar a fumaça dos alambiques. Não se marcha para a escuridão com o corpo enfraquecido. Puxei da mochila o último pão recheado e devorei cada pedaço da massa densa, empurrando a refeição com longos goles da água fresca do cantil até sentir o calor vital restabelecer as forças. Em seguida, teci com gestos precisos as palavras da Armadura Arcana, sentindo a membrana invisível de proteção abraçar meus membros. A nova disciplina que estabeleci para minhas expedições é inflexível: não há mais passeios tímidos de três passos; enquanto houver estamina sobrando e mana de reserva, as fronteiras do desconhecido serão varridas sem hesitação.",
+      "Desci a escadaria de madeira e pedra até que a sola das minhas botas mergulhasse no chão lodoso de A Entrada. O ar ali embaixo cheira a abandono secular, quebrado apenas por goteiras rítmicas e estalos distantes. Sem perder tempo, avancei pelo corredor norte e desemboquei em Um Cruzamento de Corredores. O cenário é de pura ruína: passagens estreitas de pedra bruta cortam a abóbada para o leste e o oeste sob um teto rachado que ameaça desabar a qualquer momento. O peso da atmosfera é quase palpável, mas os insetos que o Alquimista tanto teme não estavam ali para receber meu aço.",
+      "Dobrei mais ao norte e alcancei Um Canto no Corredor, onde as lajes acinzentadas brotam colônias bizarras de fungos verdes luminescentes pelas frestas úmidas. Dali, sons de criaturas invisíveis rastejando pelas paredes sussurravam promessas de emboscada. Girei em retirada metódica e explorei as demais saídas: ao sul de A Entrada, a Curva na Passagem me recebeu com um odor tão nauseante de carniça recente que o ar pareceu queimar a garganta; a oeste, a passagem torna-se um corredor sufocante de fungos viscosos que se agarram às vestes, abrindo vislumbres para duas câmaras colossais — Uma Grande Sala ao norte e Uma Sala Enorme ao sul.",
+      "O reconhecimento foi cirúrgico e impecável. As galerias de ligação estão mapeadas e gravadas na memória; a praga de insetos rastejantes não se expõe nos corredores de trânsito, o que significa que o verdadeiro covil das criaturas aguarda nas câmaras maiores a oeste. Com a estamina preservada no auge dos noventa e cinco pontos e a reserva mágica intacta, retornei com passos firmes pela escadaria até o laboratório superior. O Alquimista seguia imerso em seus pós azedos, esperando pelo sangue prometido. Deitei meu corpo ao lado das mesas de trabalho, confiei minha alma aos registros do mundo e descansei. A rota está traçada; a incursão de choque ao ninho dos monstros começará no próximo despertar."
+    ]
   }
 ]
