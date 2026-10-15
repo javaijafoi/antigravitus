@@ -437,13 +437,13 @@
     "id": "dungeon-novatos-escola-o-salao-dia85",
     "day": 85,
     "type": "exploration",
-    "summary": "Expedição do Dia 85 em Modo Dungeon: abastecimento na Padaria de Midgaard com consumo de pão recheado, hidratação na Grande Fonte Azul e calibração de combate preventivo com armadura arcana e retirada tática. Incursão na Escola de Novatos (piso superior) pelo Grande Campo; desbravamento e cartografia de O Salão a leste da Sala da Estátua (adornado com finas figuras e decorações, com saída leste para A Escadaria Norte). Coleta de punhal místico no chão e visita ao laboratório do Alquimista com fórmulas arcanas nas paredes. Retorno ao Templo de Midgaard, salvamento de atalhos e repouso formal em sono reparador (sleep).",
+    "summary": "Expedição do Dia 85 em incursão de combate: abastecimento na Padaria de Midgaard com consumo de pão recheado, hidratação na Grande Fonte Azul e calibração de combate preventivo com armadura arcana e retirada tática. Incursão na Escola de Novatos (piso superior) pelo Grande Campo; desbravamento e cartografia de O Salão a leste da Sala da Estátua (adornado com finas figuras e decorações, com saída leste para A Escadaria Norte). Coleta de punhal místico no chão e visita ao laboratório do Alquimista com fórmulas arcanas nas paredes. Retorno ao Templo de Midgaard, salvamento de atalhos e repouso formal em sono reparador (sleep).",
     "source_kind": "live",
     "evidence": [
       {
         "document": "posts.json",
         "day": 85,
-        "note": "Sessão ao vivo em debomud.org:4000: abastecimento na padaria, incursão em Modo Dungeon na Escola de Novatos, mapeamento de O Salão e pernoite formal com sono reparador (sleep) e save no Templo confirmados."
+        "note": "Sessão ao vivo em debomud.org:4000: abastecimento na padaria, incursão de combate na Escola de Novatos, mapeamento de O Salão e pernoite formal com sono reparador (sleep) e save no Templo confirmados."
       }
     ]
   },
@@ -451,7 +451,7 @@
     "id": "dungeon-catacumbas-ala-leste-dia86",
     "day": 86,
     "type": "exploration",
-    "summary": "Expedição do Dia 86 em Modo Dungeon: descida às profundezas das Catacumbas Subterrâneas através da passagem na Sala do Alquimista, com blindagem mágica e prontidão bélica. Reconhecimento e cartografia da ala leste das catacumbas: desbravamento de Uma Sala no Canto (a leste de Um Cruzamento de Corredores) e de Outra Curva (a leste de Um Canto no Corredor), registrando os despojos do Grande Minotauro espalhados pelo chão e neutralizando ameaça de zumbi descarnado. Retorno ao Templo de Midgaard, salvamento de atalhos e encerramento do dia com sono reparador (sleep).",
+    "summary": "Expedição do Dia 86 em incursão de combate: descida às profundezas das Catacumbas Subterrâneas através da passagem na Sala do Alquimista, com blindagem mágica e prontidão bélica. Reconhecimento e cartografia da ala leste das catacumbas: desbravamento de Uma Sala no Canto (a leste de Um Cruzamento de Corredores) e de Outra Curva (a leste de Um Canto no Corredor), registrando os despojos do Grande Minotauro espalhados pelo chão e neutralizando ameaça de zumbi descarnado. Retorno ao Templo de Midgaard, salvamento de atalhos e encerramento do dia com sono reparador (sleep).",
     "source_kind": "live",
     "evidence": [
       {
@@ -465,7 +465,7 @@
     "id": "dungeon-catacumbas-ala-oeste-dia87",
     "day": 87,
     "type": "exploration",
-    "summary": "Expedição do Dia 87 em Modo Dungeon: incursão tática na ala oeste das Catacumbas Subterrâneas a partir de Uma Passagem. Desbravamento e cartografia de Uma Grande Sala ao norte (amplo recinto oval subterrâneo ocupado por diabinhos e novatos zumbis) e de Uma Sala Enorme ao sul (espaço colossal cujos limites se perdem na escuridão oriental). Limpeza e abate de mortos-vivos com mísseis mágicos, assegurando a contenção da ala oeste. Retorno pelas escadarias até o Templo de Midgaard, salvamento de atalhos e recolhimento em sono reparador (sleep).",
+    "summary": "Expedição do Dia 87 em incursão de combate: incursão tática na ala oeste das Catacumbas Subterrâneas a partir de Uma Passagem. Desbravamento e cartografia de Uma Grande Sala ao norte (amplo recinto oval subterrâneo ocupado por diabinhos e novatos zumbis) e de Uma Sala Enorme ao sul (espaço colossal cujos limites se perdem na escuridão oriental). Limpeza e abate de mortos-vivos com mísseis mágicos, assegurando a contenção da ala oeste. Retorno pelas escadarias até o Templo de Midgaard, salvamento de atalhos e recolhimento em sono reparador (sleep).",
     "source_kind": "live",
     "evidence": [
       {
@@ -479,7 +479,7 @@
     "id": "dungeon-catacumbas-ala-sul-dia88",
     "day": 88,
     "type": "exploration",
-    "summary": "Expedição do Dia 88 em Modo Dungeon: descida às galerias mais fétidas das Catacumbas Subterrâneas pela Curva na Passagem. Desbravamento e cartografia de Uma Ramificação ao Sul (passagem com fungos viçosos na alvenaria, carcaça do grande Minotauro no solo e conexão sul com a Sala Enorme). Patrulha de extermínio contra zumbis descarnados e criaturas inferiores, consolidando a purificação dos novatos. Retorno vitorioso pelas rotas conhecidas até o solo sagrado do Templo de Midgaard, salvamento e sono reparador (sleep).",
+    "summary": "Expedição do Dia 88 em incursão de combate: descida às galerias mais fétidas das Catacumbas Subterrâneas pela Curva na Passagem. Desbravamento e cartografia de Uma Ramificação ao Sul (passagem com fungos viçosos na alvenaria, carcaça do grande Minotauro no solo e conexão sul com a Sala Enorme). Patrulha de extermínio contra zumbis descarnados e criaturas inferiores, consolidando a purificação dos novatos. Retorno vitorioso pelas rotas conhecidas até o solo sagrado do Templo de Midgaard, salvamento e sono reparador (sleep).",
     "source_kind": "live",
     "evidence": [
       {
@@ -500,6 +500,20 @@
         "document": "posts.json",
         "day": 89,
         "note": "Sessão ao vivo em debomud.org:4000: contemplação solene no Altar de Odin, visita à Sala de Doações, reflexão do marco decenal e encerramento com sono reparador (sleep) e salvamento no Templo de Midgaard."
+      }
+    ]
+  },
+  {
+    "id": "problemas-agricolas-aceite-pacificador-dia90",
+    "day": 90,
+    "type": "quest",
+    "summary": "Expedição do Dia 90 e Aceite de 'Problemas Agrícolas': descida à Praça do Templo para diálogo oficial com O Pacificador, ativando a autoquest ('Você começa a participar da aventura'). O guardião revela a crise de um fazendeiro cuja família está encurralada por monstros horrendos na fazenda próxima à Floresta dos Kobolds e Jareth (ao norte de Midgaard, acessível pela estrada e pela carroça de madeira que parte da Praça do Comércio). Ronda pela Praça do Comércio e Padaria de Midgaard, hidratação na Grande Fonte Azul e sondagem externa através de Atrás do Altar e Grande Campo Sul avistando a rota para o norte. Retorno ao Templo de Midgaard, salvamento de atalhos e recolhimento em sono reparador (sleep).",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 90,
+        "note": "Sessão ao vivo em debomud.org:4000: diálogo e ativação formal de Problemas Agrícolas com O Pacificador, instruções de Jareth e Kobolds, reconhecimento urbano e rural e pernoite formal com sono reparador (sleep) e save no Templo confirmados."
       }
     ]
   }

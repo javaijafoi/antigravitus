@@ -2,7 +2,7 @@
   "hero_id": "grebolius",
   "hero_name": "Grebolius",
   "sanctuary_id": "panteao_centenarios",
-  "last_updated_cycle": "Ciclo IX (Dia 89; Modo Dungeon, limpeza dos novatos e consolidação decenal)",
+  "last_updated_cycle": "Ciclo IX (Dia 90; incursão de combate, limpeza dos novatos, marco decenal e chamado do Pacificador)",
   "total_rooms": 86,
   "layers": [
     {
@@ -1965,7 +1965,7 @@
       "discovered_in": "Ciclo IX (Dia 88)"
     }
   ],
-  "last_updated_day": 84,
+  "last_updated_day": 90,
   "verification": "live",
   "current_location_id": "templo_midgaard",
   "camp_id": "laboratorio_magos",

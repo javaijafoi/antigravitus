@@ -1,6 +1,6 @@
 # 🧌 Ficha Atual de Grebolius (Último Estado Registrado)
 
-> Referência: Dia 89. Estado verificado em sessão; consultar a origem registrada.
+> Referência: Dia 90. Estado verificado em sessão; consultar a origem registrada.
 > Este documento reúne o último estado e as missões registrados; as incertezas aparecem ao final.
 
 ## ✦ Identificação e Registro
@@ -11,7 +11,7 @@
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **11**
 * **Alinhamento Moral:** 222 (Bom)
-* **Localização Atual:** O Templo de Midgaard (último registro: Dia 89)
+* **Localização Atual:** O Templo de Midgaard (último registro: Dia 90)
 * **Acampamento Registrado:** O Laboratório dos Magos
 * **Santuário de Referência:** O Panteão dos Centenários
 
@@ -54,8 +54,8 @@ Classe de armadura 16 verificada ao vivo no Nível 11 com equipamento completo.
   * Próximo passo: Pergaminho de retorno entregue com sucesso ao Mago Aventureiro no Bar dos Magos no Dia 83; acompanhar o próximo conselho místico.
 * **Novela dos Novatos — Descoberta:** Aventura narrativa para recém-chegados (Até o nível 30, iniciada com: o novato esperto).
   * Próximo passo: Localizar o novato esperto pelas praças de Midgaard para iniciar o encadeamento.
-* **Problemas Agrícolas — Descoberta:** Auxílio nas cercanias rurais de Midgaard (Até o nível 40, iniciada com: O Pacificador).
-  * Próximo passo: Dialogar diretamente com O Pacificador no Portão Oeste de Midgaard para iniciar formalmente a missão.
+* **Problemas Agrícolas — Ativa:** Resgatar o fazendeiro, sua esposa e filho cercados por monstros horrendos em sua fazenda próxima a Jareth e à Floresta dos Kobolds.
+  * Próximo passo: Tomar a estrada para o norte de Midgaard rumo a Jareth (ou viajar na carroça de madeira que parte da Praça do Comércio). Ao chegar em Jareth, ir a leste até a Entrada da Floresta, seguir ao norte na Divisão da Trilha e dobrar a leste até encontrar a fazenda sitiada.
 
 Objetivos pessoais e investigações ficam separados das autoquests no catálogo de missões.
 
@@ -102,17 +102,17 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 ## ✦ Condições Registradas
 * Nível 11 conquistado com vitais plenos (67 HP, 170 Mana, 101 MV).
 * 15 sessões de treino resguardadas para círculos superiores (9 magias básicas em proficiência plena de 95%-99%).
+* Autoquest 'Problemas Agrícolas' ATIVA com O Pacificador (rumo a Jareth e Floresta dos Kobolds).
 * Pergaminho de retorno entregue ao Mago Aventureiro no Bar dos Magos.
-* Patrono de Problemas Agrícolas revelado: O Pacificador.
-* Ciclo Decenal (Dias 85 a 89) concluído com Modo Dungeon, cartografia das catacumbas e escola superior, descanso e sono reparador (sleep) no Templo de Midgaard sob o Altar de Odin com atalhos salvos.
+* Dia 90 concluído: descansando e dormindo (sleep) no Templo de Midgaard com atalhos e estado salvos.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
-**Iniciar formalmente Problemas Agrícolas com O Pacificador e avançar Dicas Mágicas**
-Dialogar com O Pacificador ali mesmo no Portão Oeste para ativar a autoquest Problemas Agrícolas, ou retornar ao Bar dos Magos para colher os frutos das Dicas Mágicas após a entrega do pergaminho.
-* O anel arcano (+2E) segue reservado para círculos superiores de poder.
+**Viajar para Jareth e a Floresta dos Kobolds para resgatar a família do fazendeiro**
+Seguir pela estrada ao norte de Midgaard (ou apanhar a carroça de madeira na Praça do Comércio) até Jareth; em Jareth, seguir a leste até a Entrada da Floresta, tomar a Divisão da Trilha ao norte e avançar a leste até a fazenda sitiada.
+* Descarregar excesso de peso/itens nas doações ou baú para liberar espaço para mantimentos de viagem.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessão ao vivo em debomud.org:4000 (Dias 85 a 89): incursão em Modo Dungeon na Escola de Novatos e Catacumbas Subterrâneas, cartografia de O Salão, Uma Sala no Canto, Outra Curva, Uma Grande Sala, Uma Sala Enorme e Uma Ramificação ao Sul; rondas de limpeza e abate de mortos-vivos; consolidação do ciclo decenal no Altar de Odin e Templo de Midgaard; sono reparador (sleep) e salvamento de estado..
+Fonte do estado: Sessão ao vivo em debomud.org:4000 (Dia 90): diálogo oficial e ativação da autoquest 'Problemas Agrícolas' com O Pacificador na Praça do Templo; revelação do itinerário para Jareth e a Floresta dos Kobolds; ronda urbana pela Praça do Comércio e Padaria; hidratação na Grande Fonte Azul e sondagem externa do Grande Campo Sul; retorno ao Templo de Midgaard, sono reparador (sleep) e salvamento de estado com atalhos..
 * O anel arcano (+2E) segue exigindo nível ou condição mágica superior.
 * Novos feitiços superiores dependem de livros arcanos ou mestres especializados.
 * O renascimento desequipa todas as peças para a mochila; o protocolo pós-morte exige `wear all` imediato para restaurar os 67 HP máximos concedidos pela veste e a AC 16.

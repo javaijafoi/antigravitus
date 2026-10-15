@@ -317,3 +317,19 @@ Para evitar sobrecarga de inventário e otimizar tempo e recursos, **fica abolid
 * **Consolidação do Marco Decenal no Templo de Midgaard (Dia 89):**
   - O encerramento do nono decênio de aventuras em Midgaard foi celebrado com uma ronda solene de recolhimento no Templo e reverência no Altar de Odin, diante do trono majestoso do Pai de Todos ladeado por Hugin, Munin, Gere e Freke.
   - A conferência do inventário e das arcas de doações confirma Grebolius plenamente equipada com manto místico sobre o corpo, vestes encantadas, punhal novato empunhado e mente afiada, pronta para os horizontes do nonagésimo dia e a iminência do centenário.
+
+---
+
+## 14. O Chamado do Pacificador, a Família do Fazendeiro e o Roteiro para Jareth (Dia 90)
+* **Autoquest "Problemas Agrícolas" Ativada Oficialmente:**
+  - **Patrono Iniciador:** **O Pacificador** (Praça do Templo e Portão Oeste).
+  - **Aceite Formal:** Ao ser indagado com `'sim`, o servidor confirma: *"Você começa a participar da aventura."*
+  - **A Crise Rural:** Uma carta de socorro foi recebida de um fazendeiro desesperado. Ele, sua esposa e seu filho pequeno estão cercados por monstros horrendos em sua propriedade rural e não conseguem fugir.
+* **Topologia e Roteiro de Viagem para a Fazenda (Além de Midgaard):**
+  - **Rumo Geral:** Para o norte de Midgaard, seguindo a estrada principal rumo ao povoado/região de **Jareth**.
+  - **Transporte Público:** Uma **carroça de madeira** parte da Praça do Comércio de tempos em tempos e faz o percurso até Jareth.
+  - **Passo a Passo na Região de Jareth e Floresta dos Kobolds:**
+    1. Chegando em Jareth, seguir a **Leste** até a *Entrada da Floresta*.
+    2. Na floresta dos Kobolds, tomar a trilha ao **Norte** na *Divisão da Trilha*.
+    3. A partir da divisão, seguir a **Leste** diretamente até a fazenda sitiada.
+  - **Advertência de Sobrevivência:** O Pacificador adverte que a floresta pode desorientar recém-chegados; o comando `historico dizer` pode ser consultado para recordar as orientações orais.
