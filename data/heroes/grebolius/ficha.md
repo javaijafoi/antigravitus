@@ -1,6 +1,6 @@
 # 🧌 Ficha Atual de Grebolius (Último Estado Registrado)
 
-> Referência: Dia 77. Estado verificado em sessão; consultar a origem registrada.
+> Referência: Dia 78. Estado verificado em sessão; consultar a origem registrada.
 > Este documento reúne o último estado e as missões registrados; as incertezas aparecem ao final.
 
 ## ✦ Identificação e Registro
@@ -9,9 +9,9 @@
 * **Raça / Aparência Real:** Mulher goblin; aventureira sem véu
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **10**
-* **Alinhamento Moral:** 279 (Bom)
-* **Localização Atual:** A Sala do Alquimista (último registro: Dia 77)
-* **Acampamento Registrado:** A Sala do Alquimista
+* **Alinhamento Moral:** 206 (Bom)
+* **Localização Atual:** Mais Corredor (último registro: Dia 78)
+* **Acampamento Registrado:** Mais Corredor
 * **Santuário de Referência:** O Panteão dos Centenários
 
 O acampamento indica onde houve repouso; não comprova proteção absoluta contra agressão.
@@ -23,9 +23,9 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 | **Pontos de Mana (MP)** | 160 | 160 | 100% |
 | **Estamina / Movimento (MV)** | 99 | 99 | 100% |
 
-* **Experiência Acumulada:** **126.649 EXP**
-* **Experiência Necessária p/ Grau 11:** **23.351 EXP** (Meta: 150.000 EXP)
-* **Ouro Líquido:** **2.590 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **130.297 EXP**
+* **Experiência Necessária p/ Grau 11:** **19.703 EXP** (Meta: 150.000 EXP)
+* **Ouro Líquido:** **2.566 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 10
@@ -77,14 +77,14 @@ Equipamento conforme os últimos documentos disponíveis; conferir no próximo a
 
 ## ✦ Inventário e Suprimentos
 Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
-* `um brilhante punhal de novato` (x9) — Confirmado ao vivo no inventário no Dia 77 (1 despojado de monstro novato nas catacumbas)
+* `um pão recheado` (x1) — Comprado na Padaria de Midgaard no Dia 78
+* `um cantil` (x1) — Confirmado ao vivo no inventário no Dia 70 (cheio na fonte azul no Dia 78)
 * `uma brilhante veste de novato` (x1) — Despojada de monstro novato nas catacumbas no Dia 65; confirmada ao vivo no Dia 70
-* `um cantil` (x1) — Confirmado ao vivo no inventário no Dia 70
+* `um brilhante punhal de novato` (x3) — Confirmado ao vivo no inventário no Dia 78 (descarte de excedentes para alívio de peso)
 * `uma brilhante espada de novato` (x1) — Confirmado ao vivo no inventário no Dia 70
 * `uma poção amarela de detectar invisibilidade` (x1) — Confirmado ao vivo no inventário no Dia 70
 * `um pergaminho de retorno` (x1) — Confirmado ao vivo no inventário no Dia 70
 * `uma mochila` (x1) — Confirmado ao vivo no inventário no Dia 70
-* `a fedida pele do Minotauro` (x1) — Despojada do Grande Minotauro nas catacumbas no Dia 76
 * `um anel arcano (+2E)` (x1) — Confirmado ao vivo no inventário no Dia 70 (recusado no Nível 10; exige Nível 11 ou superior)
 
 ### Pendências de inventário
@@ -92,7 +92,7 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 ## ✦ Condições Registradas
 * Armadura mística (armor) ativa e verificada.
 * Nível 10 conquistado com vitais ampliados (61 HP, 160 Mana, 99 MV).
-* Chifres do Minotauro entregues ao Alquimista no Dia 77.
+* Fome e sede saciadas com pães da Padaria e água da fonte azul no Dia 78.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
 **Localizar e eliminar os insetos rastejantes nas catacumbas profundas**
@@ -100,7 +100,7 @@ Cumprir a ordem direta do Alquimista de encontrar e abater os insetos rastejante
 * O anel arcano (+2E) segue exigindo nível superior (Nível 11+).
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessão automatizada (batch) em debomud.org:4000; entrega bem-sucedida dos chifres do Minotauro ao Alquimista, ronda ampla pelas alas da Escola e catacumbas com múltiplos combates (+2.402 EXP -> 126.649 EXP), obtenção de 1 punhal de novato (total 9), saldo estável em 2.590 moedas de ouro e repouso na Sala do Alquimista..
+Fonte do estado: Sessão automatizada (batch) em debomud.org:4000; alívio de peso com descarte de itens volumosos, jornada a Midgaard Urbana com compra e consumo de pães na Padaria (-24 moedas -> 2.566 moedas de ouro), hidratação na fonte azul, ronda com múltiplos combates na Escola de Novatos (+3.648 EXP -> 130.297 EXP) e repouso em Mais Corredor com vitais plenos (61 HP, 160 Mana, 99 MV)..
 * O anel arcano (+2E) exige Nível 11 ou superior para uso (testado e recusado no Nível 10).
 * A placa de perigo em 'A Entrada' alerta sobre a morte para quem desce desacompanhado ou desequipado.
 * Locais exatos dos insetos rastejantes nas catacumbas além das câmaras já mapeadas.

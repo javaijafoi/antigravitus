@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 77,
+  "as_of_day": 78,
   "verification": "live",
   "items": [
     {
@@ -128,6 +128,11 @@
           "document": "posts.json",
           "day": 77,
           "note": "Entrega dos chifres do Minotauro ao Alquimista e ronda com múltiplos combates na Escola de Novatos e catacumbas (+2.402 EXP -> 126.649 EXP), saque de 1 punhal de novato e repouso no laboratório."
+        },
+        {
+          "document": "posts.json",
+          "day": 78,
+          "note": "Peregrinação até a Padaria de Midgaard com compra e consumo de pães recheados, hidratação na fonte azul e múltiplos combates na Escola de Novatos (+3.648 EXP -> 130.297 EXP) e repouso em Mais Corredor."
         }
       ]
     },

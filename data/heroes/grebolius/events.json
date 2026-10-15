@@ -334,5 +334,19 @@
         "note": "Entrega dos chifres ao Alquimista, ronda pela Escola e catacumbas e combates confirmados ao vivo no servidor debomud.org:4000."
       }
     ]
+  },
+  {
+    "id": "peregrinacao-padaria-e-patrulha-dia78",
+    "day": 78,
+    "type": "exploration",
+    "summary": "Expedição de abastecimento e combate ativo no Dia 78: descarte da pesada pele de Minotauro e lâminas redundantes para desimpedir a mobilidade; marcha pelos Grandes Campos até Midgaard Urbana. Visita à Padaria com aquisição de 4 pães recheados (-24 moedas de ouro), consumo imediato para saciar a fome e reserva na mochila. Hidratação e enchimento do cantil na Fonte de Mármore Azul da Praça do Templo. Retorno vigoroso à Escola de Novatos com combate contra monstros nos corredores (+3.648 EXP acumulada, atingindo 130.297 EXP), saldo fixado em 2.566 moedas de ouro e repouso em Mais Corredor com vitais plenamente recuperados.",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 78,
+        "note": "Compra de pães, saciação da fome na padaria, hidratação na fonte azul e combates confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ]
   }
 ]

@@ -1903,5 +1903,37 @@
       "O avanço não tardou a atrair hostilidade. Monstros que rastejavam ou se escondiam nas penumbras tentaram barrar meu trajeto, mas foram recebidos por rajadas impiedosas de energia pura e pelo corte veloz do punhal encantado. Das carcaças abatidas ao longo do caminho, recolhi mais uma lâmina mística imbuída de luz própria, acomodando-a junto às outras que carrego na cinta com orgulho de veterana. A marcha contínua cobrou seu tributo físico, fazendo o peito arfar e as pernas arderem em saudável cansaço.",
       "Após descer brevemente às catacumbas e conferir que as entradas inferiores permaneciam sob vigilância, retornei pelo corredor iluminado até a porta de madeira que guarda o laboratório. Acomodei meu bornal, sentindo o reconfortante tilintar de duas mil quinhentas e noventa moedas de ouro que asseguram minha independência neste reino. Sentei-me para acalmar a respiração e, logo em seguida, entreguei o corpo ao sono profundo sob a proteção silenciosa das fórmulas arcanas."
     ]
+  },
+  {
+    "id": 78,
+    "day": "Dia 78",
+    "title": "O Alívio do Fardo, o Aroma do Pão e o Fôlego Pleno",
+    "date": "30 de dezembro de 2026",
+    "in_game_time": "Midgaard Urbana e Escola de Novatos – Padaria, Fonte Azul e Mais Corredor",
+    "excerpt": "Grebolius liberta-se de itens pesados, cruza os campos até a Padaria de Midgaard para saciar a fome com pães frescos, reabastece o cantil na fonte azul e retorna aos corredores da escola para combates vigorosos, guardando duas mil quinhentas e sessenta e seis moedas de ouro.",
+    "tags": [
+      "Alívio de Carga",
+      "Peregrinação Urbana",
+      "A Padaria de Midgaard",
+      "Pão Recheado",
+      "Fonte de Mármore Azul",
+      "Combate nos Corredores",
+      "Fortuna em Ouro",
+      "Mais Corredor"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "events.json",
+        "day": 78,
+        "note": "Compra de pães, saciação da fome na padaria, hidratação na fonte azul e combates confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ],
+    "content": [
+      "Carregar tralhas demais amarra as pernas e rouba a agilidade de quem precisa de reflexos rápidos. Logo pela manhã, decidi desapegar do excesso: lancei fora a pesada e fétida pele do Minotauro e deixei para trás punhais sobressalentes que apenas faziam volume inútil na mochila. O alívio nas costas foi imediato, restaurando a passada leve e silenciosa que sempre caracterizou minhas andanças.",
+      "A fome, contudo, começou a morder as entranhas com ferocidade, cobrando a energia despendida nos confrontos recentes. Sem pestanejar, deixei a penumbra da escola e ganhei a vastidão ensolarada dos Grandes Campos, marchando em ritmo acelerado até as portas de Midgaard. Desci a escadaria do templo, atravessei a praça do comércio e dobrei na rua oeste em direção ao balcão acolhedor da Padaria. O aroma de farinha tostada e recheio fumegante foi uma bênção. Adquiri quatro pães recém-saídos do forno, comi o suficiente para forrar o estômago com fartura e guardei uma fatia de reserva na mochila para eventualidades futuras.",
+      "De volta à Praça do Templo sob a vigilância amiga do Pacificador, curvei-me sobre a grande fonte de mármore azul. A água gelada lavou a garganta e dissipou qualquer vestígio de secura, permitindo encher o cantil de viagem até o gargalo. Com o vigor físico plenamente recomposto e a mente afiada, retomei o caminho de terra batida pelos descampados verdejantes, ingressando novamente pelos portais de cantaria da escola de treino.",
+      "A incursão de regresso foi marcada por vigilância ativa e confrontos resolutos contra criaturas que espreitavam nas dobras das paredes. Rajadas certeiras de mísseis mágicos e golpes precisos de lâmina abriram caminho pelas passagens, consagrando um dia de esforço farto e satisfatório. Acomodei-me em um recanto abrigado de mais um corredor, conferindo o peso de duas mil quinhentas e sessenta e seis moedas de ouro bem guardadas no cinto antes de cerrar os olhos para o merecido sono."
+    ]
   }
 ]
