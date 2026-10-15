@@ -2,8 +2,8 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 79,
-    "source": "Sessão automatizada (batch) em debomud.org:4000; ronda de patrulha pelas alas da Escola com combate (+1.282 EXP -> 131.579 EXP), travessia dos Grandes Campos e ascensão solene ao Panteão dos Centenários. Saldo preservado em 2.566 moedas de ouro e repouso meditativo de encerramento do Ciclo VIII no Santuário Supremo sob vitais plenos (61 HP, 160 Mana, 99 MV).",
+    "day": 80,
+    "source": "Sessão em tempo real no servidor debomud.org:4000; conferência e treino de magias na Guilda dos Magos (12 sessões preservadas), avanço na autoquest 'Dicas Mágicas' com lição de meditação (+5.527 EXP -> 137.106 EXP), pesquisa de preços nas lojas de Midgaard (saldo de 2.666 moedas insuficiente para pergaminho e armaduras de bronze, fixando metas em 5k e 10k), patrulha pelas planícies a oeste e repouso no Panteão dos Centenários sob vitais plenos (61 HP, 160 Mana, 99 MV).",
     "verification": "live",
     "live_verified": true
   },
@@ -30,10 +30,10 @@
     }
   },
   "experience": {
-    "current": 131579,
+    "current": 137106,
     "next_level": 150000
   },
-  "gold": 2566,
+  "gold": 2666,
   "attributes": {
     "STR": 10,
     "DEX": 15,
@@ -51,7 +51,7 @@
   "hitroll": 0,
   "damroll": 1,
   "wimpy": 13,
-  "training_sessions": 6,
+  "training_sessions": 12,
   "location": {
     "room_id": "panteao_centenarios",
     "name": "O Panteão dos Centenários"
@@ -65,13 +65,13 @@
     "name": "O Panteão dos Centenários"
   },
   "last_event": {
-    "day": 70,
-    "summary": "Abate do Grande Minotauro renascido, obtenção e entrega dos chifres ao Novato Alquimista, abate de 1 monstro novato e 2 novatos zumbis, avanço formal para o Nível 10 (61 HP, 160 Mana, 99 MV), teste do anel arcano (+2E) revelando exigência de nível superior e saldo elevado para 2.472 moedas de ouro."
+    "day": 80,
+    "summary": "Sessão ao vivo em tempo real no Dia 80: conferência de magias na guilda com 12 sessões preservadas, avanço na autoquest 'Dicas Mágicas' ao aprender meditação (+5.527 EXP -> 137.106 EXP), levantamento de custos na Loja de Magias e de Armaduras fixando marcos de 5.000 e 10.000 moedas, e repouso no Panteão dos Centenários."
   },
   "next_objective": {
-    "mission_id": "limpando-monstros",
-    "title": "Localizar e eliminar os insetos rastejantes nas catacumbas profundas",
-    "next_step": "Cumprir a ordem direta do Alquimista de encontrar e abater os insetos rastejantes nas passagens profundas recém-mapeadas e continuar evoluindo para desbloquear o uso do anel arcano (+2E).",
+    "mission_id": "dicas-magicas",
+    "title": "Juntar recursos para adquirir o pergaminho de retorno e trocar de equipamento",
+    "next_step": "Economizar recursos para atingir o marco inicial de cinco mil moedas e a meta de dez mil moedas de ouro para comprar o pergaminho de retorno (9.202 moedas) e novas peças de proteção.",
     "missing_preparation": [
       "O anel arcano (+2E) segue exigindo nível superior (Nível 11+)."
     ]
@@ -235,13 +235,13 @@
   "evidence": [
     {
       "document": "events.json",
-      "day": 79,
-      "note": "Ronda na Escola de Novatos, travessia dos campos e ascensão ao Panteão dos Centenários confirmados no servidor debomud.org:4000."
+      "day": 80,
+      "note": "Treino na guilda, avanço na autoquest Dicas Mágicas (+5.527 EXP), levantamento de custos de armaduras e pergaminhos e repouso no Panteão confirmados ao vivo no servidor debomud.org:4000."
     },
     {
       "document": "posts.json",
-      "day": 79,
-      "note": "Crônica de fechamento do Ciclo VIII baseada em fatos ao vivo."
+      "day": 80,
+      "note": "Crônica do Dia 80 baseada na sessão ao vivo em tempo real."
     }
   ],
   "narrative_style": "ladra arcana",

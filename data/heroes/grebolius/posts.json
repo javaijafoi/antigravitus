@@ -1967,5 +1967,39 @@
       "Adentrei a nave do Templo e encarei a monumental escadaria de mármore branco que sobe em espiral em direção ao céu. Degrau por degrau, deixei para trás o ruído dos mercados e a agitação das praças urbanas, até alcançar o limiar do Panteão dos Centenários. O silêncio solene do cume abraçou meus passos. Sob a luz suave que emana do teto arqueado como um sol perpétuo, estátuas imensas descansam sobre o altar: Brandon, Kara, Deck, Wacabayaxe e tantos outros que desbravaram os caminhos antes de mim e conquistaram a eternidade pela bravura de suas escolhas.",
       "Sentei-me à base do mármore com as costas apoiadas na pedra milenar, sentindo o peso calmo de duas mil quinhentas e sessenta e seis moedas de ouro guardadas no cinto. Não há mais a urgência aflita do começo, nem o apego tolo a fardos desnecessários; aprendi a arte de viajar leve, de confiar no próprio fôlego e de honrar cada conquista sem me perder em hesitações. Olho para as figuras majestosas dos mestres e sinto que, à minha maneira, conquistei meu próprio pedaço de chão neste reino. Fecho os olhos para um repouso pleno e protegido, certa de que a estrada continua e de que estou pronta para qualquer horizonte que venha a se abrir."
     ]
+  },
+  {
+    "id": 80,
+    "day": "Dia 80",
+    "title": "A Lição do Transe, o Chamado do Mago e o Despertar da Ambição",
+    "date": "1 de janeiro de 2027",
+    "in_game_time": "Midgaard – Panteão dos Centenários, Guilda dos Magos e Lojas da Rua Principal",
+    "excerpt": "Em sessão ao vivo, Grebolius revisa seus feitiços na Guilda dos Magos, aprende a arte sagrada da meditação com o Mago Aventureiro, enfrenta o choque dos altos preços nas lojas da cidade e firma o objetivo de reunir cinco e dez mil moedas de ouro para renovar seus equipamentos.",
+    "tags": [
+      "Sessão ao Vivo",
+      "Guilda dos Magos",
+      "Mago Aventureiro",
+      "Dicas Mágicas",
+      "Meditação Arcana",
+      "Pesquisa de Preços",
+      "Troca de Equipamento",
+      "Marcos de Fortuna",
+      "Panteão dos Centenários"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "events.json",
+        "day": 80,
+        "note": "Sessão executada ao vivo em debomud.org:4000; conferência de magias na guilda, início e avanço na autoquest Dicas Mágicas (+5.527 EXP), levantamento de custos de armaduras e pergaminhos e repouso no Panteão."
+      }
+    ],
+    "content": [
+      "A quietude solene do Panteão dos Centenários me envolveu antes que o rumor matinal começasse a subir pelas encostas de Midgaard. Despertei com os olhos fixos nos afrescos de batalha e nas estátuas dos grandes mestres, sentindo a mente extraordinariamente lúcida e desimpedida de qualquer sombra. Não havia pressa cega ou inquietação: um novo ciclo de amadurecimento se iniciava, e a primeira obrigação de quem aspira à soberania é avaliar a própria força diante de quem realmente compreende as correntes do poder. Levantei-me com passos calmos, ajustei o manto às costas e desci a escadaria monumental em direção aos recintos arcanos da cidade.",
+      "Cruzei os pórticos do Templo e avancei pela Rua Principal até o umbral discreto da Guilda dos Magos. No Laboratório subterrâneo, diante da Mestre da Guilda e de seus pesados grimórios iluminados por chamas azuis, debrucei-me sobre a lousa de runas para colocar à prova cada encantamento que carrego no peito. A constatação foi gratificante e austera: da proteção mística às rajadas de energia, do toque gélido à refração da invisibilidade e à visão do calor na penumbra, todas as artes arcanas do meu estágio atual já atingiram o ápice da perfeição. A veterana assentiu em silêncio; feitiços superiores e descargas elétricas só responderão ao meu chamado quando eu romper barreiras bem mais profundas de experiência. Minhas reservas de treino permanecem intactas, guardadas como sementes para círculos futuros.",
+      "Passei então ao recinto adjacente do Bar dos Magos, onde névoas coloridas dançam pelo teto e o Mago Aventureiro repousava pensativo junto ao balcão. Ao me aproximar, o veterano acolheu minha presença com simpatia sincera e compartilhou um dos pilares mais preciosos da senda arcana: a meditação. Para demonstrar a doutrina, ele sentou-se no chão de pedra, cerrou os olhos e entrou em um transe profundo, alheio a tudo ao redor, erguendo-se instantes depois com o olhar límpido e as correntes místicas plenamente recompostas. Ao confirmar que compreendia a gravidade do recolhimento mental, senti a sabedoria ecoar em meu próprio espírito como uma onda de clareza renovadora. O mentor, contudo, não se ateve à teoria: instruiu-me sobre as artes de deslocamento rápido e lançou um desafio prático, exigindo que eu fosse até a loja da cidade adquirir um pergaminho de retorno para demonstrar o domínio do ofício.",
+      "Deixei a guilda e rumei diretamente às lojas da Rua Principal para examinar o mercado, e foi ali que a realidade cobrou seu choque. Ao conferir as prateleiras de pergaminhos e, logo adiante, as estantes pesadas da Loja de Armaduras repletas de peitorais e perneiras de bronze reluzente, percebi a verdadeira distância que separa uma iniciante de uma guerreira devidamente paramentada. O pergaminho exigido e as peças capazes de substituir meus velhos trajes não se compram com trocados de algibeira: exigem fortunas na casa dos milhares. Minha bolsa atual mal alcança a metade do necessário para os itens mais simples. Ali mesmo, diante das vitrines de ferro e veludo, tracei meu novo objetivo de vida. É hora de equipar meu corpo para perigos reais, e isso exige disciplina implacável: meu primeiro grande marco será reunir cinco mil moedas de ouro, marchando sem trégua até quebrar o teto de dez mil moedas para garantir o pergaminho do mago e a armadura que mereço.",
+      "Com a meta cravada no horizonte, marchei para fora das muralhas da cidade pelo portão oeste. Avancei pelas estradas de terra batida que cruzam as planícies abertas em direção à imensa floresta de Haon-Dor, deixando as pernas trabalharem no ritmo constante do esforço físico até que o suor lavasse qualquer hesitação e a respiração ritmada consumisse o excesso de energia do dia. Retornei a Midgaard pelo mesmo caminho, saciei a sede nas águas puras da fonte de mármore azul e alcei os degraus até o topo supremo do Panteão. Deitada sobre a pedra fria aos pés dos imortais, fecho os olhos sabendo exatamente o que buscar: a meta dos cinco mil começou a pulsar, e o caminho para o trono exige riqueza tanto quanto magia."
+    ]
   }
 ]

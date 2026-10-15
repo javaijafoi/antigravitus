@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 79,
+  "as_of_day": 80,
   "verification": "live",
   "items": [
     {
@@ -147,15 +147,19 @@
       "type": "official",
       "status": "active",
       "accepted_day": 32,
-      "last_progress_day": 32,
-      "objective": "Descobrir o próximo passo informado pelo Mago Aventureiro.",
-      "next_step": "Consultar o NPC e o estado da tarefa; registrar a instrução obtida sem presumir recompensa.",
-      "blocker": "Objetivo de conclusão e progresso atual não documentados.",
+      "last_progress_day": 80,
+      "objective": "Adquirir um pergaminho de retorno na Loja de Magias de Midgaard e entregá-lo ao Mago Aventureiro no Bar dos Magos.",
+      "next_step": "Economizar recursos para atingir a meta financeira de dez mil moedas de ouro para comprar o pergaminho de retorno (9.202 moedas) na Loja de Magias e entregá-lo ao mentor.",
       "evidence": [
         {
           "document": "posts.json",
           "day": 32,
           "note": "Início formal da tarefa narrado."
+        },
+        {
+          "document": "posts.json",
+          "day": 80,
+          "note": "Interação com o Mago Aventureiro no Bar dos Magos, lição e demonstração de meditação (+5.527 EXP) e recebimento da instrução formal de entregar um pergaminho de retorno."
         }
       ]
     },

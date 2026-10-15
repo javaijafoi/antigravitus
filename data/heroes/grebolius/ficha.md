@@ -1,6 +1,6 @@
 # 🧌 Ficha Atual de Grebolius (Último Estado Registrado)
 
-> Referência: Dia 79. Estado verificado em sessão; consultar a origem registrada.
+> Referência: Dia 80. Estado verificado em sessão; consultar a origem registrada.
 > Este documento reúne o último estado e as missões registrados; as incertezas aparecem ao final.
 
 ## ✦ Identificação e Registro
@@ -10,7 +10,7 @@
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **10**
 * **Alinhamento Moral:** 185 (Bom)
-* **Localização Atual:** O Panteão dos Centenários (último registro: Dia 79)
+* **Localização Atual:** O Panteão dos Centenários (último registro: Dia 80)
 * **Acampamento Registrado:** O Panteão dos Centenários
 * **Santuário de Referência:** O Panteão dos Centenários
 
@@ -23,9 +23,9 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 | **Pontos de Mana (MP)** | 160 | 160 | 100% |
 | **Estamina / Movimento (MV)** | 99 | 99 | 100% |
 
-* **Experiência Acumulada:** **131.579 EXP**
-* **Experiência Necessária p/ Grau 11:** **18.421 EXP** (Meta: 150.000 EXP)
-* **Ouro Líquido:** **2.566 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **137.106 EXP**
+* **Experiência Necessária p/ Grau 11:** **12.894 EXP** (Meta: 150.000 EXP)
+* **Ouro Líquido:** **2.666 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 10
@@ -49,13 +49,13 @@ Valores verificados ao vivo no servidor (AC 16 sem armadura, AC 41 com 'armor' n
   * Próximo passo: Nenhuma tarefa nova inferida a partir da conclusão.
 * **Limpando Monstros — Ativa:** Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.
   * Próximo passo: A praga dos insetos rastejantes foi erradicada em Uma Pequena Sala e comunicada ao Alquimista; manter patrulha ativa nas catacumbas para acumular recursos e novos conhecimentos arcanos.
-* **Dicas Mágicas — Ativa:** Descobrir o próximo passo informado pelo Mago Aventureiro.
-  * Próximo passo: Consultar o NPC e o estado da tarefa; registrar a instrução obtida sem presumir recompensa.
+* **Dicas Mágicas — Ativa:** Adquirir um pergaminho de retorno na Loja de Magias de Midgaard e entregá-lo ao Mago Aventureiro no Bar dos Magos.
+  * Próximo passo: Economizar recursos para atingir a meta financeira de dez mil moedas de ouro para comprar o pergaminho de retorno (9.202 moedas) na Loja de Magias e entregá-lo ao mentor.
 
 Objetivos pessoais e investigações ficam separados das autoquests no catálogo de missões.
 
 ## ✦ Habilidades Conhecidas e Treinos Concluídos
-* **Sessões de Treino Disponíveis:** **6 sessões de treino acumuladas**
+* **Sessões de Treino Disponíveis:** **12 sessões de treino acumuladas**
 Percentuais são registros de proficiência; não garantem acerto, imunidade ou acesso a guildas.
 * `armor` (Armadura Mística): **95%**
 * `invisibility` (Invisibilidade): **95%**
@@ -95,12 +95,12 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 * Fechamento do Ciclo VIII concluído com meditação existencial no Panteão dos Centenários.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
-**Localizar e eliminar os insetos rastejantes nas catacumbas profundas**
-Cumprir a ordem direta do Alquimista de encontrar e abater os insetos rastejantes nas passagens profundas recém-mapeadas e continuar evoluindo para desbloquear o uso do anel arcano (+2E).
+**Juntar recursos para adquirir o pergaminho de retorno e trocar de equipamento**
+Economizar recursos para atingir o marco inicial de cinco mil moedas e a meta de dez mil moedas de ouro para comprar o pergaminho de retorno (9.202 moedas) e novas peças de proteção.
 * O anel arcano (+2E) segue exigindo nível superior (Nível 11+).
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessão automatizada (batch) em debomud.org:4000; ronda de patrulha pelas alas da Escola com combate (+1.282 EXP -> 131.579 EXP), travessia dos Grandes Campos e ascensão solene ao Panteão dos Centenários. Saldo preservado em 2.566 moedas de ouro e repouso meditativo de encerramento do Ciclo VIII no Santuário Supremo sob vitais plenos (61 HP, 160 Mana, 99 MV)..
+Fonte do estado: Sessão em tempo real no servidor debomud.org:4000; conferência e treino de magias na Guilda dos Magos (12 sessões preservadas), avanço na autoquest 'Dicas Mágicas' com lição de meditação (+5.527 EXP -> 137.106 EXP), pesquisa de preços nas lojas de Midgaard (saldo de 2.666 moedas insuficiente para pergaminho e armaduras de bronze, fixando metas em 5k e 10k), patrulha pelas planícies a oeste e repouso no Panteão dos Centenários sob vitais plenos (61 HP, 160 Mana, 99 MV)..
 * O anel arcano (+2E) exige Nível 11 ou superior para uso (testado e recusado no Nível 10).
 * A placa de perigo em 'A Entrada' alerta sobre a morte para quem desce desacompanhado ou desequipado.
 * Locais exatos dos insetos rastejantes nas catacumbas além das câmaras já mapeadas.

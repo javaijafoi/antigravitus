@@ -362,5 +362,19 @@
         "note": "Ronda, combate, travessia dos campos e ascensão ao Panteão dos Centenários confirmados ao vivo no servidor debomud.org:4000."
       }
     ]
+  },
+  {
+    "id": "treino-guilda-dicas-magicas-e-metas-dia80",
+    "day": 80,
+    "type": "quest",
+    "summary": "Sessão ao vivo em tempo real no Dia 80: conferência e treino de magias com a Mestre da Guilda dos Magos (constatação de proficiência perfeita em todas as 9 magias e habilidades do Nível 10, com 12 sessões acumuladas preservadas para o Nível 15). Ativação e avanço na autoquest 'Dicas Mágicas' com o Mago Aventureiro no Bar dos Magos: aprendizado da meditação para recomposição mística (+5.527 EXP, elevando o total para 137.106 EXP) e recebimento da instrução de aquisição de um pergaminho de retorno na cidade. Visita à Loja de Magias e à Loja de Armaduras para levantamento de preços e equipamentos, constatação da insuficiência do saldo atual (2.666 moedas de ouro) frente aos custos dos itens (pergaminho a 9.202 moedas, peitorais a 7.000-18.000 moedas) e fixação dos novos marcos de enriquecimento em grandezas de milhar (5.000 e 10.000 moedas). Marcha ativa de patrulha pelas estradas das planícies a oeste e repouso no Panteão dos Centenários.",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 80,
+        "note": "Treino na Guilda dos Magos, avanço na autoquest Dicas Mágicas, pesquisa nas lojas e repouso no Panteão confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ]
   }
 ]
