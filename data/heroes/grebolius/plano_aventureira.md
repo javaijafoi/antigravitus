@@ -25,6 +25,10 @@ Desbravar novas rotas ou áreas desconhecidas deve estar fundamentado em um dest
 1. **Digestão de trauma recente:** Morte, queda brutal ou fuga desesperada (`wimpy`). O horizonte amplo e rotas abertas servem para clarear as ideias, digerir a derrota e recalibrar o instinto antes de encarar o subsolo sufocante.
 2. **Combate ao tédio (dois dias seguidos de repetição):** Se passar dois dias consecutivos nas mesmas rotinas mecânicas sem novidade, a inquietação goblin exige explorar uma nova frente no mapa.
 3. **Marcos decenais do ciclo:** Dias redondos (10, 20, 30, 40, 50, 60, 70...) exigem expansão proposital de fronteiras e desafio a zonas inexploradas.
+### Cadência Operacional: Tempo Real vs. Script Autônomo
+- **Dias com final 5 e final 0 (5, 10, 15, 20, 25, 30, ...): Tempo Real (Interativo).** Nesses dias, a sessão é jogada comando a comando via conexão interativa contínua (`live_session.py`), sem script enlatado de rota. Cada resposta do MUD é avaliada em tempo de execução para reagir a salas, mobs, saídas e oportunidades.
+- **Demais dias (finais 1, 2, 3, 4, 6, 7, 8): Modo Script Autônomo (Batch).** Execução programada da rota para máxima eficiência de tokens e velocidade, com pausa tática automática para assumir em tempo real se surgir anomalia ou jogador.
+- **Dias com final 9 (9, 19, 29, 39, ...): Reflexão Pessoal e Existencial.** O dia encerra um ciclo decenal e traz na crônica a reflexão psicológica/existencial da heroína, estritamente sem jargão de regras e sem números de ficha (apenas moedas de ouro).
 
 ### Gasto Ativo e Aproveitamento da Estamina (MV)
 Superar roteiros curtos e estáticos. A estamina alta (95 MV) é a energia da jornada:

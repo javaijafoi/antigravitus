@@ -40,6 +40,10 @@ A exploração de novas rotas, áreas desconhecidas ou desvios do itinerário ha
 
 ### Fluxo de Conexão e Execução em Jogo
 
+- **Cadência Operacional (Tempo Real vs. Script Autônomo):**
+  - **Dias com final 5 e final 0 (5, 10, 15, 20, 25, 30, ...): Tempo Real (Interativo).** Nesses dias, jogar comando a comando via conexão interativa contínua (`live_session.py`), sem script enlatado da rota. A IA avalia cada resposta do MUD em tempo de execução, reagindo a salas, mobs, perigos, portas e oportunidades táticas ao vivo.
+  - **Demais dias (finais 1, 2, 3, 4, 6, 7, 8, 9): Modo Script Autônomo (Batch).** Execução programada da rota para máxima eficiência de tokens e execução rápida, preservando a pausa tática para o agente assumir caso ocorra anomalia.
+  - **Dias com final 9 (9, 19, 29, 39, ...): Reflexão Pessoal e Existencial.** O dia encerra um ciclo decenal e traz na crônica a reflexão psicológica/existencial da heroína, estritamente sem jargão de regras e sem números de ficha (apenas moedas de ouro).
 - **Teto rígido de conexões:** No máximo **3 conexões** ao MUD por dia. É proibido fatiar o dia em 6, 7 ou 8 logins/logouts artificiais.
 - **Fluxo contínuo automático:** Se as salas, rotas e saídas forem as esperadas para o plano do dia, o script avança normalmente e sem hesitação.
 - **Gasto Ativo e Aproveitamento da Estamina (MV):** Os dias têm que ser proveitosos e a estamina deve ser gasta ao máximo no dia a dia, explorando e avançando. Andar em terreno padrão consome apenas 1 a 2 MV por passo; portanto, sessões curtas de 5 a 10 passos gastam quase nada e a regeneração passiva recupera tudo antes de dormir. A expedição deve gastar o fôlego ativamente (40 a 70 passos úteis por jornada) patrulhando setores, mapeando câmaras, caçando alvos ou viajando para comprar provisões.
