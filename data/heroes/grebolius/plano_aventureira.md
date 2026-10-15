@@ -77,8 +77,9 @@ Os modos operacionais definem a postura tática, a alocação de risco, a gestã
    - **Objetivo:** Varrer e limpar a masmorra/catacumba, maximizando espólios e ouro.
    - **Preparação:** Mochila limpa de peso morto (apenas armas equipadas, tocha, 1 cantil e 4-6 pães recheados).
    - **Combate:** Arrisca um pouco mais contra mobs de dificuldade moderada (zumbis, monstros novatos, minotauro com `chill touch` e `armor`), mas NUNCA desafia criaturas muito difíceis ou letais (chefes desproporcionais).
-   - **Saque Inteligente (Força 10):** Aplica a Matriz Ouro/Peso de [conhecimento.md](file:///c:/Users/alura/Downloads/antigravitus/data/heroes/grebolius/conhecimento.md). Executa rigorosamente `get gold corpo`, recolhe apenas itens leves de alto valor (Categorias A e B) e usa `sac corpo` para eliminar o peso morto no local.
+   - **Saque Inteligente & Queima de Corpos (Força 10):** Aplica a Matriz Ouro/Peso de [conhecimento.md](file:///c:/Users/alura/Downloads/antigravitus/data/heroes/grebolius/conhecimento.md). Executa rigorosamente `get gold corpo`, recolhe apenas itens leves de alto valor (Categorias A e B) e usa comandos de queima/descarte rentável (`junk corpo` / `sacrificar corpo` / `queimar corpo`) para converter a carcaça em moedas adicionais no próprio local.
    - **Sustentação e Venda:** Pausas e nutrição necessárias em salas seguras para sustentar a expedição. Quando o inventário encher de espólios valiosos, retorna temporariamente à cidade para vender nas lojas e guardar ouro na caixa do Templo/Guilda antes de retomar a limpeza. Encerra o dia com acampamento flexível ou na cidade.
+   - **Manutenção Contínua de Conhecimento:** Atualizar o catálogo de NPCs e a matriz de espólios diariamente com qualquer novidade observada, com consolidação geral obrigatória ao fim de cada ciclo decenal.
 
 4. **Modo Batedor (Stealth Scout / Mapeamento Máximo):**
    - **Objetivo:** Mapear o maior número possível de salas da área/zona sem combate.

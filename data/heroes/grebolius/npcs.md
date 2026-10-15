@@ -12,10 +12,9 @@
      - Se parecer comerciante: executa `list` (ou `listar`) para mapear itens, preços e níveis.
      - Se parecer mentor/mestre: executa `practice` para verificar opções de treino.
      - Se parecer dador de tarefas: executa `autoquest`, `'sim` ou `'não`.
-2. **Ciclo de Auditoria (1x a cada 10 dias):**
-   - Não é necessário remapear lojas a cada sessão diária. Em marcos de abertura de ciclo (Dias 1, 11, 21, 31, 41, 51, 61, 71, 81...), se a rota passar pelo NPC, revalidar `list` ou fala para conferir se houve mudança de estoque, preços ou novos diálogos no servidor.
-3. **Registro Imediato:**
-   - Toda alteração de inventário de loja, preço ou diálogo descoberto deve ser registrada diretamente neste compêndio.
+2. **Cadência de Manutenção e Auditoria:**
+   - **Atualização Diária:** Se a sessão diária revelar qualquer novo NPC, novo item à venda, alteração de preço ou diálogo inédito, o registro deve ser inserido neste documento no encerramento do dia.
+   - **Auditoria de Ciclo (1x a cada 10 dias):** Em marcos de abertura/fechamento de ciclo (Dias 1, 11, 21... 81, 91...), se a rota cruzar com NPCs e lojas de Midgaard, revalidar `list` ou fala para conferir alterações de estoque ou preços no servidor.
 
 ---
 

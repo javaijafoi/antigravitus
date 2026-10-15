@@ -79,7 +79,14 @@ A Força 10 e a carga registrada pedem atenção a peso e movimento; o custo exa
 Para evitar sobrecarga de inventário e otimizar tempo e recursos, **fica abolido o comando cego `get all corpo`**. A sequência padrão de pilhagem após abater qualquer inimigo é:
 1. **`get gold corpo`**: Recolhe todo o ouro líquido do cadáver (peso zero, benefício imediato).
 2. **`get <item_valioso> corpo`**: Coleta exclusivamente itens identificados nas Categorias A ou B, preservando a leveza da mochila.
-3. **`sac corpo`**: Sacrifica o restante do cadáver aos deuses no próprio local, convertendo os restos inúteis em benção/moedas residuais e limpando a sala sem fardo de carga.
+3. **Descarte Rentável / Queima de Corpo (`junk corpo` / `sacrificar corpo` / `queimar corpo`)**:
+   - Em MUDs derivados de CircleMUD/Diku, o comando `junk <item/corpo>` entrega o objeto aos deuses e devolve moedas de ouro como recompensa direta.
+   - Observação técnica de log: A abreviação informal `sac corpo` falhou no servidor (*"Você não tem ideia de como fazer isso"*).
+   - Diretriz: Testar e adotar a sintaxe formal aceita pelo servidor (`junk corpo`, `sacrificar corpo` ou `queimar corpo`). Sempre que o comando converter a carcaça em moedas adicionais, executá-lo imediatamente após saquear o ouro e os itens de alta densidade!
+
+### Rotina de Manutenção do Catálogo de NPCs e Matriz de Espólios
+- **Atualização Diária:** Se a expedição do dia encontrar um novo NPC, uma nova cotação de compra/venda, ou novo item de mob, registrar imediatamente em [npcs.md](file:///c:/Users/alura/Downloads/antigravitus/data/heroes/grebolius/npcs.md) e nesta seção.
+- **Auditoria de Final de Ciclo (Decenal):** Nos dias de encerramento de ciclo (Dias 10, 20, 30... 80, 90), realizar uma revisão consolidada dos estoques das lojas de Midgaard e da tabela de rentabilidade, garantindo que o conhecimento esteja sempre alinhado ao estado vivo do servidor.
 
 
 * **A Poção Amarela da Loja de Magia (Dica de Negelok — Dia 41):** Dica registrada de detecção de invisibilidade; não é demonstração de uso por Grebolius. Confirmar efeito, duração e preço antes de comprar ou depender dela.
