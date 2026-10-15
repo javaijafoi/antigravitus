@@ -1103,7 +1103,7 @@ A próxima sessão pode resolver as pendências com respostas reais do MUD. Até
   * Vida: **52/52** | Mana: **140/140** | Movimento: **95/95**
   * Classe de Armadura: **16** base / **40** com `armor` ativo *(verificado ao vivo no servidor)*
   * Salto de Experiência: **+3.436 EXP** em combates mortais contra novatos zumbis e dano cirúrgico.
-  * Ouro Líquido: **1.121 moedas de ouro** *(+70 moedas saqueadas das carcaças dos zumbis pelo autogold).*
+  * Ouro Líquido: **1.121 moedas de ouro** *(+70 moedas saqueadas das carcaças dos zumbis).*
   * Alinhamento Moral: **73** (Neutro Pragmático).
   * Fisiologia e Nutrição: Nutrição no tick com pão recheado e hidratação com cantil cristalino.
   * Inventário e Troféus: Posse do `anel arcano (+2E)` confirmada na mochila (servidor retornou requisito de nível para equipar); obtenção de `os chifres do Minotauro` como espólio raro.
@@ -1124,7 +1124,7 @@ A próxima sessão pode resolver as pendências com respostas reais do MUD. Até
   * Vida: **52/52** | Mana: **118/140** | Movimento: **95/95**
   * Classe de Armadura: **16** base / **40** com `armor` ativo *(verificado ao vivo no servidor)*
   * Salto de Experiência: **+756 EXP** em combate mortal contra outro novato zumbi que emboscou o laboratório.
-  * Ouro Líquido: **1.156 moedas de ouro** *(+35 moedas saqueadas da carcaça do zumbi pelo autogold).*
+  * Ouro Líquido: **1.156 moedas de ouro** *(+35 moedas saqueadas da carcaça do zumbi).*
   * Alinhamento Moral: **99** (Neutro Pragmático).
   * Fisiologia e Nutrição: Fome e sede sentidas durante o combate (-1 HP, -2 Mana, -2 MV); corpo regenerado em repouso.
   * Inventário e Troféus: Entrega confirmada de `os chifres do Minotauro` para o Novato Alquimista; arsenal de punhais e espada preservado.
@@ -1132,7 +1132,7 @@ A próxima sessão pode resolver as pendências com respostas reais do MUD. Até
 * **Marcos e Impactos Psicológicos:**
   * **A Decifração da Placa Sombria:** Ao examinar a madeira tosca pregada junto à escadaria descendente, decifrou o aviso categórico: *"Se você está sem equipamentos e sozinho, saia já daqui! Ou então não culpe ninguém por sua morte..."*. O aviso não afugentou a goblin; aguçou sua prudência.
   * **O Tributo Entregue e a Emboscada do Zumbi:** Aproximou-se do Novato Alquimista e entregou os pesados chifres do Minotauro. No exato instante da entrega, um novato zumbi arremeteu das sombras com golpes violentos. Grebolius usou o escudo com frieza milimétrica, perfurou o monstro repetidas vezes com o punhal (16, 14 e 22 de dano) e cravou a lâmina em seu coração inerte.
-  * **A Ordem Verbal da Autoquest:** Em resposta à consulta da missão, o Alquimista vociferou a instrução direta de trabalho: *"Vá lá, mate um desses insetos rastejantes, e volte aqui em seguida. Mas preste atenção para não se perder!"*. A tarefa de Limpando Monstros agora tem alvo definido.
+  * **A Ordem Verbal da Missão:** Em resposta à consulta da missão, o Alquimista vociferou a instrução direta de trabalho: *"Vá lá, mate um desses insetos rastejantes, e volte aqui em seguida. Mas preste atenção para não se perder!"*. A tarefa de Limpando Monstros agora tem alvo definido.
   * **Abertura da Porta Norte e Reconhecimento de 'A Entrada':** Destrancou a porta norte do laboratório (`open north`), descortinando um iluminado corredor. Em seguida, desceu a escadaria (`d`) e pisou nas pedras gélidas de **A Entrada**: um ambiente escuro, úmido e fétido ecoando ruídos inquietantes de feras à espreita, com ramificações para o Norte, Sul e Oeste. Medindo os riscos e com a fome apertando, retornou com disciplina para a segurança da câmara do Alquimista.
 * **Decisão Tática:**
   * No Dia 63, consumir provisões para saciar fome e sede, descer a escadaria armada com luz e feitiços, caçar um inseto rastejante nas galerias de 'A Entrada' e retornar ao Alquimista para avançar na missão.
@@ -1158,7 +1158,29 @@ A próxima sessão pode resolver as pendências com respostas reais do MUD. Até
     4. **Oeste (Uma Passagem):** Corredor estreito e viscoso onde fungos aderem às vestes, conectando a duas câmaras monumentais (Uma Grande Sala ao norte e Uma Sala Enorme ao sul).
   * **Disciplina Metódica de Retirada:** Sem a presença de insetos nos corredores imediatos e com o fôlego e mana intactos, evitou adentrar as salas maiores desprovida de iluminação sustentada, retornando à Sala do Alquimista para planejar a incursão de choque.
 * **Decisão Tática:**
-  * No Dia 64, empunhar a tocha, penetrar em 'Uma Grande Sala' ou 'Uma Sala Enorme' a oeste para localizar o ninho dos insetos rastejantes da autoquest e retornar com a prova da caçada ao Alquimista.
+  * No Dia 64, empunhar a tocha, penetrar em 'Uma Grande Sala' ou 'Uma Sala Enorme' a oeste para localizar o ninho dos insetos rastejantes da missão e retornar com a prova da caçada ao Alquimista.
+
+---
+
+### ⏳ Ciclo 64 (Dia 64): O Labirinto dos Fungos, o Duelo nas Sombras e a Queimação do Estômago
+* **Status Real (MUD - Verificação ao Vivo):**
+  * Nível: **8** *(56.154 EXP | Faltam apenas 3.846 EXP para o Grau 9)*
+  * Vida: **51/52** | Mana: **103/140** | Movimento: **95/95**
+  * Classe de Armadura: **16** base / **40** com `armor` ativo *(verificado ao vivo no servidor)*
+  * Salto de Experiência: **+6.792 EXP** em combate mortal contra novato zumbi em galeria profunda.
+  * Ouro Líquido: **1.191 moedas de ouro** *(+35 moedas saqueadas da carcaça do zumbi).*
+  * Alinhamento Moral: **124** (Um Pouco Bom).
+  * Fisiologia e Nutrição: Provisões de pão esgotadas na mochila; hidratação preservada via cantil; pontada de fome sentida no repouso (-1 HP).
+  * Inventário e Equipamento: Posse de punhais (x5 carregados + x5 na mochila), espada, anel arcano (+2E), poção amarela, pergaminho de retorno e cantil; garrafa de cospefogo e punhal avistados no solo de Uma Grande Sala.
+  * Local de Pernoite: **A Sala do Alquimista** (Salva com `save` e descansando com `rest`).
+* **Marcos e Impactos Psicológicos:**
+  * **A Sondagem das Câmaras Monumentais:** Penetrando a oeste de A Entrada, reconheceu Uma Grande Sala (câmara oval forrada de detritos onde uma garrafa de cospefogo jazia esquecida) e espreitou a vastidão de Uma Sala Enorme, onde o vazio sem paredes visíveis impõe respeito à ladra arcana.
+  * **O Vulto da Criatura Errante:** Avistou uma entidade diminuta e ágil, semelhante a um mico ou pequeno diabinho, transitando silenciosamente pelas frestas de fungos verdes entre os corredores.
+  * **Combate e Destruição na Passagem Leste-Oeste:** Ao investigar a galeria oeste do Cruzamento, deparou-se com o avanço de um novato zumbi. Grebolius abriu combate com rajadas sucessivas de Mísseis Mágicos, absorveu os golpes cadavéricos na couraça arcana e executou perfuração mortal com o punhal de novato, eliminando o monstro.
+  * **A Consciência da Fome e o Retorno:** Com a bolsa enriquecida em 35 moedas e a experiência aproximando-se do Grau 9, recuou com segurança ao laboratório superior. Ao se sentar junto aos alambiques, o corpo reclamou a ausência de alimento, estabelecendo uma prioridade biológica incontornável.
+* **Decisão Tática:**
+  * No Dia 65, solucionar a escassez de alimento (comprar na padaria ou obter rações) para recuperar o ciclo biológico de cura e reiniciar a busca pelo ninho dos insetos rastejantes nas câmaras restantes.
+
 
 
 

@@ -2,8 +2,8 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 63,
-    "source": "Sessão ao vivo em debomud.org:4000; exploração de galerias e estado verificados no servidor.",
+    "day": 64,
+    "source": "Sessão ao vivo em debomud.org:4000; combate nas catacumbas, abatimento de zumbi e estado verificados no servidor.",
     "verification": "live",
     "live_verified": true
   },
@@ -12,16 +12,16 @@
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
   "alignment": {
-    "value": 99,
-    "label": "Neutro Pragmático"
+    "value": 124,
+    "label": "Um Pouco Bom"
   },
   "vitals": {
     "hp": {
-      "current": 52,
+      "current": 51,
       "max": 52
     },
     "mana": {
-      "current": 140,
+      "current": 103,
       "max": 140
     },
     "mv": {
@@ -30,10 +30,10 @@
     }
   },
   "experience": {
-    "current": 49362,
+    "current": 56154,
     "next_level": 60000
   },
-  "gold": 1156,
+  "gold": 1191,
   "attributes": {
     "STR": 10,
     "DEX": 15,
@@ -65,15 +65,15 @@
     "name": "O Panteão dos Centenários"
   },
   "last_event": {
-    "day": 63,
-    "summary": "Consumo de provisões, descida a A Entrada e mapeamento vivo de 4 novas galerias subterrâneas (Cruzamento, Canto, Curva e Passagem) na busca pelos insetos rastejantes da autoquest, com retorno seguro à Sala do Alquimista."
+    "day": 64,
+    "summary": "Incursão às profundezas das catacumbas, mapeamento de Uma Grande Sala e Uma Sala Enorme, combate mortal contra um novato zumbi em Uma Longa Passagem Leste-Oeste (+6.792 EXP, +35 moedas) e repouso na Sala do Alquimista com alerta de fome."
   },
   "next_objective": {
     "mission_id": "limpando-monstros",
-    "title": "Localizar e abater inseto rastejante nas câmaras profundas",
-    "next_step": "Avançar a partir de Uma Passagem ou Um Cruzamento rumo a 'Uma Grande Sala', 'Uma Sala Enorme' ou 'Uma Longa Passagem Leste-Oeste' para encontrar o inseto rastejante.",
+    "title": "Localizar inseto rastejante e repor suprimentos de comida",
+    "next_step": "Adquirir ou conjurar rações para saciar a fome e localizar o ninho dos insetos rastejantes nas catacumbas sob A Entrada.",
     "missing_preparation": [
-      "Levar tocha ou conferir iluminação nas galerias abaixo de 'A Entrada'.",
+      "Adquirir comida (pão/ração) para regeneração plena no repouso.",
       "Identificar requisitos de nível para equipar o anel arcano (+2E)."
     ]
   },
@@ -209,38 +209,37 @@
     "pending_verification": [
       {
         "name": "anel arcano (+2E)",
-        "last_seen_day": 63,
-        "reason": "Confirmado na posse no Dia 61/62/63, mas o servidor informou 'Você não tem experiência para usar um anel arcano'; requisitos de nível e bônus reais não confirmados."
+        "last_seen_day": 64,
+        "reason": "Confirmado na posse no Dia 61/62/63/64, mas o servidor informou 'Você não tem experiência para usar um anel arcano'; requisitos de nível e bônus reais não confirmados."
       }
     ]
   },
   "conditions": [
     "Armadura mística (armor) ativa e verificada.",
-    "Autogold confirmado em funcionamento no servidor.",
-    "Saciada e hidratada no início do Dia 63 com pão recheado e cantil.",
-    "Estamina (95 MV) e mana (140 MN) plenamente preservadas após patrulha subterrânea."
+    "Alerta de fome ativo no repouso; provisões de alimento esgotadas na mochila.",
+    "Estamina (95 MV) e integridade física (51/52 HP) preservadas após combate nas catacumbas."
   ],
   "uncertainties": [
     "O anel arcano (+2E) está na mochila, mas exige nível maior que 8.",
     "A placa de perigo em 'A Entrada' alerta sobre a morte para quem desce desacompanhado ou desequipado.",
-    "Locais exatos dos insetos rastejantes nas câmaras além dos corredores iniciais (Uma Grande Sala, Uma Sala Enorme, etc.)."
+    "Locais exatos dos insetos rastejantes nas catacumbas além das câmaras já mapeadas."
   ],
   "evidence": [
     {
       "document": "events.json",
-      "day": 63,
-      "note": "Sessão de exploração e cartografia verificada ao vivo no servidor debomud.org:4000."
+      "day": 64,
+      "note": "Sessão de combate e exploração verificada ao vivo no servidor debomud.org:4000."
     },
     {
       "document": "posts.json",
-      "day": 63,
-      "note": "Crônica do Dia 63 baseada em fatos ao vivo."
+      "day": 64,
+      "note": "Crônica do Dia 64 baseada em fatos ao vivo."
     }
   ],
   "narrative_style": "ladra arcana",
   "weapon_summary": "Punhal de Novato (+ Escudo)",
   "migration": {
     "method": "sessão ao vivo e conferência direta no servidor",
-    "verified_on": "Dia 63"
+    "verified_on": "Dia 64"
   }
 }

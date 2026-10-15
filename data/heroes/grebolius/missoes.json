@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 63,
+  "as_of_day": 64,
   "verification": "live",
   "items": [
     {
@@ -45,9 +45,9 @@
       "type": "official",
       "status": "active",
       "accepted_day": 36,
-      "last_progress_day": 63,
+      "last_progress_day": 64,
       "objective": "Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.",
-      "next_step": "Localizar o ninho dos insetos rastejantes nas câmaras além dos corredores iniciais (Uma Grande Sala, Uma Sala Enorme, Longa Passagem) e retornar ao Alquimista.",
+      "next_step": "Saciar a fome com novas rações e localizar o ninho dos insetos rastejantes nas catacumbas sob A Entrada.",
       "evidence": [
         {
           "document": "posts.json",
@@ -72,7 +72,12 @@
         {
           "document": "posts.json",
           "day": 63,
-          "note": "Sondagem cartográfica viva de 4 galerias (Cruzamento, Canto, Curva e Passagem) buscando os insetos da autoquest."
+          "note": "Sondagem cartográfica viva de 4 galerias (Cruzamento, Canto, Curva e Passagem) buscando os insetos da missão."
+        },
+        {
+          "document": "posts.json",
+          "day": 64,
+          "note": "Sondagem de Uma Grande Sala e Uma Sala Enorme, e aniquilação de um novato zumbi na Longa Passagem Leste-Oeste."
         }
       ]
     },

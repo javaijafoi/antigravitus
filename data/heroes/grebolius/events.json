@@ -129,13 +129,27 @@
     "id": "reconhecimento-labirinto-subterraneo",
     "day": 63,
     "type": "exploration",
-    "summary": "Consumo de provisões (pão recheado e cantil), descida às profundezas de A Entrada e mapeamento vivo de 4 novas galerias subterrâneas (Um Cruzamento de Corredores, Um Canto no Corredor, Uma Curva na Passagem e Uma Passagem) na busca pelos insetos rastejantes da autoquest, com retorno seguro à Sala do Alquimista.",
+    "summary": "Consumo de provisões (pão recheado e cantil), descida às profundezas de A Entrada e mapeamento vivo de 4 novas galerias subterrâneas (Um Cruzamento de Corredores, Um Canto no Corredor, Uma Curva na Passagem e Uma Passagem) na busca pelos insetos rastejantes da missão do Alquimista, com retorno seguro à Sala do Alquimista.",
     "source_kind": "live",
     "evidence": [
       {
         "document": "posts.json",
         "day": 63,
         "note": "Sessão de exploração e cartografia executada ao vivo no servidor debomud.org:4000."
+      }
+    ]
+  },
+  {
+    "id": "combate-passagem-leste-oeste-e-exploracao",
+    "day": 64,
+    "type": "combat",
+    "summary": "Incursão às profundezas subterrâneas de A Entrada, mapeamento de Uma Grande Sala (com cospefogo e adaga abandonadas) e Uma Sala Enorme, avistamento de criatura errante símia, combate e aniquilação de um novato zumbi em Uma Longa Passagem Leste-Oeste (+35 moedas), constatação de esgotamento de alimentos e retorno para acampamento na Sala do Alquimista.",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 64,
+        "note": "Sessão e combate executados e confirmados ao vivo no servidor debomud.org:4000."
       }
     ]
   }

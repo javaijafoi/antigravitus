@@ -1430,7 +1430,7 @@
       "Chifres do Minotauro",
       "Combate Mortal",
       "A Entrada",
-      "Autoquest",
+      "Missão do Alquimista",
       "Acampamento Avançado"
     ],
     "source_kind": "live",
@@ -1443,8 +1443,8 @@
     ],
     "content": [
       "O cheiro ácido de enxofre e ervas destiladas me despertou sobre as pedras frias da Sala do Alquimista. Antes de colocar os pés no chão, invoquei a trama etérea da Armadura Arcana, sentindo o ar se adensar ao redor dos meus ombros como uma couraça invisível. Meus olhos foram direto para a enorme placa de madeira tosca pregada junto à escadaria que mergulha na escuridão. As palavras gravadas com fogo não deixavam margem para ilusões: 'Se você está sem equipamentos e sozinho, saia já daqui! Ou então não culpe ninguém por sua morte...'. Sorri de lado, ajeitando as correias do escudo. Para quem já cruzou o Vazio duas vezes, um aviso na madeira não é ameaça; é um lembrete do valor do aço afiado.",
-      "Aproximei-me da bancada do Novato Alquimista, retirei da mochila os pesados chifres do Minotauro e os depositei com firmeza diante de seus olhos arregalados. O tributo de sangue da véspera estava pago. Mas as masmorras não toleram pausas: das sombras do corredor, um rosnado seco anunciou a investida súbita de outro novato zumbi. O impacto de suas garras contra meu escudo fez os ossos vibrarem enquanto o estômago reclamava a queimação da fome. Não hesitei. Desferi uma sequência impiedosa de estocadas com o brilhante punhal de novato; três vezes a lâmina rasgou músculos podres em estalos de dezesseis, catorze e vinte e dois pontos de destruição pura, até o cadáver tombar imóvel sobre as lajes.",
-      "Enquanto o autogold recolhia trinta e cinco moedas de ouro do corpo caído, encarei o mestre das fórmulas. Suas mãos tremiam, mas sua voz ecoou estridente com a ordem que eu buscava: 'Vá lá, mate um desses insetos rastejantes, e volte aqui em seguida. Mas preste atenção para não se perder!'. A tarefa de Limpando Monstros finalmente ganhou forma e contorno precisos. Não se trata de vagar às cegas pelas galerias; há uma praga específica de carcaças e insetos empesteando os alicerces deste laboratório, e a cabeça de um deles é o passaporte para o próximo círculo de confiança.",
+      "Aproximei-me da bancada do Novato Alquimista, retirei da mochila os pesados chifres do Minotauro e os depositei com firmeza diante de seus olhos arregalados. O tributo de sangue da véspera estava pago. Mas as masmorras não toleram pausas: das sombras do corredor, um rosnado seco anunciou a investida súbita de outro novato zumbi. O impacto de suas garras contra meu escudo fez os ossos vibrarem enquanto o estômago reclamava a queimação da fome. Não hesitei. Desferi uma sequência impiedosa de estocadas com o brilhante punhal de novato; três vezes a lâmina rasgou músculos podres em golpes certeiros e profundos, até o cadáver tombar imóvel sobre as lajes.",
+      "Recolhi trinta e cinco moedas de ouro das vestes rasgadas do corpo caído e encarei o mestre das fórmulas. Suas mãos tremiam, mas sua voz ecoou estridente com a ordem que eu buscava: 'Vá lá, mate um desses insetos rastejantes, e volte aqui em seguida. Mas preste atenção para não se perder!'. A tarefa de Limpando Monstros finalmente ganhou forma e contorno precisos. Não se trata de vagar às cegas pelas galerias; há uma praga específica de carcaças e insetos empesteando os alicerces deste laboratório, e a cabeça de um deles é o passaporte para o próximo círculo de confiança.",
       "Com a ordem gravada na memória, testei os acessos da câmara. Pronunciei a palavra de poder e a porta norte rangeu em submissão, revelando a claridade de um iluminado corredor. Em seguida, desci passo a passo a escadaria proibida até que minhas botas tocassem a umidade lodosa de A Entrada. O ar ali embaixo é gelado, fétido e pesado; ao redor, na negrura impenetrável que se ramifica para norte, sul e oeste, ouvem-se os estalos e arranhões de predadores invisíveis. Com a estamina drenada pelo combate e a prudência de quem não luta no escuro sem tocha empunhada, recuei a passos firmes para a câmara superior. Sentei-me junto aos alambiques, salvei minha alma nas tramas do mundo e descansei. A descida para a caçada ao inseto começa no próximo alvorecer."
     ]
   },
@@ -1454,7 +1454,7 @@
     "title": "Os Fungos Verdes, o Cruzamento em Ruínas e o Labirinto dos Sussurros",
     "date": "15 de dezembro de 2026",
     "in_game_time": "Midgaard – As Catacumbas Subterrâneas sob o Alquimista",
-    "excerpt": "Após saciar a fome com as últimas provisões e renovar a couraça arcana, Grebolius desce às profundezas de A Entrada, mapeando quatro novas galerias fétidas forradas de fungos verdes na perseguição aos insetos rastejantes da autoquest.",
+    "excerpt": "Após saciar a fome com as últimas provisões e renovar a couraça arcana, Grebolius desce às profundezas de A Entrada, mapeando quatro novas galerias fétidas forradas de fungos verdes na perseguição aos insetos rastejantes da missão do Alquimista.",
     "tags": [
       "Catacumbas Subterrâneas",
       "A Entrada",
@@ -1476,7 +1476,38 @@
       "Acordei com o estômago roncando em protesto antes mesmo que meus olhos pudessem focar a fumaça dos alambiques. Não se marcha para a escuridão com o corpo enfraquecido. Puxei da mochila o último pão recheado e devorei cada pedaço da massa densa, empurrando a refeição com longos goles da água fresca do cantil até sentir o calor vital restabelecer as forças. Em seguida, teci com gestos precisos as palavras da Armadura Arcana, sentindo a membrana invisível de proteção abraçar meus membros. A nova disciplina que estabeleci para minhas expedições é inflexível: não há mais passeios tímidos de três passos; enquanto houver estamina sobrando e mana de reserva, as fronteiras do desconhecido serão varridas sem hesitação.",
       "Desci a escadaria de madeira e pedra até que a sola das minhas botas mergulhasse no chão lodoso de A Entrada. O ar ali embaixo cheira a abandono secular, quebrado apenas por goteiras rítmicas e estalos distantes. Sem perder tempo, avancei pelo corredor norte e desemboquei em Um Cruzamento de Corredores. O cenário é de pura ruína: passagens estreitas de pedra bruta cortam a abóbada para o leste e o oeste sob um teto rachado que ameaça desabar a qualquer momento. O peso da atmosfera é quase palpável, mas os insetos que o Alquimista tanto teme não estavam ali para receber meu aço.",
       "Dobrei mais ao norte e alcancei Um Canto no Corredor, onde as lajes acinzentadas brotam colônias bizarras de fungos verdes luminescentes pelas frestas úmidas. Dali, sons de criaturas invisíveis rastejando pelas paredes sussurravam promessas de emboscada. Girei em retirada metódica e explorei as demais saídas: ao sul de A Entrada, a Curva na Passagem me recebeu com um odor tão nauseante de carniça recente que o ar pareceu queimar a garganta; a oeste, a passagem torna-se um corredor sufocante de fungos viscosos que se agarram às vestes, abrindo vislumbres para duas câmaras colossais — Uma Grande Sala ao norte e Uma Sala Enorme ao sul.",
-      "O reconhecimento foi cirúrgico e impecável. As galerias de ligação estão mapeadas e gravadas na memória; a praga de insetos rastejantes não se expõe nos corredores de trânsito, o que significa que o verdadeiro covil das criaturas aguarda nas câmaras maiores a oeste. Com a estamina preservada no auge dos noventa e cinco pontos e a reserva mágica intacta, retornei com passos firmes pela escadaria até o laboratório superior. O Alquimista seguia imerso em seus pós azedos, esperando pelo sangue prometido. Deitei meu corpo ao lado das mesas de trabalho, confiei minha alma aos registros do mundo e descansei. A rota está traçada; a incursão de choque ao ninho dos monstros começará no próximo despertar."
+      "O reconhecimento foi cirúrgico e impecável. As galerias de ligação estão mapeadas e gravadas na memória; a praga de insetos rastejantes não se expõe nos corredores de trânsito, o que significa que o verdadeiro covil das criaturas aguarda nas câmaras maiores a oeste. Com a estamina e o vigor preservados e a reserva mágica intacta, retornei com passos firmes pela escadaria até o laboratório superior. O Alquimista seguia imerso em seus pós azedos, esperando pelo sangue prometido. Deitei meu corpo ao lado das mesas de trabalho, confiei minha alma aos registros do mundo e descansei. A rota está traçada; a incursão de choque ao ninho dos monstros começará no próximo despertar."
+    ]
+  },
+  {
+    "id": 64,
+    "day": "Dia 64",
+    "title": "O Labirinto dos Fungos, o Duelo nas Sombras e a Queimação do Estômago",
+    "date": "16 de dezembro de 2026",
+    "in_game_time": "Midgaard – Catacumbas Subterrâneas e A Sala do Alquimista",
+    "excerpt": "Grebolius penetra nas câmaras profundas a oeste, avista uma criatura errante entre os fungos, aniquila um novato zumbi em duelo arcano mortal na Longa Passagem e descobre o esgotamento total de suas provisões ao retornar à Sala do Alquimista.",
+    "tags": [
+      "Catacumbas Subterrâneas",
+      "Combate Mortal",
+      "Uma Longa Passagem Leste-Oeste",
+      "Uma Grande Sala",
+      "Uma Sala Enorme",
+      "Limpando Monstros",
+      "Escassez de Provisões"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "events.json",
+        "day": 64,
+        "note": "Sessão e combate executados e confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ],
+    "content": [
+      "Despertei sob o murmúrio dos frascos borbulhantes na Sala do Alquimista. Antes de me erguer, ergui a mão direita e tracei o encanto da Armadura Arcana, sentindo o ar zumbir e se condensar sobre minhas roupas como uma couraça impenetrável. Procurei nas dobras da mochila por uma sobra de pão ou ração de viagem, mas os dedos encontraram apenas o couro frio dos punhais de reserva e o peso leve do cantil. Bebi longos goles da água cristalina para engolir a queimação precoce da fome; com o dever de caça diante de mim, a fraqueza física precisava esperar.",
+      "Desci a escadaria até a lama viscosa de A Entrada e cortei direto para o oeste, penetrando na passagem estreita onde os fungos verdes tentam se agarrar aos cotovelos e às pernas. Na penumbra lodosa, percebi um vulto rápido e silencioso que se esgueirava pelas sombras — algo diminuto e ágil, semelhante a um diabinho ou um símio inquieto, rondando entre as colônias de mofo. Não dei atenção à distração: invadi Uma Grande Sala ao norte, uma abóbada oval e desolada onde garrafas de cospefogo e lâminas enferrujadas jazem esquecidas no pó, e em seguida espreitei Uma Sala Enorme ao sul, cuja imensidão sem paredes aparentes causa vertigem a qualquer um que tente sondá-la na escuridão.",
+      "Como os insetos rastejantes da ordem do Alquimista não se mostravam nessas alas abertas, recuei com passos leves até o cruzamento central e me infiltrei na Longa Passagem Leste-Oeste. O cheiro fétido de podridão se intensificou de súbito quando um vulto cadavérico bloqueou a saída: outro novato zumbi arrastava os pés em minha direção, de garras erguidas. Aproximei-me sem pestanejar. Antes que seus braços me alcançassem, murmurei a fórmula arcana e disparei uma salva impiedosa de projéteis luminosos que castigaram sua carcaça; o morto cambaleou com estalos secos na ossatura, tentou uma investida cega que rasgou parte de minhas vestes, mas minha lâmina de novato foi mais rápida. Cravei o punhal no centro de seu peito podre até que o corpo desabasse inerte e em silêncio contra o chão ensanguentado.",
+      "Recolhi trinta e cinco moedas de ouro que tilintavam nas frestas de suas roupas e, com a área limpa e os corredores ressoando ecos distantes, refiz a rota de volta à segurança superior do laboratório. O Alquimista continuava debruçado sobre seus pós, alheio aos horrores do subsolo. Sentei-me junto à bancada para salvar meus registros nas tramas do mundo e me recolher ao descanso, mas a dor aguda de um estômago completamente vazio me atingiu como um golpe no baço: as provisões acabaram, e caçar sem pão no subsolo cobra um preço biológico imediato. A próxima alvorada exigirá resolver essa escassez antes que as entranhas vençam a vontade mágica."
     ]
   }
 ]
