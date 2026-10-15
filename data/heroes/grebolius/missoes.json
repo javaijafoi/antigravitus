@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 66,
+  "as_of_day": 67,
   "verification": "live",
   "items": [
     {
@@ -45,7 +45,7 @@
       "type": "official",
       "status": "active",
       "accepted_day": 36,
-      "last_progress_day": 66,
+      "last_progress_day": 67,
       "objective": "Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.",
       "next_step": "Localizar o covil dos insetos rastejantes nas galerias profundas para satisfazer o pedido do Alquimista e testar as novas magias do Nível 9.",
       "evidence": [
@@ -88,6 +88,11 @@
           "document": "posts.json",
           "day": 66,
           "note": "Nova ronda em dois andares: abate de um novato zumbi (conquistando o avanço formal para Nível 9) e um monstro novato nas galerias superiores."
+        },
+        {
+          "document": "posts.json",
+          "day": 67,
+          "note": "Ronda profunda pelas catacumbas e galerias superiores com aniquilação de mais um monstro novato (+324 EXP, +20 moedas, +1 punhal)."
         }
       ]
     },

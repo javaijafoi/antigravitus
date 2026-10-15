@@ -1568,7 +1568,38 @@
       "Subi a escadaria de volta e forcei a porta oeste do laboratório para estender a ronda às galerias superiores da masmorra. Nos corredores úmidos onde o lodo escorre pelas paredes de pedra bruta, dei de cara com um monstro novato feroz. O confronto foi fulminante: conjurei dardos arcanos que explodiram contra sua carne dura, enquanto minha lâmina encontrava suas brechas defensivas com uma precisão cirúrgica. A besta tombou sem vida, deixando mais vinte moedas de ouro e outro punhal novato reluzente que recolhi sem pestanejar. Com os bolsos retinindo, desci uma segunda vez ao subsolo e patrulhei as passagens laterais até sentir a fadiga natural do esforço me convidar ao descanso.",
       "Retornei à Sala do Alquimista, mastiguei com calma mais um dos pães recheados que guardava na mochila e acomodei minhas costas contra a parede de pedra. O Alquimista segue em sua obsessão com os insetos rastejantes, mas eu deito hoje sabendo que meus passos estão cada vez mais pesados e difíceis de deter, com mais de mil e trezentas moedas de ouro tilintando no cinto e uma força nova queimando no sangue."
     ]
+  },
+  {
+    "id": 67,
+    "day": "Dia 67",
+    "title": "A Recusa do Anel, a Ronda das Profundezas e o Corte Preciso",
+    "date": "19 de dezembro de 2026",
+    "in_game_time": "Midgaard – Catacumbas Profundas e Galerias dos Novatos",
+    "excerpt": "Após testar sem sucesso o anel arcano que ainda repele seu toque, Grebolius conduz uma patrulha extensa pelas catacumbas e galerias superiores, abatendo mais um monstro novato e recolhendo espólios.",
+    "tags": [
+      "Anel Arcano",
+      "Catacumbas Subterrâneas",
+      "Corredor dos Novatos",
+      "Combate Decisivo",
+      "Ouro Goblin",
+      "Determinação"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "events.json",
+        "day": 67,
+        "note": "Sessão, teste do anel e combate confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ],
+    "content": [
+      "Acordei com a sensação vívida da nova força que conquistara no ciclo anterior. Antes mesmo de renovar a couraça da Armadura Arcana, abri a mochila e retirei o anel arcano. Encarei a pequena joia prateada brilhando na penumbra e tentei deslizá-la pelo dedo indicador. Uma repulsa gélida e instantânea percorreu minha pele: a magia da relíquia resistiu, como se um poder ancestral julgasse que meus punhos, embora mais calejados do que nunca, ainda precisam de mais sangue e maestria para domar seu influxo. Guardei o anel de volta com um estalo de língua. Nenhuma joia dita meu valor antes da hora; se o artefato pede mais grandeza, o mundo que se prepare para me ver conquistá-la.",
+      "Desci às catacumbas de A Entrada e iniciei uma patrulha agressiva. Percorri os corredores lodosos a passos largos: varri a Grande Sala, sondei a imensidão da Sala Enorme e dobrei para o norte, alcançando Um Canto no Corredor e a misteriosa Outra Curva. O silêncio úmido das galerias inferiores foi absoluto, quebrado apenas por goteiras e pelo odor metálico de monstros que rondam fora de vista. Não permiti que a calmaria me fizesse recuar cedo: mantive a marcha firme através de cada bifurcação até esgotar a sondagem do subsolo.",
+      "Para aproveitar o restante do fôlego, subi a escadaria e cruzei a porta leste em direção às galerias superiores da masmorra. Minha insistência foi recompensada: no meio do corredor enlameado, um monstro novato rugiu ao notar minha aproximação. A batalha foi rápida e implacável. Canalizei projéteis mágicos que detonaram em cheio contra o peito da fera, abrindo brechas para que minha lâmina cravasse três estocadas fatais que a atiraram ao chão em estertor. Saquei vinte moedas de ouro de sua carcaça e mais um brilhante punhal de novato que agora se junta à minha coleção.",
+      "De volta à Sala do Alquimista, comi mais um pão recheado para selar a jornada com o estômago aquecido. O velho Alquimista continua balbuciando suas advertências sobre insetos rastejantes, mas eu me deito com a certeza de quem domina o terreno e acumula mais de mil e trezentas e vinte moedas douradas em suas algibeiras."
+    ]
   }
 ]
+
 
 

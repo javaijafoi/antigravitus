@@ -180,5 +180,19 @@
         "note": "Avanço ao Nível 9 e combates confirmados ao vivo no servidor debomud.org:4000."
       }
     ]
+  },
+  {
+    "id": "teste-anel-arcano-e-patrulha-dia67",
+    "day": 67,
+    "type": "patrol",
+    "summary": "Tentativa de equipar o anel arcano (+2E) no Nível 9 resultando em recusa do servidor ('Você não tem experiência para usar um anel arcano'). Ronda profunda pelas catacumbas (Grande Sala, Sala Enorme, Canto e Outra Curva) e varredura nos corredores superiores com aniquilação de um monstro novato (+324 EXP, +20 moedas de ouro, +1 punhal de novato). Consumo de 1 pão recheado, saldo líquido elevado para 1.326 moedas de ouro e experiência acumulada de 62.576 EXP.",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 67,
+        "note": "Sessão, teste do anel e combate confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ]
   }
 ]

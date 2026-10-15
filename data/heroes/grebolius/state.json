@@ -2,8 +2,8 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 66,
-    "source": "Sessão ao vivo em debomud.org:4000; ronda extensiva nas catacumbas e corredores dos novatos, eliminação de zumbi e monstro novato e ascensão confirmada ao Nível 9.",
+    "day": 67,
+    "source": "Sessão ao vivo em debomud.org:4000; teste de equipamento do anel arcano no Nível 9, patrulha extensiva e eliminação de monstro novato.",
     "verification": "live",
     "live_verified": true
   },
@@ -12,7 +12,7 @@
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
   "alignment": {
-    "value": 169,
+    "value": 159,
     "label": "Um Pouco Bom"
   },
   "vitals": {
@@ -30,10 +30,10 @@
     }
   },
   "experience": {
-    "current": 62252,
+    "current": 62576,
     "next_level": 100000
   },
-  "gold": 1306,
+  "gold": 1326,
   "attributes": {
     "STR": 10,
     "DEX": 15,
@@ -65,15 +65,15 @@
     "name": "O Panteão dos Centenários"
   },
   "last_event": {
-    "day": 66,
-    "summary": "Patrulha em dois andares com aniquilação de um novato zumbi em Uma Grande Sala e um monstro novato no corredor superior (+2.698 EXP, +55 moedas líquidas), ascensão confirmada ao Nível 9 (+5 HP, +10 Mana, +2 MV) e repouso saciado na Sala do Alquimista."
+    "day": 67,
+    "summary": "Teste do anel arcano no Nível 9 com recusa de uso ('Você não tem experiência'), patrulha profunda pelas catacumbas e galerias superiores com aniquilação de um monstro novato (+324 EXP, +20 moedas, +1 punhal), consumo de pão e repouso na Sala do Alquimista."
   },
   "next_objective": {
     "mission_id": "limpando-monstros",
-    "title": "Localizar o ninho dos insetos rastejantes e consolidar os poderes do Grau 9",
-    "next_step": "Explorar as fendas inexploradas das catacumbas para abater o inseto rastejante exigido pelo Alquimista e testar as capacidades ampliadas do Nível 9.",
+    "title": "Localizar o ninho dos insetos rastejantes nas galerias profundas",
+    "next_step": "Avançar nas ramificações subterrâneas inexploradas para localizar os insetos rastejantes da ordem do Alquimista e acumular recursos para novos treinos.",
     "missing_preparation": [
-      "Identificar requisitos de nível para equipar o anel arcano (+2E)."
+      "Alcançar o Nível 10 para tentar novamente equipar o anel arcano (+2E)."
     ]
   },
   "skills": [
@@ -176,13 +176,13 @@
     "recorded": [
       {
         "name": "um pão recheado",
-        "quantity": 2,
-        "source": "Comprado na Padaria de Midgaard no Dia 65; 1 consumido no Dia 66"
+        "quantity": 1,
+        "source": "Comprado na Padaria de Midgaard no Dia 65; 1 consumido no Dia 67"
       },
       {
         "name": "um brilhante punhal de novato",
-        "quantity": 6,
-        "source": "Confirmado ao vivo no inventário no Dia 66 (1 despojado de monstro novato)"
+        "quantity": 7,
+        "source": "Confirmado ao vivo no inventário no Dia 67 (1 despojado de monstro novato)"
       },
       {
         "name": "uma brilhante veste de novato",
@@ -218,37 +218,37 @@
     "pending_verification": [
       {
         "name": "anel arcano (+2E)",
-        "last_seen_day": 66,
-        "reason": "Confirmado na posse no Dia 61 a 66; requisitos de uso para o Nível 9 a serem testados."
+        "last_seen_day": 67,
+        "reason": "Testado no Nível 9 no Dia 67 e recusado pelo servidor ('Você não tem experiência para usar um anel arcano'); exige Nível 10 ou superior."
       }
     ]
   },
   "conditions": [
     "Armadura mística (armor) ativa e verificada.",
     "Alimentada e saciada com pão recheado e cantil abastecido.",
-    "Nível 9 alcançado com expansão de capacidade (57 HP, 150 Mana, 97 MV)."
+    "Nível 9 consolidado com vitais plenos (57 HP, 150 Mana, 97 MV)."
   ],
   "uncertainties": [
-    "Requisitos exatos para equipar o anel arcano (+2E) no Nível 9.",
+    "O anel arcano (+2E) exige Nível 10 ou superior para uso.",
     "A placa de perigo em 'A Entrada' alerta sobre a morte para quem desce desacompanhado ou desequipado.",
     "Locais exatos dos insetos rastejantes nas catacumbas além das câmaras já mapeadas."
   ],
   "evidence": [
     {
       "document": "events.json",
-      "day": 66,
-      "note": "Avanço ao Nível 9 e combates confirmados ao vivo no servidor debomud.org:4000."
+      "day": 67,
+      "note": "Sessão, teste do anel e combate confirmados ao vivo no servidor debomud.org:4000."
     },
     {
       "document": "posts.json",
-      "day": 66,
-      "note": "Crônica do Dia 66 baseada em fatos ao vivo."
+      "day": 67,
+      "note": "Crônica do Dia 67 baseada em fatos ao vivo."
     }
   ],
   "narrative_style": "ladra arcana",
   "weapon_summary": "Punhal de Novato (+ Escudo)",
   "migration": {
     "method": "sessão ao vivo e conferência direta no servidor",
-    "verified_on": "Dia 66"
+    "verified_on": "Dia 67"
   }
 }
