@@ -1872,5 +1872,36 @@
       "Com a passagem desimpedida, embrenhei-me pelos labirintos mais profundos para exigir o máximo de minhas pernas. Atravessei as paredes cobertas de fungos de um canto estreito, fulminando um inseto rastejante que tentou aproximar-se das minhas botas, e contornei a curva escura onde um novato zumbi desabou sem vida após ser atingido de pleno pela magia. Continuei marchando por ramificações e interseções silenciosas até a curva isolada de mais outro canto, sentindo o esforço físico vigoroso queimar nos músculos a cada passo desbravado.",
       "Saciada a sede de movimento e esgotado o fôlego da jornada subterrânea, parei para respirar fundo e recuperar o ritmo do coração na calmaria das galerias. Retornei com passos firmes pelas mesmas passagens de pedra até alcançar a escadaria e emergir na luz acolhedora do laboratório do Alquimista. Com duas mil quinhentas e noventa moedas de ouro pesando confortavelmente no bornal e o espírito enriquecido por mais um dia de vitórias, deitei-me sobre a esteira para um merecido descanso."
     ]
+  },
+  {
+    "id": 77,
+    "day": "Dia 77",
+    "title": "A Oferenda dos Chifres e a Patrulha Incansável",
+    "date": "29 de dezembro de 2026",
+    "in_game_time": "Escola de Novatos de Midgaard – Sala do Alquimista, Corredores e Catacumbas",
+    "excerpt": "Grebolius entrega os chifres do Minotauro ao Alquimista, despende fôlego contínuo em ampla patrulha pelas alas da escola e catacumbas, aniquila monstros à espreita, recolhe mais uma lâmina brilhante e consolida seu tesouro em duas mil quinhentas e noventa moedas de ouro.",
+    "tags": [
+      "Entrega dos Chifres",
+      "Novato Alquimista",
+      "Patrulha Ativa",
+      "Combate nas Passagens",
+      "Lâmina Adicional",
+      "Fortuna em Ouro",
+      "Repouso no Laboratório"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "events.json",
+        "day": 77,
+        "note": "Entrega dos chifres ao Alquimista, ronda pela Escola e catacumbas e combates confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ],
+    "content": [
+      "O dia começou com um acerto de contas aguardado no coração do laboratório. Antes de qualquer outro passo, retirei da bagagem os chifres curvos e pesados do Minotauro abatido na véspera e os entreguei diretamente nas mãos do Novato Alquimista. O velho mestre examinou a presa com olhos brilhantes, murmurando aprovações apressadas enquanto já calculava novos pós e elixires em suas retortas borbulhantes.",
+      "Livre do peso daquela encomenda, sorvi água límpida do cantil, ergui a costumeira barreira etérea da Armadura Arcana e rumei para as passagens externas. Havia energia de sobra pedindo movimento. Em vez de me limitar a rondas curtas, lancei-me em um circuito vigoroso e extenso pelos corredores de pedra da escola, varrendo esquinas, passagens sujas e alas de treinamento com passos firmes e olhar atento a cada reentrância da cantaria.",
+      "O avanço não tardou a atrair hostilidade. Monstros que rastejavam ou se escondiam nas penumbras tentaram barrar meu trajeto, mas foram recebidos por rajadas impiedosas de energia pura e pelo corte veloz do punhal encantado. Das carcaças abatidas ao longo do caminho, recolhi mais uma lâmina mística imbuída de luz própria, acomodando-a junto às outras que carrego na cinta com orgulho de veterana. A marcha contínua cobrou seu tributo físico, fazendo o peito arfar e as pernas arderem em saudável cansaço.",
+      "Após descer brevemente às catacumbas e conferir que as entradas inferiores permaneciam sob vigilância, retornei pelo corredor iluminado até a porta de madeira que guarda o laboratório. Acomodei meu bornal, sentindo o reconfortante tilintar de duas mil quinhentas e noventa moedas de ouro que asseguram minha independência neste reino. Sentei-me para acalmar a respiração e, logo em seguida, entreguei o corpo ao sono profundo sob a proteção silenciosa das fórmulas arcanas."
+    ]
   }
 ]

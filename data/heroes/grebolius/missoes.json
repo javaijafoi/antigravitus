@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 76,
+  "as_of_day": 77,
   "verification": "live",
   "items": [
     {
@@ -123,6 +123,11 @@
           "document": "posts.json",
           "day": 76,
           "note": "Ronda profunda pelas catacumbas com aniquilação do Grande Minotauro (+95 moedas de ouro, chifres e pele), 1 inseto rastejante e 1 novato zumbi (+14.498 EXP -> 124.247 EXP) e retorno seguro ao laboratório."
+        },
+        {
+          "document": "posts.json",
+          "day": 77,
+          "note": "Entrega dos chifres do Minotauro ao Alquimista e ronda com múltiplos combates na Escola de Novatos e catacumbas (+2.402 EXP -> 126.649 EXP), saque de 1 punhal de novato e repouso no laboratório."
         }
       ]
     },

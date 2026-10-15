@@ -2,8 +2,8 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 76,
-    "source": "Sessão automatizada (batch) com retorno seguro ao laboratório em debomud.org:4000; ronda profunda nas catacumbas e ramificações subterrâneas com abate do Grande Minotauro (+95 moedas de ouro, chifres e pele do Minotauro), 1 inseto rastejante e 1 novato zumbi (+14.498 EXP -> 124.247 EXP), saldo elevado para 2.590 moedas de ouro e repouso na Sala do Alquimista.",
+    "day": 77,
+    "source": "Sessão automatizada (batch) em debomud.org:4000; entrega bem-sucedida dos chifres do Minotauro ao Alquimista, ronda ampla pelas alas da Escola e catacumbas com múltiplos combates (+2.402 EXP -> 126.649 EXP), obtenção de 1 punhal de novato (total 9), saldo estável em 2.590 moedas de ouro e repouso na Sala do Alquimista.",
     "verification": "live",
     "live_verified": true
   },
@@ -12,7 +12,7 @@
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
   "alignment": {
-    "value": 368,
+    "value": 279,
     "label": "Bom"
   },
   "vitals": {
@@ -30,7 +30,7 @@
     }
   },
   "experience": {
-    "current": 124247,
+    "current": 126649,
     "next_level": 150000
   },
   "gold": 2590,
@@ -176,8 +176,8 @@
     "recorded": [
       {
         "name": "um brilhante punhal de novato",
-        "quantity": 8,
-        "source": "Confirmado ao vivo no inventário no Dia 70 (1 despojado de monstro novato)"
+        "quantity": 9,
+        "source": "Confirmado ao vivo no inventário no Dia 77 (1 despojado de monstro novato nas catacumbas)"
       },
       {
         "name": "uma brilhante veste de novato",
@@ -215,11 +215,6 @@
         "source": "Despojada do Grande Minotauro nas catacumbas no Dia 76"
       },
       {
-        "name": "os chifres do Minotauro",
-        "quantity": 1,
-        "source": "Despojados do Grande Minotauro nas catacumbas no Dia 76"
-      },
-      {
         "name": "um anel arcano (+2E)",
         "quantity": 1,
         "source": "Confirmado ao vivo no inventário no Dia 70 (recusado no Nível 10; exige Nível 11 ou superior)"
@@ -230,7 +225,7 @@
   "conditions": [
     "Armadura mística (armor) ativa e verificada.",
     "Nível 10 conquistado com vitais ampliados (61 HP, 160 Mana, 99 MV).",
-    "Chifres do Minotauro entregues ao Alquimista, mantendo foco na caça aos insetos rastejantes."
+    "Chifres do Minotauro entregues ao Alquimista no Dia 77."
   ],
   "uncertainties": [
     "O anel arcano (+2E) exige Nível 11 ou superior para uso (testado e recusado no Nível 10).",
@@ -240,13 +235,13 @@
   "evidence": [
     {
       "document": "events.json",
-      "day": 76,
-      "note": "Ronda profunda nas catacumbas com abate do Minotauro, inseto e zumbi confirmados no servidor debomud.org:4000."
+      "day": 77,
+      "note": "Entrega dos chifres ao Alquimista, ronda ampla e combates confirmados no servidor debomud.org:4000."
     },
     {
       "document": "posts.json",
-      "day": 76,
-      "note": "Crônica do Dia 76 baseada em fatos ao vivo."
+      "day": 77,
+      "note": "Crônica do Dia 77 baseada em fatos ao vivo."
     }
   ],
   "narrative_style": "ladra arcana",

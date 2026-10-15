@@ -320,5 +320,19 @@
         "note": "Ronda profunda, combate contra Minotauro, inseto e zumbi e saldo de 2.590 moedas confirmados ao vivo no servidor debomud.org:4000."
       }
     ]
+  },
+  {
+    "id": "entrega-chifres-e-patrulha-ampla-dia77",
+    "day": 77,
+    "type": "combat",
+    "summary": "Expedição de ronda e vigilância no Dia 77: entrega dos chifres do Minotauro ao Novato Alquimista no laboratório, seguida por extensa patrulha pelas alas da Escola de Novatos e galerias superiores das catacumbas com alto consumo de energia em marcha contínua. Eliminação de múltiplos monstros novatos pelas passagens, obtenção de mais um punhal brilhante (elevando o acervo para 9 punhais) e conquista de +2.402 EXP (alcançando 126.649 EXP). Saldo estável em 2.590 moedas de ouro e repouso seguro na Sala do Alquimista.",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 77,
+        "note": "Entrega dos chifres ao Alquimista, ronda pela Escola e catacumbas e combates confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ]
   }
 ]
