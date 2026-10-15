@@ -7,11 +7,11 @@
 ## ✦ Identificação e Registro
 * **Nome de Registro no MUD:** Grebolius
 * **Título Honorífico:** o Aprendiz de Mago
-* **Raça / Aparência Real:** Mulher Goblin (disfarçada de jovem guerreiro com manto largo, capuz pesado e elmo abaixado)
+* **Raça / Aparência Real:** Mulher Goblin (Aventureira Sem Véu, de cabeça erguida perante Midgaard)
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **8** *(Oitavo Grau de Maestria conquistado — Barreira dos 40.000 EXP rompida em triplo combate fatal!)*
 * **Alinhamento Moral:** 15 (Neutro Pragmático)
-* **Localização Atual:** O Laboratório dos Magos (Enclave Arcano de Midgaard) — *Salva e Dormindo sobre os pentagramas de pedra, rompendo em definitivo a dependência do Templo*
+* **Localização Atual:** O Laboratório dos Magos (Enclave Arcano de Midgaard) — *Salva e Acampada em campo sobre os pentagramas de pedra, rompendo em definitivo a dependência do Templo*
 
 ---
 
@@ -41,7 +41,7 @@
 * **Classe de Armadura (AC):** 16 *(base)* / **40** *(sob efeito de `armor` no Nível 8)*
 * **Bônus de Acerto (Hitroll):** 0
 * **Bônus de Dano (Damroll):** +1
-* **Configuração de Fuga (Wimpy):** **12 HP** (Aventureira ousada; `armor` sempre ativo)
+* **Configuração de Fuga (Wimpy):** **13 HP** (~25% dos 52 HP máximos; aventureira audaz com `armor` sempre ativo)
 * **Modo Automático:** `autogold` ativo
 
 ---
@@ -90,4 +90,3 @@
 * `um pergaminho de retorno` (salvaguarda de retorno ao Templo)
 * `uma tocha` (reserva de iluminação)
 * `uma mochila` (armazenamento organizado)
-

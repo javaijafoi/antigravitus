@@ -68,6 +68,23 @@ Basta usar o menu seletor no topo da página ou abrir direto via parâmetro de U
 
 ---
 
+## 🧠 Ciclo Diário & Protocolo de IA (`skills/mud-ciclo-diario/`)
+
+Para manter a consistência narrativa e a evolução dos heróis via agentes de IA, todas as diretrizes de gameplay e pós-processamento estão versionadas localmente no projeto em:
+👉 [`skills/mud-ciclo-diario/SKILL.md`](skills/mud-ciclo-diario/SKILL.md)
+
+### O que essa skill dita para o agente:
+1. **Ritmo Narrativo Rico:** Dias longos, foco em imersão sensorial e ausência total de metajogo.
+2. **3 Ações Diárias Obrigatórias:** Ações estruturadas que geram consequências reais no mundo.
+3. **Combate & Treino:** Rotina frequente de progressão de atributos, magias e sobrevivência.
+4. **Reflexão Decenal (a cada 10 ciclos):** Ponto de virada na psique, consolidação de mapas topológicos e crônicas maiores.
+5. **Ficha Viva Sincronizada:** Atualização imediata dos arquivos de ficha, identidade, evolução e conhecimento do personagem.
+6. **Autonomia:** O agente deve executar alterações reversíveis diretamente, sem pedir confirmação a cada passo.
+
+> **Dica para amigos/colaboradores:** Se estiver usando o Antigravity, Claude Code, Cursor ou qualquer outro assistente de IA, aponte o assistente para ler `skills/mud-ciclo-diario/SKILL.md` antes de jogar ou gerar crônicas. Assim a IA saberá exatamente como conduzir o herói e atualizar os arquivos.
+
+---
+
 ## 🚀 Publicação & Deploy na Vercel
 
 1. **Repositório GitHub:** [https://github.com/javaijafoi/antigravitus](https://github.com/javaijafoi/antigravitus)
@@ -78,3 +95,4 @@ Basta usar o menu seletor no topo da página ou abrir direto via parâmetro de U
 ## ⚔️ Conexão ao Mundo
 * **MUD Web:** [https://www.debomud.org](https://www.debomud.org)
 * **Telnet:** `debomud.org` porta `4000`
+

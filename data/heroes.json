@@ -46,7 +46,7 @@
     "rune": "🧌",
     "avatar": "🗡️",
     "race_class": "Mulher Goblin (Maga / Ladra)",
-    "role": "Fundadora do Futuro Reino Goblin (O Ápice do Poder)",
+    "role": "Fundadora do Futuro Reino Goblin • Aventureira Sem Véu",
     "alignment": "Pragmática / Focada em Velocidade",
     "quote": "“Chega de me esconder sob trapos de novato. Vou trocar este equipamento, andar de cabeça erguida e fazer Midgaard conhecer a verdadeira força de uma mulher goblin.”",
     "subtitle": "Diário de uma aventureira goblin sem medo. Deixando os disfarces para trás para desbravar mistérios, cumprir missões e forjar o Reino Livre.",
@@ -64,11 +64,11 @@
       "level_badge": "(Grau 8 • Mago / Ladra)",
       "hp": "52 / 52",
       "mana": "140 / 140",
-      "mv": "95 / 95",
+      "mv": "94 / 95",
       "ac": "AC 16 (40 com armor)",
       "weapon": "Punhal de Novato (+ Escudo)",
       "weapon_icon": "🗡️",
-      "sanctuary": "Panteão dos Centenários"
+      "sanctuary": "Laboratório dos Magos (Acampamento em Campo)"
     },
     "voice": {
       "engine": "edge-tts",
