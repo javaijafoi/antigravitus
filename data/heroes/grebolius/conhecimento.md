@@ -172,5 +172,8 @@ A Força 10 e a carga registrada pedem atenção a peso e movimento; o custo exa
   - Ração ideal: **Pão Recheado da Padaria** (apenas 6 moedas de ouro, peso desprezível). 6 a 8 pães garantem autonomia para múltiplas paradas de sono em campo.
   - Recipientes de Líquido: O Armazém de Midgaard **NÃO vende odres maiores nem barris portáteis** (tentativa documentada no Dia 51 retornou que o comerciante não tem o item em estoque).
   - A solução viável e comprovada para ampliar a autonomia de água em campo é carregar **um segundo cantil** (ou garrafas compradas em tavernas e abastecidas na Fonte Azul: `fill garrafa fonte`), dobrando os goles disponíveis sem depender de recipientes exóticos inexistentes.
+* **Mecânica de Fuga em Combate (`flee` / `fugir` Obrigatório):**
+  - **Bloqueio Fatal de Movimento Comum:** Uma vez engajada em combate hostil, tentar sair da sala digitando direções normais (`n`, `s`, `e`, `w`, `u`, `d`) é sumariamente travado pelo servidor com o aviso: *"Não dá! Você está muito ocupado, lutando!"*. Foi exatamente essa falha que selou a derrota contra o Cavaleiro Branco no Dia 60 (onde 5 tentativas consecutivas de direções comuns foram bloqueadas).
+  - **Execução Imediata de `flee`:** Se sofrer aggro inesperado ou se o monstro desferir dano alto/crítico desvantajoso, o comando imediato de retirada emergencial é **`flee`** (ou **`fugir`**). O comando desengaja do combate e projeta a heroína para uma saída disponível.
 
 

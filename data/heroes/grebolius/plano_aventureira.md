@@ -53,7 +53,9 @@ Superar roteiros curtos e estáticos. A estamina alta (101 MV no Grau 11) é o m
 - **Reconhecimento prévio:** Em áreas perigosas ou labirintos fechados (como esgotos), espiar saídas com `look <direção>` (`look n`, `look s`, `look e`, `look w`) e usar `scan` para mapear salas vizinhas antes do avanço.
 - **Invisibilidade de batedor:** Usar `invisibility` para caminhar por zonas de predadores sem disparar aggro automático, permitindo avaliar a sala em segurança. Lembrar que a invisibilidade quebra no primeiro golpe ou magia agressiva.
 - **Avaliação de risco obrigatória (`consider <alvo>`):** Proibido atacar mobs desconhecidos sem rodar `consider <alvo>`. Se houver alerta de massacre ou alto risco, abortar o ataque.
-- **Recuo imediato:** A maioria dos predadores não ataca instantaneamente na entrada da sala. Ao avistar mob perigoso sem estar engajado, dar o passo de volta imediatamente (ex.: `s`). Se atacado, acionar `flee` imediatamente.
+- **Recuo pré-combate vs. Fuga em combate (`flee` obrigatório):**
+  - Se entrar na sala e o mob perigoso ainda não atacou: recuar imediatamente usando a direção normal inversa (ex.: `s`).
+  - Se o combate já tiver iniciado (aggro sofrido ou monstro acertar golpe pesado): **NUNCA tentar andar por direções normais (`n`, `s`, `e`, `w`)**, pois o MUD trava o comando (*"Não dá! Você está muito ocupado, lutando!"*). O único comando para desengajar e salvar a vida é **`flee`** (ou **`fugir`**).
 
 ## 3. Jogar e registrar com continuidade
 1. Escolher um fio para a expedição e as condições para interrompê-la.
