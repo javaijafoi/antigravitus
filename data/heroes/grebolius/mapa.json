@@ -2,7 +2,7 @@
   "hero_id": "grebolius",
   "hero_name": "Grebolius",
   "sanctuary_id": "panteao_centenarios",
-  "last_updated_cycle": "Ciclo IX (Dia 82; auditoria urbana total e mapeamento de Midgaard)",
+  "last_updated_cycle": "Ciclo IX (Dia 84; doações úteis, modo batedor e mapeamento da Área dos Novatos)",
   "total_rooms": 80,
   "layers": [
     {
@@ -1833,9 +1833,9 @@
       "discovered_in": "Ciclo 9 (Dia 82)"
     }
   ],
-  "last_updated_day": 81,
+  "last_updated_day": 84,
   "verification": "live",
-  "current_location_id": "portao_oeste",
+  "current_location_id": "templo_midgaard",
   "camp_id": "laboratorio_magos",
   "reconciliation_notes": [
     "Posições gráficas são esquemáticas, não distâncias do mundo.",

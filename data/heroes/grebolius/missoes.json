@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 83,
+  "as_of_day": 84,
   "verification": "live",
   "items": [
     {
@@ -45,9 +45,9 @@
       "type": "official",
       "status": "active",
       "accepted_day": 36,
-      "last_progress_day": 75,
+      "last_progress_day": 84,
       "objective": "Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.",
-      "next_step": "A praga dos insetos rastejantes foi erradicada em Uma Pequena Sala e comunicada ao Alquimista; manter patrulha ativa nas catacumbas para acumular recursos e novos conhecimentos arcanos.",
+      "next_step": "Reconhecimento em Modo Batedor efetuado no Dia 84: o Novato Alquimista renovou o pedido de ajuda em seu laboratório, e as catacumbas revelaram a presença ativa do Grande Minotauro e de novatos zumbis descarnados.",
       "evidence": [
         {
           "document": "posts.json",
@@ -138,6 +138,11 @@
           "document": "posts.json",
           "day": 79,
           "note": "Ronda nas alas da Escola de Novatos com combate (+1.282 EXP -> 131.579 EXP) e ascensão ao Panteão dos Centenários para meditação de encerramento do Ciclo VIII."
+        },
+        {
+          "document": "posts.json",
+          "day": 84,
+          "note": "Reconhecimento em Modo Batedor na Sala do Alquimista (encontrando o Novato Alquimista ocupado em suas misturas que indagou 'Ei, você poderia me ajudar?') e sondagem das catacumbas avistando o Grande Minotauro e novatos zumbis."
         }
       ]
     },

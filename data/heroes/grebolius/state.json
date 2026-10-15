@@ -2,8 +2,8 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 83,
-    "source": "Sessão ao vivo em tempo real no servidor debomud.org:4000 (Dia 83); Modo Criativo executado com ampla exploração inventiva e fechamento formal com sono reparador (sleep) e salvamento no MUD. Consulta à Mestre dos Magos constatando proficiência máxima nas 9 magias básicas com 15 treinos preservados, entrega do pergaminho de retorno ao Mago Aventureiro no Bar dos Magos, mapeamento dos patronos de autoquests (O Pacificador para Problemas Agrícolas, novato esperto para Novela dos Novatos), incursão externa pelas planícies em direção à floresta de Haon-Dor e patrulha fluvial na muralha oeste. Encerramento dormindo (sleep) Dentro do Portão Oeste sob a proteção do Pacificador e sentinelas com vitais plenos (67 HP, 170 Mana, 101 MV).",
+    "day": 84,
+    "source": "Sessão ao vivo em debomud.org:4000 (Dia 84): resgate de doações úteis (uma escura capa de novato equipada sobre o corpo, bracelete de conchas e 3 pergaminhos de sabedoria); ativação do Modo Batedor com wimpy 33 (teto máximo de 50% do HP do servidor); mapeamento completo da Escola de Novatos (Piso Superior) e Catacumbas Subterrâneas (avistamento do Grande Minotauro e zumbis descarnados); retorno seguro ao Templo de Midgaard e pernoite em sono reparador (sleep) salvo.",
     "verification": "live",
     "live_verified": true
   },
@@ -58,12 +58,12 @@
     "description": "Modo Padrão: Exploração equilibrada com cautela tática e Wimpy documental (~25%).",
     "wimpy_profile": {
       "padrao": 13,
-      "batedor": 40
+      "batedor": 33
     }
   },
   "location": {
-    "room_id": "portao_oeste",
-    "name": "Dentro do Portão Oeste de Midgaard"
+    "room_id": "templo_midgaard",
+    "name": "O Templo de Midgaard"
   },
   "camp": {
     "room_id": "laboratorio_magos",
@@ -74,8 +74,8 @@
     "name": "O Panteão dos Centenários"
   },
   "last_event": {
-    "day": 83,
-    "summary": "Expedição do Modo Criativo no Dia 83: conferência arcana no laboratório com 15 treinos preservados, entrega do pergaminho de retorno no Bar dos Magos, mapeamento dos patronos de autoquest, caminhada pelas planícies de Haon-Dor e pernoite em sono reparador (sleep) no Portão Oeste ao lado do Pacificador."
+    "day": 84,
+    "summary": "Expedição do Dia 84: coleta e equipamento de uma escura capa de novato das doações, ativação do Modo Batedor com wimpy 33, mapeamento detalhado da Escola dos Novatos e incursão nas Catacumbas Subterrâneas avistando o Grande Minotauro, retornando em segurança ao Templo de Midgaard para dormir e salvar."
   },
   "next_objective": {
     "mission_id": "problemas-agricolas",
@@ -183,6 +183,10 @@
       "name": "um brilhante elmo de novato"
     },
     {
+      "slot": "Sobre o Corpo",
+      "name": "uma escura capa de novato"
+    },
+    {
       "slot": "Empunhado (Arma Principal)",
       "name": "um brilhante punhal de novato"
     },
@@ -252,6 +256,16 @@
         "name": "um anel arcano (+2E)",
         "quantity": 1,
         "source": "Confirmado ao vivo no inventário no Dia 82"
+      },
+      {
+        "name": "um bracelete de conchas",
+        "quantity": 1,
+        "source": "Resgatado na Sala de Doações no Dia 84 (+44L)"
+      },
+      {
+        "name": "um pergaminho de sabedoria",
+        "quantity": 3,
+        "source": "Resgatado na Sala de Doações no Dia 84"
       }
     ],
     "pending_verification": []

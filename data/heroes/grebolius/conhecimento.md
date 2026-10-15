@@ -261,3 +261,40 @@ Para evitar sobrecarga de inventário e otimizar tempo e recursos, **fica abolid
 * **A Estrada das Planícies e os Horizontes de Haon-Dor:**
   - Além das portas pesadas do Portão Oeste, a poeirenta *Estrada Através das Planícies* rasga as campinas gramíneas em direção à imensa e perigosa floresta de Haon-Dor.
   - O vislumbre das copas distantes dialoga diretamente com a lenda druídica de *animate plant* do Livro Vermelho: as matas além dos muros abrigam vida selvagem, caçadores e segredos botânicos profundos que demandarão feitiços e poder consolidado quando a hora chegar.
+
+---
+
+## 12. Doações de Midgaard, Modo Batedor e Cartografia Viva da Área dos Novatos (Dia 84)
+* **Resgate de Equipamento Útil na Sala de Doações:**
+  - **Uma Escura Capa de Novato (`wear all`):** Equipada com sucesso no slot *Sobre o Corpo* (About Body). Possui uma pequena aura mágica e reforça a proteção física e mística sem penalidade de peso excessivo.
+  - **Um Bracelete de Conchas (+44L):** Coletado e armazenado na mochila para uso em círculos avançados de poder.
+  - **Pergaminhos de Sabedoria (x3):** Resgatados e guardados para estudos arcanos.
+* **Calibração Mecânica do Modo Batedor (`wimpy 33`):**
+  - O servidor do CircleMUD/DeBo impõe uma regra rígida: **o valor de covardia (`wimpy`) não pode ultrapassar a metade dos pontos de vida máximos** (`50% de HP`). Com 67 HP no Nível 11, o teto exato é `wimpy 33`.
+  - Configuração restaurada para `wimpy 13` ao término da patrulha e retorno à cidade.
+* **Topologia Auditada ao Vivo da Área dos Novatos (Escola Superior):**
+  - **Acesso Externo:** A partir de *O Grande Campo de Midgaard (Bifurcação)*, a saída para o leste (`e`) conecta diretamente com *A Entrada da Área dos Novatos*.
+  - **A Entrada da Área dos Novatos:** Inscrição entalhada na pedra; saída Norte para *O Começo Da Passagem* e Oeste para o Grande Campo.
+  - **O Começo Da Passagem:** Corredor de terra batida; saída Leste para *O Corredor Sujo* e Sul para a Entrada.
+  - **O Corredor Sujo:** Lodo nas paredes; saídas Leste para *O Cruzamento* e Oeste para o Começo da Passagem. Mobs: *Uma coisa assustadora*.
+  - **O Cruzamento:** Ponto nodal. Saídas: Norte (porta fechada), Sul (*Mais Corredor*), Oeste (*O Corredor Sujo*).
+  - **Ala Norte (Destrancada com `open north`):**
+    - *Um Caminho Iluminado:* Paredes brancas, diagramas de engenharia arcana no piso limpo; saídas Norte e Sul.
+    - *A Sala da Estátua:* Abriga uma monumental estátua artística com uma pequena placa pregada ("O rosto dela parece ser bastante familiar"). Saídas: Leste (*O Salão*) e Sul (*Um Caminho Iluminado*).
+  - **Ala Sul:**
+    - *Mais Corredor:* Saídas Norte (*O Cruzamento*) e Sul (*Um Outro Canto*). Porta trancada a oeste para a Pequena Sala. No chão, avistada a lendária **coleira de dragão de estimação** deixada pelo filhote em fuga e dezenas de punhais novatos. Mobs: *Monstro novato*.
+    - *Um Outro Canto:* Saídas Norte (*Mais Corredor*), Oeste (*Um Corredor Iluminado*) e Leste (porta fechada para o laboratório).
+    - *A Sala do Alquimista (Acesso via `open east`):* Dezenas de retortas e fórmulas arcanas nas paredes. NPC: **O Novato Alquimista** ("Ei, você poderia me ajudar?"). Saídas: Oeste (*Um Outro Canto*) e Baixo (`d`) para as Catacumbas.
+    - *Aviso da Escadaria:* Placa pregada perto da escada avisa: *"Se você está sem equipamentos e sozinho, saia já daqui! Ou então não culpe ninguém por sua morte..."*
+* **Topologia Auditada ao Vivo das Catacumbas Subterrâneas (Subsolo):**
+  - **A Entrada:** Câmara gélida e úmida com som de predadores. Mobs: **Novato extremamente descarnado (zumbi)**. Saídas: Norte, Sul, Oeste e Cima (`u` para o laboratório).
+  - **Ala Norte:**
+    - *Um Cruzamento de Corredores:* Clima fétido de decadência. Mobs de alto perigo: **O Grande Minotauro** ("imaginando qual deve ser o seu sabor"), um diabinho ágil e monstros novatos. Saídas: Norte (*Um Canto no Corredor*), Leste (*Uma Sala no Canto*), Sul (*A Entrada*) e Oeste (*Uma Longa Passagem Leste-Oeste*).
+    - *Um Canto no Corredor:* Paredes acinzentadas cobertas de fungos verdes; saídas Leste (*Outra Curva*) e Sul (*Um Cruzamento de Corredores*).
+  - **Ala Sul:**
+    - *Uma Curva na Passagem:* Odor nauseante de putrefação; saídas Norte (*A Entrada*) e Leste (*Uma Ramificação ao Sul*).
+  - **Ala Oeste:**
+    - *Uma Passagem:* Corredor apertado coberto de fungos viscosos. Mobs: **Dois novatos zumbis descarnados**. Saídas: Norte (*Uma Grande Sala*), Leste (*A Entrada*) e Sul (*Uma Sala Enorme*).
+* **Protocolo de Incursão em Modo Batedor:**
+  - A exploração pura sem agressão permitiu mapear todas as câmaras, saídas e posições de predadores sem atrair combate desfavorável nem quebrar a compostura, retornando com integridade física e mana preservadas para o Templo de Midgaard.
+
