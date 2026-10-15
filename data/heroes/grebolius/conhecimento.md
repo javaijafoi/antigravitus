@@ -86,7 +86,7 @@ Para evitar sobrecarga de inventário e otimizar tempo e recursos, **fica abolid
 
 ### Rotina de Manutenção do Catálogo de NPCs e Matriz de Espólios
 - **Atualização Diária:** Se a expedição do dia encontrar um novo NPC, uma nova cotação de compra/venda, ou novo item de mob, registrar imediatamente em [npcs.md](file:///c:/Users/alura/Downloads/antigravitus/data/heroes/grebolius/npcs.md) e nesta seção.
-- **Auditoria de Final de Ciclo (Decenal):** Nos dias de encerramento de ciclo (Dias 10, 20, 30... 80, 90), realizar uma revisão consolidada dos estoques das lojas de Midgaard e da tabela de rentabilidade, garantindo que o conhecimento esteja sempre alinhado ao estado vivo do servidor.
+- **Pendência Maleável por Ciclo (Sem Rigidez Artificial):** A checagem de estoques de lojas e NPCs não exige peregrinação forçada no dia exato de encerramento do ciclo. Funciona como uma pendência aberta ao longo do ciclo decenal: conforme a rota natural da heroína cruzar com as lojas e figuras de Midgaard, realiza-se a conferência de forma orgânica e pragmática, sem desvios artificiais.
 
 
 * **A Poção Amarela da Loja de Magia (Dica de Negelok — Dia 41):** Dica registrada de detecção de invisibilidade; não é demonstração de uso por Grebolius. Confirmar efeito, duração e preço antes de comprar ou depender dela.
@@ -201,5 +201,6 @@ Para evitar sobrecarga de inventário e otimizar tempo e recursos, **fica abolid
   - **Modo Aventura:** Foco exclusivo na missão/quest ativa; ignora o supérfluo, abate apenas mobs fracos necessários. Diante de obstáculo intransponível, anota a pendência em `missoes.json`, conclui o dia em segurança e sugere o modo adequado para o dia seguinte (ex.: Modo Dungeon).
   - **Modo Dungeon:** Foco em limpar a masmorra e maximizar pilhagem/ouro. Enfrenta mobs fracos e médios seguros. Quando a mochila lotar de espólios de valor, volta temporariamente à cidade para vender e guardar na caixa do Templo antes de continuar.
   - **Modo Batedor:** Foco em invisibilidade e mapeamento máximo de salas. Fuga imediata absoluta com `flee` no primeiro turno em qualquer combate. **Wimpy elevado a 60% do HP máximo** (`wimpy 40` no Grau 11) como rede mecânica de segurança (restaurado para ~25% ao desativar o modo). Suprimento ultra-leve (pães e cantis) e sono em campo seguro para recarga total de MV/Mana.
+  - **Sinergia Tática (Batedor Precede Dungeon):** Como o Modo Dungeon se fundamenta em eficiência e mitigação de risco, **o Modo Batedor deve sempre preceder o Modo Dungeon** ao explorar novas alas ou após mudanças de cenário. Primeiro mapeia-se as salas, saídas e predadores em segurança invisível; depois, executa-se o Modo Dungeon com o melhor plano de rota e combate.
 
 

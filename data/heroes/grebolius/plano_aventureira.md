@@ -69,7 +69,7 @@ Os modos operacionais definem a postura tática, a alocação de risco, a gestã
 2. **Modo Aventura (Foco na Missão & Mapeamento de NPCs):**
    - **Objetivo:** Concluir a autoquest ou missão ativa designada.
    - **Postura:** Foco estrito no objetivo da missão; ignora o que não for relevante ao redor.
-   - **Mapeamento e Auditoria de NPCs ([npcs.md](file:///c:/Users/alura/Downloads/antigravitus/data/heroes/grebolius/npcs.md)):** Ao encontrar figuras e comerciantes, sonda suas possibilidades (comandos contextuais como `list`, `practice`, `autoquest`, `'sim`, `'não`). Em aberturas de ciclo (dias 1, 11, 21...), confere se houve mudança de estoque, preços ou novos diálogos no servidor.
+   - **Mapeamento e Auditoria de NPCs ([npcs.md](file:///c:/Users/alura/Downloads/antigravitus/data/heroes/grebolius/npcs.md)):** Ao encontrar figuras e comerciantes, sonda suas possibilidades (comandos contextuais como `list`, `practice`, `autoquest`, `'sim`, `'não`). A checagem de novidades em lojas é uma pendência maleável por ciclo: é conferida organicamente quando a rota cruzar com o NPC, sem desvios forçados.
    - **Combate:** Abate apenas mobs fracos necessários para abrir caminho ou cumprir requisito; desvia de qualquer mob arriscado.
    - **Gestão de Bloqueios:** Se encontrar um obstáculo intransponível (falta de nível, monstro forte demais bloqueando passagem, falta de ouro para item de entrega), anota a pendência específica em `missoes.json` e na crônica, encerra o dia em segurança e sugere para o dia seguinte a transição para o modo adequado (ex.: Modo Dungeon para farmar ouro/EXP).
 
@@ -79,7 +79,7 @@ Os modos operacionais definem a postura tática, a alocação de risco, a gestã
    - **Combate:** Arrisca um pouco mais contra mobs de dificuldade moderada (zumbis, monstros novatos, minotauro com `chill touch` e `armor`), mas NUNCA desafia criaturas muito difíceis ou letais (chefes desproporcionais).
    - **Saque Inteligente & Queima de Corpos (Força 10):** Aplica a Matriz Ouro/Peso de [conhecimento.md](file:///c:/Users/alura/Downloads/antigravitus/data/heroes/grebolius/conhecimento.md). Executa rigorosamente `get gold corpo`, recolhe apenas itens leves de alto valor (Categorias A e B) e usa comandos de queima/descarte rentável (`junk corpo` / `sacrificar corpo` / `queimar corpo`) para converter a carcaça em moedas adicionais no próprio local.
    - **Sustentação e Venda:** Pausas e nutrição necessárias em salas seguras para sustentar a expedição. Quando o inventário encher de espólios valiosos, retorna temporariamente à cidade para vender nas lojas e guardar ouro na caixa do Templo/Guilda antes de retomar a limpeza. Encerra o dia com acampamento flexível ou na cidade.
-   - **Manutenção Contínua de Conhecimento:** Atualizar o catálogo de NPCs e a matriz de espólios diariamente com qualquer novidade observada, com consolidação geral obrigatória ao fim de cada ciclo decenal.
+   - **Manutenção Contínua de Conhecimento:** Atualizar o catálogo de NPCs e a matriz de espólios com qualquer novidade observada, com conferência orgânica ao longo do ciclo.
 
 4. **Modo Batedor (Stealth Scout / Mapeamento Máximo):**
    - **Objetivo:** Mapear o maior número possível de salas da área/zona sem combate.
@@ -88,9 +88,10 @@ Os modos operacionais definem a postura tática, a alocação de risco, a gestã
    - **Rede de Segurança Mecânica:** **Wimpy elevado para 60% do HP máximo** (`wimpy 40` no Grau 11) para garantir disparo automático de fuga caso a conexão ou comando falhe. Ao desativar o modo, restaura o Wimpy para o padrão (~25%).
    - **Logística e Sono em Campo:** Carga ultra-leve (6 a 8 pães recheados da padaria + 1 ou 2 cantis cheios na Fonte Azul). Ao sobrar 15-20 MV, escolhe uma sala vazia e segura (checada com `scan` e `look`), come, bebe e usa `sleep` por 3 a 4 ticks (~3 a 5 min) para recarga total de MV e Mana, acordando para prosseguir.
 
-5. **Regra de Seleção (Modelo Híbrido):**
-   - O usuário pode ativar qualquer modo explicitamente no chat (ex.: *"hoje vamos em modo batedor"*).
-   - Quando não especificado, o agente assume o modo mais lógico com base na meta prioritária do dia (se há quest pendente -> Aventura; se há masmorra lucrativa para limpar -> Dungeon; se há área desconhecida -> Batedor), usando o Modo Padrão como fallback.
+5. **Regra de Seleção & Sinergia Tática (Batedor Precede Dungeon):**
+   - **Sinergia Fundamental:** O Modo Dungeon se baseia profundamente nas lições e no mapa descoberto. Portanto, **sempre que possível, o Modo Batedor deve preceder o Modo Dungeon** ao explorar novas regiões ou após mudanças de cenário, mapeando o terreno com invisibilidade para permitir o melhor planejamento de limpeza.
+   - **Modelo Híbrido:** O usuário pode ativar qualquer modo explicitamente no chat (ex.: *"hoje vamos em modo batedor"*).
+   - Quando não especificado, o agente assume o modo mais lógico com base na meta prioritária do dia (se há área a desbravar -> Batedor antes de Dungeon; se há quest pendente -> Aventura; se a área já está mapeada -> Dungeon), usando o Modo Padrão como fallback.
 
 ## 4. Jogar e registrar com continuidade
 1. Escolher um fio para a expedição e as condições para interrompê-la.

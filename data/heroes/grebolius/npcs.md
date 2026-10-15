@@ -14,7 +14,7 @@
      - Se parecer dador de tarefas: executa `autoquest`, `'sim` ou `'não`.
 2. **Cadência de Manutenção e Auditoria:**
    - **Atualização Diária:** Se a sessão diária revelar qualquer novo NPC, novo item à venda, alteração de preço ou diálogo inédito, o registro deve ser inserido neste documento no encerramento do dia.
-   - **Auditoria de Ciclo (1x a cada 10 dias):** Em marcos de abertura/fechamento de ciclo (Dias 1, 11, 21... 81, 91...), se a rota cruzar com NPCs e lojas de Midgaard, revalidar `list` ou fala para conferir alterações de estoque ou preços no servidor.
+   - **Pendência Maleável por Ciclo:** A checagem de estoques e novidades não exige desvios artificiais forçados; é tratada como uma pendência contínua que é sanada organicamente conforme as expedições passarem próximas aos NPCs durante o ciclo.
 
 ---
 
