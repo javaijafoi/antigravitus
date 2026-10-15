@@ -66,18 +66,19 @@ Os modos operacionais definem a postura tática, a alocação de risco, a gestã
    - **Wimpy:** Configuração padrão (~25%, atualmente 13-17 HP).
    - **Logística:** Carga intermediária, retorno ao santuário/laboratório para pernoite.
 
-2. **Modo Aventura (Foco na Missão / Quest):**
+2. **Modo Aventura (Foco na Missão & Mapeamento de NPCs):**
    - **Objetivo:** Concluir a autoquest ou missão ativa designada.
    - **Postura:** Foco estrito no objetivo da missão; ignora o que não for relevante ao redor.
+   - **Mapeamento e Auditoria de NPCs ([npcs.md](file:///c:/Users/alura/Downloads/antigravitus/data/heroes/grebolius/npcs.md)):** Ao encontrar figuras e comerciantes, sonda suas possibilidades (comandos contextuais como `list`, `practice`, `autoquest`, `'sim`, `'não`). Em aberturas de ciclo (dias 1, 11, 21...), confere se houve mudança de estoque, preços ou novos diálogos no servidor.
    - **Combate:** Abate apenas mobs fracos necessários para abrir caminho ou cumprir requisito; desvia de qualquer mob arriscado.
    - **Gestão de Bloqueios:** Se encontrar um obstáculo intransponível (falta de nível, monstro forte demais bloqueando passagem, falta de ouro para item de entrega), anota a pendência específica em `missoes.json` e na crônica, encerra o dia em segurança e sugere para o dia seguinte a transição para o modo adequado (ex.: Modo Dungeon para farmar ouro/EXP).
 
-3. **Modo Dungeon (Limpeza e Pilhagem Máxima):**
+3. **Modo Dungeon (Limpeza, Pilhagem Máxima & Saque Inteligente):**
    - **Objetivo:** Varrer e limpar a masmorra/catacumba, maximizando espólios e ouro.
    - **Preparação:** Mochila limpa de peso morto (apenas armas equipadas, tocha, 1 cantil e 4-6 pães recheados).
    - **Combate:** Arrisca um pouco mais contra mobs de dificuldade moderada (zumbis, monstros novatos, minotauro com `chill touch` e `armor`), mas NUNCA desafia criaturas muito difíceis ou letais (chefes desproporcionais).
-   - **Sustentação em Campo:** Pausas e nutrição necessárias em salas seguras para sustentar a expedição.
-   - **Gestão de Carga (Força 10):** Quando o inventário encher de espólios valiosos (punhais, peles, chifres), retorna temporariamente à cidade para vender nas lojas e guardar ouro na caixa do Templo/Guilda antes de retomar a limpeza. Encerra o dia com acampamento flexível ou na cidade.
+   - **Saque Inteligente (Força 10):** Aplica a Matriz Ouro/Peso de [conhecimento.md](file:///c:/Users/alura/Downloads/antigravitus/data/heroes/grebolius/conhecimento.md). Executa rigorosamente `get gold corpo`, recolhe apenas itens leves de alto valor (Categorias A e B) e usa `sac corpo` para eliminar o peso morto no local.
+   - **Sustentação e Venda:** Pausas e nutrição necessárias em salas seguras para sustentar a expedição. Quando o inventário encher de espólios valiosos, retorna temporariamente à cidade para vender nas lojas e guardar ouro na caixa do Templo/Guilda antes de retomar a limpeza. Encerra o dia com acampamento flexível ou na cidade.
 
 4. **Modo Batedor (Stealth Scout / Mapeamento Máximo):**
    - **Objetivo:** Mapear o maior número possível de salas da área/zona sem combate.

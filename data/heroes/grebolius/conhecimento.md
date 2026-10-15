@@ -65,7 +65,21 @@ A Força 10 e a carga registrada pedem atenção a peso e movimento; o custo exa
 | **Ferreiro (Loja de Armas)** | Rua Principal Leste II | Adaga comum | **4 moedas de ouro** |
 | **Armeiro (Loja de Armaduras)**| Rua Principal Oeste | Gorro de couro simples | **75 moedas de ouro** |
 
-* **Critério de venda:** Conferir finalidade, requisitos e estado antes de vender ou doar. Preservar itens de missão e itens potencialmente úteis até esclarecer seu uso; não vender automaticamente tudo que não está equipado.
+* **Critério de venda e gestão de carga:** A Força 10 impõe limite estrito de transporte. Para o catálogo detalhado de NPCs mercadores, consulte [npcs.md](file:///c:/Users/alura/Downloads/antigravitus/data/heroes/grebolius/npcs.md).
+
+### Matriz de Custo-Benefício de Carga (Ratio Ouro / Peso para Força 10)
+
+| Categoria | Tipo de Espólio | Exemplos Típicos | Ratio Ouro/Peso | Diretriz Operacional |
+| :---: | :--- | :--- | :---: | :--- |
+| **A (Alta Densidade)** | **Ouro e Itens Leves Valiosos** | Moedas soltas, gemas, anéis, poções, pergaminhos, `chifre de minotauro`. | **Extremo (> 50 ouros/lb)** | **COLETA OBRIGATÓRIA SEMPRE**. Ouro líquido tem peso zero; itens de missão e consumíveis mágicos pesam 1 a 2 lbs e rendem fortuna ou utilidade crítica. |
+| **B (Rendimento Médio)** | **Equipamentos Leves de Revenda** | `brilhante punhal de novato` (peso 1-2 lbs, revenda ~4-10 ouros), armaduras de peão do xadrez. | **Moderado (4 a 15 ouros/lb)** | **COLETA SELETIVA**. Pegar apenas se houver espaço livre na mochila e a rota terminar próxima a ferreiro/doações. |
+| **C (Peso Morto / Lixo)** | **Armas Pesadas e Entulho** | `picareta pesada` (15+ lbs), armas marciais comuns em masmorras distantes, restos orgânicos/carne estragada. | **Péssimo (< 2 ouros/lb)** | **NUNCA CARREGAR**. O peso consome a estamina, trava o movimento e impede a coleta de ouro. Deixar no chão ou sacrificar. |
+
+### Protocolo de Saque Inteligente em Combate
+Para evitar sobrecarga de inventário e otimizar tempo e recursos, **fica abolido o comando cego `get all corpo`**. A sequência padrão de pilhagem após abater qualquer inimigo é:
+1. **`get gold corpo`**: Recolhe todo o ouro líquido do cadáver (peso zero, benefício imediato).
+2. **`get <item_valioso> corpo`**: Coleta exclusivamente itens identificados nas Categorias A ou B, preservando a leveza da mochila.
+3. **`sac corpo`**: Sacrifica o restante do cadáver aos deuses no próprio local, convertendo os restos inúteis em benção/moedas residuais e limpando a sala sem fardo de carga.
 
 
 * **A Poção Amarela da Loja de Magia (Dica de Negelok — Dia 41):** Dica registrada de detecção de invisibilidade; não é demonstração de uso por Grebolius. Confirmar efeito, duração e preço antes de comprar ou depender dela.
