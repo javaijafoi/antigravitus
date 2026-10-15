@@ -29,14 +29,19 @@ Atualizar estado e missões com essas evidências antes de elaborar a crônica. 
 
 ## 2. Objetivo da expedição e risco
 
-Consultar identidade, plano e missões do herói. Para Grebolius, a prioridade vigente é **missão ou descoberta → decisão e consequência reais → progressão como resultado**. A ambição por poder permanece uma característica, sem impor extermínio de toda criatura vencível ou repetição de monstros por XP.
+### Gatilhos para Descobrir Lugares Novos
 
-Escolher um objetivo verificável e as condições para interromper a tentativa. Antes de entrar em área desconhecida ou enfrentar alvo:
+A exploração de novas rotas, áreas desconhecidas ou desvios do itinerário habitual não deve acontecer por capricho. Ela deve estar fundamentada em pelo menos um destes três gatilhos:
 
-1. Conferir vida, mana, movimento, provisões, equipamento e efeitos ativos. Não contar com item que só conste de registro antigo ou magia não aprendida.
-2. Avaliar a ameaça e o dano observado. `con <alvo>` é uma referência local útil, sem garantir vitória. Não testar dano arriscando um golpe potencialmente letal só para completar o registro.
-3. Confirmar saída utilizável e retorno; conexão de descida pode não ter subida. Não usar invisibilidade como garantia de fuga, ausência de detecção ou acesso a guilda.
-4. Conferir margem para sobreviver e agir; se recursos ou retorno forem insuficientes, preparar melhor, contornar ou adiar. Não há obrigação de iniciar combate porque o alvo parece vencível.
+1. **Experiência traumática recente:** Morte recente, fuga brutal no limite da vida (`wimpy`) ou colapso de plano. A personagem precisa clarear as ideias, digerir a queda e recalibrar o foco em espaço aberto antes de encarar o ambiente sufocante do trauma.
+2. **Dois dias seguidos de tarefas repetitivas:** Sensação de tédio goblin, estagnação ou rotina monótona após 2 dias consecutivos fazendo a mesma tarefa/trajeto sem novidade.
+3. **Marcos decenais do ciclo:** Dias redondos terminados em zero (10, 20, 30, 40, 50, 60, 70...) que exigem expansão intencional de horizontes e quebra de limites conhecidos.
+
+### Fluxo de Conexão e Execução em Jogo
+
+- **Teto rígido de conexões:** No máximo **3 conexões** ao MUD por dia. É proibido fatiar o dia em 6, 7 ou 8 logins/logouts artificiais.
+- **Fluxo contínuo automático:** Se as salas, rotas e saídas forem as esperadas para o plano do dia, o script avança normalmente e sem hesitação.
+- **Pausa tática diante de anomalia:** Se houver personagem jogador (player), NPC/mob inesperado fora da rota prevista, dano imprevisto ou bloqueio de saída: o script **NÃO desconecta**; ele pausa a marcha automática, mantém a conexão aberta e passa o controle para o agente. O agente assume e joga em tempo real até normalizar a situação. Uma vez normalizado, o agente decide entre **retomar o script original** ou **adaptar o restante do dia com um novo roteiro** (se a ocorrência alterou os recursos, a rota ou a meta), respeitando sempre o teto de até 3 conexões.
 
 ### Referência de Grebolius
 

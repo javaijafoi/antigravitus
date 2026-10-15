@@ -2,8 +2,8 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 61,
-    "source": "Sessão ao vivo em debomud.org:4000; combate e estado verificados no servidor.",
+    "day": 62,
+    "source": "Sessão ao vivo em debomud.org:4000; combate, entrega de itens e estado verificados no servidor.",
     "verification": "live",
     "live_verified": true
   },
@@ -12,7 +12,7 @@
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
   "alignment": {
-    "value": 73,
+    "value": 99,
     "label": "Neutro Pragmático"
   },
   "vitals": {
@@ -21,7 +21,7 @@
       "max": 52
     },
     "mana": {
-      "current": 140,
+      "current": 118,
       "max": 140
     },
     "mv": {
@@ -30,10 +30,10 @@
     }
   },
   "experience": {
-    "current": 48606,
+    "current": 49362,
     "next_level": 60000
   },
-  "gold": 1121,
+  "gold": 1156,
   "attributes": {
     "STR": 10,
     "DEX": 15,
@@ -46,7 +46,7 @@
     "base": 16,
     "with_armor": 40,
     "effect_verified": true,
-    "note": "Valores verificados ao vivo no servidor no Dia 61 (AC 16 sem armadura, AC 40 com 'armor')."
+    "note": "Valores verificados ao vivo no servidor (AC 16 sem armadura, AC 40 com 'armor')."
   },
   "hitroll": 0,
   "damroll": 1,
@@ -65,15 +65,15 @@
     "name": "O Panteão dos Centenários"
   },
   "last_event": {
-    "day": 61,
-    "summary": "Marcha pelos campos, infiltração na Masmorra dos Novatos, eliminação dos novatos zumbis na Sala do Alquimista, obtenção dos chifres do Minotauro e acampamento ao lado do Alquimista."
+    "day": 62,
+    "summary": "Entrega dos chifres do Minotauro ao Alquimista, decifração da placa da escadaria, abate de novato zumbi na sala, recebimento da ordem de caçar insetos rastejantes e reconhecimento de 'A Entrada'."
   },
   "next_objective": {
     "mission_id": "limpando-monstros",
-    "title": "Completar a autoquest do Alquimista",
-    "next_step": "Entregar ou apresentar os chifres do Minotauro e os espólios ao Alquimista ou descer a escadaria da sala.",
+    "title": "Caçar inseto rastejante na masmorra inferior",
+    "next_step": "Descer pela escadaria para 'A Entrada', localizar e abater um inseto rastejante e retornar à Sala do Alquimista.",
     "missing_preparation": [
-      "Examinar a placa pregada na escadaria inferior da Sala do Alquimista.",
+      "Levar tocha ou conferir iluminação nas galerias abaixo de 'A Entrada'.",
       "Identificar requisitos de nível para equipar o anel arcano (+2E)."
     ]
   },
@@ -206,11 +206,6 @@
         "source": "Confirmado ao vivo no inventário no Dia 61"
       },
       {
-        "name": "os chifres do Minotauro",
-        "quantity": 1,
-        "source": "Espólio do novato zumbi abatido na Sala do Alquimista no Dia 61"
-      },
-      {
         "name": "um pão recheado",
         "quantity": 1,
         "source": "Provisão restante após consumo no Dia 61"
@@ -219,36 +214,37 @@
     "pending_verification": [
       {
         "name": "anel arcano (+2E)",
-        "last_seen_day": 61,
-        "reason": "Confirmado na posse no Dia 61, mas o servidor informou 'Você não tem experiência para usar um anel arcano'; requisitos de nível e bônus reais não confirmados."
+        "last_seen_day": 62,
+        "reason": "Confirmado na posse no Dia 61/62, mas o servidor informou 'Você não tem experiência para usar um anel arcano'; requisitos de nível e bônus reais não confirmados."
       }
     ]
   },
   "conditions": [
-    "Saciada e hidratada no Dia 61 com pão recheado e cantil.",
     "Armadura mística (armor) ativa e verificada.",
-    "Autogold confirmado em funcionamento no servidor (35 moedas coletadas por zumbi)."
+    "Autogold confirmado em funcionamento no servidor (35 moedas coletadas por zumbi).",
+    "Fome e sede registradas durante o combate no Dia 62; requer provisões no próximo início de jornada."
   ],
   "uncertainties": [
-    "O anel arcano (+2E) está na mochila, mas o servidor informou 'Você não tem experiência para usar um anel arcano' (exige nível maior que 8).",
-    "A escadaria descendente na Sala do Alquimista leva a 'A Entrada', com aviso em placa pregada ainda não decifrada."
+    "O anel arcano (+2E) está na mochila, mas exige nível maior que 8.",
+    "A placa de perigo em 'A Entrada' alerta sobre a morte para quem desce desacompanhado ou desequipado.",
+    "Profundidade e saídas dos corredores além de 'A Entrada' (Norte, Sul, Oeste) ainda não mapeadas."
   ],
   "evidence": [
     {
       "document": "events.json",
-      "day": 61,
-      "note": "Sessão e combate verificados ao vivo no servidor debomud.org:4000."
+      "day": 62,
+      "note": "Sessão, combate e entrega de itens verificados ao vivo no servidor debomud.org:4000."
     },
     {
       "document": "posts.json",
-      "day": 61,
-      "note": "Crônica do Dia 61 baseada em fatos ao vivo."
+      "day": 62,
+      "note": "Crônica do Dia 62 baseada em fatos ao vivo."
     }
   ],
   "narrative_style": "ladra arcana",
   "weapon_summary": "Punhal de Novato (+ Escudo)",
   "migration": {
     "method": "sessão ao vivo e conferência direta no servidor",
-    "verified_on": "Dia 61"
+    "verified_on": "Dia 62"
   }
 }

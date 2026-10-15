@@ -2,8 +2,8 @@
   "hero_id": "grebolius",
   "hero_name": "Grebolius",
   "sanctuary_id": "panteao_centenarios",
-  "last_updated_cycle": "Ciclo VII (Dia 61; verificacao ao vivo)",
-  "total_rooms": 68,
+  "last_updated_cycle": "Ciclo VII (Dia 62; verificacao ao vivo)",
+  "total_rooms": 69,
   "layers": [
     {
       "id": "superficie",
@@ -1032,20 +1032,48 @@
         "y": 560
       },
       "exits": {
-        "o": "outro_canto"
+        "o": "outro_canto",
+        "d": "a_entrada"
       },
       "npcs": [
         "O Novato Alquimista",
         "Diabinho"
       ],
-      "notes": "Acampamento vivo no Dia 61. Novatos zumbis abatidos no local e chifres do Minotauro obtidos. Alquimista presente com formulas nas paredes e escada descendente.",
+      "notes": "Acampamento vivo no Dia 61 e 62. Chifres do Minotauro entregues ao Alquimista, recebida a ordem de caçar insetos rastejantes. Novatos zumbis abatidos no local. Placa da escada decifrada alertando perigo mortal.",
       "discovered_in": "Ciclo II (Dia 14)",
       "unresolved_exits": {
         "n": {
-          "description": "Porta norte citada no mapa textual; destino não confirmado."
+          "description": "Porta norte aberta no Dia 62 revelando um iluminado corredor."
+        }
+      }
+    },
+    {
+      "id": "a_entrada",
+      "name": "A Entrada",
+      "layer": "novatos",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Médio / Hostil",
+      "risk_code": "medium",
+      "icon": "🚪",
+      "coords": {
+        "x": 1520,
+        "y": 660
+      },
+      "exits": {
+        "u": "sala_alquimista"
+      },
+      "npcs": [],
+      "notes": "Escuro, úmido e frio. Ruídos de criaturas rondando no escuro. Escadaria sobe para a Sala do Alquimista. Saídas para Norte (Um Cruzamento de Corredores), Sul (Uma Curva na Passagem) e Oeste (Uma Passagem).",
+      "discovered_in": "Ciclo VII (Dia 62)",
+      "unresolved_exits": {
+        "n": {
+          "description": "Um Cruzamento de Corredores"
         },
-        "d": {
-          "description": "Escadaria com aviso de perigo; destino não confirmado."
+        "s": {
+          "description": "Uma Curva na Passagem"
+        },
+        "o": {
+          "description": "Uma Passagem"
         }
       }
     },
@@ -1548,7 +1576,7 @@
       }
     }
   ],
-  "last_updated_day": 61,
+  "last_updated_day": 62,
   "verification": "live",
   "current_location_id": "sala_alquimista",
   "camp_id": "sala_alquimista",

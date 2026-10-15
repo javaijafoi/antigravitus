@@ -32,6 +32,7 @@ As declarações de domínio e invulnerabilidade pertencem à voz da personagem.
 3. **Vingança como objetivo futuro:** reconhecer acesso, ameaça, recursos e retorno dos esgotos antes de escolher confronto ou recuo. Não antecipar a morte da serpente nem uma recompensa.
 4. **Preparo verificável:** conferir efeitos de magia, vida, mana, movimento, equipamento, provisões e saída. `wimpy 13` é a configuração documental vigente, não uma promessa de fuga. O plano detalha as verificações.
 5. **Voz com contraste:** preservar orgulho e ambição; permitir humor, curiosidade, hesitação e silêncio quando apoiados no que aconteceu. Nem toda jornada exige clímax ou vitória épica.
+6. **Gatilhos para novos horizontes:** não desbravar o desconhecido ao acaso. Novas rotas exigem motivação psicológica ou estratégica: digestão de trauma recente (espaço aberto para esfriar a cabeça após queda brutal), combate à estagnação (após dois dias seguidos na mesma rotina) ou celebração de marco decenal (dias 10, 20, 30...).
 
 ## Nota de continuidade
 Os Dias 30–31 divergem sobre o local de despertar e repetem a entrega da coleira. O custo da segunda morte também não está explicado. As lacunas estão registradas ao final de `evolucao.md`; não preenchê-las com viagens, entregas, perdas de memória ou estados emocionais inventados.

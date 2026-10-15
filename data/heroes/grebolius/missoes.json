@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 61,
+  "as_of_day": 62,
   "verification": "live",
   "items": [
     {
@@ -45,9 +45,9 @@
       "type": "official",
       "status": "active",
       "accepted_day": 36,
-      "last_progress_day": 61,
+      "last_progress_day": 62,
       "objective": "Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.",
-      "next_step": "Apresentar ou entregar os chifres do Minotauro e outros espólios colhidos ao Alquimista ou descer a escadaria da sala.",
+      "next_step": "Matar um inseto rastejante na masmorra inferior ('A Entrada' e além) e retornar ao Alquimista conforme a ordem verbal recebida.",
       "evidence": [
         {
           "document": "posts.json",
@@ -63,6 +63,11 @@
           "document": "posts.json",
           "day": 61,
           "note": "Combate fatal contra novatos zumbis na Sala do Alquimista e obtenção dos chifres do Minotauro."
+        },
+        {
+          "document": "posts.json",
+          "day": 62,
+          "note": "Entrega dos chifres do Minotauro ao Alquimista e recebimento da instrução verbal direta: 'Vá lá, mate um desses insetos rastejantes, e volte aqui em seguida'."
         }
       ]
     },

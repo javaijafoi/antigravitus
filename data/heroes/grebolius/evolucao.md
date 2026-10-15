@@ -1116,3 +1116,25 @@ A próxima sessão pode resolver as pendências com respostas reais do MUD. Até
 * **Decisão Tática:**
   * No Dia 62, apresentar os chifres e investigar as fórmulas ou a placa pregada na escadaria que desce para 'A Entrada', mantendo o acampamento avançado em campo e a caçada por missões ativas.
 
+---
+
+### ⏳ Ciclo 62 (Dia 62): O Tributo dos Chifres, a Fúria Cadavérica e o Umbral da Escuridão
+* **Status Real (MUD - Verificação ao Vivo):**
+  * Nível: **8** *(49.362 EXP | Faltam 10.638 EXP para o Grau 9)*
+  * Vida: **52/52** | Mana: **118/140** | Movimento: **95/95**
+  * Classe de Armadura: **16** base / **40** com `armor` ativo *(verificado ao vivo no servidor)*
+  * Salto de Experiência: **+756 EXP** em combate mortal contra outro novato zumbi que emboscou o laboratório.
+  * Ouro Líquido: **1.156 moedas de ouro** *(+35 moedas saqueadas da carcaça do zumbi pelo autogold).*
+  * Alinhamento Moral: **99** (Neutro Pragmático).
+  * Fisiologia e Nutrição: Fome e sede sentidas durante o combate (-1 HP, -2 Mana, -2 MV); corpo regenerado em repouso.
+  * Inventário e Troféus: Entrega confirmada de `os chifres do Minotauro` para o Novato Alquimista; arsenal de punhais e espada preservado.
+  * Local de Pernoite: **A Sala do Alquimista** (Salva com `save` e descansando com `rest`).
+* **Marcos e Impactos Psicológicos:**
+  * **A Decifração da Placa Sombria:** Ao examinar a madeira tosca pregada junto à escadaria descendente, decifrou o aviso categórico: *"Se você está sem equipamentos e sozinho, saia já daqui! Ou então não culpe ninguém por sua morte..."*. O aviso não afugentou a goblin; aguçou sua prudência.
+  * **O Tributo Entregue e a Emboscada do Zumbi:** Aproximou-se do Novato Alquimista e entregou os pesados chifres do Minotauro. No exato instante da entrega, um novato zumbi arremeteu das sombras com golpes violentos. Grebolius usou o escudo com frieza milimétrica, perfurou o monstro repetidas vezes com o punhal (16, 14 e 22 de dano) e cravou a lâmina em seu coração inerte.
+  * **A Ordem Verbal da Autoquest:** Em resposta à consulta da missão, o Alquimista vociferou a instrução direta de trabalho: *"Vá lá, mate um desses insetos rastejantes, e volte aqui em seguida. Mas preste atenção para não se perder!"*. A tarefa de Limpando Monstros agora tem alvo definido.
+  * **Abertura da Porta Norte e Reconhecimento de 'A Entrada':** Destrancou a porta norte do laboratório (`open north`), descortinando um iluminado corredor. Em seguida, desceu a escadaria (`d`) e pisou nas pedras gélidas de **A Entrada**: um ambiente escuro, úmido e fétido ecoando ruídos inquietantes de feras à espreita, com ramificações para o Norte, Sul e Oeste. Medindo os riscos e com a fome apertando, retornou com disciplina para a segurança da câmara do Alquimista.
+* **Decisão Tática:**
+  * No Dia 63, consumir provisões para saciar fome e sede, descer a escadaria armada com luz e feitiços, caçar um inseto rastejante nas galerias de 'A Entrada' e retornar ao Alquimista para avançar na missão.
+
+

@@ -110,5 +110,19 @@
         "note": "Sessão executada e confirmada ao vivo no servidor debomud.org:4000."
       }
     ]
+  },
+  {
+    "id": "ordem-alquimista-e-sondagem-entrada",
+    "day": 62,
+    "type": "quest",
+    "summary": "Entrega dos chifres do Minotauro ao Alquimista, leitura do aviso de perigo na placa da escada, recebimento da ordem para abater insetos rastejantes, eliminação de outro novato zumbi na sala, abertura da porta norte e sondagem inicial de 'A Entrada'.",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 62,
+        "note": "Sessão e combate executados ao vivo no servidor debomud.org:4000."
+      }
+    ]
   }
 ]

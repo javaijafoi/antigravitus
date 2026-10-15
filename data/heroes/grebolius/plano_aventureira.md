@@ -20,6 +20,12 @@ Consultar `missoes.md` e `missoes.json`, diferenciando tarefa oficial, investiga
 
 Antes de sair, definir o que pode comprovar avanço: instrução recebida, pista confirmada ou descartada, rota observada, recurso obtido ou condição de missão verificada. Falta de acesso e necessidade de recuo também são resultados úteis.
 
+### Gatilhos de Exploração de Lugares Novos
+Desbravar novas rotas ou áreas desconhecidas deve estar fundamentado em um destes três motivos:
+1. **Digestão de trauma recente:** Morte, queda brutal ou fuga desesperada (`wimpy`). O horizonte amplo e rotas abertas servem para clarear as ideias, digerir a derrota e recalibrar o instinto antes de encarar o subsolo sufocante.
+2. **Combate ao tédio (dois dias seguidos de repetição):** Se passar dois dias consecutivos nas mesmas rotinas mecânicas sem novidade, a inquietação goblin exige explorar uma nova frente no mapa.
+3. **Marcos decenais do ciclo:** Dias redondos (10, 20, 30, 40, 50, 60, 70...) exigem expansão proposital de fronteiras e desafio a zonas inexploradas.
+
 ## 3. Jogar e registrar com continuidade
 1. Escolher um fio para a expedição e as condições para interrompê-la.
 2. Explorar, observar e interagir segundo o risco. Lutar por defesa, passagem ou objetivo; não há cota mínima de ações, salas novas ou combates.
