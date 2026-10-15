@@ -1508,5 +1508,36 @@
       "Como os insetos rastejantes da ordem do Alquimista não se mostravam nessas alas abertas, recuei com passos leves até o cruzamento central e me infiltrei na Longa Passagem Leste-Oeste. O cheiro fétido de podridão se intensificou de súbito quando um vulto cadavérico bloqueou a saída: outro novato zumbi arrastava os pés em minha direção, de garras erguidas. Aproximei-me sem pestanejar. Antes que seus braços me alcançassem, murmurei a fórmula arcana e disparei uma salva impiedosa de projéteis luminosos que castigaram sua carcaça; o morto cambaleou com estalos secos na ossatura, tentou uma investida cega que rasgou parte de minhas vestes, mas minha lâmina de novato foi mais rápida. Cravei o punhal no centro de seu peito podre até que o corpo desabasse inerte e em silêncio contra o chão ensanguentado.",
       "Recolhi trinta e cinco moedas de ouro que tilintavam nas frestas de suas roupas e, com a área limpa e os corredores ressoando ecos distantes, refiz a rota de volta à segurança superior do laboratório. O Alquimista continuava debruçado sobre seus pós, alheio aos horrores do subsolo. Sentei-me junto à bancada para recuperar o fôlego e me recolher ao descanso, mas a dor aguda de um estômago completamente vazio me atingiu como um aviso seco do próprio corpo: as provisões acabaram, e avançar no escuro sem comida cobra um preço pesado demais. A próxima alvorada exigirá resolver essa fome antes de colocar os pés de volta no subsolo."
     ]
+  },
+  {
+    "id": 65,
+    "day": "Dia 65",
+    "title": "O Aroma do Trigo, a Patrulha das Três Sombras e a Fartura Goblin",
+    "date": "17 de dezembro de 2026",
+    "in_game_time": "Midgaard – A Padaria, os Campos e as Catacumbas Subterrâneas",
+    "excerpt": "Acossada pela fome, Grebolius faz uma expedição relâmpago a Midgaard para comprar pães e reabastecer o cantil, retornando às catacumbas para uma varredura exaustiva que expurga dois zumbis e um monstro novato em três frentes distintas.",
+    "tags": [
+      "A Padaria de Midgaard",
+      "Pão Recheado",
+      "Catacumbas Subterrâneas",
+      "Varredura Total",
+      "Combate Múltiplo",
+      "Fartura Goblin"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "events.json",
+        "day": 65,
+        "note": "Sessão, comércio e três combates executados e confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ],
+    "content": [
+      "Abri os olhos com uma cólica seca apertando o estômago; o corpo reclamava com veemência pelo combustível que lhe faltava. O Alquimista ergueu os olhos dos seus tubos de ensaio e reforçou a exigência de sempre: descer, caçar um dos insetos rastejantes e não me perder nos túneis. Mas uma guerreira goblin esperta sabe que marchar para as entranhas da terra de barriga oca é pedir para tombar por fraqueza. Levantei-me, invoquei a textura vibrante da Armadura Arcana sobre as vestes e decidi que a primeira metade da jornada seria para restabelecer os suprimentos com a fartura que minhas algibeiras podem pagar.",
+      "Empurrei a porta oeste do laboratório e disparei pelos corredores superiores da masmorra, cruzando o pátio de pedra até ganhar a luz ampla do Grande Campo. Cruzei os prados a passos largos até alcançar o Templo de Midgaard e descer para a azáfama da Praça do Comércio. Na Rua Principal Oeste, o perfume irresistível de massa assada me guiou direto para a Padaria. Havia semanas que eu não via tanta fartura reunida: pães de todos os tipos alinhados sob o balcão enfarinhado. Contei trinta moedas de ouro para o padeiro em troca de cinco pães recheados fumegantes. Não esperei sequer sair dali: devorei dois pães inteiros em mordidas sofregas, sentindo o recheio quente e a massa densa aquecerem minhas entranhas e devolverem de imediato o vigor aos músculos. Guardei os outros três na mochila, rumei à Praça do Templo para mergulhar o cantil na fonte de mármore e bebi até fartar.",
+      "De barriga cheia, cantil transbordando e com uma disposição ardente correndo pelas veias, fiz o caminho de volta pelos campos e mergulhei nas profundezas escuras de A Entrada. Desta vez não haveria passeio tímido: decidi varrer cada galeria, cruzamento e alcova daquelas catacumbas até cansar as botas. Na Grande Sala a oeste, surpreendi um novato zumbi cambaleando entre entulhos; abri fogo com dardos luminosos que despedaçaram sua carne fétida e finalizei com um golpe cirúrgico do punhal, recolhendo trinta e cinco moedas de ouro de suas vestes. Rumei então para o norte, alcançando a Longa Passagem Leste-Oeste, onde outro morto-vivo tentou me barrar o avanço; uma nova saraivada de projéteis mágicos o prostrou sem vida, rendendo-me outras trinta e cinco moedas douradas.",
+      "Ainda cheia de fôlego e atenta aos menores ruídos, rumei ao sul e adentrei a passagem bifurcada onde a velha pele do Minotauro jaz esquecida. Ali, um monstro novato saltou das sombras pronto para me abocanhar; desviei com agilidade, fustiguei-o com magia à queima-roupa e cravei a adaga em seu flanco, tombando-o de vez. Despojei a criatura de mais vinte moedas de ouro e de uma resistente veste de novato que agora carrego comigo. Percorri os corredores restantes em patrulha minuciosa até sentir as pernas pesadas e o suor da labuta me avisar que o dia tinha sido explorado até o limite. Subi a escadaria de volta ao laboratório, deixei o Alquimista a par da ronda concluída e deitei ao lado das bancadas com a satisfação genuína de quem comeu feito rainha, limpou três ameaças e carrega mais de mil e duzentas moedas reluzindo nas algibeiras."
+    ]
   }
 ]
+

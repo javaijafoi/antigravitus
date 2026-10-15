@@ -1,6 +1,6 @@
 # 🧌 Ficha Atual de Grebolius (Último Estado Registrado)
 
-> Referência: Dia 64. Estado verificado em sessão; consultar a origem registrada.
+> Referência: Dia 65. Estado verificado em sessão; consultar a origem registrada.
 > Este documento reúne o último estado e as missões registrados; as incertezas aparecem ao final.
 
 ## ✦ Identificação e Registro
@@ -9,8 +9,8 @@
 * **Raça / Aparência Real:** Mulher goblin; aventureira sem véu
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **8**
-* **Alinhamento Moral:** 124 (Um Pouco Bom)
-* **Localização Atual:** A Sala do Alquimista (último registro: Dia 64)
+* **Alinhamento Moral:** 159 (Um Pouco Bom)
+* **Localização Atual:** A Sala do Alquimista (último registro: Dia 65)
 * **Acampamento Registrado:** A Sala do Alquimista
 * **Santuário de Referência:** O Panteão dos Centenários
 
@@ -19,13 +19,13 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 ## ✦ Status Vitais
 | Recurso | Atual | Máximo | Porcentagem |
 | :--- | :---: | :---: | :---: |
-| **Pontos de Vida (HP)** | 51 | 52 | 98% |
-| **Pontos de Mana (MP)** | 103 | 140 | 74% |
+| **Pontos de Vida (HP)** | 52 | 52 | 100% |
+| **Pontos de Mana (MP)** | 140 | 140 | 100% |
 | **Estamina / Movimento (MV)** | 95 | 95 | 100% |
 
-* **Experiência Acumulada:** **56.154 EXP**
-* **Experiência Necessária p/ Grau 9:** **3.846 EXP** (Meta: 60.000 EXP)
-* **Ouro Líquido:** **1.191 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **59.554 EXP**
+* **Experiência Necessária p/ Grau 9:** **446 EXP** (Meta: 60.000 EXP)
+* **Ouro Líquido:** **1.251 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 10
@@ -48,7 +48,7 @@ Valores verificados ao vivo no servidor (AC 16 sem armadura, AC 40 com 'armor').
 * **Altruísmo — Concluída:** Doar equipamento excedente na Sala de Doações.
   * Próximo passo: Nenhuma tarefa nova inferida a partir da conclusão.
 * **Limpando Monstros — Ativa:** Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.
-  * Próximo passo: Saciar a fome com novas rações e localizar o ninho dos insetos rastejantes nas catacumbas sob A Entrada.
+  * Próximo passo: Localizar o covil dos insetos rastejantes nas galerias profundas para satisfazer o pedido do Alquimista e obter 446 EXP restantes para o Nível 9.
 * **Dicas Mágicas — Ativa:** Descobrir o próximo passo informado pelo Mago Aventureiro.
   * Próximo passo: Consultar o NPC e o estado da tarefa; registrar a instrução obtida sem presumir recompensa.
 
@@ -77,6 +77,8 @@ Equipamento conforme os últimos documentos disponíveis; conferir no próximo a
 
 ## ✦ Inventário e Suprimentos
 Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
+* `um pão recheado` (x3) — Comprado na Padaria de Midgaard no Dia 65
+* `uma brilhante veste de novato` (x1) — Despojada de monstro novato nas catacumbas no Dia 65
 * `um cantil` (x1) — Confirmado ao vivo no inventário no Dia 61
 * `um brilhante punhal de novato` (x5) — Confirmado ao vivo no inventário no Dia 61
 * `uma brilhante espada de novato` (x1) — Confirmado ao vivo no inventário no Dia 61
@@ -85,21 +87,20 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 * `uma mochila` (x1) — Confirmado ao vivo no inventário no Dia 61
 
 ### Pendências de inventário
-* **anel arcano (+2E)** — último registro: Dia 64. Confirmado na posse no Dia 61/62/63/64, mas o servidor informou 'Você não tem experiência para usar um anel arcano'; requisitos de nível e bônus reais não confirmados.
+* **anel arcano (+2E)** — último registro: Dia 65. Confirmado na posse no Dia 61/62/63/64/65, mas o servidor informou 'Você não tem experiência para usar um anel arcano'; requisitos de nível e bônus reais não confirmados.
 
 ## ✦ Condições Registradas
 * Armadura mística (armor) ativa e verificada.
-* Alerta de fome ativo no repouso; provisões de alimento esgotadas na mochila.
-* Estamina (95 MV) e integridade física (51/52 HP) preservadas após combate nas catacumbas.
+* Alimentada com pão recheado e cantil abastecido na fonte do Templo (fome saciada).
+* Estamina plena (95 MV), mana máxima (140 MN) e vitalidade completa (52 HP) após patrulha tripla vitoriosa.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
-**Localizar inseto rastejante e repor suprimentos de comida**
-Adquirir ou conjurar rações para saciar a fome e localizar o ninho dos insetos rastejantes nas catacumbas sob A Entrada.
-* Adquirir comida (pão/ração) para regeneração plena no repouso.
+**Localizar o ninho dos insetos rastejantes e alcançar o Grau 9**
+Buscar as frestas profundas onde os insetos rastejantes se escondem para cumprir a ordem do Alquimista e acumular os 446 EXP restantes para o Nível 9.
 * Identificar requisitos de nível para equipar o anel arcano (+2E).
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessão ao vivo em debomud.org:4000; combate nas catacumbas, abatimento de zumbi e estado verificados no servidor..
+Fonte do estado: Sessão ao vivo em debomud.org:4000; expedição de abastecimento a Midgaard (Padaria e Templo) e circuito de combate triplo nas catacumbas sob A Entrada..
 * O anel arcano (+2E) está na mochila, mas exige nível maior que 8.
 * A placa de perigo em 'A Entrada' alerta sobre a morte para quem desce desacompanhado ou desequipado.
 * Locais exatos dos insetos rastejantes nas catacumbas além das câmaras já mapeadas.

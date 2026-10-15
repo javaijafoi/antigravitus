@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 64,
+  "as_of_day": 65,
   "verification": "live",
   "items": [
     {
@@ -45,9 +45,9 @@
       "type": "official",
       "status": "active",
       "accepted_day": 36,
-      "last_progress_day": 64,
+      "last_progress_day": 65,
       "objective": "Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.",
-      "next_step": "Saciar a fome com novas rações e localizar o ninho dos insetos rastejantes nas catacumbas sob A Entrada.",
+      "next_step": "Localizar o covil dos insetos rastejantes nas galerias profundas para satisfazer o pedido do Alquimista e obter 446 EXP restantes para o Nível 9.",
       "evidence": [
         {
           "document": "posts.json",
@@ -78,6 +78,11 @@
           "document": "posts.json",
           "day": 64,
           "note": "Sondagem de Uma Grande Sala e Uma Sala Enorme, e aniquilação de um novato zumbi na Longa Passagem Leste-Oeste."
+        },
+        {
+          "document": "posts.json",
+          "day": 65,
+          "note": "Reiteração da ordem pelo Alquimista ('Vá lá, mate um desses insetos rastejantes, e volte aqui em seguida'), patrulha tripla de extermínio com abate de 2 novatos zumbis e 1 monstro novato nas catacumbas."
         }
       ]
     },

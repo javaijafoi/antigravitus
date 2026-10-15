@@ -26,15 +26,16 @@ Desbravar novas rotas ou áreas desconhecidas deve estar fundamentado em um dest
 2. **Combate ao tédio (dois dias seguidos de repetição):** Se passar dois dias consecutivos nas mesmas rotinas mecânicas sem novidade, a inquietação goblin exige explorar uma nova frente no mapa.
 3. **Marcos decenais do ciclo:** Dias redondos (10, 20, 30, 40, 50, 60, 70...) exigem expansão proposital de fronteiras e desafio a zonas inexploradas.
 
-### Autonomia por Orçamento de Recursos (Estamina e Reservas)
-Superar roteiros curtos e estáticos. A estamina alta (95 MV) é o orçamento da marcha:
-- **Explorar enquanto MV > 30:** Avançar, patrulhar e mapear galerias enquanto houver fôlego superior a 30 MV.
-- **Retorno e encerramento obrigatório somente se:**
-  1. Estamina cair para o limite de retorno seguro (`MV <= 30`).
+### Gasto Ativo e Aproveitamento da Estamina (MV)
+Superar roteiros curtos e estáticos. A estamina alta (95 MV) é a energia da jornada:
+- **Dias ativos e proveitosos:** Explorar, patrulhar, caçar e mapear gastando a estamina de forma produtiva ao longo de dezenas de passos (40 a 70 passos), em vez de encerrar a sessão após breves caminhadas de 5 ou 10 passos.
+- **Avançar enquanto MV > 25-30:** A aventureira patrulha galerias, avança em corredores ou viaja para reabastecer provisões e buscar pistas enquanto tiver estamina.
+- **Abate de mob não aborta o dia:** Eliminar um inimigo ou cumprir uma etapa de missão intermediária não encerra a jornada prematuramente se ainda houver fôlego; a exploração e as tarefas continuam.
+- **Retorno e encerramento seguro somente se:**
+  1. A estamina atingir a margem de retorno seguro (`MV <= 25-30`).
   2. Integridade vital cair para menos de 35 HP ou mana para menos de 40 MN (reserva tática).
-  3. Alvo da autoquest/missão for abatido (retornar para entrega imediata).
-  4. Mochila saturada de espólios de valor.
-  5. Anomalia hostil que exija retirada.
+  3. Mochila saturada de espólios de valor que exijam guardar/vender.
+  4. Anomalia hostil grave ou emboscada que imponha retirada.
 
 ## 3. Jogar e registrar com continuidade
 1. Escolher um fio para a expedição e as condições para interrompê-la.

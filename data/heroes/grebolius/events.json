@@ -152,5 +152,19 @@
         "note": "Sessão e combate executados e confirmados ao vivo no servidor debomud.org:4000."
       }
     ]
+  },
+  {
+    "id": "expedicao-suprimentos-e-tripla-patrulha",
+    "day": 65,
+    "type": "patrol",
+    "summary": "Expedição de abastecimento a Midgaard: compra de 5 pães recheados na Padaria (-30 moedas), consumo de 2 pães saciando a fome, reabastecimento do cantil na Fonte de Mármore do Templo. Retorno às Catacumbas sob A Entrada com circuito extensivo de patrulha: aniquilação de um novato zumbi em Uma Grande Sala (+35 moedas), eliminação de outro novato zumbi em Uma Longa Passagem Leste-Oeste (+35 moedas) e abate de um monstro novato em Uma Ramificação ao Sul (+20 moedas e uma brilhante veste de novato). Retorno à Sala do Alquimista, saldo líquido de 1.251 moedas e avanço para 59.554 EXP.",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 65,
+        "note": "Sessão de abastecimento e combate triplo confirmada ao vivo no servidor debomud.org:4000."
+      }
+    ]
   }
 ]

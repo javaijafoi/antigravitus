@@ -66,8 +66,8 @@
     },
     "quick_stats": {
       "level_badge": "(Grau 8 • Mago; estilo ladra arcana)",
-      "hp": "51 / 52",
-      "mana": "103 / 140",
+      "hp": "52 / 52",
+      "mana": "140 / 140",
       "mv": "95 / 95",
       "ac": "AC 16 (40 com armor; registro)",
       "weapon": "Punhal de Novato (+ Escudo)",
@@ -75,7 +75,7 @@
       "sanctuary": "O Panteão dos Centenários",
       "location": "A Sala do Alquimista",
       "camp": "A Sala do Alquimista",
-      "as_of_day": 64,
+      "as_of_day": 65,
       "verification": "live"
     },
     "voice": {

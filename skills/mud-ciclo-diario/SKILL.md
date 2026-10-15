@@ -23,7 +23,8 @@ Atualizar estado e missões com essas evidências antes de elaborar a crônica. 
 
 - Nunca acrescentar recompensa, diálogo, relação, promessa, deslocamento, perda de memória, vitória ou desfecho que não esteja sustentado pela sessão. Não concluir uma missão por ter ocorrido um combate próximo ao NPC.
 - Preservar emoções e fatos das crônicas históricas. Só corrigir um acontecimento se uma fonte o resolver; enquanto não houver fonte, acrescentar nota editorial fora da voz da personagem. Não diagnosticar negação nem declarar trauma superado para reparar uma divergência.
-- Para novas crônicas, números mecânicos de HP, mana, movimento, XP, armadura, treino e dano pertencem aos registros técnicos. Escrevê-los por extenso como “passos de maturidade” continua sendo relatório numérico. Não citar arquivos técnicos dentro da narrativa.
+- **Regra de Ouro dos Números (Desconhecimento Total da Ficha):** A personagem NÃO conhece nem menciona números de sua ficha mecânica. Ela NÃO sabe seus pontos de vida (HP), sua quantidade de mana (MP), seus pontos de movimento/estamina (MV), sua classe de armadura (AC), bônus de itens (+2E), dano numérico de armas/magias, percentuais de treino ou pontos de experiência (EXP/XP — terminantemente proibido disfarçar como "passos de maturidade" ou "passos de experiência"). **O MÁXIMO e ÚNICO número que Grebolius conhece e menciona é DINHEIRO** (moedas de ouro, prata e cobre tilintando nas algibeiras). Todo o restante deve ser percebido e narrado exclusivamente por sensações físicas e mágicas tangíveis: cansaço nos músculos, peso nas pernas, fôlego curto ou pleno, dor da carne ferida, frescor místico no peito, zumbido de eletricidade nas têmporas, firmeza da couraça nos ombros e precisão calejada do punhal.
+- **Proibida a transposição literal de regras na voz da personagem:** Diretrizes de projeto (ex.: "orçamento de estamina", "evitar três passos", "reflexão de 9 dias", comandos como `save`, `autogold`, `autoquest`) JAMAIS devem ser descritas pela personagem como regras, disciplinas ou doutrinas inventadas. As mudanças de postura devem ser expressas de forma sutil, orgânica e psicológica: ela sente mais confiança, mais segurança, curiosidade, audácia, pragmatismo ou prudência. Mesmo nos dias de reflexão (terminados em 9), os pensamentos devem ser pessoais e existenciais, nunca formulados como regras de sistema ou métodos burocráticos.
 - Descrever ações e sensações apoiadas no ocorrido, com espaço para humor, curiosidade, tensão e silêncio. Não exigir clímax, vitória épica, descoberta nova, número mínimo de cenas ou três combates. Preparação, bloqueio e recuo podem ser o resultado real de uma sessão.
 - Uma sessão pode avançar uma pista ou descartar uma hipótese; não fabricar mudança de personalidade ou consequência emocional para cumprir uma cota narrativa.
 
@@ -41,14 +42,14 @@ A exploração de novas rotas, áreas desconhecidas ou desvios do itinerário ha
 
 - **Teto rígido de conexões:** No máximo **3 conexões** ao MUD por dia. É proibido fatiar o dia em 6, 7 ou 8 logins/logouts artificiais.
 - **Fluxo contínuo automático:** Se as salas, rotas e saídas forem as esperadas para o plano do dia, o script avança normalmente e sem hesitação.
-- **Autonomia por Orçamento de Recursos (Estamina / Vida / Mana):** Em vez de um roteiro estático e curto ("anda 3 salas e para"), a expedição usa a estamina (MV) alta da personagem (95 máx) como orçamento real de exploração e viagem. Andar em terreno padrão consome apenas 1 a 2 MV por passo.
-  - **Avançar enquanto MV > 30:** A personagem continua explorando, patrulhando e mapeando enquanto tiver margem de movimento.
-  - **Parar ou retornar somente se:**
-    1. A estamina cair para a reserva de retorno seguro (`MV <= 30`).
-    2. A integridade vital cair abaixo de 35 HP (muito antes do limite emergencial de `wimpy 13`) ou a mana cair abaixo de 40 MN (reserva para `armor` e magias de fuga).
-    3. O objetivo da autoquest/missão imediata for atingido (ex.: abater o monstro/inseto e retornar para entregar o progresso ao NPC).
-    4. A mochila estiver cheia de espólios valiosos ou houver necessidade de vender/guardar.
-    5. Ocorrer anomalia crítica ou perigo grave que recomende retirada.
+- **Gasto Ativo e Aproveitamento da Estamina (MV):** Os dias têm que ser proveitosos e a estamina deve ser gasta ao máximo no dia a dia, explorando e avançando. Andar em terreno padrão consome apenas 1 a 2 MV por passo; portanto, sessões curtas de 5 a 10 passos gastam quase nada e a regeneração passiva recupera tudo antes de dormir. A expedição deve gastar o fôlego ativamente (40 a 70 passos úteis por jornada) patrulhando setores, mapeando câmaras, caçando alvos ou viajando para comprar provisões.
+  - **Avançar enquanto houver estamina:** A personagem explora, patrulha, mapeia e viaja continuamente enquanto seu fôlego estiver acima da reserva de segurança (`MV > 25-30`).
+  - **Abate ou objetivo intermediário NÃO encerra o dia:** Matar um monstro ou cumprir uma etapa de missão NÃO significa ir dormir se a estamina ainda estiver alta. A aventureira segue ativa aproveitando o dia até esgotar a estamina planejada.
+  - **Critérios para iniciar a rota de retorno e repouso:**
+    1. A estamina atingir a margem de retorno seguro (`MV <= 25-30`).
+    2. A integridade vital cair abaixo de 35 HP (muito antes do limite de `wimpy 13`) ou a mana cair abaixo de 40 MN (reserva para `armor` e magias de fuga).
+    3. Mochila cheia de espólios valiosos que precisem ser guardados/vendidos.
+    4. Anomalia crítica, emboscada ou perigo hostil grave que recomende retirada.
 - **Pausa tática diante de anomalia:** Se houver personagem jogador (player), NPC/mob inesperado fora da rota prevista, dano imprevisto ou bloqueio de saída: o script **NÃO desconecta**; ele pausa a marcha automática, mantém a conexão aberta e passa o controle para o agente. O agente assume e joga em tempo real até normalizar a situação. Uma vez normalizado, o agente decide entre **retomar o script original** ou **adaptar o restante do dia com um novo roteiro** (se a ocorrência alterou os recursos, a rota ou a meta), respeitando sempre o teto de até 3 conexões.
 
 ### Referência de Grebolius
