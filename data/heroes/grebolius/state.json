@@ -2,8 +2,8 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 71,
-    "source": "Sessão ao vivo em debomud.org:4000; ronda superior pela Escola de Novatos e subsolo com abate de novato zumbi (+2.756 EXP e +35 moedas), elevando a experiência para 107.217 EXP e o saldo para 2.507 moedas de ouro.",
+    "day": 72,
+    "source": "Sessão ao vivo em debomud.org:4000; ascensão aos níveis superiores e marcha pelos descampados de O Grande Campo de Midgaard e Um Caminho Dentre os Campos, preservando 2.507 moedas de ouro e 107.217 EXP.",
     "verification": "live",
     "live_verified": true
   },
@@ -21,7 +21,7 @@
       "max": 61
     },
     "mana": {
-      "current": 138,
+      "current": 151,
       "max": 160
     },
     "mv": {
@@ -53,12 +53,12 @@
   "wimpy": 13,
   "training_sessions": 6,
   "location": {
-    "room_id": "sala_alquimista",
-    "name": "A Sala do Alquimista"
+    "room_id": "grande_campo_norte",
+    "name": "O Grande Campo (Norte)"
   },
   "camp": {
-    "room_id": "sala_alquimista",
-    "name": "A Sala do Alquimista"
+    "room_id": "grande_campo_norte",
+    "name": "O Grande Campo (Norte)"
   },
   "sanctuary": {
     "room_id": "panteao_centenarios",

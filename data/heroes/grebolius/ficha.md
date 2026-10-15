@@ -1,6 +1,6 @@
 # 🧌 Ficha Atual de Grebolius (Último Estado Registrado)
 
-> Referência: Dia 71. Estado verificado em sessão; consultar a origem registrada.
+> Referência: Dia 72. Estado verificado em sessão; consultar a origem registrada.
 > Este documento reúne o último estado e as missões registrados; as incertezas aparecem ao final.
 
 ## ✦ Identificação e Registro
@@ -10,8 +10,8 @@
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **10**
 * **Alinhamento Moral:** 339 (Bom)
-* **Localização Atual:** A Sala do Alquimista (último registro: Dia 71)
-* **Acampamento Registrado:** A Sala do Alquimista
+* **Localização Atual:** O Grande Campo (Norte) (último registro: Dia 72)
+* **Acampamento Registrado:** O Grande Campo (Norte)
 * **Santuário de Referência:** O Panteão dos Centenários
 
 O acampamento indica onde houve repouso; não comprova proteção absoluta contra agressão.
@@ -20,7 +20,7 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 | Recurso | Atual | Máximo | Porcentagem |
 | :--- | :---: | :---: | :---: |
 | **Pontos de Vida (HP)** | 61 | 61 | 100% |
-| **Pontos de Mana (MP)** | 138 | 160 | 86% |
+| **Pontos de Mana (MP)** | 151 | 160 | 94% |
 | **Estamina / Movimento (MV)** | 99 | 99 | 100% |
 
 * **Experiência Acumulada:** **107.217 EXP**
@@ -99,7 +99,7 @@ Cumprir a ordem direta do Alquimista de encontrar e abater os insetos rastejante
 * O anel arcano (+2E) segue exigindo nível superior (Nível 11+).
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessão ao vivo em debomud.org:4000; ronda superior pela Escola de Novatos e subsolo com abate de novato zumbi (+2.756 EXP e +35 moedas), elevando a experiência para 107.217 EXP e o saldo para 2.507 moedas de ouro..
+Fonte do estado: Sessão ao vivo em debomud.org:4000; ascensão aos níveis superiores e marcha pelos descampados de O Grande Campo de Midgaard e Um Caminho Dentre os Campos, preservando 2.507 moedas de ouro e 107.217 EXP..
 * O anel arcano (+2E) exige Nível 11 ou superior para uso (testado e recusado no Nível 10).
 * A placa de perigo em 'A Entrada' alerta sobre a morte para quem desce desacompanhado ou desequipado.
 * Locais exatos dos insetos rastejantes nas catacumbas além das câmaras já mapeadas.

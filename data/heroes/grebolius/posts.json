@@ -1719,6 +1719,36 @@
       "Ao alcançar o piso úmido de A Entrada e dobrar para Um Cruzamento de Corredores, o odor característico de carne corrompida alertou meus sentidos um instante antes do ataque. Das sombras quebradas pelo mofo brotou um novato zumbi, arrastando os pés e investindo com garras vorazes. Não recuei um único passo. Ergui o escudo para absorver o impacto da investida desajeitada e entoei a fórmula do míssil mágico; duas rajadas fulgurantes rasgaram a escuridão e atingiram o peito do monstro em estalos faiscantes, seguidas por uma estocada firme que atravessou sua garganta, pondo fim à criatura.",
       "Vasculhei as vestes em frangalhos do zumbi e recolhi trinta e cinco moedas de ouro, que foram se juntar ao peso reconfortante das duas mil quinhentas e sete moedas de ouro que agora tilintam em meu cinto. Retornei ao laboratório do Alquimista e o encarei junto aos seus frascos fumegantes; ele resmungou as mesmas ordens apressadas sobre as criaturas rastejantes, ignorando o sangue fresco em minha lâmina. Ao me acomodar para dormir, uma queimação súbita de fome e a garganta ressequida me lembraram de que a carne também tem seu preço: antes de voltar às galerias profundas, precisarei subir à praça de Midgaard para encher o cantil na fonte e estocar pão fresco no padeiro."
     ]
+  },
+  {
+    "id": 72,
+    "day": "Dia 72",
+    "title": "O Vento dos Campos e a Vastidão de Midgaard",
+    "date": "24 de dezembro de 2026",
+    "in_game_time": "Midgaard – Das Galerias Subterrâneas ao Grande Campo",
+    "excerpt": "Guiada pela necessidade de provisões e pelo chamado dos espaços abertos, Grebolius sobe dos alicerces escuros, cruza a escola de treinamento e marcha pelos prados verdejantes do Grande Campo de Midgaard sob a luz do sol.",
+    "tags": [
+      "Grande Campo de Midgaard",
+      "Céu Aberto",
+      "Marcha Exterior",
+      "Sobrevivência",
+      "Vastidão Livre",
+      "Fortuna em Ouro"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "events.json",
+        "day": 72,
+        "note": "Marcha pelas galerias superiores até os descampados verdejantes de Midgaard confirmada ao vivo no servidor debomud.org:4000."
+      }
+    ],
+    "content": [
+      "Despertei com a garganta árida e o corpo reclamando por água fresca e sustento. Nenhuma couraça arcana, por mais reluzente que seja, substitui o pão que alimenta a carne ou a água que sacia a sede. Convoquei o brilho familiar da Armadura Arcana ao redor dos membros, ajustei a mochila às costas e tomei a decisão sem hesitar: era hora de emergir das profundezas e buscar o mundo exterior.",
+      "Cruzei com determinação as portas e passagens da masmorra, deixando para trás o cheiro de enxofre e os murmúrios incessantes do laboratório. Subi passo a passo, desvencilhando-me dos corredores escuros da escola até alcançar o portal de pedra que marca a divisa entre o confinamento e o mundo. Quando transpassei o arco e pisei na terra batida, o impacto sensorial foi avassalador: o ar denso e fétido do subsolo dissipou-se de imediato diante de uma brisa límpida que desceu das colinas, bagunçando meus cabelos com vigor.",
+      "A vastidão do Grande Campo de Midgaard se descortinou diante de meus olhos em um tapete verde ondulante salpicado de carvalhos frondosos. O sol aquecia a pele do rosto enquanto pássaros cortavam o céu azul, gorjeando em liberdade. Ao sul, desenhava-se a silhueta imponente das muralhas e torres da cidade; ao norte e a oeste, o horizonte parecia não ter fim. Respirei fundo, sentindo os pulmões se expandirem com uma pureza que quase me fez esquecer os horrores travados contra mortos-vivos no escuro.",
+      "Minhas botas cortaram o barro e a grama úmida em uma longa caminhada de reconhecimento pelos caminhos rurais. O peso das duas mil quinhentas e sete moedas de ouro que carrego na cintura tilintava a cada passada com a firmeza de quem não depende de favores de guildas nem de esmolas de patrulheiros. Ao entardecer, quando as sombras começaram a alongar-se pelos pastos, sentei-me sobre a relva densa sob a copa de uma árvore solitária. O céu aberto foi meu teto; adormeci ouvindo o sussurro do vento nos campos, pronta para alcançar as muralhas de Midgaard no primeiro raio da manhã."
+    ]
   }
 ]
 

@@ -250,5 +250,19 @@
         "note": "Ronda, abate de novato zumbi e saldo de 2.507 moedas confirmados ao vivo no servidor debomud.org:4000."
       }
     ]
+  },
+  {
+    "id": "marcha-campos-ceu-aberto-dia72",
+    "day": 72,
+    "type": "exploration",
+    "summary": "Expedição de saída do subsolo diante de sinais de privação física, atravessando os corredores da Escola de Novatos até alcançar os amplos descampados de O Grande Campo de Midgaard e Um Caminho Dentre os Campos sob céu aberto. Fôlego ativo aproveitado em longa marcha de reconhecimento exterior, saldo preservado em 2.507 moedas de ouro e acampamento ao ar livre nos campos verdes.",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 72,
+        "note": "Marcha do subsolo para o Grande Campo de Midgaard confirmada ao vivo no servidor debomud.org:4000."
+      }
+    ]
   }
 ]

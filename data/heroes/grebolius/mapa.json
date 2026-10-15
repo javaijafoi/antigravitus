@@ -1671,10 +1671,10 @@
       }
     }
   ],
-  "last_updated_day": 63,
+  "last_updated_day": 72,
   "verification": "live",
-  "current_location_id": "sala_alquimista",
-  "camp_id": "sala_alquimista",
+  "current_location_id": "grande_campo_norte",
+  "camp_id": "grande_campo_norte",
   "reconciliation_notes": [
     "Posições gráficas são esquemáticas, não distâncias do mundo.",
     "Revisão inclui descobertas narradas até o Dia 60; não houve verificação ao vivo de todas as rotas antigas.",
