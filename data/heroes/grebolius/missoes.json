@@ -47,7 +47,7 @@
       "accepted_day": 36,
       "last_progress_day": 88,
       "objective": "Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.",
-      "next_step": "Incursões em Modo Dungeon concluídas com sucesso (Dias 85 a 88), limpando mortos-vivos e desbravando todas as câmaras ocultas das Catacumbas Subterrâneas e Escola Superior.",
+      "next_step": "Incursões de combate e varredura concluídas com sucesso (Dias 85 a 88), limpando mortos-vivos e desbravando todas as câmaras ocultas das Catacumbas Subterrâneas e Escola Superior.",
       "evidence": [
         {
           "document": "posts.json",
@@ -142,17 +142,17 @@
         {
           "document": "posts.json",
           "day": 84,
-          "note": "Reconhecimento em Modo Batedor na Sala do Alquimista (encontrando o Novato Alquimista ocupado em suas misturas que indagou 'Ei, você poderia me ajudar?') e sondagem das catacumbas avistando o Grande Minotauro e novatos zumbis."
+          "note": "Reconhecimento furtivo na Sala do Alquimista (encontrando o Novato Alquimista ocupado em suas misturas que indagou 'Ei, você poderia me ajudar?') e sondagem das catacumbas avistando o Grande Minotauro e novatos zumbis."
         },
         {
           "document": "posts.json",
           "day": 85,
-          "note": "Incursão em Modo Dungeon na Escola de Novatos: abastecimento na padaria, exploração de O Salão e visita à Sala do Alquimista."
+          "note": "Incursão de combate na Escola de Novatos: abastecimento na padaria, exploração de O Salão e visita à Sala do Alquimista."
         },
         {
           "document": "posts.json",
           "day": 86,
-          "note": "Descida às Catacumbas Subterrâneas em Modo Dungeon: cartografia de Uma Sala no Canto e Outra Curva, e eliminação de zumbi."
+          "note": "Descida às Catacumbas Subterrâneas em incursão de combate: cartografia de Uma Sala no Canto e Outra Curva, e eliminação de zumbi."
         },
         {
           "document": "posts.json",

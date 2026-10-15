@@ -49,7 +49,7 @@ Classe de armadura 16 verificada ao vivo no Nível 11 com equipamento completo.
 * **Altruísmo — Concluída:** Doar equipamento excedente na Sala de Doações.
   * Próximo passo: Nenhuma tarefa nova inferida a partir da conclusão.
 * **Limpando Monstros — Ativa:** Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.
-  * Próximo passo: Incursões em Modo Dungeon concluídas com sucesso (Dias 85 a 88), limpando mortos-vivos e desbravando todas as câmaras ocultas das Catacumbas Subterrâneas e Escola Superior.
+  * Próximo passo: Incursões de combate e varredura concluídas com sucesso (Dias 85 a 88), limpando mortos-vivos e desbravando todas as câmaras ocultas das Catacumbas Subterrâneas e Escola Superior.
 * **Dicas Mágicas — Ativa:** Entregar um pergaminho de retorno ao Mago Aventureiro no Bar dos Magos (item já presente na mochila desde o Dia 28).
   * Próximo passo: Pergaminho de retorno entregue com sucesso ao Mago Aventureiro no Bar dos Magos no Dia 83; acompanhar o próximo conselho místico.
 * **Novela dos Novatos — Descoberta:** Aventura narrativa para recém-chegados (Até o nível 30, iniciada com: o novato esperto).
