@@ -280,34 +280,17 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   async function loadStateForHero(hero, version) {
-    const panel = document.getElementById("adventure-status");
-    if (panel) { panel.hidden = false; panel.textContent = "Carregando situação documental…"; }
     try {
       const res = await fetch(`data/heroes/${hero.id}/state.json`);
       if (version !== heroLoadVersion) return;
-      if (res.status === 404) {
-        if (panel) panel.hidden = true;
-        return;
-      }
-      if (!res.ok) throw new Error("Estado indisponível");
+      if (!res.ok) return;
       const state = await res.json();
       if (version !== heroLoadVersion) return;
-      if (state.hero_id !== hero.id || !state.as_of || !state.next_objective) throw new Error("Estado inválido");
+      if (state.hero_id !== hero.id || !state.as_of) return;
       currentState = state;
       renderQuickStats(hero);
-      if (!panel) return;
-      const preparation = state.next_objective.missing_preparation || [];
-      panel.innerHTML = `
-        <div class="adventure-status-heading"><h2>Próxima expedição</h2><span class="document-status">Documental · Dia ${state.as_of.day}</span></div>
-        <p class="document-status">Consolidado dos registros; sem verificação ao vivo.</p>
-        <dl class="adventure-status-grid">
-          <div><dt>Objetivo proposto</dt><dd>${escapeHtml(state.next_objective.title)}</dd><dd>${escapeHtml(state.next_objective.next_step)}</dd></div>
-          <div><dt>Pendências de preparação</dt><dd>${preparation.length ? `<ul>${preparation.map(item => `<li>${escapeHtml(item)}</li>`).join("")}</ul>` : "Nenhuma pendência documental listada; conferir no jogo."}</dd></div>
-          <div><dt>Último evento registrado · Dia ${state.last_event?.day ?? state.as_of.day}</dt><dd>${escapeHtml(state.last_event?.summary || "Sem resumo registrado.")}</dd><dd>Posição: ${escapeHtml(state.location?.name || "não registrada")}<br>Acampamento: ${escapeHtml(state.camp?.name || "não registrado")}<br>Santuário de referência: ${escapeHtml(state.sanctuary?.name || "não registrado")}</dd></div>
-        </dl>`;
     } catch (e) {
-      if (version !== heroLoadVersion) return;
-      if (panel) { panel.hidden = false; panel.textContent = "Não foi possível carregar a situação documental. Consulte a ficha e os registros antes da próxima expedição."; }
+      // Estado opcional
     }
   }
 
