@@ -1658,6 +1658,37 @@
       "Com as passagens pacificadas e o peso reconfortante do metal tinindo no cinto, refiz o caminho pelos corredores gélidos e subi de volta a escadaria até o abrigo de vidro e pergaminhos do Alquimista. Tranquei a porta de madeira e sentei-me no chão de lajes frias, deixando as costas repousarem contra os tijolos úmidos.",
       "Hoje é um desses momentos em que a mente exige silêncio para olhar para trás. Lembro-me de quando despertei jogada no depósito de lixo de Midgaard, com a garganta seca, sem um único tostão no bolso e fingindo ser alguém que não era apenas para não ser esmagada na sarjeta. Hoje, olho para as fórmulas mágicas rabiscadas nas paredes deste laboratório e sei que a magia não é mais um mistério distante, mas uma força que corre no meu próprio sangue. O anel arcano que repousa na minha mochila continua me desafiando, mas sinto que a barreira final que me separa de seu poder está por um fio. Tenho em minhas mãos duas mil duzentas e cinquenta e duas moedas de ouro que tilintam a cada respiração, um tesouro erguido com sangue, frieza e coragem. Ninguém mais pode dizer a esta goblin onde ela pode ou não pisar. O meu Reino Livre já está nascendo, entalhado pedra a pedra na escuridão."
     ]
+  },
+  {
+    "id": 70,
+    "day": "Dia 70",
+    "title": "A Queda do Minotauro, a Glória do Décimo Grau e a Oferenda dos Chifres",
+    "date": "22 de dezembro de 2026",
+    "in_game_time": "Midgaard – Galerias Superiores, Catacumbas e a Sala do Alquimista",
+    "excerpt": "Em incursão ao vivo, Grebolius sobe até a sacada contemplando o campo exterior, desce às catacumbas onde abate o Grande Minotauro renascido, conquista a ascensão ao Nível 10 em combate e entrega os chifres da besta ao Alquimista.",
+    "tags": [
+      "O Grande Minotauro",
+      "Ascensão Arcana",
+      "Nível Dez",
+      "Combate Épico",
+      "Chifres do Minotauro",
+      "Fortuna em Ouro",
+      "Soberania Goblin"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "events.json",
+        "day": 70,
+        "note": "Derrota do Grande Minotauro, ascensão ao Nível 10, teste do anel arcano e entrega dos chifres confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ],
+    "content": [
+      "Despertei disposta a alargar os horizontes antes de me embrenhar nas fendas subterrâneas. Renovei a couraça luminosa da Armadura Arcana e subi as escadarias em direção às galerias superiores da masmorra. Cruzei corredores decorados e alcancei a ampla sacada que coroa o saguão norte: lá de cima, apoiada na amurada de pedra, respirei a brisa fresca e contemplei a imensidão verdejante do Grande Campo de Midgaard estendendo-se até as montanhas ao norte, com a silhueta da grande cidade livre desenhada ao sul. Foi um lembrete vivo de que este submundo é apenas uma passagem; o mundo lá fora me aguarda.",
+      "Desci com o espírito aguçado direto para as entranhas das catacumbas. Ao penetrar nas curvas lodosas além da ramificação, deparei-me com uma visão imponente: o Grande Minotauro espreitava novamente nas sombras de Outro Canto, bufando ódio ao notar minha presença. Não hesitei. Plantei os pés no lodo, ergui o escudo para aparar as investidas brutais da besta e desferi estocadas precisas com o punhal brilhante, alternando cortes velozes com projéteis arcanos que explodiram em fagulhas contra o peito maciço do monstro. Com um golpe de misericórdia cravado no coração da criatura, o Minotauro desabou com um estrondo na poeira. Saquei de sua carcaça os pesados chifres recurvados e recolhi as moedas reluzentes que guardava.",
+      "O eco da batalha atraiu mortos-vivos das galerias vizinhas. Uma horda de novatos zumbis cercou a passagem em T, mas a magia ferveu em minhas veias com fúria avassaladora. Disparei saraivadas mágicas contínuas que carbonizaram a carne podre dos atacantes. No exato instante em que o último zumbi caiu fulminado, um raio de energia pura percorreu minha espinha: senti o influxo sublime da ascensão ao décimo grau de maestria arcana. Meus pulmões se encheram de um ar mais denso, meus músculos ganharam firmeza de aço e uma reserva gigantesca de energia mística desabrochou em minha mente. Imediatamente retirei o anel arcano da mochila para testá-lo sob a nova estatura, mas a joia ancestral ainda resistiu com seu brilho enigmático, exigindo passos ainda maiores para desvendar seus segredos.",
+      "Retornei triunfante pela escadaria até a Sala do Alquimista. Diante dos olhos arregalados do velho mestre de poções, entreguei os chifres gotejantes do Minotauro, cumprindo a prova que ele me impusera. O Alquimista recebeu o troféu e renovou sua obsessão, ordenando a caçada final aos insetos rastejantes. Tranquei a porta de madeira e me acomodei nas lajes de pedra, ouvindo o retinir magnífico de duas mil quatrocentas e setenta e duas moedas de ouro que abarrotam minhas algibeiras. O décimo grau é meu; a soberania goblin já não é sonho, mas um destino inevitável."
+    ]
   }
 ]
 

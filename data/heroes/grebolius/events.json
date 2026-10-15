@@ -222,5 +222,19 @@
         "note": "Incursão profunda, múltiplos abates e saldo de 2.252 moedas confirmados ao vivo no servidor debomud.org:4000."
       }
     ]
+  },
+  {
+    "id": "vitoria-minotauro-e-ascensao-grau-10",
+    "day": 70,
+    "type": "level_up",
+    "summary": "Expedição em tempo real com subida à sacada com vista para o Grande Campo e descida profunda às catacumbas. Combate épico e aniquilação do Grande Minotauro renascido (+7.072 EXP, +95 moedas e obtenção dos chifres do Minotauro), seguido pelo abate de 1 monstro novato e 2 novatos zumbis. Conquista da ascensão formal ao Nível 10 (+4 HP máx -> 61, +10 Mana máx -> 160, +2 MV máx -> 99). Teste do anel arcano (+2E) no Nível 10 revelando que exige ainda mais experiência. Entrega bem-sucedida dos chifres do Minotauro ao Novato Alquimista, saldo líquido elevado para 2.472 moedas de ouro e repouso na Sala do Alquimista.",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "posts.json",
+        "day": 70,
+        "note": "Derrota do Minotauro, avanço ao Nível 10, teste do anel e entrega dos chifres confirmados ao vivo no servidor debomud.org:4000."
+      }
+    ]
   }
 ]

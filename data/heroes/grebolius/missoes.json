@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 69,
+  "as_of_day": 70,
   "verification": "live",
   "items": [
     {
@@ -45,9 +45,9 @@
       "type": "official",
       "status": "active",
       "accepted_day": 36,
-      "last_progress_day": 69,
+      "last_progress_day": 70,
       "objective": "Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.",
-      "next_step": "Avançar para o Nível 10 para tentar equipar o anel arcano (+2E) e continuar vasculhando as fendas profundas das catacumbas em busca dos insetos rastejantes.",
+      "next_step": "Avançar nas galerias profundas para rastrear os insetos rastejantes da ordem do Alquimista e acumular recursos para novos treinos arcanos.",
       "evidence": [
         {
           "document": "posts.json",
@@ -103,6 +103,11 @@
           "document": "posts.json",
           "day": 69,
           "note": "Incursão profunda no labirinto das catacumbas, mapeamento de Uma Interseção Das Passagens e aniquilação de 6 novatos zumbis (+20.481 EXP acumulada, elevando patrimônio para 2.252 moedas de ouro)."
+        },
+        {
+          "document": "posts.json",
+          "day": 70,
+          "note": "Derrota do Grande Minotauro renascido, obtenção e entrega dos chifres ao Novato Alquimista, avanço ao Nível 10 e patrimônio de 2.472 moedas de ouro."
         }
       ]
     },
