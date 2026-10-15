@@ -2,8 +2,8 @@
   "hero_id": "grebolius",
   "hero_name": "Grebolius",
   "sanctuary_id": "panteao_centenarios",
-  "last_updated_cycle": "Ciclo IX (Dia 90; incursão de combate, limpeza dos novatos, marco decenal e chamado do Pacificador)",
-  "total_rooms": 86,
+  "last_updated_cycle": "Ciclo X (Dia 91; fazenda reconhecida e pernoite no Templo)",
+  "total_rooms": 95,
   "layers": [
     {
       "id": "superficie",
@@ -24,6 +24,11 @@
       "id": "vazio",
       "name": "🌌 Planos Astrais & Vazio",
       "description": "O Paraíso pós-morte, o vórtice estelar e a Fonte da Vida."
+    },
+    {
+      "id": "jareth_fazenda",
+      "name": "🌾 Jareth & Fazenda",
+      "description": "Cartografia parcial da fazenda; somente ligações com destino identificável, sem completar caminhos entre homônimos."
     }
   ],
   "zones": [
@@ -31,7 +36,8 @@
     "Monte Sagrado & Templo",
     "Submundo dos Esgotos & Vazio",
     "Campos & Área dos Novatos",
-    "O Grande Tabuleiro de Xadrez"
+    "O Grande Tabuleiro de Xadrez",
+    "Fazenda próxima a Jareth"
   ],
   "rooms": [
     {
@@ -1596,17 +1602,18 @@
       },
       "exits": {
         "s": "grande_campo_norte",
-        "l": "estrada_pavimentada_campos"
+        "l": "caminho_campos_jareth"
       },
       "npcs": [
         "Homem meio-elfo",
         "Pequenina halfling"
       ],
-      "notes": "Trilha movimentada cortando as planicies; inicio da estrada Midgaard-Jareth.",
+      "notes": "Dia 91: trecho das gramíneas, com leste para outro Caminho e sul para Grande Campo Norte. O entroncamento de Jareth tem ID próprio; nomes iguais não foram fundidos. Ligação anterior direta com Estrada Pavimentada não se confirmou nesta posição.",
       "discovered_in": "Ciclo VII (Dia 61)",
       "source": {
-        "document": "posts.json",
-        "day": 61
+        "document": "evidence/dia91.json",
+        "day": 91,
+        "note": "Trechos literais do servidor, linhas dos registros anteriores e ações da continuação autorizada; sem referências circulares."
       }
     },
     {
@@ -1622,11 +1629,10 @@
         "y": -40
       },
       "exits": {
-        "o": "caminho_dentre_campos",
         "l": "portao_taverna_barumafir"
       },
       "npcs": [],
-      "notes": "Trecho pavimentado nos limites dos campos; visao de grande edificio cercado por pedras.",
+      "notes": "Trecho pavimentado nos limites dos campos; visao de grande edificio cercado por pedras. Dia 91: vínculo oeste anterior retirado por ambiguidade entre Caminhos homônimos; destino oeste exato requer nova conferência, sem inferir atalho.",
       "discovered_in": "Ciclo VII (Dia 61)",
       "source": {
         "document": "posts.json",
@@ -1963,16 +1969,247 @@
       ],
       "notes": "Galeria das catacumbas com fungos viçosos nas paredes e forte odor de morte, com saída sul para Uma Sala Enorme.",
       "discovered_in": "Ciclo IX (Dia 88)"
+    },
+    {
+      "id": "fazenda_fim_estrada",
+      "name": "O Fim da Estrada",
+      "layer": "jareth_fazenda",
+      "zone": "Fazenda próxima a Jareth",
+      "risk": "Atenção",
+      "risk_code": "medium",
+      "icon": "🌾",
+      "coords": {
+        "x": 400,
+        "y": 100
+      },
+      "exits": {
+        "l": "fazenda_estrada_vidros",
+        "o": "fazenda_milharal_borda"
+      },
+      "npcs": [],
+      "notes": "Saídas leste e oeste identificadas no log; saída sul leva a um Gramado homônimo, sem setor resolvido.",
+      "discovered_in": "Ciclo X (Dia 91)",
+      "source": {
+        "document": "evidence/dia91.json",
+        "day": 91,
+        "note": "Trechos literais do servidor, linhas dos registros anteriores e ações da continuação autorizada; sem referências circulares."
+      }
+    },
+    {
+      "id": "fazenda_estrada_vidros",
+      "name": "Uma Pequena Estrada (vidros)",
+      "layer": "jareth_fazenda",
+      "zone": "Fazenda próxima a Jareth",
+      "risk": "Atenção",
+      "risk_code": "medium",
+      "icon": "🌾",
+      "coords": {
+        "x": 600,
+        "y": 100
+      },
+      "exits": {
+        "o": "fazenda_fim_estrada"
+      },
+      "npcs": [],
+      "notes": "Vidros, líquido forte e pegadas. Saídas leste para outra Pequena Estrada e sul para Gramado permanecem sem setor identificado.",
+      "discovered_in": "Ciclo X (Dia 91)",
+      "source": {
+        "document": "evidence/dia91.json",
+        "day": 91,
+        "note": "Trechos literais do servidor, linhas dos registros anteriores e ações da continuação autorizada; sem referências circulares."
+      }
+    },
+    {
+      "id": "fazenda_milharal_borda",
+      "name": "O Milharal Destruído (borda da estrada)",
+      "layer": "jareth_fazenda",
+      "zone": "Fazenda próxima a Jareth",
+      "risk": "Perigo observado na região",
+      "risk_code": "danger",
+      "icon": "🌾",
+      "coords": {
+        "x": 200,
+        "y": 100
+      },
+      "exits": {
+        "l": "fazenda_fim_estrada"
+      },
+      "npcs": [],
+      "notes": "Setor identificado pela saída leste para O Fim da Estrada. Saídas sul e oeste levam a setores homônimos não fundidos. Monstros verdes e líder azul foram vistos na região; posição exata futura não garantida.",
+      "discovered_in": "Ciclo X (Dia 91)",
+      "source": {
+        "document": "evidence/dia91.json",
+        "day": 91,
+        "note": "Trechos literais do servidor, linhas dos registros anteriores e ações da continuação autorizada; sem referências circulares."
+      }
+    },
+    {
+      "id": "fazenda_gramado_casa",
+      "name": "O Gramado (frente da casa)",
+      "layer": "jareth_fazenda",
+      "zone": "Fazenda próxima a Jareth",
+      "risk": "Atenção",
+      "risk_code": "medium",
+      "icon": "🌾",
+      "coords": {
+        "x": 600,
+        "y": 400
+      },
+      "exits": {
+        "s": "fazenda_entrada_casa"
+      },
+      "npcs": [],
+      "notes": "Setor identificado pela saída sul para Entrada da Casa. Norte leva a Pequena Estrada e leste/oeste a Gramados, sem setores resolvidos.",
+      "discovered_in": "Ciclo X (Dia 91)",
+      "source": {
+        "document": "evidence/dia91.json",
+        "day": 91,
+        "note": "Trechos literais do servidor, linhas dos registros anteriores e ações da continuação autorizada; sem referências circulares."
+      }
+    },
+    {
+      "id": "fazenda_entrada_casa",
+      "name": "A Entrada da Casa",
+      "layer": "jareth_fazenda",
+      "zone": "Fazenda próxima a Jareth",
+      "risk": "Atenção",
+      "risk_code": "medium",
+      "icon": "🌾",
+      "coords": {
+        "x": 600,
+        "y": 600
+      },
+      "exits": {
+        "n": "fazenda_gramado_casa",
+        "s": "fazenda_sala_estar",
+        "o": "fazenda_cozinha"
+      },
+      "npcs": [
+        "O fazendeiro"
+      ],
+      "notes": "Marcas de cortes e pancadas. Fazendeiro pediu 10 invasores; entrada em cômodo não comprova segurança para repousar.",
+      "discovered_in": "Ciclo X (Dia 91)",
+      "source": {
+        "document": "evidence/dia91.json",
+        "day": 91,
+        "note": "Trechos literais do servidor, linhas dos registros anteriores e ações da continuação autorizada; sem referências circulares."
+      }
+    },
+    {
+      "id": "fazenda_sala_estar",
+      "name": "A Sala de Estar",
+      "layer": "jareth_fazenda",
+      "zone": "Fazenda próxima a Jareth",
+      "risk": "Atenção",
+      "risk_code": "medium",
+      "icon": "🌾",
+      "coords": {
+        "x": 600,
+        "y": 800
+      },
+      "exits": {
+        "n": "fazenda_entrada_casa",
+        "o": "fazenda_quarto"
+      },
+      "npcs": [
+        "Mulher desesperada"
+      ],
+      "notes": "Móveis revirados e sangue. Mulher observada; NPCs podem circular.",
+      "discovered_in": "Ciclo X (Dia 91)",
+      "source": {
+        "document": "evidence/dia91.json",
+        "day": 91,
+        "note": "Trechos literais do servidor, linhas dos registros anteriores e ações da continuação autorizada; sem referências circulares."
+      }
+    },
+    {
+      "id": "fazenda_cozinha",
+      "name": "A Cozinha",
+      "layer": "jareth_fazenda",
+      "zone": "Fazenda próxima a Jareth",
+      "risk": "Atenção",
+      "risk_code": "medium",
+      "icon": "🌾",
+      "coords": {
+        "x": 400,
+        "y": 600
+      },
+      "exits": {
+        "l": "fazenda_entrada_casa"
+      },
+      "npcs": [],
+      "notes": "Cacos, utensílios pelo chão e cheiro de pernil assado; cheiro não comprova comida disponível para coleta.",
+      "discovered_in": "Ciclo X (Dia 91)",
+      "source": {
+        "document": "evidence/dia91.json",
+        "day": 91,
+        "note": "Trechos literais do servidor, linhas dos registros anteriores e ações da continuação autorizada; sem referências circulares."
+      }
+    },
+    {
+      "id": "fazenda_quarto",
+      "name": "Um Quarto",
+      "layer": "jareth_fazenda",
+      "zone": "Fazenda próxima a Jareth",
+      "risk": "Atenção",
+      "risk_code": "medium",
+      "icon": "🌾",
+      "coords": {
+        "x": 400,
+        "y": 800
+      },
+      "exits": {
+        "l": "fazenda_sala_estar"
+      },
+      "npcs": [
+        "Mulher desesperada",
+        "Criança"
+      ],
+      "notes": "Porta caída e abajur quebrado. Mulher e criança observadas, sem resgate confirmado.",
+      "discovered_in": "Ciclo X (Dia 91)",
+      "source": {
+        "document": "evidence/dia91.json",
+        "day": 91,
+        "note": "Trechos literais do servidor, linhas dos registros anteriores e ações da continuação autorizada; sem referências circulares."
+      }
+    },
+    {
+      "id": "caminho_campos_jareth",
+      "name": "Um Caminho Dentre os Campos (entroncamento Jareth)",
+      "layer": "novatos",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Baixo observado",
+      "risk_code": "low",
+      "icon": "🌾",
+      "coords": {
+        "x": 820,
+        "y": -180
+      },
+      "exits": {
+        "o": "caminho_dentre_campos"
+      },
+      "npcs": [
+        "Pequenina halfling",
+        "Carroça de madeira"
+      ],
+      "notes": "Saídas observadas: norte O Começo da Estrada; leste outro Caminho Dentre os Campos; oeste caminho das gramíneas com saída sul para o Grande Campo. Norte/leste ainda sem setores individualizados no grafo.",
+      "discovered_in": "Ciclo X (Dia 91)",
+      "source": {
+        "document": "evidence/dia91.json",
+        "day": 91,
+        "note": "Trechos literais do servidor, linhas dos registros anteriores e ações da continuação autorizada; sem referências circulares."
+      }
     }
   ],
-  "last_updated_day": 90,
+  "last_updated_day": 91,
   "verification": "live",
   "current_location_id": "templo_midgaard",
-  "camp_id": "laboratorio_magos",
+  "camp_id": "templo_midgaard",
   "reconciliation_notes": [
     "Posições gráficas são esquemáticas, não distâncias do mundo.",
     "Revisão inclui descobertas narradas até o Dia 60; não houve verificação ao vivo de todas as rotas antigas.",
     "Saídas inversas não foram deduzidas. Saídas sem destino conhecido permanecem pendentes.",
-    "Campo Aberto versus Caminho Sujo: referências antigas divergem sobre o acesso ao Tabuleiro; não foi criada uma conexão nova por suposição."
+    "Campo Aberto versus Caminho Sujo: referências antigas divergem sobre o acesso ao Tabuleiro; não foi criada uma conexão nova por suposição.",
+    "Dia 91: fazenda é uma cartografia parcial. Trechos entre Jareth, floresta, estrada e casa não foram completados por suposição; ausência de aresta não significa ausência de passagem. Entroncamento Jareth separado do Caminho homônimo; pernoite atual no Templo."
   ]
 }

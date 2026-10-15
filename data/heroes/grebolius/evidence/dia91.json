@@ -1,0 +1,387 @@
+{
+  "hero_id": "grebolius",
+  "day": 91,
+  "source_kind": "server_log",
+  "reconciled_on": "2026-10-15",
+  "sources": [
+    {
+      "id": "sessao-anterior",
+      "file_name": "session_dia91.log",
+      "sha256": "fe92403dcd15b8f6a1e33483ce6574ea93d4ebbb7b2d54a61ab3a8836f3f535d",
+      "line_numbering": "Linhas LF do arquivo original; CR removido apenas para leitura.",
+      "note": "Arquivo privado preservado; títulos de seções não comprovam que o destino anunciado foi alcançado."
+    },
+    {
+      "id": "retorno-anterior",
+      "file_name": "session_dia91_return.log",
+      "sha256": "5b870de4d0a32fe22f903d928ebe6ce4e0461e2d9f9869ce15ea8d3b5ae1327c",
+      "note": "Retorno parcial anterior observado no Milharal Destruído; não é a continuação deste chat."
+    },
+    {
+      "id": "continuacao-autorizada",
+      "file_name": "session_dia91_continuacao_20261015_161009.jsonl",
+      "sha256": "12556a2a9cbee9bd285aa8043cde25d047ecfb1a95cd30ff91bded66d5fb47ca",
+      "note": "Uma única conexão adicional autorizada pelo usuário; comandos e respostas abaixo."
+    }
+  ],
+  "original_excerpts": [
+    {
+      "id": "trilha-divisao",
+      "source_id": "sessao-anterior",
+      "line_start": 1480,
+      "line_end": 1507,
+      "server_text": "67hp 170mn 99mv > Uma Divisão da Trilha\n   Aqui as árvores encontram seu ponto máximo, abertas o suficiente para que a luz\ncorra e brinque, de galho em galho, alegrando a paisagem. Nesse ponto a trilha se\ndivide, sendo que segue ao norte, leste, e oeste. Ao sul a trilha segue para fora\nda floresta.\n(x2) Uma calça muito velha e remendada foi deixada aqui. (novo)\n\n67hp 170mn 101mv > Saídas:\nNorte - A Trilha na Floresta\nLeste - Uma Parte Densa da Floresta\nSul   - Adentrando-se na Floresta\nOeste - Uma Parte Densa da Floresta\n\n67hp 170mn 101mv > Uma Parte Densa da Floresta\n   Subitamente as árvores começam a fechar-se, comprimindo a trilha em meio aos\nfechados troncos que se aproximam mais e mais. Uma leve impressão de que você\nestá perdido percorre seu corpo. A floresta continua ao norte, ao sul, e ao oeste.\n\n67hp 170mn 100mv > Uma Parte Densa da Floresta\n   Subitamente as árvores começam a fechar-se, comprimindo a trilha em meio aos\nfechados troncos que se aproximam mais e mais. Uma leve impressão de que você\nestá perdido percorre seu corpo. A floresta continua ao norte, ao sul, e ao oeste.\n\n67hp 170mn 100mv > Saídas:\nNorte - O Fim da Floresta\nLeste - Num Bosque Iluminado\nSul   - Uma Parte Densa da Floresta\nOeste - Uma Divisão da Trilha"
+    },
+    {
+      "id": "estrada-fazenda",
+      "source_id": "sessao-anterior",
+      "line_start": 1984,
+      "line_end": 2027,
+      "server_text": "67hp 170mn 101mv > Certo, você irá se acovardar se você ficar abaixo de 17 pontos de vida.\n\n67hp 170mn 101mv > Uma Pequena Estrada\n   Você está em um pequena estrada, que entra nas terras dessa\nfazenda cercada por um bosque.\n\n67hp 170mn 100mv > Uma Pequena Estrada\n   Você está em um pequena estrada, que entra nas terras dessa\nfazenda cercada por um bosque.\n\n67hp 170mn 100mv > Saídas:\nLeste - A Entrada da Fazenda\nSul   - O Gramado\nOeste - Uma Pequena Estrada\n\n67hp 170mn 101mv > Uma Pequena Estrada\n   Essa pacata continua a leste e oeste, enquanto ao sul parece\nacabar no gramado de frente da casa da fazenda, muito verde e bem\ncuidado por sinal. Alguns fragmentos de vidro estão espalhados por\naqui, mergulhados na poça de algum líquido muito forte. Há também\nmuitas pegadas e sinais de correria. Estranho, não?\n\n67hp 170mn 100mv > Uma Pequena Estrada\n   Essa pacata continua a leste e oeste, enquanto ao sul parece\nacabar no gramado de frente da casa da fazenda, muito verde e bem\ncuidado por sinal. Alguns fragmentos de vidro estão espalhados por\naqui, mergulhados na poça de algum líquido muito forte. Há também\nmuitas pegadas e sinais de correria. Estranho, não?\n\n67hp 170mn 101mv > Saídas:\nLeste - Uma Pequena Estrada\nSul   - O Gramado\nOeste - O Fim da Estrada\n\n67hp 170mn 101mv > Uma Pequena Estrada\n   Essa pacata continua a leste e oeste, enquanto ao sul parece\nacabar no gramado de frente da casa da fazenda, muito verde e bem\ncuidado por sinal. Alguns fragmentos de vidro estão espalhados por\naqui, mergulhados na poça de algum líquido muito forte. Há também\nmuitas pegadas e sinais de correria. Estranho, não?\n\n67hp 170mn 101mv > Saídas:\nLeste - Uma Pequena Estrada\nSul   - O Gramado"
+    },
+    {
+      "id": "gramado-casa",
+      "source_id": "sessao-anterior",
+      "line_start": 2056,
+      "line_end": 2075,
+      "server_text": "\n67hp 169mn 101mv > Você já está em pé.\n\n67hp 170mn 101mv > Certo, você irá se acovardar se você ficar abaixo de 17 pontos de vida.\n\n67hp 170mn 101mv > O Gramado\n   A linda grama que cobre a frente da casa da fazenda parece\nchamar-lhe para deitar e olhar as nuvens... realmente esse gramado\nparece ser muito bem cuidado. Só faltariam mais algumas flores, não?\n\n67hp 170mn 100mv > O Gramado\n   A linda grama que cobre a frente da casa da fazenda parece\nchamar-lhe para deitar e olhar as nuvens... realmente esse gramado\nparece ser muito bem cuidado. Só faltariam mais algumas flores, não?\n\n67hp 170mn 100mv > Saídas:\nNorte - Uma Pequena Estrada\nLeste - O Gramado\nSul   - A Entrada da Casa\nOeste - O Gramado"
+    },
+    {
+      "id": "fim-estrada-milharal",
+      "source_id": "sessao-anterior",
+      "line_start": 2127,
+      "line_end": 2166,
+      "server_text": "\n67hp 170mn 100mv > O Fim da Estrada\n   A estrada termina aqui, podendo voltar pelo leste ou seguir pelo\nsul até um belo gramado.\n\n67hp 170mn 100mv > Saídas:\nLeste - Uma Pequena Estrada\nSul   - O Gramado\nOeste - O Milharal Destruído\n\n67hp 170mn 101mv > O Milharal Destruído\n   Uma cena assustadora. O que era até muito pouco tempo atrás um\nlindo e produtivo milharal, agora não passa de pés-de-milho\nviolentamente arrancados, secando ao sol. Alguns pequenos amontoados\nde plantas sobreviveram, como que por milagre, em pequenos grupos\nisolados, que aliás, parecem esconder alguma coisa... você pode jurar\nque acabou de ver com certa clareza um par de olhos atrás de algumas\nplantas... Fuja daqui enquanto pode!!!\nUm monstro verde e peludo está aqui, mastigando freneticamente alguma coisa.\nUma estranha criatura, verde e peluda, está procurando algo.\n(x41) Um simples porrete foi abandonado aqui. (novo)\n(x2) Uma clava muito rudimentar foi deixada aqui. (novo)(+1L)\n\n67hp 170mn 100mv > O Milharal Destruído\n   Uma cena assustadora. O que era até muito pouco tempo atrás um\nlindo e produtivo milharal, agora não passa de pés-de-milho\nviolentamente arrancados, secando ao sol. Alguns pequenos amontoados\nde plantas sobreviveram, como que por milagre, em pequenos grupos\nisolados, que aliás, parecem esconder alguma coisa... você pode jurar\nque acabou de ver com certa clareza um par de olhos atrás de algumas\nplantas... Fuja daqui enquanto pode!!!\nUm monstro verde e peludo está aqui, mastigando freneticamente alguma coisa.\nUma estranha criatura, verde e peluda, está procurando algo.\n(x41) Um simples porrete foi abandonado aqui. (novo)\n(x2) Uma clava muito rudimentar foi deixada aqui. (novo)(+1L)\n\n67hp 170mn 101mv > Saídas:\nLeste - O Fim da Estrada\nSul   - O Milharal Destruído\nOeste - O Milharal Destruído"
+    },
+    {
+      "id": "lider-azul-consider",
+      "source_id": "sessao-anterior",
+      "line_start": 2203,
+      "line_end": 2263,
+      "server_text": "67hp 170mn 101mv > O Milharal Destruído\n   Uma cena assustadora. O que era até muito pouco tempo atrás um\nlindo e produtivo milharal, agora não passa de pés-de-milho\nviolentamente arrancados, secando ao sol. Alguns pequenos amontoados\nde plantas sobreviveram, como que por milagre, em pequenos grupos\nisolados, que aliás, parecem esconder alguma coisa... você pode jurar\nque acabou de ver com certa clareza um par de olhos atrás de algumas\nplantas... Fuja daqui enquanto pode!!!\nUm grande monstro de pelagem azul está aqui, coçando a cabeça.\nUm monstro verde e peludo está aqui, mastigando freneticamente alguma coisa.\nUma estranha criatura, verde e peluda, está procurando algo.\nUm monstro verde e peludo está aqui, mastigando freneticamente alguma coisa.\nUma estranha criatura, verde e peluda, está procurando algo.\n(x41) Um simples porrete foi abandonado aqui. (novo)\n(x2) Uma clava muito rudimentar foi deixada aqui. (novo)(+1L)\n\n67hp 170mn 100mv > O Milharal Destruído\n   Uma cena assustadora. O que era até muito pouco tempo atrás um\nlindo e produtivo milharal, agora não passa de pés-de-milho\nviolentamente arrancados, secando ao sol. Alguns pequenos amontoados\nde plantas sobreviveram, como que por milagre, em pequenos grupos\nisolados, que aliás, parecem esconder alguma coisa... você pode jurar\nque acabou de ver com certa clareza um par de olhos atrás de algumas\nplantas... Fuja daqui enquanto pode!!!\nUm grande monstro de pelagem azul está aqui, coçando a cabeça.\nUm monstro verde e peludo está aqui, mastigando freneticamente alguma coisa.\nUma estranha criatura, verde e peluda, está procurando algo.\nUm monstro verde e peludo está aqui, mastigando freneticamente alguma coisa.\nUma estranha criatura, verde e peluda, está procurando algo.\n(x41) Um simples porrete foi abandonado aqui. (novo)\n(x2) Uma clava muito rudimentar foi deixada aqui. (novo)(+1L)\n\n67hp 170mn 101mv > Aparentemente o líder dos monstros invasores, sua pelagem azul\nparece ter sido tingida com aqueles produtos sanitários azuis, sabe?\nO líder dos monstros está com saúde perfeita.\n\nO líder dos monstros está usando:\n  empunhando         -> uma clava (novo)(+1L)\n\n67hp 170mn 101mv > \n             Você  Oponente\n   Nível:     11   Você precisaria de um pouco de sorte!\n    Vida:     67   Você é LOUCO!\n   Poder:     21   Você precisaria de um pouco de sorte!\nPrecisão:     15   Perfeito!\nArmadura:     44   Você precisaria de um pouco de sorte!\n\n67hp 170mn 101mv > Aparentemente o líder dos monstros invasores, sua pelagem azul\nparece ter sido tingida com aqueles produtos sanitários azuis, sabe?\nO líder dos monstros está com saúde perfeita.\n\nO líder dos monstros está usando:\n  empunhando         -> uma clava (novo)(+1L)\n\n67hp 170mn 101mv > \n             Você  Oponente\n   Nível:     11   Você precisaria de um pouco de sorte!\n    Vida:     67   Você é LOUCO!\n   Poder:     21   Você precisaria de um pouco de sorte!\nPrecisão:     15   Perfeito!\nArmadura:     44   Você precisaria de um pouco de sorte!"
+    },
+    {
+      "id": "entrada-casa-saidas",
+      "source_id": "sessao-anterior",
+      "line_start": 2500,
+      "line_end": 2513,
+      "server_text": "e pancadas adornam as paredes externas... muito estranho mesmo...\nO dono da fazenda está aqui, olhando assustado para você.\n\n67hp 170mn 99mv > A Entrada da Casa\n   Apesar de um pouco suja, essa casa parece ter sido pintada e\nenvernizada recentemente. Pelo jeito, seja lá quem for o dono desse\nimóvel, deve ser muito caprichoso. Algumas marcas brutais de cortes\ne pancadas adornam as paredes externas... muito estranho mesmo...\nO dono da fazenda está aqui, olhando assustado para você.\n\n67hp 170mn 101mv > Saídas:\nNorte - O Gramado\nSul   - A Sala de Estar\nOeste - A Cozinha"
+    },
+    {
+      "id": "fazendeiro-encontro",
+      "source_id": "sessao-anterior",
+      "line_start": 2657,
+      "line_end": 2697,
+      "server_text": "67hp 170mn 100mv > O Gramado\n   A linda grama que cobre a frente da casa da fazenda parece\nchamar-lhe para deitar e olhar as nuvens... realmente esse gramado\nparece ser muito bem cuidado. Só faltariam mais algumas flores, não?\n\n67hp 170mn 100mv > A Entrada da Casa\n   Apesar de um pouco suja, essa casa parece ter sido pintada e\nenvernizada recentemente. Pelo jeito, seja lá quem for o dono desse\nimóvel, deve ser muito caprichoso. Algumas marcas brutais de cortes\ne pancadas adornam as paredes externas... muito estranho mesmo...\nO dono da fazenda está aqui, olhando assustado para você.\n\n67hp 170mn 99mv > A Entrada da Casa\n   Apesar de um pouco suja, essa casa parece ter sido pintada e\nenvernizada recentemente. Pelo jeito, seja lá quem for o dono desse\nimóvel, deve ser muito caprichoso. Algumas marcas brutais de cortes\ne pancadas adornam as paredes externas... muito estranho mesmo...\nO dono da fazenda está aqui, olhando assustado para você.\n\n67hp 170mn 101mv > Um humano na margem de seus 40 anos de idade, com sinais\naparentes de calvíces, acompanhados por uma saliente barriga.\nO fazendeiro está com saúde perfeita.\n\nO fazendeiro está usando:\n  na cabeça          -> um chapéu de palha (novo)\n  empunhando         -> uma foice (novo)\n\n67hp 170mn 101mv > Um humano na margem de seus 40 anos de idade, com sinais\naparentes de calvíces, acompanhados por uma saliente barriga.\nO fazendeiro está com saúde perfeita.\n\nO fazendeiro está usando:\n  na cabeça          -> um chapéu de palha (novo)\n  empunhando         -> uma foice (novo)\n\n67hp 170mn 101mv > Você diz: 'ola'\n\n67hp 170mn 101mv > \nO fazendeiro questiona: 'Ô sô, cê que veio nos ajudar com esses bicho feio?'\nVocê está morrendo de fome! (-1hp, -2mn e -2mv)\nVocê solta um gemido agudo ao sentir seu corpo consumindo a si próprio pela falta de alimento... [-1]"
+    },
+    {
+      "id": "sala-cozinha-saidas",
+      "source_id": "sessao-anterior",
+      "line_start": 2709,
+      "line_end": 2757,
+      "server_text": "67hp 170mn 101mv > A Sala de Estar\n   Pelos Deuses! Passou um furacão por aqui?\nSofás, poltronas e mesas, todos virados, pelo jeito brutalmente atirados!\nPapéis jogados sobre o tapete, que indica... ECA! Uma poça de sangue!\nPelo visto ocorreu algum tipo de batalha ou ataque aqui, realmente muito\nviolento! Se eu fosse você dava o fora daqui agora...\nUma mulher desesperada está chorando de medo aqui.\n\n67hp 170mn 100mv > A Sala de Estar\n   Pelos Deuses! Passou um furacão por aqui?\nSofás, poltronas e mesas, todos virados, pelo jeito brutalmente atirados!\nPapéis jogados sobre o tapete, que indica... ECA! Uma poça de sangue!\nPelo visto ocorreu algum tipo de batalha ou ataque aqui, realmente muito\nviolento! Se eu fosse você dava o fora daqui agora...\nUma mulher desesperada está chorando de medo aqui.\n\n67hp 170mn 101mv > Saídas:\nNorte - A Entrada da Casa\nOeste - Um Quarto\n\n67hp 170mn 101mv > Você diz: 'ola'\n\n67hp 170mn 101mv > Você diz: 'sim'\n\n67hp 170mn 101mv > A Entrada da Casa\n   Apesar de um pouco suja, essa casa parece ter sido pintada e\nenvernizada recentemente. Pelo jeito, seja lá quem for o dono desse\nimóvel, deve ser muito caprichoso. Algumas marcas brutais de cortes\ne pancadas adornam as paredes externas... muito estranho mesmo...\nO dono da fazenda está aqui, olhando assustado para você.\n\n67hp 170mn 100mv > A Cozinha\n   Definitivamente alguma coisa muita séria aconteceu aqui! Dezenas\nde utensílios de cozinha se encontram jogados pelo chão, cacos de\npratos e copos espalhados por todos os lados, além de muitas sujeira\ne... marcas de sangue na parede?! Um apetitoso cheiro de pernil assado\ncircula pela cozinha, indicando que independente do que ocorreu,\nocorreu há muito pouco tempo. Talvez o culpado ainda esteja por perto...\n\n67hp 170mn 99mv > A Cozinha\n   Definitivamente alguma coisa muita séria aconteceu aqui! Dezenas\nde utensílios de cozinha se encontram jogados pelo chão, cacos de\npratos e copos espalhados por todos os lados, além de muitas sujeira\ne... marcas de sangue na parede?! Um apetitoso cheiro de pernil assado\ncircula pela cozinha, indicando que independente do que ocorreu,\nocorreu há muito pouco tempo. Talvez o culpado ainda esteja por perto...\n\n67hp 170mn 101mv > Saídas:\nLeste - A Entrada da Casa"
+    },
+    {
+      "id": "pedido-dez-invasores",
+      "source_id": "sessao-anterior",
+      "line_start": 2845,
+      "line_end": 2846,
+      "server_text": "67hp 170mn 101mv > \nO fazendeiro exclama: 'Faiz o seguinte, vai lá fora e extermine 10 daqueles monstros invasores no milharal. Não deixe nenhum escapar!'"
+    },
+    {
+      "id": "familia-quarto",
+      "source_id": "sessao-anterior",
+      "line_start": 2897,
+      "line_end": 2916,
+      "server_text": "67hp 170mn 101mv > Um Quarto\n   Ao entrar no quarto você por muito pouco não escorrega na porta do\npróprio, que se encontra estirada no chão, com inúmeros sinais de\nbatalha. Por incrível que pareça, o quarto parece estar muito arrumado,\ncom apenas um abajur quebrado ao lado do criado-mudo, próximo a uma\ncama de casal, sem nenhum sinal de violência.\nUma mulher desesperada está chorando de medo aqui.\nUma pequena criança está aqui, gritando apavorada.\n\n67hp 170mn 100mv > Um Quarto\n   Ao entrar no quarto você por muito pouco não escorrega na porta do\npróprio, que se encontra estirada no chão, com inúmeros sinais de\nbatalha. Por incrível que pareça, o quarto parece estar muito arrumado,\ncom apenas um abajur quebrado ao lado do criado-mudo, próximo a uma\ncama de casal, sem nenhum sinal de violência.\nUma mulher desesperada está chorando de medo aqui.\nUma pequena criança está aqui, gritando apavorada.\n\n67hp 170mn 100mv > Saídas:\nLeste - A Sala de Estar"
+    },
+    {
+      "id": "ultimo-estado-anterior",
+      "source_id": "sessao-anterior",
+      "line_start": 4427,
+      "line_end": 4541,
+      "server_text": "feitos, são o orgulho de suas cidades-mães. A estrada continua ao\nnorte, enquanto ao sul você vê um caminho amplo caminho.\n[ Saídas: norte e sul ]\n\n67hp 170mn 101mv > Um Caminho Dentre os Campos\n   Você se encontra em meio aos vastos campos, próximos à Midgaard.\nO caminho que os atravessa realmente prova-se útil, pois evita que\nse tenha que contornar toda a planície, o que levaria muito tempo,\nalgo escasso para os comerciantes e aventureiros que por aqui cruzam.\nAo norte começa a estrada Midgaard-Jareth, diferenciada por seu\npavimento e seu tamanho, enquanto ao leste e oeste continua o caminho.\n[ Saídas: norte, leste e oeste ]\n\n67hp 170mn 100mv > Um Caminho Dentre os Campos\n   Você se encontra em meio aos vastos campos, próximos à Midgaard.\nO caminho que os atravessa realmente prova-se útil, pois evita que\nse tenha que contornar toda a planície, o que levaria muito tempo,\nalgo escasso para os comerciantes e aventureiros que por aqui cruzam.\nAo norte começa a estrada Midgaard-Jareth, diferenciada por seu\npavimento e seu tamanho, enquanto ao leste e oeste continua o caminho.\n[ Saídas: norte, leste e oeste ]\n\n67hp 170mn 101mv > Você não pode ir por aí...\n\n67hp 170mn 101mv > Um Caminho Dentre os Campos\n   Você se encontra em meio aos vastos campos, próximos à Midgaard.\nO caminho que os atravessa realmente prova-se útil, pois evita que\nse tenha que contornar toda a planície, o que levaria muito tempo,\nalgo escasso para os comerciantes e aventureiros que por aqui cruzam.\nAo norte começa a estrada Midgaard-Jareth, diferenciada por seu\npavimento e seu tamanho, enquanto ao leste e oeste continua o caminho.\n[ Saídas: norte, leste e oeste ]\n\n67hp 170mn 101mv > Você não pode ir por aí...\n\n67hp 170mn 101mv > Um Caminho Dentre os Campos\n   Você se encontra em meio aos vastos campos, próximos à Midgaard.\nO caminho que os atravessa realmente prova-se útil, pois evita que\nse tenha que contornar toda a planície, o que levaria muito tempo,\nalgo escasso para os comerciantes e aventureiros que por aqui cruzam.\nAo norte começa a estrada Midgaard-Jareth, diferenciada por seu\npavimento e seu tamanho, enquanto ao leste e oeste continua o caminho.\n[ Saídas: norte, leste e oeste ]\n\n67hp 170mn 101mv > Você não pode ir por aí...\n\n67hp 170mn 101mv > Um Caminho Dentre os Campos\n   Você se encontra em meio aos vastos campos, próximos à Midgaard.\nO caminho que os atravessa realmente prova-se útil, pois evita que\nse tenha que contornar toda a planície, o que levaria muito tempo,\nalgo escasso para os comerciantes e aventureiros que por aqui cruzam.\nAo norte começa a estrada Midgaard-Jareth, diferenciada por seu\npavimento e seu tamanho, enquanto ao leste e oeste continua o caminho.\n[ Saídas: norte, leste e oeste ]\n\n67hp 170mn 101mv > Você não pode ir por aí...\n\n67hp 170mn 101mv > Um Caminho Dentre os Campos\n   Você se encontra em meio aos vastos campos, próximos à Midgaard.\nO caminho que os atravessa realmente prova-se útil, pois evita que\nse tenha que contornar toda a planície, o que levaria muito tempo,\nalgo escasso para os comerciantes e aventureiros que por aqui cruzam.\nAo norte começa a estrada Midgaard-Jareth, diferenciada por seu\npavimento e seu tamanho, enquanto ao leste e oeste continua o caminho.\n[ Saídas: norte, leste e oeste ]\n\n67hp 170mn 101mv > \n Você é Grebolius, o Aprendiz de Mago.\n Você está em sua 1ª encarnação, como um Mago Elfo, nível 11.\n Você tem 17 anos, 2 meses, 14 dias e 6 horas.\n Você esteve jogando durante 0 dias e 15 horas.\n Você pesa 61,68kg e mede 1,39m.\n Você morreu 3 vezes e não caiu em nenhuma armadilha de morte.\n\n[Pontos e atributos]------------------------------------------------------------\n\n          Vida: {<<<<<>>>>>}  67 de 67 \n          Mana: {<<<<<>>>>>} 170 de 170\n     Movimento: {<<<<<>>>>>} 101 de 101\n\n   Experiência: {<<<<<>>>--} 152.098\n Próximo nível: {<<<<<>>>>>}  47.902           Pontos de aventura: 0\n\n   Alinhamento: {<<<<<>----}   222 - Você é um pouco bom.\n\n         Força: 10       Constituição: 10                  Acerto: 0 \n     Sabedoria: 17       Inteligência: 17                    Dano: 1 \n      Destreza: 15            Carisma: 9       Classe de Armadura: 44\n\n[Ouro e equipamentos]-----------------------------------------------------------\n\n Você está carregando 11 itens, num peso total de 90 kg.\n Você pode carregar no máximo 17 itens e um peso total de 115 kg.\n\n         Banco: {----------}   0\n    Carregando: {<<<<<>>>>>} 630 - Total: 630\n\n[Autoquests em andamento]-------------------------------------------------------\n\n   Problemas Agrícolas: Você deve matar criaturas.\n\n[Situação atual]----------------------------------------------------------------\n\n Você está em pé.\n Você está morrendo de fome!\n Você se sente protegido.\n \n[ Duração ] \n armor                 (  25 horas ) +25 em ARMADURA\n\n67hp 170mn 101mv > Salvando os seus atalhos.\n\n67hp 170mn 101mv > Você se deita e dorme.\n\n67hp 170mn 101mv > Salvando os seus atalhos."
+    }
+  ],
+  "continuation_actions": [
+    {
+      "at": "2026-10-15T16:10:29.141995-03:00",
+      "command": "",
+      "response": "66hp 168mn 99mv > "
+    },
+    {
+      "at": "2026-10-15T16:10:29.970204-03:00",
+      "command": "wake",
+      "response": "Você acorda e se senta.\r\n\r\n66hp 168mn 99mv > "
+    },
+    {
+      "at": "2026-10-15T16:10:30.789896-03:00",
+      "command": "stand",
+      "response": "Você se levanta.\r\n\r\n66hp 168mn 99mv > "
+    },
+    {
+      "at": "2026-10-15T16:10:31.600732-03:00",
+      "command": "wimpy 17",
+      "response": "Certo, você irá se acovardar se você ficar abaixo de 17 pontos de vida.\r\n\r\n66hp 168mn 99mv > "
+    },
+    {
+      "at": "2026-10-15T16:10:48.091488-03:00",
+      "command": "look",
+      "response": "\r\nVocê está morrendo de fome! (-1hp, -2mn e -2mv)\r\nVocê solta um gemido agudo ao sentir seu corpo consumindo a si próprio pela falta de alimento... [-1]\r\nVocê está morrendo de sede! (-1hp, -2mn e -2mv)\r\nSua garganta parece secar, enquanto você sente seu corpo desidratando! [-1]\r\n\r\n67hp 168mn 99mv > Um Caminho Dentre os Campos\r\n   Você se encontra em meio aos vastos campos, próximos à Midgaard.\r\nO caminho que os atravessa realmente prova-se útil, pois evita que\r\nse tenha que contornar toda a planície, o que levaria muito tempo,\r\nalgo escasso para os comerciantes e aventureiros que por aqui cruzam.\r\nAo norte começa a estrada Midgaard-Jareth, diferenciada por seu\r\npavimento e seu tamanho, enquanto ao leste e oeste continua o caminho.\r\n[ Saídas: norte, leste e oeste ]\r\nUma pequenina halfling segue apressada pelo caminho.\r\n\r\n67hp 168mn 99mv > "
+    },
+    {
+      "at": "2026-10-15T16:10:49.645993-03:00",
+      "command": "score",
+      "response": "\r\n Você é Grebolius, o Aprendiz de Mago. 1º encarnação, Mago Elfo, nível 11.\r\n\r\n[Pontos e atributos]------------------------------------------------------------\r\n\r\n          Vida: {<<<<<>>>>>}  67 de 67 \r\n          Mana: {<<<<<>>>>>} 168 de 170\r\n     Movimento: {<<<<<>>>>>}  99 de 101\r\n\r\n   Experiência: {<<<<<>>>--} 152.098\r\n Próximo nível: {<<<<<>>>>>}  47.902           Pontos de aventura: 0\r\n\r\n   Alinhamento: {<<<<<>----}   222 - Você é um pouco bom.\r\n\r\n         Força: 10       Constituição: 10                  Acerto: 0 \r\n     Sabedoria: 17       Inteligência: 17                    Dano: 1 \r\n      Destreza: 15            Carisma: 9       Classe de Armadura: 44\r\n\r\nDigite PONTOS TUDO para ver as informações completas.\r\n\r\n67hp 168mn 99mv > "
+    },
+    {
+      "at": "2026-10-15T16:10:51.149119-03:00",
+      "command": "inv",
+      "response": "Você está carregando:\r\num cantil\r\num bracelete de conchas (novo)(+44L)\r\n(x3) um pergaminho de sabedoria\r\numa tocha\r\numa brilhante espada de novato ..Isso tem uma pequena aura! (novo)\r\numa poção amarela de detectar invisibilidade\r\numa mochila\r\num brilhante punhal de novato ..Isso tem uma pequena aura! (novo)\r\num anel arcano ..Isso tem uma pequena aura! (novo)(+2E)\r\n\r\n67hp 169mn 101mv > "
+    },
+    {
+      "at": "2026-10-15T16:10:52.651889-03:00",
+      "command": "equipment",
+      "response": "Você está usando:\r\n  na cabeça          -> um brilhante elmo de novato ..Isso tem uma pequena aura! (novo)\r\n  sobre o corpo      -> uma escura capa de novato ..Isso tem uma pequena aura! (novo)\r\n  no corpo           -> uma brilhante veste de novato (novo)\r\n  nos braços         -> um par de braçadeiras de couro (novo)\r\n  nas mãos           -> um par de luvas de couro (novo)\r\n  como escudo        -> um escudo (novo)\r\n  nas pernas         -> uma calça de couro (novo)\r\n  empunhando         -> um brilhante punhal de novato ..Isso tem uma pequena aura! (novo)\r\n\r\n67hp 169mn 101mv > "
+    },
+    {
+      "at": "2026-10-15T16:11:07.345120-03:00",
+      "command": "drink cantil",
+      "response": "\r\nUma carroça de madeira chegou do oeste.\r\n\r\n67hp 170mn 101mv > Uma carroça de madeira vai para norte.\r\nVocê bebe água cristalina.\r\nVocê está morrendo de fome!\r\n\r\n67hp 170mn 101mv > "
+    },
+    {
+      "at": "2026-10-15T16:11:08.853626-03:00",
+      "command": "exits",
+      "response": "Saídas:\r\nNorte - O Começo da Estrada\r\nLeste - Um Caminho Dentre os Campos\r\nOeste - Um Caminho Dentre os Campos\r\n\r\n67hp 170mn 101mv > "
+    },
+    {
+      "at": "2026-10-15T16:11:10.357941-03:00",
+      "command": "w",
+      "response": "Um Caminho Dentre os Campos\r\n   Gramíneas verdejantes dominam a paisagem, que, refletindo a luz\r\ndo sol, formam um lindo cenário, quebrado apenas por algumas poucas\r\nárvores que se arriscam a invadir a paisagem. O caminho continua ao\r\nleste, enquanto ao sul, avança sobre os campos de Midgaard, que pode\r\nser vista ao longe.\r\n[ Saídas: leste e sul ]\r\n\r\n67hp 170mn 100mv > "
+    },
+    {
+      "at": "2026-10-15T16:11:23.832672-03:00",
+      "command": "s",
+      "response": "O Grande Campo de Midgaard\r\n   Você está andando no amplo caminho de terra através da vicosa, verde,\r\ne fresca zona rural de Midgaard. Você pode ver o horizonte ao norte, leste\r\ne oeste; a ocupada cidade de Midgaard fica ao sul. Tudo a sua volta\r\né grama verde e um ocasional carvalho. O Sol cai maravilhoso em sua\r\nface e um prazeiroso vento sopra através de seus cabelos. Passaros gorjeiam\r\ncalmamente entre si e você pode sentir o suave aroma das flores e da grama\r\nrecém cortada. Você sente como se pudesse deitar-se na grama e ficar aqui\r\npara sempre, dominado pela poderosa beleza em todas as direções.\r\nHá uma estranha estrutura no lado leste do caminho. Um pequeno caminho\r\nde terra afasta-se do caminho principal e leva para oeste.\r\n[ Saídas: norte, sul e oeste ]\r\n\r\n67hp 170mn 100mv > "
+    },
+    {
+      "at": "2026-10-15T16:11:40.390647-03:00",
+      "command": "s",
+      "response": "O Grande Campo de Midgaard\r\n   Você está andando num caminho selvagem, através de lodo, musgo e\r\nbarro. Você vê o horizonte ao Norte, Leste e Oeste. Ao Sul, a ocupada\r\ncidade de Midgaard. Tudo em sua volta é saudavelmente verde, e há\r\nalgumas árvores ocupando o caminho. O Sol bate em seu rosto e um vento\r\nbagunça o seu cabelo. Pássaros voam acima de você, e você sente que poderia\r\ndeitar na grama e ficar aqui para sempre, cercado de beleza por todos os lados.\r\nO Caminho continua para o norte, através do campo.\r\n[ Saídas: norte, leste, sul e oeste ]\r\n\r\n67hp 170mn 100mv > "
+    },
+    {
+      "at": "2026-10-15T16:11:48.875249-03:00",
+      "command": "s",
+      "response": "O Grande Campo de Midgaard\r\n   Você está andando num caminho selvagem, através de lodo, musgo e barro.\r\nVocê vê o horizonte ao Norte, Leste e Oeste. Ao sul, a ocupada cidade de\r\nMidgaard. Tudo a sua volta é saudavelmente verde, e há algumas árvores ocupando\r\no caminho. O Sol bate em seu rosto e um vento bagunça o seu cabelo.\r\nPássaros voam acima de você, e você sente que poderia deitar na grama e ficar\r\naqui para sempre, cercado de beleza por todos os lados. O caminho continua para\r\no norte, através do campo.\r\n[ Saídas: norte e sul ]\r\n\r\n67hp 170mn 100mv > "
+    },
+    {
+      "at": "2026-10-15T16:11:57.118199-03:00",
+      "command": "s",
+      "response": "Atrás do Altar\r\n   Você está em um caminho sujo que leva para longe do Altar do Templo, que\r\nfica ao sul daqui. Ao norte, o caminho continua através do belo campo de\r\nMidgaard.\r\n[ Saídas: norte e sul ]\r\n\r\n67hp 170mn 100mv > "
+    },
+    {
+      "at": "2026-10-15T16:12:05.276953-03:00",
+      "command": "s",
+      "response": "\r\nVocê está morrendo de fome! (-1hp, -2mn e -2mv)\r\nVocê solta um gemido agudo ao sentir seu corpo consumindo a si próprio pela falta de alimento... [-1]\r\n\r\n67hp 170mn 101mv > O Altar do Templo\r\n   Você está no altar do templo, na parte norte do Templo de\r\nMidgaard. Você vê um enorme altar feito de mármore em sua frente e\r\natrás de você há uma estátua de Odin, o Rei dos Deuses.\r\nAo norte, o caminho leva para o campo.\r\n[ Saídas: norte e sul ]\r\n\r\n67hp 170mn 100mv > "
+    },
+    {
+      "at": "2026-10-15T16:12:13.866648-03:00",
+      "command": "s",
+      "response": "O Templo de Midgaard\r\n   Você está no final sudeste do Templo de Midgaard. O Templo foi construído\r\ncom pedras enormes, de aparência eterna, e as paredes são praticamente cobertas\r\npor uma pintura antiga de Deuses, gigantes e camponeses.\r\n   Pedras enormes levam-lhe para baixo, passando pelo portão do Templo,\r\ndescendo pela enorme montanha onde o Templo foi construído, até chegar na Praça\r\ndo Templo.\r\n   A oeste está a Sala de Leitura. A Sala de Doações fica em uma pequena\r\nsala a leste.\r\n[ Saídas: norte, leste, sul, oeste, cima e baixo ]\r\nUm discreto aviso está flutuando aqui... mas o que será isso?!\r\nUma caixa de madeira foi deixada aqui, para que você possa guardar seu dinheiro.\r\n\r\n67hp 170mn 100mv > "
+    },
+    {
+      "at": "2026-10-15T16:12:21.613106-03:00",
+      "command": "d",
+      "response": "A Praça do Templo\r\n   Você está na Praça do Templo de Midgaard. Uma grande escada de mármore\r\nleva-lhe até o Templo. Ao oeste está a Entrada da Guilda dos Clérigos, e\r\num velho bar está a leste. Sul daqui fica a Praça do Comércio, o centro de\r\nMidgaard.\r\n[ Saídas: norte, leste, sul, oeste e cima ]\r\nUm grande e famoso aventureiro está aqui, procurando alguma missão.\r\nO Pacificador está aqui, pronto para evitar qualquer confusão.\r\nUm zelador está andando por aqui, limpando tudo.\r\nUm zelador está andando por aqui, limpando tudo.\r\nO Pacificador está aqui, pronto para evitar qualquer confusão.\r\nVocê vê uma enorme fonte feita de mármore azul... ..Isso tem uma pequena aura!\r\n\r\n67hp 170mn 100mv > "
+    },
+    {
+      "at": "2026-10-15T16:12:32.064790-03:00",
+      "command": "fill cantil fonte",
+      "response": "Você enche um cantil a partir de a grande fonte com agua cristalina.\r\n\r\n67hp 170mn 101mv > "
+    },
+    {
+      "at": "2026-10-15T16:12:33.567487-03:00",
+      "command": "s",
+      "response": "A Praça do Comércio\r\n   Você está na Praça do Comércio, a famosa praça de Midgaard. Uma grande e\r\ndiferente estátua se encontra no meio da praça. Há caminhos para todas as\r\ndireções: ao norte fica a Praça do Templo, ao sul fica a Praça Comum, ao leste\r\ne oeste segue a Rua Principal.\r\n[ Saídas: norte, leste, sul e oeste ]\r\nUm grande mural, repleto de papéis colados, flutua magicamente aqui.\r\n\r\n67hp 170mn 100mv > "
+    },
+    {
+      "at": "2026-10-15T16:12:42.432611-03:00",
+      "command": "w",
+      "response": "A Rua Principal\r\n   Você está na Rua Principal, passando no meio de Midgaard. Sul daqui\r\nfica a Loja de Armaduras, e a Padaria fica ao norte. Leste daqui você vê\r\na Praça do Comércio.\r\n[ Saídas: norte, leste, sul e oeste ]\r\n\r\n67hp 170mn 100mv > "
+    },
+    {
+      "at": "2026-10-15T16:12:51.987921-03:00",
+      "command": "n",
+      "response": "A Padaria\r\n   Você está dentro de uma pequena padaria. Um delicioso aroma enche a sala.\r\nOs pães estão minuciosamente organizados no balcão, e aparentam ser de boa qualidade.\r\nUma deliciosa massa de pão está no balcão, dando sopa. Um pequeno recado está na\r\nparede e há uma grande placa feita de pão de forma pendurada na parede, contendo o\r\nslogan da loja. \r\n[ Saídas: sul ]\r\nUm guarda da cidade está parado aqui.\r\nO padeiro olha apressado para você, enquanto tira farinha do rosto com uma das\r\nmãos.\r\n\r\n67hp 170mn 100mv > "
+    },
+    {
+      "at": "2026-10-15T16:12:53.491358-03:00",
+      "command": "list",
+      "response": " ##   Disponível   Item                                         Preço Nível Enc.\r\n--------------------------------------------------------------------------------\r\n  1)  Ilimitado   Uma rosquinha malhada                           151     0   1\r\n  2)  Ilimitado   Um pão recheado                                   6     0   1\r\n  3)  Ilimitado   Uma broa                                         13     0   1\r\n  4)  Ilimitado   Um pão de viagem                                 69     0   1\r\n\r\n67hp 170mn 101mv > "
+    },
+    {
+      "at": "2026-10-15T16:13:07.685227-03:00",
+      "command": "buy pao",
+      "response": "O padeiro falou por telepatia com você: 'São 6 moedas.'\r\nVocê comprou um pão recheado.\r\n\r\n67hp 170mn 101mv > "
+    },
+    {
+      "at": "2026-10-15T16:13:09.187795-03:00",
+      "command": "eat pao",
+      "response": "Você come um pão recheado.\r\n\r\n67hp 170mn 101mv > "
+    },
+    {
+      "at": "2026-10-15T16:13:10.690487-03:00",
+      "command": "score tudo",
+      "response": "\r\n Você é Grebolius, o Aprendiz de Mago.\r\n Você está em sua 1ª encarnação, como um Mago Elfo, nível 11.\r\n Você tem 17 anos, 2 meses, 15 dias e 1 hora.\r\n Você esteve jogando durante 0 dias e 15 horas.\r\n Você pesa 61,68kg e mede 1,39m.\r\n Você morreu 3 vezes e não caiu em nenhuma armadilha de morte.\r\n\r\n[Pontos e atributos]------------------------------------------------------------\r\n\r\n          Vida: {<<<<<>>>>>}  67 de 67 \r\n          Mana: {<<<<<>>>>>} 170 de 170\r\n     Movimento: {<<<<<>>>>>} 101 de 101\r\n\r\n   Experiência: {<<<<<>>>--} 152.098\r\n Próximo nível: {<<<<<>>>>>}  47.902           Pontos de aventura: 0\r\n\r\n   Alinhamento: {<<<<<>----}   222 - Você é um pouco bom.\r\n\r\n         Força: 10       Constituição: 10                  Acerto: 0 \r\n     Sabedoria: 17       Inteligência: 17                    Dano: 1 \r\n      Destreza: 15            Carisma: 9       Classe de Armadura: 44\r\n\r\n[Ouro e equipamentos]-----------------------------------------------------------\r\n\r\n Você está carregando 11 itens, num peso total de 99 kg.\r\n Você pode carregar no máximo 17 itens e um peso total de 115 kg.\r\n\r\n         Banco: {----------}   0\r\n    Carregando: {<<<<<>>>>>} 624 - Total: 624\r\n\r\n[Autoquests em andamento]-------------------------------------------------------\r\n\r\n   Problemas Agrícolas: Você deve matar criaturas.\r\n\r\n[Situação atual]----------------------------------------------------------------\r\n\r\n Você está em pé.\r\n Você se sente protegido.\r\n \r\n[ Duração ] \r\n armor                 (   7 horas ) +25 em ARMADURA\r\n\r\n67hp 170mn 101mv > "
+    },
+    {
+      "at": "2026-10-15T16:13:23.911820-03:00",
+      "command": "buy pao",
+      "response": "O padeiro falou por telepatia com você: 'São 6 moedas.'\r\nVocê comprou um pão recheado.\r\n\r\n67hp 170mn 101mv > "
+    },
+    {
+      "at": "2026-10-15T16:13:25.414256-03:00",
+      "command": "inv",
+      "response": "Você está carregando:\r\num pão recheado\r\num cantil\r\num bracelete de conchas (novo)(+44L)\r\n(x3) um pergaminho de sabedoria\r\numa tocha\r\numa brilhante espada de novato ..Isso tem uma pequena aura! (novo)\r\numa poção amarela de detectar invisibilidade\r\numa mochila\r\num brilhante punhal de novato ..Isso tem uma pequena aura! (novo)\r\num anel arcano ..Isso tem uma pequena aura! (novo)(+2E)\r\n\r\n67hp 170mn 101mv > "
+    },
+    {
+      "at": "2026-10-15T16:13:44.286950-03:00",
+      "command": "buy pao",
+      "response": "\r\nUm guarda vai para sul.\r\n\r\n67hp 170mn 101mv > O padeiro falou por telepatia com você: 'São 6 moedas.'\r\nVocê comprou um pão recheado.\r\n\r\n67hp 170mn 101mv > "
+    },
+    {
+      "at": "2026-10-15T16:13:45.790151-03:00",
+      "command": "look recado",
+      "response": "Instruções:\r\n\r\n   COMPRAR  - Para comprar algum pão ou massa.\r\n   LISTA    - O padeiro lhe dirá o preço e o tipo de pão da\r\n              padaria.\r\n\r\n67hp 170mn 101mv > "
+    },
+    {
+      "at": "2026-10-15T16:13:47.292378-03:00",
+      "command": "look placa",
+      "response": "Padaria de Midgaard: Entre e viaje no viagem.\r\n*Slogan mais votado pelos jogadores.\r\n\r\n67hp 170mn 101mv > "
+    },
+    {
+      "at": "2026-10-15T16:13:48.795190-03:00",
+      "command": "autoquest",
+      "response": "Certo, mas qual comando de autoquest?\r\nDigite AJUDA AUTOQUEST para ver as opções.\r\n\r\n67hp 170mn 101mv > "
+    },
+    {
+      "at": "2026-10-15T16:13:58.288773-03:00",
+      "command": "ajuda autoquest",
+      "response": "Como?!?\r\n\r\n67hp 170mn 101mv > "
+    },
+    {
+      "at": "2026-10-15T16:13:59.791465-03:00",
+      "command": "s",
+      "response": "A Rua Principal\r\n   Você está na Rua Principal, passando no meio de Midgaard. Sul daqui\r\nfica a Loja de Armaduras, e a Padaria fica ao norte. Leste daqui você vê\r\na Praça do Comércio.\r\n[ Saídas: norte, leste, sul e oeste ]\r\nUm guarda da cidade está parado aqui.\r\n\r\n67hp 170mn 100mv > "
+    },
+    {
+      "at": "2026-10-15T16:14:14.257847-03:00",
+      "command": "e",
+      "response": "A Praça do Comércio\r\n   Você está na Praça do Comércio, a famosa praça de Midgaard. Uma grande e\r\ndiferente estátua se encontra no meio da praça. Há caminhos para todas as\r\ndireções: ao norte fica a Praça do Templo, ao sul fica a Praça Comum, ao leste\r\ne oeste segue a Rua Principal.\r\n[ Saídas: norte, leste, sul e oeste ]\r\nUm grande mural, repleto de papéis colados, flutua magicamente aqui.\r\n\r\n67hp 170mn 100mv > "
+    },
+    {
+      "at": "2026-10-15T16:14:16.263892-03:00",
+      "command": "help autoquest",
+      "response": "AUTOAVENTURA AUTOAVENTURAS AUTOQUEST AUTOQUESTS\r\n\r\nSem a necessidade de um deus ou organizador presente para a aventura, as\r\naventuras automáticas permitem que você desfrute de todo o divertimento de\r\numa aventura, a qualquer hora do dia. Espalhadas pelo jogo, as autoquests\r\nse passam nos mais diferentes cenários e com as mais diferentes missões,\r\ne seus prêmios podem variar, de dinheiro até itens únicos e Pontos de Aventura.\r\n\r\nEm contato direto com os monstros do jogo, as autoquests possuem um formato\r\nlevemente diferente das aventuras tradicionais. A maioria das perguntas\r\nfeitas pelos NPCs (com resposta afirmativa ou negativa) devem ser respondidas\r\napenas com 'sim' ou 'não'. E cuidado, porque isso não vale para todas as\r\nperguntas, hein! Outros tipos de respostas podem ser exigidos, então atenção!\r\n\r\nVocê pode ver todas as aventuras existentes e os requisitos de cada uma através\r\ndo comando AUTOQUEST TODAS. Mas atenção: aventuras secretas não são listadas.\r\nPortanto é preciso explorar o jogo para encontrar todas as aventuras misteriosas.\r\n\r\nPara checar quais aventuras estão disponíveis para você neste momento, digite\r\nAUTOQUEST LISTAR.\r\n\r\n[ Aperte ENTER para continuar, S para sair ou número da página ( 1 de 5 )     ] 67hp 170mn 101mv > "
+    },
+    {
+      "at": "2026-10-15T16:14:26.758392-03:00",
+      "command": "n",
+      "response": "A Praça do Templo\r\n   Você está na Praça do Templo de Midgaard. Uma grande escada de mármore\r\nleva-lhe até o Templo. Ao oeste está a Entrada da Guilda dos Clérigos, e\r\num velho bar está a leste. Sul daqui fica a Praça do Comércio, o centro de\r\nMidgaard.\r\n[ Saídas: norte, leste, sul, oeste e cima ]\r\nUm zelador está andando por aqui, limpando tudo.\r\nUm zelador está andando por aqui, limpando tudo.\r\nUm grande e famoso aventureiro está aqui, procurando alguma missão.\r\nO Pacificador está aqui, pronto para evitar qualquer confusão.\r\nUm zelador está andando por aqui, limpando tudo.\r\nO Pacificador está aqui, pronto para evitar qualquer confusão.\r\nVocê vê uma enorme fonte feita de mármore azul... ..Isso tem uma pequena aura!\r\n\r\n67hp 170mn 100mv > "
+    },
+    {
+      "at": "2026-10-15T16:14:34.862968-03:00",
+      "command": "u",
+      "response": "O Templo de Midgaard\r\n   Você está no final sudeste do Templo de Midgaard. O Templo foi construído\r\ncom pedras enormes, de aparência eterna, e as paredes são praticamente cobertas\r\npor uma pintura antiga de Deuses, gigantes e camponeses.\r\n   Pedras enormes levam-lhe para baixo, passando pelo portão do Templo,\r\ndescendo pela enorme montanha onde o Templo foi construído, até chegar na Praça\r\ndo Templo.\r\n   A oeste está a Sala de Leitura. A Sala de Doações fica em uma pequena\r\nsala a leste.\r\n[ Saídas: norte, leste, sul, oeste, cima e baixo ]\r\nUm discreto aviso está flutuando aqui... mas o que será isso?!\r\nUma caixa de madeira foi deixada aqui, para que você possa guardar seu dinheiro.\r\n\r\n67hp 170mn 100mv > "
+    },
+    {
+      "at": "2026-10-15T16:15:00.038453-03:00",
+      "command": "inv",
+      "response": "Você está carregando:\r\n(x2) um pão recheado\r\num cantil\r\num bracelete de conchas (novo)(+44L)\r\n(x3) um pergaminho de sabedoria\r\numa tocha\r\numa brilhante espada de novato ..Isso tem uma pequena aura! (novo)\r\numa poção amarela de detectar invisibilidade\r\numa mochila\r\num brilhante punhal de novato ..Isso tem uma pequena aura! (novo)\r\num anel arcano ..Isso tem uma pequena aura! (novo)(+2E)\r\n\r\n67hp 170mn 101mv > "
+    },
+    {
+      "at": "2026-10-15T16:15:01.542245-03:00",
+      "command": "score tudo",
+      "response": "\r\n Você é Grebolius, o Aprendiz de Mago.\r\n Você está em sua 1ª encarnação, como um Mago Elfo, nível 11.\r\n Você tem 17 anos, 2 meses, 15 dias e 2 horas.\r\n Você esteve jogando durante 0 dias e 15 horas.\r\n Você pesa 61,68kg e mede 1,39m.\r\n Você morreu 3 vezes e não caiu em nenhuma armadilha de morte.\r\n\r\n[Pontos e atributos]------------------------------------------------------------\r\n\r\n          Vida: {<<<<<>>>>>}  67 de 67 \r\n          Mana: {<<<<<>>>>>} 170 de 170\r\n     Movimento: {<<<<<>>>>>} 101 de 101\r\n\r\n   Experiência: {<<<<<>>>--} 152.098\r\n Próximo nível: {<<<<<>>>>>}  47.902           Pontos de aventura: 0\r\n\r\n   Alinhamento: {<<<<<>----}   222 - Você é um pouco bom.\r\n\r\n         Força: 10       Constituição: 10                  Acerto: 0 \r\n     Sabedoria: 17       Inteligência: 17                    Dano: 1 \r\n      Destreza: 15            Carisma: 9       Classe de Armadura: 44\r\n\r\n[Ouro e equipamentos]-----------------------------------------------------------\r\n\r\n Você está carregando 13 itens, num peso total de 101 kg.\r\n Você pode carregar no máximo 17 itens e um peso total de 115 kg.\r\n\r\n         Banco: {----------}   0\r\n    Carregando: {<<<<<>>>>>} 612 - Total: 612\r\n\r\n[Autoquests em andamento]-------------------------------------------------------\r\n\r\n   Problemas Agrícolas: Você deve matar criaturas.\r\n\r\n[Situação atual]----------------------------------------------------------------\r\n\r\n Você está em pé.\r\n Você se sente protegido.\r\n \r\n[ Duração ] \r\n armor                 (   5 horas ) +25 em ARMADURA\r\n\r\n67hp 170mn 101mv > "
+    },
+    {
+      "at": "2026-10-15T16:15:03.046137-03:00",
+      "command": "save",
+      "response": "Salvando os seus atalhos.\r\n\r\n67hp 170mn 101mv > "
+    },
+    {
+      "at": "2026-10-15T16:15:04.549397-03:00",
+      "command": "sleep",
+      "response": "Você se deita e dorme.\r\n\r\n67hp 170mn 101mv > "
+    },
+    {
+      "at": "2026-10-15T16:15:06.052422-03:00",
+      "command": "score tudo",
+      "response": "\r\n Você é Grebolius, o Aprendiz de Mago.\r\n Você está em sua 1ª encarnação, como um Mago Elfo, nível 11.\r\n Você tem 17 anos, 2 meses, 15 dias e 2 horas.\r\n Você esteve jogando durante 0 dias e 15 horas.\r\n Você pesa 61,68kg e mede 1,39m.\r\n Você morreu 3 vezes e não caiu em nenhuma armadilha de morte.\r\n\r\n[Pontos e atributos]------------------------------------------------------------\r\n\r\n          Vida: {<<<<<>>>>>}  67 de 67 \r\n          Mana: {<<<<<>>>>>} 170 de 170\r\n     Movimento: {<<<<<>>>>>} 101 de 101\r\n\r\n   Experiência: {<<<<<>>>--} 152.098\r\n Próximo nível: {<<<<<>>>>>}  47.902           Pontos de aventura: 0\r\n\r\n   Alinhamento: {<<<<<>----}   222 - Você é um pouco bom.\r\n\r\n         Força: 10       Constituição: 10                  Acerto: 0 \r\n     Sabedoria: 17       Inteligência: 17                    Dano: 1 \r\n      Destreza: 15            Carisma: 9       Classe de Armadura: 44\r\n\r\n[Ouro e equipamentos]-----------------------------------------------------------\r\n\r\n Você está carregando 13 itens, num peso total de 101 kg.\r\n Você pode carregar no máximo 17 itens e um peso total de 115 kg.\r\n\r\n         Banco: {----------}   0\r\n    Carregando: {<<<<<>>>>>} 612 - Total: 612\r\n\r\n[Autoquests em andamento]-------------------------------------------------------\r\n\r\n   Problemas Agrícolas: Você deve matar criaturas.\r\n\r\n[Situação atual]----------------------------------------------------------------\r\n\r\n Você está dormindo.\r\n Você se sente protegido.\r\n \r\n[ Duração ] \r\n armor                 (   5 horas ) +25 em ARMADURA\r\n\r\n67hp 170mn 101mv > "
+    },
+    {
+      "at": "2026-10-15T16:15:07.555482-03:00",
+      "command": "save",
+      "response": "Salvando os seus atalhos.\r\n\r\n67hp 170mn 101mv > "
+    }
+  ],
+  "confirmed_final": {
+    "location_id": "templo_midgaard",
+    "location": "O Templo de Midgaard",
+    "posture": "sleeping",
+    "hp": [
+      67,
+      67
+    ],
+    "mana": [
+      170,
+      170
+    ],
+    "mv": [
+      101,
+      101
+    ],
+    "level": 11,
+    "xp": 152098,
+    "next_level_total_xp": 200000,
+    "gold": 612,
+    "wimpy": 17,
+    "wisdom": 17,
+    "armor_observed": 44,
+    "armor_effect": 25,
+    "armor_base_calculated": 19,
+    "bread_bought": 3,
+    "bread_consumed": 1,
+    "bread_remaining": 2,
+    "bread_spent": 18,
+    "carried_items": 13,
+    "carried_weight_kg": 101,
+    "capacity_items": 17,
+    "capacity_weight_kg": 115,
+    "deaths": 3,
+    "quest": {
+      "id": "problemas-agricolas",
+      "status": "active",
+      "requested_kills": 10,
+      "confirmed_kill_counter": null,
+      "completion_confirmed": false
+    },
+    "hunger_thirst": "Alertas presentes no início; pão consumido e água bebida; alertas ausentes no score final.",
+    "save_confirmed_by_client": true,
+    "save_response": "Salvando os seus atalhos.",
+    "save_scope": "Resposta literal registrada; não foi feita uma reconexão para testar persistência."
+  },
+  "uncertainties": [
+    "Saldo do Dia 90: 2636; primeiro saldo completo preservado no Dia 91: 630. A causa da diferença de 2006 moedas não é comprovada pelos registros consultados.",
+    "XP documental do Dia 90: 152101; observado no Dia 91: 152098. A diferença de 3 não foi atribuída a fuga, morte ou outro evento sem comprovante.",
+    "Armadura base 19 calculada por 44 observado menos efeito +25; não houve medição direta após expirar o efeito.",
+    "Contador de abates da missão não informado pelo servidor; não presumir 0/10 nem conclusão.",
+    "Classificador do cliente marcou combate e menu em respostas normais de ficha/ajuda. Postura, localização e vida foram conferidas pelas respostas literais; o motor não foi alterado.",
+    "Salas homônimas de campos, estrada, gramado e milharal não foram fundidas. A cartografia permanece parcial."
+  ],
+  "session_exception": {
+    "additional_connections_authorized": 1,
+    "used": 1,
+    "note": "Exceção ao teto diário autorizada neste chat; nenhuma reconexão após encerramento."
+  }
+}

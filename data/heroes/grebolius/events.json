@@ -423,13 +423,13 @@
     "id": "doacoes-capa-e-batedor-novatos-dia84",
     "day": 84,
     "type": "exploration",
-    "summary": "Expedição do Dia 84: coleta de doações úteis na Sala de Doações de Midgaard, resgatando e vestindo uma escura capa de novato sobre o corpo, além de recolher um bracelete de conchas e três pergaminhos de sabedoria. Ativação rígida do Modo Batedor com limite máximo permitido pelo servidor de fuga preventiva (wimpy 33), hidratação na Grande Fonte Azul e abastecimento do cantil. Mapeamento sistemático da Área dos Novatos (Escola Superior e Catacumbas Subterrâneas): passagem pela Entrada, Começo da Passagem e Corredor Sujo; inspeção do Cruzamento e abertura da ala norte (Um Caminho Iluminado e A Sala da Estátua com placa enigmática); varredura do corredor sul avistando a coleira do filhote de dragão no chão e dezenas de punhais; abertura da porta leste de Um Outro Canto para a Sala do Alquimista (encontrando o Novato Alquimista e a placa de aviso mortal na escadaria). Incursão nas Catacumbas Subterrâneas mapeando A Entrada, Um Cruzamento de Corredores (avistando o temível Grande Minotauro e diabinho), Um Canto no Corredor, Uma Curva na Passagem com odor cadavérico e Uma Passagem com novatos zumbis descarnados. Retorno ileso através do Grande Campo até o Templo de Midgaard, restauração de wimpy 13 e fechamento formal do dia com sono reparador (sleep) e salvamento.",
+    "summary": "Expedição do Dia 84: coleta de doações úteis na Sala de Doações de Midgaard, resgatando e vestindo uma escura capa de novato sobre o corpo, além de recolher um bracelete de conchas e três pergaminhos de sabedoria. Postura vigilante de batedora com limite máximo permitido pelo servidor de fuga preventiva (wimpy 33), hidratação na Grande Fonte Azul e abastecimento do cantil. Mapeamento sistemático da Área dos Novatos (Escola Superior e Catacumbas Subterrâneas): passagem pela Entrada, Começo da Passagem e Corredor Sujo; inspeção do Cruzamento e abertura da ala norte (Um Caminho Iluminado e A Sala da Estátua com placa enigmática); varredura do corredor sul avistando a coleira do filhote de dragão no chão e dezenas de punhais; abertura da porta leste de Um Outro Canto para a Sala do Alquimista (encontrando o Novato Alquimista e a placa de aviso mortal na escadaria). Incursão nas Catacumbas Subterrâneas mapeando A Entrada, Um Cruzamento de Corredores (avistando o temível Grande Minotauro e diabinho), Um Canto no Corredor, Uma Curva na Passagem com odor cadavérico e Uma Passagem com novatos zumbis descarnados. Retorno ileso através do Grande Campo até o Templo de Midgaard, restauração de wimpy 13 e fechamento formal do dia com sono reparador (sleep) e salvamento.",
     "source_kind": "live",
     "evidence": [
       {
         "document": "posts.json",
         "day": 84,
-        "note": "Sessão ao vivo em debomud.org:4000: coleta e uso da capa escura de novato na Sala de Doações, exploração em Modo Batedor da Escola de Novatos e Catacumbas, avistamento do Minotauro e retorno ao Templo para dormir (sleep) e salvar confirmados."
+        "note": "Sessão ao vivo em debomud.org:4000: coleta e uso da capa escura de novato na Sala de Doações, reconhecimento furtivo de batedora na Escola de Novatos e Catacumbas, avistamento do Minotauro e retorno ao Templo para dormir (sleep) e salvar confirmados."
       }
     ]
   },
@@ -516,5 +516,33 @@
         "note": "Sessão ao vivo em debomud.org:4000: diálogo e ativação formal de Problemas Agrícolas com O Pacificador, instruções de Jareth e Kobolds, reconhecimento urbano e rural e pernoite formal com sono reparador (sleep) e save no Templo confirmados."
       }
     ]
+  },
+  {
+    "id": "fazenda-familia-objetivo-invasores-dia91",
+    "day": 91,
+    "type": "quest",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "evidence/dia91.json",
+        "day": 91,
+        "note": "Trechos literais do servidor, linhas dos registros anteriores e ações da continuação autorizada; sem referências circulares."
+      }
+    ],
+    "summary": "Reconhecimento de Jareth, floresta e fazenda. Fazendeiro, mulher e criança encontrados. O fazendeiro pede exterminar 10 monstros invasores no milharal. Líder azul inspecionado; avaliação inclui alerta de vida \"Você é LOUCO!\". Não há conclusão nem contador de abates confirmado. Retorno anterior termina dormindo em Um Caminho Dentre os Campos, ainda com fome."
+  },
+  {
+    "id": "abastecimento-pernoite-templo-dia91",
+    "day": 91,
+    "type": "session",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "evidence/dia91.json",
+        "day": 91,
+        "note": "Trechos literais do servidor, linhas dos registros anteriores e ações da continuação autorizada; sem referências circulares."
+      }
+    ],
+    "summary": "Continuação em uma única conexão adicional autorizada: despertar nos campos com fome e sede, água bebida do cantil, retorno por saídas observadas, reabastecimento do cantil na fonte, compra de 3 pães a 6 moedas e consumo de 1. Consulta aos avisos da padaria e ajuda de autoquests. Fim no Templo de Midgaard, dormindo; 67/67 HP, 170/170 mana, 101/101 MV, 612 moedas, 2 pães, XP 152098 e wimpy 17. Save responde \"Salvando os seus atalhos.\"; conexão fechada. Problemas Agrícolas permanece ativa."
   }
 ]

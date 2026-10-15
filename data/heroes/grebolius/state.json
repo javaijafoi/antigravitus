@@ -2,10 +2,10 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 90,
-    "source": "Sessão ao vivo em debomud.org:4000 (Dia 90): diálogo oficial e ativação da autoquest 'Problemas Agrícolas' com O Pacificador na Praça do Templo; revelação do itinerário para Jareth e a Floresta dos Kobolds; ronda urbana pela Praça do Comércio e Padaria; hidratação na Grande Fonte Azul e sondagem externa do Grande Campo Sul; retorno ao Templo de Midgaard, sono reparador (sleep) e salvamento de estado com atalhos.",
+    "day": 91,
     "verification": "live",
-    "live_verified": true
+    "live_verified": true,
+    "source": "Conferência ao vivo na continuação autorizada do Dia 91: ficha completa, inventário, equipamento, postura dormindo no Templo e respostas de save; evidence/dia91.json. Campos sem nova medição preservam sua fonte anterior."
   },
   "level": 11,
   "mechanical_race": "Elfo",
@@ -31,23 +31,23 @@
     }
   },
   "experience": {
-    "current": 152101,
+    "current": 152098,
     "next_level": 200000
   },
-  "gold": 2636,
+  "gold": 612,
   "attributes": {
     "STR": 10,
     "DEX": 15,
     "CON": 10,
     "INT": 17,
-    "WIS": 16,
+    "WIS": 17,
     "CHA": 9
   },
   "armor": {
-    "base": 16,
-    "with_armor": 41,
+    "base": 19,
+    "with_armor": 44,
     "effect_verified": true,
-    "note": "Classe de armadura 16 verificada ao vivo no Nível 11 com equipamento completo."
+    "note": "Dia 91: AC 44 observada com armor +25 ativo (5 horas no score final). Base 19 calculada por subtração; não medida diretamente sem o efeito. Duração futura não presumida."
   },
   "hitroll": 0,
   "damroll": 1,
@@ -55,7 +55,7 @@
   "training_sessions": 15,
   "operational_mode": {
     "current": "padrao",
-    "description": "Modo Padrão: Exploração equilibrada com cautela tática e Wimpy documental (~25%).",
+    "description": "Modo Padrão; wimpy 17 confirmado na conexão de encerramento do Dia 91.",
     "wimpy_profile": {
       "padrao": 17,
       "batedor": 33,
@@ -70,23 +70,24 @@
     "name": "O Templo de Midgaard"
   },
   "camp": {
-    "room_id": "laboratorio_magos",
-    "name": "O Laboratório dos Magos"
+    "room_id": "templo_midgaard",
+    "name": "O Templo de Midgaard"
   },
   "sanctuary": {
     "room_id": "panteao_centenarios",
     "name": "O Panteão dos Centenários"
   },
   "last_event": {
-    "day": 90,
-    "summary": "Dia 90: Início do Ciclo X e aceite oficial da autoquest 'Problemas Agrícolas' com O Pacificador. A família do fazendeiro está cercada por monstros em sua propriedade perto de Jareth e da Floresta dos Kobolds ao norte. Ronda na cidade e nos campos, sono reparador (sleep) e save no Templo."
+    "day": 91,
+    "summary": "Fazenda localizada e objetivo de 10 invasores recebido; reabastecimento e pernoite dormindo no Templo de Midgaard. Missão ativa, sem conclusão comprovada."
   },
   "next_objective": {
     "mission_id": "problemas-agricolas",
-    "title": "Viajar para Jareth e a Floresta dos Kobolds para resgatar a família do fazendeiro",
-    "next_step": "Seguir pela estrada ao norte de Midgaard (ou apanhar a carroça de madeira na Praça do Comércio) até Jareth; em Jareth, seguir a leste até a Entrada da Floresta, tomar a Divisão da Trilha ao norte e avançar a leste até a fazenda sitiada.",
+    "title": "Prosseguir com o pedido do fazendeiro no milharal",
+    "next_step": "Retomar a viagem a Jareth e à fazenda por trechos confirmados; avaliar invasores comuns antes de combater. O fazendeiro pede 10 abates; conferir progresso e próxima etapa com ele. Evitar o líder azul enquanto a avaliação indicar perigo desproporcional.",
     "missing_preparation": [
-      "Descarregar excesso de peso/itens nas doações ou baú para liberar espaço para mantimentos de viagem."
+      "Verificar fome, água e capacidade antes da viagem; há 2 pães no encerramento.",
+      "Confirmar cada trecho entre salas homônimas; a cartografia da fazenda é parcial."
     ]
   },
   "skills": [
@@ -213,78 +214,79 @@
     {
       "slot": "Nas Pernas",
       "name": "uma calça de couro"
-    },
-    {
-      "slot": "Como Luz",
-      "name": "uma tocha"
     }
   ],
   "inventory": {
     "recorded": [
       {
+        "name": "um pão recheado",
+        "quantity": 2,
+        "source": "Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json."
+      },
+      {
         "name": "um cantil",
         "quantity": 1,
-        "source": "Confirmado ao vivo no inventário no Dia 82"
-      },
-      {
-        "name": "uma tocha",
-        "quantity": 1,
-        "source": "Confirmado ao vivo no inventário no Dia 82"
-      },
-      {
-        "name": "uma brilhante veste de novato",
-        "quantity": 2,
-        "source": "Confirmado ao vivo no inventário no Dia 82 (2 reservas após vestir a terceira)"
-      },
-      {
-        "name": "um brilhante punhal de novato",
-        "quantity": 5,
-        "source": "Confirmado ao vivo no inventário no Dia 89 (5 reservas após empunhar o sexto)"
-      },
-      {
-        "name": "uma brilhante espada de novato",
-        "quantity": 1,
-        "source": "Confirmado ao vivo no inventário no Dia 82"
-      },
-      {
-        "name": "uma poção amarela de detectar invisibilidade",
-        "quantity": 1,
-        "source": "Confirmado ao vivo no inventário no Dia 82"
-      },
-      {
-        "name": "uma mochila",
-        "quantity": 1,
-        "source": "Confirmado ao vivo no inventário no Dia 82"
-      },
-      {
-        "name": "um anel arcano (+2E)",
-        "quantity": 1,
-        "source": "Confirmado ao vivo no inventário no Dia 82"
+        "source": "Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json."
       },
       {
         "name": "um bracelete de conchas",
         "quantity": 1,
-        "source": "Resgatado na Sala de Doações no Dia 84 (+44L)"
+        "source": "Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json."
       },
       {
         "name": "um pergaminho de sabedoria",
         "quantity": 3,
-        "source": "Resgatado na Sala de Doações no Dia 84"
+        "source": "Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json."
+      },
+      {
+        "name": "uma tocha",
+        "quantity": 1,
+        "source": "Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json."
+      },
+      {
+        "name": "uma brilhante espada de novato",
+        "quantity": 1,
+        "source": "Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json."
+      },
+      {
+        "name": "uma poção amarela de detectar invisibilidade",
+        "quantity": 1,
+        "source": "Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json."
+      },
+      {
+        "name": "uma mochila",
+        "quantity": 1,
+        "source": "Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json."
+      },
+      {
+        "name": "um brilhante punhal de novato",
+        "quantity": 1,
+        "source": "Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json."
+      },
+      {
+        "name": "um anel arcano (+2E)",
+        "quantity": 1,
+        "source": "Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json."
       }
     ],
     "pending_verification": []
   },
   "conditions": [
-    "Nível 11 conquistado com vitais plenos (67 HP, 170 Mana, 101 MV).",
-    "15 sessões de treino resguardadas para círculos superiores (9 magias básicas em proficiência plena de 95%-99%).",
-    "Autoquest 'Problemas Agrícolas' ATIVA com O Pacificador (rumo a Jareth e Floresta dos Kobolds).",
-    "Pergaminho de retorno entregue ao Mago Aventureiro no Bar dos Magos.",
-    "Dia 90 concluído: descansando e dormindo (sleep) no Templo de Midgaard com atalhos e estado salvos."
+    "Dia 91: dormindo no Templo de Midgaard, com 67/67 HP, 170/170 mana e 101/101 MV no último score.",
+    "Pão consumido e água bebida; alertas de fome e sede ausentes da ficha final. Dois pães e cantil reabastecido para a próxima saída.",
+    "Problemas Agrícolas ativa: fazendeiro pede 10 invasores do milharal; contador e conclusão não confirmados.",
+    "Armadura arcana ativa no último score; duração futura depende do servidor.",
+    "15 treinos preservados do registro anterior; não houve treino nesta continuação.",
+    "Save respondeu \"Salvando os seus atalhos.\" antes e depois de dormir; socket encerrado sem nova conexão."
   ],
   "uncertainties": [
     "O anel arcano (+2E) segue exigindo nível ou condição mágica superior.",
     "Novos feitiços superiores dependem de livros arcanos ou mestres especializados.",
-    "O renascimento desequipa todas as peças para a mochila; o protocolo pós-morte exige `wear all` imediato para restaurar os 67 HP máximos concedidos pela veste e a AC 16."
+    "O renascimento desequipa todas as peças para a mochila; o protocolo pós-morte exige `wear all` imediato para restaurar os 67 HP máximos concedidos pela veste e a AC 16.",
+    "Saldo do Dia 90: 2636; primeiro saldo completo preservado no Dia 91: 630. A causa da diferença de 2006 moedas não é comprovada pelos registros consultados.",
+    "XP documental do Dia 90: 152101; observado no Dia 91: 152098. A diferença de 3 não foi atribuída a fuga, morte ou outro evento sem comprovante.",
+    "Armadura base 19 calculada por 44 observado menos efeito +25; não houve medição direta após expirar o efeito.",
+    "Contador de abates da missão não informado pelo servidor; não presumir 0/10 nem conclusão."
   ],
   "evidence": [
     {
@@ -296,12 +298,17 @@
       "document": "posts.json",
       "day": 81,
       "note": "Crônica do Dia 81 baseada na sessão ao vivo em tempo real."
+    },
+    {
+      "document": "evidence/dia91.json",
+      "day": 91,
+      "note": "Trechos literais do servidor, linhas dos registros anteriores e ações da continuação autorizada; sem referências circulares."
     }
   ],
   "narrative_style": "ladra arcana",
   "weapon_summary": "Punhal de Novato (+ Escudo)",
   "migration": {
     "method": "sessão ao vivo e conferência direta no servidor",
-    "verified_on": "Dia 81"
+    "verified_on": "Dia 91 (ficha, inventário, equipamento e encerramento; habilidades e treinos mantêm fontes anteriores)"
   }
 }

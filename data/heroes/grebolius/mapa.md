@@ -128,3 +128,16 @@
 - Portas e passagens conhecidas de mão única são anotadas; caminhos de volta não são inventados.
 - Acesso ao Tabuleiro: notas antigas citam Campo Aberto e Caminho Sujo de formas distintas. Manter a divergência como pendência até consultar um registro preciso ou o jogo.
 - As saídas antigas sem destino conhecido e as restrições de guilda continuam pendentes; a revisão não comprova que invisibilidade as contorne.
+
+## Dia 91 — Fazenda de Jareth e rota de retorno confirmada
+
+**Origem:** [trechos e ações do Dia 91](evidence/dia91.json). Cartografia parcial, sem declaração de exploração completa.
+
+- O reconhecimento anterior alcançou Jareth, a floresta, a fazenda e a casa da família. O pedido confirmado é eliminar 10 invasores do milharal. Não há resgate comprovado.
+- Na continuação, a sala com saídas norte/leste/oeste e descrição do início da estrada Midgaard–Jareth foi separada do Caminho homônimo a oeste, que possui saídas leste/sul. A ligação antiga direta com a Estrada Pavimentada fica pendente de localização, sem inventar um atalho.
+- **Retorno percorrido:** entroncamento dos campos — `w` → caminho das gramíneas — `s` → Grande Campo Norte — `s` → Bifurcação — `s` → Campo Sul — `s` → Atrás do Altar — `s` → Altar — `s` → Templo — `d` → Praça do Templo. Cada chegada foi conferida antes da próxima saída.
+- **Casa:** Entrada da Casa `s` → Sala de Estar; Sala de Estar `n` → Entrada e `w` → Quarto; Quarto `e` → Sala; Entrada `w` → Cozinha; Cozinha `e` → Entrada. O gramado diante da casa é identificado pela conexão com a Entrada.
+- **Milharal:** o setor com saída leste para O Fim da Estrada foi individualizado. Outros setores homônimos e a posição futura dos monstros não foram fundidos ou garantidos.
+- **Perigo:** líder azul avaliado com alerta de vida “Você é LOUCO!”. Sala limpa, casa ou gramado não comprovam proteção para dormir.
+- **Pernoite final:** Templo de Midgaard; o Laboratório deixa de ser o acampamento corrente. Panteão permanece referência histórica de santuário.
+- Coordenadas do mapa são esquemáticas; componentes sem ligação representam limites da evidência, não trajetos impossíveis.

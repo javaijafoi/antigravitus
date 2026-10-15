@@ -24,13 +24,13 @@
     "hp": "67 / 67",
     "mana": "170 / 170",
     "mv": "101 / 101",
-    "ac": "AC 16 (41 com armor; registro)",
+    "ac": "AC 19 (44 com armor; registro)",
     "weapon": "Punhal de Novato (+ Escudo)",
     "weapon_icon": "🗡️",
     "sanctuary": "O Panteão dos Centenários",
     "location": "O Templo de Midgaard",
-    "camp": "O Laboratório dos Magos",
-    "as_of_day": 90,
+    "camp": "O Templo de Midgaard",
+    "as_of_day": 91,
     "verification": "live"
   },
   "voice": {

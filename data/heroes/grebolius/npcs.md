@@ -223,3 +223,16 @@
 | **Ciclo 9** | Dia 81 | Padeiro (Padaria) e Mestre da Guilda | Reconfirmação de pães a 6 moedas e 15 sessões de treino acumuladas. |
 | **Ciclo 9** | Dia 82 | Auditoria Urbana Geral Completa (100% Midgaard) | Taverneiro do Javali (barris de cerveja 330 ouros), Carteiro (serviço postal), Garoto dos Animais (lobos e cães), Winkan e Losilly (Sala de Leitura), Clérigo Guardião, Filthy (Taverna Encardida), Prefeito de Midgaard, Negelok em Grifo Real, Pranteador, Mercenários, Guarda Necromante (ossos), Odin (Hugin, Munin, Gere, Freke), 12 heróis do Panteão e Matriz Completa de Autoquests (`autoquest todas`). |
 | **Ciclo 9** | Dia 90+ | *Aguardando próxima auditoria* | Checagem programada para início do Ciclo 10. |
+
+## Dia 91 — Família da fazenda e ameaça no milharal
+
+Fonte: [dossiê primário](evidence/dia91.json).
+
+| Personagem | Local observado | Confirmação / pendência |
+| :--- | :--- | :--- |
+| O fazendeiro | Entrada da Casa (`fazenda_entrada_casa`) | Perguntou sobre ajuda e pediu exterminar 10 invasores do milharal. Sem recompensa ou conclusão confirmada. |
+| Mulher desesperada | Sala de Estar e Quarto | Encontrada chorando de medo; pode circular. Nenhuma fala ou aliança acrescentada. |
+| Criança | Quarto | Encontrada gritando; resgate não confirmado. |
+| Líder dos monstros | Região do Milharal Destruído | Pelagem azul e clava; avaliação de vida desfavorável. Não atribuir posição fixa nem abate. |
+
+O Padeiro voltou a vender pão recheado por seis moedas; três compras foram confirmadas na continuação do Dia 91.

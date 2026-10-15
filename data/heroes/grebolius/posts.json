@@ -2135,7 +2135,7 @@
       {
         "document": "events.json",
         "day": 84,
-        "note": "Sessão ao vivo em debomud.org:4000: coleta e uso da capa escura de novato na Sala de Doações, exploração em Modo Batedor da Escola de Novatos e Catacumbas, avistamento do Minotauro e retorno ao Templo para dormir (sleep) e salvar confirmados."
+        "note": "Sessão ao vivo em debomud.org:4000: coleta e uso da capa escura de novato na Sala de Doações, reconhecimento furtivo de batedora na Escola de Novatos e Catacumbas, avistamento do Minotauro e retorno ao Templo para dormir (sleep) e salvar confirmados."
       }
     ],
     "content": [
@@ -2314,6 +2314,39 @@
       "O nonagésimo alvorecer sobre Midgaard trouxe um chamado urgente que rompeu a calmaria do Templo. Ao descer a monumental escadaria de mármore até a Praça do Templo, meus olhos cruzaram com a figura imponente do Pacificador, que mantinha uma vigília séria junto à fonte. Quando me aproximei, o colossal guardião franziu o cenho, pôs as mãos na cintura e dirigiu-se a mim com rara gravidade: uma carta desesperada acabara de chegar de uma fazenda ao norte. Um colono, sua esposa e seu filho pequeno encontravam-se encurralados em sua própria casa por monstros horrendos, sem qualquer meio de escapar ou buscar socorro.",
       "Sem hesitar diante do apelo de quem não tem a quem recorrer, respondi com um firme assentimento afirmativo. Minhas palavras ecoaram na praça e uma vibração singular percorreu o ar — o mundo selou meu compromisso com a aventura. O Pacificador então desvelou o roteiro com precisão militar: as terras sitiadas ficam para as bandas da misteriosa Floresta dos Kobolds, nas cercanias do povoado de Jareth, que se estende ao norte de Midgaard pela estrada principal. Uma carroça rústica de madeira parte periodicamente da Praça do Comércio rumo àquela região. Uma vez em Jareth, bastará marchar a leste até a Entrada da Floresta, tomar o ramal setentrional na Divisão da Trilha e dobrar novamente a leste para alcançar a fazenda dos camponeses.",
       "Antes de me lançar à grande marcha, fiz uma ronda de reconhecimento pelas ruas da cidade. Percorri a Praça do Comércio, visitei a Padaria de Midgaard sentindo o peso farto de meus mantos e punhais na bagagem, e sorvi longos goles de água cristalina na Grande Fonte Azul para saciar a garganta e encher o cantil. Subi ao Altar de Odin e transpus a nave sagrada até o Grande Campo Sul, vislumbrando na linha do horizonte as colinas distantes que levam à estrada de Jareth. De volta ao refúgio sereno do Templo de Midgaard, registrei cada passo com meticulosa reverência na memória. Recostei o corpo sob os pilares eternos e entreguei-me ao sono reparador, sabendo que o nonagésimo dia abre as portas para uma nova e honrosa jornada além dos muros de Midgaard."
+    ]
+  },
+  {
+    "id": 91,
+    "day": "Dia 91",
+    "title": "A Fazenda Sitiada, o Líder Azul e o Pão de Midgaard",
+    "date": "2026-10-15",
+    "in_game_time": "Expedição a Jareth e à fazenda; continuação e pernoite em Midgaard",
+    "excerpt": "Grebolius encontra a família do fazendeiro e descobre o que precisa fazer no milharal. Depois do reconhecimento e de um retorno difícil, resolve a fome em Midgaard e recolhe-se ao Templo, mantendo o resgate pendente.",
+    "tags": [
+      "jareth",
+      "problemas-agricolas",
+      "fazenda-sitiada",
+      "reconhecimento",
+      "provisoes",
+      "templo-midgaard"
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "evidence/dia91.json",
+        "day": 91,
+        "note": "Trechos literais do servidor, linhas dos registros anteriores e ações da continuação autorizada; sem referências circulares."
+      }
+    ],
+    "content": [
+      "Deixei Midgaard pelos campos e segui pela estrada de Jareth. A viagem atravessou caminhos, povoado e postos de guarda até alcançar as ruas da cidade. Depois vieram as árvores: a entrada da floresta, a divisão da trilha e os trechos densos em que os troncos pareciam apertar a passagem. O chamado do Pacificador já tinha um destino além das muralhas.",
+      "Na fazenda, encontrei vidro espalhado pela estrada, pegadas e marcas de correria. O gramado diante da casa ainda era verde e bem cuidado, mas o milharal estava arrancado e seco. Entre os pés que restavam, criaturas verdes e peludas se moviam. Um monstro de pelagem azul carregava uma clava; examinei-o e medi a ameaça, sem enfrentá-lo.",
+      "O dono da fazenda estava à entrada da casa. Perguntou se eu tinha vindo ajudar com os bichos e mandou exterminar os invasores do milharal. Dentro, a sala guardava móveis virados, papéis espalhados e sangue no tapete. Encontrei a mulher assustada e a criança gritando. Na cozinha, o cheiro de pernil assado se misturava aos cacos e às marcas do ataque. A família estava ali; o perigo do lado de fora também.",
+      "Percorri os arredores e voltei pelos caminhos de Jareth. A volta teve desvios e tentativas de passagem que não deram em nada. Acabei me deitando entre os campos ainda com fome. Quando despertei, a garganta também estava seca, e o corpo reclamava da falta de alimento. Bebi do cantil e retomei o caminho para Midgaard.",
+      "Atravessei os campos, passei por trás do altar e desci pela Praça do Templo. Enchi o cantil na fonte de mármore azul e fui até a padaria. O pão recheado custava seis moedas; deixei dezoito no balcão, comi e guardei pão para a próxima saída. A fome parou de me atormentar.",
+      "Na parede, o recado explicava as compras, e a placa anunciava: “Padaria de Midgaard: Entre e viaje no viagem.” Li também as orientações sobre as aventuras oferecidas pelo reino. Depois atravessei a Praça do Comércio e subi de volta ao Templo.",
+      "Recolhi-me entre as pedras antigas de Midgaard e adormeci alimentada, com água e provisões guardadas. A família do fazendeiro continuava à espera, e os invasores não tinham sido vencidos. O pedido ficava para a próxima partida."
     ]
   }
 ]

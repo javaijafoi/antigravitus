@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 90,
+  "as_of_day": 91,
   "verification": "live",
   "items": [
     {
@@ -333,9 +333,9 @@
       "type": "official",
       "status": "active",
       "accepted_day": 90,
-      "last_progress_day": 90,
-      "objective": "Resgatar o fazendeiro, sua esposa e filho cercados por monstros horrendos em sua fazenda próxima a Jareth e à Floresta dos Kobolds.",
-      "next_step": "Tomar a estrada para o norte de Midgaard rumo a Jareth (ou viajar na carroça de madeira que parte da Praça do Comércio). Ao chegar em Jareth, ir a leste até a Entrada da Floresta, seguir ao norte na Divisão da Trilha e dobrar a leste até encontrar a fazenda sitiada.",
+      "last_progress_day": 91,
+      "objective": "Eliminar 10 monstros invasores do milharal conforme pedido do fazendeiro; resgate da família e conclusão oficial ainda não confirmados.",
+      "next_step": "Retomar a viagem a Jareth e à fazenda por trechos confirmados; avaliar invasores comuns antes de combater. O fazendeiro pede 10 abates; conferir progresso e próxima etapa com ele. Evitar o líder azul enquanto a avaliação indicar perigo desproporcional.",
       "evidence": [
         {
           "document": "posts.json",
@@ -351,6 +351,11 @@
           "document": "posts.json",
           "day": 90,
           "note": "Aceite formal da missão com O Pacificador na Praça do Templo confirmado em sessão ao vivo ('Você começa a participar da aventura'). Roteiro de Jareth e Floresta dos Kobolds revelado pelo patrono."
+        },
+        {
+          "document": "evidence/dia91.json",
+          "day": 91,
+          "note": "Trechos literais do servidor, linhas dos registros anteriores e ações da continuação autorizada; sem referências circulares."
         }
       ]
     }

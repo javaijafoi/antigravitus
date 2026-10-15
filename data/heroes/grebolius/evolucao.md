@@ -1181,6 +1181,18 @@ A próxima sessão pode resolver as pendências com respostas reais do MUD. Até
 * **Decisão Tática:**
   * No Dia 65, solucionar a escassez de alimento (comprar na padaria ou obter rações) para recuperar o ciclo biológico de cura e reiniciar a busca pelo ninho dos insetos rastejantes nas câmaras restantes.
 
+---
 
+### Dia 91 — Fazenda localizada e encerramento no Templo
 
+Registro baseado em [evidência primária](evidence/dia91.json), reunindo a sessão anterior e uma continuação autorizada. Esta entrada não preenche as lacunas dos Dias 65–90.
 
+- **Reconhecimento anterior:** estrada Midgaard–Jareth, cidade, floresta e fazenda. Família encontrada; fazendeiro pede 10 invasores do milharal. Líder azul inspecionado e avaliado como arriscado; abates e conclusão não comprovados.
+- **Continuação:** fome e sede observadas nos campos; água bebida do cantil; volta por saídas conferidas, recarga na fonte e compra de três pães por 18 moedas. Um pão consumido e dois guardados.
+- **Ficha final:** nível 11; HP 67/67, mana 170/170, movimento 101/101; XP 152.098, próximo nível em 200.000; ouro 612; sabedoria 17; wimpy 17; alinhamento 222; três mortes históricas no score.
+- **Armadura:** AC 44 com efeito +25 ativo; base 19 calculada, sem medição direta após expiração. Treinos e proficiências conservam suas fontes anteriores.
+- **Carga:** 13 itens, 101/115 kg; tocha carregada, não equipada.
+- **Pernoite confirmado:** dormindo no Templo de Midgaard. Save respondeu “Salvando os seus atalhos.”; conexão encerrada sem reabertura para testar persistência.
+- **Reconciliação financeira:** 630 moedas observadas antes das compras desta continuação; 630 − 18 = 612. O registro anterior do Dia 90 tinha 2.636; a diferença precedente de 2.006 permanece sem causa comprovada.
+- **Reconciliação de XP:** valor anterior 152.101 versus 152.098 observado; não atribuir a diferença de três pontos a uma causa sem evidência.
+- **Próxima jornada:** retomar Problemas Agrícolas com avaliação de alvos e confirmação do contador; nenhuma recompensa ou transformação emocional foi acrescentada.

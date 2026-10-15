@@ -1,6 +1,6 @@
 # 🧌 Ficha Atual de Grebolius (Último Estado Registrado)
 
-> Referência: Dia 90. Estado verificado em sessão; consultar a origem registrada.
+> Referência: Dia 91. Estado verificado em sessão; consultar a origem registrada.
 > Este documento reúne o último estado e as missões registrados; as incertezas aparecem ao final.
 
 ## ✦ Identificação e Registro
@@ -11,8 +11,8 @@
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **11**
 * **Alinhamento Moral:** 222 (Bom)
-* **Localização Atual:** O Templo de Midgaard (último registro: Dia 90)
-* **Acampamento Registrado:** O Laboratório dos Magos
+* **Localização Atual:** O Templo de Midgaard (último registro: Dia 91)
+* **Acampamento Registrado:** O Templo de Midgaard
 * **Santuário de Referência:** O Panteão dos Centenários
 
 O acampamento indica onde houve repouso; não comprova proteção absoluta contra agressão.
@@ -24,21 +24,21 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 | **Pontos de Mana (MP)** | 170 | 170 | 100% |
 | **Estamina / Movimento (MV)** | 101 | 101 | 100% |
 
-* **Experiência Acumulada:** **152.101 EXP**
-* **Experiência Necessária p/ Grau 12:** **47.899 EXP** (Meta: 200.000 EXP)
-* **Ouro Líquido:** **2.636 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **152.098 EXP**
+* **Experiência Necessária p/ Grau 12:** **47.902 EXP** (Meta: 200.000 EXP)
+* **Ouro Líquido:** **612 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 10
 * **Destreza (DEX):** 15
 * **Constituição (CON):** 10
 * **Inteligência (INT):** 17
-* **Sabedoria (WIS):** 16
+* **Sabedoria (WIS):** 17
 * **Carisma (CHA):** 9
 
 ### Métricas de Combate
-* **Classe de Armadura (AC):** 16 (base) / **41** (com `armor`, conforme registro)
-Classe de armadura 16 verificada ao vivo no Nível 11 com equipamento completo.
+* **Classe de Armadura (AC):** 19 (base) / **44** (com `armor`, conforme registro)
+Dia 91: AC 44 observada com armor +25 ativo (5 horas no score final). Base 19 calculada por subtração; não medida diretamente sem o efeito. Duração futura não presumida.
 * **Bônus de Acerto (Hitroll):** 0
 * **Bônus de Dano (Damroll):** +1
 * **Configuração de Fuga (Wimpy):** **17 HP** (referência de 25%; não garante fuga antes de golpe letal)
@@ -54,8 +54,8 @@ Classe de armadura 16 verificada ao vivo no Nível 11 com equipamento completo.
   * Próximo passo: Pergaminho de retorno entregue com sucesso ao Mago Aventureiro no Bar dos Magos no Dia 83; acompanhar o próximo conselho místico.
 * **Novela dos Novatos — Descoberta:** Aventura narrativa para recém-chegados (Até o nível 30, iniciada com: o novato esperto).
   * Próximo passo: Localizar o novato esperto pelas praças de Midgaard para iniciar o encadeamento.
-* **Problemas Agrícolas — Ativa:** Resgatar o fazendeiro, sua esposa e filho cercados por monstros horrendos em sua fazenda próxima a Jareth e à Floresta dos Kobolds.
-  * Próximo passo: Tomar a estrada para o norte de Midgaard rumo a Jareth (ou viajar na carroça de madeira que parte da Praça do Comércio). Ao chegar em Jareth, ir a leste até a Entrada da Floresta, seguir ao norte na Divisão da Trilha e dobrar a leste até encontrar a fazenda sitiada.
+* **Problemas Agrícolas — Ativa:** Eliminar 10 monstros invasores do milharal conforme pedido do fazendeiro; resgate da família e conclusão oficial ainda não confirmados.
+  * Próximo passo: Retomar a viagem a Jareth e à fazenda por trechos confirmados; avaliar invasores comuns antes de combater. O fazendeiro pede 10 abates; conferir progresso e próxima etapa com ele. Evitar o líder azul enquanto a avaliação indicar perigo desproporcional.
 
 Objetivos pessoais e investigações ficam separados das autoquests no catálogo de missões.
 
@@ -82,37 +82,42 @@ Equipamento conforme os últimos documentos disponíveis; conferir no próximo a
 * **Nos Braços:** `um par de braçadeiras de couro`
 * **Nas Mãos:** `um par de luvas de couro`
 * **Nas Pernas:** `uma calça de couro`
-* **Como Luz:** `uma tocha`
 
 ## ✦ Inventário e Suprimentos
 Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
-* `um cantil` (x1) — Confirmado ao vivo no inventário no Dia 82
-* `uma tocha` (x1) — Confirmado ao vivo no inventário no Dia 82
-* `uma brilhante veste de novato` (x2) — Confirmado ao vivo no inventário no Dia 82 (2 reservas após vestir a terceira)
-* `um brilhante punhal de novato` (x5) — Confirmado ao vivo no inventário no Dia 89 (5 reservas após empunhar o sexto)
-* `uma brilhante espada de novato` (x1) — Confirmado ao vivo no inventário no Dia 82
-* `uma poção amarela de detectar invisibilidade` (x1) — Confirmado ao vivo no inventário no Dia 82
-* `uma mochila` (x1) — Confirmado ao vivo no inventário no Dia 82
-* `um anel arcano (+2E)` (x1) — Confirmado ao vivo no inventário no Dia 82
-* `um bracelete de conchas` (x1) — Resgatado na Sala de Doações no Dia 84 (+44L)
-* `um pergaminho de sabedoria` (x3) — Resgatado na Sala de Doações no Dia 84
+* `um pão recheado` (x2) — Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json.
+* `um cantil` (x1) — Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json.
+* `um bracelete de conchas` (x1) — Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json.
+* `um pergaminho de sabedoria` (x3) — Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json.
+* `uma tocha` (x1) — Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json.
+* `uma brilhante espada de novato` (x1) — Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json.
+* `uma poção amarela de detectar invisibilidade` (x1) — Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json.
+* `uma mochila` (x1) — Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json.
+* `um brilhante punhal de novato` (x1) — Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json.
+* `um anel arcano (+2E)` (x1) — Inventário ao vivo no encerramento do Dia 91; evidence/dia91.json.
 
 ### Pendências de inventário
 
 ## ✦ Condições Registradas
-* Nível 11 conquistado com vitais plenos (67 HP, 170 Mana, 101 MV).
-* 15 sessões de treino resguardadas para círculos superiores (9 magias básicas em proficiência plena de 95%-99%).
-* Autoquest 'Problemas Agrícolas' ATIVA com O Pacificador (rumo a Jareth e Floresta dos Kobolds).
-* Pergaminho de retorno entregue ao Mago Aventureiro no Bar dos Magos.
-* Dia 90 concluído: descansando e dormindo (sleep) no Templo de Midgaard com atalhos e estado salvos.
+* Dia 91: dormindo no Templo de Midgaard, com 67/67 HP, 170/170 mana e 101/101 MV no último score.
+* Pão consumido e água bebida; alertas de fome e sede ausentes da ficha final. Dois pães e cantil reabastecido para a próxima saída.
+* Problemas Agrícolas ativa: fazendeiro pede 10 invasores do milharal; contador e conclusão não confirmados.
+* Armadura arcana ativa no último score; duração futura depende do servidor.
+* 15 treinos preservados do registro anterior; não houve treino nesta continuação.
+* Save respondeu "Salvando os seus atalhos." antes e depois de dormir; socket encerrado sem nova conexão.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
-**Viajar para Jareth e a Floresta dos Kobolds para resgatar a família do fazendeiro**
-Seguir pela estrada ao norte de Midgaard (ou apanhar a carroça de madeira na Praça do Comércio) até Jareth; em Jareth, seguir a leste até a Entrada da Floresta, tomar a Divisão da Trilha ao norte e avançar a leste até a fazenda sitiada.
-* Descarregar excesso de peso/itens nas doações ou baú para liberar espaço para mantimentos de viagem.
+**Prosseguir com o pedido do fazendeiro no milharal**
+Retomar a viagem a Jareth e à fazenda por trechos confirmados; avaliar invasores comuns antes de combater. O fazendeiro pede 10 abates; conferir progresso e próxima etapa com ele. Evitar o líder azul enquanto a avaliação indicar perigo desproporcional.
+* Verificar fome, água e capacidade antes da viagem; há 2 pães no encerramento.
+* Confirmar cada trecho entre salas homônimas; a cartografia da fazenda é parcial.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessão ao vivo em debomud.org:4000 (Dia 90): diálogo oficial e ativação da autoquest 'Problemas Agrícolas' com O Pacificador na Praça do Templo; revelação do itinerário para Jareth e a Floresta dos Kobolds; ronda urbana pela Praça do Comércio e Padaria; hidratação na Grande Fonte Azul e sondagem externa do Grande Campo Sul; retorno ao Templo de Midgaard, sono reparador (sleep) e salvamento de estado com atalhos..
+Fonte do estado: Conferência ao vivo na continuação autorizada do Dia 91: ficha completa, inventário, equipamento, postura dormindo no Templo e respostas de save; evidence/dia91.json. Campos sem nova medição preservam sua fonte anterior..
 * O anel arcano (+2E) segue exigindo nível ou condição mágica superior.
 * Novos feitiços superiores dependem de livros arcanos ou mestres especializados.
 * O renascimento desequipa todas as peças para a mochila; o protocolo pós-morte exige `wear all` imediato para restaurar os 67 HP máximos concedidos pela veste e a AC 16.
+* Saldo do Dia 90: 2636; primeiro saldo completo preservado no Dia 91: 630. A causa da diferença de 2006 moedas não é comprovada pelos registros consultados.
+* XP documental do Dia 90: 152101; observado no Dia 91: 152098. A diferença de 3 não foi atribuída a fuga, morte ou outro evento sem comprovante.
+* Armadura base 19 calculada por 44 observado menos efeito +25; não houve medição direta após expirar o efeito.
+* Contador de abates da missão não informado pelo servidor; não presumir 0/10 nem conclusão.

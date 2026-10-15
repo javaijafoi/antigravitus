@@ -21,3 +21,11 @@ Estados: 🔎 Descoberta | ▶️ Ativa | ⏸️ Adiada | ⛔ Bloqueada | ✅ Co
 - Diferenciar descoberta, aceite, retomada e conclusão. Preservar os registros históricos se houver divergência e anotar a lacuna.
 - Se uma tarefa exigir risco sem saída conhecida, registrar bloqueio ou adiamento e o preparo necessário. Não inventar um desfecho para concluir a entrada.
 - O Pranteador permanece uma pista de observação no compêndio, sem tarefa aceita ou relação confirmada.
+
+## Atualização ao vivo — Dia 91: Problemas Agrícolas
+
+- **Estado:** ativa; aceite do Pacificador no Dia 90 preservado.
+- **Progresso comprovado:** Jareth e a fazenda foram alcançadas; fazendeiro, mulher e criança encontrados. O fazendeiro pede eliminar **10 monstros invasores no milharal**.
+- **Limite:** não há contador de abates ou conclusão oficial confirmado. A avaliação do líder azul contém alerta de vida “Você é LOUCO!”; não confundir precisão favorável com combate seguro.
+- **Próximo passo:** voltar preparado, avaliar invasores comuns e confirmar o avanço com o fazendeiro. O pernoite final ocorreu no Templo de Midgaard, com água e dois pães.
+- **Fonte primária:** [dossiê do Dia 91](evidence/dia91.json). Esta seção atualiza o estado corrente sem reescrever os registros anteriores.

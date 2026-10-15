@@ -333,3 +333,25 @@ Para evitar sobrecarga de inventário e otimizar tempo e recursos, **fica abolid
     2. Na floresta dos Kobolds, tomar a trilha ao **Norte** na *Divisão da Trilha*.
     3. A partir da divisão, seguir a **Leste** diretamente até a fazenda sitiada.
   - **Advertência de Sobrevivência:** O Pacificador adverte que a floresta pode desorientar recém-chegados; o comando `historico dizer` pode ser consultado para recordar as orientações orais.
+
+---
+
+## 15. Fazenda e retorno abastecido — Dia 91
+
+**Fonte:** [dossiê primário do Dia 91](evidence/dia91.json).
+
+### Observações da campanha
+
+- O fazendeiro foi encontrado na Entrada da Casa e pediu eliminar 10 monstros invasores do milharal. Mulher e criança também foram vistas. A missão permaneceu ativa no score final.
+- Um líder de pelagem azul empunha uma clava. Sua avaliação inclui “Você é LOUCO!” no eixo de vida; um resultado favorável em precisão não valida o combate inteiro.
+- Estradas, gramados e setores do milharal repetem títulos. Nome igual não comprova sala igual; a rota completa entre Midgaard e a casa continua parcialmente mapeada.
+- Na padaria, pão recheado custa seis moedas. Três compras e um consumo foram confirmados nesta continuação; sobraram dois pães.
+- `drink cantil` confirmou água cristalina; `fill cantil fonte` reabasteceu o cantil na Praça do Templo. Comer pão removeu a fome indicada no score final.
+- A Entrada da Casa tem saídas norte para O Gramado, sul para A Sala de Estar e oeste para A Cozinha. A Sala de Estar liga ao quarto a oeste. Conexões mais distantes não foram inferidas por títulos.
+
+### Notas operacionais do agente
+
+- Nesta sessão `ajuda autoquest` foi recusado; `help autoquest` retornou a ajuda e orientou `AUTOQUEST TODAS` e `AUTOQUEST LISTAR`. Instrução exibida e comando aceito precisam ser distinguidos.
+- O classificador do cliente marcou combate/menu em respostas normais de ficha e ajuda. Não registrar morte ou combate com base nesses rótulos quando a transcrição mostra a personagem em pé, caminhando ou dormindo. Defeito do motor anotado, sem alteração de código nesta tarefa.
+- A sessão começou com fome e sede apesar dos atributos quase completos. Conferir nutrição e água separadamente dos números de HP, mana e movimento.
+- Saldo 630 observado antes das compras; saldo 612 depois. Diferenças anteriores de dinheiro e XP permanecem pendentes, sem inventar perdas ou compras.
