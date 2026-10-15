@@ -50,7 +50,7 @@ Crie a seguinte pasta raiz:
 │   ├── mapa.json          # Dados do mapa interativo do aventureiro (a cada 10 ciclos)
 │   ├── ficha.md           # Ficha viva em tempo real
 │   ├── ciclos.json        # Resumos emocionantes de cada ciclo com aviso de spoiler (a cada 10 ciclos)
-│   └── posts.json         # Array de crônicas (mais recente no topo)
+│   └── posts.json         # Array de crônicas (ordem crescente: Dia 1 primeiro)
 ├── css/
 │   └── style.css          # Estilo dark fantasy responsivo (copiar do original)
 ├── js/
@@ -197,7 +197,7 @@ POSTS_PATH = os.path.join(os.path.dirname(__file__), "data", "posts.json")
 
 def add_chronicle(day_num, title, date_str, in_game_time, excerpt, tags, content_paragraphs, day_label=None):
     """
-    Adiciona nova crônica no topo de data/posts.json mantendo ordenação decrescente.
+    Adiciona nova crônica no topo de data/posts.json mantendo ordenação crescente (Dia 1, Dia 2, ...).
     """
     if os.path.exists(POSTS_PATH):
         with open(POSTS_PATH, "r", encoding="utf-8") as f:
@@ -218,8 +218,8 @@ def add_chronicle(day_num, title, date_str, in_game_time, excerpt, tags, content
 
     # Remove duplicata caso já exista
     posts = [p for p in posts if p.get("id") != day_num]
-    posts.insert(0, new_post)
-    posts.sort(key=lambda x: x.get("id", 0), reverse=True)
+    posts.append(new_post)
+    posts.sort(key=lambda x: x.get("id", 0))
 
     with open(POSTS_PATH, "w", encoding="utf-8") as f:
         json.dump(posts, f, ensure_ascii=False, indent=2)
