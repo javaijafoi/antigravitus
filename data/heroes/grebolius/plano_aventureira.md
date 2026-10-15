@@ -57,20 +57,53 @@ Superar roteiros curtos e estáticos. A estamina alta (101 MV no Grau 11) é o m
   - Se entrar na sala e o mob perigoso ainda não atacou: recuar imediatamente usando a direção normal inversa (ex.: `s`).
   - Se o combate já tiver iniciado (aggro sofrido ou monstro acertar golpe pesado): **NUNCA tentar andar por direções normais (`n`, `s`, `e`, `w`)**, pois o MUD trava o comando (*"Não dá! Você está muito ocupado, lutando!"*). O único comando para desengajar e salvar a vida é **`flee`** (ou **`fugir`**).
 
-## 3. Jogar e registrar com continuidade
+## 3. Matriz de Modos Operacionais (Overrides de Comportamento)
+Os modos operacionais definem a postura tática, a alocação de risco, a gestão de inventário e os gatilhos de recuo/fuga para cada dia de expedição. Eles dão override no comportamento padrão:
+
+1. **Modo Padrão (Equilibrado):**
+   - **Postura:** Exploração balanceada, patrulha rotineira e treino.
+   - **Combate:** Engaja presas conhecidas e seguras com `consider` prévio; recua se o risco for médio/alto.
+   - **Wimpy:** Configuração padrão (~25%, atualmente 13-17 HP).
+   - **Logística:** Carga intermediária, retorno ao santuário/laboratório para pernoite.
+
+2. **Modo Aventura (Foco na Missão / Quest):**
+   - **Objetivo:** Concluir a autoquest ou missão ativa designada.
+   - **Postura:** Foco estrito no objetivo da missão; ignora o que não for relevante ao redor.
+   - **Combate:** Abate apenas mobs fracos necessários para abrir caminho ou cumprir requisito; desvia de qualquer mob arriscado.
+   - **Gestão de Bloqueios:** Se encontrar um obstáculo intransponível (falta de nível, monstro forte demais bloqueando passagem, falta de ouro para item de entrega), anota a pendência específica em `missoes.json` e na crônica, encerra o dia em segurança e sugere para o dia seguinte a transição para o modo adequado (ex.: Modo Dungeon para farmar ouro/EXP).
+
+3. **Modo Dungeon (Limpeza e Pilhagem Máxima):**
+   - **Objetivo:** Varrer e limpar a masmorra/catacumba, maximizando espólios e ouro.
+   - **Preparação:** Mochila limpa de peso morto (apenas armas equipadas, tocha, 1 cantil e 4-6 pães recheados).
+   - **Combate:** Arrisca um pouco mais contra mobs de dificuldade moderada (zumbis, monstros novatos, minotauro com `chill touch` e `armor`), mas NUNCA desafia criaturas muito difíceis ou letais (chefes desproporcionais).
+   - **Sustentação em Campo:** Pausas e nutrição necessárias em salas seguras para sustentar a expedição.
+   - **Gestão de Carga (Força 10):** Quando o inventário encher de espólios valiosos (punhais, peles, chifres), retorna temporariamente à cidade para vender nas lojas e guardar ouro na caixa do Templo/Guilda antes de retomar a limpeza. Encerra o dia com acampamento flexível ou na cidade.
+
+4. **Modo Batedor (Stealth Scout / Mapeamento Máximo):**
+   - **Objetivo:** Mapear o maior número possível de salas da área/zona sem combate.
+   - **Camuflagem:** `invisibility` e `armor` mantidos 100% ativos; batedor avança consumindo o MV em dezenas de salas.
+   - **Postura de Combate & Fuga:** Evita 100% dos combates possíveis. Zero combate voluntário. Se sofrer aggro inesperado (criatura com visão arcana), executa **`flee` imediatamente no 1º turno**.
+   - **Rede de Segurança Mecânica:** **Wimpy elevado para 60% do HP máximo** (`wimpy 40` no Grau 11) para garantir disparo automático de fuga caso a conexão ou comando falhe. Ao desativar o modo, restaura o Wimpy para o padrão (~25%).
+   - **Logística e Sono em Campo:** Carga ultra-leve (6 a 8 pães recheados da padaria + 1 ou 2 cantis cheios na Fonte Azul). Ao sobrar 15-20 MV, escolhe uma sala vazia e segura (checada com `scan` e `look`), come, bebe e usa `sleep` por 3 a 4 ticks (~3 a 5 min) para recarga total de MV e Mana, acordando para prosseguir.
+
+5. **Regra de Seleção (Modelo Híbrido):**
+   - O usuário pode ativar qualquer modo explicitamente no chat (ex.: *"hoje vamos em modo batedor"*).
+   - Quando não especificado, o agente assume o modo mais lógico com base na meta prioritária do dia (se há quest pendente -> Aventura; se há masmorra lucrativa para limpar -> Dungeon; se há área desconhecida -> Batedor), usando o Modo Padrão como fallback.
+
+## 4. Jogar e registrar com continuidade
 1. Escolher um fio para a expedição e as condições para interrompê-la.
 2. Explorar, observar e interagir segundo o risco. Lutar por defesa, passagem ou objetivo; não há cota mínima de ações, salas novas ou combates.
 3. Registrar primeiro fatos e fontes; separar crença da personagem e plano futuro. Atualizar estado, eventos, missões e mapa conforme evidência.
 4. Escrever a crônica a partir desse registro. Não inserir diálogos, recompensas, vínculos, perdas ou vitórias ausentes da sessão. Números mecânicos ficam nos registros técnicos; escrevê-los por extenso não os torna prosa de aventura.
 5. Dar espaço ao que mudou de verdade, mesmo que seja uma hipótese descartada ou uma retirada. Não forçar clímax, novidade ou aprendizado emocional.
 
-## 4. Usar os recursos com propósito
+## 5. Usar os recursos com propósito
 - **Treinos:** consultar as opções disponíveis e escolher uma capacidade que ajude o objetivo. Não gastar automaticamente as seis sessões acumuladas.
 - **Compras:** consultar preços, peso, requisitos e benefício antes de decidir; preservar uma reserva para provisões e deslocamento. Os 1.051 ouros registrados não permitem comprar o pergaminho de retorno a 9.202 nem a poção amarela a 5.370, preços catalogados no Dia 42. Revalidar preços e saldo no jogo.
 - **Consumíveis:** não pressupor posse de retorno, cura ou detecção; verificar inventário e efeito antes de incluir o item em uma rota de retirada.
 - **Descanso:** escolher conforme segurança e saídas observadas. Não impor acampamento na masmorra nem tratar retorno ao santuário como fraqueza.
 
-## 5. Horizonte possível para os Dias 61–70 — ainda não jogados
+## 6. Horizonte de Expedições
 O antigo resumo antecipado do ciclo 7 foi retirado de `ciclos.json`: não há crônicas desses dias. Seu fio passa a ser uma possibilidade de planejamento:
 
 1. Reconciliar ficha, anel, treinos e tarefas pendentes.

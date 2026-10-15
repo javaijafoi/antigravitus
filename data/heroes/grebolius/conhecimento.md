@@ -175,5 +175,10 @@ A Força 10 e a carga registrada pedem atenção a peso e movimento; o custo exa
 * **Mecânica de Fuga em Combate (`flee` / `fugir` Obrigatório):**
   - **Bloqueio Fatal de Movimento Comum:** Uma vez engajada em combate hostil, tentar sair da sala digitando direções normais (`n`, `s`, `e`, `w`, `u`, `d`) é sumariamente travado pelo servidor com o aviso: *"Não dá! Você está muito ocupado, lutando!"*. Foi exatamente essa falha que selou a derrota contra o Cavaleiro Branco no Dia 60 (onde 5 tentativas consecutivas de direções comuns foram bloqueadas).
   - **Execução Imediata de `flee`:** Se sofrer aggro inesperado ou se o monstro desferir dano alto/crítico desvantajoso, o comando imediato de retirada emergencial é **`flee`** (ou **`fugir`**). O comando desengaja do combate e projeta a heroína para uma saída disponível.
+* **Matriz de Modos Operacionais:**
+  - **Modo Padrão:** Postura equilibrada de patrulha e grind seguro com Wimpy ~25% (13-17 HP).
+  - **Modo Aventura:** Foco exclusivo na missão/quest ativa; ignora o supérfluo, abate apenas mobs fracos necessários. Diante de obstáculo intransponível, anota a pendência em `missoes.json`, conclui o dia em segurança e sugere o modo adequado para o dia seguinte (ex.: Modo Dungeon).
+  - **Modo Dungeon:** Foco em limpar a masmorra e maximizar pilhagem/ouro. Enfrenta mobs fracos e médios seguros. Quando a mochila lotar de espólios de valor, volta temporariamente à cidade para vender e guardar na caixa do Templo antes de continuar.
+  - **Modo Batedor:** Foco em invisibilidade e mapeamento máximo de salas. Fuga imediata absoluta com `flee` no primeiro turno em qualquer combate. **Wimpy elevado a 60% do HP máximo** (`wimpy 40` no Grau 11) como rede mecânica de segurança (restaurado para ~25% ao desativar o modo). Suprimento ultra-leve (pães e cantis) e sono em campo seguro para recarga total de MV/Mana.
 
 

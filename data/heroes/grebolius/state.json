@@ -52,6 +52,14 @@
   "damroll": 1,
   "wimpy": 13,
   "training_sessions": 15,
+  "operational_mode": {
+    "current": "padrao",
+    "description": "Modo Padrão: Exploração equilibrada com cautela tática e Wimpy documental (~25%).",
+    "wimpy_profile": {
+      "padrao": 13,
+      "batedor": 40
+    }
+  },
   "location": {
     "room_id": "laboratorio_magos",
     "name": "O Laboratório dos Magos"
