@@ -579,7 +579,8 @@
         149,
         150,
         151,
-        152
+        152,
+        153
       ],
       "parts": [
         {
@@ -754,6 +755,19 @@
               "document": "evidence/dia152.json",
               "day": 152,
               "note": "Correcao da rota da fazenda e instrumentacao da rotina."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 153,
+          "summary": "Rodada decisiva: (1) a rotina nao chegava por um bug de caminho do token na base.py - corrigido e confirmado; (2) a rota da fazenda (oeste, oeste, oeste) foi confirmada AO VIVO: de 'O Fim da Estrada' o oeste leva ao Milharal Destruido; (3) o RAIO e' muito superior as maos flamejantes (48-64 de dano contra ~25); (4) PRIMEIRO INVASOR ABATIDO para Problemas Agricolas, e depois um 'monstro agressivo' a fez recuar com 71 de vida; (5) direcoes em portugues por extenso nao funcionam - o MUD quer 'west'/'w'.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia153.json",
+              "day": 153,
+              "note": "Bug da base.py, rota da fazenda, raio e primeiro invasor abatido."
             }
           ],
           "date": "2026-10-16"

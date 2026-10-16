@@ -1,0 +1,15 @@
+{
+  "hero_id": "grebolius",
+  "day": 153,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "summary": {
+    "bug_da_base": "CAUSA-RAIZ da rotina que 'nao chegava': a base.py apontava o token para scripts/scripts/local/.controller (parents[2] errado), entao o daemon recusava TODA chamada e run() devolvia texto vazio. Corrigido: LOCK = scripts/local/.controller. Ja confirmado ao vivo.",
+    "rota_da_fazenda_confirmada": "Confirmado no jogo: 'O Fim da Estrada' tem Oeste -> 'O Milharal Destruido'. A rota Entrada da Fazenda -> oeste -> Pequena Estrada -> oeste -> Fim da Estrada -> oeste -> Milharal esta correta (tres oestes).",
+    "direcoes": "As direcoes por extenso em portugues NAO funcionam ('oeste' responde 'Como?!?'); o MUD aceita 'west' e 'w'. Uma vez o 'w' nao registrou (desincronizacao) e o 'west' funcionou.",
+    "raio_e_a_arma": "O LIGHTNING BOLT (95%) e' muito superior as maos flamejantes no milharal: 48 e 64 de dano por golpe ('impacto total') contra ~25 das maos flamejantes. A habilidade ainda subiu com o uso ('Voce sente seu lightning bolt melhorar').",
+    "primeiro_invasor": "PRIMEIRO INVASOR ABATIDO para a missao Problemas Agricolas: 'Seu raio transforma um monstro esfomeado em pedacos! Um monstro esfomeado esta morto!'. Em seguida apareceu um 'monstro agressivo' (tipo diferente) e ela caiu para 71 de vida / 80 de mana antes de recuar por recall.",
+    "licao": "O milharal tem VARIOS tipos de monstro (esfomeado, agressivo, ...). O cacador deve trocar o alvo pelo nome exato do monstro que estiver na sala.",
+    "estado": "Grau 20, 87/260 mana apos a cacada, 111/115 kg, 7.000 no banco + 282 na mao, no Templo, salva."
+  }
+}
