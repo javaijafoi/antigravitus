@@ -1646,6 +1646,37 @@ aqui"*, o que confirma que **ela não estava na sala** quando testei.
 
 **Próximo passo:** **encontrá-la** (ela anda) e responder **ao que ela disser** — não falar no vácuo.
 
+### 37.4 Testado COM ela presente — e ainda não dispara
+
+Feito o que faltava: patrulhei a zona até achá-la **na sala** (*"Uma novata está aqui, falando muito"*)
+e falei **com ela na frente**:
+
+```
+say oi   -> "Você diz: 'oi'"     (sem reação)
+say sim  -> "Você diz: 'sim'"    (sem reação)
+say ola  -> "Você diz: 'ola'"    (sem reação)
+```
+
+**A missão continua em `Você deve dizer algo ao personagem`.**
+
+**Então não é (só) presença, e não é (só) o verbo.** O que já foi testado, com o alvo presente ou não:
+
+| Comando | Alvos | Resultado |
+|---|---|---|
+| `say` ~35 frases (saudações, `sim`, `yes`, `nao`, o nome dela, frases temáticas) | Smart Newbie, Annoying Newbie, **novata** | nenhuma reação |
+| `ask <topico>` 9 tópicos | novatos | nenhuma reação |
+| `give veste/punhal/adaga novato` | novatos | nenhuma reação |
+| `tell novata tagarela <msg>` | ela | *"Não há ninguém com esse nome aqui"* quando ausente |
+| Vigília passiva 16 leituras | Smart Newbie | **o NPC não fala sozinho** |
+
+**O que sobrou sem testar:** os outros dois novatos (**Lost Newbie**, *"Um novato está perdido aqui"*, e
+**Clueless Newbie**, ainda não visto), e um NPC fora da zona dos novatos.
+
+**E a hipótese que ganhou força:** o padrão de §37.1 é **o NPC perguntar primeiro**. Nenhum novato
+**perguntou nada** em nenhuma das sessões gravadas — nem o Smart Newbie, que a missão usa como
+iniciador. **Pode ser que a Novela só avance quando o novato falar, e isso depende do mundo, não do
+que ela digita.**
+
 
 ### 25.11 Invisibilidade BLOQUEIA comércio — e existe o comando `visible`
 
