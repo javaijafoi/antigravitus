@@ -578,7 +578,8 @@
         148,
         149,
         150,
-        151
+        151,
+        152
       ],
       "parts": [
         {
@@ -740,6 +741,19 @@
               "document": "evidence/dia151.json",
               "day": 151,
               "note": "Recuperacao dos paes, peso do cantil e teste de compradores."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 152,
+          "summary": "Achado e corrigido o bug do trajeto da fazenda (o mapa mostra que a Entrada da Fazenda leva ao Milharal com OESTE, OESTE, OESTE; o motor usava o,s,o,o,o, o que causava os lacos de 'O Gramado'). O turno passou a gravar rotina.log. A rotina milharal ainda falhou sem sair de Midgaard; cada etapa do trajeto foi instrumentada para diagnostico. O vigia ficou OK durante todo o turno.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia152.json",
+              "day": 152,
+              "note": "Correcao da rota da fazenda e instrumentacao da rotina."
             }
           ],
           "date": "2026-10-16"
