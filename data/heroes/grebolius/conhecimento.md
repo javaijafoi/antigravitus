@@ -1449,6 +1449,88 @@ O `--glob` é **repetível** justamente por isso. Digerir um recorte e fundir **
 fora. O sintoma é o `TOTAL` do `fundir_mapa.py` **diminuir** — e ele nunca deveria diminuir sem uma
 remoção deliberada.
 
+---
+
+## 35. 🔑 O NOVATO ESPERTO EXISTE, TEM ENDEREÇO — e estava documentado
+
+**A descoberta que cinco rodadas de busca no escuro não acharam.** A pista estava em
+[`docs/circlemud/`](../../../docs/circlemud/), que eu não tinha lido.
+
+### 35.1 Ele é o "Smart Newbie", mob 18615, e nasce na sala 18645
+
+`docs/circlemud/04-especiais-easter-eggs.md`, fato 112 — a lista de mobs da Zona dos Novatos:
+
+> *"...`Pit Beast` (18601), `Newbie Monster` (18602), **`Annoying Newbie` (18611), `Clueless Newbie`
+> (18612), `Friendly Newbie` (18613), `Lost Newbie` (18614), `Smart Newbie` (18615)**, `Alchemist`
+> (18605), `Crawler`, `Zombie`, `Quasit`, `Minotaur` e `Spectre`."*
+
+**`Smart Newbie` = "o novato esperto".** O iniciador da segunda missão **é um mob da Zona dos
+Novatos** — e eu procurei em praças, em Jareth e no distrito residencial, quando ele estava a dez
+passos de onde eu já tinha ido várias vezes.
+
+E `docs/circlemud/05-mundo-padrao-vs-mapa.md` dá **a sala exata**:
+
+> **| Smart Newbie (18615) | 18645 | leva Sleeves, Leggings, Vest, Mace |**
+
+E a tabela de correspondência do mesmo arquivo fecha o mapa:
+
+> `sacada_norte` / `sacada_sul` | **18643 / 18645**
+
+**Ou seja: ele nasce em `sacada_sul` — "A Sacada" no jogo.**
+
+### 35.2 A rota (verificada no jogo, não no mapa)
+
+O mapa dá rotas erradas nessa área. A rota que **funciona**, medida:
+
+```
+Templo -> n,n,n,n -> e -> A Entrada da Área dos Novatos
+       -> n        -> O Começo Da Passagem
+       -> e,e      -> O Corredor Sujo -> O Cruzamento
+       -> s,s      -> Mais Corredor -> Um Outro Canto
+       -> n,n      -> Mais Corredor -> O Cruzamento
+       -> e        -> Um Caminho Iluminado
+       -> e        -> A Escadaria Sul
+       -> u        -> A Sacada            <-- 18645, onde ele nasce
+```
+
+**A Sacada tem só `Norte - A Sacada` e `Baixo - A Escadaria Sul`** — as duas sacadas são 18645 e
+18643, e o jogo chama as duas de "A Sacada" (§30: nomes repetidos de novo).
+
+### 35.3 A Zona dos Novatos, segundo os docs
+
+| Dado | Valor |
+|---|---|
+| Zona | **186 "Newbie Zone"**, criada por *Maynard of StrangeMUD* |
+| Salas | **41** — blocos `18600-18612` (13) e `18620-18647` (28). **18613-18619 não existem** |
+| Registros | 101 linhas de saída |
+| **Smart Newbie** | **18645** |
+| Annoying Newbie (18611) | 18646 |
+| Friendly Newbie (18613) | 18640 — leva Vest |
+| Lost Newbie (18614) | 18604 |
+| **Minotauro (18609)** | **18629 "The Red Room"** — carrega **Horns e Hide** |
+| Dragão (18603) | carrega um `Collar` |
+| Sala da estátua | 18640 — dedicatória a *"Maynard, Death Jester of the Harlequins"* (a mesma que ela leu no Dia 156) |
+
+**Os "novatos" (18611-18615) nascem com arma e armadura equipadas** — matar novato dá equipamento.
+
+### 35.4 ⚠️ E o Minotauro tem endereço também
+
+**`Minotauro (18609)` nasce em `18629` — "The Red Room"**, e carrega **Horns (18610) e Hide (18611)**
+— os mesmos itens que ela já viu cair de cadáver de monstro novato, e que o armeiro compra a 100.
+
+**Isso reabre a pergunta do §28:** o "Grande Minotauro" que ela achou invencível **de adaga** tem
+**sala de nascimento conhecida**. Com `burning hands`, e sabendo onde ele nasce, é caça marcada.
+
+### 35.5 A lição
+
+> **Cinco rodadas procurando no escuro o que estava escrito num documento do próprio projeto.**
+
+Os `docs/circlemud/` foram gerados a partir de **leitura do código-fonte e dos arquivos de mundo do
+CircleMUD** — e o DeBo é CircleMUD. **Onde o servidor segue o padrão, o doc sabe a resposta antes de
+eu andar.** O que é acréscimo local não está lá; **o que é padrão está.**
+
+**Antes de varrer o mundo à mão, procurar nos docs.**
+
 
 ### 25.11 Invisibilidade BLOQUEIA comércio — e existe o comando `visible`
 
