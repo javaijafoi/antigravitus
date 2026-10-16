@@ -2266,6 +2266,65 @@ footer.site-footer {
   gap: 0.5rem;
 }
 
+.tactical-room-card.highlight-card {
+  border-color: var(--accent-gold) !important;
+  box-shadow: 0 0 18px rgba(229, 179, 100, 0.45);
+  background: rgba(229, 179, 100, 0.08);
+}
+
+/* Documental Layer Notice inside canvas */
+.map-layer-notice {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(14, 18, 26, 0.95);
+  border: 1px solid var(--border-highlight);
+  border-radius: var(--radius-md);
+  padding: 2rem 2.25rem;
+  max-width: 520px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  z-index: 15;
+}
+
+.map-layer-notice[hidden] {
+  display: none;
+}
+
+.map-layer-notice .notice-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.map-layer-notice h3 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--accent-gold);
+  margin-bottom: 0.65rem;
+}
+
+.map-layer-notice p {
+  color: var(--text-primary);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin-bottom: 0.5rem;
+}
+
+.map-layer-notice .notice-sub {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  margin-bottom: 1.25rem;
+}
+
+.map-layer-notice .notice-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
 /* ============================================================
    TEMPORADAS — seletor no cabeçalho
    ============================================================ */

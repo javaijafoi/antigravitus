@@ -894,6 +894,91 @@ porta.
 
 Aceita a missão, **encerrar a sessão com `save`**, nunca `quit`. Ver §26.3.
 
+---
+
+## 28. A LIÇÃO DO MODO DUNGEON V2: ela é maga, não espadachim (Dia 156)
+
+**O erro mais caro que cometi no capítulo.** Enfrentei o Grande Minotauro **de adaga**, e a resposta
+do servidor foi o veredito:
+
+> *"Você golpeia o peito do Grande Minotauro, que **quase nem sente o golpe**."*
+
+Concluí que era invencível. **Estava errado** — o autor corrigiu: *"já matei esse minotauro antes"*, e
+a doutrina do modo v2 explica por quê.
+
+### 28.1 A regra está escrita, e eu a ignorei
+
+`docs/expedicao_modular.md`:
+
+> *"**Fim de mana não muda automaticamente para punhal. Corpo a corpo exige configuração explícita** e
+> orçamento de golpes medido."*
+
+E a configuração vigente (`docs/expedicao_grebolius.json`) tem:
+
+| Chave | Valor | Tradução |
+|---|---|---|
+| `mode` | `dungeon_corajoso` | perfil de dungeon |
+| **`allow_verified_melee`** | **`False`** | **corpo a corpo DESLIGADO** |
+| `melee_max_enemy_hits` | `None` | sem orçamento de golpes |
+| `first_cast_budget` | `25` | mana por conjuração |
+
+A peça **Fight** (`scripts/expedition/actions.py`) faz, nesta ordem: **`consider <alvo>`** → checa se
+`magic missile` consta como aprendida → **`cast 'magic missile' <alvo>`** → relê recursos. O corpo a
+corpo só entra se `allow_verified_melee` **e** `melee_max_enemy_hits` **e** margem de vida calculada
+estiverem os três satisfeitos. **Nenhum está.**
+
+### 28.2 A prova medida, lado a lado
+
+| Método | Resposta do servidor | Resultado |
+|---|---|---|
+| **adaga** (corpo a corpo) | *"quase nem sente o golpe"* | inútil |
+| **`cast 'magic missile'`** | *"Você observa com orgulho seu míssil mágico **atingir** o monstro novato! **[11]**"* | **11 de dano** |
+
+E o abate: *"**Seu míssil mágico tira a vida do monstro novato!**"* — o corpo fica *"todo chamuscado,
+com sinais de graves queimaduras"*.
+
+**Experiência:** 1.088.907 → **1.091.757** (+2.850 em poucos abates). Vida e mana voltaram a 113/113 e
+260/260 sozinhas, porque ela quase não apanhou.
+
+**Usar `magic missile` em alvo que ela não vê não funciona:** sem monstro na sala, o servidor responde
+*"Em que você deseja lançar a magia?"* — e `consider` responde *"Comparar sua força com a de quem?"*.
+Isso é útil: **os dois comandos são teste de presença.**
+
+### 28.3 O `wimpy` do modo dungeon é 30%, não 48
+
+`models.py` define os perfis:
+
+| Perfil | Combate | Recua em | Turns de dano |
+|---|---|---|---|
+| **`dungeon_corajoso`** | corajosa | **30% da vida** | 2,0 |
+| `exploracao` | cautelosa | 45% | 3,0 |
+| `batedor` | **evitar** (não inicia luta) | 60% | 3,0 |
+
+Com 113 de vida máxima, 30% = **34**. O `wimpy` estava em **48** (≈42%), mais covarde que o perfil
+pede — ajustado para **34**. Reserva de mana: **12**, mais o orçamento de 25 por conjuração.
+
+### 28.4 O Minotauro JÁ foi morto — e a carcaça está no mapa
+
+A prova de que ele é abatível está no próprio compêndio, §13 (Dias 85-89):
+
+> *"**Uma Ramificação ao Sul** (a leste de Uma Curva na Passagem): Galeria coberta de fungos viçosos
+> na alvenaria com a **carcaça do grande Minotauro tombado**."*
+
+Ela limpou a Área dos Novatos naqueles dias, e a doutrina registrada lá é exatamente a que eu deveria
+ter seguido desde o começo:
+
+> *"O Modo Dungeon combina blindagem arcana ativa (`cast 'armor'`), **combate preventivo à distância
+> com projéteis arcanos (`magic missile`, `chill touch`)** e calibração de retirada automática em 25%
+> da vitalidade."*
+
+### 28.5 A correção que fica
+
+**Antes de enfrentar qualquer coisa: `consider`. Se for lutar, `cast 'magic missile'`. A adaga não
+existe como plano B** — quem decide isso é `allow_verified_melee`, e ele está desligado.
+
+> **A lição de fundo:** a resposta fácil ("é invencível") estava errada, e a evidência para derrubá-la
+> já estava escrita no projeto. **Ler a doutrina antes de concluir que algo é impossível.**
+
 
 ### 25.11 Invisibilidade BLOQUEIA comércio — e existe o comando `visible`
 

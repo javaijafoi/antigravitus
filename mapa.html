@@ -136,6 +136,19 @@
           <button class="map-ctrl-btn" id="ctrl-zoom-reset" title="Restaurar Visão Geral (Reset)">⟲</button>
         </div>
 
+        <!-- Layer Notice for non-visual / documental layers -->
+        <div class="map-layer-notice" id="map-layer-notice" hidden>
+          <div class="notice-icon">🗺️</div>
+          <h3 id="notice-title">Levantamento Vivo (Dias 96–156)</h3>
+          <p id="notice-text">Esta camada reúne <strong>219 salas e 337 conexões</strong> catalogadas a partir dos registros de sessões da Temporada 2.</p>
+          <p class="notice-sub">Por ser uma cartografia documental (sem coordenadas gráficas fixas no desenho), as salas são exploradas em formato de fichas na Tabela Tática.</p>
+          <div class="notice-actions">
+            <button class="map-btn-tool active" id="btn-notice-switch-table">
+              <span>📋 Abrir na Tabela Tática</span>
+            </button>
+          </div>
+        </div>
+
         <!-- Legend Overlay -->
         <div class="map-legend-box" aria-label="Legenda do Mapa">
           <span class="legend-item"><span class="legend-dot current-location"></span> Posição registrada</span>
