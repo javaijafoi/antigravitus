@@ -12,6 +12,7 @@ ROOT_FILES = {"index.html", "ficha.html", "mapa.html", "sobre.html", "README.md"
 ALLOWED = {"data": {".json", ".md"}, "css": {".css"}, "js": {".js"},
            "scripts": {".py", ".md"}, "skills": {".md", ".py", ".json"},
            "docs": {".md"},
+           "automato": {".py", ".md", ".json"},
            "audio": {".json", ".mp3", ".wav", ".ogg", ".m4a"}}
 
 

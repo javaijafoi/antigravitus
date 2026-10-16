@@ -1,0 +1,92 @@
+# automato — como este projeto joga
+
+O **automato** é a forma de jogar deste projeto, empacotada para que **outros agentes** possam
+usar, entender e ajustar. Ele não é um "bot que joga sozinho": é um **sistema de camadas** onde
+cada peça tem uma responsabilidade e a segurança vem antes da produtividade.
+
+## A ideia em uma frase
+> O herói tem **rotinas** (trabalhos que sabe fazer de ponta a ponta). As rotinas são
+> **observadas por um vigia**, **arrumadas por um preparador** e **supervisionadas por um turno**.
+> Toda rotina **parte do Templo e volta para lá** — é isso que a torna reiniciável.
+
+## As camadas
+\`\`\`
+turno.py      o encarregado: vigia -> prepara (se preciso) -> rotina -> vigia a cada minuto
+   |
+   +-- vigia.py        le a CAUDA DO LOG do driver (leitura pura: nao manda comando, nao interfere)
+   |                   diagnostico: OK / FOME / SEDE / VIDA_BAIXA / MORTA / TRAVADO / SEM_SESSAO
+   +-- prepara.py      o arrumador: come, bebe, DEPOSITA O OURO NO BANCO, dorme, volta ao Templo
+   +-- trabalhar.py    o despachante: --rotina X carrega rotinas/X.py e chama executar()
+         |
+         +-- rotinas/milharal.py   caca os invasores do milharal (missao Problemas Agricolas)
+         +-- rotinas/esgoto.py     reconhece os esgotos com cuidado
+         +-- rotinas/_suspensas/   rotinas proibidas por diretiva (nao reativar)
+\`\`\`
+
+O **núcleo** (\`nucleo/\`) sustenta tudo:
+- \`config.py\` — **o único lugar** onde se aponta caminho e limite (driver, token, logs, tempo, magias);
+- \`base.py\` — \`run()\` (conversa com o driver), navegação por **checkpoints**, \`voltar_ao_templo()\`;
+- \`guarda.py\` — a **guarda de repetição**.
+
+## O contrato de uma rotina
+\`\`\`python
+from base import *
+
+NOME = 'minha-rotina'
+DESCRICAO = 'o que ela faz, em uma linha'
+
+def executar() -> bool:
+    run('wake'); run('stand')          # o jogo recusa andar "relaxado"
+    if not ir_ao_lugar():              # trajeto SEMPRE verificado por marco de sala
+        return False
+    ...                                # laco de trabalho
+    voltar_ao_templo(); run('save')    # SEMPRE termina no Templo e salva
+    return True
+\`\`\`
+
+**Regras do contrato:**
+1. parte do Templo e volta para lá; 2. verifica a sala por **marco**, não por contagem de passos;
+3. nunca luta abaixo de \`VIDA_MINIMA\`; 4. termina com \`save\`; 5. pode ser interrompida a
+qualquer momento — o \`prepara.py\` conserta o resto.
+
+## Como rodar
+\`\`\`powershell
+python automato/camadas/trabalhar.py --listar              # catalogo de rotinas
+python automato/camadas/vigia.py                           # diagnostico agora
+python automato/camadas/prepara.py                         # arruma a personagem
+python automato/camadas/trabalhar.py --rotina milharal     # roda uma rotina
+python automato/camadas/turno.py --rotina milharal --turnos 2   # turno completo, supervisionado
+\`\`\`
+
+## Invariantes de segurança (não quebrar)
+1. **Guarda de repetição**: mesma resposta 3× seguidas → \`recall\` + \`save\` + saída (código 9).
+   Ela **ignora comandos benignos** (buy/eat/drink/look/score/rest/sleep...) para não disparar em compras.
+2. **O vigia lê o log, não o jogo**: mandar \`score\` enquanto a rotina roda **desincroniza** a sessão.
+3. **Nunca deixar rotina sem supervisão**: rodar como job e **ler o log a cada ~60 s**; se o vigia
+   acusar problema, **matar o job**.
+4. **O ouro dorme no banco**: \`deposit\` no Templo; a morte não leva o que está guardado.
+5. **Fome e sede consomem vida e mana por ciclo.** O prepara resolve — e **dormir faminto é o pior caso**.
+6. **O Templo é a âncora**: a vida dela é barata de recuperar a partir dali (\`recall\` é grátis até o nível 70).
+
+## Lições de campo (custaram caro — não repetir)
+| Sintoma | Causa | Regra |
+|---|---|---|
+| *"Nah... você está muito relaxado"* | a personagem está descansando | \`wake; stand\` antes de andar |
+| Muitos *"inconclusivo"* na caçada | **mana seca** | \`sleep\` ~80 s antes de sair |
+| Viagem "quebrada" | nomes de saída lidos do \`look\` | os nomes vêm do comando **\`exits\`** |
+| Laços no labirinto | trajeto por **contagem** de passos | andar por **marco de sala** |
+| Morte por script | robô solto | **teto de tempo + guarda + supervisão** |
+| Magia no alvo errado | nome genérico | mirar o **nome exato** do monstro |
+
+## Diretivas do autor (valem para outros agentes)
+- **PROIBIDO vender armaduras** (Torre Negra ou peão): *"perdemos mais dinheiro do que ganhamos"*.
+- **Nada de metajogo nas descrições dos capítulos** — o detalhe técnico fica nas descrições dos dias.
+- A **âncora do Dia 100** (a personagem é uma elfa; o nome goblin foi um engano de 99 dias) é
+  **âncora do autor**, sem evidência de servidor, e **não reescreve** crônicas antigas.
+
+## Como acrescentar uma rotina (o padrão)
+1. **Mapeie à mão primeiro**, sala a sala, e anote o trajeto (de preferência no \`mapa.json\` do herói);
+2. Escreva \`rotinas/nova.py\` seguindo o contrato acima;
+3. Teste **em trechos curtos**, lendo o retorno de cada um;
+4. Só então rode via \`turno.py\` — e **sempre supervisionado**;
+5. Se a rotina for proibida/suspensa, mova para \`rotinas/_suspensas/\` com um LEIA-ME explicando.
