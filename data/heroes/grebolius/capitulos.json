@@ -571,7 +571,8 @@
         141,
         142,
         143,
-        144
+        144,
+        145
       ],
       "parts": [
         {
@@ -632,6 +633,19 @@
               "document": "evidence/autoquests-dia143.json",
               "day": 143,
               "note": "Texto capturado das autoquests."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 145,
+          "summary": "A autoquest Dicas Magicas avancou: o 'sim' respondido no Bar dos Magos tirou a instrucao da lista, e ao perguntar sobre as dicas o mago aventureiro disse 'Vamos la, entao. Preste muita atencao.' — a missao segue em andamento e agora depende de observar o que ele faz. Fome e sede resolvidas na Padaria.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia145.json",
+              "day": 145,
+              "note": "Avanco da autoquest Dicas Magicas e higiene."
             }
           ],
           "date": "2026-10-16"
