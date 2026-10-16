@@ -944,6 +944,20 @@
       "date": "2026-10-16",
       "in_game_time": "O mapa, o santuário e as trinta e três portas",
       "closed_on_day": 156
+    },
+    {
+      "id": 5,
+      "tomo": 1,
+      "title": "Amanhã Eu Começo por Elas",
+      "kind": "marco",
+      "status": "em_curso",
+      "goal": "Abrir as trinta portas nomeadas e nunca visitadas, começando pela Avenida Floris — onde doze delas se abrem — e catalogar cada lugar novo: o que vende, por quanto e quem atende. Sem travar combate. A proteção continua sendo a escolha da rota, não a invisibilidade.",
+      "days": [],
+      "parts": [],
+      "content": [],
+      "tags": [],
+      "source_kind": "live",
+      "evidence": []
     }
   ]
 }

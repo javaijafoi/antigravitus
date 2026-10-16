@@ -113,12 +113,13 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 * Dia 156: a invisibilidade deixou de ser a protecao padrao por decisao do autor - ela bloqueia comercio ('Nao negocio com quem nao vejo!') e a protecao passou a ser a escolha da rota, evitando as 20 salas de risco alto.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
-**Capitulo 4 - desafio pessoal de mapeamento (plano proprio, kind marco)**
-Seguir data/heroes/grebolius/plano_capitulo_04.md: levantar o desconhecido em invisibilidade, com wimpy alto e sem travar combate, marcando os perigos. Meta: zerar os 41 destinos de fronteira ou fechar no Dia 170 com o que foi alcancado.
-* PROIBIDO vender armaduras (diretiva do autor, Dia 150): nem Torre Negra (8.500) nem peao (150).
-* Cap 04 nao espera as tres missoes do Cap 3: elas nao estavam sob controle da personagem.
-* Antes de partir: absorver mapa_vivo.json no mapa.json e normalizar l/o para e/w (l e look, o e order).
-* Decisoes pendentes do autor: titulo do capitulo, wimpy 48 ou 56, coletar itens ou nao, regioes proibidas.
+**Capítulo 5 — 'Amanhã Eu Começo por Elas' (desafio pessoal de mapeamento, kind marco)**
+Abrir as 30 portas nomeadas e nunca visitadas do levantamento, começando pela Avenida Floris (12 delas). Ao entrar em cada lugar novo: anotar sala, saídas, NPC que atende e o que a loja vende pelo comando `list`. Conferir a chegada por marco de sala, nunca por contagem de passos, e voltar ao Templo para salvar ao fim de cada rodada.
+* Rodar `visible` antes de qualquer `list`, `buy` ou `sell` — invisibilidade bloqueia comércio: 'Não negocio com quem não vejo!'.
+* PROIBIDO vender armaduras (diretiva do autor, Dia 150): nem Torre Negra nem peão. Antes de vender qualquer armadura, conferir a origem.
+* Saque do prepara: 300 na mão (config.SAQUE_PARA_COMPRAR). O banco protege o resto — hoje 297.
+* A Avenida Floris nunca foi visitada: ir com vida e mana cheias e rota de volta conhecida. As 20 salas de risco alto ficam fora da rota.
+* O Bar dos Paladinos e O Bar dos Guerreiros são barrados por guarda — registrar como resposta, não insistir.
 
 ## ✦ Origem e Incertezas
 Fonte do estado: Segunda sessao do Dia 156, ao vivo. Armadura da Torre Negra VESTIDA (CA 65 -> 80, Constituicao 9 -> 10, peso carregado 108 -> 51 kg) e ainda amaldicoada; um pergaminho de remover maldicoes foi perdido por ter sido recitado com a armadura na mochila. Anel arcano +2E recuperado na Sala de Doacoes e vendido ao armeiro por 500, por ser inutilizavel. detect poison e shocking grasp treinadas a 95%. Provisao reposta na Padaria. Fonte: evidence/dia156b.json..
