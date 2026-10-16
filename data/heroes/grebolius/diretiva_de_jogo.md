@@ -95,3 +95,18 @@ Outras conferências de rotina: `score tudo` (peso/limite, ouro, fome, sede), `e
 - O **armeiro de Midgaard** tem bolso finito: paga ~3 armaduras de 8.500 e seca. O **feiticeiro** não compra armaduras nem bastões usados. O **ferreiro** compra armas.
 - Quando o gargalo é o **caixa de um NPC**, registrar e parar — insistir é só gastar rodada.
 - **Não fechar capítulo antes dos alvos:** fechei o Capítulo 2 no Dia 136 com a fortuna parcial, e o próprio sistema devolveu o capítulo para `em_curso`. Fechar é ato final, não pausa.
+
+
+## 12. Guarda de repetição — o vigia dos robôs (ideia do autor, Dia 143)
+> **Se a MESMA resposta vier 3 vezes seguidas, o robô para, salva e devolve o controle.**
+
+Implementado em `scripts/local/guarda.py` e injetado no `run()` de **todos** os robôs de `scripts/local`:
+- normaliza a resposta (espaços, quebras e a linha de vitais `113hp 260mn 114mv`) e compara;
+- ao atingir **3 repetições**, imprime `[GUARDA] mesma resposta 3x seguidas: ...` (o texto exato, para eu diagnosticar), executa **`recall` + `save`** e sai com código **9**;
+- mantém um histórico curto das últimas respostas distintas.
+
+**Por que isso importa:** as mortes #5, #6 e #7 vieram de scripts **insistindo** num estado travado. A repetição é o sinal mais barato de "isto não vai andar" — e agora o robô se cala em vez de teimar até a personagem cair.
+
+**O que dispara:** sala bloqueada (`Você não pode ir por aí`), alvo inexistente (`Em que você deseja lançar a magia?`), personagem descansando (`Nah... você está muito relaxado..`), peso (`Você já está carregando muito peso`), comando inválido (`Como?!?`).
+
+**Teste feito:** enviando 4× um comando inválido, a guarda disparou na **3ª** resposta, salvou e saiu. Confirmado ao vivo.

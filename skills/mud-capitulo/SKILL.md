@@ -52,3 +52,6 @@ Definido pelo autor no pedido do capítulo. Normalmente: **duas missões** mais 
 7. **Higiene antes de sair**: `wake; stand` (o jogo recusa andar "relaxado"), `sleep` para encher a mana, comida e água em ordem (`score tudo` confere).
 8. **Limite do mundo não é falha da personagem**: quando o gargalo é o caixa de um NPC, registrar e parar.
 9. **Não fechar o capítulo antes dos alvos cumpridos** — o sistema devolve para `em_curso` (aconteceu no Dia 136).
+
+
+10. **Guarda de repetição (obrigatória em todo robô)**: mesma resposta **3× seguidas** → o script imprime o texto repetido, faz `recall` + `save` e sai com código **9** (`scripts/local/guarda.py`, injetada no `run()`). Robô que teima em estado travado é o que matou a personagem três vezes; agora ele para e devolve o controle para o agente consertar.

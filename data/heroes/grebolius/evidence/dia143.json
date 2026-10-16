@@ -1,0 +1,13 @@
+{
+  "hero_id": "grebolius",
+  "day": 143,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "summary": {
+    "guarda_repeticao": "Implementada a GUARDA DE REPETICAO (ideia do autor): se a MESMA resposta do servidor vier 3 vezes seguidas, o robo para. Criado scripts/local/guarda.py e injetada no run() de 33 robos de scripts/local. Ao disparar, o robo imprime '[GUARDA] mesma resposta 3x seguidas: <texto>' (para diagnostico), executa recall + save e sai com codigo 9.",
+    "teste": "Teste ao vivo: enviando 4x um comando invalido, a guarda disparou na 3a resposta, salvou e saiu (exit=9). Personagem confirmada no Templo com 113/113.",
+    "motivacao": "As mortes #5, #6 e #7 vieram de scripts insistindo em estado travado. A repeticao e o sinal mais barato de que o caminho nao vai andar.",
+    "gatilhos": "Sala bloqueada ('Voce nao pode ir por ai'), alvo inexistente ('Em que voce deseja lancar a magia?'), personagem descansando ('Nah... voce esta muito relaxado'), peso ('carregando muito peso') e comando invalido ('Como?!?').",
+    "docs": "Registrado na diretiva de jogo (secao 12) e na skill do capitulo (item 10)."
+  }
+}

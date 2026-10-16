@@ -569,7 +569,8 @@
       "goal": "Concluir tres missoes quaisquer, sem repetir nenhuma ja concluida (coleira-dragao, altruismo e limpando-monstros estao fora). Cada missao so conta como concluida quando o servidor confirmar a entrega.",
       "days": [
         141,
-        142
+        142,
+        143
       ],
       "parts": [
         {
@@ -594,6 +595,24 @@
               "document": "evidence/dia142.json",
               "day": 142,
               "note": "Catalogo de autoquests e inicio da aventura com o mago aventureiro."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 143,
+          "summary": "Guarda de repeticao implementada em todos os robos (33 scripts): quando a mesma resposta do servidor se repete 3x seguidas, o robo imprime o texto repetido, executa recall + save e sai com codigo 9. Testada ao vivo (comando invalido 4x: disparou na terceira). Motivacao: as mortes #5 a #7 vieram de scripts insistindo em estado travado.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia143.json",
+              "day": 143,
+              "note": "Guarda de repeticao implementada, testada e documentada."
+            },
+            {
+              "document": "diretiva_de_jogo.md",
+              "day": 143,
+              "note": "Secao 12: guarda de repeticao."
             }
           ],
           "date": "2026-10-16"
