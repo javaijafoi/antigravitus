@@ -341,3 +341,14 @@ estava escrita desde o começo. **Antes de varrer o mundo à mão, procurar nos 
   reescreveria histórico que já está publicado, e o §10 proíbe. **A correção vive aqui.**
 - **Adendo ao §9:** onde o handoff diz *"as demais mudanças são da sessão que escreveu o guia"*, leia-se
   **"da mesma autoria, em outra conversa"**. O conteúdo do handoff não muda.
+
+## Retomada do plano 001 · 2026-10-16 · Dia 156 (continuação) · GPT-6 / Codex (versão específica não informada)
+
+- **Mudou:** evidência dia156e, estado/missões, Capítulo 5 fechado, mapa na ala dos novatos, conhecimento/evolução e novo plano003; derivados regenerados pelo sincronizador. Nenhum código do motor alterado.
+- **Por quê:** retomar a campanha a partir de mandabala.py. O plano 001 omitia falas já presentes no transcript, inclusive a instrução ajuda mapas. As duas autoquests tiveram suas entregas efetivamente observadas.
+- **Verificado ao vivo:** brinco recebido/equipado, manto e 67.068 EXP, nível 21, sete mortes mantidas; 135/270/131 vitais máximos; fome/sede ausentes; retorno ao Templo, save e sleep confirmados. Daemon encerrado, sem nova conexão. Ver evidence/dia156e.json.
+- **Custo:** uma veste entregue cedo demais não contou. Duas vestes saíram do inventário; a segunda foi reconhecida. Comprados seis pães por 36 moedas; depósito de 209. Nenhuma armadura vendida.
+- **Limites da ferramenta:** dead_or_menu falso no Altar com respostas válidas/HP cheio, e respostas intercaladas a falas espontâneas. Registrado para revisão própria; nenhuma correção especulativa do driver aplicada.
+- **Próximo:** plano003, escolher a meta do próximo capítulo. Não reiniciar as duas missões. Não retomar as vetadas pelo autor. Planos antigos e crônicas anteriores preservados.
+
+- **Compatibilidade documental:** o catálogo events.json legado valida só os dias até 100. O fato novo foi registrado no capítulo, na evidência e no estado canônicos da Temporada 2; nenhum evento foi adulterado com dia antigo para passar a validação.

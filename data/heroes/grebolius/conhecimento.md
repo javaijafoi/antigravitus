@@ -1761,6 +1761,17 @@ Sair é com **`S`** (ou ENTER até o fim). Responder o número da página **não
 procurar o paginador. E jamais rodar `commands` no meio de uma rotina — ele abre um menu que a
 rotina não sabe fechar.
 
+## Retomada do Dia 156 — duas autoquests concluídas
 
+Fonte: [evidence/dia156e.json](evidence/dia156e.json). Agente: GPT-6 / Codex (versão específica não informada).
 
-
+- **Correção do plano 001:** o novato esperto havia falado no transcript anterior (linhas 5535–5562), incluindo a instrução `ajuda mapas`. O problema era a síntese incompleta das falas espontâneas, não ausência de fala do NPC. O plano antigo foi preservado.
+- **Novela:** perdido → `say ajuda mapas`; perturbador → `say diretrizes` e, quando pedido, `say sim`; levar veste à tagarela; confuso → `say retornar`; esperto → `say ajuda remortar`. Essas formas foram reconhecidas nesta sessão. `recall` no diálogo não acionou o confuso; isso não invalida o comando de deslocamento `recall`.
+- **Cadência:** ouvir toda a sequência e esperar o objetivo correspondente em `score tudo` antes de entregar. Uma veste entregue cedo demais não contou; a segunda entrega, na etapa pronta, gerou “Você atingiu seu objetivo”. Não presumir falha após apenas o eco de `say`.
+- **Alquimista:** inseto rastejante → dois monstros novatos de veste → dois zumbis → espectro negro invisível → Minotauro. Voltar ao Alquimista entre etapas. Não precisa entregar chifres neste ciclo: abate e retorno foram suficientes.
+- **Catálogo versus ciclo ativo:** `autoquest todas` já marcava Limpando Monstros concluída enquanto `score tudo` ainda pedia o Minotauro. A marca histórica não prova a entrega de um ciclo novamente ativo. A entrega atual foi confirmada com manto, EXP e ausência da tarefa no score final.
+- **Localização:** `help where` e `where minotauro` / `where perturbador` / `where tagarela` / `where confuso` funcionaram; `where` mostra um resultado, não uma lista completa. Tentativas com `2.novato` a `7.novato` repetiram o mesmo resultado; não usar ordinal para enumerar NPCs.
+- **Combate:** o Minotauro foi aguardado até estar isolado. Dois lightning bolts o abateram; o primeiro informou 71 de dano. Houve um golpe recebido de 4 HP. Um mico que iniciou combate na Sala do Alquimista fugiu após burning hands; não foi contado como morte.
+- **Recompensa:** brinco equipado com +15 HP máximo, +15 MV máximo, +1 acerto e +1 dano. Flag ANTI-DT no item não foi testada e não prova imunidade da personagem.
+- **Limites do driver:** estado `dead_or_menu` apareceu no Altar com respostas válidas e HP cheio; respostas de comandos também foram intercaladas a eventos espontâneos. Registrar a divergência e conferir a transcrição, sem converter esse rótulo isolado em morte ou nova conexão.
+- **Encerramento:** nível 21, HP 135/135, mana 270/270, MV 131/131; ouro 300 + 1.351; sete mortes; quatro pães, água, save e sleep confirmados. Conexão encerrada. Próxima sessão: [plano003.md](planos/plano003.md).

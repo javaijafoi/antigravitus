@@ -1224,4 +1224,6 @@ Registro baseado em [evidência primária](evidence/dia91.json), reunindo a sess
 - **Validação do Wimpy 30:** O gatilho de fuga tática disparou com sucesso diante do dano massivo e da inoculação de veneno, escapando para o leste até *O Canto Nordeste da Borda* com custo de 1 XP (saldo de 195.201 XP).
 - **Ficha final sobre a borda:** nível 11; HP 10/87, mana 170/170, MV 101/101; XP 195.201 (restam 4.799 para o nível 12); ouro 2.188; STR 10 (-2 por veneno, 9h restantes); AC 50 com `armor` ativo (51h restantes); 6/17 itens (71/115 kg); `save` e `sleep` confirmados em *O Canto Nordeste da Borda*. [Evidência](evidence/dia95.json).
 
+### Dia 156 — continuação e fechamento do Capítulo 5
 
+As duas autoquests foram entregues ao servidor. A Novela dos Novatos rendeu o brinco equipado; o ciclo atual de Limpando Monstros rendeu o manto e 67.068 EXP, levando ao nível 21 e ao aprendizado de curse. O progresso documentado veio de seguir os pedidos por etapa e usar magias contra alvos isolados. Nenhuma nova morte. Estado final no Templo, salvo e dormindo, com conexão encerrada. [Evidência](evidence/dia156e.json).

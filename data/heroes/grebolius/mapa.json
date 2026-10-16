@@ -1242,8 +1242,7 @@
       "exits": {
         "n": "cruzamento_novatos",
         "s": "outro_canto",
-        "w": "pequena_sala_guarda",
-        "e": "outro_canto"
+        "w": "pequena_sala_guarda"
       },
       "npcs": [
         "Bebê Dragão (Fugitivo)"
@@ -1259,7 +1258,12 @@
       ],
       "arestas_do_levantamento": [
         "e"
-      ]
+      ],
+      "source": {
+        "document": "evidence/dia156e.json",
+        "day": 156,
+        "note": "Retomada supervisionada da conexão do Dia 156; falas, objetivos, recompensas e encerramento confirmados no servidor. Correção da síntese concorrente dia156d."
+      }
     },
     {
       "id": "pequena_sala_guarda",
@@ -1920,14 +1924,16 @@
         "y": -80
       },
       "exits": {
-        "n": "sala_estatua"
+        "n": "sala_estatua",
+        "s": "cruzamento_novatos"
       },
       "npcs": [],
       "notes": "Acesso pela porta norte do Cruzamento descrito no Dia 58. Retorno direcional ainda não catalogado; não foi deduzida uma saída inversa.",
       "discovered_in": "Ciclo VI (Dia 58)",
       "source": {
-        "document": "posts.json",
-        "day": 58
+        "document": "evidence/dia156e.json",
+        "day": 156,
+        "note": "Retomada supervisionada da conexão do Dia 156; falas, objetivos, recompensas e encerramento confirmados no servidor. Correção da síntese concorrente dia156d."
       }
     },
     {
@@ -2809,15 +2815,17 @@
         "y": 200
       },
       "exits": {
+        "s": "escadaria_sul",
+        "w": "o_salao",
         "u": "sacada_norte"
       },
       "npcs": [],
       "notes": "Posição gráfica esquemática. Somente travessias observadas nesta jornada foram acrescentadas.",
       "discovered_in": "Reconferência ao vivo (Dia 92); sem presumir primeira descoberta histórica.",
       "source": {
-        "document": "evidence/dia92.json",
-        "day": 92,
-        "note": "Comandos e respostas preservados da sessão autorizada."
+        "document": "evidence/dia156e.json",
+        "day": 156,
+        "note": "Retomada supervisionada da conexão do Dia 156; falas, objetivos, recompensas e encerramento confirmados no servidor. Correção da síntese concorrente dia156d."
       }
     },
     {
@@ -2833,15 +2841,16 @@
         "y": 200
       },
       "exits": {
-        "s": "sacada_sul"
+        "s": "sacada_sul",
+        "d": "escadaria_norte"
       },
       "npcs": [],
       "notes": "Posição gráfica esquemática. Somente travessias observadas nesta jornada foram acrescentadas.",
       "discovered_in": "Reconferência ao vivo (Dia 92); sem presumir primeira descoberta histórica.",
       "source": {
-        "document": "evidence/dia92.json",
-        "day": 92,
-        "note": "Comandos e respostas preservados da sessão autorizada."
+        "document": "evidence/dia156e.json",
+        "day": 156,
+        "note": "Retomada supervisionada da conexão do Dia 156; falas, objetivos, recompensas e encerramento confirmados no servidor. Correção da síntese concorrente dia156d."
       }
     },
     {
@@ -2857,15 +2866,16 @@
         "y": 380
       },
       "exits": {
+        "n": "sacada_norte",
         "d": "escadaria_sul"
       },
       "npcs": [],
       "notes": "Posição gráfica esquemática. Somente travessias observadas nesta jornada foram acrescentadas.",
       "discovered_in": "Reconferência ao vivo (Dia 92); sem presumir primeira descoberta histórica.",
       "source": {
-        "document": "evidence/dia92.json",
-        "day": 92,
-        "note": "Comandos e respostas preservados da sessão autorizada."
+        "document": "evidence/dia156e.json",
+        "day": 156,
+        "note": "Retomada supervisionada da conexão do Dia 156; falas, objetivos, recompensas e encerramento confirmados no servidor. Correção da síntese concorrente dia156d."
       }
     },
     {
@@ -2881,15 +2891,18 @@
         "y": 380
       },
       "exits": {
-        "w": "caminho_iluminado_leste"
+        "n": "escadaria_norte",
+        "s": "passagem_estreita",
+        "w": "caminho_iluminado_leste",
+        "u": "sacada_sul"
       },
       "npcs": [],
       "notes": "Posição gráfica esquemática. Somente travessias observadas nesta jornada foram acrescentadas.",
       "discovered_in": "Reconferência ao vivo (Dia 92); sem presumir primeira descoberta histórica.",
       "source": {
-        "document": "evidence/dia92.json",
-        "day": 92,
-        "note": "Comandos e respostas preservados da sessão autorizada."
+        "document": "evidence/dia156e.json",
+        "day": 156,
+        "note": "Retomada supervisionada da conexão do Dia 156; falas, objetivos, recompensas e encerramento confirmados no servidor. Correção da síntese concorrente dia156d."
       }
     },
     {
@@ -2905,15 +2918,16 @@
         "y": 380
       },
       "exits": {
+        "e": "escadaria_sul",
         "w": "cruzamento_novatos"
       },
       "npcs": [],
       "notes": "Posição gráfica esquemática. Somente travessias observadas nesta jornada foram acrescentadas.",
       "discovered_in": "Reconferência ao vivo (Dia 92); sem presumir primeira descoberta histórica.",
       "source": {
-        "document": "evidence/dia92.json",
-        "day": 92,
-        "note": "Comandos e respostas preservados da sessão autorizada."
+        "document": "evidence/dia156e.json",
+        "day": 156,
+        "note": "Retomada supervisionada da conexão do Dia 156; falas, objetivos, recompensas e encerramento confirmados no servidor. Correção da síntese concorrente dia156d."
       }
     },
     {
@@ -2929,15 +2943,16 @@
         "y": 560
       },
       "exits": {
+        "n": "escadaria_sul",
         "s": "sala_alquimista"
       },
       "npcs": [],
       "notes": "Posição gráfica esquemática. Somente travessias observadas nesta jornada foram acrescentadas.",
       "discovered_in": "Reconferência ao vivo (Dia 92); sem presumir primeira descoberta histórica.",
       "source": {
-        "document": "evidence/dia92.json",
-        "day": 92,
-        "note": "Comandos e respostas preservados da sessão autorizada."
+        "document": "evidence/dia156e.json",
+        "day": 156,
+        "note": "Retomada supervisionada da conexão do Dia 156; falas, objetivos, recompensas e encerramento confirmados no servidor. Correção da síntese concorrente dia156d."
       }
     },
     {
@@ -8849,6 +8864,7 @@
     "Dia 156: levantamento refundido (308 salas digeridas: 90 pareadas com o curado, 218 novas). Chaves 'l'/'o' normalizadas para 'e'/'w' - no servidor 'l' e' look e 'o' e' order, nunca direcao. O derivado e refeito a cada rodada; o curado nunca e sobrescrito. Conflito de aresta mantem o valor curado.",
     "Dia 156: levantamento refundido (308 salas digeridas: 90 pareadas com o curado, 218 novas). Chaves 'l'/'o' normalizadas para 'e'/'w' - no servidor 'l' e' look e 'o' e' order, nunca direcao. O derivado e refeito a cada rodada; o curado nunca e sobrescrito. Conflito de aresta mantem o valor curado.",
     "Dia 156: levantamento refundido (173 salas digeridas: 91 pareadas com o curado, 82 novas). Chaves 'l'/'o' normalizadas para 'e'/'w' - no servidor 'l' e' look e 'o' e' order, nunca direcao. O derivado e refeito a cada rodada; o curado nunca e sobrescrito. Conflito de aresta mantem o valor curado.",
-    "Dia 156: levantamento refundido (342 salas digeridas: 103 pareadas com o curado, 239 novas). Chaves 'l'/'o' normalizadas para 'e'/'w' - no servidor 'l' e' look e 'o' e' order, nunca direcao. O derivado e refeito a cada rodada; o curado nunca e sobrescrito. Conflito de aresta mantem o valor curado."
+    "Dia 156: levantamento refundido (342 salas digeridas: 103 pareadas com o curado, 239 novas). Chaves 'l'/'o' normalizadas para 'e'/'w' - no servidor 'l' e' look e 'o' e' order, nunca direcao. O derivado e refeito a cada rodada; o curado nunca e sobrescrito. Conflito de aresta mantem o valor curado.",
+    "Dia 156, continuação: saídas da ala iluminada, escadarias e sacadas conferidas por exits e travessias. Retirada a aresta leste indevida de Mais Corredor; oeste é porta observada no look. Homônimos distinguidos pelas saídas. Nenhuma sala removida e nenhum corpus parcial digerido. Fonte: evidence/dia156e.json."
   ]
 }

@@ -31,3 +31,14 @@ Antes de combater: considerar o alvo, conferir recursos e retirada. Antes de via
 Para ampliar este guia, adicionar apenas um comando que tenha utilidade concreta. Consultar `help <comando>`, registrar a fonte e distinguir ajuda de teste. Uma divergência observada entra em [verificações](verificacoes.md), sem adulterar o manual original.
 
 Ver [diferenças importantes](comparacao_commands.md), [tips](tips.md) e [evidências selecionadas](evidencias/consulta_2026-10-15.json). Os manuais completos ficam separados: [comandos](commands.md), [informações](info.md), [magias](spells.md).
+
+## Conferência prática — 2026-10-16, Dia 156 (continuação)
+
+| Comando | Uso conferido | Limite observado |
+|---|---|---|
+| `where <nome>` / `onde <nome>` | Localizar criatura na área; ajuda do servidor e testes com minotauro/perturbador/tagarela/confuso. | Um resultado; ordinais não enumeraram NPCs nesta tentativa. |
+| `buy 6 pao` | Compra seis unidades, preço confirmado antes pela lista. | Conferir dinheiro e espaço. |
+| `put all.punhal mochila` | Guardou oito punhais no contêiner. | Confirmar com `look in mochila`. |
+| `score tudo` | Conferir etapa atual antes de fala/entrega. | Falas continuam após o eco do comando; não antecipar entrega. |
+
+As palavras exigidas em falas de missão podem diferir do alias usado pelo operador. Ver [verificações e fonte literal](verificacoes.md).

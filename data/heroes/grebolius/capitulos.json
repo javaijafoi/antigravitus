@@ -958,66 +958,47 @@
       "parts": [
         {
           "day": 156,
-          "source_kind": "live",
           "date": "2026-10-16",
+          "summary": "Retomada do plano 001: Novela dos Novatos concluída com brinco; ciclo atual de Limpando Monstros concluído após inseto, dois monstros de veste, dois zumbis, espectro e Minotauro. Nível 21; save e sleep confirmados no Templo.",
+          "source_kind": "live",
           "evidence": [
             {
-              "document": "evidence/dia156d.json",
+              "document": "evidence/dia156e.json",
               "day": 156,
-              "note": "Conclusao das duas autoquests do Capitulo 05, verificada em duas respostas independentes do servidor: 'autoquest todas' marca 'Novela dos Novatos' e 'Limpando Monstros' como Concluida, e o bloco '[Autoquests em andamento]' do score deixa de lista-las."
+              "note": "Retomada supervisionada da conexão do Dia 156; falas, objetivos, recompensas e encerramento confirmados no servidor. Correção da síntese concorrente dia156d."
             }
-          ],
-          "summary": "Capítulo 05 fechado: 'Amanhã Eu Começo por Elas'. A dúvida da abertura — começar pelas 33 portas nomeadas do Capítulo 04 ou pelo que estava pedindo resposta — resolveu-se pelo segundo caminho. As DUAS autoquests do tier de nível 30 foram concluídas na mesma sessão. 'Novela dos Novatos' fechou quando a personagem falou com a novata tagarela, presente na Escadaria Norte: a hipótese de que a missão só avançava como RESPOSTA a quem falava primeiro ficou confirmada depois de cobrir quatro dos cinco novatos com dezenas de frases sem reação. 'Limpando Monstros' fechou quando o mico que atormentava o Novato Alquimista fugiu, e ele agradeceu — 'Agora sim, paz e sossego para criar minhas poções' — entregou um manto de pano (armadura +30) e a resposta 'Parabéns, você completou a aventura!'. No caminho, abateu o Grande Minotauro em Outra Curva com lightning bolt (1.600 + 1.944 de experiência, 95 moedas) — o mesmo que a fez abandonar o corpo a corpo meses antes. Subiu do Nível 20 para o 21 (1.088.553 para 1.200.001), aprendeu curse a 10% e vestiu um diminuto brinco de novato ANTI-DT (+15 vida máxima, +15 movimento, +1 acerto, +1 dano). Fonte: evidence/dia156d.json."
+          ]
         }
       ],
       "content": [
-        "Amanhã eu começo por elas. Foi o que eu escrevi, e eu acreditava. Trinta e três portas com nome, todas fechadas, e um mundo inteiro atrás de cada uma.",
-        "Sentei na praça e fiz a conta que eu devia ter feito antes de prometer: porta fechada não me dá comida, não me dá nível e não me dá o que fazer quando eu não sei o que fazer. As trinta e três continuam lá. Elas esperam. O que não espera é o resto.",
-        "Então eu não comecei por elas. Comecei pelo que estava pedindo resposta — e o que estava pedindo resposta era uma coisa que eu venho carregando desde que pisei naquela área de novatos pela primeira vez.",
-        "A primeira foi uma história. Tem uma área a leste do campo que é feita para quem está começando, e lá dentro mora gente que parece que não faz nada além de existir: um que perturba, um que está perdido, uma que fala demais. Eles não pedem nada. Eles não respondem nada. Eu já tinha tentado falar com eles e desistido — perguntei, ofereci, insisti, e o silêncio.",
-        "O que eu não tinha entendido é que não era eu que devia começar. Toda vez que alguém me deu uma missão neste mundo, a conversa começou do outro lado: o homem da praça perguntou, o mago do bar perguntou, o alquimista perguntou. Eu só respondi. Falar com quem não falou comigo não é conversa — é barulho.",
-        "E a que fala demais falou. Não com palavras que eu tenha escutado, mas ela falou, e dessa vez eu estava lá, e disse de volta o que se diz a quem chega. Foi isso. A história que eu vinha perseguindo há dias se resolveu com um cumprimento, no momento certo, para a pessoa certa.",
-        "A segunda foi um homem e o bicho dele. O Novato Alquimista mora numa sala cheia de vidro jogado e passa os dias misturando coisas que não funcionam, e tem um mico que não deixa ele em paz. Eu já tinha estado ali antes e não tinha visto o óbvio: ele não queria que eu matasse monstro nenhum. Ele queria sossego.",
-        "Queimei o mico. Ele entrou em pânico e fugiu, e o alquimista disse a frase mais simples que eu ouvi neste mundo — 'Agora sim, paz e sossego para criar minhas poções'. E me deu um manto de pano, e me ensinou uma coisa que ele chama de maldição, e eu subi um grau. De graça. Por tirar um bicho de cima de um homem.",
-        "No caminho, eu matei o Minotauro. Aquele mesmo, o que me fez desistir de lutar com ferro na mão na primeira vez em que desci àquele corredor, quando a minha adaga mal arranhou a pele dele e eu entendi que eu estava fazendo a pergunta errada. Dessa vez eu não cheguei perto. Fiquei longe e chamei o raio — e o raio não arranha. O bicho virou pedaços, e eu fiquei ali, olhando, sem saber o que sentir.",
-        "Porque não foi coragem. Foi método. Eu não venci o Minotauro: eu venci a mim mesma daquele corredor, a que achava que lutar era chegar perto. Foi a mesma lição do Alquimista, escrita duas vezes no mesmo dia — eu passei o tempo todo tentando resolver as coisas do jeito difícil, e as duas soluções eram a coisa mais simples da sala.",
-        "Ganhei também um brinco. Pequeno, de novato, desses que ninguém olha duas vezes. Ele protege contra aquilo que mata de uma vez, sem aviso e sem luta — a armadilha que não me deixa nem fugir. É a primeira defesa que eu tenho contra a única coisa que eu não posso resolver pensando.",
-        "As trinta e três portas continuam fechadas. Eu não abri nenhuma. E não me arrependo: o dia em que eu disse que ia começar por elas foi o dia em que eu descobri que estava começando por mim."
+        "Voltei aos corredores dos novatos. Encontrei o perdido na Escadaria Sul e lhe disse: ajuda mapas. Ele reconheceu o comando e agradeceu. Depois falou do colega que perturbava os outros e perguntou por que eu não lhe dava uma lição.",
+        "No caminho, fui cumprir os pedidos do Alquimista. Primeiro, um inseto rastejante. Depois, os monstros de veste e os zumbis. Voltei à sala entre as etapas e ouvi o que faltava. Não era uma ordem para matar tudo o que se movesse: cada retorno trazia um alvo diferente.",
+        "O espírito que o assustava se escondia nas sombras. Fiz meus olhos perceberem o invisível e encontrei o espectro na sala enorme. Lancei fogo contra ele, confirmei sua queda e retornei. Ainda havia um mugido no subsolo.",
+        "O perturbador estava em Mais Corredor. Pediu que eu não o matasse: queria saber como consultar as regras do mundo. Diretrizes, respondi. Depois me confiou uma veste para a novata tagarela, por quem disse estar apaixonado.",
+        "A primeira veste que entreguei não fez a tarefa avançar. Quando a entrega foi reconhecida, a tagarela recebeu o recado e pediu ajuda para o irmão confuso. Fui encontrá-lo na sacada e lhe ensinei a retornar à cidade. Ele me mandou procurar o esperto, para falar sobre encarnações.",
+        "O esperto ouviu a indicação de ajuda sobre remortar, agradeceu e me deu um pequeno brinco. Examinei a peça e a coloquei na orelha direita. A conversa entre os novatos tinha chegado ao fim.",
+        "Voltei ao subsolo. Desta vez, o Minotauro estava sozinho em Outra Curva. Comparei nossas forças e lancei raios contra ele. Recebi um golpe no pulso durante a luta, mas o segundo raio o derrubou. Retornei ao Alquimista, que enfim anunciou sossego para suas poções e me entregou um manto.",
+        "Voltei ao Templo. Guardei parte do ouro, comi, bebi e conferi o que trazia comigo. Então me deitei para dormir. As duas tarefas estavam entregues."
       ],
       "tags": [
-        "Amanhã Eu Começo por Elas",
-        "Autoquests",
-        "Novela dos Novatos",
-        "Limpando Monstros",
-        "Novato Alquimista",
-        "Novata Tagarela",
-        "Grande Minotauro",
-        "Área dos Novatos",
-        "ANTI-DT",
-        "Nível 21"
+        "Missões",
+        "Novatos",
+        "Aprendizado"
       ],
       "source_kind": "live",
       "evidence": [
         {
-          "document": "evidence/dia156d.json",
+          "document": "evidence/dia156e.json",
           "day": 156,
-          "note": "Conclusao das duas autoquests do Capitulo 05, verificada em duas respostas independentes do servidor: 'autoquest todas' passa a marcar 'Novela dos Novatos' e 'Limpando Monstros' como Concluida, e o bloco '[Autoquests em andamento]' do score deixa de lista-las (sobrou apenas 'Problemas Agricolas', anterior ao capitulo)."
-        },
-        {
-          "document": "evidence/dia156b.json",
-          "day": 156,
-          "note": "Manutencao do Dia 156 que antecedeu a sessao: armadura da Torre Negra vestida (CA 65 -> 80) e ainda amaldicoada, anel arcano vendido por 500 e duas habilidades treinadas."
-        },
-        {
-          "document": "evidence/dia156c.json",
-          "day": 156,
-          "note": "Cartografia do Dia 156: mapa curado de 141 para 360 salas (747 arestas) e as 33 portas nomeadas que este capitulo decidiu NAO abrir ainda."
+          "note": "Retomada supervisionada da conexão do Dia 156; falas, objetivos, recompensas e encerramento confirmados no servidor. Correção da síntese concorrente dia156d."
         }
       ],
-      "excerpt": "Amanhã eu começo por elas — foi o que ela escreveu no fim do capítulo anterior, e é o que ela não fez: parou, fez a conta e escolheu o que estava pedindo resposta. Fechou as duas missões que carregava, matou o Minotauro que a tinha feito desistir do corpo a corpo, subiu de grau e ganhou a única defesa contra a morte sem aviso.",
+      "excerpt": "Entre os pedidos do Alquimista e os recados dos novatos, Grebolius conclui as duas tarefas e retorna ao Templo com um brinco e um manto.",
       "date": "2026-10-16",
-      "in_game_time": "As duas missões que não eram as trinta e três portas",
-      "closed_on_day": 156
+      "in_game_time": "Retomada nos corredores dos novatos; encerramento no Templo de Midgaard",
+      "closed_on_day": 156,
+      "completion_note": "As duas entregas foram observadas nesta continuação. A marca antiga de Limpando Monstros no catálogo não foi usada isoladamente como prova.",
+      "editorial_note": "Correção da reconstrução concorrente do Dia 156, com base em evidence/dia156e.json: Novela não fechou com say oi à tagarela, mas após a sequência de recados e ajuda remortar ao esperto. A entrega do Alquimista veio após o objetivo do Minotauro; o mico foi apenas defesa incidental. A flag ANTI-DT do brinco não foi testada como imunidade da personagem. A versão anterior permanece no histórico Git e em evidence/dia156d.json."
     }
   ]
 }

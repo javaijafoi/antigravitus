@@ -49,9 +49,9 @@
       "type": "official",
       "status": "completed",
       "accepted_day": 36,
-      "last_progress_day": 96,
+      "last_progress_day": 156,
       "objective": "Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.",
-      "next_step": "Missão concluída com sucesso no Dia 96 ao reportar ao Novato Alquimista. Recompensa recebida: 75.482 EXP e um manto de pano.",
+      "next_step": "Concluída e entregue no Dia 156, continuação. Não reiniciar sem novo objetivo do autor.",
       "reward": "75.482 EXP e um manto de pano",
       "evidence": [
         {
@@ -183,8 +183,14 @@
           "document": "evidence/dia96.json",
           "day": 96,
           "note": "Conclusão definitiva com o Novato Alquimista confirmada em sessão interativa ao vivo: +75.482 EXP e manto de pano."
+        },
+        {
+          "document": "evidence/dia156e.json",
+          "day": 156,
+          "note": "Retomada supervisionada da conexão do Dia 156; falas, objetivos, recompensas e encerramento confirmados no servidor. Correção da síntese concorrente dia156d."
         }
-      ]
+      ],
+      "completion_note": "Entrega ao servidor confirmada na continuação do Dia 156. Novo ciclo após a conclusão histórica do Dia 96; manto e 67.068 EXP recebidos, avanço ao nível 21. A conclusão antiga foi preservada nas fontes."
     },
     {
       "id": "dicas-magicas",
@@ -349,11 +355,11 @@
       "id": "novela-dos-novatos",
       "title": "Novela dos Novatos",
       "type": "official",
-      "status": "discovered",
-      "accepted_day": null,
-      "last_progress_day": 83,
+      "status": "completed",
+      "accepted_day": 156,
+      "last_progress_day": 156,
       "objective": "Aventura narrativa para recém-chegados (Até o nível 30, iniciada com: o novato esperto).",
-      "next_step": "Localizar o novato esperto pelas praças de Midgaard para iniciar o encadeamento.",
+      "next_step": "Concluída e entregue no Dia 156, continuação. Não reiniciar sem novo objetivo do autor.",
       "evidence": [
         {
           "document": "posts.json",
@@ -364,8 +370,14 @@
           "document": "posts.json",
           "day": 83,
           "note": "Patrono o novato esperto confirmado pelo comando autoquest listar no Dia 83."
+        },
+        {
+          "document": "evidence/dia156e.json",
+          "day": 156,
+          "note": "Retomada supervisionada da conexão do Dia 156; falas, objetivos, recompensas e encerramento confirmados no servidor. Correção da síntese concorrente dia156d."
         }
-      ]
+      ],
+      "completion_note": "Entrega ao servidor confirmada na continuação do Dia 156. Brinco de novato recebido e equipado."
     },
     {
       "id": "problemas-agricolas",
