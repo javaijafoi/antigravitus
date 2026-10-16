@@ -110,3 +110,16 @@ Repositório: [javaijafoi/antigravitus](https://github.com/javaijafoi/antigravit
 ## Referências da máquina
 
 [Guia prático e manuais](maquina/README.md): comandos úteis, diferenças do DeBo, tips, informações, magias e história do mundo. A base orienta a operação sem atribuir conhecimento ou acontecimentos à personagem.
+
+## Orientação para agentes
+
+Se quem está operando este repositório é um agente (e não uma pessoa), o ponto de entrada é
+[AGENTS.md](AGENTS.md). Ele traz a regra de identificação (modelo/versão em relatório, evidência e
+commit), os invariantes de segurança, os checklists de início e encerramento e o mapa de onde consultar
+cada coisa.
+
+O detalhamento fica em [docs/agentes/](docs/agentes/): [arquitetura](docs/agentes/arquitetura.md),
+[boas práticas](docs/agentes/boas_praticas.md), [glossário de cada artefato](docs/agentes/glossario.md),
+[onde consultar](docs/agentes/onde_consultar.md) e o
+[registro de evolução](docs/agentes/registro_de_evolucao.md) — o livro-razão onde cada agente documenta
+o que mudou na ferramenta, por quê, com que verificação e a que custo.

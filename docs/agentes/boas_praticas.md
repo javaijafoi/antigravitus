@@ -90,6 +90,10 @@ python -B -m unittest discover -s scripts -p "test_*.py"
   Zerar um aviso de legado reescrevendo crônica antiga é **pior** que conviver com ele.
 - **Não avance `evidence_policy.legacy_through_day`** para contornar a validação. O campo fixa o alcance
   do legado.
+- **Não digira corpus parcial.** `digerir_mapa.py` seguido de `fundir_mapa.py` com um recorte de
+  transcripts **encolhe** o mapa curado — aconteceu de 360 para 224 salas (v1.4). O `--glob` precisa
+  cobrir **todo** o corpus; o sintoma de erro é o `TOTAL` do `fundir_mapa.py` **diminuir**. O curado
+  nunca é sobrescrito (só a camada `levantamento` é refeita), mas o resultado mesclado fica incompleto.
 - **Registre a origem de cada mudança.** Um item visto no passado cuja posse é incerta vai para
   `inventory.pending_verification`, não para o inventário confirmado.
 - Conjuntos offline (Zero-Network) e o relatório HTML saem de `scripts/run_offline_tests.py`.

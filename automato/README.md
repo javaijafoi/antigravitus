@@ -1,5 +1,10 @@
 # automato — como este projeto joga
 
+> **Antes de mexer:** leia [`AGENTS.md`](../AGENTS.md) (regra de identificação, invariantes, checklists e
+> mapa de consulta) e registre sua mudança em
+> [`docs/agentes/registro_de_evolucao.md`](../docs/agentes/registro_de_evolucao.md). Este README explica
+> **como o motor funciona**; o guia de agentes explica **como trabalhar no projeto**.
+
 O **automato** é a forma de jogar deste projeto, empacotada para que **outros agentes** possam
 usar, entender e ajustar. Ele não é um "bot que joga sozinho": é um **sistema de camadas** onde
 cada peça tem uma responsabilidade e a segurança vem antes da produtividade.
