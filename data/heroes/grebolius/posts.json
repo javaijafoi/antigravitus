@@ -2581,5 +2581,38 @@
         "note": "Registro estruturado do Dia 98: comida, recall, vendas do Tabuleiro, entrega do pergaminho e repouso no Templo."
       }
     ]
+  },
+  {
+    "id": 99,
+    "day": "Dia 99",
+    "title": "A Fortuna do Tabuleiro, a Estrada Longa e o Invasor do Milharal",
+    "date": "2026-10-15",
+    "in_game_time": "Midgaard e fazenda a leste de Jareth - Ciclo X",
+    "excerpt": "A Fortuna do Tabuleiro, a Estrada Longa e o Invasor do Milharal",
+    "tags": [
+      "Tabuleiro de Xadrez",
+      "Midgaard",
+      "Jareth",
+      "Fazenda",
+      "Problemas Agricolas",
+      "Fortuna",
+      "Recall"
+    ],
+    "content": [
+      "Acordei no Templo de Midgaard com a mochila leve e a certeza de que o dia seria de ouro. Desci pelos campos ate o portao enferrujado do Tabuleiro de Xadrez, aquele quadrado de marmore onde as pecas travam uma guerra que nunca termina. As casas pretas e brancas estavam outra vez cobertas de despojos: punhais, vestes, espadas, armaduras de peao e, o que fazia meu coracao de goblin bater mais forte, lancas enormes do Cavaleiro Negro, pesadas como troncos e frias como gelo.",
+      "Nao ha honra em deixar ouro no chao. Recolhi duas lancas, recitei a palavra de retorno e desci no Templo; dali ate o ferreiro foi um passeio. Ele pesou a primeira lanca na mao e abriu os olhos: quatro mil moedas por cada uma. Voltei ao tabuleiro, trouxe as outras duas, e ainda arranquei um cetro de bispo de aura purpura e um cajado retorcido esquecido no canto da casa da Torre Negra. Vi a torre viva, aquela sombra de pedra sobre rodas que o proprio ar me disse ser a minha tumba, e passei longe. Dizem que quem desafia a torre vira poeira e lembranca.",
+      "O feiticeiro da Loja de Magias me pagou tres mil pelo cetro e dois mil quatrocentos e sessenta pelo cajado, com cara de quem estava fazendo um favor. Ao fim da manha o bornal tilintava vinte e duas mil e cento e quarenta moedas — e eu, que ja dormi no lixo, precisei parar um instante para acreditar.",
+      "Entao virou o dia da estrada. Caminhei de Midgaard a Jareth pela rodovia comprida, cruzei a Cidade Livre inteira, passei tavernas, bancos, estalagens e o Clube Kitty-Kat, e saí pelo Portao Leste para a floresta. A trilha me engoliu como sempre: borboletas, coelhos, esquilos e um bosque de arvores tao parecidas que cada passo parecia o mesmo. Errei, voltei, insisti. Quando ja achava que passaria a noite entre as arvores, a saida apareceu: um corredor de clareira, e depois a fazenda.",
+      "Entrei na casa despedacada outra vez. A mulher ainda chorava, o dono ainda olhava para mim como quem espera um milagre. Segui para o milharal, onde os corvos fazem roda sobre os pes-de-milho arrancados. Escolhi um monstro esfomeado so para mim, longe dos bandos, e lutei com a chama nas maos ate ele cair — um inimigo grande, que rendeu uma boa soma de experiencia. Quando os outros dois ou tres vieram chegando pelo mato, ja era hora de recuar; nao sou tao louca assim.",
+      "Voltei a falar com o fazendeiro, mas ele nada disse. A conta dos monstros continua em aberto, e eu detesto promessa pela metade. Voltei ao Templo com o corpo inteiro, vinte e duas mil moedas na algibeira e um gosto de tarefa inacabada. Amanha eu volto ao milharal — com a armadura refeita e o caminho do bosque ja gravado na memoria — e acerto as contas com aquele velho."
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "evidence/dia99.json",
+        "day": 99,
+        "note": "Registro estruturado do Dia 99: fortuna no Tabuleiro, travessia ate a fazenda, 1 invasor morto e conclusao nao confirmada."
+      }
+    ]
   }
 ]

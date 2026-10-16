@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 98,
+  "as_of_day": 99,
   "verification": "live",
   "items": [
     {
@@ -364,9 +364,9 @@
       "type": "official",
       "status": "active",
       "accepted_day": 90,
-      "last_progress_day": 97,
+      "last_progress_day": 99,
       "objective": "Eliminar monstros invasores do milharal conforme pedido do fazendeiro e instruções dadas pelo Pacificador.",
-      "next_step": "Fazendeiro reafirmou o pedido de exterminar 10 monstros invasores do milharal no Dia 97. Retomar com comida no inventario, confirmar o contador com o fazendeiro e nao declarar conclusao sem resposta dele.",
+      "next_step": "No Dia 99 a fazenda foi alcancada pela floresta e 1 monstro invasor foi morto no milharal (+14.488 EXP), mas o fazendeiro nao respondeu aos gatilhos de fala e o contador nao e exibido: a conclusao segue NAO confirmada. Retomar atacando apenas salas com 1 monstro e testar novamente o dialogo de entrega.",
       "evidence": [
         {
           "document": "posts.json",
@@ -402,6 +402,11 @@
           "document": "evidence/dia98.json",
           "day": 98,
           "note": "Dia 98 priorizou comida e Dicas Magicas; a fazenda nao foi visitada e a missao segue ativa, sem novo progresso."
+        },
+        {
+          "document": "evidence/dia99.json",
+          "day": 99,
+          "note": "Travessia ate a fazenda, abate de 1 invasor e tentativa de dialogo com o fazendeiro sem resposta conclusiva."
         }
       ]
     }

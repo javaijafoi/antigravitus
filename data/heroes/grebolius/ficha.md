@@ -1,6 +1,6 @@
 # 🧌 Ficha Atual de Grebolius (Último Estado Registrado)
 
-> Referência: Dia 98. Estado verificado em sessão; consultar a origem registrada.
+> Referência: Dia 99. Estado verificado em sessão; consultar a origem registrada.
 > Este documento reúne o último estado e as missões registrados; as incertezas aparecem ao final.
 
 ## ✦ Identificação e Registro
@@ -10,8 +10,8 @@
 * **Raça Mecânica no MUD:** Elfo
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **14**
-* **Alinhamento Moral:** 226 (Um pouco bom)
-* **Localização Atual:** O Templo de Midgaard (último registro: Dia 98)
+* **Alinhamento Moral:** 234 (Um pouco bom)
+* **Localização Atual:** O Templo de Midgaard (último registro: Dia 99)
 * **Acampamento Registrado:** O Templo de Midgaard
 * **Santuário de Referência:** O Panteao dos Centenarios
 
@@ -24,9 +24,9 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 | **Pontos de Mana (MP)** | 200 | 200 | 100% |
 | **Estamina / Movimento (MV)** | 105 | 105 | 100% |
 
-* **Experiência Acumulada:** **472.843 EXP**
-* **Experiência Necessária p/ Grau 15:** **27.157 EXP** (Meta: 500.000 EXP)
-* **Ouro Líquido:** **3.604 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **487.331 EXP**
+* **Experiência Necessária p/ Grau 15:** **12.669 EXP** (Meta: 500.000 EXP)
+* **Ouro Líquido:** **22.140 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 12
@@ -38,7 +38,7 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 
 ### Métricas de Combate
 * **Classe de Armadura (AC):** 49 (base) / **75** (com `armor`, conforme registro)
-Dia 98: AC 75 mantida com Armadura Mistica ativa (+26; cerca de 13 horas ao dormir).
+Dia 99: AC 75 com Armadura Mistica ativa (+26), mas a duracao chegou a cerca de 2 horas ao dormir: recastar no proximo dia.
 * **Bônus de Acerto (Hitroll):** 3
 * **Bônus de Dano (Damroll):** +4
 * **Configuração de Fuga (Wimpy):** **30 HP** (referência de 25%; não garante fuga antes de golpe letal)
@@ -55,7 +55,7 @@ Dia 98: AC 75 mantida com Armadura Mistica ativa (+26; cerca de 13 horas ao dorm
 * **Novela dos Novatos — Descoberta:** Aventura narrativa para recém-chegados (Até o nível 30, iniciada com: o novato esperto).
   * Próximo passo: Localizar o novato esperto pelas praças de Midgaard para iniciar o encadeamento.
 * **Problemas Agrícolas — Ativa:** Eliminar monstros invasores do milharal conforme pedido do fazendeiro e instruções dadas pelo Pacificador.
-  * Próximo passo: Fazendeiro reafirmou o pedido de exterminar 10 monstros invasores do milharal no Dia 97. Retomar com comida no inventario, confirmar o contador com o fazendeiro e nao declarar conclusao sem resposta dele.
+  * Próximo passo: No Dia 99 a fazenda foi alcancada pela floresta e 1 monstro invasor foi morto no milharal (+14.488 EXP), mas o fazendeiro nao respondeu aos gatilhos de fala e o contador nao e exibido: a conclusao segue NAO confirmada. Retomar atacando apenas salas com 1 monstro e testar novamente o dialogo de entrega.
 
 Objetivos pessoais e investigações ficam separados das autoquests no catálogo de missões.
 
@@ -86,40 +86,38 @@ Equipamento conforme os últimos documentos disponíveis; conferir no próximo a
 
 ## ✦ Inventário e Suprimentos
 Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
-* `um cantil` (x1) — evidence/dia98.json
-* `um manto de pano` (x1) — evidence/dia98.json
-* `a bainha de Excalibur` (x1) — evidence/dia98.json
-* `um colar com uma pedra purpura` (x1) — evidence/dia98.json
-* `o Cetro do Bispo Negro` (x1) — evidence/dia98.json
-* `um brilhante punhal de novato` (x1) — evidence/dia98.json
-* `uma atadura` (x1) — evidence/dia98.json
-* `um pao recheado` (x2) — evidence/dia98.json
-* `uma tocha` (x1) — evidence/dia98.json
-* `uma pocao amarela de detectar invisibilidade` (x1) — evidence/dia98.json
-* `uma mochila` (x1) — evidence/dia98.json
+* `um cantil` (x1) — evidence/dia99.json
+* `um manto de pano` (x1) — evidence/dia99.json
+* `a bainha de Excalibur` (x1) — evidence/dia99.json
+* `um colar com uma pedra purpura` (x1) — evidence/dia99.json
+* `o Cetro do Bispo Negro` (x1) — evidence/dia99.json
+* `um brilhante punhal de novato` (x1) — evidence/dia99.json
+* `uma atadura` (x1) — evidence/dia99.json
+* `um pao recheado` (x5) — evidence/dia99.json
+* `uma tocha` (x1) — evidence/dia99.json
+* `uma pocao amarela de detectar invisibilidade` (x1) — evidence/dia99.json
+* `uma mochila` (x1) — evidence/dia99.json
 
 ### Pendências de inventário
 
 ## ✦ Condições Registradas
-* Dia 98: dormindo no Templo de Midgaard, com 75/75 HP, 200/200 mana e 105/105 MV.
-* Fome e sede resolvidas: pao recheado comprado e consumido; cantil com agua.
-* Nivel 14 com 472.843 EXP (faltam 27.157 para o 15).
-* Saldo de 3.604 moedas de ouro carregadas.
-* Wimpy 30 ativo; o combate contra o Peao Negro levou a vida a 41 e terminou sem morte.
-* 24 sessoes de treino disponiveis (corrigido nesta sessao).
+* Dia 99: dormindo no Templo de Midgaard, com 75/75 HP, 200/200 mana e 105/105 MV.
+* Fortuna elevada a 22.140 moedas de ouro (espólio do Tabuleiro de Xadrez).
+* Nivel 14 com 487.331 EXP; faltam 12.669 para o Grau 15.
+* Um monstro invasor morto no milharal da fazenda no Dia 99 (+14.488 EXP).
+* Armadura Mistica perto de expirar (cerca de 2 horas ao dormir).
 * Save e sleep confirmados no Templo de Midgaard.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
-**Retomar a fazenda e aguardar o proximo passo de Dicas Magicas**
-Viajar de Midgaard a Jareth pela rodovia (ou pela floresta, ja conhecida) e retomar o milharal com comida e cantil cheios, confirmando o contador de abates com o fazendeiro. Antes de sair, falar de novo com o Mago Aventureiro para ouvir a proxima instrucao de Dicas Magicas.
-* O cantil esta com menos da metade; reabastecer na Fonte Azul da Praca do Templo.
-* O interior do milharal continua sem mapa consolidado; depender do comando exits.
-* Sessao ainda sem treino gasto: ha 24 sessoes disponiveis.
+**Concluir Problemas Agricolas e decidir sobre o tesouro da Torre Negra**
+Voltar a fazenda com o mapa do bosque ja anotado, caçar os monstros invasores um a um (nunca salas com 2+), e tentar novamente o gatilho de conclusao com o fazendeiro. Alternativamente, fazer viagens quase vazias ao Tabuleiro para retirar armaduras da Torre Negra, uma por viagem.
+* armor esta a ponto de expirar (cerca de 2 horas); recastar Armadura Mistica.
+* Cantil reabastecido no Dia 99; ha paes na mochila.
+* O contador da missao nao e informado pelo servidor.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessao interativa manual do Dia 98: saida da fazenda, recall para Midgaard, comida comprada na Padaria, espolios do Tabuleiro de Xadrez vendidos (lanca 4.000, cetro 3.000), pergaminho de retorno comprado e entregue ao Mago Aventureiro (+11.639 EXP) e repouso confirmado no Templo; evidence/dia98.json..
-* O anel arcano (+2E) foi vendido no Dia 92 por exigir nivel 90 e 3a encarnacao.
-* O Cetro do Bispo Negro restante pode pertencer a cadeia Xeque-mate (nivel 30); guardado por isso.
-* A bainha de Excalibur segue inutilizavel por falta de experiencia.
-* O contador da missao Problemas Agricolas nao e informado pelo servidor.
-* A Torre Negra do tabuleiro e letal e nao deve ser enfrentada; as 49 armaduras (+3L) no chao exigem viagens dedicadas por peso.
+Fonte do estado: Sessao manual do Dia 99: coleta e venda de espolio do Tabuleiro de Xadrez em multiplas viagens (4 lancas, cetro, cajado) elevando o ouro de 3.604 para 22.140; travessia Midgaard-Jareth-floresta ate a fazenda e abate de 1 monstro invasor no milharal (+14.488 EXP); repouso no Templo; evidence/dia99.json..
+* A conclusao de Problemas Agricolas nao foi confirmada: o fazendeiro nao respondeu aos gatilhos de fala e o contador de abates nao e exibido pelo servidor.
+* As 49 armaduras da Torre Negra (+3L) ficaram no chao: peso por peca acima de 46 kg e a Torre Negra viva e letal.
+* O bosque ao redor da fazenda continua sem consolidacao: as salas sao homonimas; anotada a ligacao 'norte para A Entrada da Fazenda'.
+* O Cetro do Bispo Negro guardado pode pertencer a cadeia Xeque-mate (nivel 30) e nao teve uso identificado.

@@ -1,0 +1,97 @@
+{
+  "hero_id": "grebolius",
+  "day": 99,
+  "source_kind": "server_log",
+  "recorded_on": "2026-10-15",
+  "sources": [
+    "session_live_dia99_*.log",
+    "transcript_dia99_*.jsonl"
+  ],
+  "summary": {
+    "starting_level": 14,
+    "starting_xp": 472843,
+    "starting_gold": 3604,
+    "starting_location": "O Templo de Midgaard",
+    "ending_level": 14,
+    "ending_xp": 487331,
+    "ending_gold": 22140,
+    "ending_location": "O Templo de Midgaard",
+    "xp_gained": 14488,
+    "gold_gained": 18536,
+    "ending_alignment": 234,
+    "deaths": 0,
+    "objective_a_rich": {
+      "status": "concluido",
+      "note": "Espolio do Tabuleiro de Xadrez coletado em multiplas viagens (RECALL para vender em Midgaard) e vendido: 4 Lancas do Cavaleiro Negro (4.000 cada), 1 Cetro do Bispo Negro (3.000), 1 Cajado Retorcido (2.460), 2 Armaduras do Peao Negro (150 cada) e 1 Espada do Peao Negro (40).",
+      "transactions": [
+        {
+          "type": "venda",
+          "item": "Lanca do Cavaleiro Negro",
+          "qty": 4,
+          "unit": 4000,
+          "total": 16000,
+          "buyer": "Ferreiro"
+        },
+        {
+          "type": "venda",
+          "item": "Cetro do Bispo Negro",
+          "qty": 1,
+          "unit": 3000,
+          "total": 3000,
+          "buyer": "Feiticeiro"
+        },
+        {
+          "type": "venda",
+          "item": "Cajado Retorcido",
+          "qty": 1,
+          "unit": 2460,
+          "total": 2460,
+          "buyer": "Feiticeiro"
+        },
+        {
+          "type": "venda",
+          "item": "Armadura do Peao Negro",
+          "qty": 2,
+          "unit": 150,
+          "total": 300,
+          "buyer": "Armeiro"
+        },
+        {
+          "type": "venda",
+          "item": "Espada do Peao Negro",
+          "qty": 1,
+          "unit": 40,
+          "total": 40,
+          "buyer": "Ferreiro"
+        },
+        {
+          "type": "compra",
+          "item": "um pao recheado",
+          "qty": 4,
+          "unit": 6,
+          "total": 24,
+          "buyer": "Padeiro"
+        }
+      ],
+      "impossibility": "As 49 armaduras da Torre Negra (+3L) permanecem no chao: cada uma pesa mais de 46 kg e a Torre Negra viva e LETAL ('sera sua TUMBA'); ficam registradas como tesouro pendente."
+    },
+    "objective_b_farm": {
+      "status": "parcial",
+      "note": "A fazenda foi alcancada depois de uma travessia longa (rodovia Midgaard-Jareth, cidade de Jareth, floresta e bosque). 1 monstro esfomeado invasor foi morto no milharal (+14.488 EXP, +100 moedas). O fazendeiro nao respondeu aos gatilhos de fala ('pronto', 'matei...') e o contador da autoquest nao e exibido, entao a conclusao NAO foi confirmada. As salas do milharal tem de 2 a 4 monstros cada, o que torna o combate arriscado.",
+      "route_learned": "Jareth (Portao Leste) -> A Entrada da Floresta -> norte -> Adentrando-se na Floresta -> norte -> Uma Divisao da Trilha -> leste -> Uma Parte Densa da Floresta -> leste -> Num Bosque Iluminado [l,s,o] -> leste -> correnteza de Num Bosque Iluminado [l,o] -> norte -> Num Bosque Iluminado -> norte -> Num Bosque Iluminado [n,l,s] -> norte -> ... -> saida NORTE para A Entrada da Fazenda. O bosque tem salas homonimas e nao esta consolidado no mapa."
+    },
+    "final_state": {
+      "level": 14,
+      "hp": "75/75",
+      "mana": "200/200",
+      "mv": "105/105",
+      "exp": 487331,
+      "gold": 22140,
+      "alignment": 234,
+      "ac": 75,
+      "wimpy": 30,
+      "location": "O Templo de Midgaard",
+      "status": "dormindo (sleep) com atalhos salvos"
+    }
+  }
+}

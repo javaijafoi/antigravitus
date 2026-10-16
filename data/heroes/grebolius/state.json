@@ -2,10 +2,10 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 98,
+    "day": 99,
     "verification": "live",
     "live_verified": true,
-    "source": "Sessao interativa manual do Dia 98: saida da fazenda, recall para Midgaard, comida comprada na Padaria, espolios do Tabuleiro de Xadrez vendidos (lanca 4.000, cetro 3.000), pergaminho de retorno comprado e entregue ao Mago Aventureiro (+11.639 EXP) e repouso confirmado no Templo; evidence/dia98.json."
+    "source": "Sessao manual do Dia 99: coleta e venda de espolio do Tabuleiro de Xadrez em multiplas viagens (4 lancas, cetro, cajado) elevando o ouro de 3.604 para 22.140; travessia Midgaard-Jareth-floresta ate a fazenda e abate de 1 monstro invasor no milharal (+14.488 EXP); repouso no Templo; evidence/dia99.json."
   },
   "level": 14,
   "mechanical_race": "Elfo",
@@ -13,7 +13,7 @@
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
   "alignment": {
-    "value": 226,
+    "value": 234,
     "label": "Um pouco bom"
   },
   "vitals": {
@@ -31,10 +31,10 @@
     }
   },
   "experience": {
-    "current": 472843,
+    "current": 487331,
     "next_level": 500000
   },
-  "gold": 3604,
+  "gold": 22140,
   "attributes": {
     "STR": 12,
     "DEX": 15,
@@ -47,7 +47,7 @@
     "base": 49,
     "with_armor": 75,
     "effect_verified": true,
-    "note": "Dia 98: AC 75 mantida com Armadura Mistica ativa (+26; cerca de 13 horas ao dormir)."
+    "note": "Dia 99: AC 75 com Armadura Mistica ativa (+26), mas a duracao chegou a cerca de 2 horas ao dormir: recastar no proximo dia."
   },
   "hitroll": 3,
   "damroll": 4,
@@ -78,17 +78,17 @@
     "name": "O Panteao dos Centenarios"
   },
   "last_event": {
-    "day": 98,
-    "summary": "Dia 98 sem viagem a fazenda: ainda faminta ao acordar, desceu da casa da fazenda ate o campo e usou RECALL (descoberto nesta sessao) para voltar a Midgaard. Comprou pao recheado e comeu, encerrando o dano da fome. Vendeu espolios do Tabuleiro de Xadrez no armeiro, ferreiro e feiticeiro — inclusive a Lanca do Cavaleiro Negro por 4.000 e um Cetro do Bispo Negro por 3.000 — comprou o pergaminho de retorno por 9.202 e o entregou ao Mago Aventureiro, avancando Dicas Magicas (+11.639 EXP). Evitou a Torre Negra, avaliada como letal, e dormiu no Templo de Midgaard."
+    "day": 99,
+    "summary": "Dia 99 de acumulo: Grebolius voltou ao Tabuleiro de Xadrez de Midgaard e, em varias viagens com RECALL para vender, recolheu e negociou 4 Lancas do Cavaleiro Negro (4.000 cada), um Cetro do Bispo Negro (3.000) e um Cajado Retorcido (2.460), saltando de 3.604 para 22.140 moedas. Depois atravessou a rodovia ate Jareth e a floresta ate a fazenda, onde matou um monstro invasor no milharal (+14.488 EXP). As 49 armaduras da Torre Negra ficaram no chao por peso, e a conclusao de Problemas Agricolas nao pode ser confirmada com o fazendeiro."
   },
   "next_objective": {
     "mission_id": "problemas-agricolas",
-    "title": "Retomar a fazenda e aguardar o proximo passo de Dicas Magicas",
-    "next_step": "Viajar de Midgaard a Jareth pela rodovia (ou pela floresta, ja conhecida) e retomar o milharal com comida e cantil cheios, confirmando o contador de abates com o fazendeiro. Antes de sair, falar de novo com o Mago Aventureiro para ouvir a proxima instrucao de Dicas Magicas.",
+    "title": "Concluir Problemas Agricolas e decidir sobre o tesouro da Torre Negra",
+    "next_step": "Voltar a fazenda com o mapa do bosque ja anotado, caçar os monstros invasores um a um (nunca salas com 2+), e tentar novamente o gatilho de conclusao com o fazendeiro. Alternativamente, fazer viagens quase vazias ao Tabuleiro para retirar armaduras da Torre Negra, uma por viagem.",
     "missing_preparation": [
-      "O cantil esta com menos da metade; reabastecer na Fonte Azul da Praca do Templo.",
-      "O interior do milharal continua sem mapa consolidado; depender do comando exits.",
-      "Sessao ainda sem treino gasto: ha 24 sessoes disponiveis."
+      "armor esta a ponto de expirar (cerca de 2 horas); recastar Armadura Mistica.",
+      "Cantil reabastecido no Dia 99; ha paes na mochila.",
+      "O contador da missao nao e informado pelo servidor."
     ]
   },
   "skills": [
@@ -235,76 +235,74 @@
       {
         "name": "um cantil",
         "quantity": 1,
-        "source": "evidence/dia98.json"
+        "source": "evidence/dia99.json"
       },
       {
         "name": "um manto de pano",
         "quantity": 1,
-        "source": "evidence/dia98.json"
+        "source": "evidence/dia99.json"
       },
       {
         "name": "a bainha de Excalibur",
         "quantity": 1,
-        "source": "evidence/dia98.json"
+        "source": "evidence/dia99.json"
       },
       {
         "name": "um colar com uma pedra purpura",
         "quantity": 1,
-        "source": "evidence/dia98.json"
+        "source": "evidence/dia99.json"
       },
       {
         "name": "o Cetro do Bispo Negro",
         "quantity": 1,
-        "source": "evidence/dia98.json"
+        "source": "evidence/dia99.json"
       },
       {
         "name": "um brilhante punhal de novato",
         "quantity": 1,
-        "source": "evidence/dia98.json"
+        "source": "evidence/dia99.json"
       },
       {
         "name": "uma atadura",
         "quantity": 1,
-        "source": "evidence/dia98.json"
+        "source": "evidence/dia99.json"
       },
       {
         "name": "um pao recheado",
-        "quantity": 2,
-        "source": "evidence/dia98.json"
+        "quantity": 5,
+        "source": "evidence/dia99.json"
       },
       {
         "name": "uma tocha",
         "quantity": 1,
-        "source": "evidence/dia98.json"
+        "source": "evidence/dia99.json"
       },
       {
         "name": "uma pocao amarela de detectar invisibilidade",
         "quantity": 1,
-        "source": "evidence/dia98.json"
+        "source": "evidence/dia99.json"
       },
       {
         "name": "uma mochila",
         "quantity": 1,
-        "source": "evidence/dia98.json"
+        "source": "evidence/dia99.json"
       }
     ],
     "pending_verification": []
   },
   "conditions": [
-    "Dia 98: dormindo no Templo de Midgaard, com 75/75 HP, 200/200 mana e 105/105 MV.",
-    "Fome e sede resolvidas: pao recheado comprado e consumido; cantil com agua.",
-    "Nivel 14 com 472.843 EXP (faltam 27.157 para o 15).",
-    "Saldo de 3.604 moedas de ouro carregadas.",
-    "Wimpy 30 ativo; o combate contra o Peao Negro levou a vida a 41 e terminou sem morte.",
-    "24 sessoes de treino disponiveis (corrigido nesta sessao).",
+    "Dia 99: dormindo no Templo de Midgaard, com 75/75 HP, 200/200 mana e 105/105 MV.",
+    "Fortuna elevada a 22.140 moedas de ouro (espólio do Tabuleiro de Xadrez).",
+    "Nivel 14 com 487.331 EXP; faltam 12.669 para o Grau 15.",
+    "Um monstro invasor morto no milharal da fazenda no Dia 99 (+14.488 EXP).",
+    "Armadura Mistica perto de expirar (cerca de 2 horas ao dormir).",
     "Save e sleep confirmados no Templo de Midgaard."
   ],
   "uncertainties": [
-    "O anel arcano (+2E) foi vendido no Dia 92 por exigir nivel 90 e 3a encarnacao.",
-    "O Cetro do Bispo Negro restante pode pertencer a cadeia Xeque-mate (nivel 30); guardado por isso.",
-    "A bainha de Excalibur segue inutilizavel por falta de experiencia.",
-    "O contador da missao Problemas Agricolas nao e informado pelo servidor.",
-    "A Torre Negra do tabuleiro e letal e nao deve ser enfrentada; as 49 armaduras (+3L) no chao exigem viagens dedicadas por peso."
+    "A conclusao de Problemas Agricolas nao foi confirmada: o fazendeiro nao respondeu aos gatilhos de fala e o contador de abates nao e exibido pelo servidor.",
+    "As 49 armaduras da Torre Negra (+3L) ficaram no chao: peso por peca acima de 46 kg e a Torre Negra viva e letal.",
+    "O bosque ao redor da fazenda continua sem consolidacao: as salas sao homonimas; anotada a ligacao 'norte para A Entrada da Fazenda'.",
+    "O Cetro do Bispo Negro guardado pode pertencer a cadeia Xeque-mate (nivel 30) e nao teve uso identificado."
   ],
   "evidence": [
     {
@@ -346,12 +344,17 @@
       "document": "evidence/dia98.json",
       "day": 98,
       "note": "Sessao manual do Dia 98: comida, recall, vendas do tabuleiro, compra e entrega do pergaminho de retorno, avanco de Dicas Magicas e repouso no Templo."
+    },
+    {
+      "document": "evidence/dia99.json",
+      "day": 99,
+      "note": "Sessao manual do Dia 99: espolio do Tabuleiro vendido (22.140 moedas), travessia ate a fazenda e 1 invasor morto; conclusao da missao nao confirmada."
     }
   ],
   "narrative_style": "ladra arcana",
   "weapon_summary": "Espada de Novato empunhada + Punhal segurado + Escudo",
   "migration": {
     "method": "sessao manual comandada pelo agente sob driver com token",
-    "verified_on": "Dia 98 (score, inventario, equipamento, practice, save e sleep ao vivo)"
+    "verified_on": "Dia 99 (score, inventario, vendas, combate, save e sleep ao vivo)"
   }
 }
