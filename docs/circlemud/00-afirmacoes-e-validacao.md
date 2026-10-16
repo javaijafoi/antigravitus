@@ -227,3 +227,23 @@ Cada teste abaixo é barato, cabe no teto de 3 conexões por dia e produz **evid
 11. Fugir 3×: quanto de XP se perde, e a perda é fixa (1) ou proporcional?
 12. Quantas casas tem o tabuleiro **no DeBo** (o padrão tem 64 + entrada + 2 tesourarias)?
 
+## K. O que é do DeBo e não do CircleMUD (verificado por ausência)
+
+Método: varredura da **distribuição padrão inteira** (`src/` + `lib/`, incluindo os arquivos de ajuda) e leitura da tabela real de comandos, `command_info[]` em `src/interpreter.c`.
+
+| Comando | Existe na distribuição padrão? | Evidência no DeBo | Consequência |
+| --- | --- | --- | --- |
+| **`autoquest`** | **Não.** Zero ocorrências em `src/`, `lib/`, ajuda — e zero para `autogold` também | `autoquest todas` → **"Autoquests do DeBo MUD"** (`transcript_dia101_…cd4a79.jsonl:88`, `dia104…:183`, `dia111…:301`, `dia141…:36`); `score` → `[Autoquests em andamento]` (`evidence/dia91.json:235`) | Sistema **local**: nada no engine explica regras, Pontos de Aventura, limites ou o "morrer falha as autoquests". Só a resposta do servidor é fonte. |
+| `autogold` | Não (zero ocorrências) | Citado no `commands` do DeBo (`transcript_dia156_…2cb7a0.jsonl:5958`) | Local. |
+| `tips` | Não | `tips` → *"Você verá as dicas do jogo."* (`maquina/verificacoes.md:13`) | Local. |
+| `term` | Não (nem `pagelength`/`pagesize`) | `term 22 80` → *"Muito bem, agora seu terminal está configurado…"* (`consulta_2026-10-15.json:411`) | Local — e é a alavanca para reduzir a paginação. |
+| `identify` (como comando) | Não na tabela de comandos (é **magia**, `cast 'identify'`) | Ajuda do DeBo documenta `IDENTIFICAR` com limite de nível 80 | Local como comando; a magia é do engine. |
+| `recall` | Não na tabela de comandos (é `word of recall`, magia) | `cast 'word of recall'` funciona e diz "grátis até o nível 70" | Comando local/atalho; a regra do nível 70 é local. |
+| `scan` | Não | Ajuda do DeBo exige ladrão nível 17 | Local. |
+| `autoexit`, `prompt`, `balance`, `deposit`, `withdraw`, `practice`, `hide`, `auction`, `grats`, `visible`, `wimpy`, `consider` | **Sim**, estão em `command_info[]` | — | São do engine: aqui a pesquisa de fonte vale. |
+
+**O que o CircleMUD chama de "quest" é outra coisa:** uma flag de jogador (`PRF_QUEST`, `src/structs.h:204`), um **toggle** `quest` (`src/interpreter.c:407` → `do_gen_tog`) que só responde *"Okay, you are part of the Quest!"* / *"You are no longer part of the Quest."* (`src/act.other.c:872-873`), um **canal** (`quest-say`, `src/act.comm.c:503-509`) e um filtro no `who` (`-quest`, "On Quest:"). **Não há objetivo, recompensa, catálogo nem NPC doador** — isso é invenção do DeBo.
+
+Sinal indireto que confirma: no DeBo **`help autoquest` responde e `ajuda autoquest` é recusado** — a entrada de ajuda foi escrita no conjunto em inglês e não no traduzido, típico de acréscimo local.
+
+
