@@ -3,7 +3,7 @@
   "hero_name": "Grebolius",
   "sanctuary_id": "panteao_centenarios",
   "last_updated_cycle": "Ciclo X (Dia 156; com levantamento das sessoes)",
-  "total_rooms": 360,
+  "total_rooms": 381,
   "layers": [
     {
       "id": "superficie",
@@ -94,7 +94,7 @@
       ],
       "notes": "Nave norte do templo consagrada aos deuses; saída norte dá acesso aos campos rurais.",
       "discovered_in": "Ciclo I (Dia 2)",
-      "visitas_registradas": 240,
+      "visitas_registradas": 410,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -124,7 +124,7 @@
       ],
       "notes": "Santuário indicado nos registros, com caixa de moedas e conexão ao altar e ao cume; verificar as condições atuais antes do repouso.",
       "discovered_in": "Ciclo I (Dia 1)",
-      "visitas_registradas": 795,
+      "visitas_registradas": 1096,
       "fontes": [
         "levantamento_sessoes"
       ],
@@ -154,7 +154,7 @@
       "aliases": [
         "A Sala de Doações"
       ],
-      "visitas_registradas": 109,
+      "visitas_registradas": 125,
       "fontes": [
         "levantamento_sessoes"
       ],
@@ -179,6 +179,7 @@
         "u": "templo_midgaard",
         "e": "entrada_javali",
         "w": "guilda_clerigos_entrada",
+        "d": "lv081",
         "n": "templo_midgaard"
       },
       "npcs": [
@@ -186,11 +187,12 @@
       ],
       "notes": "Fonte mágica azul restauradora para recarga de estamina e saciar a sede.",
       "discovered_in": "Ciclo I (Dia 1)",
-      "visitas_registradas": 307,
+      "visitas_registradas": 442,
       "fontes": [
         "levantamento_sessoes"
       ],
       "arestas_do_levantamento": [
+        "d",
         "n"
       ]
     },
@@ -218,7 +220,7 @@
       ],
       "notes": "Encruzilhada das quatro direções de Midgaard. Estátua e mural mágico.",
       "discovered_in": "Ciclo I (Dia 1)",
-      "visitas_registradas": 113,
+      "visitas_registradas": 179,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -246,7 +248,7 @@
       ],
       "notes": "Eixo manufatureiro e forjas ocidentais.",
       "discovered_in": "Ciclo I (Dia 1)",
-      "visitas_registradas": 92,
+      "visitas_registradas": 110,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -265,7 +267,7 @@
       },
       "exits": {
         "s": "rua_oeste_1",
-        "n": "grande_campo_bifurcacao"
+        "n": "grande_campo_norte"
       },
       "npcs": [
         "Padeiro",
@@ -273,7 +275,7 @@
       ],
       "notes": "Alimentos básicos para viagens e masmorras.",
       "discovered_in": "Ciclo I (Dia 1)",
-      "visitas_registradas": 84,
+      "visitas_registradas": 103,
       "fontes": [
         "levantamento_sessoes"
       ],
@@ -301,7 +303,7 @@
       ],
       "notes": "Forjas de couros pesados e placas defensivas.",
       "discovered_in": "Ciclo I (Dia 1)",
-      "visitas_registradas": 43,
+      "visitas_registradas": 53,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -330,7 +332,7 @@
       ],
       "notes": "Intersecção vital com presença do colosso Pacificador.",
       "discovered_in": "Ciclo I (Dia 1)",
-      "visitas_registradas": 24,
+      "visitas_registradas": 50,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -355,7 +357,7 @@
       ],
       "notes": "Pergaminhos arcanos, poções e varinhas mágicas.",
       "discovered_in": "Ciclo I (Dia 1)",
-      "visitas_registradas": 22,
+      "visitas_registradas": 30,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -381,7 +383,7 @@
       ],
       "notes": "Barreira de luz e caixa de moedas da guilda arcana.",
       "discovered_in": "Ciclo I (Dia 2)",
-      "visitas_registradas": 70,
+      "visitas_registradas": 98,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -568,7 +570,7 @@
       "npcs_confirmados": [
         "prefeito"
       ],
-      "visitas_registradas": 63,
+      "visitas_registradas": 88,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -593,7 +595,7 @@
       ],
       "notes": "Suprimentos básicos de sobrevivência.",
       "discovered_in": "Ciclo I (Dia 1)",
-      "visitas_registradas": 10,
+      "visitas_registradas": 25,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -621,7 +623,7 @@
       "npcs_confirmados": [
         "lobo"
       ],
-      "visitas_registradas": 24,
+      "visitas_registradas": 36,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -650,7 +652,7 @@
       ],
       "notes": "Área de treino inicial e venda de armas.",
       "discovered_in": "Ciclo I (Dia 1)",
-      "visitas_registradas": 56,
+      "visitas_registradas": 61,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -678,7 +680,7 @@
       "npcs_confirmados": [
         "ferreiro"
       ],
-      "visitas_registradas": 10,
+      "visitas_registradas": 27,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -704,6 +706,9 @@
       ],
       "notes": "Barreira de luz forte bloqueia intrusos.",
       "discovered_in": "Ciclo I (Dia 2)",
+      "npcs_confirmados": [
+        "gatinho"
+      ],
       "visitas_registradas": 29,
       "fontes": [
         "levantamento_sessoes"
@@ -726,7 +731,7 @@
       },
       "exits": {
         "w": "rua_leste_2",
-        "e": "a_entrada"
+        "e": "lv038"
       },
       "npcs": [
         "8 Guardas de Elite"
@@ -765,7 +770,7 @@
       ],
       "notes": "Bairro de trânsito denso; mercenários nas esquinas.",
       "discovered_in": "Ciclo I (Dia 1)",
-      "visitas_registradas": 14,
+      "visitas_registradas": 46,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -821,7 +826,7 @@
       ],
       "notes": "Viela sombria com mercenários; rota para o covil dos ladinos.",
       "discovered_in": "Ciclo I (Dia 2)",
-      "visitas_registradas": 50,
+      "visitas_registradas": 53,
       "fontes": [
         "levantamento_sessoes"
       ],
@@ -851,7 +856,7 @@
       ],
       "notes": "Covil dos ladinos; caixa de moedas; sentinela bloqueia o bar.",
       "discovered_in": "Ciclo I (Dia 2)",
-      "visitas_registradas": 39,
+      "visitas_registradas": 47,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -892,14 +897,22 @@
       "exits": {
         "e": "fim_beco_pobre",
         "n": "guilda_necromantes",
-        "w": "rua_muralha"
+        "w": "rua_muralha",
+        "s": "fim_beco_pobre"
       },
       "npcs": [
         "Mendigos",
         "Cães"
       ],
       "notes": "Aglomerado humilde de palha e taipa ligando a praça à muralha.",
-      "discovered_in": "Ciclo I (Dia 2)"
+      "discovered_in": "Ciclo I (Dia 2)",
+      "visitas_registradas": 6,
+      "fontes": [
+        "levantamento_sessoes"
+      ],
+      "arestas_do_levantamento": [
+        "s"
+      ]
     },
     {
       "id": "fim_beco_pobre",
@@ -916,16 +929,20 @@
       "exits": {
         "e": "praca_comum",
         "s": "taverna_encardida",
-        "w": "beco_pobre"
+        "w": "beco_pobre",
+        "n": "beco_pobre"
       },
       "npcs": [
         "Pedintes"
       ],
       "notes": "Canto imundo defronte ao botequim de contrabandistas.",
       "discovered_in": "Ciclo I (Dia 2)",
-      "visitas_registradas": 3,
+      "visitas_registradas": 12,
       "fontes": [
         "levantamento_sessoes"
+      ],
+      "arestas_do_levantamento": [
+        "n"
       ]
     },
     {
@@ -941,7 +958,8 @@
         "y": 1560
       },
       "exits": {
-        "n": "fim_beco_pobre"
+        "n": "fim_beco_pobre",
+        "w": "fim_beco_pobre"
       },
       "npcs": [
         "Filthy",
@@ -949,9 +967,12 @@
       ],
       "notes": "Taverna suja e fétida. Filthy vende especialidade local (20 ouros) e cospefogo (50 ouros).",
       "discovered_in": "Ciclo I (Dia 2)",
-      "visitas_registradas": 2,
+      "visitas_registradas": 11,
       "fontes": [
         "levantamento_sessoes"
+      ],
+      "arestas_do_levantamento": [
+        "w"
       ]
     },
     {
@@ -974,7 +995,11 @@
         "Guarda Necromante (com barreira de ossos)"
       ],
       "notes": "Entrada da guilda dos necromantes. Guarda protegido por enormes ossos bloqueia passagem a oeste para o Bar dos Necromantes.",
-      "discovered_in": "Ciclo I (Dia 4)"
+      "discovered_in": "Ciclo I (Dia 4)",
+      "visitas_registradas": 13,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
     },
     {
       "id": "atras_do_altar",
@@ -990,14 +1015,20 @@
       },
       "exits": {
         "s": "altar_templo",
-        "n": "grande_campo_sul"
+        "n": "grande_campo_sul",
+        "e": "grande_campo_norte",
+        "w": "caminho_sujo_xadrez"
       },
       "npcs": [],
       "notes": "Trilha descendo a encosta do templo em direção aos descampados.",
       "discovered_in": "Ciclo II (Dia 14)",
-      "visitas_registradas": 236,
+      "visitas_registradas": 417,
       "fontes": [
         "levantamento_sessoes"
+      ],
+      "arestas_do_levantamento": [
+        "e",
+        "w"
       ]
     },
     {
@@ -1015,15 +1046,15 @@
       "exits": {
         "s": "atras_do_altar",
         "n": "grande_campo_bifurcacao",
-        "e": "entrada_novatos",
-        "w": "caminho_sujo_xadrez"
+        "e": "lv065",
+        "w": "vila_residencial_entrada"
       },
       "npcs": [
         "Pássaros silvestres"
       ],
       "notes": "Prado verdejante com brisa fresca soprando das montanhas.",
       "discovered_in": "Ciclo II (Dia 14)",
-      "visitas_registradas": 277,
+      "visitas_registradas": 1064,
       "fontes": [
         "levantamento_sessoes"
       ],
@@ -1053,7 +1084,7 @@
       "npcs": [],
       "notes": "Intersecção estratégica: Leste vai para Masmorra Novatos, Oeste vai para o Xadrez.",
       "discovered_in": "Ciclo II (Dia 14)",
-      "visitas_registradas": 222,
+      "visitas_registradas": 451,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -1072,14 +1103,18 @@
       },
       "exits": {
         "w": "grande_campo_bifurcacao",
-        "n": "comeco_passagem"
+        "n": "comeco_passagem",
+        "e": "corredor_sujo"
       },
       "npcs": [],
       "notes": "Portal de pedra comemorativo de formatura (Pina e Rimbaud, 2019).",
       "discovered_in": "Ciclo II (Dia 14)",
-      "visitas_registradas": 11,
+      "visitas_registradas": 171,
       "fontes": [
         "levantamento_sessoes"
+      ],
+      "arestas_do_levantamento": [
+        "e"
       ]
     },
     {
@@ -1096,18 +1131,26 @@
       },
       "exits": {
         "s": "entrada_novatos",
-        "e": "corredor_sujo"
+        "e": "corredor_sujo",
+        "n": "altar_templo",
+        "w": "lv064"
       },
       "npcs": [],
       "notes": "Ecos de criaturas nos túneis e vestes de novatos caídas.",
       "discovered_in": "Ciclo II (Dia 14)",
       "npcs_confirmados": [
         "zumbi",
+        "coisa",
+        "coisa assustadora",
         "monstro"
       ],
-      "visitas_registradas": 11,
+      "visitas_registradas": 200,
       "fontes": [
         "levantamento_sessoes"
+      ],
+      "arestas_do_levantamento": [
+        "n",
+        "w"
       ]
     },
     {
@@ -1136,9 +1179,10 @@
         "note": "Comandos e respostas preservados da sessão autorizada."
       },
       "npcs_confirmados": [
-        "zumbi"
+        "zumbi",
+        "monstro"
       ],
-      "visitas_registradas": 8,
+      "visitas_registradas": 210,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -1178,7 +1222,7 @@
         "day": 92,
         "note": "Comandos e respostas preservados da sessão autorizada."
       },
-      "visitas_registradas": 8,
+      "visitas_registradas": 292,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -1198,16 +1242,23 @@
       "exits": {
         "n": "cruzamento_novatos",
         "s": "outro_canto",
-        "w": "pequena_sala_guarda"
+        "w": "pequena_sala_guarda",
+        "e": "outro_canto"
       },
       "npcs": [
         "Bebê Dragão (Fugitivo)"
       ],
       "notes": "Corredor onde transita o Bebê Dragão; porta de madeira a oeste.",
       "discovered_in": "Ciclo II (Dia 14)",
-      "visitas_registradas": 8,
+      "npcs_confirmados": [
+        "monstro"
+      ],
+      "visitas_registradas": 284,
       "fontes": [
         "levantamento_sessoes"
+      ],
+      "arestas_do_levantamento": [
+        "e"
       ]
     },
     {
@@ -1263,7 +1314,10 @@
       ],
       "notes": "Câmara de monstros; porta leste leva ao laboratório do Alquimista.",
       "discovered_in": "Ciclo II (Dia 14)",
-      "visitas_registradas": 8,
+      "npcs_confirmados": [
+        "monstro"
+      ],
+      "visitas_registradas": 200,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -1300,7 +1354,11 @@
         "document": "evidence/dia92.json",
         "day": 92,
         "note": "Comandos e respostas preservados da sessão autorizada."
-      }
+      },
+      "visitas_registradas": 21,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
     },
     {
       "id": "a_entrada",
@@ -1323,9 +1381,12 @@
       "npcs": [],
       "notes": "Escuro, úmido e frio. Ruídos de criaturas rondando no escuro. Escadaria sobe para a Sala do Alquimista. Conexões exploradas ao vivo no Dia 63 para Norte (Um Cruzamento de Corredores), Sul (Uma Curva na Passagem) e Oeste (Uma Passagem).",
       "discovered_in": "Ciclo VII (Dia 62)",
-      "visitas_registradas": 5,
+      "visitas_registradas": 14,
       "fontes": [
         "levantamento_sessoes"
+      ],
+      "npcs_confirmados": [
+        "gatinho"
       ]
     },
     {
@@ -1353,7 +1414,11 @@
         "document": "evidence/dia94.json",
         "day": 94,
         "note": "Travessia leste-oeste confirmada ao vivo no Modo Expandir Horizontes."
-      }
+      },
+      "visitas_registradas": 1,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
     },
     {
       "id": "canto_corredor",
@@ -1398,7 +1463,11 @@
         "document": "evidence/dia93.json",
         "day": 93,
         "note": "Comandos e respostas preservados da sessão autorizada."
-      }
+      },
+      "visitas_registradas": 2,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
     },
     {
       "id": "uma_passagem",
@@ -1419,7 +1488,11 @@
       },
       "npcs": [],
       "notes": "Passagem estreita e nojenta revestida de fungos viscosos nas paredes.",
-      "discovered_in": "Ciclo VII (Dia 63)"
+      "discovered_in": "Ciclo VII (Dia 63)",
+      "visitas_registradas": 5,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
     },
     {
       "id": "corredor_iluminado",
@@ -1440,7 +1513,7 @@
       "npcs": [],
       "notes": "Fachos de tocha iluminando pedras polidas.",
       "discovered_in": "Ciclo II (Dia 14)",
-      "visitas_registradas": 8,
+      "visitas_registradas": 26,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -1466,7 +1539,7 @@
       ],
       "notes": "Campo primordial de abate: fonte de 396 XP, ouro e punhais.",
       "discovered_in": "Ciclo II (Dia 14)",
-      "visitas_registradas": 8,
+      "visitas_registradas": 24,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -1495,7 +1568,7 @@
         "day": 92,
         "note": "Comandos e respostas preservados da sessão autorizada."
       },
-      "visitas_registradas": 8,
+      "visitas_registradas": 13,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -1519,7 +1592,7 @@
       "npcs": [],
       "notes": "Trilha ladeada por carvalhos antigos rumo ao portão do xadrez.",
       "discovered_in": "Ciclo II (Dia 18)",
-      "visitas_registradas": 35,
+      "visitas_registradas": 36,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -1544,7 +1617,7 @@
       "npcs": [],
       "notes": "Portão gigantesco de ferro em arco de pedra. Dia 60: confronto fatal com Cavaleiro Branco na região; casa exata e posição atual da criatura não confirmadas.",
       "discovered_in": "Ciclo II (Dia 18)",
-      "visitas_registradas": 37,
+      "visitas_registradas": 38,
       "fontes": [
         "levantamento_sessoes"
       ],
@@ -1636,7 +1709,7 @@
       "exits": {
         "n": "esgotos_curva",
         "w": "esgotos_enorme",
-        "s": "lv047",
+        "s": "lv053",
         "u": "laboratorio_magos"
       },
       "npcs": [],
@@ -1735,7 +1808,7 @@
       "exits": {
         "e": "portal_paraiso",
         "n": "lv004",
-        "s": "lv017",
+        "s": "lv018",
         "w": "portal_paraiso"
       },
       "npcs": [],
@@ -1796,13 +1869,13 @@
       },
       "exits": {
         "n": "fonte_vida",
-        "e": "lv015",
+        "e": "lv016",
         "w": "borda_floresta_iluminada"
       },
       "npcs": [],
       "notes": "Vácuo sem gravidade que devora memórias e sensações.",
       "discovered_in": "Ciclo II (Dia 11)",
-      "visitas_registradas": 10,
+      "visitas_registradas": 567,
       "fontes": [
         "levantamento_sessoes"
       ],
@@ -1897,7 +1970,7 @@
         "s": "grande_campo_bifurcacao",
         "n": "caminho_dentre_campos",
         "w": "vila_residencial_entrada",
-        "e": "grande_campo_sul"
+        "e": "entrada_novatos"
       },
       "npcs": [],
       "notes": "Estrutura estranha a leste; desvio para Vila Residencial a oeste e trilha entre os campos ao norte.",
@@ -1906,7 +1979,7 @@
         "document": "posts.json",
         "day": 61
       },
-      "visitas_registradas": 182,
+      "visitas_registradas": 419,
       "fontes": [
         "levantamento_sessoes"
       ],
@@ -1941,7 +2014,7 @@
         "day": 94,
         "note": "Catalogação ao vivo do portão, velho porteiro e saídas oeste/sul no Modo Expandir Horizontes."
       },
-      "visitas_registradas": 1,
+      "visitas_registradas": 17,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -1961,7 +2034,7 @@
       "exits": {
         "s": "grande_campo_norte",
         "e": "caminho_campos_jareth",
-        "n": "lb059"
+        "n": "lb061"
       },
       "npcs": [
         "Homem meio-elfo",
@@ -1974,7 +2047,7 @@
         "day": 91,
         "note": "Trechos literais do servidor, linhas dos registros anteriores e ações da continuação autorizada; sem referências circulares."
       },
-      "visitas_registradas": 237,
+      "visitas_registradas": 1136,
       "fontes": [
         "levantamento_sessoes"
       ],
@@ -2006,7 +2079,7 @@
         "day": 94,
         "note": "Travessia leste-oeste confirmada ao vivo no Modo Expandir Horizontes."
       },
-      "visitas_registradas": 8,
+      "visitas_registradas": 22,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -2035,7 +2108,7 @@
         "day": 94,
         "note": "Placa e saída leste confirmadas ao vivo no Modo Expandir Horizontes."
       },
-      "visitas_registradas": 8,
+      "visitas_registradas": 212,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -2054,7 +2127,7 @@
       },
       "exits": {
         "e": "templo_midgaard",
-        "s": "lv069"
+        "s": "lv082"
       },
       "npcs": [
         "Winkan, o Engenheiro do Caos",
@@ -2095,7 +2168,7 @@
       ],
       "notes": "Vestíbulo de madeira rústica e móveis antigos. Dá acesso ao correio, bar e recepção da estalagem.",
       "discovered_in": "Ciclo IX (Dia 82)",
-      "visitas_registradas": 245,
+      "visitas_registradas": 286,
       "fontes": [
         "levantamento_sessoes"
       ],
@@ -2127,7 +2200,7 @@
       "aliases": [
         "O Correio de Midgaard"
       ],
-      "visitas_registradas": 146,
+      "visitas_registradas": 180,
       "fontes": [
         "levantamento_sessoes"
       ],
@@ -2158,7 +2231,7 @@
       "aliases": [
         "O Bar do Javali Roncador"
       ],
-      "visitas_registradas": 89,
+      "visitas_registradas": 111,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -2198,7 +2271,7 @@
       },
       "exits": {
         "e": "praca_templo",
-        "n": "lv104"
+        "n": "lv124"
       },
       "npcs": [
         "Clérigo Guardião",
@@ -2206,7 +2279,7 @@
       ],
       "notes": "Portal de alabastro com aroma de mirra. Guardião de cota de malha prateada vigia o templo sacerdotal.",
       "discovered_in": "Ciclo IX (Dia 82)",
-      "visitas_registradas": 11,
+      "visitas_registradas": 32,
       "fontes": [
         "levantamento_sessoes"
       ],
@@ -2290,7 +2363,11 @@
         "document": "evidence/dia94.json",
         "day": 94,
         "note": "Saída norte para Outro Canto atravessada e catalogada ao vivo."
-      }
+      },
+      "visitas_registradas": 1,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
     },
     {
       "id": "outra_curva",
@@ -2348,7 +2425,11 @@
         "document": "evidence/dia94.json",
         "day": 94,
         "note": "Saída leste e detalhe da garrafa catalogados ao vivo."
-      }
+      },
+      "visitas_registradas": 3,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
     },
     {
       "id": "uma_sala_enorme",
@@ -2375,7 +2456,11 @@
         "document": "evidence/dia94.json",
         "day": 94,
         "note": "Inscrições da parede leste e conexão oeste catalogadas ao vivo no Modo Expandir Horizontes."
-      }
+      },
+      "visitas_registradas": 1,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
     },
     {
       "id": "ramificacao_ao_sul",
@@ -2706,7 +2791,7 @@
         "day": 94,
         "note": "Conexão leste e NPC aventureiro catalogados ao vivo no Modo Expandir Horizontes."
       },
-      "visitas_registradas": 165,
+      "visitas_registradas": 186,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -2916,7 +3001,8 @@
         "y": 1260
       },
       "exits": {
-        "w": "ramificacao_ao_sul"
+        "w": "ramificacao_ao_sul",
+        "s": "sala_no_canto"
       },
       "npcs": [],
       "notes": "Posição gráfica esquemática. Somente travessias observadas nesta jornada foram acrescentadas.",
@@ -2925,7 +3011,14 @@
         "document": "evidence/dia93.json",
         "day": 93,
         "note": "Comandos e respostas preservados da sessão autorizada."
-      }
+      },
+      "visitas_registradas": 1,
+      "fontes": [
+        "levantamento_sessoes"
+      ],
+      "arestas_do_levantamento": [
+        "s"
+      ]
     },
     {
       "id": "longa_passagem_leste_oeste",
@@ -2968,7 +3061,8 @@
       },
       "exits": {
         "s": "sala_no_canto",
-        "w": "intersecao_t_passagem"
+        "w": "intersecao_t_passagem",
+        "n": "intersecao_t_passagem"
       },
       "npcs": [],
       "notes": "Curva estreita ao norte de Uma Sala no Canto; paredes cobertas de fungos pegajosos. Saída oeste leva a Uma Intersecção em T na Passagem.",
@@ -2977,7 +3071,14 @@
         "document": "evidence/dia94.json",
         "day": 94,
         "note": "Catalogada ao vivo no Modo Expandir Horizontes."
-      }
+      },
+      "visitas_registradas": 3,
+      "fontes": [
+        "levantamento_sessoes"
+      ],
+      "arestas_do_levantamento": [
+        "n"
+      ]
     },
     {
       "id": "intersecao_t_passagem",
@@ -3005,7 +3106,11 @@
         "document": "evidence/dia94.json",
         "day": 94,
         "note": "Catalogada ao vivo com abate de novato zumbi no Modo Expandir Horizontes."
-      }
+      },
+      "visitas_registradas": 4,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
     },
     {
       "id": "uma_sala_enorme_oeste",
@@ -3045,7 +3150,9 @@
         "y": 160
       },
       "exits": {
-        "e": "vila_residencial_entrada"
+        "e": "vila_residencial_entrada",
+        "n": "lv013",
+        "w": "lb056"
       },
       "unresolved_exits": {
         "n": {
@@ -3063,9 +3170,13 @@
         "day": 94,
         "note": "Catalogada ao vivo no Modo Expandir Horizontes."
       },
-      "visitas_registradas": 3,
+      "visitas_registradas": 19,
       "fontes": [
         "levantamento_sessoes"
+      ],
+      "arestas_do_levantamento": [
+        "n",
+        "w"
       ]
     },
     {
@@ -3081,7 +3192,8 @@
         "y": 260
       },
       "exits": {
-        "n": "vila_residencial_entrada"
+        "n": "vila_residencial_entrada",
+        "s": "lv059"
       },
       "unresolved_exits": {
         "s": {
@@ -3095,7 +3207,14 @@
         "document": "evidence/dia94.json",
         "day": 94,
         "note": "Catalogada ao vivo no Modo Expandir Horizontes."
-      }
+      },
+      "visitas_registradas": 3,
+      "fontes": [
+        "levantamento_sessoes"
+      ],
+      "arestas_do_levantamento": [
+        "s"
+      ]
     },
     {
       "id": "borda_floresta_iluminada",
@@ -3126,7 +3245,7 @@
         "day": 94,
         "note": "Catalogada ao vivo no Modo Expandir Horizontes."
       },
-      "visitas_registradas": 8,
+      "visitas_registradas": 10,
       "fontes": [
         "levantamento_sessoes"
       ],
@@ -3438,7 +3557,7 @@
       ],
       "notes": "Início da via pavimentada entre Midgaard e Jareth.",
       "discovered_in": "Dia 96",
-      "visitas_registradas": 219,
+      "visitas_registradas": 222,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -3464,7 +3583,7 @@
       ],
       "notes": "Posto de fiscalização com cancela ao sul da vila.",
       "discovered_in": "Dia 96",
-      "visitas_registradas": 308,
+      "visitas_registradas": 315,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -3484,14 +3603,14 @@
       "exits": {
         "s": "estrada_posto_guarda_sul",
         "n": "vila_estrada_centro",
-        "e": "lb008"
+        "e": "lv030"
       },
       "npcs": [
         "Uma pequenina halfling"
       ],
       "notes": "Rua principal do vilarejo entre Midgaard e Jareth.",
       "discovered_in": "Dia 96",
-      "visitas_registradas": 239,
+      "visitas_registradas": 243,
       "fontes": [
         "levantamento_sessoes"
       ],
@@ -3514,14 +3633,14 @@
       "exits": {
         "s": "vila_estrada_sul",
         "n": "vila_estrada_norte",
-        "e": "lb008"
+        "e": "lb009"
       },
       "npcs": [
         "Um apressado aventureiro"
       ],
       "notes": "Centro do vilarejo modesto cortado pela estrada.",
       "discovered_in": "Dia 96",
-      "visitas_registradas": 169,
+      "visitas_registradas": 173,
       "fontes": [
         "levantamento_sessoes"
       ],
@@ -3543,16 +3662,20 @@
       },
       "exits": {
         "s": "vila_estrada_centro",
-        "n": "estrada_posto_guarda_norte"
+        "n": "estrada_posto_guarda_norte",
+        "e": "lv030"
       },
       "npcs": [
         "Uma pequenina halfling"
       ],
       "notes": "Extremo norte da vila cortado pelo posto de guarda.",
       "discovered_in": "Dia 96",
-      "visitas_registradas": 158,
+      "visitas_registradas": 163,
       "fontes": [
         "levantamento_sessoes"
+      ],
+      "arestas_do_levantamento": [
+        "e"
       ]
     },
     {
@@ -3727,8 +3850,8 @@
       "exits": {
         "w": "jareth_centro",
         "e": "floresta_entrada",
-        "n": "lv042",
-        "s": "lv042"
+        "n": "lv047",
+        "s": "lv047"
       },
       "npcs": [
         "Um cidadão de Jareth",
@@ -3760,7 +3883,7 @@
       "exits": {
         "w": "jareth_portao_leste",
         "n": "floresta_adentrando",
-        "e": "lv039"
+        "e": "lv044"
       },
       "npcs": [
         "Pássaros da floresta"
@@ -3814,7 +3937,7 @@
       "exits": {
         "s": "floresta_adentrando",
         "e": "floresta_bosque_iluminado",
-        "n": "lv094",
+        "n": "lv114",
         "w": "lb048"
       },
       "npcs": [],
@@ -3905,8 +4028,8 @@
       "icon": "🗺️",
       "exits": {
         "e": "lb002",
-        "n": "lb086",
-        "s": "lb070",
+        "n": "lb087",
+        "s": "lb071",
         "w": "floresta_bosque_iluminado"
       },
       "npcs": [],
@@ -4010,11 +4133,11 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb019",
-        "w": "lb012"
+        "n": "estrada_posto_guarda_sul",
+        "s": "lb008"
       },
       "npcs": [],
-      "notes": "Você está na estrada que, de acordo com as placas, é a via principal de transporte de carga e pessoas, já que a grande maioria se utiliza apenas do começo da estrada, seguindo por caminhos periféricos até seu destino. entre Midgaard e Jareth, duas importantes cidades. Aqui o movimento se encontra re",
+      "notes": "Você está na estrada que, de acordo com as placas, é a via principal entre Midgaard e Jareth, duas importantes cidades. Aparentemente em bom estado de conservação, essa movimentada via definitivamente é a artéria principal entre essas duas metrópoles, sendo por isso tão fundamental.",
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 162,
       "fontes": [
@@ -4030,13 +4153,13 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "lb009",
-        "s": "estrada_comeco"
+        "e": "lb019",
+        "w": "lb012"
       },
       "npcs": [],
-      "notes": "Você está na estrada que, de acordo com as placas, é a via principal convergentes para cá, esse trecho parece ser o ponto de encontro de entre Midgaard e Jareth, duas importantes cidades. Cercado de trilhas mas que dependem dela de algum jeito. várias tribos e grupos que não moram em nenhum das duas",
+      "notes": "Você está na estrada que, de acordo com as placas, é a via principal de transporte de carga e pessoas, já que a grande maioria se utiliza apenas do começo da estrada, seguindo por caminhos periféricos até seu destino. entre Midgaard e Jareth, duas importantes cidades. Aqui o movimento se encontra re",
       "discovered_in": "Ciclo X (Dias 96-156)",
-      "visitas_registradas": 158,
+      "visitas_registradas": 162,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -4050,13 +4173,13 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "estrada_colina_topo",
-        "w": "estrada_colina_subida"
+        "n": "lb006",
+        "s": "estrada_comeco"
       },
       "npcs": [],
-      "notes": "Você está na estrada que, de acordo com as placas, é a via principal colina. Ao longe você pode avistar com facilidade um pequeno ponto, que entre Midgaard e Jareth, duas importantes cidades. A vista deste ponto parece ser a cidade de Midgaard e seus arredores. Ao leste e oeste você pode continuar p",
+      "notes": "Você está na estrada que, de acordo com as placas, é a via principal convergentes para cá, esse trecho parece ser o ponto de encontro de entre Midgaard e Jareth, duas importantes cidades. Cercado de trilhas mas que dependem dela de algum jeito. várias tribos e grupos que não moram em nenhum das duas",
       "discovered_in": "Ciclo X (Dias 96-156)",
-      "visitas_registradas": 158,
+      "visitas_registradas": 161,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -4070,13 +4193,13 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "estrada_posto_guarda_sul",
-        "s": "lb007"
+        "e": "estrada_colina_topo",
+        "w": "estrada_colina_subida"
       },
       "npcs": [],
-      "notes": "Você está na estrada que, de acordo com as placas, é a via principal entre Midgaard e Jareth, duas importantes cidades. Aparentemente em bom estado de conservação, essa movimentada via definitivamente é a artéria principal entre essas duas metrópoles, sendo por isso tão fundamental.",
+      "notes": "Você está na estrada que, de acordo com as placas, é a via principal colina. Ao longe você pode avistar com facilidade um pequeno ponto, que entre Midgaard e Jareth, duas importantes cidades. A vista deste ponto parece ser a cidade de Midgaard e seus arredores. Ao leste e oeste você pode continuar p",
       "discovered_in": "Ciclo X (Dias 96-156)",
-      "visitas_registradas": 155,
+      "visitas_registradas": 156,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -4130,7 +4253,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb006",
+        "e": "lb007",
         "w": "estrada_colina_topo"
       },
       "npcs": [],
@@ -4271,7 +4394,7 @@
       "icon": "🗺️",
       "exits": {
         "e": "estrada_proxima_jareth",
-        "w": "lb006"
+        "w": "lb007"
       },
       "npcs": [],
       "notes": "Você está na estrada que, de acordo com as placas, é a via principal de Jareth, ao leste. A estrada continua ao oeste. entre Midgaard e Jareth, duas importantes cidades. Nesse ponto o movimento é bastante intenso, apontando a proximidade para com a cidade",
@@ -4310,7 +4433,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb088",
+        "e": "lb089",
         "n": "lb003",
         "s": "lb003"
       },
@@ -4373,8 +4496,8 @@
       "icon": "🗺️",
       "exits": {
         "e": "floresta_bosque_iluminado",
-        "n": "lv016",
-        "s": "lb052",
+        "n": "lv017",
+        "s": "lb053",
         "w": "floresta_divisao"
       },
       "npcs": [],
@@ -4466,7 +4589,7 @@
       "icon": "🗺️",
       "exits": {
         "n": "estrada_colina_subida",
-        "s": "lv089"
+        "s": "lv108"
       },
       "npcs": [],
       "notes": "Você está na estrada que, de acordo com as placas, é a via principal entre Midgaard e Jareth, duas importantes cidades. Essa bem cuidada estrada segue cautelosa ao norte e ao sul, parecendo muito pouco movimentada por aqui.",
@@ -4487,7 +4610,7 @@
       "exits": {
         "e": "lb025",
         "n": "lb037",
-        "s": "lb051",
+        "s": "lb052",
         "w": "lb037"
       },
       "npcs": [
@@ -4535,7 +4658,7 @@
       "npcs": [],
       "notes": "Ah, sim! A sorte grande se encontra em frente! Diferente de Cassinos, as agências lotéricas apresentam-se mais humildes e movimentadas, porém o prêmio grande! próprias ao pé-de-coelho pendurado atrás do balcão. Vamos lá, tente a sorte também é maior, proporcionalmente à chance de ganhar. Cartelas de",
       "discovered_in": "Ciclo X (Dias 96-156)",
-      "visitas_registradas": 83,
+      "visitas_registradas": 85,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -4571,8 +4694,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb062",
-        "n": "lb049",
+        "e": "lb064",
+        "n": "lb050",
         "s": "fazenda_entrada",
         "w": "lb027"
       },
@@ -4634,7 +4757,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lv037",
+        "e": "lv042",
         "n": "lb041",
         "s": "lb040"
       },
@@ -4642,6 +4765,27 @@
       "notes": "Borboletas parecem dançar alegres a doce melodia cantada por Esse clima contagiante obriga-lhe, involuntariamente, a abrir O bosque continua em sua vastidão, enquanto você pode seguir ao brotam aos punhados de frondosas árvores desse iluminado bosque. norte e ao sul, onde as árvores permitem sua pas",
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 44,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lv003",
+      "name": "Uma Casa Branca",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "e": "grande_tabuleiro_portao",
+        "n": "lv002",
+        "s": "lb056"
+      },
+      "npcs": [],
+      "notes": "Você está em um quadrado de mármore branco. Há um grande portao enferrujado a leste.",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 39,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -4657,33 +4801,13 @@
       "exits": {
         "e": "fazenda_milharal_borda",
         "n": "lb047",
-        "s": "lb079",
-        "w": "lb072"
+        "s": "lb080",
+        "w": "lb073"
       },
       "npcs": [
         "monstro"
       ],
       "notes": "Uma cena assustadora. O que era até muito pouco tempo atrás um de plantas sobreviveram, como que por milagre, em pequenos grupos isolados, que aliás, parecem esconder alguma coisa... você pode jurar lindo e produtivo milharal, agora não passa de pés-de-milho plantas... Fuja daqui enquanto pode!!! qu",
-      "discovered_in": "Ciclo X (Dias 96-156)",
-      "visitas_registradas": 38,
-      "fontes": [
-        "levantamento_sessoes"
-      ]
-    },
-    {
-      "id": "lv003",
-      "name": "Uma Casa Branca",
-      "layer": "levantamento",
-      "zone": "Levantamento (Dias 96-141)",
-      "risk": "Desconhecido",
-      "risk_code": "unknown",
-      "icon": "🗺️",
-      "exits": {
-        "e": "grande_tabuleiro_portao",
-        "n": "lv002"
-      },
-      "npcs": [],
-      "notes": "Você está em um quadrado de mármore branco. Há um grande portao enferrujado a leste.",
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 38,
       "fontes": [
@@ -4720,7 +4844,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb082",
+        "e": "lb083",
         "n": "lb025",
         "s": "lb031",
         "w": "lb025"
@@ -4745,9 +4869,9 @@
       "icon": "🗺️",
       "exits": {
         "e": "lb029",
-        "n": "lb053",
+        "n": "lb054",
         "s": "lb029",
-        "w": "lb067"
+        "w": "lb068"
       },
       "npcs": [
         "monstro"
@@ -4768,7 +4892,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb008",
+        "e": "lb009",
         "n": "estrada_colina_subida",
         "s": "estrada_colina_subida"
       },
@@ -4790,7 +4914,7 @@
       "icon": "🗺️",
       "exits": {
         "n": "lb033",
-        "s": "lb058"
+        "s": "lb060"
       },
       "npcs": [],
       "notes": "A linda grama que cobre a frente da casa da fazenda parece chamar-lhe para deitar e olhar as nuvens... realmente esse gramado parece ser muito bem cuidado. Só faltariam mais algumas flores, não?",
@@ -4891,9 +5015,9 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lv074",
+        "e": "lv088",
         "n": "lb043",
-        "s": "lb092",
+        "s": "lb093",
         "w": "lb043"
       },
       "npcs": [
@@ -4916,9 +5040,9 @@
       "icon": "🗺️",
       "exits": {
         "e": "lb042",
-        "n": "lv043",
+        "n": "lv048",
         "s": "lb042",
-        "w": "lb066"
+        "w": "lb067"
       },
       "npcs": [],
       "notes": "Não vê que pode morrer aqui? Talvez já seja tarde demais para Por que diabos você se adentrou nesse milharal quase extinto?! escapar... corvos sobrevoam o milharal, arrepiando cada pêlo de grunhidos... que os Deuses estejam com você... pisoteados parecem vir de todos os lados, misturados com algo co",
@@ -4938,7 +5062,7 @@
       "icon": "🗺️",
       "exits": {
         "e": "lb045",
-        "w": "lb057"
+        "w": "lb059"
       },
       "npcs": [],
       "notes": "Borboletas parecem dançar alegres a doce melodia cantada por Esse clima contagiante obriga-lhe, involuntariamente, a abrir O bosque continua em sua vastidão, enquanto você pode seguir ao brotam aos punhados de frondosas árvores desse iluminado bosque. leste e ao oeste, onde as árvores permitem sua p",
@@ -4957,7 +5081,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb063",
+        "e": "lb065",
         "w": "lb044"
       },
       "npcs": [],
@@ -4997,7 +5121,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb050",
+        "e": "lb051",
         "w": "lb030"
       },
       "npcs": [],
@@ -5017,9 +5141,9 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb071",
+        "e": "lb072",
         "s": "lb035",
-        "w": "lb093"
+        "w": "lb094"
       },
       "npcs": [
         "monstro"
@@ -5041,8 +5165,8 @@
       "icon": "🗺️",
       "exits": {
         "e": "floresta_divisao",
-        "n": "lb056",
-        "s": "lb056"
+        "n": "lb058",
+        "s": "lb058"
       },
       "npcs": [],
       "notes": "Subitamente as árvores começam a fechar-se, comprimindo a trilha em meio aos está perdido percorre seu corpo. A floresta continua ao norte, ao sul, e ao leste. fechados troncos que se aproximam mais e mais. Uma leve impressão de que você",
@@ -5062,12 +5186,32 @@
       "icon": "🗺️",
       "exits": {
         "e": "lv012",
-        "n": "lv063",
+        "n": "lv075",
         "s": "lv011",
-        "w": "lv064"
+        "w": "lv076"
       },
       "npcs": [],
       "notes": "Você está na base de uma imensa torre, aparentemente construída completo a entrada. dessa estrutura. Construída toda em pedras unidas sem massa, essa mágica fortíssima parece emanar do topo da torre, impedindo por por um mago ou uma criatura de poder de semelhante, dado o tamanho torre parece agüent",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 15,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lb049",
+      "name": "Um Caminho Dentre os Campos",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "e": "estrada_pavimentada_campos",
+        "w": "caminho_campos_jareth"
+      },
+      "npcs": [],
+      "notes": "Você continua no caminho, que é quase interrompido por uma mata muito fechada. Contudo, é possível ver, além das folhagens, uma estrada pavimentada que segue para o leste. Também é possível voltar, pelo oeste.",
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 15,
       "fontes": [
@@ -5083,7 +5227,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lv013",
+        "e": "lv014",
         "n": "portal_paraiso",
         "s": "lv006"
       },
@@ -5096,7 +5240,7 @@
       ]
     },
     {
-      "id": "lb049",
+      "id": "lb050",
       "name": "Num Bosque Iluminado",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5116,7 +5260,7 @@
       ]
     },
     {
-      "id": "lb050",
+      "id": "lb051",
       "name": "Num Bosque Iluminado",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5124,7 +5268,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb057",
+        "e": "lb059",
         "w": "lb046"
       },
       "npcs": [],
@@ -5144,7 +5288,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "s": "lv014",
+        "s": "lv015",
         "w": "beco_escuro"
       },
       "npcs": [],
@@ -5156,7 +5300,7 @@
       ]
     },
     {
-      "id": "lb051",
+      "id": "lb052",
       "name": "O Milharal Destruído",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5166,30 +5310,10 @@
       "exits": {
         "e": "lb029",
         "n": "lb029",
-        "s": "lb073"
+        "s": "lb074"
       },
       "npcs": [],
       "notes": "Uma cena assustadora. O que era até muito pouco tempo atrás um de plantas sobreviveram, como que por milagre, em pequenos grupos isolados, que aliás, parecem esconder alguma coisa... você pode jurar lindo e produtivo milharal, agora não passa de pés-de-milho plantas... Fuja daqui enquanto pode!!! qu",
-      "discovered_in": "Ciclo X (Dias 96-156)",
-      "visitas_registradas": 14,
-      "fontes": [
-        "levantamento_sessoes"
-      ]
-    },
-    {
-      "id": "lb052",
-      "name": "Uma Parte Densa da Floresta",
-      "layer": "levantamento",
-      "zone": "Levantamento (Dias 96-141)",
-      "risk": "Desconhecido",
-      "risk_code": "unknown",
-      "icon": "🗺️",
-      "exits": {
-        "n": "lb024",
-        "w": "lv019"
-      },
-      "npcs": [],
-      "notes": "Subitamente as árvores começam a fechar-se, comprimindo a trilha em meio aos está perdido percorre seu corpo. A floresta continua ao norte, ao sul, e ao oeste. fechados troncos que se aproximam mais e mais. Uma leve impressão de que você",
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 14,
       "fontes": [
@@ -5198,24 +5322,20 @@
     },
     {
       "id": "lb053",
-      "name": "O Milharal Destruído",
+      "name": "Uma Parte Densa da Floresta",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
       "risk": "Desconhecido",
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb061",
-        "n": "lb066",
-        "s": "lb037",
-        "w": "lb068"
+        "n": "lb024",
+        "w": "lv020"
       },
-      "npcs": [
-        "monstro"
-      ],
-      "notes": "Uma cena assustadora. O que era até muito pouco tempo atrás um de plantas sobreviveram, como que por milagre, em pequenos grupos isolados, que aliás, parecem esconder alguma coisa... você pode jurar lindo e produtivo milharal, agora não passa de pés-de-milho plantas... Fuja daqui enquanto pode!!! qu",
+      "npcs": [],
+      "notes": "Subitamente as árvores começam a fechar-se, comprimindo a trilha em meio aos está perdido percorre seu corpo. A floresta continua ao norte, ao sul, e ao oeste. fechados troncos que se aproximam mais e mais. Uma leve impressão de que você",
       "discovered_in": "Ciclo X (Dias 96-156)",
-      "visitas_registradas": 13,
+      "visitas_registradas": 14,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -5229,7 +5349,31 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "s": "lb096"
+        "e": "lb063",
+        "n": "lb067",
+        "s": "lb037",
+        "w": "lb069"
+      },
+      "npcs": [
+        "monstro"
+      ],
+      "notes": "Uma cena assustadora. O que era até muito pouco tempo atrás um de plantas sobreviveram, como que por milagre, em pequenos grupos isolados, que aliás, parecem esconder alguma coisa... você pode jurar lindo e produtivo milharal, agora não passa de pés-de-milho plantas... Fuja daqui enquanto pode!!! qu",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 13,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lb055",
+      "name": "O Milharal Destruído",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "s": "lb097"
       },
       "npcs": [],
       "notes": "Uma cena assustadora. O que era até muito pouco tempo atrás um de plantas sobreviveram, como que por milagre, em pequenos grupos isolados, que aliás, parecem esconder alguma coisa... você pode jurar lindo e produtivo milharal, agora não passa de pés-de-milho plantas... Fuja daqui enquanto pode!!! qu",
@@ -5248,10 +5392,10 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lv033",
+        "e": "lv037",
         "n": "lv008",
-        "s": "lv026",
-        "w": "lv067"
+        "s": "lv028",
+        "w": "lv079"
       },
       "npcs": [],
       "notes": "Você encontra uma pequena faixa de solo, praticamente uma ilha eleva ao norte, enquanto pode-se avistar lama por todos os lados. em meio ao lamaçal. Aparentemente estável, ela parece ser um dos poucos trechos livre desse lodo pegajoso. Uma imponente torre se",
@@ -5262,7 +5406,28 @@
       ]
     },
     {
-      "id": "lb055",
+      "id": "lb056",
+      "name": "Uma Rua Larga",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "e": "vila_rua_larga",
+        "n": "lv040",
+        "w": "lv032"
+      },
+      "npcs": [],
+      "notes": "Você está em uma rua feita de pedregulhos.",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 13,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lb057",
       "name": "Um Caminho Dentre os Campos",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5270,8 +5435,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb114",
-        "s": "lb110"
+        "e": "lb116",
+        "s": "lb112"
       },
       "npcs": [],
       "notes": "Gramíneas verdejantes dominam a paisagem, que, refletindo a luz do sol, formam um lindo cenário, quebrado apenas por algumas poucas leste, enquanto ao sul, avança sobre os campos de Midgaard, que pode ser vista ao longe. árvores que se arriscam a invadir a paisagem. O caminho continua ao",
@@ -5290,9 +5455,9 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lv018",
-        "n": "lv066",
-        "s": "lv033",
+        "e": "lv019",
+        "n": "lv078",
+        "s": "lv037",
         "w": "lv008"
       },
       "npcs": [],
@@ -5305,6 +5470,25 @@
     },
     {
       "id": "lv013",
+      "name": "A Recepção da Imobiliária M&M",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "s": "vila_rua_larga"
+      },
+      "npcs": [],
+      "notes": "Há uma mesa e cadeiras para que você possa sentar e negociar a compra de um imóvel. Você está em uma bela sala, que possui um mapa da Vila Residencial em destaque na parede.",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 11,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lv014",
       "name": "O Paraíso",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5324,7 +5508,7 @@
       ]
     },
     {
-      "id": "lb056",
+      "id": "lb058",
       "name": "Uma Parte Densa da Floresta",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5344,7 +5528,7 @@
       ]
     },
     {
-      "id": "lv014",
+      "id": "lv015",
       "name": "As Margens do Rio",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5353,7 +5537,7 @@
       "icon": "🗺️",
       "exits": {
         "n": "lv010",
-        "s": "lv022"
+        "s": "lv024"
       },
       "npcs": [],
       "notes": "Há uma ENORME placa fixada na parede. O rio aparenta ser muito fundo, impossibilitando a entrada nele sem alguma Você está nas margens do rio. Ao sul o rio corre para algumas direções. embarcação (ou sem saber nadar).",
@@ -5364,7 +5548,7 @@
       ]
     },
     {
-      "id": "lv015",
+      "id": "lv016",
       "name": "Através dos Arbustos",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5372,8 +5556,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lv020",
-        "s": "lv065",
+        "e": "lv021",
+        "s": "lv077",
         "w": "caminho_vazio"
       },
       "npcs": [],
@@ -5385,7 +5569,7 @@
       ]
     },
     {
-      "id": "lb057",
+      "id": "lb059",
       "name": "Num Bosque Iluminado",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5394,7 +5578,7 @@
       "icon": "🗺️",
       "exits": {
         "e": "lb044",
-        "w": "lb050"
+        "w": "lb051"
       },
       "npcs": [],
       "notes": "Borboletas parecem dançar alegres a doce melodia cantada por Esse clima contagiante obriga-lhe, involuntariamente, a abrir O bosque continua em sua vastidão, enquanto você pode seguir ao brotam aos punhados de frondosas árvores desse iluminado bosque. leste e ao oeste, onde as árvores permitem sua p",
@@ -5405,7 +5589,7 @@
       ]
     },
     {
-      "id": "lv016",
+      "id": "lv017",
       "name": "O Fim da Floresta",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5413,9 +5597,9 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lv027",
+        "e": "lv029",
         "s": "lb024",
-        "w": "lb065"
+        "w": "lb066"
       },
       "npcs": [],
       "notes": "A partir desse ponto você sente como se não estivesse mais na floresta. Galhos e plantas mortas e semi-mortas dão um ar assustador, como se algo ou alguém tivesse deixado esse rastro de morte. Ao leste você percebe claramente o começo de um pântano, enquanto a floresta se encontra ao oeste.",
@@ -5426,7 +5610,7 @@
       ]
     },
     {
-      "id": "lb058",
+      "id": "lb060",
       "name": "O Gramado",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5445,7 +5629,7 @@
       ]
     },
     {
-      "id": "lv017",
+      "id": "lv018",
       "name": "O Paraíso",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5464,7 +5648,7 @@
       ]
     },
     {
-      "id": "lb059",
+      "id": "lb061",
       "name": "Um Caminho Dentre os Campos",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5485,7 +5669,7 @@
       ]
     },
     {
-      "id": "lv018",
+      "id": "lv019",
       "name": "Um Pântano Sombrio",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5493,7 +5677,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "s": "lv028",
+        "s": "lv031",
         "w": "lv012"
       },
       "npcs": [],
@@ -5505,7 +5689,7 @@
       ]
     },
     {
-      "id": "lv019",
+      "id": "lv020",
       "name": "Uma Divisão da Trilha",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5513,9 +5697,9 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb052",
-        "n": "lb065",
-        "w": "lb076"
+        "e": "lb053",
+        "n": "lb066",
+        "w": "lb077"
       },
       "npcs": [],
       "notes": "Aqui as árvores encontram seu ponto máximo, abertas o suficiente para que a luz corra e brinque, de galho em galho, alegrando a paisagem. Nesse ponto a trilha se da floresta. divide, sendo que segue ao norte, leste, e oeste. Ao sul a trilha segue para fora",
@@ -5526,7 +5710,7 @@
       ]
     },
     {
-      "id": "lb060",
+      "id": "lb062",
       "name": "Adentro do Milharal Destruído",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5534,7 +5718,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb073"
+        "e": "lb074"
       },
       "npcs": [
         "monstro"
@@ -5547,7 +5731,7 @@
       ]
     },
     {
-      "id": "lv020",
+      "id": "lv021",
       "name": "Através dos Arbustos",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5555,7 +5739,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "w": "lv015"
+        "w": "lv016"
       },
       "npcs": [],
       "notes": "A maioria destes arbustos são extraordinariamente resistentes, prendendo-se em Você está em um matagal, infestado por muitas moscas e aranhas coloridas. seu rosto com uma força desagradável. Há um pequeno fosso ao sul.",
@@ -5566,7 +5750,7 @@
       ]
     },
     {
-      "id": "lv021",
+      "id": "lv022",
       "name": "Um Caminho no Vazio",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5575,7 +5759,7 @@
       "icon": "🗺️",
       "exits": {
         "n": "fonte_vida",
-        "s": "lv025"
+        "s": "lv027"
       },
       "npcs": [],
       "notes": "Movido por uma energia cósmica, que parece brotar dentro de seu peito, você este somado à alma fossem uma única massa sólida e mórbida. segue o caminho, que continua igual e vazio.  Seu corpo não se percebe, como se",
@@ -5586,7 +5770,29 @@
       ]
     },
     {
-      "id": "lv022",
+      "id": "lv023",
+      "name": "A Entrada",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "n": "cruzamento_corredores",
+        "s": "curva_passagem",
+        "u": "sala_alquimista",
+        "w": "uma_passagem"
+      },
+      "npcs": [],
+      "notes": "Está muito escuro, úmido, nojento e frio aqui. Adicionado ao fato de ao invés de te dizer \"O que você veio fazer aqui?\". não parecerem amigáveis, seria sábio exercitar um pouco de cuidado aqui... você ouvir o som de criaturas rondando você... e de alguma forma esses sons",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 8,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lv024",
       "name": "No Rio",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5594,8 +5800,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lv036",
-        "n": "lv014"
+        "e": "lv041",
+        "n": "lv015"
       },
       "npcs": [],
       "notes": "O dique se encontra a norte daqui. O rio flui de leste a oeste.",
@@ -5606,7 +5812,7 @@
       ]
     },
     {
-      "id": "lb061",
+      "id": "lb063",
       "name": "O Milharal Destruído",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5614,54 +5820,15 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb105",
-        "n": "lb104",
-        "s": "lb083",
-        "w": "lb053"
+        "e": "lb106",
+        "n": "lb105",
+        "s": "lb084",
+        "w": "lb054"
       },
       "npcs": [
         "monstro"
       ],
       "notes": "Uma cena assustadora. O que era até muito pouco tempo atrás um de plantas sobreviveram, como que por milagre, em pequenos grupos isolados, que aliás, parecem esconder alguma coisa... você pode jurar lindo e produtivo milharal, agora não passa de pés-de-milho plantas... Fuja daqui enquanto pode!!! qu",
-      "discovered_in": "Ciclo X (Dias 96-156)",
-      "visitas_registradas": 8,
-      "fontes": [
-        "levantamento_sessoes"
-      ]
-    },
-    {
-      "id": "lv023",
-      "name": "Um Caminho no Vazio",
-      "layer": "levantamento",
-      "zone": "Levantamento (Dias 96-141)",
-      "risk": "Desconhecido",
-      "risk_code": "unknown",
-      "icon": "🗺️",
-      "exits": {
-        "n": "lv024"
-      },
-      "npcs": [],
-      "notes": "Acima de sua cabeça repousa um caminho suspenso no ar, que parece seguir em Uma breve viagem de sons e imagens indescritíveis invade sua mente por direção ao infinito.  Uma total ausência de sensações domina seu alma, como se essa estivesse separada do corpo. instantes, até você abrir os olhos e se ",
-      "discovered_in": "Ciclo X (Dias 96-156)",
-      "visitas_registradas": 8,
-      "fontes": [
-        "levantamento_sessoes"
-      ]
-    },
-    {
-      "id": "lv024",
-      "name": "Um Caminho no Vazio",
-      "layer": "levantamento",
-      "zone": "Levantamento (Dias 96-141)",
-      "risk": "Desconhecido",
-      "risk_code": "unknown",
-      "icon": "🗺️",
-      "exits": {
-        "n": "lv025",
-        "s": "lv023"
-      },
-      "npcs": [],
-      "notes": "A total ausência de sensações se aprofunda em seu interior, causando uma Você continua nesse caminho que parece levar-lhe em direção a lugar nenhum, confusa sensação de vazio. do mesmo jeito que você tem a certeza de que em breve chegará a algum lugar.",
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 8,
       "fontes": [
@@ -5677,8 +5844,47 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "lv021",
-        "s": "lv024"
+        "n": "lv026"
+      },
+      "npcs": [],
+      "notes": "Acima de sua cabeça repousa um caminho suspenso no ar, que parece seguir em Uma breve viagem de sons e imagens indescritíveis invade sua mente por direção ao infinito.  Uma total ausência de sensações domina seu alma, como se essa estivesse separada do corpo. instantes, até você abrir os olhos e se ",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 8,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lv026",
+      "name": "Um Caminho no Vazio",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "n": "lv027",
+        "s": "lv025"
+      },
+      "npcs": [],
+      "notes": "A total ausência de sensações se aprofunda em seu interior, causando uma Você continua nesse caminho que parece levar-lhe em direção a lugar nenhum, confusa sensação de vazio. do mesmo jeito que você tem a certeza de que em breve chegará a algum lugar.",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 8,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lv027",
+      "name": "Um Caminho no Vazio",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "n": "lv022",
+        "s": "lv026"
       },
       "npcs": [],
       "notes": "O caminho continua, e junto dele, você, perdido em seu vazio interior, em busca do próprio ego.  Como se seu destino já estivesse traçado, você apenas segue, e segue, e segue, acompanhando esse caminho infinito...",
@@ -5689,7 +5895,7 @@
       ]
     },
     {
-      "id": "lv026",
+      "id": "lv028",
       "name": "Afundando no Lamaçal",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5698,7 +5904,7 @@
       "icon": "🗺️",
       "exits": {
         "n": "lv011",
-        "s": "lv032"
+        "s": "lv036"
       },
       "npcs": [],
       "notes": "Você adentra em um imenso lamaçal, muito semelhante a um pântano, ao norte. coberto de insetos e de folhas em decomposição, que parece continuar",
@@ -5709,7 +5915,7 @@
       ]
     },
     {
-      "id": "lb062",
+      "id": "lb064",
       "name": "Num Bosque Iluminado",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5717,8 +5923,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb078",
-        "n": "lb108",
+        "e": "lb079",
+        "n": "lb109",
         "s": "fazenda_entrada",
         "w": "lb032"
       },
@@ -5731,7 +5937,7 @@
       ]
     },
     {
-      "id": "lb063",
+      "id": "lb065",
       "name": "Num Bosque Iluminado",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5739,7 +5945,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb087",
+        "e": "lb088",
         "w": "lb045"
       },
       "npcs": [],
@@ -5751,7 +5957,7 @@
       ]
     },
     {
-      "id": "lv027",
+      "id": "lv029",
       "name": "O Começo do Pântano",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5759,8 +5965,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "lv030",
-        "w": "lv016"
+        "n": "lv034",
+        "w": "lv017"
       },
       "npcs": [],
       "notes": "Ploft, ploft, ploft. Ao olhar para baixo você percebe que seus pés mergulham em um denso lodo a cada passo, que segue por todo o pântano. Muitas plantas para entrar no ambiente. Ao oeste você vê um resto da floresta, e ao leste o parecem possuir um tom enegrecido, e as poucas árvores daqui demonstra",
@@ -5771,19 +5977,19 @@
       ]
     },
     {
-      "id": "lb064",
-      "name": "Um Caminho Dentre os Campos",
+      "id": "lv030",
+      "name": "Um Casebre",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
       "risk": "Desconhecido",
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "estrada_pavimentada_campos",
-        "w": "caminho_campos_jareth"
+        "e": "estrada_colina_topo",
+        "w": "vila_estrada_norte"
       },
       "npcs": [],
-      "notes": "Você continua no caminho, que é quase interrompido por uma mata muito fechada. Contudo, é possível ver, além das folhagens, uma estrada pavimentada que segue para o leste. Também é possível voltar, pelo oeste.",
+      "notes": "Você se aproveita da porta semi-aberta e entra nesse simples casebre, próximo à estrada. Paredes sem reboco, visíveis e feias, chamar esse lugarejo de vila, já que não passa de um conjunto de casas como essa, provavelmente de pobres coitados, que se utilizam de alguma maneira da estrada para sobrevi",
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 7,
       "fontes": [
@@ -5791,7 +5997,7 @@
       ]
     },
     {
-      "id": "lv028",
+      "id": "lv031",
       "name": "Um Pântano Sombrio",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5799,8 +6005,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "lv018",
-        "w": "lv033"
+        "n": "lv019",
+        "w": "lv037"
       },
       "npcs": [],
       "notes": "Você segue a adentrar-se nesse horripilante cenário, coberto de um pegajoso e fedido lodo, com certeza prova digna de um verdadeiro pântano, que se parece se estender em todas as direções.",
@@ -5811,7 +6017,29 @@
       ]
     },
     {
-      "id": "lb065",
+      "id": "lv032",
+      "name": "A Rua das Glórias",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "e": "lb056",
+        "n": "lv056",
+        "s": "lv057",
+        "w": "lv055"
+      },
+      "npcs": [],
+      "notes": "A rua de pedregulhos dá lugar à uma rua feita de cristais. Ela cruza com a Rua das Honras e continua à oeste.",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 6,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lb066",
       "name": "A Trilha na Floresta",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5819,9 +6047,9 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lv016",
-        "n": "lv058",
-        "s": "lv019"
+        "e": "lv017",
+        "n": "lv070",
+        "s": "lv020"
       },
       "npcs": [],
       "notes": "Ao norte e ao oeste a floresta continua, enquanto galhos mortos parecem surgir Você continua a seguir na trilha que avança em meio à floresta. Aos poucos ao leste. estivesse, a medida que você avança, tornando-se mais e mais vazia. você tem a impressão de que o som dos pássaros diminui, como se a fl",
@@ -5832,7 +6060,7 @@
       ]
     },
     {
-      "id": "lv029",
+      "id": "lv033",
       "name": "Aprofundando-se no Pântano",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5840,8 +6068,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "lv031",
-        "s": "lv030"
+        "n": "lv035",
+        "s": "lv034"
       },
       "npcs": [],
       "notes": "A paisagem se fecha mais e mais, começando a lhe dar a impressão de estar daqui enquanto pode!\". Ao norte e ao sul o pântano parece abrir-se mais. Seria enclausurado. Sons medonhos parecem vir de todos os lados, e você tem uma leve impressão de que está sendo observado. Suas pernas parece dizer-lhe ",
@@ -5852,7 +6080,7 @@
       ]
     },
     {
-      "id": "lv030",
+      "id": "lv034",
       "name": "Continuando no Pântano",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5860,8 +6088,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "lv029",
-        "s": "lv027"
+        "n": "lv033",
+        "s": "lv029"
       },
       "npcs": [],
       "notes": "Você vai se aprofundando no pântano, que segue a cada momento mais e mais ao norte e ao sul. denso e fétido. A falta de luz, que só consegue penetrar em alguns poucos espaços, espremendo-se entre os ramos negros, parece ser o principal motivo para esse clima sujo e pesado, que predomina a paisagem. ",
@@ -5872,7 +6100,7 @@
       ]
     },
     {
-      "id": "lv031",
+      "id": "lv035",
       "name": "O Fim do Pântano",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5880,8 +6108,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lv032",
-        "s": "lv029"
+        "e": "lv036",
+        "s": "lv033"
       },
       "npcs": [],
       "notes": "Ao sul você vê o pântano, e ao leste você vê um caminho. O ambiente aos poucos vai se abrindo, permitindo a entrada da luz, que expulsa as trevas e a paisagem escura e pesada. A vida parece voltar aos poucos, com sinais de pequenas plantas e alguns insetos que voam por entre as árvores que crescem a",
@@ -5892,7 +6120,7 @@
       ]
     },
     {
-      "id": "lb066",
+      "id": "lb067",
       "name": "O Milharal Destruído",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5901,8 +6129,8 @@
       "icon": "🗺️",
       "exits": {
         "e": "lb043",
-        "n": "lb091",
-        "s": "lb053"
+        "n": "lb092",
+        "s": "lb054"
       },
       "npcs": [],
       "notes": "Uma cena assustadora. O que era até muito pouco tempo atrás um de plantas sobreviveram, como que por milagre, em pequenos grupos isolados, que aliás, parecem esconder alguma coisa... você pode jurar lindo e produtivo milharal, agora não passa de pés-de-milho plantas... Fuja daqui enquanto pode!!! qu",
@@ -5913,7 +6141,7 @@
       ]
     },
     {
-      "id": "lv032",
+      "id": "lv036",
       "name": "Um Caminho na Floresta",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5921,8 +6149,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "lv026",
-        "w": "lv031"
+        "n": "lv028",
+        "w": "lv035"
       },
       "npcs": [],
       "notes": "Você chegou em um antigo caminho, esquecido pelo tempo. Não há nada aqui além do silêncio. Você pode voltar para o pântano ou se aventurar pelo lamaçal a norte.",
@@ -5933,7 +6161,7 @@
       ]
     },
     {
-      "id": "lv033",
+      "id": "lv037",
       "name": "Um Pântano Sombrio",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5941,7 +6169,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lv028",
+        "e": "lv031",
         "n": "lv012",
         "w": "lv011"
       },
@@ -5954,20 +6182,19 @@
       ]
     },
     {
-      "id": "lv034",
-      "name": "A Entrada da Guilda dos Guerreiros",
+      "id": "lv038",
+      "name": "A Entrada da Floresta",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
       "risk": "Desconhecido",
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "termino_rua_oeste"
+        "n": "floresta_adentrando",
+        "w": "portao_leste"
       },
-      "npcs": [
-        "gatinho"
-      ],
-      "notes": "A Entrada da Guilda dos Guerreiros. Um lugar onde deve-se tomar cuidado Rua Principal. para não dizer nada errado (ou certo). Leste daqui fica o bar e ao norte a",
+      "npcs": [],
+      "notes": "Você se encontra na entrada de uma vasta floresta, aparentemente calma, com mais apurados, além de possuir uma vasta variedade de espécies, tanto vegetais, pássaros entoando calmos e alegres sons, música de qualidade para os ouvidos quanto animais. A floresta continua ao norte.",
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 5,
       "fontes": [
@@ -5975,7 +6202,7 @@
       ]
     },
     {
-      "id": "lv035",
+      "id": "lv039",
       "name": "A Rua da Muralha",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -5984,7 +6211,7 @@
       "icon": "🗺️",
       "exits": {
         "n": "rua_muralha",
-        "s": "lv048"
+        "s": "lv054"
       },
       "npcs": [],
       "notes": "Algumas letras foram escritas na parede. Você está andando na parede oeste da cidade. A rua continua para o norte e para o sul. O Beco Pobre fica a leste.",
@@ -5995,23 +6222,20 @@
       ]
     },
     {
-      "id": "lb067",
-      "name": "Adentro do Milharal Destruído",
+      "id": "lv040",
+      "name": "Grottas - A Loja de Móveis",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
       "risk": "Desconhecido",
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb037",
-        "s": "lb094"
+        "s": "lb056"
       },
-      "npcs": [
-        "monstro"
-      ],
-      "notes": "Não vê que pode morrer aqui? Talvez já seja tarde demais para Por que diabos você se adentrou nesse milharal quase extinto?! escapar... corvos sobrevoam o milharal, arrepiando cada pêlo de grunhidos... que os Deuses estejam com você... pisoteados parecem vir de todos os lados, misturados com algo co",
+      "npcs": [],
+      "notes": "Há uma mesa e cadeiras para que você possa sentar e negociar a compra de um móvel Talvez você possa mobiliar sua casa aqui! Você está em uma grande loja de móveis, com muitos móveis de amostra. para sua casa.",
       "discovered_in": "Ciclo X (Dias 96-156)",
-      "visitas_registradas": 4,
+      "visitas_registradas": 5,
       "fontes": [
         "levantamento_sessoes"
       ]
@@ -6025,9 +6249,31 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb053",
-        "n": "lb074",
-        "w": "lb097"
+        "e": "lb037",
+        "s": "lb095"
+      },
+      "npcs": [
+        "monstro"
+      ],
+      "notes": "Não vê que pode morrer aqui? Talvez já seja tarde demais para Por que diabos você se adentrou nesse milharal quase extinto?! escapar... corvos sobrevoam o milharal, arrepiando cada pêlo de grunhidos... que os Deuses estejam com você... pisoteados parecem vir de todos os lados, misturados com algo co",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 4,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lb069",
+      "name": "Adentro do Milharal Destruído",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "e": "lb054",
+        "n": "lb075",
+        "w": "lb098"
       },
       "npcs": [],
       "notes": "Não vê que pode morrer aqui? Talvez já seja tarde demais para Por que diabos você se adentrou nesse milharal quase extinto?! escapar... corvos sobrevoam o milharal, arrepiando cada pêlo de grunhidos... que os Deuses estejam com você... pisoteados parecem vir de todos os lados, misturados com algo co",
@@ -6038,7 +6284,7 @@
       ]
     },
     {
-      "id": "lv036",
+      "id": "lv041",
       "name": "No Rio",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6046,8 +6292,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "u": "lv046",
-        "w": "lv022"
+        "u": "lv052",
+        "w": "lv024"
       },
       "npcs": [],
       "notes": "Uma curiosa saída, para cima, chama sua atenção. Você vê um armazém ao norte da margem do rio. A leste daqui você pode ver a muralha da cidade. O rio flui gentilmente a oeste, através do dique.",
@@ -6058,7 +6304,7 @@
       ]
     },
     {
-      "id": "lb069",
+      "id": "lb070",
       "name": "Num Bosque Iluminado",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6066,8 +6312,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb089",
-        "w": "lb088"
+        "e": "lb090",
+        "w": "lb089"
       },
       "npcs": [],
       "notes": "Borboletas parecem dançar alegres a doce melodia cantada por Esse clima contagiante obriga-lhe, involuntariamente, a abrir O bosque continua em sua vastidão, enquanto você pode seguir ao brotam aos punhados de frondosas árvores desse iluminado bosque. leste e ao oeste, onde as árvores permitem sua p",
@@ -6078,7 +6324,7 @@
       ]
     },
     {
-      "id": "lb070",
+      "id": "lb071",
       "name": "Num Bosque Iluminado",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6097,7 +6343,7 @@
       ]
     },
     {
-      "id": "lb071",
+      "id": "lb072",
       "name": "O Milharal Destruído",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6117,27 +6363,6 @@
       ]
     },
     {
-      "id": "lb072",
-      "name": "O Milharal Destruído",
-      "layer": "levantamento",
-      "zone": "Levantamento (Dias 96-141)",
-      "risk": "Desconhecido",
-      "risk_code": "unknown",
-      "icon": "🗺️",
-      "exits": {
-        "e": "lb035",
-        "s": "lb106",
-        "w": "lb107"
-      },
-      "npcs": [],
-      "notes": "Uma cena assustadora. O que era até muito pouco tempo atrás um de plantas sobreviveram, como que por milagre, em pequenos grupos isolados, que aliás, parecem esconder alguma coisa... você pode jurar lindo e produtivo milharal, agora não passa de pés-de-milho plantas... Fuja daqui enquanto pode!!! qu",
-      "discovered_in": "Ciclo X (Dias 96-156)",
-      "visitas_registradas": 4,
-      "fontes": [
-        "levantamento_sessoes"
-      ]
-    },
-    {
       "id": "lb073",
       "name": "O Milharal Destruído",
       "layer": "levantamento",
@@ -6146,8 +6371,9 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "lb051",
-        "w": "lb060"
+        "e": "lb035",
+        "s": "lb107",
+        "w": "lb108"
       },
       "npcs": [],
       "notes": "Uma cena assustadora. O que era até muito pouco tempo atrás um de plantas sobreviveram, como que por milagre, em pequenos grupos isolados, que aliás, parecem esconder alguma coisa... você pode jurar lindo e produtivo milharal, agora não passa de pés-de-milho plantas... Fuja daqui enquanto pode!!! qu",
@@ -6166,8 +6392,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "s": "lb068",
-        "w": "lb075"
+        "n": "lb052",
+        "w": "lb062"
       },
       "npcs": [],
       "notes": "Uma cena assustadora. O que era até muito pouco tempo atrás um de plantas sobreviveram, como que por milagre, em pequenos grupos isolados, que aliás, parecem esconder alguma coisa... você pode jurar lindo e produtivo milharal, agora não passa de pés-de-milho plantas... Fuja daqui enquanto pode!!! qu",
@@ -6186,8 +6412,28 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb074",
-        "s": "lb080"
+        "s": "lb069",
+        "w": "lb076"
+      },
+      "npcs": [],
+      "notes": "Uma cena assustadora. O que era até muito pouco tempo atrás um de plantas sobreviveram, como que por milagre, em pequenos grupos isolados, que aliás, parecem esconder alguma coisa... você pode jurar lindo e produtivo milharal, agora não passa de pés-de-milho plantas... Fuja daqui enquanto pode!!! qu",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 4,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lb076",
+      "name": "O Milharal Destruído",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "e": "lb075",
+        "s": "lb081"
       },
       "npcs": [
         "monstro"
@@ -6200,7 +6446,7 @@
       ]
     },
     {
-      "id": "lv037",
+      "id": "lv042",
       "name": "O Pequeno Bosque",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6219,7 +6465,7 @@
       ]
     },
     {
-      "id": "lv038",
+      "id": "lv043",
       "name": "Uma Divisão da Trilha",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6227,31 +6473,11 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb101",
-        "w": "lb077"
+        "e": "lb102",
+        "w": "lb078"
       },
       "npcs": [],
       "notes": "Aqui as árvores encontram seu ponto máximo, abertas o suficiente para que a luz corra e brinque, de galho em galho, alegrando a paisagem. Nesse ponto a trilha se da floresta. divide, sendo que segue ao norte, leste, e oeste. Ao sul a trilha segue para fora",
-      "discovered_in": "Ciclo X (Dias 96-156)",
-      "visitas_registradas": 4,
-      "fontes": [
-        "levantamento_sessoes"
-      ]
-    },
-    {
-      "id": "lb076",
-      "name": "Uma Parte Densa da Floresta",
-      "layer": "levantamento",
-      "zone": "Levantamento (Dias 96-141)",
-      "risk": "Desconhecido",
-      "risk_code": "unknown",
-      "icon": "🗺️",
-      "exits": {
-        "e": "lv019",
-        "s": "lb077"
-      },
-      "npcs": [],
-      "notes": "Subitamente as árvores começam a fechar-se, comprimindo a trilha em meio aos está perdido percorre seu corpo. A floresta continua ao norte, ao sul, e ao leste. fechados troncos que se aproximam mais e mais. Uma leve impressão de que você",
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 4,
       "fontes": [
@@ -6267,8 +6493,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lv038",
-        "n": "lb076"
+        "e": "lv020",
+        "s": "lb078"
       },
       "npcs": [],
       "notes": "Subitamente as árvores começam a fechar-se, comprimindo a trilha em meio aos está perdido percorre seu corpo. A floresta continua ao norte, ao sul, e ao leste. fechados troncos que se aproximam mais e mais. Uma leve impressão de que você",
@@ -6279,7 +6505,27 @@
       ]
     },
     {
-      "id": "lv039",
+      "id": "lb078",
+      "name": "Uma Parte Densa da Floresta",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "e": "lv043",
+        "n": "lb077"
+      },
+      "npcs": [],
+      "notes": "Subitamente as árvores começam a fechar-se, comprimindo a trilha em meio aos está perdido percorre seu corpo. A floresta continua ao norte, ao sul, e ao leste. fechados troncos que se aproximam mais e mais. Uma leve impressão de que você",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 4,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lv044",
       "name": "A Entrada da Floresta",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6299,7 +6545,7 @@
       ]
     },
     {
-      "id": "lb078",
+      "id": "lb079",
       "name": "Num Bosque Iluminado",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6307,9 +6553,9 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb109",
+        "e": "lb110",
         "s": "fazenda_entrada",
-        "w": "lb062"
+        "w": "lb064"
       },
       "npcs": [],
       "notes": "Borboletas parecem dançar alegres a doce melodia cantada por Esse clima contagiante obriga-lhe, involuntariamente, a abrir O bosque continua em sua vastidão, enquanto você pode seguir ao brotam aos punhados de frondosas árvores desse iluminado bosque. oeste e ao sul, onde as árvores permitem sua pas",
@@ -6320,7 +6566,7 @@
       ]
     },
     {
-      "id": "lv040",
+      "id": "lv045",
       "name": "O Andar Superior do Moinho de Vento",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6328,7 +6574,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "d": "lv049"
+        "d": "lv058"
       },
       "npcs": [],
       "notes": "Esta pequena sala, mais parecida com uma plataforma devido ao seu jovens enamorados, longe da vista de bisbilhoteiros. tamanho diminuto, não possui absolutamente nada de interessante. A menos, é claro, que você colecione poeira ou esteja à procura de um local para",
@@ -6339,7 +6585,7 @@
       ]
     },
     {
-      "id": "lv041",
+      "id": "lv046",
       "name": "O Campo do Moinho",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6347,34 +6593,11 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lv052",
-        "n": "lv053"
+        "e": "lv062",
+        "n": "lv063"
       },
       "npcs": [],
       "notes": "A leste o prado continua, até um caminho estreito que leva para dentro Este é um campo vasto, com grama verde e uma ou outra planta de folhas da floresta. escuras e flores coloridas. No centro do campo há um grande moinho, a noroeste.",
-      "discovered_in": "Ciclo X (Dias 96-156)",
-      "visitas_registradas": 3,
-      "fontes": [
-        "levantamento_sessoes"
-      ]
-    },
-    {
-      "id": "lb079",
-      "name": "O Milharal Destruído",
-      "layer": "levantamento",
-      "zone": "Levantamento (Dias 96-141)",
-      "risk": "Desconhecido",
-      "risk_code": "unknown",
-      "icon": "🗺️",
-      "exits": {
-        "e": "lb042",
-        "n": "lb035",
-        "w": "lb103"
-      },
-      "npcs": [
-        "monstro"
-      ],
-      "notes": "Uma cena assustadora. O que era até muito pouco tempo atrás um de plantas sobreviveram, como que por milagre, em pequenos grupos isolados, que aliás, parecem esconder alguma coisa... você pode jurar lindo e produtivo milharal, agora não passa de pés-de-milho plantas... Fuja daqui enquanto pode!!! qu",
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 3,
       "fontes": [
@@ -6390,7 +6613,9 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "lb075"
+        "e": "lb042",
+        "n": "lb035",
+        "w": "lb104"
       },
       "npcs": [
         "monstro"
@@ -6403,7 +6628,28 @@
       ]
     },
     {
-      "id": "lv042",
+      "id": "lb081",
+      "name": "O Milharal Destruído",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "n": "lb076"
+      },
+      "npcs": [
+        "monstro"
+      ],
+      "notes": "Uma cena assustadora. O que era até muito pouco tempo atrás um de plantas sobreviveram, como que por milagre, em pequenos grupos isolados, que aliás, parecem esconder alguma coisa... você pode jurar lindo e produtivo milharal, agora não passa de pés-de-milho plantas... Fuja daqui enquanto pode!!! qu",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 3,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lv047",
       "name": "O Portão Leste",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6423,7 +6669,7 @@
       ]
     },
     {
-      "id": "lb081",
+      "id": "lb082",
       "name": "Uma Parte Densa da Floresta",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6431,8 +6677,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "lb101",
-        "s": "lb102"
+        "n": "lb102",
+        "s": "lb103"
       },
       "npcs": [],
       "notes": "Subitamente as árvores começam a fechar-se, comprimindo a trilha em meio aos está perdido percorre seu corpo. A floresta continua ao norte, ao sul, e ao oeste. fechados troncos que se aproximam mais e mais. Uma leve impressão de que você",
@@ -6443,7 +6689,7 @@
       ]
     },
     {
-      "id": "lv043",
+      "id": "lv048",
       "name": "{--<<<>>>>>} o líder dos monstros                         Grebolius {<<<<<>>---}",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6462,7 +6708,24 @@
       ]
     },
     {
-      "id": "lv044",
+      "id": "lv049",
+      "name": "A Construtora M&M",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {},
+      "npcs": [],
+      "notes": "Talvez seja esse o lugar onde você deve comprar o material para Você entra em uma sala com muitos tijolos espalhados pelo chão. construir sua casa.",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 2,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lv050",
       "name": "A Entrada da Floresta",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6471,7 +6734,7 @@
       "icon": "🗺️",
       "exits": {
         "n": "floresta_adentrando",
-        "w": "lv055"
+        "w": "lv067"
       },
       "npcs": [],
       "notes": "Você se encontra na entrada de uma vasta floresta, aparentemente calma, com mais apurados, além de possuir uma vasta variedade de espécies, tanto vegetais, pássaros entoando calmos e alegres sons, música de qualidade para os ouvidos quanto animais. A floresta continua ao norte.",
@@ -6482,7 +6745,7 @@
       ]
     },
     {
-      "id": "lv045",
+      "id": "lv051",
       "name": "A Entrada da Floresta",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6491,7 +6754,7 @@
       "icon": "🗺️",
       "exits": {
         "n": "floresta_adentrando",
-        "w": "lv056"
+        "w": "lv068"
       },
       "npcs": [],
       "notes": "Você se encontra na entrada de uma vasta floresta, aparentemente calma, com mais apurados, além de possuir uma vasta variedade de espécies, tanto vegetais, pássaros entoando calmos e alegres sons, música de qualidade para os ouvidos quanto animais. A floresta continua ao norte.",
@@ -6502,7 +6765,7 @@
       ]
     },
     {
-      "id": "lv046",
+      "id": "lv052",
       "name": "A Entrada do Labirinto",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6510,7 +6773,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "d": "lv036"
+        "d": "lv041"
       },
       "npcs": [],
       "notes": "O que haverá lá dentro? Entre e descubra... Voce está na entrada de um enorme labirinto; um desafio mágico construído pelos deuses, destinado aos mais bravos heróis.",
@@ -6521,7 +6784,7 @@
       ]
     },
     {
-      "id": "lv047",
+      "id": "lv053",
       "name": "A Junção Regular",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6540,7 +6803,7 @@
       ]
     },
     {
-      "id": "lv048",
+      "id": "lv054",
       "name": "A Rua da Muralha",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6548,7 +6811,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "lv035"
+        "n": "lv039"
       },
       "npcs": [],
       "notes": "A ponte fica ao sul. Você está na rua da muralha, ao oeste da cidade, que continua no norte.",
@@ -6559,7 +6822,64 @@
       ]
     },
     {
-      "id": "lv049",
+      "id": "lv055",
+      "name": "A Rua das Glórias",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "e": "lv032"
+      },
+      "npcs": [],
+      "notes": "A rua segue ao leste e oeste. Ao norte temos o Terreno 27 e ao sul o Terreno 28. Você está em uma rua feita de cristais.",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 2,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lv056",
+      "name": "A Rua das Vitórias",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "s": "lv032"
+      },
+      "npcs": [],
+      "notes": "A leste segue o Terreno 05 e ao oeste, o Terreno 06. A sul fica a Rua das Honras e ao norte, a Rua das Glórias. Você está em uma esquina feita de cristais.",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 2,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lv057",
+      "name": "A Rua das Vitórias",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "n": "lv032"
+      },
+      "npcs": [],
+      "notes": "A leste segue o Terreno 03 e ao oeste, o Terreno 04. Ao norte fica a Rua das Honras e ao sul, a Rua das Conquistas. Você está em uma esquina feita de cristais.",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 2,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lv058",
       "name": "A Sala Principal do Moinho de Vento",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6567,8 +6887,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lv050",
-        "u": "lv040"
+        "e": "lv060",
+        "u": "lv045"
       },
       "npcs": [],
       "notes": "Esta pequena e suja sala dá a impressão de que não é habitada por apenas três pernas está caída em outro canto. Uma escada leva para cima, até a em funcionamento. muito tempo. Há uma cadeira em pedaços em um canto da sala, e uma mesa com roda do moinho, que parece ter sido bem preservada enquanto es",
@@ -6579,7 +6899,7 @@
       ]
     },
     {
-      "id": "lb082",
+      "id": "lb083",
       "name": "Adentro do Milharal Destruído",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6598,7 +6918,7 @@
       ]
     },
     {
-      "id": "lb083",
+      "id": "lb084",
       "name": "Adentro do Milharal Destruído",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6606,7 +6926,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "lb061"
+        "n": "lb063"
       },
       "npcs": [
         "monstro"
@@ -6619,7 +6939,7 @@
       ]
     },
     {
-      "id": "lb084",
+      "id": "lb085",
       "name": "Adentro do Milharal Destruído",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6627,7 +6947,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "lb107"
+        "n": "lb108"
       },
       "npcs": [],
       "notes": "Não vê que pode morrer aqui? Talvez já seja tarde demais para Por que diabos você se adentrou nesse milharal quase extinto?! escapar... corvos sobrevoam o milharal, arrepiando cada pêlo de grunhidos... que os Deuses estejam com você... pisoteados parecem vir de todos os lados, misturados com algo co",
@@ -6638,7 +6958,26 @@
       ]
     },
     {
-      "id": "lb085",
+      "id": "lv059",
+      "name": "Ainda na Trilha",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "n": "vila_caminho_cascalhos"
+      },
+      "npcs": [],
+      "notes": "Cercado pelas verdejantes planícies verdes de Midgaard, aos poucos você caminho. Ao sul, no ponto mais alto da pequena inclinação, é possível ver o final da trilha de cascalhos: nele, algo como um grande cubo de gelo parece o pequeno morro que parece se desenvolver aos poucos com o continuar do relu",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 2,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lb086",
       "name": "Avenida Floris",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6646,8 +6985,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lv056",
-        "w": "lv079"
+        "e": "lv068",
+        "w": "lv096"
       },
       "npcs": [],
       "notes": "Aqui a Avenida Floris segue para fora da cidade pelo Portão Leste, diretamente a leste daqui. Ao oeste, a Cidade de Jareth guarda seu encanto. Norte daqui se encontra os estábulos, e ao sul você vê a loja de montarias.",
@@ -6658,7 +6997,7 @@
       ]
     },
     {
-      "id": "lv050",
+      "id": "lv060",
       "name": "Em Frente ao Moinho",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6666,8 +7005,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lv053",
-        "w": "lv049"
+        "e": "lv063",
+        "w": "lv058"
       },
       "npcs": [],
       "notes": "Através de uma porta de madeira é possível adentrar o velho moinho. Você está no centro de um descampado, diante de um moinho que parece ter foram feitas com toras de madeira e tecidos resistentes, que agora pendem rasgados. Elas pouco se movem apesar do vento. sido abandonado. Sua pintura branca e ",
@@ -6678,7 +7017,7 @@
       ]
     },
     {
-      "id": "lv051",
+      "id": "lv061",
       "name": "Em Meio as Árvores",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6686,8 +7025,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lv093",
-        "s": "lv054"
+        "e": "lv112",
+        "s": "lv066"
       },
       "npcs": [],
       "notes": "Você caminha em meio às árvores, que continuam a se fechar cada vez mais. A luz começa a ficar rara também, diminuindo-se os feixes a cada passo. Ao leste e sul a floresta continua, enquanto ao norte você consegue avistar algo como uma margem de um rio.",
@@ -6698,7 +7037,7 @@
       ]
     },
     {
-      "id": "lb086",
+      "id": "lb087",
       "name": "Num Bosque Iluminado",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6718,26 +7057,6 @@
       ]
     },
     {
-      "id": "lb087",
-      "name": "Num Bosque Iluminado",
-      "layer": "levantamento",
-      "zone": "Levantamento (Dias 96-141)",
-      "risk": "Desconhecido",
-      "risk_code": "unknown",
-      "icon": "🗺️",
-      "exits": {
-        "s": "fazenda_entrada",
-        "w": "lb063"
-      },
-      "npcs": [],
-      "notes": "Borboletas parecem dançar alegres a doce melodia cantada por Esse clima contagiante obriga-lhe, involuntariamente, a abrir O bosque continua em sua vastidão, enquanto você pode seguir ao brotam aos punhados de frondosas árvores desse iluminado bosque. oeste e ao sul, onde as árvores permitem sua pas",
-      "discovered_in": "Ciclo X (Dias 96-156)",
-      "visitas_registradas": 2,
-      "fontes": [
-        "levantamento_sessoes"
-      ]
-    },
-    {
       "id": "lb088",
       "name": "Num Bosque Iluminado",
       "layer": "levantamento",
@@ -6746,11 +7065,11 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb069",
-        "w": "lb021"
+        "s": "fazenda_entrada",
+        "w": "lb065"
       },
       "npcs": [],
-      "notes": "Borboletas parecem dançar alegres a doce melodia cantada por Esse clima contagiante obriga-lhe, involuntariamente, a abrir O bosque continua em sua vastidão, enquanto você pode seguir ao brotam aos punhados de frondosas árvores desse iluminado bosque. leste e ao oeste, onde as árvores permitem sua p",
+      "notes": "Borboletas parecem dançar alegres a doce melodia cantada por Esse clima contagiante obriga-lhe, involuntariamente, a abrir O bosque continua em sua vastidão, enquanto você pode seguir ao brotam aos punhados de frondosas árvores desse iluminado bosque. oeste e ao sul, onde as árvores permitem sua pas",
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 2,
       "fontes": [
@@ -6766,7 +7085,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "w": "lb069"
+        "e": "lb070",
+        "w": "lb021"
       },
       "npcs": [],
       "notes": "Borboletas parecem dançar alegres a doce melodia cantada por Esse clima contagiante obriga-lhe, involuntariamente, a abrir O bosque continua em sua vastidão, enquanto você pode seguir ao brotam aos punhados de frondosas árvores desse iluminado bosque. leste e ao oeste, onde as árvores permitem sua p",
@@ -6777,7 +7097,26 @@
       ]
     },
     {
-      "id": "lv052",
+      "id": "lb090",
+      "name": "Num Bosque Iluminado",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "w": "lb070"
+      },
+      "npcs": [],
+      "notes": "Borboletas parecem dançar alegres a doce melodia cantada por Esse clima contagiante obriga-lhe, involuntariamente, a abrir O bosque continua em sua vastidão, enquanto você pode seguir ao brotam aos punhados de frondosas árvores desse iluminado bosque. leste e ao oeste, onde as árvores permitem sua p",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 2,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lv062",
       "name": "O Campo do Moinho",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6785,8 +7124,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lv062",
-        "w": "lv041"
+        "e": "lv074",
+        "w": "lv046"
       },
       "npcs": [],
       "notes": "A leste um caminho é quase escondido pelas árvores. Esta é a entrada de um belo campo. A grama é verde, com uma ou outra planta a noroeste daqui. A essa distância a construção pode ser vista nitidamente, de folhas escuras e flores coloridas. Há um grande moinho no centro do campo, envelhecida e mal ",
@@ -6797,7 +7136,7 @@
       ]
     },
     {
-      "id": "lv053",
+      "id": "lv063",
       "name": "O Campo do Moinho",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6805,8 +7144,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "s": "lv041",
-        "w": "lv050"
+        "s": "lv046",
+        "w": "lv060"
       },
       "npcs": [],
       "notes": "Este é um campo vasto, com grama verde e uma ou outra planta de folhas escuras e flores coloridas. No centro do campo, a oeste, há um grande moinho.",
@@ -6817,7 +7156,48 @@
       ]
     },
     {
-      "id": "lv054",
+      "id": "lv064",
+      "name": "O Começo Da Passagem",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "e": "comeco_passagem",
+        "n": "altar_templo"
+      },
+      "npcs": [],
+      "notes": "Uma saída ao leste te leva ao corredor, e ao sul retorna para a entrada. Você está entrando em um longo corredor, podendo escutar o som de criaturas por perto, mas sem poder contar exatamente a origem do som.",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 2,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lv065",
+      "name": "O Começo Da Passagem",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "e": "corredor_sujo",
+        "n": "lb111",
+        "w": "grande_campo_sul"
+      },
+      "npcs": [],
+      "notes": "Uma saída ao leste te leva ao corredor, e ao sul retorna para a entrada. Você está entrando em um longo corredor, podendo escutar o som de criaturas por perto, mas sem poder contar exatamente a origem do som.",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 2,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lv066",
       "name": "O Fim da Trilha",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6825,8 +7205,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "lv051",
-        "s": "lv058"
+        "n": "lv061",
+        "s": "lv070"
       },
       "npcs": [],
       "notes": "Aqui a trilha acaba, sendo impossível continuar em razão das imensas plantas, que parecem ter sido brutalmente arrancadas, enquanto você pode seguir ao norte, driblando as árvores, ou ao sul e voltar pela trilha. árvores que recortam sua passagem. Ao oeste você vê um caminho em meio as",
@@ -6837,7 +7217,7 @@
       ]
     },
     {
-      "id": "lb090",
+      "id": "lb091",
       "name": "O Grande Campo de Midgaard",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6845,8 +7225,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "lb110",
-        "s": "lv088"
+        "n": "lb112",
+        "s": "lv107"
       },
       "npcs": [],
       "notes": "O Caminho continua para o norte, através do campo. Você está andando num caminho selvagem, através de lodo, musgo e algumas árvores ocupando o caminho. O Sol bate em seu rosto e um vento bagunça o seu cabelo. Pássaros voam acima de você, e você sente que poderia barro. Você vê o horizonte ao Norte, ",
@@ -6857,7 +7237,7 @@
       ]
     },
     {
-      "id": "lb091",
+      "id": "lb092",
       "name": "O Milharal Destruído",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6865,8 +7245,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb111",
-        "s": "lb066"
+        "e": "lb113",
+        "s": "lb067"
       },
       "npcs": [],
       "notes": "Uma cena assustadora. O que era até muito pouco tempo atrás um de plantas sobreviveram, como que por milagre, em pequenos grupos isolados, que aliás, parecem esconder alguma coisa... você pode jurar lindo e produtivo milharal, agora não passa de pés-de-milho plantas... Fuja daqui enquanto pode!!! qu",
@@ -6877,7 +7257,7 @@
       ]
     },
     {
-      "id": "lb092",
+      "id": "lb093",
       "name": "O Milharal Destruído",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -6899,26 +7279,6 @@
       ]
     },
     {
-      "id": "lb093",
-      "name": "O Milharal Destruído",
-      "layer": "levantamento",
-      "zone": "Levantamento (Dias 96-141)",
-      "risk": "Desconhecido",
-      "risk_code": "unknown",
-      "icon": "🗺️",
-      "exits": {
-        "e": "lb047",
-        "s": "lb113"
-      },
-      "npcs": [],
-      "notes": "Uma cena assustadora. O que era até muito pouco tempo atrás um de plantas sobreviveram, como que por milagre, em pequenos grupos isolados, que aliás, parecem esconder alguma coisa... você pode jurar lindo e produtivo milharal, agora não passa de pés-de-milho plantas... Fuja daqui enquanto pode!!! qu",
-      "discovered_in": "Ciclo X (Dias 96-156)",
-      "visitas_registradas": 2,
-      "fontes": [
-        "levantamento_sessoes"
-      ]
-    },
-    {
       "id": "lb094",
       "name": "O Milharal Destruído",
       "layer": "levantamento",
@@ -6927,8 +7287,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "lb067",
-        "w": "lb095"
+        "e": "lb047",
+        "s": "lb115"
       },
       "npcs": [],
       "notes": "Uma cena assustadora. O que era até muito pouco tempo atrás um de plantas sobreviveram, como que por milagre, em pequenos grupos isolados, que aliás, parecem esconder alguma coisa... você pode jurar lindo e produtivo milharal, agora não passa de pés-de-milho plantas... Fuja daqui enquanto pode!!! qu",
@@ -6947,8 +7307,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb094",
-        "n": "lb096"
+        "n": "lb068",
+        "w": "lb096"
       },
       "npcs": [],
       "notes": "Uma cena assustadora. O que era até muito pouco tempo atrás um de plantas sobreviveram, como que por milagre, em pequenos grupos isolados, que aliás, parecem esconder alguma coisa... você pode jurar lindo e produtivo milharal, agora não passa de pés-de-milho plantas... Fuja daqui enquanto pode!!! qu",
@@ -6967,8 +7327,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "lb054",
-        "s": "lb095"
+        "e": "lb095",
+        "n": "lb097"
       },
       "npcs": [],
       "notes": "Uma cena assustadora. O que era até muito pouco tempo atrás um de plantas sobreviveram, como que por milagre, em pequenos grupos isolados, que aliás, parecem esconder alguma coisa... você pode jurar lindo e produtivo milharal, agora não passa de pés-de-milho plantas... Fuja daqui enquanto pode!!! qu",
@@ -6987,8 +7347,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb068",
-        "n": "lb098"
+        "n": "lb055",
+        "s": "lb096"
       },
       "npcs": [],
       "notes": "Uma cena assustadora. O que era até muito pouco tempo atrás um de plantas sobreviveram, como que por milagre, em pequenos grupos isolados, que aliás, parecem esconder alguma coisa... você pode jurar lindo e produtivo milharal, agora não passa de pés-de-milho plantas... Fuja daqui enquanto pode!!! qu",
@@ -7007,8 +7367,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb099",
-        "s": "lb097"
+        "e": "lb069",
+        "n": "lb099"
       },
       "npcs": [],
       "notes": "Uma cena assustadora. O que era até muito pouco tempo atrás um de plantas sobreviveram, como que por milagre, em pequenos grupos isolados, que aliás, parecem esconder alguma coisa... você pode jurar lindo e produtivo milharal, agora não passa de pés-de-milho plantas... Fuja daqui enquanto pode!!! qu",
@@ -7028,7 +7388,7 @@
       "icon": "🗺️",
       "exits": {
         "e": "lb100",
-        "w": "lb098"
+        "s": "lb098"
       },
       "npcs": [],
       "notes": "Uma cena assustadora. O que era até muito pouco tempo atrás um de plantas sobreviveram, como que por milagre, em pequenos grupos isolados, que aliás, parecem esconder alguma coisa... você pode jurar lindo e produtivo milharal, agora não passa de pés-de-milho plantas... Fuja daqui enquanto pode!!! qu",
@@ -7047,7 +7407,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "fazenda_fim_estrada",
+        "e": "lb101",
         "w": "lb099"
       },
       "npcs": [],
@@ -7059,7 +7419,27 @@
       ]
     },
     {
-      "id": "lv055",
+      "id": "lb101",
+      "name": "O Milharal Destruído",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "e": "fazenda_fim_estrada",
+        "w": "lb100"
+      },
+      "npcs": [],
+      "notes": "Uma cena assustadora. O que era até muito pouco tempo atrás um de plantas sobreviveram, como que por milagre, em pequenos grupos isolados, que aliás, parecem esconder alguma coisa... você pode jurar lindo e produtivo milharal, agora não passa de pés-de-milho plantas... Fuja daqui enquanto pode!!! qu",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 2,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lv067",
       "name": "O Portão Leste",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7067,8 +7447,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lv044",
-        "w": "lv085"
+        "e": "lv050",
+        "w": "lv104"
       },
       "npcs": [],
       "notes": "Jareth, também conhecida como a Cidade da Liberdade, foi fundada Você está na entrada (ou saída) da grande Cidade de Jareth, bem-vindas aqui, nenhum serviço é recusado em nenhum estabelecimento, com base na igualdade das raças e das classes. Todas as raças são difícil. Apesar de Jareth ostentar o tí",
@@ -7079,7 +7459,7 @@
       ]
     },
     {
-      "id": "lv056",
+      "id": "lv068",
       "name": "O Portão Leste",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7087,8 +7467,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lv045",
-        "w": "lb085"
+        "e": "lv051",
+        "w": "lb086"
       },
       "npcs": [],
       "notes": "Jareth, também conhecida como a Cidade da Liberdade, foi fundada Você está na entrada (ou saída) da grande Cidade de Jareth, bem-vindas aqui, nenhum serviço é recusado em nenhum estabelecimento, com base na igualdade das raças e das classes. Todas as raças são difícil. Apesar de Jareth ostentar o tí",
@@ -7099,7 +7479,7 @@
       ]
     },
     {
-      "id": "lv057",
+      "id": "lv069",
       "name": "Oeste - Avenida Floris",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7118,7 +7498,7 @@
       ]
     },
     {
-      "id": "lv058",
+      "id": "lv070",
       "name": "Seguindo a Trilha",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7126,8 +7506,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "lv054",
-        "s": "lb065"
+        "n": "lv066",
+        "s": "lb066"
       },
       "npcs": [],
       "notes": "A trilha continua, mas começa a ser comprimida por árvores frondosas Ao norte e ao sul, a trilha continua. que impedem sua passagem a leste e oeste. Você percebe também alguns traços e pegadas de algum tipo de criatura inteligente, de pequeno porte.",
@@ -7138,7 +7518,7 @@
       ]
     },
     {
-      "id": "lv059",
+      "id": "lv071",
       "name": "Sul   - O Templo de Midgaard",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7157,7 +7537,7 @@
       ]
     },
     {
-      "id": "lv060",
+      "id": "lv072",
       "name": "Um Caminho Lateral",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7165,8 +7545,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "lv065",
-        "w": "lv061"
+        "n": "lv077",
+        "w": "lv073"
       },
       "npcs": [],
       "notes": "Este é um caminho estreito, cercado por árvores grandiosas. Daqui é possível fosso gramado, cortando o interior da floresta. ver um campo aberto no fim dessa pequena estrada, a oeste. Ao norte há um",
@@ -7177,7 +7557,7 @@
       ]
     },
     {
-      "id": "lv061",
+      "id": "lv073",
       "name": "Um Caminho Lateral",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7185,8 +7565,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lv060",
-        "w": "lv062"
+        "e": "lv072",
+        "w": "lv074"
       },
       "npcs": [],
       "notes": "Este é um caminho estreito, cercado por árvores grandiosas. Daqui é possível O caminho segue a leste e a oeste. ver um campo aberto no fim dessa pequena estrada, a oeste.",
@@ -7197,7 +7577,7 @@
       ]
     },
     {
-      "id": "lv062",
+      "id": "lv074",
       "name": "Um Caminho Lateral",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7205,8 +7585,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lv061",
-        "w": "lv052"
+        "e": "lv073",
+        "w": "lv062"
       },
       "npcs": [],
       "notes": "Você está no limiar entre um caminho estreito e um vasto descampado. O campo adiante está rodeado por uma cerca de madeira. Ali há um grande moinho, com pás até lá, seguindo a oeste, ou continuar pelo caminho ladeado por árvores a leste. pesadas que giram lentamente apesar da força do vento. É possí",
@@ -7217,7 +7597,7 @@
       ]
     },
     {
-      "id": "lv063",
+      "id": "lv075",
       "name": "Um Começo de Solo",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7236,7 +7616,7 @@
       ]
     },
     {
-      "id": "lv064",
+      "id": "lv076",
       "name": "Um Começo de Solo",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7255,7 +7635,7 @@
       ]
     },
     {
-      "id": "lv065",
+      "id": "lv077",
       "name": "Um Fosso Gramado",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7263,8 +7643,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "lv015",
-        "s": "lv060"
+        "n": "lv016",
+        "s": "lv072"
       },
       "npcs": [],
       "notes": "Você está no fundo de um fosso pequeno e coberto de grama. Há um matagal crescendo ao redor. O fosso continua para o leste e um caminho estreito se inicia ao sul, quase inteiramente coberto pela vegetação.",
@@ -7275,7 +7655,7 @@
       ]
     },
     {
-      "id": "lv066",
+      "id": "lv078",
       "name": "Um Pântano Sombrio",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7294,7 +7674,7 @@
       ]
     },
     {
-      "id": "lv067",
+      "id": "lv079",
       "name": "Um Pântano Sombrio",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7313,26 +7693,6 @@
       ]
     },
     {
-      "id": "lb101",
-      "name": "Uma Parte Densa da Floresta",
-      "layer": "levantamento",
-      "zone": "Levantamento (Dias 96-141)",
-      "risk": "Desconhecido",
-      "risk_code": "unknown",
-      "icon": "🗺️",
-      "exits": {
-        "s": "lb081",
-        "w": "lv038"
-      },
-      "npcs": [],
-      "notes": "Subitamente as árvores começam a fechar-se, comprimindo a trilha em meio aos está perdido percorre seu corpo. A floresta continua ao norte, ao sul, e ao oeste. fechados troncos que se aproximam mais e mais. Uma leve impressão de que você",
-      "discovered_in": "Ciclo X (Dias 96-156)",
-      "visitas_registradas": 2,
-      "fontes": [
-        "levantamento_sessoes"
-      ]
-    },
-    {
       "id": "lb102",
       "name": "Uma Parte Densa da Floresta",
       "layer": "levantamento",
@@ -7341,7 +7701,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "lb081"
+        "s": "lb082",
+        "w": "lv043"
       },
       "npcs": [],
       "notes": "Subitamente as árvores começam a fechar-se, comprimindo a trilha em meio aos está perdido percorre seu corpo. A floresta continua ao norte, ao sul, e ao oeste. fechados troncos que se aproximam mais e mais. Uma leve impressão de que você",
@@ -7352,7 +7713,26 @@
       ]
     },
     {
-      "id": "lv068",
+      "id": "lb103",
+      "name": "Uma Parte Densa da Floresta",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "n": "lb082"
+      },
+      "npcs": [],
+      "notes": "Subitamente as árvores começam a fechar-se, comprimindo a trilha em meio aos está perdido percorre seu corpo. A floresta continua ao norte, ao sul, e ao oeste. fechados troncos que se aproximam mais e mais. Uma leve impressão de que você",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 2,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lv080",
       "name": "< Morto > Um Portal Escondido no Paraíso",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7369,7 +7749,27 @@
       ]
     },
     {
-      "id": "lv069",
+      "id": "lv081",
+      "name": "A Praça do Templo",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "s": "praca_comercio",
+        "u": "praca_templo"
+      },
+      "npcs": [],
+      "notes": "Midgaard. Você está na Praça do Templo de Midgaard. Uma grande escada de mármore leva-lhe até o Templo. Ao oeste está a Entrada da Guilda dos Clérigos, e um velho bar está a leste. Sul daqui fica a Praça do Comércio, o centro de",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 1,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lv082",
       "name": "A Sala de Leitura",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7388,19 +7788,16 @@
       ]
     },
     {
-      "id": "lb103",
-      "name": "Adentro do Milharal Destruído",
+      "id": "lv083",
+      "name": "A porta está fechada.",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
       "risk": "Desconhecido",
       "risk_code": "unknown",
       "icon": "🗺️",
-      "exits": {
-        "e": "lb079",
-        "s": "lb029"
-      },
+      "exits": {},
       "npcs": [],
-      "notes": "Não vê que pode morrer aqui? Talvez já seja tarde demais para Por que diabos você se adentrou nesse milharal quase extinto?! escapar... corvos sobrevoam o milharal, arrepiando cada pêlo de grunhidos... que os Deuses estejam com você... pisoteados parecem vir de todos os lados, misturados com algo co",
+      "notes": "Outro canto na passagem, e tão sujo quanto o resto desse ao oeste e ao norte. através... aonde será que ela leva? Ah, e o corredor continua lugar (talvez até mais?). Há uma porta ao leste que leva",
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 1,
       "fontes": [
@@ -7416,7 +7813,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "s": "lb061"
+        "e": "lb080",
+        "s": "lb029"
       },
       "npcs": [],
       "notes": "Não vê que pode morrer aqui? Talvez já seja tarde demais para Por que diabos você se adentrou nesse milharal quase extinto?! escapar... corvos sobrevoam o milharal, arrepiando cada pêlo de grunhidos... que os Deuses estejam com você... pisoteados parecem vir de todos os lados, misturados com algo co",
@@ -7435,7 +7833,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "w": "lb061"
+        "s": "lb063"
       },
       "npcs": [],
       "notes": "Não vê que pode morrer aqui? Talvez já seja tarde demais para Por que diabos você se adentrou nesse milharal quase extinto?! escapar... corvos sobrevoam o milharal, arrepiando cada pêlo de grunhidos... que os Deuses estejam com você... pisoteados parecem vir de todos os lados, misturados com algo co",
@@ -7454,7 +7852,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "lb072"
+        "w": "lb063"
       },
       "npcs": [],
       "notes": "Não vê que pode morrer aqui? Talvez já seja tarde demais para Por que diabos você se adentrou nesse milharal quase extinto?! escapar... corvos sobrevoam o milharal, arrepiando cada pêlo de grunhidos... que os Deuses estejam com você... pisoteados parecem vir de todos os lados, misturados com algo co",
@@ -7473,8 +7871,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb072",
-        "s": "lb084"
+        "n": "lb073"
       },
       "npcs": [],
       "notes": "Não vê que pode morrer aqui? Talvez já seja tarde demais para Por que diabos você se adentrou nesse milharal quase extinto?! escapar... corvos sobrevoam o milharal, arrepiando cada pêlo de grunhidos... que os Deuses estejam com você... pisoteados parecem vir de todos os lados, misturados com algo co",
@@ -7485,7 +7882,27 @@
       ]
     },
     {
-      "id": "lv070",
+      "id": "lb108",
+      "name": "Adentro do Milharal Destruído",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "e": "lb073",
+        "s": "lb085"
+      },
+      "npcs": [],
+      "notes": "Não vê que pode morrer aqui? Talvez já seja tarde demais para Por que diabos você se adentrou nesse milharal quase extinto?! escapar... corvos sobrevoam o milharal, arrepiando cada pêlo de grunhidos... que os Deuses estejam com você... pisoteados parecem vir de todos os lados, misturados com algo co",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 1,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lv084",
       "name": "As Misturas de Clariss",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7502,7 +7919,7 @@
       ]
     },
     {
-      "id": "lv071",
+      "id": "lv085",
       "name": "Dentro do Portão Leste de Midgaard",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7521,7 +7938,7 @@
       ]
     },
     {
-      "id": "lv072",
+      "id": "lv086",
       "name": "Em que você deseja lançar a magia?",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7538,7 +7955,7 @@
       ]
     },
     {
-      "id": "lv073",
+      "id": "lv087",
       "name": "Em que você deseja lançar a magia?",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7555,7 +7972,7 @@
       ]
     },
     {
-      "id": "lv074",
+      "id": "lv088",
       "name": "Em que você deseja lançar a magia?",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7574,19 +7991,16 @@
       ]
     },
     {
-      "id": "lb108",
-      "name": "Num Bosque Iluminado",
+      "id": "lv089",
+      "name": "Losilly tagarela: 'Boa tarde!'",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
       "risk": "Desconhecido",
       "risk_code": "unknown",
       "icon": "🗺️",
-      "exits": {
-        "n": "lb034",
-        "s": "lb062"
-      },
+      "exits": {},
       "npcs": [],
-      "notes": "Borboletas parecem dançar alegres a doce melodia cantada por Esse clima contagiante obriga-lhe, involuntariamente, a abrir O bosque continua em sua vastidão, enquanto você pode seguir ao brotam aos punhados de frondosas árvores desse iluminado bosque. norte e ao oeste, onde as árvores permitem sua p",
+      "notes": "Gramíneas verdejantes dominam a paisagem, que, refletindo a luz do sol, formam um lindo cenário, quebrado apenas por algumas poucas leste, enquanto ao sul, avança sobre os campos de Midgaard, que pode ser vista ao longe. árvores que se arriscam a invadir a paisagem. O caminho continua ao",
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 1,
       "fontes": [
@@ -7602,8 +8016,28 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
+        "n": "lb034",
+        "s": "lb064"
+      },
+      "npcs": [],
+      "notes": "Borboletas parecem dançar alegres a doce melodia cantada por Esse clima contagiante obriga-lhe, involuntariamente, a abrir O bosque continua em sua vastidão, enquanto você pode seguir ao brotam aos punhados de frondosas árvores desse iluminado bosque. norte e ao oeste, onde as árvores permitem sua p",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 1,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lb110",
+      "name": "Num Bosque Iluminado",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
         "s": "fazenda_entrada",
-        "w": "lb078"
+        "w": "lb079"
       },
       "npcs": [],
       "notes": "Borboletas parecem dançar alegres a doce melodia cantada por Esse clima contagiante obriga-lhe, involuntariamente, a abrir O bosque continua em sua vastidão, enquanto você pode seguir ao brotam aos punhados de frondosas árvores desse iluminado bosque. oeste e ao sul, onde as árvores permitem sua pas",
@@ -7614,7 +8048,26 @@
       ]
     },
     {
-      "id": "lb110",
+      "id": "lv090",
+      "name": "O Corredor Sujo",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "e": "corredor_sujo"
+      },
+      "npcs": [],
+      "notes": "Você continua caminhando pelo corredor. Aqui não há nada diferente, Você pega uma brilhante veste de novato de dentro do corpo de o monstro novato. alguém para limpar este lugar? O que os novatos irão pensar? Bem, você pode continuar no corredor indo para o leste ou oeste. mas você tem certeza de qu",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 1,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lb111",
       "name": "O Grande Campo de Midgaard",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7622,8 +8075,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "lb055",
-        "s": "lb090"
+        "s": "lv065"
       },
       "npcs": [],
       "notes": "Há uma estranha estrutura no lado leste do caminho. Um pequeno caminho Você está andando no amplo caminho de terra através da vicosa, verde, calmamente entre si e você pode sentir o suave aroma das flores e da grama de terra afasta-se do caminho principal e leva para oeste. e fresca zona rural de Mi",
@@ -7634,37 +8086,19 @@
       ]
     },
     {
-      "id": "lb111",
-      "name": "O Milharal Destruído",
-      "layer": "levantamento",
-      "zone": "Levantamento (Dias 96-141)",
-      "risk": "Desconhecido",
-      "risk_code": "unknown",
-      "icon": "🗺️",
-      "exits": {
-        "w": "lb091"
-      },
-      "npcs": [],
-      "notes": "Uma cena assustadora. O que era até muito pouco tempo atrás um de plantas sobreviveram, como que por milagre, em pequenos grupos isolados, que aliás, parecem esconder alguma coisa... você pode jurar lindo e produtivo milharal, agora não passa de pés-de-milho plantas... Fuja daqui enquanto pode!!! qu",
-      "discovered_in": "Ciclo X (Dias 96-156)",
-      "visitas_registradas": 1,
-      "fontes": [
-        "levantamento_sessoes"
-      ]
-    },
-    {
       "id": "lb112",
-      "name": "O Milharal Destruído",
+      "name": "O Grande Campo de Midgaard",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
       "risk": "Desconhecido",
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lv096"
+        "n": "lb057",
+        "s": "lb091"
       },
       "npcs": [],
-      "notes": "Uma cena assustadora. O que era até muito pouco tempo atrás um de plantas sobreviveram, como que por milagre, em pequenos grupos isolados, que aliás, parecem esconder alguma coisa... você pode jurar lindo e produtivo milharal, agora não passa de pés-de-milho plantas... Fuja daqui enquanto pode!!! qu",
+      "notes": "Há uma estranha estrutura no lado leste do caminho. Um pequeno caminho Você está andando no amplo caminho de terra através da vicosa, verde, calmamente entre si e você pode sentir o suave aroma das flores e da grama de terra afasta-se do caminho principal e leva para oeste. e fresca zona rural de Mi",
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 1,
       "fontes": [
@@ -7680,8 +8114,46 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
+        "w": "lb092"
+      },
+      "npcs": [],
+      "notes": "Uma cena assustadora. O que era até muito pouco tempo atrás um de plantas sobreviveram, como que por milagre, em pequenos grupos isolados, que aliás, parecem esconder alguma coisa... você pode jurar lindo e produtivo milharal, agora não passa de pés-de-milho plantas... Fuja daqui enquanto pode!!! qu",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 1,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lb114",
+      "name": "O Milharal Destruído",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "e": "lv116"
+      },
+      "npcs": [],
+      "notes": "Uma cena assustadora. O que era até muito pouco tempo atrás um de plantas sobreviveram, como que por milagre, em pequenos grupos isolados, que aliás, parecem esconder alguma coisa... você pode jurar lindo e produtivo milharal, agora não passa de pés-de-milho plantas... Fuja daqui enquanto pode!!! qu",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 1,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lb115",
+      "name": "O Milharal Destruído",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
         "e": "lb042",
-        "n": "lb093"
+        "n": "lb094"
       },
       "npcs": [
         "monstro"
@@ -7694,7 +8166,24 @@
       ]
     },
     {
-      "id": "lv075",
+      "id": "lv091",
+      "name": "O Templo dos Aventureiros",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {},
+      "npcs": [],
+      "notes": "Apesar de visitado por muitos, poucos são aqueles que não saem daqui com as Digite 'COMPRAR <num>' para comprar um item. Digite 'LISTA <num>' para ver os atributos do item. Digite 'LISTA' para ver os itens à venda. Enormes pilares de mármore sustentam as pesadas estruturas de pedra polida as trocas ",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 1,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lv092",
       "name": "Oeste - A Estrada Midgaard-Jareth",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7713,7 +8202,7 @@
       ]
     },
     {
-      "id": "lv076",
+      "id": "lv093",
       "name": "Oeste - Avenida Floris",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7732,7 +8221,7 @@
       ]
     },
     {
-      "id": "lv077",
+      "id": "lv094",
       "name": "Oeste - Avenida Floris",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7751,7 +8240,7 @@
       ]
     },
     {
-      "id": "lv078",
+      "id": "lv095",
       "name": "Oeste - Avenida Floris",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7770,7 +8259,7 @@
       ]
     },
     {
-      "id": "lv079",
+      "id": "lv096",
       "name": "Oeste - Avenida Floris",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7778,7 +8267,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb085"
+        "e": "lb086"
       },
       "npcs": [],
       "notes": "A Avenida Floris continua ao leste em direção ao Portão Leste e ao de pedra plana, aparentemente vazia. oeste em direção ao centro da cidade. Ao norte se encontra uma rua",
@@ -7789,7 +8278,7 @@
       ]
     },
     {
-      "id": "lv080",
+      "id": "lv097",
       "name": "Oeste - Num Bosque Iluminado",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7808,7 +8297,7 @@
       ]
     },
     {
-      "id": "lv081",
+      "id": "lv098",
       "name": "Oeste - O Caminho Para as Planícies Nobres",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7827,7 +8316,7 @@
       ]
     },
     {
-      "id": "lv082",
+      "id": "lv099",
       "name": "Oeste - Um Caminho Dentre os Campos",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7846,7 +8335,7 @@
       ]
     },
     {
-      "id": "lv083",
+      "id": "lv100",
       "name": "Oeste - Uma Parte Densa da Floresta",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7863,7 +8352,7 @@
       ]
     },
     {
-      "id": "lv084",
+      "id": "lv101",
       "name": "Oeste - Uma Praça",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7882,7 +8371,43 @@
       ]
     },
     {
-      "id": "lv085",
+      "id": "lv102",
+      "name": "Retornando para sua cidade natal...",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "d": "praca_templo"
+      },
+      "npcs": [],
+      "notes": "A oeste está a Sala de Leitura. A Sala de Doações fica em uma pequena Lembre-se, você só poderá retornar gratuitamente até o nível 70. Depois disso lance magias de retorno e use pergaminhos. O Templo de Midgaard Pedras enormes levam-lhe para baixo, passando pelo portão do Templo, Você está no final ",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 1,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lv103",
+      "name": "Sua garganta parece secar, enquanto você sente seu corpo desidratando! [-2]",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {},
+      "npcs": [],
+      "notes": "\"Taverna do Barumafir\". A estrada pavimentada continua para o norte, em direção a um portão de Um caminho de terra leva para o leste, na direção da floresta iluminada. madeira na cerca. Uma placa foi fixada ao portão, na qual é possível ler:",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 1,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lv104",
       "name": "Sua garganta parece secar, enquanto você sente seu corpo desidratando! [-2]",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7890,7 +8415,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lv055"
+        "e": "lv067"
       },
       "npcs": [],
       "notes": "Aqui a Avenida Floris segue para fora da cidade pelo Portão Leste, diretamente a leste daqui. Ao oeste, a Cidade de Jareth guarda seu encanto. Norte daqui se encontra os estábulos, e ao sul você vê a loja de montarias.",
@@ -7901,7 +8426,7 @@
       ]
     },
     {
-      "id": "lv086",
+      "id": "lv105",
       "name": "Sua garganta parece secar, enquanto você sente seu corpo desidratando! [-2]",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7918,7 +8443,7 @@
       ]
     },
     {
-      "id": "lv087",
+      "id": "lv106",
       "name": "Sul   - A Estrada Midgaard-Jareth",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7935,7 +8460,7 @@
       ]
     },
     {
-      "id": "lv088",
+      "id": "lv107",
       "name": "Sul   - Atrás do Altar",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7943,7 +8468,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "lb090"
+        "n": "lb091"
       },
       "npcs": [],
       "notes": "Midgaard. Tudo a sua volta é saudavelmente verde, e há algumas árvores ocupando Pássaros voam acima de você, e você sente que poderia deitar na grama e ficar Você está andando num caminho selvagem, através de lodo, musgo e barro. Você vê o horizonte ao Norte, Leste e Oeste. Ao sul, a ocupada cidade ",
@@ -7954,7 +8479,7 @@
       ]
     },
     {
-      "id": "lv089",
+      "id": "lv108",
       "name": "Sul   - Numa Pequena Vila",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7973,7 +8498,7 @@
       ]
     },
     {
-      "id": "lv090",
+      "id": "lv109",
       "name": "Sul   - O Começo da Estrada",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -7981,7 +8506,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "lb009"
+        "n": "lb006"
       },
       "npcs": [],
       "notes": "Você está na estrada que, de acordo com as placas, é a via principal convergentes para cá, esse trecho parece ser o ponto de encontro de entre Midgaard e Jareth, duas importantes cidades. Cercado de trilhas mas que dependem dela de algum jeito. várias tribos e grupos que não moram em nenhum das duas",
@@ -7992,7 +8517,7 @@
       ]
     },
     {
-      "id": "lv091",
+      "id": "lv110",
       "name": "Sul   - O Grande Campo de Midgaard",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -8011,7 +8536,7 @@
       ]
     },
     {
-      "id": "lb114",
+      "id": "lb116",
       "name": "Um Caminho Dentre os Campos",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -8019,8 +8544,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb064",
-        "w": "lb055"
+        "e": "lb049",
+        "w": "lb057"
       },
       "npcs": [],
       "notes": "Ao norte começa a estrada Midgaard-Jareth, diferenciada por seu O caminho que os atravessa realmente prova-se útil, pois evita que Você se encontra em meio aos vastos campos, próximos à Midgaard. algo escasso para os comerciantes e aventureiros que por aqui cruzam. pavimento e seu tamanho, enquanto ",
@@ -8031,7 +8556,7 @@
       ]
     },
     {
-      "id": "lv092",
+      "id": "lv111",
       "name": "Um aventureiro chegou do sul.",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -8050,7 +8575,7 @@
       ]
     },
     {
-      "id": "lv093",
+      "id": "lv112",
       "name": "Uma Armadilha Desativada",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -8058,7 +8583,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "w": "lv051"
+        "w": "lv061"
       },
       "npcs": [],
       "notes": "Mas o que é isso? Por muito pouco você não cai em uma pequena vala, com agora não oferece perigo algum. Felizmente não foi você quem caiu aí. espetos de madeira pontiagudos, estranhamente embebidos em um líquido marrom muito viscoso. Provavelmente isso seja um armadilha que foi ativada, mas que",
@@ -8069,7 +8594,26 @@
       ]
     },
     {
-      "id": "lv094",
+      "id": "lv113",
+      "name": "Uma Curva na Passagem",
+      "layer": "levantamento",
+      "zone": "Levantamento (Dias 96-141)",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "e": "intersecao_t_passagem"
+      },
+      "npcs": [],
+      "notes": "Esse canto é igual aos outros... exceto por você ver um estranho brilho vindo do sul. Poderia ser uma saída... ou não!",
+      "discovered_in": "Ciclo X (Dias 96-156)",
+      "visitas_registradas": 1,
+      "fontes": [
+        "levantamento_sessoes"
+      ]
+    },
+    {
+      "id": "lv114",
       "name": "Uma Divisão da Trilha",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -8089,27 +8633,7 @@
       ]
     },
     {
-      "id": "lb115",
-      "name": "Uma Rua Larga",
-      "layer": "levantamento",
-      "zone": "Levantamento (Dias 96-141)",
-      "risk": "Desconhecido",
-      "risk_code": "unknown",
-      "icon": "🗺️",
-      "exits": {
-        "e": "vila_residencial_entrada",
-        "w": "vila_rua_larga"
-      },
-      "npcs": [],
-      "notes": "Você está em uma rua larga feita de pedregulhos.",
-      "discovered_in": "Ciclo X (Dias 96-156)",
-      "visitas_registradas": 1,
-      "fontes": [
-        "levantamento_sessoes"
-      ]
-    },
-    {
-      "id": "lv095",
+      "id": "lv115",
       "name": "[Pontos e atributos]------------------------------------------------------------",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -8126,7 +8650,7 @@
       ]
     },
     {
-      "id": "lv096",
+      "id": "lv116",
       "name": "{----------} o líder dos monstros                         Grebolius {<<<<<>>---}",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -8134,7 +8658,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "w": "lb112"
+        "w": "lb114"
       },
       "npcs": [],
       "notes": "O Milharal Destruído O líder dos monstros tenta acertar você, que desvia facilmente. Os ferimentos do líder dos monstros estão sangrando MUITO! Uma cena assustadora. O que era até muito pouco tempo atrás um de plantas sobreviveram, como que por milagre, em pequenos grupos isolados, que aliás, parece",
@@ -8145,7 +8669,7 @@
       ]
     },
     {
-      "id": "lv097",
+      "id": "lv117",
       "name": "{------->>>} um monstro esfomeado                         Grebolius {<<<<<>----}",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -8162,7 +8686,7 @@
       ]
     },
     {
-      "id": "lv098",
+      "id": "lv118",
       "name": "{------->>>} um monstro esfomeado                         Grebolius {<<<<<>>---}",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -8179,7 +8703,7 @@
       ]
     },
     {
-      "id": "lv099",
+      "id": "lv119",
       "name": "{----->>>>>} um monstro esfomeado                         Grebolius {<<<<<>>>>>}",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -8196,7 +8720,7 @@
       ]
     },
     {
-      "id": "lv100",
+      "id": "lv120",
       "name": "{----->>>>>} um monstro invasor                           Grebolius {<<<<<>----}",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -8213,7 +8737,7 @@
       ]
     },
     {
-      "id": "lv101",
+      "id": "lv121",
       "name": "{----<>>>>>} um monstro esfomeado                         Grebolius {<<<<<>>>--}",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -8230,7 +8754,7 @@
       ]
     },
     {
-      "id": "lv102",
+      "id": "lv122",
       "name": "{-<<<<>>>>>} um monstro agressivo                         Grebolius {<<<<<-----}",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -8247,7 +8771,7 @@
       ]
     },
     {
-      "id": "lv103",
+      "id": "lv123",
       "name": "{-<<<<>>>>>} um monstro agressivo                         Grebolius {<<<<<>>---}",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -8264,7 +8788,7 @@
       ]
     },
     {
-      "id": "lv104",
+      "id": "lv124",
       "name": "O Bar dos Clérigos",
       "layer": "levantamento",
       "zone": "Levantamento (Dias 96-141)",
@@ -8323,6 +8847,8 @@
     "Dia 156: levantamento refundido (308 salas digeridas: 90 pareadas com o curado, 218 novas). Chaves 'l'/'o' normalizadas para 'e'/'w' - no servidor 'l' e' look e 'o' e' order, nunca direcao. O derivado e refeito a cada rodada; o curado nunca e sobrescrito. Conflito de aresta mantem o valor curado.",
     "Dia 156: levantamento refundido (308 salas digeridas: 90 pareadas com o curado, 218 novas). Chaves 'l'/'o' normalizadas para 'e'/'w' - no servidor 'l' e' look e 'o' e' order, nunca direcao. O derivado e refeito a cada rodada; o curado nunca e sobrescrito. Conflito de aresta mantem o valor curado.",
     "Dia 156: levantamento refundido (308 salas digeridas: 90 pareadas com o curado, 218 novas). Chaves 'l'/'o' normalizadas para 'e'/'w' - no servidor 'l' e' look e 'o' e' order, nunca direcao. O derivado e refeito a cada rodada; o curado nunca e sobrescrito. Conflito de aresta mantem o valor curado.",
-    "Dia 156: levantamento refundido (308 salas digeridas: 90 pareadas com o curado, 218 novas). Chaves 'l'/'o' normalizadas para 'e'/'w' - no servidor 'l' e' look e 'o' e' order, nunca direcao. O derivado e refeito a cada rodada; o curado nunca e sobrescrito. Conflito de aresta mantem o valor curado."
+    "Dia 156: levantamento refundido (308 salas digeridas: 90 pareadas com o curado, 218 novas). Chaves 'l'/'o' normalizadas para 'e'/'w' - no servidor 'l' e' look e 'o' e' order, nunca direcao. O derivado e refeito a cada rodada; o curado nunca e sobrescrito. Conflito de aresta mantem o valor curado.",
+    "Dia 156: levantamento refundido (173 salas digeridas: 91 pareadas com o curado, 82 novas). Chaves 'l'/'o' normalizadas para 'e'/'w' - no servidor 'l' e' look e 'o' e' order, nunca direcao. O derivado e refeito a cada rodada; o curado nunca e sobrescrito. Conflito de aresta mantem o valor curado.",
+    "Dia 156: levantamento refundido (342 salas digeridas: 103 pareadas com o curado, 239 novas). Chaves 'l'/'o' normalizadas para 'e'/'w' - no servidor 'l' e' look e 'o' e' order, nunca direcao. O derivado e refeito a cada rodada; o curado nunca e sobrescrito. Conflito de aresta mantem o valor curado."
   ]
 }

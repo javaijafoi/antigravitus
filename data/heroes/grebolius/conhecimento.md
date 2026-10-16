@@ -1390,6 +1390,65 @@ o monstro novato.
 jogadores, não NPCs). **Continua pendente** — e o próximo lugar a olhar são as praças de **Jareth**
 (§30.1), que ainda não foram visitadas.
 
+---
+
+## 34. O DISTRITO RESIDENCIAL — e o mapa subiu para 381 salas (Dia 156)
+
+Descoberto ao explorar a oeste do Grande Campo, atrás de uma porta que o mapa não tinha.
+
+### 34.1 O caminho
+
+```
+Templo -> n,n,n,n,n -> O Grande Campo (a sala com "Oeste - A Entrada da Vila Residencial")
+       -> w        -> A Entrada da Vila Residencial
+       -> w        -> Uma Rua Larga
+       -> w        -> A Rua das Glórias
+       -> n / s    -> A Rua das Vitórias
+```
+
+**É um bairro residencial inteiro**, com casas numeradas — **A Casa 4, 5, 6, 27, 28** — e
+**O Terreno 3**. Quem atende é uma **corretora**:
+
+> *"Uma mulher está aqui, mostrando a todos as vantagens de se ter uma casa..."*
+> — em **A Recepção da Imobiliária M&M**
+
+E na entrada do bairro: *"Um velho porteiro está aqui."*
+
+**Há uma Imobiliária M&M e uma Construtora M&M** — ou seja, **o MUD tem sistema de casas de jogador**.
+Isso explica o comando `house` que aparecia na lista de comandos do servidor e que eu nunca tinha
+investigado.
+
+### 34.2 Depois da exploração, o mapa foi de 360 para 381 salas
+
+Rodando o digestor sobre o corpus inteiro e fundindo:
+
+| | Antes | Depois |
+|---|---|---|
+| Salas | 360 | **381** |
+| Pareadas com a curadoria | 90 | **103** |
+| Salas novas (derivadas) | 218 | **239** |
+
+**As salas novas do bairro entraram** — A Rua das Glórias, A Rua das Vitórias, A Recepção da
+Imobiliária M&M, A Construtora M&M, Grottas - A Loja de Móveis.
+
+### 34.3 ⚠️ PERIGO: digerir um corpus PARCIAL encolhe o mapa
+
+**Aconteceu nesta rodada e quase passou.** Rodei o digestor só com `transcript_dia156_*.jsonl`, e a
+fusão levou o mapa **de 360 para 224 salas** — porque o levantamento passou a ser só o de hoje, e o
+que não estava nele **foi descartado**.
+
+**A regra:** o digestor precisa receber **o corpus inteiro**, sempre:
+
+```
+python automato/acoes/digerir_mapa.py \
+  --glob "automato/runtime/transcript_*.jsonl" \
+  --glob "scripts/local/transcript_*.jsonl"
+```
+
+O `--glob` é **repetível** justamente por isso. Digerir um recorte e fundir **destrói** o que ficou de
+fora. O sintoma é o `TOTAL` do `fundir_mapa.py` **diminuir** — e ele nunca deveria diminuir sem uma
+remoção deliberada.
+
 
 ### 25.11 Invisibilidade BLOQUEIA comércio — e existe o comando `visible`
 
