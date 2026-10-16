@@ -1,0 +1,117 @@
+{
+  "hero_id": "grebolius",
+  "day": 98,
+  "source_kind": "server_log",
+  "recorded_on": "2026-10-15",
+  "sources": [
+    "session_live_dia98_20261015_234240_ca2c00.log",
+    "scripts/local/dia98_resumo.md"
+  ],
+  "summary": {
+    "starting_level": 14,
+    "starting_xp": 460990,
+    "starting_gold": 5482,
+    "starting_location": "Um Quarto (fazenda a leste de Jareth)",
+    "ending_level": 14,
+    "ending_xp": 472843,
+    "ending_gold": 3604,
+    "ending_location": "O Templo de Midgaard",
+    "xp_gained": 11853,
+    "ending_alignment": 226,
+    "deaths": 0,
+    "crisis": "Abertura em 'morrendo de fome' e 'morrendo de sede'. Sede resolvida com drink cantil; fome causava dano por pulso (-1 HP) ate a compra e consumo de pao recheado na Padaria (6 moedas).",
+    "near_death": "Durante o combate contra o Peao Negro do Tabuleiro, a vida caiu de 75 para 41; o combate terminou sem morte e ela se recuperou.",
+    "quests_advanced": [
+      {
+        "id": "dicas-magicas",
+        "title": "Dicas Magicas",
+        "step": "Comprou um pergaminho de retorno (9.202) na Loja de Magias e o entregou ao Mago Aventureiro no Bar dos Magos; o jogo respondeu 'Voce atingiu seu objetivo' e a recompensa de 11.639 EXP foi creditada no pulso seguinte."
+      }
+    ],
+    "quests_in_progress": [
+      {
+        "id": "problemas-agricolas",
+        "title": "Problemas Agricolas",
+        "stage": "segue ativa; nao houve deslocamento a fazenda neste dia"
+      }
+    ],
+    "gold_transactions": [
+      {
+        "type": "venda",
+        "item": "Armadura do Peao Negro",
+        "qty": 2,
+        "unit": 150,
+        "total": 300,
+        "buyer": "Armeiro"
+      },
+      {
+        "type": "venda",
+        "item": "Espada do Peao Negro",
+        "qty": 1,
+        "unit": 40,
+        "total": 40,
+        "buyer": "Ferreiro"
+      },
+      {
+        "type": "venda",
+        "item": "Lanca do Cavaleiro Negro",
+        "qty": 1,
+        "unit": 4000,
+        "total": 4000,
+        "buyer": "Ferreiro"
+      },
+      {
+        "type": "venda",
+        "item": "Cetro do Bispo Negro",
+        "qty": 1,
+        "unit": 3000,
+        "total": 3000,
+        "buyer": "Feiticeiro (Loja de Magias)"
+      },
+      {
+        "type": "compra",
+        "item": "um pao recheado",
+        "qty": 6,
+        "unit": 6,
+        "total": 36,
+        "buyer": "Padeiro"
+      },
+      {
+        "type": "compra",
+        "item": "um pergaminho de retorno",
+        "qty": 1,
+        "unit": 9202,
+        "total": 9202,
+        "buyer": "Feiticeiro"
+      }
+    ],
+    "world_findings": [
+      {
+        "key": "recall",
+        "note": "O comando RECALL retorna a personagem a Midgaard gratuitamente ate o nivel 70. Resolveu o labirinto do bosque."
+      },
+      {
+        "key": "tabuleiro_precos",
+        "note": "Ferreiro paga 4.000 pela Lanca do Cavaleiro Negro e 40 pela Espada do Peao Negro; o Feiticeiro paga 3.000 pelo Cetro do Bispo Negro; o Armeiro paga 150 pela Armadura do Peao Negro e recusa armas/cetros."
+      },
+      {
+        "key": "torre_negra",
+        "note": "A Torre Negra do tabuleiro e LETAL (consider: 'Voce e LOUCO!', 'Voce tem PROBLEMAS!?', 'sera sua TUMBA'). Ha no chao 49 armaduras da torre negra (+3L), mas o peso impede carregar mais de uma peca por vez."
+      }
+    ],
+    "correction": "O practice mostrou 24 sessoes de treino disponiveis; o registro anterior dizia 15.",
+    "final_state": {
+      "level": 14,
+      "hp": "75/75",
+      "mana": "200/200",
+      "mv": "105/105",
+      "exp": 472843,
+      "gold": 3604,
+      "alignment": 226,
+      "ac": 75,
+      "wimpy": 30,
+      "location": "O Templo de Midgaard",
+      "status": "dormindo (sleep) com atalhos salvos"
+    }
+  }
+}

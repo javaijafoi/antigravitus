@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 97,
+  "as_of_day": 98,
   "verification": "live",
   "items": [
     {
@@ -188,9 +188,9 @@
       "type": "official",
       "status": "active",
       "accepted_day": 32,
-      "last_progress_day": 96,
+      "last_progress_day": 98,
       "objective": "Entregar um pergaminho de retorno ao Mago Aventureiro no Bar dos Magos.",
-      "next_step": "Primeira etapa concluída no Dia 96 (+30.000 EXP recebidos no Bar dos Magos). Segunda etapa em andamento: comprar e entregar um pergaminho de retorno ao mago aventureiro.",
+      "next_step": "Pergaminho de retorno comprado (9.202) e entregue ao Mago Aventureiro no Bar dos Magos no Dia 98; o jogo respondeu 'Voce atingiu seu objetivo' e creditou 11.639 EXP. A autoquest segue 'Em andamento': falar novamente com o Mago para ouvir a proxima instrucao.",
       "evidence": [
         {
           "document": "posts.json",
@@ -226,6 +226,11 @@
           "document": "evidence/dia97.json",
           "day": 97,
           "note": "Dia 97 sem entrega: a etapa 2 (pergaminho de retorno ao Mago Aventureiro) continua pendente; a sessao ficou na fazenda."
+        },
+        {
+          "document": "evidence/dia98.json",
+          "day": 98,
+          "note": "Compra do pergaminho de retorno na Loja de Magias e entrega fisica ao Mago Aventureiro, com recompensa de 11.639 EXP."
         }
       ]
     },
@@ -392,6 +397,11 @@
           "document": "evidence/dia97.json",
           "day": 97,
           "note": "Combates no milharal destruido, avanco ao Nivel 14 e reafirmacao do pedido pelo fazendeiro; contador de abates nao informado pelo servidor."
+        },
+        {
+          "document": "evidence/dia98.json",
+          "day": 98,
+          "note": "Dia 98 priorizou comida e Dicas Magicas; a fazenda nao foi visitada e a missao segue ativa, sem novo progresso."
         }
       ]
     }

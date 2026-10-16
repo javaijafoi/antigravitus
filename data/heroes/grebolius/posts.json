@@ -2548,5 +2548,38 @@
         "note": "Registro estruturado do Dia 97 (Nivel 14, 460.990 EXP, 5.482 moedas, wimpy 30 em fuga, fome critica e repouso em Um Quarto)."
       }
     ]
+  },
+  {
+    "id": 98,
+    "day": "Dia 98",
+    "title": "O Despertar Faminto, o Retorno pelo Templo e o Pergaminho do Mago",
+    "date": "2026-10-15",
+    "in_game_time": "Midgaard - Ciclo X",
+    "excerpt": "O Despertar Faminto, o Retorno pelo Templo e o Pergaminho do Mago",
+    "tags": [
+      "Midgaard",
+      "Padaria",
+      "Tabuleiro de Xadrez",
+      "Dicas Magicas",
+      "Recall",
+      "Fome",
+      "Templo"
+    ],
+    "content": [
+      "Acordei no quarto da casa da fazenda com a barriga colada nas costas e o corpo comecando a consumir a si proprio. Nao havia um unico pedaco de pao em toda a mochila, e a sede tambem apertava. Bebi o resto de agua do cantil e saquei que, se eu nao comesse logo, aquela cama de casal alheia seria o meu caixao.",
+      "Saí da casa sem me despedir. O bosque em volta da fazenda e uma armadilha de arvores iguais: cada clareira se parece com a anterior, e a trilha nao me levava a lugar nenhum. Quando as pernas ja pesavam e a fome roia por dentro, lembrei da palavra que todo mago de Midgaard carrega no sangue desde o primeiro dia de guilda — aquela que arranca o aventureiro de qualquer canto perdido e o devolve ao chaao da cidade natal. Fechei os olhos, pronunciei o retorno, e o mundo girou.",
+      "Abri os olhos na Pedra do Templo de Midgaard. A fome, que nao entende de magia, cobrou o seu preco no mesmo instante. Corri para o fim da Rua Principal, subi a rua poeirenta e entrei na Padaria pelo aroma. Paguei as poucas moedas que o pao recheado custa e comi ali mesmo, com farinha nos dedos e um alivio que nenhum feitico me deu. Comprei mais seis para a estrada. A fome calou.",
+      "Daí em diante o dia virou caca e comercio. Desci ao Tabuleiro de Xadrez de Midgaard, onde as casas de marmore preto e branco guardam uma guerra eterna. Enfrentei um Peao Negro e senti, por um triz, o gosto do golpe pesado que me deixou a vida pela metade; venci sem tombar. Pelo caminho recolhi o que as pecas derrubadas deixam no chao: armaduras, espadas, uma lanca enorme do Cavaleiro Negro e um cetro de bispo pulsando uma aura fria. Vi de longe a Torre Negra sobre rodas e um arrepio me disse, sem precisar de palavra alguma, que aquela sombra era a minha tumba; passei ao largo, como quem desvia de um deus adormecido.",
+      "Depois, a parte que os bardos nunca cantam: vender. O armeiro pagou cento e cinquenta por cada armadura de peao; o ferreiro me encheu as maos ao oferecer quatro mil moedas pela lanca do cavaleiro; o feiticeiro da Loja de Magias cobriu de ouro o cetro do bispo. Com o bornal pesado, comprei aquele pergaminho de retorno que o Mago Aventureiro me pedira — nove mil e duzentas moedas, cada uma delas suada — e o entreguei nas maos dele no Bar dos Magos. Ele mal levantou os olhos do copo, mas a voz do mundo sussurrou que eu tinha atingido o meu objetivo, e uma forca nova me subiu pelas costas.",
+      "Ainda guardei o segundo cetro do bispo. Nao sei para que serve um cetro assim, mas desconfio que a guerra das casas de xadrez ainda vai me cobrar essa peca. Voltei ao Templo com o corpo inteiro e a barriga cheia, salvei meus atalhos e deitei na pedra fria. Amanha eu volto para a fazenda, termino o que prometi ao fazendeiro, e depois quero ouvir o que aquele mago tem para me dizer."
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "evidence/dia98.json",
+        "day": 98,
+        "note": "Registro estruturado do Dia 98: comida, recall, vendas do Tabuleiro, entrega do pergaminho e repouso no Templo."
+      }
+    ]
   }
 ]

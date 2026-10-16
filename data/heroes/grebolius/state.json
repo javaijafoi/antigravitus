@@ -2,10 +2,10 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 97,
+    "day": 98,
     "verification": "live",
     "live_verified": true,
-    "source": "Sessao ao vivo do Dia 97 na fazenda a leste de Jareth: retorno ao milharal sitiado, abates de monstros invasores sob wimpy 30, avanco do Nivel 13 para o Nivel 14 (460.990 EXP), saques ate 5.482 moedas, bainha de Excalibur e colar de pedra purpura recolhidos, fome ate 'morrendo de fome' e repouso confirmado em Um Quarto; evidence/dia97.json."
+    "source": "Sessao interativa manual do Dia 98: saida da fazenda, recall para Midgaard, comida comprada na Padaria, espolios do Tabuleiro de Xadrez vendidos (lanca 4.000, cetro 3.000), pergaminho de retorno comprado e entregue ao Mago Aventureiro (+11.639 EXP) e repouso confirmado no Templo; evidence/dia98.json."
   },
   "level": 14,
   "mechanical_race": "Elfo",
@@ -13,7 +13,7 @@
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
   "alignment": {
-    "value": 241,
+    "value": 226,
     "label": "Um pouco bom"
   },
   "vitals": {
@@ -31,10 +31,10 @@
     }
   },
   "experience": {
-    "current": 460990,
+    "current": 472843,
     "next_level": 500000
   },
-  "gold": 5482,
+  "gold": 3604,
   "attributes": {
     "STR": 12,
     "DEX": 15,
@@ -47,12 +47,12 @@
     "base": 49,
     "with_armor": 75,
     "effect_verified": true,
-    "note": "Dia 97: AC 75 mantida com Armadura Mistica ativa (+26; restavam cerca de 33 horas ao dormir)."
+    "note": "Dia 98: AC 75 mantida com Armadura Mistica ativa (+26; cerca de 13 horas ao dormir)."
   },
   "hitroll": 3,
   "damroll": 4,
   "wimpy": 30,
-  "training_sessions": 15,
+  "training_sessions": 24,
   "operational_mode": {
     "current": "padrao",
     "description": "Cacada na fazenda/milharal com wimpy 30 e retirada por fuga; sessoes sobrepostas obrigaram a impor controle unico do daemon.",
@@ -66,29 +66,29 @@
     }
   },
   "location": {
-    "room_id": "fazenda_quarto",
-    "name": "Um Quarto"
+    "room_id": "templo_midgaard",
+    "name": "O Templo de Midgaard"
   },
   "camp": {
-    "room_id": "fazenda_quarto",
-    "name": "Um Quarto"
+    "room_id": "templo_midgaard",
+    "name": "O Templo de Midgaard"
   },
   "sanctuary": {
     "room_id": "panteao_centenarios",
     "name": "O Panteao dos Centenarios"
   },
   "last_event": {
-    "day": 97,
-    "summary": "Dia 97 na fazenda a leste de Jareth: Grebolius voltou ao milharal destruido, abateu monstros invasores e avancou do Nivel 13 para o Nivel 14 (460.990 EXP), recolhendo uma bainha de Excalibur e um colar de pedra purpura. O wimpy 30 disparou a fuga em varios confrontos, inclusive numa queda a 19 de vida. Terminou 'morrendo de fome', sem alimento no inventario, e dormiu num quarto da casa da fazenda com atalhos salvos."
+    "day": 98,
+    "summary": "Dia 98 sem viagem a fazenda: ainda faminta ao acordar, desceu da casa da fazenda ate o campo e usou RECALL (descoberto nesta sessao) para voltar a Midgaard. Comprou pao recheado e comeu, encerrando o dano da fome. Vendeu espolios do Tabuleiro de Xadrez no armeiro, ferreiro e feiticeiro — inclusive a Lanca do Cavaleiro Negro por 4.000 e um Cetro do Bispo Negro por 3.000 — comprou o pergaminho de retorno por 9.202 e o entregou ao Mago Aventureiro, avancando Dicas Magicas (+11.639 EXP). Evitou a Torre Negra, avaliada como letal, e dormiu no Templo de Midgaard."
   },
   "next_objective": {
     "mission_id": "problemas-agricolas",
-    "title": "Comer, reabastecer e retomar o milharal e a entrega em Midgaard",
-    "next_step": "Antes de qualquer combate, obter comida (Padaria de Midgaard ou vendedor de Jareth) e reabastecer o cantil. Depois voltar ao milharal para concluir os abates pedidos pelo fazendeiro e, quando houver ouro, seguir a Midgaard para entregar o pergaminho de retorno ao Mago Aventureiro.",
+    "title": "Retomar a fazenda e aguardar o proximo passo de Dicas Magicas",
+    "next_step": "Viajar de Midgaard a Jareth pela rodovia (ou pela floresta, ja conhecida) e retomar o milharal com comida e cantil cheios, confirmando o contador de abates com o fazendeiro. Antes de sair, falar de novo com o Mago Aventureiro para ouvir a proxima instrucao de Dicas Magicas.",
     "missing_preparation": [
-      "Nao ha comida alguma no inventario; a fome chegou a 'morrendo de fome' antes de dormir.",
-      "A bainha de Excalibur exige experiencia que a personagem ainda nao possui e o colar de pedra purpura nao lhe pertence.",
-      "O interior do milharal ainda nao foi consolidado no mapa; cada passo depende do comando exits."
+      "O cantil esta com menos da metade; reabastecer na Fonte Azul da Praca do Templo.",
+      "O interior do milharal continua sem mapa consolidado; depender do comando exits.",
+      "Sessao ainda sem treino gasto: ha 24 sessoes disponiveis."
     ]
   },
   "skills": [
@@ -235,68 +235,76 @@
       {
         "name": "um cantil",
         "quantity": 1,
-        "source": "evidence/dia97.json"
+        "source": "evidence/dia98.json"
       },
       {
         "name": "um manto de pano",
         "quantity": 1,
-        "source": "evidence/dia97.json"
+        "source": "evidence/dia98.json"
       },
       {
         "name": "a bainha de Excalibur",
         "quantity": 1,
-        "source": "evidence/dia97.json"
+        "source": "evidence/dia98.json"
       },
       {
         "name": "um colar com uma pedra purpura",
         "quantity": 1,
-        "source": "evidence/dia97.json"
+        "source": "evidence/dia98.json"
+      },
+      {
+        "name": "o Cetro do Bispo Negro",
+        "quantity": 1,
+        "source": "evidence/dia98.json"
       },
       {
         "name": "um brilhante punhal de novato",
-        "quantity": 2,
-        "source": "evidence/dia97.json"
+        "quantity": 1,
+        "source": "evidence/dia98.json"
       },
       {
-        "name": "uma brilhante veste de novato",
+        "name": "uma atadura",
         "quantity": 1,
-        "source": "evidence/dia97.json"
+        "source": "evidence/dia98.json"
+      },
+      {
+        "name": "um pao recheado",
+        "quantity": 2,
+        "source": "evidence/dia98.json"
       },
       {
         "name": "uma tocha",
         "quantity": 1,
-        "source": "evidence/dia97.json"
+        "source": "evidence/dia98.json"
       },
       {
         "name": "uma pocao amarela de detectar invisibilidade",
         "quantity": 1,
-        "source": "evidence/dia97.json"
+        "source": "evidence/dia98.json"
       },
       {
         "name": "uma mochila",
         "quantity": 1,
-        "source": "evidence/dia97.json"
+        "source": "evidence/dia98.json"
       }
     ],
     "pending_verification": []
   },
   "conditions": [
-    "Dia 97: dormindo em Um Quarto, na casa da fazenda a leste de Jareth, com 75/75 HP, 200/200 mana e 105/105 MV.",
-    "Nivel 14 consolidado com 460.990 EXP (avanco de um nivel no dia).",
-    "Saldo de 5.482 moedas de ouro carregadas.",
-    "Wimpy 30 ativo; disparou fuga em varios confrontos do milharal e evitou a morte.",
-    "Personagem faminta ('morrendo de fome'); nenhum alimento no inventario.",
-    "Save e sleep confirmados em Um Quarto."
+    "Dia 98: dormindo no Templo de Midgaard, com 75/75 HP, 200/200 mana e 105/105 MV.",
+    "Fome e sede resolvidas: pao recheado comprado e consumido; cantil com agua.",
+    "Nivel 14 com 472.843 EXP (faltam 27.157 para o 15).",
+    "Saldo de 3.604 moedas de ouro carregadas.",
+    "Wimpy 30 ativo; o combate contra o Peao Negro levou a vida a 41 e terminou sem morte.",
+    "24 sessoes de treino disponiveis (corrigido nesta sessao).",
+    "Save e sleep confirmados no Templo de Midgaard."
   ],
   "uncertainties": [
-    "O anel arcano (+2E) foi vendido no Dia 92 por 500 moedas por exigir nivel 90 e 3a encarnacao.",
-    "Novos feiticos superiores dependem de livros arcanos ou mestres especializados.",
-    "O renascimento desequipa todas as pecas para a mochila; o protocolo pos-morte exige wear all imediato.",
-    "A contagem de abates do Dia 97 nao foi consolidada porque duas sessoes comandaram a mesma personagem em instantes diferentes; o delta de experiencia e a medida confiavel.",
-    "O contador da missao Problemas Agricolas nao e informado pelo servidor; nao presumir 0/10 nem conclusao.",
-    "Nao ha alimento algum e a fome esta critica; a proxima sessao precisa comecar pela comida.",
-    "A bainha de Excalibur foi recolhida mas exige experiencia que a personagem nao tem; o colar de pedra purpura nao lhe pertence.",
-    "O interior do milharal nao foi consolidado no mapa; as salas homonimas impedem identidade global."
+    "O anel arcano (+2E) foi vendido no Dia 92 por exigir nivel 90 e 3a encarnacao.",
+    "O Cetro do Bispo Negro restante pode pertencer a cadeia Xeque-mate (nivel 30); guardado por isso.",
+    "A bainha de Excalibur segue inutilizavel por falta de experiencia.",
+    "O contador da missao Problemas Agricolas nao e informado pelo servidor.",
+    "A Torre Negra do tabuleiro e letal e nao deve ser enfrentada; as 49 armaduras (+3L) no chao exigem viagens dedicadas por peso."
   ],
   "evidence": [
     {
@@ -333,12 +341,17 @@
       "document": "evidence/dia97.json",
       "day": 97,
       "note": "Sessao do Dia 97: retorno ao milharal, Nivel 14, 460.990 EXP, 5.482 moedas, wimpy 30 em fuga, fome critica e repouso em Um Quarto."
+    },
+    {
+      "document": "evidence/dia98.json",
+      "day": 98,
+      "note": "Sessao manual do Dia 98: comida, recall, vendas do tabuleiro, compra e entrega do pergaminho de retorno, avanco de Dicas Magicas e repouso no Templo."
     }
   ],
   "narrative_style": "ladra arcana",
   "weapon_summary": "Espada de Novato empunhada + Punhal segurado + Escudo",
   "migration": {
-    "method": "sessao ao vivo sob driver com token e instancia unica",
-    "verified_on": "Dia 97 (score tudo, inventario, equipamento, save e sleep ao vivo)"
+    "method": "sessao manual comandada pelo agente sob driver com token",
+    "verified_on": "Dia 98 (score, inventario, equipamento, practice, save e sleep ao vivo)"
   }
 }

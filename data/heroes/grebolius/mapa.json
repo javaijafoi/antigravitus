@@ -2,7 +2,7 @@
   "hero_id": "grebolius",
   "hero_name": "Grebolius",
   "sanctuary_id": "panteao_centenarios",
-  "last_updated_cycle": "Ciclo X (Dia 97; fazenda a leste de Jareth)",
+  "last_updated_cycle": "Ciclo X (Dia 98; Midgaard)",
   "total_rooms": 141,
   "layers": [
     {
@@ -3313,10 +3313,10 @@
       "discovered_in": "Dia 96"
     }
   ],
-  "last_updated_day": 97,
+  "last_updated_day": 98,
   "verification": "live",
-  "current_location_id": "fazenda_quarto",
-  "camp_id": "fazenda_quarto",
+  "current_location_id": "templo_midgaard",
+  "camp_id": "templo_midgaard",
   "reconciliation_notes": [
     "Posições gráficas são esquemáticas, não distâncias do mundo.",
     "Revisão inclui descobertas narradas até o Dia 60; não houve verificação ao vivo de todas as rotas antigas.",
@@ -3325,6 +3325,7 @@
     "Dia 91: fazenda é uma cartografia parcial. Trechos entre Jareth, floresta, estrada e casa não foram completados por suposição; ausência de aresta não significa ausência de passagem. Entroncamento Jareth separado do Caminho homônimo; pernoite atual no Templo.",
     "Dias 92–93: novas arestas são travessias reais; mapa permanece parcial. Posição final é última resposta anterior à interrupção; camp mantém último pernoite confirmado do Dia 92. Grade trancada e partes da masmorra continuam pendentes.",
     "Dia 94 (Modo Expandir Horizontes): catalogadas 7 novas salas e resolvidas saídas pendentes no subsolo dos Novatos (Uma Longa Passagem Leste-Oeste, Outro Canto, Uma Intersecção em T na Passagem, metade oeste de Uma Sala Enorme e inscrição do Minotauro na parede leste), na Vila Residencial (Uma Rua Larga e Um Caminho de Cascalhos) e nos limites leste dos campos (Na Borda da Floresta).",
-    "Dia 97: a personagem pernoitou em Um Quarto (casa da fazenda). O interior do Milharal Destruido foi percorrido mas nao consolidado: as salas sao homonimas (O Milharal Destruido / Adentro do Milharal Destruido) com quatro saidas cada, e cada passo foi reconferido pelo comando exits. Nenhuma aresta nova foi inferida por suposicao."
+    "Dia 97: a personagem pernoitou em Um Quarto (casa da fazenda). O interior do Milharal Destruido foi percorrido mas nao consolidado: as salas sao homonimas (O Milharal Destruido / Adentro do Milharal Destruido) com quatro saidas cada, e cada passo foi reconferido pelo comando exits. Nenhuma aresta nova foi inferida por suposicao.",
+    "Dia 98: descoberto que o comando RECALL retorna gratuitamente a Midgaard (ate o nivel 70). O pernoite foi no Templo de Midgaard. O bosque ao redor da fazenda se mostrou maior que o mapa registrava (salas homonimas 'Num Bosque Iluminado'); as arestas novas nao foram inferidas."
   ]
 }
