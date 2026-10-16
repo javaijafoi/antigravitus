@@ -287,3 +287,24 @@ Avenida Floris:    abre de O Portão Leste de Jareth -> w
 mob, sala por sala**, com os itens que cada um carrega. Foi isso que resolveu **seis rodadas** de busca
 do "novato esperto" — ele é o **`Smart Newbie` (18615)**, na sala **18645 = A Sacada**, e a resposta
 estava escrita desde o começo. **Antes de varrer o mundo à mão, procurar nos docs.**
+
+---
+
+## 10. Correção de autoria · 2026-10-16 · deepseek-flash
+
+> **Correção por acréscimo** (§6: o livro-razão é *append-only*; não se edita bloco anterior).
+
+- **O que eu afirmei errado:** a entrada §5 "2026-10-16 · Dia 156 · deepseek-flash" e o **§9** tratam o
+  conjunto `AGENTS.md` + `docs/agentes/**` como trabalho de **"outra sessão"**. O commit `048d640`
+  repete isso na mensagem: *"commit com trabalho de DUAS sessões"*.
+- **O correto, informado pelo autor:** **a autoria é a mesma — `deepseek-flash`, em outra conversa.**
+  Não são dois agentes nem duas sessões concorrentes: é o **mesmo agente**, em **duas conversas
+  distintas, ao mesmo tempo**. O §0 não distingue conversas, e eu interpretei a diferença de contexto
+  como diferença de autor.
+- **O que muda na prática:** o §6 continua valendo **por outro motivo** — a árvore é compartilhada
+  entre **conversas do mesmo agente**, e a regra de "confira antes e depois" e "não publique por conta
+  própria" protege contra **duas conversas minhas se atropelando**, não contra outro modelo.
+- **O que NÃO se corrige:** a mensagem do commit `048d640` fica como está. `amend` + `push --force`
+  reescreveria histórico que já está publicado, e o §10 proíbe. **A correção vive aqui.**
+- **Adendo ao §9:** onde o handoff diz *"as demais mudanças são da sessão que escreveu o guia"*, leia-se
+  **"da mesma autoria, em outra conversa"**. O conteúdo do handoff não muda.
