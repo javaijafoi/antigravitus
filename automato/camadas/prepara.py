@@ -183,10 +183,167 @@ def dormir():
     return True
 
 
+# ---------------------------------------------------------------------------
+# Diretiva do autor (Dia 156):
+#   *"coloca no preparar passar no donations e ver se tem itens melhores que o
+#     dela, dai ela troca (se não der, não troca)"*
+#
+# O criterio e' EMPIRICO, nao leitura de descricao: veste a peca, le os numeros
+# do `score tudo` e compara com os de antes. Decide o que o SERVIDOR diz, nao o
+# que o nome do item promete - numa sala de doacoes o normal e' a peca ser pior,
+# e nesse caso ela volta e devolve a peca a sala.
+# ---------------------------------------------------------------------------
+
+# palavra no nome do item -> como se coloca no corpo
+SLOTS = {
+    'veste': 'wear', 'jaqueta': 'wear', 'armadura': 'wear', 'manto': 'wear',
+    'capa': 'wear', 'tunica': 'wear', 'peitoral': 'wear', 'couro': 'wear',
+    'elmo': 'wear', 'capacete': 'wear', 'coroa': 'wear', 'gorro': 'wear',
+    'luvas': 'wear', 'manoplas': 'wear', 'bracadeiras': 'wear',
+    'perneiras': 'wear', 'calca': 'wear', 'botas': 'wear', 'escudo': 'wear',
+    'rosario': 'wear', 'colar': 'wear', 'anel': 'wear', 'cinto': 'wear',
+    'espada': 'wield', 'adaga': 'wield', 'punhal': 'wield', 'clava': 'wield',
+    'maca': 'wield', 'mangual': 'wield', 'picareta': 'wield', 'cajado': 'wield',
+    'bastao': 'wield', 'lamina': 'wield', 'arco': 'wield',
+}
+# nao se veste: consumivel, ferramenta ou entulho
+NAO_VESTIR = ('pocao', 'pergaminho', 'garrafa', 'barril', 'pao', 'broa', 'tocha',
+              'lanterna', 'cantil', 'chave', 'grampo', 'atadura', 'mala', 'mochila',
+              'corpo', 'cadaver', 'osso', 'pele', 'chifre', 'casco')
+
+
+def numeros_do_score(tentativas=3):
+    """(CA, Acerto, Dano) como o servidor reporta, ou None se nao conseguiu ler."""
+    for _ in range(tentativas):
+        t, _, _ = run('score tudo')
+        a = sem_acento(t)
+        ca = re.search(r'classe de armadura:\s*(\d+)', a)
+        ac = re.search(r'acerto:\s*(-?\d+)', a)
+        dn = re.search(r'dano:\s*(-?\d+)', a)
+        if ca and ac and dn:
+            return int(ca.group(1)), int(ac.group(1)), int(dn.group(1))
+        time.sleep(0.6)
+    return None
+
+
+def itens_no_chao():
+    """Nomes dos itens largados na sala, das linhas de presenca do `look`."""
+    t, _, _ = run('look')
+    achados = []
+    for linha in (t or '').split('\n'):
+        l = re.sub(r'^\(x\d+\)\s*', '', linha.strip())
+        m = re.match(r'^(.{4,60}?)\s+(?:est[aá]|foi|foram|repousa|est[aã]o)\b', l, re.I)
+        if not m:
+            continue
+        nome = re.sub(r'\s*\.{2}.*$', '', m.group(1)).strip()
+        a = sem_acento(nome).strip()
+        # 'voce' e 'nada' entram por causa das linhas de prosa da sala
+        if nome and a not in IGNORAR and a not in ('voce', 'nada', 'algo', 'tudo'):
+            achados.append(nome)
+    return achados
+
+
+def palavras_chave(nome):
+    """Candidatos a palavra-chave, do mais especifico ao mais generico.
+
+    O servidor casa por palavra do nome, e nao da' para saber qual de antemao:
+    'uma enfeitada jaqueta de couro' responde a `get jaqueta`, nao a `get couro`.
+    Entao tentamos em ordem - do ultimo substantivo para tras - ate' o `get` pegar.
+    """
+    uteis = [p for p in sem_acento(nome).split() if len(p) > 2]
+    return list(reversed(uteis)) or [sem_acento(nome)]
+
+
+def pegar_do_chao(nome):
+    """Tenta `get` por cada palavra-chave. Devolve a palavra que funcionou, ou None."""
+    for chave in palavras_chave(nome):
+        t, _, _ = run('get ' + chave)
+        if 'voce pega' in sem_acento(t):
+            return chave
+    return None
+
+
+def equipado():
+    """{nome_do_item: primeira_palavra_chave} do que ela veste agora."""
+    t, _, _ = run('equipment')
+    achados = {}
+    for linha in (t or '').split('\n'):
+        if '->' not in linha:
+            continue
+        item = linha.split('->', 1)[1].strip()
+        item = re.sub(r'\s*\.{2}.*$', '', item).replace('(novo)', '').strip()
+        if item:
+            achados[item] = palavras_chave(item)[0]
+    return achados
+
+
+def ir_doacoes():
+    """Do Templo a' Sala de Doacoes (a leste) e confirma por marco de sala."""
+    voltar_ao_templo()
+    run('stand')
+    run('e')
+    t, _, _ = run('look')
+    return 'doacoes' in sem_acento(t or '')
+
+
+def revisar_doacoes():
+    """Troca SO' o que for melhor. Devolve quantas trocas fez."""
+    antes = numeros_do_score()
+    if antes is None:
+        print('[PREPARA] doacoes: sem leitura do score - nao arrisco troca', flush=True)
+        return 0
+    if not ir_doacoes():
+        print('[PREPARA] doacoes: nao cheguei', flush=True)
+        return 0
+
+    vestido = equipado()
+    trocas = 0
+    for nome in itens_no_chao():
+        n = sem_acento(nome)
+        if any(x in n for x in NAO_VESTIR):
+            continue
+        como = next((v for k, v in SLOTS.items() if k in n), None)
+        if como is None:
+            continue
+
+        chave = pegar_do_chao(nome)
+        if chave is None:
+            continue
+        run('identify ' + chave, timeout=15.0)      # diretiva §10: identificar ANTES de vestir
+
+        antigo = next((k for k in vestido if chave in palavras_chave(k)), None)
+        if antigo is None:
+            for item in list(vestido):
+                run('remove ' + vestido[item])
+        run('%s %s' % (como, chave))
+
+        depois = numeros_do_score() or antes
+        if sum(depois) > sum(antes):
+            trocas += 1
+            ganho = (antes, depois)
+            antes = depois
+            vestido[chave] = chave
+            print('[PREPARA] doacoes: TROQUEI por %r  %s -> %s' % (nome, ganho[0], ganho[1]), flush=True)
+        else:
+            run('remove ' + chave)
+            run('wear all')
+            if como == 'wield':
+                run('wield ' + chave)
+            run('drop ' + chave)
+            print('[PREPARA] doacoes: %r nao superou %s - devolvido' % (nome, antes), flush=True)
+
+    run('wear all')
+    voltar_ao_templo()
+    print('[PREPARA] doacoes: %d troca(s)' % trocas, flush=True)
+    return trocas
+
+
 def main():
     ap = argparse.ArgumentParser(description='Viagem de recarga: padaria, fonte, banco e sono.')
     ap.add_argument('--forcar', action='store_true', help='reabastece mesmo com estoque')
     ap.add_argument('--dormir', action='store_true', help='inclui o sono')
+    ap.add_argument('--sem-doacoes', action='store_true',
+                    help='nao revisar a Sala de Doacoes (a diretiva roda por padrao)')
     args = ap.parse_args()
 
     run('wake')
@@ -210,6 +367,10 @@ def main():
         feito = guardar_ouro() or feito
     if args.dormir or falta['sono']:
         feito = dormir() or feito
+    # Diretiva do autor: revisar a Sala de Doacoes procurando peca melhor que a
+    # dela. Roda por padrao, junto da viagem de recarga; `--sem-doacoes` desliga.
+    if not args.sem_doacoes:
+        revisar_doacoes()
 
     voltar_ao_templo()
     run('save')

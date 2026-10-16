@@ -1049,6 +1049,76 @@ No meio da varredura, o robô levou três recusas iguais seguidas
 **Ela terminou no Templo, salva, com 113/113 de vida.** Sem a guarda, o script teria insistido na
 rota travada — que é exatamente como as mortes #5, #6 e #7 aconteceram. **A guarda funciona.**
 
+---
+
+## 29. Diretiva nova: revisão da Sala de Doações no `prepara` (Dia 156)
+
+> **Diretiva do autor:** *"coloca no preparar passar no donations e ver se tem itens melhores que o
+> dela, dai ela troca (se não der, não troca)"*
+
+Implementado em [`automato/camadas/prepara.py`](../../../automato/camadas/prepara.py), na função
+`revisar_doacoes()`. Roda por padrão junto da viagem de recarga; `--sem-doacoes` desliga.
+
+### 29.1 O critério é EMPÍRICO, não leitura de descrição
+
+**Veste a peça, lê os números do `score tudo` e compara com os de antes.** Decide o que o **servidor**
+diz, não o que o nome do item promete.
+
+| Números lidos | O que pegam |
+|---|---|
+| `Classe de Armadura` | armadura vestida |
+| `Acerto` + `Dano` | arma empunhada |
+
+`sum((CA, Acerto, Dano))` maior que antes → fica. Menor ou igual → **tira a peça nova, veste a antiga
+de volta e devolve a peça à sala**. É o *"se não der, não troca"*.
+
+### 29.2 Duas armadilhas que o código teve de resolver
+
+**1. Não dá para saber a palavra-chave de antemão.** O servidor casa por palavra do nome, e
+`Uma enfeitada jaqueta de couro` responde a **`get jaqueta`**, não a `get couro`. A função
+`palavras_chave()` devolve os candidatos do mais específico ao mais genérico e o `get` **tenta em
+cascata** até um pegar:
+
+```
+get couro    -> "Você não vê nada assim."
+get jaqueta  -> "Você pega uma jaqueta de couro enfeitada."   ✓
+```
+
+**2. As linhas de prosa da sala viram item falso.** *"Você está em uma sala pequena"* casa com o
+padrão de presença. `voce`, `nada`, `algo` e `tudo` entram numa lista de exclusão.
+
+### 29.3 Primeira execução ao vivo — 11 peças avaliadas, 1 troca
+
+```
+[PREPARA] doacoes: 'Um espada curta' nao superou - devolvido
+[PREPARA] doacoes: TROQUEI por 'Uma brilhante veste de novato'  (110, 1, 0) -> (110, 3, 1)
+[PREPARA] doacoes: 'Um manto feito com panos muito belos' nao superou - devolvido
+[PREPARA] doacoes: 'A armadura de um peão negro' nao superou - devolvido
+[PREPARA] doacoes: 1 troca(s)
+```
+
+**Acerto 1 → 3, Dano 0 → 1.** A Armadura da Torre Negra não foi tocada — está amaldiçoada e o
+`remove` não funciona nela, o que o código já trata (o slot fica e a peça candidata é devolvida).
+
+> **O achado que isso revela:** a Sala de Doações **acumula mais do que se lembra**. Nesta passada
+> havia espada do Peão Negro, escudo de madeira, manto de panos belos, clava, punhal de novato,
+> espada curva, armadura de peão negro e escudo pequeno — tudo de graça, tudo recusado por ser pior.
+> **A sala é um teste de equipamento gratuito**, e agora ela é conferida a cada recarga.
+
+### 29.4 A masmorra está LIMPA — e é isso que trava a missão
+
+Varredura das **53 salas** da camada `novatos` no Dia 156, depois da limpeza:
+
+> **0 criaturas.**
+
+Os monstros novatos não reaparecem na hora. **`Limpando Monstros` pede mais abates do que o
+disponível no momento** — o que falta não é método, é **respawn**. Patrulhar de novo só rende depois
+que o ciclo da zona reabastecer.
+
+**O que isso ensina sobre "limpar masmorra":** uma passada boa **esvazia a masmorra**, e o gargalo
+passa a ser o tempo do servidor, não a personagem. Insistir na patrulha logo em seguida é rodada
+gasta — a resposta certa é **voltar mais tarde**.
+
 
 ### 25.11 Invisibilidade BLOQUEIA comércio — e existe o comando `visible`
 
