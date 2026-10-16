@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatório de Auditoria e Conformidade — Motor MUD Grebolius (P0)</title>
+  <style>
+    :root {
+      --bg-primary: #0a0d14;
+      --bg-secondary: #121722;
+      --bg-card: #161c2b;
+      --border-color: #2a3449;
+      --border-highlight: #d4a359;
+      --text-main: #e2e8f0;
+      --text-muted: #94a3b8;
+      --accent-gold: #e5b364;
+      --accent-cyan: #5ec4d6;
+      --accent-crimson: #d9534f;
+      --accent-emerald: #4ade80;
+      --accent-amber: #f59e0b;
+      --font-mono: "Fira Code", Consolas, "Courier New", monospace;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      padding: 2.5rem 1.5rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 2rem;
+      margin-bottom: 2.5rem;
+      background: linear-gradient(180deg, rgba(229,179,100,0.06) 0%, transparent 100%);
+      padding: 2rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: var(--accent-gold);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-success { background: rgba(74, 222, 128, 0.15); color: var(--accent-emerald); border: 1px solid var(--accent-emerald); }
+    .badge-warning { background: rgba(245, 158, 11, 0.15); color: var(--accent-amber); border: 1px solid var(--accent-amber); }
+    .badge-danger { background: rgba(217, 83, 79, 0.15); color: var(--accent-crimson); border: 1px solid var(--accent-crimson); }
+    .badge-info { background: rgba(94, 196, 214, 0.15); color: var(--accent-cyan); border: 1px solid var(--accent-cyan); }
+    .badge-p0 { background: rgba(229, 179, 100, 0.2); color: var(--accent-gold); border: 1px solid var(--accent-gold); }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .kpi-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .kpi-card:hover {
+      border-color: var(--border-highlight);
+      transform: translateY(-2px);
+    }
+
+    .kpi-value {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      margin-bottom: 0.25rem;
+      font-family: var(--font-mono);
+    }
+
+    .kpi-value.gold { color: var(--accent-gold); }
+    .kpi-value.emerald { color: var(--accent-emerald); }
+    .kpi-value.crimson { color: var(--accent-crimson); }
+
+    .kpi-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    section {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      color: var(--accent-gold);
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    h3 {
+      color: var(--accent-cyan);
+      font-size: 1.2rem;
+      margin: 1.5rem 0 0.75rem 0;
+    }
+
+    p { margin-bottom: 1rem; color: var(--text-main); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.92rem;
+    }
+
+    th, td {
+      padding: 0.85rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    th {
+      background: var(--bg-card);
+      color: var(--accent-gold);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.5px;
+    }
+
+    tr:hover {
+      background: rgba(255,255,255,0.02);
+    }
+
+    .status-badge {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: 4px;
+    }
+
+    .status-ok { background: rgba(74, 222, 128, 0.2); color: var(--accent-emerald); }
+    .status-pending { background: rgba(245, 158, 11, 0.2); color: var(--accent-amber); }
+    .status-fail { background: rgba(217, 83, 79, 0.2); color: var(--accent-crimson); }
+
+    pre {
+      background: #06080d;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 1.25rem;
+      overflow-x: auto;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: #94a3b8;
+      max-height: 450px;
+    }
+
+    code { font-family: var(--font-mono); }
+
+    ul {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    li { margin-bottom: 0.5rem; }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border-color);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Relatório de Auditoria e Conformidade — Motor MUD Grebolius</h1>
+      <div class="subtitle">Correções Críticas P0, Confiabilidade de Conexão, Buffer Telnet e Regime Zero-Network</div>
+      <div class="badges">
+        <span class="badge badge-success">100% CONFORME (APROVADO)</span>
+        <span class="badge badge-p0">Severidade P0</span>
+        <span class="badge badge-info">100% Offline (Zero-Network)</span>
+        <span class="badge badge-success">Mocks Telnet Ativos</span>
+      </div>
+      <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+        Data da Auditoria: <strong>2026-10-15 23:00:51 UTC</strong> | Alvo: <code>scripts/local/*.py</code> | Ambiente: Python 3.10 (Windows)
+      </p>
+    </header>
+
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-value gold">87</div>
+        <div class="kpi-label">Testes Automatizados</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value emerald">87</div>
+        <div class="kpi-label">Testes Aprovados</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value emerald">0</div>
+        <div class="kpi-label">Pendências / Falhas</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value emerald">0</div>
+        <div class="kpi-label">Vazamentos de Rede Externa</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-value emerald">6.44s</div>
+        <div class="kpi-label">Tempo de Execução</div>
+      </div>
+    </div>
+
+    <!-- 1. Sumário Executivo -->
+    <section id="sumario">
+      <h2>1. Sumário Executivo</h2>
+      <p>
+        Este relatório formal documenta a auditoria e validação de conformidade técnica do motor de automação e conexão telnet de 
+        <strong>Grebolius no Devil's Bob MUD</strong>. A intervenção auditada cobre sete requisitos críticos (R1 a R7), estabelecendo 
+        garantias matemáticas e comportamentais contra descritores órfãos, vitais negativos não interpretados, fragmentação telnet, 
+        vazamentos de credenciais e integridade das decisões de navegação e combate.
+      </p>
+      <p>
+        Todas as asserções e testes foram executados <strong>estritamente em regime 100% Offline (Zero-Network)</strong>, 
+        através de uma camada de guarda no nível de socket (<code>ZeroNetworkGuard</code>) combinada com um servidor mock telnet loopback 
+        (<code>MockTelnetServer</code>) e simuladores de stream em memória (<code>MockSocket</code>).
+      </p>
+    </section>
+
+    <!-- 2. Matriz de Auditoria e Conformidade -->
+    <section id="matriz">
+      <h2>2. Matriz de Auditoria e Conformidade (R1 a R7)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Requisito & Severidade</th>
+            <th>Critério de Aceite</th>
+            <th>Casos de Teste / Evidência</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>R1 (T01)</strong></td>
+            <td>Fechamento Confiável e Salvamento<br><span class="badge badge-p0">P0 Crítico</span></td>
+            <td>Encerramento transacional (<code>try...finally</code>), liberação de sockets e descritores em crash/EOF, confirmação textual estrita de <code>save</code>.</td>
+            <td><code>test_t1_r1_lifecycle_normal_close</code><br><code>test_t1_r1_save_confirmed_explicit</code><br><code>test_t2_r1_eof_drop_during_close</code></td>
+            <td><span class="status-badge status-ok">CONFORME</span></td>
+          </tr>
+          <tr>
+            <td><strong>R2 (T02)</strong></td>
+            <td>Vitais Negativos e Máquina de Estados<br><span class="badge badge-p0">P0 Crítico</span></td>
+            <td>Suporte a vitais negativos (<code>-30hp</code>), classificação estrita em 6 estados operacionais (<code>in_game</code>, <code>in_combat</code>, <code>incapacitated</code>, <code>dead_or_menu</code>, <code>disconnected</code>, <code>unknown</code>).</td>
+            <td><code>test_t1_r2_positive_vitals_parsed</code><br><code>test_t2_r2_negative_hp_in_prompt</code><br><code>test_t2_r2_incapacitated_state</code></td>
+            <td><span class="status-badge status-ok">CONFORME</span></td>
+          </tr>
+          <tr>
+            <td><strong>R3 (T03)</strong></td>
+            <td>Buffer Contínuo e Defragmentação Telnet<br><span class="badge badge-p0">P0 Crítico</span></td>
+            <td>Remontagem de fragmentos TCP e tags IAC (<code>0xFF</code>) divididas entre chunks, detecção de ameaças e ataques espontâneos em background.</td>
+            <td><code>test_t2_r3_telnet_iac_split_across_chunks</code><br><code>test_t2_r3_split_prompt_word_assembly</code><br><code>test_t3_spontaneous_mob_attack_updates_state</code></td>
+            <td><span class="status-badge status-ok">CONFORME</span></td>
+          </tr>
+          <tr>
+            <td><strong>R4 (T04)</strong></td>
+            <td>Preservação de Logs e Sanitização<br><span class="badge badge-p0">P0 Crítico</span></td>
+            <td>Prevenção de sobrescrita de logs no mesmo dia (nomes versionados/identificados), flush imediato e censura estrita de <code>MUD_PASS</code> (<code>***REDACTED***</code>).</td>
+            <td><code>test_t1_r4_session_logging_and_flush</code><br><code>test_t2_r4_credential_sanitization_outgoing</code><br><code>test_t4_distinct_session_log_filenames_same_day</code></td>
+            <td><span class="status-badge status-ok">CONFORME</span></td>
+          </tr>
+          <tr>
+            <td><strong>R5 (T05)</strong></td>
+            <td>Bloqueio da Falsa Opção <code>--quest</code><br><span class="badge badge-p0">P0 Crítico</span></td>
+            <td>Recusa imediata da execução com erro explicativo no <code>stderr</code> antes de qualquer tentativa de conexão real ou simulada.</td>
+            <td><code>test_t1_r5_runner_dry_run_allowed</code><br><code>test_t2_r5_block_quest_cli_flag_pre_connection</code></td>
+            <td><span class="status-badge status-ok">CONFORME</span></td>
+          </tr>
+          <tr>
+            <td><strong>R6 (T06)</strong></td>
+            <td>Integridade Tática, Alvos e Fuga<br><span class="badge badge-p0">P0 Crítico</span></td>
+            <td>Movimentos recusados preservam a sala original sem avançar rotas; alvos não encontrados não contam vitórias; fuga (<code>wimpy</code>) aborta rota e força <code>look</code>.</td>
+            <td><code>test_t1_r6_successful_move_updates_room</code><br><code>test_t2_r6_movement_rejection_preserves_room</code><br><code>test_t3_wimpy_panic_retreat_invalidates_route</code></td>
+            <td><span class="status-badge status-ok">CONFORME</span></td>
+          </tr>
+          <tr>
+            <td><strong>R7 (T16)</strong></td>
+            <td>Restrição Offline e Mocks Automatizados<br><span class="badge badge-p0">P0 Crítico</span></td>
+            <td>Ambiente 100% Offline (Zero-Network). Interceptação e bloqueio ativo de conexões externas via <code>ZeroNetworkGuard</code>. Relatório HTML gerado na raiz.</td>
+            <td><code>test_t1_r7_zero_network_allows_localhost</code><br><code>test_t2_r7_zero_network_blocks_external_ip</code><br><code>test_t4_full_mock_session_lifecycle</code></td>
+            <td><span class="status-badge status-ok">CONFORME (100% Offline)</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 3. Detalhamento da Infraestrutura de Testes e Mocks -->
+    <section id="infraestrutura">
+      <h2>3. Infraestrutura de Testes e Mocks Telnet</h2>
+      <p>A suíte de testes adota uma arquitetura em 4 camadas (Tiers) construída sobre o módulo <code>scripts/local/mock_telnet.py</code>:</p>
+      <ul>
+        <li><strong>Camada Zero-Network (<code>ZeroNetworkGuard</code>)</strong>: Monkeypatch global sobre <code>socket.socket.connect</code>, <code>socket.create_connection</code> e <code>socket.getaddrinfo</code>. Garante que qualquer tráfego para fora de <code>127.0.0.1</code> / <code>localhost</code> seja instantaneamente abortado com <code>ZeroNetworkViolation</code>.</li>
+        <li><strong>Simulador em Memória (<code>MockSocket</code>)</strong>: Interface rápida com enfileiramento de chunks discretos (<code>enqueue_chunks</code>), injeção pontual de EOF (<code>trigger_eof</code>) e disparo de exceções simuladas (ex.: <code>ConnectionResetError</code>).</li>
+        <li><strong>Servidor Loopback Real (<code>MockTelnetServer</code>)</strong>: Servidor TCP loopback na porta <code>127.0.0.1:0</code> que reproduz o ciclo de vida e comandos do CircleMUD, negociação telnet IAC WILL/WONT/DO/DONT, entrega fragmentada de caracteres e eventos espontâneos de monstros.</li>
+        <li><strong>Organização em 4 Tiers</strong>:
+          <ul>
+            <li><strong>Tier 1: Feature Coverage</strong>: Casos positivos de salvamento, vitais, navegação e comandos básicos.</li>
+            <li><strong>Tier 2: Boundary & Corner Cases</strong>: Sequências IAC divididas no byte <code>0xFF</code>, vitais negativos (<code>-30hp</code>), rejeições de save, bloqueio pré-conexão de <code>--quest</code> e sanitização.</li>
+            <li><strong>Tier 3: Cross-Feature Combinations</strong>: Ataques surpresa em background com transição para <code>in_combat</code>, recuo em pânico (<code>wimpy</code>) com perda de orientação e resets abruptos.</li>
+            <li><strong>Tier 4: Real-World Scenarios</strong>: Ciclo de vida completo de sessão, verificação de vazamento de descritores e identificadores únicos de log.</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 4. Conformidade com a Doutrina de Grebolius -->
+    <section id="doutrina">
+      <h2>4. Conformidade com a Doutrina de Exploração de Grebolius</h2>
+      <p>A arquitetura e os testes respeitam os quatro pilares inegociáveis da doutrina de campanha:</p>
+      <ul>
+        <li><strong>Teto de Três Conexões por Ciclo</strong>: O motor de automação assegura fechamento limpo para evitar desperdício de janelas operacionais.</li>
+        <li><strong>Wimpy 13 Obrigatório</strong>: O comando <code>wimpy 13</code> é validado na inicialização, e as rotinas de fuga abortam percursos cegos.</li>
+        <li><strong>Desconhecimento de Números na Prosa</strong>: Vitals (HP, mana, mv) são tratados estritamente como telemetria interna do motor, nunca vazando para os registros narrativos das crônicas.</li>
+        <li><strong>Evidência antes da Prosa</strong>: Nenhuma ação é presumida; todas as decisões exigem confirmação textual prévia nos buffers da sessão.</li>
+      </ul>
+    </section>
+
+    <!-- 5. Registro Verbatim de Execução dos Testes -->
+    <section id="logs">
+      <h2>5. Registro Verbatim da Suíte de Testes</h2>
+      <p>Log completo gerado durante a execução dos testes automatizados sob guarda Zero-Network:</p>
+      <pre><code>test_commit_is_single_local_revision_and_does_not_stage_unrelated_files (test_check_project.PublishTests) ... ok
+test_default_without_checkout_is_dry_run (test_check_project.PublishTests) ... ok
+test_publication_excludes_local_and_sensitive_paths (test_check_project.PublishTests) ... ok
+test_push_requires_publish_and_validation_blocks_commit (test_check_project.PublishTests) ... ok
+test_absent_parse_is_explicit_not_zero (test_check_project.ValidatorTests) ... ok
+test_empty_posts_require_explicit_draft (test_check_project.ValidatorTests) ... ok
+test_evidence_cannot_escape_hero_directory (test_check_project.ValidatorTests) ... ok
+test_full_catalog_metadata_and_unparsed_vitals_fail (test_check_project.ValidatorTests) ... ok
+test_future_cycle_and_bad_limits_are_errors (test_check_project.ValidatorTests) ... ok
+test_legacy_metagame_is_warning_and_not_rewritten (test_check_project.ValidatorTests) ... ok
+test_malformed_posts_report_errors_without_crashing (test_check_project.ValidatorTests) ... ok
+test_manual_new_day_cannot_bypass_evidence_policy (test_check_project.ValidatorTests) ... ok
+test_map_accepts_legacy_day_interval_and_warns_staleness (test_check_project.ValidatorTests) ... ok
+test_map_allows_one_way_connections (test_check_project.ValidatorTests) ... ok
+test_map_rejects_broken_targets_duplicates_totals (test_check_project.ValidatorTests) ... ok
+test_map_state_distinguishes_camp_and_sanctuary (test_check_project.ValidatorTests) ... ok
+test_markdown_bold_hp_and_wimpy_are_parsed (test_check_project.ValidatorTests) ... ok
+test_nested_malformed_data_reports_errors (test_check_project.ValidatorTests) ... ok
+test_new_post_future_or_missing_evidence_fails (test_check_project.ValidatorTests) ... ok
+test_order_duplicate_and_placeholder_are_invalid (test_check_project.ValidatorTests) ... ok
+test_cli_requires_real_content_and_evidence (test_check_project.WritingTests) ... ok
+test_create_hero_is_draft_without_invented_day_or_numbers (test_check_project.WritingTests) ... ok
+test_existing_day_requires_explicit_replace_and_preserves_bytes (test_check_project.WritingTests) ... ok
+test_future_cycle_does_not_overwrite_file (test_check_project.WritingTests) ... ok
+test_recorded_post_keeps_real_content_and_origin (test_check_project.WritingTests) ... ok
+test_unknown_hero_never_falls_back_to_other_character (test_check_project.WritingTests) ... ok
+test_check_detects_stale_without_rewriting_chronicles (test_sync_hero.SyncHeroTests) ... ok
+test_documental_source_cannot_claim_live_verification (test_sync_hero.SyncHeroTests) ... ok
+test_future_state_is_rejected (test_sync_hero.SyncHeroTests) ... ok
+test_invalid_resource_stops_before_any_write (test_sync_hero.SyncHeroTests) ... ok
+test_one_state_updates_both_catalogs_and_ficha (test_sync_hero.SyncHeroTests) ... ok
+test_pending_ring_is_not_added_as_confirmed_inventory (test_sync_hero.SyncHeroTests) ... ok
+test_classify_game_state_dead_or_menu (test_parsers.TestParsers)
+Morte (HP <= -10 ou mensagem de morte) e telas de menu devem retornar 'dead_or_menu'. ... ok
+test_classify_game_state_disconnected (test_parsers.TestParsers)
+is_connected=False deve retornar estritamente 'disconnected'. ... ok
+test_classify_game_state_in_combat (test_parsers.TestParsers)
+Detecção de combate por medidor ({...>>}) ou mensagens agressivas retorna 'in_combat'. ... ok
+test_classify_game_state_in_game (test_parsers.TestParsers)
+Conectada com HP > 0 e sem ameaça retorna 'in_game'. ... ok
+test_classify_game_state_incapacitated (test_parsers.TestParsers)
+HP <= 0 e HP > -10 classifica como 'incapacitated'. ... ok
+test_classify_game_state_unknown (test_parsers.TestParsers)
+Vitais ausentes ou vitals['hp'] is None deve retornar 'unknown' para interromper automação. ... ok
+test_deboclient_parsers_and_rejections (test_parsers.TestParsers) ... ok
+test_detect_combat_target_absence (test_parsers.TestParsers)
+Alvos ausentes devem retornar True para evitar falso positivo de vitória. ... ok
+test_detect_rejections (test_parsers.TestParsers) ... ok
+test_direction_opposites (test_parsers.TestParsers) ... ok
+test_parse_exits_basic (test_parsers.TestParsers) ... ok
+test_parse_exits_quad_cardinal (test_parsers.TestParsers) ... ok
+test_parse_room_full (test_parsers.TestParsers) ... ok
+test_parse_vitals_from_prompt (test_parsers.TestParsers) ... ok
+test_parse_vitals_from_score (test_parsers.TestParsers) ... ok
+test_parse_vitals_negative_prompt (test_parsers.TestParsers)
+Verifica se HP negativo (ex: -30hp) é extraído como número inteiro com sinal. ... ok
+test_parse_vitals_negative_score (test_parsers.TestParsers)
+Verifica se HP negativo no score é extraído corretamente. ... ok
+test_parse_vitals_zero_and_missing (test_parsers.TestParsers)
+Verifica parsing de vitais zerados e entradas vazias ou ausentes. ... ok
+test_real_historical_log_file (test_parsers.TestParsers) ... ok
+test_real_historical_rejection_step4 (test_parsers.TestParsers) ... ok
+test_strip_accents (test_parsers.TestParsers) ... ok
+test_verify_save_confirmation (test_parsers.TestParsers)
+Confirmação estrita de salvamento sem falsos positivos. ... ok
+test_t1_r1_lifecycle_normal_close (test_mud_automation.TestTier1FeatureCoverage)
+R1 (T01): Client close routine releases socket cleanly without hanging or error. ... ok
+test_t1_r1_save_confirmed_explicit (test_mud_automation.TestTier1FeatureCoverage)
+R1 (T01): Explicit canonical save confirmation strings are verified. ... ok
+test_t1_r2_positive_vitals_parsed (test_mud_automation.TestTier1FeatureCoverage)
+R2 (T02): Standard positive vitals in prompt are extracted accurately. ... ok
+test_t1_r2_state_classification_in_game (test_mud_automation.TestTier1FeatureCoverage)
+R2 (T02): Operational state is classified as 'in_game' during normal exploration. ... ok
+test_t1_r3_stream_reception (test_mud_automation.TestTier1FeatureCoverage)
+R3 (T03): Mock socket receives prompt and updates client vitals. ... ok
+test_t1_r4_session_logging_and_flush (test_mud_automation.TestTier1FeatureCoverage)
+R4 (T04): Session log writes and flushes continuously to disk. ... ok
+test_t1_r5_runner_dry_run_allowed (test_mud_automation.TestTier1FeatureCoverage)
+R5 (T05): Runner executes normally without --quest in dry-run mode. ... ok
+test_t1_r6_successful_move_updates_room (test_mud_automation.TestTier1FeatureCoverage)
+R6 (T06): Valid movement updates room title and exits without rejection. ... ok
+test_t1_r7_zero_network_allows_localhost (test_mud_automation.TestTier1FeatureCoverage)
+R7 (T16): ZeroNetworkGuard allows loopback TCP connections to 127.0.0.1. ... ok
+test_t2_r1_eof_drop_during_close (test_mud_automation.TestTier2BoundaryAndCorners)
+R1 (T01): EOF / sudden drop during close is handled without unhandled exception. ... ok
+test_t2_r1_save_loose_ok_rejected (test_mud_automation.TestTier2BoundaryAndCorners)
+R1 (T01): Server output containing 'ok' in arbitrary words must NOT confirm save. ... ok
+test_t2_r1_save_rejected_in_combat (test_mud_automation.TestTier2BoundaryAndCorners)
+R1 (T01): Save attempted during combat is rejected and not confirmed. ... ok
+test_t2_r1_save_rejected_while_sleeping (test_mud_automation.TestTier2BoundaryAndCorners)
+R1 (T01): Save attempted while sleeping/resting is rejected. ... ok
+test_t2_r2_dead_or_menu_state (test_mud_automation.TestTier2BoundaryAndCorners)
+R2 (T02): Death text or menu prompt is classified as 'dead_or_menu'. ... ok
+test_t2_r2_incapacitated_state (test_mud_automation.TestTier2BoundaryAndCorners)
+R2 (T02): Character with HP <= 0 and > -10 is classified as 'incapacitated'. ... ok
+test_t2_r2_missing_vitals_classified_unknown (test_mud_automation.TestTier2BoundaryAndCorners)
+R2 (T02): Unparseable prompt or missing vitals must be classified as 'unknown'. ... ok
+test_t2_r2_negative_hp_in_prompt (test_mud_automation.TestTier2BoundaryAndCorners)
+R2 (T02): Negative HP in prompt (-30hp) is extracted as integer -30. ... ok
+test_t2_r2_negative_hp_in_score (test_mud_automation.TestTier2BoundaryAndCorners)
+R2 (T02): Negative HP in score screen (Vida: {---} -15 de 52) extracts -15. ... ok
+test_t2_r3_split_prompt_word_assembly (test_mud_automation.TestTier2BoundaryAndCorners)
+R3 (T03): Prompt split in the middle of words is accumulated. ... ok
+test_t2_r3_telnet_iac_split_across_chunks (test_mud_automation.TestTier2BoundaryAndCorners)
+R3 (T03): Telnet IAC command split across TCP chunk boundaries is defragmented. ... ok
+test_t2_r4_credential_sanitization_incoming (test_mud_automation.TestTier2BoundaryAndCorners)
+R4 (T04): Server echoing password back is redacted from logs. ... ok
+test_t2_r4_credential_sanitization_outgoing (test_mud_automation.TestTier2BoundaryAndCorners)
+R4 (T04): Passwords are redacted from command logs. ... ok
+test_t2_r5_block_quest_cli_flag_pre_connection (test_mud_automation.TestTier2BoundaryAndCorners)
+R5 (T05): Starting creative_runner with --quest exits with error code before connecting. ... ok
+test_t2_r6_combat_target_absence_not_victory (test_mud_automation.TestTier2BoundaryAndCorners)
+R6 (T06): Target not found does not count as combat victory. ... ok
+test_t2_r6_movement_rejection_preserves_room (test_mud_automation.TestTier2BoundaryAndCorners)
+R6 (T06): Rejected movement keeps the current room unchanged. ... ok
+test_t2_r7_zero_network_blocks_external_ip (test_mud_automation.TestTier2BoundaryAndCorners)
+R7 (T16): Socket connection to external host raises ZeroNetworkViolation. ... ok
+test_t3_connection_reset_winerror_handled_cleanly (test_mud_automation.TestTier3CrossFeatureCombinations)
+R1 + R3: ConnectionResetError during recv is handled gracefully with state transition. ... ok
+test_t3_save_rejection_in_combat_triggers_alert (test_mud_automation.TestTier3CrossFeatureCombinations)
+R1 + R2: Attempting save while in combat fails and avoids claiming persistent save. ... ok
+test_t3_spontaneous_mob_attack_updates_state (test_mud_automation.TestTier3CrossFeatureCombinations)
+R3 + R2: Spontaneous mob attack text while idle updates state to in_combat. ... ok
+test_t3_wimpy_panic_retreat_invalidates_route (test_mud_automation.TestTier3CrossFeatureCombinations)
+R6 + R2: Wimpy panic retreat clears route queue and forces reorientation. ... ok
+test_t4_distinct_session_log_filenames_same_day (test_mud_automation.TestTier4RealWorldScenarios)
+R4 (T04): Two sessions started on the same day must produce distinct log filenames. ... ok
+test_t4_full_mock_session_lifecycle (test_mud_automation.TestTier4RealWorldScenarios)
+R1 + R2 + R3 + R7: Complete session lifecycle against MockTelnetServer loopback. ... ok
+test_t4_no_unmasked_credentials_in_session_output (test_mud_automation.TestTier4RealWorldScenarios)
+R4 (T04): Generated session log file must contain zero plaintext passwords. ... ok
+
+----------------------------------------------------------------------
+Ran 87 tests in 6.431s
+
+OK
+</code></pre>
+    </section>
+
+    <footer>
+      Relatório gerado automaticamente por <code>scripts/run_offline_tests.py</code> | Auditoria de Confiabilidade e Segurança Grebolius MUD
+    </footer>
+  </div>
+</body>
+</html>
