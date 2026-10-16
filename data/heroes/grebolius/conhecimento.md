@@ -520,3 +520,17 @@ Fonte: [dossiê primário do Dia 96](evidence/dia96.json).
 - **Loja de Armaduras**: ao sul do trecho meio da Rua Principal.
 - **Loja de Magias** (feiticeiro): ao norte do **fim** da Rua Principal.
 - Pontos de alimentação: padaria (pão recheado 6) e o Bar dos Magos (bebidas, sem comida).
+
+
+## 24. Rota determinística Templo → Milharal (extraída do mapa.json, Dia 154)
+Ordem confirmada sala a sala no mapa, **sem sorteio**:
+1. **Templo → Grande Campo**: `n` ×5 (até a sala com saídas nos quatro lados).
+2. **Campo → Caminho → Estrada**: `n` → *Um Caminho Dentre os Campos* → `e` → outro Caminho → `n` → *O Começo da Estrada*.
+3. **Estrada até o aclive**: `n` até *A Estrada Midgaard-Jareth (Aclive)* (saídas apenas leste/oeste).
+4. **Aclive → Jareth → Floresta**: `l` ×6 — aclive → topo da colina → proximidades de Jareth → **Portão Oeste** → **Centro** → **Portão Leste** → **A Entrada da Floresta**.
+5. **Floresta → Fazenda**: `n` (Adentrando) → `n` (Divisão da Trilha) → **`l`** (Num Bosque Iluminado) → **`s`** (**A Entrada da Fazenda**).
+6. **Fazenda → Milharal**: `o` ×3 — Entrada → Pequena Estrada (vidros) → Fim da Estrada → **O Milharal Destruído**.
+
+**Erro que isso corrige**: eu usava `l, l` no passo 5 (dois lestes), quando é **`l` e depois `s`**. Era a causa de todo o vagar no bosque.
+
+**Volta**: do milharal, `l` ×3 até a Entrada da Fazenda, `n` (Bosque), `o` (Divisão), `s`, `s`, `o` ×6 até o aclive — ou simplesmente `recall`.

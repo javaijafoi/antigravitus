@@ -580,7 +580,8 @@
         150,
         151,
         152,
-        153
+        153,
+        154
       ],
       "parts": [
         {
@@ -768,6 +769,19 @@
               "document": "evidence/dia153.json",
               "day": 153,
               "note": "Bug da base.py, rota da fazenda, raio e primeiro invasor abatido."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 154,
+          "summary": "Extraida do mapa a rota exata da fazenda: Entrada da Floresta -> norte (Adentrando) -> norte (Divisao) -> LESTE (Bosque) -> SUL (Entrada da Fazenda) -> oeste, oeste, oeste -> Milharal. Eu usava dois leste seguidos, o que explicava tudo. A rotina foi reescrita com essa rota deterministica e o cacador trocou as maos flamejantes pelo RAIO (48-64 de dano) mirando o nome especifico do monstro. Pendencia: a chegada a Entrada da Floresta ainda e imprecisa. O turno detectou fome e rodou o prepara sozinho.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia154.json",
+              "day": 154,
+              "note": "Rota do mapa, cacador com raio e pendencia da chegada a floresta."
             }
           ],
           "date": "2026-10-16"

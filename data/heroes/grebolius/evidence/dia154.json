@@ -1,0 +1,13 @@
+{
+  "hero_id": "grebolius",
+  "day": 154,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "summary": {
+    "rota_do_mapa": "O mapa.json entrega a rota exata: floresta_entrada ('A Entrada da Floresta') -n-> floresta_adentrando ('Adentrando-se na Floresta') -n-> floresta_divisao ('Uma Divisao da Trilha') -l-> floresta_bosque_iluminado ('Num Bosque Iluminado') -s-> fazenda_entrada ('A Entrada da Fazenda'); e dali -o-> estrada dos vidros -o-> fim da estrada -o-> MILHARAL. Eu usava 'n,n,l,l' (o segundo leste era o erro). A rotina foi reescrita com a rota deterministica do mapa.",
+    "caçador_corrigido": "O cacador agora usa LIGHTNING BOLT (48-64 de dano) em vez das maos flamejantes (~25) e mira o nome especifico do monstro (esfomeado, agressivo, invasor, bola, criatura, monstro), com plano B de alvo.",
+    "pendencia": "A chegada a 'A Entrada da Floresta' esta imprecisa: a rotina por vezes passa direto e para em 'Uma Parte Densa da Floresta', e dali o n,n,l,s nao acha a fazenda. Proximo passo: ancorar a entrada da floresta pelo mapa (o portao leste de Jareth fica a oeste dela).",
+    "turno_atuou": "O turno detectou FOME na primeira checagem (mana 122) e rodou o prepara sozinho: alimentou, hidratou, depositou o ouro e dormiu. A camada de seguranca funcionou.",
+    "estado": "Grau 20, no Templo, salva."
+  }
+}
