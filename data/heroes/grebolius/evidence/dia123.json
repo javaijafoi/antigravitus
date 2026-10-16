@@ -1,0 +1,12 @@
+{
+  "hero_id": "grebolius",
+  "day": 123,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "summary": {
+    "stand_fix": "CAUSA-RAIZ encontrada: o jogo recusa movimento quando a personagem esta descansando ('Nah... voce esta muito relaxado..'). Isso NAO e rota bloqueada. Todos os scripts de deslocamento passaram a comecar com 'wake; stand' — e a viagem que falhava ha varias rodadas passou de ponta a ponta (4 checkpoints, portao e floresta).",
+    "unified_engine": "motor.py: wake/stand -> recall -> checkpoints (campo, estrada, aclive, portao, floresta, com plano B se uma direcao falhar) -> n,n,e,e -> bosque com retrocesso (se travar, volta pela direcao oposta) -> cacada no milharal com sanctuary em salas de 2, guarda de DT e fuga abaixo de 45% -> recall + save.",
+    "result": "4 abates numa rodada: +26.176 de experiencia (756.922 -> 783.098). Faltam 16.902 para o Grau 18.",
+    "state": "Grau 17, 69/92, 8.695 de ouro."
+  }
+}

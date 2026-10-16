@@ -1,0 +1,12 @@
+{
+  "hero_id": "grebolius",
+  "day": 125,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "summary": {
+    "level_up": "GRAU 18 alcancado. Confirmado pelo cabecalho do score ('Voce e Grebolius, Mago Elfo, nivel 18') em duas leituras. O detalhamento numerico do score ficou truncado na resposta do daemon nesta sessao — anotado para reconferir.",
+    "engine_run": "motor.py rodou ponta a ponta: viagem por checkpoints, bosque com retrocesso e 4 abates no milharal (3 monstros esfomeados + 1 bola de pelos).",
+    "progression": "Grau 17 -> 18 em duas rodadas do motor (uma com 1 abate, uma com 4). Faltam 2 graus para o alvo do capitulo (20).",
+    "state": "Grau 18, no Templo, salva."
+  }
+}

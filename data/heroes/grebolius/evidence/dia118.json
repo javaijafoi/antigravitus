@@ -1,0 +1,12 @@
+{
+  "hero_id": "grebolius",
+  "day": 118,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "summary": {
+    "death6": "MORTE #6, por ARMADILHA MORTAL, durante cacada no milharal. Causa de conducao: o comando de cacada continuou rodando em segundo plano depois que o programa do agente estourou o tempo — personagem sem supervisao em zona de risco. Mesma causa da morte #5.",
+    "gain_before_death": "A rodada produziu: Experiencia subiu de 725.245 para 752.160 (+26.915, os abates antes da queda).",
+    "resurrection_route": "Rota do Paraiso CONFIRMADA e corrigida: a dica 'energia magica... chama sua atencao para o DIRECAO' aponta para o portal, e a DIRECAO MUDA por sala (leste, norte, oeste...). Seguir a direcao indicada leva a 'Um Portal Escondido no Paraiso' -> 'enter portal' -> norte ate 'A Fonte da Vida' -> 'drink fonte'. Erro anterior: eu fixava o oeste.",
+    "lesson": "Nunca deixar script de cacada rodando sem supervisao; incluir parada por tempo no proprio script."
+  }
+}

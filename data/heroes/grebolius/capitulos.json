@@ -357,7 +357,10 @@
       "goal": "Alcancar o nivel 20, montar um equipamento otimizado (por compra, doacao ou espolio) e acumular fortuna.",
       "days": [
         114,
-        117
+        117,
+        118,
+        123,
+        125
       ],
       "parts": [
         {
@@ -382,6 +385,45 @@
               "document": "evidence/dia117.json",
               "day": 117,
               "note": "Dia 117: Grau 17 alcancado; motor de EXP (viagem + bosque + cacada) validado com 5 abates."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 118,
+          "summary": "Morte #6 por armadilha mortal: a cacada continuou rodando sozinha apos o programa estourar o tempo. Antes da queda a rodada rendeu +26.915 de experiencia. Rota de ressurreicao corrigida: a dica de 'energia magica' muda de direcao por sala e aponta o portal; seguir a direcao indicada leva a Fonte da Vida.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia118.json",
+              "day": 118,
+              "note": "Dia 118: morte #6 por armadilha mortal em cacada nao supervisionada; +26.915 EXP antes da queda; rota de ressurreicao corrigida (seguir a direcao da energia)."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 123,
+          "summary": "CAUSA-RAIZ das viagens que falhavam: a personagem estava descansando e o jogo recusa movimento ('muito relaxado'). Corrigido com wake/stand em todos os scripts. Criado o motor.py unificado (viagem por checkpoints com plano B + bosque com retrocesso + cacada segura) que funcionou de ponta a ponta: 4 abates e +26.176 de experiencia. Faltam 16.902 para o Grau 18.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia123.json",
+              "day": 123,
+              "note": "Dia 123: causa-raiz do travamento (postura 'relaxado') corrigida com wake/stand; motor.py unificado validado com 4 abates e +26.176 EXP."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 125,
+          "summary": "GRAU 18 alcancado com o motor unificado (viagem + bosque com retrocesso + 4 abates no milharal). Dois graus conquistados em duas rodadas do motor (17 -> 18).",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia125.json",
+              "day": 125,
+              "note": "Dia 125: Grau 18 alcancado com o motor unificado (4 abates no milharal)."
             }
           ],
           "date": "2026-10-16"
