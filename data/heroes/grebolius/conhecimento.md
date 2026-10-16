@@ -1589,6 +1589,63 @@ desistir — **o mob não é fixo, ele nasce.**
 nome, sem "Você deve..." — **o objetivo se revela conforme se joga**, como aconteceu com Limpando
 Monstros) e continuar os abates da primeira.
 
+---
+
+## 37. O OBJETIVO DA NOVELA — "dizer algo a **a novata tagarela**" (Dia 156)
+
+O autor deu duas pistas: *"você já iniciou outras missões — analisa que textos você disse"* e
+*"`say sim` / `say yes`"*. A primeira destravou tudo.
+
+### 37.1 O padrão de TODOS os inícios: o NPC fala primeiro, ela responde `sim`
+
+Extraído dos transcripts, o que precedeu **cada** "Você começa a participar da aventura":
+
+| Missão | O que o NPC disse **antes** | O que ela disse |
+|---|---|---|
+| Problemas Agrícolas | *"**O Pacificador diz:** 'Ei, quer fazer uma boa ação hoje?'"* | `say sim` |
+| Problemas Agrícolas (2ª vez) | *"**O Pacificador diz:** 'Quando você estiver mais forte volte aqui para me ajudar!'"* | `say sim` |
+| Dicas Mágicas | *"**Um mago aventureiro questiona:** 'Ah, olhe só para você! Começando suas aventuras?'"* | `say sim` |
+| Limpando Monstros | o Alquimista falou ao chegar | `say oi` → `say sim` |
+| Novela dos Novatos | o Smart Newbie falou ao chegar | `say oi` → `say sim` |
+
+**A regra é sempre a mesma:** **o NPC pergunta, ela responde `sim`.** Não é um comando de aceitar —
+é **diálogo**. E por isso **a resposta depende de o NPC falar primeiro**.
+
+### 37.2 O alvo da Novela tem NOME — e está no transcript
+
+Procurando o que apareceu **um comando depois** de o objetivo surgir:
+
+```
+[5943] cmd='score tudo'   ->  [Autoquests em andamento] Novela dos Novatos: Você deve dizer algo ao personagem.
+[5944] cmd=''             ->  A novata tagarela chegou do norte.
+```
+
+> **"A novata tagarela"** — e **`tagarela` é o verbo de fala dos NPCs do DeBo**
+> (`Yurit tagarela: 'ooii'`).
+
+**"Você deve dizer algo ao personagem" = dizer algo À NOVATA TAGARELA.** Ela é a única personagem do
+jogo descrita como **"falando muito"**, e o nome com que o servidor a anuncia é
+**"a novata tagarela"**.
+
+**Ela aparece duas vezes nos transcripts, sempre CHEGANDO:**
+```
+A novata tagarela chegou do norte.
+A novata tagarela chegou do sul.
+```
+**Nunca falou** — nem uma linha de fala dela em todo o corpus.
+
+### 37.3 Ela ANDA, e é por isso que eu não a achei parada
+
+Ela não fica na Sacada nem na Sala da Estátua: **chega de norte e de sul**. Procurar por ela parado
+numa sala é depender da sorte.
+
+**O que ainda não sei:** qual frase ela espera. `say oi`, `say sim`, `say yes`, `say nao`, 20 frases
+soltas e 10 saudações completas foram testadas **sem reação** — mas **nenhuma delas foi dita com ela
+presente e falando**. `tell`/`ask` com a chave `tagarela` respondem *"Não há ninguém com esse nome
+aqui"*, o que confirma que **ela não estava na sala** quando testei.
+
+**Próximo passo:** **encontrá-la** (ela anda) e responder **ao que ela disser** — não falar no vácuo.
+
 
 ### 25.11 Invisibilidade BLOQUEIA comércio — e existe o comando `visible`
 
