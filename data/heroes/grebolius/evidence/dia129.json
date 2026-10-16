@@ -1,0 +1,11 @@
+{
+  "hero_id": "grebolius",
+  "day": 129,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "summary": {
+    "replay_ok": "O replay do caminho do bosque funcionou: o motor seguiu a rota gravada (com fallback para a caminhada aleatoria) e chegou ao milharal com rapidez.",
+    "gain": "3 abates = +29.125 de EXP (831.776 -> 860.901) — o melhor ganho por rodada ate agora. Faltam 39.099 para o Grau 19.",
+    "state": "Grau 18, 70/100, 9.365 de ouro."
+  }
+}

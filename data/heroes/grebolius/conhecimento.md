@@ -496,3 +496,11 @@ Fonte: [dossiê primário do Dia 96](evidence/dia96.json).
 - **Bosque**: as salas são homônimas, então memória por descrição colapsa. A solução que funcionou foi **caminhada aleatória dentro do cluster** (seguindo só saídas para "Num Bosque Iluminado"), checando a cada passo se alguma saída leva a **A Entrada da Fazenda**. Achou no **passo 19**.
 - **Detalhe do mapa**: a fazenda abre **ao norte** de uma sala de bosque `[norte, sul]`, logo após uma sala com **"O Pequeno Bosque" a leste** (registro do Dia 99).
 - **Rendimento**: 2 monstros esfomeados = **+18.522 de experiência**. É de longe a melhor fonte de EXP conhecida.
+
+
+## 21. Motor de EXP com gravação de caminho (Dia 128)
+- **Estrutura**: `wake; stand` → `recall` → checkpoints (campo, estrada, aclive, portão/floresta, com plano B) → `n,n,e,e` → **bosque com caminhada aleatória + retrocesso** → milharal → caçada (sanctuary em salas de 2, guarda de DT, fuga < 45%) → `recall; save`.
+- **Limites de segurança** (depois da morte #7): teto de **passos** no bosque e de **tempo** (420 s) — se estourar, ele **salva e sai** em vez de morrer.
+- **Gravação de caminho**: o motor imprime `CAMINHO BOSQUE: ...` ao achar a fazenda, permitindo repetir a rota sem sorteio. Caminho encontrado no Dia 128 (a partir da entrada do bosque, após `n,n,e,e`):
+  `s,n,e,e,w,w,e,w,s,n,e,w,e,w,s,n,e,e,w,e,e,w,w,w,e,e,w,e,w,e,w,w,e,e,w,e,e,e,e,w,w,e,e,w,w,w,e,e,w,e,w,w,e,e,w,e,e,e,e`
+- **Rendimento medido**: 4 abates = **+22.598** de experiência (809.178 → 831.776).

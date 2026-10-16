@@ -1,0 +1,12 @@
+{
+  "hero_id": "grebolius",
+  "day": 128,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "summary": {
+    "engine_ok": "motor.py funcionou ponta a ponta COM os limites de seguranca: achou a fazenda, cacou 4 monstros e saiu vivo (recall + save).",
+    "path_recorded": "O motor gravou o caminho do bosque (60 movimentos) e o imprimiu; registrado em conhecimento.md para repeticao.",
+    "gain": "4 abates = +22.598 EXP (809.178 -> 831.776). Faltam 68.224 para o Grau 19.",
+    "state": "Grau 18, 100/100, 9.095 de ouro."
+  }
+}

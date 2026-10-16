@@ -1,0 +1,12 @@
+{
+  "hero_id": "grebolius",
+  "day": 132,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "summary": {
+    "mana_insight": "DIAGNOSTICO: os 'inconclusivos' da cacada eram CONJURACOES SEM MANA. A mana chegou a 10 de 240, e as magias falhavam. Regeneracao medida: 'rest' rende ~10 por ciclo (lento); 'sleep' por ~90 s levou a mana de 20 para 218 de 240.",
+    "fix": "O motor agora faz uma RECARGA POR SONO (sleep ~80 s) antes de sair; com a mana cheia, a cacada rendeu 6 abates (recorde).",
+    "level_up": "GRAU 19 ALCANCADO! Vida maxima 108, mana maxima 250. Experiencia 902.936; proximo nivel em 1.000.000 (faltam 97.064).",
+    "state": "Grau 19, 32/108 de vida apos a cacada, 9.865 de ouro, salva no Templo."
+  }
+}

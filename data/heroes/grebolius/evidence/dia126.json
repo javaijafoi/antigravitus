@@ -1,0 +1,12 @@
+{
+  "hero_id": "grebolius",
+  "day": 126,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "summary": {
+    "death7": "MORTE #7 — quarta morte causada por script sem supervisao. O motor.py rodou como job em segundo plano por ~15 minutos sem produzir saida (o laco do bosque faz ate 200 passos x 2 comandos = ~400 chamadas ao daemon, e cada uma leva segundos). A personagem ficou presa em zona de risco ate cair.",
+    "level_confirmed": "A vida maxima agora e' 97, confirmando o GRAU 18 (alcancado na rodada anterior).",
+    "resurrection": "Rota confirmada de novo: seguir a direcao indicada pela 'energia magica' -> Portal Escondido -> enter -> norte -> A Fonte da Vida -> drink fonte. Renasceu com 50/97.",
+    "fix_needed": "O motor precisa de TETO DE PASSOS no bosque (ex.: 70 em vez de 200) e de limite de tempo interno; e nao deve rodar como job solto."
+  }
+}

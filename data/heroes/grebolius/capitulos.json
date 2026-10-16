@@ -360,7 +360,12 @@
         117,
         118,
         123,
-        125
+        125,
+        126,
+        128,
+        129,
+        130,
+        132
       ],
       "parts": [
         {
@@ -424,6 +429,71 @@
               "document": "evidence/dia125.json",
               "day": 125,
               "note": "Dia 125: Grau 18 alcancado com o motor unificado (4 abates no milharal)."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 126,
+          "summary": "Morte #7: o motor rodou como job por ~15 min sem saida (laco do bosque com ate 200 passos) e a personagem caiu em zona de risco — quarta morte por script sem supervisao. Grau 18 confirmado (vida maxima 97). Ressurreicao pela rota da energia magica. Correcao pendente: teto de passos e tempo no motor, e nunca rodar como job solto.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia126.json",
+              "day": 126,
+              "note": "Dia 126: morte #7 por script travado; Grau 18 confirmado pela vida maxima 97; ressurreicao pela rota da energia."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 128,
+          "summary": "Motor de EXP consolidado: wake/stand, checkpoints com plano B, bosque com caminhada + retrocesso e limites de tempo/passos (depois da morte #7), cacada segura e gravacao do caminho do bosque. Rodada completa: 4 abates e +22.598 de experiencia. Faltam 68.224 para o Grau 19.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia128.json",
+              "day": 128,
+              "note": "Dia 128: motor com limites de seguranca e gravacao de caminho; 4 abates e +22.598 EXP."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 129,
+          "summary": "Replay do caminho do bosque validado: o motor segue a rota gravada (com fallback aleatorio) e chega ao milharal mais rapido. 3 abates = +29.125 de experiencia, o melhor ganho por rodada ate agora. Faltam 39.099 para o Grau 19.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia129.json",
+              "day": 129,
+              "note": "Dia 129: replay do caminho do bosque validado; 3 abates e +29.125 EXP."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 130,
+          "summary": "Rodada do motor com 3 abates e +12.367 de experiencia (873.268 no total); faltam 26.732 para o Grau 19.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia130.json",
+              "day": 130,
+              "note": "Dia 130: 3 abates e +12.367 EXP rumo ao Grau 19."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 132,
+          "summary": "Diagnostico: os 'inconclusivos' eram magias sem mana (chegou a 10 de 240). 'Sleep' por ~90 s restaura a mana (20 -> 218). Com a recarga por sono no motor, a cacada rendeu 6 abates (recorde) e o GRAU 19 foi alcancado (vida maxima 108, mana 250). Faltam 97.064 de experiencia para o Grau 20.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia132.json",
+              "day": 132,
+              "note": "Dia 132: diagnosticada a mana como teto da cacada; recarga por sono; 6 abates e GRAU 19 alcancado."
             }
           ],
           "date": "2026-10-16"
