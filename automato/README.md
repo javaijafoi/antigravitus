@@ -94,7 +94,9 @@ Apontado por `nucleo/config.py` em `DIR_HEROI`:
 \`\`\`powershell
 # 1. subir o driver (uma unica sessao viva com o MUD):
 python automato/nucleo/driver/live_daemon.py
-# 2. usar as camadas:
+# 2. conferir se esta tudo no lugar:
+python automato/verificar.py
+# 3. usar as camadas:
 python automato/camadas/trabalhar.py --listar              # catalogo de rotinas
 python automato/camadas/vigia.py                           # diagnostico agora
 python automato/camadas/prepara.py                         # arruma a personagem
