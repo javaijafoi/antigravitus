@@ -572,7 +572,8 @@
         142,
         143,
         144,
-        145
+        145,
+        146
       ],
       "parts": [
         {
@@ -646,6 +647,19 @@
               "document": "evidence/dia145.json",
               "day": 145,
               "note": "Avanco da autoquest Dicas Magicas e higiene."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 146,
+          "summary": "Dicas Magicas segue em andamento: o ciclo do 'sim' limpa a instrucao e ela volta depois; testado no Bar dos Magos e no Laboratorio sem fechar. Varridas tres pracas de Midgaard sem encontrar o 'novato esperto'. Registrada a rota urbana fina (Templo -> Bar dos Magos) e o laco da Rua da Muralha.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia146.json",
+              "day": 146,
+              "note": "Estado da Dicas Magicas, rota urbana e busca do novato esperto."
             }
           ],
           "date": "2026-10-16"

@@ -511,3 +511,12 @@ Fonte: [dossiê primário do Dia 96](evidence/dia96.json).
 - **Sem criaturas**: percorri nove salas do pântano e nenhuma tinha mob. É corredor, não viveiro.
 - **A Torre**: imensa, de pedra "unida sem massa", com **"uma energia mágica fortíssima"** no topo que **impede por completo a entrada**. Fica registrada como marco — provavelmente exige missão ou nível para abrir.
 - **Consequência para o capítulo**: sem caça de nível alto aqui, o milharal segue como única fonte conhecida — mas paga só ~1.000 de EXP por abate no Grau 19.
+
+
+## 23. Rota urbana fina de Midgaard (Dia 146) — para não errar mais
+- **Templo → Guilda dos Magos**: `s` (Praça do Templo) → `s` (Praça do Comércio) → `w` (Rua Principal, meio) → `w` (**fim da Rua Principal**, com a Guilda ao SUL) → `s` (Entrada da Guilda) → `s` (**Bar dos Magos**).
+- **Erro que me custou idas e voltas**: um **terceiro `w`** sai da cidade pelo **Portão Oeste**; dali `s` entra na **Rua da Muralha**, que **dá voltas em laço** (norte/sul apenas, leste bloqueado). Se cair nela: voltar ao portão e entrar a **leste**.
+- **Padaria**: ao norte do trecho **meio** da Rua Principal (`w` desde o Comércio, depois `n`).
+- **Loja de Armaduras**: ao sul do trecho meio da Rua Principal.
+- **Loja de Magias** (feiticeiro): ao norte do **fim** da Rua Principal.
+- Pontos de alimentação: padaria (pão recheado 6) e o Bar dos Magos (bebidas, sem comida).
