@@ -577,7 +577,8 @@
         147,
         148,
         149,
-        150
+        150,
+        151
       ],
       "parts": [
         {
@@ -726,6 +727,19 @@
               "document": "diretiva_de_jogo.md",
               "day": 150,
               "note": "Secao 15: a regra permanente."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 151,
+          "summary": "Testes do autor. (1) Itens soltos no chao PERSISTEM: os 8 paes jogados na Loja de Magias continuavam la - recuperados 3 (o que cabia no peso); tocha, atadura, adaga e punhal seguem no chao. (2) Compradores mapeados: o armeiro compra somente armaduras, o feiticeiro recusa itens usados/worn, o padeiro nao compra. O teste de venda da doacao esbarra no PESO, nao no comprador - com 108-111 kg de 115 ela nao consegue nem pegar a espada de aco. (3) Descoberto que o CANTIL pesa ~40 kg. (4) Para desamaldicoar a Armadura da Torre Negra (60 kg) faltam ~1.227 moedas (pergaminho 8.509 contra 7.282 em caixa).",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia151.json",
+              "day": 151,
+              "note": "Recuperacao dos paes, peso do cantil e teste de compradores."
             }
           ],
           "date": "2026-10-16"
