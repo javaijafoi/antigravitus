@@ -6,10 +6,17 @@ Para adaptar o automato a outro projeto/heroi, mude SO este arquivo.
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parents[2]        # raiz do repositorio
-DIR_DRIVER = RAIZ / "scripts" / "local"           # onde vivem o driver e o token
-LOCK = DIR_DRIVER / ".controller"                 # arquivo com o token do driver
-DIR_LOGS = DIR_DRIVER                             # logs de sessao session_live_*.log
-LOG_ROTINA = DIR_DRIVER / "rotina.log"            # saida das rotinas
+
+# --- onde ficam os CONHECIMENTOS referenciados (nao copiados) ---
+DIR_HEROI = RAIZ / "data" / "heroes" / "grebolius"
+DOC_CONHECIMENTO = DIR_HEROI / "conhecimento.md"   # rotas, economia, DT, tudo aprendido
+DOC_DIRETIVA = DIR_HEROI / "diretiva_de_jogo.md"   # as regras de como jogar
+DOC_MAPA = DIR_HEROI / "mapa.json"                 # o mapa vivo das salas
+DIR_DRIVER = RAIZ / "automato" / "nucleo" / "driver"   # o driver vive DENTRO do automato
+RUNTIME = RAIZ / "automato" / "runtime"                # token, senha e logs (nao versionados)
+LOCK = RUNTIME / ".controller"                         # token do driver (segredo, fora do git)
+DIR_LOGS = RUNTIME                                     # logs de sessao session_live_*.log
+LOG_ROTINA = RUNTIME / "rotina.log"                    # saida das rotinas
 HOST = "127.0.0.1"
 PORT = 14888
 

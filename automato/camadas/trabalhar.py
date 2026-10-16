@@ -9,6 +9,10 @@ Cada rotina sabe partir do Templo, trabalhar e voltar. Elas sao protegidas:
   - pela guarda de repeticao (dentro de base.py);
   - pelo vigia.py, que o turno.py consulta de minuto em minuto.
 """
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(_Path(__file__).resolve().parents[1] / 'nucleo'))
+
 import argparse
 import sys
 from pathlib import Path

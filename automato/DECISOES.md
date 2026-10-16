@@ -54,6 +54,19 @@ Cada entrada responde a três perguntas: **por que** (o problema real), **o que*
 
 ---
 
+## 7. O automato passou a ser autossuficiente (v1.1, Dia 155)
+- **Por que**: o automato dependia de arquivos fora dele (o driver, os parsers, a ressurreição), então
+  outro agente não conseguia rodá-lo "pegando a pasta" — e as rotinas liam texto vazio quando o token
+  estava em outro caminho.
+- **O que**: o **driver completo** foi para `automato/nucleo/driver/` (debo_bot, parsers, live_daemon, play);
+  os **segredos e logs** para `automato/runtime/` (fora do git); a ressurreição para `automato/acoes/`; e
+  `config.py` passou a apontar os **documentos do herói** (`conhecimento.md`, `diretiva_de_jogo.md`, `mapa.json`)
+  como conhecimento **referenciado** — não copiado.
+- **Custo**: subir o driver virou um passo obrigatório antes de qualquer camada, e reiniciá-lo abre uma
+  sessão nova no MUD.
+- **Próximo desafio**: um `automato/setup.py` que valide ambiente (Python, rede, token, senha) e suba o driver sozinho.
+
+
 ## Os próximos desafios (em ordem de valor para o capítulo)
 1. **Fechar o trajeto do milharal** (falta confirmar *Uma Parte Densa → Bosque → sul*) e **entregar
    Problemas Agrícolas** — é a missão mais perto de concluir (1 invasor já abatido).

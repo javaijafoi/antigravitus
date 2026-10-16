@@ -4,6 +4,13 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.1 — Dia 155 · automato autossuficiente
+- **MUDOU**: o **driver inteiro** (debo_bot.py, parsers.py, live_daemon.py, play.py) passou a viver em `automato/nucleo/driver/`.
+- **MUDOU**: token, senha e logs foram para `automato/runtime/` — **fora do git** (`.gitignore`).
+- **NOVO**: `automato/acoes/ressuscitar.py` (a ressurreição virou ação do automato).
+- **NOVO**: `config.py` aponta os documentos do herói (`conhecimento.md`, `diretiva_de_jogo.md`, `mapa.json`) — referenciados, não copiados.
+- **REQUISITO**: subir o driver antes de qualquer camada.
+
 ## v1.0 — Dia 155 · empacotamento
 - **NOVO**: pasta `automato/` com núcleo, camadas, rotinas e documentação (README, CHANGELOG, DECISOES).
 - **NOVO**: `nucleo/config.py` — um único ponto de configuração (caminhos, limites, magias).

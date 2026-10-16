@@ -14,3 +14,6 @@ mudclient.py
 scripts/local/
 audio/test_samples/
 .agents/
+
+# automato: segredos e execucao ficam fora do git
+automato/runtime/

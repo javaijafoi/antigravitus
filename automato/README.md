@@ -49,8 +49,52 @@ def executar() -> bool:
 3. nunca luta abaixo de \`VIDA_MINIMA\`; 4. termina com \`save\`; 5. pode ser interrompida a
 qualquer momento — o \`prepara.py\` conserta o resto.
 
+
+## O que está DENTRO e o que é REFERENCIADO
+
+Nada essencial vive fora desta pasta: o driver foi migrado para dentro do automato.
+
+### Dentro (o core)
+```
+automato/
+├── nucleo/
+│   ├── config.py              <-- O UNICO lugar de configuracao
+│   ├── base.py                <-- run(), navegacao, contrato
+│   ├── guarda.py              <-- guarda de repeticao
+│   └── driver/                <-- O DRIVER COMPLETO (nada fica em scripts/local)
+│       ├── debo_bot.py        <-- cliente do MUD
+│       ├── parsers.py         <-- parsers das respostas do MUD
+│       ├── live_daemon.py     <-- sessao viva unica (127.0.0.1:14888)
+│       └── play.py            <-- cliente IPC de linha de comando
+├── camadas/                   <-- vigia, prepara, trabalhar, turno
+├── rotinas/                   <-- milharal, esgoto, _suspensas/
+├── acoes/                     <-- ressuscitar e outras acoes pontuais
+└── runtime/                   <-- SEGREDOS E LOGS (fora do git)
+    ├── .controller            <-- token do driver
+    ├── .mud_pass              <-- senha do MUD
+    └── session_live_*.log     <-- os logs que o vigia le
+```
+
+### Referenciado (conhecimento do heroi, nao copiado)
+Apontado por `nucleo/config.py` em `DIR_HEROI`:
+
+| Arquivo | Para que serve |
+|---|---|
+| `data/heroes/<heroi>/conhecimento.md` | rotas, economia, armadilhas, tudo o que foi aprendido |
+| `data/heroes/<heroi>/diretiva_de_jogo.md` | as regras de como jogar (inclui as diretivas do autor) |
+| `data/heroes/<heroi>/mapa.json` | o mapa vivo das salas (fonte das rotas) |
+| `data/heroes/<heroi>/missoes.json` | o estado das missoes |
+
+### Requisitos de ambiente
+- Python 3.10+;
+- rede liberada para `debomud.org:4000` (o MUD) e o driver escutando em `127.0.0.1:14888` (local);
+- a senha vem de `MUD_PASS` ou de `automato/runtime/.mud_pass` (nunca versionada).
+
 ## Como rodar
 \`\`\`powershell
+# 1. subir o driver (uma unica sessao viva com o MUD):
+python automato/nucleo/driver/live_daemon.py
+# 2. usar as camadas:
 python automato/camadas/trabalhar.py --listar              # catalogo de rotinas
 python automato/camadas/vigia.py                           # diagnostico agora
 python automato/camadas/prepara.py                         # arruma a personagem

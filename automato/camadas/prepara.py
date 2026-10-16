@@ -14,6 +14,10 @@ volta com 'recall' e refaz. Travas: aborta em combate, vida baixa ou torre negra
 Uso: python scripts/local/farm_armaduras.py [--max 60] [--min-hp 55]
 Depende do live_daemon.py no ar (porta 14888) e do token em scripts/local/.controller.
 """
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(_Path(__file__).resolve().parents[1] / 'nucleo'))
+
 import argparse
 import json
 from guarda import vigiar as _vigiar, limpa as _limpa_txt
@@ -27,7 +31,7 @@ from pathlib import Path
 HOST = '127.0.0.1'
 PORT = 14888
 ROOT = Path(__file__).resolve().parent.parent.parent
-LOCK = ROOT / 'scripts/local/.controller'
+LOCK = config.LOCK
 
 TO_TOWER = ['n', 'n', 'n', 'n', 'w', 'w', 'w', 'n', 'n', 'n']
 TO_SHOP = ['s', 's', 'w', 's']  # do Templo ate o Armeiro

@@ -10,6 +10,10 @@ O turno roda o motor em segundo plano e, A CADA MINUTO, pergunta ao vigia.
 Se o vigia acusar problema, o turno MATA o motor, manda o prepara resolver e
 recomeca - exatamente o "monitora status que sobrepoe o motor" pedido pelo autor.
 """
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(_Path(__file__).resolve().parents[1] / 'nucleo'))
+
 import argparse
 import subprocess
 import sys
