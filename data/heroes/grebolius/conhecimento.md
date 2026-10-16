@@ -504,3 +504,10 @@ Fonte: [dossiê primário do Dia 96](evidence/dia96.json).
 - **Gravação de caminho**: o motor imprime `CAMINHO BOSQUE: ...` ao achar a fazenda, permitindo repetir a rota sem sorteio. Caminho encontrado no Dia 128 (a partir da entrada do bosque, após `n,n,e,e`):
   `s,n,e,e,w,w,e,w,s,n,e,w,e,w,s,n,e,e,w,e,e,w,w,w,e,e,w,e,w,e,w,w,e,e,w,e,e,e,e,w,w,e,e,w,w,w,e,e,w,e,w,w,e,e,w,e,e,e,e`
 - **Rendimento medido**: 4 abates = **+22.598** de experiência (809.178 → 831.776).
+
+
+## 22. O Pântano e a Torre Selada (Dia 134)
+- **Rota**: bosque → *Uma Parte Densa da Floresta* → **O Fim da Floresta** → **O Começo do Pântano** → (norte) Continuando / Aprofundando-se no Pântano → **O Fim do Pântano** → (leste) *Um Caminho na Floresta* → (norte) *Afundando no Lamaçal* → (norte) **Um Começo de Solo** → (norte) **Na Base da Torre**.
+- **Sem criaturas**: percorri nove salas do pântano e nenhuma tinha mob. É corredor, não viveiro.
+- **A Torre**: imensa, de pedra "unida sem massa", com **"uma energia mágica fortíssima"** no topo que **impede por completo a entrada**. Fica registrada como marco — provavelmente exige missão ou nível para abrir.
+- **Consequência para o capítulo**: sem caça de nível alto aqui, o milharal segue como única fonte conhecida — mas paga só ~1.000 de EXP por abate no Grau 19.

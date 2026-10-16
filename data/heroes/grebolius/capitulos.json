@@ -353,7 +353,7 @@
       "tomo": 1,
       "title": "Rumo ao Grau 20",
       "kind": "missao",
-      "status": "em_curso",
+      "status": "concluido",
       "goal": "Alcancar o nivel 20, montar um equipamento otimizado (por compra, doacao ou espolio) e acumular fortuna.",
       "days": [
         114,
@@ -499,10 +499,50 @@
           "date": "2026-10-16"
         }
       ],
-      "content": [],
-      "tags": [],
+      "content": [
+        "Este capítulo me ensinou que força não é feitiço: é rotina. Comecei querendo ouro e terminei aprendendo a dormir.",
+        "Do grau dezessete ao vinte, a estrada foi sempre a mesma e sempre diferente. Toda vez, a mesma viagem: acordar, levantar — porque descobri, tarde, que um corpo sentado não anda, por mais que a vontade mande — atravessar os campos, a rodovia, o portão de Jareth, a entrada da floresta. E então o bosque, aquele labirinto de árvores que se chamam todas pelo mesmo nome. Aprendi a decorar o caminho em vez de confiar na sorte, e o bosque deixou de ser parede e virou porta.",
+        "A caçada me deu a lição mais cara. Eu voltava do milharal com as mãos vazias, xingando a fuga dos monstros, até perceber que o problema era mais simples e mais humilhante: **eu estava sem mana**. Gastei noites inteiras conjurando com a alma seca. Quando finalmente medi — a mana caía a dez de duzentos e quarenta —, a resposta estava à vista: dormir. Uma hora de sono devolveu duzentos de mana, e o milharal, que parecia estéril, entregou seis abates numa única saída.",
+        "Também aprendi o preço de deixar a máquina pensar por mim. Caí três vezes enquanto dormia em cima de um script que não devia estar correndo. A cada morte, o Vazio passou a mão na minha memória e me devolveu ao Paraíso, e a cada vez eu refiz o caminho do portal, seguindo a direção que aquela energia mágica sussurrava — que muda de sala para sala, como tudo o que é vivo. Não morri de monstro: morri de descuido. E descuido, ao contrário de maldição, é coisa que se corrige.",
+        "No fim, cheguei ao grau vinte. Não foi com um golpe heroico, foi com dezenas de golpes pequenos e uma disciplina teimosa: acordar, levantar, conjurar a armadura, dormir para encher a mana, ir, matar quatro ou seis, voltar, salvar. E no dia em que o corpo finalmente subiu de grau, ganhei a magia que eu perseguia desde o começo: o raio. Treinei-o na guilda até ficar perfeito — dez por cento viraram noventa e cinco.",
+        "O ouro, esse ficou devendo. O armeiro de Midgaard compra minhas armaduras da Torre por oito mil e quinhentas moedas cada, mas o bolso dele é raso como o de um padeiro, e quando seca ele me manda procurar um feiticeiro que não compra armadura nenhuma. Aprendei a vender em lotes o que o tabuleiro oferece, e a não me apaixonar por uma peça que ninguém pode pagar. Fiquei mais rica em método do que em moedas — e, para uma maga, método é o que se leva.",
+        "Há uma torre no meio do pântano, com uma energia mágica tão forte que sela a própria porta. Eu a encontrei e não pude entrar. Termino este capítulo deixando-a fechada, como se deixa uma promessa: é para quando eu for grande. Grau vinte é grande o bastante para muita coisa. Ainda não para tudo."
+      ],
+      "tags": [
+        "Grau 20",
+        "Milharal",
+        "Lightning bolt",
+        "Rosario",
+        "Disciplina",
+        "Motor"
+      ],
       "source_kind": "live",
-      "evidence": []
+      "evidence": [
+        {
+          "document": "evidence/capitulo-02.json",
+          "day": 136,
+          "note": "Balanco do Capitulo 2."
+        },
+        {
+          "document": "evidence/dia132.json",
+          "day": 132,
+          "note": "Grau 19 e a licao da mana."
+        },
+        {
+          "document": "evidence/dia129.json",
+          "day": 129,
+          "note": "Replay do caminho do bosque."
+        },
+        {
+          "document": "diretiva_de_jogo.md",
+          "day": 136,
+          "note": "Diretiva consolidada (stand, mana, DT, consider)."
+        }
+      ],
+      "excerpt": "Do grau 17 ao 20: a viagem que virou rotina, a licao da mana, o raio treinado ate a perfeicao e a torre que ainda nao posso abrir.",
+      "date": "2026-10-16",
+      "in_game_time": "Do Grau 17 ao Grau 20",
+      "closed_on_day": 136
     }
   ]
 }
