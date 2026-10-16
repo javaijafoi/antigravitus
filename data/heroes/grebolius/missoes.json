@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 96,
+  "as_of_day": 97,
   "verification": "live",
   "items": [
     {
@@ -221,6 +221,11 @@
           "document": "evidence/dia96.json",
           "day": 96,
           "note": "Etapa 1 concluída no Bar dos Magos com o Mago (+30.000 EXP recebidos); etapa 2 de entrega de novo pergaminho ativa."
+        },
+        {
+          "document": "evidence/dia97.json",
+          "day": 97,
+          "note": "Dia 97 sem entrega: a etapa 2 (pergaminho de retorno ao Mago Aventureiro) continua pendente; a sessao ficou na fazenda."
         }
       ]
     },
@@ -354,9 +359,9 @@
       "type": "official",
       "status": "active",
       "accepted_day": 90,
-      "last_progress_day": 96,
+      "last_progress_day": 97,
       "objective": "Eliminar monstros invasores do milharal conforme pedido do fazendeiro e instruções dadas pelo Pacificador.",
-      "next_step": "Grebolius viajou de Midgaard até Jareth pela rodovia e alcançou a fazenda cercada pelo bosque. Ao despertar no Clube Kitty-Kat em Jareth, avançar contra as criaturas no milharal.",
+      "next_step": "Fazendeiro reafirmou o pedido de exterminar 10 monstros invasores do milharal no Dia 97. Retomar com comida no inventario, confirmar o contador com o fazendeiro e nao declarar conclusao sem resposta dele.",
       "evidence": [
         {
           "document": "posts.json",
@@ -382,6 +387,11 @@
           "document": "evidence/dia96.json",
           "day": 96,
           "note": "Trajeto Midgaard-Jareth percorrido, portões de Jareth cruzados e aproximação à Entrada da Fazenda e ao gramado confirmados ao vivo."
+        },
+        {
+          "document": "evidence/dia97.json",
+          "day": 97,
+          "note": "Combates no milharal destruido, avanco ao Nivel 14 e reafirmacao do pedido pelo fazendeiro; contador de abates nao informado pelo servidor."
         }
       ]
     }

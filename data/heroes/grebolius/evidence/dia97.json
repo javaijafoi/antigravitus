@@ -1,0 +1,144 @@
+{
+  "hero_id": "grebolius",
+  "day": 97,
+  "source_kind": "server_log",
+  "recorded_on": "2026-10-15",
+  "sources": [
+    "session_dia96_live.log (trecho do Dia 97)",
+    "session_live_dia97_20261015_231147_e1d2ac.log",
+    "session_live_dia97_20261015_232247_e2e638.log",
+    "transcript_dia97_20261015_232247_e2e638.jsonl",
+    "dia97_run.jsonl",
+    "dia97_exit.jsonl"
+  ],
+  "summary": {
+    "starting_level": 13,
+    "starting_xp": 330001,
+    "starting_gold": 4232,
+    "starting_location": "O Clube Kitty-Kat (Jareth)",
+    "ending_level": 14,
+    "ending_xp": 460990,
+    "ending_gold": 5482,
+    "ending_location": "Um Quarto (fazenda a leste de Jareth)",
+    "xp_gained": 130989,
+    "gold_gained": 1250,
+    "ending_alignment": 241,
+    "kills_controlled_session": 3,
+    "kills_note": "O Dia 97 teve sessoes sobrepostas (um agente externo e o controlador DSH comandando a mesma personagem em instantes diferentes). A contagem de abates nao foi consolidada de forma unica; o delta de experiencia acima e a medida confiavel.",
+    "near_deaths_saved_by_wimpy": 7,
+    "quests_completed": [],
+    "quests_in_progress": [
+      {
+        "id": "problemas-agricolas",
+        "title": "Problemas Agricolas",
+        "stage": "fazendeiro reafirmou o pedido de exterminar 10 monstros invasores no milharal; autoquest segue ativa, contador nao informado pelo servidor"
+      },
+      {
+        "id": "dicas-magicas",
+        "title": "Dicas Magicas",
+        "stage": "etapa 2 ativa (entregar o pergaminho de retorno ao Mago Aventureiro em Midgaard); sem entrega no Dia 97"
+      }
+    ],
+    "incidents": [
+      "Multiplas desconexoes por 'Conexao multipla detectada' enquanto dois daemons disputavam a mesma personagem.",
+      "Queda a 19 HP durante uma troca de daemon; o wimpy 30 disparou a fuga e evitou a morte.",
+      "Fome evoluiu para 'morrendo de fome' sem nenhum alimento no inventario."
+    ],
+    "items_gained": [
+      "a bainha de Excalibur (+16E; exige experiencia que a personagem ainda nao tem)",
+      "um colar com uma pedra purpura (nao pertence a personagem)",
+      "moedas de ouro de corpos (aproximadamente 1.000 em saques e vendas)"
+    ],
+    "cataloged_rooms": [
+      {
+        "tag": "fazenda_fim_estrada",
+        "title": "O Fim da Estrada",
+        "zone": "Fazenda proxima a Jareth",
+        "exits": {
+          "e": "Uma Pequena Estrada",
+          "s": "O Gramado",
+          "w": "O Milharal Destruido"
+        }
+      },
+      {
+        "tag": "fazenda_estrada_vidros",
+        "title": "Uma Pequena Estrada",
+        "zone": "Fazenda proxima a Jareth",
+        "exits": {
+          "e": "estrada para a fazenda",
+          "s": "O Gramado",
+          "w": "O Fim da Estrada"
+        }
+      },
+      {
+        "tag": "fazenda_gramado_casa",
+        "title": "O Gramado",
+        "zone": "Fazenda proxima a Jareth",
+        "exits": {
+          "n": "Uma Pequena Estrada",
+          "e": "O Gramado",
+          "s": "A Entrada da Casa",
+          "w": "O Gramado"
+        }
+      },
+      {
+        "tag": "fazenda_entrada_casa",
+        "title": "A Entrada da Casa",
+        "zone": "Fazenda proxima a Jareth",
+        "exits": {
+          "n": "O Gramado",
+          "s": "A Sala de Estar",
+          "w": "A Cozinha"
+        }
+      },
+      {
+        "tag": "fazenda_cozinha",
+        "title": "A Cozinha",
+        "zone": "Fazenda proxima a Jareth",
+        "exits": {
+          "e": "A Entrada da Casa"
+        }
+      },
+      {
+        "tag": "fazenda_sala_estar",
+        "title": "A Sala de Estar",
+        "zone": "Fazenda proxima a Jareth",
+        "exits": {
+          "n": "A Entrada da Casa",
+          "w": "Um Quarto"
+        }
+      },
+      {
+        "tag": "fazenda_quarto",
+        "title": "Um Quarto",
+        "zone": "Fazenda proxima a Jareth",
+        "exits": {
+          "e": "A Sala de Estar"
+        }
+      },
+      {
+        "tag": "milharal_interior",
+        "title": "O Milharal Destruido / Adentro do Milharal Destruido",
+        "zone": "Fazenda proxima a Jareth",
+        "note": "Malha de salas homonimas com quatro saidas; interior nao consolidado no mapa, cada passo reconferido pelo comando exits."
+      }
+    ],
+    "final_state": {
+      "level": 14,
+      "hp": "75/75",
+      "mana": "200/200",
+      "mv": "105/105",
+      "exp": 460990,
+      "gold": 5482,
+      "alignment": 241,
+      "ac": 75,
+      "wimpy": 30,
+      "location": "Um Quarto (fazenda a leste de Jareth)",
+      "status": "dormindo (sleep) com atalhos salvos; faminta"
+    },
+    "session_control": {
+      "driver": "live_daemon.py V2.1 com token obrigatorio e instancia unica; play.py com trava de controlador",
+      "note": "A sessa foi retomada sob controle unico apos duas conexoes multiplas derrubarem a personagem."
+    }
+  }
+}

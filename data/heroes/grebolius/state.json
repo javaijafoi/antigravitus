@@ -2,39 +2,39 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 96,
+    "day": 97,
     "verification": "live",
     "live_verified": true,
-    "source": "Sessão ao vivo interativa do Dia 96: conclusão de Limpando Monstros (+75.482 EXP, manto de pano), avanço ao Nível 13 (330.001 EXP), vendas atingindo 4.232 moedas, etapa 1 de Dicas Mágicas (+30.000 EXP), avanço pela Estrada Midgaard-Jareth e repouso no Clube Kitty-Kat em Jareth; evidence/dia96.json."
+    "source": "Sessao ao vivo do Dia 97 na fazenda a leste de Jareth: retorno ao milharal sitiado, abates de monstros invasores sob wimpy 30, avanco do Nivel 13 para o Nivel 14 (460.990 EXP), saques ate 5.482 moedas, bainha de Excalibur e colar de pedra purpura recolhidos, fome ate 'morrendo de fome' e repouso confirmado em Um Quarto; evidence/dia97.json."
   },
-  "level": 13,
+  "level": 14,
   "mechanical_race": "Elfo",
   "mechanical_class": "Mago (Magic-User)",
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
   "alignment": {
-    "value": 315,
-    "label": "Bom"
+    "value": 241,
+    "label": "Um pouco bom"
   },
   "vitals": {
     "hp": {
-      "current": 72,
-      "max": 72
+      "current": 75,
+      "max": 75
     },
     "mana": {
-      "current": 190,
-      "max": 190
+      "current": 200,
+      "max": 200
     },
     "mv": {
-      "current": 104,
-      "max": 104
+      "current": 105,
+      "max": 105
     }
   },
   "experience": {
-    "current": 330001,
-    "next_level": 400000
+    "current": 460990,
+    "next_level": 500000
   },
-  "gold": 4232,
+  "gold": 5482,
   "attributes": {
     "STR": 12,
     "DEX": 15,
@@ -47,7 +47,7 @@
     "base": 49,
     "with_armor": 75,
     "effect_verified": true,
-    "note": "Dia 96: AC 75 mantida com Armadura Mística ativa (+26)."
+    "note": "Dia 97: AC 75 mantida com Armadura Mistica ativa (+26; restavam cerca de 33 horas ao dormir)."
   },
   "hitroll": 3,
   "damroll": 4,
@@ -55,7 +55,7 @@
   "training_sessions": 15,
   "operational_mode": {
     "current": "padrao",
-    "description": "Modo Dungeon Corajoso + Modo Expandir Horizontes; wimpy 30 ativo e seguro.",
+    "description": "Cacada na fazenda/milharal com wimpy 30 e retirada por fuga; sessoes sobrepostas obrigaram a impor controle unico do daemon.",
     "wimpy_profile": {
       "padrao": 17,
       "batedor": 33,
@@ -66,28 +66,29 @@
     }
   },
   "location": {
-    "room_id": "jareth_clube_kitty_kat",
-    "name": "O Clube Kitty-Kat"
+    "room_id": "fazenda_quarto",
+    "name": "Um Quarto"
   },
   "camp": {
-    "room_id": "jareth_clube_kitty_kat",
-    "name": "O Clube Kitty-Kat"
+    "room_id": "fazenda_quarto",
+    "name": "Um Quarto"
   },
   "sanctuary": {
     "room_id": "panteao_centenarios",
-    "name": "O Panteão dos Centenários"
+    "name": "O Panteao dos Centenarios"
   },
   "last_event": {
-    "day": 96,
-    "summary": "Expedição do Dia 96: Grebolius concluiu a autoquest 'Limpando Monstros' com o Alquimista (+75.482 EXP, um manto de pano), avançou do Nível 11 para o Nível 13 (330.001 EXP), realizou vendas estratégicas de armas e coroas no armeiro e ferreiro atingindo 4.232 moedas, completou a primeira etapa de 'Dicas Mágicas' no Bar dos Magos (+30.000 EXP) e foi despachada pelo Pacificador para conter a invasão na fazenda a leste de Jareth ('Problemas Agrícolas'). Percorreu a rodovia Midgaard-Jareth, cruzou os portões de Jareth até os arredores da fazenda e recolheu-se dormindo no Clube Kitty-Kat."
+    "day": 97,
+    "summary": "Dia 97 na fazenda a leste de Jareth: Grebolius voltou ao milharal destruido, abateu monstros invasores e avancou do Nivel 13 para o Nivel 14 (460.990 EXP), recolhendo uma bainha de Excalibur e um colar de pedra purpura. O wimpy 30 disparou a fuga em varios confrontos, inclusive numa queda a 19 de vida. Terminou 'morrendo de fome', sem alimento no inventario, e dormiu num quarto da casa da fazenda com atalhos salvos."
   },
   "next_objective": {
     "mission_id": "problemas-agricolas",
-    "title": "Prosseguir com a missão na fazenda a leste de Jareth e entregar pergaminho ao mago",
-    "next_step": "Ao despertar no Clube Kitty-Kat, seguir pelo Portão Leste até a fazenda cercada pelo bosque para auxiliar o fazendeiro contra as criaturas do milharal, e depois retornar a Midgaard para entregar o pergaminho de retorno no Bar dos Magos.",
+    "title": "Comer, reabastecer e retomar o milharal e a entrega em Midgaard",
+    "next_step": "Antes de qualquer combate, obter comida (Padaria de Midgaard ou vendedor de Jareth) e reabastecer o cantil. Depois voltar ao milharal para concluir os abates pedidos pelo fazendeiro e, quando houver ouro, seguir a Midgaard para entregar o pergaminho de retorno ao Mago Aventureiro.",
     "missing_preparation": [
-      "Verificar comida e cantil; há 2 pães recheados e cantil no inventário.",
-      "Comprar pergaminho de retorno na Loja de Magias quando retornar a Midgaard (custo aprox. 9.200 moedas; acumular fundos na fazenda)."
+      "Nao ha comida alguma no inventario; a fome chegou a 'morrendo de fome' antes de dormir.",
+      "A bainha de Excalibur exige experiencia que a personagem ainda nao possui e o colar de pedra purpura nao lhe pertence.",
+      "O interior do milharal ainda nao foi consolidado no mapa; cada passo depende do comando exits."
     ]
   },
   "skills": [
@@ -232,70 +233,70 @@
   "inventory": {
     "recorded": [
       {
+        "name": "um cantil",
+        "quantity": 1,
+        "source": "evidence/dia97.json"
+      },
+      {
         "name": "um manto de pano",
         "quantity": 1,
-        "source": "evidence/dia96.json"
+        "source": "evidence/dia97.json"
       },
       {
         "name": "a bainha de Excalibur",
         "quantity": 1,
-        "source": "evidence/dia96.json"
+        "source": "evidence/dia97.json"
       },
       {
-        "name": "um colar com uma pedra púrpura",
+        "name": "um colar com uma pedra purpura",
         "quantity": 1,
-        "source": "evidence/dia96.json"
-      },
-      {
-        "name": "um pão recheado",
-        "quantity": 2,
-        "source": "evidence/dia96.json"
-      },
-      {
-        "name": "um cantil",
-        "quantity": 1,
-        "source": "evidence/dia96.json"
+        "source": "evidence/dia97.json"
       },
       {
         "name": "um brilhante punhal de novato",
         "quantity": 2,
-        "source": "evidence/dia96.json"
+        "source": "evidence/dia97.json"
       },
       {
         "name": "uma brilhante veste de novato",
         "quantity": 1,
-        "source": "evidence/dia96.json"
+        "source": "evidence/dia97.json"
       },
       {
         "name": "uma tocha",
         "quantity": 1,
-        "source": "evidence/dia96.json"
+        "source": "evidence/dia97.json"
       },
       {
-        "name": "uma poção amarela de detectar invisibilidade",
+        "name": "uma pocao amarela de detectar invisibilidade",
         "quantity": 1,
-        "source": "evidence/dia96.json"
+        "source": "evidence/dia97.json"
       },
       {
         "name": "uma mochila",
         "quantity": 1,
-        "source": "evidence/dia96.json"
+        "source": "evidence/dia97.json"
       }
     ],
     "pending_verification": []
   },
   "conditions": [
-    "Dia 96: dormindo no Clube Kitty-Kat em Jareth, com 72/72 HP, 190/190 mana e 104/104 MV.",
-    "Nível 13 consolidado com 330.001 EXP (avanço de dois níveis no dia!).",
-    "Saldo de 4.232 moedas de ouro carregadas.",
-    "Wimpy configurado preventivamente em 30 HP.",
-    "Save e sleep confirmados no Clube Kitty-Kat."
+    "Dia 97: dormindo em Um Quarto, na casa da fazenda a leste de Jareth, com 75/75 HP, 200/200 mana e 105/105 MV.",
+    "Nivel 14 consolidado com 460.990 EXP (avanco de um nivel no dia).",
+    "Saldo de 5.482 moedas de ouro carregadas.",
+    "Wimpy 30 ativo; disparou fuga em varios confrontos do milharal e evitou a morte.",
+    "Personagem faminta ('morrendo de fome'); nenhum alimento no inventario.",
+    "Save e sleep confirmados em Um Quarto."
   ],
   "uncertainties": [
-    "O anel arcano (+2E) foi vendido no Dia 92 por 500 moedas por exigir nível 90 e 3ª encarnação.",
-    "Novos feitiços superiores dependem de livros arcanos ou mestres especializados.",
-    "O renascimento desequipa todas as peças para a mochila; o protocolo pós-morte exige `wear all` imediato para restaurar os bônus de HP e AC do equipamento.",
-    "Armadura base 49 calculada por 75 observado menos efeito +26."
+    "O anel arcano (+2E) foi vendido no Dia 92 por 500 moedas por exigir nivel 90 e 3a encarnacao.",
+    "Novos feiticos superiores dependem de livros arcanos ou mestres especializados.",
+    "O renascimento desequipa todas as pecas para a mochila; o protocolo pos-morte exige wear all imediato.",
+    "A contagem de abates do Dia 97 nao foi consolidada porque duas sessoes comandaram a mesma personagem em instantes diferentes; o delta de experiencia e a medida confiavel.",
+    "O contador da missao Problemas Agricolas nao e informado pelo servidor; nao presumir 0/10 nem conclusao.",
+    "Nao ha alimento algum e a fome esta critica; a proxima sessao precisa comecar pela comida.",
+    "A bainha de Excalibur foi recolhida mas exige experiencia que a personagem nao tem; o colar de pedra purpura nao lhe pertence.",
+    "O interior do milharal nao foi consolidado no mapa; as salas homonimas impedem identidade global."
   ],
   "evidence": [
     {
@@ -327,12 +328,17 @@
       "document": "evidence/dia96.json",
       "day": 96,
       "note": "Sessão interativa do Dia 96: avanço ao Nível 13, conclusão de Limpando Monstros, Dicas Mágicas etapa 1, Problemas Agrícolas, rodovia para Jareth e repouso no Clube Kitty-Kat."
+    },
+    {
+      "document": "evidence/dia97.json",
+      "day": 97,
+      "note": "Sessao do Dia 97: retorno ao milharal, Nivel 14, 460.990 EXP, 5.482 moedas, wimpy 30 em fuga, fome critica e repouso em Um Quarto."
     }
   ],
   "narrative_style": "ladra arcana",
   "weapon_summary": "Espada de Novato empunhada + Punhal segurado + Escudo",
   "migration": {
-    "method": "sessão ao vivo e conferência direta no servidor",
-    "verified_on": "Dia 96 (score tudo, inventário, equipamento e repouso ao vivo)"
+    "method": "sessao ao vivo sob driver com token e instancia unica",
+    "verified_on": "Dia 97 (score tudo, inventario, equipamento, save e sleep ao vivo)"
   }
 }

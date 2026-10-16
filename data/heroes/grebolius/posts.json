@@ -2514,5 +2514,39 @@
       "vendas"
     ],
     "source_kind": "live"
+  },
+  {
+    "id": 97,
+    "day": "Dia 97",
+    "title": "A Casa Despedacada, o Milharal Faminto e o Repouso em Quarto Alheio",
+    "date": "2026-10-15",
+    "in_game_time": "Fazenda a leste de Jareth - Ciclo X",
+    "excerpt": "A Casa Despedacada, o Milharal Faminto e o Repouso em Quarto Alheio",
+    "tags": [
+      "Jareth",
+      "Fazenda",
+      "Milharal",
+      "Problemas Agricolas",
+      "Wimpy",
+      "Fome",
+      "Repouso"
+    ],
+    "content": [
+      "Deixei o abrigo da noite antes que a estrada esquentasse e tomei o rumo da fazenda cercada pelo bosque. O dono da casa me esperava com o mesmo olhar de quem ja enterrou as esperancas: a familia encurralada, a mulher chorando abracada a uma crianca que gritava sem parar, e o milharal tomado por monstros verdes e peludos que mastigavam o que sobrou da colheita.",
+      "Nao havia tempo para discursos. Aceitei o pedido, respirei fundo e entrei no milharal destruido.",
+      "O ar ali e de corvos e grunhidos. Enfrentei os invasores com a chama nas maos e a lamina curta na outra, e por um instante a goblin antiga riu por dentro, certa de que aquele mato era dela. Mas os bichos vieram em bando, e a carne ensinou o que o orgulho demora a aceitar: dois ou tres de uma vez sao mais do que uma aventureira faminta deveria encarar. Levei golpes que me deixaram o peito ardendo e as pernas pesadas. Alguma coisa muito antiga dentro de mim gritou para correr, e eu obedeci. Goblin que morre bonito nao funda reino nenhum.",
+      "Ainda assim, colhi o que podia. Das carcacas vieram moedas que tilintam nas algibeiras, e dois achados que me queimam as maos de curiosidade: uma bainha de Excalibur, que a minha experiencia ainda nao merece empunhar, e um colar de pedra purpura que nao me pertence. Guardei os dois com o mesmo cuidado com que guardo ressentimentos.",
+      "Quando a poeira baixou, descobri o preco mais banal da jornada: a barriga vazia. A cozinha da casa ainda cheirava a pernil assado, mas nao havia um naco para uma goblin faminta. Revirei o quarto, a sala, a entrada, e nada. A mulher chorava, a crianca gritava, e o meu ouro nao valia um pao naquela mesa. Ha humilhacoes que nenhuma lâmina resolve.",
+      "Foi num quarto alheio que dormi, arrumado no meio da destruicao como se alguem tivesse feito a cama antes de o mundo desabar. A armadura ainda zumbia nos meus ombros e a fome roia por dentro, mas os atalhos estavam salvos e o corpo, inteiro.",
+      "Amanha, antes de qualquer heroismo, eu como. Depois volto ao milharal para cobrar do fazendeiro a colheita que me deve, e sigo para Midgaard entregar o pergaminho que carrego ha tanto tempo. E um dia, quando a minha mao tiver forca bastante, a bainha vai encontrar a lamina para a qual foi feita."
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "evidence/dia97.json",
+        "day": 97,
+        "note": "Registro estruturado do Dia 97 (Nivel 14, 460.990 EXP, 5.482 moedas, wimpy 30 em fuga, fome critica e repouso em Um Quarto)."
+      }
+    ]
   }
 ]

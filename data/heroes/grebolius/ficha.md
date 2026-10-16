@@ -1,6 +1,6 @@
 # 🧌 Ficha Atual de Grebolius (Último Estado Registrado)
 
-> Referência: Dia 96. Estado verificado em sessão; consultar a origem registrada.
+> Referência: Dia 97. Estado verificado em sessão; consultar a origem registrada.
 > Este documento reúne o último estado e as missões registrados; as incertezas aparecem ao final.
 
 ## ✦ Identificação e Registro
@@ -9,24 +9,24 @@
 * **Raça / Aparência Narrativa:** Mulher goblin; aventureira sem véu
 * **Raça Mecânica no MUD:** Elfo
 * **Classe Mecânica no MUD:** Mago (Magic-User)
-* **Grau / Nível Atual:** **13**
-* **Alinhamento Moral:** 315 (Bom)
-* **Localização Atual:** O Clube Kitty-Kat (último registro: Dia 96)
-* **Acampamento Registrado:** O Clube Kitty-Kat
-* **Santuário de Referência:** O Panteão dos Centenários
+* **Grau / Nível Atual:** **14**
+* **Alinhamento Moral:** 241 (Um pouco bom)
+* **Localização Atual:** Um Quarto (último registro: Dia 97)
+* **Acampamento Registrado:** Um Quarto
+* **Santuário de Referência:** O Panteao dos Centenarios
 
 O acampamento indica onde houve repouso; não comprova proteção absoluta contra agressão.
 
 ## ✦ Status Vitais
 | Recurso | Atual | Máximo | Porcentagem |
 | :--- | :---: | :---: | :---: |
-| **Pontos de Vida (HP)** | 72 | 72 | 100% |
-| **Pontos de Mana (MP)** | 190 | 190 | 100% |
-| **Estamina / Movimento (MV)** | 104 | 104 | 100% |
+| **Pontos de Vida (HP)** | 75 | 75 | 100% |
+| **Pontos de Mana (MP)** | 200 | 200 | 100% |
+| **Estamina / Movimento (MV)** | 105 | 105 | 100% |
 
-* **Experiência Acumulada:** **330.001 EXP**
-* **Experiência Necessária p/ Grau 14:** **69.999 EXP** (Meta: 400.000 EXP)
-* **Ouro Líquido:** **4.232 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **460.990 EXP**
+* **Experiência Necessária p/ Grau 15:** **39.010 EXP** (Meta: 500.000 EXP)
+* **Ouro Líquido:** **5.482 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 12
@@ -38,7 +38,7 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 
 ### Métricas de Combate
 * **Classe de Armadura (AC):** 49 (base) / **75** (com `armor`, conforme registro)
-Dia 96: AC 75 mantida com Armadura Mística ativa (+26).
+Dia 97: AC 75 mantida com Armadura Mistica ativa (+26; restavam cerca de 33 horas ao dormir).
 * **Bônus de Acerto (Hitroll):** 3
 * **Bônus de Dano (Damroll):** +4
 * **Configuração de Fuga (Wimpy):** **30 HP** (referência de 25%; não garante fuga antes de golpe letal)
@@ -55,7 +55,7 @@ Dia 96: AC 75 mantida com Armadura Mística ativa (+26).
 * **Novela dos Novatos — Descoberta:** Aventura narrativa para recém-chegados (Até o nível 30, iniciada com: o novato esperto).
   * Próximo passo: Localizar o novato esperto pelas praças de Midgaard para iniciar o encadeamento.
 * **Problemas Agrícolas — Ativa:** Eliminar monstros invasores do milharal conforme pedido do fazendeiro e instruções dadas pelo Pacificador.
-  * Próximo passo: Grebolius viajou de Midgaard até Jareth pela rodovia e alcançou a fazenda cercada pelo bosque. Ao despertar no Clube Kitty-Kat em Jareth, avançar contra as criaturas no milharal.
+  * Próximo passo: Fazendeiro reafirmou o pedido de exterminar 10 monstros invasores do milharal no Dia 97. Retomar com comida no inventario, confirmar o contador com o fazendeiro e nao declarar conclusao sem resposta dele.
 
 Objetivos pessoais e investigações ficam separados das autoquests no catálogo de missões.
 
@@ -86,35 +86,40 @@ Equipamento conforme os últimos documentos disponíveis; conferir no próximo a
 
 ## ✦ Inventário e Suprimentos
 Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
-* `um manto de pano` (x1) — evidence/dia96.json
-* `a bainha de Excalibur` (x1) — evidence/dia96.json
-* `um colar com uma pedra púrpura` (x1) — evidence/dia96.json
-* `um pão recheado` (x2) — evidence/dia96.json
-* `um cantil` (x1) — evidence/dia96.json
-* `um brilhante punhal de novato` (x2) — evidence/dia96.json
-* `uma brilhante veste de novato` (x1) — evidence/dia96.json
-* `uma tocha` (x1) — evidence/dia96.json
-* `uma poção amarela de detectar invisibilidade` (x1) — evidence/dia96.json
-* `uma mochila` (x1) — evidence/dia96.json
+* `um cantil` (x1) — evidence/dia97.json
+* `um manto de pano` (x1) — evidence/dia97.json
+* `a bainha de Excalibur` (x1) — evidence/dia97.json
+* `um colar com uma pedra purpura` (x1) — evidence/dia97.json
+* `um brilhante punhal de novato` (x2) — evidence/dia97.json
+* `uma brilhante veste de novato` (x1) — evidence/dia97.json
+* `uma tocha` (x1) — evidence/dia97.json
+* `uma pocao amarela de detectar invisibilidade` (x1) — evidence/dia97.json
+* `uma mochila` (x1) — evidence/dia97.json
 
 ### Pendências de inventário
 
 ## ✦ Condições Registradas
-* Dia 96: dormindo no Clube Kitty-Kat em Jareth, com 72/72 HP, 190/190 mana e 104/104 MV.
-* Nível 13 consolidado com 330.001 EXP (avanço de dois níveis no dia!).
-* Saldo de 4.232 moedas de ouro carregadas.
-* Wimpy configurado preventivamente em 30 HP.
-* Save e sleep confirmados no Clube Kitty-Kat.
+* Dia 97: dormindo em Um Quarto, na casa da fazenda a leste de Jareth, com 75/75 HP, 200/200 mana e 105/105 MV.
+* Nivel 14 consolidado com 460.990 EXP (avanco de um nivel no dia).
+* Saldo de 5.482 moedas de ouro carregadas.
+* Wimpy 30 ativo; disparou fuga em varios confrontos do milharal e evitou a morte.
+* Personagem faminta ('morrendo de fome'); nenhum alimento no inventario.
+* Save e sleep confirmados em Um Quarto.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
-**Prosseguir com a missão na fazenda a leste de Jareth e entregar pergaminho ao mago**
-Ao despertar no Clube Kitty-Kat, seguir pelo Portão Leste até a fazenda cercada pelo bosque para auxiliar o fazendeiro contra as criaturas do milharal, e depois retornar a Midgaard para entregar o pergaminho de retorno no Bar dos Magos.
-* Verificar comida e cantil; há 2 pães recheados e cantil no inventário.
-* Comprar pergaminho de retorno na Loja de Magias quando retornar a Midgaard (custo aprox. 9.200 moedas; acumular fundos na fazenda).
+**Comer, reabastecer e retomar o milharal e a entrega em Midgaard**
+Antes de qualquer combate, obter comida (Padaria de Midgaard ou vendedor de Jareth) e reabastecer o cantil. Depois voltar ao milharal para concluir os abates pedidos pelo fazendeiro e, quando houver ouro, seguir a Midgaard para entregar o pergaminho de retorno ao Mago Aventureiro.
+* Nao ha comida alguma no inventario; a fome chegou a 'morrendo de fome' antes de dormir.
+* A bainha de Excalibur exige experiencia que a personagem ainda nao possui e o colar de pedra purpura nao lhe pertence.
+* O interior do milharal ainda nao foi consolidado no mapa; cada passo depende do comando exits.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessão ao vivo interativa do Dia 96: conclusão de Limpando Monstros (+75.482 EXP, manto de pano), avanço ao Nível 13 (330.001 EXP), vendas atingindo 4.232 moedas, etapa 1 de Dicas Mágicas (+30.000 EXP), avanço pela Estrada Midgaard-Jareth e repouso no Clube Kitty-Kat em Jareth; evidence/dia96.json..
-* O anel arcano (+2E) foi vendido no Dia 92 por 500 moedas por exigir nível 90 e 3ª encarnação.
-* Novos feitiços superiores dependem de livros arcanos ou mestres especializados.
-* O renascimento desequipa todas as peças para a mochila; o protocolo pós-morte exige `wear all` imediato para restaurar os bônus de HP e AC do equipamento.
-* Armadura base 49 calculada por 75 observado menos efeito +26.
+Fonte do estado: Sessao ao vivo do Dia 97 na fazenda a leste de Jareth: retorno ao milharal sitiado, abates de monstros invasores sob wimpy 30, avanco do Nivel 13 para o Nivel 14 (460.990 EXP), saques ate 5.482 moedas, bainha de Excalibur e colar de pedra purpura recolhidos, fome ate 'morrendo de fome' e repouso confirmado em Um Quarto; evidence/dia97.json..
+* O anel arcano (+2E) foi vendido no Dia 92 por 500 moedas por exigir nivel 90 e 3a encarnacao.
+* Novos feiticos superiores dependem de livros arcanos ou mestres especializados.
+* O renascimento desequipa todas as pecas para a mochila; o protocolo pos-morte exige wear all imediato.
+* A contagem de abates do Dia 97 nao foi consolidada porque duas sessoes comandaram a mesma personagem em instantes diferentes; o delta de experiencia e a medida confiavel.
+* O contador da missao Problemas Agricolas nao e informado pelo servidor; nao presumir 0/10 nem conclusao.
+* Nao ha alimento algum e a fome esta critica; a proxima sessao precisa comecar pela comida.
+* A bainha de Excalibur foi recolhida mas exige experiencia que a personagem nao tem; o colar de pedra purpura nao lhe pertence.
+* O interior do milharal nao foi consolidado no mapa; as salas homonimas impedem identidade global.
