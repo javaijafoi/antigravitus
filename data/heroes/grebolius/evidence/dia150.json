@@ -1,0 +1,13 @@
+{
+  "hero_id": "grebolius",
+  "day": 150,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "summary": {
+    "diretiva_do_autor": "PROIBIDO vender armaduras. Palavras do autor: 'NAO VAMOS MAIS VENDER ESSAS ARMADURAS, PERDEMOS MAIS DINHEIRO DO QUE GANHAMOS COM ELAS, OK?' Regra permanente registrada na diretiva de jogo (secao 15).",
+    "o_que_isso_corta": "Nenhuma rotina de venda de armaduras: nem as da Torre Negra (8.500) nem as de peao (150). Nao comprar o pergaminho de remover maldicoes (8.509) com intencao de vender a armadura por 8.500 - prejuizo direto.",
+    "acoes": "A rotina 'xadrez' foi suspensa e movida para scripts/local/rotinas/_suspensas/ (com LEIA-ME explicando o motivo); o catalogo agora lista apenas milharal e esgoto. O plano de jogo (state.json) foi reescrito: ouro apenas por espolio de combate, recompensa de missao e o banco do Templo. docs/rotinas.md atualizado.",
+    "armadura_presa": "A Armadura da Torre Negra (60 kg) segue amaldicoada e presa ao corpo. Sem venda, restam duas opcoes: pagar 8.509 para desamaldicoar e doar (custo puro, libera 60 kg) ou continuar carregando. Decisao pendente do autor.",
+    "estado": "Grau 20, 113/113, 112/115 kg, 7.032 no banco + 288 na mao, no Templo."
+  }
+}

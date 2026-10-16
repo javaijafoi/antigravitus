@@ -576,7 +576,8 @@
         146,
         147,
         148,
-        149
+        149,
+        150
       ],
       "parts": [
         {
@@ -707,6 +708,24 @@
               "document": "evidence/dia149.json",
               "day": 149,
               "note": "Fonte de agua, bolsa cheia e armadura amaldicoada."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 150,
+          "summary": "DIRETIVA DO AUTOR: proibido vender armaduras ('perdemos mais dinheiro do que ganhamos com elas'). A rotina xadrez foi suspensa e guardada; o catalogo fica com milharal e esgoto. O plano de jogo passa a buscar ouro apenas por espolio de combate, recompensa de missao e o banco do Templo. A Armadura da Torre Negra (60 kg, amaldicoada) segue presa ao corpo - decisao sobre ela pendente do autor.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia150.json",
+              "day": 150,
+              "note": "Proibicao de vender armaduras."
+            },
+            {
+              "document": "diretiva_de_jogo.md",
+              "day": 150,
+              "note": "Secao 15: a regra permanente."
             }
           ],
           "date": "2026-10-16"

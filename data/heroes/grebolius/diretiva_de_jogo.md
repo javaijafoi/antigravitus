@@ -123,3 +123,15 @@ Implementado em `scripts/local/guarda.py` e injetado no `run()` de **todos** os 
 - A leitura do log **não interfere** no jogo — diferente de mandar comandos paralelos, que podem desincronizar a sessão.
 - Se o log mostrar morte, fome crítica, ou a mesma mensagem repetindo, **matar o job** na hora.
 - A **guarda de repetição** já disparou duas vezes em produção nesta rodada: uma em *"Em que você deseja lançar a magia?"*, outra em *"Você não pode ir por aí..."* — o robô parou, salvou e saiu, em vez de insistir.
+
+
+## 15. PROIBIDO vender armaduras (diretiva do autor, Dia 150)
+> **"NÃO VAMOS MAIS VENDER ESSAS ARMADURAS, PERDEMOS MAIS DINHEIRO DO QUE GANHAMOS COM ELAS, OK?"**
+
+Regra permanente e vale para todas as temporadas:
+- **Nenhuma** rotina de venda de armaduras — nem as da **Torre Negra** (8.500), nem as de **peão** (150);
+- **Não** comprar o pergaminho de remover maldições (8.509) com a intenção de vender a armadura;
+- A rotina **`xadrez` foi suspensa** e guardada em `scripts/local/rotinas/_suspensas/` (nao reativar sem ordem expressa);
+- Os scripts antigos `farm_armaduras.py` e `ciclo_peao.py` ficam **igualados a suspenso**.
+
+**Onde buscar ouro, então:** espolio de combate, recompensas de missao/autoquest, itens unicos e o **banco do Templo** (que já guarda 7.032). Nada de transporte de armadura.

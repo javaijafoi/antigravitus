@@ -29,7 +29,7 @@ Ela **sempre parte do Templo** (o ponto de encontro) e **sempre volta para lá**
 | Rotina | O que faz | Estado |
 |---|---|---|
 | **milharal** | Caça os monstros invasores (missão *Problemas Agrícolas*) e traz espólio. Trajeto: checkpoints + rota gravada do bosque. | funcional (herdada do motor.py) |
-| **xadrez** | Coleta armaduras de peão no Tabuleiro e vende ao armeiro (renda segura, 150 cada). | em teste |
+| ~~**xadrez**~~ | ~~Coleta armaduras de peão e vende (150 cada)~~ | **SUSPENSA no Dia 150 por diretiva do autor: "perdemos mais dinheiro do que ganhamos com elas". Guardada em `rotinas/_suspensas/`. Não reativar sem ordem expressa.** |
 | **esgoto** | Reconhece os esgotos sob o Laboratório com cuidado, sem entrar em luta desfavorável. | em teste |
 
 ## Proteções ativas

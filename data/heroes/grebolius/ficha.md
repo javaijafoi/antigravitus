@@ -112,14 +112,12 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
 **Capitulo 3 - Tres Oficios**
 Concluir tres missoes sem repetir as ja concluidas (Limpando Monstros, Ninguem Segura Esse Bebe, coleira-dragao, altruismo). Candidatas: Dicas Magicas (em andamento), Novela dos Novatos, Uma Licao em Gargamel, Problemas Agricolas.
-* Responder "sim" ao mago aventureiro no Bar dos Magos para fechar Dicas Magicas.
-* Localizar "o novato esperto" nas pracas de Midgaard (Novela dos Novatos).
-* Localizar "o smurf minerador" (Uma Licao em Gargamel).
-* Reaceitar Problemas Agricolas com o Pacificador antes de voltar ao milharal.
+* PROIBIDO vender armaduras (diretiva do autor, Dia 150): nem Torre Negra (8.500) nem peao (150); nao comprar o pergaminho de remover maldicoes para vender.
+* Concluir 3 missoes sem repetir as ja feitas: Dicas Magicas (em andamento), Problemas Agricolas (aceita, ir ao milharal), Novela dos Novatos e Uma Licao em Gargamel (procurar o novato esperto e o smurf minerador).
+* Ouro apenas por espolio de combate, recompensa de missao e o banco do Templo.
 
 ## ✦ Origem e Incertezas
 Fonte do estado: Capitulo 3 (Tres Oficios), Dia 143: Grau 20 alcancado no capitulo anterior; CA 94-95 com armadura arcana, Coroa da Rainha Branca (+25 armadura, +1 INT/SAB, +2 CAR), Cruz Ansada (+10 mana, +5 vida) e rosario (+1 Forca, +1 acerto). Ouro 7.360..
-* O armeiro de Midgaard segue sem caixa para as 48 Armaduras da Torre Negra (8.500 cada); o feiticeiro nao compra armaduras nem bastoes usados.
-* O estoque de armaduras de peao do tabuleiro estava vazio na ultima verificacao.
 * O colar com pedra purpura (valor 20.000.000) pertence a outro dono: o servidor recusa o uso.
 * Bainha de Excalibur exige nivel 85; Scutum de Carvalho exige nivel 35 (devolvido a Sala de Doacoes).
+* A Armadura da Torre Negra (60 kg) continua amaldicoada e presa ao corpo dela. Com a proibicao de vender, a saida seria pagar 8.509 para desamaldicoar e doar (custo puro) ou seguir carregando. Decisao pendente do autor.
