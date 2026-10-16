@@ -17,6 +17,7 @@ Depende do live_daemon.py no ar (porta 14888) e do token em scripts/local/.contr
 import sys as _sys
 from pathlib import Path as _Path
 _sys.path.insert(0, str(_Path(__file__).resolve().parents[1] / 'nucleo'))
+import config
 
 import argparse
 import json

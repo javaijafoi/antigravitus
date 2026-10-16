@@ -582,7 +582,8 @@
         152,
         153,
         154,
-        155
+        155,
+        156
       ],
       "parts": [
         {
@@ -796,6 +797,19 @@
               "document": "evidence/dia155.json",
               "day": 155,
               "note": "Rotina funcionando, 3 abates, guarda refinada, mapeador e plano do capitulo."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 156,
+          "summary": "Execucao da rotina milharal do automato sob supervisao estrita: 4 abates confirmados no milharal (totalizando 8 invasores eliminados na campanha). A guarda de repeticao agiu limpa ao detectar alvo ausente. Testada a entrega com o Pacificador na Praca do Templo; a missao 'Problemas Agricolas' segue ativa em andamento necessitando dos 10 abates exigidos pelo fazendeiro. Diagnostico de navegacao revelou que 'l' e interpretado como 'look' pelo servidor.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia156.json",
+              "day": 156,
+              "note": "Rotina milharal com 4 abates confirmados, diálogo com o Pacificador e diagnóstico de navegação."
             }
           ],
           "date": "2026-10-16"
