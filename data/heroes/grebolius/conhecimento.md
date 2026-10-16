@@ -1336,6 +1336,60 @@ nenhum. **A masmorra não sustenta caça contínua** — ela entrega um lote por
 **Conclusão prática:** fechar `Limpando Monstros` **não é questão de método, é de paciência** — voltar
 a cada reset e limpar o lote. Insistir dentro do mesmo ciclo é rodada gasta.
 
+---
+
+## 33. O corpo é pesado demais para carregar — e o entulho entope a mochila (Dia 156)
+
+Duas descobertas que andam juntas, e que explicam por que a caçada rendia pouco.
+
+### 33.1 `junk corpo` é impraticável para cadáver de monstro
+
+O ciclo do §3 (queima de corpo) exige **carregar o corpo** primeiro — `junk` só age no inventário. Mas:
+
+```
+get corpo -> "Você já está carregando muito peso e não pode pegar o corpo de o monstro novato."
+```
+
+**E isso aconteceu com a mochila em 74 de 115 kg** — ou seja, 41 kg livres, e o cadáver de um monstro
+novato **pesa mais que isso**. Estava em 22 itens quando testei pela primeira vez (*"Você já tem muitos
+itens"*), limpei para 10 itens e 74 kg, e **continuou recusando por peso**.
+
+**Conclusão:** a queima de corpo funciona para **item**, e para **cadáver** só com a mochila quase
+vazia. **Não vale como rotina de pilhagem** — vale para limpeza pontual.
+
+### 33.2 O entulho da masmorra ENTUPE a mochila — e a limpeza paga
+
+Cada monstro novato deixa **punhais e vestes de novato**, e `get all corpo` os recolhe. Em poucos
+abates ela chegou a **22 itens (o teto) e 107 kg**, e aí **parou de conseguir saquear** — o `get`
+recusava por quantidade.
+
+**A correção é `junk` no que não presta**, e o retorno é imediato:
+
+| Antes | Depois |
+|---|---|
+| 22 itens / 107 kg | **10 itens / 74 kg** |
+| ouro 421 | **ouro 433** |
+
+**Doze itens queimados** (7 vestes + 5 punhais) → **+12 moedas** e **33 kg liberados**. Pouco ouro, mas
+o ganho real é **voltar a poder saquear**.
+
+**Regra para a rotina de caça:** depois de cada lote, **`junk` nos punhais e vestes**. Sem isso a
+mochila fecha e a pilhagem para sem avisar — o sintoma é *"Você já tem muitos itens"*.
+
+### 33.3 O "novato esperto" não está nas praças nem na Área dos Novatos
+
+Busca sistemática no Dia 156, depois de a zona reabastecer:
+
+**Praças de Midgaard, vigília rotativa (~5 min, três praças):** vistos apenas **O Pacificador**, **um
+grande e famoso aventureiro** e **carroças**. Nenhum novato esperto.
+
+**Área dos Novatos, caminhada manual por 14 rotas:** nenhum NPC — só itens no chão e, quando havia,
+o monstro novato.
+
+**Ele nunca foi visto em lugar nenhum**, e o `where` não ajuda (*"Jogadores na sua área"* lista
+jogadores, não NPCs). **Continua pendente** — e o próximo lugar a olhar são as praças de **Jareth**
+(§30.1), que ainda não foram visitadas.
+
 
 ### 25.11 Invisibilidade BLOQUEIA comércio — e existe o comando `visible`
 
