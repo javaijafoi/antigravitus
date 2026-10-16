@@ -1,0 +1,102 @@
+{
+  "hero_id": "grebolius",
+  "day": 96,
+  "source_kind": "server_log",
+  "recorded_on": "2026-10-15",
+  "sources": [
+    "session_dia96_interactive.log"
+  ],
+  "summary": {
+    "kills": 0,
+    "kill_details": [],
+    "combat_gold": 0,
+    "xp_gained": 134800,
+    "starting_level": 11,
+    "ending_level": 13,
+    "starting_xp": 195201,
+    "ending_xp": 330001,
+    "starting_gold": 2188,
+    "ending_gold": 4232,
+    "quests_completed": [
+      {
+        "id": "limpando-monstros",
+        "title": "Limpando Monstros",
+        "reward_xp": 75482,
+        "reward_item": "um manto de pano"
+      }
+    ],
+    "quests_in_progress": [
+      {
+        "id": "dicas-magicas",
+        "title": "Dicas Mágicas",
+        "stage": "stage 1 completed (+30.000 EXP); stage 2 active (entregar pergaminho de retorno)"
+      },
+      {
+        "id": "problemas-agricolas",
+        "title": "Problemas Agrícolas",
+        "stage": "despachado pelo Pacificador para a fazenda a leste de Jareth"
+      }
+    ],
+    "cataloged_rooms": [
+      {
+        "tag": "estrada_midgaard_jareth",
+        "title": "A Estrada Midgaard-Jareth",
+        "zone": "Estrada Midgaard-Jareth",
+        "exits": {
+          "n": "Jareth",
+          "s": "Midgaard"
+        }
+      },
+      {
+        "tag": "jareth_portao_oeste",
+        "title": "O Portão Oeste",
+        "zone": "Cidade de Jareth",
+        "exits": {
+          "l": "Avenida Floris",
+          "o": "Nas Proximidades da Cidade"
+        }
+      },
+      {
+        "tag": "jareth_centro",
+        "title": "O Centro da Cidade de Jareth",
+        "zone": "Cidade de Jareth",
+        "exits": {
+          "n": "Rua Bourbon",
+          "l": "Avenida Floris",
+          "s": "Rua Bourbon",
+          "o": "Avenida Floris"
+        }
+      },
+      {
+        "tag": "jareth_portao_leste",
+        "title": "O Portão Leste",
+        "zone": "Cidade de Jareth",
+        "exits": {
+          "l": "A Entrada da Floresta",
+          "o": "Avenida Floris"
+        }
+      },
+      {
+        "tag": "jareth_clube_kitty_kat",
+        "title": "O Clube Kitty-Kat",
+        "zone": "Cidade de Jareth",
+        "exits": {
+          "n": "A Recepção do Clube Kitty-Kat"
+        }
+      }
+    ],
+    "final_state": {
+      "level": 13,
+      "hp": "72/72",
+      "mana": "190/190",
+      "mv": "104/104",
+      "exp": 330001,
+      "gold": 4232,
+      "alignment": 315,
+      "ac": 75,
+      "wimpy": 30,
+      "location": "O Clube Kitty-Kat (Jareth)",
+      "status": "dormindo (sleep) com atalhos salvos (save)"
+    }
+  }
+}

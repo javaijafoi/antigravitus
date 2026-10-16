@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 95,
+  "as_of_day": 96,
   "verification": "live",
   "items": [
     {
@@ -43,11 +43,12 @@
       "id": "limpando-monstros",
       "title": "Limpando Monstros",
       "type": "official",
-      "status": "active",
+      "status": "completed",
       "accepted_day": 36,
-      "last_progress_day": 93,
+      "last_progress_day": 96,
       "objective": "Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.",
-      "next_step": "Retomar conferindo o estado real após a interrupção. Foram confirmados 19 abates nos Dias 92–93, mas não houve validação de conclusão pelo Alquimista. Conferir ramais restantes, grade trancada e mico ferido; não declarar a área limpa.",
+      "next_step": "Missão concluída com sucesso no Dia 96 ao reportar ao Novato Alquimista. Recompensa recebida: 75.482 EXP e um manto de pano.",
+      "reward": "75.482 EXP e um manto de pano",
       "evidence": [
         {
           "document": "posts.json",
@@ -173,6 +174,11 @@
           "document": "evidence/dia93.json",
           "day": 93,
           "note": "Comandos e respostas preservados da sessão autorizada."
+        },
+        {
+          "document": "evidence/dia96.json",
+          "day": 96,
+          "note": "Conclusão definitiva com o Novato Alquimista confirmada em sessão interativa ao vivo: +75.482 EXP e manto de pano."
         }
       ]
     },
@@ -182,9 +188,9 @@
       "type": "official",
       "status": "active",
       "accepted_day": 32,
-      "last_progress_day": 83,
-      "objective": "Entregar um pergaminho de retorno ao Mago Aventureiro no Bar dos Magos (item já presente na mochila desde o Dia 28).",
-      "next_step": "Pergaminho de retorno entregue com sucesso ao Mago Aventureiro no Bar dos Magos no Dia 83; acompanhar o próximo conselho místico.",
+      "last_progress_day": 96,
+      "objective": "Entregar um pergaminho de retorno ao Mago Aventureiro no Bar dos Magos.",
+      "next_step": "Primeira etapa concluída no Dia 96 (+30.000 EXP recebidos no Bar dos Magos). Segunda etapa em andamento: comprar e entregar um pergaminho de retorno ao mago aventureiro.",
       "evidence": [
         {
           "document": "posts.json",
@@ -210,6 +216,11 @@
           "document": "posts.json",
           "day": 83,
           "note": "Entrega física do pergaminho de retorno comprovada no log ao vivo session_dia83.log."
+        },
+        {
+          "document": "evidence/dia96.json",
+          "day": 96,
+          "note": "Etapa 1 concluída no Bar dos Magos com o Mago (+30.000 EXP recebidos); etapa 2 de entrega de novo pergaminho ativa."
         }
       ]
     },
@@ -343,9 +354,9 @@
       "type": "official",
       "status": "active",
       "accepted_day": 90,
-      "last_progress_day": 91,
-      "objective": "Eliminar 10 monstros invasores do milharal conforme pedido do fazendeiro; resgate da família e conclusão oficial ainda não confirmados.",
-      "next_step": "Pedido anterior preservado; esta caçada priorizou os novatos a pedido do usuário. Conferir andamento oficial e preparação antes de retomar a fazenda; sem progresso novo nesta missão.",
+      "last_progress_day": 96,
+      "objective": "Eliminar monstros invasores do milharal conforme pedido do fazendeiro e instruções dadas pelo Pacificador.",
+      "next_step": "Grebolius viajou de Midgaard até Jareth pela rodovia e alcançou a fazenda cercada pelo bosque. Ao despertar no Clube Kitty-Kat em Jareth, avançar contra as criaturas no milharal.",
       "evidence": [
         {
           "document": "posts.json",
@@ -366,6 +377,11 @@
           "document": "evidence/dia91.json",
           "day": 91,
           "note": "Trechos literais do servidor, linhas dos registros anteriores e ações da continuação autorizada; sem referências circulares."
+        },
+        {
+          "document": "evidence/dia96.json",
+          "day": 96,
+          "note": "Trajeto Midgaard-Jareth percorrido, portões de Jareth cruzados e aproximação à Entrada da Fazenda e ao gramado confirmados ao vivo."
         }
       ]
     }

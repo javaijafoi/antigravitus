@@ -2481,5 +2481,38 @@
       "sobrevivencia"
     ],
     "source_kind": "live"
+  },
+  {
+    "id": 96,
+    "day": "Dia 96",
+    "title": "A Ascensão ao Nível 13, a Rodovia do Norte e o Refúgio em Jareth",
+    "content": [
+      "Acordei da febre do veneno nas lajes sagradas do Templo sentindo a vitalidade correr renovada pelas veias. Ajustei a espada na mão destra e o punhal na canhota: uma ladra com duas lâminas afiadas não pede licença para vencer. Meu primeiro destino foi o laboratório da Escola de Novatos. Diante do Alquimista atarefado com seus frascos, declarei o cumprimento definitivo da caçada nas masmorras. O mestre arregalou os olhos em aprovação e me recompensou com a mestria de seus ensinamentos e um manto de pano bem tecido. O estalo do poder arcano estremeceu meu ser: ascendi de círculo em triunfo absoluto.",
+      "Com a mente fervilhando de energia nova, rumei ao Bar dos Magos para ouvir os conselhos do mago veterano. Na atmosfera defumada de cerveja e enxofre, absorvi as lições da primeira etapa de 'Dicas Mágicas', incorporando segredos místicos que coroaram meu avanço direto para o décimo terceiro nível de poder. As portas do aprendizado superior finalmente se escancararam diante dos meus olhos.",
+      "Mas expedição de verdade exige ouro vivo na bolsa. Percorri os mercadores de Midgaard desovando os espólios guardados: vendi coroas de xadrez valiosas por 1.500 moedas cada, armaduras e lâminas aos ferreiros e armeiros locais, elevando meu saldo de meras centenas para expressivas 4.232 moedas de ouro tinindo na algibeira. Livre do peso inútil e fornida de provisões frescas, procurei o Pacificador na Praça do Templo, que me confiou o encargo de socorrer uma fazenda atacada por monstros ao norte, próxima aos limites de Jareth.",
+      "Tomei a estrada pavimentada que corta os campos verdejantes em direção às terras setentrionais. Passei pelos postos de guarda e pelas pequenas vilas de beira de estrada, vencendo a suave colina com passos firmes até contemplar os muros imponentes da Cidade da Liberdade. Cruzei o Portão Oeste de Jareth, atravessei a movimentada Avenida Floris sob os olhares atentos das sentinelas urbanas e saí pelo Portão Leste, adentrando o bosque sussurrante até avistar a clareira da fazenda sitiada.",
+      "Reconheci a trilha de cacos de vidro e os gramados que cercam a casa dos colonos. Ciente de que o milharal exige foco cirúrgico e vigor intacto, recuei com prudência tática para o interior protegido das muralhas de Jareth. Encontrei abrigo nas luzes douradas e na música suave do Clube Kitty-Kat, onde o proprietário atencioso me acolheu. Guardei meus equipamentos, confirmei meus atalhos e entreguei-me ao sono no estofado macio da sala, pronta para o combate no alvorecer."
+    ],
+    "evidence": [
+      {
+        "document": "evidence/dia96.json",
+        "day": 96,
+        "note": "Sessão interativa ao vivo no servidor: conclusão de Limpando Monstros, Dicas Mágicas etapa 1, avanço para Nível 13 (330.001 EXP), 4.232 moedas, rota Midgaard-Jareth e repouso no Clube Kitty-Kat."
+      }
+    ],
+    "date": "2026-10-15",
+    "in_game_time": "Conclusão de missões em Midgaard, negócios de armas, marcha para o norte até Jareth e pernoite no Clube Kitty-Kat",
+    "excerpt": "Grebolius entrega a missão Limpando Monstros ao Alquimista, avança do Nível 11 para o Nível 13, arrecada 4.232 moedas negociando coroas e espadas, inicia as Dicas Mágicas e marcha pela rodovia até a cidade de Jareth, recolhendo-se para dormir no Clube Kitty-Kat.",
+    "tags": [
+      "nivel-13",
+      "limpando-monstros",
+      "dicas-magicas",
+      "problemas-agricolas",
+      "estrada-midgaard-jareth",
+      "jareth",
+      "clube-kitty-kat",
+      "vendas"
+    ],
+    "source_kind": "live"
   }
 ]

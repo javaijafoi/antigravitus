@@ -3,7 +3,7 @@
   "hero_name": "Grebolius",
   "sanctuary_id": "panteao_centenarios",
   "last_updated_cycle": "Ciclo X (Dia 94; Modo Expandir Horizontes)",
-  "total_rooms": 123,
+  "total_rooms": 124,
   "layers": [
     {
       "id": "superficie",
@@ -37,7 +37,8 @@
     "Submundo dos Esgotos & Vazio",
     "Campos & Área dos Novatos",
     "O Grande Tabuleiro de Xadrez",
-    "Fazenda próxima a Jareth"
+    "Fazenda próxima a Jareth",
+    "Cidade de Jareth"
   ],
   "rooms": [
     {
@@ -2912,12 +2913,32 @@
       "npcs": [],
       "notes": "Canto nordeste seguro sobre o abismo onde Grebolius dormiu e salvou após a fuga no Dia 95.",
       "discovered_in": "Dia 95"
+    },
+    {
+      "id": "jareth_clube_kitty_kat",
+      "name": "O Clube Kitty-Kat",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🏕️",
+      "coords": {
+        "x": 500,
+        "y": 100
+      },
+      "exits": {},
+      "npcs": [
+        "Garçonetes do Clube Kitty-Kat",
+        "Cidadãos ricos de Jareth"
+      ],
+      "notes": "Estabelecimento em Jareth onde Grebolius pernoitou no Dia 96. Saída norte leva à recepção.",
+      "discovered_in": "Dia 96"
     }
   ],
-  "last_updated_day": 95,
+  "last_updated_day": 96,
   "verification": "live",
-  "current_location_id": "canto_nordeste_borda",
-  "camp_id": "canto_nordeste_borda",
+  "current_location_id": "jareth_clube_kitty_kat",
+  "camp_id": "jareth_clube_kitty_kat",
   "reconciliation_notes": [
     "Posições gráficas são esquemáticas, não distâncias do mundo.",
     "Revisão inclui descobertas narradas até o Dia 60; não houve verificação ao vivo de todas as rotas antigas.",

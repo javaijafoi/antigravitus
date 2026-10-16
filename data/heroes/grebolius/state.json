@@ -2,41 +2,41 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 95,
+    "day": 96,
     "verification": "live",
     "live_verified": true,
-    "source": "Sessão ao vivo dos Esgotos do Dia 95 via run_dia95_esgotos.py: emboscada de cobras venenosas na borda do abismo; Wimpy 30 acionou fuga tática para O Canto Nordeste da Borda; score tudo, inventário, equipamento, save e sleep confirmados; evidence/dia95.json."
+    "source": "Sessão ao vivo interativa do Dia 96: conclusão de Limpando Monstros (+75.482 EXP, manto de pano), avanço ao Nível 13 (330.001 EXP), vendas atingindo 4.232 moedas, etapa 1 de Dicas Mágicas (+30.000 EXP), avanço pela Estrada Midgaard-Jareth e repouso no Clube Kitty-Kat em Jareth; evidence/dia96.json."
   },
-  "level": 11,
+  "level": 13,
   "mechanical_race": "Elfo",
   "mechanical_class": "Mago (Magic-User)",
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
   "alignment": {
-    "value": 373,
+    "value": 315,
     "label": "Bom"
   },
   "vitals": {
     "hp": {
-      "current": 10,
-      "max": 87
+      "current": 72,
+      "max": 72
     },
     "mana": {
-      "current": 170,
-      "max": 170
+      "current": 190,
+      "max": 190
     },
     "mv": {
-      "current": 101,
-      "max": 101
+      "current": 104,
+      "max": 104
     }
   },
   "experience": {
-    "current": 195201,
-    "next_level": 200000
+    "current": 330001,
+    "next_level": 400000
   },
-  "gold": 2188,
+  "gold": 4232,
   "attributes": {
-    "STR": 10,
+    "STR": 12,
     "DEX": 15,
     "CON": 9,
     "INT": 18,
@@ -44,10 +44,10 @@
     "CHA": 9
   },
   "armor": {
-    "base": 25,
-    "with_armor": 50,
+    "base": 49,
+    "with_armor": 75,
     "effect_verified": true,
-    "note": "Dia 95: AC 50 mantida com Armadura Mística ativa (51h restantes)."
+    "note": "Dia 96: AC 75 mantida com Armadura Mística ativa (+26)."
   },
   "hitroll": 3,
   "damroll": 4,
@@ -55,7 +55,7 @@
   "training_sessions": 15,
   "operational_mode": {
     "current": "padrao",
-    "description": "Modo Dungeon Corajoso + Modo Expandir Horizontes (V2 Modular); wimpy 30 salvou a vida em emboscada no Dia 95.",
+    "description": "Modo Dungeon Corajoso + Modo Expandir Horizontes; wimpy 30 ativo e seguro.",
     "wimpy_profile": {
       "padrao": 17,
       "batedor": 33,
@@ -66,28 +66,28 @@
     }
   },
   "location": {
-    "room_id": "canto_nordeste_borda",
-    "name": "O Canto Nordeste da Borda"
+    "room_id": "jareth_clube_kitty_kat",
+    "name": "O Clube Kitty-Kat"
   },
   "camp": {
-    "room_id": "canto_nordeste_borda",
-    "name": "O Canto Nordeste da Borda"
+    "room_id": "jareth_clube_kitty_kat",
+    "name": "O Clube Kitty-Kat"
   },
   "sanctuary": {
     "room_id": "panteao_centenarios",
     "name": "O Panteão dos Centenários"
   },
   "last_event": {
-    "day": 95,
-    "summary": "Incursão aos Esgotos de Midgaard e Borda do Abismo via run_dia95_esgotos.py: após descer pelo depósito e pela estranha parede lisa até a borda, sofreu emboscada por cobras venenosas em A Estreita Borda Indo de Leste a Oeste. O Wimpy 30 disparou retirada bem-sucedida para o leste, chegando a O Canto Nordeste da Borda com perda de 1 XP (195.201 XP). Encerrou com 10/87 HP, 170/170 mana, 101/101 MV, 2.188 moedas, envenenada (-2 FOR, 9h) mas com Armor ativo (51h), salva e dormindo."
+    "day": 96,
+    "summary": "Expedição do Dia 96: Grebolius concluiu a autoquest 'Limpando Monstros' com o Alquimista (+75.482 EXP, um manto de pano), avançou do Nível 11 para o Nível 13 (330.001 EXP), realizou vendas estratégicas de armas e coroas no armeiro e ferreiro atingindo 4.232 moedas, completou a primeira etapa de 'Dicas Mágicas' no Bar dos Magos (+30.000 EXP) e foi despachada pelo Pacificador para conter a invasão na fazenda a leste de Jareth ('Problemas Agrícolas'). Percorreu a rodovia Midgaard-Jareth, cruzou os portões de Jareth até os arredores da fazenda e recolheu-se dormindo no Clube Kitty-Kat."
   },
   "next_objective": {
     "mission_id": "problemas-agricolas",
-    "title": "Prosseguir com o pedido do fazendeiro no milharal",
-    "next_step": "Retomar a viagem a Jareth e à fazenda por trechos confirmados; avaliar invasores comuns antes de combater. O fazendeiro pede 10 abates; conferir progresso e próxima etapa com ele. Evitar o líder azul enquanto a avaliação indicar perigo desproporcional.",
+    "title": "Prosseguir com a missão na fazenda a leste de Jareth e entregar pergaminho ao mago",
+    "next_step": "Ao despertar no Clube Kitty-Kat, seguir pelo Portão Leste até a fazenda cercada pelo bosque para auxiliar o fazendeiro contra as criaturas do milharal, e depois retornar a Midgaard para entregar o pergaminho de retorno no Bar dos Magos.",
     "missing_preparation": [
-      "Verificar fome, água e capacidade antes da viagem; há 2 pães no encerramento.",
-      "Confirmar cada trecho entre salas homônimas; a cartografia da fazenda é parcial."
+      "Verificar comida e cantil; há 2 pães recheados e cantil no inventário.",
+      "Comprar pergaminho de retorno na Loja de Magias quando retornar a Midgaard (custo aprox. 9.200 moedas; acumular fundos na fazenda)."
     ]
   },
   "skills": [
@@ -184,19 +184,14 @@
   ],
   "equipment": [
     {
-      "slot": "como luz",
-      "item": "um jarro brilhante",
-      "name": "um jarro brilhante"
-    },
-    {
       "slot": "na cabeça",
       "item": "os chifres do Minotauro",
       "name": "os chifres do Minotauro"
     },
     {
       "slot": "sobre o corpo",
-      "item": "a fedida pele do Minotauro",
-      "name": "a fedida pele do Minotauro"
+      "item": "um manto de pano",
+      "name": "um manto de pano"
     },
     {
       "slot": "no corpo",
@@ -237,48 +232,70 @@
   "inventory": {
     "recorded": [
       {
-        "name": "um cantil",
+        "name": "um manto de pano",
         "quantity": 1,
-        "source": "evidence/dia94.json"
+        "source": "evidence/dia96.json"
+      },
+      {
+        "name": "a bainha de Excalibur",
+        "quantity": 1,
+        "source": "evidence/dia96.json"
+      },
+      {
+        "name": "um colar com uma pedra púrpura",
+        "quantity": 1,
+        "source": "evidence/dia96.json"
       },
       {
         "name": "um pão recheado",
-        "quantity": 3,
-        "source": "evidence/dia94.json"
+        "quantity": 2,
+        "source": "evidence/dia96.json"
+      },
+      {
+        "name": "um cantil",
+        "quantity": 1,
+        "source": "evidence/dia96.json"
+      },
+      {
+        "name": "um brilhante punhal de novato",
+        "quantity": 2,
+        "source": "evidence/dia96.json"
+      },
+      {
+        "name": "uma brilhante veste de novato",
+        "quantity": 1,
+        "source": "evidence/dia96.json"
       },
       {
         "name": "uma tocha",
         "quantity": 1,
-        "source": "evidence/dia94.json"
+        "source": "evidence/dia96.json"
       },
       {
         "name": "uma poção amarela de detectar invisibilidade",
         "quantity": 1,
-        "source": "evidence/dia94.json"
+        "source": "evidence/dia96.json"
       },
       {
         "name": "uma mochila",
         "quantity": 1,
-        "source": "evidence/dia94.json"
+        "source": "evidence/dia96.json"
       }
     ],
     "pending_verification": []
   },
   "conditions": [
-    "Dia 94: dormindo no Templo de Midgaard, com 87/87 HP, 170/170 mana e 101/101 MV no último score.",
-    "Saciada de comida e água; cantil cheio na Fonte Azul e 3 pães recheados no inventário.",
-    "Mochila leve e limpa após venda de chifres e peles excedentes no Armeiro (7/17 itens, 78/140 kg).",
+    "Dia 96: dormindo no Clube Kitty-Kat em Jareth, com 72/72 HP, 190/190 mana e 104/104 MV.",
+    "Nível 13 consolidado com 330.001 EXP (avanço de dois níveis no dia!).",
+    "Saldo de 4.232 moedas de ouro carregadas.",
     "Wimpy configurado preventivamente em 30 HP.",
-    "Save e sleep confirmados no Templo de Midgaard."
+    "Save e sleep confirmados no Clube Kitty-Kat."
   ],
   "uncertainties": [
     "O anel arcano (+2E) foi vendido no Dia 92 por 500 moedas por exigir nível 90 e 3ª encarnação.",
     "Novos feitiços superiores dependem de livros arcanos ou mestres especializados.",
     "O renascimento desequipa todas as peças para a mochila; o protocolo pós-morte exige `wear all` imediato para restaurar os bônus de HP e AC do equipamento.",
-    "Saldo do Dia 90: 2636; primeiro saldo completo preservado no Dia 91: 630. A causa da diferença de 2006 moedas não é comprovada pelos registros consultados.",
-    "XP documental do Dia 90: 152101; observado no Dia 91: 152098. A diferença de 3 não foi atribuída a fuga, morte ou outro evento sem comprovante.",
-    "Armadura base 25 calculada por 50 observado menos efeito +25.",
-    "Contador de abates da missão não informado pelo servidor; não presumir 0/10 nem conclusão."
+    "Armadura base 49 calculada por 75 observado menos efeito +26."
   ],
   "evidence": [
     {
@@ -294,23 +311,28 @@
     {
       "document": "evidence/dia91.json",
       "day": 91,
-      "note": "Trechos literais do servidor, linhas dos registros anteriores e ações da continuação autorizada; sem referências circulares."
-    },
-    {
-      "document": "evidence/dia93.json",
-      "day": 93,
-      "note": "Comandos e respostas preservados da sessão autorizada e encerramento ao vivo."
+      "note": "Trechos literais do servidor, linhas dos registros anteriores e ações da continuação autorizada."
     },
     {
       "document": "evidence/dia94.json",
       "day": 94,
       "note": "Comandos e respostas preservados da sessão modular autorizada do Dia 94."
+    },
+    {
+      "document": "evidence/dia95.json",
+      "day": 95,
+      "note": "Incursão aos Esgotos de Midgaard e Borda do Abismo via run_dia95_esgotos.py."
+    },
+    {
+      "document": "evidence/dia96.json",
+      "day": 96,
+      "note": "Sessão interativa do Dia 96: avanço ao Nível 13, conclusão de Limpando Monstros, Dicas Mágicas etapa 1, Problemas Agrícolas, rodovia para Jareth e repouso no Clube Kitty-Kat."
     }
   ],
   "narrative_style": "ladra arcana",
-  "weapon_summary": "Espada de Novato + Punhal segurado + Escudo",
+  "weapon_summary": "Espada de Novato empunhada + Punhal segurado + Escudo",
   "migration": {
     "method": "sessão ao vivo e conferência direta no servidor",
-    "verified_on": "Dia 93 (ficha, inventário, equipamento e encerramento; habilidades e treinos mantêm fontes anteriores)"
+    "verified_on": "Dia 96 (score tudo, inventário, equipamento e repouso ao vivo)"
   }
 }
