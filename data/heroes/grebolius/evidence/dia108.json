@@ -1,0 +1,17 @@
+{
+  "hero_id": "grebolius",
+  "day": 108,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "sources": [
+    "session_live_dia108_*.log",
+    "transcript_dia108_*.jsonl"
+  ],
+  "summary": {
+    "map_use": "Rota derivada do mapa.json por BFS (24 passos ate fazenda_entrada). O mapa acerta a topologia, mas as contagens divergem do servidor em 1-2 passos no trecho Midgaard e o Jareth do mapa e' simplificado. Rota real verificada passo a passo: 5 norte, leste, norte, leste, norte, 8 norte, ~23 leste (ate A Entrada da Floresta), depois n,n e o explorador do bosque.",
+    "sale_test_closed": "Teste decisivo concluido: o armeiro comprou a Armadura do Peao Negro por 150 ('Voce recebera 150 moedas por isso!'). Como ele compra armaduras normalmente, a recusa da Armadura da Torre Negra (8.500) e' LIMITE DE CAIXA do lojista, nao maldicao. A hipotese do autor cai por prova direta.",
+    "hunting": "Cacador corrigido: so bloqueia perigo duro (suicidio/mataria/muito superior/sem chance/massacrado) e usa a palavra-chave certa por mob (bola de pelos -> 'bola'). Abates nesta sessao: ~5 monstros esfomeados no milharal. 'Inconclusivo' ainda ocorre quando o mob foge ou o alvo muda.",
+    "level": "Subiu para o Grau 15 (Experiencia 579.961; faltam 20.039 para o 16).",
+    "state": "Sem morte. Grebolius no Templo, 79/79, 13.528 de ouro."
+  }
+}

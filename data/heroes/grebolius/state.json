@@ -2,12 +2,12 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 100,
+    "day": 109,
     "verification": "live",
     "live_verified": true,
-    "source": "Sessao do Dia 100: morte pela quarta vez no milharal, travessia do Paraiso e do Caminho no Vazio, renascimento pela Fonte da Vida e repouso no Templo; evidence/dia100.json. A lembranca da origem elfa e ANCORA DO AUTOR, sem evidencia de servidor."
+    "source": "Capitulo 1 (Dias 101-109): venda de 2 armaduras da Torre Negra (8.500 cada), maldicao removida e item doado, revisao de equipamento, nivel 15 alcancado e mais abates no milharal. Dia 109: servidor do MUD fora do ar (porta 4000 inacessivel)."
   },
-  "level": 14,
+  "level": 15,
   "mechanical_race": "Elfo",
   "mechanical_class": "Mago (Magic-User)",
   "honorific": "o Aprendiz de Mago",
@@ -18,12 +18,12 @@
   },
   "vitals": {
     "hp": {
-      "current": 75,
-      "max": 75
+      "current": 60,
+      "max": 79
     },
     "mana": {
-      "current": 172,
-      "max": 200
+      "current": 215,
+      "max": 225
     },
     "mv": {
       "current": 105,
@@ -31,10 +31,10 @@
     }
   },
   "experience": {
-    "current": 488183,
-    "next_level": 500000
+    "current": 593419,
+    "next_level": 600000
   },
-  "gold": 22190,
+  "gold": 13578,
   "attributes": {
     "STR": 12,
     "DEX": 15,
@@ -78,8 +78,8 @@
     "name": "O Panteao dos Centenarios"
   },
   "last_event": {
-    "day": 100,
-    "summary": "Grebolius morreu pela quarta vez no Milharal Destruido, atordoada sob um monstro agressivo. Atravessou o Paraiso, o Portal Escondido e o Caminho no Vazio, onde — segundo a ancora do autor — recuperou o fio da propria origem e percebeu que o 'goblin' foi deducao errada sobre uma memoria rasgada. Renasceu pela Fonte da Vida, reequipou-se e dormiu no Templo de Midgaard."
+    "day": 109,
+    "summary": "Capitulo 1 em andamento: vendidas 2 Armaduras da Torre Negra (8.500 cada) e testada a hipotese da maldicao (confirmado: a recusa era limite de caixa do armeiro, nao o item). A terceira armadura, amaldicoada, teve a maldicao removida por pergaminho e foi doada. Grebolius alcancou o Grau 15 cacando no milharal. No Dia 109 o servidor do MUD saiu do ar durante a sessao."
   },
   "next_objective": {
     "mission_id": "problemas-agricolas",
@@ -299,12 +299,12 @@
     "Save e sleep confirmados no Templo de Midgaard."
   ],
   "uncertainties": [
-    "ANCORA DO AUTOR (sem evidencia de servidor): primeira morte no Dia 0 e origem elfa; o 'goblin' seria deducao errada sobre memoria rasgada.",
-    "A revelacao ainda NAO foi afirmada como fato do servidor; depende de um gatilho externo (nome dito por NPC, magia de deteccao, o Cavaleiro Branco).",
-    "Cronicas antigas precisam de nota editorial de segunda leitura, sem reescrita.",
-    "O colar de pedra purpura segue inutilizavel e sem dono declarado.",
-    "Problemas Agricolas continua sem contador verificavel; o milharal tem 2 a 4 monstros por sala.",
-    "A Armadura Mistica precisa ser recastada."
+    "Dia 109: servidor do MUD indisponivel (porta 4000 nao aceita conexao; DNS resolve). Sem progresso de missao enquanto durar.",
+    "Problemas Agricolas segue em andamento (milharal com 2 a 4 monstros por sala; o contador nao e exibido).",
+    "Dicas Magicas segue em andamento sem instrucao declarada; pista: laboratorio dos magos -> escada abaixo -> esgotos.",
+    "Equipamento (item d do capitulo) ainda nao fechado.",
+    "A venda das armaduras depende do caixa do armeiro, que e limitado e se recupera com o tempo.",
+    "ANCORA DO AUTOR (sem evidencia de servidor): primeira morte no Dia 0 e origem elfa."
   ],
   "evidence": [
     {
@@ -361,6 +361,51 @@
       "document": "notas_editoriais.md",
       "day": 100,
       "note": "Separacao entre fato do servidor e ancora do autor; ganchos abertos para o jogo entregar."
+    },
+    {
+      "document": "evidence/dia101.json",
+      "day": 101,
+      "note": "Falha das autoquests pela morte, reinicio de Dicas Magicas e venda da 1a armadura (8.500)."
+    },
+    {
+      "document": "evidence/dia102.json",
+      "day": 102,
+      "note": "Mochila recuperada e 2a armadura vendida carregando a bolsa."
+    },
+    {
+      "document": "evidence/dia103.json",
+      "day": 103,
+      "note": "Fluxo de limpeza do tabuleiro e o bolso finito do armeiro."
+    },
+    {
+      "document": "evidence/dia104.json",
+      "day": 104,
+      "note": "Reinicio de Problemas Agricolas, rota ate o milharal e beber direto da fonte."
+    },
+    {
+      "document": "evidence/dia105.json",
+      "day": 105,
+      "note": "Estudo da maquina (sell #, value, use) e regua de consider."
+    },
+    {
+      "document": "evidence/dia106.json",
+      "day": 106,
+      "note": "Armadura amaldicoada, remocao de maldicao e doacao."
+    },
+    {
+      "document": "evidence/dia107.json",
+      "day": 107,
+      "note": "Sanctuary pelo cetro segurado e confronto manual."
+    },
+    {
+      "document": "evidence/dia108.json",
+      "day": 108,
+      "note": "Rota pelo mapa, teste da venda encerrado e Grau 15."
+    },
+    {
+      "document": "evidence/dia109.json",
+      "day": 109,
+      "note": "Queda do servidor do MUD."
     }
   ],
   "narrative_style": "ladra arcana",

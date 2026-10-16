@@ -1,0 +1,16 @@
+{
+  "hero_id": "grebolius",
+  "day": 107,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "sources": [
+    "session_live_dia107_*.log",
+    "transcript_dia107_*.jsonl"
+  ],
+  "summary": {
+    "travel": "Midgaard -> rodovia -> Jareth -> floresta -> bosque -> fazenda -> milharal, em etapas verificadas (rota.py + go_milharal.py).",
+    "sanctuary": "O Cetro do Bispo Negro precisa estar SEGURADO: 'hold cetro' e depois 'use cetro' -> 'Voce bate o Cetro do Bispo Negro tres vezes no chao.' (conjura sanctuary na sala).",
+    "fight": "Confronto manual no milharal com monstro agressivo: 24 e 41 de dano com maos flamejantes, erros ocasionais; o monstro chegou a quase zero. Cuidado: o milharal segue com 2 a 4 monstros por sala e o hunter automatico ainda erra o alvo/veredito em parte das rodadas.",
+    "state": "Sem morte; XP e ouro a conferir no fechamento."
+  }
+}

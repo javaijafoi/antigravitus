@@ -1,0 +1,51 @@
+{
+  "hero_id": "grebolius",
+  "day": 101,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "sources": [
+    "session_live_dia101_*.log",
+    "transcript_dia101_*.jsonl"
+  ],
+  "summary": {
+    "start": {
+      "level": 14,
+      "xp": 488183,
+      "gold": 22190,
+      "location": "O Templo de Midgaard"
+    },
+    "end": {
+      "level": 14,
+      "xp": 488183,
+      "gold": 4217,
+      "location": "O Templo de Midgaard"
+    },
+    "failed_autoquests": "A morte #04 (Dia 100) falhou as duas missões: 'Problemas Agrícolas' e 'Dicas Mágicas' aparecem como NÃO FEITA. Para completá-las é preciso recomeçá-las.",
+    "quest_restart": "Dicas Mágicas reiniciada com o Mago Aventureiro no Bar dos Magos pelo gatilho 'say sim' -> 'Você começa a participar da aventura.'",
+    "donations": "Sala de Doações: Cruz Ansada (RECUSA a personagem — dá choque e pula fora), tomo da sabedoria druídica (livro de magia de druida, valor 200.000, NÃO-VENDER), brilhante elmo de novato (+3 armadura, +1 CON) e rígido peitoral de couro (+4 armadura).",
+    "equipment_review": [
+      "Espada de novato (4D8, +3 acerto/+3 dano) é melhor que a Espada do Peão Negro (4D5); empunhada.",
+      "Chifres do Minotauro dão +2 FOR e permanecem melhores que o elmo de novato; mantidos.",
+      "Manto de pano dá +30 de armadura.",
+      "Cetro do Bispo Negro conjura sanctuary (5 cargas); guardado.",
+      "Bainha de Excalibur é nível 85 (+65 armadura, +125 vida, +8 dano/acerto); item de futuro.",
+      "A mochila pesa 48 kg e não alivia peso algum (testado: 'put' não reduz o peso carregado)."
+    ],
+    "costly_mistakes": [
+      "A lista da Loja de Magias mudou (agora inclui itens vendidos por jogadores); 'buy #5' comprou um cajado retorcido por 14.570 em vez do pergaminho. Vendido de volta por 1.900 (perda líquida de 12.670).",
+      "O pergaminho de retorno (9.202) foi entregue por engano ao mago guardião, não ao Mago Aventureiro."
+    ],
+    "objective_b": {
+      "status": "concluido",
+      "detail": "Levada 1 Armadura da Torre Negra (peso 60, valor 17.000, nível 17, amaldiçoada/anti-bom) ao armeiro de Midgaard. O armeiro pagou 8.500. Restam 51 na Casa Preta (Tomo: 52 originais). Potencial de ~433.500 em ouro, ao ritmo de 1 por viagem."
+    },
+    "objective_a": {
+      "status": "pendente",
+      "detail": "Problemas Agrícolas continua NÃO FEITA: o Pacificador não respondeu aos gatilhos testados ('say sim', 'quero ajudar', 'problemas agricolas', 'fazenda')."
+    },
+    "objective_c": {
+      "status": "em_curso",
+      "detail": "Dicas Mágicas reiniciada; um pergaminho de identificação (4.601) foi entregue ao Mago Aventureiro, mas a missão segue sem nova instrução declarada."
+    }
+  }
+}

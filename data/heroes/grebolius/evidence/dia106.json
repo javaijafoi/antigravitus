@@ -1,0 +1,24 @@
+{
+  "hero_id": "grebolius",
+  "day": 106,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "sources": [
+    "session_live_dia106_*.log",
+    "transcript_dia106_*.jsonl"
+  ],
+  "summary": {
+    "curse": "Descoberta decisiva: a Armadura da Torre Negra e' AMALDICOADA — 'Voce nao pode soltar a Armadura da Torre Negra. Isso deve estar AMALDICOADO!' Ela nao podia ser doada nem largada.",
+    "solution": "Comprado um pergaminho de remover maldicoes na Loja de Magias (8.509). Dentro da loja o pergaminho NAO funciona ('As paredes desta sala parecem impedir voce'); recitado do lado de fora: 'Voce recita um pergaminho de remover maldicoes, que dissolve. A Armadura da Torre Negra brilha em azul.'",
+    "donation": "Como o armeiro continua sem ouro ('caro demais - tente um feiticeiro'), a armadura foi DOADA na Sala de Doacoes, conforme instrucao do autor. Peso caiu de 136 para 116 kg e um cantil foi recuperado.",
+    "prices": "value torre confirma 8.500 quando o armeiro tem ouro; o limite e' o bolso dele, nao o preco.",
+    "ending": {
+      "level": 14,
+      "xp": 507759,
+      "gold": 13028,
+      "hp": "79/79",
+      "location": "A Sala de Doacoes de Midgaard",
+      "weight": "116/140 kg"
+    }
+  }
+}

@@ -22,12 +22,15 @@ def json_text(value):
 def number(value):
     return f'{value:,}'.replace(',', '.')
 
-def validate_state(state, hero_id, posts):
+def validate_state(state, hero_id, posts, extra_max=0):
     if state.get('hero_id') != hero_id or state.get('schema_version') != 1:
         raise ValueError('state.json deve identificar o herói e a versão 1 do esquema.')
     day = state.get('as_of', {}).get('day')
     post_ids = [p['id'] for p in posts if isinstance(p, dict) and type(p.get('id')) is int]
-    if type(day) is not int or day < 1 or not post_ids or day > max(post_ids):
+    limite = max(post_ids) if post_ids else 0
+    # A Season 02 corre por capítulos: os dias do capítulo também são jornada documentada.
+    limite = max(limite, extra_max)
+    if type(day) is not int or day < 1 or limite <= 0 or day > limite:
         raise ValueError('O estado precisa referir-se a uma jornada documentada, não futura.')
     for key in ('hp','mana','mv'):
         resource = state['vitals'][key]
@@ -130,7 +133,18 @@ def expected_outputs(root, hero_id):
     state = read_json(directory / 'state.json')
     missions = read_json(directory / 'missoes.json')
     posts = read_json(directory / 'posts.json')
-    validate_state(state, hero_id, posts)
+    extra = 0
+    chapters = directory / 'capitulos.json'
+    if chapters.is_file():
+        try:
+            data = read_json(chapters)
+            days = [p['day'] for c in data.get('chapters', []) for p in c.get('parts', [])
+                    if isinstance(p, dict) and type(p.get('day')) is int]
+            if days:
+                extra = max(days)
+        except Exception:
+            pass
+    validate_state(state, hero_id, posts, extra)
     if missions.get('hero_id') != hero_id or missions.get('as_of_day') != state['as_of']['day']:
         raise ValueError('O catálogo de missões deve identificar o mesmo herói e dia do estado.')
     hero['quick_stats'] = quick_stats(state)

@@ -1,0 +1,31 @@
+{
+  "hero_id": "grebolius",
+  "day": 103,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "sources": [
+    "session_live_dia103_*.log",
+    "transcript_dia103_*.jsonl"
+  ],
+  "summary": {
+    "objective": "Limpar o Tabuleiro: pegar e vender TODAS as armaduras (48 restantes na Casa Preta da Torre).",
+    "flow_created": "scripts/local/farm_armaduras.py — navega em lotes curtos de 2 comandos com verificacao de sala e 'recall' de resync; pega a mochila junto com 1 armadura; vende ao armeiro; travas de combate, vida e torre negra viva.",
+    "buyers": {
+      "armeiro_midgaard": "Compra a Armadura da Torre Negra por 8.500, MAS tem bolso finito. Depois de pagar por cerca de 3 armaduras (25.500), passou a responder: 'Isso e caro demais para mim - Tente um feiticeiro!'",
+      "feiticeiro_loja_de_magias": "Recusa armaduras: 'Eu nao compro esse tipo de coisa.'"
+    },
+    "conclusion": "O gargalo de vender as 48 armaduras nao e o peso (cabe 1 por viagem, 138/140 kg com a mochila), e sim o ouro limitado do comprador. O fluxo precisa vender em lotes conforme o ouro do armeiro se recupera, ou procurar outro armeiro (Jareth tem Loja de Armas de Maris e Loja de Armaduras).",
+    "findings": [
+      "A mochila pesa 48 kg e nao alivia peso, mas cabe junto com 1 armadura: 29 kg base + 48 + 60 = 137, dentro do limite de 140.",
+      "A sala da Torre do Rei Negro tem cerca de 48 armaduras acumuladas; a 'Torre Negra' viva apareceu morta no chao durante a sessao.",
+      "Vender tudo em um unico dia nao e viavel: o armeiro para de comprar."
+    ],
+    "ending": {
+      "level": 14,
+      "xp": 488183,
+      "gold": 21217,
+      "location": "O Templo de Midgaard",
+      "carrying": "1 Armadura da Torre Negra (60 kg) + mochila, 138/140 kg"
+    }
+  }
+}

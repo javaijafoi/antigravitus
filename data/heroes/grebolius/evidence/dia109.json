@@ -1,0 +1,16 @@
+{
+  "hero_id": "grebolius",
+  "day": 109,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "sources": [
+    "session_live_dia109_20261016_012849_ad1954.log",
+    "Test-NetConnection debomud.org:4000"
+  ],
+  "summary": {
+    "outage": "A conexao com o MUD caiu durante a sessao (estado 'disconnected' no daemon). A reconexao falhou 3 vezes com WinError 10060 (timeout). Teste direto: DNS de debomud.org resolve para 71.19.147.24, mas a porta 4000 nao aceita conexao e o ping ao IP tambem falha — indisponibilidade externa, fora do controle da sessao.",
+    "last_saved_state": "Ultimo ponto salvo: Grebolius no Templo de Midgaard, Grau 15, 593.419 de experiencia, 13.578 de ouro, com ambas as autoquests em andamento (Problemas Agricolas e Dicas Magicas). A personagem NAO estava em combate quando a conexao caiu.",
+    "work_done_before_outage": "Rota pelo mapa corrigida e usada; cacador reforcado com sanctuary e permissao para salas de 2 monstros; tentativas de chegada ao milharal interrompidas pela queda.",
+    "conclusion": "Sem servidor nao ha progresso de missao. Retomar assim que a porta 4000 responder."
+  }
+}

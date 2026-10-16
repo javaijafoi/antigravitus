@@ -1,6 +1,6 @@
 # 🧌 Ficha Atual de Grebolius (Último Estado Registrado)
 
-> Referência: Dia 100. Estado verificado em sessão; consultar a origem registrada.
+> Referência: Dia 109. Estado verificado em sessão; consultar a origem registrada.
 > Este documento reúne o último estado e as missões registrados; as incertezas aparecem ao final.
 
 ## ✦ Identificação e Registro
@@ -9,9 +9,9 @@
 * **Raça / Aparência Narrativa:** Mulher goblin; aventureira sem véu
 * **Raça Mecânica no MUD:** Elfo
 * **Classe Mecânica no MUD:** Mago (Magic-User)
-* **Grau / Nível Atual:** **14**
+* **Grau / Nível Atual:** **15**
 * **Alinhamento Moral:** 238 (Um pouco bom)
-* **Localização Atual:** O Templo de Midgaard (último registro: Dia 100)
+* **Localização Atual:** O Templo de Midgaard (último registro: Dia 109)
 * **Acampamento Registrado:** O Templo de Midgaard
 * **Santuário de Referência:** O Panteao dos Centenarios
 
@@ -20,13 +20,13 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 ## ✦ Status Vitais
 | Recurso | Atual | Máximo | Porcentagem |
 | :--- | :---: | :---: | :---: |
-| **Pontos de Vida (HP)** | 75 | 75 | 100% |
-| **Pontos de Mana (MP)** | 172 | 200 | 86% |
+| **Pontos de Vida (HP)** | 60 | 79 | 76% |
+| **Pontos de Mana (MP)** | 215 | 225 | 96% |
 | **Estamina / Movimento (MV)** | 105 | 105 | 100% |
 
-* **Experiência Acumulada:** **488.183 EXP**
-* **Experiência Necessária p/ Grau 15:** **11.817 EXP** (Meta: 500.000 EXP)
-* **Ouro Líquido:** **22.190 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **593.419 EXP**
+* **Experiência Necessária p/ Grau 16:** **6.581 EXP** (Meta: 600.000 EXP)
+* **Ouro Líquido:** **13.578 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 12
@@ -116,10 +116,10 @@ Iniciar a Season 02 com abordagem diferente, decidida pelo autor. Em jogo, quand
 * A revelacao da origem elfa e leitura editorial enquanto o servidor nao entregar o gatilho.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessao do Dia 100: morte pela quarta vez no milharal, travessia do Paraiso e do Caminho no Vazio, renascimento pela Fonte da Vida e repouso no Templo; evidence/dia100.json. A lembranca da origem elfa e ANCORA DO AUTOR, sem evidencia de servidor..
-* ANCORA DO AUTOR (sem evidencia de servidor): primeira morte no Dia 0 e origem elfa; o 'goblin' seria deducao errada sobre memoria rasgada.
-* A revelacao ainda NAO foi afirmada como fato do servidor; depende de um gatilho externo (nome dito por NPC, magia de deteccao, o Cavaleiro Branco).
-* Cronicas antigas precisam de nota editorial de segunda leitura, sem reescrita.
-* O colar de pedra purpura segue inutilizavel e sem dono declarado.
-* Problemas Agricolas continua sem contador verificavel; o milharal tem 2 a 4 monstros por sala.
-* A Armadura Mistica precisa ser recastada.
+Fonte do estado: Capitulo 1 (Dias 101-109): venda de 2 armaduras da Torre Negra (8.500 cada), maldicao removida e item doado, revisao de equipamento, nivel 15 alcancado e mais abates no milharal. Dia 109: servidor do MUD fora do ar (porta 4000 inacessivel)..
+* Dia 109: servidor do MUD indisponivel (porta 4000 nao aceita conexao; DNS resolve). Sem progresso de missao enquanto durar.
+* Problemas Agricolas segue em andamento (milharal com 2 a 4 monstros por sala; o contador nao e exibido).
+* Dicas Magicas segue em andamento sem instrucao declarada; pista: laboratorio dos magos -> escada abaixo -> esgotos.
+* Equipamento (item d do capitulo) ainda nao fechado.
+* A venda das armaduras depende do caixa do armeiro, que e limitado e se recupera com o tempo.
+* ANCORA DO AUTOR (sem evidencia de servidor): primeira morte no Dia 0 e origem elfa.

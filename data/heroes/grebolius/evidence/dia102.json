@@ -1,0 +1,26 @@
+{
+  "hero_id": "grebolius",
+  "day": 102,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "sources": [
+    "session_live_dia102_*.log",
+    "transcript_dia102_*.jsonl"
+  ],
+  "summary": {
+    "start": {
+      "gold": 4217,
+      "location": "O Templo de Midgaard"
+    },
+    "end": {
+      "level": 14,
+      "xp": 488183,
+      "gold": 12717,
+      "location": "O Templo de Midgaard"
+    },
+    "backpack": "A mochila deixada na Casa Preta (Tabuleiro) foi recuperada, conforme pedido do autor: a personagem não deixa mais a bolsa para trás. Peso da mochila: 48 kg.",
+    "armour_sale": "Segunda Armadura da Torre Negra vendida ao armeiro por 8.500 — desta vez carregando também a mochila (138/140 kg), após soltar o cantil (peso 14, valor 12).",
+    "farm_quest_attempt": "Nova tentativa de reiniciar 'Problemas Agrícolas' com o Pacificador na Praça do Templo: sem resposta aos gatilhos tentados, inclusive reentrando na sala. Pendente.",
+    "weight_lesson": "A Armadura da Torre Negra (60 kg) + a mochila (48 kg) exigem uma carga quase vazia: cabe 1 armadura por viagem quando a mochila é levada; sem a mochila, ainda cabe 1."
+  }
+}

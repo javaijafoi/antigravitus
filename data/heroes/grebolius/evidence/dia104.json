@@ -1,0 +1,33 @@
+{
+  "hero_id": "grebolius",
+  "day": 104,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "sources": [
+    "session_live_dia104_*.log",
+    "transcript_dia104_*.jsonl"
+  ],
+  "summary": {
+    "quest_restart": "Problemas Agricolas reiniciada com o Pacificador pelo gatilho 'say sim' (o NPC pergunta quando o personagem permanece na sala). 'help autoquest' (em ingles) confirma: autoquests comecam por dialogo de NPC respondido com sim/nao. 'tips' e um toggle: foi religado ('Vocera as dicas do jogo').",
+    "travel": "Criados scripts/local/rota.py (anda em pares, imprime a sala, aborta se a vida cai) e scripts/local/go_milharal.py (le exits e atravessa o bosque homonimo ate A Entrada da Fazenda). Rota verificada: Midgaard -> rodovia -> Jareth -> Portao Leste -> floresta -> bosque -> fazenda -> milharal.",
+    "hunting": {
+      "kills": 3,
+      "xp_before": 488183,
+      "xp_after": 507759,
+      "gold_before": 21217,
+      "gold_after": 21417,
+      "method": "Consider antes de atacar, conforme o motor de expedicao: assess_consider marca 'danger' em louco/suicidio/muito superior e 'favorable' quando os eixos nivel/vida/poder/precisao/armadura sao todos verdes ('vence, mas com dificuldades' conta como verde). Perfil dungeon_corajoso foge a 30% da vida.",
+      "note": "O consider do 'monstro esfomeado' traz 'Vida: Voce e louco?' — ou seja, pela regua do proprio motor ele e perigoso; as salas do milharal tem de 1 a 4 monstros e so as de alvo unico foram atacadas."
+    },
+    "water": "A sede virou dano (-1hp/tick). Nao havia cantil: o comando e 'fill <recipiente> <fonte>' e nao cabia cantil com a armadura na mao. Solucao confirmada: beber DIRETO da fonte da Praca do Templo — 'drink fonte' -> 'Voce bebe agua cristalina. Voce nao sente mais sede.'",
+    "armour_sale": "A armadura continua na mao (peso 136/140). O armeiro segue sem ouro ('caro demais - tente um feiticeiro') e o feiticeiro nao compra armaduras.",
+    "ending": {
+      "level": 14,
+      "xp": 507759,
+      "gold": 21417,
+      "hp": "79/79",
+      "location": "O Templo de Midgaard",
+      "carrying": "1 Armadura da Torre Negra + mochila (136/140 kg)"
+    }
+  }
+}

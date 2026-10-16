@@ -42,7 +42,7 @@ def check_json_file(file_path):
         return None, [f"Não foi possível ler {file_path}: {exc}"]
 
 
-def validate_evidence(evidence, context, max_day, hero_dir=None):
+def validate_evidence(evidence, context, max_day, hero_dir=None, bound=True):
     errors = []
     if not isinstance(evidence, list) or not evidence:
         return [f"{context}: evidence deve ser uma lista não vazia de fontes."]
@@ -57,7 +57,7 @@ def validate_evidence(evidence, context, max_day, hero_dir=None):
         elif hero_dir is not None and not (Path(hero_dir) / path).is_file():
             errors.append(f"{context}: fonte documental não encontrada: {document}.")
         day = ref.get("day")
-        if day is not None and (not integer(day, 1) or day > max_day):
+        if day is not None and (not integer(day, 1) or (bound and day > max_day)):
             errors.append(f"{context}: evidência aponta para dia inválido ou futuro: {day} (limite {max_day}).")
     return errors
 
@@ -409,22 +409,22 @@ def validate_capitulos(hero_id, data, max_day, hero_dir=None):
         elif not (ranges[tomo][0] <= cid <= ranges[tomo][1]):
             errors.append(f"{context}: capítulo {cid} fora da faixa do Tomo {tomo} ({ranges[tomo][0]}-{ranges[tomo][1]}).")
         days = chapter.get("days", [])
-        if not isinstance(days, list) or any(not integer(d, 1) or d > max_day for d in days):
+        if not isinstance(days, list) or any(not integer(d, 1) for d in days):
             errors.append(f"{context}: days inválido no capítulo {cid}.")
         parts = chapter.get("parts", [])
         if not isinstance(parts, list):
             errors.append(f"{context}: parts deve ser lista no capítulo {cid}.")
         else:
             for part in parts:
-                if not isinstance(part, dict) or not integer(part.get("day"), 1) or part["day"] > max_day or not nonempty(part.get("summary")):
+                if not isinstance(part, dict) or not integer(part.get("day"), 1) or not nonempty(part.get("summary")):
                     errors.append(f"{context}: parte inválida no capítulo {cid}.")
                     continue
                 if part.get("source_kind") not in ("documental", "live"):
                     errors.append(f"{context}: parte do capítulo {cid} precisa de source_kind.")
-                errors.extend(validate_evidence(part.get("evidence"), f"{context} capítulo {cid} parte Dia {part.get('day')}", max_day, hero_dir))
+                errors.extend(validate_evidence(part.get("evidence"), f"{context} capítulo {cid} parte Dia {part.get('day')}", max_day, hero_dir, bound=False))
         evidence = chapter.get("evidence")
         if evidence:
-            errors.extend(validate_evidence(evidence, f"{context} capítulo {cid}", max_day, hero_dir))
+            errors.extend(validate_evidence(evidence, f"{context} capítulo {cid}", max_day, hero_dir, bound=False))
         elif chapter.get("status") == "concluido":
             errors.append(f"{context}: capítulo {cid} concluído precisa de evidence.")
         if chapter.get("source_kind") not in ("documental", "live"):
@@ -461,10 +461,21 @@ def validate_hero_sync(hero_entry, root_dir=ROOT_DIR, max_day=None):
     if draft and max_day:
         errors.append(f"'{hero_id}': record_status=draft é incompatível com crônicas já iniciadas.")
     state = None
+    effective_max = max_day
+    chapters_file = hero_dir / "capitulos.json"
+    if chapters_file.is_file():
+        try:
+            chapters_data = json.loads(chapters_file.read_text(encoding="utf-8-sig"))
+            dias = [p["day"] for c in chapters_data.get("chapters", []) for p in c.get("parts", [])
+                    if isinstance(p, dict) and integer(p.get("day"), 1)]
+            if dias:
+                effective_max = max(effective_max, max(dias))
+        except Exception:
+            pass
     if (hero_dir / "state.json").is_file():
         state, errs = check_json_file(hero_dir / "state.json")
         errors.extend(errs)
-        se, sw = validate_state(hero_id, state, max_day, hero_dir)
+        se, sw = validate_state(hero_id, state, effective_max, hero_dir)
         errors.extend(se)
         warnings.extend(sw)
         # O mesmo renderizador cobre classe, habilidades e equipamento, além dos números.
@@ -522,7 +533,7 @@ def validate_hero_sync(hero_entry, root_dir=ROOT_DIR, max_day=None):
             if errs:
                 continue
             extra = {"state": state} if filename == "mapa.json" else {"hero_dir": hero_dir} if filename == "missoes.json" else {}
-            ve, vw = validator(hero_id, data, max_day, **extra)
+            ve, vw = validator(hero_id, data, effective_max, **extra)
             errors.extend(ve)
             warnings.extend(vw)
     events_path = hero_dir / "events.json"
@@ -551,7 +562,7 @@ def validate_hero_sync(hero_entry, root_dir=ROOT_DIR, max_day=None):
             data, errs = check_json_file(path)
             errors.extend(errs)
             if not errs:
-                ve, vw = validator(hero_id, data, max_day, hero_dir)
+                ve, vw = validator(hero_id, data, effective_max, hero_dir)
                 errors.extend(ve)
                 warnings.extend(vw)
     return errors, warnings

@@ -1,0 +1,17 @@
+{
+  "hero_id": "grebolius",
+  "day": 105,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "sources": [
+    "session_live_dia105_*.log",
+    "transcript_dia105_*.jsonl"
+  ],
+  "summary": {
+    "study": "Estudo da pasta maquina: dicionario_comandos.md e commands.md. Achados uteis: 'sell [#] <item>' vende varios (ex.: sell 3 espada); 'value <item>' pede a cotacao antes de vender; 'use <cetro>' dispara a magia do bastao (o Cetro do Bispo Negro conjura sanctuary, 5 cargas); 'track <vitima>' (habilidade que Grebolius pode nao ter); 'open portal'.",
+    "consider_rule": "O consider do milharal traz: Nivel 'vence, mas com dificuldades' (verde), Vida 'Voce e louco?' (luta longa), Poder 'Muito facil' (verde), Precisao 'vence, mas com dificuldades' (verde), Armadura 'Voce precisaria de um pouco de sorte' (ARRISCADO). Ou seja: o veredito varia por instancia e o eixo Armadura com 'sorte' torna o confronto arriscado. 'Vida louca' sozinha e luta longa; nao invalida o combate em 1v1.",
+    "efforts": "Criado rota.py (navegacao verificada em pares) e go_milharal.py (atravessa o bosque homonimo lendo exits). hunt_milharal.py passou a consultar 'consider' antes de atacar e so ataca alvo unico.",
+    "outcome": "Viagem completa Midgaard -> Jareth -> floresta -> fazenda -> milharal registrada e reproduzivel. Nenhum abate novo: as salas do milharal apareceram com 2 a 5 monstros e os confrontos isolados foram classificados como arriscados (Armadura 'sorte').",
+    "health": "A personagem continua inteira: 79/79, sem sede, ouro 21.417, XP 507.759, 1 Armadura da Torre Negra na mao."
+  }
+}

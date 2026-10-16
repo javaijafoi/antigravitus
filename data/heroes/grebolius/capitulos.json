@@ -129,6 +129,148 @@
           ]
         }
       ]
+    },
+    {
+      "id": 1,
+      "tomo": 1,
+      "title": "O Milharal, a Torre e o Ferro Novo",
+      "kind": "missao",
+      "status": "em_curso",
+      "goal": "Fechar a missao Problemas Agricolas no milharal; vender 1 armadura da Torre Negra para avaliar o lote; cumprir a proxima etapa de Dicas Magicas; repensar o equipamento (compra ou Sala de Doacoes).",
+      "days": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "parts": [
+        {
+          "day": 101,
+          "summary": "Descoberto que a morte #04 falhou as duas autoquests. Dicas Magicas reiniciada com 'say sim'. Sala de Doacoes avaliada (Cruz Ansada recusa a personagem; tomo druidico; elmo e peitoral). Revisao de equipamento: espada de novato melhor que a do Peao; chifres mantidos; manto +30. Venda da 1a Armadura da Torre Negra ao armeiro por 8.500.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia101.json",
+              "day": 101,
+              "note": "Sessao do Dia 101: falha das autoquests pela morte, reinicio de Dicas Magicas, a Sala de Doacoes, a revisao de equipamento, a Cruz Ansada que recusa a personagem e a venda da 1a armadura da Torre Negra por 8.500."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 102,
+          "summary": "Mochila recuperada na Casa Preta. 2a Armadura da Torre Negra vendida por 8.500 carregando a bolsa (138/140 kg). Nova tentativa de reiniciar Problemas Agricolas com o Pacificador sem resposta.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia102.json",
+              "day": 102,
+              "note": "Sessao do Dia 102: recuperacao da mochila e venda da 2a armadura da Torre Negra carregando a bolsa."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 103,
+          "summary": "Limpeza do Tabuleiro organizada: criado o fluxo scripts/local/farm_armaduras.py (navegacao em lotes curtos com verificacao de sala, mochila + 1 armadura por viagem, travas de seguranca). 3 armaduras vendidas a 8.500. Descoberto o gargalo real: o armeiro de Midgaard tem bolso finito e para de comprar; o feiticeiro nao compra armaduras. Restam ~48 armaduras; a venda deve ser em lotes, conforme o ouro do comprador se recupera.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia103.json",
+              "day": 103,
+              "note": "Dia 103: fluxo de limpeza do Tabuleiro criado e testado; descoberto que o armeiro tem bolso finito (~3 armaduras) e o feiticeiro nao compra armaduras."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 104,
+          "summary": "Problemas Agricolas reiniciada com o Pacificador (say sim). Rota verificada ate o milharal pelos novos rota.py e go_milharal.py. 3 abates com consider e alvo unico (XP 488.183 -> 507.759; ouro 21.217 -> 21.417). Sede resolvida bebendo direto da fonte. A armadura segue na mao: o armeiro continua sem ouro.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia104.json",
+              "day": 104,
+              "note": "Dia 104: reinicio de Problemas Agricolas, rota verificada ate o milharal, 3 abates e o metodo de consider/agua."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 105,
+          "summary": "Estudo da pasta maquina: sell # vende em lote, value cota antes, use cetro dispara sanctuary. Regua de consider refinada: Vida 'louco' e luta longa; Armadura 'sorte' e arriscado. Viagem Midgaard-Jareth-floresta-fazenda-milharal reproduzivel via rota.py e go_milharal.py. Sem abates novos: salas com 2-5 monstros.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia105.json",
+              "day": 105,
+              "note": "Dia 105: estudo da maquina (sell #, value, use cetro), refinamento da regua de consider e viagem reproduzivel ate o milharal."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 106,
+          "summary": "Descoberto que a Armadura da Torre Negra e' amaldicoada (nao podia ser largada nem doada). Removida a maldicao com pergaminho de remover maldicoes (8.509) recitado fora da loja; em seguida a armadura foi doada na Sala de Doacoes, conforme o autor. Cantil recuperado; peso 116/140. O armeiro segue sem ouro.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia106.json",
+              "day": 106,
+              "note": "Dia 106: armadura amaldicoada, remocao de maldicao por pergaminho e doacao; recuperacao do cantil."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 107,
+          "summary": "Viagem reproduzivel ao milharal e descoberto que o Cetro do Bispo Negro exige 'hold cetro' antes de 'use cetro' (conjura sanctuary). Confronto manual com monstro agressivo (24 e 41 de dano) quase o derrubou; sem morte. Salas seguem com 2 a 4 monstros.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia107.json",
+              "day": 107,
+              "note": "Dia 107: viagem reproduzivel ao milharal, sanctuary via cetro segurado e confronto manual."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 108,
+          "summary": "Rota derivada do mapa e corrigida passo a passo ate o milharal. TESTE DA VENDA ENCERRADO: o armeiro comprou armadura de peao por 150, provando que a recusa de 8.500 e' limite de caixa do lojista, nao maldicao. Cacador corrigido (palavra-chave por mob, so bloqueia perigo duro): mais ~5 abates. Grau 15 alcancado (579.961 de experiencia).",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia108.json",
+              "day": 108,
+              "note": "Dia 108: rota pelo mapa corrigida passo a passo, teste da venda encerrado (e' caixa do lojista), caçador corrigido e mais abates no milharal."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 109,
+          "summary": "Servidor do MUD fora do ar durante a sessao (WinError 10060). DNS resolve 71.19.147.24, mas a porta 4000 nao aceita conexao e o ping falha. Personagem salva no Templo, Grau 15, sem estar em combate. Sem progresso de missao enquanto o servidor nao voltar.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia109.json",
+              "day": 109,
+              "note": "Dia 109: queda do servidor do MUD (porta 4000 inacessivel), com texto do erro e teste de rede; personagem salva no Templo."
+            }
+          ],
+          "date": "2026-10-16"
+        }
+      ],
+      "content": [],
+      "tags": [],
+      "source_kind": "live",
+      "evidence": []
     }
   ]
 }
