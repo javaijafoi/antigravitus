@@ -573,7 +573,8 @@
         143,
         144,
         145,
-        146
+        146,
+        147
       ],
       "parts": [
         {
@@ -660,6 +661,24 @@
               "document": "evidence/dia146.json",
               "day": 146,
               "note": "Estado da Dicas Magicas, rota urbana e busca do novato esperto."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 147,
+          "summary": "Problemas Agricolas ACEITA com o Pacificador (segunda missao em andamento). O motor revelou dois problemas corrigidos: a personagem dormia FAMINTA (perdia -2hp/-3mn por ciclo) — agora ha um abastecimento na Padaria antes de dormir e viajar; e o cacador mirava nome inexistente — ganhou plano B de alvo. A guarda de repeticao disparou duas vezes em producao e parou o robo corretamente. Adotada a supervisao por leitura do log a cada minuto.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia147.json",
+              "day": 147,
+              "note": "Problemas Agricolas aceita; fome critica e guarda de repeticao."
+            },
+            {
+              "document": "diretiva_de_jogo.md",
+              "day": 147,
+              "note": "Secoes 13 e 14: fome/sede e supervisao por minuto."
             }
           ],
           "date": "2026-10-16"

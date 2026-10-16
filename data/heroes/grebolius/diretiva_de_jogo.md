@@ -110,3 +110,16 @@ Implementado em `scripts/local/guarda.py` e injetado no `run()` de **todos** os 
 **O que dispara:** sala bloqueada (`Você não pode ir por aí`), alvo inexistente (`Em que você deseja lançar a magia?`), personagem descansando (`Nah... você está muito relaxado..`), peso (`Você já está carregando muito peso`), comando inválido (`Como?!?`).
 
 **Teste feito:** enviando 4× um comando inválido, a guarda disparou na **3ª** resposta, salvou e saiu. Confirmado ao vivo.
+
+
+## 13. Fome e sede matam devagar — e o sono acelera (Dia 147)
+- O jogo **consome vida e mana por ciclo** quando a personagem está *"morrendo de fome"*: vi **-2hp, -3mn e -2mv** no log, repetidamente.
+- O motor **dormia para recuperar mana** — e dormir faminta é o pior dos mundos: a mana não sobe e a vida cai.
+- **Regra**: `abastecer()` **antes** de qualquer sono ou viagem. O motor passou a checar `score tudo`, ir à **Padaria** (pão recheado, 6 moedas), comprar 5, comer 4 e beber do cantil.
+- **Sintoma de alarme no log**: `Você está morrendo de fome!` — se aparecer, parar o robô e alimentar.
+
+## 14. Supervisão por minuto (pedido do autor)
+- **Nunca** soltar o robô e ir embora: rodar em segundo plano e **ler a cauda do log do daemon a cada ~60 s** (`scripts/local/session_live_*.log`, o mais recente por data de modificação).
+- A leitura do log **não interfere** no jogo — diferente de mandar comandos paralelos, que podem desincronizar a sessão.
+- Se o log mostrar morte, fome crítica, ou a mesma mensagem repetindo, **matar o job** na hora.
+- A **guarda de repetição** já disparou duas vezes em produção nesta rodada: uma em *"Em que você deseja lançar a magia?"*, outra em *"Você não pode ir por aí..."* — o robô parou, salvou e saiu, em vez de insistir.

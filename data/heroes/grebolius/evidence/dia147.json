@@ -1,0 +1,15 @@
+{
+  "hero_id": "grebolius",
+  "day": 147,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "summary": {
+    "problemas_agricolas_aceita": "Aceita com o Pacificador na Praca do Templo: 'say sim' respondeu 'Voce comeca a participar da aventura.' A missao agora aparece em [Autoquests em andamento] junto com Dicas Magicas.",
+    "fome_critica": "Durante uma rodada do motor, a personagem ficou 'morrendo de fome' e perdia -2hp/-3mn/-2mv por ciclo — e o motor a fez DORMIR nesse estado. Corrigido: o motor ganhou 'abastecer()' (Padaria: compra 5 paes, come 4, bebe do cantil) executado ANTES do sono e da viagem.",
+    "guarda_em_producao": "A guarda de repeticao disparou duas vezes: (1) 'Em que voce deseja lancar a magia?' (alvo inexistente) e (2) 'Voce nao pode ir por ai...' (rota bloqueada). Nas duas o robo fez recall+save e saiu.",
+    "alvo_do_cacador": "O cacador mirando nome inexistente: adicionado plano B que tenta os outros nomes conhecidos quando a magia responde 'Em que voce deseja lancar a magia?'.",
+    "monitoracao": "Metodo novo, a pedido do autor: rodar o motor como job e LER O LOG do daemon a cada ~60 s (sem mandar comandos paralelos), matando o job se aparecer morte, fome critica ou repeticao.",
+    "motor_reconstruido": "motor.py foi reconstruido limpo apos um patch meu ter duplicado o arquivo; inclui LINHA/D/OP/pex/sala/andar/ate/bosque/bosque_replay/abastecer e limites de tempo.",
+    "estado": "Grau 20, 113/113, 7.360 de ouro, alimentada, salva no Templo."
+  }
+}
