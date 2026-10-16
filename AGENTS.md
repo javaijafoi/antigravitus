@@ -155,10 +155,40 @@ Este projeto é feito para **vários agentes**. Duas coisas diferentes precisam 
 
 | O que você fez | Onde registra |
 | --- | --- |
+| **Encerrou uma sessão de jogo** | **crie o próximo plano numerado**: `data/heroes/<id>/planos/planoNNN.md` — **nunca edite o anterior** (ver §6.1) |
 | Evoluiu a **ferramenta** (automato, scripts, camadas, rotinas, config, skills) | bloco novo em [registro_de_evolucao.md](docs/agentes/registro_de_evolucao.md) **+** `automato/CHANGELOG.md` (versão) **+** `automato/DECISOES.md` (se houver decisão e custo) |
 | Evoluiu a **campanha** (jogou, descobriu, corrigiu o mundo) | `data/heroes/<id>/` conforme o laço documental, com evidência |
 | Corrigiu uma **referência técnica** do MUD | `maquina/verificacoes.md` e o resumo em `maquina/dicionario_comandos.md` |
 | Abriu/decidiu algo que o próximo precisa saber | bloco de **handoff** no fim do seu registro |
+
+### 6.1 Planos numerados — o ponto de continuação da campanha
+
+> **Regra de encerramento de sessão.** Toda sessão de jogo termina criando o **próximo plano
+> numerado**. O autor chega, diz **"executa o plano 98"**, e quem pegar continua **como se fosse o
+> anterior continuando** — sem redescobrir, sem repetir caminho errado, sem perder conquista.
+
+```
+data/heroes/<heroi>/planos/
+    LEIA.md        <- como funciona e o modelo do plano
+    plano001.md
+    plano002.md
+    ...
+```
+
+1. **Nunca edite um plano antigo.** São **append-only**. Errou? Crie o próximo e diga nele no que o
+   anterior falhava. *(Mesma regra do registro de evolução.)*
+2. **Sempre crie um novo, com o próximo número** — três dígitos, com zeros à esquerda
+   (`plano002.md`). O número é **local ao herói**.
+3. **Todo plano diz quem o fez** — modelo/versão no cabeçalho. Sem isso não se sabe a quem perguntar,
+   nem se compara desempenho entre modelos.
+
+**O que um plano não pode deixar faltar:** número, data, **autor**, estado exato (números, não
+adjetivos), o **próximo passo único**, os **bloqueios com o que já foi tentado**, e a lista do que
+**não repetir**. O modelo completo está em
+[`data/heroes/grebolius/planos/LEIA.md`](data/heroes/grebolius/planos/LEIA.md).
+
+**Por que assim:** se cada um editasse o mesmo arquivo, a informação do anterior sumiria — e é
+exatamente essa informação que evita refazer seis rodadas de busca.
 
 Formato mínimo de um bloco (copie de [registro_de_evolucao.md](docs/agentes/registro_de_evolucao.md)):
 
@@ -224,6 +254,9 @@ do vigia.
 **Antes de encerrar**
 
 - [ ] Evidência gravada, com `agent` e origem.
+- [ ] **Plano numerado criado** em `data/heroes/<id>/planos/planoNNN.md` — o **próximo** número,
+      **sem editar o anterior** (§6.1). É o ponto de continuação que o autor executa dizendo
+      *"executa o plano NNN"*.
 - [ ] `state.json`, missões, mapa e conhecimento atualizados com a origem de cada mudança.
 - [ ] Crônica escrita a partir dos fatos registrados; incertezas marcadas como incertezas.
 - [ ] `python scripts/sync_hero.py --hero <id>` e `--check`.
