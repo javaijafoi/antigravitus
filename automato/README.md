@@ -104,6 +104,15 @@ python automato/camadas/trabalhar.py --rotina milharal     # roda uma rotina
 python automato/camadas/turno.py --rotina milharal --turnos 2   # turno completo, supervisionado
 \`\`\`
 
+## Identifique-se (regra para qualquer agente)
+Todo agente que operar este automato deve **dizer quem é** — nome e versão do modelo — no
+**começo do relatório** e nos **registros** que gravar:
+- no arquivo de evidência, no campo `"agent"`: `{"agent": "<modelo/versao>", "via": "automato"}`;
+- na mensagem do commit, no fim: `[agente: <modelo/versao>]`.
+
+Motivo: quando dois agentes (ou o mesmo, meses depois) mexem no mesmo jogo, saber **quem** mudou
+o quê evita creditar a um a trapalhada do outro — e torna possível comparar o desempenho entre modelos.
+
 ## Invariantes de segurança (não quebrar)
 1. **Guarda de repetição**: mesma resposta 3× seguidas → \`recall\` + \`save\` + saída (código 9).
    Ela **ignora comandos benignos** (buy/eat/drink/look/score/rest/sleep...) para não disparar em compras.

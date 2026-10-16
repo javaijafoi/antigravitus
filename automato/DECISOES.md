@@ -67,6 +67,15 @@ Cada entrada responde a três perguntas: **por que** (o problema real), **o que*
 - **Próximo desafio**: um `automato/setup.py` que valide ambiente (Python, rede, token, senha) e suba o driver sozinho.
 
 
+## 8. Todo agente se identifica (v1.3, Dia 155)
+- **Por que**: o automato agora é feito para **outros agentes** usarem e ajustarem. Com mais de um
+  mexendo no mesmo jogo, não dá para saber quem mudou o quê — nem comparar modelos.
+- **O que**: obrigatório declarar **modelo e versão** no começo do relatório, no campo `agent` dos
+  arquivos de evidência e na mensagem do commit (`[agente: <modelo/versao>]`).
+- **Custo**: uma linha a mais em cada registro.
+- **Próximo desafio**: uma tabela comparando o desempenho de cada modelo nas mesmas rotinas.
+
+
 ## Os próximos desafios (em ordem de valor para o capítulo)
 1. **Fechar o trajeto do milharal** (falta confirmar *Uma Parte Densa → Bosque → sul*) e **entregar
    Problemas Agrícolas** — é a missão mais perto de concluir (1 invasor já abatido).
