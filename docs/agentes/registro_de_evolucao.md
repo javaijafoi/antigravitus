@@ -141,6 +141,46 @@ handoff (§7).
 
 ### 2026-10-16 · Dia 156 · deepseek-flash
 
+> **Esta entrada é a mais desconfortável desta pasta, e é de propósito.** Ela registra um erro meu que
+> **foi publicado**, e a correção que **outro agente** fez.
+
+- **Mudou:** `automato/DECISOES.md` ganhou a **§9 — "A missão fala a palavra dela — e a fonte é o
+  transcript"**, a primeira entrada do livro de decisões que **não** é sobre código: é sobre **método de
+  leitura**. A lista de "próximos desafios" foi reescrita (pedia *"localizar os novatos nas praças"* — e
+  eles estão nos `docs/circlemud/` desde o começo; e *"Problemas Agrícolas"* estava vetada).
+  `maquina/verificacoes.md` e `maquina/dicionario_comandos.md` ganharam a **divergência do `onde`**.
+  `planos/plano004.md` fecha o capítulo.
+- **Por quê:** **dois agentes jogaram o mesmo capítulo e chegaram a resultados opostos.** Eu
+  (`deepseek-flash`) tratei *"Você deve dizer algo ao personagem"* como enigma e inventei ~35 frases;
+  o `GPT-6 / Codex` **leu o transcript** e achou a fala que o novato **já tinha dito** — `ajuda mapas`,
+  gravada na **linha 5562 de um transcript que eu tinha aberto**. A cadeia real era
+  `ajuda mapas → diretrizes → levar a veste à tagarela → retornar → ajuda remortar`, e a minha crônica
+  contava o **fim** dela como se fosse o começo. **Eu publiquei a versão errada** (`e1868d9`); ele
+  reconciliou (`1ecce4d`) e eu empurrei, com a autoria sinalizada.
+- **Como foi verificado:** as provas dele foram conferidas no transcript —
+  `ajuda mapas` **3 ocorrências** (uma na **linha 5562**), `ajuda remortar` na **8230**, `espectro`
+  8 ocorrências, `remortar` 5. **Todas confirmadas.** E testei ao vivo o que ele tirou da ajuda:
+  **`help where` documenta `Uso: onde <monstro ou jogador>`, e `onde` responde `Como?!?`** — só `where`
+  funciona, e `where` sem argumento lista **os jogadores** da área. `check_project.py` **0 erros**;
+  `verificar.py` **18/18**; suíte **116 testes OK**.
+- **Custo:** uma crônica publicada errada, por algumas horas, no GitHub. E a lição é sobre **mim**, não
+  sobre a ferramenta: **eu tinha o arquivo e preferi a conclusão** — a terceira vez no mesmo dia (as
+  outras duas: os `docs/circlemud`, seis rodadas; e o campo `agent`, onde inferi autoria em vez de ler).
+  A correção **não** apaga o `evidence/dia156d.json` nem o `plano002.md`: o erro fica registrado.
+- **Próximo:** (a) **a ferramenta que resolve isso** — extrair as falas de NPC do transcript
+  automaticamente e apresentá-las antes da sessão, para que *ler a fonte* deixe de depender de
+  disciplina (§9, próximo desafio); (b) o `autoquest todas` **não pode** ser usado como prova de
+  conclusão — vale escrever isso onde o motor lê; (c) o `where` merece entrar na rotina de
+  **localização de NPC** em vez da varredura a pé.
+
+> **Nota sobre autoria, porque esta entrada mistura duas:** o commit `1ecce4d` é do **GPT-6 / Codex** e
+> **não** foi escrito por mim. Eu o empurrei porque o autor autorizou (*"vc sempre pode publicar se
+> estiver pendente, só sinaliza quem fez"*) e porque o `AGENTS.md` **§12** proíbe esse agente de
+> publicar. **O conteúdo é dele; o envio é meu.** O commit `194663c`, que registra a §12, também tem
+> conteúdo dele e envio meu.
+
+### 2026-10-16 · Dia 156 · deepseek-flash
+
 - **Mudou:** o motor ganhou a versão **v1.5** (`automato/CHANGELOG.md`) com o esquema de **planos
   numerados** e a ferramenta de retomada:
   1. **`data/heroes/<id>/planos/planoNNN.md`** — um plano **por sessão**, **append-only**, com

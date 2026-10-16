@@ -76,16 +76,55 @@ Cada entrada responde a três perguntas: **por que** (o problema real), **o que*
 - **Próximo desafio**: uma tabela comparando o desempenho de cada modelo nas mesmas rotinas.
 
 
-## Os próximos desafios (em ordem de valor para o capítulo)
-1. **Fechar o trajeto do milharal** (falta confirmar *Uma Parte Densa → Bosque → sul*) e **entregar
-   Problemas Agrícolas** — é a missão mais perto de concluir (1 invasor já abatido).
-2. **Descobrir o gatilho de Dicas Mágicas** — o ciclo do "sim" limpa a instrução e ela volta;
-   a hipótese é que exija **uma magia específica** no lugar certo.
-3. **Localizar os NPCs** de Novela dos Novatos (*o novato esperto*, nas praças) e de
-   Uma Lição em Gargamel (*o smurf minerador*, sem pista).
-4. **Decidir o destino da Armadura da Torre Negra** (60 kg presos, amaldiçoada): carregar (grátis,
-   mas sem espaço para espólio) ou pagar **8.509** para desamaldiçoar e doar (libera 60 kg).
-5. **Revalidar o mapa** — consolidado no Dia 100 e já divergente em pelo menos um ponto.
+## 9. A missão fala a palavra dela — e a fonte é o transcript (Dia 156)
+
+- **Por que**: no Dia 156, **dois agentes jogaram o mesmo capítulo e chegaram a resultados opostos**, e a
+  diferença não foi de habilidade — foi de **método de leitura**.
+  - O `deepseek-flash` tratou o objetivo *"Você deve dizer algo ao personagem"* como **enigma**: inventou
+    ~35 frases (`say novela`, `say oi novato`, `say conte sua historia`…), 9 tópicos de `ask`, 3 itens com
+    `give`, em 4 dos 5 novatos. **Nenhuma funcionou**, e ele concluiu que faltava "o NPC falar primeiro".
+  - O `GPT-6 / Codex` **leu o transcript** e achou a fala que o novato **já tinha dito**: a instrução
+    **`ajuda mapas`**, gravada nas **linhas 5535–5562 do transcript da sessão anterior**. A cadeia real era
+    `ajuda mapas` → `diretrizes` → *levar a veste à tagarela* → `retornar` → **`ajuda remortar`**.
+  - **O primeiro agente tinha o arquivo aberto. Não leu.** É a diferença entre *ajuda* e *teste executado*
+    que o `AGENTS.md` §4.1 já exigia — agora com custo medido.
+- **O que**: a doutrina de leitura entra no método, em três regras:
+  1. **O diálogo de missão é literal.** O NPC diz a palavra, e você repete **a palavra dele** — não o seu
+     sinônimo. `say retornar` foi reconhecido pelo confuso; `say recall` **não**. `ajuda remortar` foi
+     reconhecido; `ajuda encarnação` **não**.
+  2. **Ler o transcript, não a síntese.** Fala espontânea de NPC não se perde: ela está gravada. Resumo é
+     interpretação; transcript é fonte.
+  3. **`score tudo` antes de cada fala e cada entrega.** O objetivo **muda** conforme a etapa, e ação antes
+     da hora **não conta** — uma veste entregue cedo demais saiu do inventário sem avançar; a segunda
+     entrega, com a etapa pedindo, gerou *"Você atingiu seu objetivo"*.
+- **Custo**: ler transcript é lento e chato, e o método "tentar frases" é mais divertido de escrever. O
+  custo real já foi pago: **seis rodadas** procurando o novato esperto cuja sala (**18645**) estava nos
+  `docs/circlemud/` desde o começo, e uma **crônica publicada errada** que outro agente teve de corrigir.
+- **Ganho colateral**: `where <nome>` localiza monstro/jogador **dentro da sua área** — comando que existia
+  e que o primeiro agente nunca procurou, porque nunca leu `help` de forma ampla. E `autoquest todas` é
+  **histórico**: marcava *Limpando Monstros* concluída enquanto o ciclo reiniciado ainda pedia o Minotauro.
+  **O catálogo não é prova de conclusão; o `score` é.**
+- **Próximo desafio**: uma camada que **extraia as falas de NPC do transcript automaticamente** e as
+  apresente antes da sessão — para que "ler a fonte" deixe de depender de disciplina e vire ferramenta.
+
+
+## Os próximos desafios (revisados no Dia 156)
+
+> A lista anterior pedia *"localizar os NPCs de Novela dos Novatos (o novato esperto, nas praças)"* — e
+> **estava errada**: ele não anda pelas praças, ele é o **`Smart Newbie` (18615)**, na sala **18645 = A
+> Sacada**, e os `docs/circlemud/` diziam isso desde o começo. A Novela está **concluída**.
+> *"Problemas Agrícolas"* foi **vetada pelo autor** e saiu da lista.
+
+1. **Abrir as 33 portas nomeadas** do Capítulo 04 — nunca abertas, e o Capítulo 05 as contornou duas vezes.
+2. **Jareth e a Avenida Floris** — rota conhecida e verificada, **nunca percorridas**.
+3. **Pontos de Aventura → a loja dos deuses** (`autoquest loja`): as proteções **ANTI-DT** e **IMUNE-DT**
+   são a única defesa contra a armadilha que o `wimpy` não segura.
+4. **Uma Lição em Gargamel** (*o smurf minerador*, sem pista) — a única iniciadora ainda não localizada.
+   **Comece pelos `docs/circlemud/` e pelo `where`**, não varrendo o mundo.
+5. **Decidir o destino da Armadura da Torre Negra** (amaldiçoada): carregar (grátis, mas sem espaço) ou
+   pagar **8.509** para desamaldiçoar e doar (libera 60 kg).
+6. **Extrair as falas de NPC do transcript automaticamente** (ver §9) — para que ler a fonte deixe de
+   depender de disciplina.
 
 ## Como outro agente deve continuar
 - Leia o `README.md` primeiro (a arquitetura e o contrato);
