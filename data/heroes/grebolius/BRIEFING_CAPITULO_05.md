@@ -1,5 +1,24 @@
 # Briefing — Capítulo 05 (para o agente que assume)
 
+> ## ⛔ **OBSOLETO — NÃO USE ESTE ARQUIVO**
+>
+> **Aviso acrescentado depois, por `deepseek-flash`.** Este briefing foi escrito para **quem fosse
+> assumir o Capítulo 05**. O capítulo **fechou** (as duas autoquests concluídas, `status: concluido`), e
+> ele foi **substituído pelo esquema de planos numerados**:
+>
+> ```bash
+> python scripts/mandabala.py      # a ordem de leitura + o plano vigente, inteiro
+> ```
+>
+> **Além de obsoleto, ele está errado no ponto principal:** o *"próximo passo"* dizia
+> *"vigiar os novatos até um deles FALAR"*. **Nenhum precisava falar** — o esperto **já tinha falado**, e
+> a instrução (`ajuda mapas`) estava gravada nas **linhas 5535–5562** de um transcript já aberto.
+>
+> **O que vale hoje:** [`planos/plano004.md`](planos/plano004.md) e
+> [`../../../../automato/DECISOES.md`](../../../../automato/DECISOES.md) §9.
+>
+> **Fica no repositório como registro** — o erro visível ensina mais que o erro apagado.
+
 ## Comece lendo, nesta ordem
 
 1. **`AGENTS.md`** (raiz) — como trabalhar aqui. Regra zero: diga seu modelo/versão no relatório, na

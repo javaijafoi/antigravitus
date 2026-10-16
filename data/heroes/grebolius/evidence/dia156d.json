@@ -6,7 +6,13 @@
   "agent": "deepseek-flash",
   "via": "automato",
   "verification": "live",
-  "summary": "As duas missões que o Capítulo 05 escolheu foram concluídas na mesma sessão: 'Novela dos Novatos' e 'Limpando Monstros'. A confirmação é a resposta do próprio servidor em dois lugares independentes — a lista de autoquests, que passou a marcá-las como 'Concluída', e o bloco '[Autoquests em andamento]' do score, que deixou de listá-las (sobrou apenas 'Problemas Agrícolas'). A personagem subiu do Nível 20 para o 21.",
+  "superseded_by": {
+    "document": "evidence/dia156e.json",
+    "agent": "GPT-6 / Codex (versão específica não informada)",
+    "reason": "Este documento acerta o RESULTADO (as duas missões concluídas, verificadas em duas respostas do servidor) e erra o CAMINHO. Ele atribui o fim da Novela dos Novatos a 'falar com a novata tagarela', quando a missão só terminou depois da cadeia ajuda mapas -> diretrizes -> entregar a veste -> retornar -> ajuda remortar, envolvendo cinco novatos. E atribui o fim de Limpando Monstros a 'fazer o mico fugir', quando a cadeia do Alquimista foi inseto -> monstros de veste -> zumbis -> espectro invisivel -> Minotauro. Mantido sem reescrita como registro do erro; a leitura correta esta em dia156e.json, no conhecimento.md secao 37 (nota de correcao) e no automato/DECISOES.md secao 9.",
+    "kept_deliberately": "Apagar apagaria a licao. O erro fica visivel."
+  },
+  "summary": "As duas missões que o Capítulo 05 escolheu foram concluídas na mesma sessão: 'Novela dos Novatos' e 'Limpando Monstros'. A confirmação é a resposta do próprio servidor em dois lugares independentes — a lista de autoquests, que passou a marcá-las como 'Concluída', e o bloco '[Autoquests em andamento]' do score, que deixou de listá-las (sobrou apenas 'Problemas Agrícolas'). A personagem subiu do Nível 20 para o 21. ATENCAO: o campo 'observations' descreve o caminho de forma incompleta - ver 'superseded_by'.",
   "observations": [
     {
       "kind": "resposta_do_servidor",

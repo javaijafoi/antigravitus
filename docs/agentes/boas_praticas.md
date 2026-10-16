@@ -189,9 +189,44 @@ Fonte detalhada: [`automato/README.md`](../../automato/README.md) § invariantes
 | Progresso de missão zerado de um dia para o outro | `quit` com missão em andamento | encerrar com `save` e deixar a conexão cair |
 | "A melhoria piorou" sem prova | bônus de fronteira usado como peso local | medir antes de acreditar |
 | Avaliar navegação por replay | o grafo gravado só tem saídas de salas correntes | política de navegação só se avalia com sessão real instrumentada |
+| **Crônica publicada errada** (Dia 156) | **leu o FIM de uma cadeia e narrou como se fosse o começo** — a missão só terminou depois de `ajuda mapas → diretrizes → veste → retornar → ajuda remortar` | **o transcript é a fonte; o resumo é interpretação.** Antes de narrar, ler as falas de NPC gravadas |
+| **Seis rodadas procurando um NPC** (Dia 156) | não leu `docs/circlemud/`, que dizia **mob por mob, sala por sala**, onde ele nasce | **ler os docs do padrão ANTES de varrer o mundo.** E tentar `where <nome>` antes de andar |
+| **~35 frases inventadas numa missão de diálogo** (Dia 156) | tratou diálogo **literal** como enigma | **o NPC diz a palavra; repita A PALAVRA DELE** — `retornar` funcionou, `recall` não |
+| **"Missão concluída" com o ciclo ainda ativo** (Dia 156) | usou `autoquest todas` como prova | **`autoquest todas` é HISTÓRICO.** A prova é o **`score`**: objetivo fora do bloco e recompensa entregue |
+| **Ação que não conta** | falou/entregou antes de o objetivo pedir | **`score tudo` antes de cada fala e cada entrega**; a etapa muda |
+| **Comando registrado que não existe** (Dia 156) | copiou o `Uso:` da **ajuda** — `help where` documenta `onde`, e o servidor responde `Como?!?` | **ajuda não é teste executado** (§1). Testar antes de registrar |
+| **Autoria atribuída por inferência** (Dia 156) | viu "o arquivo mudou" e concluiu "outro agente" | **autoria está no campo `agent` e no trailer do commit — nunca se infere de "mudou"** |
+| **`sync_hero.py` quebra com `missing_preparation`** | trocou `next_objective` inteiro e apagou um campo lido **por nome** | **não substituir dicionário inteiro**; conferir os campos que o código lê antes |
+| **Cabeçalho comido numa edição** | a substituição levou junto o `##` da seção seguinte | ao inserir antes de uma seção, **incluir o cabeçalho dela no texto de substituição** |
 
 Mais casos, com contexto: [`automato/README.md`](../../automato/README.md) § lições de campo e
-[`automato/DECISOES.md`](../../automato/DECISOES.md).
+[`automato/DECISOES.md`](../../automato/DECISOES.md) — em especial a **§9**, que é a lição de método do
+Dia 156.
+
+### 9.1 A regra que custou mais caro: **ler a fonte, não a conclusão**
+
+O Dia 156 teve **dois agentes jogando o mesmo capítulo com resultados opostos**, e a diferença não foi
+habilidade — foi **de onde cada um leu**:
+
+| Leu a conclusão | Leu a fonte |
+| --- | --- |
+| Inventou ~35 frases para um diálogo **literal** | Achou a fala que o NPC **já tinha dito** |
+| Narrou o fim da cadeia como começo | Reconstruiu a cadeia inteira |
+| Usou o catálogo histórico como prova | Conferiu o `score` e a recompensa |
+| Varreu o mundo atrás do NPC | Achou a sala nos docs e o alvo com `where` |
+
+**A fala que resolvia a missão estava gravada na linha 5562 de um transcript já aberto**, e passou
+despercebida. **O padrão é sempre o mesmo: o arquivo existe, e a conclusão é mais rápida de escrever.**
+
+**Três hábitos que quebram o padrão:**
+
+1. **Antes de narrar ou afirmar, citar a linha.** Se não há linha, é hipótese — e hipótese se rotula.
+2. **Antes de varrer, procurar nos docs e tentar `where`.** O mundo é grande; os docs são pequenos.
+3. **Antes de escrever a conclusão, reler o que o servidor disse.** Fala espontânea de NPC não se perde:
+   está no transcript.
+
+**E a correção não se esconde.** O erro do Dia 156 **ficou**: o `evidence/dia156d.json` e o
+`planos/plano002.md` continuam lá, **marcados** e apontando para a correção. **Apagar apagaria a lição.**
 
 ---
 

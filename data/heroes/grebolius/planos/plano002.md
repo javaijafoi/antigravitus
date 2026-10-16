@@ -1,5 +1,25 @@
 # Plano 002 — Capítulo 05 fechado; escolher o 06
 
+> ## ⚠️ ESTE PLANO FOI CORRIGIDO PELO **PLANO 003** — leia o 003 antes de agir
+>
+> **Aviso acrescentado depois, por `deepseek-flash`.** O §6.1 do `AGENTS.md` diz que plano antigo
+> **não se edita**, e o corpo abaixo **está intacto**. Esta nota existe porque **um plano errado não
+> avisado é pior que um plano apagado**: quem ler só este arquivo vai perseguir o caminho errado.
+>
+> **O que está errado aqui** (corrigido pelo `GPT-6 / Codex` em [`plano003.md`](plano003.md) e em
+> [`../evidence/dia156e.json`](../evidence/dia156e.json)):
+>
+> | O que este plano afirma | O que é verdade |
+> |---|---|
+> | A Novela fechou ao **falar com a novata tagarela** | Fechou por uma **cadeia de cinco novatos**: `ajuda mapas` (perdido) → `diretrizes` (perturbador) → **entregar a veste** (tagarela) → `retornar` (confuso) → **`ajuda remortar`** (esperto) |
+> | Limpando Monstros fechou ao **fazer o mico fugir** | A cadeia do Alquimista foi **inseto → monstros de veste → zumbis → espectro invisível → Minotauro** |
+> | *"O NPC precisa falar primeiro"* | **Ele já tinha falado** — `ajuda mapas` estava nas **linhas 5535–5562** do transcript anterior |
+> | O diálogo é um **enigma** | O diálogo é **literal**: repita a palavra do jogo (`retornar`, não `recall`) |
+> | `autoquest todas` **prova** conclusão | É **histórico**. A prova é o **`score`** |
+>
+> **A lição de método:** [`../../../../automato/DECISOES.md`](../../../../automato/DECISOES.md) §9 e
+> [`../../../../docs/agentes/boas_praticas.md`](../../../../docs/agentes/boas_praticas.md) §9.1.
+
 | | |
 |---|---|
 | **Criado em** | 2026-10-16 · Dia 156 |

@@ -141,6 +141,44 @@ handoff (§7).
 
 ### 2026-10-16 · Dia 156 · deepseek-flash
 
+> **Segunda entrada do mesmo dia, e é a limpeza da primeira.** A entrada anterior registrou o erro; esta
+> registra **as correções** e as regras que ele gerou.
+
+- **Mudou:** os **antipadrões** do Dia 156 entraram em
+  [`docs/agentes/boas_praticas.md`](boas_praticas.md) **§9** (nove linhas novas na tabela
+  *sintoma → causa → regra*) e num **§9.1 — "A regra que custou mais caro: ler a fonte, não a
+  conclusão"**, com a comparação lado a lado dos dois métodos. **Quatro documentos errados foram
+  marcados, sem apagar o corpo:**
+  1. `data/heroes/grebolius/conhecimento.md` **§37** — aviso no topo com as cinco correções e a cadeia
+     real;
+  2. `data/heroes/grebolius/planos/plano002.md` — aviso no topo (o corpo fica intacto, porque o §6.1 diz
+     que plano antigo não se edita);
+  3. `data/heroes/grebolius/evidence/dia156d.json` — campo novo **`superseded_by`**, apontando para o
+     `dia156e.json`, com o motivo e o registro de que **foi mantido de propósito**;
+  4. `data/heroes/grebolius/BRIEFING_CAPITULO_05.md` — marcado **OBSOLETO** (o capítulo fechou e o
+     esquema de planos o substituiu).
+- **Por quê:** o autor pediu duas coisas — *"ajuste as cagadas que vez e anote no método indicações para
+  não fazer mais"*. As duas têm a mesma raiz: eu **li o fim de uma cadeia e escrevi como se fosse o
+  começo**, publiquei, e deixei quatro documentos afirmando o caminho errado. **Documento errado e não
+  avisado é pior que documento apagado** — quem ler só ele persegue o caminho errado.
+- **Como foi verificado:** as provas da correção foram conferidas no transcript (a fala `ajuda mapas` na
+  **linha 5562**, `ajuda remortar` na **8230**, `espectro` 8×, `remortar` 5×) e ao vivo
+  (`onde` responde `Como?!?` enquanto o `help where` o documenta). `check_project.py` **0 erros**;
+  `verificar.py` **18/18**; derivados conferidos; e a checagem de que **os quatro arquivos errados
+  carregam marca** (`MARCADO` nos quatro).
+- **Custo:** **quatro avisos** em documentos vivos, que alguém vai ter de ler para sempre. É o preço
+  consciente de não apagar: **o erro visível ensina; o erro apagado se repete.** E este é o terceiro
+  caso do mesmo padrão só neste dia — os `docs/circlemud/` (seis rodadas), o campo `agent` (autoria
+  inferida) e agora a crônica.
+- **Próximo:** (a) **a ferramenta** — extrair falas de NPC do transcript automaticamente e apresentá-las
+  antes da sessão, para que ler a fonte deixe de depender de disciplina; (b) o `mandabala.py` poderia
+  **avisar quando um plano foi superado** por um posterior (hoje ele só avisa de lacuna, plano não
+  recente e falta de autoria) — `planos/plano002.md` e `planos/plano003.md` são exatamente esse caso;
+  (c) `autoquest todas` merece uma nota onde o motor lê, porque "catálogo não é prova" ainda não está
+  em lugar nenhum que uma rotina consulte.
+
+### 2026-10-16 · Dia 156 · deepseek-flash
+
 > **Esta entrada é a mais desconfortável desta pasta, e é de propósito.** Ela registra um erro meu que
 > **foi publicado**, e a correção que **outro agente** fez.
 

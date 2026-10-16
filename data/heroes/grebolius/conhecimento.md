@@ -1593,6 +1593,38 @@ Monstros) e continuar os abates da primeira.
 
 ## 37. O OBJETIVO DA NOVELA — "dizer algo a **a novata tagarela**" (Dia 156)
 
+> ## ⚠️ ESTA SEÇÃO ESTÁ PARCIALMENTE ERRADA — LEIA A CORREÇÃO ANTES
+>
+> Fonte da correção: [`evidence/dia156e.json`](evidence/dia156e.json) e
+> [`planos/plano003.md`](planos/plano003.md), do agente **GPT-6 / Codex**.
+>
+> **O que eu errei aqui, mantido abaixo como registro:**
+>
+> 1. **O alvo NÃO é só a novata tagarela.** A Novela é uma **cadeia de cinco novatos**, e cada um
+>    queria ouvir uma coisa diferente:
+>
+>    | Novato | O que ele queria ouvir |
+>    |---|---|
+>    | o **perdido** | **`say ajuda mapas`** |
+>    | o **perturbador** | **`say diretrizes`** e, quando pediu, `say sim` |
+>    | a **tagarela** | receber **a veste** (`give veste tagarela`) |
+>    | o **confuso** | **`say retornar`** ← **`say recall` NÃO funcionou** |
+>    | o **esperto** | **`say ajuda remortar`** |
+>
+> 2. **Não era "esperar o NPC falar primeiro".** O esperto **já tinha falado** — a instrução
+>    `ajuda mapas` estava gravada nas **linhas 5535–5562 do transcript da sessão anterior**, que eu
+>    tinha aberto e não li. **O problema era a minha síntese, não a ausência de fala.**
+> 3. **O diálogo de missão é LITERAL.** As palavras são as do jogo, não sinônimos meus.
+> 4. **"Limpando Monstros" também não era o que eu escrevi:** não fechou por "fazer o mico fugir". A
+>    cadeia do Alquimista foi **inseto rastejante → dois monstros de veste → dois zumbis → espectro
+>    negro invisível → o Minotauro**, voltando ao Alquimista entre etapas. O mico foi defesa incidental.
+> 5. **`autoquest todas` é histórico, não estado atual** — eu o usei como prova de conclusão em
+>    `evidence/dia156d.json`, e isso é **fraco**. A prova é o **`score`**.
+>
+> **A lição de método está no [`../../../../automato/DECISOES.md`](../../../../automato/DECISOES.md) §9**
+> e nos antipadrões do [`../../../../docs/agentes/boas_praticas.md`](../../../../docs/agentes/boas_praticas.md) §9.
+> **O que segue abaixo fica como registro do erro** — inclusive os títulos, que estão errados.
+
 O autor deu duas pistas: *"você já iniciou outras missões — analisa que textos você disse"* e
 *"`say sim` / `say yes`"*. A primeira destravou tudo.
 
