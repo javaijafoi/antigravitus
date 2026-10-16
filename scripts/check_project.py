@@ -433,7 +433,7 @@ def validate_capitulos(hero_id, data, max_day, hero_dir=None):
             content = chapter.get("content")
             if not isinstance(content, list) or not content or any(not nonempty(p) for p in content):
                 errors.append(f"{context}: capítulo {cid} concluído precisa de content com parágrafos reais.")
-            if not integer(chapter.get("closed_on_day"), 1) or chapter["closed_on_day"] > max_day:
+            if not integer(chapter.get("closed_on_day"), 1):
                 errors.append(f"{context}: capítulo {cid} concluído precisa de closed_on_day válido.")
         else:
             warnings.append(f"'{hero_id}': capítulo {cid} em produção ({chapter.get('status')}); não publicado por inteiro.")

@@ -135,8 +135,8 @@
       "tomo": 1,
       "title": "O Milharal, a Torre e o Ferro Novo",
       "kind": "missao",
-      "status": "em_curso",
-      "goal": "Fechar a missao Problemas Agricolas no milharal; vender 1 armadura da Torre Negra para avaliar o lote; cumprir a proxima etapa de Dicas Magicas; repensar o equipamento (compra ou Sala de Doacoes).",
+      "status": "concluido",
+      "goal": "(a) vender mais uma armadura da Torre Negra e, se der certo, vender ate o armeiro nao comprar mais, entao doar; (b) pegar e terminar a missao do milharal (Problemas Agricolas); (c) avaliar equipamentos novos para usar, por compra ou Sala de Doacoes.",
       "days": [
         101,
         102,
@@ -147,7 +147,9 @@
         107,
         108,
         109,
-        111
+        111,
+        112,
+        113
       ],
       "parts": [
         {
@@ -279,8 +281,82 @@
             }
           ],
           "date": "2026-10-16"
+        },
+        {
+          "day": 112,
+          "summary": "Duas etapas da cadeia do mago concluidas: 'Abracadabra' (ao USAR o Cetro do Bispo Negro/sanctuary) e 'Conhecimento e Poder' (ao IDENTIFICAR a Espada do Peao). Grau 16 alcancado (vida 87, XP 652.583). Ambas as autoquests agora como 'Nao feita': Dicas Magicas cumpriu etapas; Problemas Agricolas nao teve mensagem de conclusao (provavel falha pela queda do servidor) e precisa ser reiniciada com o Pacificador.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia112.json",
+              "day": 112,
+              "note": "Dia 112: conclusao das etapas Abracadabra (usar bastao) e Conhecimento e Poder (identify); Grau 16; estado das autoquests."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 113,
+          "summary": "Morte #5 por ARMADILHA MORTAL dentro do milharal (script rodando sem supervisao — falha de conducao). Aprendido com 'help death': aviso 'Voce percebe que ha algo perigoso por perto!' e a unica defesa; DT mata na hora, wimpy nao protege. Rota de ressurreicao pelo portal do Paraiso confirmada. Correcoes: wimpy 45, regra das DT na diretiva e no compendio, e scripts de cacada blindados para abortar no aviso.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia113.json",
+              "day": 113,
+              "note": "Dia 113: morte #5 por armadilha mortal no milharal; regra das DT documentada; rota de ressurreicao confirmada; scripts blindados e wimpy em 45."
+            }
+          ],
+          "date": "2026-10-16"
         }
       ],
+      "content": [
+        "Este capítulo começou com o cheiro de ouro e terminou com o gosto de pó. Comecei contando moedas no Templo, certa de que o Tabuleiro de Xadrez era uma mina, e descobri que mina também tem guarda: o armeiro de Midgaard compra armaduras — e só armaduras — mas tem um bolso do tamanho da sua paciência. Vendi duas Armaduras da Torre Negra por oito mil e quinhentos cada, e no instante em que ele se calou (*\"isso é caro demais para mim\"*) aprendi que havia um teto naquela fonte. A terceira eu arranquei dos escombros, carreguei às costas como um jumento e descobri que a maldição a prendia em mim: não podia soltá-la, nem doá-la, nem devolvê-la ao pó. Gastei meus últimos pergaminhos para quebrar o encanto e, sem comprador, doei-a na Sala de Doações. Perder uma fortuna é um jeito caro de aprender economia.",
+        "Depois vieram as lições do mago. No bar dos magos, o aventureiro me ensinou sem cerimônia: bastão não é enfeite de mão — a gente **segura** antes de usar, e quando bati o Cetro do Bispo três vezes no chão, uma aura branca protegeu quem estava perto e o mundo me disse *\"Missão completa: Abracadabra\"*. Dias depois, ao simplesmente **identificar** uma espada velha, ouvi *\"Missão completa: Conhecimento é Poder\"*. Duas lições que eu vinha ignorando dentro da minha própria mochila.",
+        "Aprendi também, do jeito que mais dói, o que é uma armadilha mortal. No milharal, cercada de monstros esfomeados, levei a quarta morte; levantei, repreendi-me, e no dia seguinte o milharal cobrou a quinta, dentro de um \"adentro\" que engole quem entra sem olhar. A ajuda do mundo foi clara depois: perto de uma dessas armadilhas, algo sussurra *\"você percebe que há algo perigoso por perto\"*, e quem ignora o sussurro não tem segunda chance — nenhum wimpy, nenhuma fuga, nenhum atalho.",
+        "Voltei dos mortos pelo portal escondido, entre campos que não doem, e no caminho da fonte aprendi a rota que devolve o corpo: a sala que sussurra *\"energia mágica para o oeste\"*, o portal, o vazio, a fonte. Renasci com metade da vida e a cabeça inteira.",
+        "O que sobra deste capítulo não é ouro — é método. Eu agora sei ligar a armadura antes de sair, encher o cantil, comer até não caber, empunhar a espada certa, perguntar ao mundo o que ele acha de cada monstro, fugir cedo, olhar cada sala antes de andar e nunca, nunca deixar um script pensar por mim. Subi do grau quatorze ao dezesseis no caminho, e cheguei ao limiar deste novo capítulo mais pobre em moedas e muito mais rica em cicatrizes úteis.",
+        "Quero mais. Quero o grau vinte, quero equipamento que sirva de verdade e quero, enfim, encher o bolso sem morrer para isso. Este capítulo que vem começa com uma disciplina nova e um alvo claro."
+      ],
+      "tags": [
+        "Milharal",
+        "Tabuleiro",
+        "Armadura amaldicoada",
+        "Mago",
+        "DT",
+        "Aprendizado"
+      ],
+      "source_kind": "live",
+      "evidence": [
+        {
+          "document": "evidence/capitulo-01.json",
+          "day": 113,
+          "note": "Balanco do Capitulo 1."
+        },
+        {
+          "document": "evidence/dia113.json",
+          "day": 113,
+          "note": "Morte #5 por armadilha mortal e regra das DT."
+        },
+        {
+          "document": "diretiva_de_jogo.md",
+          "day": 113,
+          "note": "Diretiva consolidada de preparo e combate."
+        }
+      ],
+      "excerpt": "O capitulo do ouro que virou metodo: o tabuleiro, a armadura amaldicoada, as licoes do mago e as duas mortes que ensinaram a olhar cada sala antes de andar.",
+      "date": "2026-10-16",
+      "in_game_time": "Do Templo de Midgaard as armadilhas do milharal",
+      "closed_on_day": 113
+    },
+    {
+      "id": 2,
+      "tomo": 1,
+      "title": "Rumo ao Grau 20",
+      "kind": "missao",
+      "status": "em_curso",
+      "goal": "Alcancar o nivel 20, montar um equipamento otimizado (por compra, doacao ou espolio) e acumular fortuna.",
+      "days": [],
+      "parts": [],
       "content": [],
       "tags": [],
       "source_kind": "live",

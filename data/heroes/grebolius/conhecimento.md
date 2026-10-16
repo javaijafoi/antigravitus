@@ -465,3 +465,10 @@ Fonte: [dossiê primário do Dia 96](evidence/dia96.json).
 - **Palavra-chave do alvo importa**: "bola de pêlos" → `bola`; "estranha criatura" → `criatura`; demais → `monstro`.
 - **Com armadura arcana ativa e magias certas, 7 abates saíram em 15 ciclos** (Dia 111) — antes, sem preparo, o mesmo caçador fazia 1–2.
 - Água: **beber direto da fonte** da Praça do Templo resolve a sede sem cantil; `fill cantil fonte` quando houver cantil.
+
+
+## 17. Armadilhas mortais e morte #5 (Dia 111)
+- **Morte #5, por armadilha mortal**, registrada **dentro do milharal** ("Adentro do Milharal Destruído") enquanto a personagem fugia em combate. A contagem de armadilhas do servidor continuou em 1; a mensagem foi "*Você morreu pois caiu em uma armadilha mortal*".
+- **Aviso oficial** (`help death`): perto de uma DT aparece *"Você percebe que há algo perigoso por perto!"*. **Essa é a única defesa** — DT mata direto, sem wimpy.
+- **Zonas a mapear com cautela**: milharal (a leste de Jareth), bosque homônimo da floresta, esgotos sob o Laboratório dos Magos. **Explorar sempre com `look` a cada passo**, nunca em script cego.
+- **Ressurreição confirmada (Dia 111)**: no Paraíso, a sala com *"energia mágica... para o oeste"* → `oeste` → "Um Portal Escondido no Paraíso" → `enter portal` → "Um Caminho no Vazio" → `norte` até "A Fonte da Vida" → `drink fonte` → renasce no Templo de Midgaard com metade da vida.

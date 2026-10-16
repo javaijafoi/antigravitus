@@ -1,0 +1,22 @@
+{
+  "hero_id": "grebolius",
+  "day": 112,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "sources": [
+    "session_live_dia111_20261016_013534_fcd6da.log",
+    "session_live_dia107_20261016_011155_f93b12.log",
+    "session_live_dia108_20261016_011439_c35da6.log"
+  ],
+  "summary": {
+    "missions_completed": [
+      "Dia 107: 'Missao completa! Voce completou a missao Abracadabra!' — disparada por USAR o Cetro do Bispo Negro ('Voce bate o Cetro tres vezes no chao. Um monstro agressivo e rodeado por uma aura branca.').",
+      "Dia 108: 'Missao completa! Voce completou a missao Conhecimento e Poder!' — disparada por IDENTIFICAR a Espada do Peao Negro."
+    ],
+    "chain_reading": "As duas etapas nomeadas (Abracadabra, Conhecimento e Poder) sao o tipo de licao da cadeia 'Dicas Magicas' do Mago Aventureiro (usar bastao, identificar item). Com isso, o item (c) do capitulo — 'terminar a proxima missao do mago' — avancou de verdade, mesmo sem uma fala final do NPC.",
+    "quest_status": "Ambas as autoquests constam agora como 'Nao feita' (fora de andamento): Dicas Magicas cumpriu as etapas; Problemas Agricolas NAO teve mensagem de conclusao em nenhum log — provavelmente falhou/expirou (a queda do servidor no Dia 109 e' a suspeita principal). Para retomar, voltar ao Pacificador e responder 'sim'.",
+    "level": "Grau 16 alcancado durante a cacada (vida maxima 87, experiencia 652.583; proximo nivel 700.000).",
+    "doctrine_applied": "Com armadura arcana ativa e as magias certas, o milharal rendeu: 7 abates numa rodada e o nivel 16.",
+    "state": "Grau 16, 87/87, ~14.004 de ouro carregado, armadura arcana ativa."
+  }
+}

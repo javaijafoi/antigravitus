@@ -1,0 +1,18 @@
+{
+  "hero_id": "grebolius",
+  "day": 113,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "sources": [
+    "session_live_dia111_20261016_013534_fcd6da.log",
+    "help morte",
+    "help death"
+  ],
+  "summary": {
+    "death5": "Morte #5 por ARMADILHA MORTAL, registrada dentro do milharal enquanto fugia em combate. O script rodava sem supervisao e continuou andando/lutando — erro de conducao, nao de mecanica.",
+    "trap_rule": "help death: perto de uma DT aparece 'Voce percebe que ha algo perigoso por perto!'; DT mata na hora e pode destruir itens (5% por item na 1a encarnacao). Wimpy NAO protege de DT.",
+    "resurrection": "Rota confirmada: Paraiso -> sala com 'energia magica... para o oeste' -> oeste -> Um Portal Escondido no Paraiso -> enter portal -> Um Caminho no Vazio -> norte ate A Fonte da Vida -> drink fonte. Renasceu no Templo com 50/87.",
+    "fixes": "1) wimpy elevado para 45; 2) regra de armadilha escrita na diretiva e no compendio; 3) scripts de cacada blindados para ABORTAR ao ler 'perigoso por perto' e nao mais rodar sem supervisao em zona desconhecida.",
+    "state": "Grau 16, 87/87 apos descanso, 14.354 de ouro, armadura arcana a recastar."
+  }
+}

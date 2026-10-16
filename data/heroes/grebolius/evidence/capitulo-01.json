@@ -1,0 +1,26 @@
+{
+  "hero_id": "grebolius",
+  "day": 113,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "sources": [
+    "evidence/dia101.json",
+    "evidence/dia102.json",
+    "evidence/dia103.json",
+    "evidence/dia104.json",
+    "evidence/dia105.json",
+    "evidence/dia106.json",
+    "evidence/dia107.json",
+    "evidence/dia108.json",
+    "evidence/dia109.json",
+    "evidence/dia111.json",
+    "evidence/dia112.json",
+    "evidence/dia113.json"
+  ],
+  "summary": {
+    "chapter_1_balance": "Encerrado pelo autor. (a) milharal: NAO concluido — a autoquest caiu/expirou e a segunda tentativa terminou na morte #5. (b) armaduras: mecanica dominada (armeiro so compra armaduras, paga 8.500, caixa limitado; 2 vendidas = 17.000; 1 amaldicoada teve a maldicao removida e foi doada). (c) mago: etapas conclusas — 'Abracadabra' (usar o bastao) e 'Conhecimento e Poder' (identify). (d) equipamento: revisado mas nao fechado.",
+    "gains": "Grau 14 -> 16; 'cruz ansada' recusou a personagem; bainha de Excalibur (nivel 85) guardada; espada de novato eleita (4D8, +3/+3); cetro do bispo = sanctuary.",
+    "losses": "Morte #4 (Dia 100) e #5 (Dia 111, armadilha mortal no milharal); erros de compra (~12.670 em cajado errado) e de entrega (pergaminho ao guardiao); ouro 22.140 -> ~14.354.",
+    "doctrine": "Criada a diretiva_de_jogo.md e a regra de armadilhas mortais (aviso 'perigoso por perto'); scripts de cacada blindados."
+  }
+}
