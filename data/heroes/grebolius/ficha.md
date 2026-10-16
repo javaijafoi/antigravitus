@@ -1,6 +1,6 @@
 # 🧌 Ficha Atual de Grebolius (Último Estado Registrado)
 
-> Referência: Dia 93. Estado verificado em sessão; consultar a origem registrada.
+> Referência: Dia 94. Estado verificado em sessão; consultar a origem registrada.
 > Este documento reúne o último estado e as missões registrados; as incertezas aparecem ao final.
 
 ## ✦ Identificação e Registro
@@ -10,8 +10,8 @@
 * **Raça Mecânica no MUD:** Elfo
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **11**
-* **Alinhamento Moral:** 338 (Bom)
-* **Localização Atual:** O Templo de Midgaard (último registro: Dia 93)
+* **Alinhamento Moral:** 373 (Bom)
+* **Localização Atual:** O Templo de Midgaard (último registro: Dia 94)
 * **Acampamento Registrado:** O Templo de Midgaard
 * **Santuário de Referência:** O Panteão dos Centenários
 
@@ -24,9 +24,9 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 | **Pontos de Mana (MP)** | 170 | 170 | 100% |
 | **Estamina / Movimento (MV)** | 101 | 101 | 100% |
 
-* **Experiência Acumulada:** **177.488 EXP**
-* **Experiência Necessária p/ Grau 12:** **22.512 EXP** (Meta: 200.000 EXP)
-* **Ouro Líquido:** **1.667 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **195.202 EXP**
+* **Experiência Necessária p/ Grau 12:** **4.798 EXP** (Meta: 200.000 EXP)
+* **Ouro Líquido:** **2.188 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 12
@@ -38,10 +38,10 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 
 ### Métricas de Combate
 * **Classe de Armadura (AC):** 25 (base) / **50** (com `armor`, conforme registro)
-Dia 93: AC 50 observada com armor (+25) ativo (17 horas no score final).
+Dia 94: AC base 25 observada ao final da sessão; com armor (+25) atinge 50.
 * **Bônus de Acerto (Hitroll):** 3
 * **Bônus de Dano (Damroll):** +4
-* **Configuração de Fuga (Wimpy):** **13 HP** (referência de 25%; não garante fuga antes de golpe letal)
+* **Configuração de Fuga (Wimpy):** **30 HP** (referência de 25%; não garante fuga antes de golpe letal)
 
 ## ✦ Missões e Autoquests Oficiais
 * **A Coleira do Dragão — Concluída:** Entregar a coleira ao Guarda Novato.
@@ -87,23 +87,20 @@ Equipamento conforme os últimos documentos disponíveis; conferir no próximo a
 
 ## ✦ Inventário e Suprimentos
 Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
-* `um cantil` (x1) — evidence/dia93.json
-* `os chifres do Minotauro` (x3) — evidence/dia93.json
-* `a fedida pele do Minotauro` (x1) — evidence/dia93.json
-* `um pão recheado` (x3) — evidence/dia93.json
-* `uma tocha` (x1) — evidence/dia93.json
-* `uma poção amarela de detectar invisibilidade` (x1) — evidence/dia93.json
-* `uma mochila` (x1) — evidence/dia93.json
+* `um cantil` (x1) — evidence/dia94.json
+* `um pão recheado` (x3) — evidence/dia94.json
+* `uma tocha` (x1) — evidence/dia94.json
+* `uma poção amarela de detectar invisibilidade` (x1) — evidence/dia94.json
+* `uma mochila` (x1) — evidence/dia94.json
 
 ### Pendências de inventário
 
 ## ✦ Condições Registradas
-* Dia 93: dormindo no Templo de Midgaard, com 87/87 HP, 170/170 mana e 101/101 MV no score final.
-* Três pães recheados e um cantil com água no inventário para a próxima saída.
-* Problemas Agrícolas ativa: fazendeiro pede 10 invasores do milharal; contador e conclusão não confirmados.
-* Armadura arcana ativa no score final (17 horas); duração futura depende do servidor.
-* 15 treinos preservados do registro anterior; não houve treino no Dia 93.
-* Save respondeu "Salvando os seus atalhos." antes e depois de dormir no Templo de Midgaard.
+* Dia 94: dormindo no Templo de Midgaard, com 87/87 HP, 170/170 mana e 101/101 MV no último score.
+* Saciada de comida e água; cantil cheio na Fonte Azul e 3 pães recheados no inventário.
+* Mochila leve e limpa após venda de chifres e peles excedentes no Armeiro (7/17 itens, 78/140 kg).
+* Wimpy configurado preventivamente em 30 HP.
+* Save e sleep confirmados no Templo de Midgaard.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
 **Prosseguir com o pedido do fazendeiro no milharal**
@@ -112,7 +109,7 @@ Retomar a viagem a Jareth e à fazenda por trechos confirmados; avaliar invasore
 * Confirmar cada trecho entre salas homônimas; a cartografia da fazenda é parcial.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Conferência ao vivo no encerramento do Dia 93 no Templo de Midgaard: score tudo, inventário, equipamentos, postura dormindo e save confirmados; evidence/dia93.json..
+Fonte do estado: Sessão modular ao vivo do Dia 94 encerrada no Templo de Midgaard: score tudo, inventário, equipamento, save e sleep confirmados; evidence/dia94.json..
 * O anel arcano (+2E) foi vendido no Dia 92 por 500 moedas por exigir nível 90 e 3ª encarnação.
 * Novos feitiços superiores dependem de livros arcanos ou mestres especializados.
 * O renascimento desequipa todas as peças para a mochila; o protocolo pós-morte exige `wear all` imediato para restaurar os bônus de HP e AC do equipamento.

@@ -45,7 +45,7 @@ def loot_decision(item,supplies,config,owned=0):
 
 class WorldGraph:
     """Directed observed edges. Repeated room names are never a global identity."""
-    def __init__(self):self.rooms={};self.edges={};self.previous=None
+    def __init__(self):self.rooms={};self.edges={};self.previous=None;self.avoided_nodes=set();self.avoided_edges=set()
 
     def arrive(self,room,origin=None,direction=None):
         candidate=self.edges.get((origin,direction)) if origin and direction else None
@@ -64,12 +64,27 @@ class WorldGraph:
             self.previous=(origin,candidate,OPPOSITE[direction])
         return room
 
-    def path(self,start,target):
+    def observe_room(self,room):
+        if room and room.node_id:self.rooms[room.node_id]=room
+
+    def link(self,origin,direction,dest):
+        if origin and direction and dest:self.edges[(origin,direction)]=dest
+
+    def mark_avoid_node(self,node):
+        if node:self.avoided_nodes.add(node)
+
+    def mark_avoid_edge(self,origin,direction):
+        if origin and direction:self.avoided_edges.add((origin,direction))
+
+    def path(self,start,target,avoid_nodes=None,avoid_edges=None):
+        avoid_n=self.avoided_nodes if avoid_nodes is None else avoid_nodes
+        avoid_e=self.avoided_edges if avoid_edges is None else avoid_edges
         queue=[(start,[])];seen={start}
         for node,path in queue:
             if node==target:return path
             for (source,direction),dest in self.edges.items():
-                if source==node and dest not in seen:seen.add(dest);queue.append((dest,path+[direction]))
+                if source==node and (source,direction) not in avoid_e and dest not in avoid_n and dest not in seen:
+                    seen.add(dest);queue.append((dest,path+[direction]))
         return None
 
     def nearest_camp(self,start,nutrition_reason=False):

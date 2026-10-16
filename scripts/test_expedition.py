@@ -338,5 +338,39 @@ class CoreTests(unittest.TestCase):
         with self.assertRaises(NeedsAgent):Camp().execute(ctx)
         self.assertNotIn('sleep',ctx.io.sent)
 
+    def test_horizon_expander_catalogs_new_room_and_stops_at_mv_reserve(self):
+        from expedition.engine import HorizonExpander
+        new_room='Sala Nova\n   Há uma placa na parede.\n[ Saídas: norte ]\n67hp 170mn 20mv >'
+        steps=[
+            {'command':'look','response':ROOM},
+            {'command':'look south','response':'Nada de especial.\n67hp 170mn 90mv >'},
+            {'command':'south','response':new_room},
+            {'command':'look','response':new_room},
+            {'command':'look','response':new_room},
+            {'command':'exits','response':'Norte - Uma Câmara Resguardada\n67hp 170mn 20mv >'},
+            {'command':'look parede','response':'Parede úmida.\n67hp 170mn 20mv >'},
+            {'command':'look placa','response':'Aviso antigo.\n67hp 170mn 20mv >'},
+        ]
+        ctx=self.ctx(steps)
+        exp=HorizonExpander(ctx,min_mv=25)
+        exp.cataloged_fingerprints.add(ctx.room.fingerprint)
+        result=exp.execute()
+        self.assertTrue(result.ok)
+        self.assertEqual(len(exp.cataloged_rooms),1)
+        self.assertEqual(exp.cataloged_rooms[0]['title'],'Sala Nova')
+        self.assertEqual(len(exp.cataloged_details),2)
+
+    def test_detour_around_risky_monster_continues_expedition(self):
+        from expedition.policy import WorldGraph
+        graph=WorldGraph()
+        # Malha: A --(n)--> B (risky) --(e)--> C, mas A --(e)--> D --(n)--> C (contorno seguro)
+        for src,d,dst in [('A','n','B'),('B','s','A'),('B','e','C'),('C','w','B'),('A','e','D'),('D','w','A'),('D','n','C'),('C','s','D')]:
+            graph.link(src,d,dst)
+        self.assertEqual(graph.path('A','C'),['n','e'])
+        graph.mark_avoid_node('B')
+        # Com B marcado como evitado (risky/danger), o grafo contorna por D sem parar a expedição
+        self.assertEqual(graph.path('A','C'),['e','n'])
+
 
 if __name__=='__main__':unittest.main()
+

@@ -1,0 +1,22 @@
+{
+  "version": "dungeon_v1",
+  "status": "legacy",
+  "original_entry": "scripts/local/dungeon_crawler.py",
+  "archive": "scripts/local/legacy/dungeon_v1",
+  "originals_unchanged": true,
+  "note": "Cópia privada de preservação; contém código local e deve permanecer ignorada pelo Git. Usar a entrada original para o modo antigo.",
+  "files": [
+    {
+      "original": "scripts/local/dungeon_crawler.py",
+      "sha256": "e9215c1dd3e1c9fafa48f327a5ed0b5094839262e5911c40ca815ffad433626b"
+    },
+    {
+      "original": "scripts/local/debo_bot.py",
+      "sha256": "f2e241ced06e307a5270e7e6a262ecec5eb1ba65be12ad096d86f3e55e72467b"
+    },
+    {
+      "original": "scripts/local/parsers.py",
+      "sha256": "bd54830915579cc19cdc4db6777b184a9e81f17cce64e7c2378b5a9f6074f644"
+    }
+  ]
+}

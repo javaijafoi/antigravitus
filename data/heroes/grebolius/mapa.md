@@ -166,3 +166,20 @@ O mapa estruturado recebeu somente as travessias efetivas da sessão, com fonte 
 - Dia 92: Um Campo Aberto → N → O Grande Campo (Bifurcação).
 
 Na Pequena Sala, a grade para baixo estava trancada. Na Ramificação da Passagem, o texto fala em leste, mas as saídas exibidas são norte, sul e oeste. Saídas não percorridas não receberam destinos presumidos. A ocupação varia e um mico fugiu sem abate confirmado; não declarar limpeza total ou permanente. [Fontes: Dia 92](evidence/dia92.json) e [Dia 93](evidence/dia93.json).
+
+## Dia 94 — Modo Expandir Horizontes e fechamento de conexões no subsolo e campos
+
+Fonte: [dossiê primário do Dia 94](evidence/dia94.json).
+
+- **Subsolo da Área dos Novatos:**
+  - `Um Cruzamento de Corredores` → **O** → `Uma Longa Passagem Leste-Oeste` → **O** → `Uma Grande Sala` (conexão leste-oeste entre o Cruzamento e a Grande Sala confirmada).
+  - `Uma Sala no Canto` → **N** → `Outro Canto` → **O** → `Uma Intersecção em T na Passagem` (saídas: **L** e **S** para `Outro Canto`, **O** para `Uma Curva na Passagem`).
+  - `Uma Sala Enorme` (setor leste, ao sul de `Uma Ramificação ao Sul`) → **O** → `Uma Sala Enorme (oeste)` → **N** → `Uma Passagem` → **L** → `A Entrada`. Na parede leste da Sala Enorme, `look parede` e `look palavras` revelaram a tosca figura de um homem com cabeça de touro e o aviso `'cuidado com o Minotauro...'`.
+- **Vila Residencial de Midgaard (oeste do Grande Campo Norte):**
+  - `A Entrada da Vila Residencial` (portão de ferro com emblema "M", vigiado por *Um velho porteiro*):
+    - **O** → `Uma Rua Larga` (saídas observadas: **N** para *A Recepção da Imobiliária M&M*, **L** para *A Entrada da Vila Residencial*, **O** para *Uma Rua Larga*).
+    - **S** → `Um Caminho de Cascalhos` (saídas observadas: **N** para *A Entrada da Vila Residencial*, **S** para *Ainda na Trilha*).
+- **Campos Orientais e Borda da Floresta:**
+  - `Um Caminho Dentre os Campos (entroncamento Jareth)` → **L** → `Uma Estrada Pavimentada` → **L** → `Antes de um Pequeno Portão` (placa `"Taverna do Barumafir"`, portão `!norte` fechado) → **L** → `Na Borda da Floresta` (saída **L** para *Um Caminho* na floresta iluminada).
+- **Pernoite:** retorno confirmado ao **Templo de Midgaard** (`sleep` e `save`).
+

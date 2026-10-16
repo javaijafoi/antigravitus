@@ -586,6 +586,33 @@
       }
     ],
     "summary": "Após oscilação de conexão na Ramificação ao Sul, a sessão de fechamento confirmou o retorno pela Passagem Estreita, Escadaria Sul, Caminho Iluminado, Cruzamento, Corredor Sujo e Grande Campo até O Templo de Midgaard. Conferidos 87/87 HP, 170/170 mana, 101/101 MV, 1.667 moedas, XP 177.488, AC 50 (armor 17h), inventário (3 chifres e 1 pele de Minotauro, 3 pães, cantil, tocha, poção amarela e mochila) e equipamento (jarro brilhante como luz, chifres, pele, veste e braçadeiras de novato, espada empunhada e punhal segurado), seguidos de sleep e save confirmados."
+  },
+  {
+    "id": "cacada-novatos-dia94-combat",
+    "day": 94,
+    "type": "combat",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "evidence/dia94.json",
+        "day": 94,
+        "note": "Comandos e respostas preservados da sessão modular autorizada e do Modo Expandir Horizontes do Dia 94."
+      }
+    ],
+    "summary": "Varredura completa e verificação de respawn nas galerias superiores e subsolo da Área dos Novatos com wimpy 30, seguida de combate de fronteira no Modo Expandir Horizontes: 13 abates confirmados (3 monstros novatos, 2 insetos rastejantes, 5 novatos zumbis e 3 micos, além de 3 micos postos em fuga). 235 moedas de combate e 15.106 XP ganhos. Em Uma Passagem, combate simultâneo contra mico, novato zumbi e inseto vencido sem necessidade de fuga."
+  },
+  {
+    "id": "cacada-novatos-dia94-session",
+    "day": 94,
+    "type": "session",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "evidence/dia94.json",
+        "day": 94,
+        "note": "Comandos e respostas preservados da sessão modular autorizada e do Modo Expandir Horizontes do Dia 94."
+      }
+    ],
+    "summary": "Gestão de mochila, provisões e ativação do Modo Expandir Horizontes para consumir o MV excedente: venda de 3 chifres e 2 peles de Minotauro excedentes ao armeiro por 250 moedas totais, compra de 4 pães recheados por 24 moedas, reabastecimento na Fonte Azul e segunda passagem pelas galerias comprovando ausência de respawn imediato. Em seguida, catalogação de 21 salas (incluindo 7 salas inéditas no mapa: Uma Longa Passagem Leste-Oeste, Outro Canto, Uma Intersecção em T na Passagem, setor oeste de Uma Sala Enorme, Uma Rua Larga, Um Caminho de Cascalhos e Na Borda da Floresta), inspeção da figura e aviso na parede da Sala Enorme ('cuidado com o Minotauro...') e catalogação do velho porteiro da Vila Residencial e do apressado aventureiro nos campos. Retorno ao Templo de Midgaard com 87/87 HP, 170/170 mana, 101/101 MV, 2.188 moedas, 195.202 XP (faltando 4.798 para o nível 12), alinhamento 373 (Bom), 7 itens (78/140 kg), save e sleep confirmados."
   }
 ]
-

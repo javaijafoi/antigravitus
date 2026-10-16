@@ -2,10 +2,10 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 93,
+    "day": 94,
     "verification": "live",
     "live_verified": true,
-    "source": "Conferência ao vivo no encerramento do Dia 93 no Templo de Midgaard: score tudo, inventário, equipamentos, postura dormindo e save confirmados; evidence/dia93.json."
+    "source": "Sessão modular ao vivo do Dia 94 encerrada no Templo de Midgaard: score tudo, inventário, equipamento, save e sleep confirmados; evidence/dia94.json."
   },
   "level": 11,
   "mechanical_race": "Elfo",
@@ -13,7 +13,7 @@
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
   "alignment": {
-    "value": 338,
+    "value": 373,
     "label": "Bom"
   },
   "vitals": {
@@ -31,10 +31,10 @@
     }
   },
   "experience": {
-    "current": 177488,
+    "current": 195202,
     "next_level": 200000
   },
-  "gold": 1667,
+  "gold": 2188,
   "attributes": {
     "STR": 12,
     "DEX": 15,
@@ -47,19 +47,19 @@
     "base": 25,
     "with_armor": 50,
     "effect_verified": true,
-    "note": "Dia 93: AC 50 observada com armor (+25) ativo (17 horas no score final)."
+    "note": "Dia 94: AC base 25 observada ao final da sessão; com armor (+25) atinge 50."
   },
   "hitroll": 3,
   "damroll": 4,
-  "wimpy": 13,
+  "wimpy": 30,
   "training_sessions": 15,
   "operational_mode": {
     "current": "padrao",
-    "description": "Modo Padrão; wimpy 17 confirmado na conexão de encerramento do Dia 91.",
+    "description": "Modo Dungeon Corajoso + Modo Expandir Horizontes (V2 Modular); wimpy 30 confirmado em sessão no Dia 94.",
     "wimpy_profile": {
       "padrao": 17,
       "batedor": 33,
-      "dungeon": 17
+      "dungeon": 30
     },
     "rules": {
       "batedor": "Mapeamento em invisibilidade; coleta de oportunidade de itens no chão/doações permitida; evasão total de combate (zero engajamento, fuga imediata no 1º turno)."
@@ -78,8 +78,8 @@
     "name": "O Panteão dos Centenários"
   },
   "last_event": {
-    "day": 93,
-    "summary": "Incursão nas galerias da Área dos Novatos com o jarro brilhante equipado (87 HP máx), abate de zumbis e retorno pela Escadaria Sul e Grande Campo até o pernoite dormindo e salvo no Templo de Midgaard."
+    "day": 94,
+    "summary": "Varredura modular e medição de respawn na Área dos Novatos seguida pelo Modo Expandir Horizontes: 13 abates confirmados (+15.106 XP, 235 moedas de saque), venda de chifres e peles no Armeiro (+250 moedas), catalogação de 7 novas salas, 3 detalhes ambientais (incluindo o aviso do Minotauro na parede da Sala Enorme) e 2 novos NPCs na Vila Residencial e Campos, encerrando salva e dormindo no Templo de Midgaard."
   },
   "next_objective": {
     "mission_id": "problemas-agricolas",
@@ -235,89 +235,41 @@
     }
   ],
   "inventory": {
-    "items": [
-      {
-        "name": "um cantil",
-        "quantity": 1,
-        "source": "evidence/dia93.json"
-      },
-      {
-        "name": "os chifres do Minotauro",
-        "quantity": 3,
-        "source": "evidence/dia93.json"
-      },
-      {
-        "name": "a fedida pele do Minotauro",
-        "quantity": 1,
-        "source": "evidence/dia93.json"
-      },
-      {
-        "name": "um pão recheado",
-        "quantity": 3,
-        "source": "evidence/dia93.json"
-      },
-      {
-        "name": "uma tocha",
-        "quantity": 1,
-        "source": "evidence/dia93.json"
-      },
-      {
-        "name": "uma poção amarela de detectar invisibilidade",
-        "quantity": 1,
-        "source": "evidence/dia93.json"
-      },
-      {
-        "name": "uma mochila",
-        "quantity": 1,
-        "source": "evidence/dia93.json"
-      }
-    ],
-    "pending_verification": [],
     "recorded": [
       {
         "name": "um cantil",
         "quantity": 1,
-        "source": "evidence/dia93.json"
-      },
-      {
-        "name": "os chifres do Minotauro",
-        "quantity": 3,
-        "source": "evidence/dia93.json"
-      },
-      {
-        "name": "a fedida pele do Minotauro",
-        "quantity": 1,
-        "source": "evidence/dia93.json"
+        "source": "evidence/dia94.json"
       },
       {
         "name": "um pão recheado",
         "quantity": 3,
-        "source": "evidence/dia93.json"
+        "source": "evidence/dia94.json"
       },
       {
         "name": "uma tocha",
         "quantity": 1,
-        "source": "evidence/dia93.json"
+        "source": "evidence/dia94.json"
       },
       {
         "name": "uma poção amarela de detectar invisibilidade",
         "quantity": 1,
-        "source": "evidence/dia93.json"
+        "source": "evidence/dia94.json"
       },
       {
         "name": "uma mochila",
         "quantity": 1,
-        "source": "evidence/dia93.json"
+        "source": "evidence/dia94.json"
       }
-    ]
+    ],
+    "pending_verification": []
   },
   "conditions": [
-    "Dia 93: dormindo no Templo de Midgaard, com 87/87 HP, 170/170 mana e 101/101 MV no score final.",
-    "Três pães recheados e um cantil com água no inventário para a próxima saída.",
-    "Problemas Agrícolas ativa: fazendeiro pede 10 invasores do milharal; contador e conclusão não confirmados.",
-    "Armadura arcana ativa no score final (17 horas); duração futura depende do servidor.",
-    "15 treinos preservados do registro anterior; não houve treino no Dia 93.",
-    "Save respondeu \"Salvando os seus atalhos.\" antes e depois de dormir no Templo de Midgaard."
+    "Dia 94: dormindo no Templo de Midgaard, com 87/87 HP, 170/170 mana e 101/101 MV no último score.",
+    "Saciada de comida e água; cantil cheio na Fonte Azul e 3 pães recheados no inventário.",
+    "Mochila leve e limpa após venda de chifres e peles excedentes no Armeiro (7/17 itens, 78/140 kg).",
+    "Wimpy configurado preventivamente em 30 HP.",
+    "Save e sleep confirmados no Templo de Midgaard."
   ],
   "uncertainties": [
     "O anel arcano (+2E) foi vendido no Dia 92 por 500 moedas por exigir nível 90 e 3ª encarnação.",
@@ -348,6 +300,11 @@
       "document": "evidence/dia93.json",
       "day": 93,
       "note": "Comandos e respostas preservados da sessão autorizada e encerramento ao vivo."
+    },
+    {
+      "document": "evidence/dia94.json",
+      "day": 94,
+      "note": "Comandos e respostas preservados da sessão modular autorizada do Dia 94."
     }
   ],
   "narrative_style": "ladra arcana",
@@ -356,4 +313,4 @@
     "method": "sessão ao vivo e conferência direta no servidor",
     "verified_on": "Dia 93 (ficha, inventário, equipamento e encerramento; habilidades e treinos mantêm fontes anteriores)"
   }
-}
+}

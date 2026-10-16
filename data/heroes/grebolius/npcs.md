@@ -236,3 +236,14 @@ Fonte: [dossiê primário](evidence/dia91.json).
 | Líder dos monstros | Região do Milharal Destruído | Pelagem azul e clava; avaliação de vida desfavorável. Não atribuir posição fixa nem abate. |
 
 O Padeiro voltou a vender pão recheado por seis moedas; três compras foram confirmadas na continuação do Dia 91.
+
+## Dia 94 — Armeiro e catalogação no Modo Expandir Horizontes
+
+Fonte: [dossiê primário do Dia 94](evidence/dia94.json).
+
+| Personagem / Comerciante | Local observado | Confirmação / interação |
+| :--- | :--- | :--- |
+| **O Armeiro** | Loja de Armaduras (`loja_armaduras`) | Comprou `os chifres do Minotauro` por **50 moedas** cada (3 vendidos = 150 moedas) e `a fedida pele do Minotauro` por **50 moedas** cada (2 vendidas = 100 moedas). |
+| **Um velho porteiro** | A Entrada da Vila Residencial (`vila_residencial_entrada`) | Guarda o grande portão de ferro com emblema `"M"` na entrada murada da Vila Residencial. Nota técnica: a palavra-chave de alvo não é `velho` (`look velho` recusado); usar substantivo `porteiro`. |
+| **Um apressado aventureiro** | Um Caminho Dentre os Campos (`caminho_campos_jareth`) | Transita pelo entroncamento dos campos em busca de desafios. Nota técnica: a palavra-chave de alvo não é `apressado` (`look apressado` recusado); usar substantivo `aventureiro`. |
+

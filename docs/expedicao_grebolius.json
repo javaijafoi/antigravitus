@@ -1,0 +1,16 @@
+{
+  "mode": "dungeon_corajoso",
+  "destination_id": null,
+  "food_target": 4,
+  "food_price_ceiling": 10,
+  "min_loot_value_per_weight": 10,
+  "spare_weapons": 1,
+  "max_commands": 400,
+  "max_seconds": 1800,
+  "recovery_seconds": 45,
+  "known_entities": [],
+  "item_catalog": [],
+  "verified_shelters": [],
+  "outside_rooms": [],
+  "allow_verified_melee": false
+}

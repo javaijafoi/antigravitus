@@ -2414,6 +2414,39 @@
       "Refiz a trilha rumo ao sul, passando por trás do santuário e saudando em silêncio a estátua imponente de Odin no Altar do Templo antes de alcançar as pedras eternas do Templo de Midgaard. Conferi meus apetrechos à luz constante do jarro brilhante — chifres, pele de Minotauro e braçadeiras ajustadas, lâminas firmes e três pães recheados guardados ao lado do cantil —, deitei-me sobre o piso sagrado e entreguei-me ao sono reparador."
     ],
     "editorial_note": "Após a oscilação de conexão registrada na galeria subterrânea ao perseguir o mico ferido, a sessão de fechamento (session_dia93_fechamento.log) confirmou o retorno pela Escadaria Sul e pelos campos até o Templo de Midgaard, com conferência de ficha, inventário, equipamento, comando save e repouso dormindo (sleep)."
+  },
+  {
+    "id": 94,
+    "day": "Dia 94",
+    "title": "O Silêncio das Galerias Vazias, o Aviso na Parede e os Novos Horizontes",
+    "content": [
+      "A garganta seca me puxou de volta à consciência antes mesmo de eu abrir os olhos por completo. Bebi longos goles do cantil, sentindo a água fria limpar o gosto de poeira velha que ficara da véspera, e decidi que não desceria de novo aos túneis carregando tralha repetida nas costas. Voltei à superfície, enchi o cantil até a boca na fonte da praça e passei no armeiro para negociar os três pares de chifres e a pele de minotauro que pesavam na bolsa. Com o fardo aliviado e pães frescos comprados na padaria, ajustei o jarro brilhante na mão e retornei ao campo com um objetivo bem claro: medir quanto tempo aquelas galerias levam para se repovoar depois que a minha lâmina passa.",
+      "Avancei primeiro pelo anel superior, abrindo a porta da pequena sala onde o guarda vigiava a grade trancada e limpando a criatura rastejante que se arrastava pelo chão. Segui até a estátua, contornei o salão e subi às sacadas antes de descer pela escadaria sul e destrancar a porta que devolve ao cruzamento. Três monstros surgiram nas dobras escuras do caminho rumo ao laboratório; avaliei o porte de cada um com calma antes de disparar os mísseis arcanos e cruzar o aço. Caíram um após o outro, e de um dos cadáveres ainda retirei mais uma pele grossa antes de cruzar a porta leste.",
+      "Com o clarão firme do jarro cortando o breu úmido do subsolo, desci a escada junto ao alquimista. No cruzamento inferior, um mico tentou me golpear o peito, mas o talho da espada o fez sangrar tanto que a criatura entrou em pânico e disparou para o sul antes que eu pudesse dar o passo seguinte. Não me precipitei no escuro sem necessidade: avancei pelo canto esverdeado de fungos, onde dois zumbis descarnados vieram para cima de mim. Aparando os socos no escudo, deixei que os dardos místicos e o fio da lâmina abrissem caminho até tombarem no lodo.",
+      "O teste mais tenso aconteceu nas passagens estreitas do oeste e do sul. Persegui e abati micos pelas curvas, mas ao dobrar para o corredor coberto de limo dei de cara com uma emboscada tripla: um zumbi, um mico e um inseto dividindo o mesmo espaço sufocante. O morto-vivo acertou minha cabeça de raspão enquanto eu concentrava os disparos arcanos para derrubar o mico primeiro; mantive os pés firmes, pronta para recuar ao menor sinal de que o fôlego me faltaria, mas a espada abriu o peito do zumbi logo depois de o mico tombar, e o inseto não durou mais que um instante. Ao subir de volta ao laboratório e refazer os corredores superiores, encontrei apenas o silêncio e os corpos estendidos na pedra fria: o retorno das criaturas já é lento demais para o ritmo da minha lâmina.",
+      "Como minhas pernas ainda tinham vigor de sobra depois de vender a última pele no armeiro, resolvi esticar o passo para esquadrinhar os cantos que ainda faltavam no meu mapa. Voltei às galerias profundas para traçar a longa passagem que liga o cruzamento inferior à grande sala oval — onde examinei uma garrafa de cospefogo esquecida no chão — e dobrei pelos cantos úmidos do norte até uma intersecção em forma de T, abatendo mais dois zumbis descarnados pelo caminho. Na imensidão sem paredes da Sala Enorme, pus três micos em debandada e ergui o jarro brilhante diante da rocha oriental: ali, rabiscada às pressas ao lado da figura tosca de um homem com cabeça de touro, li a advertência deixada para os incautos sobre o Minotauro.",
+      "De volta ao ar livre sob o sol dos campos de Midgaard, aproveitei o resto do fôlego para reconhecer as fronteiras da superfície. Caminhei até o portão enferrujado do grande tabuleiro de xadrez e depois subi ao norte para inspecionar o grande portão de ferro marcado com o emblema da Vila Residencial, onde um velho porteiro montava guarda entre a rua larga de pedregulhos e a trilha de cascalhos que sobe o morro. Mais adiante, cruzei com um aventureiro apressado no entroncamento das campinas e segui a estrada pavimentada até o portão de madeira da Taverna do Barumafir, espiando o caminho de terra que serpenteia na borda da floresta iluminada. Só então, com a mente farta de rotas novas e a bolsa pesada de moedas, retornei às lajes sagradas do Templo de Midgaard para o sono reparador."
+    ],
+    "evidence": [
+      {
+        "document": "evidence/dia94.json",
+        "day": 94,
+        "note": "Comandos e respostas preservados da sessão modular autorizada e do Modo Expandir Horizontes do Dia 94."
+      }
+    ],
+    "date": "2026-10-15",
+    "in_game_time": "Manhã de vendas em Midgaard, varredura dupla na Área dos Novatos, expansão de horizontes e repouso no Templo",
+    "excerpt": "Após aliviar a mochila no armeiro e comprovar a demora no retorno dos monstros na Área dos Novatos, Grebolius aproveita o fôlego restante para decifrar o aviso do Minotauro na parede da Sala Enorme e mapear novas passagens no subsolo, a Vila Residencial e a borda da floresta iluminada.",
+    "tags": [
+      "area-dos-novatos",
+      "subsolo",
+      "zumbis",
+      "micos",
+      "vendas",
+      "cartografia",
+      "vila-residencial",
+      "templo-midgaard"
+    ],
+    "source_kind": "live"
   }
 ]
-

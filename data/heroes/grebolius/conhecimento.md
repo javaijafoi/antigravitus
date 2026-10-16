@@ -367,3 +367,24 @@ Para evitar sobrecarga de inventário e otimizar tempo e recursos, **fica abolid
 - O registro do Dia 93 termina sem resposta e sem encerramento confirmado. Não atribuir esse fato técnico a um acontecimento mágico ou a sentimentos da personagem.
 
 Fontes: [Dia 92](evidence/dia92.json), [Dia 93](evidence/dia93.json). Comparação de abordagens na camada da máquina, fora da crônica.
+
+## 16. Dia 94 — Medição de Respawn, Cotações do Minotauro e Modo Expandir Horizontes (`HorizonExpander`)
+
+Fonte: [dossiê primário do Dia 94](evidence/dia94.json).
+
+- **Medição de Respawn na Área dos Novatos:**
+  - Após varrer o anel superior e o subsolo imediato (11 abates na primeira passagem), a segunda travessia imediata pelas galerias superiores confirmou **zero respawns instantâneos** nas salas recém-limpas, restando apenas os corpos no chão.
+  - Na segunda incursão ao subsolo durante o Modo Expandir Horizontes, câmaras laterais não limpas anteriormente (`Uma Intersecção em T na Passagem`, `Uma Sala Enorme`) e `Uma Ramificação ao Sul` apresentaram novos novatos zumbis (2 abatidos) e micos (3 postos em fuga).
+- **Cotações de Venda no Armeiro (`loja_armaduras`):**
+  - `os chifres do Minotauro`: **50 moedas de ouro** por unidade.
+  - `a fedida pele do Minotauro`: **50 moedas de ouro** por unidade.
+- **Inscrição da Parede em `Uma Sala Enorme`:**
+  - `look parede`: *"Há uma tosca figura de um homem com cabeça de touro seguida de alguns escritos."*
+  - `look palavras`: *"Os escritos aparentam dizer 'cuidado com o Minotauro...'"*
+- **Doutrina do Modo Expandir Horizontes (`HorizonExpander` em `scripts/expedition/engine.py`):**
+  - Quando a limpeza da masmorra principal termina e a heroína ainda dispõe de movimento abundante (`MV > 30`), o motor ativa o **Modo Expandir Horizontes** para gastar o MV útil em exploração e catalogação:
+    1. Prioriza saídas não resolvidas (`unresolved_exits`) e fronteiras adjacentes.
+    2. Em cada sala visitada, executa `look` e `exits` para registrar descrição e conexões exatas.
+    3. Inspeciona palavras-chave ambientais mencionadas na descrição (`parede`, `palavras`, `figura`, `placa`, `inscricao`, `estatua`, `garrafa`, `portao`).
+    4. Avalia entidades novas com `look <alvo>` e `consider <alvo>`, usando o substantivo principal da linha (ex.: `porteiro`, `aventureiro`) em vez de adjetivos iniciais (`velho`, `apressado`).
+

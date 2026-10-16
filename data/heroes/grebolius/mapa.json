@@ -2,8 +2,8 @@
   "hero_id": "grebolius",
   "hero_name": "Grebolius",
   "sanctuary_id": "panteao_centenarios",
-  "last_updated_cycle": "Ciclo X (Dia 93; caçada interrompida)",
-  "total_rooms": 104,
+  "last_updated_cycle": "Ciclo X (Dia 94; Modo Expandir Horizontes)",
+  "total_rooms": 111,
   "layers": [
     {
       "id": "superficie",
@@ -1116,15 +1116,16 @@
       "exits": {
         "n": "canto_corredor",
         "s": "a_entrada",
-        "l": "sala_no_canto"
+        "l": "sala_no_canto",
+        "o": "longa_passagem_leste_oeste"
       },
       "npcs": [],
-      "notes": "Passagem estreita leste-oeste cruza com passagem ampla norte-sul. Clima de ruína e ar pesado.",
+      "notes": "Passagem estreita leste-oeste cruza com passagem ampla norte-sul. Clima de ruína e ar pesado. Conexão oeste para Uma Longa Passagem Leste-Oeste confirmada no Dia 94.",
       "discovered_in": "Ciclo VII (Dia 63)",
-      "unresolved_exits": {
-        "o": {
-          "description": "Uma Longa Passagem Leste-Oeste"
-        }
+      "source": {
+        "document": "evidence/dia94.json",
+        "day": 94,
+        "note": "Travessia leste-oeste confirmada ao vivo no Modo Expandir Horizontes."
       }
     },
     {
@@ -1605,14 +1606,19 @@
         "y": 160
       },
       "exits": {
-        "l": "grande_campo_norte"
+        "l": "grande_campo_norte",
+        "o": "vila_rua_larga",
+        "s": "vila_caminho_cascalhos"
       },
-      "npcs": [],
-      "notes": "Acesso residencial nos arredores de Midgaard.",
+      "npcs": [
+        "Um velho porteiro"
+      ],
+      "notes": "Grande portão de ferro com emblema 'M' gravado e muro alto. Velho porteiro presente; oeste leva a Uma Rua Larga e sul a Um Caminho de Cascalhos (confirmados no Dia 94).",
       "discovered_in": "Ciclo VII (Dia 61)",
       "source": {
-        "document": "posts.json",
-        "day": 61
+        "document": "evidence/dia94.json",
+        "day": 94,
+        "note": "Catalogação ao vivo do portão, velho porteiro e saídas oeste/sul no Modo Expandir Horizontes."
       }
     },
     {
@@ -1656,14 +1662,16 @@
         "y": -40
       },
       "exits": {
-        "l": "portao_taverna_barumafir"
+        "l": "portao_taverna_barumafir",
+        "o": "caminho_campos_jareth"
       },
       "npcs": [],
-      "notes": "Trecho pavimentado nos limites dos campos; visao de grande edificio cercado por pedras. Dia 91: vínculo oeste anterior retirado por ambiguidade entre Caminhos homônimos; destino oeste exato requer nova conferência, sem inferir atalho.",
+      "notes": "Trecho pavimentado nos limites dos campos; visão de grande edifício cercado por pedras ao nordeste. Conexão oeste com o entroncamento de Jareth confirmada ao vivo no Dia 94.",
       "discovered_in": "Ciclo VII (Dia 61)",
       "source": {
-        "document": "posts.json",
-        "day": 61
+        "document": "evidence/dia94.json",
+        "day": 94,
+        "note": "Travessia leste-oeste confirmada ao vivo no Modo Expandir Horizontes."
       }
     },
     {
@@ -1679,19 +1687,16 @@
         "y": -40
       },
       "exits": {
-        "o": "estrada_pavimentada_campos"
-      },
-      "unresolved_exits": {
-        "l": {
-          "description": "Na Borda da Floresta Iluminada"
-        }
+        "o": "estrada_pavimentada_campos",
+        "l": "borda_floresta_iluminada"
       },
       "npcs": [],
-      "notes": "Portao rustico de madeira com placa da lendaria Taverna do Barumafir; trilha leste segue para a floresta iluminada.",
+      "notes": "Portão rústico de madeira ao norte (!norte fechado) com placa da Taverna do Barumafir; caminho de terra a leste confirmado para Na Borda da Floresta no Dia 94.",
       "discovered_in": "Ciclo VII (Dia 61)",
       "source": {
-        "document": "posts.json",
-        "day": 61
+        "document": "evidence/dia94.json",
+        "day": 94,
+        "note": "Placa e saída leste confirmadas ao vivo no Modo Expandir Horizontes."
       }
     },
     {
@@ -1890,16 +1895,17 @@
         "y": 720
       },
       "exits": {
-        "o": "cruzamento_corredores"
-      },
-      "unresolved_exits": {
-        "n": {
-          "description": "Outro Canto"
-        }
+        "o": "cruzamento_corredores",
+        "n": "outro_canto_subsolo"
       },
       "npcs": [],
-      "notes": "Cruzamento angular entre corredores subterrâneos; brisa com cheiro fétido sopra da passagem ao norte, com despojos do Minotauro pelo chão.",
-      "discovered_in": "Ciclo IX (Dia 86)"
+      "notes": "Cruzamento angular entre corredores subterrâneos; brisa com cheiro fétido sopra da passagem ao norte (Outro Canto, confirmada no Dia 94), com despojos do Minotauro pelo chão.",
+      "discovered_in": "Ciclo IX (Dia 86)",
+      "source": {
+        "document": "evidence/dia94.json",
+        "day": 94,
+        "note": "Saída norte para Outro Canto atravessada e catalogada ao vivo."
+      }
     },
     {
       "id": "outra_curva",
@@ -1944,19 +1950,20 @@
         "y": 720
       },
       "exits": {
-        "s": "uma_passagem"
-      },
-      "unresolved_exits": {
-        "l": {
-          "description": "Uma Longa Passagem Leste-Oeste"
-        }
+        "s": "uma_passagem",
+        "l": "longa_passagem_leste_oeste"
       },
       "npcs": [
         "Diabinho",
         "Novato Zumbi Descarnado"
       ],
-      "notes": "Ampla câmara subterrânea oval nas catacumbas, infestada por diabinhos e novatos zumbis descarnados.",
-      "discovered_in": "Ciclo IX (Dia 87)"
+      "notes": "Ampla câmara subterrânea oval nas catacumbas, infestada por diabinhos e novatos zumbis descarnados. Garrafa de cospefogo inspecionada no chão; saída leste para Uma Longa Passagem Leste-Oeste confirmada no Dia 94.",
+      "discovered_in": "Ciclo IX (Dia 87)",
+      "source": {
+        "document": "evidence/dia94.json",
+        "day": 94,
+        "note": "Saída leste e detalhe da garrafa catalogados ao vivo."
+      }
     },
     {
       "id": "uma_sala_enorme",
@@ -1967,24 +1974,22 @@
       "risk_code": "medium",
       "icon": "🕳️",
       "coords": {
-        "x": 1460,
-        "y": 600
+        "x": 1520,
+        "y": 540
       },
       "exits": {
-        "n": "ramificacao_ao_sul"
+        "n": "ramificacao_ao_sul",
+        "o": "uma_sala_enorme_oeste"
       },
-      "unresolved_exits": {
-        "l": {
-          "description": "Vasta escuridão que se estende ao leste tanto quanto a luz alcança"
-        }
-      },
-      "npcs": [],
-      "notes": "Recinto colossal das catacumbas sem paredes visíveis imediatas, causando vertigem e sensação de vulnerabilidade.",
+      "npcs": [
+        "Diabinho (O mico)"
+      ],
+      "notes": "Setor leste da Sala Enorme (ao sul de Uma Ramificação ao Sul). Na parede leste há uma tosca figura de um homem com cabeça de touro e palavras rabiscadas às pressas: 'cuidado com o Minotauro...' (inspecionadas com look parede e look palavras no Dia 94).",
       "discovered_in": "Ciclo IX (Dia 87)",
       "source": {
-        "document": "evidence/dia93.json",
-        "day": 93,
-        "note": "Comandos e respostas preservados da sessão autorizada."
+        "document": "evidence/dia94.json",
+        "day": 94,
+        "note": "Inscrições da parede leste e conexão oeste catalogadas ao vivo no Modo Expandir Horizontes."
       }
     },
     {
@@ -2231,22 +2236,29 @@
       "risk_code": "low",
       "icon": "🌾",
       "coords": {
-        "x": 820,
-        "y": -180
+        "x": 740,
+        "y": -120
       },
       "exits": {
-        "o": "caminho_dentre_campos"
+        "o": "caminho_dentre_campos",
+        "l": "estrada_pavimentada_campos"
+      },
+      "unresolved_exits": {
+        "n": {
+          "description": "O Começo da Estrada (estrada Midgaard-Jareth)"
+        }
       },
       "npcs": [
         "Pequenina halfling",
-        "Carroça de madeira"
+        "Carroça de madeira",
+        "Um apressado aventureiro"
       ],
-      "notes": "Saídas observadas: norte O Começo da Estrada; leste outro Caminho Dentre os Campos; oeste caminho das gramíneas com saída sul para o Grande Campo. Norte/leste ainda sem setores individualizados no grafo.",
+      "notes": "Entroncamento entre os campos e o início da estrada pavimentada Midgaard-Jareth ao norte. Conexão leste com Uma Estrada Pavimentada e presença de um apressado aventureiro confirmadas ao vivo no Dia 94.",
       "discovered_in": "Ciclo X (Dia 91)",
       "source": {
-        "document": "evidence/dia91.json",
-        "day": 91,
-        "note": "Trechos literais do servidor, linhas dos registros anteriores e ações da continuação autorizada; sem referências circulares."
+        "document": "evidence/dia94.json",
+        "day": 94,
+        "note": "Conexão leste e NPC aventureiro catalogados ao vivo no Modo Expandir Horizontes."
       }
     },
     {
@@ -2464,9 +2476,204 @@
         "day": 93,
         "note": "Comandos e respostas preservados da sessão autorizada."
       }
+    },
+    {
+      "id": "longa_passagem_leste_oeste",
+      "name": "Uma Longa Passagem Leste-Oeste",
+      "layer": "novatos",
+      "zone": "Área dos Novatos — subsolo",
+      "risk": "Médio / Subsolo",
+      "risk_code": "medium",
+      "icon": "↔️",
+      "coords": {
+        "x": 1490,
+        "y": 720
+      },
+      "exits": {
+        "l": "cruzamento_corredores",
+        "o": "uma_grande_sala"
+      },
+      "npcs": [
+        "Diabinho (O mico)"
+      ],
+      "notes": "Corredor subterrâneo úmido e escuro que liga diretamente Um Cruzamento de Corredores (leste) a Uma Grande Sala (oeste).",
+      "discovered_in": "Ciclo X (Dia 94)",
+      "source": {
+        "document": "evidence/dia94.json",
+        "day": 94,
+        "note": "Catalogada ao vivo no Modo Expandir Horizontes."
+      }
+    },
+    {
+      "id": "outro_canto_subsolo",
+      "name": "Outro Canto",
+      "layer": "novatos",
+      "zone": "Área dos Novatos — subsolo",
+      "risk": "Médio / Subsolo",
+      "risk_code": "medium",
+      "icon": "📐",
+      "coords": {
+        "x": 1680,
+        "y": 660
+      },
+      "exits": {
+        "s": "sala_no_canto",
+        "o": "intersecao_t_passagem"
+      },
+      "npcs": [],
+      "notes": "Curva estreita ao norte de Uma Sala no Canto; paredes cobertas de fungos pegajosos. Saída oeste leva a Uma Intersecção em T na Passagem.",
+      "discovered_in": "Ciclo X (Dia 94)",
+      "source": {
+        "document": "evidence/dia94.json",
+        "day": 94,
+        "note": "Catalogada ao vivo no Modo Expandir Horizontes."
+      }
+    },
+    {
+      "id": "intersecao_t_passagem",
+      "name": "Uma Intersecção em T na Passagem",
+      "layer": "novatos",
+      "zone": "Área dos Novatos — subsolo",
+      "risk": "Médio / Hostil",
+      "risk_code": "medium",
+      "icon": "┳",
+      "coords": {
+        "x": 1620,
+        "y": 660
+      },
+      "exits": {
+        "l": "outro_canto_subsolo",
+        "s": "outro_canto_subsolo",
+        "o": "curva_passagem"
+      },
+      "npcs": [
+        "Novato Zumbi Descarnado"
+      ],
+      "notes": "Intersecção úmida e escorregadia com musgo e fungos nas paredes. Novato zumbi abatido no local no Dia 94; múltiplas peles e chifres de Minotauro abandonados no chão.",
+      "discovered_in": "Ciclo X (Dia 94)",
+      "source": {
+        "document": "evidence/dia94.json",
+        "day": 94,
+        "note": "Catalogada ao vivo com abate de novato zumbi no Modo Expandir Horizontes."
+      }
+    },
+    {
+      "id": "uma_sala_enorme_oeste",
+      "name": "Uma Sala Enorme (oeste)",
+      "layer": "novatos",
+      "zone": "Área dos Novatos — subsolo",
+      "risk": "Médio / Hostil",
+      "risk_code": "medium",
+      "icon": "🕳️",
+      "coords": {
+        "x": 1460,
+        "y": 540
+      },
+      "exits": {
+        "n": "uma_passagem",
+        "l": "uma_sala_enorme"
+      },
+      "npcs": [],
+      "notes": "Metade ocidental da Sala Enorme: sem paredes imediatas visíveis, conectando Uma Passagem (ao norte) ao setor oriental da Sala Enorme (a leste).",
+      "discovered_in": "Ciclo X (Dia 94)",
+      "source": {
+        "document": "evidence/dia94.json",
+        "day": 94,
+        "note": "Travessia oeste-norte confirmada ao vivo no Modo Expandir Horizontes."
+      }
+    },
+    {
+      "id": "vila_rua_larga",
+      "name": "Uma Rua Larga",
+      "layer": "novatos",
+      "zone": "Vila Residencial de Midgaard",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🏘️",
+      "coords": {
+        "x": 200,
+        "y": 160
+      },
+      "exits": {
+        "l": "vila_residencial_entrada"
+      },
+      "unresolved_exits": {
+        "n": {
+          "description": "A Recepção da Imobiliária M&M"
+        },
+        "o": {
+          "description": "Uma Rua Larga (continuação)"
+        }
+      },
+      "npcs": [],
+      "notes": "Rua larga de pedregulhos no interior do portão da Vila Residencial; ao norte fica A Recepção da Imobiliária M&M.",
+      "discovered_in": "Ciclo X (Dia 94)",
+      "source": {
+        "document": "evidence/dia94.json",
+        "day": 94,
+        "note": "Catalogada ao vivo no Modo Expandir Horizontes."
+      }
+    },
+    {
+      "id": "vila_caminho_cascalhos",
+      "name": "Um Caminho de Cascalhos",
+      "layer": "novatos",
+      "zone": "Vila Residencial de Midgaard",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "🪨",
+      "coords": {
+        "x": 360,
+        "y": 260
+      },
+      "exits": {
+        "n": "vila_residencial_entrada"
+      },
+      "unresolved_exits": {
+        "s": {
+          "description": "Ainda na Trilha (subindo pequeno morro reluzente)"
+        }
+      },
+      "npcs": [],
+      "notes": "Trilha pavimentada por cascalhos beges tangenciando as muralhas da Vila Residencial; sobe ao sul rumo a um pequeno morro sobre o qual algo reluz.",
+      "discovered_in": "Ciclo X (Dia 94)",
+      "source": {
+        "document": "evidence/dia94.json",
+        "day": 94,
+        "note": "Catalogada ao vivo no Modo Expandir Horizontes."
+      }
+    },
+    {
+      "id": "borda_floresta_iluminada",
+      "name": "Na Borda da Floresta",
+      "layer": "novatos",
+      "zone": "Campos & Área dos Novatos",
+      "risk": "Baixo",
+      "risk_code": "low",
+      "icon": "🌲",
+      "coords": {
+        "x": 1320,
+        "y": -40
+      },
+      "exits": {
+        "o": "portao_taverna_barumafir"
+      },
+      "unresolved_exits": {
+        "l": {
+          "description": "Um Caminho (interior da floresta iluminada)"
+        }
+      },
+      "npcs": [],
+      "notes": "Caminho de terra serpeando rumo à parte iluminada da floresta a leste, com chilrear de pássaros e Midgaard distante a sudoeste.",
+      "discovered_in": "Ciclo X (Dia 94)",
+      "source": {
+        "document": "evidence/dia94.json",
+        "day": 94,
+        "note": "Catalogada ao vivo no Modo Expandir Horizontes."
+      }
     }
   ],
-  "last_updated_day": 93,
+  "last_updated_day": 94,
   "verification": "live",
   "current_location_id": "templo_midgaard",
   "camp_id": "templo_midgaard",
@@ -2476,6 +2683,7 @@
     "Saídas inversas não foram deduzidas. Saídas sem destino conhecido permanecem pendentes.",
     "Campo Aberto versus Caminho Sujo: referências antigas divergem sobre o acesso ao Tabuleiro; não foi criada uma conexão nova por suposição.",
     "Dia 91: fazenda é uma cartografia parcial. Trechos entre Jareth, floresta, estrada e casa não foram completados por suposição; ausência de aresta não significa ausência de passagem. Entroncamento Jareth separado do Caminho homônimo; pernoite atual no Templo.",
-    "Dias 92–93: novas arestas são travessias reais; mapa permanece parcial. Posição final é última resposta anterior à interrupção; camp mantém último pernoite confirmado do Dia 92. Grade trancada e partes da masmorra continuam pendentes."
+    "Dias 92–93: novas arestas são travessias reais; mapa permanece parcial. Posição final é última resposta anterior à interrupção; camp mantém último pernoite confirmado do Dia 92. Grade trancada e partes da masmorra continuam pendentes.",
+    "Dia 94 (Modo Expandir Horizontes): catalogadas 7 novas salas e resolvidas saídas pendentes no subsolo dos Novatos (Uma Longa Passagem Leste-Oeste, Outro Canto, Uma Intersecção em T na Passagem, metade oeste de Uma Sala Enorme e inscrição do Minotauro na parede leste), na Vila Residencial (Uma Rua Larga e Um Caminho de Cascalhos) e nos limites leste dos campos (Na Borda da Floresta)."
   ]
 }

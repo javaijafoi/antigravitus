@@ -19,7 +19,7 @@ def plain(value):
 
 def rejection(text):
     value=norm(text)
-    return any(s in value for s in ('como?!','nao pode ir por ai','nao esta vendo','nao ve nada','nao tem esse','muito ocupado, lutando','nao consegue','nao conseguiu','nao ha espaco','nao pode carregar','nao tem mais espaco','fechada','esta trancad','voce nao pode'))
+    return any(s in value for s in ('como?!','nao pode ir por ai','nao esta vendo','nao ve nada','nao tem esse','muito ocupado, lutando','nao consegue','nao conseguiu','nao ha espaco','nao pode carregar','nao tem mais espaco','fechada','esta trancad','voce nao pode','em que voce deseja lancar','comparar sua forca com a de quem','atacar quem','ninguem aqui com esse nome','nao parece haver'))
 
 
 def saved(text):
@@ -104,8 +104,8 @@ def parse_room(text,config):
     # A room title directly precedes its indented description. Discard tips and
     # unsolicited messages before it instead of including them in room identity.
     exits_at=next(i for i,s in enumerate(raw_lines) if re.search(r'\[\s*Sa[ií]das\s*:',s,re.I))
-    starts=[i for i,s in enumerate(raw_lines[:max(0,exits_at-1)]) if not s[0].isspace() and raw_lines[i+1][0].isspace() and not s.strip().startswith('[')]
-    if starts:raw_lines=raw_lines[starts[-1]:]
+    starts=[i for i,s in enumerate(raw_lines[:max(0,exits_at-1)]) if not s[0].isspace() and raw_lines[i+1][0].isspace() and not s.strip().startswith('[') and not s.strip().endswith('.')]
+    if starts:raw_lines=raw_lines[starts[0]:]
     lines=[s.strip() for s in raw_lines]
     exit_index=next(i for i,s in enumerate(lines) if re.search(r'\[\s*Sa[ií]das\s*:',s,re.I))
     candidates=[s for s in lines[:exit_index] if len(s)<85 and not norm(s).startswith(('voce ','dica:','>>>','salvando','como','certo','uma carroca'))]
@@ -117,13 +117,17 @@ def parse_room(text,config):
     for line in lines[exit_index+1:]:
         value=norm(line)
         if value.startswith(('dica:','voce ')):continue
-        if any(s in value for s in ('foi deixad','foi abandonad','esta jogad')):
+        if any(s in value for s in ('um pouco de sangue','uma poca de sangue','um discreto aviso','uma caixa de madeira','um grande mural','uma enorme fonte')):continue
+        is_ground_item = any(s in value for s in ('foi deixad','foram deixad','foi esquecid','foram esquecid','foi abandonad','foram abandonad','esta jogad','jaz aqui','deixou sua coleira')) or (
+            any(s in value for s in ('punhal de novato','veste de novato','elmo de novato','maca de novato','espada de novato','capa de novato','bracadeiras de novato','jarro com um liquido')) and 'esta aqui' in value
+        )
+        if is_ground_item:
             known=next((item for item in config.item_catalog if norm(item.get('pattern','')) and norm(item['pattern']) in value),None)
             if known:
                 allowed={k:v for k,v in known.items() if k in Item.__dataclass_fields__}
                 ground.append(Item(**allowed))
             else: ground.append(Item('',line))
-        elif re.search(r'esta aqui|esta andando|zanza|rastej|espreita|esta procurando|esta chorando|esta gritando',value):
+        elif re.search(r'esta aqui|esta andando|zanza|rastej|espreita|esta procurando|esta chorando|esta gritando|esta perdido|questiona:|exclama:',value):
             match=next((e for e in config.known_entities if any(norm(p) in value for p in e.get('patterns',[]))),None)
             if match: entities.append(Entity(line,match.get('target',''),match.get('kind','unknown'),bool(match.get('verified'))))
             elif any(s in value for s in ('foi deixad','uma caixa','um aviso','uma fonte')):continue
@@ -147,9 +151,9 @@ def named_exits(text):
 def assess_consider(text):
     value=norm(text)
     if rejection(text): return 'unknown'
-    if any(s in value for s in ('louco','suicid','mataria','menor chance','muito superior','sem chance')):return 'danger'
-    if any(s in value for s in ('sorte','dificil','arriscad')):return 'risky'
+    if any(s in value for s in ('louco','suicid','mataria','menor chance','muito superior','sem chance','massacrado')):return 'danger'
+    if any(s in value for s in ('sorte','muito dificil','arriscad')):return 'risky'
     axes=re.findall(r'(?im)^\s*(?:nivel|vida|poder|precisao|armadura):\s*\d+\s+(.+)',value)
     if len(axes)<3:return 'unknown'
-    green=('perfeito','perda de tempo','facil','moleza','mais fraco','sem dificuldade','sem problema')
+    green=('perfeito','perda de tempo','facil','moleza','mais fraco','sem dificuldade','sem problema','vence, mas com dificuldades')
     return 'favorable' if all(any(token in axis for token in green) for axis in axes) else 'unknown'

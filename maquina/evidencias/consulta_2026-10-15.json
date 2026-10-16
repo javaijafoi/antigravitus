@@ -1,0 +1,552 @@
+{
+  "scope": "maquina",
+  "date": "2026-10-15",
+  "new_adventure_day": false,
+  "source_records": [
+    {
+      "file": "maquina_tip_identify_20261015_181720.jsonl",
+      "sha256": "f721f670ae86603b173015e5b1f67423cf5641eb8a27ab0bbb76139aefe4740c"
+    },
+    {
+      "file": "maquina_tip_identify_20261015_184005.jsonl",
+      "sha256": "f3697b0cbe6a7c1e98ded07c98bca09c48d73a3361bf26f7586ce87e7e87c5a0"
+    }
+  ],
+  "selected_help": [
+    {
+      "command": "help help",
+      "at": "2026-10-15T18:25:38.735355-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 103,
+      "response": "4.1.1 AJUDA HELP\n\nUso: ajuda [comando]\n\nO comando AJUDA procura por um resultado parcial para a palavra fornecida,\nincluindo quaisquer espaços que possam seguir a palavra. Apenas AJUDA, sem\nnenhum argumento, lista os comandos mais comuns do jogo.\n\nExemplos:\n\n  > ajuda magic mis\n    irá encontrar o texto da ajuda para a magia magic missile.\n\n  > ajuda mag\n    irá encontrar 'magia' ou 'magic missile' dependendo da primeira ocorrência\n    no arquivo de ajuda.\n\nVeja também: COMANDOS, SOCIAIS"
+    },
+    {
+      "command": "help look",
+      "at": "2026-10-15T18:31:48.915579-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 264,
+      "response": "1.1.2 3.1.5 4.3.3 VER LOOK\n\nUso: ver\n     ver <item>\n     ver <em | no | na | dentro | in> <item>\n     ver <o | a | at> <item>\n     ver <direção>\n\nUse este comando para observar os arredores.\n\nExemplos:\n\n  > ver\n  > ver o anjo\n  > ver dentro da mochila\n  > ver sul\n\nObserve que se você VER O CORPO você não verá o conteúdo dele. Para ver\no que está dentro de um contêiner (por exemplo, um corpo) use VER EM <objeto>.\n\nVeja também: EXAMINAR, PEGAR, LER"
+    },
+    {
+      "command": "help exits",
+      "at": "2026-10-15T18:25:03.851125-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 87,
+      "response": "1.1.3 SAÍDAS SAIDAS EXITS\n\nUso: saídas\n\nFornece uma lista das saídas diretas de sua localidade. Obviamente, as menos\nvisíveis (como portas secretas) não serão exibidas por este comando - você\ntem que PENSAR para que possa localizar estas! =P\n\nVeja também: AUTOSAÍDAS"
+    },
+    {
+      "command": "help read",
+      "at": "2026-10-15T18:27:39.998376-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 172,
+      "response": "3.1.6 LER LEIA READ\n\nUso: ler <objeto>\n     ler <número da mensagem do quadro>\n\nUse este comando quando precisar ler alguma coisa.\n\nLER também é utilizado para ler mensagens em quadros; digite AJUDA QUADROS\npara mais informações.\n\nExemplo:\n\n  > ler carta\n\nVeja também: QUADROS"
+    },
+    {
+      "command": "help consider",
+      "at": "2026-10-15T18:24:28.791752-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 64,
+      "response": "4.3.6 CONSIDERAR CONSIDERE\n\nUso: considerar <criatura>\n\nEste comando efetua uma comparação de forças entre você e seu alvo.\n\nEntretanto, tal comparação não passa de uma rude estimativa numérica; cada\naventureiro conhece bem o próprio poder!\n\nExemplo:\n\n  > considerar cachorro\n\nSee also: GOLPEAR, MATAR"
+    },
+    {
+      "command": "help equipment",
+      "at": "2026-10-15T18:25:00.844124-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 85,
+      "response": "3.2.1 EQUIPAMENTOS EQUIPMENT\n\nUso: equipamentos\n\nFornece uma lista de todos os equipamentos que você estiver vestindo, segurando\ne empunhando.\n\nVeja também: INVENTÁRIO, REMOVER, VESTIR"
+    },
+    {
+      "command": "help identificar",
+      "at": "2026-10-15T18:18:20.926677-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 7,
+      "response": "IDENTIFICAR\n\nUso: identificar <item>\n\nAtravés do comando IDENTIFICAR é possível identificar os atributos exatos de determinado\nobjeto, exatamente como ocorre com a magia IDENTIFY.\nSó é possível utilizar este comando até o nível 80 da primeira encarnação. Após isso,\né necessário recorrer a pergaminhos de identificação ou à magia IDENTIFY.\n\nVeja também: MAGIA IDENTIFY"
+    },
+    {
+      "command": "help buy",
+      "at": "2026-10-15T18:24:17.266701-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 57,
+      "response": "COMPRAR COMPRE BUY\n\nUso: comprar <nome do item>\n     comprar #<número>\n     comprar n.<nome do item>\n     comprar n <compre do item>\n     comprar n #<número>\n\nSe você gostaria de adquirir um item de uma loja e tem o dinheiro, você pode\ncomprá-lo. Itens podem ser comprados pelo nome ou pelo número na lista da loja.\nTambém podem ser comprados em quantidades.\n \nExemplos:\n \n  > comprar espada    (compra a primeira espada na lista)\n  > comprar #3        (compra o terceiro item na lista)\n  > comprar 4.espada  (compra a quarta espada na lista)\n  > comprar 10 pão    (compra 10 unidades de pão)\n  > comprar 10 #2     (compra 10 unidades do segundo item na lista)\n \nVeja também: LISTAR, VENDER, LOJAS, VALOR"
+    },
+    {
+      "command": "help put",
+      "at": "2026-10-15T18:27:25.975823-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 163,
+      "response": "3.1.4 PÔR POR COLOCAR PUT\n\nUsage: pôr <item> dentro de <container>\n       pôr todo.<item> dentro de <container>\n       pôr tudo dentro de <container>\n\nUse este comando para colocar itens dentro de contêineres, como sacolas, mochilas,\nbaús, ou qualquer outro tipo de contêiner.\n\nExamples:\n\n  > pôr pão dentro da mochila\n  > pôr todo.pão dentro da mochila\n  > pôr tudo caixa\n\nPara entender melhor as formas usando \"tudo\", os pontos \".\" e \"dentro de\",\nconsulte AJUDA PEGAR.\n\nVeja também: PEGAR"
+    },
+    {
+      "command": "help fill",
+      "at": "2026-10-15T18:25:06.855376-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 89,
+      "response": "ENCHER ENCHA FILL\n\nUso: encher <recipiente> <recipiente de onde irá encher>\n\nUtilize este comando para encher, com um líquido de uma fonte à sua frente,\num recipiente que você esteja segurando.\n\nExemplo:\n\n  > encher cantil fonte\n\nVeja também: DESPEJAR"
+    },
+    {
+      "command": "help ask",
+      "at": "2026-10-15T18:35:59.763790-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 363,
+      "response": "2.1.1 ' DIZER DIGA FALAR FALE CONTAR CONTE PERGUNTAR PERGUNTE COCHICHAR GRITAR BERRAR SAY TELL TELEPATIA ASK WHISPER SHOUT HOLLER\n\nUso:  falar <mensagem> [<pontuação> <emoção>]\n     gritar <mensagem>\n     berrar <mensagem>\n     contar <alguém> <mensagem>\n  cochichar <alguém> <mensagem>\n  perguntar <alguém> <mensagem>\n\nSe você quiser se comunicar com outros seres, você será melhor entendido se\ncomeçar suas frases com um dos comandos de comunicação, como DIZER, CONTAR,\nou GRITAR.\n\nExemplos:\n\n  > falar Ei, alguém sabe como chegar até Oz?\n  > contar catje oi, tudo bem?\n\nVocê pode usar o símbolo ' como um atalho para DIZER, como em:\n\n  > 'olá.\n\nGRITAR envia sua mensagem para todos que estiverem na mesma área que você.\nBERRAR envia sua mensagem para todos no jogo, mas custa 20 pontos de movimento.\n\nO comando FALAR (SAY e DIZER também) possui um completo sistema de emoções e entonação.\nConsulte o a AJUDA FALAR DETALHES para saber mais.\n\nVeja também: FALAR DETALHES, RESPONDER, TAGARELAR, GCONTAR, LEILÃO, SEMREPETIÇÃO, AFALAR"
+    },
+    {
+      "command": "help cast",
+      "at": "2026-10-15T18:24:18.769900-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 58,
+      "response": "6.1.1 LANÇAR LANCAR LANCE CAST\n\nUso: lançar '<nome da magia>'\n     lançar '<nome da magia>' <alvo>\n\nEste é o comando utilizado para lançar magias. Utilize-o para lançar magias,\nem alguém, ou em algum objeto.\n\nExemplo:\n\n  > lançar 'burning hands' <alvo>\n  Note que o nome da magia precisa estar entre aspas \"'\".\n\nVeja também: AJUDA MAGIA <nome de uma magia>\n\nExemplos:\n\n  > ajuda magia cure ligh\n  > ajuda magia energy drain"
+    },
+    {
+      "command": "help wimpy",
+      "at": "2026-10-15T18:31:23.867728-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 248,
+      "response": "5.1.4 COVARDE WIMPY\n\nUso: covarde\n     covarde <pontos de vida>\n\nUse o comando COVARDE para fugir automaticamente de uma luta quando seus pontos\nde vida estiverem abaixo do nível configurado.\n\nExemplos:\n\n  > covarde 35  Fará seu personagem fugir automaticamente de uma luta se\n                você tiver menos do que 35 pontos de vida.\n  > covarde 0   Desligará o modo covarde, e você vai lutar até o fim.\n  > covarde     Mostrará o nível atual do modo covarde.\n\nVeja também: FUGIR, OPÇÕES"
+    },
+    {
+      "command": "help sleep",
+      "at": "2026-10-15T18:28:42.264119-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 201,
+      "response": "1.3.1 ACORDAR ACORDE DORMIR DURMA DESCANSAR DESCANSE SENTAR SENTE LEVANTAR LEVANTE WAKE SLEEPING REST SIT STAND\n\nUtilize esses comandos para mudar de posição. Caso se sinta cansado, talvez\nseja uma boa idéia sentar e descansar por um tempo, ou mesmo tirar um cochilo,\ncom o comando DORMIR.\n\nVeja também: DIREÇÕES, MAGIA SLEEP"
+    },
+    {
+      "command": "help save",
+      "at": "2026-10-15T18:28:20.724468-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 188,
+      "response": "SALVAR SAVE\n\nUso: salvar\n\nSalva seu personagem. Isso inclui pontos de experiência, força, ouro, etc.\nSeu equipamento é tambem salvo no (improvável?) caso de uma pane do jogo.\nO jogo periodicamente salva automaticamente você e seu equipamento; então\nnão é necessário fazer com que seu cliente (o programa pelo qual você\nconecta no jogo) salve automaticamente para você.\n\nVocê NÃO PODE carregar uma versão salva se você morrer -- seu personagem ainda\nexiste, mas você irá perder pontos de experiência, e todos seus objetos\ncontinuarão no jogo, em seu corpo.\n\nVeja também: SAIR"
+    },
+    {
+      "command": "help tip",
+      "at": "2026-10-15T18:17:57.757860-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 2,
+      "response": "4.1.8 DICAS TIPS\n\nLiga e desliga as dicas de jogo.\n\nQuando ligadas, diversas dicas aparecerão de tempos em tempos, ajudando\nprincipalmente jogadores iniciantes.\n\nVeja também: AJUDA\n\nMarceus vai para sul."
+    },
+    {
+      "command": "help examine",
+      "at": "2026-10-15T18:25:02.347399-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 86,
+      "response": "3.1.7 4.3.4 EXAMINAR EXAMINE\n\nUso: examinar <alvo a ser examinado>\n\nCom este comando você poderá obter informações valiosas sobre um objeto\nou um monstro.\n\nVeja também: VER"
+    },
+    {
+      "command": "help diagnose",
+      "at": "2026-10-15T18:24:33.300058-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 67,
+      "response": "DIAGNOSTICAR DIAGNOSTIQUE DIAGNOSE\n\nUso: diagnosticar\n     diagnosticar <vítima>\n\nO comando DIAGNOSTICAR lhe mostra o quão ferido um personagem aparenta.\nCaso esteja lutando contra alguém, você pode usar DIAGNOSTICAR para\ndiagnosticar a pessoa com quem você estiver lutando.\n\nExemplos: \n\n  > diagnosticar\n  > diagnosticar rasmussen\n\nVeja também: CONSIDERAR"
+    },
+    {
+      "command": "help inventory",
+      "at": "2026-10-15T18:25:57.763127-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 115,
+      "response": "3.1.1 INVENTÁRIO INVENTARIO INVENTORY\n\nUso: inventário \n\nUse este comando se você não tem certeza do que está carregando, ou caso queira\nsimplesmente checar se nenhum ladrão furtou sua mochila sem que você tenha\npercebido.\n\nVeja também: EQUIPAMENTOS, SEGURAR, REMOVER, VESTIR"
+    },
+    {
+      "command": "help list",
+      "at": "2026-10-15T18:31:47.410558-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 263,
+      "response": "LISTAR LISTE\n\nUso: listar\n     listar <tipo do objeto>\n\nSe você gostaria de ver quais itens de uma loja estão à venda, dê uma olhada\nna lista. A lista contém todos os itens à venda no momento, assim como a\nquantidade em estoque. O preço para cada item também será listado. Caso você\ntenha interesse num tipo particular de item, você pode especificar quais itens\nlistar.\n \nExemplos:\n \n  > listar            (lista todos itens à venda)\n  > listar espada     (lista todas espadas à venda)\n \nVeja também: COMPRAR, VENDER, LOJAS, VALOR"
+    },
+    {
+      "command": "help value",
+      "at": "2026-10-15T18:30:58.325947-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 232,
+      "response": "VALOR VALUE\n\nUso: valor <item>\n\nAntes de vender um item para uma loja, você pode perguntar ao lojista quanto\nele está inclinado a pagar por isso.\n \nExemplo:\n \n  > valor pão\n \nVeja também: COMPRAR, LISTAR, VENDER, LOJAS"
+    },
+    {
+      "command": "help get",
+      "at": "2026-10-15T18:36:10.283277-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 370,
+      "response": "3.1.2 PEGAR GET TAKE\n\nUso: pegar <objeto>\n     pegar tudo\n     pegar tudo dentro de <objeto>\n     pegar tudo dentro de todo.<objeto>\n     pegar todo.<objeto> dentro de todo.<objeto>\n\nSe você encontrar algo interessante jogado no chão, pode pode PEGAR este\nobjeto e carregá-lo em seu inventário.  PEGAR também é utilizado para\npegar objetos de dentro de baús, mochilas ou qualquer outro tipo de contêiner.\n\nExemplos:\n\n  > pegar espada corpo          (uma espada dentro de um corpo)\n  > pegar tudo dentro de corpo  (todos itens dentro de um corpo)\n  > pegar tudo todas.mochila    (tudo dentro de todas as mochilas)\n  > pegar todo.pão toda.mochila (todos os pães dentro de todas as mochilas)\n\nQuando você não usar o objeto após \"dentro de\", você tentará pegar algo que\nestiver no chão.\n\nNote que o uso de \"dentro de\" é somente cosmético, para entender melhor o que\nse faz. Se você estiver acostumado com o comando, poderá omití-lo.\n\nSe ficou um pouco confuso, ao ler troque o ponto \".\" por \"objeto do tipo\"; e o\nespaço por \"dentro de\", caso já não esteja na frase. Nesse caso, vamos usar o\n\"dentro de\", então concentre-se apenas em entender o ponto \".\".\n\nExercite um pouco esse raciocínio:\n\nPEGAR ...\n                                 \"tudo\" = \"tudo\"\n                             \"todo.pão\" = \"todo objeto do tipo pão\"\n         \"pegar tudo dentro da mochila\" = \"pegar tudo dentro da mochila\"\n \"pegar tudo de dentro de toda.mochila\" = \"pegar tudo de dentro de todo objeto\n                                           do tipo mochila\"\n     \"pegar todo.pão dentro da mochila\" = \"pegar todo objeto do tipo pão dentro\n                                           da mochila\"\n\"pegar todo.pão dentro de toda.mochila\" = \"pegar todo objeto do tipo pão dentro\n                                           de todo objeto do tipo mochila\"\n\nNesse ponto você já deve ter percebido que o uso do termo \"tudo\" é especial.\nNão importa se você usar o termo \"tudo\", \"todas\" etc; eles são permutáveis.\n\nAqui vai a lista completa deles: TUDO, TODA, TODO, TODAS, TODOS e ALL.\n\nVeja também: SOLTAR, PÔR"
+    },
+    {
+      "command": "help eat",
+      "at": "2026-10-15T18:24:54.335085-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 81,
+      "response": "3.3.1 FOME COMER COMA SEDE BEBER BEBA BEBERICAR BEBERIQUE PROVAR PROVE EAT DRINK SIP TASTE\n\nUso: comer <item>\n     provar <item>\n     beber [do] <item>\n     bebericar [do] <item>\n\nSe você está com fome ou sede, esses comandos são para você!\n\n  > comer pão\n  > provar pão\n  > beber copo\n  > beber do cantil\n  > bebericar da fonte"
+    },
+    {
+      "command": "help drink",
+      "at": "2026-10-15T18:24:46.823757-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 76,
+      "response": "3.3.1 FOME COMER COMA SEDE BEBER BEBA BEBERICAR BEBERIQUE PROVAR PROVE EAT DRINK SIP TASTE\n\nUso: comer <item>\n     provar <item>\n     beber [do] <item>\n     bebericar [do] <item>\n\nSe você está com fome ou sede, esses comandos são para você!\n\n  > comer pão\n  > provar pão\n  > beber copo\n  > beber do cantil\n  > bebericar da fonte\n\nDICA: Os deuses são os responsáveis pela criação e manutenção de nosso jogo. Respeite-os, pois é graças a eles que este mundo existe."
+    },
+    {
+      "command": "help practice",
+      "at": "2026-10-15T18:27:12.452313-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 155,
+      "response": "4.2.4 PRATICAR PRACTICE PRACTISE\n\nUso: praticar\n     praticar <nome da habilidade ou magia>\n\nA Prática é a maneira de aperfeiçoar suas magias e habilidades. Existem duas\nformas de desenvolver o seu nível de prática:\n\n1) utilizando suas magias e habilidades durante as lutas ou coisas que não\n   necessariamente envolvam batalhas, mas exigem do uso delas.  \n2) através da prática na sua guilda, junto ao seu mestre, que pode ajudá-lo\n   a treinar.\n\nVocê pode somente praticar uma certa quantidade para cada nível que alcançar.\n\nSessões de prática não utilizadas irão acumular para uso em níveis futuros.\n\nSe você digitar PRATICAR em qualquer outro lugar que não seja sua guilda,\nvocê irá obter uma lista de todas as magias e habilidades que você conhece, e\no seu nível de proficiência em cada uma.\n\nVeja também: MAGIAS, HABILIDADES, LANÇAR"
+    },
+    {
+      "command": "help flee",
+      "at": "2026-10-15T18:25:08.357295-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 90,
+      "response": "5.1.2 FUGIR FUJA FLEE\n\nUso: fugir\n\nSe você está numa luta e as coisas estão começando a ficar um pouco\ndesfavoráveis (talvez você esteja morrendo), apenas digite FUGIR, e pronto!\nVocê evitou o perigo - isto é, SE existir uma saída próxima viável, e SE essa\nsaída não levar você simplesmente da brasa para o fogo... no entanto, quem quer\nmesmo viver pra sempre?\n\nVeja também: COVARDE"
+    },
+    {
+      "command": "help rest",
+      "at": "2026-10-15T18:28:13.207854-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 183,
+      "response": "1.3.1 ACORDAR ACORDE DORMIR DURMA DESCANSAR DESCANSE SENTAR SENTE LEVANTAR LEVANTE WAKE SLEEPING REST SIT STAND\n\nUtilize esses comandos para mudar de posição. Caso se sinta cansado, talvez\nseja uma boa idéia sentar e descansar por um tempo, ou mesmo tirar um cochilo,\ncom o comando DORMIR.\n\nVeja também: DIREÇÕES, MAGIA SLEEP"
+    },
+    {
+      "command": "help wake",
+      "at": "2026-10-15T18:31:04.335650-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 236,
+      "response": "1.3.1 ACORDAR ACORDE DORMIR DURMA DESCANSAR DESCANSE SENTAR SENTE LEVANTAR LEVANTE WAKE SLEEPING REST SIT STAND\n\nUtilize esses comandos para mudar de posição. Caso se sinta cansado, talvez\nseja uma boa idéia sentar e descansar por um tempo, ou mesmo tirar um cochilo,\ncom o comando DORMIR.\n\nVeja também: DIREÇÕES, MAGIA SLEEP"
+    },
+    {
+      "command": "help stand",
+      "at": "2026-10-15T18:29:00.792876-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 213,
+      "response": "1.3.1 ACORDAR ACORDE DORMIR DURMA DESCANSAR DESCANSE SENTAR SENTE LEVANTAR LEVANTE WAKE SLEEPING REST SIT STAND\n\nUtilize esses comandos para mudar de posição. Caso se sinta cansado, talvez\nseja uma boa idéia sentar e descansar por um tempo, ou mesmo tirar um cochilo,\ncom o comando DORMIR.\n\nVeja também: DIREÇÕES, MAGIA SLEEP"
+    },
+    {
+      "command": "help commands",
+      "at": "2026-10-15T18:19:06.647874-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 11,
+      "response": "COMANDOS COMMANDS\n\nUso: comandos\n\nO comando COMANDOS fornece uma lista de todos os comandos conhecidos.\n\nCada comando listado oferecerá ajuda disponível, ao digitar AJUDA <comando>.\n\nVeja também: SOCIAIS"
+    },
+    {
+      "command": "help ac",
+      "at": "2026-10-15T18:33:47.057252-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 291,
+      "response": "\"CLASSE DE ARMADURA\" ARMADURA CA AC\n\nArmadura é tudo aquilo que protege seu corpo e minimiza os danos de ataques\nque você recebe.\n\nVocê pode consultar o valor atual de sua Classe de Armadura através do comando\nPONTOS.\n\nA cada 10 pontos de armadura, o dano recebido é reduzido em um ponto.\n\nExemplo:\n\n  Se você está usando um elmo cuja classe de armadura é 20 e você recebe um\n  dano de 10, o dano que chegaria até você seria de \"10 - (20/10)\": 8 pontos.\n\nNote que a redução de dano garantida pela armadura é aplicada sobre o dano\noriginal, e somente após isso são aplicados outros efeitos, como o de magias\nde redução de dano. Desse modo, com base no exemplo anterior, caso você\nestivesse sob efeito da magia sanctuary, o dano seria reduzido pela metade após\na redução da armadura, resultando em um dano final de apenas 4 pontos.\n\nSeus itens podem quebrar se tomarem muito dano. Para arrumar um item quebrado,\nvocê deve ir até o ferreiro. Ele cobrará 3 vezes o preço nominal do item\n(aquele que você observa ao identificar um objeto). Se o seu item ainda não\nestiver quebrado, porém já danificado, o ferreiro lhe dará um desconto e fará\no serviço pela metade do preço do item.\n\nVeja também: PONTOS, EXPERIÊNCIA\n\nDICA: Você pode normalmente emitir um comando digitando apenas suas primeiras letras."
+    },
+    {
+      "command": "help armor",
+      "at": "2026-10-15T18:34:15.613434-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 310,
+      "response": "\"MAGIA ARMOR\"\n\nUso    : lançar 'armor' <alvo>\nEfeito : -20 - nível(conjurador)/2\nDuração: 24 horas\nAcumula: Duração\nNível  : Clérigo nível 9, Mago nível 7, Paladino nível 1\n\nMagia defensiva, aumenta a classe de armadura do alvo. Quanto maior o nível do\nconjurador, maior o bônus oferecido.\n\nVeja também: ARMADURA"
+    },
+    {
+      "command": "help identify",
+      "at": "2026-10-15T18:17:59.260938-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 3,
+      "response": "\"MAGIA IDENTIFY\"\n\nUso    : lançar 'identify' <indivíduos | objeto>\nEfeito : Descreve o alvo\nDuração: Instantânea\nAcumula: Não\nNível  : Mago nível 22\n\nA magia IDENTIFY permite que o conjurador identifique as propriedades de um objeto, \ncomo tipo, dano, bônus, etc.\nSeu funcionamento é idêntico ao comando IDENTIFICAR, que, contudo, só pode ser\nutilizado por jogadores abaixo do nível 80 da primeira encarnação. Após essa\nmarca, só é possível identificar objetos através da magia IDENTIFY.\n\nVeja também: IDENTIFICAR, CREATURE KNOWLEDGE"
+    },
+    {
+      "command": "help invisibility",
+      "at": "2026-10-15T18:35:22.200220-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 338,
+      "response": "\"MAGIA INVISIBILITY\"\n\nUso    : lançar 'invisibility' <vítima | objeto>\nEfeito : Torna o alvo invisível\nDuração: (6 + (nível do conjurador)/4) h em pessoas e permanente em objetos\nAcumula: Não\nNível  : Mago nível 6\n\nTorna o alvo invisível a todos, exceto A criaturas que enxerguem alvos invisíveis,\nassim como indivíduos que estejam sob o efeito da magia DETECT INVISIBILITY.\nIndivíduos invisíveis recebem um bônus de 40 pontos na classe de armadura.\nAtacar quando se está invisível quebra imediatamente o efeito da magia.\n\nVeja também: MAGIA DETECT INVISIBILITY"
+    },
+    {
+      "command": "help locate object",
+      "at": "2026-10-15T18:35:25.205626-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 340,
+      "response": "\"MAGIA LOCATE OBJECT\"\n\nUso    : lançar 'locate object' <objeto>\nEfeito : Localiza objetos\nDuração: Instantânea\nAcumula: Não\nNível  : Mago nível 34\n\nQuando bem sucedida, essa magia lhe informa exatamente onde está localizado\ndeterminado objeto, ou o nome da pessoa que o está utilizando. Caso exista\nmais de um objeto com o mesmo nome, você obterá uma lista de vários desses \nobjetos. O número máximo de objetos que podem ser localizados simultaneamente\né igual à metade do nível do conjurador.\nPara utilizar locate object, é necessário conjurá-la a partir de um espelho\nlocalizador, artefato mágico que pode ser encontrado pelo mundo mas que também\né vendido pelo velho Albernathy, o mestre das quinquilharias de Silverthorne."
+    },
+    {
+      "command": "help offer",
+      "at": "2026-10-15T18:33:20.013423-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 273,
+      "response": "OFERENDA OFFERING\n\nUso: oferenda [corpo]\n     oferenda <quantidade> [corpo]\n     oferenda tudo\n\nOferenda é o ato de oferecer como tributo aos deuses do mundo o corpo sem vida\nde uma criatura. Como recompensa pelo sacrifício realizado, cada corpo dado em\noferta é recompensado com 50 pontos de experiência. \nOferendar um cadáver aos deuses faz com que tanto o corpo quanto os itens dentro\ndo mob desapareçam.\n\nVeja também: DEUSES"
+    },
+    {
+      "command": "help circle",
+      "at": "2026-10-15T18:34:14.109526-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 309,
+      "response": "\"CIRCLE AROUND\"\n\nCom essa habilidade, você pode apunhalar alguém mesmo depois do começo \nda luta. Você consegue dar a volta e acertar as costas de seu inimigo.\n\n*Você precisa ter a habilidade BACKSTAB para conseguir apunhalar a \npessoa.\n\nVeja também: BACKSTAB"
+    },
+    {
+      "command": "help quit",
+      "at": "2026-10-15T18:27:36.993344-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 170,
+      "response": "7.1 \"Sair do jogo (comando QUIT)\" SAIR QUIT\n\nQuando você estiver cansado de jogar, você pode deixar o jogo ao digitar SAIR.\nNão se preocupe, todos os seus itens continuarão com você após ter saído do\njogo.\n\nVeja também: CONEXÃO"
+    },
+    {
+      "command": "help language",
+      "at": "2026-10-15T18:42:00.835661-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 51,
+      "response": "LÍNGUA LINGUAGEM IDIOMA LANGUAGE\n\nUso: lingua <idioma>\n     lingua <idioma preferencial> <idioma secundário>\n\nO comando LÍNGUA é utilizado para trocar o idioma dos comandos que você\nutiliza no jogo.\n\nCaso prefira utilizar comandos preferencialmente em português, utilize:\n\n    LINGUA PORTUGUES INGLES\n\nCaso prefira escrever comandos preferencialmente em inglês, utilize:\n\n    LINGUA INGLES PORTUGUES\n\nO DeBo MUD possui versões dos comandos, em dois idiomas: INGLÊS e\nPORTUGUÊS. Por padrão todos os jogadores utilizam ambas as versões, sendo\nque um comando é inicialmente buscado na versão em português, e, caso não\nseja encontrado, é posteriormente procurado na versão em inglês. Por essa\nrazão, é possível escolher um idioma primário e um secundário.\n\nÉ possível também escolher apenas um idioma; entretanto, a escolha de apenas\num idioma para a utilização de comandos não é recomendada, por excluir as\ndemais opções.\n\nVeja também: COMANDOS, SOCIAIS"
+    }
+  ],
+  "observed_tests": [
+    {
+      "command": "score tudo",
+      "at": "2026-10-15T18:18:03.770763-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 6,
+      "response": "Você é Grebolius, o Aprendiz de Mago.\n Você está em sua 1ª encarnação, como um Mago Elfo, nível 11.\n Você tem 17 anos, 2 meses, 19 dias e 4 horas.\n Você esteve jogando durante 0 dias e 15 horas.\n Você pesa 61,68kg e mede 1,39m.\n Você morreu 3 vezes e não caiu em nenhuma armadilha de morte.\n\n[Pontos e atributos]------------------------------------------------------------\n\n          Vida: {<<<<<>>>>>}  67 de 67 \n          Mana: {<<<<<>>>>>} 170 de 170\n     Movimento: {<<<<<>>>>>} 101 de 101\n\n   Experiência: {<<<<<>>>--} 152.098\n Próximo nível: {<<<<<>>>>>}  47.902           Pontos de aventura: 0\n\n   Alinhamento: {<<<<<>----}   222 - Você é um pouco bom.\n\n         Força: 10       Constituição: 10                  Acerto: 0 \n     Sabedoria: 17       Inteligência: 17                    Dano: 1 \n      Destreza: 15            Carisma: 9       Classe de Armadura: 44\n\n[Ouro e equipamentos]-----------------------------------------------------------\n\n Você está carregando 13 itens, num peso total de 101 kg.\n Você pode carregar no máximo 17 itens e um peso total de 115 kg.\n\n         Banco: {----------}   0\n    Carregando: {<<<<<>>>>>} 612 - Total: 612\n\n[Situação atual]----------------------------------------------------------------\n\n Você está em pé.\n Você se sente protegido.\n \n[ Duração ] \n armor                 (   5 horas ) +25 em ARMADURA"
+    },
+    {
+      "command": "tips",
+      "at": "2026-10-15T18:18:22.429484-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 8,
+      "response": "Você verá as dicas do jogo."
+    },
+    {
+      "command": "identificar anel",
+      "at": "2026-10-15T18:19:03.643175-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 9,
+      "response": "DICA: Você não irá recuperar sua saúde enquanto estiver com fome ou com sede. Se ficar muito tempo em inanição, tomará dano e poderá até morrer.\n\nBarlow vai para oeste.\n\nComo?!?"
+    },
+    {
+      "command": "score tudo",
+      "at": "2026-10-15T18:19:05.145815-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 10,
+      "response": "Você é Grebolius, o Aprendiz de Mago.\n Você está em sua 1ª encarnação, como um Mago Elfo, nível 11.\n Você tem 17 anos, 2 meses, 19 dias e 5 horas.\n Você esteve jogando durante 0 dias e 15 horas.\n Você pesa 61,68kg e mede 1,39m.\n Você morreu 3 vezes e não caiu em nenhuma armadilha de morte.\n\n[Pontos e atributos]------------------------------------------------------------\n\n          Vida: {<<<<<>>>>>}  67 de 67 \n          Mana: {<<<<<>>>>>} 170 de 170\n     Movimento: {<<<<<>>>>>} 101 de 101\n\n   Experiência: {<<<<<>>>--} 152.098\n Próximo nível: {<<<<<>>>>>}  47.902           Pontos de aventura: 0\n\n   Alinhamento: {<<<<<>----}   222 - Você é um pouco bom.\n\n         Força: 10       Constituição: 10                  Acerto: 0 \n     Sabedoria: 17       Inteligência: 17                    Dano: 1 \n      Destreza: 15            Carisma: 9       Classe de Armadura: 44\n\n[Ouro e equipamentos]-----------------------------------------------------------\n\n Você está carregando 13 itens, num peso total de 101 kg.\n Você pode carregar no máximo 17 itens e um peso total de 115 kg.\n\n         Banco: {----------}   0\n    Carregando: {<<<<<>>>>>} 612 - Total: 612\n\n[Situação atual]----------------------------------------------------------------\n\n Você está em pé.\n Você se sente protegido.\n \n[ Duração ] \n armor                 (   4 horas ) +25 em ARMADURA"
+    },
+    {
+      "command": "identify anel",
+      "at": "2026-10-15T18:20:07.409441-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 14,
+      "response": "DICA: O mundo de Devil's Bob possui regras feitas para organizar o jogo. Digite DIRETRIZES para vê-las. Respeite e obedeça.\n\nVocê se sente informado:\nObjeto: 'um anel arcano' Tipo: ARMADURA\nO item é: BRILHO ABENÇOADO ANTI-MAU NOBITS \nPeso: 14, Valor: 1000, Aluguel: 3, Nível: 90, Encarnação: 3\nPode ser vestido em: PEGAR DEDO \nMelhora sua armadura por 0.\n\nIsto pode te afetar :\n   Modifica: INTELIGÊNCIA por 1\n   Modifica: SABEDORIA por 1\n   Modifica: CONSTITUIÇÃO por 1\n   Modifica: MÁX-MANA por 116"
+    },
+    {
+      "command": "score tudo",
+      "at": "2026-10-15T18:20:08.911858-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 15,
+      "response": "Você é Grebolius, o Aprendiz de Mago.\n Você está em sua 1ª encarnação, como um Mago Elfo, nível 11.\n Você tem 17 anos, 2 meses, 19 dias e 6 horas.\n Você esteve jogando durante 0 dias e 15 horas.\n Você pesa 61,68kg e mede 1,39m.\n Você morreu 3 vezes e não caiu em nenhuma armadilha de morte.\n\n[Pontos e atributos]------------------------------------------------------------\n\n          Vida: {<<<<<>>>>>}  67 de 67 \n          Mana: {<<<<<>>>>>} 170 de 170\n     Movimento: {<<<<<>>>>>} 101 de 101\n\n   Experiência: {<<<<<>>>--} 152.098\n Próximo nível: {<<<<<>>>>>}  47.902           Pontos de aventura: 0\n\n   Alinhamento: {<<<<<>----}   222 - Você é um pouco bom.\n\n         Força: 10       Constituição: 10                  Acerto: 0 \n     Sabedoria: 17       Inteligência: 17                    Dano: 1 \n      Destreza: 15            Carisma: 9       Classe de Armadura: 44\n\n[Ouro e equipamentos]-----------------------------------------------------------\n\n Você está carregando 13 itens, num peso total de 101 kg.\n Você pode carregar no máximo 17 itens e um peso total de 115 kg.\n\n         Banco: {----------}   0\n    Carregando: {<<<<<>>>>>} 612 - Total: 612\n\n[Situação atual]----------------------------------------------------------------\n\n Você está em pé.\n Você se sente protegido.\n \n[ Duração ] \n armor                 (   3 horas ) +25 em ARMADURA"
+    },
+    {
+      "command": "sleep",
+      "at": "2026-10-15T18:25:22.710261-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 93,
+      "response": "Você se deita e dorme."
+    },
+    {
+      "command": "eat pao",
+      "at": "2026-10-15T18:31:55.424391-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 268,
+      "response": "Você come um pão recheado."
+    },
+    {
+      "command": "drink cantil",
+      "at": "2026-10-15T18:31:56.927447-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 269,
+      "response": "Você bebe água cristalina.\nVocê não sente mais sede."
+    },
+    {
+      "command": "sleep",
+      "at": "2026-10-15T18:31:58.429765-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 270,
+      "response": "Você se deita e dorme."
+    },
+    {
+      "command": "score tudo",
+      "at": "2026-10-15T18:41:18.631044-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 3,
+      "response": "Você é Grebolius, o Aprendiz de Mago.\n Você está em sua 1ª encarnação, como um Mago Elfo, nível 11.\n Você tem 17 anos, 2 meses, 19 dias e 23 horas.\n Você esteve jogando durante 0 dias e 16 horas.\n Você pesa 61,68kg e mede 1,39m.\n Você morreu 3 vezes e não caiu em nenhuma armadilha de morte.\n\n[Pontos e atributos]------------------------------------------------------------\n\n          Vida: {<<<<<>>>>>}  67 de 67 \n          Mana: {<<<<<>>>>>} 170 de 170\n     Movimento: {<<<<<>>>>>} 101 de 101\n\n   Experiência: {<<<<<>>>--} 152.098\n Próximo nível: {<<<<<>>>>>}  47.902           Pontos de aventura: 0\n\n   Alinhamento: {<<<<<>----}   222 - Você é um pouco bom.\n\n         Força: 10       Constituição: 10                  Acerto: 0 \n     Sabedoria: 17       Inteligência: 17                    Dano: 1 \n      Destreza: 15            Carisma: 9       Classe de Armadura: 19\n\n[Ouro e equipamentos]-----------------------------------------------------------\n\n Você está carregando 12 itens, num peso total de 92 kg.\n Você pode carregar no máximo 17 itens e um peso total de 115 kg.\n\n         Banco: {----------}   0\n    Carregando: {<<<<<>>>>>} 612 - Total: 612\n\n[Situação atual]----------------------------------------------------------------\n\n Você está dormindo.\n Você está ficando com fome."
+    },
+    {
+      "command": "inv",
+      "at": "2026-10-15T18:41:20.136097-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 4,
+      "response": "Você está carregando:\num cantil\num pão recheado\num bracelete de conchas (novo)(+44L)\n(x3) um pergaminho de sabedoria\numa tocha\numa brilhante espada de novato ..Isso tem uma pequena aura! (novo)\numa poção amarela de detectar invisibilidade\numa mochila\num brilhante punhal de novato ..Isso tem uma pequena aura! (novo)\num anel arcano ..Isso tem uma pequena aura! (novo)(+2E)"
+    },
+    {
+      "command": "eat pao",
+      "at": "2026-10-15T18:42:44.389434-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 74,
+      "response": "Você come um pão recheado."
+    },
+    {
+      "command": "drink cantil",
+      "at": "2026-10-15T18:42:45.891577-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 75,
+      "response": "Você bebe água cristalina.\nVocê não sente mais sede."
+    },
+    {
+      "command": "tips",
+      "at": "2026-10-15T18:42:47.393406-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 76,
+      "response": "DICA: Você pode utilizar o comando SAÍDAS para ver as saídas disponíveis em sua sala.\nVocê não verá mais as dicas do jogo."
+    },
+    {
+      "command": "tips",
+      "at": "2026-10-15T18:44:58.403491-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 77,
+      "response": "Você verá as dicas do jogo."
+    },
+    {
+      "command": "alias cxhelp_1817",
+      "at": "2026-10-15T18:44:59.905968-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 78,
+      "response": "Atalho apagado."
+    },
+    {
+      "command": "term 22 80",
+      "at": "2026-10-15T18:45:01.407698-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 79,
+      "response": "Muito bem, agora seu terminal está configurado para 22 linhas e 80 colunas."
+    },
+    {
+      "command": "score tudo",
+      "at": "2026-10-15T18:45:02.909870-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 80,
+      "response": "Você é Grebolius, o Aprendiz de Mago.\n Você está em sua 1ª encarnação, como um Mago Elfo, nível 11.\n Você tem 17 anos, 2 meses, 20 dias e 2 horas.\n Você esteve jogando durante 0 dias e 16 horas.\n Você pesa 61,68kg e mede 1,39m.\n Você morreu 3 vezes e não caiu em nenhuma armadilha de morte.\n\n[Pontos e atributos]------------------------------------------------------------\n\n          Vida: {<<<<<>>>>>}  67 de 67 \n          Mana: {<<<<<>>>>>} 170 de 170\n     Movimento: {<<<<<>>>>>} 101 de 101\n\n   Experiência: {<<<<<>>>--} 152.098\n Próximo nível: {<<<<<>>>>>}  47.902           Pontos de aventura: 0\n\n   Alinhamento: {<<<<<>----}   222 - Você é um pouco bom.\n\n         Força: 10       Constituição: 10                  Acerto: 0 \n     Sabedoria: 17       Inteligência: 17                    Dano: 1 \n      Destreza: 15            Carisma: 9       Classe de Armadura: 19\n\n[Ouro e equipamentos]-----------------------------------------------------------\n\n Você está carregando 11 itens, num peso total de 84 kg.\n Você pode carregar no máximo 17 itens e um peso total de 115 kg.\n\n         Banco: {----------}   0\n    Carregando: {<<<<<>>>>>} 612 - Total: 612\n\n[Situação atual]----------------------------------------------------------------\n\n Você está em pé."
+    },
+    {
+      "command": "inv",
+      "at": "2026-10-15T18:45:04.412703-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 81,
+      "response": "Você está carregando:\num cantil\num bracelete de conchas (novo)(+44L)\n(x3) um pergaminho de sabedoria\numa tocha\numa brilhante espada de novato ..Isso tem uma pequena aura! (novo)\numa poção amarela de detectar invisibilidade\numa mochila\num brilhante punhal de novato ..Isso tem uma pequena aura! (novo)\num anel arcano ..Isso tem uma pequena aura! (novo)(+2E)"
+    },
+    {
+      "command": "save",
+      "at": "2026-10-15T18:45:05.915138-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 82,
+      "response": "Salvando os seus atalhos."
+    },
+    {
+      "command": "sleep",
+      "at": "2026-10-15T18:45:07.417251-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 83,
+      "response": "Você se deita e dorme."
+    },
+    {
+      "command": "score tudo",
+      "at": "2026-10-15T18:45:08.920234-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 84,
+      "response": "Você é Grebolius, o Aprendiz de Mago.\n Você está em sua 1ª encarnação, como um Mago Elfo, nível 11.\n Você tem 17 anos, 2 meses, 20 dias e 2 horas.\n Você esteve jogando durante 0 dias e 16 horas.\n Você pesa 61,68kg e mede 1,39m.\n Você morreu 3 vezes e não caiu em nenhuma armadilha de morte.\n\n[Pontos e atributos]------------------------------------------------------------\n\n          Vida: {<<<<<>>>>>}  67 de 67 \n          Mana: {<<<<<>>>>>} 170 de 170\n     Movimento: {<<<<<>>>>>} 101 de 101\n\n   Experiência: {<<<<<>>>--} 152.098\n Próximo nível: {<<<<<>>>>>}  47.902           Pontos de aventura: 0\n\n   Alinhamento: {<<<<<>----}   222 - Você é um pouco bom.\n\n         Força: 10       Constituição: 10                  Acerto: 0 \n     Sabedoria: 17       Inteligência: 17                    Dano: 1 \n      Destreza: 15            Carisma: 9       Classe de Armadura: 19\n\n[Ouro e equipamentos]-----------------------------------------------------------\n\n Você está carregando 11 itens, num peso total de 84 kg.\n Você pode carregar no máximo 17 itens e um peso total de 115 kg.\n\n         Banco: {----------}   0\n    Carregando: {<<<<<>>>>>} 612 - Total: 612\n\n[Situação atual]----------------------------------------------------------------\n\n Você está dormindo."
+    },
+    {
+      "command": "save",
+      "at": "2026-10-15T18:45:10.422002-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 85,
+      "response": "Salvando os seus atalhos."
+    }
+  ],
+  "tips": [
+    {
+      "text": "Você não irá recuperar sua saúde enquanto estiver com fome ou com sede. Se ficar muito tempo em inanição, tomará dano e poderá até morrer.",
+      "at": "2026-10-15T18:19:03.643175-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 9
+    },
+    {
+      "text": "O mundo de Devil's Bob possui regras feitas para organizar o jogo. Digite DIRETRIZES para vê-las. Respeite e obedeça.",
+      "at": "2026-10-15T18:20:07.409441-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 14
+    },
+    {
+      "text": "Se ouvir o termo MOB, entenda por Monstro ou Criatura. Uma criatura é um personagem controlado pelo jogo.",
+      "at": "2026-10-15T18:22:49.682269-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 21
+    },
+    {
+      "text": "Se você possui uma idéia que possa melhorar nosso mundo, use o comando IDÉIA para sugerí-la.",
+      "at": "2026-10-15T18:22:49.682269-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 21
+    },
+    {
+      "text": "Se você encontrar um erro ortográfico no jogo que precise ser corrigido, utilize o comando ERRATA para reportá-lo.",
+      "at": "2026-10-15T18:23:46.294230-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 56
+    },
+    {
+      "text": "Os deuses são os responsáveis pela criação e manutenção de nosso jogo. Respeite-os, pois é graças a eles que este mundo existe.",
+      "at": "2026-10-15T18:24:46.823757-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 76
+    },
+    {
+      "text": "Temos uma página no Facebook: fb.com/DeBoMUD",
+      "at": "2026-10-15T18:25:46.246007-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 108
+    },
+    {
+      "text": "Para desabilitar essas dicas, simplesmente digite DICAS.",
+      "at": "2026-10-15T18:30:43.300187-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 222
+    },
+    {
+      "text": "Se você for derrubado em uma luta, levante-se rápido! Você não pode atacar ou defender nessa posição.",
+      "at": "2026-10-15T18:30:46.303997-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 224
+    },
+    {
+      "text": "Você irá automaticamente ganhar um nível ao atingir os pontos de experiência requeridos.",
+      "at": "2026-10-15T18:31:47.410558-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 263
+    },
+    {
+      "text": "Digite MDD para ver as Mensagens Do Dia.",
+      "at": "2026-10-15T18:33:20.013423-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 273
+    },
+    {
+      "text": "Você pode normalmente emitir um comando digitando apenas suas primeiras letras.",
+      "at": "2026-10-15T18:33:47.057252-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 291
+    },
+    {
+      "text": "Você pode identificar itens utilizando o comando IDENTIFICAR. Lembre-se que ele funciona apenas até o nível 80.",
+      "at": "2026-10-15T18:34:50.637744-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 317
+    },
+    {
+      "text": "Você pode ver uma lista completa com a maioria dos comandos disponíveis para você digitando COMANDOS.",
+      "at": "2026-10-15T18:35:46.238730-03:00",
+      "source_file": "maquina_tip_identify_20261015_181720.jsonl",
+      "source_line": 354
+    },
+    {
+      "text": "Você pode utilizar o comando SAÍDAS para ver as saídas disponíveis em sua sala.",
+      "at": "2026-10-15T18:42:47.393406-03:00",
+      "source_file": "maquina_tip_identify_20261015_184005.jsonl",
+      "source_line": 76
+    }
+  ]
+}

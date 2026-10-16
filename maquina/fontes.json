@@ -1,0 +1,34 @@
+{
+  "imported_on": "2026-10-15",
+  "scope": "maquina",
+  "sources": [
+    {
+      "file": "commands.hlp",
+      "original_path": "C:\\Users\\alura\\Downloads\\commands.hlp",
+      "sha256": "4206bdcb7790cef42e76377ae952e084c531a3cb5452c68500e3fc6276275c87",
+      "encoding": "utf-8-sig",
+      "topics": 99
+    },
+    {
+      "file": "info.hlp",
+      "original_path": "C:\\Users\\alura\\Downloads\\info.hlp",
+      "sha256": "a7c8e7fc9cfb4694ecc725de88c1185b46e7eb5edf4844fc90243fa755781428",
+      "encoding": "utf-8-sig",
+      "topics": 19
+    },
+    {
+      "file": "spells.hlp",
+      "original_path": "C:\\Users\\alura\\Downloads\\spells.hlp",
+      "sha256": "c3e37b48bed2b776d2f12a72bc7af8b66f07d6ee4f14ac295f94471cf5c1e699",
+      "encoding": "utf-8-sig",
+      "topics": 44
+    },
+    {
+      "file": "A Historia do Mundo.txt",
+      "original_path": "C:\\Users\\alura\\Downloads\\A Historia do Mundo.txt",
+      "sha256": "88818cfa037b346051007d6a48af46ace5f19adad51e7c2db7b08b438d844b40",
+      "encoding": "utf-8-sig",
+      "treatment": "Texto integral; paginação removida e linhas recompostas em parágrafos; grafia original preservada."
+    }
+  ]
+}

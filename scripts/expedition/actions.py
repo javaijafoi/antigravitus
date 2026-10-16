@@ -281,6 +281,8 @@ class Ambient:
             ctx.record('ambient_transit',room=ctx.room.title,entities=[asdict(e) for e in ctx.room.entities],
                        decision='Seguir o destino sem iniciar limpeza ou coleta oportunista.')
             return Result(Status.DONE,'Ambientação de trânsito concluída; ameaças reativas continuam monitoradas.')
+        if variant=='observe':
+            return Result(Status.DONE,'Observação de chegada concluída.')
         if variant!='clear':return Result(Status.PAUSED,'Variação de ambientação desconhecida.')
         for _ in range(ctx.config.max_room_encounters):
             unknown=[e for e in ctx.room.entities if e.kind in ('unknown','player') or not e.verified]

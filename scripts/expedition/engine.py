@@ -136,7 +136,18 @@ class Expedition:
                     return Camp().execute(ctx)
                 if ctx.in_combat:return Fight().retreat(ctx,'Agressão inesperada antes da próxima ação.')
                 ambient=Ambient().execute(ctx,'clear')
-                if not ambient.ok:return ambient
+                if not ambient.ok:
+                    # Se encontrou bicho risky/danger e há sala anterior observada, recua e faz contorno sem parar a expedição!
+                    if ('Avaliação desfavorável' in ambient.detail or 'entidade não classificada' in ambient.detail) and ctx.graph.previous and ctx.graph.previous[1]==ctx.room.node_id:
+                        origin_id,risky_id,back_dir=ctx.graph.previous
+                        ctx.graph.avoided_nodes.add(risky_id)
+                        for d in ctx.room.exits:
+                            self.attempted.add((risky_id,d))
+                        ctx.record('detour_risky_room',avoided_node=risky_id,room=ctx.room.title,back_dir=back_dir)
+                        back_res=Move().execute(ctx,back_dir,safety=True,arrival='observe')
+                        if back_res.ok:
+                            continue
+                    return ambient
                 # Survey potential near-frontline shelters without ending the day early.
                 if ctx.room.quiet() and (ctx.room.known_shelter or len(ctx.room.exits)<=1):
                     for _ in range(max(0,3-ctx.room.clean_checks)):
@@ -149,13 +160,13 @@ class Expedition:
                     hinted=hint.get('exits',{}).get({'e':'l','w':'o'}.get(d,d),hint.get('exits',{}).get(d))
                     other=next((r for r in ctx.map_data.get('rooms',[]) if r['id']==hinted),{})
                     if ctx.room.city is False and other.get('layer')=='superficie' and ('midgaard' in norm(other.get('zone','')) or 'templo' in norm(other.get('zone',''))):self.attempted.add((ctx.room.node_id,d))
-                direction=next((d for d in ctx.room.exits if (ctx.room.node_id,d) not in self.attempted),None)
+                direction=next((d for d in ctx.room.exits if (ctx.room.node_id,d) not in self.attempted and (ctx.room.node_id,d) not in ctx.graph.avoided_edges),None)
                 if direction is None:
                     frontier=self.frontier_path()
                     if not frontier:return Camp().execute(ctx)
                     direction=frontier[0]
                 key=(ctx.room.node_id,direction);self.attempted.add(key)
-                result=Move().execute(ctx,direction,arrival='clear')
+                result=Move().execute(ctx,direction,arrival='observe')
                 if result.status==Status.REJECTED:
                     self.no_progress+=1
                     ctx.observe()
@@ -171,7 +182,156 @@ class Expedition:
     def frontier_path(self):
         ctx=self.ctx;candidates=[]
         for node,room in ctx.graph.rooms.items():
-            if any((node,direction) not in self.attempted for direction in room.exits):
+            if node in ctx.graph.avoided_nodes:continue
+            if any((node,direction) not in self.attempted and (node,direction) not in ctx.graph.avoided_edges for direction in room.exits):
                 path=ctx.graph.path(ctx.room.node_id,node)
                 if path:candidates.append(path)
         return min(candidates,key=len,default=None)
+
+
+class HorizonExpander:
+    """Modo Expandir Horizontes: transita rápido em salas conhecidas e cataloga profundamente salas inéditas em BFS/DFS dinâmico, contornando bichos risky/danger sem parar a expedição até atingir a reserva real de MV."""
+    DETAIL_KEYWORDS = ('palavras','figura','parede','inscricao','placa','estatua','garrafa','altar','tabuleiro','portao','aviso','buraco','fenda')
+    STOPWORDS = {'um','uma','os','as','esta','aqui','andando','por','olhando','para','voce','com','de','da','do','no','na','em','busca','desafios','segue','velho','apressado','pequeno','grande','muito','parece','coisa','assustadora'}
+    OPPOSITE = {'n':'s','s':'n','e':'w','w':'e','u':'d','d':'u'}
+
+    def __init__(self,ctx,min_mv=25):
+        self.ctx=ctx
+        self.min_mv=min_mv
+        self.cataloged_rooms=[]
+        self.cataloged_details=[]
+        self.cataloged_entities=[]
+        self.cataloged_fingerprints=set()
+        self.attempted_edges=set()
+        self.danger_edges=set()
+
+    def dynamic_mv_reserve(self):
+        ctx=self.ctx
+        nearest=ctx.graph.nearest_camp(ctx.room.node_id,True) if ctx.room else None
+        camp_steps=nearest[0] if nearest else 6
+        step_cost=max(ctx.step_cost,1)
+        return max(self.min_mv,camp_steps*step_cost+ctx.profile.escape_mv)
+
+    def is_known_room(self,room):
+        if room.fingerprint in self.cataloged_fingerprints:
+            return True
+        if room.hint_id:
+            hint=next((r for r in self.ctx.map_data.get('rooms',[]) if r.get('id')==room.hint_id),None)
+            if hint and not hint.get('unresolved_exits'):
+                return True
+        return False
+
+    def catalog_current_room(self,tag='',came_from_dir=None,origin_node=None):
+        ctx=self.ctx
+        room=ctx.observe()
+        self.cataloged_fingerprints.add(room.fingerprint)
+        exits_txt=ctx.send('exits')
+        from .observations import named_exits,plain,assess_consider
+        ex_map=named_exits(exits_txt)
+        for d,dest_name in ex_map.items():
+            if d in room.exits:
+                room.exits[d]=dest_name
+        entry={
+            'tag':tag or room.node_id,
+            'title':room.title,
+            'exits':dict(ex_map),
+            'raw_description':plain(room.raw).strip(),
+            'entities':[e.description for e in room.entities],
+            'ground':[g.name for g in room.ground],
+        }
+        self.cataloged_rooms.append(entry)
+        desc_norm=norm(room.raw)
+        for kw in self.DETAIL_KEYWORDS:
+            if kw in desc_norm:
+                res=ctx.send(f'look {kw}')
+                if not rejection(res):
+                    self.cataloged_details.append({'room':room.title,'keyword':kw,'response':plain(res).strip()})
+        for ent in list(room.entities):
+            target=ent.target
+            if not target:
+                words=[w for w in re.findall(r'[a-z]+',norm(ent.description)) if len(w)>2 and w not in self.STOPWORDS]
+                target=words[-1] if words else ''
+            if target:
+                l_res=ctx.send(f'look {target}')
+                c_res=ctx.send(f'consider {target}')
+                verdict=assess_consider(c_res)
+                self.cataloged_entities.append({
+                    'room':room.title,
+                    'description':ent.description,
+                    'target':target,
+                    'look':plain(l_res).strip(),
+                    'consider':plain(c_res).strip(),
+                    'verdict':verdict,
+                })
+                if verdict in ('danger','risky') and ent.kind!='friendly':
+                    # Marca o nó e a aresta para contorno (sem parar a expedição!) e recua para continuar por outras rotas
+                    ctx.graph.avoided_nodes.add(room.node_id)
+                    if origin_node and came_from_dir:
+                        self.danger_edges.add((origin_node,came_from_dir))
+                        ctx.graph.avoided_edges.add((origin_node,came_from_dir))
+                    for d in room.exits:
+                        self.attempted_edges.add((room.node_id,d))
+                    ctx.record('horizon_detour',room=room.title,target=target,verdict=verdict)
+                    if came_from_dir and self.OPPOSITE.get(came_from_dir) in room.exits:
+                        Move().execute(ctx,self.OPPOSITE[came_from_dir],safety=True,arrival='observe')
+                    return room,ex_map
+                if ent.kind=='hostile' and ent.verified and verdict=='favorable':
+                    Fight().execute(ctx,ent)
+        ctx.record('horizon_catalog',room=room.title,exits=ex_map,details=len(self.cataloged_details),entities=len(self.cataloged_entities))
+        return room,ex_map
+
+    def next_frontier_path(self):
+        ctx=self.ctx
+        candidates=[]
+        for node,room in ctx.graph.rooms.items():
+            if node in ctx.graph.avoided_nodes:
+                continue
+            for d in room.exits:
+                if (node,d) not in self.attempted_edges and (node,d) not in self.danger_edges:
+                    if node==ctx.room.node_id:
+                        return [d]
+                    path=ctx.graph.path(ctx.room.node_id,node)
+                    if path:
+                        candidates.append(path+[d])
+        return min(candidates,key=len,default=None)
+
+    def execute(self,directions=()):
+        ctx=self.ctx
+        ctx.fresh()
+        if not self.is_known_room(ctx.room):
+            self.catalog_current_room('start')
+        else:
+            self.cataloged_fingerprints.add(ctx.room.fingerprint)
+
+        queue=list(directions)
+        while ctx.commands<ctx.config.max_commands and ctx.io.now()-ctx.started<ctx.config.max_seconds:
+            ctx.fresh()
+            if (ctx.vitals.mv or 0)<=self.dynamic_mv_reserve() or ctx.in_combat:
+                break
+            if not queue:
+                path=self.next_frontier_path()
+                if not path:
+                    break
+                queue=list(path)
+            d=queue.pop(0)
+            origin=ctx.room.node_id
+            self.attempted_edges.add((origin,d))
+            target_node=ctx.graph.edges.get((origin,d))
+            target_known=bool(target_node and self.is_known_room(ctx.graph.rooms[target_node]))
+            res=Move().execute(ctx,d,arrival='transit' if target_known else 'observe')
+            if not res.ok:
+                queue.clear()
+                continue
+            if not self.is_known_room(ctx.room):
+                self.catalog_current_room(f'step_{d}',came_from_dir=d,origin_node=origin)
+                if ctx.room.node_id==origin:
+                    # Recuou de bicho risky/danger: limpa a fila atual para recalcular contorno (next_frontier_path)
+                    queue.clear()
+        return Result(Status.DONE,'Horizontes expandidos e catalogados até o limite de segurança.',{
+            'rooms':self.cataloged_rooms,
+            'details':self.cataloged_details,
+            'entities':self.cataloged_entities,
+        })
+
+
+
