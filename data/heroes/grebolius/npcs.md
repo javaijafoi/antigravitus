@@ -287,3 +287,24 @@ Fonte: [dossiê primário do Dia 96](evidence/dia96.json).
 | **O Ferreiro** | `uma espada longa` militar | **240 moedas de ouro** | Excelente cotação de armamento marcial. |
 
 
+
+
+## Capítulo 1 (Dias 101 a 111) — Vendas, quests e a armadura amaldiçoada
+
+### Armeiro de Midgaard (Loja de Armaduras) — corrigido
+- **Compra apenas armaduras**: "Eu compro apenas armaduras... Vá embora!" (recusa espadas e afins).
+- Paga **8.500** pela **Armadura da Torre Negra** e **150** pela armadura de peão.
+- **Tem caixa finito**: depois de pagar cerca de três armaduras (≈25.500), passa a responder "Isso é caro demais para mim - Tente um feiticeiro!". **É limite de dinheiro, não o item** — testado e confirmado no Dia 108 (comprou a armadura de peão normalmente).
+- **`sell [#] <item>`** vende vários; **`value <item>`** cota antes.
+
+### Feiticeiro (Loja de Magias) — corrigido
+- **Não compra armaduras**: "Eu não compro esse tipo de coisa." Compra **bastões/cajados**.
+- Vende pergaminhos: retorno (9.202), **remover maldições (8.509)**, identificação (4.601).
+- **As paredes da loja bloqueiam magia**: recitar pergaminho lá dentro falha ("As paredes desta sala parecem impedir você"). Recitar **do lado de fora**.
+
+### Mago Aventureiro e Mestre da Guilda dos Magos
+- O **Mago Aventureiro** (Bar dos Magos) inicia/reinicia **Dicas Mágicas** com `say sim`; depois da entrega do pergaminho só dá falas de sabor.
+- A **Mestre da Guilda** (Laboratório dos Magos) estuda um livro e não deu instrução. O laboratório tem **escada para baixo → esgotos**.
+
+### Pacificador (Praça do Templo)
+- Inicia/reinicia **Problemas Agrícolas**. Ele **fala sozinho quando o personagem permanece na sala**; responder `say sim` engata a missão.

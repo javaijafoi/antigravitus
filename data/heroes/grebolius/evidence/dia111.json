@@ -1,0 +1,17 @@
+{
+  "hero_id": "grebolius",
+  "day": 111,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "sources": [
+    "session_live_dia111_*.log",
+    "transcript_dia111_*.jsonl"
+  ],
+  "summary": {
+    "prep_doctrine": "Criada a diretiva de jogo (diretiva_de_jogo.md) e APLICADA: 'cast armor' ate pegar -> 'Voce sente alguem te protegendo', CA 75 (+27), duracao 49 horas. Comida comprada (4 paes a 6) e sede resolvida na fonte.",
+    "spells": "Lista real de magias (nivel 15): armor 99, burning hands 99, magic missile 99, chill touch 95, invisibility 97, detects 95, shocking grasp 10 (nao usar). 27 sessoes de treino; proximas: 16 detect poison, 20 lightning bolt.",
+    "hunting": "Com armadura arcana ativa e as palavras-chave certas, o cacador fez 7 abates em 15 ciclos no milharal (antes: 1-2 sem preparo).",
+    "docs_updated": "plano_aventureira.md, missoes.md, npcs.md e conhecimento.md receberam secoes datadas do Capitulo 1 (rotas, economia da armadura amaldicoada, correcao do armeiro/feiticeiro, gatilhos de autoquest e a doutrina de combate). Historico antigo preservado, sem reescrita.",
+    "state": "Grau 15, 13.554 de ouro, 79/79, armadura arcana ativa, no milharal."
+  }
+}

@@ -120,3 +120,14 @@ Se surgir uma oportunidade real ligada ao Reino Livre ou um compromisso efetivam
 ## Prioridade após a interrupção do Dia 93
 
 Em nova sessão autorizada, verificar primeiro o estado real: última posição respondida foi Uma Ramificação ao Sul, com mico ferido ainda sem desfecho. Não supor save, sono ou conservação dos efeitos. Confirmar comida, água, equipamento e retirada. A ordem atual do usuário foi caçar na Área dos Novatos por até dois dias; esse limite foi atingido, com o segundo dia interrompido. Explorações ou nova conexão posteriores precisam de nova autorização. Não tratar as missões oficiais como concluídas por causa da contagem de abates.
+
+
+## ATUALIZAÇÃO — Season 02, Capítulo 1 (Dias 101 a 111)
+
+> A seção 1 acima está congelada no Dia 60 (nível 8, 52 de vida, wimpy 13). **Estes são os números vigentes.**
+
+- **Grau 15**, vida máxima **79**, mana máxima **215**, movimento **105**, ouro **~13.554**, **wimpy 30**, **4 mortes**.
+- **A unidade de trabalho mudou:** a Season 02 corre por **capítulos** (`capitulos.json`), não por dias. O capítulo fecha quando o objetivo é cumprido; dormir encerra a sessão, não o capítulo.
+- **Armadura arcana é obrigatória** antes de sair: `cast 'armor'` (99%) → CA 75, +27, duração observada de 49 h. Conferir em `score` e recastar.
+- **Magias de dano**: `burning hands` (99%) é a principal; `magic missile` (99%) a reserva; `chill touch` (95%) para alvos resistentes a fogo; **`shocking grasp` está a 10% — não usar**. **27 sessões de treino** guardadas; próximas magias: 16 detect poison, **20 lightning bolt**.
+- A **diretiva de jogo** consolidada está em `diretiva_de_jogo.md`.

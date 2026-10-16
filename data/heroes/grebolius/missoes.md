@@ -33,3 +33,16 @@ Estados: 🔎 Descoberta | ▶️ Ativa | ⏸️ Adiada | ⛔ Bloqueada | ✅ Co
 ## Dias 92–93 — foco autorizado na Área dos Novatos
 
 19 abates confirmados (7 monstros novatos, 6 insetos, 3 micos e 3 zumbis). Isso é progresso observado de combate, não uma confirmação oficial de conclusão de Limpando Monstros. Problemas Agrícolas não teve avanço nesta jornada. O Dia 93 terminou em interrupção da conexão, com mico ferido e áreas não conferidas; retomar exige primeiro verificar o estado real. Ver [Dia 92](evidence/dia92.json) e [Dia 93](evidence/dia93.json).
+
+
+## Season 02, Capítulo 1 — estado das missões (Dias 101 a 111)
+
+| Missão | Estado | Observação |
+| --- | --- | --- |
+| **Problemas Agrícolas** | **em andamento** | Reiniciada no Dia 104 com o Pacificador: o gatilho é **`say sim` enquanto se permanece na sala dele** ("Você começa a participar da aventura"). Alvo: monstros do milharal, a leste de Jareth. Cerca de 13 abates somados; **o contador não é exibido pelo servidor**. |
+| **Dicas Mágicas** | **em andamento** | Reiniciada no Dia 101 pelo Mago Aventureiro (`say sim`). Um pergaminho entregue; **sem próxima instrução declarada**. Pista: Laboratório dos Magos → escada abaixo → esgotos. |
+| Limpando Monstros | não retomada | segue como pendência antiga |
+
+**Regra que custou caro:** morrer **falha as autoquests** ("Você falhou em suas aventuras!"). Para retomar, é preciso voltar ao NPC e responder `sim` de novo.
+
+**Ajuda útil:** `help autoquest` funciona (em inglês; `ajuda` não). `tips` é alternância e ficou **ligado**.

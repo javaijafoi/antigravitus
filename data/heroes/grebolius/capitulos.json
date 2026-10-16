@@ -146,7 +146,8 @@
         106,
         107,
         108,
-        109
+        109,
+        111
       ],
       "parts": [
         {
@@ -262,6 +263,19 @@
               "document": "evidence/dia109.json",
               "day": 109,
               "note": "Dia 109: queda do servidor do MUD (porta 4000 inacessivel), com texto do erro e teste de rede; personagem salva no Templo."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 111,
+          "summary": "Diretiva de jogo criada e aplicada: armadura arcana ligada (CA 75, 49h), comida e agua repostas. Lista real de magias conferida (burning hands 99, armor 99; shocking grasp 10 nao usar; 27 treinos). Com preparo, 7 abates no milharal em 15 ciclos. Os markdowns do heroi foram atualizados com secoes datadas do capitulo.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia111.json",
+              "day": 111,
+              "note": "Dia 111: diretiva de jogo criada e aplicada (armadura arcana ativa), magias conferidas, 7 abates e quatro documentos do heroi atualizados."
             }
           ],
           "date": "2026-10-16"

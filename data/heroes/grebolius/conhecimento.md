@@ -436,3 +436,32 @@ Fonte: [dossiê primário do Dia 96](evidence/dia96.json).
 
 
 
+
+
+## 16. Capítulo 1 (Dias 101 a 111) — rotas, economia e combate no milharal
+
+### Rota verificada Midgaard → Milharal (a leste de Jareth)
+`5 norte → leste → norte → leste → norte → 9 norte` (rodovia e vila), depois `leste` até **A Entrada da Floresta**, então `norte, norte` (Adentrando, Divisão da Trilha) e `leste` pelo bosque até uma sala cujo **sul** abre **A Entrada da Fazenda**; daí `oeste, sul, oeste, oeste` até **O Milharal Destruído**.
+- **O mapa (`mapa.json`) acerta a topologia, mas erra a contagem em 1–2 passos** no trecho de Midgaard e simplifica Jareth. Usar o mapa para planejar e o `exits` para confirmar.
+- O bosque é de salas **homônimas** ("Num Bosque Iluminado"): navegar pelas saídas, não pela memória.
+
+### Áreas novas descobertas
+- **Campo do Moinho**: ramo a leste/leste-sul do "Caminho Dentre os Campos" (Estrada Pavimentada → Borda da Floresta → Através dos Arbustos → Fosso Gramado → Caminho Lateral). O moinho por dentro é **só cenário** (dois andares vazios).
+- **Laboratório dos Magos** (leste do Bar dos Magos) tem **escada para baixo** que desce aos **esgotos** (junções de cano). Não explorar sem preparo — os esgotos já mataram uma vez.
+
+### Economia da Armadura da Torre Negra
+| Item | Valor | Peso | Comprador | Observação |
+| --- | --- | --- | --- | --- |
+| Armadura da Torre Negra | 8.500 | **60 kg** | armeiro (só armaduras) | **amaldiçoada** (não pode ser largada nem doada); nível 17; +21 CA, +1 CON; +2L |
+| Armadura de peão negro | 150 | ~13 kg | armeiro | comum |
+
+- Cabe **1 armadura da Torre por viagem**, mesmo levando a mochila (29 kg base + 48 mochila + 60 = 137 ≤ 140).
+- **Maldição**: remover com pergaminho de remover maldições (8.509), **recitado fora da loja**.
+- Há **~48 a 52** armaduras na Casa Preta da Torre do Rei Negro — potencial de ~400 mil, limitado pelo caixa do armeiro.
+
+### Combate no milharal (o que os abates ensinaram)
+- As salas têm de **1 a 4** monstros (esfomeado, agressivo, invasor, "estranha criatura", "bola de pêlos"). **Atacar só sala de alvo único** (ou 2, com sanctuary).
+- `consider` do monstro esfomeado: Nível "vence, mas com dificuldades" (verde), **Vida "Você é louco?" (luta longa)**, Poder "Muito fácil" (verde), Precisão "vence, mas com dificuldades" (verde), **Armadura "precisaria de um pouco de sorte" (arriscado)**.
+- **Palavra-chave do alvo importa**: "bola de pêlos" → `bola`; "estranha criatura" → `criatura`; demais → `monstro`.
+- **Com armadura arcana ativa e magias certas, 7 abates saíram em 15 ciclos** (Dia 111) — antes, sem preparo, o mesmo caçador fazia 1–2.
+- Água: **beber direto da fonte** da Praça do Templo resolve a sede sem cantil; `fill cantil fonte` quando houver cantil.
