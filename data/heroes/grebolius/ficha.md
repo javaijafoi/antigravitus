@@ -113,13 +113,14 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 * Dia 156: a invisibilidade deixou de ser a protecao padrao por decisao do autor - ela bloqueia comercio ('Nao negocio com quem nao vejo!') e a protecao passou a ser a escolha da rota, evitando as 20 salas de risco alto.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
-**Capítulo 5 — 'Amanhã Eu Começo por Elas' (desafio pessoal de mapeamento, kind marco)**
-Abrir as 30 portas nomeadas e nunca visitadas do levantamento, começando pela Avenida Floris (12 delas). Ao entrar em cada lugar novo: anotar sala, saídas, NPC que atende e o que a loja vende pelo comando `list`. Conferir a chegada por marco de sala, nunca por contagem de passos, e voltar ao Templo para salvar ao fim de cada rodada.
-* Rodar `visible` antes de qualquer `list`, `buy` ou `sell` — invisibilidade bloqueia comércio: 'Não negocio com quem não vejo!'.
-* PROIBIDO vender armaduras (diretiva do autor, Dia 150): nem Torre Negra nem peão. Antes de vender qualquer armadura, conferir a origem.
-* Saque do prepara: 300 na mão (config.SAQUE_PARA_COMPRAR). O banco protege o resto — hoje 297.
-* A Avenida Floris nunca foi visitada: ir com vida e mana cheias e rota de volta conhecida. As 20 salas de risco alto ficam fora da rota.
-* O Bar dos Paladinos e O Bar dos Guerreiros são barrados por guarda — registrar como resposta, não insistir.
+**Capítulo 5 — 'Amanhã Eu Começo por Elas' (duas autoquests, kind marco)**
+Concluir as duas autoquests do tier de nível 30, nesta ordem: (A) 'Limpando Monstros' com o Novato Alquimista em A Sala do Alquimista — rota do Templo em 10 passos: n,n,n,e,n,e,e,s,s,e; (B) 'Novela dos Novatos' com o novato esperto, que é andarilho das praças (Praça do Templo, Praça do Comércio, Praça Comum) e não tem sala fixa. Falar com cada iniciador e responder 'sim'/'não' conforme a pergunta.
+* NUNCA dar `quit` com missão em andamento: o servidor responde 'Você falhou em suas aventuras! Se quiser concluí-las deverá recomeçá-las!' e ZERA o progresso. Terminar a sessão com `save` e deixar a conexão cair.
+* 'Limpando Monstros' EXIGE combate — é eliminação de pragas. Diferente do Capítulo 04, onde a regra era não lutar. Ir com vida e mana cheias, e fugir se a vida cair (wimpy 48).
+* A Masmorra dos Novatos (camada `novatos`) tem Monstro Novato, Monstro Novato de Elite, Novato Zumbi Descarnado e Diabinho. Teto de nível 30 contra o nível 20 dela.
+* Rodar `visible` antes de qualquer `list`, `buy` ou `sell` — invisibilidade bloqueia comércio.
+* PROIBIDO vender armaduras (diretiva do autor, Dia 150): nem Torre Negra nem peão.
+* Saque do prepara: 300 na mão (config.SAQUE_PARA_COMPRAR).
 
 ## ✦ Origem e Incertezas
 Fonte do estado: Segunda sessao do Dia 156, ao vivo. Armadura da Torre Negra VESTIDA (CA 65 -> 80, Constituicao 9 -> 10, peso carregado 108 -> 51 kg) e ainda amaldicoada; um pergaminho de remover maldicoes foi perdido por ter sido recitado com a armadura na mochila. Anel arcano +2E recuperado na Sala de Doacoes e vendido ao armeiro por 500, por ser inutilizavel. detect poison e shocking grasp treinadas a 95%. Provisao reposta na Padaria. Fonte: evidence/dia156b.json..

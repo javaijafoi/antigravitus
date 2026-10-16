@@ -754,20 +754,31 @@ Varredura do texto inteiro do `help autoquest` por *desistir*, *cancelar*, *aban
 *parar*: **zero ocorrências**. A única forma de "sair" de uma autoquest é **terminar** — ou **morrer**,
 que a falha (registrado na doutrina antiga).
 
-### 26.3 E não havia nada para abandonar
+### 26.3 A CAUSA: `quit` apaga o progresso das missões
 
-O achado que corrige o que a base sabia. Em `autoquest todas`:
+O achado que fecha a questão. Em `autoquest todas`: **49 autoquests, TODAS "Não feita", zero "Em
+andamento"** — inclusive **Problemas Agrícolas** e **Dicas Mágicas**, que estavam em andamento desde
+o Dia 97.
 
-> **49 autoquests, e TODAS com status "Não feita". Zero "Em andamento".**
+**Não foi a morte.** O contador prova: ela morreu no Dia 101 (3→4) e no Dia 141 (4→7), e **as duas
+missões sobreviveram às sete mortes** — a seção `[Autoquests em andamento]` do `score tudo` continuava
+presente no Dia 155.
 
-Inclusive **Problemas Agrícolas** e **Dicas Mágicas**, que os registros dos Dias 147 e 156 anotavam
-como *"Em andamento"*. Ou o status não persiste entre sessões, ou aquelas leituras estavam erradas —
-**as duas hipóteses apontam para o mesmo cuidado: não tratar "Em andamento" como estado durável sem
-reconferir.**
+**Foi a saída do jogo.** O último comando da sessão `transcript_dia156_20261016_113245` foi `quit`,
+e a resposta do servidor é literal:
 
-**Consequência prática para o Capítulo 05:** a frustração do Capítulo 03 (o fazendeiro que nunca
-confirmou a entrega) **não deixou missão presa**. Não há dívida a carregar — o que há é uma missão
-não feita, que pode ser reaberta quando fizer sentido.
+> ***"Adeus e volte sempre! Você falhou em suas aventuras! Se quiser concluí-las deverá recomeçá-las!"***
+
+**`quit` com missão em andamento = falha e recomeço.** Foi isso que zerou o placar — e explica por que
+"Limpando Monstros", que os registros do Dia 144 davam como concluída, voltou a aparecer disponível.
+
+**Regra:** **terminar a sessão com `save` e deixar a conexão cair.** Jamais `quit` no meio de uma
+missão. Se precisar desconectar e reconectar, que seja por queda, não por `quit`.
+
+> **Como a seção do `score` engana:** `[Autoquests em andamento]` é **cabeçalho de seção**, não status
+> de missão. Quando não há nada em andamento **a seção inteira desaparece** — não vem vazia. Ler a
+> ausência da seção como "nada em andamento" é o certo; ler a presença do cabeçalho como status foi
+> o erro dos registros dos Dias 147 e 156.
 
 ### 26.4 O paginador e o falso MORTA — resolvido com `term`
 

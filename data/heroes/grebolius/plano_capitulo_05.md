@@ -1,123 +1,132 @@
 # Plano do Capítulo 05 — "Amanhã Eu Começo por Elas"
 
-> **Título escolhido pelo autor.** É a última linha do fecho do Capítulo 04 — *"Amanhã eu começo por
-> elas"* — e amarra os dois capítulos: o 04 descobriu as portas, o 05 as abre.
+> **Título escolhido pelo autor, e ele virou o eixo do capítulo.** É a última linha do fecho do
+> Capítulo 04 — *"Amanhã eu começo por elas"* — dita sobre **as trinta portas**. O Capítulo 05 abre
+> com a dúvida: ela senta, pensa, e **"elas" acaba sendo outra coisa**.
 
-**Natureza do capítulo:** continuação do **desafio pessoal** de mapeamento. `kind`: **`marco`**.
-Não é missão de ninguém; ninguém está esperando resposta.
-
-**Goal:** abrir as **trinta portas nomeadas e nunca visitadas** do levantamento, começando pela
-**Avenida Floris**, e catalogar cada lugar novo — o que vende, por quanto e quem atende. Sem travar
-combate. `id` no `capitulos.json`: **5**.
+**Natureza:** `kind` **`marco`**. **`id` no `capitulos.json`: 5.**
 
 ---
 
-## 1. O placar: as trinta portas
+## 1. A dúvida da abertura — e a decisão
 
-São destinos que o servidor **anuncia pelo nome** e que ela **nunca atravessou**. Cada um é uma porta
-fechada com placa — o levantamento registrou o nome, não a sala.
+O Capítulo 04 terminou com uma promessa: *amanhã eu começo por elas*, as trinta portas nomeadas e
+nunca abertas. O Capítulo 05 **abre traindo essa promessa**, e é isso que o torna um capítulo e não
+uma continuação.
 
-### A Avenida Floris — 12 portas (a prioridade do capítulo)
+Ela para, olha a lista das portas, e pensa. **As portas não vão levá-la a lugar nenhum útil por
+enquanto.** Uma delegacia, um banco, uma sapataria, um clube — são lugares de cidade, e cidade ela
+já sabe andar. O que as portas oferecem é **mapa**, e o mapa ela já provou que consegue fazer. O que
+elas **não** oferecem é o que ela precisa agora: experiência, poder, e um motivo para os deuses
+olharem para ela.
 
-Uma rua inteira que ela nunca andou. **Quase metade das portas do capítulo abre aqui**, e o padrão
-dos nomes diz que é um distrito comercial:
+E existe outra lista, aquela que ela viu sem querer enquanto conferia outra coisa: **as missões**.
 
-| Porta | Sentido a partir da Avenida |
+Então ela decide o contrário do que prometeu. Vai começar pelas **missões**, não pelas portas. As
+portas ficam para quando houver motivo para atravessá-las — e "elas", no fim, era as missões.
+
+> **É a primeira vez que ela muda de plano por conta própria.** Nos capítulos anteriores ela reagia:
+> ao milharal, à torre, ao que pediam dela. Aqui ela escolhe, e a escolha contraria a própria
+> promessa.
+
+---
+
+## 2. As duas missões do capítulo
+
+O autor vetou duas das cinco disponíveis — **Dicas Mágicas** e **Problemas Agrícolas**. As duas
+escolhidas são as do **tier de nível 30**, adequadas ao nível 20 dela:
+
+### Missão A — Limpando Monstros
+
+| | |
 |---|---|
-| A Delegacia | norte |
-| A Loja de Arcos | norte |
-| A Loja de Armas de Maris | norte |
-| A Sapataria | norte |
-| Estábulos | norte |
-| O Banco de Jareth | norte |
-| Uma Rua de Pedra Esburacada | norte |
-| A Loja de Carriolas | sul |
-| A Loja de Montarias | sul |
-| A Loja de Provisões | sul |
-| A Recepção do Clube Kitty-Kat | sul |
-| A Via da Veneração | sul |
+| **Teto** | até o nível 30 |
+| **Inicia com** | **O Novato Alquimista** |
+| **Onde** | **A Sala do Alquimista**, na Masmorra dos Novatos |
+| **Rota do Templo** | **10 passos: `n,n,n,e,n,e,e,s,s,e`** |
+| **Objetivo (o que a base sabe)** | *"Eliminação de pragas e entrega de materiais ao Alquimista"* |
 
-> **Repare no que essa lista é:** uma delegacia, um banco, estábulos, uma sapataria, uma loja de
-> arcos, uma loja de armas, uma loja de carriolas, uma loja de montarias, uma loja de provisões, um
-> clube e uma via de veneração. É outro centro urbano. **E "A Loja de Armas de Maris" implica uma
-> Maris** — pode ser outra cidade, não um bairro de Midgaard.
+**⚠️ Esta missão exige COMBATE.** É a diferença central em relação ao Capítulo 04, onde a regra era
+*não lutar*. "Limpar monstros" é matar bichos e entregar o material. Ela vai para uma masmorra de
+novatos (teto de nível 30) no nível 20, com 113 de vida, classe de armadura 110 e a experiência do
+milharal — é um alvo adequado, não um suicídio. Mas **é luta**, e o capítulo tem de dizer isso.
 
-### As outras 18
+**Inimigos já vistos na camada `novatos`:** Monstro Novato, Monstro Novato de Elite, Novato Zumbi
+Descarnado, Diabinho, Guarda Novato em Apuros.
 
-| Porta | Vista de | Sentido |
-|---|---|---|
-| A Construtora M&M | Uma Rua Larga | sul |
-| A Rua das Glórias | Uma Rua Larga | oeste |
-| Grottas - A Loja de Móveis | Uma Rua Larga | norte |
-| A Rua do Rio | Uma Praça | norte e sul |
-| Rua Bourbon | O Centro da Cidade de Jareth | norte e sul |
-| O Caminho Para as Planícies Nobres | O Centro do Vilarejo | oeste |
-| Um Casebre | Numa Pequena Vila | leste e oeste |
-| A Entrada Para o Bosque Sombrio | O Pequeno Bosque | norte |
-| As Planícies | O Pequeno Bosque | leste |
-| Na Margem do Lago | Em Meio as Árvores | norte |
-| Uma Densa Floresta | Em Meio as Árvores | oeste |
-| Na Porta da Caverna | O Fim da Trilha | oeste |
-| Caminhando no Fosso | Um Fosso Gramado | leste |
-| O Labirinto | A Entrada do Labirinto | sul |
-| Uma Curva no Cano de Esgoto | A Junção Regular | oeste |
-| O Final Leste do Beco | O Beco Escuro | leste |
-| O Bar dos Guerreiros | A Entrada da Guilda dos Guerreiros | leste |
-| O Bar dos Paladinos | A Entrada da Guilda dos Paladinos | leste |
+### Missão B — Novela dos Novatos
 
-**Três exigem ressalva antes de tentar** — não são portas, são guardas:
+| | |
+|---|---|
+| **Teto** | até o nível 30 |
+| **Inicia com** | **o novato esperto** |
+| **Onde** | **não tem sala fixa.** A base o descreve como *"habitante das praças e encruzilhadas civis"* |
+| **Objetivo** | *"Cadeia narrativa de suporte aos recém-chegados"* |
 
-- **O Bar dos Paladinos** e **O Bar dos Guerreiros**: o guarda da entrada já recusou passagem
-  (*"O guarda te humilha e não deixa você passar."*). Só se entra sendo da guilda.
-- **O Labirinto** e **O Final Leste do Beco**: labirinto tem teto de visitas por segurança
-  (`MAX_VISITAS_LABIRINTO = 3`), e o Beco Escuro tem guarda no `e`.
+**Ele é andarilho**, como O Pacificador e O zelador — aparece andando. As praças candidatas são
+**A Praça do Templo**, **A Praça do Comércio** e **A Praça Comum**. Encontrá-lo é parte da missão:
+ela vai ter de **esperar em praça pública**, o que é o oposto de tudo que ela fez no Capítulo 04.
 
 ---
 
-## 2. O método
+## 3. O método
 
-O que funcionou no Capítulo 04 e continua valendo:
+O que continua valendo do Capítulo 04:
 
-1. **Rota pelo mapa, não de ouvido.** A origem é sempre a sala onde ela **está** — não onde se supõe.
-   Aplicar rota de origem errada é o que faz um `d` responder *"Você não pode ir por aí..."*.
-2. **Conferir a chegada por marco de sala**, nunca por contagem de passos.
-3. **Desviar do perigo.** As 20 salas de `risk_code` alto (`RISCO_A_EVITAR`) ficam fora da rota. Se
-   não houver caminho limpo, vai pela direta **e registra** que passou por perigo.
-4. **`visible` antes de qualquer comércio.** Invisibilidade bloqueia troca: *"Não negocio com quem
-   não vejo!"*.
-5. **Não lutar.** Fugir é vitória. `wimpy` fica em **48**.
+1. **Rota pelo mapa, a partir da sala onde ela ESTÁ** — nunca de onde se supõe.
+2. **Conferir a chegada por marco de sala**, não por contagem de passos.
+3. **Desviar das 20 salas de risco alto** (`RISCO_A_EVITAR`), e registrar quando não houver caminho
+   limpo.
+4. **`visible` antes de qualquer comércio** — invisibilidade bloqueia troca.
+5. **`term 200 80` já é aplicado no login**; o paginador não existe mais.
 6. **Voltar ao Templo e salvar** ao fim de cada rodada.
 
-**Ao entrar em cada lugar novo, anotar:** nome da sala, saídas, NPC que atende, o que a loja vende
-(`list`) e o preço. Item novo entra na tabela de [itens.md](itens.md) com ID próprio.
+**O que muda:** o passo 5 do capítulo anterior era *não lutar*. Aqui **a luta é o objetivo da Missão
+A** — mas continua valendo que ela não procura briga fora do escopo, e que **fugir é vitória quando a
+vida cai**. `wimpy` fica em **48**.
+
+**Ao entrar em cada lugar novo, anotar:** nome, saídas, NPC que atende, o que vende (`list`) e preço.
 
 ---
 
-## 3. Diretivas que continuam valendo
+## 4. Diretivas que continuam valendo
 
-- **PROIBIDO vender armaduras** da Torre Negra ou de peão: *"perdemos mais dinheiro do que ganhamos"*.
-- **Saque do prepara: 300** na mão (`config.SAQUE_PARA_COMPRAR`). O banco não é tocado além disso.
+- **PROIBIDO vender armaduras** da Torre Negra ou de peão.
+- **Saque do prepara: 300** na mão (`config.SAQUE_PARA_COMPRAR`).
 - **Teto de 10 conexões**, com 3 preferidas.
 - **Nada de metajogo** nas descrições dos capítulos.
-- **Coordenadas são só da superfície.** Para labirinto vale o `id`, com `lb###`.
+- **Nunca dar `quit` com missão em andamento.** Descoberto no Dia 156: `quit` responde
+  ***"Você falhou em suas aventuras! Se quiser concluí-las deverá recomeçá-las!"*** e **zera todo o
+  progresso** — foi o que apagou as missões em andamento desde o Dia 97. **Terminar as sessões com
+  `save` e deixar a conexão cair**, não com `quit`.
 
 ---
 
-## 4. Quando o capítulo fecha
+## 5. Quando o capítulo fecha
 
-Quando **as trinta portas tiverem sido abertas ou justificadas** — uma porta guardada, um labirinto no
-teto de visitas ou uma região de risco fatal não é falha do capítulo, é resposta. O que não se admite
-é porta fechada por não ter ido.
+Quando **as duas missões estiverem concluídas e confirmadas pelo servidor** — não por achismo. A
+confirmação é o servidor dizendo, ou o status mudando no `autoquest`/`score`.
 
-**E o que o capítulo deixa:** um mapa do mundo além de Midgaard, com o comércio de lá catalogado.
+**E o que o capítulo deixa:** duas missões a menos, alguma experiência, e a lição de que ela pode
+escolher.
 
 ---
 
-## 5. Riscos conhecidos
+## 6. Riscos conhecidos
 
 | Risco | Estado |
 |---|---|
-| **Avenida Floris pode ser cidade hostil** | desconhecido — o distrito nunca foi visitado. Ir com vida e mana cheias e rota de volta conhecida. |
-| **O Banco de Jareth** | pode render acesso a mais um banco; útil, mas exige ouro para testar. |
-| **Na Porta da Caverna / Uma Densa Floresta** | podem ser zona de caça; não é para lutar. |
-| **Guildas (Paladinos, Guerreiros)** | barradas por guarda. Registrar como resposta, não insistir. |
+| **A Masmorra dos Novatos tem monstros** | esperado — é o objeto da Missão A. Ir com vida e mana cheias. |
+| **O novato esperto pode não aparecer** | é andarilho. Se não aparecer, a Missão B fica pendente e o capítulo fecha com uma. Registrar como resposta, não como falha. |
+| **`quit` apaga o progresso** | proibido no meio do capítulo. Só `save`. |
+| **As portas ficam para depois** | decisão do capítulo, não dívida. Elas continuam no mapa, nomeadas e esperando motivo. |
+
+---
+
+## 7. Anexo — por que não as outras
+
+| Missão | Por quê não |
+|---|---|
+| **Dicas Mágicas** | vetada pelo autor |
+| **Problemas Agrícolas** | vetada pelo autor |
+| **Uma Lição em Gargamel** | o conteúdo mais novo do jogo (não catalogado, teto 80), mas o **smurf minerador não está no mapa** — viraria exploração antes de virar missão. Guardada para um capítulo próprio. |
