@@ -9,8 +9,8 @@
 * **Raça / Aparência Narrativa:** Mulher goblin; aventureira sem véu
 * **Raça Mecânica no MUD:** Elfo
 * **Classe Mecânica no MUD:** Mago (Magic-User)
-* **Grau / Nível Atual:** **20**
-* **Alinhamento Moral:** 231 (Um pouco bom)
+* **Grau / Nível Atual:** **21**
+* **Alinhamento Moral:** 181 (Um pouco bom)
 * **Localização Atual:** O Templo de Midgaard (último registro: Dia 156)
 * **Acampamento Registrado:** O Templo de Midgaard
 * **Santuário de Referência:** O Panteao dos Centenarios
@@ -20,13 +20,13 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 ## ✦ Status Vitais
 | Recurso | Atual | Máximo | Porcentagem |
 | :--- | :---: | :---: | :---: |
-| **Pontos de Vida (HP)** | 113 | 113 | 100% |
-| **Pontos de Mana (MP)** | 260 | 260 | 100% |
-| **Estamina / Movimento (MV)** | 114 | 114 | 100% |
+| **Pontos de Vida (HP)** | 135 | 135 | 100% |
+| **Pontos de Mana (MP)** | 270 | 270 | 100% |
+| **Estamina / Movimento (MV)** | 131 | 131 | 100% |
 
-* **Experiência Acumulada:** **1.088.553 EXP**
-* **Experiência Necessária p/ Grau 21:** **111.447 EXP** (Meta: 1.200.000 EXP)
-* **Ouro Líquido:** **401 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **1.200.001 EXP**
+* **Experiência Necessária p/ Grau 22:** **199.999 EXP** (Meta: 1.400.000 EXP)
+* **Ouro Líquido:** **300 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 11
@@ -39,8 +39,8 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 ### Métricas de Combate
 * **Classe de Armadura (AC):** 64 (base) / **80** (com `armor`, conforme registro)
 CA 80 medida ao vivo no Dia 156 com a Armadura da Torre Negra VESTIDA. A armadura arcana NAO esta ativa: com ela a CA fica mais alta. A veste de novato saiu do corpo e esta na mochila; o slot do corpo pertence a armadura da torre e ela nao sai enquanto a maldicao durar.
-* **Bônus de Acerto (Hitroll):** 1
-* **Bônus de Dano (Damroll):** +0
+* **Bônus de Acerto (Hitroll):** 4
+* **Bônus de Dano (Damroll):** +2
 * **Configuração de Fuga (Wimpy):** **48 HP** (referência de 25%; não garante fuga antes de golpe letal)
 
 ## ✦ Missões e Autoquests Oficiais
@@ -62,7 +62,7 @@ CA 80 medida ao vivo no Dia 156 com a Armadura da Torre Negra VESTIDA. A armadur
 Objetivos pessoais e investigações ficam separados das autoquests no catálogo de missões.
 
 ## ✦ Habilidades Conhecidas e Treinos Concluídos
-* **Sessões de Treino Disponíveis:** **38 sessões de treino acumuladas**
+* **Sessões de Treino Disponíveis:** **40 sessões de treino acumuladas**
 Percentuais são registros de proficiência; não garantem acerto, imunidade ou acesso a guildas.
 * `armor` (Armadura Mística): **99%**
 * `burning hands` (Mãos Flamejantes): **99%**
@@ -76,6 +76,7 @@ Percentuais são registros de proficiência; não garantem acerto, imunidade ou 
 * `magic missile` (Míssil Mágico): **99%**
 * `shocking grasp` (Choque Eletrico): **95%**
 * `swim` (Nadar): **95%**
+* `curse` (Maldicao): **10%**
 
 ## ✦ Equipamento em Uso
 Equipamento conforme os últimos documentos disponíveis; conferir no próximo acesso ao MUD.
@@ -87,6 +88,7 @@ Equipamento conforme os últimos documentos disponíveis; conferir no próximo a
 * **no pulso direito:** `um rosario`
 * **como escudo:** `um escudo`
 * **nas pernas:** `uma calca de couro`
+* **na orelha direita:** `um diminuto brinco de novato`
 
 ## ✦ Inventário e Suprimentos
 Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
@@ -101,29 +103,28 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 ### Pendências de inventário
 
 ## ✦ Condições Registradas
-* Dia 156: no Templo de Midgaard, 113/113 de vida, 260/260 de mana e 114/114 de movimento, alimentada e hidratada.
-* Grau 20 (vida maxima 113, mana maxima 260); proximo nivel em 1.200.000 (faltam 111.447).
+* Dia 156 (terceira sessao): no Templo de Midgaard, 135/135 de vida, 270/270 de mana e 131/131 de movimento, alimentada e hidratada.
+* Grau 21 (vida maxima 135, mana maxima 270); proximo nivel em 1.400.000 (faltam 199.999).
+* Pesa 61,68 kg e mede 1,39 m; carrega 15 itens, 88 kg de 115 kg de limite.
+* Grau 21 (vida maxima 135, mana maxima 270); proximo nivel em 1.400.000 (faltam 199.999).
+* Pesa 61,68 kg e mede 1,39 m; carrega 15 itens, 88 kg de 115 kg de limite.
 * Armadura da Torre Negra VESTIDA: CA 80, Constituicao 10. Peso carregado 43/115 kg; a armadura nao consome capacidade por estar equipada.
 * Ouro 369 no banco do Templo e 32 na mao (total 401).
 * Sete mortes registradas; uma armadilha de morte. Ultima morte no Dia 126, por script sem supervisao.
-* Dia 156 (cartografia): o mapa vivo esta em 361 salas e 750 arestas - 141 autorais e 220 derivadas do levantamento dos Dias 96-156. Faltam 33 destinos nomeados e nunca visitados.
-* Dia 156 (magia): o Templo de Midgaard e AREA SEM MAGIA - conjurar la devolve 'Sua magia falha e desaparece'. A Praca do Templo, um passo abaixo, aceita. Armadura e invisibilidade custam ~25 de mana cada, e a mana regenera rapido.
-* Dia 156 (santuario alcancado): O Panteao dos Centenarios foi visitado pela porta 'u' do Templo. E o santuario dela e nunca havia sido visitado nos Dias 96-141.
-* Dia 156: CAPITULO 04 FECHADO - 'Ate Onde Vai o Mundo' (kind marco, 12 paragrafos). O mapa curado saiu de 141 para 360 salas e 747 arestas com o levantamento dos Dias 96-156. O Panteao dos Centenarios foi alcancado pela primeira vez.
-* Dia 156: a invisibilidade deixou de ser a protecao padrao por decisao do autor - ela bloqueia comercio ('Nao negocio com quem nao vejo!') e a protecao passou a ser a escolha da rota, evitando as 20 salas de risco alto.
+* As duas autoquests do Capitulo 05 estao CONCLUIDAS: 'Novela dos Novatos' e 'Limpando Monstros'. Em andamento sobrou apenas 'Problemas Agricolas', anterior ao capitulo.
+* As duas autoquests do Capitulo 05 estao CONCLUIDAS: 'Novela dos Novatos' e 'Limpando Monstros'. Em andamento sobrou apenas 'Problemas Agricolas', anterior ao capitulo.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
-**Capítulo 5 — 'Amanhã Eu Começo por Elas' (duas autoquests, kind marco)**
-Concluir as duas autoquests do tier de nível 30, nesta ordem: (A) 'Limpando Monstros' com o Novato Alquimista em A Sala do Alquimista — rota do Templo em 10 passos: n,n,n,e,n,e,e,s,s,e; (B) 'Novela dos Novatos' com o novato esperto, que é andarilho das praças (Praça do Templo, Praça do Comércio, Praça Comum) e não tem sala fixa. Falar com cada iniciador e responder 'sim'/'não' conforme a pergunta.
-* NUNCA dar `quit` com missão em andamento: o servidor responde 'Você falhou em suas aventuras! Se quiser concluí-las deverá recomeçá-las!' e ZERA o progresso. Terminar a sessão com `save` e deixar a conexão cair.
-* 'Limpando Monstros' EXIGE combate — é eliminação de pragas. Diferente do Capítulo 04, onde a regra era não lutar. Ir com vida e mana cheias, e fugir se a vida cair (wimpy 48).
-* A Masmorra dos Novatos (camada `novatos`) tem Monstro Novato, Monstro Novato de Elite, Novato Zumbi Descarnado e Diabinho. Teto de nível 30 contra o nível 20 dela.
-* Rodar `visible` antes de qualquer `list`, `buy` ou `sell` — invisibilidade bloqueia comércio.
-* PROIBIDO vender armaduras (diretiva do autor, Dia 150): nem Torre Negra nem peão.
-* Saque do prepara: 300 na mão (config.SAQUE_PARA_COMPRAR).
+**O Capitulo 05 esta' fechado — o proximo ainda nao foi aberto**
+O Capitulo 05 cobria duas autoquests e as duas foram concluidas. O que sobrou mapeado e' o placar das 33 portas nomeadas do Capitulo 04, nunca abertas, e as regioes nunca visitadas (Jareth, Avenida Floris, e as 18 regioes de 'help mapas'). A guarda de 0 Pontos de Aventura tambem segue aberta: a loja dos deuses vende as protecoes ANTI-DT e IMUNE-DT.
+* Escolher o objetivo do proximo capitulo ANTES de jogar: o 05 fechou e nao ha alvo definido.
+* As 33 portas nomeadas do Capitulo 04 seguem fechadas; nenhuma foi aberta no 05.
+* A loja dos deuses ('autoquest loja', dentro do Templo) esta' a 0 Pontos de Aventura: as protecoes IMUNE-DT e ANTI-DT de la' ainda nao foram compradas.
+* 40 sessoes de treino sobrando — decidir o que treinar conforme o objetivo antes de gastar.
+* NUNCA dar `quit` com missao em andamento: o servidor responde 'Voce falhou em suas aventuras!' e ZERA o progresso. Encerrar com `save`.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Segunda sessao do Dia 156, ao vivo. Armadura da Torre Negra VESTIDA (CA 65 -> 80, Constituicao 9 -> 10, peso carregado 108 -> 51 kg) e ainda amaldicoada; um pergaminho de remover maldicoes foi perdido por ter sido recitado com a armadura na mochila. Anel arcano +2E recuperado na Sala de Doacoes e vendido ao armeiro por 500, por ser inutilizavel. detect poison e shocking grasp treinadas a 95%. Provisao reposta na Padaria. Fonte: evidence/dia156b.json..
+Fonte do estado: Terceira sessao do Dia 156, ao vivo: as DUAS autoquests do Capitulo 05 foram concluidas. Nivel 20 -> 21 (1.088.553 -> 1.200.001 de experiencia). Abateu o Grande Minotauro (1.600 + 1.944 de experiencia, 95 moedas) e venceu o mico que atormentava o Novato Alquimista, o que fechou 'Limpando Monstros' ('Parabens, você completou a aventura!'). Falou com a novata tagarela, o que fechou 'Novela dos Novatos'. Recebeu como recompensa um manto de pano (armadura +30), aprendeu a magia curse e vestiu um diminuto brinco de novato ANTI-DT. Fonte: evidence/dia156d.json..
 * A Armadura da Torre Negra segue AMALDIÇOADA e vestida: nao pode ser removida, largada, jogada nem doada. O remove curse do CircleMUD exige o item EQUIPADO, entao o segundo pergaminho (8.509) so funciona agora. O armeiro avalia a armadura em 8.500 mas nao tem ouro; o feiticeiro recusa armaduras. Comprador desconhecido.
 * A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido; explica a mana maxima de 260 em vez de 265.
 * O colar com pedra purpura pertence a outro dono: o servidor recusa o uso. Nenhum comerciante testado o compra.

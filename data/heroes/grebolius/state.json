@@ -5,36 +5,37 @@
     "day": 156,
     "verification": "live",
     "live_verified": true,
-    "source": "Segunda sessao do Dia 156, ao vivo. Armadura da Torre Negra VESTIDA (CA 65 -> 80, Constituicao 9 -> 10, peso carregado 108 -> 51 kg) e ainda amaldicoada; um pergaminho de remover maldicoes foi perdido por ter sido recitado com a armadura na mochila. Anel arcano +2E recuperado na Sala de Doacoes e vendido ao armeiro por 500, por ser inutilizavel. detect poison e shocking grasp treinadas a 95%. Provisao reposta na Padaria. Fonte: evidence/dia156b.json."
+    "source": "Terceira sessao do Dia 156, ao vivo: as DUAS autoquests do Capitulo 05 foram concluidas. Nivel 20 -> 21 (1.088.553 -> 1.200.001 de experiencia). Abateu o Grande Minotauro (1.600 + 1.944 de experiencia, 95 moedas) e venceu o mico que atormentava o Novato Alquimista, o que fechou 'Limpando Monstros' ('Parabens, você completou a aventura!'). Falou com a novata tagarela, o que fechou 'Novela dos Novatos'. Recebeu como recompensa um manto de pano (armadura +30), aprendeu a magia curse e vestiu um diminuto brinco de novato ANTI-DT. Fonte: evidence/dia156d.json.",
+    "previous": "Segunda sessao do Dia 156, ao vivo. Armadura da Torre Negra VESTIDA (CA 65 -> 80, Constituicao 9 -> 10, peso carregado 108 -> 51 kg) e ainda amaldicoada; um pergaminho de remover maldicoes foi perdido por ter sido recitado com a armadura na mochila. Anel arcano +2E recuperado na Sala de Doacoes e vendido ao armeiro por 500, por ser inutilizavel. detect poison e shocking grasp treinadas a 95%. Provisao reposta na Padaria. Fonte: evidence/dia156b.json."
   },
-  "level": 20,
+  "level": 21,
   "mechanical_race": "Elfo",
   "mechanical_class": "Mago (Magic-User)",
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
   "alignment": {
-    "value": 231,
+    "value": 181,
     "label": "Um pouco bom"
   },
   "vitals": {
     "hp": {
-      "current": 113,
-      "max": 113
+      "current": 135,
+      "max": 135
     },
     "mana": {
-      "current": 260,
-      "max": 260
+      "current": 270,
+      "max": 270
     },
     "mv": {
-      "current": 114,
-      "max": 114
+      "current": 131,
+      "max": 131
     }
   },
   "experience": {
-    "current": 1088553,
-    "next_level": 1200000
+    "current": 1200001,
+    "next_level": 1400000
   },
-  "gold": 401,
+  "gold": 300,
   "attributes": {
     "STR": 11,
     "DEX": 15,
@@ -49,10 +50,10 @@
     "effect_verified": true,
     "note": "CA 80 medida ao vivo no Dia 156 com a Armadura da Torre Negra VESTIDA. A armadura arcana NAO esta ativa: com ela a CA fica mais alta. A veste de novato saiu do corpo e esta na mochila; o slot do corpo pertence a armadura da torre e ela nao sai enquanto a maldicao durar."
   },
-  "hitroll": 1,
-  "damroll": 0,
+  "hitroll": 4,
+  "damroll": 2,
   "wimpy": 48,
-  "training_sessions": 38,
+  "training_sessions": 40,
   "operational_mode": {
     "current": "padrao",
     "description": "Cacada na fazenda/milharal com wimpy 30 e retirada por fuga; sessoes sobrepostas obrigaram a impor controle unico do daemon.",
@@ -79,21 +80,26 @@
   },
   "last_event": {
     "day": 156,
-    "summary": "Manutencao do Dia 156: armadura da torre vestida (CA 80) apos descobrir que o remove curse so afeta item equipado - o primeiro pergaminho foi perdido na mochila. Anel arcano +2E recuperado na Sala de Doacoes e vendido por 500, por ser inutilizavel no Grau 20. detect poison e shocking grasp treinadas a 95%. Fome e sede zeradas e provisao reposta. O automato teve corrigidos o flag de combate travado, a leitura de fome/sede e a janela do vigia."
+    "summary": "Terceira sessao do Dia 156: as duas autoquests do Capitulo 05 foram concluidas. Abateu o Grande Minotauro em Outra Curva (1.600 + 1.944 de experiencia, 95 moedas) e venceu o mico que atormentava o Novato Alquimista — 'Agora sim, paz e sossego para criar minhas poces' — o que fechou 'Limpando Monstros' com a resposta 'Parabens, você completou a aventura!'. Subiu do Nivel 20 para o 21, aprendeu curse e recebeu um manto de pano (armadura +30). Falou com a novata tagarela, o que fechou 'Novela dos Novatos'. Vestiu um diminuto brinco de novato ANTI-DT. Fonte: evidence/dia156d.json."
   },
   "next_objective": {
-    "mission_id": "capitulo-5",
-    "title": "Capítulo 5 — 'Amanhã Eu Começo por Elas' (duas autoquests, kind marco)",
-    "next_step": "Concluir as duas autoquests do tier de nível 30, nesta ordem: (A) 'Limpando Monstros' com o Novato Alquimista em A Sala do Alquimista — rota do Templo em 10 passos: n,n,n,e,n,e,e,s,s,e; (B) 'Novela dos Novatos' com o novato esperto, que é andarilho das praças (Praça do Templo, Praça do Comércio, Praça Comum) e não tem sala fixa. Falar com cada iniciador e responder 'sim'/'não' conforme a pergunta.",
+    "mission_id": "capitulo-6",
+    "title": "O Capitulo 05 esta' fechado — o proximo ainda nao foi aberto",
+    "next_step": "O Capitulo 05 cobria duas autoquests e as duas foram concluidas. O que sobrou mapeado e' o placar das 33 portas nomeadas do Capitulo 04, nunca abertas, e as regioes nunca visitadas (Jareth, Avenida Floris, e as 18 regioes de 'help mapas'). A guarda de 0 Pontos de Aventura tambem segue aberta: a loja dos deuses vende as protecoes ANTI-DT e IMUNE-DT.",
     "missing_preparation": [
-      "NUNCA dar `quit` com missão em andamento: o servidor responde 'Você falhou em suas aventuras! Se quiser concluí-las deverá recomeçá-las!' e ZERA o progresso. Terminar a sessão com `save` e deixar a conexão cair.",
-      "'Limpando Monstros' EXIGE combate — é eliminação de pragas. Diferente do Capítulo 04, onde a regra era não lutar. Ir com vida e mana cheias, e fugir se a vida cair (wimpy 48).",
-      "A Masmorra dos Novatos (camada `novatos`) tem Monstro Novato, Monstro Novato de Elite, Novato Zumbi Descarnado e Diabinho. Teto de nível 30 contra o nível 20 dela.",
-      "Rodar `visible` antes de qualquer `list`, `buy` ou `sell` — invisibilidade bloqueia comércio.",
-      "PROIBIDO vender armaduras (diretiva do autor, Dia 150): nem Torre Negra nem peão.",
-      "Saque do prepara: 300 na mão (config.SAQUE_PARA_COMPRAR)."
+      "Escolher o objetivo do proximo capitulo ANTES de jogar: o 05 fechou e nao ha alvo definido.",
+      "As 33 portas nomeadas do Capitulo 04 seguem fechadas; nenhuma foi aberta no 05.",
+      "A loja dos deuses ('autoquest loja', dentro do Templo) esta' a 0 Pontos de Aventura: as protecoes IMUNE-DT e ANTI-DT de la' ainda nao foram compradas.",
+      "40 sessoes de treino sobrando — decidir o que treinar conforme o objetivo antes de gastar.",
+      "NUNCA dar `quit` com missao em andamento: o servidor responde 'Voce falhou em suas aventuras!' e ZERA o progresso. Encerrar com `save`."
     ],
-    "plan_document": "plano_capitulo_05.md"
+    "plan_document": "planos/plano002.md",
+    "carried_over": [
+      "33 destinos nomeados e nunca visitados (heranca do Capitulo 04)",
+      "Jareth e Avenida Floris: rota conhecida, nunca percorrida",
+      "0 Pontos de Aventura — a loja divina e' o caminho para IMUNE-DT",
+      "40 sessoes de treino sobrando"
+    ]
   },
   "skills": [
     {
@@ -215,6 +221,16 @@
         "day": 81,
         "note": "Proficiência perfeita confirmada com comando practice na Guilda dos Magos no Dia 81."
       }
+    },
+    {
+      "id": "curse",
+      "name": "Maldicao",
+      "proficiency": 10,
+      "source": {
+        "document": "evidence/dia156d.json",
+        "day": 156,
+        "note": "aprendida ao subir para o Nivel 21, ao concluir 'Limpando Monstros'"
+      }
     }
   ],
   "equipment": [
@@ -226,7 +242,8 @@
     {
       "slot": "sobre o corpo",
       "item": "um manto de pano",
-      "name": "um manto de pano"
+      "name": "um manto de pano",
+      "note": "Recompensa do Novato Alquimista ao fim de 'Limpando Monstros'. Armadura +30."
     },
     {
       "slot": "no corpo",
@@ -257,6 +274,12 @@
       "slot": "nas pernas",
       "item": "uma calca de couro",
       "name": "uma calca de couro"
+    },
+    {
+      "slot": "na orelha direita",
+      "item": "um diminuto brinco de novato",
+      "name": "um diminuto brinco de novato",
+      "note": "ANTI-DT (protege contra armadilha mortal). +15 de vida maxima, +15 de movimento maximo, +1 de Acerto e +1 de Dano. Flags do servidor: BRILHO NAO-DOAR NAO-INVISIVEL NAO-VENDER ANTI-DT ENTALHADO. Valor 25.000."
     }
   ],
   "inventory": {
@@ -300,16 +323,16 @@
     "pending_verification": []
   },
   "conditions": [
-    "Dia 156: no Templo de Midgaard, 113/113 de vida, 260/260 de mana e 114/114 de movimento, alimentada e hidratada.",
-    "Grau 20 (vida maxima 113, mana maxima 260); proximo nivel em 1.200.000 (faltam 111.447).",
+    "Dia 156 (terceira sessao): no Templo de Midgaard, 135/135 de vida, 270/270 de mana e 131/131 de movimento, alimentada e hidratada.",
+    "Grau 21 (vida maxima 135, mana maxima 270); proximo nivel em 1.400.000 (faltam 199.999).",
+    "Pesa 61,68 kg e mede 1,39 m; carrega 15 itens, 88 kg de 115 kg de limite.",
+    "Grau 21 (vida maxima 135, mana maxima 270); proximo nivel em 1.400.000 (faltam 199.999).",
+    "Pesa 61,68 kg e mede 1,39 m; carrega 15 itens, 88 kg de 115 kg de limite.",
     "Armadura da Torre Negra VESTIDA: CA 80, Constituicao 10. Peso carregado 43/115 kg; a armadura nao consome capacidade por estar equipada.",
     "Ouro 369 no banco do Templo e 32 na mao (total 401).",
     "Sete mortes registradas; uma armadilha de morte. Ultima morte no Dia 126, por script sem supervisao.",
-    "Dia 156 (cartografia): o mapa vivo esta em 361 salas e 750 arestas - 141 autorais e 220 derivadas do levantamento dos Dias 96-156. Faltam 33 destinos nomeados e nunca visitados.",
-    "Dia 156 (magia): o Templo de Midgaard e AREA SEM MAGIA - conjurar la devolve 'Sua magia falha e desaparece'. A Praca do Templo, um passo abaixo, aceita. Armadura e invisibilidade custam ~25 de mana cada, e a mana regenera rapido.",
-    "Dia 156 (santuario alcancado): O Panteao dos Centenarios foi visitado pela porta 'u' do Templo. E o santuario dela e nunca havia sido visitado nos Dias 96-141.",
-    "Dia 156: CAPITULO 04 FECHADO - 'Ate Onde Vai o Mundo' (kind marco, 12 paragrafos). O mapa curado saiu de 141 para 360 salas e 747 arestas com o levantamento dos Dias 96-156. O Panteao dos Centenarios foi alcancado pela primeira vez.",
-    "Dia 156: a invisibilidade deixou de ser a protecao padrao por decisao do autor - ela bloqueia comercio ('Nao negocio com quem nao vejo!') e a protecao passou a ser a escolha da rota, evitando as 20 salas de risco alto."
+    "As duas autoquests do Capitulo 05 estao CONCLUIDAS: 'Novela dos Novatos' e 'Limpando Monstros'. Em andamento sobrou apenas 'Problemas Agricolas', anterior ao capitulo.",
+    "As duas autoquests do Capitulo 05 estao CONCLUIDAS: 'Novela dos Novatos' e 'Limpando Monstros'. Em andamento sobrou apenas 'Problemas Agricolas', anterior ao capitulo."
   ],
   "uncertainties": [
     "A Armadura da Torre Negra segue AMALDIÇOADA e vestida: nao pode ser removida, largada, jogada nem doada. O remove curse do CircleMUD exige o item EQUIPADO, entao o segundo pergaminho (8.509) so funciona agora. O armeiro avalia a armadura em 8.500 mas nao tem ouro; o feiticeiro recusa armaduras. Comprador desconhecido.",
@@ -425,7 +448,7 @@
     }
   ],
   "narrative_style": "ladra arcana",
-  "weapon_summary": "Sem arma empunhada (combate por magias); adaga e punhal de novato na mochila; Cetro do Bispo Negro descarregado.",
+  "weapon_summary": "Empunha uma espada curta (Acerto 4, Dano 2 com o brinco de novato); o combate real e' por magias (burning hands a 99%). Adaga e punhal de novato na mochila; Cetro do Bispo Negro descarregado.",
   "migration": {
     "method": "sessao manual comandada pelo agente sob driver com token",
     "verified_on": "Dia 99 (score, inventario, vendas, combate, save e sleep ao vivo)"
