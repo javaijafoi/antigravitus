@@ -51,6 +51,12 @@ from parsers import (
 
 DEFAULT_CREDENTIALS: List[str] = []  # Sem segredo embutido: a senha vem de MUD_PASS ou scripts/local/.mud_pass.
 
+# Dimensoes de terminal informadas ao jogo logo apos o login (`term <linhas> <colunas>`).
+# Pagina alta = lista longa sai inteira = o paginador nao aparece = o driver nao
+# entra em `dead_or_menu` e o vigia nao confunde pagina com morte.
+TERM_LINHAS = 200
+TERM_COLUNAS = 80
+
 # Linhas de ficha/score. Elas NUNCA sao evento de combate, mas enganavam a
 # leitura em dois pontos do rastreio de estado: os medidores '{<<<<<>>>>>}'
 # contam como gatilho '>>' e 'Voce morreu 7 vezes' conta como terminador de
@@ -695,6 +701,18 @@ class DeboClient:
         self.send_prompt("", timeout=3.0)
         self.send_prompt("wake", timeout=3.0)
         self.send_prompt("stand", timeout=3.0)
+        # PAGINA ALTA, e isto e' correcao de seguranca, nao conforto.
+        #
+        # Sem `term`, toda lista longa (`commands`, `help autoquest`, `autoquest
+        # todas`) abre um PAGINADOR: "Aperte ENTER para continuar, S para sair ou
+        # numero da pagina". Enquanto o paginador espera, o driver fica em
+        # `dead_or_menu` - e o vigia LE ISSO COMO MORTA. Foi a segunda fonte de
+        # falso positivo de morte; a primeira foi uma DICA do servidor que
+        # mencionava "Menu Principal".
+        #
+        # `help term` -> "TERM <linhas> <colunas>". Com pagina alta a lista sai
+        # inteira e o paginador nunca aparece.
+        self.send_prompt(f"term {TERM_LINHAS} {TERM_COLUNAS}", timeout=3.0)
         if wimpy:
             self.send_prompt(f"wimpy {wimpy}", timeout=3.0)
 

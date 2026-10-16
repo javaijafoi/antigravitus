@@ -726,6 +726,71 @@ porque "A Entrada da Guilda dos Clérigos" tinha **três das quatro arestas erra
 `s` para a Loja de Armaduras que o jogo recusa. A rota real é **`d,s,w,s`**, e o mapa foi corrigido
 com a verificação ao vivo.
 
+---
+
+## 26. Missões: dá para abandonar? Não. (Dia 156)
+
+Pergunta feita pelo autor, e a resposta tem duas partes — as duas medidas no servidor.
+
+### 26.1 `abandon` existe, mas é para a MONTARIA
+
+> **`help abandon`** — *"ABANDONAR ABANDON — Uso: abandonar. **Cuidado ao utilizar esse comando.**
+> Quando utilizado este comando irá **libertar sua montaria na natureza**."*
+
+**Não é para missão.** É para largar o cavalo — e o próprio verbete pede cuidado.
+
+### 26.2 Não há como desistir de uma autoquest
+
+O `help autoquest` lista os subcomandos que existem, e **nenhum deles é de desistir**:
+
+| Subcomando | Para quê |
+|---|---|
+| `autoquest todas` | todas as aventuras e os requisitos de cada uma |
+| `autoquest listar` | as disponíveis para ela **agora** |
+| `autoquest loja` | a loja de prêmios |
+| `autoquest disponível` | idem listar |
+
+Varredura do texto inteiro do `help autoquest` por *desistir*, *cancelar*, *abandonar*, *largar* e
+*parar*: **zero ocorrências**. A única forma de "sair" de uma autoquest é **terminar** — ou **morrer**,
+que a falha (registrado na doutrina antiga).
+
+### 26.3 E não havia nada para abandonar
+
+O achado que corrige o que a base sabia. Em `autoquest todas`:
+
+> **49 autoquests, e TODAS com status "Não feita". Zero "Em andamento".**
+
+Inclusive **Problemas Agrícolas** e **Dicas Mágicas**, que os registros dos Dias 147 e 156 anotavam
+como *"Em andamento"*. Ou o status não persiste entre sessões, ou aquelas leituras estavam erradas —
+**as duas hipóteses apontam para o mesmo cuidado: não tratar "Em andamento" como estado durável sem
+reconferir.**
+
+**Consequência prática para o Capítulo 05:** a frustração do Capítulo 03 (o fazendeiro que nunca
+confirmou a entrega) **não deixou missão presa**. Não há dívida a carregar — o que há é uma missão
+não feita, que pode ser reaberta quando fizer sentido.
+
+### 26.4 O paginador e o falso MORTA — resolvido com `term`
+
+O comando `commands` e as listas longas abrem um **paginador**:
+
+```
+[ Aperte ENTER para continuar, S para sair ou número da página ( 1 de 3 ) ]
+```
+
+Enquanto ele espera, o driver entra em **`estado=dead_or_menu`** — o mesmo estado que o vigia usa
+para declarar MORTA. Era a **segunda** fonte de falso positivo de morte (a primeira foi uma DICA do
+servidor que mencionava "Menu Principal").
+
+**A solução é dizer ao jogo o tamanho do terminal logo após o login:**
+
+```
+term 200 80  ->  "Muito bem, agora seu terminal está configurado para 200 linhas e 80 colunas."
+```
+
+Com página alta a lista sai inteira e **o paginador nunca aparece**. Aplicado no login do driver
+(`debo_bot.py`, constantes `TERM_LINHAS`/`TERM_COLUNAS`). E é **correção de segurança, não conforto**:
+sem ela o motor confunde uma página de ajuda com a morte da personagem.
+
 
 ### 25.11 Invisibilidade BLOQUEIA comércio — e existe o comando `visible`
 

@@ -156,7 +156,8 @@ o quê evita creditar a um a trapalhada do outro — e torna possível comparar 
 | Viagem "quebrada" | nomes de saída lidos do `look` | os nomes vêm do comando **`exits`** |
 | Magia no alvo errado | nome genérico | mirar o **nome exato** do monstro |
 | Loja não responde ao `list` | **invisibilidade bloqueia comércio** — *"Não negocio com quem não vejo!"* | **`visible` antes de `list`/`buy`/`sell`** |
-| Falso MORTA outra vez | o **paginador do `commands`** deixa o driver em `dead_or_menu` | **texto que parece menu não é morte**; sair do paginador com `S`, e nunca rodar `commands` no meio de uma rotina |
+| Falso MORTA outra vez | o **paginador do `commands`** deixa o driver em `dead_or_menu` | **`term 200 80` no login** (já aplicado em `debo_bot.py`); nunca rodar `commands` no meio de uma rotina |
+| Missão "Em andamento" tratada como presa | `autoquest todas` mostra **49 missões, todas "Não feita", zero em andamento** | **não há como abandonar autoquest** (`help abandon` é para a montaria) — e "Em andamento" não é estado durável sem reconferir |
 | Fome com ouro no banco | a padaria cobra da **mão** e o `prepara` só depositava | **`sacar_para_comprar()`** — saca até `SAQUE_PARA_COMPRAR` e **avisa** quando o banco não cobre |
 | Rota aplicada da sala errada | o caminho foi calculado a partir do Templo, mas ela estava na Praça | **a origem da rota é a sala onde ela ESTÁ** (`sala_atual()`), não onde se supõe |
 | *"Nah... você está muito relaxado"* | a personagem está descansando | `wake; stand` antes de andar |
