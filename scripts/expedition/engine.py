@@ -49,8 +49,11 @@ class Prepare(Travel):
             if rejection(ctx.send('eat pao')):return Result(Status.PAUSED,'Alimentação recusada.')
         if ctx.supplies.thirsty and ctx.supplies.water and ctx.supplies.water>0:
             if rejection(ctx.send('drink cantil')):return Result(Status.PAUSED,'Hidratação recusada.')
-        needs_food=ctx.supplies.food<ctx.config.food_target
-        needs_water=ctx.supplies.water is None or ctx.supplies.water<.75
+        needs_food=ctx.supplies.food<ctx.config.food_floor
+        # Ir buscar agua so' quando o cantil ACABOU. O piso de .75 e' exigencia
+        # de PARTIDA (ver a conferencia no fim), nao gatilho de retorno: com
+        # meio cantil a resposta e' beber, nao atravessar a cidade.
+        needs_water=ctx.supplies.water is None or ctx.supplies.water<=ctx.config.water_floor
         if needs_water:
             result=self.travel_to(ctx,lambda room:room.get('id')=='praca_templo')
             if not result.ok:return result

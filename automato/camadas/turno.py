@@ -1,14 +1,21 @@
 # -*- coding: utf-8 -*-
 """turno.py - o encarregado do turno.
 
-Junta as tres pecas:
-  1. VIGIA (vigia.py)      - le o log e diz se esta tudo bem (leitura pura, nao interfere);
-  2. PREPARA (prepara.py)  - conserta: come, bebe, guarda o ouro no banco, dorme e volta ao Templo;
-  3. MOTOR (motor.py)      - trabalha na missao (sabe sempre partir do Templo).
+Tres camadas, cada uma com um trabalho so':
 
-O turno roda o motor em segundo plano e, A CADA MINUTO, pergunta ao vigia.
-Se o vigia acusar problema, o turno MATA o motor, manda o prepara resolver e
-recomeca - exatamente o "monitora status que sobrepoe o motor" pedido pelo autor.
+    vigia.py    OBSERVA   - le o log e o driver (por IPC, sem falar com o MUD)
+                            e diz o estado. Nunca age.
+    cuidar.py   CUIDA     - em campo: come, bebe, veste armadura e
+                            invisibilidade. Nunca vai a cidade.
+    prepara.py  RECARREGA - a ida a cidade: padaria, fonte, banco, sono. So'
+                            entra quando o cuidar avisa que o estoque acabou.
+
+O turno roda a rotina em segundo plano e, A CADA MINUTO, pergunta ao vigia. Se o
+vigia acusar problema, o turno mata o motor, manda o `cuidar` resolver e so'
+manda o `prepara` se o cuidar disser que falta estoque.
+
+Os codigos de saida do `cuidar.py` sao o contrato: 0 = resolvido em campo,
+2 = precisa recarregar, 1 = nao resolveu sozinho.
 """
 import sys as _sys
 from pathlib import Path as _Path
@@ -20,7 +27,7 @@ import sys
 import time
 from pathlib import Path
 
-LOCAL = Path(__file__).resolve().parents[1]
+LOCAL = Path(__file__).resolve().parents[1]        # automato/
 PY = sys.executable
 sys.path.insert(0, str(LOCAL / 'camadas'))
 sys.path.insert(0, str(LOCAL / 'nucleo'))
@@ -28,12 +35,23 @@ import vigia  # noqa: E402
 
 MINUTOS_POR_TURNO = 6
 TURNOS = 4
-PROBLEMAS = ('MORTA', 'FOME', 'SEDE', 'VIDA_BAIXA', 'MANA_BAIXA', 'TRAVADO')
+PROBLEMAS = ('MORTA', 'FOME', 'SEDE', 'VIDA_BAIXA', 'MANA_BAIXA', 'TRAVADO', 'EM_COMBATE')
+PRECISA_RECARGA = 2
 
 
-def roda(nome):
-    print(f'[turno] rodando {nome}', flush=True)
-    return subprocess.run([PY, str(LOCAL / nome)], check=False).returncode
+def roda(relativo, extra=()):
+    """Executa um script pelo caminho relativo a automato/.
+
+    Antes isto montava `automato/prepara.py` e `automato/ressuscitar6.py`:
+    nenhum dos dois existe (estao em camadas/ e acoes/). O prepara nunca rodou
+    por aqui - o turno so' achava que sim.
+    """
+    alvo = LOCAL / relativo
+    if not alvo.is_file():
+        print(f'[turno] NAO EXISTE: {alvo}', flush=True)
+        return 1
+    print(f'[turno] rodando {relativo}', flush=True)
+    return subprocess.run([PY, str(alvo), *extra], check=False).returncode
 
 
 def motor_em_segundo_plano(rotina):
@@ -44,29 +62,45 @@ def motor_em_segundo_plano(rotina):
                             stdout=log, stderr=subprocess.STDOUT)
 
 
+def socorrer():
+    """Cuidado em campo primeiro; a cidade so' se o estoque acabou."""
+    if roda('camadas/cuidar.py') == PRECISA_RECARGA:
+        print('[turno] cuidar pediu recarga -> prepara (viagem a cidade)', flush=True)
+        roda('camadas/prepara.py')
+        roda('camadas/cuidar.py')       # aplica o cuidado sobre o estoque novo
+
+
 def main():
-    ap = argparse.ArgumentParser(description='Encarregado do turno: vigia + prepara + rotina.')
+    ap = argparse.ArgumentParser(description='Encarregado do turno: vigia + cuidar + prepara + rotina.')
     ap.add_argument('--rotina', default='milharal', help='rotina a executar')
     ap.add_argument('--turnos', type=int, default=TURNOS)
+    ap.add_argument('--socorrer', action='store_true',
+                    help='aplica cuidado (e recarga, se preciso) antes de comecar')
     args = ap.parse_args()
+
     print(f'[turno] rotina={args.rotina}', flush=True)
     for turno in range(1, args.turnos + 1):
         d = vigia.diagnosticar()
-        print(f'[turno {turno}] vigia={d["estado"]} {d.get("vitais", "")}', flush=True)
+        print(f'[turno {turno}] vigia={d["estado"]} {d.get("vitais", "")} '
+              f'fome={d.get("fome")} sede={d.get("sede")}', flush=True)
         for m in d.get('motivos', []):
             print('   -', m, flush=True)
-        if d['estado'] != 'OK':
-            roda('prepara.py')
+
+        if args.socorrer or d['estado'] in PROBLEMAS:
+            socorrer()
+
         p = motor_em_segundo_plano(args.rotina)
         estado = 'OK'
         for minuto in range(1, MINUTOS_POR_TURNO + 1):
             time.sleep(60)
             d = vigia.diagnosticar()
             estado = d['estado']
-            print(f'   [min {minuto}] vigia={estado} {d.get("vitais", "")}', flush=True)
+            print(f'   [min {minuto}] vigia={estado} {d.get("vitais", "")} '
+                  f'fome={d.get("fome")} sede={d.get("sede")}', flush=True)
             if estado in PROBLEMAS:
                 print(f'   !! problema ({estado}) - interrompendo o motor', flush=True)
                 p.kill()
+                socorrer()
                 break
             if p.poll() is not None:
                 print('   motor terminou sozinho - devolvendo ao vigia', flush=True)
@@ -79,7 +113,7 @@ def main():
                 p.kill()
         if estado == 'MORTA':
             print('[turno] ressuscitando', flush=True)
-            roda('ressuscitar6.py')
+            roda('acoes/ressuscitar.py')
     print('[turno] fim', flush=True)
     return 0
 

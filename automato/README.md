@@ -10,18 +10,30 @@ cada peça tem uma responsabilidade e a segurança vem antes da produtividade.
 > Toda rotina **parte do Templo e volta para lá** — é isso que a torna reiniciável.
 
 ## As camadas
+
+Três camadas com um trabalho cada — **observar, cuidar, recarregar**. Misturar as três foi o que
+fez a rotina parar no meio do mato e voltar para a padaria por fome, com seis pães na mochila.
+
 \`\`\`
-turno.py      o encarregado: vigia -> prepara (se preciso) -> rotina -> vigia a cada minuto
+turno.py      o encarregado: vigia -> cuidar -> (prepara, se o cuidar pedir) -> rotina -> vigia/min
    |
-   +-- vigia.py        le a CAUDA DO LOG do driver (leitura pura: nao manda comando, nao interfere)
-   |                   diagnostico: OK / FOME / SEDE / VIDA_BAIXA / MORTA / TRAVADO / SEM_SESSAO
-   +-- prepara.py      o arrumador: come, bebe, DEPOSITA O OURO NO BANCO, dorme, volta ao Templo
+   +-- vigia.py        OBSERVA. Le o log E o driver (por IPC _STATUS, sem falar com o MUD).
+   |                   diagnostico: OK / FOME / SEDE / VIDA_BAIXA / MORTA / TRAVADO / EM_COMBATE
+   +-- cuidar.py       CUIDA, em campo. Come, bebe, veste armadura e invisibilidade. NUNCA vai
+   |                   a cidade; o unico passo que da' e' sair da area sem magia (o Templo).
+   |                   saida: 0 resolvido | 2 precisa recarregar | 1 nao resolveu
+   +-- prepara.py      RECARREGA. A ida a cidade: padaria, fonte, banco e sono. So' entra quando
+   |                   o cuidar devolve 2, ou com --forcar. Decide por ESTOQUE, nunca por fome.
    +-- trabalhar.py    o despachante: --rotina X carrega rotinas/X.py e chama executar()
          |
-         +-- rotinas/milharal.py   caca os invasores do milharal (missao Problemas Agricolas)
-         +-- rotinas/esgoto.py     reconhece os esgotos com cuidado
-         +-- rotinas/_suspensas/   rotinas proibidas por diretiva (nao reativar)
+         +-- rotinas/milharal.py    caca os invasores do milharal (missao Problemas Agricolas)
+         +-- rotinas/esgoto.py      reconhece os esgotos com cuidado
+         +-- rotinas/cartografa.py  modo batedor: levanta salas novas sem travar combate
+         +-- rotinas/_suspensas/    rotinas proibidas por diretiva (nao reativar)
 \`\`\`
+
+**Regra de ouro:** *fome pede comida; a cidade entra quando a comida acaba.* O piso é
+\`LIMIAR_PAO = 2\` — mínimo para partir; abaixo disso, recarrega.
 
 O **núcleo** (\`nucleo/\`) sustenta tudo:
 - \`config.py\` — **o único lugar** onde se aponta caminho e limite (driver, token, logs, tempo, magias);
@@ -120,18 +132,61 @@ o quê evita creditar a um a trapalhada do outro — e torna possível comparar 
 3. **Nunca deixar rotina sem supervisão**: rodar como job e **ler o log a cada ~60 s**; se o vigia
    acusar problema, **matar o job**.
 4. **O ouro dorme no banco**: \`deposit\` no Templo; a morte não leva o que está guardado.
-5. **Fome e sede consomem vida e mana por ciclo.** O prepara resolve — e **dormir faminto é o pior caso**.
+5. **Fome e sede consomem vida e mana por ciclo — e sem comer não há regeneração.** A resposta é
+   **comer da bolsa, no lugar**. A cidade só entra quando o **estoque** acaba: `LIMIAR_PAO = 2` é o
+   mínimo para partir; abaixo disso, repõe. Sentir fome com seis pães na mochila **não** é motivo
+   de caminhada — isso já fez a rotina parar no meio do mato e voltar para a padaria à toa.
+   Regra de ouro: **fome pede comida; a cidade entra quando a comida acaba.** **Dormir faminto é o pior caso.**
 6. **O Templo é a âncora**: a vida dela é barata de recuperar a partir dali (\`recall\` é grátis até o nível 70).
+7. **\`vigia.py\` sozinho não vigia nada.** Ele é um retrato do agora; quem pergunta em laço, a cada
+   60 s, é o \`turno.py\`. Conduzir a sessão à mão com \`play.py\` deixa a personagem **sem vigia** — foi
+   assim que ela chegou a "morrendo de fome" com o vigia tendo respondido \`OK\` no começo. Toda
+   sessão viva passa pelo \`turno.py\`, ou por um laço equivalente.
 
 ## Lições de campo (custaram caro — não repetir)
+
+### Ler o servidor sem acreditar na primeira resposta
+
 | Sintoma | Causa | Regra |
 |---|---|---|
-| *"Nah... você está muito relaxado"* | a personagem está descansando | \`wake; stand\` antes de andar |
-| Muitos *"inconclusivo"* na caçada | **mana seca** | \`sleep\` ~80 s antes de sair |
-| Viagem "quebrada" | nomes de saída lidos do \`look\` | os nomes vêm do comando **\`exits\`** |
-| Laços no labirinto | trajeto por **contagem** de passos | andar por **marco de sala** |
-| Morte por script | robô solto | **teto de tempo + guarda + supervisão** |
+| `exits` com menos portas que a sala tem | resposta **cortada pela latência** — 20 leituras curtas numa sessão, uma delas com **1 linha numa sala de 6 portas** | **acrescentar a linha de colchetes do `look`** e insistir até o número já conhecido |
+| `inventory` devolvendo zero pão | a resposta veio com o texto do `score` | **a resposta tem que se identificar; `None` não é zero** (`nucleo/inventario.py`) |
+| O vigia declarando MORTA com ela inteira | "Menu Principal" casou dentro de uma **DICA do servidor** | **sinal de morte exige a linha inteira** (`^\s*Menu Principal\s*$`) |
+| Magia "que não funciona" | o **Templo de Midgaard é área sem magia**; e a falha diz "…falha e **desaparece**", palavra que também está no sucesso da invisibilidade | **conjurar na Praça do Templo e conferir a FALHA antes do sucesso** |
+| Viagem "quebrada" | nomes de saída lidos do `look` | os nomes vêm do comando **`exits`** |
 | Magia no alvo errado | nome genérico | mirar o **nome exato** do monstro |
+| Loja não responde ao `list` | **invisibilidade bloqueia comércio** — *"Não negocio com quem não vejo!"* | **`visible` antes de `list`/`buy`/`sell`** |
+| Falso MORTA outra vez | o **paginador do `commands`** deixa o driver em `dead_or_menu` | **texto que parece menu não é morte**; sair do paginador com `S`, e nunca rodar `commands` no meio de uma rotina |
+| Fome com ouro no banco | a padaria cobra da **mão** e o `prepara` só depositava | **`sacar_para_comprar()`** — saca até `SAQUE_PARA_COMPRAR` e **avisa** quando o banco não cobre |
+| Rota aplicada da sala errada | o caminho foi calculado a partir do Templo, mas ela estava na Praça | **a origem da rota é a sala onde ela ESTÁ** (`sala_atual()`), não onde se supõe |
+| *"Nah... você está muito relaxado"* | a personagem está descansando | `wake; stand` antes de andar |
+
+### Andar sem girar em círculo
+
+| Sintoma | Causa | Regra |
+|---|---|---|
+| Laços no labirinto | trajeto por **contagem** de passos | andar por **marco de sala** |
+| Robô girando na mesma sala | recusa lida como sucesso (`andar` só vê "não pode ir") | **conferir a chegada pela sala ter mudado** |
+| Robô que não cobre o mapa | a escolha só olha os vizinhos daqui e esquece as portas deixadas por abrir | **fronteira: abrir a porta onde está; senão BFS até a mais próxima** |
+| Porta negada vira ímã | o guarda barra, a rotina marca bloqueio — e continua mirando a mesma sala | **porta recusada sai da fronteira** |
+| BFS devolve `None` sem motivo aparente | destinos gravados com o **nome cru** do servidor enquanto o grafo usa normalizado; e o `?` da linha de colchetes sobrescrevendo nome real | **normalizar todo destino ao gravar; `setdefault`, nunca `update`** |
+
+### Cuidar de si em campo
+
+| Sintoma | Causa | Regra |
+|---|---|---|
+| Volta à cidade sem motivo | fome tratada como gatilho de viagem | **comer da bolsa; repor só com estoque < 2** |
+| Muitos *"inconclusivo"* na caçada | **mana seca** | `sleep` ~80 s antes de sair |
+| Morte por script | robô solto | **teto de tempo + guarda + supervisão** |
+
+### Método — os erros que custaram rounds inteiros
+
+| Sintoma | Causa | Regra |
+|---|---|---|
+| "A melhoria piorou" sem prova | bônus de fronteira como peso local (mediu 7 → 4 salas) | **medir antes de acreditar**; fronteira se resolve com caminho, não com peso |
+| Avaliar navegação por replay | o grafo gravado só tem saídas de salas **correntes** — trava e mente | **política de navegação só se avalia com sessão real instrumentada** |
+| Ensaio que usa o código anterior | editar o arquivo e rodar a sessão **no mesmo bloco de ferramentas**: elas correm em paralelo | **editar, conferir o arquivo, e só então executar** — em chamadas separadas |
+| Bug invisível por dois rounds | a variável do título foi **sombreada** por um `for ... in do_look.items()` dentro da própria correção | **depois de editar, varrer o AST** procurando reatribuição de variável de estado |
 
 ## Diretivas do autor (valem para outros agentes)
 - **PROIBIDO vender armaduras** (Torre Negra ou peão): *"perdemos mais dinheiro do que ganhamos"*.

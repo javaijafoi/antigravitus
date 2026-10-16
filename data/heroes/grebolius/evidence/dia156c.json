@@ -1,0 +1,36 @@
+{
+  "hero_id": "grebolius",
+  "chapter": 4,
+  "day": 156,
+  "date": "2026-10-16",
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "agent": "deepseek-flash",
+  "via": "automato",
+  "summary": {
+    "missao": "Capitulo 04 - 'Ate Onde Vai o Mundo'. Desafio pessoal: mapear o maximo do mundo que fosse possivel, com a marcacao de que o objetivo NAO era lutar. A personagem partia do Templo de Midgaard, voltava a ele e salvava.",
+    "levantamento_do_mundo": "O levantamento foi digerido de 26 sessoes gravadas entre os Dias 96 e 156 (18 dias distintos, 31.874 comandos) e absorvido no mapa curado. O mapa saiu de 141 salas para 360, com 747 arestas. Das 308 salas com identidade propria no levantamento, 88 parearam com salas de curadoria e 220 entraram como salas novas.",
+    "fronteira": "Restaram 33 destinos nomeados e nunca visitados - portas que o servidor anuncia e que ela nunca atravessou. Sao eles que definem 'ate onde vai o mundo' no estado atual.",
+    "identidade_de_sala": "Toda sala tem id. As 141 de curadoria usam slug legivel (templo_midgaard); as derivadas usam lv### - e, a partir do Dia 156, as 115 salas de titulo repetido (labirintos como 'Num Bosque Iluminado', 25 salas homonimas) usam lb###, para que o proprio id denuncie que ali o titulo nao identifica.",
+    "panteao_alcancado": "O Panteao dos Centenarios - o santuario dela - foi visitado pela primeira vez, pela porta 'u' do Templo. Nunca havia sido alcancado nos Dias 96-141. Tambem entraram no mapa conhecido o distrito comercial (Praca do Comercio, Rua Principal, Loja de Armas, Loja de Animais, Armazem, Guilda dos Guerreiros) e a zona dos ladroes (Praca Comum, Beco Escuro, Guilda dos Ladroes, Margens do Rio).",
+    "npc_confirmado_por_comportamento": "O levantamento passou a registrar NPC por sala usando o COMPORTAMENTO, nao o veredito do 'consider'. O 'consider' separa criatura de objeto (382 recusas contra 92 aceites no corpus), mas NAO separa NPC de monstro: 'consider zumbi' le 'E uma perda de tempo', 'consider rato' le 'Voce e LOUCO!' e 'consider ferreiro' (NPC) tambem le 'Voce e LOUCO!'. Quem separa e falar (NPC) e cair (monstro). Resultado: 29 salas com presenca confirmada, incluindo monstro, criatura, peao, torre, castelo, zumbi, rato, cobra, kobold, prefeito, lobo e ferreiro.",
+    "tabela_de_itens": "Auditoria de comercio com o comando 'list': 11 lojas responderam com estoque, somando 38 itens distintos, com preco, nivel minimo, encargos e quantidade em estoque. Registrado que o MESMO item pode ter precos diferentes em lojas diferentes - a garrafa de especialidade local custa 20 na Taverna Encardida e 22 no Bar do Javali.",
+    "venda_da_jaqueta": "Item pego de graca na Sala de Doacoes (uma enfeitada jaqueta de couro, 34 kg) e vendido ao armeiro por 250 moedas: 'Vou te pagar 250 moedas por isso!'. Merceeiro e feiticeiro recusaram ('Eu nao compro ISSO... Tente outra loja.' e 'eu nao compro esse tipo de coisa.'). Ouro depositado: banco de 47 para 297, com 300 mantidos na mao.",
+    "tempo_do_jogo": "A hora do jogo foi medida ao vivo com o comando 'time': cerca de 75 segundos reais por hora de jogo, por duas transicoes cronometradas (61 s e ~78 s). Serve para estimar a duracao das magias, que o manual importado do CircleMUD da' como 24 horas de jogo.",
+    "area_sem_magia": "Confirmado ao vivo que o Templo de Midgaard NAO aceita conjuracao: 'cast armor' responde 'Sua magia falha e desaparece.'. Um passo abaixo, na Praca do Templo, a magia pega ('Voce sente alguem te protegendo.'). O registro anterior ja' apontava o mesmo fenomeno nas paredes da Loja de Magias - nao e' privilegio do Templo.",
+    "invisibilidade_e_comercio": "Descoberto que invisibilidade BLOQUEIA comercio: o balconista responde 'Nao negocio com quem nao vejo!' e o 'list' nao devolve nada. A saida e' o comando 'visible' ('Voce se torna visivel novamente.'). Por decisao do autor, a invisibilidade deixou de ser a protecao padrao: a protecao passou a ser a ESCOLHA DA ROTA, evitando as salas de risco alto.",
+    "o_que_nao_da_para_saber": "Confirmado por duas vias - o 'help' do servidor e um bruteforce de 19 verbos - que NAO ha como inspecionar as propriedades de um item a venda. 'help listar' diz que a lista contem os itens, o estoque e o preco, e nada mais. 'value', 'examine', 'look', 'identify' e 'study' so' funcionam no que ela carrega; 'appraise', 'inspect', 'probe', 'analyze', 'compare', 'assess', 'evaluate', 'measure' e 'weigh' nao existem ('Como?!?'). O balcao e a prateleira nao sao examinaveis.",
+    "defeitos_de_mapa_corrigidos": "A auditoria de comercio expos tres salas duplicadas (a curadoria e o levantamento batizaram o mesmo lugar de formas diferentes): 'O Correio de Midgaard' = 'O Escritorio dos Correios', 'O Bar do Javali Roncador' = 'O Bar da Estalagem Javali Roncador' e 'A Sala de Doacoes' = 'A Sala de Doacoes de Midgaard'. A identidade foi provada PELA CAMINHADA, e o nome do jogo passou a vencer - e' ele que a rotina le' no 'look'. Corrigida tambem 'A Entrada da Guilda dos Clerigos', que tinha tres das quatro arestas erradas, incluindo um 's' para a Loja de Armaduras que o jogo recusa."
+  },
+  "raw_evidence": {
+    "mapa_final": "360 salas, 747 arestas, 141 com coordenada. Camadas: superficie 41, novatos 53, esgotos 17, vazio 4, jareth_fazenda 26, levantamento 219.",
+    "levantamento_final": "308 salas, 640 arestas observadas em 18 dias (Dias 96 a 156).",
+    "lojas_auditadas": ["A Loja de Armaduras (14 itens)", "A Loja de Armas (11)", "O Armazem (5)", "O Bar do Javali Roncador (5)", "A Padaria (4)", "A Taverna Encardida (2)"],
+    "rota_do_armeiro": "A rota real e' Templo -> d (Praca do Templo) -> s (Praca do Comercio) -> w (A Rua Principal Oeste) -> s (A Loja de Armaduras). O mapa dava d,w,s, que terminava na Praca do Templo.",
+    "comandos_de_compra": "help comprar: 'comprar <nome do item>' ou 'comprar #<numero>'. help listar: 'listar <tipo do objeto>', com o exemplo 'listar espada'.",
+    "duracao_provavel_das_magias": "ARMOR 24 horas de jogo; INVISIBILITY 24 horas (permanente em objetos); DETECT INVISIBILITY 12 h + nivel/4; DETECT MAGIC 12 h + nivel; INFRAVISION 12 h + nivel; BLESS 6 h; SANCTUARY 4 h; PROTECTION FROM EVIL 24 h; CURSE 7 dias; POISON nivel horas. Fonte: maquina/spells.md, importado do CircleMUD - PROVAVEL, nao confirmado para este servidor.",
+    "ouro_final": "300 na mao e 297 no banco, total 597. Antes da venda: 300 na mao e 47 no banco, total 347.",
+    "falso_positivo_de_morte": "O paginador do comando 'commands' deixa o driver em estado 'dead_or_menu', que o vigia le' como MORTA. E' a segunda fonte de falso positivo: a primeira foi uma DICA do servidor que menciona 'Menu Principal'.",
+    "estado_final": "Nivel 20, Mago Elfo. Vida 113/113, mana 260/260, movimento 114/114, sem fome e sem sede, fora de combate. Save respondido pelo servidor."
+  }
+}

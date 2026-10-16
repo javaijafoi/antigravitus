@@ -1,0 +1,28 @@
+{
+  "hero_id": "grebolius",
+  "day": 156,
+  "date": "2026-10-16",
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "agent": "deepseek-flash",
+  "via": "automato",
+  "summary": {
+    "sessao": "Segunda sessao do Dia 156, conduzida para manutencao de equipamento e provisao. Transcript: automato/runtime/transcript_dia156_20261016_121159_9eb61a.jsonl.",
+    "armadura_vestida": "A Armadura da Torre Negra foi VESTIDA. O slot 'no corpo' estava ocupado pela brilhante veste de novato; 'remove veste' liberou o slot e 'wear armadura' funcionou: 'Voce veste a Armadura da Torre Negra no seu corpo.' Efeito medido: Classe de Armadura 65 -> 80 e Constituicao 9 -> 10. Como equipamento vestido nao conta no peso carregado, o peso caiu de 108 para 51 kg e a capacidade livre subiu de 7 para 64 kg. A armadura segue amaldicoada: 'remove armadura' responde 'Voce nao pode parar de usar... AMALDIÇOADO'.",
+    "primeiro_pergaminho_perdido": "Comprado um pergaminho de remover maldicoes (8.509) e recitado FORA da loja com a armadura ainda NA MOCHILA. Resultado: 'Voce recita um pergaminho de remover maldicoes, que dissolve. Nada parece acontecer.' Causa identificada: o remove curse do CircleMUD so afeta itens EQUIPADOS; a armadura estava carregada, nao vestida. O pergaminho foi consumido sem efeito.",
+    "armadura_a_venda": "As armaduras da Torre Negra doadas na Sala de Doacoes continuam fora de alcance: 60 kg cada, com 17 kg livres na ocasiao. O armeiro AVALIA em 8.500 ('Vou te pagar 8500 moedas por isso!') mas NAO PAGA: 'Isso e caro demais para mim - Tente um feiticeiro!'. O feiticeiro recusa armaduras. Sem comprador para o item.",
+    "anel_arcano_recuperado_e_vendido": "O anel arcano (+2E) foi recuperado na Sala de Doacoes e VENDIDO ao armeiro por 500. Ele era inutilizavel: 'wear anel' responde 'Voce nao tem experiencia para usar um anel arcano' no Grau 20. Isso encerra a pendencia aberta desde o Dia 43.",
+    "treino": "Duas habilidades treinadas com a Mestre da Guilda dos Magos no Laboratorio: detect poison 10% -> 95% e shocking grasp 10% -> 95%. Uma unica sessao leva de 10% a 95%; repetir responde 'Voce ja esta instruido nessa area.' Sessoes de treino: 40 -> 38. invisibility foi observada em 97%.",
+    "tabela_de_magias": "O comando 'spells' informa a progressao da maga: 1 magic missile, 2 detect invisibility, 3 detect magic, 4 chill touch, 5 infravision, 6 invisibility, 7 armor, 8 burning hands, 15 shocking grasp, 16 detect poison, 20 lightning bolt, 21 curse, 22 identify, 24 blindness, 25 champions strength, 27 poison, 28 enchant weapon. O comando 'skills': 1 swim, 22 blast, 40 mix, 50 second attack, 60 magic extension. 'remove curse' NAO consta: o pergaminho e o unico caminho.",
+    "provisao": "A personagem estava 'morrendo de fome' e 'morrendo de sede' com zero comida no inventario e 19 moedas. Sede resolvida na Fonte de Marmore Azul (gratuita, na Praca do Templo). Comida comprada na Padaria: 6 pao recheado a 6, 1 broa a 13 e 1 pao de viagem a 69. Observacao de comando: 'buy pao de viagem' cobra 6 e entrega pao recheado - a loja casa so a primeira palavra; a palavra distintiva e necessaria.",
+    "comandos_que_nao_funcionam": "drop, junk e donate recusam a armadura amaldicoada. 'sacrifice' responde 'Voce nao tem ideia de como fazer isso'. 'sacrificar', 'queimar' e 'burn' respondem 'Como?!?': nao existem. 'l' e look e 'o' e order - nao sao direcoes.",
+    "correcoes_no_automato": "Corrigidos no driver: (1) o flag in_combat travava para sempre porque debo_bot.py usava 'or self.in_combat' e porque os medidores do score casavam com o gatilho '>>' e o 'Voce morreu 7 vezes' com o terminador 'morreu'; (2) parsers.py passou a ignorar linhas rotuladas de ficha no medidor de combate e a exigir pontuacao para 'morreu'; (3) fome e sede viraram estado (parse_supplies) e aparecem no _STATUS; (4) vigia.py passou a decidir por marcador em vez de janela fixa de 120 linhas; (5) prepara.py passou a insistir na leitura do score e a conferir a fome antes de declarar sucesso."
+  },
+  "raw_evidence": {
+    "score_final": "Nivel 20, Mago Elfo. Vida 113/113, Mana 260/260, Movimento 114/114. Experiencia 1.088.553, proximo nivel 111.447. Alinhamento 231. Forca 11, Constituicao 10, Sabedoria 17, Inteligencia 19, Destreza 15, Carisma 11, Acerto 1, Dano 0, Classe de Armadura 80. Carregando 11 itens, 43 kg de 115. Banco 369, na mao 32, total 401.",
+    "equipamento_final": ["na cabeca: a Coroa da Rainha Branca", "sobre o corpo: um manto de pano", "no corpo: a Armadura da Torre Negra", "nos bracos: um par de bracadeiras de novato", "nas maos: um par de luvas de couro", "no pulso direito: um rosario", "como escudo: um escudo", "nas pernas: uma calca de couro"],
+    "inventario_final": ["um cantil", "uma Cruz Ansada", "uma broa", "(x5) um pao recheado", "uma brilhante veste de novato", "um pergaminho de sabedoria", "um colar com uma pedra purpura"],
+    "cruz_ansada": "Nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Explica a mana maxima observada de 260 em vez de 265.",
+    "dica_do_servidor": "DICA: Voce nao ira recuperar sua saude enquanto estiver com fome ou com sede. Se ficar muito tempo em inanicao, tomara dano e podera ate morrer."
+  }
+}

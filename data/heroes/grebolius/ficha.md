@@ -10,7 +10,7 @@
 * **Raça Mecânica no MUD:** Elfo
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **20**
-* **Alinhamento Moral:** 223 (Um pouco bom)
+* **Alinhamento Moral:** 231 (Um pouco bom)
 * **Localização Atual:** O Templo de Midgaard (último registro: Dia 156)
 * **Acampamento Registrado:** O Templo de Midgaard
 * **Santuário de Referência:** O Panteao dos Centenarios
@@ -26,19 +26,19 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 
 * **Experiência Acumulada:** **1.088.553 EXP**
 * **Experiência Necessária p/ Grau 21:** **111.447 EXP** (Meta: 1.200.000 EXP)
-* **Ouro Líquido:** **7.828 moedas de ouro** (valor documental)
+* **Ouro Líquido:** **401 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 11
 * **Destreza (DEX):** 15
-* **Constituição (CON):** 9
+* **Constituição (CON):** 10
 * **Inteligência (INT):** 19
 * **Sabedoria (WIS):** 17
 * **Carisma (CHA):** 11
 
 ### Métricas de Combate
-* **Classe de Armadura (AC):** 64 (base) / **95** (com `armor`, conforme registro)
-Armadura arcana ativa (~28h) conjurada na Praca do Templo; a Coroa da Rainha Branca soma +25. CA 95 na ultima leitura (94 em leituras anteriores).
+* **Classe de Armadura (AC):** 64 (base) / **80** (com `armor`, conforme registro)
+CA 80 medida ao vivo no Dia 156 com a Armadura da Torre Negra VESTIDA. A armadura arcana NAO esta ativa: com ela a CA fica mais alta. A veste de novato saiu do corpo e esta na mochila; o slot do corpo pertence a armadura da torre e ela nao sai enquanto a maldicao durar.
 * **Bônus de Acerto (Hitroll):** 1
 * **Bônus de Dano (Damroll):** +0
 * **Configuração de Fuga (Wimpy):** **48 HP** (referência de 25%; não garante fuga antes de golpe letal)
@@ -62,52 +62,55 @@ Armadura arcana ativa (~28h) conjurada na Praca do Templo; a Coroa da Rainha Bra
 Objetivos pessoais e investigações ficam separados das autoquests no catálogo de missões.
 
 ## ✦ Habilidades Conhecidas e Treinos Concluídos
-* **Sessões de Treino Disponíveis:** **40 sessões de treino acumuladas**
+* **Sessões de Treino Disponíveis:** **38 sessões de treino acumuladas**
 Percentuais são registros de proficiência; não garantem acerto, imunidade ou acesso a guildas.
 * `armor` (Armadura Mística): **99%**
-* `invisibility` (Invisibilidade): **95%**
-* `infravision` (Infravisão): **95%**
-* `magic missile` (Míssil Mágico): **99%**
-* `chill touch` (Toque Gélido): **95%**
 * `burning hands` (Mãos Flamejantes): **99%**
+* `chill touch` (Toque Gélido): **95%**
 * `detect invisibility` (Detectar Invisibilidade): **95%**
 * `detect magic` (Detectar Magia): **95%**
-* `swim` (Nadar): **95%**
+* `detect poison` (Detectar Veneno): **95%**
+* `infravision` (Infravisão): **95%**
+* `invisibility` (Invisibilidade): **97%**
 * `lightning bolt` (Raio): **95%**
+* `magic missile` (Míssil Mágico): **99%**
+* `shocking grasp` (Choque Eletrico): **95%**
+* `swim` (Nadar): **95%**
 
 ## ✦ Equipamento em Uso
 Equipamento conforme os últimos documentos disponíveis; conferir no próximo acesso ao MUD.
-* **na cabeça:** `a Coroa da Rainha Branca`
+* **na cabeca:** `a Coroa da Rainha Branca`
 * **sobre o corpo:** `um manto de pano`
-* **no corpo:** `uma brilhante veste de novato`
-* **nos braços:** `um par de braçadeiras de novato`
-* **nas mãos:** `um par de luvas de couro`
-* **no pulso direito:** `um rosário`
-* **no pescoço:** `uma Cruz Ansada`
+* **no corpo:** `a Armadura da Torre Negra`
+* **nos bracos:** `um par de bracadeiras de novato`
+* **nas maos:** `um par de luvas de couro`
+* **no pulso direito:** `um rosario`
 * **como escudo:** `um escudo`
-* **nas pernas:** `uma calça de couro`
+* **nas pernas:** `uma calca de couro`
 
 ## ✦ Inventário e Suprimentos
 Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
-* `a Armadura da Torre Negra` (x1) — evidence/dia137.json
-* `a bainha de Excalibur` (x1) — evidence/dia137.json
-* `um colar com uma pedra púrpura` (x1) — evidence/dia137.json
-* `o Cetro do Bispo Negro` (x1) — evidence/dia137.json
-* `uma adaga` (x1) — evidence/dia143.json
-* `um brilhante punhal de novato` (x1) — evidence/dia143.json
-* `um cantil` (x1) — evidence/dia143.json
-* `uma atadura` (x1) — evidence/dia143.json
-* `uma tocha` (x1) — evidence/dia143.json
-* `uma poção amarela de detectar invisibilidade` (x1) — evidence/dia143.json
+* `um cantil` (x1) — evidence/dia156b.json
+* `uma Cruz Ansada` (x1) — evidence/dia156b.json
+* `uma broa` (x1) — evidence/dia156b.json
+* `um pao recheado` (x5) — evidence/dia156b.json
+* `uma brilhante veste de novato` (x1) — evidence/dia156b.json
+* `um pergaminho de sabedoria` (x1) — evidence/dia156b.json
+* `um colar com uma pedra purpura` (x1) — evidence/dia156b.json
 
 ### Pendências de inventário
 
 ## ✦ Condições Registradas
 * Dia 156: no Templo de Midgaard, 113/113 de vida, 260/260 de mana e 114/114 de movimento, alimentada e hidratada.
 * Grau 20 (vida maxima 113, mana maxima 260); proximo nivel em 1.200.000 (faltam 111.447).
-* Capitulo 3 fechado frustrado no Dia 156: cota de abates cumprida, entrega nao reconhecida, nenhuma das tres missoes concluida.
-* Ouro 7.528 guardado no banco do Templo e 300 na mao (total 7.828).
+* Armadura da Torre Negra VESTIDA: CA 80, Constituicao 10. Peso carregado 43/115 kg; a armadura nao consome capacidade por estar equipada.
+* Ouro 369 no banco do Templo e 32 na mao (total 401).
 * Sete mortes registradas; uma armadilha de morte. Ultima morte no Dia 126, por script sem supervisao.
+* Dia 156 (cartografia): o mapa vivo esta em 361 salas e 750 arestas - 141 autorais e 220 derivadas do levantamento dos Dias 96-156. Faltam 33 destinos nomeados e nunca visitados.
+* Dia 156 (magia): o Templo de Midgaard e AREA SEM MAGIA - conjurar la devolve 'Sua magia falha e desaparece'. A Praca do Templo, um passo abaixo, aceita. Armadura e invisibilidade custam ~25 de mana cada, e a mana regenera rapido.
+* Dia 156 (santuario alcancado): O Panteao dos Centenarios foi visitado pela porta 'u' do Templo. E o santuario dela e nunca havia sido visitado nos Dias 96-141.
+* Dia 156: CAPITULO 04 FECHADO - 'Ate Onde Vai o Mundo' (kind marco, 12 paragrafos). O mapa curado saiu de 141 para 360 salas e 747 arestas com o levantamento dos Dias 96-156. O Panteao dos Centenarios foi alcancado pela primeira vez.
+* Dia 156: a invisibilidade deixou de ser a protecao padrao por decisao do autor - ela bloqueia comercio ('Nao negocio com quem nao vejo!') e a protecao passou a ser a escolha da rota, evitando as 20 salas de risco alto.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
 **Capitulo 4 - desafio pessoal de mapeamento (plano proprio, kind marco)**
@@ -118,9 +121,13 @@ Seguir data/heroes/grebolius/plano_capitulo_04.md: levantar o desconhecido em in
 * Decisoes pendentes do autor: titulo do capitulo, wimpy 48 ou 56, coletar itens ou nao, regioes proibidas.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Capitulo 3 (Tres Oficios) fechado no Dia 156 sem cumprir o objetivo: onze abates acumulados contra a cota de dez do fazendeiro e entrega nao reconhecida. Recolhimento ao vivo no Templo de Midgaard: 113/113 de vida, 260/260 de mana, 114/114 de movimento, 7.528 no banco do Templo e 300 na mao, com save, sleep e quit respondidos pelo servidor..
-* A mana maxima caiu de 265 (Dia 143) para 260 (Dia 156) sem explicacao registrada: conferir se a Cruz Ansada, o rosario ou a armadura arcana respondem pelos 5 pontos.
-* O colar com pedra purpura (valor 20.000.000) pertence a outro dono: o servidor recusa o uso.
-* Bainha de Excalibur exige nivel 85; Scutum de Carvalho exige nivel 35 (devolvido a Sala de Doacoes).
-* A Armadura da Torre Negra (60 kg) continua amaldicoada e presa ao corpo dela. Com a proibicao de vender, a saida seria pagar 8.509 para desamaldicoar e doar (custo puro) ou seguir carregando. Decisao pendente do autor.
-* Problemas Agricolas: onze abates acumulados contra cota de dez e o gatilho de entrega nunca veio (Dia 156). O estado real da missao e desconhecido - pode exigir outra condicao, outro NPC ou reinicio.
+Fonte do estado: Segunda sessao do Dia 156, ao vivo. Armadura da Torre Negra VESTIDA (CA 65 -> 80, Constituicao 9 -> 10, peso carregado 108 -> 51 kg) e ainda amaldicoada; um pergaminho de remover maldicoes foi perdido por ter sido recitado com a armadura na mochila. Anel arcano +2E recuperado na Sala de Doacoes e vendido ao armeiro por 500, por ser inutilizavel. detect poison e shocking grasp treinadas a 95%. Provisao reposta na Padaria. Fonte: evidence/dia156b.json..
+* A Armadura da Torre Negra segue AMALDIÇOADA e vestida: nao pode ser removida, largada, jogada nem doada. O remove curse do CircleMUD exige o item EQUIPADO, entao o segundo pergaminho (8.509) so funciona agora. O armeiro avalia a armadura em 8.500 mas nao tem ouro; o feiticeiro recusa armaduras. Comprador desconhecido.
+* A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido; explica a mana maxima de 260 em vez de 265.
+* O colar com pedra purpura pertence a outro dono: o servidor recusa o uso. Nenhum comerciante testado o compra.
+* Bainha de Excalibur exige nivel 85 (vista na Sala de Doacoes, nao pode ser carregada com a carga atual). Scutum de Carvalho exige nivel 35 (devolvido a Sala de Doacoes).
+* Problemas Agricolas: onze abates acumulados contra cota de dez e o gatilho de entrega nunca veio (Dia 156). O estado real da missao e desconhecido.
+* Dia 156: a DURACAO de 'armor' e 'invisibility' nao esta medida. Nao existe, em registro nenhum do projeto, uma mensagem de queda de magia. O cuidar.py re-conjura por validade assumida (VALIDADE_SEGUNDOS = 600) e registra a resposta crua de cada conjuracao, para que o texto da expiracao apareca sozinho no log em vez de ser adivinhado.
+* Dia 156: a semente do levantamento tem contaminacao por salas homonimas - 'A Sala de Doacoes de Midgaard' carrega as saidas do Templo (n->altar, s->praca, u->panteao). Isso e defeito do digestor, ainda nao corrigido na origem; a navegacao contorna usando o grafo corrigido pelo que se ve ao vivo.
+* Dia 156: restam 33 destinos nomeados e nunca visitados - sao o placar do proximo capitulo. Alguns sao lojas (A Loja de Arcos, A Sapataria, Grottas - A Loja de Moveis, A Loja de Provisoes, A Loja de Montarias) e outros sao regioes (A Rua das Glorias, Rua Bourbon, O Banco de Jareth, Uma Densa Floresta).
+* Dia 156: nao ha como inspecionar as propriedades de um item a venda. Confirmado pelo 'help' e por um bruteforce de 19 verbos. O 'list' da' nome, preco, nivel minimo, encargos e estoque - e nada mais. A tabela esta em itens.md.

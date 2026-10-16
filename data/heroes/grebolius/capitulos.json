@@ -862,6 +862,88 @@
       "date": "2026-10-16",
       "in_game_time": "Os três ofícios e o silêncio do fazendeiro",
       "closed_on_day": 156
+    },
+    {
+      "id": 4,
+      "tomo": 1,
+      "title": "Até Onde Vai o Mundo",
+      "kind": "marco",
+      "status": "concluido",
+      "goal": "Mapear o máximo do mundo que conseguir, registrando cada sala, cada NPC de cada lugar e cada preço praticado, sem travar combate. Placar do capítulo: fechar as portas nomeadas e nunca visitadas.",
+      "days": [
+        156
+      ],
+      "parts": [
+        {
+          "day": 156,
+          "summary": "Capítulo 04 aberto: 'Até Onde Vai o Mundo'. Desafio pessoal: mapear o máximo do mundo que fosse possível, com a marca explícita de que o objetivo NÃO era lutar — o lance era mapear. O levantamento dos Dias 96 a 156 (26 sessões gravadas, 31.874 comandos, 18 dias distintos) foi absorvido no mapa curado, que saiu de 141 para 360 salas e 747 arestas: 88 salas parearam com a curadoria e 220 entraram como novas. O Panteão dos Centenários — o santuário dela — foi alcançado pela primeira vez, pela porta 'u' do Templo, e nunca havia sido visitado nos Dias 96–141. Entraram também o distrito comercial (Praça do Comércio, Rua Principal, Loja de Armas, Loja de Animais, Armazém, Guilda dos Guerreiros) e a zona dos ladrões (Praça Comum, Beco Escuro, Guilda dos Ladrões, Margens do Rio). Toda sala passou a ter id, e as 115 de título repetido — labirintos como 'Num Bosque Iluminado', 25 salas homônimas — ganharam id próprio lb### para que a etiqueta denuncie que ali o título não identifica. Restaram 33 destinos nomeados e nunca visitados, que são o placar do capítulo.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia156c.json",
+              "day": 156,
+              "note": "Cartografia do Dia 156: o mapa curado saiu de 141 para 360 salas (747 arestas) com o levantamento de 26 sessoes entre os Dias 96 e 156. O Panteao dos Centenarios foi alcancado pela porta 'u' do Templo. Restaram 33 destinos nomeados e nunca visitados."
+            },
+            {
+              "document": "evidence/dia156b.json",
+              "day": 156,
+              "note": "Manutencao do Dia 156 que antecedeu a cartografia: armadura da Torre Negra vestida (CA 65 -> 80), anel arcano vendido por 500 ao armeiro, duas habilidades treinadas com a Mestre da Guilda e a tabela de magias e habilidades lida no servidor."
+            },
+            {
+              "document": "evidence/dia156.json",
+              "day": 156,
+              "note": "Rodadas supervisionadas da rotina do milharal: sete abates, onze acumulados contra a cota de dez do fazendeiro, e a entrega que o dono da fazenda nunca confirmou."
+            }
+          ],
+          "date": "2026-10-16"
+        }
+      ],
+      "content": [
+        "O mundo tem mais portas do que eu pensei. Foi isso que eu descobri, e não é pouco.",
+        "Não foi ninguém que me pediu. Ninguém prometeu recompensa, ninguém ficou esperando resposta. Eu acordei no Templo, olhei para os lados e percebi que sabia o nome de um punhado de lugares e não sabia nada do resto. Se eu não sei onde fica o quê, eu não escolho nada — só reajo. Então decidi andar até acabar, e anotar tudo.",
+        "Meu método é simples e não depende de memória. Eu conto direção, não caminho. Se eu saio para o norte e depois para o leste, eu não guardo \"fui por ali\": eu guardo que aquele lugar está a uma casa ao norte e uma ao leste de onde eu comecei. Assim, toda sala do mundo vira uma distância a partir de um ponto que eu escolhi. O Templo é o meu ponto. Foi o que me deixou voltar quando me perdi, e me perdi muitas vezes.",
+        "A primeira coisa que aprendi foi que o Templo não gosta de magia. Tentei me proteger ali dentro e o feitiço morreu na minha mão — \"sua magia falha e desaparece\". Desci um lance de escada, para a praça em frente, e funcionou. Não é o Templo que é especial: as paredes da loja de magias também barram. Aprendi a perguntar ao lugar antes de gastar mana.",
+        "A segunda coisa que aprendi foi a andar à vista. Eu passava os dias escondida, e escondida ninguém me vende nada: o balconista olha o balcão e diz que não negocia com quem não vê. Perdi tempo com isso. Desde então ando de cara limpa e resolvo o perigo por outro caminho — escolhendo por onde passo, não me escondendo de quem passa. Deu certo. Passei o dia inteiro andando por Midgaard e não troquei um golpe.",
+        "Fui parar no Panteão dos Centenários. Fica em cima do Templo, por uma porta que eu nunca tinha subido. É o meu próprio santuário, o lugar onde eu deveria ter ido primeiro, e eu nunca tinha estado lá. Fiquei um tempo olhando as estátuas. É estranho descobrir que a casa da gente existe e a gente não conhece.",
+        "Depois veio a cidade, e a cidade é maior do que a minha lista. A Praça do Comércio, a Rua Principal inteira, o Beco Escuro, a Praça Comum, o bar dos ladrões, a margem do rio. Anotei cada porta de cada canto, e as portas que não abri ficaram anotadas também — é o que me diz onde ainda falta ir. Contei trinta e três.",
+        "Entrei em todas as lojas que achei e li o que elas vendem. Isso eu fiz com cuidado, porque descobri uma coisa que me pareceu importante: a mesma garrafa custa vinte numa taverna e vinte e dois no bar do Javali. Ninguém me disse isso. Só sei porque li as duas listas e comparei. O mesmo vale para armas e armaduras, e cada coisa tem um grau mínimo para ser usada — já vi peça de nível trinta e dois que eu não posso nem segurar.",
+        "E tem uma coisa que eu não posso fazer, e me incomodou. Não dá para saber o que um objeto faz antes de comprar. Perguntei ao ferreiro, ao armeiro, ao merceeiro, ao feiticeiro, e tentei todo verbo que conheço. Todos respondem a mesma coisa: que eu não tenho aquilo. Só depois de pagar eu descubro o que comprei. Para as coisas baratas vale a pena arriscar. Para uma espada de setecentos e setenta e nove, não vale — aí eu decido pelo grau, que é a única coisa honesta que a lista me dá.",
+        "Na Sala de Doações, a leste do Templo, achei uma jaqueta de couro enfeitada que alguém esqueceu. Pesava trinta e quatro quilos e não me custou nada. O merceeiro não quis, o feiticeiro não quis, e o armeiro me pagou duzentas e cinquenta moedas. Guardei no banco. Não é fortuna, mas é a primeira vez que eu tiro dinheiro de alguma coisa que eu não precisei arrancar de um corpo.",
+        "Foi um dia estranho e bom. Eu não lutei, não morri, não fugi. Eu andei, olhei, escrevi e voltei inteira — e o mundo, que antes era umas tantas salas em volta do Templo, virou trezentos e sessenta lugares com nome, e trinta e três portas que eu ainda não abri.",
+        "Amanhã eu começo por elas."
+      ],
+      "tags": [
+        "Até Onde Vai o Mundo",
+        "Cartografia",
+        "Bússola",
+        "Panteão dos Centenários",
+        "Midgaard",
+        "Sala de Doações",
+        "Comércio",
+        "Fronteira"
+      ],
+      "source_kind": "live",
+      "evidence": [
+        {
+          "document": "evidence/dia156c.json",
+          "day": 156,
+          "note": "Cartografia do Dia 156: o mapa curado saiu de 141 para 360 salas (747 arestas) com o levantamento de 26 sessoes entre os Dias 96 e 156. O Panteao dos Centenarios foi alcancado pela porta 'u' do Templo. Restaram 33 destinos nomeados e nunca visitados."
+        },
+        {
+          "document": "evidence/dia156b.json",
+          "day": 156,
+          "note": "Manutencao do Dia 156 que antecedeu a cartografia: armadura da Torre Negra vestida (CA 65 -> 80), anel arcano vendido por 500 ao armeiro, duas habilidades treinadas com a Mestre da Guilda e a tabela de magias e habilidades lida no servidor."
+        },
+        {
+          "document": "evidence/dia156.json",
+          "day": 156,
+          "note": "Rodadas supervisionadas da rotina do milharal: sete abates, onze acumulados contra a cota de dez do fazendeiro, e a entrega que o dono da fazenda nunca confirmou."
+        }
+      ],
+      "excerpt": "O dia em que ela não lutou: andou o mundo de ponta a ponta, achou o próprio santuário que nunca tinha visto, vendeu o que achou de graça na Sala de Doações e contou as trinta e três portas que ainda não abriu.",
+      "date": "2026-10-16",
+      "in_game_time": "O mapa, o santuário e as trinta e três portas",
+      "closed_on_day": 156
     }
   ]
 }

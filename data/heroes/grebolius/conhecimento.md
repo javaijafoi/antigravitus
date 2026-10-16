@@ -534,3 +534,282 @@ Ordem confirmada sala a sala no mapa, **sem sorteio**:
 **Erro que isso corrige**: eu usava `l, l` no passo 5 (dois lestes), quando é **`l` e depois `s`**. Era a causa de todo o vagar no bosque.
 
 **Volta**: do milharal, `l` ×3 até a Entrada da Fazenda, `n` (Bosque), `o` (Divisão), `s`, `s`, `o` ×6 até o aclive — ou simplesmente `recall`.
+
+
+## 25. Capítulo 04 — o Templo não aceita magia, e o servidor mente por omissão (Dia 156)
+
+Tudo abaixo foi **medido ao vivo**, não deduzido. É o que a cartografia custou para descobrir.
+
+### 25.1 O Templo de Midgaard é ÁREA SEM MAGIA
+
+```
+cast 'armor'  ->  "Sua magia falha e desaparece."     (no Templo)
+cast 'armor'  ->  "Você sente alguém te protegendo."  (na Praça do Templo, um passo abaixo)
+```
+
+Um passo abaixo (`d`, a **Praça do Templo**) a magia pega. Isto queimou uma sessão inteira: a
+rotina se buffava no Templo, as duas magias falhavam em silêncio, e ela saía para mapear **sem
+armadura e sem invisibilidade** — a doutrina do capítulo depende da invisibilidade.
+
+**Regra:** conjurar sempre na **Praça do Templo**, nunca no Templo.
+
+### 25.2 As respostas reais de conjuração (e a armadilha da palavra "desaparece")
+
+| Magia | Sucesso |
+|---|---|
+| `armor` | *"Você sente alguém te protegendo."* |
+| `invisibility` | *"Você desaparece."* |
+| **falha (qualquer uma)** | *"Sua magia falha e desaparece."* |
+
+**A falha contém a palavra "desaparece".** Procurar o marcador de sucesso primeiro lia a falha
+como sucesso, e a personagem saía achando que estava oculta. **Conferir a falha ANTES do sucesso.**
+
+### 25.3 Mana: custo e regeneração
+
+- Cada magia custa **~25 de mana** (260 → 245 → 220 com armadura + invisibilidade).
+- A mana **regenera rápido**: 226 → 233 em segundos, 227 → 260 em cerca de um minuto.
+- Com 260 de mana cabem ~5 pares de conjuração. Não é recurso escasso; não vale economizar.
+
+### 25.4 O comando `exits` volta CORTADO, e o `look` salva
+
+Medido numa única sessão: **20 leituras curtas**. Uma delas trouxe **uma linha numa sala de seis
+portas** — e a rotina passou a acreditar que havia uma porta só.
+
+O **`look` sempre traz a linha de colchetes**, que é fonte independente e gratuita:
+
+```
+[ Saídas: norte, leste, sul, oeste, cima e baixo ]
+```
+
+**Regra:** ler `exits`, mas **acrescentar** o que a linha de colchetes anuncia — nunca deixar que
+a leitura curta apague uma porta conhecida. E se já se sabe que a sala tem N portas, insistir até
+N (o `exits` costuma vir completo na segunda ou terceira tentativa).
+
+### 25.5 O inventário tem forma fixa
+
+`inventory` **sempre** abre com *"Você está carregando:"*. Se essa marca não vier, a resposta está
+corrompida — e "não consegui ler" **não é** "não tenho nada". O formato de quantidade é `(x3) um
+pão recheado`, com o `x` **antes** do número.
+
+### 25.6 Sinais que parecem morte e não são
+
+- O servidor manda **DICAs** que contêm a frase *"...utilize o comando SAIR para ir até o Menu
+  Principal..."*. Isso **não** é morte.
+- `< Morto >` **é** sinal de morte, mas como **prefixo de título de sala**: `< Morto > O Paraíso`,
+  `< Morto > Um Portal Escondido no Paraíso`.
+
+Sinal de morte exige a **linha inteira**, não um pedaço de frase no meio de outra.
+
+### 25.7 Guardas que barram passagem (descobertos no Dia 156)
+
+| Sala | Direção | Resposta |
+|---|---|---|
+| A Entrada da Guilda dos Paladinos | `l` (leste) | *"O guarda te humilha e não deixa você passar."* |
+| O Beco Escuro | `l` (leste) | barrado |
+
+Não é porta inexistente: é porta que **existe e é negada**. Ela não pode virar alvo de navegação,
+senão a rotina volta eternamente para tentar a mesma porta.
+
+### 25.8 Lugares confirmados no Dia 156
+
+**O Panteão dos Centenários** — o santuário dela, alcançado pela porta `u` do Templo (e também do
+Altar, de Atrás do Altar e da Sala de Doações). Nunca havia sido visitado nos Dias 96–141.
+
+**O distrito comercial, pela Praça do Comércio:** Rua Principal, A Loja de Armas, A Loja de
+Animais, O Armazém, A Entrada da Guilda dos Guerreiros.
+
+**A Praça Comum e a zona dos ladrões:** A Praça Comum, O Beco Escuro, A Entrada da Guilda dos
+Ladrões, O Bar dos Ladrões, As Margens do Rio.
+
+**Geografia do Templo, confirmada:**
+
+| Direção do Templo | Sala |
+|---|---|
+| `n` | O Altar do Templo |
+| `l` | A Sala de Doações de Midgaard |
+| `s` ou `d` | A Praça do Templo |
+| `o` | A Sala de Leitura |
+| `u` | O Panteão dos Centenários |
+
+### 25.9 Duração das magias — provável, com base medida
+
+**A duração em si é provável; a escala do tempo é medida.** As duas coisas juntas dão uma estimativa
+utilizável, e a diferença de confiança importa:
+
+| | |
+|---|---|
+| **Escala do relógio (MEDIDA ao vivo)** | A hora do jogo anda **~75 s reais**. Duas transições cronometradas com o comando `time`: **61 s** e **~78 s**. Bate com o padrão do CircleMUD. |
+| **Duração de `armor` e `invisibility` (PROVÁVEL)** | **24 horas de jogo**, segundo o manual importado do CircleMUD (`maquina/spells.md`). Não é confirmado para o DeBo. |
+| **Conta** | 24 h × 75 s = **1800 s = 30 minutos** |
+
+Outras durações do mesmo manual, para referência: `detect invisibility` 12 h + nível/4; `detect magic`
+12 h + nível; `infravision` 12 h + nível; `bless` 6 h; `sanctuary` 4 h; `protection from evil` 24 h;
+`curse` 7 dias; `poison` nível horas.
+
+**O comando `time` é a ferramenta**: ele dá hora, dia do mês e ano do jogo. Serve para cronometrar
+qualquer coisa que dependa do relógio do servidor — e é assim que a escala acima foi medida.
+
+**O que continua sem prova:** a mensagem que o servidor manda quando a magia cai. Não existe em
+registro nenhum. O `cuidar.py` re-conjura a cada **25 minutos** (5 min de margem sob os 30 prováveis)
+e registra a resposta crua de cada conjuração, para que a expiração real apareça sozinha.
+
+### 25.10 Como saber se uma presença é criatura ou objeto
+
+**A frase do `look` NÃO separa as duas.** Compare:
+
+```
+Um zelador está andando por aqui, limpando tudo.            <- criatura
+Um brilhante punhal de novato está aqui, procurando alguém  <- OBJETO, mesma forma!
+```
+
+**Quem separa é o `consider`**: em objeto o jogo recusa, com *"Comparar sua força com a de quem?"*.
+No corpus: **382 recusas contra 92 aceites**. Quando aceita, responde `Você  Oponente` seguido da
+tabela comparativa (Nível, Vida, Poder, Precisão, Armadura) — **sem dizer o nome do alvo**, que sai
+do próprio comando (`consider zumbi` → o alvo é `zumbi`).
+
+Foi assim que o levantamento passou a registrar NPC por sala: 29 salas, com `monstro`, `criatura`,
+`peao`, `torre`, `castelo`, `zumbi`, `rato`, `cobra`, `kobold`, `prefeito`, `lobo`, `ferreiro`.
+O cruzamento com a curadoria à mão validou o método: *A Loja de Armas* tem o curado **"Ferreiro"** e
+o confirmado **"ferreiro"** — o mesmo NPC, em dois vocabulários.
+
+> ⚠️ **O `consider` separa CRIATURA de OBJETO. Não separa NPC de MONSTRO.** Isto foi medido:
+> `consider zumbi` lê *"É uma perda de tempo"*, `consider rato` lê *"Você é LOUCO!"* e
+> `consider ferreiro` (NPC) também lê *"Você é LOUCO!"*. O mesmo nome genérico `monstro` produziu
+> seis vereditos diferentes ao longo das sessões. **É uma régua de força, não de espécie.**
+>
+> Quem separa é o **comportamento**: **fala** (`diz`/`pergunta`/`responde`/`tagarela`) e **vende**
+> provam NPC; **`X está morto!`** depois de um ataque dela prova monstro. A tabela completa está em
+> [monstros.md](monstros.md).
+
+> ⚠️ **Sala sem magia não é privilégio do Templo.** As paredes da **Loja de Magias** também bloqueiam
+> conjuração (*"As paredes desta sala parecem impedir você"*). Conferir o local antes de conjurar.
+
+### 25.14 Renda das doações: pegar de graça e vender no armeiro
+
+Descoberto e executado no Dia 156. É um ciclo curto, barato e repetível.
+
+**A Sala de Doações** (a leste do Templo, `e` do Templo) acumula o que outros deixam. No Dia 156
+havia: um grampo feminino de cabelo, **uma enfeitada jaqueta de couro (novo)**, **uma espada curta
+(novo)** e uma colorida chave de água-marinha.
+
+**O ciclo:**
+
+1. Templo → `e` → **Sala de Doações**; pegar o que servir (`get jaqueta`).
+2. Templo → **`d`, `s`, `w`, `s`** → **A Loja de Armaduras** (o armeiro).
+3. `value <item>` para saber quanto ele paga.
+4. `sell <item>` e depois `deposit` no Templo.
+
+**O resultado medido:**
+
+```
+value jaqueta -> "Vou te pagar 250 moedas por isso!"
+sell jaqueta  -> "Você receberá 250 moedas." / "O lojista agora possui uma jaqueta..."
+```
+
+Ouro: **300 → 550 na mão**; total **347 → 597**. A jaqueta pesava 34 kg e custou zero.
+
+**Quem compra o quê (medido):**
+
+| Comprador | Resposta à jaqueta de couro |
+|---|---|
+| **Armeiro** (Loja de Armaduras) | **paga 250** ✓ |
+| Merceeiro (O Armazém) | *"Eu não compro ISSO... Tente outra loja."* |
+| Feiticeiro (Loja de Magias) | *"eu não compro esse tipo de coisa."* |
+| Ferreiro (Loja de Armas) | só armas |
+
+**Ressalva da diretiva:** é **PROIBIDO vender armaduras da Torre Negra ou de peão** — *"perdemos mais
+dinheiro do que ganhamos"*. A jaqueta de couro **não é nenhuma das duas**, por isso a venda foi
+legítima. **Conferir a origem do item antes de vender qualquer armadura.**
+
+**A rota importa e o mapa tinha a errada.** O mapa mandava `d,w,s` e terminava na Praça do Templo,
+porque "A Entrada da Guilda dos Clérigos" tinha **três das quatro arestas erradas** — inclusive um
+`s` para a Loja de Armaduras que o jogo recusa. A rota real é **`d,s,w,s`**, e o mapa foi corrigido
+com a verificação ao vivo.
+
+
+### 25.11 Invisibilidade BLOQUEIA comércio — e existe o comando `visible`
+
+Descoberto no Dia 156, ao tentar auditar as lojas: com a invisibilidade ativa, o `list` não devolve
+nada. O balconista responde:
+
+> *"O balconista do bar exclama: 'Não negocio com quem não vejo!'"*
+
+Isto é uma armadilha direta da doutrina do capítulo: **a invisibilidade serve para mapear e atrapalha
+para comprar.** As duas coisas não convivem no mesmo passo.
+
+**A saída é o comando `visible`:**
+
+```
+visible  ->  "Você se torna visível novamente."
+```
+
+Ele quebra a invisibilidade antes de ela expirar (as ~24 h de jogo, ~30 min reais). O verbete está no
+manual importado (`maquina/commands.md`):
+
+> *Usage: visible — Use this command to break your spell of invisibility before it expires.*
+
+**Regra prática:** antes de qualquer `list`, `buy` ou `sell`, rodar `visible`. A armadura **não**
+atrapalha o comércio — só a invisibilidade.
+
+### 25.12 O que dá para saber de um item ANTES de comprar
+
+**Resposta curta: nome, preço, nível mínimo, encargos e estoque — e mais nada.** Confirmado por
+**duas vias independentes**: o `help` do servidor e um bruteforce de **19 verbos**.
+
+**O que o `help` diz, e é definitivo:**
+
+> **`help listar`** — *"A lista contém todos os itens à venda no momento, assim como a quantidade em
+> estoque. O preço para cada item também será listado. Caso você tenha interesse num tipo particular
+> de item, você pode especificar quais itens listar."*
+>
+> **`help valor`** — *"**Antes de vender** um item para uma loja, você pode perguntar ao lojista
+> quanto ele está inclinado a pagar por isso."* — serve para VENDER, não para inspecionar estoque.
+
+**O bruteforce, contra *Uma espada longa* (779):**
+
+| Verbo | Resultado |
+|---|---|
+| `look`, `examine`, `read` | *"Você não está vendo nada parecido com isso."* |
+| `value`, `identify`, `study` | só funcionam no que ela **carrega** |
+| `consider`, `diagnose` | só criaturas |
+| `check` | é **correio** (`help check` prova) |
+| `display` | é **seletor de prompt de vitais** (`display <número>` mostra prompts, não itens) |
+| `appraise`, `inspect`, `probe`, `analyze`, `compare`, `assess`, `evaluate`, `measure`, `weigh` | **"Como?!?"** — não existem |
+
+**Nenhum verbo revela propriedades.** O balcão e a prateleira não são examináveis.
+
+**Duas conveniências que valem guardar:**
+
+- **`comprar #<número>` compra pelo número da lista** (`help comprar`). `comprar #12` pega a espada
+  longa, sem digitar o nome e sem risco de casar com o item errado.
+- **`listar <palavra>` filtra o estoque**: `listar espada` mostra só as espadas, com os **mesmos
+  números** da lista completa. Casa a palavra do nome do item — `armas`, `armadura`, `todas` e inglês
+  não funcionam.
+
+**A heurística:** para item barato, **comprar é a avaliação** — a adaga custa 12, a clava 15, a tocha
+15. Para a espada de 779, não; aí decide-se pelo **nível mínimo**, o único dado duro disponível.
+Depois de comprar, `identify` descreve e `value` diz quanto o mercador paga. Tabela completa em
+[itens.md](itens.md).
+
+### 25.13 O paginador do `commands` derruba o driver
+
+O comando `commands` lista **todos** os verbos disponíveis — mas em **três páginas**, com um
+paginador:
+
+```
+[ Aperte ENTER para continuar, S para sair ou número da página ( 1 de 3 ) ]
+```
+
+**Enquanto o paginador está aberto, o driver entra em `estado=dead_or_menu`** — o mesmo estado que o
+vigia usa para declarar MORTA. É a segunda fonte de falso positivo de morte, depois da DICA que
+menciona "Menu Principal": **texto do servidor que parece menu não é morte.**
+
+Sair é com **`S`** (ou ENTER até o fim). Responder o número da página **não** funciona pelo driver.
+
+**Regra:** antes de concluir qualquer coisa de um estado `dead_or_menu`, olhar a **linha inteira** e
+procurar o paginador. E jamais rodar `commands` no meio de uma rotina — ele abre um menu que a
+rotina não sabe fechar.
+
+
+
+

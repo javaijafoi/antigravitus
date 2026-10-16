@@ -1,0 +1,17 @@
+[
+  {
+    "document": "evidence/dia156c.json",
+    "day": 156,
+    "note": "Cartografia do Dia 156: o mapa curado saiu de 141 para 360 salas (747 arestas) com o levantamento de 26 sessoes entre os Dias 96 e 156. O Panteao dos Centenarios foi alcancado pela porta 'u' do Templo. Restaram 33 destinos nomeados e nunca visitados."
+  },
+  {
+    "document": "evidence/dia156b.json",
+    "day": 156,
+    "note": "Manutencao do Dia 156 que antecedeu a cartografia: armadura da Torre Negra vestida (CA 65 -> 80), anel arcano vendido por 500 ao armeiro, duas habilidades treinadas com a Mestre da Guilda e a tabela de magias e habilidades lida no servidor."
+  },
+  {
+    "document": "evidence/dia156.json",
+    "day": 156,
+    "note": "Rodadas supervisionadas da rotina do milharal: sete abates, onze acumulados contra a cota de dez do fazendeiro, e a entrega que o dono da fazenda nunca confirmou."
+  }
+]

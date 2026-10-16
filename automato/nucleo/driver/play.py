@@ -83,7 +83,13 @@ def render(payload):
         parts.append(f"[ERRO] {payload['error']}")
     vitals = payload.get('vitals') or {}
     if vitals:
-        parts.append(f"[vitais hp={vitals.get('hp')} mn={vitals.get('mana')} mv={vitals.get('mv')} | combate={payload.get('in_combat')} | estado={payload.get('state')} | sala={payload.get('room')}]")
+        sup = payload.get('supplies') or {}
+        def _sup(v):
+            return {True: 'SIM', False: 'nao', None: '?'}[v]
+        parts.append(
+            f"[vitais hp={vitals.get('hp')} mn={vitals.get('mana')} mv={vitals.get('mv')}"
+            f" | fome={_sup(sup.get('fome'))} sede={_sup(sup.get('sede'))}"
+            f" | combate={payload.get('in_combat')} | estado={payload.get('state')} | sala={payload.get('room')}]")
     return '\n'.join(parts)
 
 

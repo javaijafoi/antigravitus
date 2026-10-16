@@ -16,13 +16,21 @@ Depende do live_daemon.py no ar (porta 14888) e do token em scripts/local/.contr
 """
 import argparse
 import json
-from guarda import vigiar as _vigiar, limpa as _limpa_txt
 import os
 import re
 import socket
 import sys
 import time
 from pathlib import Path
+
+# O turno chama este arquivo como `automato/acoes/ressuscitar.py`, e nesse
+# caminho o `nucleo/` nao esta' no sys.path - o import de `guarda` estourava com
+# ModuleNotFoundError e a resurreicao simplesmente NAO acontecia. Antes disso o
+# turno nem chegava aqui: apontava para `automato/ressuscitar6.py`, que nao
+# existe. O defeito so' apareceu quando o caminho foi corrigido.
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'nucleo'))
+
+from guarda import vigiar as _vigiar, limpa as _limpa_txt  # noqa: E402
 
 HOST = '127.0.0.1'
 PORT = 14888

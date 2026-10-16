@@ -78,8 +78,27 @@ def run(command, timeout=60.0):
         text = '\n'.join((c.get('text') or '') for c in cmds)
         vitals = payload.get('vitals') or {}
         combate = bool(payload.get('in_combat'))
+        # Fome e sede vem do driver; o ultimo valor vale para quem perguntar depois.
+        sup = payload.get('supplies')
+        if isinstance(sup, dict):
+            for chave in ('fome', 'sede'):
+                if sup.get(chave) is not None:
+                    _SUPRIMENTOS[chave] = sup[chave]
     _vigiar_repeticao(text, 3, command)
     return text, vitals, combate
+
+
+_SUPRIMENTOS = {'fome': None, 'sede': None}
+
+
+def suprimentos():
+    """Fome e sede mais recentes, como o driver reportou. None = ainda nao visto.
+
+    Existe porque `run` devolve tres valores e mudar a assinatura quebraria
+    todas as rotinas. Antes disto, nenhuma rotina sabia que a personagem
+    estava morrendo de fome.
+    """
+    return dict(_SUPRIMENTOS)
 
 
 LINHA = re.compile('^(Norte|Sul|Leste|Oeste)\\s*-\\s*(.+)$')

@@ -1,8 +1,27 @@
 # Plano do Capítulo 04 — "Até Onde Vai o Mundo"
 
+> ## ✅ CAPÍTULO FECHADO no Dia 156 (2026-10-16)
+>
+> **Registrado em `capitulos.json` como `id=4`, `kind=marco`, `status=concluido`.**
+> Fecho narrativo em [`capitulo-04-fecho.md`](capitulo-04-fecho.md); evidência em
+> [`evidence/capitulo-04-final.json`](evidence/capitulo-04-final.json).
+>
+> **O que o capítulo entregou:** o mapa curado saiu de **141 para 360 salas** (747 arestas);
+> o **Panteão dos Centenários** foi alcançado pela primeira vez; entraram o distrito comercial e a
+> zona dos ladrões; toda sala ganhou **id** (e os labirintos, id próprio `lb###`); **33 portas
+> nomeadas** continuam por abrir — e é esse o placar que fica para o próximo capítulo.
+>
+> **O que mudou na doutrina, por decisão do autor:** a invisibilidade **deixou de ser a proteção
+> padrão**. Ela bloqueia comércio (*"Não negocio com quem não vejo!"*) e a proteção passou a ser a
+> **escolha da rota**, evitando as salas de risco alto. *"E se der merda, acontece, aprendemos."*
+>
+> **Este documento fica como registro do planejamento.** O que estava previsto e não se confirmou,
+> e o que apareceu e não estava previsto, estão anotados ao longo do texto.
+
 > **Título proposto, pendente do autor.** Alternativas: *"Aquilo que Se Vê Sem Ser Vista"*,
 > *"O Mundo Sem Testemunhas"*, *"Ninguém Me Verá Passar"*.
 > "Modo Cartógrafa" é nome de ferramenta, não de capítulo — a diretiva proíbe metajogo.
+> **Decisão final do autor:** *"Até Onde Vai o Mundo"* — confirmado no fecho.
 
 **Natureza do capítulo:** **desafio pessoal**, não missão oficial. `kind` sugerido: **`marco`**
 (expansão intencional de horizontes), não `missao`.
@@ -138,36 +157,131 @@ regra escrita:
 
 ## 4. O que precisa ser construído
 
-### 4.1 Absorver o levantamento que já foi digerido — **bloqueante**
+> **Estado em 2026-10-16 (Dia 156).**
+>
+> **Feito — motores.** `cuidar.py` (camada nova), `inventario.py`, `cartografa.py`, `digerir_mapa.py`
+> e `fundir_mapa.py`. O cuidado virou **três camadas**: `vigia` **observa** (log *e* driver, por IPC),
+> `cuidar` **cuida** em campo (comer, beber, armadura, invisibilidade — **nunca vai à cidade**) e
+> `prepara` só **recarrega** (padaria, fonte, banco, sono). Antes o `prepara` fazia as três coisas e
+> era chamado a qualquer sinal de fome: com seis pães na bolsa, parava no meio do mato e voltava.
+>
+> **Feito — dados.** O levantamento foi absorvido: **`mapa.json` de 141 para 361 salas**
+> (141 autorais + 220 derivadas), **750 arestas**, sobre **308 salas digeridas** dos Dias 96–156.
+> O digestor saiu da pasta ignorada pelo git e a mesclagem virou ferramenta repetível e idempotente.
+> `state.json` reconciliado no Dia 156.
+>
+> **Feito — navegação.** A fronteira por fim funciona (a causa e as provas estão em §4.1.2):
+> `bfs` em **10 de 13 decisões** numa sessão real, **zero títulos ilegíveis**, e a rotina saiu do
+> bolsão sozinha — chegou ao Panteão dos Centenários, à Praça do Comércio, à Rua Principal, a
+> A Praça Comum, O Beco Escuro e As Margens do Rio.
+>
+> **Falta:** fechar as **33 portas nomeadas**. Com a navegação destravada, isso é trabalho de campo —
+> não de motor.
 
-O `scripts/local/digerir_mapa.py` já produziu `data/heroes/grebolius/mapa_vivo.json` a partir
-dos registros dos Dias 96–141:
 
-| | |
-|---|---|
-| Salas com identidade própria | **266** |
-| Arestas observadas | **551** (90% com volta confirmada) |
-| Salas ausentes do `mapa.json` curado | **162 (61%)** |
-| Salas de texto idêntico (só a posição separa) | 163 |
-| Destinos nomeados e nunca visitados | **41** |
+### 4.1 Absorver o levantamento já digerido — **RESOLVIDO no Dia 156**
 
-**O `mapa.json` tem 141 salas.** Se o capítulo começar sem absorver isso, a cartógrafa
-re-percorre terreno que já está levantado e gasta o dia redescobrindo. Antes de abrir o
-capítulo: revisar as **14 divergências** entre digerido e curado (todas em salas descobertas
-nos Dias 97–99 que o mapa curado, parado no Dia 96, nunca absorveu) e mesclar.
+O levantamento saiu dos registros das sessões (Dias 96–156, 26 sessões, 27.356 comandos):
+
+| | Antes (Dias 96–141) | Agora (Dias 96–156) |
+|---|---|---|
+| Salas com identidade própria | 266 | **308** |
+| Arestas observadas | 551 | **640** |
+| Salas no `mapa.json` | 141 | **361** (141 autorais + 220 derivadas) |
+| Arestas no `mapa.json` | — | **750** |
+| Destinos nomeados e nunca visitados | 41 | **33** |
+
+Das 308 salas digeridas, **88 parearam** com salas autorais (74 por nome exato) e **220 são novas**.
+As 141 salas autorais foram preservadas: nome, camada, zona, risco, coordenadas e notas **nunca** são
+sobrescritos. Nos **71 conflitos** de aresta, o valor curado venceu e o divergente ficou registrado —
+é justamente onde o levantamento discorda do mapa à mão, e portanto onde há o que investigar.
+
+### 4.1.1 Semear a cartógrafa com o levantamento — **o que converte cobertura em dado**
+
+Um ensaio mostrou o desperdício: das sete salas que uma sessão alcançou, **seis já eram conhecidas** —
+o trabalho foi quase todo redescobrir o mesmo bolsão a partir do Templo, execução após execução.
+
+O levantamento digerido já sabe onde estão as portas que ninguém abriu. Com
+`SEMEAR_LEVANTAMENTO = True`, `cartografa.py` nasce com **95 salas conhecidas e 23 portas por abrir**
+(`exits_por_nome` dá o grafo, o campo `fronteira` dá as portas), e o BFS leva direto até a mais
+próxima atravessando terreno conhecido sem gastar passo.
+
+**Resultado medido na primeira sessão semeada:** ela chegou a **O Panteão dos Centenários** — o
+santuário dela, alvo nomeado no plano e nunca visitado nos Dias 96–141 — pela porta `u` do Templo.
+A fronteira caiu de **42 para 38** destinos.
+
+
+### 4.1.2 O que travou a navegação, e como foi resolvido — **RESOLVIDO no Round 6**
+
+Durante três rounds a navegação por fronteira **não disparava ao vivo**: `via=porta`/`bfs` em 1 de 17,
+0 de 17 e 1 de 27 decisões, com a rotina presa no bolsão Praça ↔ Estalagem ↔ Correios ↔ Lotérica.
+As portas que restam estão **todas em salas remotas** — só o BFS chega lá.
+
+**A causa era tríplice, e as três eram minhas:**
+
+1. **Nome cru vs chave normalizada.** `saidas()` devolve o nome como o servidor escreve
+   (`"A Entrada da Estalagem Javali Roncador"`); todo o resto do grafo usa normalizado
+   (`"a entrada da estalagem javali roncador"`). O BFS saía da sala, procurava o nó pelo nome cru,
+   **não achava e devolvia `None`**.
+
+2. **O `?` da linha de colchetes envenenando o valor.** A linha `[ Saídas: norte, leste ]` traz
+   **direções, não nomes** — `direcoes_do_look()` devolve `'?'` como valor. E eu fazia
+   `ex.update(do_look)`, que **sobrescrevia o nome real por `'?'`**. O BFS ia procurar um nó
+   chamado `'?'`.
+
+3. **Variável sombreada.** Ao corrigir o item 2 escrevi `for direcao, nome in do_look.items()` —
+   e `nome` era o **título da sala**. Como `chave` já havia sido calculada, a navegação seguiu
+   certa (o mapa cresceu), mas **todo título gravado virou `'?'`**.
+
+**As provas, isoladas em laboratório:**
+
+```
+BFS com destinos CRUS:         None      BFS com um destino valendo '?':  desvia
+BFS com destinos NORMALIZADOS: 'e'       BFS com todos os valores '?':    None
+```
+
+**As correções:** normalizar todo destino ao gravar (`sem_acento`); `setdefault`, **nunca** `update`;
+e uma **varredura de AST** depois de editar, procurando reatribuição de variável de estado.
+
+**Resultado medido depois das correções:** `vias={'bfs': 10, 'porta': 3}` e **zero títulos `'?'`**
+numa sessão que saiu do bolsão e chegou a **A Praça Comum, O Beco Escuro e As Margens do Rio**.
+
+#### O que eu errei no caminho — para não repetir
+
+- **Round 1:** relatei "8 títulos distintos girando num bolsão". Era artefato de medir **uma**
+  execução com a memória zerando a cada reinício. O replay real mostra **25 salas distintas**.
+- **Round 2:** tentei um *bônus* de fronteira como peso local dentro de `escolher()`. **Piorou,
+  medido: 7 → 4 salas.** Revertido: fronteira se resolve com **caminho**, não com peso.
+- **Round 4:** avaliei a política por *replay do grafo observado* — números inválidos, porque o
+  grafo gravado só tem saídas de salas que foram **correntes**.
+- **Rounds 4–5:** rodei ensaios **no mesmo bloco de ferramentas que a edição**. As ferramentas
+  correm em paralelo, a sessão usava o código anterior, e eu passei dois rounds acusando o código
+  de um comportamento que era artefato do meu próprio método.
+
+
+
+**Ferramentas, agora versionadas e repetíveis:**
+
+```bash
+python automato/acoes/digerir_mapa.py     # transcripts -> mapa_vivo.json
+python automato/acoes/fundir_mapa.py      # mapa_vivo.json + curado -> mapa.json
+python automato/acoes/fundir_mapa.py --seco   # relata sem gravar
+```
+
+O `fundir_mapa.py` é **idempotente**: o derivado (camada `levantamento`) é apagado e refeito a cada
+rodada, e as arestas que ele acrescentou ao curado ficam registradas em `arestas_do_levantamento`
+para serem removidas antes de repor. Rodar duas vezes seguidas dá o mesmo arquivo — conferido:
+remove 49 arestas e repõe 49, o total não se move.
+
+> ⚠️ **O digestor lê DUAS pastas de transcript.** As sessões vivas escrevem em `automato/runtime/`;
+> o corpus histórico dos Dias 96–141 ficou em `scripts/local/` (que o git ignora). Ler só a primeira
+> derruba o levantamento de 291 para 105 salas. O padrão lê as duas.
 
 > ⚠️ **Cuidado na mesclagem: as duas convenções são diferentes.**
-> `mapa.json` guarda leste/oeste como **`l`** (65 saídas) e **`o`** (67) — abreviatura em
+> `mapa.json` guardava leste/oeste como **`l`** (65 saídas) e **`o`** (67) — abreviatura em
 > português. `mapa_vivo.json` guarda como **`e`** (148) e **`w`** (140) — os tokens que o
-> servidor realmente aceita. Mesclar os dois sem normalizar deixa o arquivo com as duas
-> convenções e recria a armadilha que queimou a sessão do Dia 156.
-> **Normalizar tudo para `n/s/e/w/u/d`.** Se o nome em português for necessário para exibir,
-> guardar num campo separado — nunca na chave que vira comando.
-
-> ⚠️ **O digestor está em pasta ignorada pelo git.** `scripts/local/` está no `.gitignore`
-> (linha 14), então `digerir_mapa.py` não é versionado — e sem ele o levantamento do capítulo
-> não é reproduzível por outro agente. O `README.md` do automato é explícito: *"nada essencial
-> vive fora desta pasta"*. **Mover o digestor para `automato/`** antes de abrir o capítulo.
+> servidor realmente aceita. As **132 chaves** foram normalizadas para `n/s/e/w/u/d` na mesclagem:
+> no servidor `l` é *look* e `o` é *order*, nunca direção.
 
 ### 4.2 Acréscimos no `nucleo/config.py`
 

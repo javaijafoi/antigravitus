@@ -112,6 +112,27 @@ def parse_vitals(text):
 
     return {"hp": hp, "mana": mana, "mv": mv}
 
+def parse_supplies(text):
+    """Fome e sede a partir do que o servidor mostra.
+
+    Devolve {'fome': bool|None, 'sede': bool|None}; None significa "ainda nao
+    observado". O bloco '[Situacao atual]' do score e a fonte autoritativa,
+    porque ele reflete o AGORA. As rajadas 'morrendo de fome/sede' so valem
+    como reserva, quando nao ha bloco nenhum: o servidor as repete com o dano
+    junto ('-2hp, -3mn e -2mv'), mas elas envelhecem no buffer.
+    """
+    if not text:
+        return {"fome": None, "sede": None}
+    norm_txt = strip_accents(text.lower())
+    corte = norm_txt.rfind('situacao atual')
+    if corte != -1:
+        corpo = norm_txt[corte:corte + 400]
+        return {"fome": 'fome' in corpo, "sede": 'sede' in corpo}
+    return {
+        "fome": ('morrendo de fome' in norm_txt) or ('esta com fome' in norm_txt),
+        "sede": ('morrendo de sede' in norm_txt) or ('esta com sede' in norm_txt),
+    }
+
 def parse_exits(text):
     """
     Analisa o bloco de saídas de uma sala no CircleMUD:
@@ -326,10 +347,13 @@ def classify_game_state(vitals: Optional[dict], text: str = "", is_connected: bo
         return "dead_or_menu"
 
     # 1b. Mensagens explícitas de morte da personagem do jogador
+    # Cuidado com o historico do score: "Voce morreu 7 vezes" e contagem, nao
+    # obito. Sem o lookahead, todo 'score' era lido como morte.
+    # "sua alma" solto casava com lore; agora exige o verbo ou as reticencias.
     death_patterns = [
         r"voc[eê]\s+est[aá]\s+morto",
-        r"sua\s+alma(?:\s+flutua|\s+abandona|\.\.\.)?",
-        r"voc[eê]\s+morreu",
+        r"sua\s+alma(?:\s+(?:flutua|abandona|deixa)|\.\.\.)",
+        r"voc[eê]\s+morreu(?!\s+(?:\d|vezes))",
         r"o\s+ceifador\s+ceifa\s+sua\s+vida",
         r"\br\.i\.p\.\b",
         r"seu\s+corpo\s+cai\s+sem\s+vida",
@@ -340,6 +364,8 @@ def classify_game_state(vitals: Optional[dict], text: str = "", is_connected: bo
 
     # 1c. Telas de menu, seleção, login ou pager
     menu_patterns = [
+        r"menu\s+principal",
+        r"fa[cç]a\s+a\s+sua\s+escolha",
         r"escolha\s+uma\s+das\s+seguintes\s+op[cç][oõ]es",
         r"escolha\s*:",
         r"pressione\s+(?:enter|<enter>)",
@@ -366,11 +392,13 @@ def classify_game_state(vitals: Optional[dict], text: str = "", is_connected: bo
 
     # 4. Combate ativo (in_combat)
     # 4a. Barra / medidor de combate do CircleMUD ({...>>} ou medidores duplos de combate)
-    # Linhas de score contendo 'Vida:', 'Mana:' ou 'Movimento:' são ignoradas.
+    # Um medidor de combate nao vem rotulado. As barras do score vem com rotulo
+    # antes da chave ('Banco: {<<<<<>>>>>}', 'Proximo nivel: {----<>>>>>}') e tem
+    # exatamente a mesma forma. Sem separar as duas, rodar 'score' ligava o flag
+    # de combate e ele nunca mais desligava.
     in_combat_meter = False
     for line in raw_text.splitlines():
-        line_norm = strip_accents(line.lower())
-        if "vida:" in line_norm or "mana:" in line_norm or "movimento:" in line_norm:
+        if ':' in line.split('{', 1)[0]:
             continue
         if re.search(r'\{[^\}]*>>\}', line) or re.search(r'\{[^\}]*<<[^\}]*\}', line) or re.search(r'\{[<\->=]{5,}\}.*?\{[<\->=]{5,}\}', line):
             in_combat_meter = True

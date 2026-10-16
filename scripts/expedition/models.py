@@ -123,6 +123,13 @@ class Config:
     mode: str = 'dungeon_corajoso'
     destination_id: Optional[str] = None
     food_target: int = 4
+    # Gatilhos de RETORNO, separados do estoque de PARTIDA.
+    # food_target e' quanto trazer quando se vai a padaria; food_floor e' quando
+    # a viagem se justifica. Antes o mesmo numero (4) fazia as duas coisas: com 3
+    # paes e fome a expedicao abandonava o campo para reabastecer, em vez de
+    # comer da bolsa e continuar.
+    food_floor: int = 2
+    water_floor: float = 0.0
     food_price_ceiling: int = 10
     min_loot_value_per_weight: float = 10
     spare_weapons: int = 1
@@ -146,9 +153,11 @@ class Config:
     def validate(self):
         if self.mode not in PROFILES:
             raise ValueError('Modo desconhecido.')
-        for name in ('food_target', 'max_commands', 'max_seconds', 'recovery_seconds', 'max_no_progress', 'max_combat_rounds', 'max_room_encounters', 'max_step_cost'):
+        for name in ('food_target', 'food_floor', 'max_commands', 'max_seconds', 'recovery_seconds', 'max_no_progress', 'max_combat_rounds', 'max_room_encounters', 'max_step_cost'):
             if not isinstance(getattr(self, name), int) or getattr(self, name) <= 0:
                 raise ValueError('Limite deve ser positivo: '+name)
+        if self.food_floor > self.food_target:
+            raise ValueError('food_floor (retorno) nao pode passar de food_target (partida).')
         if self.food_price_ceiling < 0 or self.first_cast_budget < 1 or self.spare_slots < 0:
             raise ValueError('Orçamento ou capacidade inválidos.')
         return self

@@ -35,6 +35,13 @@
 
 ## 🛒 2. Mercadores, Artesãos e Lojas
 
+> **Preços e estoques estão consolidados em [itens.md](itens.md)** — a tabela de itens com ID por
+> item e por oferta, referenciando o NPC. Este arquivo descreve **quem é** cada mercador; aquele
+> diz **o que ele vende e por quanto**. Onde os dois discordarem, vale o `list` ao vivo.
+>
+> ⚠️ **Invisibilidade bloqueia comércio.** O balconista responde *"Não negocio com quem não vejo!"* e
+> o `list` não devolve nada. Rodar **`visible`** antes de `list`, `buy` ou `sell`.
+
 ### A. Padaria de Midgaard
 * **NPC Responsável:** O Padeiro (`padaria` — Rua Principal Oeste, 1 norte).
 * **Função:** Fornecimento de rações e pães de alto rendimento calórico e baixo peso.
@@ -308,3 +315,68 @@ Fonte: [dossiê primário do Dia 96](evidence/dia96.json).
 
 ### Pacificador (Praça do Templo)
 - Inicia/reinicia **Problemas Agrícolas**. Ele **fala sozinho quando o personagem permanece na sala**; responder `say sim` engata a missão.
+
+---
+
+## Dia 156 — NPCs confirmados pelo COMPORTAMENTO (levantamento das sessões)
+
+Este bloco não é curadoria: sai da varredura de **26 sessões gravadas** (Dias 96–156, 31.874
+comandos). O critério é comportamento observado, não suposição.
+
+### Por que o critério é o comportamento, e não o `consider`
+
+Tentei usar o `consider` para separar NPC de monstro e **não funciona** — ele mede força relativa:
+
+```
+consider zumbi     -> "É uma perda de tempo"    (monstro, fácil)
+consider rato      -> "Você é LOUCO!"           (monstro, mortal)
+consider ferreiro  -> "Você é LOUCO!"           (NPC, mortal)
+```
+
+A separação vem de **falar** (`diz`, `pergunta`, `responde`, `tagarela`) e de **vender**. O bestiário
+e a tabela de sinais estão em **[monstros.md](monstros.md)**.
+
+### Confirmados por fala
+
+| NPC | Onde | Falas registradas |
+|---|---|---|
+| **Um Membro da Guarda da Cidade** | Midgaard (rondas) | 24 |
+| **Um feiticeiro** | atrás do balcão da Loja de Magias | 23 |
+| **Uma pequena criança** | Midgaard | 27 |
+| **O Pacificador** | Praça do Templo | 7 |
+| **Yurit** | — | 4 |
+
+### Confirmados por chegada (andam pelo mundo)
+
+**O zelador** (8×) e **O Pacificador** (3×) chegam andando e falam — NPC.
+Os **monstros do milharal** também chegam andando, mas atacam — monstro. A distinção é o que fazem
+ao chegar, não o fato de andarem.
+
+### O cruzamento que valida o método
+
+O levantamento confirmou pelo jogo NPCs que a curadoria já tinha escrito à mão — **com outro
+vocabulário**, o que é a prova de que os dois olhares concordam:
+
+| Sala | Curadoria (nome) | Confirmado pelo jogo (palavra-chave) |
+|---|---|---|
+| A Loja de Armas | Ferreiro | `ferreiro` |
+| Rua Principal (Leste I) | Guarda Municipal | `prefeito` |
+| Uma Casa Branca | Peões Caídos | `peao`, `peão` |
+| A Loja de Animais | Vendedor | `lobo` ⚠️ o lobo está **dentro** da loja |
+
+> ⚠️ **`A Loja de Animais` tem um lobo dentro.** O `consider` aceitou `lobo` naquela sala. Não
+> confundir o lobo com o vendedor.
+
+### Pendência que este levantamento NÃO resolve
+
+O campo `npcs` das salas do levantamento mistura o que o `consider` aceitou — criatura — sem
+distinguir NPC de monstro. Ele é **matéria-prima**, não veredito. Quem decide é o comportamento, e a
+tabela de monstros é [monstros.md](monstros.md).
+
+### Reforço sobre sala sem magia
+
+O `conhecimento.md` §25.1 registra que **o Templo de Midgaard é área sem magia**. Este arquivo já
+trazia o mesmo fenômeno noutro lugar, e vale repetir aqui: **as paredes da Loja de Magias também
+bloqueiam conjuração** (*"As paredes desta sala parecem impedir você"*). Não é privilégio do Templo —
+**conferir o local antes de conjurar**.
+

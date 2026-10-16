@@ -1,5 +1,18 @@
 # 🗺️ Mapa Operacional de Grebolius (Mapeamento Simplificado)
 
+> ⚠️ **Este arquivo é histórico e NÃO é a fonte de verdade do mapa.** Ele é uma reconciliação
+> autoral parada no **Dia 60**. A partir do Dia 156 os dados vivos são máquina-mantidos:
+>
+> | Arquivo | O que é | Estado em 2026-10-16 (Dia 156) |
+> |---|---|---|
+> | `mapa.json` | o mapa vivo, com coordenadas e camadas | **361 salas / 750 arestas** |
+> | `mapa_vivo.json` | o levantamento digerido dos transcripts | **308 salas / 640 arestas** |
+> | `mapa.md` | esta reconciliação à mão | parada no Dia 60 |
+>
+> Para atualizar os dois primeiros:
+> `python automato/acoes/digerir_mapa.py` e depois `python automato/acoes/fundir_mapa.py`.
+> O `mapa.md` fica como registro de como o mapa era pensado à mão nos primeiros sessenta dias.
+
 > Reconciliação documental até o Dia 60. As saídas abaixo são registros históricos e precisam de confirmação no jogo; não houve nova exploração nesta revisão. Localização e acampamento registrados: Laboratório dos Magos. Santuário de referência: Panteão dos Centenários.
 
 ---

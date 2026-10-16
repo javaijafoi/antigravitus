@@ -40,6 +40,7 @@ from parsers import (
     strip_accents,
     parse_room as parse_room_pure,
     parse_vitals as parse_vitals_pure,
+    parse_supplies as parse_supplies_pure,
     parse_exits as parse_exits_pure,
     detect_rejection as detect_rejection_pure,
     classify_game_state,
@@ -49,6 +50,30 @@ from parsers import (
 )
 
 DEFAULT_CREDENTIALS: List[str] = []  # Sem segredo embutido: a senha vem de MUD_PASS ou scripts/local/.mud_pass.
+
+# Linhas de ficha/score. Elas NUNCA sao evento de combate, mas enganavam a
+# leitura em dois pontos do rastreio de estado: os medidores '{<<<<<>>>>>}'
+# contam como gatilho '>>' e 'Voce morreu 7 vezes' conta como terminador de
+# combate. Como o historico vem ANTES dos medidores, todo 'score' era lido
+# como combate em andamento.
+_ROTULO_SCORE = re.compile(
+    r'^\s*(?:vida|mana|movimento|experiencia|proximo nivel|alinhamento|banco|carregando'
+    r'|forca|sabedoria|destreza|constituicao|inteligencia|carisma|acerto|dano'
+    r'|classe de armadura|pontos de aventura)\s*:')
+_MORREU_HISTORICO = re.compile(r'voce\s+morreu\s+\d+\s+vezes')
+
+
+def sem_score(texto: str) -> str:
+    """Remove as linhas de ficha, que nao descrevem combate."""
+    if not texto:
+        return ""
+    manter = []
+    for linha in texto.splitlines():
+        limpa = strip_accents(linha.lower())
+        if _ROTULO_SCORE.match(limpa) or _MORREU_HISTORICO.search(limpa):
+            continue
+        manter.append(linha)
+    return '\n'.join(manter)
 
 
 def sanitize_log(text: str, extra_passwords=None) -> str:
@@ -99,6 +124,9 @@ class DeboClient:
         self.mana: Optional[int] = None
         self.mv: Optional[int] = None
         self.vitals: Dict[str, Optional[int]] = {"hp": None, "mana": None, "mv": None}
+        # Fome e sede NAO sao vitais de combate, mas decidem provisao: sem elas o
+        # daemon nao tinha como saber que a personagem estava morrendo de fome.
+        self.supplies: Dict[str, Optional[bool]] = {"fome": None, "sede": None}
         self.current_state: str = "disconnected"
         self.in_combat: bool = False
 
@@ -360,6 +388,13 @@ class DeboClient:
                     self.mv = v["mv"]
                     self.vitals["mv"] = v["mv"]
 
+            # Fome e sede, do mesmo acumulador: o bloco '[Situacao atual]' manda.
+            s = parse_supplies_pure(self._text_accumulator)
+            if s.get("fome") is not None:
+                self.supplies["fome"] = s["fome"]
+            if s.get("sede") is not None:
+                self.supplies["sede"] = s["sede"]
+
             # Atualizar estado operacional dinamicamente (incluindo emboscadas espontâneas e combate)
             is_conn = bool(self.sock and getattr(self.sock, "connected", True) and not getattr(self.sock, "closed", False))
             recent_window = self._text_accumulator[-2000:] if len(self._text_accumulator) > 2000 else self._text_accumulator
@@ -376,7 +411,7 @@ class DeboClient:
                 self.current_state = raw_state
                 self.in_combat = False
             else:
-                norm_recent = strip_accents(recent_window.lower())
+                norm_recent = strip_accents(sem_score(recent_window).lower())
                 terminator_patterns = [
                     "esta morto", "esta morta", "caiu morto", "caiu morta",
                     "morreu", "voce matou", "pontos de experiencia",
@@ -393,7 +428,7 @@ class DeboClient:
                         "ataca voce", "acerta voce", "arrebenta voce", "massacra voce",
                         "golpeia", "tenta acertar", "erra voce", "muito ocupado, lutando",
                         "voce arrebenta", "voce massacra", "voce acerta", "voce golpeia",
-                        "voce desfere", "seu missil magico", ">>"
+                        "voce desfere", "seu missil magico"
                     ]
                     last_trig_pos = -1
                     for pat in trigger_patterns:
@@ -412,7 +447,11 @@ class DeboClient:
                         self.in_combat = True
                         self.current_state = "in_combat"
                 else:
-                    if raw_state == "in_combat" or self.in_combat:
+                    # Sem terminador no buffer recente. O flag segue o que o
+                    # accumulador mostra AGORA; antes havia 'or self.in_combat',
+                    # que transformava o flag numa catraca: ligava uma vez e
+                    # nunca mais desligava ate cair a conexao.
+                    if raw_state == "in_combat":
                         self.in_combat = True
                         self.current_state = "in_combat"
                     else:
@@ -610,11 +649,13 @@ class DeboClient:
                     "cmd": cmd, "text": text, "prompt": True, "timeout": False,
                     "vitals": {"hp": int(match.group(1)), "mana": int(match.group(2)), "mv": int(match.group(3))},
                     "in_combat": bool(self.in_combat), "state": self.current_state,
+                    "supplies": dict(self.supplies),
                 }
             time.sleep(0.04)
         return {
             "cmd": cmd, "text": text, "prompt": False, "timeout": True,
             "vitals": dict(self.vitals), "in_combat": bool(self.in_combat), "state": self.current_state,
+            "supplies": dict(self.supplies),
         }
 
     def login(self, username: str = "Grebolius", password: Optional[str] = None, wimpy: int = 30):

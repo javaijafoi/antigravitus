@@ -83,7 +83,7 @@ def main(argv=None):
     if not args.live and not args.replay:
         print(json.dumps({'execution':'preview_only','network':False,'mode':args.mode,'dictionary':str(book.path),
             'dictionary_entries':len(book.entries),'missing_commands':missing,
-            'preparation':{'food_target':config.food_target,'water_fraction_min':.75,'spare_slots':config.spare_slots},
+            'preparation':{'food_target':config.food_target,'food_floor':config.food_floor,'water_fraction_min':.75,'water_floor':config.water_floor,'spare_slots':config.spare_slots},
             'actions':['localizar','preparar','olhar_ao_redor','olhar_adiante','mover','ambientar_transito','ambientar_exploracao','lutar_'+PROFILES[args.mode].combat,'selecionar_espolios','recuperar','acampar_perto','vigiar_ataques'],
             'city_return':'Apenas para comida/água; outros impasses passam ao agente.',
             'legacy':'scripts/local/legacy/dungeon_v1',

@@ -82,6 +82,7 @@ class Session:
         c = self.client
         return {
             'vitals': dict(c.vitals),
+            'supplies': dict(c.supplies),
             'in_combat': bool(c.in_combat),
             'state': c.current_state,
             'last_move': c.last_move,
