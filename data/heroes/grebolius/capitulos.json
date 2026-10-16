@@ -10,7 +10,7 @@
       "title": "Tomo I — O Nome no Vazio",
       "chapter_start": 0,
       "chapter_end": 10,
-      "subtitle": "Doze capítulos para reconstruir uma identidade: a origem, as primeiras missões da nova estação e o que o Vazio deixou para trás."
+      "subtitle": "Um prólogo e os capítulos de uma identidade em reconstrução."
     }
   ],
   "chapters": [
@@ -28,7 +28,7 @@
       ],
       "date": "2026-10-15",
       "in_game_time": "Do Despertar no Depósito de Lixo ao Vazio do Dia 100",
-      "excerpt": "O mapa de noventa e nove dias: do lixo de Midgaard ao Vazio que devolveu o que a morte tinha levado.",
+      "excerpt": "Do despertar no lixo ao retorno da Fonte da Vida: o caminho até a pergunta que encerra a primeira temporada.",
       "tags": [
         "Season 01",
         "Prólogo",
@@ -37,12 +37,12 @@
         "Recomeço"
       ],
       "content": [
-        "Antes de a estação nova começar, é preciso lembrar de onde viemos. Isto não é uma crônica; é um mapa. Um mapa de noventa e nove dias, e de uma mulher que atravessou todos eles com o nome errado na boca.",
+        "Antes de seguir, vale olhar o caminho percorrido. Este prólogo reúne cem dias de jornada: o que Grebolius viveu, o que perdeu e as certezas que agora começa a questionar.",
         "Tudo começa no chão fétido do Depósito de Lixo, em Midgaard. Uma criatura acorda sem memória, com o corpo que mal reconhece e a certeza plantada na cabeça de que precisa se esconder para sobreviver. Ela veste um capuz, engrossa a voz e se faz passar por homem. Aprende a rastejar pelos becos, a medir cada guarda e cada moeda, a engolir o desprezo como quem engole pão dormido. E jura que um dia haverá um reino onde nenhum goblin seja pisado.",
         "A cidade a ensina pela dor. No Dia 11, uma serpente monstruosa a mata nos esgotos, e o Vazio lhe arranca o rosto da mãe, a voz do clã e as canções de infância. Ela volta dos mortos com a alma queimada e transforma o luto em juramento: aquela serpente pagaria. Depois vêm as galerias dos arcanos, os graus de poder um a um, o feitiço aprendido nas paredes da Guilda dos Magos, o ouro empilhado, o Grande Minotauro tomado de assalto, o tabuleiro de xadrez com suas peças vivas e a Torre Negra que sussurra a morte a quem chega perto.",
-        "Ela cai mais três vezes. Tomba para o Cavaleiro Branco no Dia 60. Consome-se contra a serpente no Dia 81 e renasce na Fonte da Vida, prometendo voltar mais forte. Vence e perde no mesmo fôlego, enriquece, acumula equipamento de novato como quem coleciona cicatrizes, e nunca deixa de escrever. A goblin sem véu aprende que a memória é o único tesouro que a morte também rouba — e é justamente por isso que ela insiste em registrar cada passo, cada golpe e cada moeda tilintando na algibeira.",
-        "Até que, no Dia 100, o milharal destruído cobra o seu preço. Quarta morte, quatro vezes o Vazio. E desta vez o nada não leva apenas um pedaço de memória: devolve um. Um fio que ela passou noventa e nove dias sem enxergar, um colar que não lhe pertence, um nome que soa a folhas e a canção, e o olhar de quem já sabia. Talvez a criatura que emergiu do lixo nunca tenha sido goblin. Talvez ela só tenha deduzido isso dos cacos que sobraram.",
-        "A Season 01 termina aqui, no limiar. A Season 02 começa no Dia 101 e não será medida em dias, mas em capítulos — metas que podem atravessar muitas noites, muitos saves e muitos despertares. E o primeiro capítulo não pergunta onde ela está. Pergunta quem é que está olhando no espelho."
+        "As quedas voltam a fazer parte do caminho nos Dias 60 e 81. Entre elas, Grebolius enfrenta perigos, reúne equipamento e registra o que encontra. A memória é um tesouro que a morte também ameaça — por isso ela continua a escrever.",
+        "No Dia 100, o milharal destruído cobra seu preço. Grebolius atravessa outra vez o Vazio e retorna à Fonte da Vida. A passagem termina com uma pergunta sobre sua origem: quanto do que chama de memória é lembrança, e quanto é uma conclusão tirada do que restou? A resposta ainda não veio do mundo.",
+        "A primeira temporada termina no Templo, com o corpo de volta e a pergunta em aberto. A segunda começa a partir do Dia 101. Os dias continuam acontecendo; os capítulos reúnem as etapas da história, cada qual com seu objetivo e seu desfecho."
       ],
       "source_kind": "documental",
       "evidence": [
@@ -118,7 +118,7 @@
         {
           "day": 100,
           "date": "2026-10-15",
-          "summary": "Quarta morte, travessia do Vazio e a lembrança da origem.",
+          "summary": "Queda no milharal, travessia do Vazio, renascimento e dúvida de identidade em aberto.",
           "source_kind": "live",
           "evidence": [
             {

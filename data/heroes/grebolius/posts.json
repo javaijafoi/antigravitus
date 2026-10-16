@@ -2618,30 +2618,28 @@
   {
     "id": 100,
     "day": "Dia 100",
-    "title": "O Nome Errado na Boca",
+    "title": "O Nome que Ficou",
     "date": "2026-10-15",
-    "in_game_time": "Pariso, Caminho no Vazio e Fonte da Vida - Ciclo X",
-    "excerpt": "O Nome Errado na Boca",
+    "in_game_time": "Paraíso, Caminho no Vazio e Fonte da Vida — encerramento da Temporada 1",
+    "excerpt": "Depois da queda no milharal, Grebolius atravessa o Vazio e retorna à vida. A memória volta incompleta; a certeza sobre quem ela é também.",
     "tags": [
       "Dia 100",
       "Vazio",
       "Morte",
       "Renascimento",
       "Identidade",
-      "Elfa",
-      "Reflexao"
+      "Origem",
+      "Reflexão"
     ],
     "content": [
-      "Morri no milharal. O monstro agressivo me acertou quando eu já estava cega de dor, e desta vez não houve fuga para lugar nenhum: era só um corpo imóvel, pensando nas estrelas, enquanto a vida escorria entre os pés-de-milho arrancados. A quarta vez. A quarta vez que o mundo me apaga sem pedir licença.",
-      "Acordei em campos verdes que não doem. O Paraíso é exatamente o que prometem e exatamente o que não quero: uma calma sem fome, sem sede, sem dívida a cobrar. Mas havia uma energia teimosa puxando a oeste, atrás de uma árvore que não era árvore, e um portal pequeno demais para entrar de pé. Entrei de joelhos, como quem se rende.",
-      "Do outro lado não havia chão. Um caminho suspenso no nada, e dentro de mim uma ausência que eu conheço bem demais. É o mesmo vazio que, no Dia 11, me arrancou o rosto da minha mãe, a voz do meu clã e as canções de infância. Eu já estive aqui. Foi aqui que fui esvaziada.",
-      "E foi no nada que a primeira pedra rolou.",
-      "Veio uma lembrança que não é lembrança, é buraco com forma de lembrança. Um dia antes de todos os meus dias. Uma morte antes de todas as minhas mortes. Acordar num beco de Midgaard já com um nome na boca e uma certeza plantada na cabeça: sou goblin. Só que a certeza não veio de espelho nenhum. Veio dos cacos. Do corpo que eu mal vi quando abri os olhos. Do povo que me cuspiu nos becos. Da raiva grande demais para caber em mim.",
-      "E então as outras peças se encaixaram tortas. O colar de pedra roxa, que o mundo inteiro insiste que não me pertence. O Cavaleiro Branco, no Dia 60, me olhando como quem reconhece alguma coisa que eu não sabia que carregava. E o meu próprio nome. Grebolius. Eu repeti ele noventa e nove dias sem ouvir. É um nome de folhas e de canção, não de pedra e de beco.",
-      "Eu não fui vítima de uma mentira minha. Fui vítima de uma dedução. Peguei quatro cacos — um corpo que mal vi, um povo que me rejeitou, uma dor sem nome — e montei com eles a única figura que caberia: goblin. Era a história que me mantinha viva. E era falsa. Passei noventa e nove dias com o nome errado na boca e não percebi.",
-      "Dói mais do que a lâmina. Porque a lâmina corta a carne, e isso corta a única coisa que eu tinha construído sozinha: a certeza de quem eu era. O disfarce de homem que abandonei, a serpente que me matou e que eu jurei decapitar, a ambição de erguer um Reino Livre para o meu povo, a soberania sem véu — tudo isso eu construí sobre uma mulher que eu inventei para não enlouquecer no vazio. A jornada foi real. A mulher, talvez, não fosse.",
-      "Não posso prometer que nunca mais vou mentir. Não sabia que estava mentindo. Só posso prometer o que está ao meu alcance: que vou olhar melhor. Que não vou aceitar a primeira história que os cacos contam. Que da próxima vez que o Vazio passar a mão na minha memória, eu vou segurar o que sobrar com as duas mãos e ler com mais cuidado.",
-      "Bebi da Fonte da Vida. A água me devolveu o corpo inteiro, o hálito, o peso da armadura nos ombros. Voltei ao Templo de Midgaard com vinte e duas mil moedas no bornal e uma pergunta no lugar do nome. Amanhã começa outra estação da minha vida. Não sei ainda quem eu sou. Mas sei que não sou o nome que me dei, e que desconfiar da própria certeza já é um começo de lucidez."
+      "Morri no milharal. O monstro me acertou quando a dor já não deixava espaço para a fuga. Meu corpo ficou imóvel entre os pés de milho arrancados. Depois, o mundo se apagou. Outra vez.",
+      "Acordei nos campos verdes do Paraíso. A calma daquele lugar não era a resposta que eu procurava. Encontrei o portal e atravessei para o caminho suspenso no nada. Reconheci a ausência antes de reconhecer o lugar: no Vazio, eu já tinha perdido o rosto da minha mãe, a voz do meu clã, as canções de infância.",
+      "Havia uma pergunta no que restava. Quando foi que eu soube quem era? No lixo de Midgaard, abri os olhos e já me chamava goblin. Mas de onde vinha aquela certeza? Do corpo que mal reconheci? Do desprezo nos becos? Da raiva com que aprendi a responder?",
+      "Não encontrei uma lembrança inteira que me desse a resposta. Encontrei cacos. O colar de pedra púrpura que não consigo usar. O nome que carrego desde o despertar. Grebolius. Repeti-o tantas vezes sem perguntar o que havia antes dele.",
+      "Talvez eu tenha chamado de memória aquilo que era uma conclusão. Talvez tenha juntado o pouco que sobrou e feito uma história capaz de me manter de pé. Isso não torna falsos os caminhos que percorri, as escolhas que fiz ou o reino livre que desejei. A jornada foi real. A certeza é que pode estar errada.",
+      "O disfarce de homem ficou para trás. O juramento contra a serpente, não. Tampouco desapareceu o desejo de que ninguém do meu povo fosse pisado. Mas quem era esse povo? A pergunta doía porque não apagava nada: mudava o lugar de tudo.",
+      "Não posso devolver à força o que a morte levou. Posso desconfiar da primeira resposta e guardar melhor o que ainda tenho. Meu nome continuava ali. Não como uma explicação, mas como um fio que ainda não se rompeu.",
+      "Bebi da Fonte da Vida e voltei ao Templo de Midgaard. Recoloquei meu equipamento e me deitei. O corpo tinha retornado; a resposta, não. A história continuava comigo."
     ],
     "source_kind": "live",
     "evidence": [
@@ -2655,6 +2653,7 @@
         "day": 100,
         "note": "Separacao entre fato do servidor e ancora do autor."
       }
-    ]
+    ],
+    "editorial_note": "A queda, a travessia, o renascimento e o repouso vêm do registro do servidor. A origem elfa e o Dia 0 são âncoras estabelecidas pelo autor, descritas nas notas editoriais; a crônica mantém a investigação da personagem em aberto."
   }
 ]

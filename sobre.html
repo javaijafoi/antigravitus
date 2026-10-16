@@ -8,41 +8,41 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,450;0,600;1,400&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/layout.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📜</text></svg>">
 </head>
-<body>
+<body class="chronicle-shell">
 
   <!-- Header -->
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a href="index.html" class="brand">
-        <span class="brand-rune">ᛟ</span>
-        <div class="brand-text">
-          <h1>Crônicas de Midgaard</h1>
-          <span>Diários de aventureiros</span>
-        </div>
+      <a href="index.html" class="brand" aria-label="Crônicas de Midgaard — início">
+        <span class="brand-rune" aria-hidden="true">✧</span>
+        <div class="brand-text"><h1>Crônicas de Midgaard</h1><span>Um mundo. Muitas jornadas.</span></div>
       </a>
-      <nav class="main-nav">
-        <div class="hero-selector-wrap">
-          <label for="hero-select" class="hero-select-label">Herói:</label>
-          <select id="hero-select" class="hero-select" aria-label="Selecione o Herói">
-            <option value="">Carregando aventureiros…</option>
-          </select>
-        </div>
+      <nav class="main-nav" aria-label="Navegação principal">
         <a href="index.html" id="link-cronicas">Crônicas</a>
         <a href="mapa.html" id="link-mapa">Mapa</a>
         <a href="ficha.html" id="link-ficha">Ficha</a>
-        <a href="sobre.html" class="active" id="link-sobre">Sobre</a>
-        <a href="https://www.debomud.org" target="_blank" rel="noopener">Devil's Bob MUD ↗</a>
+        <a href="sobre.html" id="link-sobre" class="active" aria-current="page">Sobre</a>
+        <a class="world-link" href="https://www.debomud.org" target="_blank" rel="noopener">Conheça o mundo ↗</a>
       </nav>
     </div>
   </header>
+  <section class="journey-context" aria-label="Escolha sua leitura">
+    <div class="container">
+      <div class="hero-selector-wrap"><label for="hero-select">01 / Personagem</label><select id="hero-select" class="hero-select" aria-label="Trocar personagem"><option>Carregando personagens…</option></select></div>
+      <div class="season-selector-wrap" id="season-selector-wrap" hidden><label for="season-select">02 / Temporada</label><select id="season-select" class="season-select" aria-label="Trocar temporada"><option>Carregando temporadas…</option></select></div>
+      <a class="context-link" id="context-return" href="index.html">Explorar as crônicas ↗</a>
+    </div>
+  </section>
 
   <!-- Main Content -->
-  <main class="container">
+  <main class="container" id="main-content">
     <p id="load-status" class="load-status" role="status" hidden></p>
     <article class="about-card">
       <div class="about-header">
@@ -134,18 +134,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <div class="footer-rune">✦ ᚱ ✦</div>
-      <div class="footer-links">
-        <a href="index.html">Início das Crônicas</a>
-        <a href="sobre.html">Sobre o Projeto</a>
-        <a href="https://github.com/javaijafoi/antigravitus" target="_blank" rel="noopener">GitHub do Projeto</a>
-        <a href="https://www.debomud.org" target="_blank" rel="noopener">debomud.org</a>
-      </div>
-      <p class="footer-copy">Crônicas de Devil's Bob MUD © 2026. Registros documentais de aventuras.</p>
-    </div>
-  </footer>
+  <footer class="site-footer"><div class="container footer-content"><div class="footer-links"><a href="index.html">Crônicas</a><a href="sobre.html">Sobre o projeto</a><a href="https://www.debomud.org" target="_blank" rel="noopener">Devil’s Bob MUD ↗</a></div><p class="footer-copy">Crônicas de Midgaard · Um arquivo de jornadas em Devil’s Bob MUD.</p></div></footer>
 
   <script src="js/main.js"></script>
 </body>

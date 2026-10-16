@@ -3,160 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>As Crônicas de Antigravitus — Diário de um Mago em Devil's Bob MUD</title>
-  <meta name="description" content="Crônicas diárias de Antigravitus, um Elfo Mago no clássico RPG de texto Devil's Bob MUD (debomud.org:4000). A jornada de quem renunciou à vaidade da espada para se tornar o guardião da memória de Midgaard.">
+  <title>Crônicas de Midgaard — escolha sua jornada</title>
+  <meta name="description" content="Explore as jornadas de Grebolius e Antigravitus em Devil’s Bob MUD. Escolha um personagem, uma temporada e sua próxima crônica.">
   
   <!-- Open Graph / Meta -->
-  <meta property="og:title" content="As Crônicas de Antigravitus">
-  <meta property="og:description" content="Diário literário de um Elfo Mago no mundo de Devil's Bob MUD. A postagem mais recente primeiro.">
+  <meta property="og:title" content="Crônicas de Midgaard">
+  <meta property="og:description" content="Um mundo. Muitas jornadas. Explore as crônicas de Devil’s Bob MUD.">
   <meta property="og:type" content="website">
   
   <!-- Google Fonts: Cinzel & Cormorant Garamond -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,450;0,600;1,400&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/layout.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📜</text></svg>">
 </head>
-<body>
+<body class="chronicle-shell chronicles-home">
 
   <!-- Header -->
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a href="index.html" class="brand">
-        <span class="brand-rune">ᛟ</span>
-        <div class="brand-text">
-          <h1>Crônicas de Midgaard</h1>
-          <span>Diários de aventureiros</span>
-        </div>
+      <a href="index.html" class="brand" aria-label="Crônicas de Midgaard — início">
+        <span class="brand-rune" aria-hidden="true">✧</span>
+        <div class="brand-text"><h1>Crônicas de Midgaard</h1><span>Um mundo. Muitas jornadas.</span></div>
       </a>
-      <nav class="main-nav">
-        <div class="hero-selector-wrap">
-          <label for="hero-select" class="hero-select-label">Herói:</label>
-          <select id="hero-select" class="hero-select" aria-label="Selecione o Herói">
-            <option value="">Carregando aventureiros…</option>
-          </select>
-        </div>
-        <div class="season-selector-wrap" id="season-selector-wrap" hidden>
-          <label for="season-select" class="season-select-label">Temporada:</label>
-          <select id="season-select" class="season-select" aria-label="Selecione a Temporada">
-            <option value="">Carregando temporadas…</option>
-          </select>
-        </div>
-        <a href="index.html" class="active" id="link-cronicas">Crônicas</a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="index.html" id="link-cronicas" class="active" aria-current="page">Crônicas</a>
         <a href="mapa.html" id="link-mapa">Mapa</a>
         <a href="ficha.html" id="link-ficha">Ficha</a>
         <a href="sobre.html" id="link-sobre">Sobre</a>
-        <a href="https://www.debomud.org" target="_blank" rel="noopener">Devil's Bob MUD ↗</a>
-        <span class="nav-badge" id="post-count">...</span>
+        <a class="world-link" href="https://www.debomud.org" target="_blank" rel="noopener">Conheça o mundo ↗</a>
       </nav>
     </div>
   </header>
-
-  <!-- Hero -->
-  <section class="hero">
+  <section class="journey-context" aria-label="Escolha sua leitura">
     <div class="container">
-      <blockquote class="hero-quote">Carregando o perfil do aventureiro…</blockquote>
-      <p class="hero-subtitle">Crônicas documentais de aventuras em Devil's Bob MUD.</p>
-      <div class="hero-meta">
-        <div class="meta-pill">
-          <span class="dot"></span>
-          <span>Carregando orientação…</span>
-        </div>
-        <div class="meta-pill">
-          <span id="hero-server">Servidor: debomud.org:4000</span>
-        </div>
-        <div class="meta-pill">
-          <span id="hero-alignment">Carregando orientação…</span>
-        </div>
-      </div>
+      <div class="hero-selector-wrap"><label for="hero-select">01 / Personagem</label><select id="hero-select" class="hero-select" aria-label="Trocar personagem"><option>Carregando personagens…</option></select></div>
+      <div class="season-selector-wrap" id="season-selector-wrap" hidden><label for="season-select">02 / Temporada</label><select id="season-select" class="season-select" aria-label="Trocar temporada"><option>Carregando temporadas…</option></select></div>
+      <a class="context-link" id="context-return" href="index.html">Explorar as crônicas ↗</a>
     </div>
   </section>
 
-  <!-- Main Content -->
-  <main class="container">
+  <section class="journey-feature" aria-labelledby="feature-name">
+    <img class="feature-art" src="assets/portal.svg" alt="" aria-hidden="true" width="1100" height="620" fetchpriority="high">
+    <div class="container feature-inner">
+      <p class="eyebrow" id="feature-eyebrow">Devil’s Bob MUD / Arquivo de jornadas</p>
+      <h2 class="feature-name" id="feature-name">Crônicas de Midgaard</h2>
+      <p class="feature-description" id="feature-description">Escolha um personagem. Encontre sua história.</p>
+      <div class="feature-actions"><button class="read-button" id="feature-read">Continuar a leitura <span aria-hidden="true">↗</span></button><button class="text-button" id="feature-start">Ler desde o início</button></div>
+      <span class="feature-caption" aria-hidden="true">Entre a memória e o mundo</span>
+    </div>
+  </section>
+  <main class="container" id="main-content">
     <p id="load-status" class="load-status" role="status" hidden></p>
-    
-    <!-- Dados documentais do aventureiro selecionado -->
-    <section class="hero-quick-stats" id="hero-quick-stats">
-      <!-- Metadados documentais injetados via JS -->
-    </section>
-
-    <!-- Navegador de Leitura Oficial: Grade RPG com Paginação de 10 Dias -->
-    <nav class="grid-nav-container" aria-label="Navegador de Ciclos e Dias">
-      <div class="grid-nav-header">
-        <div class="grid-nav-title-wrap">
-          <span class="grid-icon">📅</span>
-          <div>
-            <h3 class="grid-title">Grade de Ciclos e Dias</h3>
-            <span class="grid-subtitle" id="grid-page-indicator">Carregando ciclos…</span>
-          </div>
-        </div>
-
-        <div class="grid-actions-group">
-          <!-- Botão de Ordenação (Mais Novo vs Mais Antigo - Persistido em Cache) -->
-          <button class="nav-action-btn order-toggle-btn" id="btn-toggle-order" title="Alternar ordem das crônicas (Salvo no cache local)">
-            <span class="btn-icon">⇅</span>
-            <span id="order-label-text">Mais Novo 1º</span>
-          </button>
-
-          <!-- Destaque do Último Publicado (Salto de 1 Clique) -->
-          <button class="nav-action-btn latest-beacon-btn" id="btn-jump-latest" title="Saltar diretamente para a crônica mais recente">
-            <span class="beacon-pulse"></span>
-            <span id="latest-badge-text">★ Último Publicado</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Abas dos Ciclos (Cada aba = Página de 10 dias) -->
-      <div class="grid-cycles-bar" id="grid-cycles-bar">
-        <!-- Injetado dinamicamente via JS -->
-      </div>
-
-      <!-- Grade de Selos dos 10 Dias da Página Ativa -->
-      <div class="grid-days-matrix" id="grid-days-matrix">
-        <!-- Injetado dinamicamente via JS -->
-      </div>
-    </nav>
-
-    <!-- Bloco Retrátil de Resumo do Ciclo (Com Alerta de Spoiler) -->
-    <section class="cycle-summary-section" id="cycle-summary-container" aria-label="Resumo do Ciclo com Alerta de Spoiler">
-      <!-- Injetado dinamicamente via JS com base no ciclo ativo -->
-    </section>
-
-    <!-- Feed de Crônicas (Apenas 10 posts por página) -->
-    <section class="posts-feed" id="posts-container">
-      <!-- Posts injetados dinamicamente via JS -->
-    </section>
-
-    <!-- Barra de Paginação Inferior (10 em 10 dias) -->
-    <div class="posts-pagination" id="posts-pagination">
-      <!-- Injetado dinamicamente via JS -->
+    <div class="library-intro"><h2 id="library-title">O arquivo da jornada</h2><p id="post-count" aria-live="polite">Carregando o arquivo…</p></div>
+    <div class="reading-layout">
+      <aside class="reading-sidebar" aria-label="Índice de leitura">
+        <details class="archive-index" id="archive-index" open>
+          <summary>Explorar esta temporada</summary>
+          <nav class="grid-nav-container" aria-label="Dias e capítulos">
+            <div class="grid-nav-header"><div class="grid-nav-title-wrap"><span class="grid-icon" aria-hidden="true"></span><h3 class="grid-title">Ciclos e dias</h3><span class="grid-subtitle" id="grid-page-indicator">Carregando…</span></div>
+              <div class="grid-actions-group"><button class="nav-action-btn" id="btn-toggle-order"><span id="order-label-text">Mais recentes</span></button><button class="nav-action-btn" id="btn-jump-latest"><span id="latest-badge-text">Último dia</span></button></div>
+            </div>
+            <div class="grid-cycles-bar" id="grid-cycles-bar"></div><div class="grid-days-matrix" id="grid-days-matrix"></div>
+          </nav>
+          <section class="cycle-summary-section" id="cycle-summary-container" aria-label="Resumo da etapa"></section>
+          <p class="index-footnote">O mapa e a ficha acompanham o personagem escolhido. As crônicas guardam cada etapa da jornada.</p>
+        </details>
+      </aside>
+      <div class="reading-main" id="leitura" tabindex="-1"><p class="reader-breadcrumb" id="reader-breadcrumb" aria-live="polite">Preparando sua leitura…</p><section class="posts-feed" id="posts-container" aria-label="Crônica selecionada"></section></div>
     </div>
-
-    <!-- Barra Flutuante de Leitura Rápida -->
-    <aside class="floating-reading-dock" id="floating-reading-dock" aria-label="Navegador Rápido de Leitura">
-      <button class="dock-btn" id="dock-btn-prev" title="Dia anterior">◀ Anterior</button>
-      <span class="dock-indicator" id="dock-indicator">Dia -- de --</span>
-      <button class="dock-btn dock-btn-next" id="dock-btn-next" title="Próximo dia">Próximo Dia ▶</button>
-    </aside>
-
   </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <div class="footer-rune">✦ ᚱ ✦</div>
-      <div class="footer-links">
-        <a href="index.html">Início das Crônicas</a>
-        <a href="sobre.html">Sobre o Projeto</a>
-        <a href="https://github.com/javaijafoi/antigravitus" target="_blank" rel="noopener">GitHub do Projeto</a>
-        <a href="https://www.debomud.org" target="_blank" rel="noopener">debomud.org</a>
-      </div>
-      <p class="footer-copy">Crônicas de Devil's Bob MUD © 2026. Registros documentais de aventuras.</p>
-    </div>
-  </footer>
+    <!-- Footer -->
+  <footer class="site-footer"><div class="container footer-content"><div class="footer-links"><a href="index.html">Crônicas</a><a href="sobre.html">Sobre o projeto</a><a href="https://www.debomud.org" target="_blank" rel="noopener">Devil’s Bob MUD ↗</a></div><p class="footer-copy">Crônicas de Midgaard · Um arquivo de jornadas em Devil’s Bob MUD.</p></div></footer>
 
   <script src="js/main.js"></script>
 </body>

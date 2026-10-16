@@ -6,8 +6,8 @@
     {
       "id": "s01",
       "number": 1,
-      "title": "Season 01 — As Crônicas de Midgaard",
-      "subtitle": "A mulher goblin que se ergueu do lixo, desafiou a morte quatro vezes e se tornou a cronista de seu próprio mundo.",
+      "title": "Temporada 1 — As Crônicas de Midgaard",
+      "subtitle": "Do despertar em Midgaard ao retorno da Fonte da Vida.",
       "model": "dias",
       "unit": "Dia",
       "source": "posts.json",
@@ -17,19 +17,19 @@
         100
       ],
       "status": "concluida",
-      "summary": "Noventa e nove dias de jornada narrados como um diário: do despertar no Depósito de Lixo à véspera da revelação no Vazio."
+      "summary": "Cem dias entre becos, magia e recomeços. A primeira jornada de Grebolius, do despertar à dúvida sobre a própria memória."
     },
     {
       "id": "s02",
       "number": 2,
-      "title": "Season 02 — O Nome no Vazio",
-      "subtitle": "A partir do Dia 101, a história deixa de ser contada em dias e passa a ser contada em capítulos: metas que podem durar muitas sessões.",
+      "title": "Temporada 2 — O Nome no Vazio",
+      "subtitle": "Uma história contada em capítulos, a partir do Dia 101.",
       "model": "capitulos",
       "unit": "Capítulo",
       "source": "capitulos.json",
       "started_day": 101,
       "status": "em_curso",
-      "summary": "Capítulos guiados por objetivos: normalmente duas missões mais o que houver no meio (treino, equipamento). O capítulo fecha quando a meta se resolve, nunca porque o sol nasceu."
+      "summary": "Um nome permanece quando as certezas se desfazem. A jornada continua, agora em capítulos."
     }
   ]
 }
