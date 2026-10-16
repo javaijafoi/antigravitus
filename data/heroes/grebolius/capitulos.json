@@ -575,7 +575,8 @@
         145,
         146,
         147,
-        148
+        148,
+        149
       ],
       "parts": [
         {
@@ -693,6 +694,19 @@
               "document": "evidence/dia148.json",
               "day": 148,
               "note": "Arquitetura de rotinas e validacao das camadas."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 149,
+          "summary": "A supervisao por minuto pegou dois problemas reais: (1) a sede persistia porque o cantil estava vazio - resolvido na fonte de marmore azul da Praca do Templo ('fill cantil fonte' / 'drink fonte'), agora no prepara; (2) a bolsa estava cheia (130/115 kg) por 10 paes acumulados - o prepara nao compra mais pao a toa, e bainha de Excalibur e o Cetro do Bispo Negro foram devolvidos a Sala de Doacoes para preservacao. Agora 112/115 kg. A Armadura da Torre Negra segue amaldicoada (60 kg) e o pergaminho de remover maldicoes custa 8.509 contra 7.032 no banco.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia149.json",
+              "day": 149,
+              "note": "Fonte de agua, bolsa cheia e armadura amaldicoada."
             }
           ],
           "date": "2026-10-16"
