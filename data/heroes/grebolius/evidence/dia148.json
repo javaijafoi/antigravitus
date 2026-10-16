@@ -1,0 +1,15 @@
+{
+  "hero_id": "grebolius",
+  "day": 148,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "summary": {
+    "arquitetura_rotinas": "Pedido do autor: N motores, ou um motor que chama uma 'rotina X'. Implementado: rotinas plugaveis em scripts/local/rotinas/ (base.py + milharal.py + xadrez.py + esgoto.py), despachante trabalhar.py (--rotina / --listar) e o encarregado turno.py. Descrito em docs/rotinas.md.",
+    "camadas": "VIGIA (vigia.py) le a cauda do log do daemon - LEITURA PURA, nao manda comando, nao interfere no motor. Diagnostico: OK/FOME/SEDE/VIDA_BAIXA/MORTA/TRAVADO/SEM_SESSAO. PREPARA (prepara.py): come, bebe, deposita o ouro no banco, dorme e volta ao Templo. TRABALHAR (trabalhar.py): despacha a rotina. TURNO (turno.py): vigia -> prepara se preciso -> rotina em segundo plano -> vigia a cada minuto -> mata e recomeca.",
+    "contrato": "Toda rotina parte do Templo e volta para la, salvando no fim: e isso que a torna reiniciavel. Qualquer interrupcao e recuperavel com prepara.py.",
+    "banco": "Comando descoberto: 'deposit <valor>' (ingles) e 'balance'. O ouro agora fica protegido no banco do Templo; prepara.py depositou 6.032 e mantem reserva de 300.",
+    "validacao": "vigia.py testado (acusou SEDE corretamente e depois OK); prepara.py testado de ponta a ponta (alimentou, hidratou, depositou 6.032, dormiu, voltou ao Templo); trabalhar.py --listar lista as tres rotinas; base.py importa e hp_frac funciona.",
+    "correcao_guarda": "A guarda disparava em compras legitimas (6 paes = mesma resposta 3x). Agora comandos benignos (buy/eat/drink/look/score/rest/sleep...) nao disparam a guarda; ela vigia os perigosos (andar, conjurar, pegar).",
+    "estado": "Grau 20, 113/113, 300 na mao + 7.032 no banco, alimentada, no Templo."
+  }
+}

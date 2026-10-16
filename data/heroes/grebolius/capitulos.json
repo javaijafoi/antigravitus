@@ -574,7 +574,8 @@
         144,
         145,
         146,
-        147
+        147,
+        148
       ],
       "parts": [
         {
@@ -679,6 +680,19 @@
               "document": "diretiva_de_jogo.md",
               "day": 147,
               "note": "Secoes 13 e 14: fome/sede e supervisao por minuto."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 148,
+          "summary": "Arquitetura de ROTINAS (proposta do autor) implementada e documentada em docs/rotinas.md: base.py compartilhada + rotinas milharal, xadrez e esgoto, despachante trabalhar.py e encarregado turno.py. Camadas: vigia.py (le o log, diagnostica, nao interfere), prepara.py (come, bebe, deposita o ouro no banco do Templo, dorme e volta) e a guarda de repeticao. O banco aceita 'deposit' e guardou 6.032 moedas.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia148.json",
+              "day": 148,
+              "note": "Arquitetura de rotinas e validacao das camadas."
             }
           ],
           "date": "2026-10-16"
