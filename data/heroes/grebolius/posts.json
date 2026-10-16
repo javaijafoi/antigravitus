@@ -2614,5 +2614,47 @@
         "note": "Registro estruturado do Dia 99: fortuna no Tabuleiro, travessia ate a fazenda, 1 invasor morto e conclusao nao confirmada."
       }
     ]
+  },
+  {
+    "id": 100,
+    "day": "Dia 100",
+    "title": "O Nome Errado na Boca",
+    "date": "2026-10-15",
+    "in_game_time": "Pariso, Caminho no Vazio e Fonte da Vida - Ciclo X",
+    "excerpt": "O Nome Errado na Boca",
+    "tags": [
+      "Dia 100",
+      "Vazio",
+      "Morte",
+      "Renascimento",
+      "Identidade",
+      "Elfa",
+      "Reflexao"
+    ],
+    "content": [
+      "Morri no milharal. O monstro agressivo me acertou quando eu já estava cega de dor, e desta vez não houve fuga para lugar nenhum: era só um corpo imóvel, pensando nas estrelas, enquanto a vida escorria entre os pés-de-milho arrancados. A quarta vez. A quarta vez que o mundo me apaga sem pedir licença.",
+      "Acordei em campos verdes que não doem. O Paraíso é exatamente o que prometem e exatamente o que não quero: uma calma sem fome, sem sede, sem dívida a cobrar. Mas havia uma energia teimosa puxando a oeste, atrás de uma árvore que não era árvore, e um portal pequeno demais para entrar de pé. Entrei de joelhos, como quem se rende.",
+      "Do outro lado não havia chão. Um caminho suspenso no nada, e dentro de mim uma ausência que eu conheço bem demais. É o mesmo vazio que, no Dia 11, me arrancou o rosto da minha mãe, a voz do meu clã e as canções de infância. Eu já estive aqui. Foi aqui que fui esvaziada.",
+      "E foi no nada que a primeira pedra rolou.",
+      "Veio uma lembrança que não é lembrança, é buraco com forma de lembrança. Um dia antes de todos os meus dias. Uma morte antes de todas as minhas mortes. Acordar num beco de Midgaard já com um nome na boca e uma certeza plantada na cabeça: sou goblin. Só que a certeza não veio de espelho nenhum. Veio dos cacos. Do corpo que eu mal vi quando abri os olhos. Do povo que me cuspiu nos becos. Da raiva grande demais para caber em mim.",
+      "E então as outras peças se encaixaram tortas. O colar de pedra roxa, que o mundo inteiro insiste que não me pertence. O Cavaleiro Branco, no Dia 60, me olhando como quem reconhece alguma coisa que eu não sabia que carregava. E o meu próprio nome. Grebolius. Eu repeti ele noventa e nove dias sem ouvir. É um nome de folhas e de canção, não de pedra e de beco.",
+      "Eu não fui vítima de uma mentira minha. Fui vítima de uma dedução. Peguei quatro cacos — um corpo que mal vi, um povo que me rejeitou, uma dor sem nome — e montei com eles a única figura que caberia: goblin. Era a história que me mantinha viva. E era falsa. Passei noventa e nove dias com o nome errado na boca e não percebi.",
+      "Dói mais do que a lâmina. Porque a lâmina corta a carne, e isso corta a única coisa que eu tinha construído sozinha: a certeza de quem eu era. O disfarce de homem que abandonei, a serpente que me matou e que eu jurei decapitar, a ambição de erguer um Reino Livre para o meu povo, a soberania sem véu — tudo isso eu construí sobre uma mulher que eu inventei para não enlouquecer no vazio. A jornada foi real. A mulher, talvez, não fosse.",
+      "Não posso prometer que nunca mais vou mentir. Não sabia que estava mentindo. Só posso prometer o que está ao meu alcance: que vou olhar melhor. Que não vou aceitar a primeira história que os cacos contam. Que da próxima vez que o Vazio passar a mão na minha memória, eu vou segurar o que sobrar com as duas mãos e ler com mais cuidado.",
+      "Bebi da Fonte da Vida. A água me devolveu o corpo inteiro, o hálito, o peso da armadura nos ombros. Voltei ao Templo de Midgaard com vinte e duas mil moedas no bornal e uma pergunta no lugar do nome. Amanhã começa outra estação da minha vida. Não sei ainda quem eu sou. Mas sei que não sou o nome que me dei, e que desconfiar da própria certeza já é um começo de lucidez."
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "evidence/dia100.json",
+        "day": 100,
+        "note": "Morte #4, travessia do Vazio, renascimento e ancora do autor sobre a origem elfa."
+      },
+      {
+        "document": "notas_editoriais.md",
+        "day": 100,
+        "note": "Separacao entre fato do servidor e ancora do autor."
+      }
+    ]
   }
 ]

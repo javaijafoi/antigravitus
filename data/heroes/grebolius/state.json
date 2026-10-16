@@ -2,10 +2,10 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 99,
+    "day": 100,
     "verification": "live",
     "live_verified": true,
-    "source": "Sessao manual do Dia 99: coleta e venda de espolio do Tabuleiro de Xadrez em multiplas viagens (4 lancas, cetro, cajado) elevando o ouro de 3.604 para 22.140; travessia Midgaard-Jareth-floresta ate a fazenda e abate de 1 monstro invasor no milharal (+14.488 EXP); repouso no Templo; evidence/dia99.json."
+    "source": "Sessao do Dia 100: morte pela quarta vez no milharal, travessia do Paraiso e do Caminho no Vazio, renascimento pela Fonte da Vida e repouso no Templo; evidence/dia100.json. A lembranca da origem elfa e ANCORA DO AUTOR, sem evidencia de servidor."
   },
   "level": 14,
   "mechanical_race": "Elfo",
@@ -13,7 +13,7 @@
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
   "alignment": {
-    "value": 234,
+    "value": 238,
     "label": "Um pouco bom"
   },
   "vitals": {
@@ -22,7 +22,7 @@
       "max": 75
     },
     "mana": {
-      "current": 200,
+      "current": 172,
       "max": 200
     },
     "mv": {
@@ -31,10 +31,10 @@
     }
   },
   "experience": {
-    "current": 487331,
+    "current": 488183,
     "next_level": 500000
   },
-  "gold": 22140,
+  "gold": 22190,
   "attributes": {
     "STR": 12,
     "DEX": 15,
@@ -47,7 +47,7 @@
     "base": 49,
     "with_armor": 75,
     "effect_verified": true,
-    "note": "Dia 99: AC 75 com Armadura Mistica ativa (+26), mas a duracao chegou a cerca de 2 horas ao dormir: recastar no proximo dia."
+    "note": "Dia 100: a Armadura Mistica expirou com a morte e nao pode ser recastada (duas falhas de conjuracao); AC 49 ao dormir. Recastar no proximo dia."
   },
   "hitroll": 3,
   "damroll": 4,
@@ -78,17 +78,17 @@
     "name": "O Panteao dos Centenarios"
   },
   "last_event": {
-    "day": 99,
-    "summary": "Dia 99 de acumulo: Grebolius voltou ao Tabuleiro de Xadrez de Midgaard e, em varias viagens com RECALL para vender, recolheu e negociou 4 Lancas do Cavaleiro Negro (4.000 cada), um Cetro do Bispo Negro (3.000) e um Cajado Retorcido (2.460), saltando de 3.604 para 22.140 moedas. Depois atravessou a rodovia ate Jareth e a floresta ate a fazenda, onde matou um monstro invasor no milharal (+14.488 EXP). As 49 armaduras da Torre Negra ficaram no chao por peso, e a conclusao de Problemas Agricolas nao pode ser confirmada com o fazendeiro."
+    "day": 100,
+    "summary": "Grebolius morreu pela quarta vez no Milharal Destruido, atordoada sob um monstro agressivo. Atravessou o Paraiso, o Portal Escondido e o Caminho no Vazio, onde — segundo a ancora do autor — recuperou o fio da propria origem e percebeu que o 'goblin' foi deducao errada sobre uma memoria rasgada. Renasceu pela Fonte da Vida, reequipou-se e dormiu no Templo de Midgaard."
   },
   "next_objective": {
     "mission_id": "problemas-agricolas",
-    "title": "Concluir Problemas Agricolas e decidir sobre o tesouro da Torre Negra",
-    "next_step": "Voltar a fazenda com o mapa do bosque ja anotado, caçar os monstros invasores um a um (nunca salas com 2+), e tentar novamente o gatilho de conclusao com o fazendeiro. Alternativamente, fazer viagens quase vazias ao Tabuleiro para retirar armaduras da Torre Negra, uma por viagem.",
+    "title": "Season 02 (a partir do Dia 101) e a missao em aberto",
+    "next_step": "Iniciar a Season 02 com abordagem diferente, decidida pelo autor. Em jogo, quando houver autorizacao: retomar a fazenda com o mapa do bosque ja anotado e enfrentar apenas salas de alvo unico; conferir se o servidor entrega algum gatilho externo sobre a origem (nome, colar, Cavaleiro Branco) antes de afirmar qualquer revelacao como fato.",
     "missing_preparation": [
-      "armor esta a ponto de expirar (cerca de 2 horas); recastar Armadura Mistica.",
-      "Cantil reabastecido no Dia 99; ha paes na mochila.",
-      "O contador da missao nao e informado pelo servidor."
+      "Armadura Mistica expirada; recastar.",
+      "O contador de Problemas Agricolas nao e informado pelo servidor.",
+      "A revelacao da origem elfa e leitura editorial enquanto o servidor nao entregar o gatilho."
     ]
   },
   "skills": [
@@ -291,18 +291,20 @@
     "pending_verification": []
   },
   "conditions": [
-    "Dia 99: dormindo no Templo de Midgaard, com 75/75 HP, 200/200 mana e 105/105 MV.",
-    "Fortuna elevada a 22.140 moedas de ouro (espólio do Tabuleiro de Xadrez).",
-    "Nivel 14 com 487.331 EXP; faltam 12.669 para o Grau 15.",
-    "Um monstro invasor morto no milharal da fazenda no Dia 99 (+14.488 EXP).",
-    "Armadura Mistica perto de expirar (cerca de 2 horas ao dormir).",
+    "Dia 100: dormindo no Templo de Midgaard, com 75/75 HP, 172/200 mana e 105/105 MV.",
+    "Quarta morte registrada (milharal da fazenda); renascimento pela Fonte da Vida.",
+    "Armadura Mistica expirada e nao recastada; AC 49.",
+    "Fortuna de 22.190 moedas de ouro preservada.",
+    "Nivel 14 com 488.183 EXP; faltam 11.817 para o Grau 15.",
     "Save e sleep confirmados no Templo de Midgaard."
   ],
   "uncertainties": [
-    "A conclusao de Problemas Agricolas nao foi confirmada: o fazendeiro nao respondeu aos gatilhos de fala e o contador de abates nao e exibido pelo servidor.",
-    "As 49 armaduras da Torre Negra (+3L) ficaram no chao: peso por peca acima de 46 kg e a Torre Negra viva e letal.",
-    "O bosque ao redor da fazenda continua sem consolidacao: as salas sao homonimas; anotada a ligacao 'norte para A Entrada da Fazenda'.",
-    "O Cetro do Bispo Negro guardado pode pertencer a cadeia Xeque-mate (nivel 30) e nao teve uso identificado."
+    "ANCORA DO AUTOR (sem evidencia de servidor): primeira morte no Dia 0 e origem elfa; o 'goblin' seria deducao errada sobre memoria rasgada.",
+    "A revelacao ainda NAO foi afirmada como fato do servidor; depende de um gatilho externo (nome dito por NPC, magia de deteccao, o Cavaleiro Branco).",
+    "Cronicas antigas precisam de nota editorial de segunda leitura, sem reescrita.",
+    "O colar de pedra purpura segue inutilizavel e sem dono declarado.",
+    "Problemas Agricolas continua sem contador verificavel; o milharal tem 2 a 4 monstros por sala.",
+    "A Armadura Mistica precisa ser recastada."
   ],
   "evidence": [
     {
@@ -349,6 +351,16 @@
       "document": "evidence/dia99.json",
       "day": 99,
       "note": "Sessao manual do Dia 99: espolio do Tabuleiro vendido (22.140 moedas), travessia ate a fazenda e 1 invasor morto; conclusao da missao nao confirmada."
+    },
+    {
+      "document": "evidence/dia100.json",
+      "day": 100,
+      "note": "Morte #4 no milharal, travessia do Vazio, renascimento na Fonte da Vida e ancora do autor sobre a origem elfa."
+    },
+    {
+      "document": "notas_editoriais.md",
+      "day": 100,
+      "note": "Separacao entre fato do servidor e ancora do autor; ganchos abertos para o jogo entregar."
     }
   ],
   "narrative_style": "ladra arcana",
@@ -356,5 +368,11 @@
   "migration": {
     "method": "sessao manual comandada pelo agente sob driver com token",
     "verified_on": "Dia 99 (score, inventario, vendas, combate, save e sleep ao vivo)"
+  },
+  "identity_revelation": {
+    "day": 100,
+    "status": "reconhecida pela personagem como experiencia subjetiva",
+    "mechanical_race_confirmed": "Elfo",
+    "editorial_note": "ANCORA DO AUTOR, sem evidencia de servidor: primeira morte no Dia 0 e origem elfa. A cronica do Dia 100 narra a lembranca no Vazio; as cronicas antigas permanecem intactas e ganham segunda leitura. Ver notas_editoriais.md."
   }
 }

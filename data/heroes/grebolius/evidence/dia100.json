@@ -1,0 +1,42 @@
+{
+  "hero_id": "grebolius",
+  "day": 100,
+  "source_kind": "live",
+  "recorded_on": "2026-10-15",
+  "sources": [
+    "session_live_dia99_*.log (queda no milharal)",
+    "session_live_dia100_*.log (Paraiso, Vazio e renascimento)"
+  ],
+  "summary": {
+    "death": {
+      "ordinal": 4,
+      "place": "O Milharal Destruido (fazenda a leste de Jareth)",
+      "cause": "monstro agressivo; a personagem caiu a 13 de vida, ficou atordoada ('imovel') e a fuga do wimpy nao pode ser executada a tempo.",
+      "consequence": "Conducao ao Paraiso, ao Portal Escondido, ao Caminho no Vazio e a Fonte da Vida."
+    },
+    "resurrection": {
+      "method": "comando 'drink fonte' na Fonte da Vida; em seguida 'wear all' para reequipar",
+      "result": "retorno ao Templo de Midgaard com equipamento reequipado; armor nao pode ser recastada (duas falhas de conjuracao)."
+    },
+    "ending_state": {
+      "level": 14,
+      "xp": 488183,
+      "gold": 22190,
+      "hp": "75/75",
+      "mana": "172/200",
+      "mv": "105/105",
+      "ac": 49,
+      "alignment": 238,
+      "deaths": 4,
+      "location": "O Templo de Midgaard",
+      "status": "dormindo (sleep) com atalhos salvos"
+    },
+    "xp_note": "O personagem atravessou o Vazio e renasceu; o estado final e anterior ao fechamento com save+sleep.",
+    "authorial_anchor": {
+      "label": "ANCORA ESTABELECIDA PELO AUTOR — sem evidencia de servidor.",
+      "content": "Houve uma primeira morte no Dia 0. No Dia 1 Grebolius acorda ja se crendo goblin. Essa morte inicial apagou o alicerce da memoria, e 'goblin' foi a conclusao que a personagem tirou dos cacos (o corpo que viu, a rejeicao nos becos, a raiva). A origem real e elfa; o nome Grebolius e de sonoridade elfica e nunca havia sido explicado. Isso NAO e mentira deliberada da personagem: e deducao errada com prova insuficiente.",
+      "ties_to_canon": "A morte do Dia 11 (posts.json) ja narra o Vazio arrancando o rosto da mae, a voz do cla e as cancoes de infancia; a identidade.md proibe declarar esse trauma curado. O Dia 0 passa a ser a raiz acrescentada pelo autor.",
+      "editorial_note": "As cronicas dos Dias 1 em diante permanecem intactas e ganham segunda leitura a luz do Dia 100; nenhuma cena antiga foi reescrita."
+    }
+  }
+}

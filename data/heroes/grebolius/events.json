@@ -628,5 +628,19 @@
       }
     ],
     "summary": "Expedição aos Esgotos de Midgaard com o executor run_dia95_esgotos.py: descida e reconhecimento dos canos profundos e da Borda do Abismo. Em A Estreita Borda Indo de Leste a Oeste, ocorreu emboscada por grupo de cobras venenosas. O protocolo de sobrevivência Wimpy 30 disparou a retirada imediata para o leste com sucesso, levando a O Canto Nordeste da Borda com perda de 1 XP (195.201 XP). Encerramento com 10/87 HP, 170/170 mana, 101/101 MV, 2.188 moedas, envenenada (-2 FOR, 9h) e com Armadura Mística ativa (51h restantes), salva e dormindo sobre a borda."
+  },
+  {
+    "id": "morte-quarta-vazio-dia100",
+    "day": 100,
+    "type": "morte_ressurreicao",
+    "summary": "Quarta morte de Grebolius, no Milharal Destruido, sob ataque de um monstro agressivo apos ficar atordoada. Travessia do Paraiso, do Portal Escondido e do Caminho no Vazio ate a Fonte da Vida; renascimento por 'drink fonte' e reequipamento com 'wear all'. A lembranca da origem elfa e ANCORA DO AUTOR, sem evidencia de servidor (ver notas_editoriais.md).",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "evidence/dia100.json",
+        "day": 100,
+        "note": "Registro da morte #4, do renascimento e da ancora do autor."
+      }
+    ]
   }
 ]

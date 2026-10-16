@@ -67,7 +67,7 @@
     "quick_stats": {
       "level_badge": "(Grau 14 • Mago; estilo ladra arcana)",
       "hp": "75 / 75",
-      "mana": "200 / 200",
+      "mana": "172 / 200",
       "mv": "105 / 105",
       "ac": "AC 49 (75 com armor; registro)",
       "weapon": "Espada de Novato empunhada + Punhal segurado + Escudo",
@@ -75,7 +75,7 @@
       "sanctuary": "O Panteao dos Centenarios",
       "location": "O Templo de Midgaard",
       "camp": "O Templo de Midgaard",
-      "as_of_day": 99,
+      "as_of_day": 100,
       "verification": "live"
     },
     "voice": {

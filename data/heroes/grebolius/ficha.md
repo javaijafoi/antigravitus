@@ -1,6 +1,6 @@
 # 🧌 Ficha Atual de Grebolius (Último Estado Registrado)
 
-> Referência: Dia 99. Estado verificado em sessão; consultar a origem registrada.
+> Referência: Dia 100. Estado verificado em sessão; consultar a origem registrada.
 > Este documento reúne o último estado e as missões registrados; as incertezas aparecem ao final.
 
 ## ✦ Identificação e Registro
@@ -10,8 +10,8 @@
 * **Raça Mecânica no MUD:** Elfo
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **14**
-* **Alinhamento Moral:** 234 (Um pouco bom)
-* **Localização Atual:** O Templo de Midgaard (último registro: Dia 99)
+* **Alinhamento Moral:** 238 (Um pouco bom)
+* **Localização Atual:** O Templo de Midgaard (último registro: Dia 100)
 * **Acampamento Registrado:** O Templo de Midgaard
 * **Santuário de Referência:** O Panteao dos Centenarios
 
@@ -21,12 +21,12 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 | Recurso | Atual | Máximo | Porcentagem |
 | :--- | :---: | :---: | :---: |
 | **Pontos de Vida (HP)** | 75 | 75 | 100% |
-| **Pontos de Mana (MP)** | 200 | 200 | 100% |
+| **Pontos de Mana (MP)** | 172 | 200 | 86% |
 | **Estamina / Movimento (MV)** | 105 | 105 | 100% |
 
-* **Experiência Acumulada:** **487.331 EXP**
-* **Experiência Necessária p/ Grau 15:** **12.669 EXP** (Meta: 500.000 EXP)
-* **Ouro Líquido:** **22.140 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **488.183 EXP**
+* **Experiência Necessária p/ Grau 15:** **11.817 EXP** (Meta: 500.000 EXP)
+* **Ouro Líquido:** **22.190 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 12
@@ -38,7 +38,7 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 
 ### Métricas de Combate
 * **Classe de Armadura (AC):** 49 (base) / **75** (com `armor`, conforme registro)
-Dia 99: AC 75 com Armadura Mistica ativa (+26), mas a duracao chegou a cerca de 2 horas ao dormir: recastar no proximo dia.
+Dia 100: a Armadura Mistica expirou com a morte e nao pode ser recastada (duas falhas de conjuracao); AC 49 ao dormir. Recastar no proximo dia.
 * **Bônus de Acerto (Hitroll):** 3
 * **Bônus de Dano (Damroll):** +4
 * **Configuração de Fuga (Wimpy):** **30 HP** (referência de 25%; não garante fuga antes de golpe letal)
@@ -101,23 +101,25 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 ### Pendências de inventário
 
 ## ✦ Condições Registradas
-* Dia 99: dormindo no Templo de Midgaard, com 75/75 HP, 200/200 mana e 105/105 MV.
-* Fortuna elevada a 22.140 moedas de ouro (espólio do Tabuleiro de Xadrez).
-* Nivel 14 com 487.331 EXP; faltam 12.669 para o Grau 15.
-* Um monstro invasor morto no milharal da fazenda no Dia 99 (+14.488 EXP).
-* Armadura Mistica perto de expirar (cerca de 2 horas ao dormir).
+* Dia 100: dormindo no Templo de Midgaard, com 75/75 HP, 172/200 mana e 105/105 MV.
+* Quarta morte registrada (milharal da fazenda); renascimento pela Fonte da Vida.
+* Armadura Mistica expirada e nao recastada; AC 49.
+* Fortuna de 22.190 moedas de ouro preservada.
+* Nivel 14 com 488.183 EXP; faltam 11.817 para o Grau 15.
 * Save e sleep confirmados no Templo de Midgaard.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
-**Concluir Problemas Agricolas e decidir sobre o tesouro da Torre Negra**
-Voltar a fazenda com o mapa do bosque ja anotado, caçar os monstros invasores um a um (nunca salas com 2+), e tentar novamente o gatilho de conclusao com o fazendeiro. Alternativamente, fazer viagens quase vazias ao Tabuleiro para retirar armaduras da Torre Negra, uma por viagem.
-* armor esta a ponto de expirar (cerca de 2 horas); recastar Armadura Mistica.
-* Cantil reabastecido no Dia 99; ha paes na mochila.
-* O contador da missao nao e informado pelo servidor.
+**Season 02 (a partir do Dia 101) e a missao em aberto**
+Iniciar a Season 02 com abordagem diferente, decidida pelo autor. Em jogo, quando houver autorizacao: retomar a fazenda com o mapa do bosque ja anotado e enfrentar apenas salas de alvo unico; conferir se o servidor entrega algum gatilho externo sobre a origem (nome, colar, Cavaleiro Branco) antes de afirmar qualquer revelacao como fato.
+* Armadura Mistica expirada; recastar.
+* O contador de Problemas Agricolas nao e informado pelo servidor.
+* A revelacao da origem elfa e leitura editorial enquanto o servidor nao entregar o gatilho.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessao manual do Dia 99: coleta e venda de espolio do Tabuleiro de Xadrez em multiplas viagens (4 lancas, cetro, cajado) elevando o ouro de 3.604 para 22.140; travessia Midgaard-Jareth-floresta ate a fazenda e abate de 1 monstro invasor no milharal (+14.488 EXP); repouso no Templo; evidence/dia99.json..
-* A conclusao de Problemas Agricolas nao foi confirmada: o fazendeiro nao respondeu aos gatilhos de fala e o contador de abates nao e exibido pelo servidor.
-* As 49 armaduras da Torre Negra (+3L) ficaram no chao: peso por peca acima de 46 kg e a Torre Negra viva e letal.
-* O bosque ao redor da fazenda continua sem consolidacao: as salas sao homonimas; anotada a ligacao 'norte para A Entrada da Fazenda'.
-* O Cetro do Bispo Negro guardado pode pertencer a cadeia Xeque-mate (nivel 30) e nao teve uso identificado.
+Fonte do estado: Sessao do Dia 100: morte pela quarta vez no milharal, travessia do Paraiso e do Caminho no Vazio, renascimento pela Fonte da Vida e repouso no Templo; evidence/dia100.json. A lembranca da origem elfa e ANCORA DO AUTOR, sem evidencia de servidor..
+* ANCORA DO AUTOR (sem evidencia de servidor): primeira morte no Dia 0 e origem elfa; o 'goblin' seria deducao errada sobre memoria rasgada.
+* A revelacao ainda NAO foi afirmada como fato do servidor; depende de um gatilho externo (nome dito por NPC, magia de deteccao, o Cavaleiro Branco).
+* Cronicas antigas precisam de nota editorial de segunda leitura, sem reescrita.
+* O colar de pedra purpura segue inutilizavel e sem dono declarado.
+* Problemas Agricolas continua sem contador verificavel; o milharal tem 2 a 4 monstros por sala.
+* A Armadura Mistica precisa ser recastada.

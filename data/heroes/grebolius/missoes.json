@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 99,
+  "as_of_day": 100,
   "verification": "live",
   "items": [
     {
@@ -407,6 +407,11 @@
           "document": "evidence/dia99.json",
           "day": 99,
           "note": "Travessia ate a fazenda, abate de 1 invasor e tentativa de dialogo com o fazendeiro sem resposta conclusiva."
+        },
+        {
+          "document": "evidence/dia100.json",
+          "day": 100,
+          "note": "A personagem morreu no milharal durante a nova tentativa; a missao segue sem conclusao confirmada."
         }
       ]
     }
