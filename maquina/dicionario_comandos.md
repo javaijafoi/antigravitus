@@ -36,7 +36,9 @@ Ver [diferenças importantes](comparacao_commands.md), [tips](tips.md) e [evidê
 
 | Comando | Uso conferido | Limite observado |
 |---|---|---|
-| `where <nome>` / `onde <nome>` | Localizar criatura na área; ajuda do servidor e testes com minotauro/perturbador/tagarela/confuso. | Um resultado; ordinais não enumeraram NPCs nesta tentativa. |
+| `where <nome>` | Localizar **monstro ou jogador dentro da sua área**; testes com minotauro/perturbador/tagarela/confuso. | Um resultado; ordinais não enumeraram NPCs. Fora da área responde `Ninguem com esse nome.` |
+| `where` (sem argumento) | Lista **os jogadores da área** (`Jogadores na sua área`). | Não lista monstros. |
+| ~~`onde <nome>`~~ | **NÃO EXISTE** — apesar do `help where` documentar `Uso: onde <monstro ou jogador>`. | `onde` e `onde minotauro` respondem `Como?!?`. Ver [verificações](verificacoes.md). |
 | `buy 6 pao` | Compra seis unidades, preço confirmado antes pela lista. | Conferir dinheiro e espaço. |
 | `put all.punhal mochila` | Guardou oito punhais no contêiner. | Confirmar com `look in mochila`. |
 | `score tudo` | Conferir etapa atual antes de fala/entrega. | Falas continuam após o eco do comando; não antecipar entrega. |

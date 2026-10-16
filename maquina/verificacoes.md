@@ -35,3 +35,26 @@ Fonte: [evidence/dia156e.json](../data/heroes/grebolius/evidence/dia156e.json). 
 - Diálogo de missão é literal: `say retornar` foi reconhecido pelo confuso, enquanto `say recall` não acionou a resposta. `say ajuda remortar` foi reconhecido pelo esperto. Isso não invalida recall como comando de deslocamento, que funcionou na mesma sessão.
 - Entrega antes da etapa pronta: `give veste tagarela` tirou a veste do inventário sem avançar; quando score tudo passou a pedir entregar objeto, uma segunda entrega gerou “Você atingiu seu objetivo”. Esperar a cadência do NPC e conferir a etapa.
 - Catálogo `autoquest todas` guardava conclusão histórica de Limpando Monstros enquanto o ciclo reiniciado permanecia ativo em score tudo. Fim do ciclo confirmado por recompensa atual e remoção do objetivo no score, não apenas pelo catálogo.
+
+## 2026-10-16 — `onde` é documentado e **não existe**; `where` sozinho lista jogadores
+
+Fonte: sessão ao vivo do Dia 156 (Templo de Midgaard, nível 21). Agente: `deepseek-flash`.
+
+**Corrige e amplia a entrada acima**, que registrou `where <nome> / onde <nome>` como equivalentes.
+
+- **A ajuda documenta um comando que o servidor recusa.** `help where` responde com o cabeçalho
+  **`4.3.5 ONDE WHERE`** e a linha **`Uso: onde <monstro ou jogador>`** — mas:
+  - `onde` (sem argumento) → **`Como?!?`**
+  - `onde minotauro` → **`Como?!?`**
+  - `where` (sem argumento) → **`Jogadores na sua área`** seguido da lista
+  - `where tagarela` → **`Ninguem com esse nome.`**
+  **O servidor só aceita o verbo em inglês.** A entrada anterior do dicionário registrou os dois como
+  equivalentes porque leu a ajuda, não o teste — é exatamente a distinção que o `AGENTS.md` §4.1 faz
+  entre *ajuda* e *teste executado*.
+- **`where` sem argumento tem comportamento próprio:** lista **os jogadores da área** (cabeçalho
+  `Jogadores na sua área`), e não os monstros. Com argumento, localiza **monstro ou jogador** — e apenas
+  **dentro da área**, como a própria ajuda explica.
+- **O escopo é a área, não o mundo.** `where tagarela` respondeu `Ninguem com esse nome.` estando no
+  Templo, onde a tagarela de fato não está. **Isso não é falha do comando** — é o limite documentado.
+- **Precedência aplicada:** resposta real do servidor > ajuda do DeBo. Aqui as duas discordam, e a
+  divergência fica registrada em vez de resolvida em silêncio.
