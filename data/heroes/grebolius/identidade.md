@@ -1,3 +1,5 @@
+> **Nota editorial (Dia 143).** Este documento é orientação viva e foi escrito antes do Dia 100. Ele permanece como estava — é o retrato honesto de quem ela acreditava ser — mas passa a ser lido sob a **âncora do autor**: houve uma primeira morte no Dia 0 e, no Dia 1, ela acordou já se achando goblin. Mecanicamente ela é uma **elfa**. Onde este texto diz "goblin", leia-se o nome que ela carregou por noventa e nove dias sem perceber o erro. As crônicas antigas não são reescritas; ganham segunda leitura.
+
 # 🧌 A Alma de Grebolius — Matriz de Identidade Viva
 
 Orientação vigente após o Dia 60, reconciliada a partir dos documentos existentes. Este texto orienta as próximas decisões; não acrescenta acontecimentos às crônicas nem altera as emoções narradas no passado.

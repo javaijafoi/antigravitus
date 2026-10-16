@@ -5,32 +5,32 @@
   "rune": "🧌",
   "avatar": "🗡️",
   "race_class": "Mulher Goblin (Elfo Mago mecânico; estilo ladra arcana)",
-  "role": "Fundadora do Futuro Reino Goblin • Aventureira Sem Véu",
-  "alignment": "Um pouco bom (última medição: 252 no Dia 93; valor após os últimos abates não conferido)",
+  "role": "Fundadora de um Reino Livre (nome em reconstrução) • Aventureira Sem Véu",
+  "alignment": "Um pouco bom (223 no Dia 143)",
   "quote": "“Chega de me esconder sob trapos de novato. Vou trocar este equipamento, andar de cabeça erguida e fazer Midgaard conhecer a verdadeira força de uma mulher goblin.”",
   "subtitle": "Diário de uma mulher goblin sem véu: missões, mistérios e a ambição de preparar um Reino Livre para seu povo.",
   "vigilia": "Fio da jornada: missões, descobertas e preparo",
   "server": "debomud.org:4000",
   "accent_color": "#2bd685",
   "questions": {
-    "q1": "Desbravar Midgaard, cumprir compromissos e preparar o Reino Livre dos Goblins. Conhecimento e poder servem a essa jornada.",
-    "q2": "A morte que ameaça sua memória e o risco de perder o futuro que deseja construir. O custo da segunda morte ainda não está explicado nos registros.",
+    "q1": "Desbravar Midgaard, cumprir compromissos e preparar um reino livre para quem não tem onde ficar. Conhecimento e poder servem a essa jornada.",
+    "q2": "A morte que ameaça sua memória — e hoje também a dúvida sobre o que, na própria memória, é lembrança e o que foi plantado.",
     "q3": "Audácia e orgulho que podem confundir ambição com capacidade diante de ameaças desconhecidas.",
-    "q4": "Disposta a sacrificar conforto e discrição; preserva como valores declarados a dignidade goblin, sua palavra e o futuro livre de seu povo. A vingança pode entrar em tensão com esses valores.",
-    "q5": "Ser a aventureira goblin que abriu caminho para um povo livre. Trata-se de um legado pretendido, ainda em construção."
+    "q4": "Disposta a sacrificar conforto e discrição; preserva como valores declarados a dignidade de quem não tem nome reconhecido, sua palavra e o futuro livre de seu povo. A vingança pode entrar em tensão com esses valores.",
+    "q5": "Ser a aventureira que abriu caminho para um povo livre. O Dia 100 revelou que o nome goblin que carregou por noventa e nove dias estava errado: o legado continua, mas o nome ainda precisa ser achado."
   },
   "quick_stats": {
-    "level_badge": "(Grau 15 • Mago; estilo ladra arcana)",
-    "hp": "87 / 87",
-    "mana": "220 / 225",
-    "mv": "107 / 107",
-    "ac": "AC 49 (77 com armor; registro)",
-    "weapon": "Espada de Novato empunhada + Punhal segurado + Escudo",
+    "level_badge": "(Grau 20 • Mago; estilo ladra arcana)",
+    "hp": "113 / 113",
+    "mana": "265 / 265",
+    "mv": "114 / 114",
+    "ac": "AC 64 (95 com armor; registro)",
+    "weapon": "Sem arma empunhada (combate por magias); adaga e punhal de novato na mochila; Cetro do Bispo Negro descarregado.",
     "weapon_icon": "🗡️",
     "sanctuary": "O Panteao dos Centenarios",
     "location": "O Templo de Midgaard",
     "camp": "O Templo de Midgaard",
-    "as_of_day": 113,
+    "as_of_day": 143,
     "verification": "live"
   },
   "voice": {
@@ -44,5 +44,10 @@
   "folder": "data/heroes/grebolius",
   "evidence_policy": {
     "legacy_through_day": 60
+  },
+  "revelation": {
+    "kind": "ancora-do-autor",
+    "day": 100,
+    "note": "Primeira morte no Dia 0; no Dia 1 ela acorda já se achando goblin. A personagem é, mecanicamente, uma Elfa. Sem evidência de servidor para a origem: a revelação é âncora do autor. As crônicas antigas permanecem intactas, com notas de segunda leitura."
   }
 }

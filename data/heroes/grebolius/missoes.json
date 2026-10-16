@@ -1,8 +1,15 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 113,
-  "verification": "live",
+  "as_of_day": 143,
+  "verification": {
+    "0": "l",
+    "1": "i",
+    "2": "v",
+    "3": "e",
+    "autoquest_check_day": 143,
+    "autoquest_check_note": "Estado conferido no servidor via \"autoquest todas\" (log do daemon). Concluidas: Limpando Monstros e Ninguem Segura Esse Bebe. Em andamento: Dicas Magicas (responder sim)."
+  },
   "items": [
     {
       "id": "coleira-dragao",
@@ -190,7 +197,7 @@
       "accepted_day": 32,
       "last_progress_day": 98,
       "objective": "Entregar um pergaminho de retorno ao Mago Aventureiro no Bar dos Magos.",
-      "next_step": "Pergaminho de retorno comprado (9.202) e entregue ao Mago Aventureiro no Bar dos Magos no Dia 98; o jogo respondeu 'Voce atingiu seu objetivo' e creditou 11.639 EXP. A autoquest segue 'Em andamento': falar novamente com o Mago para ouvir a proxima instrucao.",
+      "next_step": "EM ANDAMENTO pelo servidor: 'Dicas Mágicas: Você deve responder sim.' Falar com o mago aventureiro no Bar dos Magos e responder 'sim'.",
       "evidence": [
         {
           "document": "posts.json",
@@ -231,6 +238,11 @@
           "document": "evidence/dia98.json",
           "day": 98,
           "note": "Compra do pergaminho de retorno na Loja de Magias e entrega fisica ao Mago Aventureiro, com recompensa de 11.639 EXP."
+        },
+        {
+          "document": "evidence/autoquests-dia143.json",
+          "day": 143,
+          "note": "Texto capturado de autoquest todas + score tudo."
         }
       ]
     },
@@ -362,11 +374,11 @@
       "id": "problemas-agricolas",
       "title": "Problemas Agrícolas",
       "type": "official",
-      "status": "active",
+      "status": "discovered",
       "accepted_day": 90,
       "last_progress_day": 99,
       "objective": "Eliminar monstros invasores do milharal conforme pedido do fazendeiro e instruções dadas pelo Pacificador.",
-      "next_step": "No Dia 99 a fazenda foi alcancada pela floresta e 1 monstro invasor foi morto no milharal (+14.488 EXP), mas o fazendeiro nao respondeu aos gatilhos de fala e o contador nao e exibido: a conclusao segue NAO confirmada. Retomar atacando apenas salas com 1 monstro e testar novamente o dialogo de entrega.",
+      "next_step": "CORRIGIDO em 2026-10-16: o servidor lista \"Problemas Agricolas — Nao feita\" e a missao NAO aparece em \"[Autoquests em andamento]\" do score tudo. As mortes #4/#5 reiniciaram a autoquest. Aceitar de novo com o Pacificador (\"sim\") antes de retomar o milharal.",
       "evidence": [
         {
           "document": "posts.json",
@@ -412,6 +424,29 @@
           "document": "evidence/dia100.json",
           "day": 100,
           "note": "A personagem morreu no milharal durante a nova tentativa; a missao segue sem conclusao confirmada."
+        },
+        {
+          "document": "evidence/autoquests-dia143.json",
+          "day": 143,
+          "note": "Texto capturado de autoquest todas + score tudo."
+        }
+      ]
+    },
+    {
+      "id": "ninguem-segura-esse-bebe",
+      "title": "Ninguém Segura Esse Bebê",
+      "type": "official",
+      "status": "completed",
+      "accepted_day": null,
+      "last_progress_day": null,
+      "objective": "Autoquest de todos os níveis (encarnações 1-4), qualquer alinhamento e classe.",
+      "next_step": "CONCLUÍDA. Estado confirmado no servidor em 2026-10-16 pelo comando \"autoquest todas\": \"Ninguém Segura Esse Bebê — Concluída\".",
+      "completion_note": "REGISTRO ATRASADO: a conclusão ocorreu antes do Dia 98 (já aparecia como Concluída no log de sessão daquele dia) e nunca havia sido anotada. Não repetir.",
+      "evidence": [
+        {
+          "document": "evidence/autoquests-dia143.json",
+          "day": 143,
+          "note": "Texto capturado de autoquest todas + score tudo."
         }
       ]
     }

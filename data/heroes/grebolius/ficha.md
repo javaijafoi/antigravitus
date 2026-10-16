@@ -1,6 +1,6 @@
 # 🧌 Ficha Atual de Grebolius (Último Estado Registrado)
 
-> Referência: Dia 113. Estado verificado em sessão; consultar a origem registrada.
+> Referência: Dia 143. Estado verificado em sessão; consultar a origem registrada.
 > Este documento reúne o último estado e as missões registrados; as incertezas aparecem ao final.
 
 ## ✦ Identificação e Registro
@@ -9,9 +9,9 @@
 * **Raça / Aparência Narrativa:** Mulher goblin; aventureira sem véu
 * **Raça Mecânica no MUD:** Elfo
 * **Classe Mecânica no MUD:** Mago (Magic-User)
-* **Grau / Nível Atual:** **15**
-* **Alinhamento Moral:** 238 (Um pouco bom)
-* **Localização Atual:** O Templo de Midgaard (último registro: Dia 113)
+* **Grau / Nível Atual:** **20**
+* **Alinhamento Moral:** 223 (Um pouco bom)
+* **Localização Atual:** O Templo de Midgaard (último registro: Dia 143)
 * **Acampamento Registrado:** O Templo de Midgaard
 * **Santuário de Referência:** O Panteao dos Centenarios
 
@@ -20,28 +20,28 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 ## ✦ Status Vitais
 | Recurso | Atual | Máximo | Porcentagem |
 | :--- | :---: | :---: | :---: |
-| **Pontos de Vida (HP)** | 87 | 87 | 100% |
-| **Pontos de Mana (MP)** | 220 | 225 | 98% |
-| **Estamina / Movimento (MV)** | 107 | 107 | 100% |
+| **Pontos de Vida (HP)** | 113 | 113 | 100% |
+| **Pontos de Mana (MP)** | 265 | 265 | 100% |
+| **Estamina / Movimento (MV)** | 114 | 114 | 100% |
 
-* **Experiência Acumulada:** **593.419 EXP**
-* **Experiência Necessária p/ Grau 16:** **6.581 EXP** (Meta: 600.000 EXP)
-* **Ouro Líquido:** **13.578 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **1.013.629 EXP**
+* **Experiência Necessária p/ Grau 21:** **186.371 EXP** (Meta: 1.200.000 EXP)
+* **Ouro Líquido:** **7.360 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
-* **Força (STR):** 12
+* **Força (STR):** 11
 * **Destreza (DEX):** 15
 * **Constituição (CON):** 9
-* **Inteligência (INT):** 18
-* **Sabedoria (WIS):** 16
-* **Carisma (CHA):** 9
+* **Inteligência (INT):** 19
+* **Sabedoria (WIS):** 17
+* **Carisma (CHA):** 11
 
 ### Métricas de Combate
-* **Classe de Armadura (AC):** 49 (base) / **77** (com `armor`, conforme registro)
-Armadura arcana ativa (47h) apos conjurar na Praca do Templo — dentro do Templo a magia falha.
-* **Bônus de Acerto (Hitroll):** 3
-* **Bônus de Dano (Damroll):** +4
-* **Configuração de Fuga (Wimpy):** **43 HP** (referência de 25%; não garante fuga antes de golpe letal)
+* **Classe de Armadura (AC):** 64 (base) / **95** (com `armor`, conforme registro)
+Armadura arcana ativa (~28h) conjurada na Praca do Templo; a Coroa da Rainha Branca soma +25. CA 95 na ultima leitura (94 em leituras anteriores).
+* **Bônus de Acerto (Hitroll):** 1
+* **Bônus de Dano (Damroll):** +0
+* **Configuração de Fuga (Wimpy):** **48 HP** (referência de 25%; não garante fuga antes de golpe letal)
 
 ## ✦ Missões e Autoquests Oficiais
 * **A Coleira do Dragão — Concluída:** Entregar a coleira ao Guarda Novato.
@@ -51,16 +51,18 @@ Armadura arcana ativa (47h) apos conjurar na Praca do Templo — dentro do Templ
 * **Limpando Monstros — Concluída:** Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.
   * Próximo passo: Missão concluída com sucesso no Dia 96 ao reportar ao Novato Alquimista. Recompensa recebida: 75.482 EXP e um manto de pano.
 * **Dicas Mágicas — Ativa:** Entregar um pergaminho de retorno ao Mago Aventureiro no Bar dos Magos.
-  * Próximo passo: Pergaminho de retorno comprado (9.202) e entregue ao Mago Aventureiro no Bar dos Magos no Dia 98; o jogo respondeu 'Voce atingiu seu objetivo' e creditou 11.639 EXP. A autoquest segue 'Em andamento': falar novamente com o Mago para ouvir a proxima instrucao.
+  * Próximo passo: EM ANDAMENTO pelo servidor: 'Dicas Mágicas: Você deve responder sim.' Falar com o mago aventureiro no Bar dos Magos e responder 'sim'.
 * **Novela dos Novatos — Descoberta:** Aventura narrativa para recém-chegados (Até o nível 30, iniciada com: o novato esperto).
   * Próximo passo: Localizar o novato esperto pelas praças de Midgaard para iniciar o encadeamento.
-* **Problemas Agrícolas — Ativa:** Eliminar monstros invasores do milharal conforme pedido do fazendeiro e instruções dadas pelo Pacificador.
-  * Próximo passo: No Dia 99 a fazenda foi alcancada pela floresta e 1 monstro invasor foi morto no milharal (+14.488 EXP), mas o fazendeiro nao respondeu aos gatilhos de fala e o contador nao e exibido: a conclusao segue NAO confirmada. Retomar atacando apenas salas com 1 monstro e testar novamente o dialogo de entrega.
+* **Problemas Agrícolas — Descoberta:** Eliminar monstros invasores do milharal conforme pedido do fazendeiro e instruções dadas pelo Pacificador.
+  * Próximo passo: CORRIGIDO em 2026-10-16: o servidor lista "Problemas Agricolas — Nao feita" e a missao NAO aparece em "[Autoquests em andamento]" do score tudo. As mortes #4/#5 reiniciaram a autoquest. Aceitar de novo com o Pacificador ("sim") antes de retomar o milharal.
+* **Ninguém Segura Esse Bebê — Concluída:** Autoquest de todos os níveis (encarnações 1-4), qualquer alinhamento e classe.
+  * Próximo passo: CONCLUÍDA. Estado confirmado no servidor em 2026-10-16 pelo comando "autoquest todas": "Ninguém Segura Esse Bebê — Concluída".
 
 Objetivos pessoais e investigações ficam separados das autoquests no catálogo de missões.
 
 ## ✦ Habilidades Conhecidas e Treinos Concluídos
-* **Sessões de Treino Disponíveis:** **24 sessões de treino acumuladas**
+* **Sessões de Treino Disponíveis:** **40 sessões de treino acumuladas**
 Percentuais são registros de proficiência; não garantem acerto, imunidade ou acesso a guildas.
 * `armor` (Armadura Mística): **99%**
 * `invisibility` (Invisibilidade): **95%**
@@ -71,55 +73,53 @@ Percentuais são registros de proficiência; não garantem acerto, imunidade ou 
 * `detect invisibility` (Detectar Invisibilidade): **95%**
 * `detect magic` (Detectar Magia): **95%**
 * `swim` (Nadar): **95%**
+* `lightning bolt` (Raio): **95%**
 
 ## ✦ Equipamento em Uso
 Equipamento conforme os últimos documentos disponíveis; conferir no próximo acesso ao MUD.
-* **na cabeça:** `os chifres do Minotauro`
+* **na cabeça:** `a Coroa da Rainha Branca`
 * **sobre o corpo:** `um manto de pano`
 * **no corpo:** `uma brilhante veste de novato`
 * **nos braços:** `um par de braçadeiras de novato`
 * **nas mãos:** `um par de luvas de couro`
+* **no pulso direito:** `um rosário`
+* **no pescoço:** `uma Cruz Ansada`
 * **como escudo:** `um escudo`
 * **nas pernas:** `uma calça de couro`
-* **empunhando:** `uma brilhante espada de novato`
-* **segurando:** `um brilhante punhal de novato`
 
 ## ✦ Inventário e Suprimentos
 Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
-* `um cantil` (x1) — evidence/dia99.json
-* `um manto de pano` (x1) — evidence/dia99.json
-* `a bainha de Excalibur` (x1) — evidence/dia99.json
-* `um colar com uma pedra purpura` (x1) — evidence/dia99.json
-* `o Cetro do Bispo Negro` (x1) — evidence/dia99.json
-* `um brilhante punhal de novato` (x1) — evidence/dia99.json
-* `uma atadura` (x1) — evidence/dia99.json
-* `um pao recheado` (x5) — evidence/dia99.json
-* `uma tocha` (x1) — evidence/dia99.json
-* `uma pocao amarela de detectar invisibilidade` (x1) — evidence/dia99.json
-* `uma mochila` (x1) — evidence/dia99.json
+* `a Armadura da Torre Negra` (x1) — evidence/dia137.json
+* `a bainha de Excalibur` (x1) — evidence/dia137.json
+* `um colar com uma pedra púrpura` (x1) — evidence/dia137.json
+* `o Cetro do Bispo Negro` (x1) — evidence/dia137.json
+* `uma adaga` (x1) — evidence/dia143.json
+* `um brilhante punhal de novato` (x1) — evidence/dia143.json
+* `um cantil` (x1) — evidence/dia143.json
+* `uma atadura` (x1) — evidence/dia143.json
+* `uma tocha` (x1) — evidence/dia143.json
+* `uma poção amarela de detectar invisibilidade` (x1) — evidence/dia143.json
 
 ### Pendências de inventário
 
 ## ✦ Condições Registradas
-* Dia 100: dormindo no Templo de Midgaard, com 75/75 HP, 172/200 mana e 105/105 MV.
-* Quarta morte registrada (milharal da fazenda); renascimento pela Fonte da Vida.
-* Armadura Mistica expirada e nao recastada; AC 49.
-* Fortuna de 22.190 moedas de ouro preservada.
-* Nivel 14 com 488.183 EXP; faltam 11.817 para o Grau 15.
-* Save e sleep confirmados no Templo de Midgaard.
+* Dia 143: no Templo de Midgaard, 113/113 HP, 265/265 mana, 114 MV, alimentada e hidratada.
+* Grau 20 (vida maxima 113, mana maxima 265); proximo nivel em 1.200.000 (faltam 186.371).
+* Armadura arcana ativa (~28h), CA 95; Coroa da Rainha Branca, Cruz Ansada e rosario equipados.
+* Wimpy 48 (metade da vida maxima de 113 e 56; 48 e o teto pratico testado).
+* Sete mortes registradas; uma armadilha de morte. Ultima morte no Dia 126, por script sem supervisao.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
-**Season 02 (a partir do Dia 101) e a missao em aberto**
-Iniciar a Season 02 com abordagem diferente, decidida pelo autor. Em jogo, quando houver autorizacao: retomar a fazenda com o mapa do bosque ja anotado e enfrentar apenas salas de alvo unico; conferir se o servidor entrega algum gatilho externo sobre a origem (nome, colar, Cavaleiro Branco) antes de afirmar qualquer revelacao como fato.
-* Armadura Mistica expirada; recastar.
-* O contador de Problemas Agricolas nao e informado pelo servidor.
-* A revelacao da origem elfa e leitura editorial enquanto o servidor nao entregar o gatilho.
+**Capitulo 3 - Tres Oficios**
+Concluir tres missoes sem repetir as ja concluidas (Limpando Monstros, Ninguem Segura Esse Bebe, coleira-dragao, altruismo). Candidatas: Dicas Magicas (em andamento), Novela dos Novatos, Uma Licao em Gargamel, Problemas Agricolas.
+* Responder "sim" ao mago aventureiro no Bar dos Magos para fechar Dicas Magicas.
+* Localizar "o novato esperto" nas pracas de Midgaard (Novela dos Novatos).
+* Localizar "o smurf minerador" (Uma Licao em Gargamel).
+* Reaceitar Problemas Agricolas com o Pacificador antes de voltar ao milharal.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Capitulo 2 (Rumo ao Grau 20): preparo concluido (armadura arcana CA 77, wimpy 43 no teto de metade da vida, espada de novato empunhada); armeiro de Midgaard segue sem caixa para comprar a Armadura da Torre Negra, que e' amaldicoada e nao pode ser doada..
-* Dia 109: servidor do MUD indisponivel (porta 4000 nao aceita conexao; DNS resolve). Sem progresso de missao enquanto durar.
-* Problemas Agricolas segue em andamento (milharal com 2 a 4 monstros por sala; o contador nao e exibido).
-* Dicas Magicas segue em andamento sem instrucao declarada; pista: laboratorio dos magos -> escada abaixo -> esgotos.
-* Equipamento (item d do capitulo) ainda nao fechado.
-* A venda das armaduras depende do caixa do armeiro, que e limitado e se recupera com o tempo.
-* ANCORA DO AUTOR (sem evidencia de servidor): primeira morte no Dia 0 e origem elfa.
+Fonte do estado: Capitulo 3 (Tres Oficios), Dia 143: Grau 20 alcancado no capitulo anterior; CA 94-95 com armadura arcana, Coroa da Rainha Branca (+25 armadura, +1 INT/SAB, +2 CAR), Cruz Ansada (+10 mana, +5 vida) e rosario (+1 Forca, +1 acerto). Ouro 7.360..
+* O armeiro de Midgaard segue sem caixa para as 48 Armaduras da Torre Negra (8.500 cada); o feiticeiro nao compra armaduras nem bastoes usados.
+* O estoque de armaduras de peao do tabuleiro estava vazio na ultima verificacao.
+* O colar com pedra purpura (valor 20.000.000) pertence a outro dono: o servidor recusa o uso.
+* Bainha de Excalibur exige nivel 85; Scutum de Carvalho exige nivel 35 (devolvido a Sala de Doacoes).

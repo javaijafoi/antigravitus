@@ -20,7 +20,7 @@
       "title": "Prólogo",
       "kind": "prologo",
       "status": "concluido",
-      "goal": "Resumir a Season 01 e preparar a leitura por capítulos.",
+      "goal": "Reunir a primeira temporada num prólogo: do despertar no Depósito de Lixo à pergunta que a Fonte da Vida não respondeu.",
       "closed_on_day": 100,
       "days": [
         1,
@@ -136,7 +136,7 @@
       "title": "O Milharal, a Torre e o Ferro Novo",
       "kind": "missao",
       "status": "concluido",
-      "goal": "(a) vender mais uma armadura da Torre Negra e, se der certo, vender ate o armeiro nao comprar mais, entao doar; (b) pegar e terminar a missao do milharal (Problemas Agricolas); (c) avaliar equipamentos novos para usar, por compra ou Sala de Doacoes.",
+      "goal": "Fechar a missão do milharal, vender as armaduras da Torre, terminar a missão do mago e repensar o equipamento.",
       "days": [
         101,
         102,
@@ -343,7 +343,7 @@
           "note": "Diretiva consolidada de preparo e combate."
         }
       ],
-      "excerpt": "O capitulo do ouro que virou metodo: o tabuleiro, a armadura amaldicoada, as licoes do mago e as duas mortes que ensinaram a olhar cada sala antes de andar.",
+      "excerpt": "O capítulo do ouro difícil: o tabuleiro de xadrez, a armadura que não desgrudava do corpo, as lições do mago e as duas mortes que a ensinaram a olhar cada sala antes de andar.",
       "date": "2026-10-16",
       "in_game_time": "Do Templo de Midgaard as armadilhas do milharal",
       "closed_on_day": 113
@@ -354,7 +354,7 @@
       "title": "Rumo ao Grau 20",
       "kind": "missao",
       "status": "concluido",
-      "goal": "Alcancar o nivel 20, montar um equipamento otimizado (por compra, doacao ou espolio) e acumular fortuna.",
+      "goal": "Alcançar o Grau 20, montar o melhor equipamento que o grau permite e acumular ouro.",
       "days": [
         114,
         117,
@@ -555,7 +555,7 @@
           "note": "Balanco do fechamento anterior."
         }
       ],
-      "excerpt": "Grau 20 cumprido, equipamento no melhor que o nivel permite (CA 94, mana 265, coroa e Cruz Ansada) e a fortuna honestamente barrada pela economia do servidor.",
+      "excerpt": "Do Grau 17 ao Grau 20: a estrada que virou rotina, a mana que faltava, o raio treinado até a perfeição e a torre que ainda não pode abrir.",
       "date": "2026-10-16",
       "in_game_time": "Grau 17 ao Grau 20",
       "closed_on_day": 140
@@ -566,11 +566,12 @@
       "title": "Tres Oficios",
       "kind": "missao",
       "status": "em_curso",
-      "goal": "Concluir tres missoes quaisquer, sem repetir nenhuma ja concluida (coleira-dragao, altruismo e limpando-monstros estao fora). Cada missao so conta como concluida quando o servidor confirmar a entrega.",
+      "goal": "Concluir três missões, sem repetir nenhuma das que já terminou.",
       "days": [
         141,
         142,
-        143
+        143,
+        144
       ],
       "parts": [
         {
@@ -613,6 +614,24 @@
               "document": "diretiva_de_jogo.md",
               "day": 143,
               "note": "Secao 12: guarda de repeticao."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 144,
+          "summary": "Auditoria e ajustes: (1) estados de missao conferidos no servidor — concluidas Limpando Monstros e Ninguem Segura Esse Bebe (esta nunca registrada), Dicas Magicas em andamento, Problemas Agricolas reiniciada pelas mortes; (2) state.json estava parado no Dia 113 (nivel 15) e foi atualizado para o Dia 143 (nivel 20, CA 95, 7.360 de ouro), regenerando a ficha; (3) paginas do site auditadas com navegador headless e o 'sobre' corrigido com a ancora do Dia 100; (4) descricoes dos capitulos reescritas sem metajogo.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia144.json",
+              "day": 144,
+              "note": "Auditoria de missoes e das paginas do site."
+            },
+            {
+              "document": "evidence/autoquests-dia143.json",
+              "day": 143,
+              "note": "Texto capturado das autoquests."
             }
           ],
           "date": "2026-10-16"

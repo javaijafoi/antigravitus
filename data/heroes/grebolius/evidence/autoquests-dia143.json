@@ -1,0 +1,34 @@
+{
+  "hero_id": "grebolius",
+  "day": 143,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "title": "Estado real das autoquests conferido no servidor",
+  "method": "Comando 'autoquest todas' (listagem completa com status) e 'score tudo' (secao [Autoquests em andamento]). Texto bruto capturado pelo daemon local.",
+  "captured_text": {
+    "concluidas": [
+      "Limpando Monstros              Concluída",
+      "Ninguém Segura Esse Bebê       Concluída"
+    ],
+    "em_andamento": [
+      "Dicas Mágicas: Você deve responder 'sim'."
+    ],
+    "nao_feita_destaque": [
+      "Problemas Agrícolas            Não feita"
+    ],
+    "observacao_dia98": "No log de sessao do Dia 98 a missao 'Ninguém Segura Esse Bebê' JA constava como Concluída — ou seja, foi concluída antes do Dia 98 e nunca foi registrada."
+  },
+  "conclusao": {
+    "total_listado": 51,
+    "concluidas_confirmadas": [
+      "Limpando Monstros",
+      "Ninguém Segura Esse Bebê"
+    ],
+    "em_andamento": [
+      "Dicas Mágicas"
+    ],
+    "reiniciadas_por_morte": [
+      "Problemas Agrícolas"
+    ]
+  }
+}

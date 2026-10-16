@@ -2,57 +2,57 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 113,
+    "day": 143,
     "verification": "live",
     "live_verified": true,
-    "source": "Capitulo 2 (Rumo ao Grau 20): preparo concluido (armadura arcana CA 77, wimpy 43 no teto de metade da vida, espada de novato empunhada); armeiro de Midgaard segue sem caixa para comprar a Armadura da Torre Negra, que e' amaldicoada e nao pode ser doada."
+    "source": "Capitulo 3 (Tres Oficios), Dia 143: Grau 20 alcancado no capitulo anterior; CA 94-95 com armadura arcana, Coroa da Rainha Branca (+25 armadura, +1 INT/SAB, +2 CAR), Cruz Ansada (+10 mana, +5 vida) e rosario (+1 Forca, +1 acerto). Ouro 7.360."
   },
-  "level": 15,
+  "level": 20,
   "mechanical_race": "Elfo",
   "mechanical_class": "Mago (Magic-User)",
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
   "alignment": {
-    "value": 238,
+    "value": 223,
     "label": "Um pouco bom"
   },
   "vitals": {
     "hp": {
-      "current": 87,
-      "max": 87
+      "current": 113,
+      "max": 113
     },
     "mana": {
-      "current": 220,
-      "max": 225
+      "current": 265,
+      "max": 265
     },
     "mv": {
-      "current": 107,
-      "max": 107
+      "current": 114,
+      "max": 114
     }
   },
   "experience": {
-    "current": 593419,
-    "next_level": 600000
+    "current": 1013629,
+    "next_level": 1200000
   },
-  "gold": 13578,
+  "gold": 7360,
   "attributes": {
-    "STR": 12,
+    "STR": 11,
     "DEX": 15,
     "CON": 9,
-    "INT": 18,
-    "WIS": 16,
-    "CHA": 9
+    "INT": 19,
+    "WIS": 17,
+    "CHA": 11
   },
   "armor": {
-    "base": 49,
-    "with_armor": 77,
+    "base": 64,
+    "with_armor": 95,
     "effect_verified": true,
-    "note": "Armadura arcana ativa (47h) apos conjurar na Praca do Templo — dentro do Templo a magia falha."
+    "note": "Armadura arcana ativa (~28h) conjurada na Praca do Templo; a Coroa da Rainha Branca soma +25. CA 95 na ultima leitura (94 em leituras anteriores)."
   },
-  "hitroll": 3,
-  "damroll": 4,
-  "wimpy": 43,
-  "training_sessions": 24,
+  "hitroll": 1,
+  "damroll": 0,
+  "wimpy": 48,
+  "training_sessions": 40,
   "operational_mode": {
     "current": "padrao",
     "description": "Cacada na fazenda/milharal com wimpy 30 e retirada por fuga; sessoes sobrepostas obrigaram a impor controle unico do daemon.",
@@ -78,17 +78,18 @@
     "name": "O Panteao dos Centenarios"
   },
   "last_event": {
-    "day": 109,
-    "summary": "Capitulo 1 em andamento: vendidas 2 Armaduras da Torre Negra (8.500 cada) e testada a hipotese da maldicao (confirmado: a recusa era limite de caixa do armeiro, nao o item). A terceira armadura, amaldicoada, teve a maldicao removida por pergaminho e foi doada. Grebolius alcancou o Grau 15 cacando no milharal. No Dia 109 o servidor do MUD saiu do ar durante a sessao."
+    "day": 143,
+    "summary": "Capitulo 3 \"Tres Oficios\" aberto. Estado das missoes conferido no servidor (autoquest todas): CONCLUIDAS Limpando Monstros e Ninguem Segura Esse Bebe (esta ultima sem registro ate o Dia 143, embora ja constasse como concluida no Dia 98); EM ANDAMENTO Dicas Magicas (responder sim ao mago aventureiro); Problemas Agricolas reiniciada pelas mortes."
   },
   "next_objective": {
-    "mission_id": "problemas-agricolas",
-    "title": "Season 02 (a partir do Dia 101) e a missao em aberto",
-    "next_step": "Iniciar a Season 02 com abordagem diferente, decidida pelo autor. Em jogo, quando houver autorizacao: retomar a fazenda com o mapa do bosque ja anotado e enfrentar apenas salas de alvo unico; conferir se o servidor entrega algum gatilho externo sobre a origem (nome, colar, Cavaleiro Branco) antes de afirmar qualquer revelacao como fato.",
+    "mission_id": "capitulo-3",
+    "title": "Capitulo 3 - Tres Oficios",
+    "next_step": "Concluir tres missoes sem repetir as ja concluidas (Limpando Monstros, Ninguem Segura Esse Bebe, coleira-dragao, altruismo). Candidatas: Dicas Magicas (em andamento), Novela dos Novatos, Uma Licao em Gargamel, Problemas Agricolas.",
     "missing_preparation": [
-      "Armadura Mistica expirada; recastar.",
-      "O contador de Problemas Agricolas nao e informado pelo servidor.",
-      "A revelacao da origem elfa e leitura editorial enquanto o servidor nao entregar o gatilho."
+      "Responder \"sim\" ao mago aventureiro no Bar dos Magos para fechar Dicas Magicas.",
+      "Localizar \"o novato esperto\" nas pracas de Midgaard (Novela dos Novatos).",
+      "Localizar \"o smurf minerador\" (Uma Licao em Gargamel).",
+      "Reaceitar Problemas Agricolas com o Pacificador antes de voltar ao milharal."
     ]
   },
   "skills": [
@@ -181,13 +182,23 @@
         "day": 81,
         "note": "Proficiência perfeita confirmada com comando practice na Guilda dos Magos no Dia 81."
       }
+    },
+    {
+      "id": "lightning bolt",
+      "name": "Raio",
+      "proficiency": 95,
+      "source": {
+        "document": "ficha.md",
+        "day": 136,
+        "note": "Aprendido no Grau 20 e treinado de 10% para 95% (perfeito) no Laboratorio dos Magos."
+      }
     }
   ],
   "equipment": [
     {
       "slot": "na cabeça",
-      "item": "os chifres do Minotauro",
-      "name": "os chifres do Minotauro"
+      "item": "a Coroa da Rainha Branca",
+      "name": "a Coroa da Rainha Branca"
     },
     {
       "slot": "sobre o corpo",
@@ -210,6 +221,16 @@
       "name": "um par de luvas de couro"
     },
     {
+      "slot": "no pulso direito",
+      "item": "um rosário",
+      "name": "um rosário"
+    },
+    {
+      "slot": "no pescoço",
+      "item": "uma Cruz Ansada",
+      "name": "uma Cruz Ansada"
+    },
+    {
       "slot": "como escudo",
       "item": "um escudo",
       "name": "um escudo"
@@ -218,93 +239,75 @@
       "slot": "nas pernas",
       "item": "uma calça de couro",
       "name": "uma calça de couro"
-    },
-    {
-      "slot": "empunhando",
-      "item": "uma brilhante espada de novato",
-      "name": "uma brilhante espada de novato"
-    },
-    {
-      "slot": "segurando",
-      "item": "um brilhante punhal de novato",
-      "name": "um brilhante punhal de novato"
     }
   ],
   "inventory": {
     "recorded": [
       {
-        "name": "um cantil",
+        "name": "a Armadura da Torre Negra",
         "quantity": 1,
-        "source": "evidence/dia99.json"
-      },
-      {
-        "name": "um manto de pano",
-        "quantity": 1,
-        "source": "evidence/dia99.json"
+        "source": "evidence/dia137.json"
       },
       {
         "name": "a bainha de Excalibur",
         "quantity": 1,
-        "source": "evidence/dia99.json"
+        "source": "evidence/dia137.json"
       },
       {
-        "name": "um colar com uma pedra purpura",
+        "name": "um colar com uma pedra púrpura",
         "quantity": 1,
-        "source": "evidence/dia99.json"
+        "source": "evidence/dia137.json"
       },
       {
         "name": "o Cetro do Bispo Negro",
         "quantity": 1,
-        "source": "evidence/dia99.json"
+        "source": "evidence/dia137.json"
+      },
+      {
+        "name": "uma adaga",
+        "quantity": 1,
+        "source": "evidence/dia143.json"
       },
       {
         "name": "um brilhante punhal de novato",
         "quantity": 1,
-        "source": "evidence/dia99.json"
+        "source": "evidence/dia143.json"
+      },
+      {
+        "name": "um cantil",
+        "quantity": 1,
+        "source": "evidence/dia143.json"
       },
       {
         "name": "uma atadura",
         "quantity": 1,
-        "source": "evidence/dia99.json"
-      },
-      {
-        "name": "um pao recheado",
-        "quantity": 5,
-        "source": "evidence/dia99.json"
+        "source": "evidence/dia143.json"
       },
       {
         "name": "uma tocha",
         "quantity": 1,
-        "source": "evidence/dia99.json"
+        "source": "evidence/dia143.json"
       },
       {
-        "name": "uma pocao amarela de detectar invisibilidade",
+        "name": "uma poção amarela de detectar invisibilidade",
         "quantity": 1,
-        "source": "evidence/dia99.json"
-      },
-      {
-        "name": "uma mochila",
-        "quantity": 1,
-        "source": "evidence/dia99.json"
+        "source": "evidence/dia143.json"
       }
     ],
     "pending_verification": []
   },
   "conditions": [
-    "Dia 100: dormindo no Templo de Midgaard, com 75/75 HP, 172/200 mana e 105/105 MV.",
-    "Quarta morte registrada (milharal da fazenda); renascimento pela Fonte da Vida.",
-    "Armadura Mistica expirada e nao recastada; AC 49.",
-    "Fortuna de 22.190 moedas de ouro preservada.",
-    "Nivel 14 com 488.183 EXP; faltam 11.817 para o Grau 15.",
-    "Save e sleep confirmados no Templo de Midgaard."
+    "Dia 143: no Templo de Midgaard, 113/113 HP, 265/265 mana, 114 MV, alimentada e hidratada.",
+    "Grau 20 (vida maxima 113, mana maxima 265); proximo nivel em 1.200.000 (faltam 186.371).",
+    "Armadura arcana ativa (~28h), CA 95; Coroa da Rainha Branca, Cruz Ansada e rosario equipados.",
+    "Wimpy 48 (metade da vida maxima de 113 e 56; 48 e o teto pratico testado).",
+    "Sete mortes registradas; uma armadilha de morte. Ultima morte no Dia 126, por script sem supervisao."
   ],
   "uncertainties": [
-    "Dia 109: servidor do MUD indisponivel (porta 4000 nao aceita conexao; DNS resolve). Sem progresso de missao enquanto durar.",
-    "Problemas Agricolas segue em andamento (milharal com 2 a 4 monstros por sala; o contador nao e exibido).",
-    "Dicas Magicas segue em andamento sem instrucao declarada; pista: laboratorio dos magos -> escada abaixo -> esgotos.",
-    "Equipamento (item d do capitulo) ainda nao fechado.",
-    "A venda das armaduras depende do caixa do armeiro, que e limitado e se recupera com o tempo.",
-    "ANCORA DO AUTOR (sem evidencia de servidor): primeira morte no Dia 0 e origem elfa."
+    "O armeiro de Midgaard segue sem caixa para as 48 Armaduras da Torre Negra (8.500 cada); o feiticeiro nao compra armaduras nem bastoes usados.",
+    "O estoque de armaduras de peao do tabuleiro estava vazio na ultima verificacao.",
+    "O colar com pedra purpura (valor 20.000.000) pertence a outro dono: o servidor recusa o uso.",
+    "Bainha de Excalibur exige nivel 85; Scutum de Carvalho exige nivel 35 (devolvido a Sala de Doacoes)."
   ],
   "evidence": [
     {
@@ -409,7 +412,7 @@
     }
   ],
   "narrative_style": "ladra arcana",
-  "weapon_summary": "Espada de Novato empunhada + Punhal segurado + Escudo",
+  "weapon_summary": "Sem arma empunhada (combate por magias); adaga e punhal de novato na mochila; Cetro do Bispo Negro descarregado.",
   "migration": {
     "method": "sessao manual comandada pelo agente sob driver com token",
     "verified_on": "Dia 99 (score, inventario, vendas, combate, save e sleep ao vivo)"
@@ -419,5 +422,6 @@
     "status": "reconhecida pela personagem como experiencia subjetiva",
     "mechanical_race_confirmed": "Elfo",
     "editorial_note": "ANCORA DO AUTOR, sem evidencia de servidor: primeira morte no Dia 0 e origem elfa. A cronica do Dia 100 narra a lembranca no Vazio; as cronicas antigas permanecem intactas e ganham segunda leitura. Ver notas_editoriais.md."
-  }
+  },
+  "as_of_day": 143
 }

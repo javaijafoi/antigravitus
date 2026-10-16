@@ -1,0 +1,14 @@
+{
+  "hero_id": "grebolius",
+  "day": 144,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "summary": {
+    "missoes_estado_real": "Conferido no servidor (autoquest todas + score tudo): CONCLUIDAS = Limpando Monstros e NINGUEM SEGURA ESSE BEBE (esta jamais havia sido registrada; ja constava como concluida no log do Dia 98). EM ANDAMENTO = Dicas Magicas (responder 'sim'). PROBLEMAS AGRICOLAS voltou a 'Nao feita' (as mortes reiniciaram a autoquest; os registros diziam 'active', corrigido para 'discovered').",
+    "ficha_corrigida": "O state.json estava parado no Dia 113 (nivel 15, ouro 13.578). Atualizado para o Dia 143: nivel 20, 1.013.629 EXP, 7.360 de ouro, 113/113 HP, 265/265 mana, CA 95, wimpy 48, 40 sessoes de treino, Raio a 95%. A ficha (site) foi regenerada por scripts/sync_hero.py.",
+    "paginas_do_site": "Auditoria com navegador headless (Chrome): ficha.html e sobre.html passaram a renderizar o estado correto. Causa dos erros: data/heroes.json (catalogo) e data/heroes/grebolius/hero.json sao GERADOS por sync_hero.py a partir do hero.json do heroi — edicoes feitas direto no catalogo eram sobrescritas.",
+    "sobre_ancora": "As 5 perguntas do 'sobre' ainda diziam 'goblin' e alinhamento '252 no Dia 93'. Corrigidas na fonte (hero.json): alinhamento 223 no Dia 143, papel 'Fundadora de um Reino Livre (nome em reconstrucao)', q5 com a revelacao do Dia 100 e campo 'revelation' com a ancora do autor. Nota editorial de segunda leitura adicionada em identidade.md.",
+    "metajogo": "Descricoes dos capitulos reescritas sem metajogo (saem CA, mana, 'servidor', 'autoquest', economia): os objetivos ficaram narrativos e os detalhes tecnicos permanecem nas descricoes dos dias/partes.",
+    "alerta": "data/heroes/antigravitus NAO tem state.json, capitulos.json nem temporadas.json — o site tolera a ausencia, mas a ficha dele fica sem dados vivos."
+  }
+}
