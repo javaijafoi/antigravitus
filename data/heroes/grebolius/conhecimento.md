@@ -84,6 +84,32 @@ Para evitar sobrecarga de inventário e otimizar tempo e recursos, **fica abolid
    - Observação técnica de log: A abreviação informal `sac corpo` falhou no servidor (*"Você não tem ideia de como fazer isso"*).
    - Diretriz: Testar e adotar a sintaxe formal aceita pelo servidor (`junk corpo`, `sacrificar corpo` ou `queimar corpo`). Sempre que o comando converter a carcaça em moedas adicionais, executá-lo imediatamente após saquear o ouro e os itens de alta densidade!
 
+   > **✅ RESOLVIDO no Dia 156 — a sintaxe é `junk`, e só ela.**
+   >
+   > Testado ao vivo, as três, uma por uma:
+   >
+   > | Comando | Resposta | Existe? |
+   > |---|---|---|
+   > | **`junk punhal`** | *"Você joga um brilhante punhal de novato. Isso **desaparece em uma nuvem de fumaça**!"* e *"**Você foi recompensado pelos deuses!**"* | **SIM ✓** |
+   > | `junk corpo`, com o corpo no chão | *"Você não tem nenhum corpo."* | existe, mas só age no **inventário** |
+   > | `sacrificar corpo` | *"Como?!?"* | **NÃO EXISTE** |
+   > | `queimar corpo` | *"Como?!?"* | **NÃO EXISTE** |
+   >
+   > **A "queima" é o `junk`** — a nuvem de fumaça é o efeito. **Não há verbo em português**: é
+   > `junk`, em inglês, e o alvo precisa estar **na mochila**.
+   >
+   > **Recompensa medida:** um brilhante punhal de novato → **+1 moeda** (380 → 381). É pouco por item,
+   > mas os monstros novatos deixam **dezenas** de punhais no chão — 39 numa sala só. Serve como
+   > limpeza, não como renda.
+   >
+   > **Para o corpo** o ciclo é: `examine corpo` (mostra o conteúdo) → `get gold corpo` →
+   > `get all corpo` → `get corpo` → `junk corpo`. O passo frágil é o **`get corpo`**: cadáver de
+   > monstro é **pesadíssimo** e o servidor recusa (*"Você já está carregando muito peso e não pode
+   > pegar o corpo de o monstro novato"*) mesmo com 64 kg livres na mochila.
+   >
+   > **Achado de espólio:** dentro do monstro novato havia **"a fedida pele do Minotauro"** — o mesmo
+   > item que o armeiro compra a 100. **Os monstros novatos carregam restos de Minotauro.**
+
 ### Rotina de Manutenção do Catálogo de NPCs e Matriz de Espólios
 - **Atualização Diária:** Se a expedição do dia encontrar um novo NPC, uma nova cotação de compra/venda, ou novo item de mob, registrar imediatamente em [npcs.md](file:///c:/Users/alura/Downloads/antigravitus/data/heroes/grebolius/npcs.md) e nesta seção.
 - **Pendência Maleável por Ciclo (Sem Rigidez Artificial):** A checagem de estoques de lojas e NPCs não exige peregrinação forçada no dia exato de encerramento do ciclo. Funciona como uma pendência aberta ao longo do ciclo decenal: conforme a rota natural da heroína cruzar com as lojas e figuras de Midgaard, realiza-se a conferência de forma orgânica e pragmática, sem desvios artificiais.
@@ -973,11 +999,55 @@ ter seguido desde o começo:
 
 ### 28.5 A correção que fica
 
-**Antes de enfrentar qualquer coisa: `consider`. Se for lutar, `cast 'magic missile'`. A adaga não
+**Antes de enfrentar qualquer coisa: `consider`. Se for lutar, `cast 'burning hands'`. A adaga não
 existe como plano B** — quem decide isso é `allow_verified_melee`, e ele está desligado.
 
 > **A lição de fundo:** a resposta fácil ("é invencível") estava errada, e a evidência para derrubá-la
 > já estava escrita no projeto. **Ler a doutrina antes de concluir que algo é impossível.**
+
+### 28.6 `burning hands` mata de primeira — o magic missile não
+
+Medido no Dia 156, na Área dos Novatos:
+
+| Magia | Resultado num monstro novato |
+|---|---|
+| `magic missile` | **11 de dano**; vários disparos por abate |
+| **`burning hands`** | ***"Você queimou o monstro novato até morte!"*** — **uma conjuração** |
+
+`burning hands` a 99% é o dano principal, como a diretiva dizia. Custa 10 de mana, igual ao míssil —
+e resolve em um golpe. **`shocking grasp` (10%) não se usa.**
+
+### 28.7 Limpar a Área dos Novatos é PATRULHA, não uma passada
+
+Tentativa de limpeza sala-a-sala no Dia 156, com o mapa já levantado:
+
+| Sala (a que o mapa aponta monstro) | Abates na passada |
+|---|---|
+| A Sala do Alquimista | 0 |
+| Uma Grande Sala | 0 |
+| Uma Intersecção em T na Passagem | 0 |
+| Um Outro Canto | **1** |
+| O Começo Da Passagem / Corredor Sujo / Fim do Corredor | 0 |
+
+**Os monstros ANDAM e reaparecem.** Uma sala que o mapa lista como habitada estava vazia na
+passagem, e uma que não estava tinha bicho. **Limpar masmorra é patrulhar em ciclo, não varrer uma
+vez** — o valor de uma passada é o que se encontra, não o que o mapa promete.
+
+**Saldo do dia (medido):** experiência **1.088.553 → 1.092.549 (+3.996)**; ouro **597 → 719 (+122)**;
+**mortes: continuam 7** — nenhuma nova.
+
+### 28.8 A guarda de repetição salvou a rodada
+
+No meio da varredura, o robô levou três recusas iguais seguidas
+(*"Você não pode ir por aí..."*) e a guarda da diretiva §12 agiu:
+
+```
+[GUARDA] mesma resposta 3x seguidas: 'Você não pode ir por aí...'
+[GUARDA] parando o robô: recall + save
+```
+
+**Ela terminou no Templo, salva, com 113/113 de vida.** Sem a guarda, o script teria insistido na
+rota travada — que é exatamente como as mortes #5, #6 e #7 aconteceram. **A guarda funciona.**
 
 
 ### 25.11 Invisibilidade BLOQUEIA comércio — e existe o comando `visible`

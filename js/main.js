@@ -138,13 +138,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
     localStorage.setItem("active_hero", hero.id);
     applyHeroContext(hero);
+    if (seasonSelect) await loadSeasonsForHero(hero, version);
     const tasks = [loadStateForHero(hero, version)];
     if (postsContainer) tasks.push(loadPostsForHero(hero, version));
 
     if (fichaContainer) tasks.push(loadFichaForHero(hero, version));
     if (mapCanvasWrap) tasks.push(loadMapForHero(hero, version));
     await Promise.all(tasks);
-    if (version === heroLoadVersion && postsContainer) await loadSeasonsForHero(hero, version);
   }
 
   function renderHeroSelector() {
@@ -416,7 +416,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   async function loadSeasonsForHero(hero, version) {
-    if (!postsContainer || !seasonSelect) return;
+    if (!seasonSelect) return;
     try {
       const res = await fetch("data/heroes/" + hero.id + "/temporadas.json");
       if (version !== heroLoadVersion) return;
@@ -456,6 +456,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
+  function updateMapSeasonContext() {
+    if (!mapCanvasWrap || !currentHero) return;
+    const mapHeroSub = document.getElementById("map-hero-sub");
+    if (mapHeroSub) {
+      if (activeSeason) {
+        mapHeroSub.textContent = `Território explorado, rotas e santuários de ${currentHero.name} — ${seasonTitleShort(activeSeason)} (${activeSeason.subtitle || currentHero.title}).`;
+      } else {
+        mapHeroSub.textContent = `Território explorado, rotas e santuários de ${currentHero.name} (${currentHero.title}).`;
+      }
+    }
+  }
+
   async function activateSeason(seasonId, version, userNavigation = false) {
     const heroVersion = version ?? heroLoadVersion;
     const requestVersion = ++seasonLoadVersion;
@@ -480,6 +492,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     window.history[userNavigation ? "pushState" : "replaceState"]({},"",next);
     renderSeasonSelector();
     renderAllViews();
+    updateMapSeasonContext();
     preserveContextLinks();
   }
 
@@ -1416,7 +1429,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       mapHeroTitle.textContent = `🗺️ Mapa Topológico de ${hero.name}`;
     }
     if (mapHeroSub) {
-      mapHeroSub.textContent = `Território explorado, rotas e santuários de ${hero.name} (${hero.title}).`;
+      if (activeSeason) {
+        mapHeroSub.textContent = `Território explorado, rotas e santuários de ${hero.name} — ${seasonTitleShort(activeSeason)} (${activeSeason.subtitle || hero.title}).`;
+      } else {
+        mapHeroSub.textContent = `Território explorado, rotas e santuários de ${hero.name} (${hero.title}).`;
+      }
     }
 
     try {
@@ -1478,6 +1495,34 @@ document.addEventListener("DOMContentLoaded", async () => {
       currentActiveLayer = "all";
     }
 
+    // Enquadra a camada ativa perfeitamente dentro da tela do SVG
+    function fitLayerInView(activeRooms) {
+      const withCoords = activeRooms.filter(r => r.coords && typeof r.coords.x === "number" && typeof r.coords.y === "number");
+      if (!withCoords.length) return;
+
+      const xs = withCoords.map(r => r.coords.x);
+      const ys = withCoords.map(r => r.coords.y);
+      const minX = Math.min(...xs);
+      const maxX = Math.max(...xs);
+      const minY = Math.min(...ys);
+      const maxY = Math.max(...ys);
+
+      const spanX = Math.max(maxX - minX + 240, 500);
+      const spanY = Math.max(maxY - minY + 240, 380);
+
+      const scaleX = 960 / spanX;
+      const scaleY = 640 / spanY;
+      const bestScale = Math.min(Math.max(Math.min(scaleX, scaleY), 0.32), 1.15);
+
+      const centerX = (minX + maxX) / 2;
+      const centerY = (minY + maxY) / 2;
+
+      mapScale = bestScale;
+      mapPanX = 500 - centerX * mapScale;
+      mapPanY = 320 - centerY * mapScale;
+      applyTransform();
+    }
+
     // Renderiza a barra de abas de camadas
     function renderLayersTabs() {
       if (!layersTabsEl) return;
@@ -1488,11 +1533,18 @@ document.addEventListener("DOMContentLoaded", async () => {
       ];
 
       defaultLayers.forEach(l => {
-        const count = rooms.filter(r => r.layer === l.id).length;
+        const layerRooms = rooms.filter(r => r.layer === l.id);
+        const count = layerRooms.length;
+        const hasCoords = layerRooms.some(r => r.coords && typeof r.coords.x === "number");
+        const countBadge = hasCoords ? count : `${count} fichas`;
+
         const btn = document.createElement("button");
         btn.className = `layer-tab-btn ${currentActiveLayer === l.id ? "active" : ""}`;
         btn.setAttribute("data-layer", l.id);
-        btn.innerHTML = `<span>${l.name}</span><span class="layer-room-count">${count}</span>`;
+        if (!hasCoords) {
+          btn.title = "Camada documental: salas registradas a partir de sessões, organizadas em fichas táticas";
+        }
+        btn.innerHTML = `<span>${l.name}</span><span class="layer-room-count">${countBadge}</span>`;
         btn.addEventListener("click", () => {
           switchLayer(l.id);
         });
@@ -1526,19 +1578,43 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       renderMapForCurrentLayer();
 
-      // Centraliza na camada ativa
       const activeRooms = currentActiveLayer === "all" ? rooms : rooms.filter(r => r.layer === currentActiveLayer);
-      if (activeRooms.length > 0) {
-        const hasSanctuary = activeRooms.find(r => r.id === current_location_id) || activeRooms.find(r => r.id === camp_id) || activeRooms.find(r => r.id === sanctuary_id);
-        if (hasSanctuary) {
-          centerOnCoords(hasSanctuary.coords.x, hasSanctuary.coords.y, 0.95);
-          inspectRoom(hasSanctuary);
-        } else {
-          // Centroide da camada
-          const avgX = activeRooms.reduce((acc, r) => acc + (r.coords ? r.coords.x : 0), 0) / activeRooms.length;
-          const avgY = activeRooms.reduce((acc, r) => acc + (r.coords ? r.coords.y : 0), 0) / activeRooms.length;
-          centerOnCoords(avgX, avgY, 0.9);
+      const roomsWithCoords = activeRooms.filter(r => r.coords && typeof r.coords.x === "number" && typeof r.coords.y === "number");
+      const layerNoticeEl = document.getElementById("map-layer-notice");
+
+      if (roomsWithCoords.length === 0) {
+        // Camada documental sem posições gráficas no desenho: ativa modo tabela tática para visualização imediata
+        const btnViewTable = document.getElementById("btn-view-table");
+        if (btnViewTable && !btnViewTable.classList.contains("active")) {
+          btnViewTable.click();
+        }
+        if (layerNoticeEl) {
+          layerNoticeEl.hidden = false;
+          const noticeTitle = document.getElementById("notice-title");
+          const noticeText = document.getElementById("notice-text");
+          const layerMeta = layers.find(l => l.id === layerId);
+          if (noticeTitle) noticeTitle.textContent = layerMeta?.name || "Camada Documental";
+          if (noticeText) noticeText.innerHTML = `Esta camada reúne <strong>${activeRooms.length} salas</strong> catalogadas a partir de registros e sessões.`;
+          const btnNoticeSwitch = document.getElementById("btn-notice-switch-table");
+          if (btnNoticeSwitch) {
+            btnNoticeSwitch.onclick = () => {
+              if (btnViewTable) btnViewTable.click();
+            };
+          }
+        }
+        if (activeRooms.length > 0) {
           inspectRoom(activeRooms[0]);
+        }
+      } else {
+        if (layerNoticeEl) layerNoticeEl.hidden = true;
+        // Enquadra a camada visual de forma harmoniosa no canvas
+        fitLayerInView(activeRooms);
+
+        const hasSanctuary = activeRooms.find(r => r.id === current_location_id) || activeRooms.find(r => r.id === camp_id) || activeRooms.find(r => r.id === sanctuary_id);
+        if (hasSanctuary && hasSanctuary.coords) {
+          inspectRoom(hasSanctuary);
+        } else if (roomsWithCoords.length > 0) {
+          inspectRoom(roomsWithCoords[0]);
         }
       }
     }
@@ -1802,10 +1878,15 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (targetRoom.layer && targetRoom.layer !== currentActiveLayer && currentActiveLayer !== "all") {
               switchLayer(targetRoom.layer);
             }
-            centerOnRoom(targetRoom);
             inspectRoom(targetRoom);
-            const btnVisual = document.getElementById("btn-view-visual");
-            if (btnVisual) btnVisual.click();
+            const cardEl = document.getElementById(`card-${tid}`);
+            if (cardEl) {
+              cardEl.scrollIntoView({ behavior: "smooth", block: "center" });
+              cardEl.classList.add("highlight-card");
+              setTimeout(() => cardEl.classList.remove("highlight-card"), 2200);
+            } else if (targetRoom.coords) {
+              centerOnRoom(targetRoom);
+            }
           }
         }
       };
@@ -1879,8 +1960,16 @@ document.addEventListener("DOMContentLoaded", async () => {
                 if (targetRoom.layer && targetRoom.layer !== currentActiveLayer && currentActiveLayer !== "all") {
                   switchLayer(targetRoom.layer);
                 }
-                centerOnRoom(targetRoom);
+                if (targetRoom.coords) {
+                  centerOnRoom(targetRoom);
+                }
                 inspectRoom(targetRoom);
+                const cardEl = document.getElementById(`card-${targetRoom.id}`);
+                if (cardEl && tableContainer?.classList.contains("active")) {
+                  cardEl.scrollIntoView({ behavior: "smooth", block: "center" });
+                  cardEl.classList.add("highlight-card");
+                  setTimeout(() => cardEl.classList.remove("highlight-card"), 2200);
+                }
               }
             });
             inspectExits.appendChild(btn);
@@ -2002,6 +2091,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         btnViewTable.classList.remove("active");
         if (mapCanvasWrap) mapCanvasWrap.style.display = "block";
         if (tableContainer) tableContainer.classList.remove("active");
+        const activeRooms = currentActiveLayer === "all" ? rooms : rooms.filter(r => r.layer === currentActiveLayer);
+        const hasVisual = activeRooms.some(r => r.coords && typeof r.coords.x === "number");
+        const noticeEl = document.getElementById("map-layer-notice");
+        if (noticeEl) noticeEl.hidden = hasVisual;
       };
 
       btnViewTable.onclick = () => {
@@ -2024,8 +2117,16 @@ document.addEventListener("DOMContentLoaded", async () => {
         const room = roomMap.get(current_location_id);
         if (!room) return;
         if (room.layer && room.layer !== currentActiveLayer && currentActiveLayer !== "all") switchLayer(room.layer);
-        centerOnCoords(room.coords.x, room.coords.y, 1.15);
+        if (room.coords) {
+          centerOnCoords(room.coords.x, room.coords.y, 1.15);
+        }
         inspectRoom(room);
+        const cardEl = document.getElementById(`card-${room.id}`);
+        if (cardEl && tableContainer?.classList.contains("active")) {
+          cardEl.scrollIntoView({ behavior: "smooth", block: "center" });
+          cardEl.classList.add("highlight-card");
+          setTimeout(() => cardEl.classList.remove("highlight-card"), 2200);
+        }
       };
     }
 
@@ -2043,7 +2144,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
     if (btnZoomReset) {
       btnZoomReset.onclick = () => {
-        switchLayer(currentActiveLayer);
+        const activeRooms = currentActiveLayer === "all" ? rooms : rooms.filter(r => r.layer === currentActiveLayer);
+        fitLayerInView(activeRooms);
       };
     }
     if (btnCenterSanctuary) {
@@ -2054,8 +2156,16 @@ document.addEventListener("DOMContentLoaded", async () => {
           if (sanctuary.layer && sanctuary.layer !== currentActiveLayer && currentActiveLayer !== "all") {
             switchLayer(sanctuary.layer);
           }
-          centerOnCoords(sanctuary.coords.x, sanctuary.coords.y, 1.15);
+          if (sanctuary.coords) {
+            centerOnCoords(sanctuary.coords.x, sanctuary.coords.y, 1.15);
+          }
           inspectRoom(sanctuary);
+          const cardEl = document.getElementById(`card-${sanctuary.id}`);
+          if (cardEl && tableContainer?.classList.contains("active")) {
+            cardEl.scrollIntoView({ behavior: "smooth", block: "center" });
+            cardEl.classList.add("highlight-card");
+            setTimeout(() => cardEl.classList.remove("highlight-card"), 2200);
+          }
         }
       };
     }
