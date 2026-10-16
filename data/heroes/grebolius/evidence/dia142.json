@@ -1,0 +1,13 @@
+{
+  "hero_id": "grebolius",
+  "day": 142,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "summary": {
+    "quest_catalog": "'autoquest todas' revelou o catalogo completo com status. Nao feitas e ELEGIVEIS ao nivel 20: 'Uma Licao em Gargamel' (niveis 20-80, inicia com o smurf minerador — missao NOVA, nao catalogada antes), 'Novela dos Novatos' (ate 30, com o novato esperto), 'Dicas Magicas' (ate 29, com um mago aventureiro) e 'Problemas Agricolas' (ate 40, com o Pacificador). Nao elegiveis por nivel/classe: Resgate Pirata (70-100), Cuidado Com o Chacal (22-100, so paladinos), O Creme Nao Compensa (45-100), Arrumando a Biblioteca (60-100, encarnacoes 3+).",
+    "quest_started": "No Bar dos Magos, respondendo 'sim' ao mago aventureiro, o servidor confirmou: 'Voce comeca a participar da aventura.' — o gancho da Dicas Magicas foi reaberto.",
+    "pager": "'autoquest todas' e 'help autoquest' usam paginador; a listagem completa exige avancar as paginas.",
+    "daemon": "A conexao caiu durante a rodada (estado=disconnected, sem prompt). O servidor estava no ar (Test-NetConnection True). Matei o processo do daemon (PID 22784, socket morto) e subi um novo (job pwsh-882); a personagem voltou intacta no Templo (113hp/260mn).",
+    "state": "Grau 20, 113/113, 7.360 de ouro, salva."
+  }
+}

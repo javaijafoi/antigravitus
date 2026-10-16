@@ -46,3 +46,22 @@ Estados: 🔎 Descoberta | ▶️ Ativa | ⏸️ Adiada | ⛔ Bloqueada | ✅ Co
 **Regra que custou caro:** morrer **falha as autoquests** ("Você falhou em suas aventuras!"). Para retomar, é preciso voltar ao NPC e responder `sim` de novo.
 
 **Ajuda útil:** `help autoquest` funciona (em inglês; `ajuda` não). `tips` é alternância e ficou **ligado**.
+
+
+## Capítulo 3 — "Três Ofícios" (aberto no Dia 141)
+**Goal do autor:** concluir **3 missões quaisquer**, sem repetir nenhuma já feita.
+**Fora de cogitação (já concluídas):** `coleira-dragao`, `altruismo`, `limpando-monstros`.
+
+### Candidatas, por viabilidade
+| Missão | Tipo | Situação | O que falta |
+|---|---|---|---|
+| **novela-dos-novatos** | oficial | descoberta (Dia 83) | localizar **"o novato esperto"** nas praças de Midgaard para iniciar o encadeamento (até o nível 30 — ela tem 20) |
+| **dicas-magicas** | oficial | ativa | o servidor respondeu "Você atingiu seu objetivo" no Dia 98 (+11.639 EXP); falta **falar de novo com o Mago Aventureiro** no Bar dos Magos para ouvir a próxima instrução |
+| **convite-pacificador** | investigação | descoberta | perguntar ao Pacificador **quais serviços** estão disponíveis (Dia 31) |
+| **problemas-agricolas** | oficial | ativa, já falhou 2x por morte | dialogar com o fazendeiro e confirmar a entrega; o contador não é exibido |
+| **vinganca-serpente** | pessoal | adiada | caçar a serpente do esgoto que a matou no Dia 11 |
+| **guildas-hostis** | investigação | descoberta | entender as restrições de classe das guildas |
+| **mercenarios-beco** | investigação | descoberta | observar/dialogar com os mercenários do beco |
+| **reino-livre** | pessoal | descoberta | primeira oportunidade concreta para o povo goblin |
+
+**Método (Capítulo 3):** uma missão de cada vez; mapear à mão antes de automatizar; `autoquest listar` e `autoquest todas` para confirmar estado; nada é dado por concluído sem confirmação do servidor.

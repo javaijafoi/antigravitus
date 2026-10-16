@@ -559,6 +559,50 @@
       "date": "2026-10-16",
       "in_game_time": "Grau 17 ao Grau 20",
       "closed_on_day": 140
+    },
+    {
+      "id": 3,
+      "tomo": 1,
+      "title": "Tres Oficios",
+      "kind": "missao",
+      "status": "em_curso",
+      "goal": "Concluir tres missoes quaisquer, sem repetir nenhuma ja concluida (coleira-dragao, altruismo e limpando-monstros estao fora). Cada missao so conta como concluida quando o servidor confirmar a entrega.",
+      "days": [
+        141,
+        142
+      ],
+      "parts": [
+        {
+          "day": 141,
+          "summary": "Abertura do Capitulo 3 'Tres Oficios': o autor pediu tres missoes quaisquer, sem repetir as concluidas. Registrada a revisao de aprendizados do capitulo anterior (metodo de automacao, higiene de personagem e limites do mundo) na diretiva e na skill. Mapeadas as oito candidatas.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia141.json",
+              "day": 141,
+              "note": "Abertura do Capitulo 3 e revisao de aprendizados."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 142,
+          "summary": "Levantamento do catalogo de autoquests (autoquest todas): descoberta a missao NAO catalogada 'Uma Licacao em Gargamel' (niveis 20-80, inicia com o smurf minerador), alem de Novela dos Novatos e Dicas Magicas como elegiveis. No Bar dos Magos, o mago aventureiro confirmou 'Voce comeca a participar da aventura'. A conexao com o servidor caiu e o daemon foi reiniciado; personagem intacta.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia142.json",
+              "day": 142,
+              "note": "Catalogo de autoquests e inicio da aventura com o mago aventureiro."
+            }
+          ],
+          "date": "2026-10-16"
+        }
+      ],
+      "content": [],
+      "tags": [],
+      "source_kind": "live",
+      "evidence": []
     }
   ]
 }

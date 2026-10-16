@@ -68,3 +68,30 @@ Regra-mãe: **nunca sair de aventura sem preparo, e nunca lutar do jeito errado.
 - **Todo script de deslocamento deve começar com `wake; stand`** — e, de preferência, reconferir depois de qualquer `rest`/`sleep`.
 - Isso explica boa parte das "viagens que falhavam" entre os Dias 110 e 122: eu culpava o parser e a rota, quando era a postura.
 - Rota curta confirmada para o tabuleiro: `recall` → `stand` → 4 norte (Grande Campo) → oeste (Caminho Sujo) → oeste (Grande Tabuleiro) → oeste (Casa Branca) → norte, norte.
+
+
+## 9. Método de automação — a lição que custou três mortes (Dias 110-140)
+> Regra-mãe: **o motor só anda sozinho depois de provar que anda.** Enquanto não provou, cada passo é observado.
+
+**Ordem obrigatória antes de soltar qualquer script:**
+1. **Mapear a região à mão primeiro.** Ir e voltar eu mesma, conferindo sala a sala, e só depois escrever o trajeto. Foi assim que o bosque caiu: depois de registrar que a fazenda abre ao norte de uma sala `[norte, sul]` logo após a sala com "O Pequeno Bosque".
+2. **Ler `exits` para os NOMES das saídas.** O `look` só mostra "[ Saídas: leste, sul ]", sem destino. Todo navegador que li do lugar errado abortou.
+3. **Andar por MARCO, não por contagem.** "Avance até a sala cujo nome é X" resiste à desincronização de lotes; "ande 13 leste" não resiste.
+4. **Rodar o motor em trechos curtos e ler o retorno** — viagem, bosque, caçada, um de cada vez — e só juntar quando cada trecho passa sozinho.
+5. **Limite dentro do próprio script.** Teto de passos e de tempo; ao estourar, **salvar e sair**. Sem isso ele vira job, e job solto já matou três vezes.
+6. **Nunca** deixar caçada em segundo plano. Se o programa estourar o tempo, o script continua sem supervisão e a personagem morre — mortes #5, #6 e #7 vieram todas daí.
+7. **Gravar o caminho quando ele funciona** e reproduzi-lo depois (o motor imprime `CAMINHO BOSQUE: ...`).
+
+## 10. Higiene de personagem — os três "relaxamentos" que parecem bug
+| Sintoma | Causa real | Correção |
+|---|---|---|
+| *"Nah... você está muito relaxado.."* | a personagem está **descansando**; o jogo recusa andar | **`wake; stand`** antes de qualquer deslocamento |
+| Caçada com muitos *"inconclusivo"* | **mana seca** (chegou a 10 de 240); a magia falha | **`sleep` ~80 s** antes de sair (20 → 218 de mana) |
+| Combate fraco e regeneração ruim | **fome e sede**: "morrendo de fome!" | comer na **padaria** e beber do **cantil** a cada ciclo |
+
+Outras conferências de rotina: `score tudo` (peso/limite, ouro, fome, sede), `equipment` (o que está no corpo), `identify` **antes** de vestir, `consider` **antes** de atacar.
+
+## 11. O que é limite do MUNDO, e não da personagem
+- O **armeiro de Midgaard** tem bolso finito: paga ~3 armaduras de 8.500 e seca. O **feiticeiro** não compra armaduras nem bastões usados. O **ferreiro** compra armas.
+- Quando o gargalo é o **caixa de um NPC**, registrar e parar — insistir é só gastar rodada.
+- **Não fechar capítulo antes dos alvos:** fechei o Capítulo 2 no Dia 136 com a fortuna parcial, e o próprio sistema devolveu o capítulo para `em_curso`. Fechar é ato final, não pausa.

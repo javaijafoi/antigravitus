@@ -37,3 +37,18 @@ Definido pelo autor no pedido do capítulo. Normalmente: **duas missões** mais 
 - A doutrina de evidência continua valendo: cada parte e cada capítulo declaram `source_kind` e fontes; nada é narrado sem base na sessão.
 - As regras de segurança do jogo são as do [post-mortem da morte #04](../../data/heroes/grebolius/observacoes/morte-04-dia-100.md): **parada dura em 60% da vida**, um comando por vez sob ameaça, fuga é emergência e não licença para lutar, nunca lutar em sala com 2+ monstros.
 - Se o capítulo envolver a origem da personagem (Season 02, Tomo I), valem as ressalvas de [notas_editoriais.md](../../data/heroes/grebolius/notas_editoriais.md): só afirmar revelação quando o servidor entregar o gatilho.
+
+
+## Método de automação (obrigatório desde o Capítulo 2)
+
+**O motor só anda sozinho depois de provar que anda.** A ordem é sempre:
+
+1. **Mapear à mão primeiro** — ir e voltar observando sala a sala; só então escrever o trajeto.
+2. **Ler `exits`** para os nomes das saídas (o `look` não traz destino).
+3. **Andar por marco** ("até a sala X"), nunca por contagem de passos.
+4. **Testar em trechos curtos**, lendo o retorno de cada um, antes de juntar.
+5. **Teto de passos e de tempo dentro do script**: ao estourar, `recall` + `save` e sair.
+6. **Nunca** rodar caçada em segundo plano — script solto já causou as mortes #5, #6 e #7.
+7. **Higiene antes de sair**: `wake; stand` (o jogo recusa andar "relaxado"), `sleep` para encher a mana, comida e água em ordem (`score tudo` confere).
+8. **Limite do mundo não é falha da personagem**: quando o gargalo é o caixa de um NPC, registrar e parar.
+9. **Não fechar o capítulo antes dos alvos cumpridos** — o sistema devolve para `em_curso` (aconteceu no Dia 136).

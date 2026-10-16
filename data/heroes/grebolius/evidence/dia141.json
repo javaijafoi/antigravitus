@@ -1,0 +1,12 @@
+{
+  "hero_id": "grebolius",
+  "day": 141,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "summary": {
+    "chapter3_open": "CAPITULO 3 'Tres Oficios' aberto no Tomo I. Goal do autor: concluir 3 missoes quaisquer, sem repetir as ja concluidas (coleira-dragao, altruismo, limpando-monstros).",
+    "lesson_review": "Revisao de aprendizados registrada na diretiva (secoes 9, 10 e 11) e na skill do capitulo: (9) METODO DE AUTOMACAO — mapear a regiao a mao primeiro, ler 'exits' para os nomes das saidas, andar por MARCO e nao por contagem, testar em trechos curtos lendo o retorno de cada um, teto de passos e de tempo dentro do script, NUNCA caçar em segundo plano, gravar o caminho quando funcionar. (10) HIGIENE — 'wake; stand' antes de andar (o jogo recusa movimento 'relaxado'), 'sleep' antes de caçar (mana), comida e agua em ordem; 'score tudo', 'equipment', 'identify' e 'consider' como rotina. (11) LIMITE DO MUNDO — o armeiro tem bolso finito; quando o gargalo e o caixa de um NPC, registrar e parar; e nao fechar capitulo antes dos alvos (o sistema devolveu o capitulo 2 para em_curso no Dia 136).",
+    "candidates": "Candidatas mapeadas em missoes.md: novela-dos-novatos (localizar o novato esperto), dicas-magicas (falar de novo com o Mago Aventureiro), convite-pacificador, problemas-agricolas, vinganca-serpente, guildas-hostis, mercenarios-beco, reino-livre.",
+    "state": "Grau 20, 113/113, mana 265/265, CA 94, 7.360 de ouro, salva em Midgaard."
+  }
+}
