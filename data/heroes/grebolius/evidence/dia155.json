@@ -1,0 +1,14 @@
+{
+  "hero_id": "grebolius",
+  "day": 155,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "summary": {
+    "rotina_funcionando": "A rotina milharal do automato FUNCIONOU de ponta a ponta: viajou (checkpoints), atravessou o labirinto do bosque achando a sala-marco ('O Pequeno Bosque' a leste), entrou na fazenda, chegou ao Milharal e Cacou. O elo que faltava era 'oeste, oeste, oeste' com verificacao por sala (um movimento se perdia e ela parava em 'O Fim da Estrada').",
+    "abates": "3 monstros agressivos abatidos nesta rodada (total de 4 invasores ate agora, contando o do Dia 153). A rotina parou limpa pela guarda quando o alvo sumiu (recall + save).",
+    "guarda_aprimorada": "A guarda de repeticao foi refinada: agora conta SOMENTE assinaturas de PROBLEMA (sala bloqueada, alvo inexistente, corpo relaxado, peso, magia sem mana). Antes, andar num labirinto de salas homonimas (mesma descricao) disparava a guarda e abortava o trajeto.",
+    "ferramenta_de_mapeamento": "Nova ferramenta do automato: automato/acoes/mapear.py - anda uma sequencia imprimindo cada sala, e --buscar procura uma sala/saida pelo nome gravando o caminho. Foi com ela que a rota do bosque e a da fazenda foram descobertas a mao, como manda a doutrina.",
+    "plano_do_capitulo": "CRIADO data/heroes/grebolius/plano_capitulo_03.md - o plano do capitulo para o agente: o que nao repetir, as quatro missões candidatas com estado e proximo passo, as rotas resolvidas, as ferramentas do automato, as regras permanentes, a decisao pendente (armadura) e o plano de execucao em 5 passos. Apontado no state.json (next_objective.plan_document).",
+    "estado": "Grau 20, no Templo, salva; banco com ~7.000; missao Problemas Agricolas segue EM ANDAMENTO."
+  }
+}

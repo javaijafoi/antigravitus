@@ -84,12 +84,13 @@
   "next_objective": {
     "mission_id": "capitulo-3",
     "title": "Capitulo 3 - Tres Oficios",
-    "next_step": "Concluir tres missoes sem repetir as ja concluidas (Limpando Monstros, Ninguem Segura Esse Bebe, coleira-dragao, altruismo). Candidatas: Dicas Magicas (em andamento), Novela dos Novatos, Uma Licao em Gargamel, Problemas Agricolas.",
+    "next_step": "Seguir data/heroes/grebolius/plano_capitulo_03.md: (1) fechar Problemas Agricolas (rotina milharal + entrega ao Pacificador/fazendeiro); (2) destravar Dicas Magicas; (3) Novela dos Novatos / Gargamel.",
     "missing_preparation": [
       "PROIBIDO vender armaduras (diretiva do autor, Dia 150): nem Torre Negra (8.500) nem peao (150); nao comprar o pergaminho de remover maldicoes para vender.",
       "Concluir 3 missoes sem repetir as ja feitas: Dicas Magicas (em andamento), Problemas Agricolas (aceita, ir ao milharal), Novela dos Novatos e Uma Licao em Gargamel (procurar o novato esperto e o smurf minerador).",
       "Ouro apenas por espolio de combate, recompensa de missao e o banco do Templo."
-    ]
+    ],
+    "plan_document": "plano_capitulo_03.md"
   },
   "skills": [
     {

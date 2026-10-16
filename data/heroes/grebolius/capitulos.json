@@ -581,7 +581,8 @@
         151,
         152,
         153,
-        154
+        154,
+        155
       ],
       "parts": [
         {
@@ -782,6 +783,19 @@
               "document": "evidence/dia154.json",
               "day": 154,
               "note": "Rota do mapa, cacador com raio e pendencia da chegada a floresta."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 155,
+          "summary": "A rotina milharal do automato passou a funcionar de ponta a ponta: viaja, atravessa o labirinto do bosque pela sala-marco ('O Pequeno Bosque' a leste), entra na fazenda e chega ao MILHARAL. Abateu 3 monstros agressivos. A guarda de repeticao foi refinada para contar apenas assinaturas de problema (labirintos de salas homonimas nao a disparam mais). Criada a ferramenta automato/acoes/mapear.py (mapear a mao e buscar por nome). E criado o PLANO DO CAPITULO 03 em plano_capitulo_03.md, apontado no estado.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia155.json",
+              "day": 155,
+              "note": "Rotina funcionando, 3 abates, guarda refinada, mapeador e plano do capitulo."
             }
           ],
           "date": "2026-10-16"

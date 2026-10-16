@@ -26,6 +26,7 @@ def count_mobs(text):
 
 
 def matar(alvo, maximo=14):
+    falhas = 0
     for _ in range(maximo):
         t, _, _ = run('look')
         if 'morre' in t or 'morto' in t:
@@ -49,7 +50,12 @@ def matar(alvo, maximo=14):
                     alvo, text, trocou = kw, t2, True
                     break
             if not trocou:
-                return 'sem alvo valido'
+                falhas += 1
+                if falhas >= 2:
+                    return 'sumiu'
+                continue
+        if 'Em que você deseja' not in text:
+            falhas = 0
         if 'morre' in text or 'morto' in text:
             return 'morto'
         if hp_frac(text) < 0.40:
@@ -106,9 +112,8 @@ def _sala_nome():
     return next((l.strip() for l in t.split(chr(10)) if l.strip()), '?')
 
 
-def ir_ao_milharal():
-    """Rota por CHECKPOINTS (a mesma que funcionou no viagem.py): cada etapa para
-    quando a marca da sala aparece, em vez de contar passos."""
+def ir_ate_a_floresta():
+    """Templo -> A Entrada da Floresta, por checkpoints (comprovado)."""
     for tent in range(3):
         run('recall'); run('stand')
         for _ in range(9):
@@ -124,23 +129,67 @@ def ir_ao_milharal():
             if 'Estrada Midgaard-Jareth' in t and set(ex) == {'e', 'w'}:
                 break
             andar('n')
-        print('[rota] aclive:', _sala_nome(), flush=True)
-        if not ate('e', 'A Entrada da Floresta', 24):
-            print('[rota] sem floresta nesta tentativa', flush=True)
-            continue
-        print('[rota] floresta ok:', _sala_nome(), flush=True)
-        for m in ['n', 'n', 'e', 'e', 's']:
-            andar(m)
-        nome = _sala_nome()
-        print('[rota] apos o bosque:', nome, flush=True)
-        if 'Entrada da Fazenda' not in nome:
-            continue
-        for m in ['w', 'w', 'w']:
-            andar(m)
-        nome = _sala_nome()
-        print('[rota] apos 3 oestes:', nome, flush=True)
-        if 'Milharal' in nome:
+        if ate('e', 'A Entrada da Floresta', 24):
             return True
+    return False
+
+
+CAMINHO_BOSQUE = 'n,s,n,n,e,e,s,s,s,n,s,s,n,n,n,n,s,n,e,w,s,n,e,w,s,s,s,s,n,n,n,s,s,n,n,s,s,s,s,e,e,e,w,e,w,e,w,e,e,e,w,w,e,e,e,e,n,n'.split(',')
+
+
+def _achar_marco_do_bosque(limite=200):
+    """Anda pelo bosque (salas homonimas) ate achar a sala com 'O Pequeno Bosque' a leste."""
+    for _ in range(limite):
+        if estourou():
+            return False
+        ex, t = sala()
+        if any('Pequeno Bosque' in v for v in ex.values()):
+            return True
+        bosque = [d for d, v in ex.items() if 'Bosque' in v]
+        trans = [d for d, v in ex.items() if ('Densa' in v or 'Floresta' in v or 'Trilha' in v)]
+        if bosque:
+            d = random.choice(bosque)
+        elif trans:
+            d = random.choice(trans)
+        else:
+            return False
+        andar(d)
+    return False
+
+
+def da_floresta_ao_milharal():
+    if 'Entrada da Floresta' not in _sala_nome():
+        return False
+    for m in CAMINHO_BOSQUE:
+        andar(m)
+    ex, t = sala()
+    if not any('Pequeno Bosque' in v for v in ex.values()):
+        print('[rota] caminho gravado nao serviu; buscando o marco', flush=True)
+        if not _achar_marco_do_bosque():
+            print('[rota] nao achei a sala-marco', flush=True)
+            return False
+    print('[rota] na sala-marco (O Pequeno Bosque a leste)', flush=True)
+    for m in ['n', 'n']:
+        andar(m)
+    nome = _sala_nome()
+    print('[rota] apos 2 nortes:', nome, flush=True)
+    if 'Entrada da Fazenda' not in nome:
+        return False
+    for _ in range(6):
+        if 'Milharal' in _sala_nome():
+            print('[rota] no Milharal', flush=True)
+            return True
+        andar('w')
+    nome = _sala_nome()
+    print('[rota] parei em:', nome, flush=True)
+    return 'Milharal' in nome
+
+
+def ir_ao_milharal():
+    for tent in range(3):
+        if ir_ate_a_floresta() and da_floresta_ao_milharal():
+            return True
+        print('[rota] tentativa', tent + 1, 'falhou; repetindo', flush=True)
     return False
 
 
