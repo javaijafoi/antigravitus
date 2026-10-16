@@ -256,4 +256,34 @@ Fonte: [dossiê primário do Dia 95](evidence/dia95.json).
 | **Um ameaçador dragão vermelho** | A Borda Estreita (`borda_estreita_sul`) | **LETAL / CRÍTICO.** Dragão colossal cercado por aura multicolorida mística. Encarou a aventureira com fúria. Deve ser contornado a todo custo, sem qualquer engajamento direto. |
 | **Cobras venenosas (múltiplas)** | A Estreita Borda Indo de Leste a Oeste (`estreita_borda_leste_oeste`) | **HOSTIS / VENENOSAS.** Grupo emboscador atacando em bando com mordidas lacerantes. Picada inocula peçonha grave (`poison`, -2 FOR, 9h de duração, -10 HP por pulso de dano). O protocolo Wimpy 30 disparou a fuga tática imediata salvando a vida da personagem. |
 
+## Dia 96 — NPCs de Jareth, Rodovia e Novas Cotações de Comércio
+
+Fonte: [dossiê primário do Dia 96](evidence/dia96.json).
+
+### Figuras e Autoridades Encontradas
+
+| Personagem | Local observado | Interação / Comportamento |
+| :--- | :--- | :--- |
+| **Novato Alquimista** | Sala do Alquimista (`sala_alquimista`) | Relatado o triunfo sobre a masmorra. Missão *Limpando Monstros* concluída com louvor (+75.482 EXP e manto de pano). |
+| **Mago Aventureiro** | Bar dos Magos (`bar_magos`) | Etapa 1 de *Dicas Mágicas* concluída (+30.000 EXP recebidos). Etapa 2 ativada (solicitou pergaminho de retorno). |
+| **O Pacificador** | Praça do Templo (`praca_templo`) | Despachou Grebolius para socorrer os colonos na fazenda a leste de Jareth (*Problemas Agrícolas*). |
+| **Comerciante Sorridente** | A Estrada Midgaard-Jareth | Mercador itinerante exibindo produtos na margem da rodovia. |
+| **Guardas Particulares** | Postos de Guarda da Estrada | Operadores de grandes cancelas nos trechos afunilados da rodovia entre Midgaard e Jareth. |
+| **Membros da Guarda da Cidade** | Avenida Floris (Jareth) | Sentinelas urbanas fortemente armadas patrulhando a via principal da Cidade Livre. Diálogos observados: *"Paladinos seriam de grande ajuda por aqui..."* e *"Jareth precisa de alguém experiente para uma importante missão"*. |
+| **Arius, o Abastecedor** | Loja de Provisões (Jareth) | Mercador de víveres e produtos gerais atendendo no balcão da loja. |
+| **Dono do Estábulo** | Estábulos de Jareth | Cuidador encarregado de abrigar e alimentar montarias de viajantes. |
+| **Proprietário do Clube Kitty-Kat** | Recepção do Clube Kitty-Kat (Jareth) | Homem careca administrando as reservas e contando as vendas diárias na mesa lustrosa. |
+| **Garçonetes do Kitty-Kat** | O Clube Kitty-Kat (`jareth_clube_kitty_kat`) | Atendentes loira e morena servindo mesas, entregando cardápio e acolhendo aventureiros no salão refinado. |
+
+### Novas Cotações de Venda Comprovadas (Midgaard)
+
+| Mercador / Loja | Item Vendido | Cotação Paga | Custo-Benefício |
+| :--- | :--- | :---: | :--- |
+| **O Armeiro** | `a coroa da Rainha Branca` | **1.500 moedas de ouro** | **Extremo (Ouro puro)**. Peça leve de xadrez com retorno colossal. |
+| **O Armeiro** | `a armadura do Peão Preto` | **150 moedas de ouro** | Muito bom para armadura de novato. |
+| **O Armeiro** | `um escudo` | **200 moedas de ouro** | Excelente para proteção padrão. |
+| **O Armeiro** | Peças de couro (`perneiras`, `jaqueta`, `botas`) | **37 a 75 moedas** | Regular. Bom para descarte de sucata leve. |
+| **O Ferreiro** | `a espada do Peão Preto` | **40 moedas de ouro** | Bom rendimento para lâmina de mob. |
+| **O Ferreiro** | `uma espada longa` militar | **240 moedas de ouro** | Excelente cotação de armamento marcial. |
+
 

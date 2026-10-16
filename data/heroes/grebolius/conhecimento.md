@@ -403,4 +403,36 @@ Fonte: [dossiê primário do Dia 95](evidence/dia95.json).
   - O gatilho de recuo mecânico `wimpy 30` acionou imediatamente quando o HP desceu abaixo de 30, executando a fuga para o leste (*O Canto Nordeste da Borda*) e salvando a vida da personagem com 10 HP restantes.
   - **Lição definitiva:** A margem conservadora de fuga (`wimpy 30`) é essencial diante de predadores rápidos e venenosos, prevenindo morte imediata em rodada surpresa.
 
+## 18. Dia 96 — A Rodovia do Norte, Topologia de Jareth, Acesso à Fazenda e Economia de Xadrez
+
+Fonte: [dossiê primário do Dia 96](evidence/dia96.json).
+
+- **A Rodovia Midgaard-Jareth:**
+  - Ligação pavimentada e segura entre as duas cidades.
+  - Do Templo de Midgaard: cruza os campos a norte até `O Começo da Estrada`, passando por postos de guarda particulares com cancelas, vilarejo rústico (`Numa Pequena Vila` e `O Centro do Vilarejo`) e ascensão sobre uma modesta colina com visão panorâmica de Midgaard.
+  - A descida oriental conduz diretamente a `Nas Proximidades da Cidade` e ao `Portão Oeste` de Jareth.
+- **Topologia Urbana da Cidade de Jareth (A Cidade da Liberdade):**
+  - Eixo central: **Avenida Floris** (corta a cidade de leste a oeste).
+  - Pontos de interesse mapeados:
+    - *O Portão Oeste* -> *Rua do Rio* (norte para travessia do Alquandon; sul para lojas).
+    - *Taverna Grainy* (ao sul na Avenida Floris; famosa pelo licor de malte).
+    - *O Centro da Cidade de Jareth* (monumento central com a estátua e inscrição `LIBERDADE`, carruagens de transporte e entroncamento com a *Rua Bourbon*).
+    - *Rua Bourbon* (ao sul concentra variedade de estalagens e tavernas; ao norte margeia o rio).
+    - *Avenida Floris Leste*: *Loja de Armas de Maris* (norte), *O Clube Kitty-Kat* (sul), *O Banco de Jareth* (norte), *A Loja de Provisões* de Arius (sul), *A Delegacia* e *Prisão* (norte), *Via da Veneração* (sul, via cerimonial para o *Templo de Todos e Ninguém*), *Estábulos* (norte) e *Loja de Montarias* (sul).
+    - *O Portão Leste* (saída oriental protegida pela guarda urbana em direção aos ermos florestais).
+- **Rota de Acesso à Fazenda Pelos Bosques de Jareth:**
+  - A partir do Portão Leste: seguir a leste até *A Entrada da Floresta*, avançar dois passos ao norte até *Uma Divisão da Trilha*.
+  - Da *Divisão da Trilha*, seguir a leste por *Uma Parte Densa da Floresta* e adentrar a galeria de *Num Bosque Iluminado* (trilha linear leste-oeste).
+  - No oitavo segmento oriental do bosque, a trilha curva para o sul, desembocando em *A Entrada da Fazenda*.
+  - A oeste da entrada da fazenda, segue-se por *Uma Pequena Estrada* (onde há cacos de vidro e pegadas) até *O Gramado*, que dá acesso direto à casa dos colonos (*A Entrada da Casa*).
+- **Descoberta Econômica de Alta Densidade (Peças de Xadrez):**
+  - As peças de xadrez do Grande Tabuleiro de Midgaard possuem valor de revenda excepcional no Armeiro de Midgaard (`loja_armaduras`):
+    - `a coroa da Rainha Branca`: **1.500 moedas de ouro** por peça (ratio de ouro/peso imbatível no jogo inicial).
+    - `a armadura do Peão Preto`: **150 moedas de ouro**.
+    - `um escudo`: **200 moedas de ouro**.
+  - A liquidação rápida desse lote permitiu saltar de ~600 para **4.232 moedas de ouro**, viabilizando futuras compras de pergaminhos arcanos de alto custo.
+- **Configuração de Combate Dual-Wield:**
+  - Comprovada a eficácia de empunhar a `espada de novato` na mão principal e segurar o `punhal de novato` na mão secundária, mantendo simultaneamente o `escudo` equipado, otimizando o dano marcial para apoiar as magias ofensivas (`míssil mágico`).
+
+
 

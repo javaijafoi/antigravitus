@@ -3,7 +3,7 @@
   "hero_name": "Grebolius",
   "sanctuary_id": "panteao_centenarios",
   "last_updated_cycle": "Ciclo X (Dia 94; Modo Expandir Horizontes)",
-  "total_rooms": 124,
+  "total_rooms": 141,
   "layers": [
     {
       "id": "superficie",
@@ -38,7 +38,8 @@
     "Campos & Área dos Novatos",
     "O Grande Tabuleiro de Xadrez",
     "Fazenda próxima a Jareth",
-    "Cidade de Jareth"
+    "Cidade de Jareth",
+    "Estrada Midgaard-Jareth"
   ],
   "rooms": [
     {
@@ -2043,7 +2044,8 @@
         "y": 100
       },
       "exits": {
-        "o": "fazenda_fim_estrada"
+        "o": "fazenda_fim_estrada",
+        "l": "fazenda_entrada"
       },
       "npcs": [],
       "notes": "Vidros, líquido forte e pegadas. Saídas leste para outra Pequena Estrada e sul para Gramado permanecem sem setor identificado.",
@@ -2222,7 +2224,8 @@
       },
       "exits": {
         "o": "caminho_dentre_campos",
-        "l": "estrada_pavimentada_campos"
+        "l": "estrada_pavimentada_campos",
+        "n": "estrada_comeco"
       },
       "unresolved_exits": {
         "n": {
@@ -2926,12 +2929,387 @@
         "x": 500,
         "y": 100
       },
-      "exits": {},
+      "exits": {
+        "n": "jareth_centro"
+      },
       "npcs": [
         "Garçonetes do Clube Kitty-Kat",
         "Cidadãos ricos de Jareth"
       ],
       "notes": "Estabelecimento em Jareth onde Grebolius pernoitou no Dia 96. Saída norte leva à recepção.",
+      "discovered_in": "Dia 96"
+    },
+    {
+      "id": "estrada_comeco",
+      "name": "O Começo da Estrada",
+      "layer": "jareth_fazenda",
+      "zone": "Estrada Midgaard-Jareth",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🛣️",
+      "coords": {
+        "x": 100,
+        "y": 1000
+      },
+      "exits": {
+        "s": "caminho_campos_jareth",
+        "n": "estrada_posto_guarda_sul"
+      },
+      "npcs": [
+        "Um apressado aventureiro"
+      ],
+      "notes": "Início da via pavimentada entre Midgaard e Jareth.",
+      "discovered_in": "Dia 96"
+    },
+    {
+      "id": "estrada_posto_guarda_sul",
+      "name": "Um Posto de Guarda na Estrada (Sul)",
+      "layer": "jareth_fazenda",
+      "zone": "Estrada Midgaard-Jareth",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🛡️",
+      "coords": {
+        "x": 100,
+        "y": 900
+      },
+      "exits": {
+        "s": "estrada_comeco",
+        "n": "vila_estrada_sul"
+      },
+      "npcs": [
+        "Guardas particulares"
+      ],
+      "notes": "Posto de fiscalização com cancela ao sul da vila.",
+      "discovered_in": "Dia 96"
+    },
+    {
+      "id": "vila_estrada_sul",
+      "name": "Numa Pequena Vila (Sul)",
+      "layer": "jareth_fazenda",
+      "zone": "Estrada Midgaard-Jareth",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🏡",
+      "coords": {
+        "x": 100,
+        "y": 800
+      },
+      "exits": {
+        "s": "estrada_posto_guarda_sul",
+        "n": "vila_estrada_centro"
+      },
+      "npcs": [
+        "Uma pequenina halfling"
+      ],
+      "notes": "Rua principal do vilarejo entre Midgaard e Jareth.",
+      "discovered_in": "Dia 96"
+    },
+    {
+      "id": "vila_estrada_centro",
+      "name": "O Centro do Vilarejo",
+      "layer": "jareth_fazenda",
+      "zone": "Estrada Midgaard-Jareth",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🏡",
+      "coords": {
+        "x": 100,
+        "y": 700
+      },
+      "exits": {
+        "s": "vila_estrada_sul",
+        "n": "vila_estrada_norte"
+      },
+      "npcs": [
+        "Um apressado aventureiro"
+      ],
+      "notes": "Centro do vilarejo modesto cortado pela estrada.",
+      "discovered_in": "Dia 96"
+    },
+    {
+      "id": "vila_estrada_norte",
+      "name": "Numa Pequena Vila (Norte)",
+      "layer": "jareth_fazenda",
+      "zone": "Estrada Midgaard-Jareth",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🏡",
+      "coords": {
+        "x": 100,
+        "y": 600
+      },
+      "exits": {
+        "s": "vila_estrada_centro",
+        "n": "estrada_posto_guarda_norte"
+      },
+      "npcs": [
+        "Uma pequenina halfling"
+      ],
+      "notes": "Extremo norte da vila cortado pelo posto de guarda.",
+      "discovered_in": "Dia 96"
+    },
+    {
+      "id": "estrada_posto_guarda_norte",
+      "name": "Um Posto de Guarda na Estrada (Norte)",
+      "layer": "jareth_fazenda",
+      "zone": "Estrada Midgaard-Jareth",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🛡️",
+      "coords": {
+        "x": 100,
+        "y": 500
+      },
+      "exits": {
+        "s": "vila_estrada_norte",
+        "n": "estrada_colina_subida"
+      },
+      "npcs": [
+        "Guardas particulares"
+      ],
+      "notes": "Posto de guarda antes da subida da colina.",
+      "discovered_in": "Dia 96"
+    },
+    {
+      "id": "estrada_colina_subida",
+      "name": "A Estrada Midgaard-Jareth (Aclive)",
+      "layer": "jareth_fazenda",
+      "zone": "Estrada Midgaard-Jareth",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🛣️",
+      "coords": {
+        "x": 100,
+        "y": 400
+      },
+      "exits": {
+        "s": "estrada_posto_guarda_norte",
+        "l": "estrada_colina_topo"
+      },
+      "npcs": [
+        "Um homem meio-elfo"
+      ],
+      "notes": "Curva da estrada subindo rumo ao topo da colina.",
+      "discovered_in": "Dia 96"
+    },
+    {
+      "id": "estrada_colina_topo",
+      "name": "A Estrada Midgaard-Jareth (Topo da Colina)",
+      "layer": "jareth_fazenda",
+      "zone": "Estrada Midgaard-Jareth",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🌄",
+      "coords": {
+        "x": 200,
+        "y": 400
+      },
+      "exits": {
+        "o": "estrada_colina_subida",
+        "l": "estrada_proxima_jareth"
+      },
+      "npcs": [
+        "Uma pequenina halfling"
+      ],
+      "notes": "Mirante privilegiado com vista para Midgaard.",
+      "discovered_in": "Dia 96"
+    },
+    {
+      "id": "estrada_proxima_jareth",
+      "name": "Nas Proximidades da Cidade",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🏰",
+      "coords": {
+        "x": 300,
+        "y": 400
+      },
+      "exits": {
+        "o": "estrada_colina_topo",
+        "l": "jareth_portao_oeste"
+      },
+      "npcs": [
+        "Cidadãos e viajantes"
+      ],
+      "notes": "Aproximação ocidental dos muros de Jareth.",
+      "discovered_in": "Dia 96"
+    },
+    {
+      "id": "jareth_portao_oeste",
+      "name": "O Portão Oeste",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🚪",
+      "coords": {
+        "x": 400,
+        "y": 400
+      },
+      "exits": {
+        "o": "estrada_proxima_jareth",
+        "l": "jareth_centro"
+      },
+      "npcs": [
+        "Guarda da Cidade de Jareth"
+      ],
+      "notes": "Entrada ocidental da Cidade da Liberdade.",
+      "discovered_in": "Dia 96"
+    },
+    {
+      "id": "jareth_centro",
+      "name": "O Centro da Cidade de Jareth",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🗽",
+      "coords": {
+        "x": 500,
+        "y": 400
+      },
+      "exits": {
+        "o": "jareth_portao_oeste",
+        "l": "jareth_portao_leste",
+        "s": "jareth_clube_kitty_kat"
+      },
+      "npcs": [
+        "Uma bela carroça de madeira"
+      ],
+      "notes": "Praça monumental com estátua e inscrição LIBERDADE.",
+      "discovered_in": "Dia 96"
+    },
+    {
+      "id": "jareth_portao_leste",
+      "name": "O Portão Leste",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🚪",
+      "coords": {
+        "x": 600,
+        "y": 400
+      },
+      "exits": {
+        "o": "jareth_centro",
+        "l": "floresta_entrada"
+      },
+      "npcs": [
+        "Um cidadão de Jareth",
+        "Guarda da Cidade"
+      ],
+      "notes": "Saída oriental de Jareth para as florestas e fazendas.",
+      "discovered_in": "Dia 96"
+    },
+    {
+      "id": "floresta_entrada",
+      "name": "A Entrada da Floresta",
+      "layer": "jareth_fazenda",
+      "zone": "Fazenda próxima a Jareth",
+      "risk": "Atenção",
+      "risk_code": "medium",
+      "icon": "🌲",
+      "coords": {
+        "x": 700,
+        "y": 400
+      },
+      "exits": {
+        "o": "jareth_portao_leste",
+        "n": "floresta_adentrando"
+      },
+      "npcs": [
+        "Pássaros da floresta"
+      ],
+      "notes": "Limiar da vasta floresta a leste de Jareth.",
+      "discovered_in": "Dia 96"
+    },
+    {
+      "id": "floresta_adentrando",
+      "name": "Adentrando-se na Floresta",
+      "layer": "jareth_fazenda",
+      "zone": "Fazenda próxima a Jareth",
+      "risk": "Atenção",
+      "risk_code": "medium",
+      "icon": "🌲",
+      "coords": {
+        "x": 700,
+        "y": 300
+      },
+      "exits": {
+        "s": "floresta_entrada",
+        "n": "floresta_divisao"
+      },
+      "npcs": [],
+      "notes": "Trilha de penetração na floresta sob luz entre galhos.",
+      "discovered_in": "Dia 96"
+    },
+    {
+      "id": "floresta_divisao",
+      "name": "Uma Divisão da Trilha",
+      "layer": "jareth_fazenda",
+      "zone": "Fazenda próxima a Jareth",
+      "risk": "Atenção",
+      "risk_code": "medium",
+      "icon": "🌿",
+      "coords": {
+        "x": 700,
+        "y": 200
+      },
+      "exits": {
+        "s": "floresta_adentrando",
+        "l": "floresta_bosque_iluminado"
+      },
+      "npcs": [],
+      "notes": "Ponto de bifurcação indicado pelo Pacificador.",
+      "discovered_in": "Dia 96"
+    },
+    {
+      "id": "floresta_bosque_iluminado",
+      "name": "Num Bosque Iluminado",
+      "layer": "jareth_fazenda",
+      "zone": "Fazenda próxima a Jareth",
+      "risk": "Atenção",
+      "risk_code": "medium",
+      "icon": "🌳",
+      "coords": {
+        "x": 800,
+        "y": 200
+      },
+      "exits": {
+        "o": "floresta_divisao",
+        "s": "fazenda_entrada"
+      },
+      "npcs": [
+        "Um coelho selvagem",
+        "Um pequenino esquilo"
+      ],
+      "notes": "Bosque florido que conecta a floresta à clareira da fazenda.",
+      "discovered_in": "Dia 96"
+    },
+    {
+      "id": "fazenda_entrada",
+      "name": "A Entrada da Fazenda",
+      "layer": "jareth_fazenda",
+      "zone": "Fazenda próxima a Jareth",
+      "risk": "Atenção",
+      "risk_code": "medium",
+      "icon": "🌾",
+      "coords": {
+        "x": 800,
+        "y": 300
+      },
+      "exits": {
+        "n": "floresta_bosque_iluminado",
+        "o": "fazenda_estrada_vidros"
+      },
+      "npcs": [
+        "Um coelho selvagem"
+      ],
+      "notes": "Clareira de acesso às terras da fazenda sitiada.",
       "discovered_in": "Dia 96"
     }
   ],
