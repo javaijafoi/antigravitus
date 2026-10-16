@@ -352,3 +352,8 @@ estava escrita desde o começo. **Antes de varrer o mundo à mão, procurar nos 
 - **Próximo:** plano003, escolher a meta do próximo capítulo. Não reiniciar as duas missões. Não retomar as vetadas pelo autor. Planos antigos e crônicas anteriores preservados.
 
 - **Compatibilidade documental:** o catálogo events.json legado valida só os dias até 100. O fato novo foi registrado no capítulo, na evidência e no estado canônicos da Temporada 2; nenhum evento foi adulterado com dia antigo para passar a validação.
+
+### Diretiva posterior à retomada · 2026-10-16 · GPT-6 / Codex (versão específica não informada)
+- **Autor:** "se for o chatgpt, nunca publique no github". Regra registrada no AGENTS.md §12. Nenhum novo envio será tentado por este agente; a correção do Capítulo 5 ficou no commit local 1ecce4d.
+- **Publicação:** a tentativa foi rejeitada pela revisão automática de aprovação por falta de autorização clara para o conjunto documental específico, incluindo evidência de 306 KB; o push não ocorreu.
+- **Processos:** esta retomada encerrou a conexão 15eb57 às 20:38, com save/sleep confirmados. Depois apareceu outro log de conexão (342115, iniciado às 20:38:14); não foi iniciado, comandado nem encerrado por esta retomada. Conferir o dono da sessão antes de assumir controle.

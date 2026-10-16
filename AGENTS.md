@@ -320,3 +320,11 @@ intervalo da conferência). Revalide antes de confiar nestes números.
   **Não** versionados: `scripts/local/` (legado local) e `.agents/` (coordenação entre agentes).
 - Pendências conhecidas da ferramenta: ver §8 de
   [registro_de_evolucao.md](docs/agentes/registro_de_evolucao.md).
+
+## 12. Diretiva do autor — ChatGPT não publica no GitHub (2026-10-16)
+
+> "se for o chatgpt, nunca publique no github"
+
+Para agentes ChatGPT/Codex baseados em modelos OpenAI, manter as alterações e os commits apenas locais. Não executar push, publicação por API/conector do GitHub, criação de PR remoto ou delegação do envio para contornar esta restrição. A autorização genérica anterior para publicar o layout não autoriza publicação por esses agentes após esta diretiva. Somente nova instrução explícita do autor pode revogar a regra.
+
+Registro desta preferência: GPT-6 / Codex (versão específica não informada). A tentativa de envio da reconciliação do Capítulo 5 foi rejeitada pela revisão automática de aprovação e não foi executada; commit 1ecce4dd756e0fff797bea64fc6fd3529c709333 permanece local.
