@@ -1,0 +1,12 @@
+{
+  "hero_id": "grebolius",
+  "day": 117,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "summary": {
+    "level_up": "GRAU 17 alcancado! Vida maxima subiu de 87 para 92. Experiencia 725.245; proximo nivel em 800.000 (faltam 74.755).",
+    "engine": "Motor de EXP validado ponta a ponta: viagem.py (checkpoints: Templo -> campo -> estrada -> A Entrada da Floresta) + n,n,e,e + bosque_random.py (caminhada com transicoes; achou a fazenda no passo 19) + hunt_cap2.py (5 abates no milharal, sanctuary a cada 5 ciclos, guarda de DT e recuo abaixo de 45% da vida).",
+    "gains": "5 monstros esfomeados = +27.584 de experiencia numa unica rodada.",
+    "state": "Grau 17, 72/92, 8.095 de ouro, armadura arcana ativa (CA 76), salva no Templo."
+  }
+}

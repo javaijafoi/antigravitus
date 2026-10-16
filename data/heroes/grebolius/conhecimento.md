@@ -472,3 +472,27 @@ Fonte: [dossiê primário do Dia 96](evidence/dia96.json).
 - **Aviso oficial** (`help death`): perto de uma DT aparece *"Você percebe que há algo perigoso por perto!"*. **Essa é a única defesa** — DT mata direto, sem wimpy.
 - **Zonas a mapear com cautela**: milharal (a leste de Jareth), bosque homônimo da floresta, esgotos sob o Laboratório dos Magos. **Explorar sempre com `look` a cada passo**, nunca em script cego.
 - **Ressurreição confirmada (Dia 111)**: no Paraíso, a sala com *"energia mágica... para o oeste"* → `oeste` → "Um Portal Escondido no Paraíso" → `enter portal` → "Um Caminho no Vazio" → `norte` até "A Fonte da Vida" → `drink fonte` → renasce no Templo de Midgaard com metade da vida.
+
+
+## 18. Sala de Doações — itens notáveis (Dia 114)
+- **um rosário** (a "corrente de contas", +4L): pescoço **ou pulso**, peso 3, valor 853, **nível 20**, efeitos: FORÇA +1, ARMADURA **-5** (e mais um). É um item-alvo do Capítulo 2 — fica utilizável ao alcançar o Grau 20.
+- **um brilhante elmo de novato**: +3 armadura, +1 CONSTITUIÇÃO, nível 0 — mas os **chifres do Minotauro** (+2 FORÇA) seguem melhores para o conjunto.
+- **uma espada curva, muito afiada (+44L)**: continua na sala; as palavras-chave `curva` e `afiada` foram recusadas pelo `get` — anotado como pendência (pode ser item especial ou armadilha; a sala avisa "Isso está muito afiado!").
+- Também disponíveis: adagas de lâmina delgada (x4), vestes/punhais de novato em quantidade, e a armadura da Torre Negra doada no Dia 106.
+
+
+## 19. Renda do tabuleiro — o ciclo das armaduras de peão (Dia 115)
+- **Fonte:** a sala *Uma Casa Branca* (casa do peão, a norte da primeira Casa Preta) acumula **armaduras de peão** no chão (11 estavam lá).
+- **Comprador:** o **armeiro de Midgaard** — que compra armaduras mesmo com o caixa curto (comprou 5 por **750** e depois mais 5).
+- **Truque de logística:** `sell 5 armadura` vende **o lote inteiro em um comando**.
+- **Limite:** peso. Cabe ~5 por viagem (cada uma ~13 kg) com a mochila fora; a partir daí ele recusa.
+- **Ciclo:** `recall` → 4N → 3O → N (Casa Branca) → pegar 5 → `recall` → S,S,O,S (armeiro) → `sell 5 armadura`. Rende **750 por viagem** e não exige matar nada.
+- **Bônus:** matar os peões que circulam ali rende EXP, mas eles **fogem quando quase mortos** — golpe final tem que ser rápido.
+
+
+## 20. Rota confiável até o milharal (Dia 116) — o que destravou
+- **Bug corrigido**: os NOMES das saídas vêm do comando `exits`; o `look` só mostra `[ Saídas: leste, sul... ]`. Todo navegador que eu escrevi lia do lugar errado.
+- **Viajante por checkpoints** (`viagem.py`): avança **até uma marca de sala**, conferindo a cada passo, e usa o conjunto de saídas para se localizar (ex.: só reconhece o "aclive" quando a sala é *Estrada Midgaard-Jareth* com saídas **apenas leste/oeste**). Rota: Templo → 5N → leste/norte/leste → 9N (rodovia/vila) → leste até **A Entrada da Floresta**.
+- **Bosque**: as salas são homônimas, então memória por descrição colapsa. A solução que funcionou foi **caminhada aleatória dentro do cluster** (seguindo só saídas para "Num Bosque Iluminado"), checando a cada passo se alguma saída leva a **A Entrada da Fazenda**. Achou no **passo 19**.
+- **Detalhe do mapa**: a fazenda abre **ao norte** de uma sala de bosque `[norte, sul]`, logo após uma sala com **"O Pequeno Bosque" a leste** (registro do Dia 99).
+- **Rendimento**: 2 monstros esfomeados = **+18.522 de experiência**. É de longe a melhor fonte de EXP conhecida.

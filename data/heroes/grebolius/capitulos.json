@@ -355,8 +355,38 @@
       "kind": "missao",
       "status": "em_curso",
       "goal": "Alcancar o nivel 20, montar um equipamento otimizado (por compra, doacao ou espolio) e acumular fortuna.",
-      "days": [],
-      "parts": [],
+      "days": [
+        114,
+        117
+      ],
+      "parts": [
+        {
+          "day": 114,
+          "summary": "Viagem ao milharal pela rota verificada e cacador seguro criado (evita a sala 'Adentro' e aborta no aviso de DT). Confirmada de novo a regra de que a morte falha a autoquest: 'Problemas Agricolas' sumiu apos a morte #5. Verificado que nao existe armeiro em Jareth; a renda das armaduras da Torre segue dependente do caixa do armeiro de Midgaard.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia114.json",
+              "day": 114,
+              "note": "Dia 114: confirmacao da regra de falha de autoquest pela morte; fronte de renda travada; cacador seguro no milharal."
+            }
+          ],
+          "date": "2026-10-16"
+        },
+        {
+          "day": 117,
+          "summary": "Motor de EXP fechado e validado: viajante por checkpoints + caminhada no bosque + cacada segura no milharal. 5 abates numa rodada (+27.584 EXP) e GRAU 17 alcancado (vida maxima 92; proximo nivel em 800.000).",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia117.json",
+              "day": 117,
+              "note": "Dia 117: Grau 17 alcancado; motor de EXP (viagem + bosque + cacada) validado com 5 abates."
+            }
+          ],
+          "date": "2026-10-16"
+        }
+      ],
       "content": [],
       "tags": [],
       "source_kind": "live",

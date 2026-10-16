@@ -1,0 +1,12 @@
+{
+  "hero_id": "grebolius",
+  "day": 115,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "summary": {
+    "decursed_armour": "Executada a opcao (A): pergaminho de remover maldicoes comprado (8.509) e recitado fora da loja → 'A Armadura da Torre Negra brilha em azul'; armadura DOADA na Sala de Doacoes, liberando 60 kg (peso caiu de 121 para 68 kg).",
+    "income_loop": "Descoberto e validado o CICLO DAS ARMADURAS DE PEAO: a Casa Branca acumula armaduras de peao; o armeiro paga 150 cada e aceita lote com 'sell 5 armadura'. Duas viagens = 1.500 moedas, sem combate obrigatorio.",
+    "gold": "5.945 apos comprar o pergaminho; 6.695 apos a primeira venda; +750 na segunda.",
+    "weight_lesson": "Mobs do tabuleiro fogem quando quase mortos (sem XP nem espolio se fugirem). Conferir a sala com look imediatamente antes de atacar."
+  }
+}

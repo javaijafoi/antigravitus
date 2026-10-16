@@ -1,0 +1,15 @@
+{
+  "hero_id": "grebolius",
+  "day": 114,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "sources": [
+    "session_live (Dia 114)"
+  ],
+  "summary": {
+    "quest_rule_confirmed": "A regra 'morrer falha a autoquest' foi CONFIRMADA de novo: apos a morte #5 (Dia 113), 'Problemas Agricolas' saiu da lista de em andamento mesmo tendo sido reiniciada no Dia 113 com o Pacificador.",
+    "income_front": "Nao existe armeiro em Jareth (mapa: so Midgaard tem comprador de armaduras; Jareth tem Ferreiro/Loja de Armas). A venda do lote da Torre continua dependente do caixa do armeiro de Midgaard.",
+    "risky_hunt": "Criado hunt_seguro.py: caça no milharal evitando a sala 'Adentro do Milharal' (onde a DT matou) e abortando no aviso 'perigoso por perto'. 1 abate de monstro esfomeado nesta rodada.",
+    "state": "Grau 16, 87/87, 14.354 de ouro, armadura arcana ativa, armadura da Torre Negra na mao (121 kg)."
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "hero_id": "grebolius",
+  "day": 114,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "sources": [
+    "respostas JSON do daemon (Dia 114)"
+  ],
+  "summary": {
+    "armourer": "Armeiro de Midgaard segue com caixa vazio ('caro demais') mesmo apos varios dias de jogo — a venda do lote da Torre continua bloqueada.",
+    "equipment_review": "Sala de Doacoes reavaliada: achado o 'rosario' (corrente de contas) de nivel 20, peso 3, +1 FORCA e -5 ARMADURA; elmo de novato (+3 armadura, +1 CON) e pior que os chifres (+2 FORCA) para o conjunto. A 'espada curva muito afiada (+44L)' resiste ao get (pendencia).",
+    "hunt": "hunt_seguro.py roda sem morrer (evita a sala 'Adentro' e aborta no aviso de DT), mas rendeu pouco: 0 abates nesta rodada por falta de salas de alvo unico.",
+    "state": "Grau 16, 87/87, ~14.454 de ouro, armadura arcana ativa, armadura da Torre na mao."
+  }
+}
