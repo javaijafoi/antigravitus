@@ -802,6 +802,98 @@ Com página alta a lista sai inteira e **o paginador nunca aparece**. Aplicado n
 (`debo_bot.py`, constantes `TERM_LINHAS`/`TERM_COLUNAS`). E é **correção de segurança, não conforto**:
 sem ela o motor confunde uma página de ajuda com a morte da personagem.
 
+---
+
+## 27. Como se faz uma autoquest — medido no Dia 156
+
+O Capítulo 05 abriu com duas missões. A mecânica foi medida na primeira.
+
+### 27.1 Iniciar: falar e dizer `sim`
+
+Não existe comando de aceitar. O ciclo é **conversa**:
+
+```
+say oi   -> "Você diz: 'oi'"
+say sim  -> "Você começa a participar da aventura."
+```
+
+**`say sim` é o gatilho.** É o mesmo texto que o Pacificador deu quando Problemas Agrícolas foi
+aceita. `ask <npc>` sem tópico responde *"Você quer perguntar o quê?"* — a forma é
+`ask <npc> <tópico>`, e o tópico é uma palavra só.
+
+### 27.2 O objetivo aparece no `score`, e vai sendo revelado
+
+O `score tudo` tem a seção **`[Autoquests em andamento]`**:
+
+| Momento | O que a seção mostra |
+|---|---|
+| Recém-aceita | só o nome: `Limpando Monstros` |
+| **Depois do 1º abate** | **`Limpando Monstros: Você deve matar criatura.`** |
+
+**O objetivo se completa conforme se joga.** Esperar a descrição inteira logo após aceitar não
+funciona — é preciso dar o primeiro passo para o servidor dizer o que falta.
+
+### 27.3 A sala diz o alvo
+
+Em "Um Outro Canto", a descrição da criatura é literalmente uma ordem:
+
+> **"O monstro novato está aqui. MATE-O! MATE-O!"**
+
+O jogo **marca o alvo da missão na própria sala**. É a dica mais direta que existe.
+
+### 27.4 Primeiro abate medido
+
+| | |
+|---|---|
+| Alvo | monstro novato (em Um Outro Canto) |
+| Experiência | **1.088.553 → 1.088.907 = +354** |
+| Dano que ela sofreu | ~1 ponto; o bicho é inofensivo para o nível 20 dela |
+
+### 27.5 ⚠️ O GRANDE MINOTAURO anda pela área dos novatos
+
+**Não é morador de sala** — o mapa registra a Sala do Alquimista com apenas *Novato Alquimista* e
+*Diabinho*. Ele **aparece**, e quando aparece **ataca**.
+
+Medido: ela entrou na Sala do Alquimista e caiu de **113 para 100 de vida** em segundos. O veredito
+do combate foi decisivo:
+
+> *"Você golpeia o peito do Grande Minotauro, que **quase nem sente o golpe**."*
+
+**Ela não consegue machucá-lo.** A placa da sala avisa, e é para ser levada a sério:
+
+> *"Se você está sem equipamentos e sozinho, saia já daqui! Ou então não culpe ninguém por sua morte..."*
+
+**Fugir com `flee` funciona** e é a resposta certa. Ele aparece duas vezes seguidas e depois segue
+viagem — **a segunda entrada deu tempo de falar com o Alquimista antes de qualquer ataque**, e o
+Minotauro foi embora sozinho.
+
+**Regra:** entrar na Sala do Alquimista com vida cheia e **`flee` engatilhado**. Se ele estiver lá,
+fugir e voltar depois; ele não fica.
+
+### 27.6 A rota até o Alquimista
+
+Do Templo, **11 passos + uma porta**:
+
+```
+n, n, n, e          -> O Grande Campo de Midgaard
+e                   -> A Entrada da Área dos Novatos   (ler a inscrição comemora Pina e Rimbaud)
+n                   -> O Começo Da Passagem            (8 vestes e 8 punhais de novato no chão)
+e                   -> O Corredor Sujo
+e                   -> O Cruzamento
+s                   -> Mais Corredor
+s                   -> Um Outro Canto                  (o monstro novato; o mapa registra aqui)
+open leste          -> "Certo."
+e                   -> A Sala do Alquimista
+```
+
+**A porta fechada se denuncia na linha de saídas:** `[ Saídas: norte, !leste e oeste ]` — **o `!`
+antes da direção significa porta fechada**. `open leste` abre; `open porta` também. Nenhum `!` é
+porta.
+
+### 27.7 `quit` mata a missão — repetindo, porque custou caro
+
+Aceita a missão, **encerrar a sessão com `save`**, nunca `quit`. Ver §26.3.
+
 
 ### 25.11 Invisibilidade BLOQUEIA comércio — e existe o comando `visible`
 
