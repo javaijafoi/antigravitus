@@ -1119,6 +1119,67 @@ que o ciclo da zona reabastecer.
 passa a ser o tempo do servidor, não a personagem. Insistir na patrulha logo em seguida é rodada
 gasta — a resposta certa é **voltar mais tarde**.
 
+---
+
+## 30. O Grande Campo é um labirinto de nomes iguais — e isso quebra a navegação (Dia 156)
+
+Descoberto ao tentar voltar para a Área dos Novatos e **não conseguir sair do lugar**:
+
+> `exits` em "O Grande Campo de Midgaard" → **Norte: O Grande Campo de Midgaard / Sul: Atrás do Altar**
+
+**Há cerca de dez salas chamadas "O Grande Campo de Midgaard"**, todas vizinhas umas das outras. Andar
+de uma para outra **não muda o título da sala** — e aí a verificação por marco de sala, que é a regra
+de ouro do motor (§9 da diretiva), **mente**:
+
+```
+n -> "O Grande Campo de Midgaard"      # parece que nao andou...
+```
+
+Ela andou. Para outra sala com o mesmo nome.
+
+**Consequência prática:** dentro do Grande Campo, **não confie no título para saber se moveu**. O que
+funciona é contar os passos **a partir de uma sala de nome único** (o Templo, `Atrás do Altar`,
+`A Entrada da Área dos Novatos`) e **não parar no meio do campo**.
+
+**E o mapa está corrompido nessa área:** uma entrada traz `s: 'Sul   - Atrás do Altar'` — a **linha
+inteira do `exits` virou nome de sala**, em vez de só o destino. O mesmo defeito que aparece em
+`Sul   - Numa Pequena Vila` (`lv089`) e `Sul   - A Estrada Midgaard-Jareth` (`lv087`).
+
+### 30.1 Como se chega em Jareth — e onde fica a Avenida Floris
+
+Descoberto na mesma rodada, e é o mapa da fronteira que falta:
+
+| Trecho | Caminho |
+|---|---|
+| **Templo → Jareth (Centro)** | **15 passos: `n,n,n,n,n,n,e,n,n,n,e,e,e,e,e`** |
+| **Templo → Portão Leste de Jareth** | **15 passos: `n,n,n,e,n,e,s,w,e,e,n,w,s,s,w`** |
+| Jareth (Portão Leste) | `e` → A Entrada da Floresta · `w` → O Centro da Cidade |
+
+E a **Avenida Floris não se chega por Midgaard**: ela abre de **`O Portão Leste` (`lv056`)**, que por
+sua vez tem `e` → A Entrada da Floresta. **A Avenida Floris é do lado de Jareth** — o que explica
+*"A Loja de Armas de **Maris**"* e *"O Banco de **Jareth**"* entre as portas dela.
+
+**A Avenida Floris é uma rua, não uma sala:** o mapa tem **10 salas `lb011`-`lb085`** com esse nome,
+todas com saídas só `e`/`w` — outro corredor de nomes repetidos, como o Grande Campo.
+
+### 30.2 O "novato esperto" nunca foi visto
+
+A segunda missão do Capítulo 05 — **Novela dos Novatos** — inicia com **o novato esperto**, e ele:
+
+- **não está no mapa** (nenhum NPC com "esperto" em nenhuma sala)
+- **não aparece em transcript nenhum** — a única menção é o **catálogo** do `autoquest listar`
+- a base o descreve como *"habitante das praças e encruzilhadas civis"*
+
+**Praças verificadas no Dia 156, com espera:** A Praça do Templo (Scarios, Yurit), A Praça do Comércio
+(vazia), A Praça Comum (um grande e famoso aventureiro). **Ele não estava em nenhuma.**
+
+`where` **não ajuda**: responde *"Jogadores na sua área"* e lista jogadores, não NPCs.
+
+**Hipótese em aberto:** com a Área dos Novatos **inteira vazia** (0 criaturas e 0 NPCs, incluindo o
+próprio Novato Alquimista, que estava lá mais cedo), o mais provável é que **a zona inteira precise de
+reset** — e que os dois problemas do capítulo tenham a mesma causa: **o servidor ainda não
+reabasteceu a região**.
+
 
 ### 25.11 Invisibilidade BLOQUEIA comércio — e existe o comando `visible`
 
