@@ -133,6 +133,28 @@ servidor e um **bruteforce de 19 verbos** contra um item à venda.
 **A lista é tudo o que a loja revela: nome, estoque e preço.** Não há verbo de inspeção — e o `help`
 deixa isso implícito ao listar só `COMPRAR`, `VENDER`, `LOJAS` e `VALOR` como assuntos relacionados.
 
+> ### ⚠️ A EXCEÇÃO, descoberta depois (Dia 156) — e ela delimita este veredito
+>
+> **Na loja dos deuses** (`autoquest loja` — ver §32 do compêndio), **`list <número>` devolve a ficha
+> completa do item**: tipo, peso, valor, nível, encarnação, onde se veste e o efeito.
+>
+> ```
+> list 1 -> Objeto: 'um livro imaterial' Tipo: LIVRO-MAGIAS
+>           O item é: BRILHO ENTALHADO
+>           Peso: 1, Valor: 10, Nível: 75, Encarnação: 1
+>           Este livro faz seu counter shield melhorar em 5%.
+> ```
+>
+> **É a única loja onde se inspeciona antes de comprar.**
+>
+> **Testado para achar o limite:** na loja comum, `list 1` é lido como **filtro de palavra** e responde
+> *"Por enquanto, nada disto está sendo vendido"*. **O número só é índice na loja divina.**
+>
+> **Ou seja: o veredito abaixo vale para MERCADOR COMUM. Não generalizar.** A conclusão anterior,
+> escrita antes desta descoberta, está corrigida aqui e não apagada — o erro era generalizar.
+>
+> *(Bônus do mesmo teste: o armeiro oferece **`repair <item>`** para consertar equipamento.)*
+
 > **`help valor`** — *"Antes de vender um item para uma loja, você pode perguntar ao lojista quanto
 > ele está inclinado a pagar por isso."* — **é para VENDER, não para inspecionar estoque.**
 
