@@ -1,0 +1,17 @@
+[
+  {
+    "document": "evidence/dia153.json",
+    "day": 153,
+    "note": "Primeiro abate da cota do fazendeiro no milharal e rota da fazenda pela entrada da floresta."
+  },
+  {
+    "document": "evidence/dia155.json",
+    "day": 155,
+    "note": "Rotina milharal funcionando de ponta a ponta: viaja, atravessa o labirinto do bosque e caca; tres abates."
+  },
+  {
+    "document": "evidence/dia156.json",
+    "day": 156,
+    "note": "Sete abates em tres rodadas supervisionadas; onze acumulados contra a cota de dez do fazendeiro. Entrega NAO confirmada: o dono da fazenda permaneceu em silencio apos 'say ola', 'say sim', 'ask fazendeiro monstros', 'ask fazendeiro invasores', 'ask fazendeiro missao', 'ask fazendeiro ajuda', 'say terminei', 'say matei os monstros' e 'say 10'. O Pacificador respondeu 'Procure um lugar onde precisem de sua forca.'. Em 'autoquest todas', Problemas Agricolas segue 'Em andamento'. Recolhimento confirmado: Templo de Midgaard, 113/113 de vida, 260/260 de mana, 114/114 de movimento, 7.528 no banco e 300 na mao, com save, sleep e quit respondidos pelo servidor."
+  }
+]

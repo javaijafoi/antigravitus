@@ -1,25 +1,77 @@
-# Plano do Capítulo 04 — "O Levantamento"
+# Plano do Capítulo 04 — "Até Onde Vai o Mundo"
 
-> **Título proposto, pendente do autor.** "Modo Cartógrafa" é nome de ferramenta, não de
-> capítulo — a diretiva proíbe metajogo nas descrições. Alternativas: *"Aquilo que Se Vê Sem
-> Ser Vista"*, *"A Carta Invisível"*, *"Os Olhos que Ninguém Vê"*.
+> **Título proposto, pendente do autor.** Alternativas: *"Aquilo que Se Vê Sem Ser Vista"*,
+> *"O Mundo Sem Testemunhas"*, *"Ninguém Me Verá Passar"*.
+> "Modo Cartógrafa" é nome de ferramenta, não de capítulo — a diretiva proíbe metajogo.
 
-**Goal do capítulo:** levantar o mundo inteiro **sem travar um único combate** — entrar no
-desconhecido em invisibilidade, anotar cada sala e cada perigo, e **voltar viva todos os dias**.
-A morte não é o preço do mapa; é a falha do método.
+**Natureza do capítulo:** **desafio pessoal**, não missão oficial. `kind` sugerido: **`marco`**
+(expansão intencional de horizontes), não `missao`.
 
-**Estado:** **aguardando** o fecho do Capítulo 03 ("Três Ofícios"), que está em curso.
-**Não abrir antes.** O Capítulo 03 é do outro agente; este documento não toca nele.
+**Goal do capítulo:** responder sozinha a uma pergunta que ninguém pode lhe negar —
+**até onde vai o mundo?** Entrar no desconhecido em invisibilidade, anotar cada sala e cada
+perigo, e **voltar viva todos os dias**. A morte não é o preço do mapa; é a falha do método.
 
-**Gatilho que legitima o capítulo** (doutrina da skill, seção 2): o Capítulo 03 é feito de
-caçadas repetidas no milharal — incide o gatilho *"dois dias seguidos de tarefas repetitivas"*.
-Além disso, o **Dia 160** é marco decenal (*"dias terminados em zero exigem expansão
-intencional de horizontes"*). O capítulo abre entre o 157 e o 160.
+**Estado:** o Capítulo 03 ("Três Ofícios") **fecha frustrado** — aceito como está, sem as três
+missões. O Capítulo 04 **não espera por elas**. Este documento não toca no Capítulo 03.
 
-**Justificativa dentro do mundo (não é capricho):** duas missões do Capítulo 03 ficaram sem
-pista de **onde** acontecem — *Novela dos Novatos* (procurar "o novato esperto" nas
-encruzilhadas) e *Uma Lição em Gargamel* (procurar "o smurf minerador" em minas e colinas).
-Levantar o terreno é a forma de achar as duas. O mapa é o subproduto; a missão é a busca.
+**Por que este capítulo, agora (doutrina da skill, seção 2):** incide o gatilho nº 1 —
+*"Experiência traumática recente: morte recente, fuga brutal no limite da vida (`wimpy`) ou
+**colapso de plano**. A personagem precisa clarear as ideias, digerir a queda e recalibrar o
+foco em espaço aberto antes de encarar o ambiente sufocante do trauma."*
+
+O Capítulo 03 é exatamente um **colapso de plano**: onze monstros abatidos contra uma cota de
+dez, e o fazendeiro não respondeu. Não foi falta de esforço nem de método — o gatilho de
+entrega simplesmente não veio. Três missões abertas, nenhuma fechada, e nenhuma delas estava
+ao alcance dela.
+
+**A inversão que dá sentido ao capítulo:**
+
+| | Capítulo 03 | Capítulo 04 |
+|---|---|---|
+| A conclusão dependia de | gatilho de NPC (fora do controle dela) | **andar até a próxima sala** (inteiramente sob controle dela) |
+| O que podia dar errado | tudo, sem aviso | só o que ela aceitar arriscar |
+| Como termina | frustrado | **com o que ela conseguiu** |
+
+É por isso que este capítulo cura o anterior. O mundo pode negar um gatilho de missão; não pode
+negar uma sala que ela acabou de pisar. **O placar é honesto porque ela mesma o produz.**
+
+**Registro emocional esperado na crônica:** não é euforia nem vingança. É uma mulher que
+apanhou de algo que não estava sob seu controle e sai para fazer, sozinha e em silêncio, a única
+coisa que ninguém pode impedir. Curiosidade, teimosia, alívio. Sem discurso de superação, sem
+declarar o trauma curado — o capítulo não diagnostica nada, só acontece.
+
+---
+
+## 0. O desafio e o placar
+
+Um desafio pessoal precisa de número, senão vira passeio e não tem como acabar. O placar sai do
+levantamento já digerido dos Dias 96–141 (`mapa_vivo.json`), então **o ponto de partida é medido,
+não estimado**.
+
+| Métrica | Ponto de partida | Meta do capítulo |
+|---|---|---|
+| **Destinos nomeados e nunca visitados** | **41 abertos** (30 nomes únicos) | **0** — é o objetivo do capítulo |
+| Salas com identidade própria | 266 (Dias 96–141) | crescer todo dia |
+| Salas no `mapa.json` curado | 141 (parado no Dia 96) | absorver as 162 ausentes |
+| Salas de **texto idêntico** (só a posição separa) | 163 — bosque e milharal | atravessar sem se perder |
+| Perigos catalogados com evidência | parcial | todo `alto`/`armadilha`/`morte` |
+| **Mortes no capítulo** | — | **0** |
+| **Fugas (posição perdida)** | — | **0**; cada uma vira evidência de perigo |
+
+**Condição de conclusão:** a **fronteira zerar** — nenhum destino nomeado continuar sem visita.
+Se não zerar, o capítulo fecha no **Dia 170** (marco decenal) com o que foi alcançado. As duas
+saídas são legítimas; a segunda não é fracasso, é o capítulo terminando como ele é.
+
+**Condição de fracasso:** uma morte. Não há outra. Gastar mana, se perder uma vez, voltar cedo
+por vida baixa — nada disso é derrota. Morrer é.
+
+**Por que o placar entra na crônica sem virar metajogo:** a personagem não conta "salas" nem
+"fronteira". Ela conta o que viu — quantas portas atrás das quais nunca olhou, quantos nomes de
+rua que só conhecia de ouvir. O número é do agente; a **curiosidade insatisfeita** é dela.
+Proibido na voz da personagem: "contabilizei", "zerei a fronteira", "meta atingida".
+
+**Regra do placar:** ele é recalculado a cada dia e gravado na evidência do dia. Sem isso o
+desafio não tem memória e o fechamento vira opinião.
 
 ---
 
@@ -28,6 +80,7 @@ Levantar o terreno é a forma de achar as duas. O mapa é o subproduto; a missã
 | Proibição | Por quê |
 |---|---|
 | **Não conjurar magia de dano.** Nenhuma. | O capítulo não é combate. `magic missile`, `burning hands`, `chill touch` e `lightning bolt` ficam fora. |
+| **Não enviar `l` nem `o` como direção.** | **Medido no servidor:** `l` é `look` (devolveu "Uma Divisão da Trilha" e a personagem **não saiu do lugar**) e `o` é `order` ("Ordenar quem e o que?"). Leste é `e`, oeste é `w`. `oeste` por extenso é recusado ("Como?!?"). Uma sessão do Dia 156 foi perdida por isso. |
 | **Não entrar em sala marcada `nao_entrar`.** | É o ponto do capítulo: o mapa serve para *não* passar por lá. |
 | **Não sondar direção no escuro.** | Ver risco R1: sondar cega dispara a guarda de repetição e mata a rotina. |
 | **Não continuar depois de uma fuga.** | Ver risco R2: `wimpy` salva o corpo e **destrói a posição**. Fuga = abortar o dia naquela região. |
@@ -102,6 +155,14 @@ dos registros dos Dias 96–141:
 re-percorre terreno que já está levantado e gasta o dia redescobrindo. Antes de abrir o
 capítulo: revisar as **14 divergências** entre digerido e curado (todas em salas descobertas
 nos Dias 97–99 que o mapa curado, parado no Dia 96, nunca absorveu) e mesclar.
+
+> ⚠️ **Cuidado na mesclagem: as duas convenções são diferentes.**
+> `mapa.json` guarda leste/oeste como **`l`** (65 saídas) e **`o`** (67) — abreviatura em
+> português. `mapa_vivo.json` guarda como **`e`** (148) e **`w`** (140) — os tokens que o
+> servidor realmente aceita. Mesclar os dois sem normalizar deixa o arquivo com as duas
+> convenções e recria a armadilha que queimou a sessão do Dia 156.
+> **Normalizar tudo para `n/s/e/w/u/d`.** Se o nome em português for necessário para exibir,
+> guardar num campo separado — nunca na chave que vira comando.
 
 > ⚠️ **O digestor está em pasta ignorada pelo git.** `scripts/local/` está no `.gitignore`
 > (linha 14), então `digerir_mapa.py` não é versionado — e sem ele o levantamento do capítulo
@@ -225,6 +286,8 @@ esperado, não é falha.
 
 ## 6. Alvos do levantamento, em ordem de rendimento
 
+> Cada alvo abaixo **fecha destinos de fronteira** — é assim que o placar da seção 0 sobe.
+
 ### Prioridade 1 — Avenida Floris (a melhor relação rendimento/risco do capítulo)
 Descoberta no **Dia 99**, **não existe no `mapa.json`**. É uma **avenida de cidade**, com
 **7 destinos nomeados e nunca visitados**:
@@ -281,7 +344,11 @@ reiniciável.
 
 ## 8. O plano de execução, em ordem
 
-1. **Esperar o Capítulo 03 fechar.** Não abrir o 04 antes — o outro agente está nele.
+1. **Fechar o Capítulo 03 frustrado.** Escrever a crônica de fecho com o que de fato houve —
+   11 abates, cota estourada, gatilho que nunca veio, três missões abertas — e encerrar com
+   `add_chapter.py --close`. **Sem inventar desfecho, sem declarar missão concluída, sem
+   transformar o Pacificador em aliado.** O fecho frustrado é honesto e é o que dá base ao 04.
+   Não esperar as três missões: elas não estão sob controle dela, e é esse o ponto.
 2. **Verificar as magias antes de partir:** conjurar `invisibility` e `armor` numa sessão
    autorizada e **anotar o que o servidor responder** (duração, custo, aviso de expiração).
    Sem isso o planejamento de mana é chute.
@@ -297,27 +364,32 @@ reiniciável.
    de vida, e voltar ao Templo sozinha. **Antes disso, não pisar em terreno novo.**
 8. **Primeira incursão real:** Avenida Floris, 20–30 salas, **supervisionada**, lendo o log a
    cada ~60 s.
-9. **Abrir o capítulo:**
+9. **Abrir o capítulo** — `kind marco`, porque é desafio pessoal e não missão oficial:
    ```
-   python add_chapter.py --hero grebolius --chapter 4 --tomo 1 \
+   python add_chapter.py --hero grebolius --chapter 4 --tomo 1 --kind marco \
      --title "<título aprovado pelo autor>" \
-     --goal "Levantar o terreno desconhecido sem travar combate, marcando os perigos, e voltar viva todos os dias."
+     --goal "Desafio pessoal: ate onde vai o mundo. Entrar no desconhecido em invisibilidade, anotar cada sala e cada perigo, e voltar viva todos os dias. A morte nao e o preco do mapa."
    ```
-10. **Por dia:** `add_chapter.py --chapter 4 --part --day <N> --summary "..." --evidence-file <...>`.
-11. **No fim:** fechar com `--close --content-file --evidence-file`, a crônica do capítulo.
+10. **Por dia:** `add_chapter.py --chapter 4 --part --day <N> --summary "..." --evidence-file <...>`,
+    **com o placar da seção 0 recalculado dentro da evidência**.
+11. **No fim:** fechar com `--close --content-file --evidence-file`, a crônica do capítulo — seja
+    com a fronteira zerada, seja no Dia 170 com o que foi alcançado.
 
 ---
 
 ## 9. Decisões pendentes do autor
 
-1. **Título do capítulo** — precisa ser narrativo, sem metajogo.
+1. **Título do capítulo** — narrativo, sem metajogo. Proposto: *"Até Onde Vai o Mundo"*.
 2. **`wimpy`:** sobe para 56 (novo teste) ou fica 48?
 3. **Coleta:** a regra do `batedor` permite *"coleta de oportunidade de itens no chão/doações"*.
    O capítulo mantém isso ou é mapeamento puro, sem pegar nada?
 4. **Armadura da Torre Negra** (herdada do Cap. 03): continuar carregando os 60 kg presos, ou
-   pagar **8.509** para desamaldiçoar e doar?
+   pagar **8.509** para desamaldiçoar e doar? *(Para este capítulo não bloqueia: sem saque, o peso
+   fica estável. É decisão de economia, não de mapeamento.)*
 5. **Regiões proibidas:** alguma área que a cartógrafa **não** deve levantar (ex.: Torre Negra,
    margens do rio, esgotos)?
+6. **Condição de conclusão:** zera a fronteira, ou fecha no Dia 170 com o que alcançou?
+   (Proposto: as duas valem — a segunda não conta como fracasso.)
 
 ---
 

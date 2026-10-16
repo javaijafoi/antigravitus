@@ -2,10 +2,10 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 143,
+    "day": 156,
     "verification": "live",
     "live_verified": true,
-    "source": "Capitulo 3 (Tres Oficios), Dia 143: Grau 20 alcancado no capitulo anterior; CA 94-95 com armadura arcana, Coroa da Rainha Branca (+25 armadura, +1 INT/SAB, +2 CAR), Cruz Ansada (+10 mana, +5 vida) e rosario (+1 Forca, +1 acerto). Ouro 7.360."
+    "source": "Capitulo 3 (Tres Oficios) fechado no Dia 156 sem cumprir o objetivo: onze abates acumulados contra a cota de dez do fazendeiro e entrega nao reconhecida. Recolhimento ao vivo no Templo de Midgaard: 113/113 de vida, 260/260 de mana, 114/114 de movimento, 7.528 no banco do Templo e 300 na mao, com save, sleep e quit respondidos pelo servidor."
   },
   "level": 20,
   "mechanical_race": "Elfo",
@@ -22,8 +22,8 @@
       "max": 113
     },
     "mana": {
-      "current": 265,
-      "max": 265
+      "current": 260,
+      "max": 260
     },
     "mv": {
       "current": 114,
@@ -31,10 +31,10 @@
     }
   },
   "experience": {
-    "current": 1013629,
+    "current": 1088553,
     "next_level": 1200000
   },
-  "gold": 7360,
+  "gold": 7828,
   "attributes": {
     "STR": 11,
     "DEX": 15,
@@ -78,19 +78,20 @@
     "name": "O Panteao dos Centenarios"
   },
   "last_event": {
-    "day": 143,
-    "summary": "Capitulo 3 \"Tres Oficios\" aberto. Estado das missoes conferido no servidor (autoquest todas): CONCLUIDAS Limpando Monstros e Ninguem Segura Esse Bebe (esta ultima sem registro ate o Dia 143, embora ja constasse como concluida no Dia 98); EM ANDAMENTO Dicas Magicas (responder sim ao mago aventureiro); Problemas Agricolas reiniciada pelas mortes."
+    "day": 156,
+    "summary": "Capitulo 3 \"Tres Oficios\" FECHADO sem cumprir o objetivo. Onze abates acumulados contra a cota de dez do fazendeiro (Dia 153: 1, Dia 155: 3, Dia 156: 7) e a entrega nao foi reconhecida: o dono da fazenda permaneceu em silencio e o Pacificador respondeu 'Procure um lugar onde precisem de sua forca.'. Em 'autoquest todas', Problemas Agricolas e Dicas Magicas seguem em andamento. Fecho registrado em capitulo-03-fecho.md."
   },
   "next_objective": {
-    "mission_id": "capitulo-3",
-    "title": "Capitulo 3 - Tres Oficios",
-    "next_step": "Seguir data/heroes/grebolius/plano_capitulo_03.md: (1) fechar Problemas Agricolas (rotina milharal + entrega ao Pacificador/fazendeiro); (2) destravar Dicas Magicas; (3) Novela dos Novatos / Gargamel.",
+    "mission_id": "capitulo-4",
+    "title": "Capitulo 4 - desafio pessoal de mapeamento (plano proprio, kind marco)",
+    "next_step": "Seguir data/heroes/grebolius/plano_capitulo_04.md: levantar o desconhecido em invisibilidade, com wimpy alto e sem travar combate, marcando os perigos. Meta: zerar os 41 destinos de fronteira ou fechar no Dia 170 com o que foi alcancado.",
     "missing_preparation": [
-      "PROIBIDO vender armaduras (diretiva do autor, Dia 150): nem Torre Negra (8.500) nem peao (150); nao comprar o pergaminho de remover maldicoes para vender.",
-      "Concluir 3 missoes sem repetir as ja feitas: Dicas Magicas (em andamento), Problemas Agricolas (aceita, ir ao milharal), Novela dos Novatos e Uma Licao em Gargamel (procurar o novato esperto e o smurf minerador).",
-      "Ouro apenas por espolio de combate, recompensa de missao e o banco do Templo."
+      "PROIBIDO vender armaduras (diretiva do autor, Dia 150): nem Torre Negra (8.500) nem peao (150).",
+      "Cap 04 nao espera as tres missoes do Cap 3: elas nao estavam sob controle da personagem.",
+      "Antes de partir: absorver mapa_vivo.json no mapa.json e normalizar l/o para e/w (l e look, o e order).",
+      "Decisoes pendentes do autor: titulo do capitulo, wimpy 48 ou 56, coletar itens ou nao, regioes proibidas."
     ],
-    "plan_document": "plano_capitulo_03.md"
+    "plan_document": "plano_capitulo_04.md"
   },
   "skills": [
     {
@@ -297,16 +298,18 @@
     "pending_verification": []
   },
   "conditions": [
-    "Dia 143: no Templo de Midgaard, 113/113 HP, 265/265 mana, 114 MV, alimentada e hidratada.",
-    "Grau 20 (vida maxima 113, mana maxima 265); proximo nivel em 1.200.000 (faltam 186.371).",
-    "Armadura arcana ativa (~28h), CA 95; Coroa da Rainha Branca, Cruz Ansada e rosario equipados.",
-    "Wimpy 48 (metade da vida maxima de 113 e 56; 48 e o teto pratico testado).",
+    "Dia 156: no Templo de Midgaard, 113/113 de vida, 260/260 de mana e 114/114 de movimento, alimentada e hidratada.",
+    "Grau 20 (vida maxima 113, mana maxima 260); proximo nivel em 1.200.000 (faltam 111.447).",
+    "Capitulo 3 fechado frustrado no Dia 156: cota de abates cumprida, entrega nao reconhecida, nenhuma das tres missoes concluida.",
+    "Ouro 7.528 guardado no banco do Templo e 300 na mao (total 7.828).",
     "Sete mortes registradas; uma armadilha de morte. Ultima morte no Dia 126, por script sem supervisao."
   ],
   "uncertainties": [
+    "A mana maxima caiu de 265 (Dia 143) para 260 (Dia 156) sem explicacao registrada: conferir se a Cruz Ansada, o rosario ou a armadura arcana respondem pelos 5 pontos.",
     "O colar com pedra purpura (valor 20.000.000) pertence a outro dono: o servidor recusa o uso.",
     "Bainha de Excalibur exige nivel 85; Scutum de Carvalho exige nivel 35 (devolvido a Sala de Doacoes).",
-    "A Armadura da Torre Negra (60 kg) continua amaldicoada e presa ao corpo dela. Com a proibicao de vender, a saida seria pagar 8.509 para desamaldicoar e doar (custo puro) ou seguir carregando. Decisao pendente do autor."
+    "A Armadura da Torre Negra (60 kg) continua amaldicoada e presa ao corpo dela. Com a proibicao de vender, a saida seria pagar 8.509 para desamaldicoar e doar (custo puro) ou seguir carregando. Decisao pendente do autor.",
+    "Problemas Agricolas: onze abates acumulados contra cota de dez e o gatilho de entrega nunca veio (Dia 156). O estado real da missao e desconhecido - pode exigir outra condicao, outro NPC ou reinicio."
   ],
   "evidence": [
     {
@@ -422,5 +425,5 @@
     "mechanical_race_confirmed": "Elfo",
     "editorial_note": "ANCORA DO AUTOR, sem evidencia de servidor: primeira morte no Dia 0 e origem elfa. A cronica do Dia 100 narra a lembranca no Vazio; as cronicas antigas permanecem intactas e ganham segunda leitura. Ver notas_editoriais.md."
   },
-  "as_of_day": 143
+  "as_of_day": 156
 }

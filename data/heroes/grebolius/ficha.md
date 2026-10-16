@@ -1,6 +1,6 @@
 # 🧌 Ficha Atual de Grebolius (Último Estado Registrado)
 
-> Referência: Dia 143. Estado verificado em sessão; consultar a origem registrada.
+> Referência: Dia 156. Estado verificado em sessão; consultar a origem registrada.
 > Este documento reúne o último estado e as missões registrados; as incertezas aparecem ao final.
 
 ## ✦ Identificação e Registro
@@ -11,7 +11,7 @@
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **20**
 * **Alinhamento Moral:** 223 (Um pouco bom)
-* **Localização Atual:** O Templo de Midgaard (último registro: Dia 143)
+* **Localização Atual:** O Templo de Midgaard (último registro: Dia 156)
 * **Acampamento Registrado:** O Templo de Midgaard
 * **Santuário de Referência:** O Panteao dos Centenarios
 
@@ -21,12 +21,12 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 | Recurso | Atual | Máximo | Porcentagem |
 | :--- | :---: | :---: | :---: |
 | **Pontos de Vida (HP)** | 113 | 113 | 100% |
-| **Pontos de Mana (MP)** | 265 | 265 | 100% |
+| **Pontos de Mana (MP)** | 260 | 260 | 100% |
 | **Estamina / Movimento (MV)** | 114 | 114 | 100% |
 
-* **Experiência Acumulada:** **1.013.629 EXP**
-* **Experiência Necessária p/ Grau 21:** **186.371 EXP** (Meta: 1.200.000 EXP)
-* **Ouro Líquido:** **7.360 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **1.088.553 EXP**
+* **Experiência Necessária p/ Grau 21:** **111.447 EXP** (Meta: 1.200.000 EXP)
+* **Ouro Líquido:** **7.828 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 11
@@ -51,11 +51,11 @@ Armadura arcana ativa (~28h) conjurada na Praca do Templo; a Coroa da Rainha Bra
 * **Limpando Monstros — Concluída:** Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.
   * Próximo passo: Missão concluída com sucesso no Dia 96 ao reportar ao Novato Alquimista. Recompensa recebida: 75.482 EXP e um manto de pano.
 * **Dicas Mágicas — Ativa:** Entregar um pergaminho de retorno ao Mago Aventureiro no Bar dos Magos.
-  * Próximo passo: EM ANDAMENTO pelo servidor: 'Dicas Mágicas: Você deve responder sim.' Falar com o mago aventureiro no Bar dos Magos e responder 'sim'.
+  * Próximo passo: O servidor insiste em 'Voce deve responder sim' pelo mago aventureiro, mas responder 'sim' limpa a instrucao e ela volta. Hipoteses ainda nao testadas: responder 'nao'; conjurar uma magia especifica na sala certa; estar no Laboratorio dos Magos com a magia ativa. Registrar a resposta exata do servidor a cada tentativa.
 * **Novela dos Novatos — Descoberta:** Aventura narrativa para recém-chegados (Até o nível 30, iniciada com: o novato esperto).
   * Próximo passo: Localizar o novato esperto pelas praças de Midgaard para iniciar o encadeamento.
-* **Problemas Agrícolas — Descoberta:** Eliminar monstros invasores do milharal conforme pedido do fazendeiro e instruções dadas pelo Pacificador.
-  * Próximo passo: CORRIGIDO em 2026-10-16: o servidor lista "Problemas Agricolas — Nao feita" e a missao NAO aparece em "[Autoquests em andamento]" do score tudo. As mortes #4/#5 reiniciaram a autoquest. Aceitar de novo com o Pacificador ("sim") antes de retomar o milharal.
+* **Problemas Agrícolas — Bloqueada:** Eliminar monstros invasores do milharal conforme pedido do fazendeiro e instruções dadas pelo Pacificador.
+  * Próximo passo: Onze abates acumulados contra a cota de dez do fazendeiro (Dia 153: 1, Dia 155: 3, Dia 156: 7) e a entrega NAO foi reconhecida. O dono da fazenda permaneceu em silencio apos 'say ola', 'say sim', 'ask fazendeiro monstros', 'ask fazendeiro invasores', 'ask fazendeiro missao', 'ask fazendeiro ajuda', 'say terminei', 'say matei os monstros' e 'say 10'. O Pacificador respondeu 'Procure um lugar onde precisem de sua forca.'. Proximo passo verificavel: DESCONHECIDO - descobrir qual condicao o servidor exige, sem repetir as falas ja testadas.
 * **Ninguém Segura Esse Bebê — Concluída:** Autoquest de todos os níveis (encarnações 1-4), qualquer alinhamento e classe.
   * Próximo passo: CONCLUÍDA. Estado confirmado no servidor em 2026-10-16 pelo comando "autoquest todas": "Ninguém Segura Esse Bebê — Concluída".
 
@@ -103,21 +103,24 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 ### Pendências de inventário
 
 ## ✦ Condições Registradas
-* Dia 143: no Templo de Midgaard, 113/113 HP, 265/265 mana, 114 MV, alimentada e hidratada.
-* Grau 20 (vida maxima 113, mana maxima 265); proximo nivel em 1.200.000 (faltam 186.371).
-* Armadura arcana ativa (~28h), CA 95; Coroa da Rainha Branca, Cruz Ansada e rosario equipados.
-* Wimpy 48 (metade da vida maxima de 113 e 56; 48 e o teto pratico testado).
+* Dia 156: no Templo de Midgaard, 113/113 de vida, 260/260 de mana e 114/114 de movimento, alimentada e hidratada.
+* Grau 20 (vida maxima 113, mana maxima 260); proximo nivel em 1.200.000 (faltam 111.447).
+* Capitulo 3 fechado frustrado no Dia 156: cota de abates cumprida, entrega nao reconhecida, nenhuma das tres missoes concluida.
+* Ouro 7.528 guardado no banco do Templo e 300 na mao (total 7.828).
 * Sete mortes registradas; uma armadilha de morte. Ultima morte no Dia 126, por script sem supervisao.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
-**Capitulo 3 - Tres Oficios**
-Seguir data/heroes/grebolius/plano_capitulo_03.md: (1) fechar Problemas Agricolas (rotina milharal + entrega ao Pacificador/fazendeiro); (2) destravar Dicas Magicas; (3) Novela dos Novatos / Gargamel.
-* PROIBIDO vender armaduras (diretiva do autor, Dia 150): nem Torre Negra (8.500) nem peao (150); nao comprar o pergaminho de remover maldicoes para vender.
-* Concluir 3 missoes sem repetir as ja feitas: Dicas Magicas (em andamento), Problemas Agricolas (aceita, ir ao milharal), Novela dos Novatos e Uma Licao em Gargamel (procurar o novato esperto e o smurf minerador).
-* Ouro apenas por espolio de combate, recompensa de missao e o banco do Templo.
+**Capitulo 4 - desafio pessoal de mapeamento (plano proprio, kind marco)**
+Seguir data/heroes/grebolius/plano_capitulo_04.md: levantar o desconhecido em invisibilidade, com wimpy alto e sem travar combate, marcando os perigos. Meta: zerar os 41 destinos de fronteira ou fechar no Dia 170 com o que foi alcancado.
+* PROIBIDO vender armaduras (diretiva do autor, Dia 150): nem Torre Negra (8.500) nem peao (150).
+* Cap 04 nao espera as tres missoes do Cap 3: elas nao estavam sob controle da personagem.
+* Antes de partir: absorver mapa_vivo.json no mapa.json e normalizar l/o para e/w (l e look, o e order).
+* Decisoes pendentes do autor: titulo do capitulo, wimpy 48 ou 56, coletar itens ou nao, regioes proibidas.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Capitulo 3 (Tres Oficios), Dia 143: Grau 20 alcancado no capitulo anterior; CA 94-95 com armadura arcana, Coroa da Rainha Branca (+25 armadura, +1 INT/SAB, +2 CAR), Cruz Ansada (+10 mana, +5 vida) e rosario (+1 Forca, +1 acerto). Ouro 7.360..
+Fonte do estado: Capitulo 3 (Tres Oficios) fechado no Dia 156 sem cumprir o objetivo: onze abates acumulados contra a cota de dez do fazendeiro e entrega nao reconhecida. Recolhimento ao vivo no Templo de Midgaard: 113/113 de vida, 260/260 de mana, 114/114 de movimento, 7.528 no banco do Templo e 300 na mao, com save, sleep e quit respondidos pelo servidor..
+* A mana maxima caiu de 265 (Dia 143) para 260 (Dia 156) sem explicacao registrada: conferir se a Cruz Ansada, o rosario ou a armadura arcana respondem pelos 5 pontos.
 * O colar com pedra purpura (valor 20.000.000) pertence a outro dono: o servidor recusa o uso.
 * Bainha de Excalibur exige nivel 85; Scutum de Carvalho exige nivel 35 (devolvido a Sala de Doacoes).
 * A Armadura da Torre Negra (60 kg) continua amaldicoada e presa ao corpo dela. Com a proibicao de vender, a saida seria pagar 8.509 para desamaldicoar e doar (custo puro) ou seguir carregando. Decisao pendente do autor.
+* Problemas Agricolas: onze abates acumulados contra cota de dez e o gatilho de entrega nunca veio (Dia 156). O estado real da missao e desconhecido - pode exigir outra condicao, outro NPC ou reinicio.

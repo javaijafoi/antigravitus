@@ -1,14 +1,11 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 143,
+  "as_of_day": 156,
   "verification": {
-    "0": "l",
-    "1": "i",
-    "2": "v",
-    "3": "e",
-    "autoquest_check_day": 143,
-    "autoquest_check_note": "Estado conferido no servidor via \"autoquest todas\" (log do daemon). Concluidas: Limpando Monstros e Ninguem Segura Esse Bebe. Em andamento: Dicas Magicas (responder sim)."
+    "mode": "live",
+    "autoquest_check_day": 156,
+    "autoquest_check_note": "Estado conferido no servidor via 'autoquest todas' (Dia 156, log do daemon). Concluidas: Limpando Monstros e Ninguem Segura Esse Bebe. Em andamento: Problemas Agricolas e Dicas Magicas. Nao iniciadas e elegiveis ao Grau 20: Uma Licao em Gargamel e Novela dos Novatos."
   },
   "items": [
     {
@@ -195,9 +192,9 @@
       "type": "official",
       "status": "active",
       "accepted_day": 32,
-      "last_progress_day": 98,
+      "last_progress_day": 156,
       "objective": "Entregar um pergaminho de retorno ao Mago Aventureiro no Bar dos Magos.",
-      "next_step": "EM ANDAMENTO pelo servidor: 'Dicas Mágicas: Você deve responder sim.' Falar com o mago aventureiro no Bar dos Magos e responder 'sim'.",
+      "next_step": "O servidor insiste em 'Voce deve responder sim' pelo mago aventureiro, mas responder 'sim' limpa a instrucao e ela volta. Hipoteses ainda nao testadas: responder 'nao'; conjurar uma magia especifica na sala certa; estar no Laboratorio dos Magos com a magia ativa. Registrar a resposta exata do servidor a cada tentativa.",
       "evidence": [
         {
           "document": "posts.json",
@@ -374,11 +371,11 @@
       "id": "problemas-agricolas",
       "title": "Problemas Agrícolas",
       "type": "official",
-      "status": "discovered",
+      "status": "blocked",
       "accepted_day": 90,
-      "last_progress_day": 99,
+      "last_progress_day": 156,
       "objective": "Eliminar monstros invasores do milharal conforme pedido do fazendeiro e instruções dadas pelo Pacificador.",
-      "next_step": "CORRIGIDO em 2026-10-16: o servidor lista \"Problemas Agricolas — Nao feita\" e a missao NAO aparece em \"[Autoquests em andamento]\" do score tudo. As mortes #4/#5 reiniciaram a autoquest. Aceitar de novo com o Pacificador (\"sim\") antes de retomar o milharal.",
+      "next_step": "Onze abates acumulados contra a cota de dez do fazendeiro (Dia 153: 1, Dia 155: 3, Dia 156: 7) e a entrega NAO foi reconhecida. O dono da fazenda permaneceu em silencio apos 'say ola', 'say sim', 'ask fazendeiro monstros', 'ask fazendeiro invasores', 'ask fazendeiro missao', 'ask fazendeiro ajuda', 'say terminei', 'say matei os monstros' e 'say 10'. O Pacificador respondeu 'Procure um lugar onde precisem de sua forca.'. Proximo passo verificavel: DESCONHECIDO - descobrir qual condicao o servidor exige, sem repetir as falas ja testadas.",
       "evidence": [
         {
           "document": "posts.json",
@@ -430,7 +427,8 @@
           "day": 143,
           "note": "Texto capturado de autoquest todas + score tudo."
         }
-      ]
+      ],
+      "blocker": "Condicao de entrega desconhecida: o servidor mantem a missao 'Em andamento' mesmo com a cota de abates superada. Nenhuma fala testada disparou o reconhecimento."
     },
     {
       "id": "ninguem-segura-esse-bebe",
