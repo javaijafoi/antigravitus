@@ -388,3 +388,19 @@ Fonte: [dossiê primário do Dia 94](evidence/dia94.json).
     3. Inspeciona palavras-chave ambientais mencionadas na descrição (`parede`, `palavras`, `figura`, `placa`, `inscricao`, `estatua`, `garrafa`, `portao`).
     4. Avalia entidades novas com `look <alvo>` e `consider <alvo>`, usando o substantivo principal da linha (ex.: `porteiro`, `aventureiro`) em vez de adjetivos iniciais (`velho`, `apressado`).
 
+## 17. Dia 95 — Esgotos de Midgaard, Escorregador Unidirecional e Sobrevivência Crítica via Wimpy 30
+
+Fonte: [dossiê primário do Dia 95](evidence/dia95.json).
+
+- **O Escorregador Unidirecional (Chute dos Esgotos):**
+  - A sala a oeste da *Junção Quádrupla Abaixo do Depósito de Lixo* (`A Estranha Sala Com Paredes Lisas`) é uma armadilha mecânica de deslizamento: o chão cede com estalido e a personagem desliza sem retorno até *Uma Estranha Interseção*.
+  - **Regra tática:** Nunca avançar a oeste da entrada dos esgotos sem preparo prévio de retorno místico ou cartografia completa das galerias profundas.
+- **Topologia da Borda do Abismo e Perigos Extremos:**
+  - *O Canto Sudoeste da Borda* conecta ao covil de *Um ameaçador dragão vermelho* cercado por aura multicolorida.
+  - Saídas para o interior do abismo recebem o nome de *Passo-Em-Falso* (descritas como meio-ar e quedas livres). Devem ser categoricamente bloqueadas nas políticas de navegação (`cautious_step`).
+- **Validação do Protocolo de Sobrevivência Wimpy 30:**
+  - Em *A Estreita Borda Indo de Leste a Oeste*, uma emboscada simultânea de cobras venenosas desferiu mordidas mortais (dano massivo de 12 a 25 por acerto e envenenamento).
+  - O gatilho de recuo mecânico `wimpy 30` acionou imediatamente quando o HP desceu abaixo de 30, executando a fuga para o leste (*O Canto Nordeste da Borda*) e salvando a vida da personagem com 10 HP restantes.
+  - **Lição definitiva:** A margem conservadora de fuga (`wimpy 30`) é essencial diante de predadores rápidos e venenosos, prevenindo morte imediata em rodada surpresa.
+
+

@@ -1,6 +1,6 @@
 # 🧌 Ficha Atual de Grebolius (Último Estado Registrado)
 
-> Referência: Dia 94. Estado verificado em sessão; consultar a origem registrada.
+> Referência: Dia 95. Estado verificado em sessão; consultar a origem registrada.
 > Este documento reúne o último estado e as missões registrados; as incertezas aparecem ao final.
 
 ## ✦ Identificação e Registro
@@ -11,8 +11,8 @@
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **11**
 * **Alinhamento Moral:** 373 (Bom)
-* **Localização Atual:** O Templo de Midgaard (último registro: Dia 94)
-* **Acampamento Registrado:** O Templo de Midgaard
+* **Localização Atual:** O Canto Nordeste da Borda (último registro: Dia 95)
+* **Acampamento Registrado:** O Canto Nordeste da Borda
 * **Santuário de Referência:** O Panteão dos Centenários
 
 O acampamento indica onde houve repouso; não comprova proteção absoluta contra agressão.
@@ -20,16 +20,16 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 ## ✦ Status Vitais
 | Recurso | Atual | Máximo | Porcentagem |
 | :--- | :---: | :---: | :---: |
-| **Pontos de Vida (HP)** | 87 | 87 | 100% |
+| **Pontos de Vida (HP)** | 10 | 87 | 11% |
 | **Pontos de Mana (MP)** | 170 | 170 | 100% |
 | **Estamina / Movimento (MV)** | 101 | 101 | 100% |
 
-* **Experiência Acumulada:** **195.202 EXP**
-* **Experiência Necessária p/ Grau 12:** **4.798 EXP** (Meta: 200.000 EXP)
+* **Experiência Acumulada:** **195.201 EXP**
+* **Experiência Necessária p/ Grau 12:** **4.799 EXP** (Meta: 200.000 EXP)
 * **Ouro Líquido:** **2.188 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
-* **Força (STR):** 12
+* **Força (STR):** 10
 * **Destreza (DEX):** 15
 * **Constituição (CON):** 9
 * **Inteligência (INT):** 18
@@ -38,7 +38,7 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 
 ### Métricas de Combate
 * **Classe de Armadura (AC):** 25 (base) / **50** (com `armor`, conforme registro)
-Dia 94: AC base 25 observada ao final da sessão; com armor (+25) atinge 50.
+Dia 95: AC 50 mantida com Armadura Mística ativa (51h restantes).
 * **Bônus de Acerto (Hitroll):** 3
 * **Bônus de Dano (Damroll):** +4
 * **Configuração de Fuga (Wimpy):** **30 HP** (referência de 25%; não garante fuga antes de golpe letal)
@@ -109,7 +109,7 @@ Retomar a viagem a Jareth e à fazenda por trechos confirmados; avaliar invasore
 * Confirmar cada trecho entre salas homônimas; a cartografia da fazenda é parcial.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessão modular ao vivo do Dia 94 encerrada no Templo de Midgaard: score tudo, inventário, equipamento, save e sleep confirmados; evidence/dia94.json..
+Fonte do estado: Sessão ao vivo dos Esgotos do Dia 95 via run_dia95_esgotos.py: emboscada de cobras venenosas na borda do abismo; Wimpy 30 acionou fuga tática para O Canto Nordeste da Borda; score tudo, inventário, equipamento, save e sleep confirmados; evidence/dia95.json..
 * O anel arcano (+2E) foi vendido no Dia 92 por 500 moedas por exigir nível 90 e 3ª encarnação.
 * Novos feitiços superiores dependem de livros arcanos ou mestres especializados.
 * O renascimento desequipa todas as peças para a mochila; o protocolo pós-morte exige `wear all` imediato para restaurar os bônus de HP e AC do equipamento.

@@ -2,10 +2,10 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 94,
+    "day": 95,
     "verification": "live",
     "live_verified": true,
-    "source": "Sessão modular ao vivo do Dia 94 encerrada no Templo de Midgaard: score tudo, inventário, equipamento, save e sleep confirmados; evidence/dia94.json."
+    "source": "Sessão ao vivo dos Esgotos do Dia 95 via run_dia95_esgotos.py: emboscada de cobras venenosas na borda do abismo; Wimpy 30 acionou fuga tática para O Canto Nordeste da Borda; score tudo, inventário, equipamento, save e sleep confirmados; evidence/dia95.json."
   },
   "level": 11,
   "mechanical_race": "Elfo",
@@ -18,7 +18,7 @@
   },
   "vitals": {
     "hp": {
-      "current": 87,
+      "current": 10,
       "max": 87
     },
     "mana": {
@@ -31,12 +31,12 @@
     }
   },
   "experience": {
-    "current": 195202,
+    "current": 195201,
     "next_level": 200000
   },
   "gold": 2188,
   "attributes": {
-    "STR": 12,
+    "STR": 10,
     "DEX": 15,
     "CON": 9,
     "INT": 18,
@@ -47,7 +47,7 @@
     "base": 25,
     "with_armor": 50,
     "effect_verified": true,
-    "note": "Dia 94: AC base 25 observada ao final da sessão; com armor (+25) atinge 50."
+    "note": "Dia 95: AC 50 mantida com Armadura Mística ativa (51h restantes)."
   },
   "hitroll": 3,
   "damroll": 4,
@@ -55,7 +55,7 @@
   "training_sessions": 15,
   "operational_mode": {
     "current": "padrao",
-    "description": "Modo Dungeon Corajoso + Modo Expandir Horizontes (V2 Modular); wimpy 30 confirmado em sessão no Dia 94.",
+    "description": "Modo Dungeon Corajoso + Modo Expandir Horizontes (V2 Modular); wimpy 30 salvou a vida em emboscada no Dia 95.",
     "wimpy_profile": {
       "padrao": 17,
       "batedor": 33,
@@ -66,20 +66,20 @@
     }
   },
   "location": {
-    "room_id": "templo_midgaard",
-    "name": "O Templo de Midgaard"
+    "room_id": "canto_nordeste_borda",
+    "name": "O Canto Nordeste da Borda"
   },
   "camp": {
-    "room_id": "templo_midgaard",
-    "name": "O Templo de Midgaard"
+    "room_id": "canto_nordeste_borda",
+    "name": "O Canto Nordeste da Borda"
   },
   "sanctuary": {
     "room_id": "panteao_centenarios",
     "name": "O Panteão dos Centenários"
   },
   "last_event": {
-    "day": 94,
-    "summary": "Varredura modular e medição de respawn na Área dos Novatos seguida pelo Modo Expandir Horizontes: 13 abates confirmados (+15.106 XP, 235 moedas de saque), venda de chifres e peles no Armeiro (+250 moedas), catalogação de 7 novas salas, 3 detalhes ambientais (incluindo o aviso do Minotauro na parede da Sala Enorme) e 2 novos NPCs na Vila Residencial e Campos, encerrando salva e dormindo no Templo de Midgaard."
+    "day": 95,
+    "summary": "Incursão aos Esgotos de Midgaard e Borda do Abismo via run_dia95_esgotos.py: após descer pelo depósito e pela estranha parede lisa até a borda, sofreu emboscada por cobras venenosas em A Estreita Borda Indo de Leste a Oeste. O Wimpy 30 disparou retirada bem-sucedida para o leste, chegando a O Canto Nordeste da Borda com perda de 1 XP (195.201 XP). Encerrou com 10/87 HP, 170/170 mana, 101/101 MV, 2.188 moedas, envenenada (-2 FOR, 9h) mas com Armor ativo (51h), salva e dormindo."
   },
   "next_objective": {
     "mission_id": "problemas-agricolas",

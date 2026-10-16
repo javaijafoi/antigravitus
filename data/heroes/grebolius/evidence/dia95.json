@@ -1,0 +1,377 @@
+{
+  "hero_id": "grebolius",
+  "day": 95,
+  "source_kind": "server_log",
+  "recorded_on": "2026-10-15",
+  "sources": [
+    "session_dia95_esgotos.log"
+  ],
+  "summary": {
+    "kills": 0,
+    "kill_details": [],
+    "combat_gold": 0,
+    "xp_gained": 0,
+    "cataloged_rooms": [
+      {
+        "tag": "sala_inicial_esgoto",
+        "title": "A Borda Estreita",
+        "exits": {
+          "n": "O Canto Noroeste da Borda",
+          "e": "Passo-Em-Falso",
+          "s": "A Borda Estreita"
+        },
+        "raw_description": "A Borda Estreita\n   Você está começando a caminhar na borda, não há como voltar. Há uma\noutra saída daqui, mas leva diretamente para o meio-ar, e com grandes\nchances de uma sessão de quedas livres.\n\u0007Você percebe que há algo perigoso por perto!\n[ Saídas: norte, leste e sul ]\n\n87hp 152mn 101mv > A Borda Estreita\n   Você está começando a caminhar na borda, não há como voltar. Há uma\noutra saída daqui, mas leva diretamente para o meio-ar, e com grandes\nchances de uma sessão de quedas livres.\n\u0007Você percebe que há algo perigoso por perto!\n[ Saídas: norte, leste e sul ]\n\n87hp 158mn 101mv >",
+        "entities": [
+          "A Borda Estreita",
+          "outra saída daqui, mas leva diretamente para o meio-ar, e com grandes",
+          "chances de uma sessão de quedas livres.",
+          "\u0007Você percebe que há algo perigoso por perto!",
+          "[ Saídas: norte, leste e sul ]"
+        ],
+        "ground": []
+      }
+    ],
+    "cataloged_details": [],
+    "cataloged_entities": [
+      {
+        "room": "A Borda Estreita",
+        "description": "A Borda Estreita",
+        "target": "estreita",
+        "look": "Você não está vendo nada parecido com isso.\n\n87hp 158mn 101mv >",
+        "consider": "Comparar sua força com a de quem?\n\n87hp 158mn 101mv >",
+        "verdict": "unknown"
+      },
+      {
+        "room": "A Borda Estreita",
+        "description": "outra saída daqui, mas leva diretamente para o meio-ar, e com grandes",
+        "target": "grandes",
+        "look": "Você não está vendo nada parecido com isso.\n\n87hp 164mn 101mv >",
+        "consider": "Comparar sua força com a de quem?\n\n87hp 164mn 101mv >",
+        "verdict": "unknown"
+      },
+      {
+        "room": "A Borda Estreita",
+        "description": "chances de uma sessão de quedas livres.",
+        "target": "livres",
+        "look": "Você não está vendo nada parecido com isso.\n\n87hp 164mn 101mv >",
+        "consider": "Comparar sua força com a de quem?\n\n87hp 170mn 101mv >",
+        "verdict": "unknown"
+      },
+      {
+        "room": "A Borda Estreita",
+        "description": "\u0007Você percebe que há algo perigoso por perto!",
+        "target": "perto",
+        "look": "Você não está vendo nada parecido com isso.\n\n87hp 170mn 101mv >",
+        "consider": "Comparar sua força com a de quem?\n\n87hp 170mn 101mv >",
+        "verdict": "unknown"
+      },
+      {
+        "room": "A Borda Estreita",
+        "description": "[ Saídas: norte, leste e sul ]",
+        "target": "sul",
+        "look": "",
+        "consider": "Sul. A borda segue adiante ao sul, rumo à escuridão.\n\n87hp 170mn 101mv > Comparar sua força com a de quem?\n\n87hp 170mn 101mv >",
+        "verdict": "unknown"
+      }
+    ]
+  },
+  "records": [
+    {
+      "at": "2026-10-15T21:09:02.966087-03:00",
+      "day": 95,
+      "command": "wake",
+      "response": "Você já está acordado...\r\n\r\n87hp 170mn 101mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 1,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:03.882429-03:00",
+      "day": 95,
+      "command": "stand",
+      "response": "Você já está em pé.\r\n\r\n87hp 170mn 101mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 2,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:04.787664-03:00",
+      "day": 95,
+      "command": "wimpy 30",
+      "response": "Certo, você irá se acovardar se você ficar abaixo de 30 pontos de vida.\r\n\r\n87hp 170mn 101mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 3,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:05.894211-03:00",
+      "day": 95,
+      "command": "cast 'armor' grebolius",
+      "response": "Certo.\r\nVocê sente alguém te protegendo.\r\n\r\n87hp 152mn 101mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 4,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:06.900529-03:00",
+      "day": 95,
+      "command": "look",
+      "response": "",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 5,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:07.809963-03:00",
+      "day": 95,
+      "command": "look",
+      "response": "A Borda Estreita\r\n   Você está começando a caminhar na borda, não há como voltar. Há uma\r\noutra saída daqui, mas leva diretamente para o meio-ar, e com grandes\r\nchances de uma sessão de quedas livres.\r\n\u0007Você percebe que há algo perigoso por perto!\r\n[ Saídas: norte, leste e sul ]\r\n\r\n87hp 152mn 101mv > A Borda Estreita\r\n   Você está começando a caminhar na borda, não há como voltar. Há uma\r\noutra saída daqui, mas leva diretamente para o meio-ar, e com grandes\r\nchances de uma sessão de quedas livres.\r\n\u0007Você percebe que há algo perigoso por perto!\r\n[ Saídas: norte, leste e sul ]\r\n\r\n87hp 158mn 101mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 6,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:08.723965-03:00",
+      "day": 95,
+      "command": "exits",
+      "response": "Saídas:\r\nNorte - O Canto Noroeste da Borda\r\nLeste - Passo-Em-Falso\r\nSul   - A Borda Estreita\r\n\r\n87hp 158mn 101mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 7,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:09.533729-03:00",
+      "day": 95,
+      "command": "look estreita",
+      "response": "Você não está vendo nada parecido com isso.\r\n\r\n87hp 158mn 101mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 8,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:10.440120-03:00",
+      "day": 95,
+      "command": "consider estreita",
+      "response": "Comparar sua força com a de quem?\r\n\r\n87hp 158mn 101mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 9,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:11.246470-03:00",
+      "day": 95,
+      "command": "look grandes",
+      "response": "Você não está vendo nada parecido com isso.\r\n\r\n87hp 164mn 101mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 10,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:12.148947-03:00",
+      "day": 95,
+      "command": "consider grandes",
+      "response": "Comparar sua força com a de quem?\r\n\r\n87hp 164mn 101mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 11,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:12.956780-03:00",
+      "day": 95,
+      "command": "look livres",
+      "response": "Você não está vendo nada parecido com isso.\r\n\r\n87hp 164mn 101mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 12,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:13.861574-03:00",
+      "day": 95,
+      "command": "consider livres",
+      "response": "Comparar sua força com a de quem?\r\n\r\n87hp 170mn 101mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 13,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:14.674992-03:00",
+      "day": 95,
+      "command": "look perto",
+      "response": "Você não está vendo nada parecido com isso.\r\n\r\n87hp 170mn 101mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 14,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:15.577762-03:00",
+      "day": 95,
+      "command": "consider perto",
+      "response": "Comparar sua força com a de quem?\r\n\r\n87hp 170mn 101mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 15,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:16.385710-03:00",
+      "day": 95,
+      "command": "look sul",
+      "response": "",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 16,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:17.285929-03:00",
+      "day": 95,
+      "command": "consider sul",
+      "response": "Sul. A borda segue adiante ao sul, rumo à escuridão.\r\n\r\n87hp 170mn 101mv > Comparar sua força com a de quem?\r\n\r\n87hp 170mn 101mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 17,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:18.191829-03:00",
+      "day": 95,
+      "command": "look north",
+      "response": "Norte. A borda segue em um canto, e vira a leste.\r\n\r\n87hp 170mn 101mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 18,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:19.203321-03:00",
+      "day": 95,
+      "command": "n",
+      "response": "O Canto Noroeste da Borda\r\n   Você está inclinado para fora da borda, com apenas algumas polegadas\r\nde uma segura borda sob seus pés. A borda continua a leste, mas não volta\r\npara o sul. A borda é tão estreita que você não pode virar-se; logo, você\r\ndeve continuar a seguir em frente.\r\n[ Saídas: leste, sul e !baixo ]\r\n\r\n87hp 170mn 100mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 19,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:20.107101-03:00",
+      "day": 95,
+      "command": "look south",
+      "response": "A borda continua ao sul.\r\n\r\n87hp 170mn 101mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 20,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:21.122770-03:00",
+      "day": 95,
+      "command": "s",
+      "response": "A Borda Estreita\r\n   Você está começando a caminhar na borda, não há como voltar. Há uma\r\noutra saída daqui, mas leva diretamente para o meio-ar, e com grandes\r\nchances de uma sessão de quedas livres.\r\n\u0007Você percebe que há algo perigoso por perto!\r\n[ Saídas: norte, leste e sul ]\r\n\r\n87hp 170mn 100mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 21,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:22.027928-03:00",
+      "day": 95,
+      "command": "look",
+      "response": "A Borda Estreita\r\n   Você está começando a caminhar na borda, não há como voltar. Há uma\r\noutra saída daqui, mas leva diretamente para o meio-ar, e com grandes\r\nchances de uma sessão de quedas livres.\r\n\u0007Você percebe que há algo perigoso por perto!\r\n[ Saídas: norte, leste e sul ]\r\n\r\n87hp 170mn 100mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 22,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:22.838354-03:00",
+      "day": 95,
+      "command": "n",
+      "response": "O Canto Noroeste da Borda\r\n   Você está inclinado para fora da borda, com apenas algumas polegadas\r\nde uma segura borda sob seus pés. A borda continua a leste, mas não volta\r\npara o sul. A borda é tão estreita que você não pode virar-se; logo, você\r\ndeve continuar a seguir em frente.\r\n[ Saídas: leste, sul e !baixo ]\r\n\r\n87hp 170mn 100mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 23,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:23.743387-03:00",
+      "day": 95,
+      "command": "look east",
+      "response": "A borda continua a leste.\r\n\r\n87hp 170mn 100mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 24,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:24.756675-03:00",
+      "day": 95,
+      "command": "e",
+      "response": "A Estreita Borda Indo de Leste a Oeste\r\n   Você continua a caminhar na borda, e não há como voltar. Há uma\r\noutra saída daqui, mas leva diretamente para o meio-ar, e com grandes\r\nchances de uma sucessão de quedas livres.\r\n\u0007Você percebe que há algo perigoso por perto!\r\n[ Saídas: leste e sul ]\r\nUma cobra serpenteia em sua direção. Ela parece bastante vil.\r\nUma cobra serpenteia em sua direção. Ela parece bastante vil.\r\nUma cobra serpenteia em sua direção. Ela parece bastante vil.\r\nUma cobra serpenteia em sua direção. Ela parece bastante vil.\r\nUma cobra serpenteia em sua direção. Ela parece bastante vil.\r\nUma cobra serpenteia em sua direção. Ela parece bastante vil.\r\n\r\n87hp 170mn 99mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 25,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:25.662596-03:00",
+      "day": 95,
+      "command": "look",
+      "response": "A Estreita Borda Indo de Leste a Oeste\r\n   Você continua a caminhar na borda, e não há como voltar. Há uma\r\noutra saída daqui, mas leva diretamente para o meio-ar, e com grandes\r\nchances de uma sucessão de quedas livres.\r\n\u0007Você percebe que há algo perigoso por perto!\r\n[ Saídas: leste e sul ]\r\nUma cobra serpenteia em sua direção. Ela parece bastante vil.\r\nUma cobra serpenteia em sua direção. Ela parece bastante vil.\r\nUma cobra serpenteia em sua direção. Ela parece bastante vil.\r\nUma cobra serpenteia em sua direção. Ela parece bastante vil.\r\nUma cobra serpenteia em sua direção. Ela parece bastante vil.\r\nUma cobra serpenteia em sua direção. Ela parece bastante vil.\r\n\r\n87hp 170mn 99mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 26,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:26.469600-03:00",
+      "day": 95,
+      "command": "w",
+      "response": "Você não pode ir por aí...\r\n\r\n87hp 170mn 101mv > \r\nUma cobra morde seus braços com força. [-12]\r\nUma cobra tenta te morder, mas erra.\r\nUma cobra tenta morder você mas erra!\r\nVocê usa seu escudo para bloquear o ataque de uma cobra!\r\nUma cobra tenta morder você mas erra!\r\nUma cobra morde seu peito com muita força. [-17]\r\nUma cobra massacra você com uma mordida. [-19]\r\nUma cobra te picou!\r\nVocê se sente muito doente!\r\nUma cobra tenta morder você mas erra!\r\nUma cobra arrebenta você com uma mordida mortal! [-25]\r\nIsso fez um grave ferimento!\r\nSeus ferimentos estão sangrando MUITO!\r\nVocê sente que está muito fraco e tenta fugir!\r\nO Canto Nordeste da Borda\r\n   Você está pendurado na borda, com apenas algumas polegadas de segurança,\r\nenquanto há uma sólida borda sob seus pés. A borda continua ao oeste, e leva\r\ntambém ao sul, daqui para a escuridão.\r\n[ Saídas: sul, oeste e !baixo ]\r\nVocê consegue fugir para o leste.\r\nVocê perdeu 1 ponto de experiência na sua fuga.\r\n\r\n14hp 170mn 100mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 27,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:27.371862-03:00",
+      "day": 95,
+      "command": "look",
+      "response": "O Canto Nordeste da Borda\r\n   Você está pendurado na borda, com apenas algumas polegadas de segurança,\r\nenquanto há uma sólida borda sob seus pés. A borda continua ao oeste, e leva\r\ntambém ao sul, daqui para a escuridão.\r\n[ Saídas: sul, oeste e !baixo ]\r\n\r\n14hp 170mn 100mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 28,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:28.379088-03:00",
+      "day": 95,
+      "command": "score tudo",
+      "response": "\r\n Você é Grebolius, o Aprendiz de Mago.\r\n Você está em sua 1ª encarnação, como um Mago Elfo, nível 11.\r\n Você tem 17 anos, 2 meses, 24 dias e 22 horas.\r\n Você esteve jogando durante 0 dias e 18 horas.\r\n Você pesa 61,68kg e mede 1,39m.\r\n Você morreu 3 vezes e não caiu em nenhuma armadilha de morte.\r\n\r\n[Pontos e atributos]------------------------------------------------------------\r\n\r\n          Vida: {<<--------}  14 de 87 \r\n          Mana: {<<<<<>>>>>} 170 de 170\r\n     Movimento: {<<<<<>>>>>} 100 de 101\r\n\r\n   Experiência: {<<<<<>>>>>} 195.201\r\n Próximo nível: {--------->}   4.799           Pontos de aventura: 0\r\n\r\n   Alinhamento: {<<<<<>>---}   373 - Você é bom.\r\n\r\n         Força: 10       Constituição: 9                   Acerto: 3 \r\n     Sabedoria: 16       Inteligência: 18                    Dano: 4 \r\n      Destreza: 15            Carisma: 9       Classe de Armadura: 50\r\n\r\n[Ouro e equipamentos]-----------------------------------------------------------\r\n\r\n Você está carregando 6 itens, num peso total de 71 kg.\r\n Você pode carregar no máximo 17 itens e um peso total de 115 kg.\r\n\r\n         Banco: {----------}     0\r\n    Carregando: {<<<<<>>>>>} 2.188 - Total: 2.188\r\n\r\n[Situação atual]----------------------------------------------------------------\r\n\r\n Você está em pé.\r\n Você está envenenado!\r\n Você se sente protegido.\r\n \r\n[ Duração ] \r\n armor                 (  51 horas ) +25 em ARMADURA\r\n poison                (   9 horas ) -2 em FORÇA\r\n\r\n14hp 170mn 100mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 29,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:29.383575-03:00",
+      "day": 95,
+      "command": "inventory",
+      "response": "Você está carregando:\r\num cantil\r\n(x2) um pão recheado\r\numa tocha\r\numa poção amarela de detectar invisibilidade\r\numa mochila\r\n\r\n17hp 170mn 101mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 30,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:30.390340-03:00",
+      "day": 95,
+      "command": "equipment",
+      "response": "Você está usando:\r\n  como luz           -> um jarro brilhante ..Isso tem uma pequena aura!\r\n  na cabeça          -> os chifres do Minotauro (novo)\r\n  sobre o corpo      -> a fedida pele do Minotauro (novo)\r\n  no corpo           -> uma brilhante veste de novato (novo)\r\n  nos braços         -> um par de braçadeiras de novato (novo)\r\n  nas mãos           -> um par de luvas de couro (novo)\r\n  como escudo        -> um escudo (novo)\r\n  nas pernas         -> uma calça de couro (novo)\r\n  empunhando         -> uma brilhante espada de novato ..Isso tem uma pequena aura! (novo)\r\n  segurando          -> um brilhante punhal de novato ..Isso tem uma pequena aura! (novo)\r\n\r\n17hp 170mn 101mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 31,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:31.398389-03:00",
+      "day": 95,
+      "command": "save",
+      "response": "Salvando os seus atalhos.\r\n\r\n17hp 170mn 101mv > \r\nVocê sente um veneno queimar em suas veias, e sofre. [-10]\r\nSeus ferimentos estão sangrando MUITO!\r\n\r\n10hp 170mn 101mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 32,
+      "record_kind": "command_response"
+    },
+    {
+      "at": "2026-10-15T21:09:32.410364-03:00",
+      "day": 95,
+      "command": "sleep",
+      "response": "Você se deita e dorme.\r\n\r\n10hp 170mn 101mv > ",
+      "source_file": "session_dia95_esgotos.log",
+      "source_line": 33,
+      "record_kind": "command_response"
+    }
+  ]
+}

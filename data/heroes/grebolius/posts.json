@@ -2448,5 +2448,38 @@
       "templo-midgaard"
     ],
     "source_kind": "live"
+  },
+  {
+    "id": 95,
+    "day": "Dia 95",
+    "title": "O Alçapão do Lixo, a Queda na Borda e o Veneno na Escuridão",
+    "content": [
+      "Deixei para trás a luz serena do santuário e segui para o sul, onde o fedor sufocante do Depósito de Lixo indicava o caminho para as entranhas da cidade. Sob o amontoado de detritos, encontrei a escada de ferro chumbada na parede de concreto e desci até a Junção Quádrupla dos Esgotos de Midgaard, onde o eco da água turva corria pelos dutos gigantescos. Minha intenção era esquadrinhar a malha de canos com cautela cadenciada, medindo saídas e catalogando as curvas do esgoto superior.",
+      "Reconheci as junções ao norte e ao sul e espiei a abertura do poço ao leste antes de examinar a passagem ocidental. Ao cruzar o limiar daquela sala de paredes estranhamente polidas, ouvi um estalido metálico seco: a rocha sob meus pés cedeu num ângulo abrupto e me vi escorregando vertiginosamente por um duto de rocha lisa, caindo e deslizando pela escuridão até ser cuspida com violência numa câmara talhada em pedra maciça, muito abaixo dos canos artificiais de Midgaard.",
+      "A saída acima não existia mais; o único caminho descia até a borda de uma garganta sem fundo, onde a escuridão absoluta parecia engolir qualquer eco. Caminhei com o jarro brilhante erguido, sentindo o vazio puxar cada passo meu sobre uma fresta de poucas polegadas de largura. Em um dos recantos da cornija, o reflexo avermelhado de escamas imensas e uma aura multicolorida pulsante me gelaram o sangue: um dragão vermelho erguia sua silhueta ameaçadora nas trevas. Mantive o sangue-frio, prendi a respiração e contornei a fera contornando a borda rumo ao norte, sem provocar o colosso adormecido.",
+      "Mas a rocha traiçoeira guardava outro perigo. Ao dobrar na borda estreita que corta de leste a oeste, o sibilar súbito rasgou o ar antes que eu pudesse recuar: um grupo de cobras rastejou das frestas e me cercou. Seus dentes afiados atravessaram minhas defesas com violência assustadora, e senti o fogo líquido da peçonha queimar minhas veias enquanto o sangue vertia de ferimentos profundos. Quando minha visão começou a escurecer e a vida despencou perigosamente, a frieza do treino falou mais alto: a determinação do meu limite de sobrevivência disparou um salto desesperado para o leste, rompendo o cerco das serpentes num arranco que custou cada gota de fôlego que me restava.",
+      "Aterrissei no Canto Nordeste da Borda, com o corpo tremendo da febre do veneno e apenas um sopro de vitalidade me mantendo consciente. As serpentes ficaram para trás, bloqueadas pela quina da pedra. Encostada na muralha escura, verifiquei meus apetrechos e confirmei que a armadura mística ainda mantinha seu escudo invisível ativo ao meu redor. Comi o último bocado de pão, bebi um gole longo do cantil para refrescar a garganta ressequida e deitei-me sobre a rocha fria da borda, concentrando toda a minha vontade para sobreviver à noite e queimar a peçonha durante o sono."
+    ],
+    "evidence": [
+      {
+        "document": "evidence/dia95.json",
+        "day": 95,
+        "note": "Comandos e respostas preservados da execução autorizada de run_dia95_esgotos.py."
+      }
+    ],
+    "date": "2026-10-15",
+    "in_game_time": "Incursão aos Esgotos de Midgaard, queda na Borda do Abismo, emboscada de cobras venenosas e repouso crítico",
+    "excerpt": "Descendo aos Esgotos de Midgaard, Grebolius cai num escorregador de pedra até a borda do abismo profundo. Após contornar um dragão colossal, sobrevive por um triz a uma emboscada de cobras venenosas graças à fuga rápida proporcionada pelo Wimpy 30, recolhendo-se ferida no Canto Nordeste da Borda.",
+    "tags": [
+      "esgotos",
+      "borda-do-abismo",
+      "dragao",
+      "cobras",
+      "veneno",
+      "wimpy",
+      "fuga",
+      "sobrevivencia"
+    ],
+    "source_kind": "live"
   }
 ]

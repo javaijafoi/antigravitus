@@ -247,3 +247,13 @@ Fonte: [dossiê primário do Dia 94](evidence/dia94.json).
 | **Um velho porteiro** | A Entrada da Vila Residencial (`vila_residencial_entrada`) | Guarda o grande portão de ferro com emblema `"M"` na entrada murada da Vila Residencial. Nota técnica: a palavra-chave de alvo não é `velho` (`look velho` recusado); usar substantivo `porteiro`. |
 | **Um apressado aventureiro** | Um Caminho Dentre os Campos (`caminho_campos_jareth`) | Transita pelo entroncamento dos campos em busca de desafios. Nota técnica: a palavra-chave de alvo não é `apressado` (`look apressado` recusado); usar substantivo `aventureiro`. |
 
+## Dia 95 — Criaturas da Borda do Abismo nos Esgotos
+
+Fonte: [dossiê primário do Dia 95](evidence/dia95.json).
+
+| Criatura / Monstro | Local observado | Comportamento e Periculosidade |
+| :--- | :--- | :--- |
+| **Um ameaçador dragão vermelho** | A Borda Estreita (`borda_estreita_sul`) | **LETAL / CRÍTICO.** Dragão colossal cercado por aura multicolorida mística. Encarou a aventureira com fúria. Deve ser contornado a todo custo, sem qualquer engajamento direto. |
+| **Cobras venenosas (múltiplas)** | A Estreita Borda Indo de Leste a Oeste (`estreita_borda_leste_oeste`) | **HOSTIS / VENENOSAS.** Grupo emboscador atacando em bando com mordidas lacerantes. Picada inocula peçonha grave (`poison`, -2 FOR, 9h de duração, -10 HP por pulso de dano). O protocolo Wimpy 30 disparou a fuga tática imediata salvando a vida da personagem. |
+
+

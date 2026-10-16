@@ -183,3 +183,22 @@ Fonte: [dossiê primário do Dia 94](evidence/dia94.json).
   - `Um Caminho Dentre os Campos (entroncamento Jareth)` → **L** → `Uma Estrada Pavimentada` → **L** → `Antes de um Pequeno Portão` (placa `"Taverna do Barumafir"`, portão `!norte` fechado) → **L** → `Na Borda da Floresta` (saída **L** para *Um Caminho* na floresta iluminada).
 - **Pernoite:** retorno confirmado ao **Templo de Midgaard** (`sleep` e `save`).
 
+## Dia 95 — Esgotos de Midgaard e Borda do Abismo
+
+Fonte: [dossiê primário do Dia 95](evidence/dia95.json).
+
+- **Esgotos de Midgaard (Zona 70):**
+  - `O Depósito de Lixo` → **D** → `A Junção Quádrupla Abaixo do Depósito de Lixo` (escada de metal chumbada no concreto leva para cima `u`).
+  - `A Junção Quádrupla` → **N** → `A Junção Tripla` (saídas: **L** para *A Curva No Cano De Esgoto*, **S** para *A Junção Quádrupla*, **O** para *Uma Calma Junção de Canos*).
+  - `A Junção Quádrupla` → **S** → `Uma Junção Tripla` (saídas: **N** para *A Junção Quádrupla*, **L** para *A Junção que Leva a Três Caminhos*, **O** para *A Junção Regular*).
+  - `A Junção Quádrupla` → **L** → `O Poço` (saídas: **O** para *A Junção Quádrupla*, **D** para *Abaixo do Poço*).
+  - `A Junção Quádrupla` → **O** → `A Estranha Sala Com Paredes Lisas` (escorregador unidirecional de sentido único: chão cede e desliza até *Uma Estranha Interseção*).
+- **Subsolo Profundo e Borda do Abismo:**
+  - `A Estranha Sala Com Paredes Lisas` → **D** → `Uma Estranha Interseção` (túnel de pedra na rocha; saídas: **N** para *O Canto Sudoeste da Borda*, **L** para *Abaixo do Poço*, **O** para *Uma Junção nos Canos de Esgoto*).
+  - `Uma Estranha Interseção` → **N** → `O Canto Sudoeste da Borda` → **N** → `A Borda Estreita (Covil do Dragão)` (habitada por *Um ameaçador dragão vermelho*) → **N** → `A Borda Estreita (norte)`.
+  - `A Borda Estreita (norte)`: saída **L** dá em *Passo-Em-Falso* (abismo mortal, bloqueada por precaução); saída **N** leva a `O Canto Noroeste da Borda`.
+  - `O Canto Noroeste da Borda` → **L** → `A Estreita Borda Indo de Leste a Oeste` (emboscada de cobras venenosas; saída **S** é *Passo-Em-Falso*).
+  - Fuga tática via Wimpy 30 para o leste (**L**) alcançou `O Canto Nordeste da Borda` (saídas: **S**, **O** e `!baixo`).
+- **Pernoite:** repouso e salvamento confirmados sobre a borda em **O Canto Nordeste da Borda**.
+
+

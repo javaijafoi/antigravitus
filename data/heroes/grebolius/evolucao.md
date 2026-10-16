@@ -1217,3 +1217,11 @@ Registro baseado em [evidência primária](evidence/dia91.json), reunindo a sess
 - **Modo Expandir Horizontes (Catalogação pós-dungeon):** Com estamina disponível após a limpeza, mapeou 21 salas (7 inéditas adicionadas a `mapa.json`: `Uma Longa Passagem Leste-Oeste`, `Outro Canto`, `Uma Intersecção em T na Passagem`, setor oeste de `Uma Sala Enorme`, `Uma Rua Larga`, `Um Caminho de Cascalhos` e `Na Borda da Floresta`), inspecionou 3 detalhes ambientais (`look parede` e `look palavras` em `Uma Sala Enorme` revelando a figura do homem com cabeça de touro e o aviso `'cuidado com o Minotauro...'`; `look garrafa` em `Uma Grande Sala`) e registrou o velho porteiro na Vila Residencial e o apressado aventureiro nos campos.
 - **Ficha final no Templo de Midgaard:** nível 11; HP 87/87, mana 170/170, MV 101/101; XP 195.202 (faltando 4.798 para o nível 12); alinhamento 373 (Bom); wimpy 30; 7/17 itens (78/140 kg); `save` e `sleep` confirmados. [Evidência](evidence/dia94.json).
 
+### Dia 95 — incursão aos Esgotos de Midgaard, queda na Borda do Abismo e sobrevivência crítica
+
+- **Descida e Cartografia:** Incursão a partir de *O Depósito de Lixo* descendo até *A Junção Quádrupla Abaixo do Depósito de Lixo*. Reconhecimento de saídas norte, leste e sul, e queda pelo escorregador da parede lisa até *Uma Estranha Interseção* e a borda do abismo profundo.
+- **Encontros Extremos e Fuga:** Avistamento de *Um ameaçador dragão vermelho* em *A Borda Estreita*, contornado com sucesso rumo ao norte. Em *A Estreita Borda Indo de Leste a Oeste*, emboscada surpresa por grupo de cobras venenosas.
+- **Validação do Wimpy 30:** O gatilho de fuga tática disparou com sucesso diante do dano massivo e da inoculação de veneno, escapando para o leste até *O Canto Nordeste da Borda* com custo de 1 XP (saldo de 195.201 XP).
+- **Ficha final sobre a borda:** nível 11; HP 10/87, mana 170/170, MV 101/101; XP 195.201 (restam 4.799 para o nível 12); ouro 2.188; STR 10 (-2 por veneno, 9h restantes); AC 50 com `armor` ativo (51h restantes); 6/17 itens (71/115 kg); `save` e `sleep` confirmados em *O Canto Nordeste da Borda*. [Evidência](evidence/dia95.json).
+
+

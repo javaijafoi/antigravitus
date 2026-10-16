@@ -3,7 +3,7 @@
   "hero_name": "Grebolius",
   "sanctuary_id": "panteao_centenarios",
   "last_updated_cycle": "Ciclo X (Dia 94; Modo Expandir Horizontes)",
-  "total_rooms": 111,
+  "total_rooms": 123,
   "layers": [
     {
       "id": "superficie",
@@ -1426,26 +1426,6 @@
       "discovered_in": "Ciclo II (Dia 11)"
     },
     {
-      "id": "esgotos_entrada",
-      "name": "Os Esgotos de Midgaard (Entrada)",
-      "layer": "esgotos",
-      "zone": "Submundo dos Esgotos & Vazio",
-      "risk": "Médio",
-      "risk_code": "medium",
-      "icon": "🪜",
-      "coords": {
-        "x": 640,
-        "y": 420
-      },
-      "exits": {
-        "u": "deposito_lixo",
-        "o": "esgotos_juncao"
-      },
-      "npcs": [],
-      "notes": "Acesso aos esgotos descendo pelo alçapão do Depósito de Lixo.",
-      "discovered_in": "Ciclo I (Dia 1)"
-    },
-    {
       "id": "paraiso_plano",
       "name": "O Paraíso (Plano Pós-Morte)",
       "layer": "vazio",
@@ -2671,12 +2651,273 @@
         "day": 94,
         "note": "Catalogada ao vivo no Modo Expandir Horizontes."
       }
+    },
+    {
+      "id": "esgotos_entrada",
+      "name": "A Junção Quádrupla Abaixo do Depósito de Lixo",
+      "layer": "esgotos",
+      "zone": "Submundo dos Esgotos & Vazio",
+      "risk": "Médio",
+      "risk_code": "medium",
+      "icon": "🕳️",
+      "coords": {
+        "x": 600,
+        "y": 1600
+      },
+      "exits": {
+        "n": "juncao_tripla_norte",
+        "l": "esgoto_poco",
+        "s": "juncao_tripla_sul",
+        "o": "sala_paredes_lisas",
+        "u": "deposito_lixo"
+      },
+      "npcs": [],
+      "notes": "Entrada principal dos esgotos pelo alçapão do Depósito de Lixo. Escada de metal na parede leva para cima (u).",
+      "discovered_in": "Dia 95"
+    },
+    {
+      "id": "juncao_tripla_norte",
+      "name": "A Junção Tripla",
+      "layer": "esgotos",
+      "zone": "Submundo dos Esgotos & Vazio",
+      "risk": "Médio",
+      "risk_code": "medium",
+      "icon": "🕳️",
+      "coords": {
+        "x": 600,
+        "y": 1580
+      },
+      "exits": {
+        "s": "esgotos_entrada"
+      },
+      "npcs": [],
+      "notes": "Junção de canos de concreto ao norte da entrada dos esgotos. Canos levam a leste e oeste.",
+      "discovered_in": "Dia 95"
+    },
+    {
+      "id": "juncao_tripla_sul",
+      "name": "Uma Junção Tripla",
+      "layer": "esgotos",
+      "zone": "Submundo dos Esgotos & Vazio",
+      "risk": "Médio",
+      "risk_code": "medium",
+      "icon": "🕳️",
+      "coords": {
+        "x": 600,
+        "y": 1620
+      },
+      "exits": {
+        "n": "esgotos_entrada"
+      },
+      "npcs": [],
+      "notes": "Junção ao sul da entrada dos esgotos. Canos levam a leste e oeste.",
+      "discovered_in": "Dia 95"
+    },
+    {
+      "id": "esgoto_poco",
+      "name": "O Poço",
+      "layer": "esgotos",
+      "zone": "Submundo dos Esgotos & Vazio",
+      "risk": "Médio",
+      "risk_code": "medium",
+      "icon": "🕳️",
+      "coords": {
+        "x": 620,
+        "y": 1600
+      },
+      "exits": {
+        "o": "esgotos_entrada",
+        "d": "abaixo_do_poco"
+      },
+      "npcs": [],
+      "notes": "Secção sem saída com poço vertical levando para baixo (d).",
+      "discovered_in": "Dia 95"
+    },
+    {
+      "id": "sala_paredes_lisas",
+      "name": "A Estranha Sala Com Paredes Lisas",
+      "layer": "esgotos",
+      "zone": "Submundo dos Esgotos & Vazio",
+      "risk": "Alto",
+      "risk_code": "high",
+      "icon": "⚠️",
+      "coords": {
+        "x": 580,
+        "y": 1600
+      },
+      "exits": {
+        "d": "estranha_intersecao"
+      },
+      "npcs": [],
+      "notes": "Armadilha de escorregador unidirecional (chute): ao entrar, o chão cede e você desliza até a borda profunda.",
+      "discovered_in": "Dia 95"
+    },
+    {
+      "id": "estranha_intersecao",
+      "name": "Uma Estranha Interseção",
+      "layer": "esgotos",
+      "zone": "Submundo dos Esgotos & Vazio",
+      "risk": "Alto",
+      "risk_code": "high",
+      "icon": "🕳️",
+      "coords": {
+        "x": 580,
+        "y": 1640
+      },
+      "exits": {
+        "n": "canto_sudoeste_borda",
+        "l": "abaixo_do_poco"
+      },
+      "npcs": [],
+      "notes": "Túnel talhado na rocha abaixo do escorregador. Ao norte fica a borda do abismo.",
+      "discovered_in": "Dia 95"
+    },
+    {
+      "id": "abaixo_do_poco",
+      "name": "Abaixo do Poço",
+      "layer": "esgotos",
+      "zone": "Submundo dos Esgotos & Vazio",
+      "risk": "Médio",
+      "risk_code": "medium",
+      "icon": "🕳️",
+      "coords": {
+        "x": 620,
+        "y": 1640
+      },
+      "exits": {
+        "o": "estranha_intersecao"
+      },
+      "npcs": [],
+      "notes": "Caverna escura abaixo do poço conectando a oeste com a Estranha Interseção.",
+      "discovered_in": "Dia 95"
+    },
+    {
+      "id": "canto_sudoeste_borda",
+      "name": "O Canto Sudoeste da Borda",
+      "layer": "esgotos",
+      "zone": "Submundo dos Esgotos & Vazio",
+      "risk": "Alto",
+      "risk_code": "high",
+      "icon": "🧗",
+      "coords": {
+        "x": 580,
+        "y": 1660
+      },
+      "exits": {
+        "n": "borda_estreita_sul",
+        "s": "estranha_intersecao"
+      },
+      "npcs": [],
+      "notes": "Início da borda sobre o abismo na total escuridão.",
+      "discovered_in": "Dia 95"
+    },
+    {
+      "id": "borda_estreita_sul",
+      "name": "A Borda Estreita (Covil do Dragão)",
+      "layer": "esgotos",
+      "zone": "Submundo dos Esgotos & Vazio",
+      "risk": "Letal",
+      "risk_code": "critical",
+      "icon": "🐉",
+      "coords": {
+        "x": 580,
+        "y": 1680
+      },
+      "exits": {
+        "n": "borda_estreita_norte",
+        "s": "canto_sudoeste_borda"
+      },
+      "npcs": [
+        "Um ameaçador dragão vermelho"
+      ],
+      "notes": "Trecho estreito habitado por um ameaçador dragão vermelho furioso cercado de aura multicolorida.",
+      "discovered_in": "Dia 95"
+    },
+    {
+      "id": "borda_estreita_norte",
+      "name": "A Borda Estreita",
+      "layer": "esgotos",
+      "zone": "Submundo dos Esgotos & Vazio",
+      "risk": "Alto",
+      "risk_code": "high",
+      "icon": "🧗",
+      "coords": {
+        "x": 580,
+        "y": 1700
+      },
+      "exits": {
+        "n": "canto_noroeste_borda",
+        "s": "borda_estreita_sul"
+      },
+      "npcs": [],
+      "notes": "Borda estreita ao norte do dragão. Leste dá em Passo-Em-Falso (queda mortal).",
+      "discovered_in": "Dia 95"
+    },
+    {
+      "id": "canto_noroeste_borda",
+      "name": "O Canto Noroeste da Borda",
+      "layer": "esgotos",
+      "zone": "Submundo dos Esgotos & Vazio",
+      "risk": "Alto",
+      "risk_code": "high",
+      "icon": "🧗",
+      "coords": {
+        "x": 580,
+        "y": 1720
+      },
+      "exits": {
+        "l": "estreita_borda_leste_oeste",
+        "s": "borda_estreita_norte"
+      },
+      "npcs": [],
+      "notes": "Curva da borda virando para o leste.",
+      "discovered_in": "Dia 95"
+    },
+    {
+      "id": "estreita_borda_leste_oeste",
+      "name": "A Estreita Borda Indo de Leste a Oeste",
+      "layer": "esgotos",
+      "zone": "Submundo dos Esgotos & Vazio",
+      "risk": "Alto",
+      "risk_code": "high",
+      "icon": "🐍",
+      "coords": {
+        "x": 600,
+        "y": 1720
+      },
+      "exits": {
+        "l": "canto_nordeste_borda"
+      },
+      "npcs": [
+        "Cobras venenosas"
+      ],
+      "notes": "Área de emboscada por grupo de cobras venenosas.",
+      "discovered_in": "Dia 95"
+    },
+    {
+      "id": "canto_nordeste_borda",
+      "name": "O Canto Nordeste da Borda",
+      "layer": "esgotos",
+      "zone": "Submundo dos Esgotos & Vazio",
+      "risk": "Alto",
+      "risk_code": "high",
+      "icon": "🏕️",
+      "coords": {
+        "x": 620,
+        "y": 1720
+      },
+      "exits": {
+        "o": "estreita_borda_leste_oeste"
+      },
+      "npcs": [],
+      "notes": "Canto nordeste seguro sobre o abismo onde Grebolius dormiu e salvou após a fuga no Dia 95.",
+      "discovered_in": "Dia 95"
     }
   ],
-  "last_updated_day": 94,
+  "last_updated_day": 95,
   "verification": "live",
-  "current_location_id": "templo_midgaard",
-  "camp_id": "templo_midgaard",
+  "current_location_id": "canto_nordeste_borda",
+  "camp_id": "canto_nordeste_borda",
   "reconciliation_notes": [
     "Posições gráficas são esquemáticas, não distâncias do mundo.",
     "Revisão inclui descobertas narradas até o Dia 60; não houve verificação ao vivo de todas as rotas antigas.",

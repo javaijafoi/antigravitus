@@ -21,16 +21,16 @@
   },
   "quick_stats": {
     "level_badge": "(Grau 11 • Mago; estilo ladra arcana)",
-    "hp": "87 / 87",
+    "hp": "10 / 87",
     "mana": "170 / 170",
     "mv": "101 / 101",
     "ac": "AC 25 (50 com armor; registro)",
     "weapon": "Espada de Novato + Punhal segurado + Escudo",
     "weapon_icon": "🗡️",
     "sanctuary": "O Panteão dos Centenários",
-    "location": "O Templo de Midgaard",
-    "camp": "O Templo de Midgaard",
-    "as_of_day": 94,
+    "location": "O Canto Nordeste da Borda",
+    "camp": "O Canto Nordeste da Borda",
+    "as_of_day": 95,
     "verification": "live"
   },
   "voice": {

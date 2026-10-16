@@ -614,5 +614,19 @@
       }
     ],
     "summary": "Gestão de mochila, provisões e ativação do Modo Expandir Horizontes para consumir o MV excedente: venda de 3 chifres e 2 peles de Minotauro excedentes ao armeiro por 250 moedas totais, compra de 4 pães recheados por 24 moedas, reabastecimento na Fonte Azul e segunda passagem pelas galerias comprovando ausência de respawn imediato. Em seguida, catalogação de 21 salas (incluindo 7 salas inéditas no mapa: Uma Longa Passagem Leste-Oeste, Outro Canto, Uma Intersecção em T na Passagem, setor oeste de Uma Sala Enorme, Uma Rua Larga, Um Caminho de Cascalhos e Na Borda da Floresta), inspeção da figura e aviso na parede da Sala Enorme ('cuidado com o Minotauro...') e catalogação do velho porteiro da Vila Residencial e do apressado aventureiro nos campos. Retorno ao Templo de Midgaard com 87/87 HP, 170/170 mana, 101/101 MV, 2.188 moedas, 195.202 XP (faltando 4.798 para o nível 12), alinhamento 373 (Bom), 7 itens (78/140 kg), save e sleep confirmados."
+  },
+  {
+    "id": "expedicao-esgotos-dia95-session",
+    "day": 95,
+    "type": "session",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "evidence/dia95.json",
+        "day": 95,
+        "note": "Comandos e respostas preservados da execução autorizada de run_dia95_esgotos.py."
+      }
+    ],
+    "summary": "Expedição aos Esgotos de Midgaard com o executor run_dia95_esgotos.py: descida e reconhecimento dos canos profundos e da Borda do Abismo. Em A Estreita Borda Indo de Leste a Oeste, ocorreu emboscada por grupo de cobras venenosas. O protocolo de sobrevivência Wimpy 30 disparou a retirada imediata para o leste com sucesso, levando a O Canto Nordeste da Borda com perda de 1 XP (195.201 XP). Encerramento com 10/87 HP, 170/170 mana, 101/101 MV, 2.188 moedas, envenenada (-2 FOR, 9h) e com Armadura Mística ativa (51h restantes), salva e dormindo sobre a borda."
   }
 ]
