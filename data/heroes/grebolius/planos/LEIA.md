@@ -30,6 +30,29 @@ outro herói**. O número é local ao herói.
 
 ## Ordem de leitura de quem chega
 
+**O autor diz "mandabala" e roda:**
+
+```bash
+python scripts/mandabala.py
+```
+
+O script acha o **plano mais alto**, confere a numeração e a autoria, e imprime **num bloco só**: a
+ordem de leitura, as regras que não se negociam e o **conteúdo integral do plano**. Não edita nada, não
+joga, não publica — só lê e mostra.
+
+| Comando | O que faz |
+|---|---|
+| `python scripts/mandabala.py` | o plano vigente, com a ordem de leitura |
+| `python scripts/mandabala.py --listar` | todos os planos, de todos os heróis, com autor e objetivo |
+| `python scripts/mandabala.py --numero 3` | um plano específico (avisa se não for o mais recente) |
+| `python scripts/mandabala.py --hero <id>` | escolhe o herói |
+| `python scripts/mandabala.py --so-caminho` | imprime só o caminho, para usar em script |
+
+**Ele avisa sozinho** quando: a numeração tem **lacuna** (plano removido ou renomeado), o plano pedido
+**não é o mais recente**, ou o plano **não declara autoria**.
+
+**Sem o script, a ordem é esta:**
+
 1. `AGENTS.md` (raiz) — como trabalhar neste repositório
 2. **O plano mais alto da pasta `planos/`** — é o seu ponto de partida
 3. `docs/agentes/registro_de_evolucao.md` — o que mudou na ferramenta e por quê

@@ -141,6 +141,39 @@ handoff (§7).
 
 ### 2026-10-16 · Dia 156 · deepseek-flash
 
+- **Mudou:** o motor ganhou a versão **v1.5** (`automato/CHANGELOG.md`) com o esquema de **planos
+  numerados** e a ferramenta de retomada:
+  1. **`data/heroes/<id>/planos/planoNNN.md`** — um plano **por sessão**, **append-only**, com
+     **autoria** no cabeçalho. Regra no `AGENTS.md` **§6.1**, na tabela do §6 e no checklist *"Antes de
+     encerrar"*;
+  2. **`data/heroes/grebolius/planos/LEIA.md`** — como o esquema funciona e o **modelo** do plano;
+  3. **`data/heroes/grebolius/planos/plano001.md`** — a primeira aplicação (Capítulo 05);
+  4. **`scripts/mandabala.py`** — acha o plano mais alto, avisa de **lacuna na numeração**, de plano
+     **não mais recente** e de plano **sem autoria**, e imprime a ordem de leitura + o plano integral.
+     Modos: `--listar`, `--numero N`, `--hero`, `--so-caminho`;
+  5. **`scripts/test_mandabala.py`** — **25 testes**.
+- **Por quê:** a passagem de agente para agente custava **rodadas inteiras de redescoberta**. O caso
+  concreto: **seis rodadas** procurando o "novato esperto" cuja sala (**18645**) estava escrita num
+  documento do próprio repositório desde o começo. A pedido do autor, a retomada virou artefato: ele diz
+  *"executa o plano 001"* e quem pegar continua como se fosse o anterior. **Um arquivo que se atualiza
+  perderia o histórico; um plano novo por sessão preserva quem veio antes e o que já falhou.**
+- **Como foi verificado:** `python -B -m unittest discover -s scripts -p "test_*.py"` → **116 testes OK**
+  (eram 91); `automato/verificar.py` **18/18**; `check_project.py` **0 erros**. O script foi rodado nos
+  quatro modos, incluindo o caminho de erro (`--numero 99` → exit 1 com mensagem clara). Dois **erros
+  meus** apareceram no caminho e foram corrigidos: o teste passava `--numero 99` como **int** (o argparse
+  quebra antes de converter), e `main()` agora **normaliza `argv` para texto** para tolerar chamada
+  programática.
+- **Custo:** mais um artefato por sessão para manter, e a numeração exige disciplina — um plano removido
+  ou renomeado deixa **lacuna** e o `mandabala.py` avisa. Nada foi removido: o `mandabala.md` que eu
+  havia criado foi **substituído pelo esquema** (o arquivo foi apagado; o conceito virou `plano001.md`).
+- **Próximo:** (a) o `publish_daily.py` publica `data/**` e `scripts/**`, então a pasta `planos/` entra
+  sozinha — vale conferir se convém **excluir planos antigos** da revisão ou publicá-los todos;
+  (b) o `check_project.py` ainda **não valida o conteúdo de um plano** (número, autor, seções) — hoje só
+  o `test_mandabala.py` olha para o plano real; (c) a convenção é **newest first** abaixo do marcador
+  deste arquivo, e isso não está escrito em lugar nenhum além daqui.
+
+### 2026-10-16 · Dia 156 · deepseek-flash
+
 > **Nota de autoria:** esta entrada é da **sessão que estava jogando** o Capítulo 05, não da sessão que
 > escreveu o guia — as duas rodam como `deepseek-flash` e o §0 não distingue sessões. O que separa é o
 > conteúdo: esta entrada trata do **motor em campo**, a de cima trata da **documentação de agentes**.

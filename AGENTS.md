@@ -187,6 +187,18 @@ adjetivos), o **próximo passo único**, os **bloqueios com o que já foi tentad
 **não repetir**. O modelo completo está em
 [`data/heroes/grebolius/planos/LEIA.md`](data/heroes/grebolius/planos/LEIA.md).
 
+**Para retomar, o autor diz "mandabala" e roda:**
+
+```bash
+python scripts/mandabala.py            # o plano vigente + a ordem de leitura
+python scripts/mandabala.py --listar   # todos os planos, com autor e objetivo
+python scripts/mandabala.py --numero 3 # um plano específico
+```
+
+O `scripts/mandabala.py` acha o plano mais alto, **avisa** se a numeração tem lacuna, se o plano pedido
+não é o mais recente ou se ele não declara autoria, e imprime o **conteúdo integral** do plano junto com
+a ordem de leitura. Não edita, não joga, não publica.
+
 **Por que assim:** se cada um editasse o mesmo arquivo, a informação do anterior sumiria — e é
 exatamente essa informação que evita refazer seis rodadas de busca.
 

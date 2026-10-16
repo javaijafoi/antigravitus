@@ -4,6 +4,21 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.5 — Dia 156 · planos numerados e o "mandabala"
+- **NOVO**: **planos numerados** em `data/heroes/<id>/planos/planoNNN.md` — **append-only**, um por
+  sessão, com **autoria** no cabeçalho. O autor chega, diz *"executa o plano NNN"*, e quem pegar
+  continua como se fosse o anterior. Regra no `AGENTS.md` **§6.1** e no checklist de encerramento.
+- **NOVO**: **`scripts/mandabala.py`** — acha o **plano mais alto** do herói e imprime, num bloco só, a
+  **ordem de leitura**, as regras que não se negociam e o **conteúdo integral** do plano. Avisa quando
+  a numeração tem **lacuna**, quando o plano pedido **não é o mais recente** e quando ele **não declara
+  autoria**. `--listar`, `--numero N`, `--hero`, `--so-caminho`. Não edita, não joga, não publica.
+- **NOVO**: `scripts/test_mandabala.py` — **25 testes** (descoberta, resolução de herói, cabeçalho,
+  lacunas, modos da linha de comando, e a integridade do plano real do repositório).
+- **MOTIVO**: a passagem de um agente para outro estava custando **rodadas inteiras de redescoberta** —
+  seis delas só para achar um NPC cuja sala estava escrita num documento do próprio repositório. Um
+  arquivo que se *atualiza* perderia a informação de quem veio antes; um **plano novo por sessão**, não.
+- **MUDOU**: a suíte offline passou de **91 para 116 testes**.
+
 ## v1.4 — Dia 156 · segurança de sessão, comércio e mapa derivado
 - **CORREÇÃO (segurança)**: **`term 200 80` no login** (`driver/debo_bot.py`, constantes
   `TERM_LINHAS`/`TERM_COLUNAS`). Sem isto, `commands`, `help` longo e `autoquest todas` abrem
