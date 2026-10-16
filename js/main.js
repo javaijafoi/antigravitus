@@ -24,6 +24,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   const mapCanvasWrap = document.getElementById("map-canvas-wrap");
   const btnBackCronicas = document.getElementById("btn-back-cronicas");
   const cycleSummaryContainer = document.getElementById("cycle-summary-container");
+  const seasonSelect = document.getElementById("season-select");
+  const seasonSelectorWrap = document.getElementById("season-selector-wrap");
+  const gridTitleEl = document.querySelector(".grid-title");
+  const gridIconEl = document.querySelector(".grid-icon");
+  const gridActionsGroup = document.querySelector(".grid-actions-group");
 
   const brandRuneEl = document.querySelector(".brand-rune");
   const brandTitleEl = document.querySelector(".brand-text h1");
@@ -57,6 +62,14 @@ document.addEventListener("DOMContentLoaded", async () => {
   let latestPostId = 0;
   // Cache de preferências do usuário (localStorage)
   let sortOrder = localStorage.getItem("antigravitus_sort_order") || "desc"; // "desc" (mais novo 1º) ou "asc" (mais antigo 1º)
+
+  // Temporadas e capítulos (Season 02+). A Season 01 continua no modelo por dias.
+  let seasonsCatalog = null;
+  let activeSeason = null;
+  let chaptersData = null;
+  let activeTomoNumber = 1;
+  let activeChapterId = null;
+  let seasonSelectorReady = false;
 
   // 1. Carrega lista de heróis do arquivo central heroes.json
   async function initHeroes() {
@@ -104,6 +117,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     const version = ++heroLoadVersion;
     currentHero = hero;
     currentState = null;
+    // A troca de herói recarrega a temporada escolhida para ele.
+    seasonsCatalog = null;
+    activeSeason = null;
+    chaptersData = null;
+    activeTomoNumber = 1;
+    activeChapterId = null;
+    if (seasonSelectorWrap) seasonSelectorWrap.hidden = true;
     if (postsContainer) {
       allPosts = [];
       allCycles = [];
@@ -116,6 +136,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     applyHeroContext(hero);
     const tasks = [loadStateForHero(hero, version)];
     if (postsContainer) tasks.push(loadPostsForHero(hero, version));
+    if (postsContainer) tasks.push(loadSeasonsForHero(hero, version));
     if (fichaContainer) tasks.push(loadFichaForHero(hero, version));
     if (mapCanvasWrap) tasks.push(loadMapForHero(hero, version));
     await Promise.all(tasks);
@@ -347,9 +368,280 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   function updatePostCount(count) {
+    if (isChapterSeason()) return; // a contagem de capítulos é atualizada em renderChapterContent
     if (postCountEl) {
       postCountEl.textContent = `${count} ${count === 1 ? "crônica" : "crônicas"} registradas`;
     }
+  }
+
+  // ============================================================
+  // TEMPORADAS — Season 01 por dias • Season 02+ por capítulos
+  // ============================================================
+  function isChapterSeason() {
+    return !!(activeSeason && activeSeason.model === "capitulos");
+  }
+
+  function seasonTitleShort(season) {
+    const title = String(season.title || ("Season " + season.number));
+    const parts = title.split("\u2014").length > 1 ? title.split("\u2014") : title.split("-");
+    const short = parts.length > 1 ? parts.slice(1).join(" ").trim() : title;
+    return "T" + season.number + " · " + short;
+  }
+
+  // Esconde os controles exclusivos do modelo por dias durante a temporada de capítulos.
+  function toggleSeason01Chrome(show) {
+    const display = show ? "" : "none";
+    if (gridActionsGroup) gridActionsGroup.style.display = display;
+    if (floatingDockEl) floatingDockEl.style.display = display;
+    if (postsPaginationEl) postsPaginationEl.style.display = display;
+    if (show) {
+      if (gridTitleEl) gridTitleEl.textContent = "Grade de Ciclos e Dias";
+      if (gridIconEl) gridIconEl.textContent = "📅";
+    } else if (cycleSummaryContainer) {
+      cycleSummaryContainer.style.display = "none";
+    }
+  }
+
+  async function loadSeasonsForHero(hero, version) {
+    // Somente a página de crônicas usa temporadas; ficha, mapa e sobre seguem no modelo por dias.
+    if (!postsContainer || !seasonSelect) return;
+    try {
+      const res = await fetch("data/heroes/" + hero.id + "/temporadas.json");
+      if (version !== heroLoadVersion) return;
+      if (!res.ok) throw new Error("Catálogo de temporadas indisponível");
+      const data = await res.json();
+      if (version !== heroLoadVersion) return;
+      if (!data || !Array.isArray(data.seasons) || data.seasons.length === 0) throw new Error("Catálogo de temporadas inválido");
+      seasonsCatalog = data;
+      const urlSeason = new URLSearchParams(window.location.search).get("season");
+      const stored = localStorage.getItem("active_season");
+      const seasons = data.seasons;
+      const resolved = seasons.find(s => s.id === urlSeason)
+        || seasons.find(s => s.id === stored)
+        || seasons.find(s => s.id === data.current)
+        || seasons[0];
+      await activateSeason(resolved.id, version);
+    } catch (e) {
+      seasonsCatalog = null;
+      activeSeason = null;
+      if (seasonSelectorWrap) seasonSelectorWrap.hidden = true;
+      renderAllViews();
+    }
+  }
+
+  function renderSeasonSelector() {
+    if (!seasonSelect) return;
+    const seasons = (seasonsCatalog && seasonsCatalog.seasons) || [];
+    if (!seasons.length) {
+      if (seasonSelectorWrap) seasonSelectorWrap.hidden = true;
+      return;
+    }
+    if (seasonSelectorWrap) seasonSelectorWrap.hidden = false;
+    seasonSelect.innerHTML = seasons.map(s => {
+      const selected = (activeSeason && s.id === activeSeason.id) ? " selected" : "";
+      return '<option value="' + escapeHtml(s.id) + '"' + selected + ">" + escapeHtml(seasonTitleShort(s)) + "</option>";
+    }).join("");
+    if (activeSeason) seasonSelect.value = activeSeason.id;
+    if (!seasonSelectorReady) {
+      seasonSelectorReady = true;
+      seasonSelect.addEventListener("change", (e) => { activateSeason(e.target.value); });
+    }
+  }
+
+  async function activateSeason(seasonId, version) {
+    const seasons = (seasonsCatalog && seasonsCatalog.seasons) || [];
+    const season = seasons.find(s => s.id === seasonId) || seasons[0];
+    if (!season) return;
+    activeSeason = season;
+    activeTomoNumber = 1;
+    activeChapterId = null;
+    if (season.model === "capitulos") {
+      await loadChaptersForHero(currentHero, season, version);
+      activeChapterId = defaultChapterId();
+    } else {
+      chaptersData = null;
+    }
+    localStorage.setItem("active_season", season.id);
+    if (seasonSelect) seasonSelect.value = season.id;
+    if (currentHero) {
+      const newUrl = new URL(window.location.href);
+      newUrl.searchParams.set("hero", currentHero.id);
+      newUrl.searchParams.set("season", season.id);
+      window.history.replaceState({}, "", newUrl);
+    }
+    renderSeasonSelector();
+    renderAllViews();
+  }
+
+  async function loadChaptersForHero(hero, season, version) {
+    if (!hero || !season) return;
+    if (chaptersData && chaptersData.hero_id === hero.id && chaptersData.season === season.id) return;
+    try {
+      const source = season.source || "capitulos.json";
+      const res = await fetch("data/heroes/" + hero.id + "/" + source);
+      if (version !== undefined && version !== heroLoadVersion) return;
+      if (!res.ok) throw new Error("Capítulos indisponíveis");
+      const data = await res.json();
+      if (version !== undefined && version !== heroLoadVersion) return;
+      chaptersData = (data && Array.isArray(data.chapters)) ? data : null;
+    } catch (e) {
+      chaptersData = null;
+    }
+  }
+
+  function defaultChapterId() {
+    const chapters = (chaptersData && chaptersData.chapters) || [];
+    if (!chapters.length) return null;
+    const concluded = chapters.filter(c => c.status === "concluido").map(c => c.id).sort((a, b) => a - b);
+    if (concluded.length) return concluded[0];
+    return chapters.map(c => c.id).sort((a, b) => a - b)[0];
+  }
+
+  function chapterStatusText(status) {
+    if (status === "concluido") return "✔ Concluído";
+    return "✎ Em produção";
+  }
+
+  function seasonPlaceholder(message) {
+    return '<div class="post-card" style="text-align: center; padding: 3rem;">'
+      + '<p style="font-family: var(--font-serif); font-size: 1.3rem; color: var(--accent-gold);">'
+      + escapeHtml(message) + "</p></div>";
+  }
+
+  function renderChapterParts(chapter) {
+    if (!Array.isArray(chapter.parts) || chapter.parts.length === 0) return "";
+    let html = '<section class="chapter-parts"><h3 class="chapter-parts-title">Partes registradas</h3>';
+    chapter.parts.forEach(part => {
+      html += '<div class="chapter-part">';
+      html += '<div class="chapter-part-head"><span class="chapter-part-day">Dia ' + escapeHtml(String(part.day)) + "</span>";
+      if (part.date) html += '<span class="chapter-part-date">' + escapeHtml(part.date) + "</span>";
+      html += "</div>";
+      if (part.summary) html += '<p class="chapter-part-summary">' + escapeHtml(part.summary) + "</p>";
+      html += "</div>";
+    });
+    return html + "</section>";
+  }
+
+  function renderChapterContent() {
+    if (!postsContainer) return;
+    const chapters = (chaptersData && chaptersData.chapters) || [];
+    let html = "";
+    if (activeChapterId === null || activeChapterId === undefined) {
+      html = seasonPlaceholder("Selecione um capítulo na grade acima.");
+    } else {
+      const chapter = chapters.find(c => c.id === activeChapterId);
+      const badge = "Capítulo " + activeChapterId + (chapter && chapter.kind === "prologo" ? " • Prólogo" : "");
+      if (!chapter) {
+        html = '<article class="post-card chapter-view">'
+          + '<header class="post-header"><span class="post-day-badge">' + escapeHtml(badge) + "</span></header>"
+          + '<h2 class="post-title">Capítulo ' + escapeHtml(String(activeChapterId)) + "</h2>"
+          + '<div class="chapter-production-warning">⏳ Em produção — este capítulo ainda não foi publicado.</div>'
+          + "</article>";
+      } else if (chapter.status === "concluido" && Array.isArray(chapter.content) && chapter.content.length) {
+        html = '<article class="post-card chapter-view" id="chapter-' + chapter.id + '">'
+          + '<header class="post-header">'
+          + '<span class="post-day-badge">' + escapeHtml(badge) + "</span>"
+          + '<div class="post-dates"><span>' + escapeHtml(chapter.date || "") + "</span></div>"
+          + "</header>"
+          + '<h2 class="post-title">' + escapeHtml(chapter.title || ("Capítulo " + chapter.id)) + "</h2>"
+          + (chapter.in_game_time ? '<div class="post-location"><span>🏛️ ' + escapeHtml(chapter.in_game_time) + "</span></div>" : "")
+          + (chapter.excerpt ? '<p class="chapter-excerpt">' + escapeHtml(chapter.excerpt) + "</p>" : "")
+          + '<div class="post-body">' + chapter.content.map(p => "<p>" + p + "</p>").join("") + "</div>"
+          + '<div class="post-signature">— ' + escapeHtml(currentHero ? currentHero.name : "") + ", " + escapeHtml(currentHero ? (currentHero.title || "Aventureiro") : "Aventureiro") + "</div>"
+          + (chapter.tags && chapter.tags.length ? '<div class="post-tags"><span class="label">Marcos:</span>' + chapter.tags.map(t => '<span class="tag-pill">#' + escapeHtml(t) + "</span>").join("") + "</div>" : "")
+          + renderChapterParts(chapter)
+          + "</article>";
+      } else {
+        html = '<article class="post-card chapter-view" id="chapter-' + chapter.id + '">'
+          + '<header class="post-header"><span class="post-day-badge">' + escapeHtml(badge) + "</span></header>"
+          + '<h2 class="post-title">' + escapeHtml(chapter.title || ("Capítulo " + chapter.id)) + "</h2>"
+          + (chapter.excerpt ? '<p class="chapter-excerpt">' + escapeHtml(chapter.excerpt) + "</p>" : "")
+          + '<div class="chapter-goal"><strong>Objetivo:</strong> ' + escapeHtml(chapter.goal || "não registrado") + "</div>"
+          + '<div class="chapter-production-warning">⏳ Em produção — este capítulo ainda não foi fechado.</div>'
+          + "</article>";
+      }
+    }
+    postsContainer.innerHTML = html;
+    if (postCountEl) {
+      const total = chapters.length;
+      postCountEl.textContent = total + (total === 1 ? " capítulo registrado" : " capítulos registrados");
+    }
+  }
+
+  function renderChapterView() {
+    const tomos = (chaptersData && chaptersData.tomos) || [];
+    const chapters = (chaptersData && chaptersData.chapters) || [];
+    if (gridTitleEl) gridTitleEl.textContent = "Tomos e Capítulos";
+    if (gridIconEl) gridIconEl.textContent = "📖";
+    toggleSeason01Chrome(false);
+
+    if (!tomos.length) {
+      if (gridPageIndicator) gridPageIndicator.textContent = "Nenhum tomo publicado nesta temporada.";
+      if (gridCyclesBar) gridCyclesBar.innerHTML = "";
+      if (gridDaysMatrix) gridDaysMatrix.innerHTML = "";
+      if (cycleSummaryContainer) { cycleSummaryContainer.innerHTML = ""; cycleSummaryContainer.style.display = "none"; }
+      renderChapterContent();
+      return;
+    }
+
+    if (!tomos.some(t => t.number === activeTomoNumber)) activeTomoNumber = tomos[0].number;
+    const tomo = tomos.find(t => t.number === activeTomoNumber) || tomos[0];
+
+    if (gridPageIndicator) {
+      gridPageIndicator.textContent = (tomo.title || ("Tomo " + (tomo.roman || tomo.number)))
+        + " • Capítulos " + tomo.chapter_start + " a " + tomo.chapter_end;
+    }
+
+    if (gridCyclesBar) {
+      gridCyclesBar.innerHTML = tomos.map(t => {
+        const active = t.number === activeTomoNumber ? " active" : "";
+        return '<button class="cycle-page-btn' + active + '" data-tomo="' + t.number + '" title="' + escapeHtml(t.subtitle || t.title || "") + '">'
+          + "<span>✦ Tomo " + escapeHtml(String(t.roman || t.number)) + " (" + t.chapter_start + "–" + t.chapter_end + ")</span></button>";
+      }).join("");
+      gridCyclesBar.querySelectorAll(".cycle-page-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          activeTomoNumber = parseInt(btn.dataset.tomo, 10);
+          renderChapterView();
+        });
+      });
+    }
+
+    if (cycleSummaryContainer) {
+      if (tomo.subtitle || tomo.title) {
+        cycleSummaryContainer.style.display = "block";
+        cycleSummaryContainer.innerHTML = '<div class="cycle-spoiler-card"><div class="cycle-spoiler-quote-banner">'
+          + '<div class="cycle-spoiler-badge">✦ ' + escapeHtml(tomo.title || ("Tomo " + (tomo.roman || tomo.number))) + "</div>"
+          + (tomo.subtitle ? '<p class="cycle-spoiler-text">' + escapeHtml(tomo.subtitle) + "</p>" : "")
+          + "</div></div>";
+      } else {
+        cycleSummaryContainer.innerHTML = "";
+        cycleSummaryContainer.style.display = "none";
+      }
+    }
+
+    const ids = [];
+    for (let id = tomo.chapter_start; id <= tomo.chapter_end; id++) ids.push(id);
+    if (gridDaysMatrix) {
+      gridDaysMatrix.innerHTML = ids.map(id => {
+        const chapter = chapters.find(c => c.id === id);
+        const concluded = !!(chapter && chapter.status === "concluido");
+        const title = chapter ? chapter.title : ("Capítulo " + id);
+        return '<button class="grid-day-cell chapter-cell' + (id === activeChapterId ? " active" : "") + (concluded ? " chapter-concluido" : " chapter-producao")
+          + '" data-chapter="' + id + '" title="Cap. ' + id + ": " + escapeHtml(title) + '">'
+          + '<span class="cell-day-num">Cap. ' + id + "</span>"
+          + '<span class="chapter-cell-title">' + escapeHtml(title) + "</span>"
+          + '<span class="chapter-status ' + (concluded ? "concluido" : "producao") + '">' + chapterStatusText(chapter ? chapter.status : "ausente") + "</span>"
+          + "</button>";
+      }).join("");
+      gridDaysMatrix.querySelectorAll(".chapter-cell").forEach(cell => {
+        cell.addEventListener("click", () => {
+          activeChapterId = parseInt(cell.dataset.chapter, 10);
+          renderChapterView();
+        });
+      });
+    }
+
+    renderChapterContent();
   }
 
   function toRoman(num) {
@@ -429,6 +721,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Renderiza toda a interface com base no ciclo e ordenação ativos
   function renderAllViews() {
+    // Season 02+ usa tomos e capítulos; a Season 01 mantém a grade de dias.
+    if (isChapterSeason()) {
+      renderChapterView();
+      return;
+    }
+    toggleSeason01Chrome(true);
     renderGridNavigation();
     renderCycleSummary();
     renderFeed();
@@ -438,6 +736,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Define um ciclo ativo e recarrega views
   function setCycle(cycleNum, scrollToTop = true) {
+    if (isChapterSeason()) return;
     activeCycle = cycleNum;
     renderAllViews();
     if (scrollToTop && postsContainer) {
@@ -447,6 +746,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Salta suavemente para uma crônica específica (trocando de página se necessário)
   function jumpToPost(dayId) {
+    if (isChapterSeason()) return;
     if (!dayId || dayId < 1 || dayId > latestPostId) return;
     activeDay = dayId;
 

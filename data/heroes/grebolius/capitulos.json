@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "hero_id": "grebolius",
+  "season": "s02",
+  "tomos": [
+    {
+      "id": "tomo-1",
+      "number": 1,
+      "roman": "I",
+      "title": "Tomo I — O Nome no Vazio",
+      "chapter_start": 0,
+      "chapter_end": 10,
+      "subtitle": "Doze capítulos para reconstruir uma identidade: a origem, as primeiras missões da nova estação e o que o Vazio deixou para trás."
+    }
+  ],
+  "chapters": [
+    {
+      "id": 0,
+      "tomo": 1,
+      "title": "Prólogo",
+      "kind": "prologo",
+      "status": "concluido",
+      "goal": "Resumir a Season 01 e preparar a leitura por capítulos.",
+      "closed_on_day": 100,
+      "days": [
+        1,
+        100
+      ],
+      "date": "2026-10-15",
+      "in_game_time": "Do Despertar no Depósito de Lixo ao Vazio do Dia 100",
+      "excerpt": "O mapa de noventa e nove dias: do lixo de Midgaard ao Vazio que devolveu o que a morte tinha levado.",
+      "tags": [
+        "Season 01",
+        "Prólogo",
+        "Memória",
+        "Vazio",
+        "Recomeço"
+      ],
+      "content": [
+        "Antes de a estação nova começar, é preciso lembrar de onde viemos. Isto não é uma crônica; é um mapa. Um mapa de noventa e nove dias, e de uma mulher que atravessou todos eles com o nome errado na boca.",
+        "Tudo começa no chão fétido do Depósito de Lixo, em Midgaard. Uma criatura acorda sem memória, com o corpo que mal reconhece e a certeza plantada na cabeça de que precisa se esconder para sobreviver. Ela veste um capuz, engrossa a voz e se faz passar por homem. Aprende a rastejar pelos becos, a medir cada guarda e cada moeda, a engolir o desprezo como quem engole pão dormido. E jura que um dia haverá um reino onde nenhum goblin seja pisado.",
+        "A cidade a ensina pela dor. No Dia 11, uma serpente monstruosa a mata nos esgotos, e o Vazio lhe arranca o rosto da mãe, a voz do clã e as canções de infância. Ela volta dos mortos com a alma queimada e transforma o luto em juramento: aquela serpente pagaria. Depois vêm as galerias dos arcanos, os graus de poder um a um, o feitiço aprendido nas paredes da Guilda dos Magos, o ouro empilhado, o Grande Minotauro tomado de assalto, o tabuleiro de xadrez com suas peças vivas e a Torre Negra que sussurra a morte a quem chega perto.",
+        "Ela cai mais três vezes. Tomba para o Cavaleiro Branco no Dia 60. Consome-se contra a serpente no Dia 81 e renasce na Fonte da Vida, prometendo voltar mais forte. Vence e perde no mesmo fôlego, enriquece, acumula equipamento de novato como quem coleciona cicatrizes, e nunca deixa de escrever. A goblin sem véu aprende que a memória é o único tesouro que a morte também rouba — e é justamente por isso que ela insiste em registrar cada passo, cada golpe e cada moeda tilintando na algibeira.",
+        "Até que, no Dia 100, o milharal destruído cobra o seu preço. Quarta morte, quatro vezes o Vazio. E desta vez o nada não leva apenas um pedaço de memória: devolve um. Um fio que ela passou noventa e nove dias sem enxergar, um colar que não lhe pertence, um nome que soa a folhas e a canção, e o olhar de quem já sabia. Talvez a criatura que emergiu do lixo nunca tenha sido goblin. Talvez ela só tenha deduzido isso dos cacos que sobraram.",
+        "A Season 01 termina aqui, no limiar. A Season 02 começa no Dia 101 e não será medida em dias, mas em capítulos — metas que podem atravessar muitas noites, muitos saves e muitos despertares. E o primeiro capítulo não pergunta onde ela está. Pergunta quem é que está olhando no espelho."
+      ],
+      "source_kind": "documental",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 100,
+          "note": "Compêndio integral da Season 01, Dias 1 a 100."
+        },
+        {
+          "document": "evidence/dia100.json",
+          "day": 100,
+          "note": "Morte #4, travessia do Vazio e âncora do autor sobre a origem elfa."
+        },
+        {
+          "document": "notas_editoriais.md",
+          "day": 100,
+          "note": "Separação entre fato do servidor e âncora do autor."
+        }
+      ],
+      "parts": [
+        {
+          "day": 1,
+          "date": "2026-10-14",
+          "summary": "Despertar no Depósito de Lixo e o disfarce de homem.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 1,
+              "note": "Crônica do Dia 1."
+            }
+          ]
+        },
+        {
+          "day": 11,
+          "date": "2026-10-24",
+          "summary": "Morte pela serpente e o Vazio que apaga a mãe, o clã e as canções.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 11,
+              "note": "Crônica do Dia 11."
+            }
+          ]
+        },
+        {
+          "day": 60,
+          "date": "2026-12-12",
+          "summary": "Derrota para o Cavaleiro Branco.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 60,
+              "note": "Crônica do Dia 60."
+            }
+          ]
+        },
+        {
+          "day": 81,
+          "date": "2027-01-02",
+          "summary": "Morte contra a serpente e renascimento na Fonte da Vida.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 81,
+              "note": "Crônica do Dia 81."
+            }
+          ]
+        },
+        {
+          "day": 100,
+          "date": "2026-10-15",
+          "summary": "Quarta morte, travessia do Vazio e a lembrança da origem.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia100.json",
+              "day": 100,
+              "note": "Registro da morte #4 e do renascimento."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -333,6 +333,113 @@ def validate_missions(hero_id, missions, max_day, hero_dir=None):
     return errors, warnings
 
 
+CHAPTER_KINDS = ("prologo", "missao", "intervalo", "reflexao", "marco")
+CHAPTER_STATUS = ("aberto", "em_curso", "concluido")
+
+
+def validate_temporadas(hero_id, data, max_day, hero_dir=None):
+    errors, warnings = [], []
+    context = f"'{hero_id}'/temporadas.json"
+    if not isinstance(data, dict) or not isinstance(data.get("seasons"), list) or not data["seasons"]:
+        return [f"{context}: objeto com lista seasons não vazia é obrigatório."], warnings
+    if data.get("hero_id") != hero_id or data.get("schema_version") != 1:
+        errors.append(f"{context}: schema_version=1 e hero_id correspondente são obrigatórios.")
+    ids = set()
+    for season in data["seasons"]:
+        if not isinstance(season, dict) or not nonempty(season.get("id")):
+            errors.append(f"{context}: temporada precisa de id textual.")
+            continue
+        if season["id"] in ids:
+            errors.append(f"{context}: temporada duplicada {season['id']}.")
+        ids.add(season["id"])
+        if not nonempty(season.get("title")) or season.get("model") not in ("dias", "capitulos"):
+            errors.append(f"{context}: {season['id']} precisa de title e model 'dias' ou 'capitulos'.")
+        if not nonempty(season.get("source")):
+            errors.append(f"{context}: {season['id']} precisa de source.")
+        elif hero_dir is not None and not (Path(hero_dir) / season["source"]).is_file():
+            errors.append(f"{context}: fonte da temporada {season['id']} não encontrada: {season['source']}.")
+        rng = season.get("range")
+        if rng is not None and (not isinstance(rng, list) or len(rng) != 2 or not all(integer(v, 1) for v in rng)
+                                or rng[0] > rng[1] or rng[1] > max_day):
+            errors.append(f"{context}: range inválido em {season['id']}.")
+        if season.get("model") == "capitulos" and not integer(season.get("started_day"), 1):
+            errors.append(f"{context}: temporada por capítulos precisa de started_day.")
+    if data.get("current") is not None and data["current"] not in ids:
+        errors.append(f"{context}: current aponta para temporada inexistente.")
+    return errors, warnings
+
+
+def validate_capitulos(hero_id, data, max_day, hero_dir=None):
+    errors, warnings = [], []
+    context = f"'{hero_id}'/capitulos.json"
+    if not isinstance(data, dict) or not isinstance(data.get("chapters"), list):
+        return [f"{context}: objeto com lista chapters é obrigatório."], warnings
+    if data.get("hero_id") != hero_id or data.get("schema_version") != 1 or not nonempty(data.get("season")):
+        errors.append(f"{context}: schema_version=1, hero_id e season são obrigatórios.")
+    tomos = data.get("tomos")
+    if not isinstance(tomos, list) or not tomos:
+        errors.append(f"{context}: tomos deve ser lista não vazia.")
+        tomos = []
+    ranges = {}
+    for tomo in tomos:
+        if not isinstance(tomo, dict) or not nonempty(tomo.get("id")) or not integer(tomo.get("number"), 1):
+            errors.append(f"{context}: tomo precisa de id e number.")
+            continue
+        start, end = tomo.get("chapter_start"), tomo.get("chapter_end")
+        if not integer(start, 0) or not integer(end, 0) or end < start:
+            errors.append(f"{context}: limites inválidos no tomo {tomo['id']}.")
+            continue
+        ranges[tomo.get("number")] = (start, end, tomo["id"])
+    ids = set()
+    for chapter in data["chapters"]:
+        if not isinstance(chapter, dict) or not isinstance(chapter.get("id"), int) or isinstance(chapter.get("id"), bool) or chapter["id"] < 0:
+            errors.append(f"{context}: capítulo precisa de id inteiro >= 0.")
+            continue
+        cid = chapter["id"]
+        if cid in ids:
+            errors.append(f"{context}: capítulo duplicado {cid}.")
+        ids.add(cid)
+        if not nonempty(chapter.get("title")) or not nonempty(chapter.get("goal")):
+            errors.append(f"{context}: capítulo {cid} precisa de title e goal.")
+        if chapter.get("kind") not in CHAPTER_KINDS or chapter.get("status") not in CHAPTER_STATUS:
+            errors.append(f"{context}: capítulo {cid} com kind/status inválido.")
+        tomo = chapter.get("tomo")
+        if not integer(tomo, 1) or tomo not in ranges:
+            errors.append(f"{context}: capítulo {cid} aponta para tomo inexistente.")
+        elif not (ranges[tomo][0] <= cid <= ranges[tomo][1]):
+            errors.append(f"{context}: capítulo {cid} fora da faixa do Tomo {tomo} ({ranges[tomo][0]}-{ranges[tomo][1]}).")
+        days = chapter.get("days", [])
+        if not isinstance(days, list) or any(not integer(d, 1) or d > max_day for d in days):
+            errors.append(f"{context}: days inválido no capítulo {cid}.")
+        parts = chapter.get("parts", [])
+        if not isinstance(parts, list):
+            errors.append(f"{context}: parts deve ser lista no capítulo {cid}.")
+        else:
+            for part in parts:
+                if not isinstance(part, dict) or not integer(part.get("day"), 1) or part["day"] > max_day or not nonempty(part.get("summary")):
+                    errors.append(f"{context}: parte inválida no capítulo {cid}.")
+                    continue
+                if part.get("source_kind") not in ("documental", "live"):
+                    errors.append(f"{context}: parte do capítulo {cid} precisa de source_kind.")
+                errors.extend(validate_evidence(part.get("evidence"), f"{context} capítulo {cid} parte Dia {part.get('day')}", max_day, hero_dir))
+        evidence = chapter.get("evidence")
+        if evidence:
+            errors.extend(validate_evidence(evidence, f"{context} capítulo {cid}", max_day, hero_dir))
+        elif chapter.get("status") == "concluido":
+            errors.append(f"{context}: capítulo {cid} concluído precisa de evidence.")
+        if chapter.get("source_kind") not in ("documental", "live"):
+            errors.append(f"{context}: capítulo {cid} precisa de source_kind.")
+        if chapter.get("status") == "concluido":
+            content = chapter.get("content")
+            if not isinstance(content, list) or not content or any(not nonempty(p) for p in content):
+                errors.append(f"{context}: capítulo {cid} concluído precisa de content com parágrafos reais.")
+            if not integer(chapter.get("closed_on_day"), 1) or chapter["closed_on_day"] > max_day:
+                errors.append(f"{context}: capítulo {cid} concluído precisa de closed_on_day válido.")
+        else:
+            warnings.append(f"'{hero_id}': capítulo {cid} em produção ({chapter.get('status')}); não publicado por inteiro.")
+    return errors, warnings
+
+
 def validate_hero_sync(hero_entry, root_dir=ROOT_DIR, max_day=None):
     errors, warnings = [], []
     if not isinstance(hero_entry, dict) or not isinstance(hero_entry.get("id"), str) or not SLUG.fullmatch(hero_entry["id"]):
@@ -438,6 +545,15 @@ def validate_hero_sync(hero_entry, root_dir=ROOT_DIR, max_day=None):
                 if not nonempty(event.get("type")) or not nonempty(event.get("summary")) or event.get("source_kind") not in ("document", "documental", "live"):
                     errors.append(f"'{hero_id}': evento {event['id']} precisa de type, summary e source_kind explícito.")
                 errors.extend(validate_evidence(event.get("evidence"), f"{hero_id}/evento {event['id']}", max_day, hero_dir))
+    for filename, validator in (("temporadas.json", validate_temporadas), ("capitulos.json", validate_capitulos)):
+        path = hero_dir / filename
+        if path.is_file():
+            data, errs = check_json_file(path)
+            errors.extend(errs)
+            if not errs:
+                ve, vw = validator(hero_id, data, max_day, hero_dir)
+                errors.extend(ve)
+                warnings.extend(vw)
     return errors, warnings
 
 

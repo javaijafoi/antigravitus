@@ -7,10 +7,11 @@ from scripts.check_project import validate_project
 
 BASE_DIR = Path(__file__).resolve().parent
 ROOT_FILES = {"index.html", "ficha.html", "mapa.html", "sobre.html", "README.md",
-              "TEMPLATE_NOVO_HEROI.md", "vercel.json", "add_day.py", "create_hero.py",
-              "publish_daily.py", ".gitignore"}
+              "TEMPLATE_NOVO_HEROI.md", "vercel.json", "add_day.py", "add_chapter.py",
+              "create_hero.py", "publish_daily.py", ".gitignore"}
 ALLOWED = {"data": {".json", ".md"}, "css": {".css"}, "js": {".js"},
            "scripts": {".py", ".md"}, "skills": {".md", ".py", ".json"},
+           "docs": {".md"},
            "audio": {".json", ".mp3", ".wav", ".ogg", ".m4a"}}
 
 

@@ -2266,3 +2266,171 @@ footer.site-footer {
   gap: 0.5rem;
 }
 
+/* ============================================================
+   TEMPORADAS — seletor no cabeçalho
+   ============================================================ */
+.season-selector-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(18, 22, 30, 0.95);
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  transition: var(--transition);
+}
+
+.season-selector-wrap[hidden] {
+  display: none;
+}
+
+.season-selector-wrap:hover {
+  border-color: var(--accent-cyan);
+}
+
+.season-select-label {
+  font-family: var(--font-serif);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.season-select {
+  background: transparent;
+  border: none;
+  color: var(--accent-cyan);
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  padding-right: 0.25rem;
+  max-width: 18rem;
+}
+
+.season-select option {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  padding: 0.5rem;
+}
+
+/* ============================================================
+   SEASON 02 — grade de capítulos e leitura por capítulo
+   ============================================================ */
+.chapter-cell {
+  align-items: flex-start;
+  text-align: left;
+  gap: 0.3rem;
+  min-height: 88px;
+}
+
+.chapter-cell-title {
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  line-height: 1.15;
+  color: var(--text-primary);
+}
+
+.chapter-status {
+  margin-top: auto;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.03em;
+  padding: 0.12rem 0.4rem;
+  border-radius: 99px;
+  border: 1px solid var(--border-color);
+  white-space: nowrap;
+}
+
+.chapter-status.concluido {
+  color: #3fb950;
+  border-color: rgba(63, 185, 80, 0.5);
+  background: rgba(63, 185, 80, 0.12);
+}
+
+.chapter-status.producao {
+  color: var(--text-muted);
+  border-color: var(--border-color);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.chapter-cell.chapter-producao .cell-day-num {
+  color: var(--text-muted);
+}
+
+.chapter-view .chapter-excerpt {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin: 0.25rem 0 1rem;
+}
+
+.chapter-goal {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  border-left: 2px solid var(--accent-gold);
+  padding-left: 0.85rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.chapter-production-warning {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent-gold);
+  background: rgba(229, 179, 100, 0.08);
+  border: 1px dashed rgba(229, 179, 100, 0.45);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  margin-top: 0.5rem;
+}
+
+.chapter-parts {
+  margin-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.25rem;
+}
+
+.chapter-parts-title {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--accent-gold);
+  margin: 0 0 0.85rem;
+  letter-spacing: 0.04em;
+}
+
+.chapter-part {
+  border-left: 2px solid var(--border-color);
+  padding: 0.15rem 0 0.15rem 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.chapter-part-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.chapter-part-day {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent-cyan);
+}
+
+.chapter-part-date {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.chapter-part-summary {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 0.2rem 0 0;
+}
+
+

@@ -2,6 +2,12 @@
 
 Diário de roleplay e compêndio de múltiplos personagens em Devil's Bob MUD (`debomud.org:4000`). O site é estático; cada herói mantém seus próprios documentos em `data/heroes/<id>/`.
 
+## Temporadas e capítulos
+
+A obra de cada herói é dividida em **temporadas**. A **Season 01** é narrada por **dias** (`posts.json` + `ciclos.json`) e está encerrada no Dia 100. A partir da **Season 02** a narrativa passa a ser por **capítulos**: cada capítulo tem um objetivo verificável, pode durar quantos dias forem necessários e **não fecha quando se dorme** — fecha quando a meta é cumprida. Capítulos são agrupados de dez em dez em **tomos**; o Tomo I cobre os capítulos 0 a 10, começando pelo Prólogo (capítulo 0).
+
+Ferramentas: `data/heroes/<id>/temporadas.json` (catálogo), `data/heroes/<id>/capitulos.json` (tomos e capítulos) e [add_chapter.py](add_chapter.py). O método está em [docs/season_capitulos.md](docs/season_capitulos.md) e na skill [mud-capitulo](skills/mud-capitulo/SKILL.md). O sono e o `save` encerram a **sessão**; a publicação é do **capítulo**.
+
 ## Fonte e alcance da revisão
 
 A Grebolius foi reconciliada documentalmente até o **Dia 60**, a partir dos registros existentes. Esta revisão não jogou, não verificou conta ou mecânicas ao vivo e não criou acontecimentos para as crônicas. Os posts históricos foram preservados. Dúvidas de continuidade estão registradas como dúvidas, sem inventar deslocamentos, recompensas, diálogos ou efeitos da morte.
