@@ -2,10 +2,10 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 109,
+    "day": 113,
     "verification": "live",
     "live_verified": true,
-    "source": "Capitulo 1 (Dias 101-109): venda de 2 armaduras da Torre Negra (8.500 cada), maldicao removida e item doado, revisao de equipamento, nivel 15 alcancado e mais abates no milharal. Dia 109: servidor do MUD fora do ar (porta 4000 inacessivel)."
+    "source": "Capitulo 2 (Rumo ao Grau 20): preparo concluido (armadura arcana CA 77, wimpy 43 no teto de metade da vida, espada de novato empunhada); armeiro de Midgaard segue sem caixa para comprar a Armadura da Torre Negra, que e' amaldicoada e nao pode ser doada."
   },
   "level": 15,
   "mechanical_race": "Elfo",
@@ -18,16 +18,16 @@
   },
   "vitals": {
     "hp": {
-      "current": 60,
-      "max": 79
+      "current": 87,
+      "max": 87
     },
     "mana": {
-      "current": 215,
+      "current": 220,
       "max": 225
     },
     "mv": {
-      "current": 105,
-      "max": 105
+      "current": 107,
+      "max": 107
     }
   },
   "experience": {
@@ -45,13 +45,13 @@
   },
   "armor": {
     "base": 49,
-    "with_armor": 75,
+    "with_armor": 77,
     "effect_verified": true,
-    "note": "Dia 100: a Armadura Mistica expirou com a morte e nao pode ser recastada (duas falhas de conjuracao); AC 49 ao dormir. Recastar no proximo dia."
+    "note": "Armadura arcana ativa (47h) apos conjurar na Praca do Templo — dentro do Templo a magia falha."
   },
   "hitroll": 3,
   "damroll": 4,
-  "wimpy": 30,
+  "wimpy": 43,
   "training_sessions": 24,
   "operational_mode": {
     "current": "padrao",

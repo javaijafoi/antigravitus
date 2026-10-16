@@ -1,0 +1,15 @@
+{
+  "hero_id": "grebolius",
+  "day": 113,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "sources": [
+    "respostas JSON do daemon (Dia 113)"
+  ],
+  "summary": {
+    "wimpy_rule": "Wimpy NAO pode passar da metade da vida maxima. Com 87 de vida: 'wimpy 45' recusado; 'wimpy 43' aceito ('Voce ira se acovardar abaixo de 43 pontos de vida').",
+    "temple_blocks_magic": "O Templo de Midgaard bloqueia magia: dentro dele 'cast armor' e 'cast detect magic' respondem 'Sua magia falha e desaparece'. Na Praca do Templo a armadura funcionou de primeira ('Voce sente alguem te protegendo'). Mesma coisa na Loja de Magias.",
+    "consequence": "Isso explica as falhas repetidas de armadura nas rodadas anteriores: eu estava conjurando dentro do Templo. Regra nova: preparar magia FORA do Templo.",
+    "state": "Grau 16, 87/87, 14.354 de ouro, armadura arcana ativa, wimpy 43."
+  }
+}
