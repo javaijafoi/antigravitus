@@ -1,0 +1,11 @@
+{
+  "hero_id": "grebolius",
+  "day": 140,
+  "source_kind": "live",
+  "recorded_on": "2026-10-16",
+  "summary": {
+    "chapter_final": "Capitulo 2 'Rumo ao Grau 20' FECHADO. Balanco honesto dos tres alvos: (1) GRAU 20 cumprido (vida 113, mana 265, XP 1.013.629); (2) EQUIPAMENTO otimizado dentro do nivel: Coroa da Rainha Branca (+25 armadura, +1 INT/SAB, +2 CAR), Cruz Ansada (+10 mana, +5 vida), rosario (+1 Forca, +1 acerto), manto (+30), CA 94; pecas futuras mapeadas (bainha de Excalibur nivel 85: +125 vida/+8 dano; Scutum de Carvalho nivel 35: +45 vida); (3) FORTUNA PARCIAL e explicitamente barrada: 7.360 moedas. Causa: o armeiro de Midgaard tem bolso finito (~3 armaduras de 8.500 e depois seca), o feiticeiro nao compra armaduras ('nao compro esse tipo de coisa') nem bastoes usados, o estoque de armaduras de peao do tabuleiro esta vazio, e as 48 armaduras da Torre Negra seguem sem comprador.",
+    "necklace_hook": "Ao tentar vestir o colar com pedra purpura (valor 20.000.000, +25 mana, +1 Destreza), o servidor respondeu: 'Voce nao pode usar... porque nao e o dono do item.' O colar e amarrado a outro dono — gancho narrativo em aberto.",
+    "equipment_method": "Metodo confirmado: identify antes de vestir; comparar com o que se usa; devolver a doacao o que exige nivel maior que o atual."
+  }
+}

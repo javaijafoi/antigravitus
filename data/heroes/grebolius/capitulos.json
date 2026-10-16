@@ -365,7 +365,8 @@
         128,
         129,
         130,
-        132
+        132,
+        137
       ],
       "parts": [
         {
@@ -497,6 +498,19 @@
             }
           ],
           "date": "2026-10-16"
+        },
+        {
+          "day": 137,
+          "summary": "EQUIPAMENTO: comprada e vestida a Coroa da Rainha Branca (3.000, nivel 18): +25 de armadura, +1 INT, +1 SAB, +2 CAR. Substituiu os chifres do Minotauro. Com a armadura arcana, a CA chegou a 94. Tambem comprado um peitoral de couro (+4) de reserva. O ouro ficou em ~6.600; o gargalo da fortuna segue sendo o caixa do armeiro.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia137.json",
+              "day": 137,
+              "note": "Dia 137: Coroa da Rainha Branca vestida; CA 94."
+            }
+          ],
+          "date": "2026-10-16"
         }
       ],
       "content": [
@@ -506,43 +520,45 @@
         "Também aprendi o preço de deixar a máquina pensar por mim. Caí três vezes enquanto dormia em cima de um script que não devia estar correndo. A cada morte, o Vazio passou a mão na minha memória e me devolveu ao Paraíso, e a cada vez eu refiz o caminho do portal, seguindo a direção que aquela energia mágica sussurrava — que muda de sala para sala, como tudo o que é vivo. Não morri de monstro: morri de descuido. E descuido, ao contrário de maldição, é coisa que se corrige.",
         "No fim, cheguei ao grau vinte. Não foi com um golpe heroico, foi com dezenas de golpes pequenos e uma disciplina teimosa: acordar, levantar, conjurar a armadura, dormir para encher a mana, ir, matar quatro ou seis, voltar, salvar. E no dia em que o corpo finalmente subiu de grau, ganhei a magia que eu perseguia desde o começo: o raio. Treinei-o na guilda até ficar perfeito — dez por cento viraram noventa e cinco.",
         "O ouro, esse ficou devendo. O armeiro de Midgaard compra minhas armaduras da Torre por oito mil e quinhentas moedas cada, mas o bolso dele é raso como o de um padeiro, e quando seca ele me manda procurar um feiticeiro que não compra armadura nenhuma. Aprendei a vender em lotes o que o tabuleiro oferece, e a não me apaixonar por uma peça que ninguém pode pagar. Fiquei mais rica em método do que em moedas — e, para uma maga, método é o que se leva.",
-        "Há uma torre no meio do pântano, com uma energia mágica tão forte que sela a própria porta. Eu a encontrei e não pude entrar. Termino este capítulo deixando-a fechada, como se deixa uma promessa: é para quando eu for grande. Grau vinte é grande o bastante para muita coisa. Ainda não para tudo."
+        "Há uma torre no meio do pântano, com uma energia mágica tão forte que sela a própria porta. Eu a encontrei e não pude entrar. Termino este capítulo deixando-a fechada, como se deixa uma promessa: é para quando eu for grande. Grau vinte é grande o bastante para muita coisa. Ainda não para tudo.",
+        "---",
+        "**Fecho de contas, e o que ficou por pagar.**",
+        "Depois de chegar ao grau vinte, arrumei a casa. Troquei os chifres do minotauro por uma coroa que encontrei à venda — a Coroa da Rainha Branca, vinte e cinco de armadura e a cabeça mais clara — e pendurei no pescoço uma Cruz Ansada que me dá mais dez de mana e cinco de vida. Com a armadura arcana firme, minha guarda chegou a noventa e quatro. Achei também, no chão da Sala de Doações, um colar de pedra púrpura que valeria vinte milhões — e descobri, ao tentar vesti-lo, que **não é meu**. \"Não é o dono do item\", disse o mundo. Alguém o amarrou ao próprio nome, e esse alguém não sou eu. Deixei-o onde estava.",
+        "Encontrei ainda uma bainha de Excalibur, que promete cento e vinte e cinco de vida e oito de dano — mas exige o grau oitenta e cinco, e eu não tenho nem um quarto disso. E um Scutum de Carvalho, que exige o trinta e cinco. Anotei os dois. São promessas de um futuro que este capítulo não alcança.",
+        "O ouro, esse não veio. Não por falta de trabalho, e sim porque descobri o limite do mundo: o armeiro de Midgaard compra minhas armaduras da Torre por oito mil e quinhentas moedas, mas o bolso dele é fundo só até um ponto — paga por três e seca. O feiticeiro não compra armadura. O ferreiro compra armas. E o cetro que eu carregava, gasto, ninguém quer: \"não compro varinhas usadas\". Fico com sete mil, trezentas e sessenta moedas, e com quarenta e oito armaduras de torre esperando no tabuleiro por um comprador que ainda não acordou com dinheiro no bolso.",
+        "Aprendi neste capítulo que nem toda muralha é feita de pedra: algumas são feitas de **caixa de loja**. E contra essas não há feitiço — só paciência, ou outro mundo. Fecho o capítulo com o nível cumprido, o equipamento no melhor que o grau permite, e a fortuna **honestamente barrada pela economia do servidor**. Não é derrota; é a fronteira. A próxima temporada que comece por outro lado dela."
       ],
       "tags": [
         "Grau 20",
-        "Milharal",
-        "Lightning bolt",
-        "Rosario",
-        "Disciplina",
+        "Equipamento",
+        "Coroa da Rainha Branca",
+        "Cruz Ansada",
+        "Colar purpura",
+        "Economia",
         "Motor"
       ],
       "source_kind": "live",
       "evidence": [
         {
+          "document": "evidence/capitulo-02-final.json",
+          "day": 140,
+          "note": "Balanco final do Capitulo 2."
+        },
+        {
+          "document": "evidence/dia137.json",
+          "day": 137,
+          "note": "Coroa da Rainha Branca; CA 94."
+        },
+        {
           "document": "evidence/capitulo-02.json",
           "day": 136,
-          "note": "Balanco do Capitulo 2."
-        },
-        {
-          "document": "evidence/dia132.json",
-          "day": 132,
-          "note": "Grau 19 e a licao da mana."
-        },
-        {
-          "document": "evidence/dia129.json",
-          "day": 129,
-          "note": "Replay do caminho do bosque."
-        },
-        {
-          "document": "diretiva_de_jogo.md",
-          "day": 136,
-          "note": "Diretiva consolidada (stand, mana, DT, consider)."
+          "note": "Balanco do fechamento anterior."
         }
       ],
-      "excerpt": "Do grau 17 ao 20: a viagem que virou rotina, a licao da mana, o raio treinado ate a perfeicao e a torre que ainda nao posso abrir.",
+      "excerpt": "Grau 20 cumprido, equipamento no melhor que o nivel permite (CA 94, mana 265, coroa e Cruz Ansada) e a fortuna honestamente barrada pela economia do servidor.",
       "date": "2026-10-16",
-      "in_game_time": "Do Grau 17 ao Grau 20",
-      "closed_on_day": 136
+      "in_game_time": "Grau 17 ao Grau 20",
+      "closed_on_day": 140
     }
   ]
 }
