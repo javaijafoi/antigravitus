@@ -1531,6 +1531,64 @@ eu andar.** O que é acréscimo local não está lá; **o que é padrão está.*
 
 **Antes de varrer o mundo à mão, procurar nos docs.**
 
+---
+
+## 36. ✅ "NOVELA DOS NOVATOS" INICIADA — as duas missões do capítulo 05 ativas (Dia 156)
+
+**A missão que cinco rodadas não acharam foi iniciada na sexta tentativa, com endereço em mãos.**
+
+### 36.1 O que o jogo mostra, e por que eu não reconheci
+
+Os mobs-novato da zona 186 **não se anunciam pelo nome do arquivo**. Na Sacada aparecem assim:
+
+| Linha que o jogo mostra | Quem é |
+|---|---|
+| *"Um novato está aqui, **perturbando você**."* | Annoying Newbie (18611) |
+| *"Um novato esta aqui e ele **aparenta estar bem confiante**."* | **Smart Newbie (18615)** — o novato esperto |
+
+**Os dois nascem na mesma sala (18645), com nomes de exibição parecidos.** Foi por isso que passar
+por ali antes não resolveu nada: **sem saber que existiam dois, um "novato" na sala parecia o outro.**
+
+### 36.2 Como se inicia
+
+```
+say oi   -> "Você diz: 'oi'"
+say sim  -> "Você começa a participar da aventura."
+```
+
+**O `say sim` é o gatilho**, igual às outras autoquests. O `ask novato <tópico>` funciona mas não
+adianta informação: ele é chamado de **"o novato perturbador"**.
+
+**Resultado — as DUAS missões do capítulo em andamento ao mesmo tempo:**
+
+```
+[Autoquests em andamento]
+Novela dos Novatos
+Limpando Monstros: Você deve matar criatura.
+```
+
+### 36.3 A janela de oportunidade é o RESET da zona
+
+Ele **não estava lá** nas vezes anteriores porque a zona estava vazia — e a zona **só repovoa no
+reset**. Nesta rodada ele apareceu entre duas checagens, com ~25 s de intervalo.
+
+**Regra prática:** ir à Sacada **e esperar**, checando a cada ~25 s. Não adianta passar uma vez e
+desistir — **o mob não é fixo, ele nasce.**
+
+### 36.4 O saldo da rodada
+
+| | |
+|---|---|
+| **Novela dos Novatos** | **INICIADA** ✓ |
+| **Limpando Monstros** | em andamento (1 abate na rodada) |
+| Experiência | 1.107.839 |
+| Ouro | 694 na mão + 766 no banco = **1.460** |
+| Mortes | **7** — nenhuma nova |
+
+**O que falta agora:** descobrir o objetivo de "Novela dos Novatos" (a seção do `score` mostrou só o
+nome, sem "Você deve..." — **o objetivo se revela conforme se joga**, como aconteceu com Limpando
+Monstros) e continuar os abates da primeira.
+
 
 ### 25.11 Invisibilidade BLOQUEIA comércio — e existe o comando `visible`
 
