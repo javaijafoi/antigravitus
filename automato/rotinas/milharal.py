@@ -126,10 +126,10 @@ def ir_ate_a_floresta():
         ate('n', 'O Começo da Estrada', 4)
         for _ in range(14):
             ex, t = sala()
-            if 'Estrada Midgaard-Jareth' in t and set(ex) == {'e', 'w'}:
+            if 'Estrada Midgaard-Jareth' in t and ('e' in ex and 'n' not in ex or set(ex) == {'e', 'w'}):
                 break
             andar('n')
-        if ate('e', 'A Entrada da Floresta', 24):
+        if ate('e', 'A Entrada da Floresta', 36):
             return True
     return False
 

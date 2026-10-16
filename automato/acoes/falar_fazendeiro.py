@@ -26,26 +26,17 @@ def ir_ate_a_casa():
     base.andar('n')
     ex, t = base.sala()
     print("[falar] Chegou em:", t.split('\n')[0].strip())
-    # Entrada da Fazenda -> w (Pequena Estrada)
+    # Rota exata comprovada pelo mapa:
+    # Entrada da Fazenda -> w (Pequena Estrada) -> s (Gramado) -> w (Gramado frente casa) -> s (Entrada da Casa)
     base.andar('w')
-    for passo in range(6):
-        ex, t = base.sala()
-        nome = next((l.strip() for l in t.split(chr(10)) if l.strip()), '?')
-        print(f"[falar] Passo {passo}: {nome} | saidas: {ex}")
-        if 'Entrada da Casa' in nome or 'Casa' in nome:
-            print("[falar] Chegou na casa!")
-            return True
-        casa_dir = [d for d, v in ex.items() if 'Casa' in v]
-        if casa_dir:
-            base.andar(casa_dir[0])
-        elif 's' in ex:
-            base.andar('s')
-        else:
-            break
+    base.andar('s')
+    base.andar('w')
+    base.andar('s')
     ex, t = base.sala()
     nome = next((l.strip() for l in t.split(chr(10)) if l.strip()), '?')
-    print("[falar] Parou em:", nome)
-    return 'Casa' in nome
+    print("[falar] Chegou em:", nome)
+    print("[falar] Saidas:", ex)
+    return 'Casa' in nome or 'fazendeiro' in t.lower() or 'dono' in t.lower()
 
 def main():
     try:
@@ -53,17 +44,29 @@ def main():
         print("[falar] Partindo do templo para a casa da fazenda...")
         if not ir_ate_a_casa():
             print("[falar] Nao foi possivel chegar a casa da fazenda")
-            return 1
+            # Tenta buscar nas salas vizinhas
+            for d in ['s', 'w', 's']:
+                base.andar(d)
+                ex, t = base.sala()
+                nome = next((l.strip() for l in t.split(chr(10)) if l.strip()), '?')
+                print(f"[falar] Tentativa extra ({d}): {nome}")
+                if 'Casa' in nome or 'fazendeiro' in t.lower() or 'dono' in t.lower():
+                    break
         
         cmds = [
             "look",
+            "say ola",
+            "say sim",
             "ask fazendeiro",
             "ask dono",
-            "say sim",
-            "ask fazendeiro ajuda",
             "ask fazendeiro monstros",
             "ask fazendeiro invasores",
-            "say pronto"
+            "ask fazendeiro missao",
+            "ask fazendeiro ajuda",
+            "say terminei",
+            "say matei os monstros",
+            "autoquest todas",
+            "score tudo"
         ]
         
         for c in cmds:

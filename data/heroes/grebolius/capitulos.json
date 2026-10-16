@@ -803,13 +803,13 @@
         },
         {
           "day": 156,
-          "summary": "Execucao da rotina milharal do automato sob supervisao estrita: 4 abates confirmados no milharal (totalizando 8 invasores eliminados na campanha). A guarda de repeticao agiu limpa ao detectar alvo ausente. Testada a entrega com o Pacificador na Praca do Templo; a missao 'Problemas Agricolas' segue ativa em andamento necessitando dos 10 abates exigidos pelo fazendeiro. Diagnostico de navegacao revelou que 'l' e interpretado como 'look' pelo servidor.",
+          "summary": "Rotina milharal executada em 3 rodadas supervisionadas: 7 abates confirmados no Dia 156 (total acumulado de 11 invasores eliminados na campanha, superando a cota de 10). Correções no automato: import config em prepara.py, limite de 36 passos e detecção de curva da estrada em milharal.py. Tentativas de entrega no fazendeiro (A Entrada da Casa) e Pacificador (Praça do Templo) com respostas cruas registradas; a autoquest 'Problemas Agrícolas' permaneceu em andamento no servidor. Grebolius recolhida ao Templo com 1.088.553 XP (+33.290 XP), 7.528 ouro no banco, salva, dormindo e desconectada via quit.",
           "source_kind": "live",
           "evidence": [
             {
               "document": "evidence/dia156.json",
               "day": 156,
-              "note": "Rotina milharal com 4 abates confirmados, diálogo com o Pacificador e diagnóstico de navegação."
+              "note": "Rotina milharal com 7 abates (11 acumulados), correções de rota e prepara, diálogos com fazendeiro e Pacificador, e quit seguro no Templo."
             }
           ],
           "date": "2026-10-16"
