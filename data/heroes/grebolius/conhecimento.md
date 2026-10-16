@@ -1241,11 +1241,89 @@ conexão cair é seguro; `quit` é que é fatal.** A doutrina estava certa.
 autoquest loja -> "Você só pode usar esse comando no ponto de retorno de sua cidade-natal."
 ```
 
-**O prêmio da autoquest se resgata no Templo de Midgaard**, não onde a missão acontece. Guardar para
-depois de fechar.
+**O prêmio da autoquest se resgata no Templo de Midgaard**, não onde a missão acontece.
 
 `autoquest aventura` e `autoquest status` **não existem** (*"Comando de Autoquest desconhecido"*). Para
 ver o objetivo, só o `score tudo`.
+
+---
+
+## 32. A LOJA DOS DEUSES — e ela CORRIGE o que eu tinha concluído sobre inspeção (Dia 156)
+
+Descoberta ao usar `autoquest loja` dentro do Templo: **o comando teletransporta** para uma sala nova.
+
+> *"Teletransportando gratuitamente... **O Templo dos Aventureiros**"*
+
+**A sala não tem saída nenhuma** (`exits` → *"Nenhuma"*). Sai-se com **`recall`** — *"Retornando para
+sua cidade natal..."*.
+
+### 32.1 A moeda é PONTOS DE AVENTURA, não ouro
+
+> *"...os deuses lhes oferecem itens com a dádiva divina, artigos esses cobiçados por todos os
+> aventureiros."*
+
+A tabela é `## | Preço(Pontos de Aventura) | Nível | Enc. | Item`. **Ela tem 0** — e é isso que a
+tabela de autoquests paga.
+
+### 32.2 ⚠️ `list <número>` MOSTRA OS ATRIBUTOS — eu estava errado
+
+No §4 de [itens.md](itens.md) eu concluí que **não há como inspecionar item à venda**. **Estava certo
+para as lojas comuns e errado aqui.** O próprio letreiro da sala ensina:
+
+> *"Digite 'LISTA \<num\>' para ver os atributos do item."*
+> *"Para ver mais detalhes sobre um item, digite **LIST \<número do item\>**."*
+
+O comando é **`list <número>`** (em inglês — `lista` responde *"Como?!?"*), e devolve a **ficha
+completa**:
+
+```
+list 1 ->
+  Objeto: '*** um livro imaterial' Tipo: LIVRO-MAGIAS
+  O item é: BRILHO ENTALHADO
+  Peso: 1, Valor: 10, Aluguel: 0, Nível: 75, Encarnação: 1
+  Pode ser vestido em: PEGAR
+  Este livro faz seu counter shield melhorar em 5%.
+```
+
+**A lição:** o que não dá para inspecionar é **o estoque de mercador comum**. O estoque **divino** se
+inspeciona inteiro, item por item, sem comprar. **Não generalizar a limitação.**
+
+### 32.3 O catálogo dos dezesseis — e o que ele revela
+
+| # | Item | PA | Nível | Efeito |
+|---|---|---|---|---|
+| 1 | um livro imaterial | 10 | 75 | counter shield +5% |
+| 2 | um livro de folhas verdes | 10 | 52 | — |
+| 3 | o Manto Sagrado de Thor | 10 | 71 | — |
+| **4** | **o bracelete de Osiris** | **15** | **2** | **armadura +30**, ANTI-DT |
+| **5** | **um pingente de cristal** | **15** | **5** | **armadura +35**, ANTI-DT |
+| 6 | o anel do Caos | 15 | 30 | — |
+| 7 | um brinco de penas de fênix | 20 | 10 | FORÇA +1, ANTI-DT |
+| 8 | a adaga de Peter Pan | 20 | 0 | VARINHA: conjura `timeless body`; efeito `fly` |
+| 9 | a cauda de Thalassa | 20 | 30 | — |
+| **10** | **franjas coloridas de careto** | **20** | **3** | **armadura +100**, ANTI-DT |
+| **11** | **um pequeno vortex em forma de argola** | **25** | **0** | **IMUNE-DT**, contêiner 1200 kg, `no-scry` |
+| 12 | o cinto Zaio Den | 25 | 70 | — |
+| 13 | as asas de Kirvraghon | 25 | 35 | — |
+| 14 | uma esfera alaranjada com estrelas | 30 | 20 | — |
+| 15 | a máscara do poder transcendente | 30 | 55 | — |
+| 16 | o cajado azul de Loraine | 40 | 40 | — |
+
+**Compra-se pelo número:** *"você deve comprar o item pelo seu número"*.
+
+### 32.4 🔥 ANTI-DT e IMUNE-DT — a resposta para a armadilha mortal
+
+**Os itens divinos carregam a flag `ANTI-DT`** — e o vortex carrega **`IMUNE-DT`**.
+
+A diretiva §6 é explícita: **armadilha mortal (DT) mata na hora e `wimpy` não segura**. Nenhuma
+armadura, poção ou magia do mundo comum resolve isso. **Estes itens resolvem.**
+
+E eles são **baratos em Pontos de Aventura**: o bracelete de Osiris custa **15**, e dá **+30 de
+armadura** no nível 2 — usável por ela **agora**. As franjas de careto dão **+100 de armadura** por
+**20 PA**, no nível 3. Para comparação: **a Classe de Armadura dela hoje é 110.**
+
+**Consequência para o projeto:** completar autoquests deixou de ser só "conteúdo do capítulo". **É a
+via de acesso à imunidade a armadilha mortal** — o único risco que o motor não sabe evitar.
 
 ### 31.5 O gargalo de "Limpando Monstros" é a taxa de repovoamento
 
