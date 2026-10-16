@@ -1180,6 +1180,84 @@ próprio Novato Alquimista, que estava lá mais cedo), o mais provável é que *
 reset** — e que os dois problemas do capítulo tenham a mesma causa: **o servidor ainda não
 reabasteceu a região**.
 
+**Confirmado no mesmo dia:** a zona **reabasteceu** — os monstros voltaram **e o Novato Alquimista
+também**, junto com os itens do chão (8 vestes, 8 punhais). A hipótese estava certa.
+
+---
+
+## 31. Como navegar em labirinto de nomes iguais: impressão digital por `exits` (Dia 156)
+
+O Grande Campo (§30) quebrava a verificação por título. A solução **não é o título nem o mapa** — é a
+**linha de saídas**, que traz o NOME do destino:
+
+```
+look  -> "O Grande Campo de Midgaard"      # inútil: dez salas com esse nome
+exits -> Norte - O Grande Campo de Midgaard
+         Leste - A Entrada da Área dos Novatos     <-- ESTE é unico
+         Sul   - O Grande Campo de Midgaard
+         Oeste - O Caminho Sujo
+```
+
+**A impressão digital da sala é o conjunto de destinos do `exits`.** Duas salas só são a mesma se
+todos os destinos baterem.
+
+### 31.1 A rota que finalmente funcionou até a Área dos Novatos
+
+```
+Templo -> n -> O Altar do Templo
+       -> n -> Atrás do Altar
+       -> n -> O Grande Campo de Midgaard     (só norte/sul)
+       -> n -> O Grande Campo de Midgaard     (tem LESTE para a Área dos Novatos)
+       -> e -> A Entrada da Área dos Novatos
+       -> n -> O Começo Da Passagem
+```
+
+**`n,n,n,n,e,n` do Templo** — e a sala certa é a que anuncia **"Leste - A Entrada da Área dos
+Novatos"**. Não adianta contar passos sem conferir essa saída: o campo tem braços diferentes.
+
+### 31.2 A entrega ao Alquimista funciona
+
+```
+give pele alquimista -> "Você entrega a fedida pele do Minotauro para o Novato Alquimista."
+```
+
+**A sintaxe é `give <item> <npc>`** (só o nome do NPC; `give pele` sozinho responde *"Para quem?"*).
+A pele sai do inventário e vai para ele — mas **não avançou a missão**: o que ela cobra é **abate**,
+não entrega. A entrega deve ser o passo final.
+
+### 31.3 Queda de conexão NÃO falha a missão — verificado ao vivo
+
+A sessão caiu (`estado=disconnected`) no meio da caçada, com `Limpando Monstros` em andamento.
+Depois de reiniciar o daemon:
+
+> **A missão estava intacta:** `Limpando Monstros: Você deve matar criatura.`
+
+**É a prova que faltava do §26.3:** o que apaga a autoquest é o **`quit`**, não a queda. **Deixar a
+conexão cair é seguro; `quit` é que é fatal.** A doutrina estava certa.
+
+### 31.4 `autoquest loja` — a loja de prêmios fica na cidade-natal
+
+```
+autoquest loja -> "Você só pode usar esse comando no ponto de retorno de sua cidade-natal."
+```
+
+**O prêmio da autoquest se resgata no Templo de Midgaard**, não onde a missão acontece. Guardar para
+depois de fechar.
+
+`autoquest aventura` e `autoquest status` **não existem** (*"Comando de Autoquest desconhecido"*). Para
+ver o objetivo, só o `score tudo`.
+
+### 31.5 O gargalo de "Limpando Monstros" é a taxa de repovoamento
+
+Medido em seis ciclos de caçada com espera: **1 a 4 abates por ciclo**, e ciclos inteiros sem
+nenhum. **A masmorra não sustenta caça contínua** — ela entrega um lote por reset e seca.
+
+**Saldo da rodada:** experiência **1.092.549 → 1.097.661 (+5.112)**; ouro **707 → 1.028 (+321)**;
+**mortes: continuam 7**. A missão segue pedindo abate.
+
+**Conclusão prática:** fechar `Limpando Monstros` **não é questão de método, é de paciência** — voltar
+a cada reset e limpar o lote. Insistir dentro do mesmo ciclo é rodada gasta.
+
 
 ### 25.11 Invisibilidade BLOQUEIA comércio — e existe o comando `visible`
 
