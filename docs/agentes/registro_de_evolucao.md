@@ -603,6 +603,44 @@ canônicos — **aponte** para eles.
 - **Não repetir:** <o caminho que já se provou errado>
 ```
 
+### Handoff · 2026-10-17 · Dia 156 · `deepseek-flash`
+
+> **O primeiro handoff preenchido deste livro-razão.** Até aqui o §7 era só o modelo.
+
+- **Estado da ferramenta:** `automato/` na **v1.6** (`CHANGELOG.md`). **Estável e verificado:**
+  `verificar.py` **18/18**, `check_project.py` **0 erros**, suíte **141 testes**, e
+  `devolutiva.py` **0 falhas**. O que existe de novo e funciona: **planos numerados** (§6.1),
+  **`mandabala.py`** (retomada) e **`devolutiva.py`** (fechamento) — **os dois últimos são de uso
+  obrigatório.**
+- **Estado da campanha:** **Capítulos 0 a 8 `concluido`; o 9 está `em_curso`.** O 08 fechou
+  **incompleto por decisão do autor** (ver `carried_over` nele). **Documentos vivos:**
+  `planos/plano013.md` (é o plano vigente — rode `mandabala.py`), `capitulos.json` (id=9,
+  "O Preço Não Se Mata com Raio"), `state.json` (`next_objective`), `conhecimento.md` §41-43 (a
+  geografia dos Smurfs e **a regra da concorrência de autoquests no §42.1**), e `diretiva_de_jogo.md`
+  §15-17.
+- **Processos:** **nenhum.** O driver foi **encerrado depois de `save` + `sleep`** — não há processo
+  python nem job em segundo plano, e a conexão caiu. **Quem continuar sobe um daemon novo.** O
+  controlador ficou em `automato/runtime/.controller` (owner `DSH`).
+- **Bloqueios:** **um só, e é numérico.** A missão `Uma Lição em Gargamel` está **ATIVA** com o objetivo
+  *"entregar objeto ao personagem"*, e falta **ouro**: a `poção aquosa` de Clariss custa **9.750** e ela
+  tem **4.229** — faltam **5.521**. O caminho já tentado e **falhado**: vender para os três lojistas de
+  Jareth (recusam — ver plano 013 §4) e a rotina `xadrez` (proibida pelo autor). **Além disso, ela está
+  com FOME E SEM COMIDA na bolsa** — `cuidar.py` acusou *"fome sem comida na bolsa"*.
+- **Próximo passo sugerido:** **comprar comida na Padaria de Midgaard e comer** — antes de qualquer
+  outra coisa. Depois disso, o plano 013 §4: juntar as 5.521 moedas.
+- **Não repetir:**
+  1. **Reiniciar `Limpando Monstros` antes de entregar a poção** — com ela ativa, o `O Novato
+     Alquimista` **engole a poção sem dar o jarro** (`conhecimento.md` §42.1). **Foi o que fez o agente
+     anterior girar em círculos.**
+  2. **Escrever um script por tentativa de fala** — o Dia 156 deixou **18** desses; foram para
+     `scripts/local/entulho_dia156/`. Use `play.py "say <frase>"` direto.
+  3. **Inventar sinônimo** para o diálogo de missão — ele é **literal**.
+  4. **`onde`** — não existe; só `where`.
+  5. **`autoquest todas` como prova** — é histórico; a prova é o `score`.
+  6. **Vender armaduras** (§15) e **`quit` com missão em andamento** (zera o progresso).
+  7. **Fechar capítulo sem declarar a pendência** — se fechar incompleto, use os três lugares: o campo
+     `carried_over`, o último parágrafo da narrativa e o plano seguinte.
+
 ---
 
 ## 8. Pendências herdadas (abertas em 2026-10-16)

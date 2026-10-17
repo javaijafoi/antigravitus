@@ -124,6 +124,7 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
 **Capítulo 09: comprar a poção aquosa e iluminar a mina (`Uma Lição em Gargamel`)**
 A autoquest 'Uma Licao em Gargamel' esta ATIVA (objetivo do servidor: 'entregar objeto ao personagem'). Falta ouro: a `pocao aquosa` de Clariss custa 9.750 e ela tem 4.229 - faltam 5.521. Levantar o ouro (milharal ~50 por abate; ou uma autoquest vizinha como 'Cuidado Com o Chacal', nivel 22+, ja liberada), comprar em `As Misturas de Clariss` na Avenida Floris de Jareth, entregar ao `O Novato Alquimista` e receber o `jarro brilhante`, e entregar o jarro ao `o smurf minerador` no fim do tunel sob o Poco Smurf.
+* PRIMEIRA ACAO: comprar pao na Padaria de Midgaard. Ela esta com FOME e SEM comida na bolsa - o cuidar.py acusou 'fome sem comida na bolsa'. Sem comida nao regenera vida nem mana.
 * NAO reiniciar 'Limpando Monstros' enquanto a pocao nao estiver entregue: com ela ativa, o Alquimista prioriza a propria missao e ENGOLE a pocao sem entregar o jarro (conhecimento §42.1). A concorrencia ja foi resolvida no Dia 156 - a janela esta limpa.
 * Ouro e o unico bloqueio: faltam 5.521 moedas. Os tres lojistas de Jareth recusam venda (Maris e Dalston: 'Eu nao compro!'; Granny recusa magos; Ilena nao compra de forasteiros).
 * Vender armaduras e PROIBIDO (diretiva secao 15). A rotina xadrez esta suspensa - nao reativar.

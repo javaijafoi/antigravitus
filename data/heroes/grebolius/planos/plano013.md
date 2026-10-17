@@ -7,12 +7,18 @@
 | **Herói** | `grebolius` |
 | **Capítulo** | **09 — "O Preço Não Se Mata com Raio"**, já **`em_curso`** em `capitulos.json` (`id=9`), `continues_chapter: 8` |
 | **Objetivo** | **Concluir `Uma Lição em Gargamel`** — falta comprar a poção aquosa e entregar o jarro ao minerador |
-| **Sessão encerrada?** | **Sim** — no Templo, salva; driver no ar |
+| **Sessão encerrada?** | **Sim** — `save` + `sleep` confirmados no Templo; **driver encerrado, nenhum processo deixado rodando** |
 
 > **Leia o [`LEIA.md`](LEIA.md) primeiro.** **Este arquivo não se edita** — quem vier cria o
 > **`plano014.md`**.
 >
 > **Antes de encerrar, rode `python scripts/devolutiva.py`** — obrigatório desde o Dia 156 (§8).
+>
+> ## 🔴 A PRIMEIRA COISA A FAZER: comprar comida
+>
+> **Ela está com FOME e sem comida na bolsa** — o `cuidar.py` acusou *"fome sem comida na bolsa"*. Sem
+> comida ela **não regenera vida nem mana** (`diretiva_de_jogo.md` §13) e emagrece até morrer.
+> **Padaria de Midgaard, com 30 moedas:** compre pães antes de qualquer outra coisa. *(Ela tem 4.229.)*
 
 ---
 
