@@ -139,6 +139,39 @@ PRÓXIMA ENTRADA COMEÇA AQUI. Não edite os blocos acima; acrescente o seu abai
 handoff (§7).
 -->
 
+### 2026-10-17 · Dia 156 · deepseek-flash
+
+> **Entrada de fechamento e limpeza.** O autor pediu três coisas: **arrumar o entulho**, **fechar e
+> publicar o Capítulo 08** e **deixar pronto para o próximo agente**.
+
+- **Mudou:**
+  1. **`capitulos.json` id=8 fechado** — `status: concluido`, `closed_on_day: 156`, **13 parágrafos** de
+     narrativa, 10 tags, 4 evidências e um campo novo **`carried_over`** dizendo em voz alta que **a
+     autoquest `Uma Lição em Gargamel` continua ATIVA** (objetivo do servidor: *"entregar objeto ao
+     personagem"*). **O capítulo fecha a expedição, não a missão** — e isso está no **dado**, não só na
+     prosa.
+  2. **`planos/plano013.md`** — o Capítulo 09: comprar a poção, entregar o jarro, e a porta trancada com
+     o Papai Smurf atrás.
+  3. **`state.json`** — `next_objective` apontando o plano 013, com **8 itens de preparação**, mantendo o
+     campo **`missing_preparation`** que o `sync_hero.py` lê **por nome**.
+  4. **Entulho limpo:** **18 scripts soltos** em `scripts/` (um por tentativa de fala) movidos para
+     **`scripts/local/entulho_dia156/`**, que é gitignored.
+- **Por quê:** o autor identificou o problema certo — *"o Argon começou o Gargamel e no meio, sem
+  rastreio, o 3.8 assumiu e ficou em círculos"*. A auditoria **confirmou a causa**, e ela está escrita no
+  `conhecimento.md` **§42.1**: **com `Limpando Monstros` ativa ao mesmo tempo, o `O Novato Alquimista`
+  prioriza a própria missão, não dispara o diálogo do jarro — e ENG OLE a poção se a receber naquele
+  estado.** O agente anterior tentou **18 frases diferentes em 18 scripts** em vez de ler essa regra.
+- **Como foi verificado:** **leitura ao vivo** do `score` (nível 28, 4.229 de ouro, missão ativa, objetivo
+  *"entregar objeto"*); `check_project.py` **0 erros**; `verificar.py` **18/18**; derivados conferidos; e
+  **`scripts/devolutiva.py` → 0 falhas**.
+- **Custo:** nenhum de ferramenta. **De jogo:** o Capítulo 08 fecha com a missão **pela metade** — por
+  decisão do autor, e declarada no `carried_over`.
+- **Próximo:** (a) **o ouro é o único bloqueio** — faltam **5.521** para a poção de 9.750; (b) **não
+  reiniciar `Limpando Monstros`** antes de entregar a poção, ou o Alquimista engole o item de novo;
+  (c) a pendência do **`mapa.json`** (4 arestas dos anéis do esgoto) **segue aberta** e o `devolutiva.py`
+  a avisa em toda execução; (d) os 18 scripts estão em `scripts/local/entulho_dia156/` — se algum prestar,
+  ele está lá, **fora do git**.
+
 ### 2026-10-17 · Dia 156 · Gemini 4 Argon / Gemini 3.8 Flash
 
 > **Nona entrada do dia.** Avanço para o **Nível 27**, grind de 4.054 moedas de ouro, confinamento espacial no milharal (v1.6.2) e diagnóstico do Alquimista.
