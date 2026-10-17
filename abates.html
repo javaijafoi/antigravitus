@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abates (Nível 20 ao 28) — As Crônicas de Antigravitus</title>
+  <meta name="description" content="Relatório documental de todos os monstros abatidos por Grebolius entre o Nível 20 e o Nível 28, com XP e loot.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚔️</text></svg>">
+  <style>
+    .report-table-wrap {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+      border: 1px solid var(--border-color, #2a3449);
+      border-radius: 6px;
+      background: rgba(18, 23, 34, 0.6);
+    }
+    table.report-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+    table.report-table th, table.report-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border-color, #2a3449);
+    }
+    table.report-table th {
+      background: rgba(22, 28, 43, 0.9);
+      color: var(--accent-gold, #e5b364);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+    }
+    table.report-table tr:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .badge-gold {
+      background: rgba(229, 179, 100, 0.15);
+      color: #e5b364;
+      border: 1px solid rgba(229, 179, 100, 0.3);
+    }
+    .badge-cyan {
+      background: rgba(94, 196, 214, 0.15);
+      color: #5ec4d6;
+      border: 1px solid rgba(94, 196, 214, 0.3);
+    }
+    .alert-box {
+      background: rgba(22, 28, 43, 0.8);
+      border-left: 4px solid var(--accent-gold, #e5b364);
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .alert-box h4 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      color: var(--accent-gold, #e5b364);
+      font-size: 1rem;
+    }
+    .alert-box p {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body class="chronicle-shell">
+
+  <!-- Header -->
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand" aria-label="Crônicas de Midgaard — início">
+        <span class="brand-rune" aria-hidden="true">✧</span>
+        <div class="brand-text"><h1>Crônicas de Midgaard</h1><span>Um mundo. Muitas jornadas.</span></div>
+      </a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="index.html" id="link-cronicas">Crônicas</a>
+        <a href="mapa.html" id="link-mapa">Mapa</a>
+        <a href="ficha.html" id="link-ficha">Ficha</a>
+        <a href="sobre.html" id="link-sobre">Sobre</a>
+        <a href="abates.html" id="link-abates" class="active" aria-current="page">Abates</a>
+        <a class="world-link" href="https://www.debomud.org" target="_blank" rel="noopener">Conheça o mundo ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="main-content" style="padding-top: 2rem; padding-bottom: 3rem;">
+    <article class="about-card">
+      <div class="about-header">
+        <div class="about-avatar" style="font-size: 2.5rem;">⚔️</div>
+        <h2>Relatório de Abates — Nível 20 ao 28</h2>
+        <p class="about-sub">Telemetria de monstros abatidos, experiência (XP) e pilhagens de Grebolius (Mulher Goblin, Mago).</p>
+      </div>
+
+      <div class="alert-box">
+        <h4>✦ Fonte dos Dados & Metodologia Offline</h4>
+        <p>
+          Este relatório foi gerado por extração estrita de dados documentais locais (evidências em <code>data/heroes/grebolius/evidence/</code> e transcrições completas de sessão em <code>automato/runtime/</code>). <strong>Nenhuma conexão ao vivo foi realizada para gerar estes números.</strong>
+        </p>
+      </div>
+
+      <!-- Seção 1: Tabela Consolidada -->
+      <section class="about-section">
+        <h3>1. Tabela Consolidada de Abates (Nível 20 ao 28)</h3>
+        <p>
+          Total de <strong>384 abates confirmados</strong> no intervalo de níveis, acumulando mais de <strong>19.600 moedas de ouro</strong> e impulsionando a personagem do Grau 20 até o Grau 28.
+        </p>
+
+        <div class="report-table-wrap">
+          <table class="report-table">
+            <thead>
+              <tr>
+                <th>Monstro</th>
+                <th>Abates</th>
+                <th>XP por Bicho (Faixa / Média)</th>
+                <th>Loot em Moedas & Itens</th>
+                <th>Local Principal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Monstro esfomeado</strong></td>
+                <td><span class="badge badge-cyan">100</span></td>
+                <td>2.038 a 17.468 <small>(média ~4.426)</small></td>
+                <td><strong>50 moedas</strong> (autoloot fixo)</td>
+                <td>O Milharal Destruído</td>
+              </tr>
+              <tr>
+                <td><strong>Monstro invasor</strong></td>
+                <td><span class="badge badge-cyan">95</span></td>
+                <td>648 a 4.056 <small>(média ~964)</small></td>
+                <td><strong>50 moedas</strong> (autoloot fixo)</td>
+                <td>O Milharal Destruído</td>
+              </tr>
+              <tr>
+                <td><strong>Monstro agressivo</strong></td>
+                <td><span class="badge badge-cyan">89</span></td>
+                <td>2.238 a 28.138 <small>(média ~6.769)</small></td>
+                <td><strong>50 moedas</strong> (autoloot fixo)</td>
+                <td>O Milharal Destruído</td>
+              </tr>
+              <tr>
+                <td><strong>Monstro novato</strong></td>
+                <td><span class="badge badge-cyan">57</span></td>
+                <td>198 a 2.580 <small>(média ~390)</small></td>
+                <td><strong>20 moedas</strong> (adagas ocasionais)</td>
+                <td>Área dos Novatos</td>
+              </tr>
+              <tr>
+                <td><strong>Líder dos monstros</strong></td>
+                <td><span class="badge badge-gold">22</span></td>
+                <td>5.706 a 29.342 <small>(18.214 na missão; média ~11.481)</small></td>
+                <td><strong>120 moedas</strong> (autoloot fixo)</td>
+                <td>O Milharal Destruído</td>
+              </tr>
+              <tr>
+                <td><strong>Pequeno morcego</strong></td>
+                <td><span class="badge badge-cyan">6</span></td>
+                <td>2.740 a 3.774 <small>(média ~3.365)</small></td>
+                <td>0 moedas / sem loot</td>
+                <td>Esgotos de Midgaard</td>
+              </tr>
+              <tr>
+                <td><strong>Novato zumbi</strong></td>
+                <td><span class="badge badge-cyan">4</span></td>
+                <td>756 a 1.908 <small>(média ~1.341)</small></td>
+                <td><strong>35 moedas</strong></td>
+                <td>Masmorra dos Novatos</td>
+              </tr>
+              <tr>
+                <td><strong>Larva gigante (larva)</strong></td>
+                <td><span class="badge badge-cyan">3</span></td>
+                <td>576 a 612 <small>(média ~600)</small></td>
+                <td><strong>2 moedas</strong></td>
+                <td>Esgotos de Midgaard</td>
+              </tr>
+              <tr>
+                <td><strong>Inseto rastejante</strong></td>
+                <td><span class="badge badge-cyan">2</span></td>
+                <td>504 a 1.008 <small>(média 756)</small></td>
+                <td>0 moedas / sem loot</td>
+                <td>Área dos Novatos</td>
+              </tr>
+              <tr>
+                <td><strong>Espectro negro</strong></td>
+                <td><span class="badge badge-cyan">2</span></td>
+                <td>1.188 a 2.700 <small>(média 1.944)</small></td>
+                <td>0 moedas / sem loot</td>
+                <td>Masmorra dos Novatos</td>
+              </tr>
+              <tr>
+                <td><strong>Grande Minotauro</strong></td>
+                <td><span class="badge badge-gold">2</span></td>
+                <td>3.544 a 4.032 <small>(combate + dano)</small></td>
+                <td><strong>95 moedas</strong>, Chifres, Pele</td>
+                <td>Masmorra dos Novatos</td>
+              </tr>
+              <tr>
+                <td><strong>Peão Branco do Tabuleiro</strong></td>
+                <td><span class="badge badge-cyan">1</span></td>
+                <td>2.718</td>
+                <td><strong>125 moedas</strong></td>
+                <td>Tabuleiro de Xadrez</td>
+              </tr>
+              <tr>
+                <td><strong>Peão Negro do Tabuleiro</strong></td>
+                <td><span class="badge badge-cyan">1</span></td>
+                <td>2.700</td>
+                <td><strong>125 moedas</strong>, Espada do Peão Negro</td>
+                <td>Tabuleiro de Xadrez</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Seção 2: Entregas de Missões -->
+      <section class="about-section">
+        <h3>2. Bônus de Entrega de Autoquests no Intervalo</h3>
+        <p>Além da experiência dos abates individuais, a progressão contou com as entregas de missões:</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin: 1rem 0;">
+          <div class="stat-box">
+            <h4>Novela dos Novatos (Nv 20)</h4>
+            <p><strong>+4.508 EXP</strong> e <code>diminuto brinco de novato</code>.</p>
+          </div>
+          <div class="stat-box">
+            <h4>Limpando Monstros Ciclo 1 (Nv 20 → 21)</h4>
+            <p><strong>+67.068 EXP</strong> e <code>um manto de pano</code>.</p>
+          </div>
+          <div class="stat-box">
+            <h4>Problemas Agrícolas (Nv 21 → 22)</h4>
+            <p><strong>+9.088 EXP</strong> e <code>um belo cinturão de rodeio</code>.</p>
+          </div>
+          <div class="stat-box">
+            <h4>Limpando Monstros Ciclo 2 (Nv 27 → 28)</h4>
+            <p><strong>+94.227 EXP</strong> e <code>um manto de pano</code>.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção 3: Imprecisões e Notas Técnicas -->
+      <section class="about-section">
+        <h3>3. Notas de Imprecisão & Resolução Técnica</h3>
+        <ul>
+          <li><strong>Oscilação de XP:</strong> O servidor Devil's Bob MUD concede XP fracionada entre dano desferido e bônus de abate. Em determinados períodos do Nível 27, o servidor estava em modo <em>DoubleXP</em>, dobrando o rendimento recebido por abate (exibido na telemetria como <em>"Você recebe mais X pontos de experiência pelo DoubleXP"</em>).</li>
+          <li><strong>Loot em Moedas:</strong> Os monstros do milharal colocam moedas automaticamente no inventário por <code>autoloot</code> (50 moedas para monstros comuns, 120 para o líder). Mobs de masmorra exigem comando explícito <code>get all.moedas corpo</code>.</li>
+          <li><strong>Dias 20 ao 28 (Season 01):</strong> Se o recorte referir-se aos Dias 20–28 da campanha narrativa histórica, Grebolius estava entre os Níveis 3 e 4. Nesses dias, 0 abates ocorreram nos Dias 20 a 24 e 26 a 28; no <strong>Dia 25</strong>, ela abateu 1 monstro novato, 1 abominação rastejante e 1 monstro guardião para ascender ao Grau 4 (com valores numéricos exatos de XP omitidos na crônica textual legada).</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-links">
+        <a href="index.html">Crônicas</a>
+        <a href="sobre.html">Sobre o projeto</a>
+        <a href="https://www.debomud.org" target="_blank" rel="noopener">Devil’s Bob MUD ↗</a>
+      </div>
+      <p class="footer-copy">Crônicas de Midgaard · Um arquivo de jornadas em Devil’s Bob MUD.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
