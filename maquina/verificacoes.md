@@ -108,3 +108,8 @@ Fonte: [evidence/dia156h.json](../data/heroes/grebolius/evidence/dia156h.json). 
   - `Uma poção aquosa` (nível 10, item de quest do Alquimista): 9.750 moedas de ouro.
 
 
+
+
+## 2026-10-17 — respostas intercaladas e histórico de morte
+
+Agente: GPT-6 / Codex (versão específica não informada). Fonte: [dia156j](../data/heroes/grebolius/evidence/dia156j.json). Transcript72663a: linha202 entrega recompensa do Alquimista sob eat pao,com consumo em preroll203;274 recebe DICA para exits,saídas em idle275;300 recebe saídas para n,chegada em preroll301/look302. Prompt isolado não confirma a semântica esperada. Conter por sala/saídas/objetivo e não repetir comando de risco por resposta incompleta. Palavra morte em histórico ou relato não equivale a morte atual; consultar estado real. Não houve alteração do código do driver nesta reconciliação.
