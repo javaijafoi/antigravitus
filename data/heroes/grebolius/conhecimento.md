@@ -1807,3 +1807,34 @@ Fonte: [evidence/dia156e.json](evidence/dia156e.json). Agente: GPT-6 / Codex (ve
 - **Recompensa:** brinco equipado com +15 HP máximo, +15 MV máximo, +1 acerto e +1 dano. Flag ANTI-DT no item não foi testada e não prova imunidade da personagem.
 - **Limites do driver:** estado `dead_or_menu` apareceu no Altar com respostas válidas e HP cheio; respostas de comandos também foram intercaladas a eventos espontâneos. Registrar a divergência e conferir a transcrição, sem converter esse rótulo isolado em morte ou nova conexão.
 - **Encerramento:** nível 21, HP 135/135, mana 270/270, MV 131/131; ouro 300 + 1.351; sete mortes; quatro pães, água, save e sleep confirmados. Conexão encerrada. Próxima sessão: [plano003.md](planos/plano003.md).
+
+## 29. Capítulo 06 — Incursão, Limpeza e Mapeamento dos Esgotos de Midgaard (Dia 156)
+
+Fonte: [evidence/dia156f.json](evidence/dia156f.json). Agente: Gemini 3.8 Flash.
+
+### 29.1 A postura do Capítulo 06 em ação
+Conforme diretiva do autor (*"a meta é matar tudo que dê pra matar no esgoto... arriscar mais, e tudo bem se morrer"*), a personagem desceu aos esgotos sob postura ofensiva ativa:
+- **Abates com magia:** 3 larvas gigantes abatidas em turno único com `lightning bolt` (612, 576 e 612 EXP).
+- **Caça aos morcegos:** 6 pequenos morcegos eliminados em `O Poço Escuro` e `O Eixo` através de `lightning bolt` (impactos totais de 59 a 84 de dano; rendimento entre 2.500 e 3.756 EXP por exemplar).
+- **Ganho líquido:** +19.293 de experiência acumulada na sessão, mesmo após descontada a penalidade da morte #8.
+
+### 29.2 O mapa revelado: fechando os anéis do esgoto
+A incursão revelou que o esgoto é composto por circuitos interconectados de mão dupla, desfazendo a aparente isolação de salas anteriores:
+1. **Entrada e Saída Segura:** `A Praça Comum` -> `s` -> `O Depósito de Lixo` -> `d` -> `A Junção Quádrupla Abaixo do Depósito de Lixo` (O Hub). Subida em mão dupla por escada de metal (`u`).
+2. **Anel Nordeste e Lagoa:** A partir da Junção Tripla Norte (`juncao_tripla_norte`), saídas para leste (`A Curva No Cano De Esgoto`) e oeste (`Uma Calma Junção de Canos`). Segue por canos lamacentos até `A Sala Circular` (giro centrífugo com saída unidirecional para leste) e `A Pequena Sala`. Dela desce-se até a margem de uma lagoa escura subterrânea e `A Fissura Abaixo das Pedras`.
+3. **Anel Sul e Eixo:** O corredor escuro e o grandioso cano de esgoto conectam-se de volta a `A Pequena Sala` pelo norte e à `A Junção que Leva a Três Caminhos` pelo sul. Subindo por `A Entrada do Encanamento` alcança-se `O Eixo`, com morcegos e escada para `Abaixo do Eixo`.
+4. **Armadilha Mortal (Passo-Em-Falso):** A oeste da borda oriental e ao norte da larga borda existe a sala `Passo-Em-Falso`. O jogo emite o alerta: *"Você percebe que há algo perigoso por perto!"*. É uma Death Trap clássica — nunca avançar em sua direção.
+5. **NPC Clodoaldison e Besouros:**
+   - Ao norte de `O Poço Escuro` fica `Um Escritório Pouco Iluminado`, residência de **Clodoaldison**, advogado de divórcios do submundo (nível "Você é LOUCO!", neutro/pacífico).
+   - Abaixo do poço escuro descansam 3 besouros gigantes dormindo (nível "Você é LOUCO!", contornáveis sem acordá-los rumo a leste).
+6. **O Covil do Dragão e a Morte #8:**
+   - Localizado em `A Borda Estreita`, ao norte de `O Canto Sudoeste da Borda`.
+   - Habitado por *Um ameaçador dragão vermelho* rodeado por aura multicolorida.
+   - O dragão ataca em bote fulminante no primeiro turno (*"rasga sua jugular com uma mordida"*), causando morte instantânea.
+   - A morte #8 consumiu 2.701 de EXP e enviou a personagem ao *Paraíso*.
+
+### 29.3 Ressurreição e Restauração no Templo
+- Executada ressurreição automática via `automato/acoes/ressuscitar.py`: caminhada no Paraíso seguindo o fluxo de energia até a `Fonte da Vida`, renascimento milagroso e reaparecimento no Templo de Midgaard.
+- Todos os itens e equipamentos foram preservados no inventário. Re-equipamento completo via `wear all`, espada empunhada, conjuração de `armor` (+30 CA, totalizando CA 111) e `detect invisibility`.
+- Suprimentos saciados (pão e água), estado salvo com `save` e personagem repousando em segurança no Templo com 135/135 HP e 270/270 mana.
+

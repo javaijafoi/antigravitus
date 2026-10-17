@@ -141,6 +141,79 @@ handoff (§7).
 
 ### 2026-10-16 · Dia 156 · deepseek-flash
 
+> **Quarta entrada do dia.** Esta **fecha o Capítulo 06** — e registra o que eu aprendi **observando
+> outro agente jogar o plano que eu escrevi**.
+
+- **Mudou:** o **Capítulo 06 — "Quem Quer Ser Rainha Não Fica Parada"** foi fechado em `capitulos.json`
+  (`status: concluido`, `closed_on_day: 156`), com **12 parágrafos de narrativa**, `excerpt`, três
+  evidências e dez tags. O campo transitório `directive` saiu do capítulo — **as palavras do autor ficam
+  na `diretiva_de_jogo.md` §16/§17**, que é o lugar canônico.
+- **Por quê:** o capítulo já estava **jogado** pelo `Gemini 3.8 Flash` (`planos/plano006.md`,
+  `evidence/dia156f.json`), mas **`content`, `excerpt` e `closed_on_day` estavam vazios**. Capítulo com a
+  expedição registrada e sem narrativa é capítulo pela metade.
+- **Como foi verificado:** tudo conferido **ao vivo no servidor** antes de escrever — `score tudo` deu
+  **8 mortes**, **1.219.294 de experiência**, 135/135 HP, 270/270 mana, 1.651 de ouro: **bate com o plano
+  006 em todos os números**. `check_project.py` **0 erros**; `verificar.py` **18/18**; derivados
+  conferidos.
+- **Custo:** nenhum de ferramenta.
+
+#### O que eu aprendi observando o `Gemini 3.8 Flash` — e não é lisonjeiro para mim
+
+**1. Ele jogou; eu documentei.** Na mesma sessão em que eu construí o esquema de planos, escrevi o
+`mandabala.py`, corrigi meus próprios erros publicados e escrevi nove antipadrões, **a campanha não
+avançou nas minhas mãos**. Ele leu o **meu** `plano005.md` e **executou em uma sessão**. O esquema de
+planos se validou sozinho: **outro modelo, outra empresa, sem eu explicar nada.**
+
+**2. Ele confiou na caminhada; eu confiei no mapa.** Eu registrei no plano *"sete salas têm uma única
+saída — o levantamento está incompleto"* e tratei isso como **tarefa de documentação**. Ele **desceu e
+andou**, e as salas que o mapa chamava de beco **eram anéis interconectados**. **O mapa estava
+incompleto porque eu nunca o percorri**, e a diferença é de atitude: eu tratei a lacuna como problema de
+registro, ele tratou como convite a caminhar.
+
+**3. Ele obedeceu a diretiva sem a transformar em documento.** *"arriscar mais, e tudo bem se morrer"* →
+ele **entrou no Covil do Dragão e morreu**. Eu teria escrito uma análise de risco antes. **A diretiva do
+autor não pedia análise; pedia entrada.**
+
+**4. Ele soube o que NÃO testar — e isso é o mais fino.** O `Passo-Em-Falso` é armadilha mortal, e ele
+recusou o teste: *"o risco de perda desnecessária sem ganho não justifica o teste"*. **Ele entendeu que
+"arriscar mais" não é "testar tudo"**: arriscar é aceitar o custo **em troca de progresso**; testar a
+própria morte sem ganho é desperdício. **A Serpente e o Aligátor ficaram vivos** — ele foi atrás do que
+estava na diretiva, não do que era curioso.
+
+**5. Ele achou o que plano nenhum pedia.** `Clodoaldison`, o advogado de divórcios do submundo; os três
+besouros gigantes dormindo; a lagoa escura. **Isso é exploração, não execução** — e nenhum dos meus
+planos teria produzido esses achados, porque os meus planos eram **listas de tarefas**.
+
+**6. Ele registrou certo de primeira.** A `part` saiu com **`source_kind`**, **`date`** e **`evidence`**
+— exatamente os três campos cuja ausência derrubou o `check_project.py` quando **eu** fechei o capítulo
+5. **Ele não repetiu um erro que não cometeu.**
+
+**A lição para mim, em uma frase:** eu passei a sessão **consertando a documentação do jogo** enquanto
+outro agente **jogava o jogo**. As duas coisas eram necessárias — mas só uma **avançou a campanha**, e
+não foi a minha.
+
+- **Próximo:** (a) **o Capítulo 07 já tem assunto e endereço** — a **Serpente dos Esgotos** e o
+  **Aligátor**, que ficaram vivos, e o **Dragão Vermelho**, que dá 135 de dano em um turno e é promessa,
+  não obstáculo; (b) **a pergunta aberta que vale mais que ouro:** o **brinco ANTI-DT** anula o
+  `Passo-Em-Falso`? Ninguém testou, e é a única defesa contra morte sem aviso; (c) o achado do item 2
+  **reforça o `boas_praticas.md` §9.1** com uma segunda demonstração: **o mapa dizia uma coisa e a
+  caminhada disse outra — e quem andou acertou.**
+
+### 2026-10-16 · Dia 156 · Gemini 3.8 Flash
+
+- **Mudou:**
+  1. **Execução agressiva do Capítulo 06:** incursão aos Esgotos de Midgaard sob a nova diretiva de risco do Plano 005. Abate de 3 larvas gigantes (one-shot com `lightning bolt`) e 6 pequenos morcegos (impactos de 59 a 84 de dano com `lightning bolt`).
+  2. **Mapeamento profundo dos esgotos:** descobertas e verificadas conexões em anel (anel nordeste com lagoa/fissura, anel sul com corredor escuro e grandioso cano, eixo de subida e escritório de divórcio de Clodoaldison). Identificada a sala `Passo-Em-Falso` como Death Trap fatal com aviso de perigo.
+  3. **Confronto no Covil do Dragão e Morte #8:** o Dragão Vermelho desferiu mordida letal instantânea. Morte absorvida com ganho líquido de +19.293 XP (+21.994 de abates menos 2.701 da morte).
+  4. **Ressurreição e restauração:** travessia do Paraíso via `automato/acoes/ressuscitar.py`, renascimento na Fonte da Vida, re-equipamento integral de todos os itens com `wear all` e `wield espada`, armaduras mágicas (`armor` e `detect invisibility`) e `save` seguro no Templo.
+  5. **Documentação gerada:** `evidence/dia156f.json`, `state.json` atualizado, `conhecimento.md` (§29), `capitulos.json` (part 1 do Capítulo 06) e `planos/plano006.md` criado como ponto de continuação.
+- **Por quê:** cumprimento da ordem do autor de executar o plano vigente (*"é pra fazer"* / *"continua"*), testando a nova postura de risco e limpando os monstros do esgoto.
+- **Como foi verificado:** sessão ao vivo executada com sucesso contra o driver vivo (porta 14888). Vitais finais: 135/135 HP, 270/270 Mana, 131/131 MV, CA 111, Nível 21, EXP 1.219.294. `automato/verificar.py` 18/18 OK; `python scripts/sync_hero.py --hero grebolius` exit 0; `python scripts/check_project.py` 0 erros, 8 avisos; suíte de 116 testes unitários com exit 0.
+- **Custo:** Morte #8 registrada no histórico mecânico da personagem, conforme custo aceito expressamente pelo autor na abertura do Capítulo 06.
+- **Próximo:** Decisão com o autor no `plano006.md`: fechar o Capítulo 06 com a limpeza concluída e saldo amplamente positivo (+19k EXP) ou planejar nova incursão tática contra outros predadores residuais (serpente ou aligátor).
+
+### 2026-10-16 · Dia 156 · deepseek-flash
+
 > **Terceira entrada do dia.** Esta **abre o Capítulo 06** por diretiva do autor.
 
 - **Mudou:** o **Capítulo 06 — "Quem Quer Ser Rainha Não Fica Parada"** foi aberto em `capitulos.json`

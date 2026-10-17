@@ -1005,60 +1005,74 @@
       "tomo": 1,
       "title": "Quem Quer Ser Rainha Não Fica Parada",
       "kind": "marco",
-      "status": "em_curso",
+      "status": "concluido",
       "goal": "Voltar aos Esgotos de Midgaard e LIMPAR tudo o que for abatível — a vingança do lugar que a matou no Dia 11 e a expulsou no Dia 95. O que não der para matar, ela desvia ou foge; mas a postura muda: agora ela ARRISCA. Morrer é aceitável. A meta é o esgoto vazio.",
-      "days": [],
-      "parts": [],
-      "content": [],
-      "tags": [],
-      "source_kind": "live",
-      "evidence": [],
-      "directive": {
-        "author_quote": "quem quer ser rainha, não pode ficar parada / já aprendi demais, agora é hora de voltar lá e se vingar / vamos arriscar mais, e tudo bem se morrer",
-        "risk_posture": "RISCO AUTORIZADO. Ao contrário dos capítulos anteriores — onde fugir era sempre a vitória — aqui ela enfrenta o que antes contornava. Só recua do que for comprovadamente inabatível para o nível dela. Morte não é falha: é custo aceito pelo autor.",
-        "target": "Matar tudo o que for matável nos esgotos (ratos, morcegos, larvas e o que mais aparecer), incluindo o que o Dia 95 mandou CONTORNAR: a serpente e o aligátor. E o Covil do Dragão.",
-        "no_kill_policy": "O que não der para matar: desviar ou fugir. Não insistir até morrer à toa.",
-        "narrative_hooks": [
-          "A morte já não a afeta como antes — e ela percebe isso.",
-          "A memória dela tem ficado mais clara: ela só perde o que aprendeu RECENTEMENTE, como se não tivesse dormido depois de aprender.",
-          "O poder que ela carrega a protege das mortes — por enquanto.",
-          "Quem quer ser rainha não pode ficar parada.",
-          "Já aprendeu demais; é hora de voltar lá e se vingar."
-        ],
-        "fiction_layer": {
-          "declared_by": "autor, Dia 156",
-          "author_quote": "estou dando uma camada só de ficção porque na verdade morrer quando tá level baixo 'tirou o passado dela', mas agora a gente vai morrer a beça e queria tirar esse peso, e como ela tem muito mais xp, agora ela perde algo novo e não algo velho. são adaptações do metajogo",
-          "what_it_is": "A narrativa de morte e memoria do Capitulo 06 e' ADAPTACAO DELIBERADA do metajogo, declarada pelo autor. Nao e' fato verificado do servidor, e nao deve ser citada como regra mecanica.",
-          "mapping": [
+      "days": [
+        156
+      ],
+      "parts": [
+        {
+          "day": 156,
+          "source_kind": "live",
+          "date": "2026-10-16",
+          "evidence": [
             {
-              "mechanic": "Morrer custa experiencia.",
-              "fiction": "A morte tira o passado dela."
-            },
-            {
-              "mechanic": "Em nivel baixo a experiencia era escassa, entao a perda doia proporcionalmente muito.",
-              "fiction": "Morrer cedo 'tirou o passado dela' — o que se perdia era historia acumulada."
-            },
-            {
-              "mechanic": "Com muito mais experiencia acumulada, a mesma perda vira uma fracao pequena do total.",
-              "fiction": "Agora ela perde algo NOVO, e nao algo velho."
-            },
-            {
-              "mechanic": "Nao ha imunidade a morte no servidor; o que existe e' o brinco com flag ANTI-DT, que protege de ARMADILHA mortal e nunca foi testado.",
-              "fiction": "'O poder que ela tem a protege, pelo menos por enquanto, das mortes.' — leitura subjetiva dela, com o 'por enquanto' fazendo o trabalho de nao prometer imunidade."
-            },
-            {
-              "mechanic": "Aprendizado recente e' o que se perde primeiro ao morrer (a habilidade nova ainda nao esta consolidada).",
-              "fiction": "'A memoria dela tem se tornado mais clara: ela so perde o que aprendeu recentemente, como se nao dormisse depois de um aprendizado.'"
+              "document": "evidence/dia156f.json",
+              "day": 156,
+              "note": "Incursao agressiva aos Esgotos de Midgaard sob a diretiva ofensiva do autor: 3 larvas gigantes e 6 morcegos abatidos com raio, topologia dos aneis revelada pela caminhada, Clodoaldison e os besouros adormecidos descobertos, o Passo-Em-Falso identificado como armadilha mortal e nao testado, e a Morte #8 no Covil do Dragao Vermelho — 2.701 de experiencia perdidos contra mais de 21.000 ganhos na sessao. Agente: Gemini 3.8 Flash."
             }
           ],
-          "rules_for_writing": [
-            "PODE narrar como percepcao dela, em primeira pessoa, sem hedge.",
-            "NAO afirmar imunidade a morte como fato: o texto deve manter 'por enquanto' / 'parece'.",
-            "NAO usar numero cru de XP/HP/mana na cronica — o check_project.py acusa isso como metajogo.",
-            "Morrer no Capitulo 06 e' custo previsto, nao falha: a cronica nao trata morte como derrota."
-          ]
+          "summary": "Capitulo 06 fechado: 'Quem Quer Ser Rainha Nao Fica Parada'. A vinganca nos Esgotos de Midgaard foi executada sob a diretiva de risco autorizado. Abates: 3 larvas gigantes (uma por raio, de primeira) e 6 morcegos. A caminhada revelou o que o mapa curado nao mostrava — as salas registradas como becos eram ANEIS interconectados. Descobertas laterais: Clodoaldison, um advogado de divorcios do submundo, num escritorio ao norte do Poco Escuro; tres besouros gigantes adormecidos no fundo do poco, contornados sem combate; e o PASSO-EM-FALSO, armadilha mortal sinalizada pelo proprio servidor ('Voce percebe que ha algo perigoso por perto!'), recuada e deliberadamente NAO testada. O encerramento foi o Covil do Dragao Vermelho: a criatura abateu 135 HP em um unico turno, cobrando a Morte #8. A perda foi de 2.701 de experiencia contra mais de 21.000 ganhos na sessao — a primeira validacao pratica da camada de ficcao declarada pelo autor (diretiva secao 17): com muito mais experiencia acumulada, a morte cobra o que se aprendeu recentemente e nao o passado. Saldo liquido do capitulo: +19.293 de experiencia, 1.219.294 no total, 8 mortes. A Serpente dos Esgotos e o Aligator seguem vivos, com endereco conhecido — ficam para o Capitulo 07."
         }
-      }
+      ],
+      "content": [
+        "Voltei lá embaixo. Aquele lugar me matou quando eu tinha onze graus de vida e um punhal na mão, e me expulsou quando eu tinha vinte. Eu levei meses para conseguir voltar, e voltei com a única coisa que eu não tinha na primeira vez: distância.",
+        "Não desci pelo buraco do laboratório, que é de mão única. Desci pelo lixo — onde ninguém olha, que é exatamente onde eu sempre entro. E lá embaixo eu fiz o que a raiva manda fazer: não parei para contar, não escolhi alvo, não contornei nada. Matei o que apareceu.",
+        "Três larvas do tamanho de gente caíram com um raio cada, de primeira. Seis morcegos. Eu já tinha lutado com eles antes, com a mão, e perdido tempo. Agora eu nem chegava perto.",
+        "E enquanto matava, eu andava, e o lugar começou a fazer sentido. As salas que eu tinha anotado como becos sem saída eram anéis — passagens que voltam para onde começaram. Eu passei dias olhando aquele mapa e não entendi. Bastou caminhar.",
+        "Foi assim que eu achei o escritório. Um sujeito chamado Clodoaldison, que desfaz casamentos, mora numa sala mal iluminada ao norte do poço e não quer saber de briga. Um advogado de divórcio no esgoto. Eu ri sozinha, com o cheiro de esgoto na garganta, e essa foi a melhor coisa do dia.",
+        "Achei também três besouros do tamanho de cavalos, dormindo, no fundo do poço. Eles não acordaram, e eu não os acordei. Tem uma diferença entre arriscar e ser burra, e eu ainda sei qual é.",
+        "E achei o Passo-Em-Falso. Não vi o que é, porque o mundo me avisou antes — uma coisa que sussurra *cuidado* no fundo da cabeça — e eu recuei. É a primeira vez que um aviso desses me salvou. Eu carrego uma proteção contra exatamente esse tipo de morte, e não sei se ela funciona. Não testei. Não vou testar com a minha vida o que eu posso testar com paciência.",
+        "E então eu achei o Dragão. Vermelho, no covil, com uma aura de todas as cores em volta. Eu não hesitei — hesitar era o que eu fazia antes. Entrei, e ele me rasgou a garganta com uma mordida só.",
+        "Morri pela oitava vez, e a coisa mais estranha aconteceu: não doeu como das outras vezes. Eu atravessei o Paraíso, bebi da Fonte da Vida, e voltei. Perdi o que eu tinha aprendido naquela mesma tarde — e é isso, exatamente isso, que eu venho percebendo há dias: eu perco o novo, não o velho. O que está gravado em mim fica. O que eu acabei de aprender escorrega, como se eu tivesse morrido antes de dormir sobre aquilo.",
+        "Antes, morrer me tirava o passado. Eu era fraca, e cada morte apagava um pedaço do que eu tinha conquistado — meses de trabalho virando nada em um turno de descuido. Agora eu carrego tanto que cada morte é uma mordida pequena numa coisa grande. O Dragão me matou e eu perdi quase nada: o que eu ganhei naquela tarde foi muito mais do que ele me tirou.",
+        "E é por isso que eu não estou com raiva dele. Um dragão não é um obstáculo: é uma promessa. Ele vai estar lá quando eu voltar, e eu vou voltar. Quem quer ser rainha não pode ficar parada — e uma rainha não morre de vez, ela volta mais forte e mais magra de memória.",
+        "Os esgotos não estão limpos. A serpente que me matou aos onze graus ainda está lá embaixo, e o aligátor também, e eu sei onde os dois moram. Eu não terminei o que vim fazer. Mas eu descobri uma coisa que vale mais do que terminar: eu descobri que dá para morrer e continuar. Isso muda o que eu tenho coragem de tentar."
+      ],
+      "tags": [
+        "Esgotos de Midgaard",
+        "Limpeza",
+        "Raios Elétricos",
+        "Covil do Dragão",
+        "Paraíso",
+        "Ressurreição",
+        "Passo-Em-Falso",
+        "Clodoaldison",
+        "Memória",
+        "Quem Quer Ser Rainha"
+      ],
+      "source_kind": "live",
+      "evidence": [
+        {
+          "document": "evidence/dia156f.json",
+          "day": 156,
+          "note": "A investida nos Esgotos: abates, topologia, Clodoaldison, besouros, Passo-Em-Falso e a Morte #8 no Covil do Dragao. Agente: Gemini 3.8 Flash."
+        },
+        {
+          "document": "planos/plano005.md",
+          "day": 156,
+          "note": "O plano que abriu o capitulo: grafo dos esgotos, rota de mao dupla pelo Deposito de Lixo, bichos conhecidos e a ordem de execucao. Agente: deepseek-flash."
+        },
+        {
+          "document": "planos/plano006.md",
+          "day": 156,
+          "note": "O plano que fechou: rescaldo da limpeza e a decisao sobre o Dragao. Agente: Gemini 3.8 Flash."
+        }
+      ],
+      "excerpt": "A vingança nos esgotos: ela voltou mais forte, matou o que antes contornava, e morreu pela oitava vez para um Dragão que a rasgou em um turno — e descobriu que morrer já não lhe tira o passado, só o que aprendeu naquela tarde. A serpente e o aligátor continuam lá embaixo. Ela também.",
+      "date": "2026-10-16",
+      "in_game_time": "O Dragão, o Passo-Em-Falso e a morte que não doeu",
+      "closed_on_day": 156
     }
   ]
 }

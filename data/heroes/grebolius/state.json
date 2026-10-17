@@ -5,7 +5,7 @@
     "day": 156,
     "verification": "live",
     "live_verified": true,
-    "source": "Continuação supervisionada do Dia 156 por GPT-6 / Codex (versão específica não informada). Fonte: evidence/dia156e.json. Duas autoquests entregues, nível 21, brinco equipado, retorno ao Templo, save e sleep confirmados; daemon encerrado."
+    "source": "Capítulo 06 executado por Gemini 3.8 Flash. Incursão aos Esgotos de Midgaard sob a diretiva de risco autorizada: eliminação de 3 larvas e 6 morcegos com raios elétricos, mapeamento de múltiplos anéis e corredores ocultos. Morte #8 no Covil do Dragão, travessia do Paraíso e ressurreição via Fonte da Vida. Re-equipamento completo, armor, detect invisibility e save no Templo. Fonte: evidence/dia156f.json."
   },
   "level": 21,
   "mechanical_race": "Elfo",
@@ -13,7 +13,7 @@
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
   "alignment": {
-    "value": 181,
+    "value": 224,
     "label": "Um pouco bom"
   },
   "vitals": {
@@ -31,7 +31,7 @@
     }
   },
   "experience": {
-    "current": 1200001,
+    "current": 1219294,
     "next_level": 1400000
   },
   "gold": 1651,
@@ -344,14 +344,14 @@
     "pending_verification": []
   },
   "conditions": [
-    "Dia 156, continuação: 135/135 HP, 270/270 mana e 131/131 MV, no Templo de Midgaard; save e sleep confirmados e daemon encerrado.",
-    "Nível 21, EXP 1.200.001; próximo nível em 1.400.000 (faltam 199.999).",
+    "Capítulo 06: 135/135 HP, 270/270 mana e 131/131 MV, salvo no Templo de Midgaard.",
+    "Nível 21, EXP 1.219.294; próximo nível em 1.400.000 (faltam 180.706).",
     "Ouro: 300 na mão e 1.351 no banco, total 1.651.",
-    "Sete mortes e uma armadilha mortal no histórico; nenhuma nova morte nesta retomada.",
-    "Quatro pães e cantil com água; fome e sede ausentes no último score. Peso 88/115 kg, 15/22 itens carregados; oito punhais dentro da mochila.",
-    "Armadura da Torre Negra vestida; armor ativo (+30), CA 110. Não houve teste de remoção da maldição nesta retomada.",
-    "Wimpy 45 mantido conforme diretiva §6; não foi reduzido automaticamente para um perfil antigo.",
-    "Quarenta treinos; curse recém-aprendida a 10%.",
+    "Oito mortes e uma armadilha mortal no histórico; morte #8 sofrida no Covil do Dragão e ressurreição no Paraíso com recuperação completa.",
+    "Dois pães e cantil cheio; fome e sede ausentes.",
+    "Armadura da Torre Negra vestida; armor ativo (+30), CA 111.",
+    "Wimpy 45 mantido conforme diretiva §6.",
+    "Quarenta treinos; curse a 10%.",
     "Novela dos Novatos e o ciclo atual de Limpando Monstros concluídos; apenas Problemas Agrícolas apareceu no último score, sem autorização para retomá-la.",
     "Brinco com flag ANTI-DT identificada; nenhuma imunidade da personagem foi testada ou presumida."
   ],
@@ -471,6 +471,11 @@
       "document": "evidence/dia156e.json",
       "day": 156,
       "note": "Retomada supervisionada da conexão do Dia 156; falas, objetivos, recompensas e encerramento confirmados no servidor. Correção da síntese concorrente dia156d."
+    },
+    {
+      "document": "evidence/dia156f.json",
+      "day": 156,
+      "note": "Incursão agressiva aos Esgotos no Capítulo 06; abate de 3 larvas e 6 morcegos, mapeamento amplo do sistema subterrâneo, morte #8 no Covil do Dragão e ressurreição no Paraíso."
     }
   ],
   "narrative_style": "ladra arcana",

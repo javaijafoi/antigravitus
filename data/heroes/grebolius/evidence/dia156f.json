@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "hero_id": "grebolius",
+  "day": 156,
+  "title": "Capítulo 06 — Incursão e limpeza profunda dos Esgotos de Midgaard",
+  "agent": "Gemini 3.8 Flash",
+  "via": "automato",
+  "verification": "live",
+  "summary": "Incursão agressiva aos Esgotos de Midgaard sob a nova diretiva de risco do Capítulo 06. Eliminação confirmada de 3 larvas gigantes e 6 morcegos com raios elétricos (impactos de 59-84). Mapeamento massivo de dezenas de salas e conexões antes ausentes do mapa. Descoberta do NPC Clodoaldison (escritório suspeito), dos besouros gigantes dormindo, do abismo com armadilha Passo-Em-Falso e do Covil do Dragão. Morte #8 confirmada pelo bote letal do Dragão Vermelho. Travessia do Paraíso e ressurreição completa via Fonte da Vida, com re-equipamento integral de todos os itens, armadura mágica e save seguro no Templo. Ganho líquido de +19.293 XP.",
+  "observations": [
+    {
+      "kind": "combate",
+      "command": "cast 'lightning bolt' larva",
+      "target": "larva gigante (3x em salas distintas)",
+      "response": "Seu raio transforma uma larva em pedaços! Uma larva está morta! Você recebe 612 pontos de experiência pelo dano causado.",
+      "note": "Todas as larvas foram abatidas com um único raio (one-shot)."
+    },
+    {
+      "kind": "combate",
+      "command": "cast 'lightning bolt' morcego",
+      "target": "pequeno morcego (6 espécimes abatidos)",
+      "response": "O raio acerta um pequeno morcego com impacto total! [59 a 84]. Você recebe até 3.756 pontos de experiência.",
+      "note": "4 morcegos eliminados em O Poço Escuro e 2 morcegos em O Eixo."
+    },
+    {
+      "kind": "exploracao",
+      "command": "look / exits",
+      "location": "Um Escritório Pouco Iluminado",
+      "response": "Clodoaldison está aqui, com vários processos de divórcio em suas mãos. Clodoaldison, o desatador de laços matrimoniais está com saúde perfeita.",
+      "note": "NPC de nível 'Você é LOUCO!'. Não hostil, dedicado a processos de divórcio no esgoto."
+    },
+    {
+      "kind": "morte",
+      "command": "n (em A Borda Estreita)",
+      "opponent": "Um ameaçador dragão vermelho",
+      "response": "Um dragão vermelho rasga sua jugular com uma mordida, fazendo-lhe cair no chão agonizando... Você está morto! Você perdeu 2.701 pontos de experiência pela sua morte.",
+      "note": "Bote instantâneo com aura multicolorida. Custo aceito pelo autor na diretiva do Capítulo 06."
+    },
+    {
+      "kind": "ressurreicao",
+      "command": "automato/acoes/ressuscitar.py",
+      "location": "O Paraíso -> Fonte da Vida -> O Templo de Midgaard",
+      "response": "Você milagrosamente revive... O Templo de Midgaard",
+      "note": "Ressurreição limpa através do plano celestial. Recuperação integral de todos os equipamentos (brinco ANTI-DT, Armadura da Torre Negra, Coroa da Rainha Branca, cajados/espadas e itens de bolsa)."
+    },
+    {
+      "kind": "resposta_do_servidor",
+      "command": "score tudo",
+      "response": "Vida: 135 de 135 | Mana: 270 de 270 | Movimento: 131 de 131 | Experiência: 1.219.294 (próximo: 180.706) | Mortes: 8 | CA: 111 | Banco: 1.351 | Carregando: 300",
+      "note": "Estado verificado e salvo com 'save' no Templo de Midgaard."
+    }
+  ],
+  "state_after": {
+    "level": 21,
+    "experience": 1219294,
+    "exp_net_change": 19293,
+    "vitals": { "hp": 135, "mana": 270, "mv": 131 },
+    "alignment": 224,
+    "gold_hand": 300,
+    "gold_bank": 1351,
+    "gold_total": 1651,
+    "deaths": 8,
+    "armor_class": 111,
+    "spells_active": ["armor (25h)", "detect invisibility (13h)"]
+  },
+  "uncertainties": [
+    "A margem de dano exata do Dragão Vermelho não pôde ser calculada porque a mordida abateu a personagem em turno único (135 HP -> 0 HP).",
+    "Não foi testado se a armadilha Passo-Em-Falso acionaria o brinco ANTI-DT, pois a passagem foi contornada por prudência."
+  ]
+}

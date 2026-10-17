@@ -10,7 +10,7 @@
 * **Raça Mecânica no MUD:** Elfo
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **21**
-* **Alinhamento Moral:** 181 (Um pouco bom)
+* **Alinhamento Moral:** 224 (Um pouco bom)
 * **Localização Atual:** O Templo de Midgaard (último registro: Dia 156)
 * **Acampamento Registrado:** O Templo de Midgaard
 * **Santuário de Referência:** O Panteao dos Centenarios
@@ -24,8 +24,8 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 | **Pontos de Mana (MP)** | 270 | 270 | 100% |
 | **Estamina / Movimento (MV)** | 131 | 131 | 100% |
 
-* **Experiência Acumulada:** **1.200.001 EXP**
-* **Experiência Necessária p/ Grau 22:** **199.999 EXP** (Meta: 1.400.000 EXP)
+* **Experiência Acumulada:** **1.219.294 EXP**
+* **Experiência Necessária p/ Grau 22:** **180.706 EXP** (Meta: 1.400.000 EXP)
 * **Ouro Líquido:** **1.651 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
@@ -109,14 +109,14 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 ### Pendências de inventário
 
 ## ✦ Condições Registradas
-* Dia 156, continuação: 135/135 HP, 270/270 mana e 131/131 MV, no Templo de Midgaard; save e sleep confirmados e daemon encerrado.
-* Nível 21, EXP 1.200.001; próximo nível em 1.400.000 (faltam 199.999).
+* Capítulo 06: 135/135 HP, 270/270 mana e 131/131 MV, salvo no Templo de Midgaard.
+* Nível 21, EXP 1.219.294; próximo nível em 1.400.000 (faltam 180.706).
 * Ouro: 300 na mão e 1.351 no banco, total 1.651.
-* Sete mortes e uma armadilha mortal no histórico; nenhuma nova morte nesta retomada.
-* Quatro pães e cantil com água; fome e sede ausentes no último score. Peso 88/115 kg, 15/22 itens carregados; oito punhais dentro da mochila.
-* Armadura da Torre Negra vestida; armor ativo (+30), CA 110. Não houve teste de remoção da maldição nesta retomada.
-* Wimpy 45 mantido conforme diretiva §6; não foi reduzido automaticamente para um perfil antigo.
-* Quarenta treinos; curse recém-aprendida a 10%.
+* Oito mortes e uma armadilha mortal no histórico; morte #8 sofrida no Covil do Dragão e ressurreição no Paraíso com recuperação completa.
+* Dois pães e cantil cheio; fome e sede ausentes.
+* Armadura da Torre Negra vestida; armor ativo (+30), CA 111.
+* Wimpy 45 mantido conforme diretiva §6.
+* Quarenta treinos; curse a 10%.
 * Novela dos Novatos e o ciclo atual de Limpando Monstros concluídos; apenas Problemas Agrícolas apareceu no último score, sem autorização para retomá-la.
 * Brinco com flag ANTI-DT identificada; nenhuma imunidade da personagem foi testada ou presumida.
 
@@ -129,7 +129,7 @@ Escolher o objetivo do próximo capítulo com o autor antes de iniciar outra mis
 * Curse está em 10%; não usar como magia confiável sem treino.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Continuação supervisionada do Dia 156 por GPT-6 / Codex (versão específica não informada). Fonte: evidence/dia156e.json. Duas autoquests entregues, nível 21, brinco equipado, retorno ao Templo, save e sleep confirmados; daemon encerrado..
+Fonte do estado: Capítulo 06 executado por Gemini 3.8 Flash. Incursão aos Esgotos de Midgaard sob a diretiva de risco autorizada: eliminação de 3 larvas e 6 morcegos com raios elétricos, mapeamento de múltiplos anéis e corredores ocultos. Morte #8 no Covil do Dragão, travessia do Paraíso e ressurreição via Fonte da Vida. Re-equipamento completo, armor, detect invisibility e save no Templo. Fonte: evidence/dia156f.json..
 * A Armadura da Torre Negra segue AMALDIÇOADA e vestida: nao pode ser removida, largada, jogada nem doada. O remove curse do CircleMUD exige o item EQUIPADO, entao o segundo pergaminho (8.509) so funciona agora. O armeiro avalia a armadura em 8.500 mas nao tem ouro; o feiticeiro recusa armaduras. Comprador desconhecido.
 * A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido; explica a mana maxima de 260 em vez de 265.
 * O colar com pedra purpura pertence a outro dono: o servidor recusa o uso. Nenhum comerciante testado o compra.
