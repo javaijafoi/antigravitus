@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "hero_id": "grebolius",
+  "day": 156,
+  "title": "Capítulo 07 — Conclusão integral da autoquest 'Problemas Agrícolas' e avanço ao Nível 22",
+  "agent": "Gemini 4 Argon",
+  "via": "automato",
+  "verification": "live",
+  "summary": "Execução completa do Plano 008 (Capítulo 07). Reinício de 'Problemas Agrícolas' com O Pacificador em A Entrada da Estalagem Javali Roncador, permanecendo na sala até a 13ª fala inédita do briefing ('O Pacificador exclama: Se esquecer o caminho, digite HISTÓRICO DIZER. E vá encontrar o fazendeiro!'). Descoberta e resolução das duas causas-raiz que travavam a missão desde o Dia 90: (1) sair da sala antes da 13ª fala do Pacificador impedia o gatilho do fazendeiro de armar; (2) a rotina milharal.py filtrava alvos por 'está aqui'/'está jogado', ignorando 'um monstro invasor' ('Uma estranha criatura, verde e peluda, está procurando algo.'). Cumprimento sequencial das 4 etapas do fazendeiro (10 um monstro invasor -> 10 um monstro esfomeado -> 5 um monstro agressivo -> 1 o líder dos monstros), avanço ao Nível 22 (141 HP, 280 Mana, 133 MV) e recebimento da recompensa final (+9.088 XP e 'um belo cinturão de rodeio', equipado na cintura: CA 112->134, Acerto 5->10, Dano 2->7, DEX 15->16, CAR 11->12). Retorno ao Templo, depósito de 2.648 moedas (banco: 3.999, mão: 300, total: 4.299) e save seguro.",
+  "observations": [
+    {
+      "kind": "dialogo_missao",
+      "command": "say sim (para O Pacificador em A Entrada da Estalagem Javali Roncador)",
+      "target": "O Pacificador",
+      "response": "Você começa a participar da aventura. ... O Pacificador diz: 'Mas cuidado! A floresta pode enganar quem é novo por aquelas bandas.' O Pacificador exclama: 'Se esquecer o caminho, digite HISTÓRICO DIZER. E vá encontrar o fazendeiro!'",
+      "note": "Permanecer na mesma sala até a 13ª fala ('E vá encontrar o fazendeiro!') é obrigatório para armar o gatilho de diálogo do fazendeiro na casa."
+    },
+    {
+      "kind": "dialogo_missao",
+      "command": "say sim (para O dono da fazenda em A Sala de Estar)",
+      "target": "O dono da fazenda (o fazendeiro)",
+      "response": "O fazendeiro questiona: 'Ô sô, cê que veio nos ajudar com esses bicho feio?' -> Você diz: 'sim' -> O fazendeiro grita: 'Ô muié! A sua carta pra Midgaard funcionô!' / 'Já chegou alguém para ajudar!' / 'Oia moço, o negócio é o seguinte.' / 'Como cê pode ver, nossa fazenda foi invadida por monstros feiosos.' / 'Quero ajuda para acabar com essas pragas de uma vez por todas!' / 'Faiz o seguinte, vai lá fora e extermine 10 daqueles monstros invasores no milharal. Não deixe nenhum escapar!'",
+      "note": "Abre a Etapa 1 da caçada: abater especificamente 10 'um monstro invasor' ('Uma estranha criatura, verde e peluda, está procurando algo.'). Em score tudo: 'Problemas Agrícolas: Você deve matar criaturas.'."
+    },
+    {
+      "kind": "combate_e_transicao",
+      "command": "cast 'lightning bolt' invasor (10 abates) -> retorno a A Entrada da Casa",
+      "target": "um monstro invasor (10x) -> O fazendeiro",
+      "response": "O fazendeiro questiona: 'Óia, não é que cê deu conta do recado?' O fazendeiro diz: 'Agora, extermine 10 dos monstros verdes famintos, que estão sempre mastigando meu precioso milho.'",
+      "note": "Em score tudo, o texto 'Problemas Agrícolas: Você deve matar criaturas.' não muda após o 10º abate; o avanço para a Etapa 2 ocorre automaticamente ao entrar na sala do fazendeiro."
+    },
+    {
+      "kind": "combate_e_transicao",
+      "command": "cast 'lightning bolt' esfomeado (10 abates) -> retorno a A Entrada da Casa",
+      "target": "um monstro esfomeado (10x) -> O fazendeiro",
+      "response": "O fazendeiro questiona: 'Cê já terminô o serviço que te pedi, jovem?' O fazendeiro exclama: 'Elimine também 5 dos monstros que andam por aí, assustando meu garoto. Cuidado que eles são agressivos!'",
+      "note": "Durante a Etapa 2, Grebolius alcançou o Nível 22 (141 HP, 280 Mana, 133 MV). Ao retornar à casa, o fazendeiro abriu a Etapa 3: abater 5 'um monstro agressivo' ('Uma bola de pêlos verde está aqui, procurando um pescoço para torcer.')."
+    },
+    {
+      "kind": "combate_e_transicao",
+      "command": "cast 'lightning bolt' agressivo (5 abates) -> retorno a A Entrada da Casa",
+      "target": "um monstro agressivo (5x) -> O fazendeiro",
+      "response": "O fazendeiro exclama: 'Óia quem vortô!' O fazendeiro questiona: 'Cê deu mesmo cabo daqueles monstros agressivos, hein?' O fazendeiro exclama: 'Agora, por último, acabe com o líder desta invasão!'",
+      "note": "Abre a Etapa 4 (final). Em score tudo, o objetivo muda do plural para o singular: 'Problemas Agrícolas: Você deve matar criatura.'."
+    },
+    {
+      "kind": "combate",
+      "command": "cast 'lightning bolt' lider",
+      "target": "o líder dos monstros ('Um grande monstro de pelagem azul está aqui, coçando a cabeça.')",
+      "response": "Seu raio transforma o líder dos monstros em pedaços! O líder dos monstros está morto! Você recebe 12.400 pontos de experiência pelo combate. Você recebe 5.814 pontos de experiência pelo dano causado. Você já atingiu este objetivo. ... Havia 120 moedas.",
+      "note": "Abate do chefe do milharal (+18.214 XP totais e 120 moedas de ouro) com confirmação imediata 'Você já atingiu este objetivo.'."
+    },
+    {
+      "kind": "conclusao_missao",
+      "command": "s (entrando em A Sala de Estar junto a O dono da fazenda)",
+      "target": "O dono da fazenda",
+      "response": "O fazendeiro diz: 'Agora talvez eu possa viver em paz aqui, com minha família.' Você recebeu 9.088 pontos de experiência! O fazendeiro diz: 'Nóis aqui na fazenda estamos agradecidos por demais.' O fazendeiro pega um belo cinturão, pendurado na parede. O fazendeiro diz: 'Toma aqui, um dos meus tesouros.' O fazendeiro diz: 'Ganhei num rodeio quando era mais novo.' O fazendeiro exclama: 'Agora isso é seu. Cê merece! Brigado demais da conta pela ajuda!' O fazendeiro entrega um belo cinturão de rodeio para você. Parabéns, você completou a aventura!",
+      "note": "Conclusão definitiva de 'Problemas Agrícolas'. Equipar 'um belo cinturão de rodeio' (slot: na cintura) elevou CA de 112 para 134 (+22 CA), Acerto de 5 para 10 (+5), Dano de 2 para 7 (+5), Destreza de 15 para 16 (+1) e Carisma de 11 para 12 (+1)."
+    },
+    {
+      "kind": "resposta_do_servidor",
+      "command": "score tudo / save (em O Templo de Midgaard)",
+      "response": "Nível: 22 | Vida: 141 de 141 | Mana: 280 de 280 | Movimento: 133 de 133 | Experiência: 1.572.738 (próximo: 27.262) | Alinhamento: 219 | Força: 11, Constituição: 10, Sabedoria: 17, Inteligência: 19, Destreza: 16, Carisma: 12 | Acerto: 10 | Dano: 7 | CA: 134 | Banco: 3.999 | Carregando: 300 (Total: 4.299) | Duração: detect invisibility (10h), armor (48h, +31 em ARMADURA).",
+      "note": "Provisões repostas (3 pães recheados e cantil cheio), 2.648 moedas depositadas no banco e sessão salva no Templo de Midgaard."
+    }
+  ],
+  "state_after": {
+    "level": 22,
+    "experience": 1572738,
+    "exp_net_change": 353444,
+    "vitals": { "hp": 141, "mana": 280, "mv": 133 },
+    "alignment": 219,
+    "gold_hand": 300,
+    "gold_bank": 3999,
+    "gold_total": 4299,
+    "deaths": 8,
+    "armor_class": 134,
+    "spells_active": ["armor (48h)", "detect invisibility (10h)"]
+  },
+  "uncertainties": [
+    "O comando cast 'identify' cinturao falhou na primeira tentativa por falta de concentração e na segunda porque o item já estava vestido (exige estar no inventário); os bônus mecânicos exatos (+22 CA, +5 Acerto, +5 Dano, +1 DEX, +1 CAR) foram medidos diretamente pela diferença no score tudo antes e depois de vestir."
+  ]
+}

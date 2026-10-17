@@ -5,7 +5,7 @@
   "verification": {
     "mode": "live",
     "autoquest_check_day": 156,
-    "autoquest_check_note": "Estado conferido no servidor via 'autoquest todas' (Dia 156, log do daemon). Concluidas: Limpando Monstros e Ninguem Segura Esse Bebe. Em andamento: Problemas Agricolas e Dicas Magicas. Nao iniciadas e elegiveis ao Grau 20: Uma Licao em Gargamel e Novela dos Novatos."
+    "autoquest_check_note": "Estado conferido no servidor ao fim do Capítulo 07 (Dia 156g, evidence/dia156g.json). Concluídas: A Coleira do Dragão, Altruísmo, Ninguém Segura Esse Bebê, Novela dos Novatos, Limpando Monstros e Problemas Agrícolas. Elegíveis abertas: Dicas Mágicas e Uma Lição em Gargamel."
   },
   "items": [
     {
@@ -383,11 +383,12 @@
       "id": "problemas-agricolas",
       "title": "Problemas Agrícolas",
       "type": "official",
-      "status": "blocked",
+      "status": "completed",
       "accepted_day": 90,
       "last_progress_day": 156,
-      "objective": "Eliminar monstros invasores do milharal conforme pedido do fazendeiro e instruções dadas pelo Pacificador.",
-      "next_step": "Onze abates acumulados contra a cota de dez do fazendeiro (Dia 153: 1, Dia 155: 3, Dia 156: 7) e a entrega NAO foi reconhecida. O dono da fazenda permaneceu em silencio apos 'say ola', 'say sim', 'ask fazendeiro monstros', 'ask fazendeiro invasores', 'ask fazendeiro missao', 'ask fazendeiro ajuda', 'say terminei', 'say matei os monstros' e 'say 10'. O Pacificador respondeu 'Procure um lugar onde precisem de sua forca.'. Proximo passo verificavel: DESCONHECIDO - descobrir qual condicao o servidor exige, sem repetir as falas ja testadas.",
+      "objective": "Eliminar monstros do milharal em 4 etapas (10 invasores, 10 esfomeados, 5 agressivos e 1 líder dos monstros) conforme pedido de O dono da fazenda e instruções dadas por O Pacificador.",
+      "next_step": "Concluída e entregue no Dia 156 (Capítulo 07). Não reiniciar sem novo objetivo do autor.",
+      "reward": "9.088 EXP e um belo cinturão de rodeio (+22 CA, +5 Acerto, +5 Dano, +1 DEX, +1 CAR)",
       "evidence": [
         {
           "document": "posts.json",
@@ -438,9 +439,14 @@
           "document": "evidence/autoquests-dia143.json",
           "day": 143,
           "note": "Texto capturado de autoquest todas + score tudo."
+        },
+        {
+          "document": "evidence/dia156g.json",
+          "day": 156,
+          "note": "Reinício completo com O Pacificador (ouvindo até a 13ª fala) e conclusão das 4 etapas sequenciais no Milharal Destruído com O fazendeiro: 10 invasores, 10 esfomeados, 5 agressivos e 1 líder dos monstros. Recompensa de +9.088 EXP e um belo cinturão de rodeio. Agente: Gemini 4 Argon."
         }
       ],
-      "blocker": "Condicao de entrega desconhecida: o servidor mantem a missao 'Em andamento' mesmo com a cota de abates superada. Nenhuma fala testada disparou o reconhecimento."
+      "completion_note": "Reiniciada com O Pacificador (aguardando as 13 falas até o fim) e concluída integralmente no Dia 156g: 10 monstros invasores -> 10 monstros esfomeados -> 5 monstros agressivos -> 1 líder dos monstros, retornando a O fazendeiro entre cada etapa. Recompensa de 9.088 EXP e um belo cinturão de rodeio recebida em A Sala de Estar."
     },
     {
       "id": "ninguem-segura-esse-bebe",
@@ -457,6 +463,23 @@
           "document": "evidence/autoquests-dia143.json",
           "day": 143,
           "note": "Texto capturado de autoquest todas + score tudo."
+        }
+      ]
+    },
+    {
+      "id": "uma-licao-em-gargamel",
+      "title": "Uma Lição em Gargamel",
+      "type": "official",
+      "status": "discovered",
+      "accepted_day": null,
+      "last_progress_day": 156,
+      "objective": "Autoquest de níveis 20-80 (encarnações 1-4, qualquer alinhamento/classe/raça), iniciada com o smurf minerador na Vila dos Smurfs.",
+      "next_step": "Objetivo do Capítulo 08 (planos/plano009.md): seguir a rota de 'help vila dos smurfs' (Templo -> sul até Praça do Comércio -> leste pela Rua Principal e Portão Leste até o centro da Estrada do Rei -> norte para A Entrada Para a Vila dos Smurfs), localizar 'o smurf minerador' com 'where minerador' / 'where smurf', iniciar a missão ('say sim') e concluí-la.",
+      "evidence": [
+        {
+          "document": "evidence/dia156g.json",
+          "day": 156,
+          "note": "Confirmada em autoquest listar ('Até o nível 80, iniciada com: o smurf minerador') e rota localizada via 'help vila dos smurfs' (MAPA 33). Agente: Gemini 4 Argon."
         }
       ]
     }

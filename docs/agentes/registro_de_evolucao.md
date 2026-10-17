@@ -139,6 +139,43 @@ PRÓXIMA ENTRADA COMEÇA AQUI. Não edite os blocos acima; acrescente o seu abai
 handoff (§7).
 -->
 
+### 2026-10-16 · Dia 156 · Gemini 4 Argon
+
+> **Sétima entrada do dia.** Execução integral do `planos/plano008.md` e fechamento do **Capítulo 07 —
+> "O Que Eu Deixei no Meio"** (`Problemas Agrícolas` concluída após 66 dias de campanha).
+
+- **Mudou:**
+  1. **Autoquest `Problemas Agrícolas` concluída ao vivo** (`evidence/dia156g.json`, `missoes.json`,
+     `state.json`, `capitulos.json` cap. 07): reiniciada com `O Pacificador` e executada nas **4 etapas**
+     com `O fazendeiro` (10 `um monstro invasor`, 10 `um monstro esfomeado`, 5 `um monstro agressivo` e
+     1 `o líder dos monstros`). Recompensa: **+9.088 EXP** e **`um belo cinturão de rodeio`** equipado
+     na cintura (**CA 112 → 134**, **Acerto 5 → 10**, **Dano 2 → 7**, **DEX 15 → 16**, **CAR 11 → 12**).
+     Avanço ao **Nível 22** (`141 HP`, `280 Mana`, `133 MV`, `1.572.738 EXP`) e depósito de **2.648 moedas**
+     no banco (`3.999` banco + `300` mão = `4.299`).
+  2. **`automato/rotinas/milharal.py` e `automato/CHANGELOG.md` (v1.6.1):** corrigido o filtro de
+     `count_mobs(text)`, que exigia `'está aqui'` ou `'está jogado'` e por isso **ignorava todos os
+     `um monstro invasor`** (*"Uma estranha criatura, verde e peluda, está procurando algo."*) e mirava
+     cadáveres no chão.
+  3. **`maquina/verificacoes.md` e `conhecimento.md` (§40):** documentadas as três causas do bloqueio
+     histórico da missão (sair antes da 13ª fala do Pacificador; o filtro do `milharal.py`; e o fato de
+     `score tudo` permanecer em *"Você deve matar criaturas."* ao fim das Etapas 1–3 até o jogador voltar
+     à sala do fazendeiro), além dos atributos medidos do cinturão de rodeio.
+  4. **`data/heroes/grebolius/mapa.json`:** atualizadas as salas da fazenda (`fazenda_milharal_borda`,
+     `fazenda_entrada_casa`, `fazenda_sala_estar`, `fazenda_cozinha`) com os 4 tipos de monstros do
+     milharal e os 3 membros da família do fazendeiro verificados ao vivo.
+  5. **`data/heroes/grebolius/planos/plano009.md`:** criado o plano de transição pós-Capítulo 07 com a
+     devolutiva técnica preenchida.
+- **Por quê:** cumprir o objetivo do Capítulo 07 definido pelo autor em `planos/plano008.md` e eliminar o
+  bug silencioso de `milharal.py` que impedia o fechamento da Etapa 1.
+- **Como foi verificado:** sessão ao vivo no servidor (`evidence/dia156g.json`), `identify cinturão` +
+  comparação empírica de `score tudo` antes/depois de vestir, `prepara.py --forcar`, `cuidar.py` (exit 0)
+  e `save` no Templo. Validadores: `automato/verificar.py` **18/18 OK**, `sync_hero.py --check` **exit 0**,
+  `check_project.py` **0 erros**, `devolutiva.py` **0 falhas**.
+- **Custo:** nenhum de ferramenta; 0 mortes na sessão (permanecem 8).
+- **Próximo:** aguardar diretriz do autor para o **Capítulo 08** em `planos/plano009.md` (faltam apenas
+  **27.262 EXP** para o Nível 23; candidatas: `Uma Lição em Gargamel`, destravar `Dicas Mágicas` ou
+  retornar aos Esgotos para a Serpente/Aligátor e gravar as 4 arestas pendentes dos anéis do esgoto).
+
 ### 2026-10-16 · Dia 156 · deepseek-flash
 
 > **Sexta entrada do dia.** O autor entregou `Problemas Agrícolas` ao próximo agente. Esta entrada

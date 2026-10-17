@@ -1073,6 +1073,77 @@
       "date": "2026-10-16",
       "in_game_time": "O Dragão, o Passo-Em-Falso e a morte que não doeu",
       "closed_on_day": 156
+    },
+    {
+      "id": 7,
+      "tomo": 1,
+      "title": "O Que Eu Deixei no Meio",
+      "kind": "marco",
+      "status": "concluido",
+      "goal": "Concluir 'Problemas Agrícolas' — a missão que ela começou no Dia 90 e nunca entregou. Na ficção, ela volta porque não gosta de deixar coisa por fazer: escuta O Pacificador até o fim, entende a sequência do fazendeiro e limpa o milharal até derrubar o líder da invasão.",
+      "days": [
+        156
+      ],
+      "parts": [
+        {
+          "day": 156,
+          "source_kind": "live",
+          "date": "2026-10-16",
+          "evidence": [
+            {
+              "document": "evidence/dia156g.json",
+              "day": 156,
+              "note": "Reinício de Problemas Agrícolas com O Pacificador na Entrada da Estalagem Javali Roncador (aguardando a 13ª fala 'Se esquecer o caminho, digite HISTÓRICO DIZER. E vá encontrar o fazendeiro!') e conclusão das 4 etapas sequenciais no Milharal Destruído com O fazendeiro: 10 monstros invasores, 10 monstros esfomeados, 5 monstros agressivos e 1 líder dos monstros. Avanço ao Nível 22, recompensa de +9.088 EXP e um belo cinturão de rodeio equipado (+22 CA, +5 Acerto, +5 Dano, +1 DEX, +1 CHA). Agente: Gemini 4 Argon."
+            },
+            {
+              "document": "planos/plano008.md",
+              "day": 156,
+              "note": "Plano que abriu o Capítulo 07: revogação do veto anterior, diagnóstico de missão perdida e roteiro de verificação. Agente: deepseek-flash."
+            }
+          ],
+          "summary": "Capítulo 07 concluído: 'O Que Eu Deixei no Meio'. Problemas Agrícolas foi reiniciada do zero com O Pacificador em A Entrada da Estalagem Javali Roncador e concluída integralmente. Descoberta a causa raiz do bloqueio histórico do Dia 90 ao Dia 156: (1) sair da sala antes da 13ª fala do Pacificador impedia o gatilho do fazendeiro de armar; (2) na 1ª etapa o fazendeiro pede 10 'um monstro invasor', cuja descrição na sala ('Uma estranha criatura, verde e peluda, está procurando algo.') não contém 'está aqui' e era ignorada pelo filtro antigo de milharal.py; (3) o texto de 'score tudo' não avisa quando a cota de uma etapa fecha — é preciso entrar na sala do fazendeiro para disparar a próxima etapa. Cumpridas as 4 etapas em sequência no Milharal Destruído com raios elétricos: 10 monstros invasores, 10 monstros esfomeados, 5 monstros agressivos e 1 líder dos monstros (pelagem azul). Avanço ao Nível 22 (141 HP, 280 mana, 133 MV) durante a 2ª etapa. Recompensa entregue pelo dono da fazenda: +9.088 EXP e 'um belo cinturão de rodeio', equipado na cintura (+22 CA, +5 Acerto, +5 Dano, +1 DEX, +1 CHA). Saldo da sessão: +353.444 EXP líquidos (total 1.572.738) e +2.648 moedas guardadas no banco (total 4.299). Zero mortes."
+        }
+      ],
+      "content": [
+        "Eu não gosto de deixar serviço pela metade. Passei dias repetindo para mim mesma que a culpa era do fazendeiro, que aquele homem se fingia de mudo para não dever favor a uma goblin, e fui cuidar de outras brigas. Mas a verdade é que nenhuma outra estrada deste mundo me humilhou tantas vezes quanto o caminho daquela fazenda.",
+        "Eu já tinha perdido a conta de quantas vezes tentei e saí de lá de mãos abanando. Nas primeiras idas, mal sabia achar a curva da estrada de Jareth e passei tardes inteiras rodando em círculos dentro daquele bosque iluminado onde todas as clareiras têm a mesma cara, voltando faminta e exausta antes mesmo de ver a cerca.",
+        "Depois, quando finalmente aprendi a chegar, aquele milharal seco me matou duas vezes. Na primeira, cercada no meio da palha quebrada, caí sangrando entre os colmos e atravessei o Vazio escuro onde lembrei pela primeira vez do meu sangue antigo. Na segunda, dei um passo em falso para o fundo da plantação e o chão simplesmente sumiu debaixo dos meus pés, me engolindo inteira sem me dar tempo sequer de correr.",
+        "E o pior ainda veio depois das mortes: as três viagens seguidas em que derrubei onze daqueles bichos — um a mais do que a conta — e entrei na casa de chão batido esperando que tudo acabasse. A mulher chorava num canto, e eu falei, repeti, gritei cada palavra que conhecia na cara do dono da fazenda, e ele não abriu a boca. Quando voltei à cidade para cobrar do Pacificador, ouvi dele que fosse procurar outro lugar onde precisassem da minha força. Saí batendo os pés, jurando que nunca mais punha os olhos naquela lavoura.",
+        "Só que juramento feito de cabeça quente dura pouco quando a coisa fica atravessada na garganta. Encontrei O Pacificador na porta da Estalagem Javali Roncador e decidi engolir o orgulho e tentar de novo, do começo. Desta vez não saí correndo no meio da explicação. Fiquei parada na calçada até ele terminar a última frase e me mandar procurar o fazendeiro. Percebi ali o primeiro erro de toda a minha pressa antiga: eu costumava dar as costas antes de o recado inteiro sair da boca de quem pede.",
+        "Cruzei a estrada do norte, passei pelos portões de Jareth e atravessei o bosque olhando para as saídas da mata em vez de confiar nas árvores repetidas. Quando entrei na sala de estar da fazenda, a mulher continuava aos prantos e o garoto seguia encolhido na cozinha, abraçado ao cãozinho. Mas o dono da fazenda olhou para mim e finalmente falou.",
+        "Ele nunca tinha sido mudo por desprezo. Pediu que eu começasse limpando dez daquelas criaturas verdes e peludas que reviravam o chão procurando sabe-se lá o quê. Foi aí que entendi o segundo erro que me fez gritar à toa da outra vez: nas minhas idas antigas, eu entrava no milharal e atacava apenas os bichos que avançavam babando ou mastigando milho, deixando para trás justamente os vasculhadores que ele precisava ver mortos primeiro.",
+        "Fui para o milharal seco e contei um por um. Dez criaturas verdes derrubadas a distância, o cheiro de planta queimada misturado ao de pêlo chamuscado, sempre cuidando onde pisava para não chegar perto do buraco onde a terra cede. Quando voltei à varanda da casa, o homem abriu um sorriso espantado e apontou o segundo serviço: dez dos famintos que viviam mastigando as espigas.",
+        "Voltei à plantação. No meio da segunda leva senti o corpo mais firme e o fôlego mais largo — a tempestade saía dos meus dedos quase sem esforço, e até a proteção que envolvia minha pele ficou mais espessa. Derrubei os dez mastigadores e tornei à casa. O fazendeiro já me olhava de outro jeito: pediu mais cinco dos agressivos que viviam assustando o menino dele.",
+        "Cumpri a terceira parte sem dar espaço para que me cercassem. Quando pisei na entrada da casa de novo, ele gritou de alegria ao me ver voltar e fez o último pedido: acabar com o líder da invasão, uma besta grande de pelagem azul que ficava coçando a cabeça no meio do milharal destruído.",
+        "Encontrei o bicho azul na borda da plantação. Dois clarões bastaram para que ele tombasse entre as palhas secas. Voltei à sala de estar, sacudi a fuligem das mãos e vi o fazendeiro respirar aliviado pela primeira vez desde que pus os pés naquela terra.",
+        "Ele me agradeceu de verdade e me passou às mãos um belo cinturão de rodeio. Prendi a peça na cintura ali mesmo: pesada na medida certa, firme no quadril, deixando o passo mais leve e a mão mais certeira. Depois de tantas viagens perdidas, duas mortes na palha e uma tarde inteira gritando para as paredes, saí daquela fazenda sem dever mais nada a ela."
+      ],
+      "tags": [
+        "Problemas Agrícolas",
+        "Milharal",
+        "Fazendeiro",
+        "Pacificador",
+        "Cinturão de Rodeio",
+        "Persistência",
+        "Conclusão"
+      ],
+      "source_kind": "live",
+      "evidence": [
+        {
+          "document": "evidence/dia156g.json",
+          "day": 156,
+          "note": "Reinício de Problemas Agrícolas com O Pacificador e conclusão integral das 4 etapas no Milharal Destruído com O fazendeiro: 10 invasores, 10 esfomeados, 5 agressivos e 1 líder dos monstros. Avanço ao Nível 22, +9.088 EXP e um belo cinturão de rodeio equipado. Agente: Gemini 4 Argon."
+        },
+        {
+          "document": "planos/plano008.md",
+          "day": 156,
+          "note": "Plano do Capítulo 07 que orientou a retomada de Problemas Agrícolas. Agente: deepseek-flash."
+        }
+      ],
+      "excerpt": "Depois de se perder no bosque, morrer duas vezes na palha seca e gritar sozinha para um fazendeiro que não respondia, ela voltou ao que tinha deixado pelo caminho: ouviu o recado até o fim, cumpriu as quatro levas do milharal até derrubar o líder azul e saiu de lá com um cinturão de rodeio na cintura.",
+      "date": "2026-10-16",
+      "in_game_time": "As tentativas frustradas, as quatro levas do milharal e o cinturão do fazendeiro",
+      "closed_on_day": 156
     }
   ]
 }

@@ -2584,16 +2584,25 @@
         "s": "lb025",
         "w": "lb035"
       },
-      "npcs": [],
-      "notes": "Setor identificado pela saída leste para O Fim da Estrada. Saídas sul e oeste levam a setores homônimos não fundidos. Monstros verdes e líder azul foram vistos na região; posição exata futura não garantida.",
+      "npcs": [
+        "um monstro invasor",
+        "um monstro esfomeado",
+        "um monstro agressivo",
+        "o líder dos monstros"
+      ],
+      "notes": "Setor identificado pela saída leste para O Fim da Estrada. Quatro espécies da invasão verificadas no Capítulo 07: um monstro invasor (procurando algo), um monstro esfomeado (mastigando), um monstro agressivo (procurando um pescoço para torcer) e o líder dos monstros (pelagem azul).",
       "discovered_in": "Ciclo X (Dia 91)",
       "source": {
-        "document": "evidence/dia91.json",
-        "day": 91,
-        "note": "Trechos literais do servidor, linhas dos registros anteriores e ações da continuação autorizada; sem referências circulares."
+        "document": "evidence/dia156g.json",
+        "day": 156,
+        "note": "Quatro espécies de monstros de Problemas Agrícolas e conclusão da missão verificadas ao vivo no Capítulo 07. Agente: Gemini 4 Argon."
       },
       "npcs_confirmados": [
-        "monstro"
+        "monstro",
+        "um monstro invasor",
+        "um monstro esfomeado",
+        "um monstro agressivo",
+        "o líder dos monstros"
       ],
       "visitas_registradas": 231,
       "fontes": [
@@ -2659,14 +2668,14 @@
         "w": "fazenda_cozinha"
       },
       "npcs": [
-        "O fazendeiro"
+        "O dono da fazenda"
       ],
-      "notes": "Marcas de cortes e pancadas. Fazendeiro pediu 10 invasores; entrada em cômodo não comprova segurança para repousar.",
+      "notes": "Marcas de cortes e pancadas. O dono da fazenda (O fazendeiro) circula entre aqui e A Sala de Estar; conduz as 4 etapas de Problemas Agrícolas (10 invasores, 10 esfomeados, 5 agressivos e 1 líder dos monstros) por gatilho automático ao entrar na sala dele.",
       "discovered_in": "Ciclo X (Dia 91)",
       "source": {
-        "document": "evidence/dia91.json",
-        "day": 91,
-        "note": "Trechos literais do servidor, linhas dos registros anteriores e ações da continuação autorizada; sem referências circulares."
+        "document": "evidence/dia156g.json",
+        "day": 156,
+        "note": "Gatilhos de avanço de etapa com O fazendeiro confirmados ao vivo no Capítulo 07. Agente: Gemini 4 Argon."
       },
       "visitas_registradas": 39,
       "fontes": [
@@ -2690,14 +2699,15 @@
         "w": "fazenda_quarto"
       },
       "npcs": [
-        "Mulher desesperada"
+        "Mulher desesperada",
+        "O fazendeiro"
       ],
-      "notes": "Móveis revirados e sangue. Mulher observada; NPCs podem circular.",
+      "notes": "Móveis revirados e sangue. Mulher desesperada e O dono da fazenda circulam; abertura da missão e entrega final do cinturão de rodeio confirmadas aqui no Capítulo 07.",
       "discovered_in": "Ciclo X (Dia 91)",
       "source": {
-        "document": "evidence/dia91.json",
-        "day": 91,
-        "note": "Trechos literais do servidor, linhas dos registros anteriores e ações da continuação autorizada; sem referências circulares."
+        "document": "evidence/dia156g.json",
+        "day": 156,
+        "note": "Abertura da missão com O fazendeiro e entrega final do cinturão de rodeio verificadas ao vivo no Capítulo 07. Agente: Gemini 4 Argon."
       },
       "visitas_registradas": 3,
       "fontes": [
@@ -2719,13 +2729,15 @@
       "exits": {
         "e": "fazenda_entrada_casa"
       },
-      "npcs": [],
-      "notes": "Cacos, utensílios pelo chão e cheiro de pernil assado; cheiro não comprova comida disponível para coleta.",
+      "npcs": [
+        "Um garoto"
+      ],
+      "notes": "Cacos, utensílios pelo chão e cheiro de pernil assado. Presença de um garoto (Uma pequena criança está aqui, abraçada a um cãozinho) verificada ao vivo no Capítulo 07.",
       "discovered_in": "Ciclo X (Dia 91)",
       "source": {
-        "document": "evidence/dia91.json",
-        "day": 91,
-        "note": "Trechos literais do servidor, linhas dos registros anteriores e ações da continuação autorizada; sem referências circulares."
+        "document": "evidence/dia156g.json",
+        "day": 156,
+        "note": "Inspeção ao vivo de A Cozinha e identificação de um garoto no Capítulo 07. Agente: Gemini 4 Argon."
       },
       "visitas_registradas": 13,
       "fontes": [

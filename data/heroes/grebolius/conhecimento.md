@@ -1909,3 +1909,82 @@ ask Pacificador fazenda       ask Pacificador monstros
 **É o melhor grind do jogo em OURO** (~50 por abate) e empata com o esgoto em XP (~2.400).
 **Mas o milharal tem ARMADILHA MORTAL:** a **Morte #5** foi DT em *"Adentro do Milharal Destruído"*.
 O `wimpy` não segura DT — e o **brinco ANTI-DT nunca foi testado**.
+
+---
+
+## 40. ✅ `PROBLEMAS AGRÍCOLAS` CONCLUÍDA — as quatro etapas do fazendeiro e o cinturão de rodeio (Dia 156)
+
+Fonte: [`evidence/dia156g.json`](evidence/dia156g.json). Agente: `Gemini 4 Argon`.
+
+O mistério que travava `Problemas Agrícolas` desde o Dia 90 tinha **três causas técnicas cumulativas**, todas medidas e resolvidas ao vivo no Capítulo 07:
+
+### 40.1 Causa #1: sair da sala antes da 13ª fala do Pacificador trava o gatilho do fazendeiro
+Ao dizer `say sim` para `O Pacificador`, ele inicia um monólogo de **13 linhas** espaçadas por vários segundos. Na primeira tentativa desta sessão, sair da sala antes da 13ª linha (`O Pacificador exclama: 'Se esquecer o caminho, digite HISTÓRICO DIZER. E vá encontrar o fazendeiro!'`) deixou o `score tudo` com `Problemas Agrícolas` **sem dois-pontos nem objetivo**, e `O dono da fazenda` permaneceu mudo na casa.
+Ao retornar ao Pacificador, reiniciar (`say sim`) e **aguardar na mesma sala até a 13ª fala terminar**, o fazendeiro reagiu imediatamente assim que Grebolius entrou na sala dele.
+
+### 40.2 Causa #2: `milharal.py` ignorava `um monstro invasor` por causa da descrição na sala
+Em [`automato/rotinas/milharal.py`](../../../automato/rotinas/milharal.py), `count_mobs(text)` filtrava linhas apenas por `'está aqui'` ou `'está jogado'`. Porém, as quatro espécies do milharal têm descrições distintas na sala:
+
+| Nome em combate | Linha na sala (`look`) | Contém `'está aqui'`? | XP (nível 21–22) | Ouro |
+|---|---|---|---|---|
+| `um monstro invasor` | *"Uma estranha criatura, verde e peluda, está procurando algo."* | **NÃO** | ~759–846 | 50 |
+| `um monstro esfomeado` | *"Um monstro verde e peludo está aqui, mastigando freneticamente alguma coisa."* | Sim | ~2.038–2.268 | 50 |
+| `um monstro agressivo` | *"Uma bola de pêlos verde está aqui, procurando um pescoço para torcer."* | Sim | ~2.238–2.484 | 50 |
+| `o líder dos monstros` | *"Um grande monstro de pelagem azul está aqui, coçando a cabeça."* | Sim | **18.214** | **120** |
+
+Como `um monstro invasor` **não** contém `'está aqui'`, a rotina `milharal.py` jamais atacava os invasores da Etapa 1 (só matava `esfomeado` e `agressivo`, além de tentar conjurar em cadáveres por causa de `'está jogado'`). Corrigido na **v1.6.1** de `automato/rotinas/milharal.py`.
+
+### 40.3 Causa #3: o `score tudo` NÃO muda ao fechar a cota das Etapas 1, 2 e 3
+Diferente de outras missões, completar os abates das três primeiras etapas **não** imprime aviso na tela e **não** muda a linha `Problemas Agrícolas: Você deve matar criaturas.` para *"ir ao encontro do personagem"*. Basta **voltar à sala onde está `O fazendeiro`** (`A Sala de Estar`, `A Entrada da Casa` ou `O Gramado`) e **esperar ~10–16 segundos** para o *mobprog* dele disparar a etapa seguinte:
+
+1. **Chegada à fazenda + `say sim`:**
+   - `O fazendeiro diz: 'Eles comeram toda minha plantação e se multiplicaram rapidamente!'`
+   - `O fazendeiro exclama: 'Primeiro, mate 10 monstros invasores que estão no milharal!'`
+2. **Etapa 1 — 10 `um monstro invasor` → voltar ao fazendeiro:**
+   - `O fazendeiro diz: 'Muito bem! Mas ainda não acabou...'`
+   - `O fazendeiro exclama: 'Agora mate 10 monstros esfomeados!'`
+3. **Etapa 2 — 10 `um monstro esfomeado` (avanço ao Nível 22!) → voltar ao fazendeiro:**
+   - `O fazendeiro diz: 'Ótimo, já estamos quase no fim.'`
+   - `O fazendeiro exclama: 'Mate 5 monstros agressivos!'`
+4. **Etapa 3 — 5 `um monstro agressivo` → voltar ao fazendeiro:**
+   - `O fazendeiro diz: 'Maravilha! Parece que o líder deles não gostou nada disso.'`
+   - `O fazendeiro exclama: 'Vá até o milharal e acabe com a raça daquele monstro!'`
+   - Aqui o `score tudo` muda para o singular: **`Problemas Agrícolas: Você deve matar criatura.`**
+5. **Etapa 4 — 1 `o líder dos monstros` (+18.214 XP, 120 moedas; o servidor anuncia `Você já atingiu este objetivo.`) → voltar ao fazendeiro:**
+   - `O fazendeiro exclama: 'Você conseguiu! Nem sei como agradecer!'`
+   - `O fazendeiro diz: 'Não é muito, mas espero que isto lhe seja útil.'`
+   - **`O fazendeiro lhe deu 9088 pontos de experiência.`**
+   - **`O fazendeiro lhe deu um belo cinturão de rodeio.`**
+   - **`Parabéns, você completou a aventura!`**
+
+### 40.4 O prêmio: `um belo cinturão de rodeio` (vestido `na cintura`)
+
+Identificado com `identify cinturão` e medido empiricamente no `score tudo` ao vestir (`wear cinturão`):
+
+```
+Objeto: 'um belo cinturão de rodeio', Tipo: ARMADURA
+O item é: BRILHO
+Peso: 5, Valor: 1250, Aluguel: 250, Nível: 15, Encarnação: 1
+Pode ser vestido em: PEGAR CINTURA
+A CA aplicada é -12
+Afeta: ACERTO em 5 / DANO em 5 / DESTREZA em 1 / CARISMA em 1
+```
+
+| Atributo no `score` | Antes do cinturão | Com o cinturão | Ganho |
+|---|---|---|---|
+| **Classe de Armadura (CA)** | 112 (base 81 + `armor` 31) | **134** (base 103 + `armor` 31) | **+22 CA** |
+| **Acerto (Hitroll)** | 5 | **10** | **+5** |
+| **Dano (Damroll)** | 2 | **7** | **+5** |
+| **Destreza (DEX)** | 15 | **16** | **+1** |
+| **Carisma (CAR)** | 11 | **12** | **+1** |
+
+### 40.5 Onde o jogo marca que `Problemas Agrícolas` foi feita — e o endereço de `Uma Lição em Gargamel`
+
+Conferido ao vivo logo após a entrega:
+1. **`autoquest todas`:** muda a linha para **`Problemas Agrícolas            Concluída`** (ao lado de `Novela dos Novatos`, `Limpando Monstros` e `Ninguém Segura Esse Bebê`).
+2. **`autoquest listar`:** **retira** `Problemas Agrícolas` da lista `Autoquests Disponíveis Agora:` (diferente de `Limpando Monstros`, que continua listada como repetível até o nível 30). Isso prova que `Problemas Agrícolas` é **missão única nesta encarnação**.
+3. **A missão do Capítulo 08 (`Uma Lição em Gargamel`, nível 20–80, iniciada com `o smurf minerador`) tem endereço no `help`:**
+   - `help mapas` lista **`33. VILA DOS SMURFS (recomendada para iniciantes)`**.
+   - `help vila dos smurfs` (`help mapa 33`) entrega a rota exata a partir do Templo:
+     > *"A partir do Templo de Midgaard, siga para o sul em direção à famosa Praça do Comércio. De lá, siga para o leste pela Rua Principal, até chegar ao centro da grande Estrada do Rei. Nesse ponto, haverá um caminho ao norte, onde se encontra a Entrada Para a Vila dos Smurfs."*
+

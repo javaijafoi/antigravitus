@@ -7,7 +7,18 @@ import random
 
 NOME = 'milharal'
 DESCRICAO = 'Cacar monstros invasores no milharal da fazenda (Problemas Agricolas) e trazer espolio.'
-MOBS = [('esfomeado', 'esfomeado'), ('agressivo', 'agressivo'), ('invasor', 'invasor'), ('bola', 'bola'), ('criatura', 'criatura'), ('monstro', 'monstro')]
+MOBS = [
+    ('pelagem azul', 'lider'),
+    ('estranha criatura, verde e peluda', 'invasor'),
+    ('mastigando freneticamente', 'esfomeado'),
+    ('bola de pêlos verde', 'agressivo'),
+    ('esfomeado', 'esfomeado'),
+    ('agressivo', 'agressivo'),
+    ('invasor', 'invasor'),
+    ('bola', 'bola'),
+    ('criatura', 'criatura'),
+    ('monstro', 'monstro'),
+]
 CAMINHO = 's,n,e,e,w,w,e,w,s,n,e,w,e,w,s,n,e,e,w,e,e,w,w,w,e,e,w,e,w,e,w,w,e,e,w,e,e,e,e,w,w,e,e,w,w,w,e,e,w,e,w,w,e,e,w,e,e,e,e'.split(',')
 
 
@@ -15,7 +26,9 @@ def count_mobs(text):
     n, alvo = 0, None
     for line in text.split('\n'):
         low = line.lower()
-        if 'está aqui' in low or 'está jogado' in low:
+        if 'corpo de' in low or 'está jogado' in low:
+            continue
+        if 'está aqui' in low or 'estranha criatura, verde e peluda' in low:
             for marca, kw in MOBS:
                 if marca in low:
                     n += 1

@@ -5,57 +5,57 @@
     "day": 156,
     "verification": "live",
     "live_verified": true,
-    "source": "Capítulo 06 executado por Gemini 3.8 Flash. Incursão aos Esgotos de Midgaard sob a diretiva de risco autorizada: eliminação de 3 larvas e 6 morcegos com raios elétricos, mapeamento de múltiplos anéis e corredores ocultos. Morte #8 no Covil do Dragão, travessia do Paraíso e ressurreição via Fonte da Vida. Re-equipamento completo, armor, detect invisibility e save no Templo. Fonte: evidence/dia156f.json."
+    "source": "Capítulo 07 executado por Gemini 4 Argon. Autoquest 'Problemas Agrícolas' concluída integralmente em 4 etapas (10 monstros invasores, 10 esfomeados, 5 agressivos e 1 líder dos monstros), com avanço ao Nível 22, recompensa de 9.088 EXP e um belo cinturão de rodeio (+22 CA, +5 Acerto, +5 Dano, +1 DEX, +1 CAR) equipado na cintura. Retorno ao Templo, depósito de 2.648 moedas no banco (total 4.299), abastecimento, armor (48h), detect invisibility (10h) e save. Fonte: evidence/dia156g.json."
   },
-  "level": 21,
+  "level": 22,
   "mechanical_race": "Elfo",
   "mechanical_class": "Mago (Magic-User)",
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
   "alignment": {
-    "value": 224,
+    "value": 219,
     "label": "Um pouco bom"
   },
   "vitals": {
     "hp": {
-      "current": 135,
-      "max": 135
+      "current": 141,
+      "max": 141
     },
     "mana": {
-      "current": 270,
-      "max": 270
+      "current": 280,
+      "max": 280
     },
     "mv": {
-      "current": 131,
-      "max": 131
+      "current": 133,
+      "max": 133
     }
   },
   "experience": {
-    "current": 1219294,
-    "next_level": 1400000
+    "current": 1572738,
+    "next_level": 1600000
   },
-  "gold": 1651,
+  "gold": 4299,
   "attributes": {
     "STR": 11,
-    "DEX": 15,
+    "DEX": 16,
     "CON": 10,
     "INT": 19,
     "WIS": 17,
-    "CHA": 11
+    "CHA": 12
   },
   "armor": {
-    "base": 80,
-    "with_armor": 110,
+    "base": 103,
+    "with_armor": 134,
     "effect_verified": true,
-    "note": "CA 80 observada no consider após armor expirar; CA 110 confirmada no score após nova conjuração. Armor com 16 horas de jogo no último score da retomada (evidence/dia156e.json)."
+    "note": "CA subiu de 112 para 134 (+22 CA) ao vestir um belo cinturão de rodeio na cintura, com armor ativo (+31 CA por 48 horas no último score: base 103, com armor 134; evidence/dia156g.json)."
   },
-  "hitroll": 4,
-  "damroll": 2,
+  "hitroll": 10,
+  "damroll": 7,
   "wimpy": 45,
   "training_sessions": 40,
   "operational_mode": {
     "current": "padrao",
-    "description": "Retomada manual supervisionada na Área dos Novatos: alvos individuais, magias, wimpy 45; duas autoquests concluídas e conexão encerrada no Templo.",
+    "description": "Sessão supervisionada no Milharal Destruído (Capítulo 07): combate à distância com lightning bolt, wimpy 45, autoquest 'Problemas Agrícolas' concluída nas 4 etapas e estado salvo no Templo.",
     "wimpy_profile": {
       "padrao": 17,
       "batedor": 33,
@@ -79,21 +79,20 @@
   },
   "last_event": {
     "day": 156,
-    "summary": "Capítulo 5 concluído: Novela dos Novatos entregou o brinco, e Limpando Monstros entregou o manto após o Minotauro. Avanço ao nível 21, curse aprendida, sete mortes mantidas. Salva e dormindo no Templo, sem conexão ativa."
+    "summary": "Capítulo 7 concluído: Problemas Agrícolas vencida nas 4 etapas (10 invasores, 10 esfomeados, 5 agressivos e 1 líder dos monstros) e entregue a O fazendeiro. Avanço ao nível 22, cinturão de rodeio equipado na cintura (CA 134, Acerto 10, Dano 7), 4.299 moedas (3.999 no banco + 300 na mão) e 8 mortes mantidas. Salva no Templo."
   },
   "next_objective": {
-    "mission_id": "proxima-meta-a-definir",
-    "title": "Definir o próximo capítulo",
-    "next_step": "Objetivo definido pelo autor (Dia 156): concluir 'Problemas Agrícolas'. O plano é planos/plano008.md — inclui a rota, o briefing literal do Pacificador, o perigo da armadilha mortal no milharal e o bloqueio conhecido (a entrega que nunca foi confirmada).",
+    "mission_id": "uma-licao-em-gargamel",
+    "title": "Capítulo 08: Uma Lição em Gargamel",
+    "next_step": "Objetivo definido pelo autor para o Capítulo 08: concluir a autoquest 'Uma Lição em Gargamel' (níveis 20-80, iniciada com 'o smurf minerador'). Seguir planos/plano009.md: a rota oficial do servidor ('help vila dos smurfs' / MAPA 33) sai do Templo para o sul até a Praça do Comércio, segue a leste pela Rua Principal e Portão Leste até o centro da Estrada do Rei, e entra ao norte em 'A Entrada Para a Vila dos Smurfs'.",
     "missing_preparation": [
-      "Ler planos/plano008.md, conferir o estado real e preparar nova conexão somente para a próxima sessão autorizada.",
-      "'Problemas Agrícolas' NAO ESTA ATIVA: o score nao tem bloco de autoquests e o catalogo diz 'Nao feita'. Tem de ser reiniciada com O Pacificador (say sim). O veto anterior do autor CAIU no Dia 156.",
-      "O bloqueio historico e a ENTREGA: onze abates acumulados contra cota de dez, e o fazendeiro nunca confirmou. 'ask' foi tentado e nao fechou; apostar em give ou na palavra literal, lendo o score antes de cada acao.",
-      "ARMADILHA MORTAL dentro do milharal: a Morte #5 foi DT em 'Adentro do Milharal Destruido'. O brinco ANTI-DT nunca foi testado - nao confiar nele como certeza.",
-      "Proibida a venda de armaduras.",
-      "Curse está em 10%; não usar como magia confiável sem treino."
+      "Ler planos/plano009.md antes de sair do Templo.",
+      "Rodar prepara.py --forcar antes de partir (repor pães na Padaria).",
+      "Seguir a rota de 'help vila dos smurfs': Templo -> s,s (Praça do Comércio) -> leste pela Rua Principal / Portão Leste até a Estrada do Rei -> norte para A Entrada Para a Vila dos Smurfs.",
+      "Usar 'where minerador' ou 'where smurf' dentro da Vila dos Smurfs, aguardar a fala inicial do NPC, responder 'say sim' e NÃO sair da sala antes de terminar a última fala do briefing.",
+      "Proibida a venda de armaduras (§15)."
     ],
-    "plan_document": "planos/plano008.md"
+    "plan_document": "planos/plano009.md"
   },
   "skills": [
     {
@@ -239,6 +238,11 @@
       "item": "um diminuto brinco de novato"
     },
     {
+      "slot": "no pescoço",
+      "name": "a coleira do dragão de estimação",
+      "item": "a coleira do dragão de estimação"
+    },
+    {
       "slot": "sobre o corpo",
       "name": "um manto de pano",
       "item": "um manto de pano"
@@ -247,6 +251,11 @@
       "slot": "no corpo",
       "name": "a Armadura da Torre Negra",
       "item": "a Armadura da Torre Negra"
+    },
+    {
+      "slot": "na cintura",
+      "name": "um belo cinturão de rodeio",
+      "item": "um belo cinturão de rodeio"
     },
     {
       "slot": "nos braços",
@@ -284,57 +293,52 @@
       {
         "name": "um cantil",
         "quantity": 1,
-        "source": "evidence/dia156e.json"
+        "source": "evidence/dia156g.json"
       },
       {
         "name": "um manto de pano",
         "quantity": 1,
-        "source": "evidence/dia156e.json"
+        "source": "evidence/dia156g.json"
       },
       {
         "name": "um pão recheado",
-        "quantity": 4,
-        "source": "evidence/dia156e.json"
-      },
-      {
-        "name": "a coleira do dragão de estimação",
-        "quantity": 1,
-        "source": "evidence/dia156e.json"
+        "quantity": 3,
+        "source": "evidence/dia156g.json"
       },
       {
         "name": "uma Cruz Ansada",
         "quantity": 1,
-        "source": "evidence/dia156e.json"
+        "source": "evidence/dia156g.json"
       },
       {
         "name": "uma brilhante veste de novato",
         "quantity": 2,
-        "source": "evidence/dia156e.json"
+        "source": "evidence/dia156g.json"
       },
       {
-        "name": "o poderoso Scutum de Carvalho (+14L)",
+        "name": "o poderoso Scutum de Carvalho (+13L)",
         "quantity": 1,
-        "source": "evidence/dia156e.json"
+        "source": "evidence/dia156g.json"
       },
       {
         "name": "a mochila de Pellinore",
         "quantity": 1,
-        "source": "evidence/dia156e.json"
+        "source": "evidence/dia156g.json"
       },
       {
         "name": "uma adaga",
         "quantity": 1,
-        "source": "evidence/dia156e.json"
+        "source": "evidence/dia156g.json"
       },
       {
         "name": "um pergaminho de sabedoria",
         "quantity": 1,
-        "source": "evidence/dia156e.json"
+        "source": "evidence/dia156g.json"
       },
       {
         "name": "um colar com uma pedra púrpura",
         "quantity": 1,
-        "source": "evidence/dia156e.json"
+        "source": "evidence/dia156g.json"
       },
       {
         "name": "um brilhante punhal de novato",
@@ -346,27 +350,27 @@
     "pending_verification": []
   },
   "conditions": [
-    "Capítulo 06: 135/135 HP, 270/270 mana e 131/131 MV, salvo no Templo de Midgaard.",
-    "Nível 21, EXP 1.219.294; próximo nível em 1.400.000 (faltam 180.706).",
-    "Ouro: 300 na mão e 1.351 no banco, total 1.651.",
-    "Oito mortes e uma armadilha mortal no histórico; morte #8 sofrida no Covil do Dragão e ressurreição no Paraíso com recuperação completa.",
-    "Dois pães e cantil cheio; fome e sede ausentes.",
-    "Armadura da Torre Negra vestida; armor ativo (+30), CA 111.",
+    "Capítulo 07 concluído: 141/141 HP, 280/280 mana e 133/133 MV, salva no Templo de Midgaard.",
+    "Nível 22, EXP 1.572.738; próximo nível em 1.600.000 (faltam 27.262).",
+    "Ouro: 300 na mão e 3.999 no banco, total 4.299 (+2.648 depositados nesta sessão).",
+    "Oito mortes e uma armadilha mortal no histórico; zero mortes no Capítulo 07.",
+    "Três pães recheados e cantil cheio; fome e sede ausentes.",
+    "Um belo cinturão de rodeio equipado na cintura (+22 CA, +5 Acerto, +5 Dano, +1 DEX, +1 CAR); armor ativo (+31 por 48h), CA 134.",
     "Wimpy 45 mantido conforme diretiva §6.",
     "Quarenta treinos; curse a 10%.",
-    "Novela dos Novatos e o ciclo atual de Limpando Monstros concluídos; apenas Problemas Agrícolas apareceu no último score, sem autorização para retomá-la.",
-    "Brinco com flag ANTI-DT identificada; nenhuma imunidade da personagem foi testada ou presumida."
+    "Problemas Agrícolas concluída e entregue após as 4 etapas no milharal (10 invasores, 10 esfomeados, 5 agressivos e 1 líder dos monstros).",
+    "Brinco com flag ANTI-DT equipada; nenhuma imunidade da personagem foi testada ou presumida."
   ],
   "uncertainties": [
-    "A Armadura da Torre Negra segue AMALDIÇOADA e vestida: nao pode ser removida, largada, jogada nem doada. O remove curse do CircleMUD exige o item EQUIPADO, entao o segundo pergaminho (8.509) so funciona agora. O armeiro avalia a armadura em 8.500 mas nao tem ouro; o feiticeiro recusa armaduras. Comprador desconhecido.",
-    "A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido; explica a mana maxima de 260 em vez de 265.",
+    "A Armadura da Torre Negra segue AMALDIÇOADA e vestida: nao pode ser removida, largada, jogada nem doada. O remove curse do CircleMUD exige o item EQUIPADO, entao o segundo pergaminho (8.509) so funciona agora. Com 4.299 moedas totais, faltam 4.210 moedas.",
+    "A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.",
     "O colar com pedra purpura pertence a outro dono: o servidor recusa o uso. Nenhum comerciante testado o compra.",
-    "Bainha de Excalibur exige nivel 85 (vista na Sala de Doacoes, nao pode ser carregada com a carga atual). Scutum de Carvalho exige nivel 35 (devolvido a Sala de Doacoes).",
-    "Problemas Agricolas: onze abates acumulados contra cota de dez e o gatilho de entrega nunca veio (Dia 156). O estado real da missao e desconhecido.",
-    "Dia 156: a DURACAO de 'armor' e 'invisibility' nao esta medida. Nao existe, em registro nenhum do projeto, uma mensagem de queda de magia. O cuidar.py re-conjura por validade assumida (VALIDADE_SEGUNDOS = 600) e registra a resposta crua de cada conjuracao, para que o texto da expiracao apareca sozinho no log em vez de ser adivinhado.",
+    "Bainha de Excalibur exige nivel 85 (vista na Sala de Doacoes, nao pode ser carregada com a carga atual). Scutum de Carvalho exige nivel 35.",
+    "Dicas Magicas: perdeu o estado ativo apos o quit historico anterior e precisara ser reiniciada com o Mago Aventureiro caso volte a ser objetivo.",
+    "Dia 156: a DURACAO de 'armor' e 'invisibility' nao esta medida em segundos reais, embora o score tudo exiba '48 horas' de jogo logo apos conjurar no nivel 22.",
     "Dia 156: a semente do levantamento tem contaminacao por salas homonimas - 'A Sala de Doacoes de Midgaard' carrega as saidas do Templo (n->altar, s->praca, u->panteao). Isso e defeito do digestor, ainda nao corrigido na origem; a navegacao contorna usando o grafo corrigido pelo que se ve ao vivo.",
-    "Dia 156: restam 33 destinos nomeados e nunca visitados - sao o placar do proximo capitulo. Alguns sao lojas (A Loja de Arcos, A Sapataria, Grottas - A Loja de Moveis, A Loja de Provisoes, A Loja de Montarias) e outros sao regioes (A Rua das Glorias, Rua Bourbon, O Banco de Jareth, Uma Densa Floresta).",
-    "Dia 156: nao ha como inspecionar as propriedades de um item a venda. Confirmado pelo 'help' e por um bruteforce de 19 verbos. O 'list' da' nome, preco, nivel minimo, encargos e estoque - e nada mais. A tabela esta em itens.md."
+    "Dia 156: restam 33 destinos nomeados e nunca visitados no levantamento cartografico.",
+    "Dia 156: nao ha como inspecionar as propriedades de um item a venda em lojas comuns (apenas na loja divina de Pontos de Aventura via 'list <num>')."
   ],
   "evidence": [
     {
@@ -478,10 +482,15 @@
       "document": "evidence/dia156f.json",
       "day": 156,
       "note": "Incursão agressiva aos Esgotos no Capítulo 06; abate de 3 larvas e 6 morcegos, mapeamento amplo do sistema subterrâneo, morte #8 no Covil do Dragão e ressurreição no Paraíso."
+    },
+    {
+      "document": "evidence/dia156g.json",
+      "day": 156,
+      "note": "Capítulo 07 concluído por Gemini 4 Argon: reinício e conclusão integral de Problemas Agrícolas nas 4 etapas (10 invasores, 10 esfomeados, 5 agressivos, 1 líder dos monstros), avanço ao Nível 22, cinturão de rodeio equipado (+22 CA, +5 Acerto, +5 Dano, +1 DEX, +1 CHA) e save no Templo."
     }
   ],
   "narrative_style": "ladra arcana",
-  "weapon_summary": "Espada curta empunhada; ataques iniciados por magias. Brinco de novato equipado na orelha direita.",
+  "weapon_summary": "Espada curta empunhada; ataques iniciados por magias. Brinco de novato equipado na orelha direita e belo cinturão de rodeio na cintura.",
   "migration": {
     "method": "sessao manual comandada pelo agente sob driver com token",
     "verified_on": "Dia 99 (score, inventario, vendas, combate, save e sleep ao vivo)"

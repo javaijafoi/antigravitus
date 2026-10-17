@@ -9,8 +9,8 @@
 * **Raça / Aparência Narrativa:** Mulher goblin; aventureira sem véu
 * **Raça Mecânica no MUD:** Elfo
 * **Classe Mecânica no MUD:** Mago (Magic-User)
-* **Grau / Nível Atual:** **21**
-* **Alinhamento Moral:** 224 (Um pouco bom)
+* **Grau / Nível Atual:** **22**
+* **Alinhamento Moral:** 219 (Um pouco bom)
 * **Localização Atual:** O Templo de Midgaard (último registro: Dia 156)
 * **Acampamento Registrado:** O Templo de Midgaard
 * **Santuário de Referência:** O Panteao dos Centenarios
@@ -20,27 +20,27 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 ## ✦ Status Vitais
 | Recurso | Atual | Máximo | Porcentagem |
 | :--- | :---: | :---: | :---: |
-| **Pontos de Vida (HP)** | 135 | 135 | 100% |
-| **Pontos de Mana (MP)** | 270 | 270 | 100% |
-| **Estamina / Movimento (MV)** | 131 | 131 | 100% |
+| **Pontos de Vida (HP)** | 141 | 141 | 100% |
+| **Pontos de Mana (MP)** | 280 | 280 | 100% |
+| **Estamina / Movimento (MV)** | 133 | 133 | 100% |
 
-* **Experiência Acumulada:** **1.219.294 EXP**
-* **Experiência Necessária p/ Grau 22:** **180.706 EXP** (Meta: 1.400.000 EXP)
-* **Ouro Líquido:** **1.651 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **1.572.738 EXP**
+* **Experiência Necessária p/ Grau 23:** **27.262 EXP** (Meta: 1.600.000 EXP)
+* **Ouro Líquido:** **4.299 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 11
-* **Destreza (DEX):** 15
+* **Destreza (DEX):** 16
 * **Constituição (CON):** 10
 * **Inteligência (INT):** 19
 * **Sabedoria (WIS):** 17
-* **Carisma (CHA):** 11
+* **Carisma (CHA):** 12
 
 ### Métricas de Combate
-* **Classe de Armadura (AC):** 80 (base) / **110** (com `armor`, conforme registro)
-CA 80 observada no consider após armor expirar; CA 110 confirmada no score após nova conjuração. Armor com 16 horas de jogo no último score da retomada (evidence/dia156e.json).
-* **Bônus de Acerto (Hitroll):** 4
-* **Bônus de Dano (Damroll):** +2
+* **Classe de Armadura (AC):** 103 (base) / **134** (com `armor`, conforme registro)
+CA subiu de 112 para 134 (+22 CA) ao vestir um belo cinturão de rodeio na cintura, com armor ativo (+31 CA por 48 horas no último score: base 103, com armor 134; evidence/dia156g.json).
+* **Bônus de Acerto (Hitroll):** 10
+* **Bônus de Dano (Damroll):** +7
 * **Configuração de Fuga (Wimpy):** **45 HP** (referência de 25%; não garante fuga antes de golpe letal)
 
 ## ✦ Missões e Autoquests Oficiais
@@ -54,10 +54,12 @@ CA 80 observada no consider após armor expirar; CA 110 confirmada no score apó
   * Próximo passo: O servidor insiste em 'Voce deve responder sim' pelo mago aventureiro, mas responder 'sim' limpa a instrucao e ela volta. Hipoteses ainda nao testadas: responder 'nao'; conjurar uma magia especifica na sala certa; estar no Laboratorio dos Magos com a magia ativa. Registrar a resposta exata do servidor a cada tentativa.
 * **Novela dos Novatos — Concluída:** Aventura narrativa para recém-chegados (Até o nível 30, iniciada com: o novato esperto).
   * Próximo passo: Concluída e entregue no Dia 156, continuação. Não reiniciar sem novo objetivo do autor.
-* **Problemas Agrícolas — Bloqueada:** Eliminar monstros invasores do milharal conforme pedido do fazendeiro e instruções dadas pelo Pacificador.
-  * Próximo passo: Onze abates acumulados contra a cota de dez do fazendeiro (Dia 153: 1, Dia 155: 3, Dia 156: 7) e a entrega NAO foi reconhecida. O dono da fazenda permaneceu em silencio apos 'say ola', 'say sim', 'ask fazendeiro monstros', 'ask fazendeiro invasores', 'ask fazendeiro missao', 'ask fazendeiro ajuda', 'say terminei', 'say matei os monstros' e 'say 10'. O Pacificador respondeu 'Procure um lugar onde precisem de sua forca.'. Proximo passo verificavel: DESCONHECIDO - descobrir qual condicao o servidor exige, sem repetir as falas ja testadas.
+* **Problemas Agrícolas — Concluída:** Eliminar monstros do milharal em 4 etapas (10 invasores, 10 esfomeados, 5 agressivos e 1 líder dos monstros) conforme pedido de O dono da fazenda e instruções dadas por O Pacificador.
+  * Próximo passo: Concluída e entregue no Dia 156 (Capítulo 07). Não reiniciar sem novo objetivo do autor.
 * **Ninguém Segura Esse Bebê — Concluída:** Autoquest de todos os níveis (encarnações 1-4), qualquer alinhamento e classe.
   * Próximo passo: CONCLUÍDA. Estado confirmado no servidor em 2026-10-16 pelo comando "autoquest todas": "Ninguém Segura Esse Bebê — Concluída".
+* **Uma Lição em Gargamel — Descoberta:** Autoquest de níveis 20-80 (encarnações 1-4, qualquer alinhamento/classe/raça), iniciada com o smurf minerador na Vila dos Smurfs.
+  * Próximo passo: Objetivo do Capítulo 08 (planos/plano009.md): seguir a rota de 'help vila dos smurfs' (Templo -> sul até Praça do Comércio -> leste pela Rua Principal e Portão Leste até o centro da Estrada do Rei -> norte para A Entrada Para a Vila dos Smurfs), localizar 'o smurf minerador' com 'where minerador' / 'where smurf', iniciar a missão ('say sim') e concluí-la.
 
 Objetivos pessoais e investigações ficam separados das autoquests no catálogo de missões.
 
@@ -82,8 +84,10 @@ Percentuais são registros de proficiência; não garantem acerto, imunidade ou 
 Equipamento conforme os últimos documentos disponíveis; conferir no próximo acesso ao MUD.
 * **na cabeça:** `a Coroa da Rainha Branca`
 * **na orelha direita:** `um diminuto brinco de novato`
+* **no pescoço:** `a coleira do dragão de estimação`
 * **sobre o corpo:** `um manto de pano`
 * **no corpo:** `a Armadura da Torre Negra`
+* **na cintura:** `um belo cinturão de rodeio`
 * **nos braços:** `um par de braçadeiras de novato`
 * **nas mãos:** `um par de luvas de couro`
 * **no pulso direito:** `um rosário`
@@ -93,51 +97,49 @@ Equipamento conforme os últimos documentos disponíveis; conferir no próximo a
 
 ## ✦ Inventário e Suprimentos
 Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
-* `um cantil` (x1) — evidence/dia156e.json
-* `um manto de pano` (x1) — evidence/dia156e.json
-* `um pão recheado` (x4) — evidence/dia156e.json
-* `a coleira do dragão de estimação` (x1) — evidence/dia156e.json
-* `uma Cruz Ansada` (x1) — evidence/dia156e.json
-* `uma brilhante veste de novato` (x2) — evidence/dia156e.json
-* `o poderoso Scutum de Carvalho (+14L)` (x1) — evidence/dia156e.json
-* `a mochila de Pellinore` (x1) — evidence/dia156e.json
-* `uma adaga` (x1) — evidence/dia156e.json
-* `um pergaminho de sabedoria` (x1) — evidence/dia156e.json
-* `um colar com uma pedra púrpura` (x1) — evidence/dia156e.json
+* `um cantil` (x1) — evidence/dia156g.json
+* `um manto de pano` (x1) — evidence/dia156g.json
+* `um pão recheado` (x3) — evidence/dia156g.json
+* `uma Cruz Ansada` (x1) — evidence/dia156g.json
+* `uma brilhante veste de novato` (x2) — evidence/dia156g.json
+* `o poderoso Scutum de Carvalho (+13L)` (x1) — evidence/dia156g.json
+* `a mochila de Pellinore` (x1) — evidence/dia156g.json
+* `uma adaga` (x1) — evidence/dia156g.json
+* `um pergaminho de sabedoria` (x1) — evidence/dia156g.json
+* `um colar com uma pedra púrpura` (x1) — evidence/dia156g.json
 * `um brilhante punhal de novato` (x8) — evidence/dia156e.json
 
 ### Pendências de inventário
 
 ## ✦ Condições Registradas
-* Capítulo 06: 135/135 HP, 270/270 mana e 131/131 MV, salvo no Templo de Midgaard.
-* Nível 21, EXP 1.219.294; próximo nível em 1.400.000 (faltam 180.706).
-* Ouro: 300 na mão e 1.351 no banco, total 1.651.
-* Oito mortes e uma armadilha mortal no histórico; morte #8 sofrida no Covil do Dragão e ressurreição no Paraíso com recuperação completa.
-* Dois pães e cantil cheio; fome e sede ausentes.
-* Armadura da Torre Negra vestida; armor ativo (+30), CA 111.
+* Capítulo 07 concluído: 141/141 HP, 280/280 mana e 133/133 MV, salva no Templo de Midgaard.
+* Nível 22, EXP 1.572.738; próximo nível em 1.600.000 (faltam 27.262).
+* Ouro: 300 na mão e 3.999 no banco, total 4.299 (+2.648 depositados nesta sessão).
+* Oito mortes e uma armadilha mortal no histórico; zero mortes no Capítulo 07.
+* Três pães recheados e cantil cheio; fome e sede ausentes.
+* Um belo cinturão de rodeio equipado na cintura (+22 CA, +5 Acerto, +5 Dano, +1 DEX, +1 CAR); armor ativo (+31 por 48h), CA 134.
 * Wimpy 45 mantido conforme diretiva §6.
 * Quarenta treinos; curse a 10%.
-* Novela dos Novatos e o ciclo atual de Limpando Monstros concluídos; apenas Problemas Agrícolas apareceu no último score, sem autorização para retomá-la.
-* Brinco com flag ANTI-DT identificada; nenhuma imunidade da personagem foi testada ou presumida.
+* Problemas Agrícolas concluída e entregue após as 4 etapas no milharal (10 invasores, 10 esfomeados, 5 agressivos e 1 líder dos monstros).
+* Brinco com flag ANTI-DT equipada; nenhuma imunidade da personagem foi testada ou presumida.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
-**Definir o próximo capítulo**
-Objetivo definido pelo autor (Dia 156): concluir 'Problemas Agrícolas'. O plano é planos/plano008.md — inclui a rota, o briefing literal do Pacificador, o perigo da armadilha mortal no milharal e o bloqueio conhecido (a entrega que nunca foi confirmada).
-* Ler planos/plano008.md, conferir o estado real e preparar nova conexão somente para a próxima sessão autorizada.
-* 'Problemas Agrícolas' NAO ESTA ATIVA: o score nao tem bloco de autoquests e o catalogo diz 'Nao feita'. Tem de ser reiniciada com O Pacificador (say sim). O veto anterior do autor CAIU no Dia 156.
-* O bloqueio historico e a ENTREGA: onze abates acumulados contra cota de dez, e o fazendeiro nunca confirmou. 'ask' foi tentado e nao fechou; apostar em give ou na palavra literal, lendo o score antes de cada acao.
-* ARMADILHA MORTAL dentro do milharal: a Morte #5 foi DT em 'Adentro do Milharal Destruido'. O brinco ANTI-DT nunca foi testado - nao confiar nele como certeza.
-* Proibida a venda de armaduras.
-* Curse está em 10%; não usar como magia confiável sem treino.
+**Capítulo 08: Uma Lição em Gargamel**
+Objetivo definido pelo autor para o Capítulo 08: concluir a autoquest 'Uma Lição em Gargamel' (níveis 20-80, iniciada com 'o smurf minerador'). Seguir planos/plano009.md: a rota oficial do servidor ('help vila dos smurfs' / MAPA 33) sai do Templo para o sul até a Praça do Comércio, segue a leste pela Rua Principal e Portão Leste até o centro da Estrada do Rei, e entra ao norte em 'A Entrada Para a Vila dos Smurfs'.
+* Ler planos/plano009.md antes de sair do Templo.
+* Rodar prepara.py --forcar antes de partir (repor pães na Padaria).
+* Seguir a rota de 'help vila dos smurfs': Templo -> s,s (Praça do Comércio) -> leste pela Rua Principal / Portão Leste até a Estrada do Rei -> norte para A Entrada Para a Vila dos Smurfs.
+* Usar 'where minerador' ou 'where smurf' dentro da Vila dos Smurfs, aguardar a fala inicial do NPC, responder 'say sim' e NÃO sair da sala antes de terminar a última fala do briefing.
+* Proibida a venda de armaduras (§15).
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Capítulo 06 executado por Gemini 3.8 Flash. Incursão aos Esgotos de Midgaard sob a diretiva de risco autorizada: eliminação de 3 larvas e 6 morcegos com raios elétricos, mapeamento de múltiplos anéis e corredores ocultos. Morte #8 no Covil do Dragão, travessia do Paraíso e ressurreição via Fonte da Vida. Re-equipamento completo, armor, detect invisibility e save no Templo. Fonte: evidence/dia156f.json..
-* A Armadura da Torre Negra segue AMALDIÇOADA e vestida: nao pode ser removida, largada, jogada nem doada. O remove curse do CircleMUD exige o item EQUIPADO, entao o segundo pergaminho (8.509) so funciona agora. O armeiro avalia a armadura em 8.500 mas nao tem ouro; o feiticeiro recusa armaduras. Comprador desconhecido.
-* A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido; explica a mana maxima de 260 em vez de 265.
+Fonte do estado: Capítulo 07 executado por Gemini 4 Argon. Autoquest 'Problemas Agrícolas' concluída integralmente em 4 etapas (10 monstros invasores, 10 esfomeados, 5 agressivos e 1 líder dos monstros), com avanço ao Nível 22, recompensa de 9.088 EXP e um belo cinturão de rodeio (+22 CA, +5 Acerto, +5 Dano, +1 DEX, +1 CAR) equipado na cintura. Retorno ao Templo, depósito de 2.648 moedas no banco (total 4.299), abastecimento, armor (48h), detect invisibility (10h) e save. Fonte: evidence/dia156g.json..
+* A Armadura da Torre Negra segue AMALDIÇOADA e vestida: nao pode ser removida, largada, jogada nem doada. O remove curse do CircleMUD exige o item EQUIPADO, entao o segundo pergaminho (8.509) so funciona agora. Com 4.299 moedas totais, faltam 4.210 moedas.
+* A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.
 * O colar com pedra purpura pertence a outro dono: o servidor recusa o uso. Nenhum comerciante testado o compra.
-* Bainha de Excalibur exige nivel 85 (vista na Sala de Doacoes, nao pode ser carregada com a carga atual). Scutum de Carvalho exige nivel 35 (devolvido a Sala de Doacoes).
-* Problemas Agricolas: onze abates acumulados contra cota de dez e o gatilho de entrega nunca veio (Dia 156). O estado real da missao e desconhecido.
-* Dia 156: a DURACAO de 'armor' e 'invisibility' nao esta medida. Nao existe, em registro nenhum do projeto, uma mensagem de queda de magia. O cuidar.py re-conjura por validade assumida (VALIDADE_SEGUNDOS = 600) e registra a resposta crua de cada conjuracao, para que o texto da expiracao apareca sozinho no log em vez de ser adivinhado.
+* Bainha de Excalibur exige nivel 85 (vista na Sala de Doacoes, nao pode ser carregada com a carga atual). Scutum de Carvalho exige nivel 35.
+* Dicas Magicas: perdeu o estado ativo apos o quit historico anterior e precisara ser reiniciada com o Mago Aventureiro caso volte a ser objetivo.
+* Dia 156: a DURACAO de 'armor' e 'invisibility' nao esta medida em segundos reais, embora o score tudo exiba '48 horas' de jogo logo apos conjurar no nivel 22.
 * Dia 156: a semente do levantamento tem contaminacao por salas homonimas - 'A Sala de Doacoes de Midgaard' carrega as saidas do Templo (n->altar, s->praca, u->panteao). Isso e defeito do digestor, ainda nao corrigido na origem; a navegacao contorna usando o grafo corrigido pelo que se ve ao vivo.
-* Dia 156: restam 33 destinos nomeados e nunca visitados - sao o placar do proximo capitulo. Alguns sao lojas (A Loja de Arcos, A Sapataria, Grottas - A Loja de Moveis, A Loja de Provisoes, A Loja de Montarias) e outros sao regioes (A Rua das Glorias, Rua Bourbon, O Banco de Jareth, Uma Densa Floresta).
-* Dia 156: nao ha como inspecionar as propriedades de um item a venda. Confirmado pelo 'help' e por um bruteforce de 19 verbos. O 'list' da' nome, preco, nivel minimo, encargos e estoque - e nada mais. A tabela esta em itens.md.
+* Dia 156: restam 33 destinos nomeados e nunca visitados no levantamento cartografico.
+* Dia 156: nao ha como inspecionar as propriedades de um item a venda em lojas comuns (apenas na loja divina de Pontos de Aventura via 'list <num>').

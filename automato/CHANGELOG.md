@@ -4,6 +4,10 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.6.1 — Dia 156 · correção de `count_mobs` em `milharal.py`
+- **CORREÇÃO**: `count_mobs` em `automato/rotinas/milharal.py` filtrava linhas apenas por `'está aqui'` ou `'está jogado'`, o que **ignorava todos os exemplares de `um monstro invasor`** (cuja descrição de sala é *"Uma estranha criatura, verde e peluda, está procurando algo."*, sem `'está aqui'`) e confundia cadáveres no chão (`'está jogado'`) com monstros vivos. Corrigido para ignorar `'corpo de'`/`'está jogado'` e casar as quatro descrições reais do milharal (`invasor`, `esfomeado`, `agressivo` e `lider`).
+- **MOTIVO**: foi a causa técnica pela qual a Etapa 1 de `Problemas Agrícolas` (10 `um monstro invasor`) nunca fechava nas execuções automatizadas anteriores — a rotina só matava `esfomeado` e `agressivo`.
+
 ## v1.6 — Dia 156 · a devolutiva técnica obrigatória
 - **NOVO**: **`scripts/devolutiva.py`** — o verificador de **fim de sessão**. Confere o protocolo
   inteiro e **reprova** o que passar despercebido: plano numerado (número, autoria, seção de

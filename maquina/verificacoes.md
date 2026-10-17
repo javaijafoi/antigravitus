@@ -86,3 +86,12 @@ de Midgaard. Agente da coleta: **`Gemini 3.8 Flash`**; registro aqui feito por `
   registro: **a morte custa experiência, não equipamento.**
 - **A ressurreição é automática**, pelo fluxo do `Paraíso` até a `Fonte da Vida`, terminando no Templo
   de Midgaard — **sem comando do jogador**. Já era sabido (§ do Dia 111); reconfirmado aqui.
+
+## 2026-10-16 — `Problemas Agrícolas`: briefing completo do Pacificador, `score tudo` entre etapas e `um belo cinturão de rodeio`
+
+Fonte: [evidence/dia156g.json](../data/heroes/grebolius/evidence/dia156g.json). Agente: `Gemini 4 Argon`.
+
+- **Sair da sala antes do fim da fala do NPC trava o gatilho da etapa seguinte.** Após `say sim` para `O Pacificador`, ele emite 13 linhas espaçadas por vários segundos (terminando em `O Pacificador exclama: 'Se esquecer o caminho, digite HISTÓRICO DIZER. E vá encontrar o fazendeiro!'`). Quando a personagem saiu da sala antes da 13ª linha, `[Autoquests em andamento]` exibiu apenas `Problemas Agrícolas` (sem dois-pontos nem objetivo) e `O dono da fazenda` permaneceu mudo na fazenda. Ao permanecer na sala até a 13ª linha terminar, `O dono da fazenda` falou imediatamente ao vê-la entrar em `A Sala de Estar`.
+- **Em `Problemas Agrícolas`, concluir a cota das Etapas 1, 2 e 3 NÃO altera o `score tudo` nem imprime aviso de objetivo concluído.** Durante as três primeiras etapas (10 `um monstro invasor`, 10 `um monstro esfomeado` e 5 `um monstro agressivo`), o `score tudo` permanece estático em `Problemas Agrícolas: Você deve matar criaturas.` mesmo após o 10º/5º abate. O avanço ocorre exclusivamente ao retornar à sala onde está `O fazendeiro` (`A Sala de Estar` ou `A Entrada da Casa`) e aguardar ~10–16 segundos pelo disparo do *mobprog*. Apenas na Etapa 4 (1 `o líder dos monstros`) o texto muda para o singular (`Problemas Agrícolas: Você deve matar criatura.`) e o abate imprime `Você já atingiu este objetivo.`.
+- **Recompensa verificada (`identify cinturão` e comparação empírica de `score tudo`):** `um belo cinturão de rodeio` (Tipo: `ARMADURA`, Flags: `BRILHO`, Peso: `5`, Valor: `1250`, Nível: `15`, Slot: `CINTURA`) aplica `CA -12` na convenção interna do CircleMUD (medido no `score` do DeBo como **+22 CA**: `112 -> 134`), **+5 Acerto** (`5 -> 10`), **+5 Dano** (`2 -> 7`), **+1 Destreza** (`15 -> 16`) e **+1 Carisma** (`11 -> 12`).
+
