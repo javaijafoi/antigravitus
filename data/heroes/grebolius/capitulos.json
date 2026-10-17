@@ -1248,7 +1248,7 @@
       "title": "O Preço Não Se Mata com Raio",
       "kind": "marco",
       "status": "em_curso",
-      "goal": "Terminar o que o Capítulo 08 deixou aberto: juntar o ouro, comprar a pocao aquosa em Clariss, Trocar com o Novato Alquimista pelo jarro brilhante e leva-lo ao smurf minerador. E, depois, a porta trancada do Covil de Gargamel — Papai Smurf.",
+      "goal": "Concluir integralmente a missão 'Uma Lição em Gargamel' (compra da poção aquosa em Clariss, troca pelo jarro brilhante com o Alquimista, entrega ao smurf minerador e resolução do resgate de Papai Smurf no Covil de Gargamel) e avançar a personagem até o Nível 50.",
       "days": [],
       "parts": [],
       "content": [],
@@ -1257,8 +1257,8 @@
       "evidence": [],
       "continues_chapter": 8,
       "directive": {
-        "author_quote": "FECHAR INCOMPLETO TUDO BEM, COMENTA QUE VAI FICAR PRO PROXIMO E CONTINUAMOS NO PROXIMO CAPITULO",
-        "rule": "Fechar um capitulo com a missao em andamento e' permitido, desde que DECLARADO: no campo carried_over do capitulo fechado, no ultimo paragrafo da narrativa e no plano numerado do proximo agente."
+        "author_quote": "o capitulo nove é terminar a missão e chegar no level 50",
+        "rule": "Objetivo duplo do Capítulo 09 definido diretamente pelo autor: conclusão da cadeia de missões dos Smurfs/Gargamel e progressão contínua de poder até atingir o Nível 50."
       }
     }
   ]
