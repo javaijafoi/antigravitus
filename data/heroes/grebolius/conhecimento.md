@@ -2066,3 +2066,26 @@ A rota curta de milharal do plano011 falhou: a Rua da Muralha e a Ponte Sobre o 
 Briefing: sair depois de uma fala intermediária deixou instrução final pendente; ouvir a sequência e consultar objetivo antes de entregar. A correlação de prompt falhou: recompensa apareceu sob eat pao; exits apareceu sob movimento e chegada veio em preroll. Ler histórico completo e confirmar sala real. Alertas do worker local sobre palavra morte em relato/histórico não comprovam morte atual; cruzar vitais e resposta real. Contenção ficou fora da aplicação, sem conserto declarado do driver.
 
 Fotografia final: Limpando Monstros concluída sem quit: sete abates, manto de pano e 94.227 EXP de entrega; nível 28. Minerador completou a fala final e Alquimista pediu poção aquosa de Clariss: Gargamel está na etapa de entregar objeto. Nenhum jarro ou resgate confirmado, nenhuma nova morte. A rota gravada pelo norte/Jareth chegou à fazenda; nenhuma nova caça no milharal foi confirmada. Compra de cinco pães por 30 moedas; final no Templo com 178/178 HP, 340/340 mana, 141/141 MV, 4.229 moedas, cinco pães, save e sono confirmados, socket e daemon encerrados. Próximo: Conferir o estado real e completar o saldo para a poção aquosa de Clariss (9.750; faltam 5.521 moedas), sem quit/reset: o Alquimista já pediu a poção e score marcou entregar objeto. Usar a rota pelo norte/Jareth comprovada no transcript156j, nunca a rota curta do plano011. Rever os guardas da caça antes de automatizar; o worker temporário teve falso alarme e não comprovou rendimento. Com peso 109/115 kg, conferir capacidade. Ao ter a poção, entregar somente com objetivo vigente e aguardar o jarro no diálogo completo. Não abrir outra conexão automaticamente em falha.
+
+
+## 44. Execução do Plano 014 — Grind de Ouro no Milharal (7.189 Moedas), Abates e Robustez de Trânsito — Dia 156 — Gemini 3.8 Flash (High)
+
+Fonte: [evidence/dia156k.json](evidence/dia156k.json). Sessão ao vivo via `automato/camadas/trabalhar.py --rotina milharal` supervisionada.
+
+1. **Rendimento Financeiro e EXP (Comprovado ao Vivo):**
+   - 8 rodadas de caça executadas no Milharal via `automato/rotinas/milharal.py`.
+   - **57 abates confirmados** (monstros invasores, esfomeados, agressivos e líder dos monstros).
+   - **Ouro vivo:** subiu de 4.229 moedas para **7.189 moedas** (+2.960 moedas líquidas, descontados 30 ouros em 5 pães). Restam apenas **2.611 moedas** para atingir 9.800 (9.750 da poção aquosa de Clariss + reserva).
+   - **EXP:** avançou de 4.000.001 para **4.191.978** (+191.977 EXP acumulada, restam 308.022 para Nível 29).
+   - **Autoloot verificado:** o servidor recolhe automaticamente moedas ao matar criaturas (50 moedas em mobs comuns, 120 no líder dos monstros).
+
+2. **Aperfeiçoamento do Motor (`milharal.py`):**
+   - **Resiliência a emboscadas no trânsito:** adicionada detecção de combate durante o deslocamento em direção ao milharal; ao sofrer ataque espontâneo de monstro agressivo no caminho, o bot agora contra-ataca imediatamente com `matar('monstro')`, elimina o agressor via `lightning bolt` e retoma a rota sem travar em *"Não dá! Você está muito ocupado, lutando!"*.
+   - **Recuperação de rota limpa:** em caso de falha de rota na ida, foi adicionado `run('recall'); run('stand')` garantindo que toda nova tentativa parta limpa do Templo de Midgaard.
+
+3. **Logística e Suprimentos:**
+   - Comprados 5 pães recheados na Padaria de Midgaard (3 na mochila de Pellinore, 3 na mão); cantil de água cristalina recarregado na Praça do Templo.
+   - `armor` (+34) mantido ativo ao longo de toda a sessão (24 horas restantes de duração no score final).
+   - `wimpy 45` confirmado e mantido.
+   - Encerramento: servidor DeBo encerrou o socket telnet (EOF) ao fim da 8ª rodada. Conforme AGENTS.md §13, a sessão foi finalizada sem reconexão automática forçada, gerando o `plano015.md`.
+

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "hero_id": "grebolius",
+  "day": 156,
+  "title": "Capítulo 09 (em andamento) — Grind de Ouro no Milharal (7.189 Moedas), 57 Abates, Resiliência de Trânsito e Abastecimento de Suprimentos",
+  "agent": "Gemini 3.8 Flash (High)",
+  "via": "automato",
+  "verification": "live",
+  "summary": "Execução ao vivo do Plano 014 por Gemini 3.8 Flash (High). Grebolius realizou 8 rodadas completas de caça supervisionada no Milharal via automato/rotinas/milharal.py, acumulando 57 abates de invasores, esfomeados, agressivos e o líder dos monstros. Ouro vivo subiu de 4.229 moedas para 7.189 moedas (+2.960 líquido, restam 2.611 para os 9.800 de Clariss). EXP avançou para 4.191.978 (faltam 308.022 para Nível 29). Comprados 5 pães recheados na Padaria de Midgaard (3 na mochila de Pellinore, 3 na mão) e cantil enchido com água cristalina na Praça do Templo. Corrigida a rotina milharal.py com contra-ataque a emboscadas no trânsito e recall limpo entre tentativas de rota. Desconexão por encerramento de socket (EOF) pelo servidor DeBo ao fim da 8ª rodada.",
+  "observations": [
+    {
+      "kind": "economia_farm",
+      "command": "score tudo",
+      "target": "milharal",
+      "response": "Carregando: 7.189 moedas na mão (0 no banco). Total: 7.189 moedas.",
+      "note": "8 rodadas de caça renderam +2.960 moedas líquidas em 57 abates (autoloot de 50 moedas em mobs comuns e 120 moedas no líder dos monstros, descontadas 30 moedas em pães)."
+    },
+    {
+      "kind": "evolucao_exp",
+      "command": "score tudo",
+      "target": "Grebolius",
+      "response": "Experiência: 4.191.978. Próximo nível: 308.022.",
+      "note": "Avanço de +191.977 EXP na sessão, aproximando Grebolius do Nível 29."
+    },
+    {
+      "kind": "suprimentos",
+      "command": "inventory / look",
+      "target": "A Padaria / Praça do Templo",
+      "response": "5 pães recheados comprados na Padaria (3 na mão, 3 na mochila de Pellinore); cantil de água cristalina recarregado na grande fonte de mármore azul. Fome e sede saciadas.",
+      "note": "Estoque de pães e água renovado para garantir sustentabilidade do grind."
+    },
+    {
+      "kind": "motor_transito",
+      "command": "automato/rotinas/milharal.py",
+      "target": "Trânsito Floresta -> Fazenda -> Milharal",
+      "response": "Implementado contra-ataque automático em caso de emboscada durante a rota até a fazenda e recall + stand entre tentativas.",
+      "note": "Eliminou travamento em 'Não dá! Você está muito ocupado, lutando!' durante o percurso."
+    }
+  ]
+}

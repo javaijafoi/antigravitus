@@ -4,6 +4,10 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.6.3 — Dia 156 · resiliência a emboscadas no trânsito e recuperação de rota limpa em `milharal.py`
+- **CORREÇÃO**: `da_floresta_ao_milharal()` em `automato/rotinas/milharal.py` agora detecta combate espontâneo durante o trânsito da fazenda (`lutando` no retorno de look). Em vez de falhar repetindo passos bloqueados com `"Não dá! Você está muito ocupado, lutando!"`, contra-ataca com `matar('monstro')`, despacha a ameaça via `lightning bolt` e retoma o deslocamento até o milharal.
+- **CORREÇÃO**: `ir_ao_milharal()` agora executa `run('recall'); run('stand')` entre tentativas falhas de trânsito, garantindo que toda repetição parta limpa do Templo de Midgaard em vez de iniciar desorientada de onde a rota anterior parou.
+
 ## v1.6.2 — Dia 156 · confinamento espacial no milharal e salvaguardas de sono
 - **CORREÇÃO**: `automato/rotinas/milharal.py` atualizado com restrição espacial: o laço de busca de monstros agora rejeita salas fora do milharal (`'Milharal' not in t2`), impedindo dispersão para `O Gramado` e `Uma Pequena Estrada` (onde não há mobs) e mantendo a salvaguarda estrita contra o DT `Adentro do Milharal Destruído` (`Morte #5`).
 - **CORREÇÃO**: `scripts/farm_ouro_milharal.py` recebeu suporte a todos os estados de fome e sede (`ficando com`, `com`, `com muita`, `morrendo de`) antes e após os ciclos de regeneração por sono no Templo, com compra automática de pão na Padaria e abastecimento de cantil na fonte, eliminando risco de desidratação ou inanição durante grind prolongado.

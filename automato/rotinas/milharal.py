@@ -185,7 +185,11 @@ def da_floresta_ao_milharal():
     if 'Entrada da Fazenda' not in nome:
         return False
     for _ in range(6):
-        if 'Milharal' in _sala_nome():
+        nome = _sala_nome()
+        if 'lutando' in nome.lower():
+            matar('monstro')
+            nome = _sala_nome()
+        if 'Milharal' in nome:
             print('[rota] no Milharal', flush=True)
             return True
         andar('w')
@@ -199,6 +203,7 @@ def ir_ao_milharal():
         if ir_ate_a_floresta() and da_floresta_ao_milharal():
             return True
         print('[rota] tentativa', tent + 1, 'falhou; repetindo', flush=True)
+        run('recall'); run('stand')
     return False
 
 

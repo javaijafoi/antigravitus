@@ -24,9 +24,9 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 | **Pontos de Mana (MP)** | 340 | 340 | 100% |
 | **Estamina / Movimento (MV)** | 141 | 141 | 100% |
 
-* **Experiência Acumulada:** **4.000.001 EXP**
-* **Experiência Necessária p/ Grau 29:** **499.999 EXP** (Meta: 4.500.000 EXP)
-* **Ouro Líquido:** **4.229 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **4.191.978 EXP**
+* **Experiência Necessária p/ Grau 29:** **308.022 EXP** (Meta: 4.500.000 EXP)
+* **Ouro Líquido:** **7.189 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 11
@@ -38,7 +38,7 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 
 ### Métricas de Combate
 * **Classe de Armadura (AC):** 103 (base) / **137** (com `armor`, conforme registro)
-Armor +34, 10 horas de jogo na consulta final; evidence/dia156j.json.
+Armor +34, 24 horas de jogo na consulta final; evidence/dia156k.json.
 * **Bônus de Acerto (Hitroll):** 10
 * **Bônus de Dano (Damroll):** +7
 * **Configuração de Fuga (Wimpy):** **45 HP** (referência de 25%; não garante fuga antes de golpe letal)
@@ -114,28 +114,27 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 ### Pendências de inventário
 
 ## ✦ Condições Registradas
-* Limpando Monstros concluída sem quit: sete abates, manto de pano e 94.227 EXP de entrega; nível 28. Minerador completou a fala final e Alquimista pediu poção aquosa de Clariss: Gargamel está na etapa de entregar objeto. Nenhum jarro ou resgate confirmado, nenhuma nova morte. A rota gravada pelo norte/Jareth chegou à fazenda; nenhuma nova caça no milharal foi confirmada. Compra de cinco pães por 30 moedas; final no Templo com 178/178 HP, 340/340 mana, 141/141 MV, 4.229 moedas, cinco pães, save e sono confirmados, socket e daemon encerrados.
-* Ouro: 4229 na mão + 0 no banco; 5 pães registrados.
+* Execução ao vivo do plano014 por Gemini 3.8 Flash (High): 8 rodadas de caça no Milharal (57 abates), ouro vivo elevado a 7.189 moedas (+2.960 líquido), EXP a 4.191.978 (+191.977).
+* Ouro: 7189 na mão + 0 no banco; 6 pães registrados (3 na mochila, 3 na mão); cantil cheio.
 * Save confirmado: True; sono confirmado: True; conexão fechada: True.
 * Oito mortes e uma armadilha mortal históricas na consulta da retomada; nenhum resgate de Papai Smurf confirmado.
-* Alimentada e sem sede; cantil cheio; armor +34 por 10 horas de jogo na fotografia final.
-* Peso 109/115 kg; conferir capacidade antes de comprar poção.
+* Alimentada e sem sede; cantil cheio; armor +34 por 24 horas de jogo no score final.
+* Peso 102/115 kg; conferir capacidade antes de comprar poção.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
-**Capítulo 09: comprar a poção aquosa e iluminar a mina (`Uma Lição em Gargamel`)**
-A autoquest 'Uma Licao em Gargamel' esta ATIVA (objetivo do servidor: 'entregar objeto ao personagem'). Falta ouro: a `pocao aquosa` de Clariss custa 9.750 e ela tem 4.229 - faltam 5.521. Levantar o ouro (milharal ~50 por abate; ou uma autoquest vizinha como 'Cuidado Com o Chacal', nivel 22+, ja liberada), comprar em `As Misturas de Clariss` na Avenida Floris de Jareth, entregar ao `O Novato Alquimista` e receber o `jarro brilhante`, e entregar o jarro ao `o smurf minerador` no fim do tunel sob o Poco Smurf.
-* PRIMEIRA ACAO: comprar pao na Padaria de Midgaard. Ela esta com FOME e SEM comida na bolsa - o cuidar.py acusou 'fome sem comida na bolsa'. Sem comida nao regenera vida nem mana.
-* NAO reiniciar 'Limpando Monstros' enquanto a pocao nao estiver entregue: com ela ativa, o Alquimista prioriza a propria missao e ENGOLE a pocao sem entregar o jarro (conhecimento §42.1). A concorrencia ja foi resolvida no Dia 156 - a janela esta limpa.
-* Ouro e o unico bloqueio: faltam 5.521 moedas. Os tres lojistas de Jareth recusam venda (Maris e Dalston: 'Eu nao compro!'; Granny recusa magos; Ilena nao compra de forasteiros).
-* Vender armaduras e PROIBIDO (diretiva secao 15). A rotina xadrez esta suspensa - nao reativar.
-* Dialogo de missao e LITERAL: minerador aceita `say sim` -> `say Grebolius` -> `say sim`; Alquimista, `say Grebolius` -> `say sim`. Conferir `score tudo` antes de cada entrega.
-* Atras da porta TRANCADA no Covil de Gargamel esta `Papai Smurf` (confirmado via `where smurf`). Gargamel e Azrael estao la. Nao abrir sem plano.
-* A pendencia do mapa segue aberta: as 4 arestas dos aneis do esgoto continuam como becos.
-* Proibida a venda de armaduras.
+**Capítulo 09: comprar a poção aquosa e iluminar a mina (`Uma Lição em Gargamel`) e avançar ao Nível 50**
+A autoquest 'Uma Lição em Gargamel' está ATIVA (objetivo do servidor: 'entregar objeto ao personagem'). Ouro acumulado: 7.189 moedas na mão (faltam apenas 2.611 para os 9.800 da poção aquosa de Clariss + reserva). Concluir o farm no Milharal (~5-6 rodadas), viajar a 'As Misturas de Clariss' na Avenida Floris de Jareth, comprar a poção (9.750), entregar a 'O Novato Alquimista' para receber 'o jarro brilhante', entregar ao minerador em 'O Fim Do Túnel' sob o Poço Smurf e avançar à Fase 2 (Nível 50).
+* Suprimentos plenos: 3 pães na mochila de Pellinore, 3 pães na mão e cantil cheio de água cristalina.
+* NÃO reiniciar 'Limpando Monstros' enquanto a poção não estiver entregue: com ela ativa, o Alquimista prioriza a própria missão e engole a poção sem entregar o jarro (conhecimento §42.1).
+* Ouro: faltam 2.611 moedas. Concluir via milharal.py (autoloot de 50 moedas por mob e 120 por líder).
+* Vender armaduras é PROIBIDO (diretiva seção 15). A rotina xadrez está suspensa - não reativar.
+* Diálogo de missão é LITERAL: minerador aceita `say sim` -> `say Grebolius` -> `say sim`; Alquimista, `say Grebolius` -> `say sim`. Conferir `score tudo` antes de cada entrega.
+* Atrás da porta TRANCADA no Covil de Gargamel está `Papai Smurf` (confirmado via `where smurf`). Gargamel e Azrael estão lá. Não abrir sem consider e plano.
+* A pendencia do mapa segue aberta: as 4 arestas dos anéis do esgoto continuam como becos.
 * Curse está em 10%; não usar como magia confiável sem treino.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Retomada do plano011 por GPT-6 / Codex (versão específica não informada); evidence/dia156j.json; fotografia 2026-10-17T10:17:27-03:00 linha1130. Limpando Monstros concluída sem quit: sete abates, manto de pano e 94.227 EXP de entrega; nível 28. Minerador completou a fala final e Alquimista pediu poção aquosa de Clariss: Gargamel está na etapa de entregar objeto. Nenhum jarro ou resgate confirmado, nenhuma nova morte. A rota gravada pelo norte/Jareth chegou à fazenda; nenhuma nova caça no milharal foi confirmada. Compra de cinco pães por 30 moedas; final no Templo com 178/178 HP, 340/340 mana, 141/141 MV, 4.229 moedas, cinco pães, save e sono confirmados, socket e daemon encerrados..
+Fonte do estado: Execução ao vivo do plano014 por Gemini 3.8 Flash (High); evidence/dia156k.json. 8 rodadas de caça no Milharal (57 abates de invasores, agressivos, esfomeados e líder dos monstros). Ouro vivo avançou de 4.229 para 7.189 moedas (+2.960 líquido, restam ~2.611 para os 9.800 de Clariss). EXP avançou de 4.000.001 para 4.191.978 (+191.977 EXP, restam 308.022 para nível 29). Compra de 5 pães na Padaria (3 na mochila, 3 na mão); cantil cheio; armor renovado (+34, 24h restantes). Conexão encerrada pelo servidor DeBo (EOF socket) ao fim da 8ª rodada; processo live_daemon finalizado..
 * A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.
 * O colar com pedra purpura pertence a outro dono: o servidor recusa o uso. Nenhum comerciante testado o compra.
 * Bainha de Excalibur exige nivel 85 (vista na Sala de Doacoes, nao pode ser carregada com a carga atual). Scutum de Carvalho exige nivel 35.
