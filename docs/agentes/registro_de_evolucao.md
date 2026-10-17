@@ -141,6 +141,33 @@ handoff (§7).
 
 ### 2026-10-16 · Dia 156 · deepseek-flash
 
+> **Terceira entrada do dia.** Esta **abre o Capítulo 06** por diretiva do autor.
+
+- **Mudou:** o **Capítulo 06 — "Quem Quer Ser Rainha Não Fica Parada"** foi aberto em `capitulos.json`
+  (`id=6`, `kind=marco`, **`em_curso`**), com um campo novo **`directive`** que guarda as **palavras do
+  autor** e a postura de risco do capítulo. A **`diretiva_de_jogo.md` ganhou a §16 — "RISCO AUTORIZADO"**,
+  que **revoga, para os esgotos**, a doutrina de fuga que valeu dos Capítulos 03 a 05. E o
+  **`planos/plano005.md`** traz o grafo dos esgotos, os bichos conhecidos e a ordem de execução.
+- **Por quê:** o autor definiu o próximo capítulo — *"limpar todos os monstros do esgoto"*, *"vamos
+  arriscar mais, e tudo bem se morrer"*, *"já aprendi demais, agora é hora de voltar lá e se vingar"*.
+  **É a primeira vez que a postura de risco muda por decisão explícita**, e isso precisa estar escrito
+  onde o próximo agente lê — senão ele joga com a doutrina antiga e foge do que devia matar.
+- **Como foi verificado:** o **grafo dos esgotos foi lido do `mapa.json`** (17 salas, camada `esgotos`) e
+  a rota de mão dupla conferida pela curadoria (`Praça Comum → n → O Depósito de Lixo → d → hub → u`).
+  **O levantamento está INCOMPLETO** — sete salas têm uma única saída registrada e as arestas reversas
+  não existem no mapa. Isso ficou registrado no plano como **tarefa**, não como fato.
+  `check_project.py` **0 erros**; `verificar.py` **18/18**; derivados conferidos; e o `mandabala.py`
+  confirmado listando os cinco planos e **avisando** que o `plano002` não é o mais recente.
+- **Custo:** **nenhum de ferramenta.** O custo é de jogo e é declarado: **morte é aceita**. E o esgoto
+  **não paga ouro** (mobs selvagens dropam zero) — o capítulo compra **XP e limpeza**, não bolsa.
+- **Próximo:** (a) **corrigir o `mapa.json` do esgoto** com o `exits` real de cada sala — é o único
+  levantamento do repositório que se sabe incompleto; (b) o `mandabala.py` **ainda não avisa quando um
+  plano foi SUPERADO por outro** (avisa só de lacuna, plano não-recente e falta de autoria) — e
+  `plano002` é exatamente esse caso; (c) a promessa do capítulo anterior segue aberta: **extrair falas
+  de NPC do transcript automaticamente**, para que ler a fonte não dependa de disciplina.
+
+### 2026-10-16 · Dia 156 · deepseek-flash
+
 > **Segunda entrada do mesmo dia, e é a limpeza da primeira.** A entrada anterior registrou o erro; esta
 > registra **as correções** e as regras que ele gerou.
 

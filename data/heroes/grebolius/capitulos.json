@@ -999,6 +999,33 @@
       "closed_on_day": 156,
       "completion_note": "As duas entregas foram observadas nesta continuação. A marca antiga de Limpando Monstros no catálogo não foi usada isoladamente como prova.",
       "editorial_note": "Correção da reconstrução concorrente do Dia 156, com base em evidence/dia156e.json: Novela não fechou com say oi à tagarela, mas após a sequência de recados e ajuda remortar ao esperto. A entrega do Alquimista veio após o objetivo do Minotauro; o mico foi apenas defesa incidental. A flag ANTI-DT do brinco não foi testada como imunidade da personagem. A versão anterior permanece no histórico Git e em evidence/dia156d.json."
+    },
+    {
+      "id": 6,
+      "tomo": 1,
+      "title": "Quem Quer Ser Rainha Não Fica Parada",
+      "kind": "marco",
+      "status": "em_curso",
+      "goal": "Voltar aos Esgotos de Midgaard e LIMPAR tudo o que for abatível — a vingança do lugar que a matou no Dia 11 e a expulsou no Dia 95. O que não der para matar, ela desvia ou foge; mas a postura muda: agora ela ARRISCA. Morrer é aceitável. A meta é o esgoto vazio.",
+      "days": [],
+      "parts": [],
+      "content": [],
+      "tags": [],
+      "source_kind": "live",
+      "evidence": [],
+      "directive": {
+        "author_quote": "quem quer ser rainha, não pode ficar parada / já aprendi demais, agora é hora de voltar lá e se vingar / vamos arriscar mais, e tudo bem se morrer",
+        "risk_posture": "RISCO AUTORIZADO. Ao contrário dos capítulos anteriores — onde fugir era sempre a vitória — aqui ela enfrenta o que antes contornava. Só recua do que for comprovadamente inabatível para o nível dela. Morte não é falha: é custo aceito pelo autor.",
+        "target": "Matar tudo o que for matável nos esgotos (ratos, morcegos, larvas e o que mais aparecer), incluindo o que o Dia 95 mandou CONTORNAR: a serpente e o aligátor. E o Covil do Dragão.",
+        "no_kill_policy": "O que não der para matar: desviar ou fugir. Não insistir até morrer à toa.",
+        "narrative_hooks": [
+          "A morte já não a afeta como antes — e ela percebe isso.",
+          "A memória dela tem ficado mais clara: ela só perde o que aprendeu RECENTEMENTE, como se não tivesse dormido depois de aprender.",
+          "O poder que ela carrega a protege das mortes — por enquanto.",
+          "Quem quer ser rainha não pode ficar parada.",
+          "Já aprendeu demais; é hora de voltar lá e se vingar."
+        ]
+      }
     }
   ]
 }

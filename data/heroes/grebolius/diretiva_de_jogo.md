@@ -135,3 +135,32 @@ Regra permanente e vale para todas as temporadas:
 - Os scripts antigos `farm_armaduras.py` e `ciclo_peao.py` ficam **igualados a suspenso**.
 
 **Onde buscar ouro, então:** espolio de combate, recompensas de missao/autoquest, itens unicos e o **banco do Templo** (que já guarda 7.032). Nada de transporte de armadura.
+
+
+## 16. RISCO AUTORIZADO — o Capítulo 06 inverte a regra da fuga (diretiva do autor, Dia 156)
+
+> **"vamos arriscar mais, e tudo bem se morrer"**
+> **"a meta é matar tudo que dê pra matar no esgoto, e o que não der, fugir, desviar"**
+> **"já aprendi demais, agora é hora de voltar lá e se vingar"**
+
+**Isto REVOGA, para os esgotos, a doutrina que valeu dos Capítulos 03 a 05** — onde fugir era sempre a
+vitória e o corpo a corpo estava desligado por precaução.
+
+- **Alvo:** os **Esgotos de Midgaard** (camada `esgotos`, 17 salas mapeadas). **Matar tudo o que for
+  abatível.** E isso inclui **o que o Dia 95 mandou contornar**: a **Serpente dos Esgotos** e o
+  **Aligátor** — e o **Covil do Dragão** (`borda_estreita_sul`).
+- **O que não der para matar:** **desviar ou fugir**, e seguir. **Não** insistir até morrer à toa — isso
+  não é coragem, é desperdício de rodada.
+- **Morrer é aceitável.** Não é falha de execução; é custo previsto. **Mas** as regras de segurança
+  continuam valendo: `stand` antes de andar, `score` antes de agir, e `save` — **nunca `quit`**.
+- **O que NÃO muda:** §15 (proibido vender armaduras), §6 (armadilhas mortais — **DT continua sendo o
+  único risco que o `wimpy` não segura**, e é por isso que o brinco ANTI-DT importa), e a proibição de
+  `quit` com missão em andamento.
+- **A justificativa narrativa é dela, e vai para a crônica:** a morte já não a atinge como antes; a
+  memória tem ficado mais clara e ela só perde o que aprendeu **recentemente**; o poder que ela carrega a
+  protege — **por enquanto**. *"Quem quer ser rainha não pode ficar parada."*
+
+**Rota de entrada e saída (verificada no Dia 95, e a única de mão dupla):**
+`O Depósito de Lixo` (a partir da `Praça Comum`, `n`) → **`d`** → *A Junção Quádrupla Abaixo do Depósito
+de Lixo* → e **`u`** volta. **NUNCA descer pelo buraco do Laboratório dos Magos** — aquela queda é de
+mão única.
