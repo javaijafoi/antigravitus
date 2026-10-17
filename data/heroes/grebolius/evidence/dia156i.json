@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "hero_id": "grebolius",
+  "day": 156,
+  "title": "Capítulo 08 (em andamento) — Avanço para Nível 27, Grind de Ouro no Milharal (4.054 Moedas) e Diagnóstico do Alquimista",
+  "agent": "Gemini 4 Argon (primeira metade do jogo) / Gemini 3.8 Flash (encerramento, automação e handoff)",
+  "via": "automato",
+  "verification": "live",
+  "summary": "Execução continuada do Plano 010. Primeira metade do capítulo jogada por Gemini 4 Argon e encerramento com automação financeira conduzido por Gemini 3.8 Flash. Grebolius atingiu o Nível 27 (172 HP, 330 Mana, 139 MV, CA 136). Levantadas 4.054 moedas de ouro em dinheiro vivo via incursões otimizadas na rotina milharal. Identificada causa raiz da retenção do jarro brilhante por O Novato Alquimista: conflito de autoquest ativa (Limpando Monstros bloqueia o diálogo do jarro de Uma Lição em Gargamel). Refinada a rotina de caça no milharal para confinamento exclusivo em O Milharal Destruído, contornando o DT Adentro e eliminando desperdício de passos em O Gramado. Mochila abastecida com 5 pães recheados e cantil abastecido com água cristalina na Praça do Templo. Retorno seguro e salvamento (save) no Templo de Midgaard.",
+  "observations": [
+    {
+      "kind": "evolucao_nivel",
+      "command": "score tudo",
+      "target": "Grebolius",
+      "response": "Você é Grebolius, o Aprendiz de Mago. 1ª encarnação, como um Mago Elfo, nível 27. Vida 166/172, Mana 190/330, MV 139/139, EXP 3.892.670 (faltam 107.330 para nível 28), CA 136 com armor (+33 por 31 horas), 64 sessões de treino sobrando.",
+      "note": "Avanço consolidado do Nível 22 para o Nível 27 durante as operações do Dia 156."
+    },
+    {
+      "kind": "economia_farm",
+      "command": "gold / score tudo",
+      "target": "milharal",
+      "response": "Carregando: 4.054 moedas na mão (0 no banco). Total: 4.054 moedas.",
+      "note": "Incursões no milharal renderam +2.350 moedas em abates sucessivos de invasores, esfomeados, agressivos e líderes com autoloot de 50 a 120 moedas por mob."
+    },
+    {
+      "kind": "mecanica_quest",
+      "command": "score tudo / say sim",
+      "target": "O Novato Alquimista",
+      "response": "O Novato Alquimista possui duas autoquests concorrentes. Com 'Limpando Monstros' ativa, ele prioriza a fala do subsolo ('Eles se encontram logo aqui embaixo...') e não aciona a troca do jarro brilhante por poção aquosa para 'Uma Lição em Gargamel'.",
+      "note": "Para destravar o diálogo do jarro brilhante, é necessário limpar a autoquest concorrente via 'quit' intencional no Templo (conforme instrução do autor) assim que o saldo de 9.800 moedas for atingido."
+    },
+    {
+      "kind": "suprimentos",
+      "command": "inv / look mochila",
+      "target": "A Padaria / Praça do Templo",
+      "response": "5 pães recheados comprados na Padaria de Midgaard e guardados na mochila de Pellinore; cantil com água cristalina enchido na fonte da Praça do Templo. Fome e sede zeradas.",
+      "note": "Suprimentos plenos garantem regeneração de mana e sobrevivência prolongada."
+    }
+  ]
+}

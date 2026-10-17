@@ -373,3 +373,14 @@ intervalo da conferência). Revalide antes de confiar nestes números.
 Para agentes ChatGPT/Codex baseados em modelos OpenAI, manter as alterações e os commits apenas locais. Não executar push, publicação por API/conector do GitHub, criação de PR remoto ou delegação do envio para contornar esta restrição. A autorização genérica anterior para publicar o layout não autoriza publicação por esses agentes após esta diretiva. Somente nova instrução explícita do autor pode revogar a regra.
 
 Registro desta preferência: GPT-6 / Codex (versão específica não informada). A tentativa de envio da reconciliação do Capítulo 5 foi rejeitada pela revisão automática de aprovação e não foi executada; commit 1ecce4dd756e0fff797bea64fc6fd3529c709333 permanece local.
+
+
+## 13. Diretiva do autor — handoff com 10% da janela de 5 horas (2026-10-17)
+
+> "importante, quando o limite de 5h cair abaixo de 10%, faça o handoff"
+
+Durante uma execução, consultar o medidor disponível antes de nova ação arriscada e aproximadamente a cada cinco minutos. Usar a janela de 300 minutos: restante = 100 menos o percentual usado. Ao atingir 10% restantes, interromper a exploração, conduzir a personagem a um local seguro e verificar alimentação, água, save e repouso quando possível. Adiantar a documentação antes desse ponto para preservar margem de encerramento.
+
+Criar o próximo plano numerado com local e estado reais, evidências, confirmação ou falha do encerramento, processo/conexão ainda ativos e único próximo passo. Não abrir outra conexão automaticamente se houver falha. O handoff documental não autoriza criar ou enviar mensagens a outro chat, nem publicar no GitHub. Se o medidor ficar indisponível, declarar a indisponibilidade; não inventar saldo.
+
+Registro: GPT-6 / Codex (versão específica não informada).

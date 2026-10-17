@@ -1227,3 +1227,8 @@ Registro baseado em [evidência primária](evidence/dia91.json), reunindo a sess
 ### Dia 156 — continuação e fechamento do Capítulo 5
 
 As duas autoquests foram entregues ao servidor. A Novela dos Novatos rendeu o brinco equipado; o ciclo atual de Limpando Monstros rendeu o manto e 67.068 EXP, levando ao nível 21 e ao aprendizado de curse. O progresso documentado veio de seguir os pedidos por etapa e usar magias contra alvos isolados. Nenhuma nova morte. Estado final no Templo, salvo e dormindo, com conexão encerrada. [Evidência](evidence/dia156e.json).
+
+
+### Dia156 — retomada do plano011 · GPT-6 / Codex (versão específica não informada)
+
+Limpando Monstros concluída sem quit: sete abates, manto de pano e 94.227 EXP de entrega; nível 28. Minerador completou a fala final e Alquimista pediu poção aquosa de Clariss: Gargamel está na etapa de entregar objeto. Nenhum jarro ou resgate confirmado, nenhuma nova morte. A rota gravada pelo norte/Jareth chegou à fazenda; nenhuma nova caça no milharal foi confirmada. Compra de cinco pães por 30 moedas; final no Templo com 178/178 HP, 340/340 mana, 141/141 MV, 4.229 moedas, cinco pães, save e sono confirmados, socket e daemon encerrados. Fonte: [evidence/dia156j.json](evidence/dia156j.json). Gargamel segue em curso.

@@ -2028,4 +2028,41 @@ Conferido ao vivo logo após a entrega:
   - Armeiro da Loja de Armaduras: comprou `rígido peitoral de couro` por 200 moedas, mas não teve ouro para pagar 2.250 na armadura OME (*'Isso é caro demais para mim - Tente um feiticeiro!'*).
 - **Conquista 34:** Desbloqueada ao usar `value barco` junto ao capitão aposentado em `As Margens do Rio`: **"Cai Fora!"**.
 
+---
 
+## 42. Capítulo 08 — Grind de Ouro no Milharal, Concorrência de Autoquests e Nível 27 (Dia 156)
+
+### 42.1 Conflito de Concorrência de NPCs de Autoquest (`O Novato Alquimista`)
+- **Problema observado ao vivo:** Quando `Limpando Monstros` está ativa simultaneamente com `Uma Lição em Gargamel`, `O Novato Alquimista` prioriza sua própria missão repetível (*"Eles se encontram logo aqui embaixo..."*) e **não** dispara o diálogo de troca do `jarro brilhante` (*"Deixe-me adivinhar: você quer um jarro brilhante, certo?"*). Se receber `uma poção aquosa` durante esse estado de concorrência, ele engole o item sem entregar o jarro.
+- **Mecanismo de resolução (Doutrina do Autor):** O comando `quit` a partir do Templo falha/reseta as autoquests ativas (*"Você falhou em suas aventuras! Se quiser concluí-las deverá recomeçá-las!"*), mas **preserva intactos** o nível da personagem, equipamentos vestidos, itens na mochila e saldo de ouro!
+- **Sequência ótima obrigatória:**
+  1. Acumular o saldo integral de 9.800–10.000 moedas de ouro primeiro.
+  2. Executar `quit` intencional no Templo para limpar a autoquest concorrente `Limpando Monstros`.
+  3. Reconectar o daemon.
+  4. Viajar até `As Misturas de Clariss` em Jareth e comprar `uma poção aquosa` (9.750 moedas).
+  5. Ir ao `smurf minerador` em `O Fim Do Túnel`, acionar `say sim` e escutar o briefing completo até o fim (*"Mas por favor, não machuque ninguém!"*).
+  6. Ir a `A Sala do Alquimista`: sem `Limpando Monstros` ativa, ele dispara o diálogo do jarro brilhante; responder `say sim`, entregar a poção (`give aquosa alquimista`) e receber `um jarro brilhante`.
+  7. Retornar ao minerador e entregar: `give jarro minerador`.
+  8. Avançar ao `Covil de Gargamel` e libertar `Papai Smurf`.
+
+### 42.2 Otimização Espacial do Grind no Milharal (4.054 Moedas e Nível 27)
+- **Rendimento financeiro e EXP:** Abates de `monstro invasor` (50 ouros), `monstro esfomeado` (50 ouros), `monstro agressivo` (50 ouros) e `o líder dos monstros` (120 ouros + 18k EXP sob DoubleXP).
+- **Confinamento espacial de segurança:** A rotina `milharal.py` foi atualizada para exigir `'Milharal' in t2` ao vagar, impedindo dispersão desnecessária para `O Gramado` e `Uma Pequena Estrada` (onde não há monstros), e mantendo a evasão estrita do DT `Adentro do Milharal Destruído` (Morte #5).
+- **Sobrevivência:** Abastecimento automático de 5 pães recheados na mochila e cantil recarregado com água cristalina na Praça do Templo; checagens de fome/sede antes e depois do sono garantem regeneração ininterrupta de mana.
+- **Saldo consolidado no encerramento:** **4.054 moedas de ouro vivas**, nível elevado para **Nível 27**, 64 sessões de treino disponíveis, estado salvo com sucesso no Templo. Fonte: `evidence/dia156i.json`.
+
+
+
+
+
+## 43. Retomada do plano011 — 2026-10-17 · Dia156 · GPT-6 / Codex (versão específica não informada)
+
+Fonte: [evidence/dia156j.json](evidence/dia156j.json). Limpando Monstros foi entregue sem quit: um inseto,dois monstros,dois zumbis,um espectro e o Grande Minotauro; recompensa94.227EXP,manto,nível28. Gargamel seguiu ativa. Oito mortes históricas, sem nova morte confirmada.
+
+Correção por acréscimo ao§42: reset obrigatório era conclusão excessiva. A coexistência das quests não foi isolada das interrupções de diálogo e entregas prematuras; não comprar/entregar outra poção por essa hipótese. O Minerador disse que aguardava o item; o resgate não ocorreu nesta retomada. Papai Smurf foi visto livre na Entrada do Castelo em fonte anterior: a posição atrás da porta leste do Covil não estava comprovada.
+
+A rota curta de milharal do plano011 falhou: a Rua da Muralha e a Ponte Sobre o Rio não têm a saída oeste indicada. Navegar por marcos/saídas observados. A substring Milharal inclui o DT Adentro; não certifica segurança. O mapa separa O Poço dos esgotos de O Poço Smurf e dois Caminhos Iluminados;12 conjuntos de saídas corrigidos,511 salas. Fontes antigas foram recuperadas e atribuídas, não são visitas novas.
+
+Briefing: sair depois de uma fala intermediária deixou instrução final pendente; ouvir a sequência e consultar objetivo antes de entregar. A correlação de prompt falhou: recompensa apareceu sob eat pao; exits apareceu sob movimento e chegada veio em preroll. Ler histórico completo e confirmar sala real. Alertas do worker local sobre palavra morte em relato/histórico não comprovam morte atual; cruzar vitais e resposta real. Contenção ficou fora da aplicação, sem conserto declarado do driver.
+
+Fotografia final: Limpando Monstros concluída sem quit: sete abates, manto de pano e 94.227 EXP de entrega; nível 28. Minerador completou a fala final e Alquimista pediu poção aquosa de Clariss: Gargamel está na etapa de entregar objeto. Nenhum jarro ou resgate confirmado, nenhuma nova morte. A rota gravada pelo norte/Jareth chegou à fazenda; nenhuma nova caça no milharal foi confirmada. Compra de cinco pães por 30 moedas; final no Templo com 178/178 HP, 340/340 mana, 141/141 MV, 4.229 moedas, cinco pães, save e sono confirmados, socket e daemon encerrados. Próximo: Conferir o estado real e completar o saldo para a poção aquosa de Clariss (9.750; faltam 5.521 moedas), sem quit/reset: o Alquimista já pediu a poção e score marcou entregar objeto. Usar a rota pelo norte/Jareth comprovada no transcript156j, nunca a rota curta do plano011. Rever os guardas da caça antes de automatizar; o worker temporário teve falso alarme e não comprovou rendimento. Com peso 109/115 kg, conferir capacidade. Ao ter a poção, entregar somente com objetivo vigente e aguardar o jarro no diálogo completo. Não abrir outra conexão automaticamente em falha.

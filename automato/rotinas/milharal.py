@@ -41,26 +41,18 @@ def count_mobs(text):
 def matar(alvo, maximo=14):
     falhas = 0
     for _ in range(maximo):
-        t, _, _ = run('look')
-        if 'morre' in t or 'morto' in t:
+        magia = 'lightning bolt'
+        text, vitals, _ = run(f"cast '{magia}' {alvo}")
+        if 'morre' in text or 'morto' in text:
             return 'morto'
-        n, a = count_mobs(t)
-        if n == 0:
-            return 'sumiu'
-        if a and a != alvo:
-            alvo = a
-        if mana_baixa():
-            return 'sem mana'
-        magia = 'burning hands' if mana_baixa() else 'lightning bolt'
-        text, _, _ = run(f"cast '{magia}' {alvo}")
         if 'Em que você deseja' in text:
             trocou = False
             for _, kw in MOBS:
                 if kw == alvo:
                     continue
-                t2, _, _ = run(f"cast '{magia}' {kw}")
+                t2, v2, _ = run(f"cast '{magia}' {kw}")
                 if 'Em que você deseja' not in t2:
-                    alvo, text, trocou = kw, t2, True
+                    alvo, text, vitals, trocou = kw, t2, v2, True
                     break
             if not trocou:
                 falhas += 1
@@ -71,7 +63,11 @@ def matar(alvo, maximo=14):
             falhas = 0
         if 'morre' in text or 'morto' in text:
             return 'morto'
-        if hp_frac(text) < 0.40:
+        mn = vitals.get('mana')
+        if mn is not None and mn < 30:
+            return 'sem mana'
+        hp = vitals.get('hp')
+        if hp is not None and hp < 50:
             run('flee')
             return 'recuou'
     return 'inconclusivo'
@@ -213,18 +209,22 @@ def executar():
         return False
     print('[milharal] no milharal', flush=True)
     mortos = 0
-    for r in range(18):
+    for r in range(50):
         if estourou():
             print('[milharal] tempo esgotado na cacada', flush=True)
             break
         t, _, _ = run('look')
         if hp_frac(t) < 0.45 or 'perigoso por perto' in t.lower() or 'Adentro' in t:
             run('flee'); continue
+        if 'Milharal' not in t:
+            andar('w'); continue
         n, alvo = count_mobs(t)
         if not (1 <= n <= 3 and alvo and hp_frac(t) >= 0.70):
-            for dd in random.sample(['n', 's', 'e', 'w'], 4):
+            ex_txt, _, _ = run('exits')
+            saidas = [d for d in pex(ex_txt) if d in ['n', 's', 'e', 'w']]
+            for dd in random.sample(saidas, len(saidas)):
                 t2, _, _ = run(dd)
-                if 'perigoso por perto' in t2.lower() or 'Adentro' in t2:
+                if 'perigoso por perto' in t2.lower() or 'Adentro' in t2 or 'Milharal' not in t2:
                     run(OP[dd]); continue
                 n2, a2 = count_mobs(t2)
                 if 1 <= n2 <= 3 and a2:
@@ -235,6 +235,9 @@ def executar():
         res = matar(alvo)
         if res == 'morto':
             mortos += 1
+        elif res == 'sem mana':
+            print('[milharal] mana esgotada; retornando ao Templo', flush=True)
+            break
         print(f'[milharal] [r{r}] {res} vs {alvo}; total={mortos}', flush=True)
     print('[milharal] abates:', mortos, flush=True)
     voltar_ao_templo(); run('save')

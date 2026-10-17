@@ -51,7 +51,7 @@
       "accepted_day": 36,
       "last_progress_day": 156,
       "objective": "Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.",
-      "next_step": "Concluída e entregue no Dia 156, continuação. Não reiniciar sem novo objetivo do autor.",
+      "next_step": "Ciclo repetido concluído nesta continuação: manto e 94.227EXP. Não reiniciar sem objetivo.",
       "reward": "75.482 EXP e um manto de pano",
       "evidence": [
         {
@@ -188,9 +188,14 @@
           "document": "evidence/dia156e.json",
           "day": 156,
           "note": "Retomada supervisionada da conexão do Dia 156; falas, objetivos, recompensas e encerramento confirmados no servidor. Correção da síntese concorrente dia156d."
+        },
+        {
+          "document": "evidence/dia156j.json",
+          "day": 156,
+          "note": "Conclusão de Limpando sem quit; Gargamel permanece ativa."
         }
       ],
-      "completion_note": "Entrega ao servidor confirmada na continuação do Dia 156. Novo ciclo após a conclusão histórica do Dia 96; manto e 67.068 EXP recebidos, avanço ao nível 21. A conclusão antiga foi preservada nas fontes."
+      "completion_note": "Entrega ao servidor confirmada na continuação do Dia 156. Novo ciclo após a conclusão histórica do Dia 96; manto e 67.068 EXP recebidos, avanço ao nível 21. A conclusão antiga foi preservada nas fontes. Novo ciclo entregue em2026-10-17, sem quit: manto,94.227EXP,nível28; conclusão histórica anterior preservada nas fontes."
     },
     {
       "id": "dicas-magicas",
@@ -474,7 +479,7 @@
       "accepted_day": 156,
       "last_progress_day": 156,
       "objective": "Autoquest de níveis 20-80 (encarnações 1-4, qualquer alinhamento/classe/raça), iniciada com o smurf minerador na Vila dos Smurfs.",
-      "next_step": "Obter 9.750 moedas de ouro para comprar 'uma poção aquosa' na loja As Misturas de Clariss em Jareth (saldo atual: 4.880 moedas), entregá-la a O Novato Alquimista na Escola de Treinamento de Midgaard, levar o jarro brilhante a o smurf minerador em O Fim Do Túnel e resgatar Papai Smurf no Covil de Gargamel.",
+      "next_step": "Conferir o estado real e completar o saldo para a poção aquosa de Clariss (9.750; faltam 5.521 moedas), sem quit/reset: o Alquimista já pediu a poção e score marcou entregar objeto. Usar a rota pelo norte/Jareth comprovada no transcript156j, nunca a rota curta do plano011. Rever os guardas da caça antes de automatizar; o worker temporário teve falso alarme e não comprovou rendimento. Com peso 109/115 kg, conferir capacidade. Ao ter a poção, entregar somente com objetivo vigente e aguardar o jarro no diálogo completo. Não abrir outra conexão automaticamente em falha.",
       "evidence": [
         {
           "document": "evidence/dia156g.json",
@@ -485,6 +490,16 @@
           "document": "evidence/dia156h.json",
           "day": 156,
           "note": "Missão iniciada ao vivo com o smurf minerador em O Fim Do Túnel. Alquimista exige poção aquosa de Clariss (9.750 moedas). Vila dos Smurfs, pomar e Covil de Gargamel mapeados. Agente: Gemini 4 Argon / Gemini 3.8 Flash."
+        },
+        {
+          "document": "evidence/dia156i.json",
+          "day": 156,
+          "note": "Avanço para Nível 27 e grind de ouro até 4.054 moedas no milharal. Diagnosticada causa raiz do bloqueio de O Novato Alquimista (conflito de concorrência com Limpando Monstros impede diálogo do jarro brilhante). Agente: Gemini 4 Argon / Gemini 3.8 Flash."
+        },
+        {
+          "document": "evidence/dia156j.json",
+          "day": 156,
+          "note": "Conclusão de Limpando sem quit; Gargamel permanece ativa."
         }
       ]
     }

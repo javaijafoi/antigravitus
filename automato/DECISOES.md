@@ -136,3 +136,8 @@ Cada entrada responde a três perguntas: **por que** (o problema real), **o que*
 - Mude **só** `nucleo/config.py` para adaptar a outro projeto/heroi;
 - **Nunca** rode rotina sem vigia e sem supervisão (ver os invariantes no README);
 - Registre cada mudança aqui e no `CHANGELOG.md` — o próximo agente continua de onde você parou.
+
+
+## 2026-10-17 — retomada011: confirmar contexto antes de agir
+
+Agente: GPT-6 / Codex (versão específica não informada); fonte: data/heroes/grebolius/evidence/dia156j.json. Decisão: cruzar resposta com sala-marco,vitais,objetivo e falas em idle/preroll; não confiar em prompt isolado ou palavra morte em histórico como morte vigente. Exemplo: recompensa sob eat pao e saídas sob n no transcript72663a. Alertas/guardas temporários são de worker no workspace; nenhum reparo geral do motor foi aplicado. Custo: consultas adicionais e interrupção manual em ambiguidade. Seguir AGENTS§13 para retirada/handoff ao atingir10% da janela5h.

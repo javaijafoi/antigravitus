@@ -2,8 +2,8 @@
   "hero_id": "grebolius",
   "hero_name": "Grebolius",
   "sanctuary_id": "panteao_centenarios",
-  "last_updated_cycle": "Ciclo X (Dia 156; com levantamento das sessoes)",
-  "total_rooms": 510,
+  "last_updated_cycle": "Dia 156 — reconciliação cartográfica 2026-10-17",
+  "total_rooms": 511,
   "layers": [
     {
       "id": "superficie",
@@ -1141,9 +1141,7 @@
       },
       "exits": {
         "s": "entrada_novatos",
-        "e": "corredor_sujo",
-        "n": "altar_templo",
-        "w": "lv123"
+        "e": "corredor_sujo"
       },
       "npcs": [],
       "notes": "Ecos de criaturas nos túneis e vestes de novatos caídas.",
@@ -1161,7 +1159,13 @@
       "arestas_do_levantamento": [
         "n",
         "w"
-      ]
+      ],
+      "source_before_20261017": null,
+      "source": {
+        "document": "evidence/dia156j.json",
+        "day": 156,
+        "note": "Saídas reais leste/sul; remover ligação ao Altar e clone homônimo. Fontes: escola-atual"
+      }
     },
     {
       "id": "corredor_sujo",
@@ -1178,16 +1182,15 @@
       "exits": {
         "w": "comeco_passagem",
         "e": "cruzamento_novatos",
-        "s": "pequena_sala_guarda",
-        "u": "lv005"
+        "s": "pequena_sala_guarda"
       },
       "npcs": [],
       "notes": "Paredes lodosas com ruídos de monstros nas proximidades.",
       "discovered_in": "Ciclo II (Dia 14)",
       "source": {
-        "document": "evidence/dia93.json",
-        "day": 93,
-        "note": "Comandos e respostas preservados da sessão autorizada."
+        "document": "evidence/dia156j.json",
+        "day": 156,
+        "note": "Saídas reais leste/sul/oeste, sem subida para Sacada. Fontes: escola-atual"
       },
       "npcs_confirmados": [
         "zumbi",
@@ -1199,7 +1202,12 @@
       ],
       "arestas_do_levantamento": [
         "u"
-      ]
+      ],
+      "source_before_20261017": {
+        "document": "evidence/dia93.json",
+        "day": 93,
+        "note": "Comandos e respostas preservados da sessão autorizada."
+      }
     },
     {
       "id": "cruzamento_novatos",
@@ -1217,7 +1225,7 @@
         "w": "corredor_sujo",
         "s": "mais_corredor",
         "n": "caminho_iluminado_norte",
-        "e": "caminho_iluminado_norte"
+        "e": "caminho_iluminado_leste"
       },
       "npcs": [],
       "notes": "Entroncamento de corredores subterrâneos de treino.",
@@ -1233,9 +1241,9 @@
         }
       },
       "source": {
-        "document": "evidence/dia92.json",
-        "day": 92,
-        "note": "Comandos e respostas preservados da sessão autorizada."
+        "document": "evidence/dia156j.json",
+        "day": 156,
+        "note": "Separar destino do braço leste do braço norte. Fontes: caminho-leste"
       },
       "visitas_registradas": 570,
       "fontes": [
@@ -1246,7 +1254,12 @@
       ],
       "arestas_do_levantamento": [
         "e"
-      ]
+      ],
+      "source_before_20261017": {
+        "document": "evidence/dia92.json",
+        "day": 92,
+        "note": "Comandos e respostas preservados da sessão autorizada."
+      }
     },
     {
       "id": "mais_corredor",
@@ -1364,9 +1377,7 @@
       "exits": {
         "w": "outro_canto",
         "d": "a_entrada",
-        "n": "passagem_estreita",
-        "s": "passagem_estreita",
-        "u": "lv110"
+        "n": "passagem_estreita"
       },
       "npcs": [
         "O Novato Alquimista",
@@ -1374,15 +1385,11 @@
       ],
       "notes": "Acampamento vivo no Dia 61 e 62. Chifres do Minotauro entregues ao Alquimista, recebida a ordem de caçar insetos rastejantes. Novatos zumbis abatidos no local. Placa da escada decifrada alertando perigo mortal.",
       "discovered_in": "Ciclo II (Dia 14)",
-      "unresolved_exits": {
-        "n": {
-          "description": "Porta norte aberta no Dia 62 revelando um iluminado corredor."
-        }
-      },
+      "unresolved_exits": {},
       "source": {
-        "document": "evidence/dia92.json",
-        "day": 92,
-        "note": "Comandos e respostas preservados da sessão autorizada."
+        "document": "evidence/dia156j.json",
+        "day": 156,
+        "note": "Saídas reais norte/oeste/baixo; a Passagem Estreita fica ao norte, não ao sul. Fontes: escola-atual, alquimista-norte"
       },
       "visitas_registradas": 61,
       "fontes": [
@@ -1391,7 +1398,12 @@
       "arestas_do_levantamento": [
         "s",
         "u"
-      ]
+      ],
+      "source_before_20261017": {
+        "document": "evidence/dia92.json",
+        "day": 92,
+        "note": "Comandos e respostas preservados da sessão autorizada."
+      }
     },
     {
       "id": "a_entrada",
@@ -1985,18 +1997,15 @@
       },
       "exits": {
         "n": "sala_estatua",
-        "s": "cruzamento_novatos",
-        "e": "escadaria_sul",
-        "u": "lv111",
-        "w": "cruzamento_novatos"
+        "s": "cruzamento_novatos"
       },
       "npcs": [],
       "notes": "Acesso pela porta norte do Cruzamento descrito no Dia 58. Retorno direcional ainda não catalogado; não foi deduzida uma saída inversa.",
       "discovered_in": "Ciclo VI (Dia 58)",
       "source": {
-        "document": "evidence/dia156e.json",
+        "document": "evidence/dia156j.json",
         "day": 156,
-        "note": "Retomada supervisionada da conexão do Dia 156; falas, objetivos, recompensas e encerramento confirmados no servidor. Correção da síntese concorrente dia156d."
+        "note": "Este homônimo só tem norte/sul; remover contaminação do corredor leste e da sacada. Fontes: caminho-norte, caminho-leste"
       },
       "visitas_registradas": 74,
       "fontes": [
@@ -2006,7 +2015,12 @@
         "e",
         "u",
         "w"
-      ]
+      ],
+      "source_before_20261017": {
+        "document": "evidence/dia156e.json",
+        "day": 156,
+        "note": "Retomada supervisionada da conexão do Dia 156; falas, objetivos, recompensas e encerramento confirmados no servidor. Correção da síntese concorrente dia156d."
+      }
     },
     {
       "id": "sala_estatua",
@@ -3024,17 +3038,15 @@
         "n": "escadaria_norte",
         "s": "passagem_estreita",
         "w": "caminho_iluminado_leste",
-        "u": "sacada_sul",
-        "d": "lv169",
-        "e": "lv169"
+        "u": "sacada_sul"
       },
       "npcs": [],
       "notes": "Posição gráfica esquemática. Somente travessias observadas nesta jornada foram acrescentadas.",
       "discovered_in": "Reconferência ao vivo (Dia 92); sem presumir primeira descoberta histórica.",
       "source": {
-        "document": "evidence/dia156e.json",
+        "document": "evidence/dia156j.json",
         "day": 156,
-        "note": "Retomada supervisionada da conexão do Dia 156; falas, objetivos, recompensas e encerramento confirmados no servidor. Correção da síntese concorrente dia156d."
+        "note": "Saídas n,s,w,u observadas; d,e para Sacada são espúrias. Fontes: caminho-leste, alquimista-norte"
       },
       "visitas_registradas": 83,
       "fontes": [
@@ -3043,7 +3055,12 @@
       "arestas_do_levantamento": [
         "d",
         "e"
-      ]
+      ],
+      "source_before_20261017": {
+        "document": "evidence/dia156e.json",
+        "day": 156,
+        "note": "Retomada supervisionada da conexão do Dia 156; falas, objetivos, recompensas e encerramento confirmados no servidor. Correção da síntese concorrente dia156d."
+      }
     },
     {
       "id": "caminho_iluminado_leste",
@@ -3059,17 +3076,15 @@
       },
       "exits": {
         "e": "escadaria_sul",
-        "w": "cruzamento_novatos",
-        "n": "sala_estatua",
-        "s": "caminho_iluminado_norte"
+        "w": "cruzamento_novatos"
       },
       "npcs": [],
       "notes": "Posição gráfica esquemática. Somente travessias observadas nesta jornada foram acrescentadas.",
       "discovered_in": "Reconferência ao vivo (Dia 92); sem presumir primeira descoberta histórica.",
       "source": {
-        "document": "evidence/dia156e.json",
+        "document": "evidence/dia156j.json",
         "day": 156,
-        "note": "Retomada supervisionada da conexão do Dia 156; falas, objetivos, recompensas e encerramento confirmados no servidor. Correção da síntese concorrente dia156d."
+        "note": "Este homônimo só tem leste/oeste; remover contaminação do corredor norte. Fontes: caminho-leste"
       },
       "visitas_registradas": 9,
       "fontes": [
@@ -3078,7 +3093,12 @@
       "arestas_do_levantamento": [
         "n",
         "s"
-      ]
+      ],
+      "source_before_20261017": {
+        "document": "evidence/dia156e.json",
+        "day": 156,
+        "note": "Retomada supervisionada da conexão do Dia 156; falas, objetivos, recompensas e encerramento confirmados no servidor. Correção da síntese concorrente dia156d."
+      }
     },
     {
       "id": "passagem_estreita",
@@ -3537,10 +3557,7 @@
       },
       "exits": {
         "w": "esgotos_entrada",
-        "d": "abaixo_do_poco",
-        "e": "lv061",
-        "n": "lv061",
-        "s": "lv024"
+        "d": "abaixo_do_poco"
       },
       "npcs": [],
       "notes": "Secção sem saída com poço vertical levando para baixo (d).",
@@ -3553,7 +3570,13 @@
         "e",
         "n",
         "s"
-      ]
+      ],
+      "source_before_20261017": null,
+      "source": {
+        "document": "evidence/dia156j.json",
+        "day": 156,
+        "note": "Retirar arestas da Vila anexadas ao poço dos esgotos; preservar w,d autênticos. Fontes: esgoto-real, poco-smurf"
+      }
     },
     {
       "id": "sala_paredes_lisas",
@@ -6231,7 +6254,7 @@
       "icon": "🗺️",
       "exits": {
         "e": "lv035",
-        "n": "esgoto_poco",
+        "n": "poco_smurf",
         "s": "lv045",
         "w": "lv063"
       },
@@ -6241,7 +6264,13 @@
       "visitas_registradas": 10,
       "fontes": [
         "levantamento_sessoes"
-      ]
+      ],
+      "source_before_20261017": null,
+      "source": {
+        "document": "evidence/dia156j.json",
+        "day": 156,
+        "note": "Estrada da vila ao norte desemboca no Poço Smurf. Fontes: poco-smurf"
+      }
     },
     {
       "id": "lv025",
@@ -7170,8 +7199,9 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "s": "esgoto_poco",
-        "w": "lv078"
+        "s": "poco_smurf",
+        "w": "lv078",
+        "e": "lv113"
       },
       "npcs": [],
       "notes": "Você está em uma intersecção de dois caminhos raramente utilizados.",
@@ -7179,7 +7209,13 @@
       "visitas_registradas": 5,
       "fontes": [
         "levantamento_sessoes"
-      ]
+      ],
+      "source_before_20261017": null,
+      "source": {
+        "document": "evidence/dia156j.json",
+        "day": 156,
+        "note": "Corrigir retorno ao Poço Smurf e incorporar saída leste observada. Não inferir nenhuma ligação aos esgotos. Fontes: poco-smurf, barney"
+      }
     },
     {
       "id": "lv062",
@@ -7837,7 +7873,7 @@
       "icon": "🗺️",
       "exits": {
         "e": "lv070",
-        "u": "esgoto_poco"
+        "u": "poco_smurf"
       },
       "npcs": [],
       "notes": "Como pode ver ao redor, há muito pouca água restante no fundo deste poço. Parece haver um pequeno túnel seguindo para o leste.",
@@ -7845,7 +7881,13 @@
       "visitas_registradas": 3,
       "fontes": [
         "levantamento_sessoes"
-      ]
+      ],
+      "source_before_20261017": null,
+      "source": {
+        "document": "evidence/dia156j.json",
+        "day": 156,
+        "note": "Dentro do Poço da vila sobe ao Poço Smurf. Fontes: poco-smurf"
+      }
     },
     {
       "id": "lb089",
@@ -8509,14 +8551,22 @@
       "risk": "Desconhecido",
       "risk_code": "unknown",
       "icon": "🗺️",
-      "exits": {},
+      "exits": {
+        "w": "lv061"
+      },
       "npcs": [],
       "notes": "Oh não, Barney ficou louco! Há sangue cobrindo todos os brinquedos e a parede desta antes bem iluminada área. Vários corpos indistingüíveis estão no chão e um fedor pútrido permanece no ar.",
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 2,
       "fontes": [
         "levantamento_sessoes"
-      ]
+      ],
+      "source_before_20261017": null,
+      "source": {
+        "document": "evidence/dia156j.json",
+        "day": 156,
+        "note": "Saída nomeada observada no servidor, sem travessia de retorno; tratar como observação de saída, não visita adicional. Fontes: barney"
+      }
     },
     {
       "id": "lb094",
@@ -11650,6 +11700,28 @@
       "fontes": [
         "levantamento_sessoes"
       ]
+    },
+    {
+      "id": "poco_smurf",
+      "name": "O Poço Smurf",
+      "layer": "levantamento",
+      "zone": "Vila dos Smurfs",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "n": "lv061",
+        "s": "lv024",
+        "d": "lv084"
+      },
+      "npcs": [],
+      "notes": "Poço de pedras no centro de reuniões da Vila dos Smurfs. Estrada sinistra ao norte; desce para Dentro do Poço. Identidade separada de O Poço nos esgotos.",
+      "discovered_in": "Dia 156 (transcrição observada em 2026-10-16/17)",
+      "source": {
+        "document": "evidence/dia156j.json",
+        "day": 156,
+        "note": "Separação do Poço Smurf; fontes curadas em recovered_map_records."
+      }
     }
   ],
   "last_updated_day": 156,

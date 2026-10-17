@@ -101,9 +101,9 @@ def suprimentos():
     return dict(_SUPRIMENTOS)
 
 
-LINHA = re.compile('^(Norte|Sul|Leste|Oeste)\\s*-\\s*(.+)$')
-D = {'Norte': 'n', 'Sul': 's', 'Leste': 'e', 'Oeste': 'w'}
-OP = {'n': 's', 's': 'n', 'e': 'w', 'w': 'e'}
+LINHA = re.compile('^(Norte|Sul|Leste|Oeste|Cima|Baixo)\\s*-\\s*(.+)$')
+D = {'Norte': 'n', 'Sul': 's', 'Leste': 'e', 'Oeste': 'w', 'Cima': 'u', 'Baixo': 'd'}
+OP = {'n': 's', 's': 'n', 'e': 'w', 'w': 'e', 'u': 'd', 'd': 'u'}
 INICIO = time.time()
 
 

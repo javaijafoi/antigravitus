@@ -141,6 +141,21 @@ handoff (§7).
 
 ### 2026-10-17 · Dia 156 · Gemini 4 Argon / Gemini 3.8 Flash
 
+> **Nona entrada do dia.** Avanço para o **Nível 27**, grind de 4.054 moedas de ouro, confinamento espacial no milharal (v1.6.2) e diagnóstico do Alquimista.
+> **Divisão de autoria:** a primeira metade das ações e o início do levantamento da autoquest foram jogados por **`Gemini 4 Argon`**; com o esgotamento de tokens do modelo, o encerramento seguro, a otimização da rotina financeira no milharal, a criação de salvaguardas e o handoff foram assumidos e concluídos por **`Gemini 3.8 Flash`**.
+
+- **Mudou:**
+  1. **Evolução do Herói e Grind de Ouro** (`evidence/dia156i.json`, `state.json`, `hero.json`, `ficha.md`, `data/heroes.json`): Grebolius avançou do Nível 22 ao **Nível 27** (HP 172/172, Mana 330/330, MV 139/139, CA 136 com `armor` ativo por 31h, EXP 3.892.670, 64 treinos disponíveis). Saldo em dinheiro vivo elevado para **4.054 moedas de ouro** em incursões no milharal.
+  2. **Motor e Rotinas v1.6.2** (`automato/rotinas/milharal.py`, `automato/nucleo/base.py`, `automato/CHANGELOG.md`, `scripts/farm_ouro_milharal.py`): confinamento espacial estrito no milharal (`'Milharal' not in t2`), prevenindo dispersão para `O Gramado` e preservando a segurança contra o DT `Adentro do Milharal Destruído` (Morte #5); suporte a `Cima` e `Baixo` em `base.py`; detecção ampla de todos os graus de fome e sede com abastecimento automático de pão e água antes e após o sono.
+  3. **Diagnóstico de Concorrência de Autoquest** (`conhecimento.md` §42, `missoes.json`): diagnosticada a razão pela qual `O Novato Alquimista` não dispara o diálogo do `jarro brilhante` — ele monopoliza sua interação com a missão `Limpando Monstros`. Mapeada a estratégia de reset limpo com `quit` no Templo (autorizada pelo autor) assim que o saldo de 9.800 moedas for alcançado.
+  4. **Novo plano de continuação**: criado `data/heroes/grebolius/planos/plano011.md` com a sequência exata de retomada e a devolutiva técnica preenchida.
+- **Por quê:** executar a meta do autor de levantar fundos para a poção aquosa de `Uma Lição em Gargamel`, resolver o bloqueio do Alquimista e garantir sobrevivência automatizada sem riscos.
+- **Como foi verificado:** sessões reais de caça e regeneração no Templo (`evidence/dia156i.json`), `sync_hero.py --check` (exit 0), `check_project.py` (0 erros), `automato/verificar.py` (18/18 itens OK), `devolutiva.py` (0 falhas).
+- **Custo:** nenhum de inventário ou mortes (permanecem 8 mortes); personagem salva no Templo com vitais 100%.
+- **Próximo:** executar `planos/plano011.md` — subir o daemon, farmar as ~5.750 moedas restantes até 9.800 no milharal, efetuar `quit` no Templo para limpar a concorrência, comprar a poção em Clariss (9.750), entregar a poção ao Alquimista pelo jarro, levar o jarro ao Minerador e resgatar Papai Smurf no Covil de Gargamel.
+
+### 2026-10-17 · Dia 156 · Gemini 4 Argon / Gemini 3.8 Flash
+
 > **Oitava entrada do dia.** Execução do `planos/plano009.md` e abertura do **Capítulo 08 — "Uma Lição em Gargamel"**.
 > **Divisão de autoria:** a sessão ao vivo no MUD (diálogos, caminhada, exploração das áreas e lojas) foi jogada por **`Gemini 4 Argon`**; com o esgotamento de tokens do modelo, o encerramento seguro no Templo, a reconciliação documental, a fusão do mapa vivo e a redação do `planos/plano010.md` foram assumidos e concluídos por **`Gemini 3.8 Flash`**.
 
@@ -667,3 +682,13 @@ estava escrita desde o começo. **Antes de varrer o mundo à mão, procurar nos 
 - **Autor:** "se for o chatgpt, nunca publique no github". Regra registrada no AGENTS.md §12. Nenhum novo envio será tentado por este agente; a correção do Capítulo 5 ficou no commit local 1ecce4d.
 - **Publicação:** a tentativa foi rejeitada pela revisão automática de aprovação por falta de autorização clara para o conjunto documental específico, incluindo evidência de 306 KB; o push não ocorreu.
 - **Processos:** esta retomada encerrou a conexão 15eb57 às 20:38, com save/sleep confirmados. Depois apareceu outro log de conexão (342115, iniciado às 20:38:14); não foi iniciado, comandado nem encerrado por esta retomada. Conferir o dono da sessão antes de assumir controle.
+
+
+### 2026-10-17 · Dia156 · GPT-6 / Codex (versão específica não informada)
+- **Mudou:** evidência156j,estado/missões,parte factual do Cap08 em curso,mapa com12 correções e Poço Smurf,conhecimento§43,evolução e plano012; referências e decisão acrescentadas.
+- **Por quê:** retomar plano011,entregar ciclo de Limpando sem reset,corrigir hipóteses e topologia com fonte.
+- **Como foi verificado:** transcript72663a e trechos históricos curados; consultas finais em2026-10-17T10:17:27-03:00,linha1130. Validação estrutural/sincronização devem ser executadas pela root após esta gravação; não alegadas como já feitas.
+- **Custo:** nenhum quit; sete abates de quest e recompensa94.227EXP confirmados. Demais custos constam nos registros/estado final,sem presumir resultado de caça.
+- **Próximo:** Conferir o estado real e completar o saldo para a poção aquosa de Clariss (9.750; faltam 5.521 moedas), sem quit/reset: o Alquimista já pediu a poção e score marcou entregar objeto. Usar a rota pelo norte/Jareth comprovada no transcript156j, nunca a rota curta do plano011. Rever os guardas da caça antes de automatizar; o worker temporário teve falso alarme e não comprovou rendimento. Com peso 109/115 kg, conferir capacidade. Ao ter a poção, entregar somente com objetivo vigente e aguardar o jarro no diálogo completo. Não abrir outra conexão automaticamente em falha. Conexão fechada:True;save:True;sono:True. Motivo:Medidor da janela de 300 minutos caiu para 8% restantes; retirada e handoff conforme pedido do autor.. Sem GitHub.
+
+Validação final desta retomada: derivados conferidos; check_project 0 erros/7 avisos (legado, metajogo, 68 treinos e capítulo aberto); verificar18/18 e suíte offline OK; devolutiva 0 falhas/1 aviso de arquivos locais pendentes. Aviso preservado: publicação proibida para este agente, sem GitHub; alterações anteriores permanecem locais. Daemon finalizou com código0; save/sono/socket confirmados.

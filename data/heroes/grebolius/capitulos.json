@@ -1144,6 +1144,102 @@
       "date": "2026-10-16",
       "in_game_time": "As tentativas frustradas, as quatro levas do milharal e o cinturão do fazendeiro",
       "closed_on_day": 156
+    },
+    {
+      "id": 8,
+      "tomo": 1,
+      "title": "Uma Lição em Gargamel",
+      "kind": "missao",
+      "goal": "Concluir a autoquest Uma Lição em Gargamel com confirmação do servidor.",
+      "days": [
+        156
+      ],
+      "parts": [
+        {
+          "day": 156,
+          "source_kind": "live",
+          "date": "2026-10-17",
+          "evidence": [
+            {
+              "document": "evidence/dia156g.json",
+              "day": 156,
+              "note": "Inicio de 'Uma Licao em Gargamel' e a geografia da Vila dos Smurfs, do pomar e do Castelo de Gargamel (511 salas no mapa). Agente: Gemini 4 Argon."
+            },
+            {
+              "document": "evidence/dia156h.json",
+              "day": 156,
+              "note": "Avanco da cadeia dos NPCs: o minerador quer um jarro brilhante; o Novato Alquimista cobra uma pocao aquosa de Clariss. Inicio do grind de ouro. Agente: Gemini 4 Argon."
+            },
+            {
+              "document": "evidence/dia156i.json",
+              "day": 156,
+              "note": "Nivel 27 e grind de ouro no milharal para chegar as 9.750 de Clariss. Agente: Gemini 4 Argon."
+            },
+            {
+              "document": "evidence/dia156j.json",
+              "day": 156,
+              "note": "'Limpando Monstros' entregue de novo sem quit (7 abates e 94.227 de experiencia), o que removeu a concorrencia que fazia o Alquimista ignorar o pedido do jarro; nivel 28. Agente: GPT-6 / Codex."
+            }
+          ],
+          "summary": "Capitulo 08 fechado: 'Uma Licao em Gargamel'. A missao foi INICIADA na Vila dos Smurfs com `o smurf minerador`, no fim do tunel abaixo do Poco Smurf, e o capitulo termina com ela ATIVA (objetivo do servidor: 'entregar objeto ao personagem') — o capitulo fecha a expedicao, nao a missao. A cadeia: o minerador ficou sem oleo no lampiao e pede algo confiavel que ilumine (um jarro brilhante), com a instrucao expressa 'nao machuque ninguem'; o `O Novato Alquimista` cobra por ele `uma pocao aquosa` de `As Misturas de Clariss`, na Avenida Floris em Jareth, por 9.750 moedas. Ela tem 4.229 — o bloqueio e OURO, nao combate. Descoberto e documentado o problema de CONCORRENCIA que fez o agente anterior girar em circulos: com 'Limpando Monstros' ativa ao mesmo tempo, o Alquimista prioriza a propria missao e, se receber a pocao nesse estado, engole o item sem entregar o jarro. Ela limpou o porao dele de novo (inseto, monstros de veste, zumbis, espectro invisivel e o Minotauro), entregou sem `quit`, subiu ao Nivel 28 e agora o Alquimista nao tem mais o que pedir antes da compra. De brinde, a exploracao achou o Castelo de Gargamel: no Covil, Gargamel e Azrael, e atras de uma porta TRANCADA a leste, `Papai Smurf` preso. O mapa subiu de 381 para 511 salas. Saldo: Nivel 28, 4.000.001 de experiencia, 178 HP, 340 de mana, 4.229 de ouro na mao (banco zerado), 8 mortes, nenhuma nova. Pecas do plano: planos/plano013.md."
+        }
+      ],
+      "content": [
+        "Todo mundo aqui é azul, tem a minha altura do joelho e fala com a voz de quem engoliu um assobio. Isso deveria ter sido o meu primeiro aviso de que o dia ia ser estranho.",
+        "A mina fica embaixo de um poço, no fim de um túnel, e o velho que cava lá dentro estava no escuro. O lampião dele tinha secado. Ele não pediu para eu matar nada — pediu uma coisa que iluminasse, feita por alguém de confiança: um ferreiro ou um alquimista. E pediu mais: *por favor, não machuque ninguém.*",
+        "Eu tenho um problema com esse pedido. Não é que eu queira machucar gente. É que ultimamente toda vez que eu resolvo alguma coisa, eu resolvo matando, e sai funcionando. Aqui não. Aqui o velho quer que eu compre.",
+        "O alquimista da escola de Midgaard me recebeu como quem já esperava. Antes de eu abrir a boca ele adivinhou: um jarro brilhante. E cobrou o preço que alquimistas cobram — não em ouro, em outra coisa. Uma poção aquosa, da Clariss, em Jareth. Nove mil e setecentas e cinquenta moedas.",
+        "Eu tenho quatro mil duzentas e vinte e nove.",
+        "Foi aí que o dia ficou interessante. O alquimista tem duas missões na cabeça ao mesmo tempo — a dele, de limpar os monstros que o atrapalham, e a minha, do jarro. E ele escolhe. Se eu chegar com a poção enquanto ele ainda está esperando que eu limpe o porão dele, ele pega a poção, *engole*, e não me dá jarro nenhum.",
+        "Descobri isso do jeito ruim, e descobri caro. Mas descobri. Então voltei e limpei o porão dele de novo — o inseto, os monstros de veste, os zumbis, o espectro que só aparece para quem sabe olhar, e o Minotauro no fim —, e subi de grau, e agora ele não tem mais nada para me pedir além do que eu quero comprar.",
+        "E no meio disso tudo eu fui ver o castelo.",
+        "O caminho para o castelo de Gargamel sai de uma interseção ao norte do poço, e o castelo é exatamente o que um castelo de vilão deveria ser: escuro, fedendo, com um gato chamado Azrael andando por cima dos móveis como se fosse o dono. E atrás de uma porta trancada, no lado leste, tem alguém preso. Eu perguntei ao mundo e o mundo me respondeu com um nome: Papai Smurf.",
+        "Eu não abri a porta. Não tinha chave, e mesmo que tivesse, Gargamel estava lá dentro com o gato dele, e eu tenho vinte e oito graus de experiência e bom senso suficiente para saber que hoje não é o dia.",
+        "Então o capítulo se chama *uma lição em Gargamel* e a lição não foi sobre o Gargamel. Foi sobre o preço. O velho precisa de luz, o alquimista precisa de uma poção, a poção custa nove mil e setecentas moedas, e eu tenho quatro mil duzentas. Não tem magia que resolva isso. Não tem raio, não tem fogo, não tem morte. Tem trabalho.",
+        "Eu já matei coisa grande. Já morri oito vezes. Já subi dez graus em dois dias. E mesmo assim estou aqui, com quatro mil moedas no bolso, olhando para uma mina escura e uma porta fechada — esperando juntar o suficiente para comprar um jarro.",
+        "Amanhã eu volto ao milharal. Não porque eu goste de matar bicho no milho, mas porque cada invasor deixa cinquenta moedas, e cinquenta moedas é o que separa o velho do escuro. Enquanto isso, Papai Smurf espera atrás de uma porta. Ele já esperou mais do que isso."
+      ],
+      "tags": [
+        "Uma Lição em Gargamel",
+        "Vila dos Smurfs",
+        "Smurf Minerador",
+        "Novato Alquimista",
+        "Clariss",
+        "Poção Aquosa",
+        "Covil de Gargamel",
+        "Papai Smurf",
+        "Nível 28",
+        "Concorrência de autoquests"
+      ],
+      "source_kind": "live",
+      "evidence": [
+        {
+          "document": "evidence/dia156g.json",
+          "day": 156,
+          "note": "Inicio de 'Uma Licao em Gargamel' e geografia dos Smurfs. Agente: Gemini 4 Argon."
+        },
+        {
+          "document": "evidence/dia156h.json",
+          "day": 156,
+          "note": "Cadeia de NPCs e inicio do grind de ouro. Agente: Gemini 4 Argon."
+        },
+        {
+          "document": "evidence/dia156i.json",
+          "day": 156,
+          "note": "Nivel 27 e economia de Jareth. Agente: Gemini 4 Argon."
+        },
+        {
+          "document": "evidence/dia156j.json",
+          "day": 156,
+          "note": "Fim da concorrencia de autoquests, Nivel 28 e a fotografia final. Agente: GPT-6 / Codex."
+        }
+      ],
+      "status": "concluido",
+      "excerpt": "Uma lição em Gargamel que não é sobre Gargamel: um velho smurf sem óleo no lampião, um alquimista que cobra uma poção de nove mil e setecentas moedas, e ela com quatro mil duzentas no bolso. No caminho, o castelo do vilão — e Papai Smurf preso atrás de uma porta trancada. Ela sobe ao grau 28 e descobre que o preço não se mata com raio.",
+      "date": "2026-10-17",
+      "in_game_time": "O lampião apagado, a poção de nove mil e a porta trancada",
+      "closed_on_day": 156,
+      "carried_over": "A autoquest 'Uma Licao em Gargamel' continua ATIVA (objetivo: entregar objeto ao personagem). O capitulo fecha a expedicao, nao a missao. Falta o ouro para a pocao aquosa (9.750; ela tem 4.229) e, depois, o jarro brilhante para o minerador. A porta trancada do Covil de Gargamel, com Papai Smurf atras, tambem segue fechada."
     }
   ]
 }

@@ -5,36 +5,36 @@
     "day": 156,
     "verification": "live",
     "live_verified": true,
-    "source": "Capítulo 08 (em andamento) jogado por Gemini 4 Argon e reconciliado por Gemini 3.8 Flash. Autoquest 'Uma Lição em Gargamel' iniciada com 'o smurf minerador' em O Fim Do Túnel. O Novato Alquimista exige 'uma poção aquosa' vendida por Clariss em Jareth (9.750 moedas). Mapeada toda a Vila dos Smurfs, pomar de smurfigos, Covil de Gargamel e lojas de Jareth. Saldo total: 4.880 moedas (3.999 no banco + 881 na mão). Retorno seguro ao Templo e save. Fonte: evidence/dia156h.json."
+    "source": "Retomada do plano011 por GPT-6 / Codex (versão específica não informada); evidence/dia156j.json; fotografia 2026-10-17T10:17:27-03:00 linha1130. Limpando Monstros concluída sem quit: sete abates, manto de pano e 94.227 EXP de entrega; nível 28. Minerador completou a fala final e Alquimista pediu poção aquosa de Clariss: Gargamel está na etapa de entregar objeto. Nenhum jarro ou resgate confirmado, nenhuma nova morte. A rota gravada pelo norte/Jareth chegou à fazenda; nenhuma nova caça no milharal foi confirmada. Compra de cinco pães por 30 moedas; final no Templo com 178/178 HP, 340/340 mana, 141/141 MV, 4.229 moedas, cinco pães, save e sono confirmados, socket e daemon encerrados."
   },
-  "level": 22,
+  "level": 28,
   "mechanical_race": "Elfo",
   "mechanical_class": "Mago (Magic-User)",
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
   "alignment": {
-    "value": 219,
-    "label": "Um pouco bom"
+    "value": 310,
+    "label": "Bom"
   },
   "vitals": {
     "hp": {
-      "current": 141,
-      "max": 141
+      "current": 178,
+      "max": 178
     },
     "mana": {
-      "current": 280,
-      "max": 280
+      "current": 340,
+      "max": 340
     },
     "mv": {
-      "current": 133,
-      "max": 133
+      "current": 141,
+      "max": 141
     }
   },
   "experience": {
-    "current": 1572738,
-    "next_level": 1600000
+    "current": 4000001,
+    "next_level": 4500000
   },
-  "gold": 4880,
+  "gold": 4229,
   "attributes": {
     "STR": 11,
     "DEX": 16,
@@ -45,17 +45,17 @@
   },
   "armor": {
     "base": 103,
-    "with_armor": 134,
+    "with_armor": 137,
     "effect_verified": true,
-    "note": "CA subiu de 112 para 134 (+22 CA) ao vestir um belo cinturão de rodeio na cintura, com armor ativo (+31 CA por 48 horas no último score: base 103, com armor 134; evidence/dia156g.json)."
+    "note": "Armor +34, 10 horas de jogo na consulta final; evidence/dia156j.json."
   },
   "hitroll": 10,
   "damroll": 7,
   "wimpy": 45,
-  "training_sessions": 40,
+  "training_sessions": 68,
   "operational_mode": {
     "current": "padrao",
-    "description": "Sessão supervisionada na Vila dos Smurfs e Jareth (Capítulo 08): 'Uma Lição em Gargamel' iniciada, reconhecimento de lojas e salas, retorno seguro e estado salvo no Templo.",
+    "description": "Retomada supervisionada do plano011; Gargamel permanece em andamento. Limpando Monstros concluída sem quit: sete abates, manto de pano e 94.227 EXP de entrega; nível 28. Minerador completou a fala final e Alquimista pediu poção aquosa de Clariss: Gargamel está na etapa de entregar objeto. Nenhum jarro ou resgate confirmado, nenhuma nova morte. A rota gravada pelo norte/Jareth chegou à fazenda; nenhuma nova caça no milharal foi confirmada. Compra de cinco pães por 30 moedas; final no Templo com 178/178 HP, 340/340 mana, 141/141 MV, 4.229 moedas, cinco pães, save e sono confirmados, socket e daemon encerrados.",
     "wimpy_profile": {
       "padrao": 17,
       "batedor": 33,
@@ -66,12 +66,12 @@
     }
   },
   "location": {
-    "room_id": "templo_midgaard",
-    "name": "O Templo de Midgaard"
+    "name": "O Templo de Midgaard",
+    "room_id": "templo_midgaard"
   },
   "camp": {
-    "room_id": "templo_midgaard",
-    "name": "O Templo de Midgaard"
+    "name": "O Templo de Midgaard",
+    "room_id": "templo_midgaard"
   },
   "sanctuary": {
     "room_id": "panteao_centenarios",
@@ -79,20 +79,23 @@
   },
   "last_event": {
     "day": 156,
-    "summary": "Início do Capítulo 08: aceita a autoquest 'Uma Lição em Gargamel' com o smurf minerador. O Novato Alquimista pediu uma poção aquosa de Clariss em Jareth (9.750 moedas). Mapeada a Vila dos Smurfs (510 salas no mapa), casas e Covil de Gargamel. Desbloqueada Conquista 34 (Cai Fora!). Salva no Templo de Midgaard com 4.880 moedas (3.999 no banco + 881 na mão)."
+    "summary": "Limpando Monstros concluída sem quit: sete abates, manto de pano e 94.227 EXP de entrega; nível 28. Minerador completou a fala final e Alquimista pediu poção aquosa de Clariss: Gargamel está na etapa de entregar objeto. Nenhum jarro ou resgate confirmado, nenhuma nova morte. A rota gravada pelo norte/Jareth chegou à fazenda; nenhuma nova caça no milharal foi confirmada. Compra de cinco pães por 30 moedas; final no Templo com 178/178 HP, 340/340 mana, 141/141 MV, 4.229 moedas, cinco pães, save e sono confirmados, socket e daemon encerrados."
   },
   "next_objective": {
-    "mission_id": "uma-licao-em-gargamel",
-    "title": "Capítulo 08: Uma Lição em Gargamel",
-    "next_step": "Levantar as ~4.870 moedas restantes para comprar a 'poção aquosa' (9.750 moedas) na loja de Clariss em Jareth, ou buscar meios alternativos de obtê-la. Entregar a poção a O Novato Alquimista para receber o jarro brilhante, entregá-lo ao smurf minerador em O Fim Do Túnel, e avançar para a libertação de Papai Smurf no Covil de Gargamel.",
+    "mission_id": "capitulo-9",
+    "title": "Capítulo 09: comprar a poção aquosa e iluminar a mina (`Uma Lição em Gargamel`)",
+    "next_step": "A autoquest 'Uma Licao em Gargamel' esta ATIVA (objetivo do servidor: 'entregar objeto ao personagem'). Falta ouro: a `pocao aquosa` de Clariss custa 9.750 e ela tem 4.229 - faltam 5.521. Levantar o ouro (milharal ~50 por abate; ou uma autoquest vizinha como 'Cuidado Com o Chacal', nivel 22+, ja liberada), comprar em `As Misturas de Clariss` na Avenida Floris de Jareth, entregar ao `O Novato Alquimista` e receber o `jarro brilhante`, e entregar o jarro ao `o smurf minerador` no fim do tunel sob o Poco Smurf.",
     "missing_preparation": [
-      "Ler planos/plano010.md antes de sair do Templo.",
-      "Obter fundos suficientes para a poção aquosa (9.750 moedas em As Misturas de Clariss, Jareth).",
-      "Entregar a poção a O Novato Alquimista na Escola de Treinamento de Midgaard.",
-      "Entregar o jarro resultante ao smurf minerador em O Fim Do Túnel.",
-      "Resgatar Papai Smurf no Covil de Gargamel sem quebrar a proibição de venda de armaduras (§15)."
+      "NAO reiniciar 'Limpando Monstros' enquanto a pocao nao estiver entregue: com ela ativa, o Alquimista prioriza a propria missao e ENGOLE a pocao sem entregar o jarro (conhecimento §42.1). A concorrencia ja foi resolvida no Dia 156 - a janela esta limpa.",
+      "Ouro e o unico bloqueio: faltam 5.521 moedas. Os tres lojistas de Jareth recusam venda (Maris e Dalston: 'Eu nao compro!'; Granny recusa magos; Ilena nao compra de forasteiros).",
+      "Vender armaduras e PROIBIDO (diretiva secao 15). A rotina xadrez esta suspensa - nao reativar.",
+      "Dialogo de missao e LITERAL: minerador aceita `say sim` -> `say Grebolius` -> `say sim`; Alquimista, `say Grebolius` -> `say sim`. Conferir `score tudo` antes de cada entrega.",
+      "Atras da porta TRANCADA no Covil de Gargamel esta `Papai Smurf` (confirmado via `where smurf`). Gargamel e Azrael estao la. Nao abrir sem plano.",
+      "A pendencia do mapa segue aberta: as 4 arestas dos aneis do esgoto continuam como becos.",
+      "Proibida a venda de armaduras.",
+      "Curse está em 10%; não usar como magia confiável sem treino."
     ],
-    "plan_document": "planos/plano010.md"
+    "plan_document": "planos/plano013.md"
   },
   "skills": [
     {
@@ -224,6 +227,16 @@
         "day": 156,
         "note": "Practice consultado no encerramento da continuação do Dia 156."
       }
+    },
+    {
+      "id": "enchant_weapon",
+      "name": "enchant weapon",
+      "proficiency": 10,
+      "source": {
+        "document": "evidence/dia156j.json",
+        "day": 156,
+        "note": "Aprendida ao nível28; practice final confirmou10%."
+      }
     }
   ],
   "equipment": [
@@ -293,82 +306,84 @@
       {
         "name": "um cantil",
         "quantity": 1,
-        "source": "evidence/dia156h.json"
-      },
-      {
-        "name": "um jarro brilhante",
-        "quantity": 1,
-        "source": "evidence/dia156h.json"
+        "source": "evidence/dia156j.json"
       },
       {
         "name": "a mochila de Pellinore",
         "quantity": 1,
-        "source": "evidence/dia156h.json"
+        "source": "evidence/dia156j.json"
       },
       {
         "name": "um pergaminho de sabedoria",
         "quantity": 1,
-        "source": "evidence/dia156h.json"
+        "source": "evidence/dia156j.json"
       },
       {
-        "name": "uma armadura de metal da OME",
+        "name": "um pão recheado",
+        "quantity": 5,
+        "source": "evidence/dia156j.json",
+        "container": "a mochila de Pellinore"
+      },
+      {
+        "name": "um manto de pano",
         "quantity": 1,
-        "container": "a mochila de Pellinore",
-        "source": "evidence/dia156h.json"
+        "source": "evidence/dia156j.json",
+        "container": "a mochila de Pellinore"
       },
       {
         "name": "a Espada do Peão Negro",
-        "quantity": 2,
-        "container": "a mochila de Pellinore",
-        "source": "evidence/dia156h.json"
-      },
-      {
-        "name": "o Cetro do Bispo Negro",
         "quantity": 1,
-        "container": "a mochila de Pellinore",
-        "source": "evidence/dia156h.json"
-      },
-      {
-        "name": "a bainha de Excalibur",
-        "quantity": 1,
-        "container": "a mochila de Pellinore",
-        "source": "evidence/dia156h.json"
-      },
-      {
-        "name": "um capuz negro",
-        "quantity": 1,
-        "container": "a mochila de Pellinore",
-        "source": "evidence/dia156h.json"
+        "source": "evidence/dia156j.json",
+        "container": "a mochila de Pellinore"
       },
       {
         "name": "um colar com uma pedra púrpura",
         "quantity": 1,
-        "container": "a mochila de Pellinore",
-        "source": "evidence/dia156h.json"
+        "source": "evidence/dia156j.json",
+        "container": "a mochila de Pellinore"
+      },
+      {
+        "name": "os chifres do Minotauro",
+        "quantity": 2,
+        "source": "evidence/dia156j.json",
+        "container": "a mochila de Pellinore"
+      },
+      {
+        "name": "a fedida pele do Minotauro",
+        "quantity": 1,
+        "source": "evidence/dia156j.json",
+        "container": "a mochila de Pellinore"
+      },
+      {
+        "name": "a bainha de Excalibur",
+        "quantity": 1,
+        "source": "evidence/dia156j.json",
+        "container": "a mochila de Pellinore"
       },
       {
         "name": "uma Cruz Ansada",
         "quantity": 1,
-        "container": "a mochila de Pellinore",
-        "source": "evidence/dia156h.json"
+        "source": "evidence/dia156j.json",
+        "container": "a mochila de Pellinore"
+      },
+      {
+        "name": "o Cetro do Bispo Negro",
+        "quantity": 1,
+        "source": "evidence/dia156j.json",
+        "container": "a mochila de Pellinore"
       }
     ],
     "pending_verification": []
   },
   "conditions": [
-    "Capítulo 08 em andamento: 141/141 HP, 280/280 mana e 133/133 MV, salva no Templo de Midgaard.",
-    "Nível 22, EXP 1.572.738; próximo nível em 1.600.000 (faltam 27.262).",
-    "Ouro: 881 na mão e 3.999 no banco, total 4.880 (+581 moedas obtidas em vendas nesta sessão).",
-    "Oito mortes e uma armadilha mortal no histórico; zero mortes na sessão.",
-    "Alimentada e saciada; cantil com água cristalina.",
-    "Um belo cinturão de rodeio equipado na cintura (+22 CA, +5 Acerto, +5 Dano, +1 DEX, +1 CAR); armor ativo (+31 por 13h), CA 134.",
-    "Wimpy 45 mantido conforme diretiva §6.",
-    "Quarenta treinos; curse a 10%.",
-    "Problemas Agrícolas concluída e entregue após as 4 etapas no milharal (10 invasores, 10 esfomeados, 5 agressivos e 1 líder dos monstros).",
-    "Brinco com flag ANTI-DT equipada; nenhuma imunidade da personagem foi testada ou presumida."
+    "Limpando Monstros concluída sem quit: sete abates, manto de pano e 94.227 EXP de entrega; nível 28. Minerador completou a fala final e Alquimista pediu poção aquosa de Clariss: Gargamel está na etapa de entregar objeto. Nenhum jarro ou resgate confirmado, nenhuma nova morte. A rota gravada pelo norte/Jareth chegou à fazenda; nenhuma nova caça no milharal foi confirmada. Compra de cinco pães por 30 moedas; final no Templo com 178/178 HP, 340/340 mana, 141/141 MV, 4.229 moedas, cinco pães, save e sono confirmados, socket e daemon encerrados.",
+    "Ouro: 4229 na mão + 0 no banco; 5 pães registrados.",
+    "Save confirmado: True; sono confirmado: True; conexão fechada: True.",
+    "Oito mortes e uma armadilha mortal históricas na consulta da retomada; nenhum resgate de Papai Smurf confirmado.",
+    "Alimentada e sem sede; cantil cheio; armor +34 por 10 horas de jogo na fotografia final.",
+    "Peso 109/115 kg; conferir capacidade antes de comprar poção."
   ],
   "uncertainties": [
-    "A Armadura da Torre Negra segue AMALDIÇOADA e vestida: nao pode ser removida, largada, jogada nem doada. O remove curse do CircleMUD exige o item EQUIPADO, entao o segundo pergaminho (8.509) so funciona agora. Com 4.299 moedas totais, faltam 4.210 moedas.",
     "A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.",
     "O colar com pedra purpura pertence a outro dono: o servidor recusa o uso. Nenhum comerciante testado o compra.",
     "Bainha de Excalibur exige nivel 85 (vista na Sala de Doacoes, nao pode ser carregada com a carga atual). Scutum de Carvalho exige nivel 35.",
@@ -376,7 +391,8 @@
     "Dia 156: a DURACAO de 'armor' e 'invisibility' nao esta medida em segundos reais, embora o score tudo exiba '48 horas' de jogo logo apos conjurar no nivel 22.",
     "Dia 156: a semente do levantamento tem contaminacao por salas homonimas - 'A Sala de Doacoes de Midgaard' carrega as saidas do Templo (n->altar, s->praca, u->panteao). Isso e defeito do digestor, ainda nao corrigido na origem; a navegacao contorna usando o grafo corrigido pelo que se ve ao vivo.",
     "Dia 156: restam 33 destinos nomeados e nunca visitados no levantamento cartografico.",
-    "Dia 156: nao ha como inspecionar as propriedades de um item a venda em lojas comuns (apenas na loja divina de Pontos de Aventura via 'list <num>')."
+    "Dia 156: nao ha como inspecionar as propriedades de um item a venda em lojas comuns (apenas na loja divina de Pontos de Aventura via 'list <num>').",
+    "§42/plano011: reset obrigatório e conflito de autoquests eram hipóteses não isoladas; ver conhecimento §43."
   ],
   "evidence": [
     {
@@ -493,6 +509,11 @@
       "document": "evidence/dia156g.json",
       "day": 156,
       "note": "Capítulo 07 concluído por Gemini 4 Argon: reinício e conclusão integral de Problemas Agrícolas nas 4 etapas (10 invasores, 10 esfomeados, 5 agressivos, 1 líder dos monstros), avanço ao Nível 22, cinturão de rodeio equipado (+22 CA, +5 Acerto, +5 Dano, +1 DEX, +1 CHA) e save no Templo."
+    },
+    {
+      "document": "evidence/dia156j.json",
+      "day": 156,
+      "note": "Estado final e continuação supervisionada do plano011."
     }
   ],
   "narrative_style": "ladra arcana",

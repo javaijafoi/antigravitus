@@ -9,8 +9,8 @@
 * **Raça / Aparência Narrativa:** Mulher goblin; aventureira sem véu
 * **Raça Mecânica no MUD:** Elfo
 * **Classe Mecânica no MUD:** Mago (Magic-User)
-* **Grau / Nível Atual:** **22**
-* **Alinhamento Moral:** 219 (Um pouco bom)
+* **Grau / Nível Atual:** **28**
+* **Alinhamento Moral:** 310 (Bom)
 * **Localização Atual:** O Templo de Midgaard (último registro: Dia 156)
 * **Acampamento Registrado:** O Templo de Midgaard
 * **Santuário de Referência:** O Panteao dos Centenarios
@@ -20,13 +20,13 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 ## ✦ Status Vitais
 | Recurso | Atual | Máximo | Porcentagem |
 | :--- | :---: | :---: | :---: |
-| **Pontos de Vida (HP)** | 141 | 141 | 100% |
-| **Pontos de Mana (MP)** | 280 | 280 | 100% |
-| **Estamina / Movimento (MV)** | 133 | 133 | 100% |
+| **Pontos de Vida (HP)** | 178 | 178 | 100% |
+| **Pontos de Mana (MP)** | 340 | 340 | 100% |
+| **Estamina / Movimento (MV)** | 141 | 141 | 100% |
 
-* **Experiência Acumulada:** **1.572.738 EXP**
-* **Experiência Necessária p/ Grau 23:** **27.262 EXP** (Meta: 1.600.000 EXP)
-* **Ouro Líquido:** **4.880 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **4.000.001 EXP**
+* **Experiência Necessária p/ Grau 29:** **499.999 EXP** (Meta: 4.500.000 EXP)
+* **Ouro Líquido:** **4.229 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 11
@@ -37,8 +37,8 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 * **Carisma (CHA):** 12
 
 ### Métricas de Combate
-* **Classe de Armadura (AC):** 103 (base) / **134** (com `armor`, conforme registro)
-CA subiu de 112 para 134 (+22 CA) ao vestir um belo cinturão de rodeio na cintura, com armor ativo (+31 CA por 48 horas no último score: base 103, com armor 134; evidence/dia156g.json).
+* **Classe de Armadura (AC):** 103 (base) / **137** (com `armor`, conforme registro)
+Armor +34, 10 horas de jogo na consulta final; evidence/dia156j.json.
 * **Bônus de Acerto (Hitroll):** 10
 * **Bônus de Dano (Damroll):** +7
 * **Configuração de Fuga (Wimpy):** **45 HP** (referência de 25%; não garante fuga antes de golpe letal)
@@ -49,7 +49,7 @@ CA subiu de 112 para 134 (+22 CA) ao vestir um belo cinturão de rodeio na cintu
 * **Altruísmo — Concluída:** Doar equipamento excedente na Sala de Doações.
   * Próximo passo: Nenhuma tarefa nova inferida a partir da conclusão.
 * **Limpando Monstros — Concluída:** Eliminar monstros que infestam a masmorra e o laboratório do Alquimista.
-  * Próximo passo: Concluída e entregue no Dia 156, continuação. Não reiniciar sem novo objetivo do autor.
+  * Próximo passo: Ciclo repetido concluído nesta continuação: manto e 94.227EXP. Não reiniciar sem objetivo.
 * **Dicas Mágicas — Ativa:** Entregar um pergaminho de retorno ao Mago Aventureiro no Bar dos Magos.
   * Próximo passo: O servidor insiste em 'Voce deve responder sim' pelo mago aventureiro, mas responder 'sim' limpa a instrucao e ela volta. Hipoteses ainda nao testadas: responder 'nao'; conjurar uma magia especifica na sala certa; estar no Laboratorio dos Magos com a magia ativa. Registrar a resposta exata do servidor a cada tentativa.
 * **Novela dos Novatos — Concluída:** Aventura narrativa para recém-chegados (Até o nível 30, iniciada com: o novato esperto).
@@ -59,12 +59,12 @@ CA subiu de 112 para 134 (+22 CA) ao vestir um belo cinturão de rodeio na cintu
 * **Ninguém Segura Esse Bebê — Concluída:** Autoquest de todos os níveis (encarnações 1-4), qualquer alinhamento e classe.
   * Próximo passo: CONCLUÍDA. Estado confirmado no servidor em 2026-10-16 pelo comando "autoquest todas": "Ninguém Segura Esse Bebê — Concluída".
 * **Uma Lição em Gargamel — Ativa:** Autoquest de níveis 20-80 (encarnações 1-4, qualquer alinhamento/classe/raça), iniciada com o smurf minerador na Vila dos Smurfs.
-  * Próximo passo: Obter 9.750 moedas de ouro para comprar 'uma poção aquosa' na loja As Misturas de Clariss em Jareth (saldo atual: 4.880 moedas), entregá-la a O Novato Alquimista na Escola de Treinamento de Midgaard, levar o jarro brilhante a o smurf minerador em O Fim Do Túnel e resgatar Papai Smurf no Covil de Gargamel.
+  * Próximo passo: Conferir o estado real e completar o saldo para a poção aquosa de Clariss (9.750; faltam 5.521 moedas), sem quit/reset: o Alquimista já pediu a poção e score marcou entregar objeto. Usar a rota pelo norte/Jareth comprovada no transcript156j, nunca a rota curta do plano011. Rever os guardas da caça antes de automatizar; o worker temporário teve falso alarme e não comprovou rendimento. Com peso 109/115 kg, conferir capacidade. Ao ter a poção, entregar somente com objetivo vigente e aguardar o jarro no diálogo completo. Não abrir outra conexão automaticamente em falha.
 
 Objetivos pessoais e investigações ficam separados das autoquests no catálogo de missões.
 
 ## ✦ Habilidades Conhecidas e Treinos Concluídos
-* **Sessões de Treino Disponíveis:** **40 sessões de treino acumuladas**
+* **Sessões de Treino Disponíveis:** **68 sessões de treino acumuladas**
 Percentuais são registros de proficiência; não garantem acerto, imunidade ou acesso a guildas.
 * `armor` (Armadura Mística): **99%**
 * `burning hands` (Mãos Flamejantes): **99%**
@@ -79,6 +79,7 @@ Percentuais são registros de proficiência; não garantem acerto, imunidade ou 
 * `shocking grasp` (Choque Eletrico): **95%**
 * `swim` (Nadar): **99%**
 * `curse` (Maldicao): **10%**
+* `enchant_weapon` (enchant weapon): **10%**
 
 ## ✦ Equipamento em Uso
 Equipamento conforme os últimos documentos disponíveis; conferir no próximo acesso ao MUD.
@@ -97,44 +98,43 @@ Equipamento conforme os últimos documentos disponíveis; conferir no próximo a
 
 ## ✦ Inventário e Suprimentos
 Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
-* `um cantil` (x1) — evidence/dia156h.json
-* `um jarro brilhante` (x1) — evidence/dia156h.json
-* `a mochila de Pellinore` (x1) — evidence/dia156h.json
-* `um pergaminho de sabedoria` (x1) — evidence/dia156h.json
-* `uma armadura de metal da OME` (x1) — evidence/dia156h.json
-* `a Espada do Peão Negro` (x2) — evidence/dia156h.json
-* `o Cetro do Bispo Negro` (x1) — evidence/dia156h.json
-* `a bainha de Excalibur` (x1) — evidence/dia156h.json
-* `um capuz negro` (x1) — evidence/dia156h.json
-* `um colar com uma pedra púrpura` (x1) — evidence/dia156h.json
-* `uma Cruz Ansada` (x1) — evidence/dia156h.json
+* `um cantil` (x1) — evidence/dia156j.json
+* `a mochila de Pellinore` (x1) — evidence/dia156j.json
+* `um pergaminho de sabedoria` (x1) — evidence/dia156j.json
+* `um pão recheado` (x5) — evidence/dia156j.json
+* `um manto de pano` (x1) — evidence/dia156j.json
+* `a Espada do Peão Negro` (x1) — evidence/dia156j.json
+* `um colar com uma pedra púrpura` (x1) — evidence/dia156j.json
+* `os chifres do Minotauro` (x2) — evidence/dia156j.json
+* `a fedida pele do Minotauro` (x1) — evidence/dia156j.json
+* `a bainha de Excalibur` (x1) — evidence/dia156j.json
+* `uma Cruz Ansada` (x1) — evidence/dia156j.json
+* `o Cetro do Bispo Negro` (x1) — evidence/dia156j.json
 
 ### Pendências de inventário
 
 ## ✦ Condições Registradas
-* Capítulo 08 em andamento: 141/141 HP, 280/280 mana e 133/133 MV, salva no Templo de Midgaard.
-* Nível 22, EXP 1.572.738; próximo nível em 1.600.000 (faltam 27.262).
-* Ouro: 881 na mão e 3.999 no banco, total 4.880 (+581 moedas obtidas em vendas nesta sessão).
-* Oito mortes e uma armadilha mortal no histórico; zero mortes na sessão.
-* Alimentada e saciada; cantil com água cristalina.
-* Um belo cinturão de rodeio equipado na cintura (+22 CA, +5 Acerto, +5 Dano, +1 DEX, +1 CAR); armor ativo (+31 por 13h), CA 134.
-* Wimpy 45 mantido conforme diretiva §6.
-* Quarenta treinos; curse a 10%.
-* Problemas Agrícolas concluída e entregue após as 4 etapas no milharal (10 invasores, 10 esfomeados, 5 agressivos e 1 líder dos monstros).
-* Brinco com flag ANTI-DT equipada; nenhuma imunidade da personagem foi testada ou presumida.
+* Limpando Monstros concluída sem quit: sete abates, manto de pano e 94.227 EXP de entrega; nível 28. Minerador completou a fala final e Alquimista pediu poção aquosa de Clariss: Gargamel está na etapa de entregar objeto. Nenhum jarro ou resgate confirmado, nenhuma nova morte. A rota gravada pelo norte/Jareth chegou à fazenda; nenhuma nova caça no milharal foi confirmada. Compra de cinco pães por 30 moedas; final no Templo com 178/178 HP, 340/340 mana, 141/141 MV, 4.229 moedas, cinco pães, save e sono confirmados, socket e daemon encerrados.
+* Ouro: 4229 na mão + 0 no banco; 5 pães registrados.
+* Save confirmado: True; sono confirmado: True; conexão fechada: True.
+* Oito mortes e uma armadilha mortal históricas na consulta da retomada; nenhum resgate de Papai Smurf confirmado.
+* Alimentada e sem sede; cantil cheio; armor +34 por 10 horas de jogo na fotografia final.
+* Peso 109/115 kg; conferir capacidade antes de comprar poção.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
-**Capítulo 08: Uma Lição em Gargamel**
-Levantar as ~4.870 moedas restantes para comprar a 'poção aquosa' (9.750 moedas) na loja de Clariss em Jareth, ou buscar meios alternativos de obtê-la. Entregar a poção a O Novato Alquimista para receber o jarro brilhante, entregá-lo ao smurf minerador em O Fim Do Túnel, e avançar para a libertação de Papai Smurf no Covil de Gargamel.
-* Ler planos/plano010.md antes de sair do Templo.
-* Obter fundos suficientes para a poção aquosa (9.750 moedas em As Misturas de Clariss, Jareth).
-* Entregar a poção a O Novato Alquimista na Escola de Treinamento de Midgaard.
-* Entregar o jarro resultante ao smurf minerador em O Fim Do Túnel.
-* Resgatar Papai Smurf no Covil de Gargamel sem quebrar a proibição de venda de armaduras (§15).
+**Capítulo 09: comprar a poção aquosa e iluminar a mina (`Uma Lição em Gargamel`)**
+A autoquest 'Uma Licao em Gargamel' esta ATIVA (objetivo do servidor: 'entregar objeto ao personagem'). Falta ouro: a `pocao aquosa` de Clariss custa 9.750 e ela tem 4.229 - faltam 5.521. Levantar o ouro (milharal ~50 por abate; ou uma autoquest vizinha como 'Cuidado Com o Chacal', nivel 22+, ja liberada), comprar em `As Misturas de Clariss` na Avenida Floris de Jareth, entregar ao `O Novato Alquimista` e receber o `jarro brilhante`, e entregar o jarro ao `o smurf minerador` no fim do tunel sob o Poco Smurf.
+* NAO reiniciar 'Limpando Monstros' enquanto a pocao nao estiver entregue: com ela ativa, o Alquimista prioriza a propria missao e ENGOLE a pocao sem entregar o jarro (conhecimento §42.1). A concorrencia ja foi resolvida no Dia 156 - a janela esta limpa.
+* Ouro e o unico bloqueio: faltam 5.521 moedas. Os tres lojistas de Jareth recusam venda (Maris e Dalston: 'Eu nao compro!'; Granny recusa magos; Ilena nao compra de forasteiros).
+* Vender armaduras e PROIBIDO (diretiva secao 15). A rotina xadrez esta suspensa - nao reativar.
+* Dialogo de missao e LITERAL: minerador aceita `say sim` -> `say Grebolius` -> `say sim`; Alquimista, `say Grebolius` -> `say sim`. Conferir `score tudo` antes de cada entrega.
+* Atras da porta TRANCADA no Covil de Gargamel esta `Papai Smurf` (confirmado via `where smurf`). Gargamel e Azrael estao la. Nao abrir sem plano.
+* A pendencia do mapa segue aberta: as 4 arestas dos aneis do esgoto continuam como becos.
+* Proibida a venda de armaduras.
+* Curse está em 10%; não usar como magia confiável sem treino.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Capítulo 08 (em andamento) jogado por Gemini 4 Argon e reconciliado por Gemini 3.8 Flash. Autoquest 'Uma Lição em Gargamel' iniciada com 'o smurf minerador' em O Fim Do Túnel. O Novato Alquimista exige 'uma poção aquosa' vendida por Clariss em Jareth (9.750 moedas). Mapeada toda a Vila dos Smurfs, pomar de smurfigos, Covil de Gargamel e lojas de Jareth. Saldo total: 4.880 moedas (3.999 no banco + 881 na mão). Retorno seguro ao Templo e save. Fonte: evidence/dia156h.json..
-* A Armadura da Torre Negra segue AMALDIÇOADA e vestida: nao pode ser removida, largada, jogada nem doada. O remove curse do CircleMUD exige o item EQUIPADO, entao o segundo pergaminho (8.509) so funciona agora. Com 4.299 moedas totais, faltam 4.210 moedas.
+Fonte do estado: Retomada do plano011 por GPT-6 / Codex (versão específica não informada); evidence/dia156j.json; fotografia 2026-10-17T10:17:27-03:00 linha1130. Limpando Monstros concluída sem quit: sete abates, manto de pano e 94.227 EXP de entrega; nível 28. Minerador completou a fala final e Alquimista pediu poção aquosa de Clariss: Gargamel está na etapa de entregar objeto. Nenhum jarro ou resgate confirmado, nenhuma nova morte. A rota gravada pelo norte/Jareth chegou à fazenda; nenhuma nova caça no milharal foi confirmada. Compra de cinco pães por 30 moedas; final no Templo com 178/178 HP, 340/340 mana, 141/141 MV, 4.229 moedas, cinco pães, save e sono confirmados, socket e daemon encerrados..
 * A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.
 * O colar com pedra purpura pertence a outro dono: o servidor recusa o uso. Nenhum comerciante testado o compra.
 * Bainha de Excalibur exige nivel 85 (vista na Sala de Doacoes, nao pode ser carregada com a carga atual). Scutum de Carvalho exige nivel 35.
@@ -143,3 +143,4 @@ Fonte do estado: Capítulo 08 (em andamento) jogado por Gemini 4 Argon e reconci
 * Dia 156: a semente do levantamento tem contaminacao por salas homonimas - 'A Sala de Doacoes de Midgaard' carrega as saidas do Templo (n->altar, s->praca, u->panteao). Isso e defeito do digestor, ainda nao corrigido na origem; a navegacao contorna usando o grafo corrigido pelo que se ve ao vivo.
 * Dia 156: restam 33 destinos nomeados e nunca visitados no levantamento cartografico.
 * Dia 156: nao ha como inspecionar as propriedades de um item a venda em lojas comuns (apenas na loja divina de Pontos de Aventura via 'list <num>').
+* §42/plano011: reset obrigatório e conflito de autoquests eram hipóteses não isoladas; ver conhecimento §43.
