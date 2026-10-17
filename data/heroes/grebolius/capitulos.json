@@ -1197,7 +1197,8 @@
         "Eu não abri a porta. Não tinha chave, e mesmo que tivesse, Gargamel estava lá dentro com o gato dele, e eu tenho vinte e oito graus de experiência e bom senso suficiente para saber que hoje não é o dia.",
         "Então o capítulo se chama *uma lição em Gargamel* e a lição não foi sobre o Gargamel. Foi sobre o preço. O velho precisa de luz, o alquimista precisa de uma poção, a poção custa nove mil e setecentas moedas, e eu tenho quatro mil duzentas. Não tem magia que resolva isso. Não tem raio, não tem fogo, não tem morte. Tem trabalho.",
         "Eu já matei coisa grande. Já morri oito vezes. Já subi dez graus em dois dias. E mesmo assim estou aqui, com quatro mil moedas no bolso, olhando para uma mina escura e uma porta fechada — esperando juntar o suficiente para comprar um jarro.",
-        "Amanhã eu volto ao milharal. Não porque eu goste de matar bicho no milho, mas porque cada invasor deixa cinquenta moedas, e cinquenta moedas é o que separa o velho do escuro. Enquanto isso, Papai Smurf espera atrás de uma porta. Ele já esperou mais do que isso."
+        "Amanhã eu volto ao milharal. Não porque eu goste de matar bicho no milho, mas porque cada invasor deixa cinquenta moedas, e cinquenta moedas é o que separa o velho do escuro. Enquanto isso, Papai Smurf espera atrás de uma porta. Ele já esperou mais do que isso.",
+        "Eu não gosto de deixar coisa pela metade. Nunca gostei, e foi por isso que eu voltei à fazenda depois de onze abates, e por isso que eu insisti naquele cumprimento até a tagarela responder. Mas hoje eu aprendi uma diferença que eu não sabia: tem uma coisa parar porque desistiu, e outra parar porque falta ouro. **Isso não termina aqui.** O velho passa a noite no escuro, o alquimista continua esperando a poção, e o Papai Smurf continua atrás daquela porta. Eu só estou adiando — e adiar é diferente de esquecer."
       ],
       "tags": [
         "Uma Lição em Gargamel",
@@ -1235,11 +1236,30 @@
         }
       ],
       "status": "concluido",
-      "excerpt": "Uma lição em Gargamel que não é sobre Gargamel: um velho smurf sem óleo no lampião, um alquimista que cobra uma poção de nove mil e setecentas moedas, e ela com quatro mil duzentas no bolso. No caminho, o castelo do vilão — e Papai Smurf preso atrás de uma porta trancada. Ela sobe ao grau 28 e descobre que o preço não se mata com raio.",
+      "excerpt": "Uma lição em Gargamel que não é sobre Gargamel: um velho smurf sem óleo no lampião, um alquimista que cobra uma poção de nove mil e setecentas moedas, e ela com quatro mil duzentas no bolso. No caminho, o castelo do vilão — e Papai Smurf preso atrás de uma porta trancada. Ela sobe ao grau 28 e descobre que o preço não se mata com raio. **O capítulo fecha incompleto de propósito: o lampião apagado, a poção e a porta ficam para o próximo.**",
       "date": "2026-10-17",
       "in_game_time": "O lampião apagado, a poção de nove mil e a porta trancada",
       "closed_on_day": 156,
-      "carried_over": "A autoquest 'Uma Licao em Gargamel' continua ATIVA (objetivo: entregar objeto ao personagem). O capitulo fecha a expedicao, nao a missao. Falta o ouro para a pocao aquosa (9.750; ela tem 4.229) e, depois, o jarro brilhante para o minerador. A porta trancada do Covil de Gargamel, com Papai Smurf atras, tambem segue fechada."
+      "carried_over": "FECHADO INCOMPLETO POR DECISAO DO AUTOR — e isso e' narrativa, nao falha. A autoquest 'Uma Licao em Gargamel' continua ATIVA (objetivo do servidor: 'entregar objeto ao personagem') e e' o objetivo do CAPITULO 09, ja aberto em capitulos.json (id=9). Falta: o ouro para a pocao aquosa (9.750; ela tem 4.229), a compra em As Misturas de Clariss, a entrega ao Novato Alquimista para receber o jarro brilhante, e a entrega do jarro ao smurf minerador. A porta trancada do Covil de Gargamel, com Papai Smurf atras, tambem segue fechada. Plano: planos/plano013.md."
+    },
+    {
+      "id": 9,
+      "tomo": 1,
+      "title": "O Preço Não Se Mata com Raio",
+      "kind": "marco",
+      "status": "em_curso",
+      "goal": "Terminar o que o Capítulo 08 deixou aberto: juntar o ouro, comprar a pocao aquosa em Clariss, Trocar com o Novato Alquimista pelo jarro brilhante e leva-lo ao smurf minerador. E, depois, a porta trancada do Covil de Gargamel — Papai Smurf.",
+      "days": [],
+      "parts": [],
+      "content": [],
+      "tags": [],
+      "source_kind": "live",
+      "evidence": [],
+      "continues_chapter": 8,
+      "directive": {
+        "author_quote": "FECHAR INCOMPLETO TUDO BEM, COMENTA QUE VAI FICAR PRO PROXIMO E CONTINUAMOS NO PROXIMO CAPITULO",
+        "rule": "Fechar um capitulo com a missao em andamento e' permitido, desde que DECLARADO: no campo carried_over do capitulo fechado, no ultimo paragrafo da narrativa e no plano numerado do proximo agente."
+      }
     }
   ]
 }

@@ -5,6 +5,7 @@
 | **Criado em** | 2026-10-17 · Dia 156 |
 | **Por** | **`deepseek-flash`** |
 | **Herói** | `grebolius` |
+| **Capítulo** | **09 — "O Preço Não Se Mata com Raio"**, já **`em_curso`** em `capitulos.json` (`id=9`), `continues_chapter: 8` |
 | **Objetivo** | **Concluir `Uma Lição em Gargamel`** — falta comprar a poção aquosa e entregar o jarro ao minerador |
 | **Sessão encerrada?** | **Sim** — no Templo, salva; driver no ar |
 
@@ -12,6 +13,24 @@
 > **`plano014.md`**.
 >
 > **Antes de encerrar, rode `python scripts/devolutiva.py`** — obrigatório desde o Dia 156 (§8).
+
+---
+
+## 0. O Capítulo 08 fechou **incompleto, e isso foi decidido**
+
+> **Diretiva do autor:** *"FECHAR INCOMPLETO TUDO BEM, COMENTA QUE VAI FICAR PRO PROXIMO E CONTINUAMOS NO
+> PROXIMO CAPITULO"*
+
+**O Capítulo 08 (`Uma Lição em Gargamel`) está `concluido`** com 14 parágrafos, e **o último diz em voz
+alta que a história continua.** O campo **`carried_over`** do capítulo registra a mesma coisa em dado. **O
+Capítulo 09 (`O Preço Não Se Mata com Raio`) já está aberto** e é onde você continua.
+
+**Fechar incompleto é permitido desde que declarado em três lugares:**
+1. **`carried_over`** do capítulo fechado;
+2. **o último parágrafo da narrativa** (na voz dela, sem metalinguagem);
+3. **o plano numerado** do próximo agente — este.
+
+**O capítulo anterior a este (o 08) fechou assim. O 09 pode fechar igual, se faltar ouro de novo.**
 
 ---
 
