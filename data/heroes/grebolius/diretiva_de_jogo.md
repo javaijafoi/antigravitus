@@ -164,3 +164,35 @@ vitória e o corpo a corpo estava desligado por precaução.
 `O Depósito de Lixo` (a partir da `Praça Comum`, `n`) → **`d`** → *A Junção Quádrupla Abaixo do Depósito
 de Lixo* → e **`u`** volta. **NUNCA descer pelo buraco do Laboratório dos Magos** — aquela queda é de
 mão única.
+
+
+## 17. A CAMADA DE FICÇÃO sobre morte e memória (declarada pelo autor, Dia 156)
+
+> **"estou dando uma camada só de ficção porque na verdade morrer quando tá level baixo 'tirou o passado
+> dela', mas agora a gente vai morrer a beça e queria tirar esse peso, e como ela tem muito mais xp,
+> agora ela perde algo novo e não algo velho. são adaptações do metajogo"**
+
+**Isto é ADAPTAÇÃO DELIBERADA do metajogo, não fato do servidor.** Serve para tirar o peso narrativo de
+um capítulo em que ela **vai morrer muito** — e para que a morte deixe de ser derrota na crônica.
+
+| Mecânica real | Camada de ficção |
+|---|---|
+| Morrer custa experiência | *"A morte tira o passado dela."* |
+| Em nível baixo a XP era escassa — a perda doía proporcionalmente muito | *"Morrer cedo tirou o passado dela"* — perdia-se história acumulada |
+| Com muito mais XP acumulada, a mesma perda vira fração pequena | *"Agora ela perde algo novo, e não algo velho."* |
+| O aprendizado recente é o que ainda não se consolidou | *"A memória tem ficado mais clara: ela só perde o que aprendeu recentemente, como se não dormisse depois de um aprendizado."* |
+| **Não há imunidade a morte no servidor.** O que existe é o **brinco com flag ANTI-DT**, que protege de **armadilha mortal** e **nunca foi testado** | *"O poder que ela tem a protege, pelo menos por enquanto, das mortes."* |
+
+### Como escrever
+
+- **Pode** narrar como **percepção dela**, em primeira pessoa, sem hedge — é a voz do diário.
+- **Não** afirmar **imunidade a morte como fato**: o texto mantém o *"por enquanto"* / *"parece"*. A
+  promessa de imunidade seria mentira mecânica.
+- **Não** usar **número cru** de XP/HP/mana na crônica. **O validador é estreito, então não confie nele
+  como rede:** o `META` de `scripts/check_project.py` pega `<número> XP|EXP|HP|MP|MV|%`,
+  `mana|armadura|dano|experiência: <número>` e `pontos de mana|couraça|experiência` — mas **deixa passar**
+  *"ganhei 67068 de experiencia"* (o número não está colado na unidade). **A regra é a intenção, não o
+  regex:** *"subi um grau"* é a forma certa; *"oito mil de experiência"* não é, ainda que escape.
+- **Morrer no Capítulo 06 é custo previsto, não falha** — a crônica não trata morte como derrota.
+
+**Registro completo, com os cinco mapeamentos:** `capitulos.json` → capítulo 6 → `directive.fiction_layer`.

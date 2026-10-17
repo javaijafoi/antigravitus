@@ -1024,7 +1024,40 @@
           "O poder que ela carrega a protege das mortes — por enquanto.",
           "Quem quer ser rainha não pode ficar parada.",
           "Já aprendeu demais; é hora de voltar lá e se vingar."
-        ]
+        ],
+        "fiction_layer": {
+          "declared_by": "autor, Dia 156",
+          "author_quote": "estou dando uma camada só de ficção porque na verdade morrer quando tá level baixo 'tirou o passado dela', mas agora a gente vai morrer a beça e queria tirar esse peso, e como ela tem muito mais xp, agora ela perde algo novo e não algo velho. são adaptações do metajogo",
+          "what_it_is": "A narrativa de morte e memoria do Capitulo 06 e' ADAPTACAO DELIBERADA do metajogo, declarada pelo autor. Nao e' fato verificado do servidor, e nao deve ser citada como regra mecanica.",
+          "mapping": [
+            {
+              "mechanic": "Morrer custa experiencia.",
+              "fiction": "A morte tira o passado dela."
+            },
+            {
+              "mechanic": "Em nivel baixo a experiencia era escassa, entao a perda doia proporcionalmente muito.",
+              "fiction": "Morrer cedo 'tirou o passado dela' — o que se perdia era historia acumulada."
+            },
+            {
+              "mechanic": "Com muito mais experiencia acumulada, a mesma perda vira uma fracao pequena do total.",
+              "fiction": "Agora ela perde algo NOVO, e nao algo velho."
+            },
+            {
+              "mechanic": "Nao ha imunidade a morte no servidor; o que existe e' o brinco com flag ANTI-DT, que protege de ARMADILHA mortal e nunca foi testado.",
+              "fiction": "'O poder que ela tem a protege, pelo menos por enquanto, das mortes.' — leitura subjetiva dela, com o 'por enquanto' fazendo o trabalho de nao prometer imunidade."
+            },
+            {
+              "mechanic": "Aprendizado recente e' o que se perde primeiro ao morrer (a habilidade nova ainda nao esta consolidada).",
+              "fiction": "'A memoria dela tem se tornado mais clara: ela so perde o que aprendeu recentemente, como se nao dormisse depois de um aprendizado.'"
+            }
+          ],
+          "rules_for_writing": [
+            "PODE narrar como percepcao dela, em primeira pessoa, sem hedge.",
+            "NAO afirmar imunidade a morte como fato: o texto deve manter 'por enquanto' / 'parece'.",
+            "NAO usar numero cru de XP/HP/mana na cronica — o check_project.py acusa isso como metajogo.",
+            "Morrer no Capitulo 06 e' custo previsto, nao falha: a cronica nao trata morte como derrota."
+          ]
+        }
       }
     }
   ]
