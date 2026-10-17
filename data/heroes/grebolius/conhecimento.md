@@ -1847,3 +1847,65 @@ A incursão revelou que o esgoto é composto por circuitos interconectados de m�
 - Todos os itens e equipamentos foram preservados no inventário. Re-equipamento completo via `wear all`, espada empunhada, conjuração de `armor` (+30 CA, totalizando CA 111) e `detect invisibility`.
 - Suprimentos saciados (pão e água), estado salvo com `save` e personagem repousando em segurança no Templo com 135/135 HP e 270/270 mana.
 
+## 39. O VETO CAIU e `Problemas Agrícolas` está PERDIDA — o Capítulo 07 (Dia 156)
+
+**Duas correções que mudam o planejamento, e as duas são factuais:**
+
+### 39.1 O veto do autor foi REVOGADO
+
+A missão `Problemas Agrícolas` estava marcada como **"vetada pelo autor; não retomar"** desde o Dia 150 —
+e isso está escrito em `state.json`, no `automato/DECISOES.md` e no `plano_capitulo_05.md`.
+
+> **Diretriz do autor, Dia 156:** *"vamos dar a missão para o próximo agente e ver se ele consegue fazer
+> a do Problemas Agrícolas. Na ficção ela fala que não gosta de deixar coisas por fazer, que vai tentar
+> de novo."*
+
+**O veto caiu.** Ela é o objetivo do **Capítulo 07**, e o plano é o **`planos/plano008.md`**.
+**Onde ainda se ler "vetada", está desatualizado** — exceto no `plano_capitulo_05.md`, que é
+**histórico** e registra o que valia **naquele** capítulo (não se edita).
+
+### 39.2 A missão NÃO está ativa — ela foi PERDIDA
+
+Verificado ao vivo no Dia 156:
+
+- O bloco **`[Autoquests em andamento]`** do `score tudo` **não existe mais** — nenhuma missão ativa.
+- O catálogo `autoquest todas` diz **`Problemas Agrícolas — Não feita`**.
+- O `autoquest listar` **ainda a oferece** (`Até o nível 40, iniciada com: o Pacificador`).
+
+**Ou seja: ela foi perdida, não concluída nem abandonada por escolha.** A causa provável é a mesma que o
+`conhecimento.md` §26 já documenta: **`quit` com missão em andamento zera o progresso**. Ela estava ativa
+no Dia 104 e sobreviveu a várias sessões — até não sobreviver.
+
+**Consequência prática:** o próximo agente tem de **reiniciar do zero** — achar **O Pacificador**
+(`where pacificador`; ele anda entre a Praça do Templo, o Término da Rua e o Portão Oeste) e responder
+**`say sim`**. Os **onze abates acumulados do Dia 90/Dia 104 não contam mais**.
+
+### 39.3 O bloqueio histórico, para não ser redescoberto
+
+**Onze abates contra uma cota de dez — e o fazendeiro nunca confirmou a entrega.** É onde a missão
+morava. Já tentado, sem resultado, nos transcripts:
+
+```
+ask fazendeiro invasores      ask fazendeiro missao      ask fazendeiro ajuda
+ask Pacificador fazenda       ask Pacificador monstros
+```
+
+**O que NÃO foi tentado** (e é a aposta do `plano008.md`, pela lição do §37):
+
+1. **Ler o `score` ANTES de cada ação** — o objetivo muda com a etapa, e ação antes da hora não conta.
+2. **A palavra LITERAL do jogo**, não sinônimo.
+3. **`give`**, se a etapa pedir objeto — foi assim que a Novela fechou.
+4. **Falar com a ESPOSA e o FILHO.** O briefing do Pacificador cita os três, e **nenhum plano meu tentou
+   falar com eles.** Podem ser o gatilho da entrega.
+
+### 39.4 Os valores dos bichos da fazenda, medidos
+
+| Bicho | XP medido | Ouro medido |
+|---|---|---|
+| monstro agressivo | 2.484 | 50 |
+| monstro esfomeado | 2.268 | 50 |
+| monstro invasor | 846 | 50 |
+
+**É o melhor grind do jogo em OURO** (~50 por abate) e empata com o esgoto em XP (~2.400).
+**Mas o milharal tem ARMADILHA MORTAL:** a **Morte #5** foi DT em *"Adentro do Milharal Destruído"*.
+O `wimpy` não segura DT — e o **brinco ANTI-DT nunca foi testado**.

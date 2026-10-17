@@ -113,7 +113,12 @@ Cada entrada responde a três perguntas: **por que** (o problema real), **o que*
 > A lista anterior pedia *"localizar os NPCs de Novela dos Novatos (o novato esperto, nas praças)"* — e
 > **estava errada**: ele não anda pelas praças, ele é o **`Smart Newbie` (18615)**, na sala **18645 = A
 > Sacada**, e os `docs/circlemud/` diziam isso desde o começo. A Novela está **concluída**.
-> *"Problemas Agrícolas"* foi **vetada pelo autor** e saiu da lista.
+> **CORREÇÃO (Dia 156, mesma data):** a linha abaixo dizia que *"Problemas Agrícolas"* estava **vetada**.
+> **O veto CAIU.** O autor deu a missão ao próximo agente — *"vamos dar a missão para o próximo agente e
+> ver se ele consegue fazer a do Problemas Agrícolas"*. Ela é o objetivo do **Capítulo 07**, e o plano é
+> o **`planos/plano008.md`**. **Onde ainda se ler "vetada", está desatualizado.**
+>
+> *"Problemas Agrícolas"* foi **vetada pelo autor** e saiu da lista. *(VETO REVOGADO — ver acima.)*
 
 1. **Abrir as 33 portas nomeadas** do Capítulo 04 — nunca abertas, e o Capítulo 05 as contornou duas vezes.
 2. **Jareth e a Avenida Floris** — rota conhecida e verificada, **nunca percorridas**.

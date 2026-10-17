@@ -84,14 +84,16 @@
   "next_objective": {
     "mission_id": "proxima-meta-a-definir",
     "title": "Definir o próximo capítulo",
-    "next_step": "Escolher o objetivo do próximo capítulo com o autor antes de iniciar outra missão. O Capítulo 5 está concluído; não reiniciar as duas autoquests.",
+    "next_step": "Objetivo definido pelo autor (Dia 156): concluir 'Problemas Agrícolas'. O plano é planos/plano008.md — inclui a rota, o briefing literal do Pacificador, o perigo da armadilha mortal no milharal e o bloqueio conhecido (a entrega que nunca foi confirmada).",
     "missing_preparation": [
-      "Ler planos/plano003.md, conferir o estado real e preparar nova conexão somente para a próxima sessão autorizada.",
-      "Problemas Agrícolas continua listada no servidor, mas está vetada pelo autor; não retomar.",
+      "Ler planos/plano008.md, conferir o estado real e preparar nova conexão somente para a próxima sessão autorizada.",
+      "'Problemas Agrícolas' NAO ESTA ATIVA: o score nao tem bloco de autoquests e o catalogo diz 'Nao feita'. Tem de ser reiniciada com O Pacificador (say sim). O veto anterior do autor CAIU no Dia 156.",
+      "O bloqueio historico e a ENTREGA: onze abates acumulados contra cota de dez, e o fazendeiro nunca confirmou. 'ask' foi tentado e nao fechou; apostar em give ou na palavra literal, lendo o score antes de cada acao.",
+      "ARMADILHA MORTAL dentro do milharal: a Morte #5 foi DT em 'Adentro do Milharal Destruido'. O brinco ANTI-DT nunca foi testado - nao confiar nele como certeza.",
       "Proibida a venda de armaduras.",
       "Curse está em 10%; não usar como magia confiável sem treino."
     ],
-    "plan_document": "planos/plano003.md"
+    "plan_document": "planos/plano008.md"
   },
   "skills": [
     {

@@ -141,6 +141,44 @@ handoff (§7).
 
 ### 2026-10-16 · Dia 156 · deepseek-flash
 
+> **Sexta entrada do dia.** O autor entregou `Problemas Agrícolas` ao próximo agente. Esta entrada
+> registra o plano e **as duas descobertas que o tornaram necessário**.
+
+- **Mudou:** o **`planos/plano008.md`** — o plano do **Capítulo 07**, cujo objetivo é concluir
+  **`Problemas Agrícolas`**. Ele traz o **briefing literal do Pacificador** (extraído dos transcripts), a
+  rota verificada até a fazenda, o **bloqueio histórico** (a entrega que nunca foi confirmada, com o que
+  já foi tentado por `ask` e o que **não** foi), os **valores medidos** dos bichos do milharal, o
+  **perigo da armadilha mortal** que já matou uma vez lá dentro, e as ferramentas prontas
+  (`milharal.py`, `encontrar_fazendeiro.py`, `falar_fazendeiro.py`). Também: **`conhecimento.md` §39**,
+  e a **atualização do `state.json` e do `automato/DECISOES.md`**, que ainda diziam *"vetada"*.
+- **Por quê:** **duas descobertas factuais** que mudam o planejamento:
+  1. **O veto do autor CAIU.** A missão estava marcada *"vetada; não retomar"* desde o Dia 150, em três
+     lugares. **Onde ainda se ler "vetada", está desatualizado** — exceto no `plano_capitulo_05.md`, que é
+     **histórico** e registra o que valia naquele capítulo.
+  2. **A missão está PERDIDA, não ativa.** O `score tudo` **não tem mais o bloco `[Autoquests em
+     andamento]`** e o catálogo diz **`Não feita`** — mas o `autoquest listar` ainda a oferece. **Os onze
+     abates acumulados não contam mais:** o próximo agente reinicia do zero. A causa provável é a que o
+     §26 já documenta — **`quit` com missão em andamento zera o progresso**.
+- **Como foi verificado:** tudo conferido **ao vivo** (`score tudo`, `autoquest todas`, `autoquest
+  listar`), e o **briefing do Pacificador** extraído dos transcripts com as falas literais. Os valores
+  por bicho foram medidos **abate a abate** (não por bloco de texto — a primeira medição inflava os
+  números com recompensas de missão, e eu refiz). `check_project.py` **0 erros**; `verificar.py`
+  **18/18**; derivados conferidos.
+- **Custo:** nenhum de ferramenta. **De jogo:** o Capítulo 07 vai gastar sessão refazendo o que já foi
+  feito no Dia 90 — **onze abates perdidos** por uma desconexão.
+- **E a devolutiva funcionou — inclusive contra mim.** Na primeira versão, o plano declarava devolutiva
+  do trabalho da **sessão anterior**; o **`scripts/devolutiva.py` reprovou** com duas falhas
+  (*"promete referência de servidor, mas `maquina/verificacoes.md` NÃO foi tocado"*). **Foi o primeiro
+  caso real de uso, e ele pegou exatamente o que existe para pegar.** Corrigi a tabela, escrevi o que
+  faltava de verdade (**`conhecimento.md` §39**) e a verificação passou: **0 falhas, 4 avisos**.
+- **Próximo:** (a) **a missão em si** — reiniciar com o Pacificador (`where pacificador`; ele anda entre a
+  Praça do Templo, o Término da Rua e o Portão Oeste) e responder `say sim`; (b) **a aposta central do
+  plano:** ler o `score` **antes** de cada ação, usar a **palavra literal**, tentar **`give`**, e **falar
+  com a esposa e o filho** — que nenhum plano meu tentou; (c) a pendência que **continua aberta** e segue
+  declarada: **as quatro arestas dos anéis do esgoto** no `mapa.json`.
+
+### 2026-10-16 · Dia 156 · deepseek-flash
+
 > **Quinta entrada do dia.** A pergunta do autor foi *"ele deixou de fazer algo de devolutiva técnica
 > que devemos deixar mais explícito?"* — e a resposta virou ferramenta.
 
