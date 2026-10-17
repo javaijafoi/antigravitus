@@ -82,6 +82,45 @@ def lacunas(numeros):
     return [n for n in range(1, max(numeros) + 1) if n not in numeros]
 
 
+DEVOLUTIVA = re.compile(r"^#{1,4}\s*\d*\.?\s*devolutiva\s+t[eé]cnica", re.IGNORECASE | re.MULTILINE)
+PLACEHOLDER = re.compile(r"<[^>\n]{3,}>")
+
+
+def devolutiva_tecnica(texto):
+    """(tem_secao, tem_conteudo_real) da devolutiva técnica de um plano.
+
+    O AGENTS.md §5 diz ONDE cada descoberta vai; o que faltava era alguém cobrar. O sintoma de
+    devolutiva ignorada é a descoberta existir em prosa e não no artefato — aconteceu no Dia 156,
+    quando a caminhada revelou os anéis do esgoto e o `mapa.json` não foi tocado.
+    """
+    m = DEVOLUTIVA.search(texto)
+    if not m:
+        return False, False
+
+    corpo = []
+    for linha in texto[m.end():].split("\n"):
+        if re.match(r"^#{1,4}\s*\d+\.", linha):      # começou outra seção numerada
+            break
+        if linha.strip():
+            corpo.append(linha.strip())
+
+    # O cabeçalho e a régua da tabela do modelo NÃO contam como conteúdo: sem isso, um plano que
+    # só copiou o modelo passaria no teste. (Foi o que a primeira versão fazia.)
+    CABECALHO = re.compile(r"^(descobri|registrei em|o qu[êe])\b", re.IGNORECASE)
+
+    def util(linha):
+        if PLACEHOLDER.search(linha):
+            return False
+        if re.fullmatch(r"[|\-: ]+", linha):          # régua |---|---|
+            return False
+        celulas = [c.strip() for c in linha.strip("|").split("|")]
+        if celulas and all(CABECALHO.match(c) for c in celulas if c):
+            return False                              # cabeçalho do modelo
+        return len(linha.strip(" |-")) > 12
+
+    return True, any(util(l) for l in corpo)
+
+
 def bloco_ordem(heroi, numero, caminho, campos, proximo):
     plano_rel = caminho.relative_to(ROOT_DIR).as_posix()
     linhas = []
@@ -197,6 +236,19 @@ def main(argv=None):
     if not campos.get("Por"):
         print()
         print("[AVISO] o plano não declara autoria ('Por'). O AGENTS.md §6.1 exige modelo/versão.")
+
+    tem_secao, tem_conteudo = devolutiva_tecnica(texto)
+    if not tem_secao:
+        print()
+        print("[AVISO] o plano NÃO tem a seção 'Devolutiva técnica', que é obrigatória no modelo do")
+        print("        LEIA.md. O AGENTS.md §5 diz onde cada descoberta vai (mapa.json,")
+        print("        maquina/verificacoes.md, conhecimento.md, automato/DECISOES.md). Sem essa seção,")
+        print("        a descoberta fica em prosa e não no artefato — foi o que aconteceu no Dia 156,")
+        print("        quando a caminhada revelou os anéis do esgoto e o mapa.json não foi tocado.")
+    elif not tem_conteudo:
+        print()
+        print("[AVISO] a seção 'Devolutiva técnica' existe mas está só com o MODELO (placeholders).")
+        print("        Preencha, ou escreva 'nada' em cada linha que não se aplica.")
     return 0
 
 

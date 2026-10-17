@@ -114,6 +114,46 @@ class TestLacunas(unittest.TestCase):
         self.assertEqual(mandabala.lacunas([]), [])
 
 
+class TestDevolutivaTecnica(unittest.TestCase):
+    """A devolutiva técnica é obrigatória desde o Dia 156 — o sintoma é a descoberta
+    existir em prosa e não no artefato (os anéis do esgoto fora do mapa.json)."""
+
+    def test_sem_secao(self):
+        self.assertEqual(mandabala.devolutiva_tecnica("# Plano 001\n\n## 1. Onde\nnada\n"),
+                         (False, False))
+
+    def test_secao_com_conteudo_real(self):
+        texto = ("# Plano\n\n## 8. Devolutiva técnica\n\n"
+                 "| Descobri | Registrei em | O quê |\n|---|---|---|\n"
+                 "| mapa | `mapa.json` | 4 arestas reversas dos aneis do esgoto |\n")
+        self.assertEqual(mandabala.devolutiva_tecnica(texto), (True, True))
+
+    def test_secao_so_com_placeholders(self):
+        texto = ("# Plano\n\n## 8. Devolutiva técnica\n\n"
+                 "| Descobri | Registrei em | O quê |\n|---|---|---|\n"
+                 "| mapa | `mapa.json` | <salas/arestas corrigidas, ou \"nada\"> |\n")
+        self.assertEqual(mandabala.devolutiva_tecnica(texto), (True, False))
+
+    def test_aceita_acento_e_variacao_de_nivel(self):
+        self.assertTrue(mandabala.devolutiva_tecnica("### Devolutiva tecnica\nmapa: nada\n")[0])
+        self.assertTrue(mandabala.devolutiva_tecnica("## 8. DEVOLUTIVA TÉCNICA\n" + "x" * 20 + "\n")[0])
+
+    def test_avisa_quando_falta_a_secao(self):
+        self.criar_em_tmp = None  # marcador de leitura
+        with tempfile.TemporaryDirectory() as tmp:
+            heroi = Path(tmp) / "data" / "heroes" / "h" / "planos"
+            heroi.mkdir(parents=True)
+            (heroi / "plano001.md").write_text(
+                "# Plano 001\n\n| **Por** | `m` |\n| **Objetivo** | testar |\n\n## 1. Onde\nnada\n",
+                encoding="utf-8")
+            with mock.patch.object(mandabala, "HEROES_DIR", Path(tmp) / "data" / "heroes"), \
+                 mock.patch.object(mandabala, "ROOT_DIR", Path(tmp)), \
+                 mock.patch("sys.stdout") as out:
+                mandabala.main(["--hero", "h"])
+                texto = "".join(c.args[0] for c in out.write.call_args_list)
+        self.assertIn("NÃO tem a seção 'Devolutiva técnica'", texto)
+
+
 class TestMain(BasePlanos):
     def test_padrao_imprime_ordem_e_plano_integral(self):
         self.criar("h", 1)

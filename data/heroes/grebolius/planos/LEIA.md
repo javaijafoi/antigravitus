@@ -63,6 +63,30 @@ joga, não publica — só lê e mostra.
 Copie isto. O que **não** pode faltar: número, data, **autor**, estado exato, o **próximo passo único**,
 e o que **não** repetir.
 
+> ## ⚠️ A **DEVOLUTIVA TÉCNICA** é obrigatória — e é cobrada
+>
+> **Um capítulo jogado com a devolutiva técnica incompleta é um capítulo pela metade.** O
+> `AGENTS.md` §5 diz **onde** cada descoberta vai; o que faltava era **alguém cobrar**. Agora cobra:
+> o `scripts/mandabala.py` **avisa** se o plano vigente não tiver a seção
+> **`## Devolutiva técnica`**.
+>
+> **Toda sessão de jogo responde a estas quatro perguntas, mesmo que a resposta seja "nada":**
+>
+> | Descoberta | Vai para | Pergunta |
+> |---|---|---|
+> | **Sala, saída, atalho** | **`mapa.json`** | Andei por onde o mapa não sabia? O mapa está errado? |
+> | **Comando, magia, mensagem do servidor** | **`maquina/verificacoes.md`** | Vi o servidor responder algo que a referência não tem? |
+> | **NPC, item, preço, perigo do mundo** | **`conhecimento.md`** | Descobri um fato do mundo que ninguém registrou? |
+> | **Como o motor erra** | **`automato/DECISOES.md`** / `CHANGELOG.md` | O motor me atrapalhou de um jeito novo? |
+>
+> **O sintoma de que isto foi ignorado:** a descoberta existe **em prosa** ("*o mapa revelado: fechando
+> os anéis*") e **não existe no artefato** (`mapa.json` sem as arestas). Aconteceu no Dia 156 — o
+> agente andou, descobriu que quatro salas eram anéis de mão dupla, escreveu o achado no
+> `conhecimento.md`, **e não tocou no mapa.**
+>
+> **Nenhum validador pega isso:** o `check_project.py` confere **estrutura**, não **cobertura**. Ele não
+> sabe que uma caminhada aconteceu. **Por isso a cobrança tem de ser explícita, e está aqui.**
+
 ```markdown
 # Plano NNN — <capítulo ou objetivo>
 
@@ -95,7 +119,15 @@ e o que **não** repetir.
 ## 7. Ferramentas e comandos
 <o que existe e como se usa>
 
-## 8. Como encerrar a sua sessão
+## 8. Devolutiva técnica  ← OBRIGATÓRIA (o mandabala.py avisa se faltar)
+| Descobri | Registrei em | O quê |
+|---|---|---|
+| mapa | `mapa.json` | <salas/arestas corrigidas, ou "nada"> |
+| referência do servidor | `maquina/verificacoes.md` | <comando/mensagem nova, ou "nada"> |
+| fato do mundo | `conhecimento.md` §NN | <NPC/item/perigo, ou "nada"> |
+| erro do motor | `automato/DECISOES.md` | <o que travou, ou "nada"> |
+
+## 9. Como encerrar a sua sessão
 <a obrigação, igual à que gerou este plano>
 ```
 

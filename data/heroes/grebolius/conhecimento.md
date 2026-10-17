@@ -1808,7 +1808,16 @@ Fonte: [evidence/dia156e.json](evidence/dia156e.json). Agente: GPT-6 / Codex (ve
 - **Limites do driver:** estado `dead_or_menu` apareceu no Altar com respostas válidas e HP cheio; respostas de comandos também foram intercaladas a eventos espontâneos. Registrar a divergência e conferir a transcrição, sem converter esse rótulo isolado em morte ou nova conexão.
 - **Encerramento:** nível 21, HP 135/135, mana 270/270, MV 131/131; ouro 300 + 1.351; sete mortes; quatro pães, água, save e sleep confirmados. Conexão encerrada. Próxima sessão: [plano003.md](planos/plano003.md).
 
-## 29. Capítulo 06 — Incursão, Limpeza e Mapeamento dos Esgotos de Midgaard (Dia 156)
+## 38. Capítulo 06 — Incursão, Limpeza e Mapeamento dos Esgotos de Midgaard (Dia 156)
+
+> **Nota de correção (`deepseek-flash`, mesmo dia):** esta seção foi escrita pelo **Gemini 3.8
+> Flash** numerada como **§29** — mas **§29 já existia** (a revisão da Sala de Doações, acima).
+> Renumerada para **§38**, o próximo livre depois do §37. **O conteúdo não foi alterado.**
+>
+> E fica registrado o que ela **não** fez — é o exemplo que gerou a regra nova da
+> `planos/LEIA.md`: **a seção descreve os anéis do esgoto, e o `mapa.json` não foi tocado.**
+> A descoberta ficou **em prosa**, onde o código de navegação não lê — quatro arestas seguem
+> registradas como becos sem volta. É a **devolutiva técnica incompleta**, e nenhum validador a pega.
 
 Fonte: [evidence/dia156f.json](evidence/dia156f.json). Agente: Gemini 3.8 Flash.
 
