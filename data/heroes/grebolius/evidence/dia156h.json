@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "hero_id": "grebolius",
+  "day": 156,
+  "title": "Capítulo 08 (em andamento) — Início de 'Uma Lição em Gargamel', Mapeamento da Vila dos Smurfs e Levantamento Econômico",
+  "agent": "Gemini 4 Argon (sessão de jogo) / Gemini 3.8 Flash (encerramento e handoff)",
+  "via": "automato",
+  "verification": "live",
+  "summary": "Execução do Plano 009. Viagem à Vila dos Smurfs pela Estrada do Rei (8 passos a leste do Portão Leste de Midgaard). Localizado 'o smurf minerador' em O Fim Do Túnel (Dentro do Poço -> leste); iniciada a autoquest 'Uma Lição em Gargamel'. O minerador solicitou fonte confiável de iluminação ('jarro brilhante') de um alquimista ou ferreiro sem machucar ninguém. Ida a A Sala do Alquimista (Escola de Treinamento de Midgaard); O Novato Alquimista exigiu em troca 'uma poção aquosa' vendida por Clariss em Jareth. Viagem a Jareth: localizada a loja As Misturas de Clariss na Avenida Floris (preço da poção aquosa: 9.750 moedas de ouro). Testadas opções de venda de armaduras e itens da Sala de Doações de Midgaard e lojas de Jareth. Mapeamento completo de todas as casas da Vila dos Smurfs, pomar de smurfigos, A Terra das Brincadeiras de Barney (com Barney) e O Covil de Gargamel (Gargamel, Azrael e porta leste trancada com Papai Smurf). Desbloqueada conquista 34 (Cai Fora!). Retorno seguro ao Templo de Midgaard, vitais 100%, save executado.",
+  "observations": [
+    {
+      "kind": "dialogo_missao",
+      "command": "say sim -> say Grebolius -> say sim",
+      "target": "o smurf minerador (em O Fim Do Túnel)",
+      "response": "O smurf minerador diz: 'É que o óleo do meu lampião acabou. Desde então, não consigo enxergar mais nada... Mas você vai me ajudar, sim?' -> Você diz: 'sim' -> 'Que bom! ... Preciso de algo para iluminar meu caminho... Mas deve ser algo confiável, feito por um ferreiro ou alquimista! Converse com o novato alquimista. Mas por favor, não machuque ninguém! Estarei te esperando com o que preciso.'",
+      "note": "Abre a primeira etapa de 'Uma Lição em Gargamel'. Não matar nenhum mob neutro durante esta fase."
+    },
+    {
+      "kind": "dialogo_missao",
+      "command": "say Grebolius -> say sim",
+      "target": "O Novato Alquimista (em A Sala do Alquimista)",
+      "response": "O Novato Alquimista questiona: 'Deixe-me adivinhar: você quer um jarro brilhante, certo?' -> Você diz: 'sim' -> 'Bem, todos queremos coisas nesse mundo, não? Eu daria tudo por uma poção aquosa da loja da Clariss, em Jareth...'",
+      "note": "Em score tudo: 'Uma Lição em Gargamel: Você deve entregar objeto ao personagem.'."
+    },
+    {
+      "kind": "economia",
+      "command": "list (em As Misturas de Clariss, Jareth)",
+      "target": "Clariss",
+      "response": "1) Uma poção amarela de detectar invisibilidade - 4.605 moedas. 2) Uma poção aquosa - 9.750 moedas.",
+      "note": "A poção aquosa necessária para o alquimista custa 9.750 moedas de ouro."
+    },
+    {
+      "kind": "reconhecimento",
+      "command": "where smurf / where gargamel",
+      "target": "Vila dos Smurfs / Covil de Gargamel",
+      "response": "Papai Smurf - O Covil de Gargamel; Gargamel - O Covil de Gargamel; Azrael - O Covil de Gargamel.",
+      "note": "Em O Covil de Gargamel há Gargamel, Azrael e uma porta a leste trancada, onde Papai Smurf está confinado."
+    },
+    {
+      "kind": "conquista",
+      "command": "value barco (com capitão aposentado nas Margens do Rio)",
+      "target": "capitão aposentado",
+      "response": "O capitão aposentado exclama: 'Volte mais tarde!' * Você desbloqueou a conquista 34: Cai Fora!",
+      "note": "Desbloqueada Conquista 34 do jogo."
+    }
+  ]
+}

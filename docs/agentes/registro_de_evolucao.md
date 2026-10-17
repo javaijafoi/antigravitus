@@ -139,6 +139,22 @@ PRÓXIMA ENTRADA COMEÇA AQUI. Não edite os blocos acima; acrescente o seu abai
 handoff (§7).
 -->
 
+### 2026-10-17 · Dia 156 · Gemini 4 Argon / Gemini 3.8 Flash
+
+> **Oitava entrada do dia.** Execução do `planos/plano009.md` e abertura do **Capítulo 08 — "Uma Lição em Gargamel"**.
+> **Divisão de autoria:** a sessão ao vivo no MUD (diálogos, caminhada, exploração das áreas e lojas) foi jogada por **`Gemini 4 Argon`**; com o esgotamento de tokens do modelo, o encerramento seguro no Templo, a reconciliação documental, a fusão do mapa vivo e a redação do `planos/plano010.md` foram assumidos e concluídos por **`Gemini 3.8 Flash`**.
+
+- **Mudou:**
+  1. **Início da autoquest `Uma Lição em Gargamel`** (`evidence/dia156h.json`, `missoes.json`, `state.json`): aceita com `o smurf minerador` em `O Fim Do Túnel` na Vila dos Smurfs. O minerador precisa de iluminação confiável sem ferir ninguém. `O Novato Alquimista` (Escola de Treinamento) exige em troca `uma poção aquosa` de Clariss em Jareth (`As Misturas de Clariss`, custo: 9.750 moedas).
+  2. **Mapeamento da Vila dos Smurfs e arredores** (`mapa.json`, `mapa_vivo.json`): expansão de 381 para 510 salas (+129 salas integradas via `fundir_mapa.py`), incluindo a rota da Estrada do Rei, Entrada da Vila dos Smurfs, Estrada Smurf, Travessa da Smurfette, Travessa do Papai Smurf, Pomar dos Smurfigos, Terra das Brincadeiras de Barney, Estrada e Entrada do Castelo de Gargamel, e O Covil de Gargamel (onde estão Gargamel, Azrael e a porta leste com Papai Smurf).
+  3. **Levantamento Econômico e Lojas** (`maquina/verificacoes.md`, `conhecimento.md` §41): testadas lojas de armas e armaduras de Midgaard e Jareth; documentadas respostas de recusa de lojistas (*"não compro de forasteiros"*, *"não trabalhamos para sua classe"*, caixa limitado do ferreiro e armeiro de Midgaard). Saldo em moedas elevado para 4.880 (3.999 banco + 881 mão).
+  4. **Conquista 34 desbloqueada**: *Cai Fora!* desbloqueada em `As Margens do Rio` ao avaliar o barco com o capitão aposentado.
+  5. **Novo plano de continuação**: criado `data/heroes/grebolius/planos/plano010.md` com a devolutiva técnica preenchida.
+- **Por quê:** avançar a campanha no Capítulo 08 conforme solicitado pelo autor e preparar a entrega segura para o próximo agente.
+- **Como foi verificado:** sessão real no MUD, `save` no Templo de Midgaard (141/141 HP, 280/280 mana, 133/133 mv), `automato/acoes/digerir_mapa.py` e `fundir_mapa.py` (510 salas), `sync_hero.py`, `check_project.py` e `devolutiva.py`.
+- **Custo:** nenhum; vitais cheios, zero mortes.
+- **Próximo:** executar `planos/plano010.md` — levantar as ~4.870 moedas restantes para a poção aquosa na loja de Clariss em Jareth, entregá-la ao Alquimista, levar o jarro ao Minerador e resgatar Papai Smurf.
+
 ### 2026-10-16 · Dia 156 · Gemini 4 Argon
 
 > **Sétima entrada do dia.** Execução integral do `planos/plano008.md` e fechamento do **Capítulo 07 —

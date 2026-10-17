@@ -1988,3 +1988,44 @@ Conferido ao vivo logo após a entrega:
    - `help vila dos smurfs` (`help mapa 33`) entrega a rota exata a partir do Templo:
      > *"A partir do Templo de Midgaard, siga para o sul em direção à famosa Praça do Comércio. De lá, siga para o leste pela Rua Principal, até chegar ao centro da grande Estrada do Rei. Nesse ponto, haverá um caminho ao norte, onde se encontra a Entrada Para a Vila dos Smurfs."*
 
+---
+
+## 41. Capítulo 08 (em andamento) — `Uma Lição em Gargamel`, Geografia dos Smurfs e Economia (Dia 156)
+
+### 41.1 Início de `Uma Lição em Gargamel` e Cadeia de NPCs
+- **Local do iniciador:** Na Vila dos Smurfs, descer no poço (`d` a partir de `O Poço Smurf`) e seguir a leste (`e`) até `O Fim Do Túnel`.
+- **Iniciador:** `o smurf minerador` (`'Olá, alguém poderia me ajudar?'`).
+- **Gatilho de fala:** Responder `say sim` → `say Grebolius` → `say sim`.
+- **Briefing do Minerador:** Ficou sem óleo no lampião e não enxerga nada no túnel. Precisa de algo confiável feito por ferreiro ou alquimista (`um jarro brilhante`). **Instrução expressa de conduta:** *'Mas por favor, não machuque ninguém!'* — não engajar combate neutro com mobs na vila.
+- **Etapa 2 (`O Novato Alquimista`):** Localizado em `A Sala do Alquimista` na Escola de Treinamento de Midgaard (abrir porta leste a partir do corredor nordeste da escola).
+  - Diálogo: `say Grebolius` → `say sim`.
+  - Exigência: Em troca do jarro brilhante, quer **`uma poção aquosa`** da loja de Clariss em Jareth.
+  - Atualização em `score tudo`: **`Uma Lição em Gargamel: Você deve entregar objeto ao personagem.`**
+
+### 41.2 Geografia da Vila dos Smurfs, Pomar e Castelo de Gargamel
+- **Acesso:** Templo de Midgaard → `s, s` (Praça do Comércio) → `8x e` (Rua Principal, Portão Leste, Entrada da Cidade, Estrada do Rei) → `n` (`A Entrada Para a Vila dos Smurfs`).
+- **Estrutura interna:**
+  - `A Estrada Smurf`: eixo norte-sul.
+  - `A Travessa da Smurfette` (ao norte, leste da estrada): casas do Smurf Artista (norte), Smurf Desastrado (sul), Smurf Bombeiro (norte), Vovô Smurf (sul) e Casa da Smurfette (leste).
+  - `A Travessa do Papai Smurf` (ao sul, leste da estrada): casas do Smurf Vaidoso (norte), Smurf Gênio (sul), Smurf Vigoroso (norte), Smurf Prático (sul) e Casa do Papai Smurf (leste, porta norte dá acesso à Smurfette).
+  - `O Caminho dos Smurfigos`: pomar em malha a oeste da Estrada Smurf, com frutinhas pelo chão.
+  - Norte de `O Poço Smurf`: `Uma Intersecção em T`.
+    - Leste: `A Terra das Brincadeiras de Barney` (com `Barney, o dinossauro roxo`, mob agressivo e poderoso).
+    - Oeste: `A Estrada para o Castelo de Gargamel` → `A Entrada do Castelo de Gargamel` → norte para `O Covil de Gargamel`.
+  - `O Covil de Gargamel`: contém `Gargamel` e `Azrael` (gato que usa `o colar de Azrael`). Ao leste há uma porta trancada, atrás da qual está preso `Papai Smurf` (confirmado via `where smurf`).
+
+### 41.3 Economia, Lojas de Jareth e Preços
+- **`As Misturas de Clariss` (Jareth):** localizada na Avenida Floris (sul da praça central oeste).
+  - Vende:
+    1. `Uma poção amarela de detectar invisibilidade`: 4.605 moedas de ouro.
+    2. `Uma poção aquosa`: 9.750 moedas de ouro.
+- **Políticas de compra dos lojistas de Jareth:**
+  - `A Loja de Armas de Maris` (Maris) e `Dalston Tralhas e Cia` (Elias Dalston): avaliam armas e itens, mas respondem *'Eu não compro!'*.
+  - `A Loja de Trapos da Vovó` (Granny): responde *'Nós não trabalhamos para sua classe aqui!'* (recusa magos).
+  - `A Loja de Armaduras de Maris` (Ilena): avalia armaduras de alta qualidade (ex.: `armadura de metal da OME` por 2.250 moedas), mas responde *'Desculpe, mas eu não compro de forasteiros.'* (comprou apenas `luvas de couro` por 37 moedas).
+- **Lojas de Midgaard:**
+  - Ferreiro da Loja de Armas: caixa pequeno (~200 moedas), comprou lança e espadas até zerar caixa.
+  - Armeiro da Loja de Armaduras: comprou `rígido peitoral de couro` por 200 moedas, mas não teve ouro para pagar 2.250 na armadura OME (*'Isso é caro demais para mim - Tente um feiticeiro!'*).
+- **Conquista 34:** Desbloqueada ao usar `value barco` junto ao capitão aposentado em `As Margens do Rio`: **"Cai Fora!"**.
+
+

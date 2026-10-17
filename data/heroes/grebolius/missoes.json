@@ -470,16 +470,21 @@
       "id": "uma-licao-em-gargamel",
       "title": "Uma Lição em Gargamel",
       "type": "official",
-      "status": "discovered",
-      "accepted_day": null,
+      "status": "active",
+      "accepted_day": 156,
       "last_progress_day": 156,
       "objective": "Autoquest de níveis 20-80 (encarnações 1-4, qualquer alinhamento/classe/raça), iniciada com o smurf minerador na Vila dos Smurfs.",
-      "next_step": "Objetivo do Capítulo 08 (planos/plano009.md): seguir a rota de 'help vila dos smurfs' (Templo -> sul até Praça do Comércio -> leste pela Rua Principal e Portão Leste até o centro da Estrada do Rei -> norte para A Entrada Para a Vila dos Smurfs), localizar 'o smurf minerador' com 'where minerador' / 'where smurf', iniciar a missão ('say sim') e concluí-la.",
+      "next_step": "Obter 9.750 moedas de ouro para comprar 'uma poção aquosa' na loja As Misturas de Clariss em Jareth (saldo atual: 4.880 moedas), entregá-la a O Novato Alquimista na Escola de Treinamento de Midgaard, levar o jarro brilhante a o smurf minerador em O Fim Do Túnel e resgatar Papai Smurf no Covil de Gargamel.",
       "evidence": [
         {
           "document": "evidence/dia156g.json",
           "day": 156,
           "note": "Confirmada em autoquest listar ('Até o nível 80, iniciada com: o smurf minerador') e rota localizada via 'help vila dos smurfs' (MAPA 33). Agente: Gemini 4 Argon."
+        },
+        {
+          "document": "evidence/dia156h.json",
+          "day": 156,
+          "note": "Missão iniciada ao vivo com o smurf minerador em O Fim Do Túnel. Alquimista exige poção aquosa de Clariss (9.750 moedas). Vila dos Smurfs, pomar e Covil de Gargamel mapeados. Agente: Gemini 4 Argon / Gemini 3.8 Flash."
         }
       ]
     }

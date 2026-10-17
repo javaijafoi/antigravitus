@@ -26,7 +26,7 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 
 * **Experiência Acumulada:** **1.572.738 EXP**
 * **Experiência Necessária p/ Grau 23:** **27.262 EXP** (Meta: 1.600.000 EXP)
-* **Ouro Líquido:** **4.299 moedas de ouro** (valor documental)
+* **Ouro Líquido:** **4.880 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 11
@@ -58,8 +58,8 @@ CA subiu de 112 para 134 (+22 CA) ao vestir um belo cinturão de rodeio na cintu
   * Próximo passo: Concluída e entregue no Dia 156 (Capítulo 07). Não reiniciar sem novo objetivo do autor.
 * **Ninguém Segura Esse Bebê — Concluída:** Autoquest de todos os níveis (encarnações 1-4), qualquer alinhamento e classe.
   * Próximo passo: CONCLUÍDA. Estado confirmado no servidor em 2026-10-16 pelo comando "autoquest todas": "Ninguém Segura Esse Bebê — Concluída".
-* **Uma Lição em Gargamel — Descoberta:** Autoquest de níveis 20-80 (encarnações 1-4, qualquer alinhamento/classe/raça), iniciada com o smurf minerador na Vila dos Smurfs.
-  * Próximo passo: Objetivo do Capítulo 08 (planos/plano009.md): seguir a rota de 'help vila dos smurfs' (Templo -> sul até Praça do Comércio -> leste pela Rua Principal e Portão Leste até o centro da Estrada do Rei -> norte para A Entrada Para a Vila dos Smurfs), localizar 'o smurf minerador' com 'where minerador' / 'where smurf', iniciar a missão ('say sim') e concluí-la.
+* **Uma Lição em Gargamel — Ativa:** Autoquest de níveis 20-80 (encarnações 1-4, qualquer alinhamento/classe/raça), iniciada com o smurf minerador na Vila dos Smurfs.
+  * Próximo passo: Obter 9.750 moedas de ouro para comprar 'uma poção aquosa' na loja As Misturas de Clariss em Jareth (saldo atual: 4.880 moedas), entregá-la a O Novato Alquimista na Escola de Treinamento de Midgaard, levar o jarro brilhante a o smurf minerador em O Fim Do Túnel e resgatar Papai Smurf no Covil de Gargamel.
 
 Objetivos pessoais e investigações ficam separados das autoquests no catálogo de missões.
 
@@ -97,27 +97,27 @@ Equipamento conforme os últimos documentos disponíveis; conferir no próximo a
 
 ## ✦ Inventário e Suprimentos
 Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
-* `um cantil` (x1) — evidence/dia156g.json
-* `um manto de pano` (x1) — evidence/dia156g.json
-* `um pão recheado` (x3) — evidence/dia156g.json
-* `uma Cruz Ansada` (x1) — evidence/dia156g.json
-* `uma brilhante veste de novato` (x2) — evidence/dia156g.json
-* `o poderoso Scutum de Carvalho (+13L)` (x1) — evidence/dia156g.json
-* `a mochila de Pellinore` (x1) — evidence/dia156g.json
-* `uma adaga` (x1) — evidence/dia156g.json
-* `um pergaminho de sabedoria` (x1) — evidence/dia156g.json
-* `um colar com uma pedra púrpura` (x1) — evidence/dia156g.json
-* `um brilhante punhal de novato` (x8) — evidence/dia156e.json
+* `um cantil` (x1) — evidence/dia156h.json
+* `um jarro brilhante` (x1) — evidence/dia156h.json
+* `a mochila de Pellinore` (x1) — evidence/dia156h.json
+* `um pergaminho de sabedoria` (x1) — evidence/dia156h.json
+* `uma armadura de metal da OME` (x1) — evidence/dia156h.json
+* `a Espada do Peão Negro` (x2) — evidence/dia156h.json
+* `o Cetro do Bispo Negro` (x1) — evidence/dia156h.json
+* `a bainha de Excalibur` (x1) — evidence/dia156h.json
+* `um capuz negro` (x1) — evidence/dia156h.json
+* `um colar com uma pedra púrpura` (x1) — evidence/dia156h.json
+* `uma Cruz Ansada` (x1) — evidence/dia156h.json
 
 ### Pendências de inventário
 
 ## ✦ Condições Registradas
-* Capítulo 07 concluído: 141/141 HP, 280/280 mana e 133/133 MV, salva no Templo de Midgaard.
+* Capítulo 08 em andamento: 141/141 HP, 280/280 mana e 133/133 MV, salva no Templo de Midgaard.
 * Nível 22, EXP 1.572.738; próximo nível em 1.600.000 (faltam 27.262).
-* Ouro: 300 na mão e 3.999 no banco, total 4.299 (+2.648 depositados nesta sessão).
-* Oito mortes e uma armadilha mortal no histórico; zero mortes no Capítulo 07.
-* Três pães recheados e cantil cheio; fome e sede ausentes.
-* Um belo cinturão de rodeio equipado na cintura (+22 CA, +5 Acerto, +5 Dano, +1 DEX, +1 CAR); armor ativo (+31 por 48h), CA 134.
+* Ouro: 881 na mão e 3.999 no banco, total 4.880 (+581 moedas obtidas em vendas nesta sessão).
+* Oito mortes e uma armadilha mortal no histórico; zero mortes na sessão.
+* Alimentada e saciada; cantil com água cristalina.
+* Um belo cinturão de rodeio equipado na cintura (+22 CA, +5 Acerto, +5 Dano, +1 DEX, +1 CAR); armor ativo (+31 por 13h), CA 134.
 * Wimpy 45 mantido conforme diretiva §6.
 * Quarenta treinos; curse a 10%.
 * Problemas Agrícolas concluída e entregue após as 4 etapas no milharal (10 invasores, 10 esfomeados, 5 agressivos e 1 líder dos monstros).
@@ -125,15 +125,15 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
 **Capítulo 08: Uma Lição em Gargamel**
-Objetivo definido pelo autor para o Capítulo 08: concluir a autoquest 'Uma Lição em Gargamel' (níveis 20-80, iniciada com 'o smurf minerador'). Seguir planos/plano009.md: a rota oficial do servidor ('help vila dos smurfs' / MAPA 33) sai do Templo para o sul até a Praça do Comércio, segue a leste pela Rua Principal e Portão Leste até o centro da Estrada do Rei, e entra ao norte em 'A Entrada Para a Vila dos Smurfs'.
-* Ler planos/plano009.md antes de sair do Templo.
-* Rodar prepara.py --forcar antes de partir (repor pães na Padaria).
-* Seguir a rota de 'help vila dos smurfs': Templo -> s,s (Praça do Comércio) -> leste pela Rua Principal / Portão Leste até a Estrada do Rei -> norte para A Entrada Para a Vila dos Smurfs.
-* Usar 'where minerador' ou 'where smurf' dentro da Vila dos Smurfs, aguardar a fala inicial do NPC, responder 'say sim' e NÃO sair da sala antes de terminar a última fala do briefing.
-* Proibida a venda de armaduras (§15).
+Levantar as ~4.870 moedas restantes para comprar a 'poção aquosa' (9.750 moedas) na loja de Clariss em Jareth, ou buscar meios alternativos de obtê-la. Entregar a poção a O Novato Alquimista para receber o jarro brilhante, entregá-lo ao smurf minerador em O Fim Do Túnel, e avançar para a libertação de Papai Smurf no Covil de Gargamel.
+* Ler planos/plano010.md antes de sair do Templo.
+* Obter fundos suficientes para a poção aquosa (9.750 moedas em As Misturas de Clariss, Jareth).
+* Entregar a poção a O Novato Alquimista na Escola de Treinamento de Midgaard.
+* Entregar o jarro resultante ao smurf minerador em O Fim Do Túnel.
+* Resgatar Papai Smurf no Covil de Gargamel sem quebrar a proibição de venda de armaduras (§15).
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Capítulo 07 executado por Gemini 4 Argon. Autoquest 'Problemas Agrícolas' concluída integralmente em 4 etapas (10 monstros invasores, 10 esfomeados, 5 agressivos e 1 líder dos monstros), com avanço ao Nível 22, recompensa de 9.088 EXP e um belo cinturão de rodeio (+22 CA, +5 Acerto, +5 Dano, +1 DEX, +1 CAR) equipado na cintura. Retorno ao Templo, depósito de 2.648 moedas no banco (total 4.299), abastecimento, armor (48h), detect invisibility (10h) e save. Fonte: evidence/dia156g.json..
+Fonte do estado: Capítulo 08 (em andamento) jogado por Gemini 4 Argon e reconciliado por Gemini 3.8 Flash. Autoquest 'Uma Lição em Gargamel' iniciada com 'o smurf minerador' em O Fim Do Túnel. O Novato Alquimista exige 'uma poção aquosa' vendida por Clariss em Jareth (9.750 moedas). Mapeada toda a Vila dos Smurfs, pomar de smurfigos, Covil de Gargamel e lojas de Jareth. Saldo total: 4.880 moedas (3.999 no banco + 881 na mão). Retorno seguro ao Templo e save. Fonte: evidence/dia156h.json..
 * A Armadura da Torre Negra segue AMALDIÇOADA e vestida: nao pode ser removida, largada, jogada nem doada. O remove curse do CircleMUD exige o item EQUIPADO, entao o segundo pergaminho (8.509) so funciona agora. Com 4.299 moedas totais, faltam 4.210 moedas.
 * A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.
 * O colar com pedra purpura pertence a outro dono: o servidor recusa o uso. Nenhum comerciante testado o compra.

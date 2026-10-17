@@ -93,5 +93,18 @@ Fonte: [evidence/dia156g.json](../data/heroes/grebolius/evidence/dia156g.json). 
 
 - **Sair da sala antes do fim da fala do NPC trava o gatilho da etapa seguinte.** Após `say sim` para `O Pacificador`, ele emite 13 linhas espaçadas por vários segundos (terminando em `O Pacificador exclama: 'Se esquecer o caminho, digite HISTÓRICO DIZER. E vá encontrar o fazendeiro!'`). Quando a personagem saiu da sala antes da 13ª linha, `[Autoquests em andamento]` exibiu apenas `Problemas Agrícolas` (sem dois-pontos nem objetivo) e `O dono da fazenda` permaneceu mudo na fazenda. Ao permanecer na sala até a 13ª linha terminar, `O dono da fazenda` falou imediatamente ao vê-la entrar em `A Sala de Estar`.
 - **Em `Problemas Agrícolas`, concluir a cota das Etapas 1, 2 e 3 NÃO altera o `score tudo` nem imprime aviso de objetivo concluído.** Durante as três primeiras etapas (10 `um monstro invasor`, 10 `um monstro esfomeado` e 5 `um monstro agressivo`), o `score tudo` permanece estático em `Problemas Agrícolas: Você deve matar criaturas.` mesmo após o 10º/5º abate. O avanço ocorre exclusivamente ao retornar à sala onde está `O fazendeiro` (`A Sala de Estar` ou `A Entrada da Casa`) e aguardar ~10–16 segundos pelo disparo do *mobprog*. Apenas na Etapa 4 (1 `o líder dos monstros`) o texto muda para o singular (`Problemas Agrícolas: Você deve matar criatura.`) e o abate imprime `Você já atingiu este objetivo.`.
-- **Recompensa verificada (`identify cinturão` e comparação empírica de `score tudo`):** `um belo cinturão de rodeio` (Tipo: `ARMADURA`, Flags: `BRILHO`, Peso: `5`, Valor: `1250`, Nível: `15`, Slot: `CINTURA`) aplica `CA -12` na convenção interna do CircleMUD (medido no `score` do DeBo como **+22 CA**: `112 -> 134`), **+5 Acerto** (`5 -> 10`), **+5 Dano** (`2 -> 7`), **+1 Destreza** (`15 -> 16`) e **+1 Carisma** (`11 -> 12`).
+## 2026-10-16 — `Uma Lição em Gargamel`, políticas de comércio de Jareth e Conquista 34 ("Cai Fora!")
+
+Fonte: [evidence/dia156h.json](../data/heroes/grebolius/evidence/dia156h.json). Agentes: `Gemini 4 Argon` (sessão de jogo) / `Gemini 3.8 Flash` (encerramento e handoff).
+
+- **Políticas de compra de lojistas em Jareth e Midgaard:**
+  - `A Loja de Armaduras de Maris` (Ilena) avalia armaduras de qualidade (ex.: `armadura de metal da OME` avaliada em 2.250 moedas), mas recusa a compra com a resposta: **`Desculpe, mas eu não compro de forasteiros.`**. Porém, comprou `luvas de couro` por 37 moedas.
+  - `A Loja de Armas de Maris` (Maris) e `Dalston Tralhas e Cia` (Elias Dalston): avaliam armas/itens, mas recusam compras com **`Eu não compro!`**.
+  - `A Loja de Trapos da Vovó` (Granny): recusa atendimento a magos com **`Nós não trabalhamos para sua classe aqui!`**.
+  - `A Loja de Armaduras de Midgaard`: possui limite rígido de caixa por dia/ciclo. Comprou o `peitoral de couro` por 200 moedas, mas recusou a armadura da OME com a mensagem: **`Isso é caro demais para mim - Tente um feiticeiro!`**.
+- **Conquista 34 ("Cai Fora!"):** Desbloqueada ao interagir com o capitão aposentado em `As Margens do Rio` com `value barco`: o capitão responde **`O capitão aposentado exclama: 'Volte mais tarde!'`** seguido pelo anúncio de conquista **`* Você desbloqueou a conquista 34: Cai Fora! Que tal guardar segredo e deixar que os outros a descubram por conta própria?`**.
+- **Preços em `As Misturas de Clariss` (Jareth):**
+  - `Uma poção amarela de detectar invisibilidade` (nível 10): 4.605 moedas de ouro.
+  - `Uma poção aquosa` (nível 10, item de quest do Alquimista): 9.750 moedas de ouro.
+
 

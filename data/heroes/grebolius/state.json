@@ -5,7 +5,7 @@
     "day": 156,
     "verification": "live",
     "live_verified": true,
-    "source": "Capítulo 07 executado por Gemini 4 Argon. Autoquest 'Problemas Agrícolas' concluída integralmente em 4 etapas (10 monstros invasores, 10 esfomeados, 5 agressivos e 1 líder dos monstros), com avanço ao Nível 22, recompensa de 9.088 EXP e um belo cinturão de rodeio (+22 CA, +5 Acerto, +5 Dano, +1 DEX, +1 CAR) equipado na cintura. Retorno ao Templo, depósito de 2.648 moedas no banco (total 4.299), abastecimento, armor (48h), detect invisibility (10h) e save. Fonte: evidence/dia156g.json."
+    "source": "Capítulo 08 (em andamento) jogado por Gemini 4 Argon e reconciliado por Gemini 3.8 Flash. Autoquest 'Uma Lição em Gargamel' iniciada com 'o smurf minerador' em O Fim Do Túnel. O Novato Alquimista exige 'uma poção aquosa' vendida por Clariss em Jareth (9.750 moedas). Mapeada toda a Vila dos Smurfs, pomar de smurfigos, Covil de Gargamel e lojas de Jareth. Saldo total: 4.880 moedas (3.999 no banco + 881 na mão). Retorno seguro ao Templo e save. Fonte: evidence/dia156h.json."
   },
   "level": 22,
   "mechanical_race": "Elfo",
@@ -34,7 +34,7 @@
     "current": 1572738,
     "next_level": 1600000
   },
-  "gold": 4299,
+  "gold": 4880,
   "attributes": {
     "STR": 11,
     "DEX": 16,
@@ -55,7 +55,7 @@
   "training_sessions": 40,
   "operational_mode": {
     "current": "padrao",
-    "description": "Sessão supervisionada no Milharal Destruído (Capítulo 07): combate à distância com lightning bolt, wimpy 45, autoquest 'Problemas Agrícolas' concluída nas 4 etapas e estado salvo no Templo.",
+    "description": "Sessão supervisionada na Vila dos Smurfs e Jareth (Capítulo 08): 'Uma Lição em Gargamel' iniciada, reconhecimento de lojas e salas, retorno seguro e estado salvo no Templo.",
     "wimpy_profile": {
       "padrao": 17,
       "batedor": 33,
@@ -79,20 +79,20 @@
   },
   "last_event": {
     "day": 156,
-    "summary": "Capítulo 7 concluído: Problemas Agrícolas vencida nas 4 etapas (10 invasores, 10 esfomeados, 5 agressivos e 1 líder dos monstros) e entregue a O fazendeiro. Avanço ao nível 22, cinturão de rodeio equipado na cintura (CA 134, Acerto 10, Dano 7), 4.299 moedas (3.999 no banco + 300 na mão) e 8 mortes mantidas. Salva no Templo."
+    "summary": "Início do Capítulo 08: aceita a autoquest 'Uma Lição em Gargamel' com o smurf minerador. O Novato Alquimista pediu uma poção aquosa de Clariss em Jareth (9.750 moedas). Mapeada a Vila dos Smurfs (510 salas no mapa), casas e Covil de Gargamel. Desbloqueada Conquista 34 (Cai Fora!). Salva no Templo de Midgaard com 4.880 moedas (3.999 no banco + 881 na mão)."
   },
   "next_objective": {
     "mission_id": "uma-licao-em-gargamel",
     "title": "Capítulo 08: Uma Lição em Gargamel",
-    "next_step": "Objetivo definido pelo autor para o Capítulo 08: concluir a autoquest 'Uma Lição em Gargamel' (níveis 20-80, iniciada com 'o smurf minerador'). Seguir planos/plano009.md: a rota oficial do servidor ('help vila dos smurfs' / MAPA 33) sai do Templo para o sul até a Praça do Comércio, segue a leste pela Rua Principal e Portão Leste até o centro da Estrada do Rei, e entra ao norte em 'A Entrada Para a Vila dos Smurfs'.",
+    "next_step": "Levantar as ~4.870 moedas restantes para comprar a 'poção aquosa' (9.750 moedas) na loja de Clariss em Jareth, ou buscar meios alternativos de obtê-la. Entregar a poção a O Novato Alquimista para receber o jarro brilhante, entregá-lo ao smurf minerador em O Fim Do Túnel, e avançar para a libertação de Papai Smurf no Covil de Gargamel.",
     "missing_preparation": [
-      "Ler planos/plano009.md antes de sair do Templo.",
-      "Rodar prepara.py --forcar antes de partir (repor pães na Padaria).",
-      "Seguir a rota de 'help vila dos smurfs': Templo -> s,s (Praça do Comércio) -> leste pela Rua Principal / Portão Leste até a Estrada do Rei -> norte para A Entrada Para a Vila dos Smurfs.",
-      "Usar 'where minerador' ou 'where smurf' dentro da Vila dos Smurfs, aguardar a fala inicial do NPC, responder 'say sim' e NÃO sair da sala antes de terminar a última fala do briefing.",
-      "Proibida a venda de armaduras (§15)."
+      "Ler planos/plano010.md antes de sair do Templo.",
+      "Obter fundos suficientes para a poção aquosa (9.750 moedas em As Misturas de Clariss, Jareth).",
+      "Entregar a poção a O Novato Alquimista na Escola de Treinamento de Midgaard.",
+      "Entregar o jarro resultante ao smurf minerador em O Fim Do Túnel.",
+      "Resgatar Papai Smurf no Covil de Gargamel sem quebrar a proibição de venda de armaduras (§15)."
     ],
-    "plan_document": "planos/plano009.md"
+    "plan_document": "planos/plano010.md"
   },
   "skills": [
     {
@@ -293,69 +293,75 @@
       {
         "name": "um cantil",
         "quantity": 1,
-        "source": "evidence/dia156g.json"
+        "source": "evidence/dia156h.json"
       },
       {
-        "name": "um manto de pano",
+        "name": "um jarro brilhante",
         "quantity": 1,
-        "source": "evidence/dia156g.json"
-      },
-      {
-        "name": "um pão recheado",
-        "quantity": 3,
-        "source": "evidence/dia156g.json"
-      },
-      {
-        "name": "uma Cruz Ansada",
-        "quantity": 1,
-        "source": "evidence/dia156g.json"
-      },
-      {
-        "name": "uma brilhante veste de novato",
-        "quantity": 2,
-        "source": "evidence/dia156g.json"
-      },
-      {
-        "name": "o poderoso Scutum de Carvalho (+13L)",
-        "quantity": 1,
-        "source": "evidence/dia156g.json"
+        "source": "evidence/dia156h.json"
       },
       {
         "name": "a mochila de Pellinore",
         "quantity": 1,
-        "source": "evidence/dia156g.json"
-      },
-      {
-        "name": "uma adaga",
-        "quantity": 1,
-        "source": "evidence/dia156g.json"
+        "source": "evidence/dia156h.json"
       },
       {
         "name": "um pergaminho de sabedoria",
         "quantity": 1,
-        "source": "evidence/dia156g.json"
+        "source": "evidence/dia156h.json"
+      },
+      {
+        "name": "uma armadura de metal da OME",
+        "quantity": 1,
+        "container": "a mochila de Pellinore",
+        "source": "evidence/dia156h.json"
+      },
+      {
+        "name": "a Espada do Peão Negro",
+        "quantity": 2,
+        "container": "a mochila de Pellinore",
+        "source": "evidence/dia156h.json"
+      },
+      {
+        "name": "o Cetro do Bispo Negro",
+        "quantity": 1,
+        "container": "a mochila de Pellinore",
+        "source": "evidence/dia156h.json"
+      },
+      {
+        "name": "a bainha de Excalibur",
+        "quantity": 1,
+        "container": "a mochila de Pellinore",
+        "source": "evidence/dia156h.json"
+      },
+      {
+        "name": "um capuz negro",
+        "quantity": 1,
+        "container": "a mochila de Pellinore",
+        "source": "evidence/dia156h.json"
       },
       {
         "name": "um colar com uma pedra púrpura",
         "quantity": 1,
-        "source": "evidence/dia156g.json"
+        "container": "a mochila de Pellinore",
+        "source": "evidence/dia156h.json"
       },
       {
-        "name": "um brilhante punhal de novato",
-        "quantity": 8,
+        "name": "uma Cruz Ansada",
+        "quantity": 1,
         "container": "a mochila de Pellinore",
-        "source": "evidence/dia156e.json"
+        "source": "evidence/dia156h.json"
       }
     ],
     "pending_verification": []
   },
   "conditions": [
-    "Capítulo 07 concluído: 141/141 HP, 280/280 mana e 133/133 MV, salva no Templo de Midgaard.",
+    "Capítulo 08 em andamento: 141/141 HP, 280/280 mana e 133/133 MV, salva no Templo de Midgaard.",
     "Nível 22, EXP 1.572.738; próximo nível em 1.600.000 (faltam 27.262).",
-    "Ouro: 300 na mão e 3.999 no banco, total 4.299 (+2.648 depositados nesta sessão).",
-    "Oito mortes e uma armadilha mortal no histórico; zero mortes no Capítulo 07.",
-    "Três pães recheados e cantil cheio; fome e sede ausentes.",
-    "Um belo cinturão de rodeio equipado na cintura (+22 CA, +5 Acerto, +5 Dano, +1 DEX, +1 CAR); armor ativo (+31 por 48h), CA 134.",
+    "Ouro: 881 na mão e 3.999 no banco, total 4.880 (+581 moedas obtidas em vendas nesta sessão).",
+    "Oito mortes e uma armadilha mortal no histórico; zero mortes na sessão.",
+    "Alimentada e saciada; cantil com água cristalina.",
+    "Um belo cinturão de rodeio equipado na cintura (+22 CA, +5 Acerto, +5 Dano, +1 DEX, +1 CAR); armor ativo (+31 por 13h), CA 134.",
     "Wimpy 45 mantido conforme diretiva §6.",
     "Quarenta treinos; curse a 10%.",
     "Problemas Agrícolas concluída e entregue após as 4 etapas no milharal (10 invasores, 10 esfomeados, 5 agressivos e 1 líder dos monstros).",
