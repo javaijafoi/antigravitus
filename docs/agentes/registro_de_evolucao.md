@@ -141,6 +141,47 @@ handoff (§7).
 
 ### 2026-10-16 · Dia 156 · deepseek-flash
 
+> **Quinta entrada do dia.** A pergunta do autor foi *"ele deixou de fazer algo de devolutiva técnica
+> que devemos deixar mais explícito?"* — e a resposta virou ferramenta.
+
+- **Mudou:** o motor ganhou a **v1.6** (`CHANGELOG.md`) com três peças:
+  1. **`scripts/devolutiva.py`** — verificador de **fim de sessão**, **obrigatório**;
+  2. **`scripts/test_devolutiva.py`** — **20 testes** (suíte **121 → 141**);
+  3. a seção **`## 8. Devolutiva técnica`** no modelo do plano (`planos/LEIA.md`), o **`AGENTS.md`
+     §6.2** e o item obrigatório no checklist de encerramento.
+  Também: **`planos/plano007.md`** (o plano vigente, com a devolutiva preenchida como modelo), e a
+  **renumeração da §29 → §38** no `conhecimento.md`.
+- **Por quê:** o autor auditou o trabalho do `Gemini 3.8 Flash` e a resposta é que **ele atendeu o
+  narrativo e deixou a devolutiva técnica pela metade** — nos **dois lugares exatos** que o
+  `AGENTS.md` §5 nomeia:
+  - **`mapa.json` intocado**, apesar de ele ter escrito uma seção chamada *"O mapa revelado: fechando os
+    anéis do esgoto"*. **Quatro arestas que ele andou e provou serem de mão dupla continuam registradas
+    como becos.**
+  - **`maquina/verificacoes.md` nunca aberto**, apesar de ele ter encontrado o **aviso prévio de
+    armadilha mortal** do servidor, um **rótulo novo de `consider`** (`Você é LOUCO!`) e a **mordida de
+    um turno** do Dragão.
+  E o sintoma que explica os dois: **nenhum validador enxerga isso.** O `check_project.py` confere
+  **estrutura**, não **cobertura** — ele não sabe que uma caminhada aconteceu. **A lacuna é invisível, e
+  foi por isso que ela se repetiu comigo (a crônica errada do capítulo 5) e com ele (o mapa).**
+- **Como foi verificado:** as provas dele foram conferidas no transcript e **confirmadas**
+  (`ajuda mapas` na linha **5562**, `ajuda remortar` na **8230**); e o próprio `devolutiva.py` foi rodado
+  no repositório real: **0 falhas, 4 avisos, exit 2**. `check_project.py` **0 erros**; `verificar.py`
+  **18/18**; suíte **141 testes OK**. Corrigi **quatro bugs meus** durante o desenvolvimento:
+  (a) o `PENDENTE` era lido só na terceira coluna, e ele está na segunda; (b) a checagem lia **a prosa
+  inteira** em vez das **linhas de tabela**, então qualquer menção a "mapa.json" disparava falha;
+  (c) `HEAD~1` como janela erra quando a sessão já publicou — trocado pelo **commit que criou o plano
+  anterior**; (d) **recursão infinita**, porque o script roda a suíte e o teste dele a chamava.
+- **Custo:** mais uma seção obrigatória por plano e mais um passo no fim da sessão. **E o custo de NÃO
+  ter isto já está medido: seis rodadas** procurando um NPC cuja sala estava num doc do repositório, e
+  **uma crônica publicada errada**.
+- **Próximo:** (a) a pendência que a devolutiva **declara em voz alta** — **corrigir as quatro arestas
+  dos anéis no `mapa.json`**, o que exige **descer e conferir o `exits` ao vivo** (gravar sem andar
+  seria inventar, §4.1); (b) o `maquina/dicionario_comandos.md` merece o mesmo tratamento que dei ao
+  `verificacoes.md`; (c) o `check_project.py` ainda **não sabe validar cobertura** — enquanto não
+  souber, o `devolutiva.py` é a única rede.
+
+### 2026-10-16 · Dia 156 · deepseek-flash
+
 > **Quarta entrada do dia.** Esta **fecha o Capítulo 06** — e registra o que eu aprendi **observando
 > outro agente jogar o plano que eu escrevi**.
 

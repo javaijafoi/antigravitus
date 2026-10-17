@@ -202,6 +202,43 @@ a ordem de leitura. Não edita, não joga, não publica.
 **Por que assim:** se cada um editasse o mesmo arquivo, a informação do anterior sumiria — e é
 exatamente essa informação que evita refazer seis rodadas de busca.
 
+### 6.2 A devolutiva técnica é obrigatória — e é conferida contra o git
+
+> **`python scripts/devolutiva.py`** — rode **antes de encerrar** e **resolva todas as FALHAS**.
+> Código 0 = tudo certo; 1 = falha; 2 = só avisos.
+
+A §6.1 resolve **onde o próximo começa**. Esta resolve **o que o próximo precisa saber** — e o problema
+que ela ataca é sutil: **a descoberta existe, e o artefato não mudou.**
+
+**O caso real (Dia 156), duas vezes no mesmo dia:**
+
+- uma sessão **publicou uma crônica errada** — leu o fim de uma cadeia e narrou como começo;
+- outra **andou os esgotos, descobriu quatro anéis de mão dupla**, escreveu o achado em prosa numa
+  seção chamada *"fechando os anéis do esgoto"* — **e não tocou no `mapa.json`**.
+
+**Nenhum validador percebeu, nos dois casos.** O `check_project.py` confere **estrutura**, não
+**cobertura**: ele não sabe que uma caminhada aconteceu. **É essa cegueira que o `devolutiva.py`
+cobre.**
+
+**Como funciona.** O plano ganha uma seção **`## 8. Devolutiva técnica`** (modelo no `LEIA.md`), com uma
+tabela de quatro linhas — **mapa, referência do servidor, fato do mundo, erro do motor** — dizendo em
+qual artefato cada descoberta foi gravada. O verificador então:
+
+1. exige a seção no plano mais alto, **preenchida** (só o modelo não conta);
+2. **confere cada linha da tabela contra o `git diff`**: se diz `mapa.json`, o `mapa.json` **tem** de ter
+   mudado na sessão;
+3. trata **`PENDENTE` como aviso, não falha** — declarar o que não se fez é o comportamento **certo**;
+4. confere `parts` de capítulo (`source_kind`, `date`, `evidence`), autoria das evidências, bloco no
+   livro-razão, e se há segredo rastreado.
+
+**A janela do diff é o commit que criou o plano ANTERIOR** — porque o plano anterior nasceu no **fim** da
+sessão passada. `HEAD~1` erra quando a sessão já publicou (foi o que aconteceu: o arquivo já estava
+commitado).
+
+**Custo:** mais uma seção obrigatória por plano, e mais uma coisa para rodar no fim. **O ganho é o que
+não se perde** — e o custo de não ter isto já foi medido: **seis rodadas** procurando um NPC cuja sala
+estava num doc do repositório, e uma **crônica publicada errada**.
+
 Formato mínimo de um bloco (copie de [registro_de_evolucao.md](docs/agentes/registro_de_evolucao.md)):
 
 ```markdown
@@ -257,6 +294,7 @@ do vigia.
 **Antes de começar**
 
 - [ ] Li o `README.md` da raiz e este arquivo.
+- [ ] **Rodei `python scripts/mandabala.py`** e li o plano vigente **inteiro** (§6.1).
 - [ ] Sei qual herói, qual temporada/capítulo e qual o objetivo verificável.
 - [ ] Li `diretiva_de_jogo.md` e as pendências em `missoes.json` / plano do capítulo.
 - [ ] Sei onde vou escrever e qual é a fonte da verdade daquele dado.
@@ -265,6 +303,13 @@ do vigia.
 
 **Antes de encerrar**
 
+> **🔴 OBRIGATÓRIO: `python scripts/devolutiva.py`** — e **resolver todas as FALHAS**. Ele é a
+> verificação do protocolo inteiro, e existe porque duas sessões seguidas falharam do mesmo jeito no
+> Dia 156: uma publicou crônica errada, a outra andou os esgotos e **não gravou no `mapa.json` o que
+> descobriu**. **Nos dois casos nenhum validador percebeu** — o `check_project.py` confere
+> **estrutura**, não **cobertura**; ele não sabe que uma caminhada aconteceu. Ver §6.2.
+
+- [ ] **`python scripts/devolutiva.py` rodado, com 0 falhas** (avisos lidos, não silenciados).
 - [ ] Evidência gravada, com `agent` e origem.
 - [ ] **Plano numerado criado** em `data/heroes/<id>/planos/planoNNN.md` — o **próximo** número,
       **sem editar o anterior** (§6.1). É o ponto de continuação que o autor executa dizendo

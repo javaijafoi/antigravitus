@@ -4,6 +4,30 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.6 — Dia 156 · a devolutiva técnica obrigatória
+- **NOVO**: **`scripts/devolutiva.py`** — o verificador de **fim de sessão**. Confere o protocolo
+  inteiro e **reprova** o que passar despercebido: plano numerado (número, autoria, seção de
+  devolutiva **preenchida**), **coerência da devolutiva contra o `git diff`**, `parts` de capítulo
+  (`source_kind`/`date`/`evidence`), autoria das evidências, bloco no livro-razão, e segredo rastreado.
+  Códigos: **0** ok, **1** falha, **2** só avisos.
+- **NOVO**: a seção **`## 8. Devolutiva técnica`** no modelo do plano (`planos/LEIA.md`), com os quatro
+  destinos do `AGENTS.md` §5 — **mapa, referência do servidor, fato do mundo, erro do motor**.
+- **NOVO**: `scripts/test_devolutiva.py` — **20 testes**. Suíte offline: **121 → 141**.
+- **NOVO**: `AGENTS.md` **§6.2** e item **obrigatório** no checklist *"Antes de encerrar"*.
+- **MOTIVO**: **duas sessões seguidas falharam do mesmo jeito no mesmo dia.** A primeira publicou uma
+  crônica errada (leu o fim de uma cadeia e narrou como começo). A segunda **andou os esgotos,
+  descobriu que quatro salas eram anéis de mão dupla**, escreveu o achado em prosa numa seção chamada
+  *"fechando os anéis do esgoto"* — **e não tocou no `mapa.json`**. **Nos dois casos nenhum validador
+  percebeu**: o `check_project.py` confere **estrutura**, não **cobertura** — ele não sabe que uma
+  caminhada aconteceu. **É essa cegueira que este script cobre.**
+- **DETALHE DE PROJETO**: a janela do diff é **o commit que criou o plano ANTERIOR** (o plano anterior
+  nasce no fim da sessão passada). `HEAD~1` erra quando a sessão já publicou — aconteceu no primeiro
+  teste, com o `conhecimento.md` já commitado.
+- **ARMADILHA RESOLVIDA**: o script **roda a suíte de testes**, e pode ser chamado **de dentro dela** —
+  `devolutiva.py` → suíte → `test_devolutiva.py` → `devolutiva.py`… **travou de verdade** durante o
+  desenvolvimento. A guarda é a variável de ambiente **`DSH_DEVOLUTIVA_RODANDO`**, e há um teste que
+  a exige.
+
 ## v1.5 — Dia 156 · planos numerados e o "mandabala"
 - **NOVO**: **planos numerados** em `data/heroes/<id>/planos/planoNNN.md` — **append-only**, um por
   sessão, com **autoria** no cabeçalho. O autor chega, diz *"executa o plano NNN"*, e quem pegar
