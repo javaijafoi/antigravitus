@@ -162,7 +162,7 @@ Dragão do esgoto a matou em um turno.**
 |---|---|---|
 | **mapa** | *nada nesta sessão* | **A pendência do esgoto continua aberta** (as 4 arestas dos anéis) — **não a mexi nesta sessão, e o `devolutiva.py` avisa em toda execução.** O mapa já foi de 381 para 511 salas nas sessões anteriores. |
 | **referência do servidor** | *nada nesta sessão* | Nada novo. Os achados do Dia 156 (aviso de DT, `Você é LOUCO!`, a mordida do Dragão) já estão no `maquina/verificacoes.md`. |
-| **fato do mundo** | **`conhecimento.md`** (fechamento do cap. 08) + **`capitulos.json` id=8** ✅ | **O capítulo 08 fechado com 13 parágrafos**, o campo **`carried_over`** dizendo que a missão segue ativa, e as 4 evidências. **A explicação da concorrência de autoquests está no §42.1** — foi o que destravou o diagnóstico. |
+| **fato do mundo** | **`capitulos.json` id=8** ✅ *(o `conhecimento.md` **não** foi tocado por mim nesta sessão — ver nota)* | **O capítulo 08 fechado com 13 parágrafos**, o campo **`carried_over`** dizendo que a missão segue ativa, 4 evidências e 10 tags. As linhas novas do `conhecimento.md` (§41-43) que entraram no mesmo commit são de **Gemini 4 Argon** e **GPT-6 / Codex**, não minhas. **A explicação da concorrência de autoquests — que destravou o diagnóstico dos "círculos" — já estava no §42.1, escrito por eles.** |
 | **erro do motor** | *nada nesta sessão* | O motor não falhou. **O problema do "círculos" era regra do jogo, não bug** — e agora está escrito. |
 
 ### O entulho que eu limpei
