@@ -58,3 +58,31 @@ Fonte: sessão ao vivo do Dia 156 (Templo de Midgaard, nível 21). Agente: `deep
   Templo, onde a tagarela de fato não está. **Isso não é falha do comando** — é o limite documentado.
 - **Precedência aplicada:** resposta real do servidor > ajuda do DeBo. Aqui as duas discordam, e a
   divergência fica registrada em vez de resolvida em silêncio.
+
+## 2026-10-16 — o alerta de armadilha mortal, o `consider` **"Você é LOUCO!"** e o Dragão de um turno
+
+Fonte: [evidence/dia156f.json](../data/heroes/grebolius/evidence/dia156f.json) — incursão aos Esgotos
+de Midgaard. Agente da coleta: **`Gemini 3.8 Flash`**; registro aqui feito por `deepseek-flash`, porque
+**ele não tocou neste arquivo** e são achados de referência de servidor, não fatos do mundo.
+
+**Estes três achados existiam só em prosa (`conhecimento.md` §38) — que é onde o código não lê.**
+
+- **Existe um AVISO PRÉVIO de armadilha mortal, e ele é do servidor.** Na sala do `Passo-Em-Falso`, o
+  jogo emite: **`Você percebe que há algo perigoso por perto!`** — e **nada mais** acontece até a
+  personagem pisar. Isso muda o tratamento de DT no motor: hoje o `RISCO_A_EVITAR` do `config.py` é uma
+  **lista de salas escrita à mão**, mas o servidor **avisa em tempo real**. Vale investigar se o aviso é
+  genérico (qualquer DT) ou específico daquela sala — **não foi testado**.
+- **`consider` tem um rótulo acima de `danger`: `Você é LOUCO!`.** Dois NPCs o receberam —
+  **Clodoaldison**, o advogado de divórcios do submundo (`Um Escritório Pouco Iluminado`, ao norte de
+  `O Poço Escuro`), e os **3 besouros gigantes** que dormem abaixo do poço. **A escala conhecida até
+  aqui parava em `danger`;** este rótulo é novo e **não foi calibrado** — não se sabe se indica nível
+  muito acima, imortalidade ou apenas recusa de avaliação. **Clodoaldison é pacífico** (não atacou).
+- **O Dragão Vermelho do Covil abate 135 HP em um único turno** — a vida máxima dela no nível 21.
+  Mecânica exata **não** confirmada: pode ser dano fixo alto, morte por script ou efeito especial.
+  Mensagem observada: **`rasga sua jugular com uma mordida`**, seguida de `< Morto >`. Ele habita
+  `A Borda Estreita (Covil do Dragão)` e tem **aura multicolorida**. **Não é alvo de nível 21.**
+- **O inventário SOBREVIVE à morte.** Depois da Morte #8, *"todos os itens e equipamentos foram
+  preservados"* e ela os revestiu com `wear all` no Templo. Isso responde a uma dúvida antiga do
+  registro: **a morte custa experiência, não equipamento.**
+- **A ressurreição é automática**, pelo fluxo do `Paraíso` até a `Fonte da Vida`, terminando no Templo
+  de Midgaard — **sem comando do jogador**. Já era sabido (§ do Dia 111); reconfirmado aqui.
