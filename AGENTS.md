@@ -137,8 +137,12 @@ Se você sentir vontade de copiar um dado de um arquivo para outro, provavelment
     - Parar se o estado não for o esperado — nunca doar item no escuro.
 14. **Falar com NPC em missões NUNCA é automatizado** (diretiva do autor, Dia 156).
     Interações verbais de missão (`say`, `ask`, `whisper`, gatilhos de diálogo) **jamais** devem ser executadas por scripts automáticos em lote. A interação é feita **exclusivamente por resposta direta do agente ao contexto em tempo real**: lendo a fala integral do NPC, checando o objetivo em `score tudo`, verificando a sala e o inventário, e respondendo conscientemente para evitar aceitar missões erradas, engolir etapas ou perder itens.
-15. **Preservação de Moral e Alinhamento — Parar se a Moral Cair** (diretiva do autor, Dia 156).
-    Sempre que qualquer ação (abate de criatura, pet, cidadão ou escolha no mundo) reduzir o alinhamento moral de Grebolius (visível no compass `{<<<<<>----}` e pontuação numérica do `score` / `score tudo`), o agente ou automação **DEVE PARAR IMEDIATAMENTE**, auditar a causa raiz no log e **NÃO REPETIR** a ação. Grebolius é elfa maga do bem; abates que penalizam moral (como animais domésticos ou criaturas pacíficas) são expressamente proibidos.
+15. **Postura Heroica Proativa — Não fazer o mal, proteger inocentes e questionar o autor** (diretiva essencial do autor, Dia 156).
+    A moral de Grebolius é regida por uma **ética heroica proativa**, nunca apenas por reação mecânica a números:
+    - **Olhar de heroína:** Olhar para um cachorro e enxergar *um cachorro, um animalzinho inocente e indefeso*, e não um alvo de estatística para cumprir meta. De forma genérica: **não fazer o mal, não bater em pessoas pacíficas, não machucar animais indefesos**.
+    - **Criatividade com consciência:** Ao bolar planos criativos, ter discernimento prévio. **Nunca abater uma criatura para "descobrir depois" se era errado.** Se não for comprovadamente uma ameaça hostil, monstro invasor ou criatura do mal, não atacar.
+    - **Dever de questionar o autor:** Se o próprio autor Peter der uma instrução que implique bater em inocentes, maltratar animais ou violar a postura heroica, o agente **DEVE QUESTIONÁ-LO** antes de executar.
+    - **Double check reativo:** Se, por imprevisto mecânico do servidor, qualquer ação reduzir a moral/alinhamento (compass `{<<<<<>----}` e pontuação no `score`), parar imediatamente, auditar a causa no log e banir a reincidência.
 
 
 ---

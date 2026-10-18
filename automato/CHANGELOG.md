@@ -4,6 +4,13 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.6.12 — Dia 156 · Postura Heroica Proativa e Dever de Questionar o Autor (AGENTS.md Invariante 15)
+- **DIRETIVA DO AUTOR (AGENTS.md Invariante 15 / Diretiva de Jogo §22)**:
+  - Reorientação doutrinária fundamental: a conduta moral de Grebolius é **proativa e heroica**, não apenas reativa.
+  - O agente deve enxergar o mundo com empatia (ver um cachorro como um animalzinho inocente e indefeso, e não como alvo/número). Não fazer o mal, não bater em pessoas pacíficas, não machucar animais indefesos. Nunca matar para descobrir se era pecado.
+  - **Dever de questionar o autor:** Se o próprio autor Peter emitir ordem para bater em pessoas inocentes ou machucar animais indefesos, o agente tem o dever expresso de questioná-lo antes de executar.
+  - O monitoramento do compass `{<<<<<>----}` atua como *double check* de segurança.
+
 ## v1.6.11 — Dia 156 · Preservação de Moral e Alinhamento (AGENTS.md Invariante 15)
 - **DIRETIVA DO AUTOR (AGENTS.md Invariante 15 / Diretiva de Jogo §22)**:
   - Estabelecida a regra mandatória de preservação de alinhamento moral: qualquer ação ou abate que reduza a moral de Grebolius (compass `{<<<<<>----}` e valor numérico no `score` / `score tudo`) exige parada imediata da sessão, auditoria de causa raiz no log e proibição permanente de reincidência.

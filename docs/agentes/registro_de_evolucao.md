@@ -894,3 +894,25 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Custo:** Nenhum. Zero mortes, caixa líquido aumentado em +832 moedas (totalizando 1.719 moedas), alinhamento recuperado para Bom (311) e EXP acumulada deixando o Nível 32 a um passo minúsculo.
 - **Próximo:** Executar o Plano 022: acordar no Templo, farmar os 66.784 de EXP restantes no xadrez/esgotos para conquistar o Nível 32 e aguardar a próxima aventura definida pelo autor Peter.
 
+### 2026-10-18 · Dia 156 (sessão 15) · Gemini 3.8 Flash (High)
+- **Mudou:** `AGENTS.md` (Invariante 15 atualizada), `data/heroes/grebolius/diretiva_de_jogo.md` (§22 reformulada), `data/heroes/grebolius/conhecimento.md` (§54), `automato/README.md`, `docs/agentes/boas_praticas.md` (§5) e `automato/CHANGELOG.md` (v1.6.12).
+- **Por quê:** Diretiva fundamental e correção de postura solicitada pelo autor Peter: *"eu não queria que fosse só uma ação reativa, acho que o reativo é o double check. Eu acho que tem que também ter uma postura, uma postura um pouco mais heroica. De forma mais genérica, não fazer o mal, não bater em pessoas, não bater em animais. Se eu mandar alguma coisa que mande fazer isso, você me questiona. Quando você for criativo, você toma esse cuidado, porque eu não quero matar um bicho para descobrir que fiz errado. Eu queria que você olhasse para o cachorro e visse um cachorro, um animalzinho inocente e indefeso."*
+- **Como foi verificado:**
+  1. Invariante 15 e Seção 22 expandidas formalizando a Ética Heroica Proativa: ver animais e pessoas com empatia genuína, proibição absoluta de agredir inocentes ou machucar animais indefesos, discernimento prévio sem matar para testar pecado, e o **dever expresso de questionar o próprio autor** caso uma instrução mande ferir inocentes. O monitoramento de moral no compass atua apenas como double check de segurança.
+  2. Suíte de testes unitários (`test_*.py`: 141 testes OK), `check_project.py` (0 erros), `automato/verificar.py` (18/18 OK).
+- **Custo:** Nenhum. Consolida a alma do projeto: Grebolius como uma heroína de verdade, com integridade narrativa e princípios inegociáveis.
+- **Próximo:** Seguir o Plano 022 rumo ao Nível 32 mantendo a conduta heroica proativa.
+
+### 2026-10-18 · Dia 156 (sessão 16) · Gemini 3.8 Flash (High)
+- **Mudou:** `data/heroes/grebolius/conhecimento.md` (§55 adicionada), `maquina/verificacoes.md` (seção de hipótese técnica adicionada) e criação de `data/heroes/grebolius/planos/plano023.md`.
+- **Por quê:** Proposição e diretiva direta do autor Peter: *"Pensou que sleep pode ser bom para matar duplas? Dorme um, mata o outro e depois mata o que dormiu? Coloque como hipotese a testar"*.
+- **Como foi verificado:**
+  1. Hipótese formalizada e catalogada em `conhecimento.md` §55 e `maquina/verificacoes.md`, mapeando o precedente no Covil de Gargamel e o cenário de teste dos dois monstros da lama na Curva Lamacenta dos Esgotos.
+  2. Criação do `planos/plano023.md` estabelecendo o protocolo empírico para execução no Capítulo 11 logo após consolidar o Nível 32.
+  3. `python scripts/mandabala.py` executado com sucesso e reconhecendo o Plano 023 como plano vigente sem lacunas.
+  4. Suíte de testes (`test_*.py`: 141 testes OK), `check_project.py` (0 erros, 7 avisos históricos), `automato/verificar.py` (18/18 OK).
+- **Custo:** Nenhum.
+- **Próximo:** Executar o Plano 023: farmar os 66.784 de EXP restantes para o Nível 32 e realizar o teste empírico de controle de multidão com sono arcano contra os monstros da lama.
+
+
+

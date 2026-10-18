@@ -198,7 +198,7 @@ o quê evita creditar a um a trapalhada do outro — e torna possível comparar 
 
 ## Diretivas do autor (valem para outros agentes)
 - **PROIBIDO pegar/comercializar itens amaldiçoados** (incluindo Armadura da Torre Negra amaldiçoada / NODROP): itens da Torre Negra ou de peão são permitidos se NÃO forem amaldiçoados, exigindo dupla checagem com `identify` no chão antes do `get`.
-- **PRESERVAÇÃO DE MORAL E ALINHAMENTO**: se qualquer ação ou abate derrubar o alinhamento moral (`score` / compass `{<<<<<>----}`), **parar imediatamente**, auditar a causa raiz no log e **não repetir** (proibido abater animais domésticos ou pacíficos).
+- **POSTURA HEROICA PROATIVA (PRESERVAÇÃO DA MORAL)**: agir com conduta heroica proativa (não fazer o mal, não bater em pessoas pacíficas, não machucar animais indefesos). Olhar para o mundo com empatia (ver um cachorro como um animalzinho inocente e indefeso, nunca como mob a abater para testar). Se o autor mandar ferir inocentes/animais, o agente **deve questioná-lo**. O reativo (parar se o compass cair) atua apenas como double check de segurança.
 - **Nada de metajogo nas descrições dos capítulos** — o detalhe técnico fica nas descrições dos dias.
 - A **âncora do Dia 100** (a personagem é uma elfa; o nome goblin foi um engano de 99 dias) é
   **âncora do autor**, sem evidência de servidor, e **não reescreve** crônicas antigas.

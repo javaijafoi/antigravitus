@@ -2254,12 +2254,32 @@ Fonte: [evidence/dia156k.json](evidence/dia156k.json). Sessão ao vivo via `auto
 
 ---
 
-## 54. Impacto Moral e Diretiva de Preservação do Alinhamento (Dia 156)
+## 54. A Postura Heroica de Grebolius e a Ética Proativa (Dia 156)
 
 - **A Queda de Alinhamento e a Restauração Triunfal:**
   - Após os testes errôneos com animais domésticos, o alinhamento moral havia caído para 198.
   - Ao executar a caçada aos 10 monstros autênticos do mal (Azrael, cobra peçonhenta, rato gigante de esgoto, aranha das trevas, Cavaleiro Negro e Bispo Negro), o alinhamento de Grebolius disparou para **311** (`{<<<<<>>---} Você é bom`).
-  - O resultado comprovou matematicamente o sistema moral do DeBo MUD: matar criaturas malignas eleva expressivamente a virtude do herói.
-- **Diretiva Absoluta do Autor Peter:**
-  - Grebolius só mata o que for comprovadamente maligno ou monstruoso. Animais indefesos e criaturas pacíficas são estritamente intocáveis.
+  - O resultado comprovou matematicamente o sistema moral do DeBo MUD: abater criaturas comprovadamente malignas eleva expressivamente a virtude do herói.
+- **Diretiva Absoluta do Autor Peter (Ética Heroica Proativa):**
+  - **O Olhar da Heroína:** O reativo é apenas o *double check*; a conduta deve ser guiada por uma postura heroica proativa. Olhar para um cachorro e enxergar *um animalzinho inocente e indefeso*, nunca um mob abstrato. Não fazer o mal, não agredir pessoas pacíficas, não machucar animais indefesos.
+  - **Criatividade Consciente:** Em qualquer tarefa criativa, jamais abater uma criatura para "descobrir depois se era pecado".
+  - **Dever de Questionar o Autor:** Se uma ordem direta do autor mandar bater em inocentes ou animais indefesos, o agente tem o dever de questioná-lo antes de executar.
+
+---
+
+## 55. Hipótese Tática a Testar: Controle de Grupo (CC) contra Duplas com Sono Arcano (Dia 156)
+
+- **Proposição do Autor Peter:** Usar a magia `sleep` como ferramenta de controle de grupo contra duplas de monstros perigosos que habitam a mesma sala:
+  1. `cast 'sleep' <alvo 2>` coloca o segundo oponente para dormir no primeiro turno.
+  2. Grebolius combate o primeiro alvo (`alvo 1`) em duelo isolado 1v1, utilizando feitiços de alvo único (`lightning bolt`) e ataques físicos, evitando qualquer dano em área.
+  3. Com o primeiro inimigo abatido, Grebolius pode regenerar mana se necessário ou finalizar o segundo monstro adormecido com raio fulminante no ponto fraco.
+- **Precedente Conhecido:** Validado com sucesso no Covil de Gargamel (Gargamel foi adormecido com `sleep`, Azrael foi abatido no 1v1 e em seguida Gargamel foi eliminado com um único raio, sem causar dano em Grebolius).
+- **Cenários Candidatos para Teste Empírico:**
+  - *Curva Lamacenta nos Esgotos:* dois `monstros da lama` habitam a sala juntos (veredito de Vida "Você é LOUCO!", Poder "Você tem PROBLEMAS!?"). O combate 2 contra 1 é quase certamente letal, mas a neutralização de um dos monstros via sono pode viabilizar a vitória e a limpeza da sala.
+- **Variáveis a Verificar no Teste:**
+  1. O monstro adormecido acorda com a morte ou os gritos do parceiro na mesma sala, ou permanece em sono até sofrer dano direto?
+  2. A salvaguarda contra magia (`save vs spell`) dos monstros da lama resiste ao sono arcano?
+  3. A duração do sono no Nível 31 de Grebolius (420 mana) é suficiente para derrotar o primeiro monstro antes do despertar espontâneo do segundo?
+
+
 

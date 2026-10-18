@@ -165,6 +165,21 @@ Fonte: [evidence/dia156p.json](../data/heroes/grebolius/evidence/dia156p.json). 
 - **Dinâmica Matemática de Alinhamento Moral:**
   - O abate de criaturas inequivocamente malignas e de alta experiência nos esgotos e no exército das sombras elevou o alinhamento moral de Grebolius de 198 para **311** (`{<<<<<>>---} Você é bom`), confirmando que a eliminação do mal no DeBo MUD atua como alavanca mecânica direta de virtude arcana.
 
+## 2026-10-18 — Hipótese Técnica a Testar: Sono Arcano (`sleep`) como Controle de Multidão (CC) contra Múltiplos Alvos
+
+- **Hipótese formulada pelo autor Peter:** A magia `sleep` pode ser empregada como mecânica de controle de multidão (CC) para converter encontros 2v1 em dois combates sequenciais 1v1.
+- **Protocolo de Teste Proposto:**
+  - Em sala com dois monstros hostis (ex.: *Curva Lamacenta* nos esgotos com dois monstros da lama):
+    1. Entrada na sala e conjuração imediata de `cast 'sleep' 2.monstro` (ou no alvo secundário).
+    2. Combate direcionado estritamente ao monstro acordado (`kill monstro`, `cast 'lightning bolt' monstro`), sem nenhuma magia de dano em área.
+    3. Inspeção do estado do segundo monstro durante e após a morte do primeiro.
+    4. Eliminação do segundo monstro adormecido ou recuo estratégico caso o sono expire prematuramente.
+- **Questões mecânicas abertas a verificar:**
+  - Se a morte de um monstro na mesma sala acorda o parceiro adormecido no DeBo/CircleMUD ou se ele permanece dormindo até sofrer dano direto.
+  - Imunidade ou resistência a sono (`save vs spell`) em criaturas do tipo monstro da lama/elementais.
+  - Duração do sono com Grebolius no nível 31 (420 mana).
+
+
 
 
 
