@@ -10,7 +10,7 @@
 * **Raça Mecânica no MUD:** Elfo
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **31**
-* **Alinhamento Moral:** 285 (Um pouco bom)
+* **Alinhamento Moral:** 198 (Um pouco bom)
 * **Localização Atual:** O Templo de Midgaard (último registro: Dia 156)
 * **Acampamento Registrado:** O Templo de Midgaard
 * **Santuário de Referência:** O Panteao dos Centenarios
@@ -24,9 +24,9 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 | **Pontos de Mana (MP)** | 420 | 420 | 100% |
 | **Estamina / Movimento (MV)** | 144 | 144 | 100% |
 
-* **Experiência Acumulada:** **6.851.196 EXP**
-* **Experiência Necessária p/ Grau 32:** **148.804 EXP** (Meta: 7.000.000 EXP)
-* **Ouro Líquido:** **1.497 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **6.853.770 EXP**
+* **Experiência Necessária p/ Grau 32:** **146.230 EXP** (Meta: 7.000.000 EXP)
+* **Ouro Líquido:** **887 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 11
@@ -125,15 +125,15 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
 **Capítulo 11: Avançar ao Nível 32 e Nova Expedição de Autoquest ou Exploração**
-Com Grebolius descansada, abastecida e a apenas 148.804 de EXP para o Nível 32, realizar uma sessão de caça rápida no Milharal ou Masmorra para alcançar o nível 32, ou avançar para nova autoquest recomendada pelo autor.
-* Suprimentos plenos: 4 pães na mochila de Pellinore e cantil de água cristalina cheio.
+Com Grebolius descansada, abastecida e a apenas 146.230 de EXP para o Nível 32, realizar uma sessão de caça rápida no Milharal ou Masmorra para alcançar o nível 32, ou avançar para nova autoquest recomendada pelo autor.
+* Suprimentos plenos: cantil saciado e itens essenciais na mochila.
 * Vitals e mana restaurados ao máximo (196 HP, 420 Mana).
 * Colar com pedra púrpura (ANTI-DT) e coleira do dragão equipados no pescoço (CA 148, Wimpy 45).
-* Ouro: 1.497 moedas na mão.
-* EXP: faltam 148.804 pontos para atingir o Nível 32.
+* Ouro: 887 moedas na mão.
+* EXP: faltam 146.230 pontos para atingir o Nível 32.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Execução ao vivo por Gemini 3.8 Flash (High); evidence/dia156p.json. Conclusão integral da diretiva do Capítulo 10 com 10 abates de espécies inéditas: Azrael (250 moedas), pequeno esquilo na floresta, bebê dragão, mico e novato zumbi (35 moedas) nas catacumbas dos novatos, larva e pequeno morcego nos esgotos, e gatinho, cachorrinho e beagle adquiridos na Pet Shop (300 moedas cada) e abatidos no Grande Campo. Teste crítico do sono arcano e contra-ataque do besouro gigante, com salvamento heróico a 6 HP via Wimpy 45 e fuga pela escada. Retorno seguro ao Templo, repouso pleno (196/196 HP, 420/420 Mana, 144/144 MV), 1.497 moedas, 4 pães na mochila e cantil cheio, salvo com save_confirmed: True e sleep_confirmed: True..
+Fonte do estado: Execução ao vivo por Gemini 3.8 Flash (High); evidence/dia156p.json. Conclusão estrita da diretiva do Capítulo 10 com 10+1 abates de espécies genuinamente inéditas na campanha inteira: 1) Azrael no Covil de Gargamel (250 moedas); 2) Um pequeno esquilo na floresta densa; 3) O bebê dragão na masmorra dos novatos; 4) Um gatinho (Pet Shop); 5) Um cachorrinho (Pet Shop); 6) Um beagle (Pet Shop); 7) Um rottweiler (Pet Shop por 900 moedas); 8) Um coelho selvagem na Trilha da Floresta de Jareth; 9) Um ladrão kobold na entrada da caverna (100 moedas); 10) Um kobold na Caverna dos Kobolds (60 moedas); 11) O líder kobold no Amplo Salão (160 moedas). Retorno seguro ao Templo via recall, sono pleno com 196/196 HP, 420/420 Mana, 144/144 MV, 887 moedas de ouro, cantil saciado e save_confirmed / sleep_confirmed verdadeiros..
 * A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.
 * O colar com pedra purpura pertence a outro dono: o servidor recusa o uso. Nenhum comerciante testado o compra.
 * Bainha de Excalibur exige nivel 85 (vista na Sala de Doacoes, nao pode ser carregada com a carga atual). Scutum de Carvalho exige nivel 35.

@@ -2224,17 +2224,23 @@ Fonte: [evidence/dia156k.json](evidence/dia156k.json). Sessão ao vivo via `auto
 ## 53. O Desafio das Dez Cabeças Inéditas (Capítulo 10) e Lições Críticas de Combate (Dia 156)
 
 - **Diretiva do Autor:** *"a próxima missão vai ser matar 10 bichos que ela ainda não matou mesmo que ela tenha que fazer planos malucos e ser muito criativa"*.
-- **Os 10 Abates Inéditos Executados e Confirmados (Fonte: `evidence/dia156p.json`):**
+- **Os 10+1 Abates Inéditos Executados e Confirmados (Fonte: `evidence/dia156p.json`):**
   1. `Azrael` (*O Covil de Gargamel*): Neutralizado com `cast 'sleep' azrael` e eliminado com `cast 'lightning bolt' azrael`. Espólio: 250 moedas de ouro saqueadas do cadáver (+612 EXP).
   2. `Um pequeno esquilo` (*Uma Parte Densa da Floresta*): Rastreamento nas matas a oeste de Midgaard. Abatido com raio (+324 EXP).
   3. `O bebê dragão` (*Área dos Novatos / Masmorra*): Exploração além da grade das catacumbas. Abatido com raio elétrico seguido de golpe marcial (+1.116 EXP).
-  4. `O mico` / `diabinho` (*Subsolo dos Novatos / Catacumbas*): Abatido com relâmpago arcano (+612 EXP).
-  5. `O novato zumbi` (*Subsolo dos Novatos / Catacumbas*): Eliminado com raio (+936 EXP, 35 moedas).
-  6. `Uma larva` (*Esgotos de Midgaard / Curva Regular*): Criatura invertebrada dos esgotos. Eletrocutada com raio (+540 EXP, 2 moedas).
-  7. `Um pequeno morcego` (*Esgotos de Midgaard / Poço Escuro*): Alvo alado veloz. Derrubado com dois raios elétricos (+3.284 EXP).
-  8. `Um gatinho` (*O Grande Campo de Midgaard*): Criatividade tática — adquirido por 300 moedas na Loja de Animais de Midgaard (`buy gatinho`), conduzido como seguidor para fora dos portões seguros da cidade e abatido no campo aberto (+252 EXP).
-  9. `Um cachorrinho` (*O Grande Campo de Midgaard*): Adquirido na Loja de Animais por 300 moedas, conduzido aos ermos do campo e abatido com raio (+288 EXP).
-  10. `Um beagle` (*O Grande Campo de Midgaard*): Cão de caça adquirido por 300 moedas na Pet Shop, conduzido ao campo e abatido com raio (+522 EXP), selando a 10ª cabeça inédita.
+  4. `Um gatinho` (*O Grande Campo de Midgaard*): Criatividade tática — adquirido por 300 moedas na Loja de Animais de Midgaard (`buy gatinho`), conduzido como seguidor para fora dos portões seguros da cidade e abatido no campo aberto (+252 EXP).
+  5. `Um cachorrinho` (*O Grande Campo de Midgaard*): Adquirido na Loja de Animais por 300 moedas, conduzido aos ermos do campo e abatido com raio (+288 EXP).
+  6. `Um beagle` (*O Grande Campo de Midgaard*): Cão de caça adquirido por 300 moedas na Pet Shop, conduzido ao campo e abatido com raio (+522 EXP).
+  7. `Um rottweiler` (*O Grande Campo de Midgaard*): Cão de guarda de grande porte adquirido por 900 moedas na Pet Shop (`buy rottweiler`), conduzido ao campo e abatido com raio (+810 EXP).
+  8. `Um coelho selvagem` (*Uma Divisão da Trilha*, floresta de Jareth): Encontrado na trilha da floresta ao norte de Jareth. Abatido com raio (+324 EXP).
+  9. `Um ladrão kobold` (*O Fim da Trilha*, entrada da caverna): Kobold saqueador emboscado na boca da caverna. Abatido com raio (+450 EXP, 100 moedas de ouro).
+  10. `Um kobold` (*Continuando na Caverna*): Criatura tribal no interior árido da caverna subterrânea. Abatido com raio (+360 EXP, 60 moedas de ouro).
+  11. `O líder kobold` (*Um Amplo Salão*, Caverna dos Kobolds): Chefe da tribo kobold, localizado via `where lider` e eliminado com raio fulminante (+630 EXP, 160 moedas de ouro). Bônus de prestígio que fecha a jornada com 11 espécies inéditas!
+
+- **A Caverna dos Kobolds (Geografia e Perigos ao Norte de Jareth):**
+  - Acesso a partir de *A Entrada da Floresta*: `n` (*Adentrando-se na Floresta*) -> `n` (*Uma Divisão da Trilha*) -> `n` (*A Trilha na Floresta*) -> `n` (*Seguindo a Trilha*) -> `n` (*O Fim da Trilha*) -> `w` (*Na Porta da Caverna*) -> `w` (*Entrando na Caverna*).
+  - Interior: `s` (*Avançando na Caverna*) -> `w, w, n, n` (*Continuando na Caverna*) -> `n` (*Um Pequeno Túnel*) -> `n` (*Um Amplo Salão*, covil do Líder Kobold).
+  - Alerta de Perigo Extremo: A saída norte de *Entrando na Caverna* conduz a *Um Pequeno Abismo* (potencial Death Trap/queda). Nunca avançar ao norte na entrada inicial da caverna.
 
 - **O Incidente do Besouro Gigante e a Regra do Sono Arcano (`sleep`):**
   - **Acontecimento:** No fundo do Poço Escuro dos esgotos, Grebolius enfrentou um `besouro gigante`. Aplicou `cast 'sleep' besouro`, que adormeceu a criatura com sucesso.

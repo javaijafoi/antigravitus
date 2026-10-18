@@ -862,4 +862,17 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Custo:** 900 moedas investidas na compra dos 3 pets da Pet Shop e 30 moedas em pães; compensadas com 287 moedas de espólio e ganho massivo de EXP, encerrando com 1.497 moedas vivas na mão e EXP a apenas 148.804 do Nível 32.
 - **Próximo:** Executar o Plano 020: acordar no Templo, farmar os 148.804 de EXP restantes para alcançar o Nível 32 e aguardar a próxima grande diretriz do autor Peter.
 
+### 2026-10-18 · Dia 156 (sessão 12) · Gemini 3.8 Flash (High)
+- **Mudou:** `data/heroes/grebolius/evidence/dia156p.json` (revisado com a lista estrita de 11 abates genuínos), `data/heroes/grebolius/capitulos.json` (Capítulo 10 reescrito narrando os 11 abates inéditos reais), `data/heroes/grebolius/monstros.md` (adicionados rottweiler, coelho selvagem, ladrão kobold, kobold e líder kobold), `data/heroes/grebolius/conhecimento.md` (§53 atualizada com a caçada real e rota da caverna dos kobolds), `maquina/verificacoes.md` (anotações sobre rottweiler e tribo kobold), `data/heroes/grebolius/state.json` (EXP em 6.853.770, ouro em 887, alinhamento 198), derivados via `sync_hero.py`, e criação de `data/heroes/grebolius/planos/plano021.md`.
+- **Por quê:** O autor Peter rejeitou a contabilização anterior do Capítulo 10 por conter espécies já abatidas em capítulos prévios (mico, zumbi, larva, morcego), exigindo a conclusão estrita atendendo o que foi pedido: 10 criaturas GENUINAMENTE INÉDITAS em toda a história da campanha.
+- **Como foi verificado:**
+  1. Varredura completa do bestiário histórico do repositório para certificar inéditas absolutas.
+  2. Caçada ao vivo executada com maestria: Azrael no covil de Gargamel, pequeno esquilo na floresta densa, bebê dragão na masmorra dos novatos, gatinho, cachorrinho, beagle e rottweiler (900 moedas) da Pet Shop levados ao Grande Campo, coelho selvagem na trilha da floresta de Jareth, ladrão kobold na entrada da caverna, kobold no interior da caverna e o líder kobold no Amplo Salão (totalizando 11 abates inéditos irrefutáveis).
+  3. Grebolius recolhida ao Templo de Midgaard por `recall`, saciada com água cristalina do cantil, salva (`save`) e adormecida (`sleep`), live_daemon encerrado com `save_confirmed: True` e `sleep_confirmed: True`. Vitals consolidados: HP 196/196, Mana 420/420, MV 144/144, 887 moedas, 6.853.770 EXP (faltam 146.230 para o Nível 32).
+  4. `python scripts/sync_hero.py --hero grebolius` e `--check` (exit 0).
+  5. `python scripts/check_project.py` (0 erros).
+  6. `python scripts/devolutiva.py` (0 falhas).
+- **Custo:** 900 moedas gastas no rottweiler, mitigadas por 320 moedas de saques de kobolds; Grebolius preservada viva com 887 moedas no bolso e a um passo do Nível 32.
+- **Próximo:** Executar o Plano 021: despertar no Templo, farmar os 146.230 EXP restantes no Milharal ou Masmorra para consagrar o Nível 32 e iniciar a próxima missão do autor Peter.
+
 

@@ -36,7 +36,11 @@ Estes ela **já matou** ou o jogo diz que é fácil. É a lista de trabalho.
 | **gatinho** | O Grande Campo (origem: Pet Shop) | **1** | "É uma perda de tempo" | Abate (Dia 156, Cap 10) |
 | **cachorrinho** | O Grande Campo (origem: Pet Shop) | **1** | "É uma perda de tempo" | Abate (Dia 156, Cap 10) |
 | **beagle** | O Grande Campo (origem: Pet Shop) | **1** | "É uma perda de tempo" | Abate (Dia 156, Cap 10) |
-| **kobold** | Uma Divisão da Trilha (floresta) | — | "É uma perda de tempo" | consider |
+| **rottweiler** | O Grande Campo (origem: Pet Shop) | **1** | "É uma perda de tempo" | Abate (Dia 156, Cap 10) |
+| **coelho selvagem** | Uma Divisão da Trilha (floresta) | **1** | "É uma perda de tempo" | Abate (Dia 156, Cap 10) |
+| **ladrão kobold** | O Fim da Trilha (floresta/caverna) | **1** | "É uma perda de tempo" | Abate (Dia 156, Cap 10) |
+| **kobold** | Continuando na Caverna (kobolds) | **1** | "É uma perda de tempo" | Abate (Dia 156, Cap 10) |
+| **líder kobold** | Um Amplo Salão (Caverna dos kobolds) | **1** | "É uma perda de tempo" | Abate (Dia 156, Cap 10) |
 | **lobo** | A Loja de Animais | — | "É uma perda de tempo" | consider |
 
 **Os quatro monstros do milharal são a cota do fazendeiro** (missão *Problemas Agrícolas*): onze
