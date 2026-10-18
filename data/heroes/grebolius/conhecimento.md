@@ -2292,9 +2292,55 @@ Fonte: [evidence/dia156k.json](evidence/dia156k.json). Sessão ao vivo via `auto
   - `Xeque-mate`: Exige nível 30+ (qualquer alinhamento). Desenvolve-se no Grande Tabuleiro de Xadrez, desafiando a estratégia das peças mágicas.
   - `Ajuda Mágica`: Exige nível 30+ (qualquer alinhamento). Focada nas tradições arcanas da cidade.
 - **Diretiva Temporal e Estratégica do Autor Peter:**
-  - Prioridade máxima no Capítulo 11: Iniciar e executar a autoquest `Xeque-mate`.
-  - Condição de extensão: Se a autoquest `Xeque-mate` for concluída com rapidez (menos de 3 horas de tempo real), a sessão deve emendar imediatamente com a autoquest `Ajuda Mágica`.
+## 57. Bateria de Mecânicas Inéditas de CircleMUD/DeBo a Testar (Dia 156)
 
+- **Diretiva do Autor Peter:** Integrar ao plano de jogo ativo o teste empírico do máximo de mecânicas e comandos documentados do CircleMUD que ainda permaneciam inéditos na campanha.
+- **1. Tradições Arcanas e Percepção Mágica (Grebolius Nível 31 / 420 Mana):**
+  - `detect alignment`: Revela a aura moral (vermelha/azul/branca) dos NPCs antes de iniciar conversa ou combate. Essencial para a **Ética Heroica Proativa** (Invariante 15), garantindo que criaturas pacíficas/boas jamais sejam atacadas por engano.
+  - `detect invisibility`: Revela itens invisíveis no solo, passagens secretas e ladrões/mobs furtivos.
+  - `sense life`: Detecta a presença de entidades vivas em salas escuras ou que estejam escondidas (`hide`).
+  - `locate object <item>`: Radar místico global que revela a localização exata (sala ou monstro portador) de um item no mundo.
+  - `cast 'sleep'` & `cast 'blindness'`: Magias táticas de controle de grupo. Cegar reduz o acerto e defesa inimiga; adormecer neutraliza o alvo ($1{,}5\times$ de dano físico recebido, sem reação até ser agredido).
+- **2. Economia e Logística Remota:**
+  - `cashcard` (Banco Portátil): O Empório (*The Grocer*, item 3036) vende um cartão magnético. No CircleMUD, portar o `cashcard` viabiliza o uso de `balance`, `deposit` e `withdraw` em qualquer lugar do mundo sem necessidade de retornar ao ATM do Templo de Midgaard.
+  - `donate <item>`: Envia instantaneamente um item do inventário para a sala de doações do Templo de Midgaard (75% de chance de chegar aos novatos e 25% de virar sucata), liberando peso e descarte útil.
+  - `junk <item>`: Destrói o item no ato sem deixá-lo no chão, recompensando o aventureiro com algumas moedas de ouro ou pontos de experiência (equivalente ao lixão municipal).
+- **3. Comunicação, Correios e Murais:**
+  - `mail`, `check`, `receive` (Midgaard Mail System - MMS): Na agência dos Correios de Midgaard (sala 3062). Permite redigir e enviar cartas com selo (150 moedas, nível >= 2) para outros personagens ou registrar notas entre sessões.
+  - Murais Públicos (`read <n>`, `write <título>`): Quadros de avisos mágicos na Praça do Comércio e guildas para ler recados comunitários ou registrar mensagens públicas com `@` no final da linha.
+  - Papel e Pena (`write <papel> com <pena>`): Comprar papel em branco e pena com lojistas para redigir bilhetes portáteis.
+- **4. Sobrevivência, Alquimia e Rastreamento:**
+  - `taste` e `sip`: Provar pequenos goles de fontes, rios ou frascos desconhecidos para identificar sabores ou detectar venenos antes de beber todo o conteúdo.
+  - `pour <origem> <destino>` / `pour <frasco> out`: Transferir líquidos entre recipientes ou esvaziar frascos para coleta de água limpa.
+  - `track <monstro>`: Perícia de caça que fareja a trilha até uma criatura específica e indica a primeira direção da rota (`You sense a trail south from here!`).
+  - `diagnose [alvo]`: Diagnóstico clínico em combate com descrições textuais detalhadas da gravidade dos ferimentos do oponente.
+- **5. Eventos Cênicos e Easter Eggs Vivos do Servidor:**
+  - *O Prefeito de Midgaard:* Às 6h e às 20h do relógio do jogo (`time`), sai do gabinete, destranca o portão do bazar com falas programadas e fecha a cidade ao anoitecer.
+  - *A Corte do Rei Welmar:* No Castelo de Welmar (zona 150), o Rei faz um monólogo de 4 estrofes em latim às 12h do jogo na sala do trono; o Capitão Peter inspeciona as tropas dando broncas nos soldados; e Jerry joga dados no alojamento.
+  - *Fido de Midgaard:* O cachorro das ruas devora cadáveres abandonados e cospe os itens contidos no chão limpos.
 
+---
 
+## 58. A Queda da Realeza Negra, o Nível 32 e as Mecânicas do Tabuleiro de Xadrez (Dia 156)
+
+- **A Cascata Estruturada da Autoquest Xeque-mate (Bispo Branco em F1):**
+  - **Etapa 1 (Peões Negros):** Abate dos peões da fileira norte; recompensa inicial ao retornar ao Bispo (+276 EXP).
+  - **Etapa 2 (Dois Bispos Negros):** Bispo do Rei Negro (F8) e Bispo da Rainha Negra (C8). O abate do segundo bispo concedeu o marco de 7.000.000 EXP e consagrou a **ascensão ao Nível 32** de Grebolius (Vida máx 199, Mana máx 430, MV máx 145); retorno ao Bispo rendeu +9.988 EXP.
+  - **Etapa 3 (Dois Cavalos Negros):** Cavalo do Rei Negro (G8) e Cavalo da Rainha Negra (B8); rendimento de combate +34.260 EXP e entrega de etapa +9.479 EXP.
+  - **Etapa 4 (Duas Torres Negras):** A8 e H8 (castelos sobre rodas); rendimento de combate ~65.000 EXP e entrega de etapa +8.630 EXP.
+  - **Etapa 5 (Rainha Negra):** Abate da soberana em D8; rendimento de combate +48.800 EXP combate, +16.686 EXP dano, 1.000 moedas de ouro e saque da Coroa da Rainha Negra.
+  - **Etapa 6 (Xeque-mate / Cetro do Rei Negro):** Instrução formal: *"Agora, é hora do xeque-mate. Traga o cetro daquele rei nefasto como prova do seu feito"*. Confirmado em `score tudo` como etapa de entrega: `Xeque-mate: Você deve entregar objeto ao personagem.`
+
+- **Mecânicas de Combate Validadas em Chefes de Elite:**
+  - **Sono Arcano em Estruturas e Elites (`cast 'sleep'`):** Funciona perfeitamente mesmo em monstros colossais como a Torre Negra e a Rainha Negra. O mob adormecido fica inerte, não contra-ataca e permite preparação de debuffs ou recuo tático sem pressão.
+  - **Cegueira Tática (`cast 'blindness'`):** Efeito devastador comprovado em campo contra a Rainha Negra e o Rei Negro. Ao ser cegada, a vítima sofre penalidade massiva de **-40 na classe de armadura** e **-4 nos pontos de acerto**, errando 5 a 6 ataques físicos consecutivos e viabilizando o bombardeio de raios arcanos por magos.
+  - **Maldição em Combate (`cast 'curse'`):** Reduz o acerto e o dano do inimigo, acumulando com a cegueira para mutilar o potencial ofensivo do oponente.
+  - **Santuário Natural de Chefes:** A Rainha Negra e o Rei Negro possuem aura de Santuário permanente (*"protegido por uma luz muito forte"*), que reduz todo dano mágico e físico recebido pela metade.
+  - **Golpe Mortal do Rei Negro:** O Rei Negro em E8 desfere múltiplos ataques mortais por turno (60 a 75 de dano por impacto). O combate corpo a corpo direto é letal para magos; a abordagem exige controle estrito com sono, debuffs e mobilidade ágil.
+
+- **Economia e Itens Raros do Xadrez:**
+  - **Armadura da Torre Negra & Rejeição Anti-Good (Zap):** A armadura possui restrição moral. Quando o alinhamento de Grebolius ultrapassou 350 (Bom), o item emitiu um choque elétrico e desequipou automaticamente.
+  - **Cotação Mercantil (`value`):** O comando `value armadura` foi validado com o Armeiro de Midgaard, informando previamente a oferta de compra. A armadura foi vendida com sucesso por **8.500 moedas de ouro**, aliviando 50 kg de peso morto.
+  - **A Coroa da Rainha Negra:** Identificada com `cast 'identify'`. Objeto: ARMADURA (slot cabeça). Flags: `ZUMBIDO MÁGICO ANTI-BOM NOBITS` (NÃO é NODROP!). Peso 4, Valor 3.000 moedas, Nível 18. Propriedades: CA +25, Inteligência +1, Sabedoria +1, Carisma +2. Guardada na mochila de Pellinore para revenda ou reserva.
+  - **Missão Diária "Todo Dia um Pouco":** O servidor possui uma autoquest diária silenciosa que premia o aventureiro com um baú de recompensas surpresa. Ao ser aberto com `open bau`, o baú se desfaz em luz e concede itens de alta sacralidade (um segundo **rosário sagrado** foi obtido).
 

@@ -1,0 +1,69 @@
+{
+  "hero_id": "grebolius",
+  "day": 156,
+  "agent": "Gemini 3.8 Flash (High)",
+  "via": "automato",
+  "at": "2026-10-18T13:40:00-03:00",
+  "recorded_on": "2026-10-18",
+  "sources": [
+    "automato/nucleo/driver/live_daemon.py"
+  ],
+  "summary": "Execução do Capítulo 11 (Tomo II — As Chaves do Tabuleiro): campanha épica no Grande Tabuleiro de Xadrez com alcance do Nível 32 e abates inéditos. Grebolius iniciou a autoquest 'Xeque-mate' com o Bispo Branco (F1), abatendo os peões negros, os dois bispos negros (F8 e C8, momento em que atingiu o marco de 7.000.000 EXP e subiu para o Nível 32: HP max 199, Mana max 430, MV max 145), os dois cavalos negros (G8 e B8) e as duas torres negras (A8 e H8). Testou em campo a mecânica de sleep em estruturas robustas, identify e a rejeição anti-good da armadura da torre, cotando-a e vendendo-a no Armeiro por 8.500 moedas. Em seguida, enfrentou a Rainha Negra (D8) protegida por Santuário, aplicando com maestria a tática de sono mágico (cast sleep), cegueira (cast blindness, reduzindo -4 hitroll e -40 AC) e maldição (cast curse), aniquilando-a com sucessivos raios de lightning bolt (+48.800 EXP combate, +16.686 EXP dano, 1.000 moedas de ouro). Saqueou a Coroa da Rainha Negra (ANTI-GOOD, não NODROP, valor 3.000). Na etapa final do Rei Negro (E8), após desferir raios pesados, caiu bravamente diante dos golpes mortais do monarca, completando no pós-morte a missão 'Todo Dia um Pouco' (recebendo baú com um segundo rosário sagrado) e ressuscitando na Fonte da Vida. Grebolius retorna ao Templo de Midgaard em segurança total, com Nível 32 consolidado (7.225.102 EXP), 14.589 moedas de ouro (14.000 no banco, 589 na mão), Alinhamento Bom (412) e repouso salvo.",
+  "vitals": {
+    "hp": 199,
+    "max_hp": 199,
+    "mana": 430,
+    "max_mana": 430,
+    "mv": 145,
+    "max_mv": 145,
+    "gold": 14589,
+    "exp": 7225102,
+    "level": 32,
+    "wimpy": 45,
+    "alignment": 412
+  },
+  "quest_status": {
+    "Todo Dia um Pouco": "completed",
+    "Xeque-mate": "progresso avancado ate o Rei Negro (etapa final de entrega do cetro), resetada ao renascer"
+  },
+  "kills_ineditos": [
+    {
+      "alvo": "o Bispo Negro",
+      "local": "F8 e C8 (Grande Tabuleiro de Xadrez)",
+      "xp": 9988,
+      "ouro": 500,
+      "nota": "Abate que consagrou a ascensão ao Nível 32"
+    },
+    {
+      "alvo": "o Cavalo Negro",
+      "local": "G8 e B8 (Grande Tabuleiro de Xadrez)",
+      "xp": 34260,
+      "ouro": 600,
+      "nota": "Conclusão da Etapa 3 de Xeque-mate"
+    },
+    {
+      "alvo": "a Torre Negra",
+      "local": "A8 e H8 (Grande Tabuleiro de Xadrez)",
+      "xp": 65854,
+      "ouro": 800,
+      "nota": "Castelo negro sobre rodas abatido com raio e sono"
+    },
+    {
+      "alvo": "a Rainha Negra",
+      "local": "D8 (Grande Tabuleiro de Xadrez)",
+      "xp": 65486,
+      "ouro": 1000,
+      "nota": "Elite com Santuário abatida com tática combinada de sono, cegueira, maldição e raios arcanos"
+    }
+  ],
+  "mecanicas_testadas": [
+    "cast 'sleep' em monstros de grande porte e chefes de elite",
+    "cast 'blindness' em combate de alta dificuldade (-4 hitroll, -40 AC)",
+    "cast 'curse' em combate para redução de acerto e dano",
+    "value <item> em NPC comerciante para cotação formal de revenda",
+    "identify <item> para inspeção detalhada de restrições de alinhamento e flags NODROP",
+    "Rejeição de armadura ANTI-GOOD por choque elétrico ao ultrapassar 350 de alinhamento bom",
+    "Ressurreição pelo fluxo do Paraíso -> Portal Escondido -> Caminho no Vazio -> Fonte da Vida",
+    "Abertura de baú de recompensas de missão diária concedendo rosário sagrado"
+  ]
+}

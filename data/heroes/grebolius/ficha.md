@@ -9,8 +9,8 @@
 * **Raça / Aparência Narrativa:** Mulher goblin; aventureira sem véu
 * **Raça Mecânica no MUD:** Elfo
 * **Classe Mecânica no MUD:** Mago (Magic-User)
-* **Grau / Nível Atual:** **31**
-* **Alinhamento Moral:** 311 (Bom)
+* **Grau / Nível Atual:** **32**
+* **Alinhamento Moral:** 412 (Bom)
 * **Localização Atual:** O Templo de Midgaard (último registro: Dia 156)
 * **Acampamento Registrado:** O Templo de Midgaard
 * **Santuário de Referência:** O Panteao dos Centenarios
@@ -20,13 +20,13 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 ## ✦ Status Vitais
 | Recurso | Atual | Máximo | Porcentagem |
 | :--- | :---: | :---: | :---: |
-| **Pontos de Vida (HP)** | 196 | 196 | 100% |
-| **Pontos de Mana (MP)** | 420 | 420 | 100% |
-| **Estamina / Movimento (MV)** | 144 | 144 | 100% |
+| **Pontos de Vida (HP)** | 199 | 199 | 100% |
+| **Pontos de Mana (MP)** | 430 | 430 | 100% |
+| **Estamina / Movimento (MV)** | 145 | 145 | 100% |
 
-* **Experiência Acumulada:** **6.933.216 EXP**
-* **Experiência Necessária p/ Grau 32:** **66.784 EXP** (Meta: 7.000.000 EXP)
-* **Ouro Líquido:** **1.719 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **7.225.102 EXP**
+* **Experiência Necessária p/ Grau 33:** **774.898 EXP** (Meta: 8.000.000 EXP)
+* **Ouro Líquido:** **14.589 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 11
@@ -37,8 +37,8 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 * **Carisma (CHA):** 12
 
 ### Métricas de Combate
-* **Classe de Armadura (AC):** 113 (base) / **143** (com `armor`, conforme registro)
-Armor +35 ativo em score tudo (17h restantes) + colar com pedra púrpura (+10 armadura); evidence/dia156p.json.
+* **Classe de Armadura (AC):** 89 (base) / **124** (com `armor`, conforme registro)
+CA 89 equipado no Templo (sem armadura da torre que foi vendida por 8.500 moedas e sem buff arcano ativo no sono); CA 124 verificado durante a batalha com armor arcana; evidence/dia156q.json.
 * **Bônus de Acerto (Hitroll):** 16
 * **Bônus de Dano (Damroll):** +5
 * **Configuração de Fuga (Wimpy):** **45 HP** (referência de 25%; não garante fuga antes de golpe letal)
@@ -60,11 +60,15 @@ Armor +35 ativo em score tudo (17h restantes) + colar com pedra púrpura (+10 ar
   * Próximo passo: CONCLUÍDA. Estado confirmado no servidor em 2026-10-16 pelo comando "autoquest todas": "Ninguém Segura Esse Bebê — Concluída".
 * **Uma Lição em Gargamel — Concluída:** Autoquest de níveis 20-80 (encarnações 1-4, qualquer alinhamento/classe/raça), iniciada com o smurf minerador na Vila dos Smurfs.
   * Próximo passo: Concluída integralmente com o Smurf Minerador em O Fim Do Túnel. Entregues poção aquosa (ao Alquimista), jarro brilhante, chave quadrada e tocha. Recompensa recebida: um colar com uma pedra púrpura (Anti-DT, Abençoado, Armadura +10, Acerto +1, Dano +1, Des +1, Max-Mana +25) e 2.000 moedas de ouro de Gargamel.
+* **Todo Dia um Pouco — Concluída:** Missão diária do servidor Devil's Bob.
+  * Próximo passo: Concluída integralmente no Dia 156. Baú de recompensas surpresa recebido e aberto, entregando um rosário sagrado ao herói.
+* **Xeque-mate — Ativa:** Autoquest de nível 30+, iniciada com o Bispo Branco no Grande Tabuleiro de Xadrez.
+  * Próximo passo: Avanço estruturado até a etapa 6: peões -> 2 bispos -> 2 cavalos -> 2 torres -> Rainha Negra (abatida com sono e cegueira). Instrução final alcançada: 'Agora, é hora do xeque-mate. Traga o cetro daquele rei nefasto como prova do seu feito'. Resetada ao renascer na Fonte da Vida; rota e mecânica completamente mapeadas para reexecução rápida no Capítulo 12.
 
 Objetivos pessoais e investigações ficam separados das autoquests no catálogo de missões.
 
 ## ✦ Habilidades Conhecidas e Treinos Concluídos
-* **Sessões de Treino Disponíveis:** **64 sessões de treino acumuladas**
+* **Sessões de Treino Disponíveis:** **68 sessões de treino acumuladas**
 Percentuais são registros de proficiência; não garantem acerto, imunidade ou acesso a guildas.
 * `armor` (Armadura Mística): **99%**
 * `burning hands` (Mãos Flamejantes): **99%**
@@ -88,30 +92,28 @@ Equipamento conforme os últimos documentos disponíveis; conferir no próximo a
 * **no pescoço:** `a coleira do dragão de estimação`
 * **no pescoço:** `um colar com uma pedra púrpura`
 * **sobre o corpo:** `um manto de pano`
-* **no corpo:** `a Armadura da Torre Negra`
 * **na cintura:** `um belo cinturão de rodeio`
 * **nos braços:** `um par de braçadeiras de novato`
 * **nas mãos:** `um par de luvas de couro`
-* **no pulso esquerdo:** `um bracelete de prata e ouro`
-* **no pulso direito:** `um rosário`
+* **no pulso esquerdo:** `um rosário`
+* **no pulso direito:** `um bracelete de prata e ouro`
 * **como escudo:** `um escudo`
 * **nas pernas:** `uma calça de couro`
 * **empunhando:** `uma espada curta`
 
 ## ✦ Inventário e Suprimentos
 Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
-* `um cantil` (x1) — evidence/dia156j.json
-* `a mochila de Pellinore` (x1) — evidence/dia156j.json
-* `um pergaminho de sabedoria` (x1) — evidence/dia156j.json
-* `um pão recheado` (x4) — evidence/dia156p.json
-* `um manto de pano` (x1) — evidence/dia156j.json
-* `a Espada do Peão Negro` (x1) — evidence/dia156j.json
-* `um colar com uma pedra púrpura` (x1) — evidence/dia156j.json
-* `os chifres do Minotauro` (x2) — evidence/dia156j.json
-* `a fedida pele do Minotauro` (x1) — evidence/dia156j.json
-* `a bainha de Excalibur` (x1) — evidence/dia156j.json
-* `uma Cruz Ansada` (x1) — evidence/dia156j.json
-* `o Cetro do Bispo Negro` (x1) — evidence/dia156j.json
+* `um rosário` (x1) — evidence/dia156q.json
+* `um cantil` (x1) — evidence/dia156q.json
+* `a mochila de Pellinore` (x1) — evidence/dia156q.json
+* `um pergaminho de sabedoria` (x1) — evidence/dia156q.json
+* `a Coroa da Rainha Negra` (x1) — evidence/dia156q.json
+* `um pão recheado` (x2) — evidence/dia156q.json
+* `um manto de pano` (x1) — evidence/dia156q.json
+* `um colar com uma pedra púrpura` (x1) — evidence/dia156q.json
+* `a bainha de Excalibur` (x1) — evidence/dia156q.json
+* `uma Cruz Ansada` (x1) — evidence/dia156q.json
+* `o Cetro do Bispo Negro` (x1) — evidence/dia156q.json
 
 ### Pendências de inventário
 
@@ -124,17 +126,16 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 * Peso 102/115 kg; conferir capacidade antes de comprar poção.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
-**Capítulo 11: Xeque-Mate nas Sombras (Tomo II) e Ajuda Mágica**
-No Tomo II, executar a autoquest Xeque-mate no Grande Tabuleiro de Xadrez; se for rápida (< 3h de tempo real), avançar para a autoquest Ajuda Mágica.
-* Suprimentos plenos: cantil saciado e pães na mochila de Pellinore.
-* Vitals e mana restaurados ao máximo (196 HP, 420 Mana).
-* Colar com pedra púrpura (ANTI-DT) e coleira do dragão equipados no pescoço (CA 143, Wimpy 45).
-* Ouro: 1.719 moedas na mão.
-* EXP: faltam míseros 66.784 pontos para atingir o Nível 32.
-* Identificar o NPC iniciador da autoquest Xeque-mate no Tabuleiro de Xadrez.
+**Capítulo 12: Ajuda Mágica e a Coroa do Rei**
+Iniciar e executar a autoquest Ajuda Mágica em Midgaard, ou preparar abordagem tática refinada para o Cetro do Rei Negro.
+* Suprimentos plenos: cantil abastecido e pães na mochila de Pellinore.
+* Vitals e mana restaurados ao máximo (199 HP, 430 Mana).
+* Vender a Coroa da Rainha Negra (valor 3.000) no Armeiro de Midgaard para liberar espaço e caixa.
+* Ouro: 14.589 moedas (14.000 no banco, 589 na mão).
+* Nível 32 consolidado com 7.225.102 EXP.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Execução ao vivo por Gemini 3.8 Flash (High); evidence/dia156p.json. Conclusão integral do Capítulo 10 com 10 abates de monstros puramente malignos e inéditos após censura e expurgo editorial de animais inofensivos: 1) Azrael (250 moedas); 2) Bebê dragão; 3) Ladrão kobold (100 moedas); 4) Kobold (60 moedas); 5) Líder kobold (160 moedas); 6) Cobra dos esgotos (1 moeda); 7) Pequena aranha dos esgotos (1 moeda); 8) Rato de esgoto no Poço Escuro (30 moedas, 28k EXP); 9) O Cavaleiro Negro no Tabuleiro (300 moedas, 23k EXP); 10) O Bispo Negro no Tabuleiro (500 moedas, 18k EXP). Retorno ao Templo por recall, repouso pleno salvo e dormindo com 196/196 HP, 420/420 Mana, 144/144 MV, 1.719 moedas de ouro, Alinhamento 311 (Bom) e 6.933.216 EXP (faltam apenas 66.784 para o Nível 32)..
+Fonte do estado: Execução ao vivo por Gemini 3.8 Flash (High); evidence/dia156q.json. Conclusão das batalhas do Capítulo 11 no Grande Tabuleiro de Xadrez com ascensão ao Nível 32 (EXP: 7.225.102): abate dos peões, dois bispos negros, dois cavalos negros, duas torres negras e a própria Rainha Negra (com Santuário). Testadas e validadas as mecânicas de sleep, blindness, curse, identify e value (com venda da armadura da torre por 8.500 moedas). Saque da Coroa da Rainha Negra e conclusão da missão diária Todo Dia um Pouco com prêmio de baú contendo segundo rosário sagrado. Retorno ao Templo de Midgaard com ressurreição na Fonte da Vida, vitais 199/199 HP, 430/430 Mana, 145/145 MV, Alinhamento 412 (Bom), 14.589 moedas de ouro (14.000 no banco, 589 na mão), sono e save confirmados..
 * A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.
 * O colar com pedra purpura pertence a outro dono: o servidor recusa o uso. Nenhum comerciante testado o compra.
 * Bainha de Excalibur exige nivel 85 (vista na Sala de Doacoes, nao pode ser carregada com a carga atual). Scutum de Carvalho exige nivel 35.

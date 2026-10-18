@@ -187,10 +187,24 @@ Fonte: [evidence/dia156j.json](../data/heroes/grebolius/evidence/dia156j.json:10
   - `Xeque-mate`: Requisito: A partir do nível 30, qualquer alinhamento. Desenvolve-se no Grande Tabuleiro de Xadrez.
   - `Ajuda Mágica`: Requisito: A partir do nível 30, qualquer alinhamento.
   - O catálogo do DeBo MUD remove automaticamente de `Autoquests Disponíveis Futuramente Nesta Encarnação` as missões cujos requisitos de nível forem preenchidos, movendo-as para `Autoquests Disponíveis Agora:`.
-  - Como Grebolius está no Nível 31, ambas tornaram-se elegíveis para ativação direta sem barreira de nível ou classe.
-  - Protocolo operacional (Capítulo 11): priorizar `Xeque-mate`; se concluída em menos de 3h de relógio no mundo real, emendar imediatamente com `Ajuda Mágica`.
+## 2026-10-18 — Protocolo Técnico de Verificação: Comandos e Mecânicas Inéditas de CircleMUD/DeBo
 
+Fonte: Consolidação das referências `maquina/commands.md` e `docs/circlemud/04-especiais-easter-eggs.md`. Diretiva do autor Peter.
 
-
-
-
+- **Comandos Arcanos a Testar (Grebolius Nível 31 / 420 Mana):**
+  - `cast 'detect alignment'`: Verificar sintaxe no DeBo, custo de mana e se a aura exibida no `look` discrimina claramente azul/branca (bem) de vermelha (mal).
+  - `cast 'detect invisibility'`: Verificar detecção de itens ocultos e ladrões invisíveis.
+  - `cast 'sense life'`: Verificar mensagem e eficácia em salas escuras.
+  - `cast 'locate object <item>'`: Verificar se o servidor responde a localização exata de itens do catálogo.
+  - `cast 'blindness' <alvo>`: Testar contra peça negra no xadrez e observar redução de capacidade combativa do oponente.
+- **Comandos de Economia e Sobrevivência:**
+  - `cashcard`: Comprar no Empório (item 3036) e testar comandos `balance`, `deposit` e `withdraw` em trânsito fora do Templo de Midgaard.
+  - `donate <item>`: Testar envio de item dispensável e verificar se chega à sala de doação do Templo.
+  - `junk <item>`: Testar descarte destrutivo e registrar retorno de moedas ou EXP.
+  - `taste` e `sip`: Testar ingestão fracionada em fonte e cantil.
+  - `pour`: Testar transferência e esvaziamento de recipientes de líquido.
+  - `diagnose`: Testar diagnóstico clínico em combate para aferição qualitativa de HP.
+  - `track <monstro>`: Testar sintaxe de busca e rastro em zonas conhecidas.
+- **Sistemas de Mensagens:**
+  - MMS nos Correios (sala 3062): testar `check`, `receive` e sintaxe de `mail`.
+  - Murais comunitários: testar `read 1` e leitura de tópicos na Praça do Comércio.

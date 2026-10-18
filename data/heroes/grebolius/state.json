@@ -5,36 +5,36 @@
     "day": 156,
     "verification": "live",
     "live_verified": true,
-    "source": "Execução ao vivo por Gemini 3.8 Flash (High); evidence/dia156p.json. Conclusão integral do Capítulo 10 com 10 abates de monstros puramente malignos e inéditos após censura e expurgo editorial de animais inofensivos: 1) Azrael (250 moedas); 2) Bebê dragão; 3) Ladrão kobold (100 moedas); 4) Kobold (60 moedas); 5) Líder kobold (160 moedas); 6) Cobra dos esgotos (1 moeda); 7) Pequena aranha dos esgotos (1 moeda); 8) Rato de esgoto no Poço Escuro (30 moedas, 28k EXP); 9) O Cavaleiro Negro no Tabuleiro (300 moedas, 23k EXP); 10) O Bispo Negro no Tabuleiro (500 moedas, 18k EXP). Retorno ao Templo por recall, repouso pleno salvo e dormindo com 196/196 HP, 420/420 Mana, 144/144 MV, 1.719 moedas de ouro, Alinhamento 311 (Bom) e 6.933.216 EXP (faltam apenas 66.784 para o Nível 32)."
+    "source": "Execução ao vivo por Gemini 3.8 Flash (High); evidence/dia156q.json. Conclusão das batalhas do Capítulo 11 no Grande Tabuleiro de Xadrez com ascensão ao Nível 32 (EXP: 7.225.102): abate dos peões, dois bispos negros, dois cavalos negros, duas torres negras e a própria Rainha Negra (com Santuário). Testadas e validadas as mecânicas de sleep, blindness, curse, identify e value (com venda da armadura da torre por 8.500 moedas). Saque da Coroa da Rainha Negra e conclusão da missão diária Todo Dia um Pouco com prêmio de baú contendo segundo rosário sagrado. Retorno ao Templo de Midgaard com ressurreição na Fonte da Vida, vitais 199/199 HP, 430/430 Mana, 145/145 MV, Alinhamento 412 (Bom), 14.589 moedas de ouro (14.000 no banco, 589 na mão), sono e save confirmados."
   },
-  "level": 31,
+  "level": 32,
   "mechanical_race": "Elfo",
   "mechanical_class": "Mago (Magic-User)",
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
   "alignment": {
-    "value": 311,
+    "value": 412,
     "label": "Bom"
   },
   "vitals": {
     "hp": {
-      "current": 196,
-      "max": 196
+      "current": 199,
+      "max": 199
     },
     "mana": {
-      "current": 420,
-      "max": 420
+      "current": 430,
+      "max": 430
     },
     "mv": {
-      "current": 144,
-      "max": 144
+      "current": 145,
+      "max": 145
     }
   },
   "experience": {
-    "current": 6933216,
-    "next_level": 7000000
+    "current": 7225102,
+    "next_level": 8000000
   },
-  "gold": 1719,
+  "gold": 14589,
   "attributes": {
     "STR": 11,
     "DEX": 17,
@@ -44,18 +44,18 @@
     "CHA": 12
   },
   "armor": {
-    "base": 113,
-    "with_armor": 143,
+    "base": 89,
+    "with_armor": 124,
     "effect_verified": true,
-    "note": "Armor +35 ativo em score tudo (17h restantes) + colar com pedra púrpura (+10 armadura); evidence/dia156p.json."
+    "note": "CA 89 equipado no Templo (sem armadura da torre que foi vendida por 8.500 moedas e sem buff arcano ativo no sono); CA 124 verificado durante a batalha com armor arcana; evidence/dia156q.json."
   },
   "hitroll": 16,
   "damroll": 5,
   "wimpy": 45,
-  "training_sessions": 64,
+  "training_sessions": 68,
   "operational_mode": {
     "current": "padrao",
-    "description": "Retomada supervisionada do plano011; Gargamel permanece em andamento. Limpando Monstros concluída sem quit: sete abates, manto de pano e 94.227 EXP de entrega; nível 28. Minerador completou a fala final e Alquimista pediu poção aquosa de Clariss: Gargamel está na etapa de entregar objeto. Nenhum jarro ou resgate confirmado, nenhuma nova morte. A rota gravada pelo norte/Jareth chegou à fazenda; nenhuma nova caça no milharal foi confirmada. Compra de cinco pães por 30 moedas; final no Templo com 178/178 HP, 340/340 mana, 141/141 MV, 4.229 moedas, cinco pães, save e sono confirmados, socket e daemon encerrados.",
+    "description": "Capítulo 11 concluído por Gemini 3.8 Flash (High): Nível 32 consolidado, abate dos peões, bispos, cavalos, torres e Rainha Negra no Xadrez. Venda da armadura da torre por 8.500 moedas, saque da Coroa da Rainha Negra, conclusão de Todo Dia um Pouco com prêmio de rosário sagrado. Repouso pleno no Templo com 14.589 moedas de ouro (14.000 no banco, 589 na mão), vitais 199/199 HP, 430/430 Mana, 145/145 MV, save e sono confirmados.",
     "wimpy_profile": {
       "padrao": 17,
       "batedor": 33,
@@ -79,21 +79,20 @@
   },
   "last_event": {
     "day": 156,
-    "summary": "Sessão ao vivo por Gemini 3.8 Flash (High): Execução impecável e moralmente blindada do Capítulo 10 ('Dez Cabeças Inéditas'). Dez monstros inequivocamente malignos e inéditos eliminados (Azrael, bebê dragão, ladrão kobold, kobold, líder kobold, cobra peçonhenta, pequena aranha tecedora, rato de esgoto faminto, Cavaleiro Negro e Bispo Negro). Animais e pets foram censurados e expurgados pelo código moral da heroína. Grebolius repousa em total segurança no Templo com 1.719 moedas de ouro, Alinhamento 311 (Bom) e 6.933.216 EXP (faltam apenas 66.784 para o Nível 32)."
+    "summary": "Sessão ao vivo por Gemini 3.8 Flash (High): Conclusão das batalhas do Capítulo 11 no Grande Tabuleiro de Xadrez com ascensão e consolidação do Nível 32 (7.225.102 EXP, HP max 199, Mana max 430, MV max 145). Abate inédito de 2 Bispos Negros, 2 Cavalos Negros, 2 Torres Negras e da Rainha Negra com Santuário. Validação magistral de sleep, blindness, curse, identify e value. Venda da armadura por 8.500 moedas, saque da Coroa da Rainha Negra, e missão diária Todo Dia um Pouco concedendo rosário sagrado. Grebolius descansa no Templo de Midgaard com 14.589 moedas de ouro e Alinhamento Bom (412)."
   },
   "next_objective": {
-    "mission_id": "capitulo-11",
-    "title": "Capítulo 11: Xeque-Mate nas Sombras (Tomo II) e Ajuda Mágica",
-    "next_step": "No Tomo II, executar a autoquest Xeque-mate no Grande Tabuleiro de Xadrez; se for rápida (< 3h de tempo real), avançar para a autoquest Ajuda Mágica.",
+    "mission_id": "capitulo-12",
+    "title": "Capítulo 12: Ajuda Mágica e a Coroa do Rei",
+    "next_step": "Iniciar e executar a autoquest Ajuda Mágica em Midgaard, ou preparar abordagem tática refinada para o Cetro do Rei Negro.",
     "missing_preparation": [
-      "Suprimentos plenos: cantil saciado e pães na mochila de Pellinore.",
-      "Vitals e mana restaurados ao máximo (196 HP, 420 Mana).",
-      "Colar com pedra púrpura (ANTI-DT) e coleira do dragão equipados no pescoço (CA 143, Wimpy 45).",
-      "Ouro: 1.719 moedas na mão.",
-      "EXP: faltam míseros 66.784 pontos para atingir o Nível 32.",
-      "Identificar o NPC iniciador da autoquest Xeque-mate no Tabuleiro de Xadrez."
+      "Suprimentos plenos: cantil abastecido e pães na mochila de Pellinore.",
+      "Vitals e mana restaurados ao máximo (199 HP, 430 Mana).",
+      "Vender a Coroa da Rainha Negra (valor 3.000) no Armeiro de Midgaard para liberar espaço e caixa.",
+      "Ouro: 14.589 moedas (14.000 no banco, 589 na mão).",
+      "Nível 32 consolidado com 7.225.102 EXP."
     ],
-    "plan_document": "planos/plano024.md"
+    "plan_document": "planos/plano026.md"
   },
   "skills": [
     {
@@ -264,11 +263,6 @@
       "item": "um manto de pano"
     },
     {
-      "slot": "no corpo",
-      "name": "a Armadura da Torre Negra",
-      "item": "a Armadura da Torre Negra"
-    },
-    {
       "slot": "na cintura",
       "name": "um belo cinturão de rodeio",
       "item": "um belo cinturão de rodeio"
@@ -285,13 +279,13 @@
     },
     {
       "slot": "no pulso esquerdo",
-      "name": "um bracelete de prata e ouro",
-      "item": "um bracelete de prata e ouro"
+      "name": "um rosário",
+      "item": "um rosário"
     },
     {
       "slot": "no pulso direito",
-      "name": "um rosário",
-      "item": "um rosário"
+      "name": "um bracelete de prata e ouro",
+      "item": "um bracelete de prata e ouro"
     },
     {
       "slot": "como escudo",
@@ -312,72 +306,65 @@
   "inventory": {
     "recorded": [
       {
+        "name": "um rosário",
+        "quantity": 1,
+        "source": "evidence/dia156q.json"
+      },
+      {
         "name": "um cantil",
         "quantity": 1,
-        "source": "evidence/dia156j.json"
+        "source": "evidence/dia156q.json"
       },
       {
         "name": "a mochila de Pellinore",
         "quantity": 1,
-        "source": "evidence/dia156j.json"
+        "source": "evidence/dia156q.json"
       },
       {
         "name": "um pergaminho de sabedoria",
         "quantity": 1,
-        "source": "evidence/dia156j.json"
+        "source": "evidence/dia156q.json"
+      },
+      {
+        "name": "a Coroa da Rainha Negra",
+        "quantity": 1,
+        "source": "evidence/dia156q.json",
+        "container": "a mochila de Pellinore"
       },
       {
         "name": "um pão recheado",
-        "quantity": 4,
-        "source": "evidence/dia156p.json",
+        "quantity": 2,
+        "source": "evidence/dia156q.json",
         "container": "a mochila de Pellinore"
       },
       {
         "name": "um manto de pano",
         "quantity": 1,
-        "source": "evidence/dia156j.json",
-        "container": "a mochila de Pellinore"
-      },
-      {
-        "name": "a Espada do Peão Negro",
-        "quantity": 1,
-        "source": "evidence/dia156j.json",
+        "source": "evidence/dia156q.json",
         "container": "a mochila de Pellinore"
       },
       {
         "name": "um colar com uma pedra púrpura",
         "quantity": 1,
-        "source": "evidence/dia156j.json",
-        "container": "a mochila de Pellinore"
-      },
-      {
-        "name": "os chifres do Minotauro",
-        "quantity": 2,
-        "source": "evidence/dia156j.json",
-        "container": "a mochila de Pellinore"
-      },
-      {
-        "name": "a fedida pele do Minotauro",
-        "quantity": 1,
-        "source": "evidence/dia156j.json",
+        "source": "evidence/dia156q.json",
         "container": "a mochila de Pellinore"
       },
       {
         "name": "a bainha de Excalibur",
         "quantity": 1,
-        "source": "evidence/dia156j.json",
+        "source": "evidence/dia156q.json",
         "container": "a mochila de Pellinore"
       },
       {
         "name": "uma Cruz Ansada",
         "quantity": 1,
-        "source": "evidence/dia156j.json",
+        "source": "evidence/dia156q.json",
         "container": "a mochila de Pellinore"
       },
       {
         "name": "o Cetro do Bispo Negro",
         "quantity": 1,
-        "source": "evidence/dia156j.json",
+        "source": "evidence/dia156q.json",
         "container": "a mochila de Pellinore"
       }
     ],

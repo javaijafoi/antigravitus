@@ -508,6 +508,42 @@
           "note": "Conclusão integral da autoquest 'Uma Lição em Gargamel' no servidor. Compra da poção aquosa em Clariss (9.750), entrega ao Alquimista, entrega do jarro ao Minerador, abate de Gargamel com sono/raio obtendo a chave quadrada e 2.000 moedas, entrega da chave e entrega de uma tocha do Armazém (15 moedas). Recebimento do colar com uma pedra púrpura e parabéns do servidor. Agente: Gemini 3.8 Flash (High)."
         }
       ]
+    },
+    {
+      "id": "todo-dia-um-pouco",
+      "title": "Todo Dia um Pouco",
+      "type": "official",
+      "status": "completed",
+      "accepted_day": 156,
+      "last_progress_day": 156,
+      "objective": "Missão diária do servidor Devil's Bob.",
+      "next_step": "Concluída integralmente no Dia 156. Baú de recompensas surpresa recebido e aberto, entregando um rosário sagrado ao herói.",
+      "reward": "um baú de recompensas surpresa (concedeu um rosário)",
+      "evidence": [
+        {
+          "document": "evidence/dia156q.json",
+          "day": 156,
+          "note": "Missão completada no servidor: 'Missão completa! Você completou a missão Todo Dia um Pouco! Você recebeu um baú de recompensas surpresa como prêmio!'. Abertura do baú concedeu um rosário. Agente: Gemini 3.8 Flash (High)."
+        }
+      ]
+    },
+    {
+      "id": "xeque-mate",
+      "title": "Xeque-mate",
+      "type": "official",
+      "status": "active",
+      "accepted_day": 156,
+      "last_progress_day": 156,
+      "objective": "Autoquest de nível 30+, iniciada com o Bispo Branco no Grande Tabuleiro de Xadrez.",
+      "next_step": "Avanço estruturado até a etapa 6: peões -> 2 bispos -> 2 cavalos -> 2 torres -> Rainha Negra (abatida com sono e cegueira). Instrução final alcançada: 'Agora, é hora do xeque-mate. Traga o cetro daquele rei nefasto como prova do seu feito'. Resetada ao renascer na Fonte da Vida; rota e mecânica completamente mapeadas para reexecução rápida no Capítulo 12.",
+      "reward": "EXP massiva em cascata (mais de 150.000 EXP acumulada)",
+      "evidence": [
+        {
+          "document": "evidence/dia156q.json",
+          "day": 156,
+          "note": "Progressão épica da autoquest Xeque-mate no Grande Tabuleiro de Xadrez até a etapa do Rei Negro. Abate da Rainha Negra e saque da Coroa da Rainha Negra. Agente: Gemini 3.8 Flash (High)."
+        }
+      ]
     }
   ]
 }

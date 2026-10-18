@@ -4,6 +4,20 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.6.15 — Dia 156 · Validação Tática de Sleep/Blindness em Chefes e Cotação Mercantil (Capítulo 11)
+- **TÁTICA ARCANA EM COMBATE DE ELITE**:
+  - Validação empírica de `cast 'sleep'` em monstros de grande porte e estruturas blindadas (Torre Negra, Rainha Negra), comprovando que o adormecimento impede retaliação e permite preparação tática.
+  - Validação de `cast 'blindness'` contra alvos com múltiplos ataques por round (Rainha Negra): a penalidade severa (-4 hitroll, -40 AC) fez com que a oponente errasse mais de 80% dos golpes, viabilizando bombardeio de raios arcanos.
+- **COMÉRCIO E IDENTIFICAÇÃO**:
+  - Validação do comando `value <item>` com o Armeiro de Midgaard para cotação formal de revenda antes de transacionar.
+  - Venda de armadura limpa por 8.500 moedas e catalogação da Coroa da Rainha Negra (ANTI-GOOD, não NODROP, valor 3.000 moedas).
+
+## v1.6.14 — Dia 156 · Incorporação da Bateria de Testes de Mecânicas Inéditas ao Capítulo 11 (Plano 025)
+- **DIRETIVA DO AUTOR (Diretiva de Jogo §23 / Plano 025)**:
+  - Integração mandatória de bateria de testes de mecânicas e comandos inéditos de CircleMUD/DeBo ao ciclo do Capítulo 11 (Tomo II — As Chaves do Tabuleiro).
+  - Escopo de testes mapeado e dividido em 4 fases: Percepção Arcana (`detect alignment`, `detect invisibility`, `sense life`, `locate object`), Sobrevivência (`sip`, `taste`, `pour`, `diagnose`, `track`), Economia/Logística (`cashcard` como banco portátil no Empório, `donate <item>`, `junk <item>`) e Comunicação (`check`, `receive`, `mail` nos Correios 3062 e leitura em murais públicos).
+  - Execução integrada como apoio preparatório e ferramental tático antes e durante as autoquests `Xeque-mate` e `Ajuda Mágica`.
+
 ## v1.6.13 — Dia 156 · Monitoramento de Weekly Limit (< 5%) e Janela Curta (< 10%) na Guarda de Cota
 - **DIRETIVA DO AUTOR (AGENTS.md §13 / Guarda de Cota)**:
   - Adicionado monitoramento do **weekly limit** do modelo: se o tempo de reset for superior a 24 horas (como a janela semanal do Gemini de ~129h), o corte crítico de segurança é acionado ao atingir **<= 5%** (`0.05`).

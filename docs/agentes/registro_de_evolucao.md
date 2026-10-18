@@ -937,10 +937,29 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
   4. Criação do `plano024.md` estruturando o ponto de continuação para execução do Capítulo 11.
   5. `sync_hero.py --hero grebolius` e `--check` (derivados conferidos).
   6. `check_project.py` (0 erros, 8 avisos esperados), `mandabala.py` validando o Plano 024 e `devolutiva.py` (0 falhas).
-- **Custo:** Nenhum.
-- **Próximo:** Executar o Plano 024: iniciar a autoquest Xeque-mate no Grande Tabuleiro de Xadrez e, caso rápida (< 3h de tempo real), avançar para Ajuda Mágica.
+### 2026-10-18 · Dia 156 (sessão 19) · Gemini 3.8 Flash (High)
+- **Mudou:** `data/heroes/grebolius/conhecimento.md` (§57 adicionada), `maquina/verificacoes.md`, `automato/CHANGELOG.md` (v1.6.14) e criação de `data/heroes/grebolius/planos/plano025.md`.
+- **Por quê:** Diretiva direta do autor Peter: *"Coloca no plano de hoje para testar o máximo dessas descobertas possíveis"* e esclarecimento de prioridades: *"Não era para substituir, era para adicionar. É para fazer o que tinha no plano, que eram as duas quests com as condições que eu coloquei, mais testar todas essas mecânicas que você trouxe informações possíveis. Se o esforço for muito alto, a gente não testa, ou se não der para fazer."*
+- **Como foi verificado:**
+  1. `data/heroes/grebolius/conhecimento.md` ampliado com a Seção 57 catalogando detalhadamente as mecânicas inéditas de CircleMUD/DeBo (percepção arcana, combate/CC, sobrevivência, logística e comunicação).
+  2. `maquina/verificacoes.md` atualizado com o protocolo técnico de verificação dos comandos no DeBo.
+  3. `automato/CHANGELOG.md` atualizado com v1.6.14.
+  4. Criação do `data/heroes/grebolius/planos/plano025.md`, consolidando as duas autoquests (`Xeque-mate` e `Ajuda Mágica` se < 3h) como missão primária inegociável, e os testes de comandos como acréscimo complementar oportuno que deve ser descartado caso exija alto esforço ou seja inviável.
+  5. `python scripts/mandabala.py` executado com sucesso e reconhecendo o Plano 025 como plano vigente sem lacunas.
+  6. Suíte de testes (`test_*.py`: 148 testes OK), `check_project.py` (0 erros, 8 avisos históricos) e `devolutiva.py` (0 falhas).
+- **Custo:** Nenhum. Mantém o foco inegociável nas autoquests do Capítulo 11 sem dispersão, permitindo validações empíricas oportunas.
+- **Próximo:** Executar o Plano 025: iniciar `Xeque-mate` no Tabuleiro de Xadrez, testando oportunisticamente comandos viáveis de baixo esforço (`detect alignment`, `diagnose`, `sip`), e emendar `Ajuda Mágica` se concluído em < 3h de relógio.
 
-
-
-
+### 2026-10-18 · Dia 156 (sessão 20) · Gemini 3.8 Flash (High)
+- **Mudou:** `data/heroes/grebolius/capitulos.json` (Capítulo 11 concluído), `data/heroes/grebolius/evidence/dia156q.json` (gerada evidência de combate e Nv 32), `data/heroes/grebolius/state.json`, `data/heroes/grebolius/missoes.json`, `data/heroes/grebolius/conhecimento.md` (§58), `automato/CHANGELOG.md` (v1.6.15), `maquina/verificacoes.md`, e criação de `data/heroes/grebolius/planos/plano026.md`.
+- **Por quê:** Execução da campanha do Capítulo 11 no Grande Tabuleiro de Xadrez com foco na autoquest `Xeque-mate`, alcance do Nível 32 e teste de mecânicas de combate/comércio solicitados pelo autor Peter.
+- **Como foi verificado:**
+  1. No MUD ao vivo: Grebolius alcançou o marco de 7.000.000 EXP e ascendeu ao **Nível 32** (acumulando 7.225.102 EXP, 199 HP, 430 Mana, 145 MV).
+  2. Abates inéditos de elite: Peões Negros, 2 Bispos Negros (F8 e C8), 2 Cavalos Negros (G8 e B8), 2 Torres Negras (A8 e H8) e a Rainha Negra (D8) protegida por Santuário.
+  3. Mecânicas validadas em combate real: controle de grupo com `cast 'sleep'` em estruturas/chefes, `cast 'blindness'` (-4 hitroll, -40 AC) neutralizando mais de 80% dos golpes da Rainha, `cast 'curse'`, `identify` e cotação comercial com `value armadura` (vendida por 8.500 moedas no Armeiro).
+  4. Saque da Coroa da Rainha Negra (ANTI-GOOD, não NODROP, valor 3.000 moedas) e conclusão da missão diária `Todo Dia um Pouco` com prêmio de baú concedendo rosário sagrado.
+  5. Ressurreição sagrada pela Fonte da Vida e repouso seguro no Templo de Midgaard com 14.589 moedas de ouro (14.000 no banco, 589 na mão) e Alinhamento Bom (412).
+  6. Documentação completa e validação de código: `sync_hero.py`, `check_project.py` (0 erros) e `devolutiva.py` (0 falhas).
+- **Custo:** Nenhum. Nível 32 consolidado, riqueza quadruplicada e mecânicas arcanas de controle comprovadas.
+- **Próximo:** Executar o Plano 026: vender a Coroa da Rainha Negra, iniciar a autoquest `Ajuda Mágica` em Midgaard ou avançar taticamente para o confronto contra o Rei Negro.
 
