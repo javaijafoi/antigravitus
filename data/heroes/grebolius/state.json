@@ -5,7 +5,7 @@
     "day": 156,
     "verification": "live",
     "live_verified": true,
-    "source": "Execução ao vivo por Gemini 3.8 Flash (High); evidence/dia156o.json. Conclusão integral da autoquest 'Uma Lição em Gargamel' com cumprimento estrito das Invariantes 13 e 14. Compra da poção aquosa (9.750 moedas) em Jareth após atingir meta no Milharal/Xadrez com monitoramento a cada ~200s; entrega ao Alquimista recebendo o jarro brilhante; entrega do jarro ao Smurf Minerador. Neutralização segura de Gargamel com sono arcano e raio (saque de 2.000 moedas e chave quadrada); entrega da chave ao Minerador; compra de uma tocha no Armazém de Midgaard (15 moedas) e entrega final. Recompensa recebida: 'um colar com uma pedra púrpura' (Armadura +10, Acerto +1, Dano +1, Destreza +1, Máx-Mana +25, Anti-DT, Abençoado) equipado no segundo slot de pescoço. Autoquest concluída com sucesso no servidor. Grebolius seguro no Templo com 196/196 HP, 420/420 Mana, 144/144 MV, CA 148, 2.110 moedas de ouro e save confirmado."
+    "source": "Execução ao vivo por Gemini 3.8 Flash (High); evidence/dia156p.json. Conclusão integral da diretiva do Capítulo 10 com 10 abates de espécies inéditas: Azrael (250 moedas), pequeno esquilo na floresta, bebê dragão, mico e novato zumbi (35 moedas) nas catacumbas dos novatos, larva e pequeno morcego nos esgotos, e gatinho, cachorrinho e beagle adquiridos na Pet Shop (300 moedas cada) e abatidos no Grande Campo. Teste crítico do sono arcano e contra-ataque do besouro gigante, com salvamento heróico a 6 HP via Wimpy 45 e fuga pela escada. Retorno seguro ao Templo, repouso pleno (196/196 HP, 420/420 Mana, 144/144 MV), 1.497 moedas, 4 pães na mochila e cantil cheio, salvo com save_confirmed: True e sleep_confirmed: True."
   },
   "level": 31,
   "mechanical_race": "Elfo",
@@ -31,10 +31,10 @@
     }
   },
   "experience": {
-    "current": 6840487,
+    "current": 6851196,
     "next_level": 7000000
   },
-  "gold": 2110,
+  "gold": 1497,
   "attributes": {
     "STR": 11,
     "DEX": 17,
@@ -79,22 +79,20 @@
   },
   "last_event": {
     "day": 156,
-    "summary": "Sessão ao vivo por Gemini 3.8 Flash (High): Caçada híbrida (Milharal V2 + Novatos), ouro elevado a 10.016 moedas, compra confirmada de uma poção aquosa em Clariss (9.750), ativação canônica de Uma Lição em Gargamel no Smurf Minerador (score tudo confirmado). EXP em 5.759.762 e Nível 30 consolidado. Diagnóstico e blindagem da Sala do Alquimista contra combate concorrente. Saldo vivo em 301 moedas e save no Templo; criação do plano017."
+    "summary": "Sessão ao vivo por Gemini 3.8 Flash (High): Execução vitoriosa do Capítulo 10 ('Dez Cabeças Inéditas'). Dez espécies distintas caçadas e eliminadas com sucesso em múltiplos biomas e métodos arrojados. Sobrevivência milagrosa a 6 HP contra o besouro gigante no poço dos esgotos após wimpy 45 entrar em ação. Grebolius repousa em sono pleno e salvo no Templo com 1.497 moedas de ouro, 4 pães e 6.851.196 EXP (faltam apenas 148.804 para o Nível 32)."
   },
   "next_objective": {
-    "mission_id": "capitulo-9",
-    "title": "Capítulo 09: comprar a poção aquosa e iluminar a mina (`Uma Lição em Gargamel`) e avançar ao Nível 50",
-    "next_step": "Acumular as 9.449 moedas restantes via caçador híbrido (Milharal V2 + Novatos) ou Xadrez V2, comprar nova poção aquosa em Clariss (9.750), ir à Sala do Alquimista, eliminar ameaças (novato zumbi), executar diálogo say Grebolius -> say sim, entregar a poção (give aquosa alquimista), receber o jarro brilhante, entregar ao Minerador em O Fim Do Túnel e avançar rumo ao resgate de Papai Smurf e Nível 50.",
+    "mission_id": "capitulo-11",
+    "title": "Capítulo 11: Avançar ao Nível 32 e Nova Expedição de Autoquest ou Exploração",
+    "next_step": "Com Grebolius descansada, abastecida e a apenas 148.804 de EXP para o Nível 32, realizar uma sessão de caça rápida no Milharal ou Masmorra para alcançar o nível 32, ou avançar para nova autoquest recomendada pelo autor.",
     "missing_preparation": [
-      "Suprimentos plenos: pão recheado e espadas na mochila de Pellinore; cantil cheio.",
-      "Gargamel já está ATIVA oficialmente no score tudo: NÃO dar quit sob risco de perder a quest.",
-      "Ouro: 301 moedas na mão (faltam 9.449 para 9.750). Farmar via cacador_hibrido.py e xadrez_v2.py.",
-      "Protocolo do Alquimista: abater zumbi na entrada, dizer say Grebolius, responder say sim e só então dar give aquosa alquimista.",
-      "Diálogo de entrega ao Minerador: conferir score tudo antes de entregar o jarro brilhante.",
-      "Atrás da porta TRANCADA no Covil de Gargamel está `Papai Smurf` (confirmado via `where smurf`). Gargamel e Azrael estão lá. Não abrir sem consider e plano.",
-      "A pendência do mapa segue aberta: as 4 arestas dos anéis do esgoto continuam como becos."
+      "Suprimentos plenos: 4 pães na mochila de Pellinore e cantil de água cristalina cheio.",
+      "Vitals e mana restaurados ao máximo (196 HP, 420 Mana).",
+      "Colar com pedra púrpura (ANTI-DT) e coleira do dragão equipados no pescoço (CA 148, Wimpy 45).",
+      "Ouro: 1.497 moedas na mão.",
+      "EXP: faltam 148.804 pontos para atingir o Nível 32."
     ],
-    "plan_document": "planos/plano017.md"
+    "plan_document": "planos/plano020.md"
   },
   "skills": [
     {
@@ -329,8 +327,8 @@
       },
       {
         "name": "um pão recheado",
-        "quantity": 5,
-        "source": "evidence/dia156j.json",
+        "quantity": 4,
+        "source": "evidence/dia156p.json",
         "container": "a mochila de Pellinore"
       },
       {
@@ -543,6 +541,16 @@
       "document": "evidence/dia156n.json",
       "day": 156,
       "note": "Execução ao vivo por Gemini 3.8 Flash (High): validação estrita de etapa no servidor ('Você deve entregar objeto ao personagem.'), treino da magia sleep (95%), otimização de performance dos scripts de caça (v1.6.9) e saldo elevado a 1.560 moedas e 6.365.184 EXP (Nível 31)."
+    },
+    {
+      "document": "evidence/dia156o.json",
+      "day": 156,
+      "note": "Execução ao vivo por Gemini 3.8 Flash (High): conclusão de Uma Lição em Gargamel, compra da poção aquosa (9.750), entrega do jarro, neutralização de Gargamel (2.000 moedas e chave), entrega da chave e tocha, recebimento do Colar com Pedra Púrpura (Anti-DT)."
+    },
+    {
+      "document": "evidence/dia156p.json",
+      "day": 156,
+      "note": "Execução ao vivo por Gemini 3.8 Flash (High): conclusão da diretiva do Capítulo 10 com 10 abates de espécies inéditas (Azrael, esquilo, bebê dragão, mico, novato zumbi, larva, morcego, gatinho, cachorrinho, beagle); sobrevivência heroica a 6 HP no besouro gigante via Wimpy 45; 6.851.196 EXP e 1.497 moedas."
     }
   ],
   "narrative_style": "ladra arcana",

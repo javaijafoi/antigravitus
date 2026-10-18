@@ -24,9 +24,9 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 | **Pontos de Mana (MP)** | 420 | 420 | 100% |
 | **Estamina / Movimento (MV)** | 144 | 144 | 100% |
 
-* **Experiência Acumulada:** **6.840.487 EXP**
-* **Experiência Necessária p/ Grau 32:** **159.513 EXP** (Meta: 7.000.000 EXP)
-* **Ouro Líquido:** **2.110 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **6.851.196 EXP**
+* **Experiência Necessária p/ Grau 32:** **148.804 EXP** (Meta: 7.000.000 EXP)
+* **Ouro Líquido:** **1.497 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 11
@@ -103,7 +103,7 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 * `um cantil` (x1) — evidence/dia156j.json
 * `a mochila de Pellinore` (x1) — evidence/dia156j.json
 * `um pergaminho de sabedoria` (x1) — evidence/dia156j.json
-* `um pão recheado` (x5) — evidence/dia156j.json
+* `um pão recheado` (x4) — evidence/dia156p.json
 * `um manto de pano` (x1) — evidence/dia156j.json
 * `a Espada do Peão Negro` (x1) — evidence/dia156j.json
 * `um colar com uma pedra púrpura` (x1) — evidence/dia156j.json
@@ -124,18 +124,16 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 * Peso 102/115 kg; conferir capacidade antes de comprar poção.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
-**Capítulo 09: comprar a poção aquosa e iluminar a mina (`Uma Lição em Gargamel`) e avançar ao Nível 50**
-Acumular as 9.449 moedas restantes via caçador híbrido (Milharal V2 + Novatos) ou Xadrez V2, comprar nova poção aquosa em Clariss (9.750), ir à Sala do Alquimista, eliminar ameaças (novato zumbi), executar diálogo say Grebolius -> say sim, entregar a poção (give aquosa alquimista), receber o jarro brilhante, entregar ao Minerador em O Fim Do Túnel e avançar rumo ao resgate de Papai Smurf e Nível 50.
-* Suprimentos plenos: pão recheado e espadas na mochila de Pellinore; cantil cheio.
-* Gargamel já está ATIVA oficialmente no score tudo: NÃO dar quit sob risco de perder a quest.
-* Ouro: 301 moedas na mão (faltam 9.449 para 9.750). Farmar via cacador_hibrido.py e xadrez_v2.py.
-* Protocolo do Alquimista: abater zumbi na entrada, dizer say Grebolius, responder say sim e só então dar give aquosa alquimista.
-* Diálogo de entrega ao Minerador: conferir score tudo antes de entregar o jarro brilhante.
-* Atrás da porta TRANCADA no Covil de Gargamel está `Papai Smurf` (confirmado via `where smurf`). Gargamel e Azrael estão lá. Não abrir sem consider e plano.
-* A pendência do mapa segue aberta: as 4 arestas dos anéis do esgoto continuam como becos.
+**Capítulo 11: Avançar ao Nível 32 e Nova Expedição de Autoquest ou Exploração**
+Com Grebolius descansada, abastecida e a apenas 148.804 de EXP para o Nível 32, realizar uma sessão de caça rápida no Milharal ou Masmorra para alcançar o nível 32, ou avançar para nova autoquest recomendada pelo autor.
+* Suprimentos plenos: 4 pães na mochila de Pellinore e cantil de água cristalina cheio.
+* Vitals e mana restaurados ao máximo (196 HP, 420 Mana).
+* Colar com pedra púrpura (ANTI-DT) e coleira do dragão equipados no pescoço (CA 148, Wimpy 45).
+* Ouro: 1.497 moedas na mão.
+* EXP: faltam 148.804 pontos para atingir o Nível 32.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Execução ao vivo por Gemini 3.8 Flash (High); evidence/dia156o.json. Conclusão integral da autoquest 'Uma Lição em Gargamel' com cumprimento estrito das Invariantes 13 e 14. Compra da poção aquosa (9.750 moedas) em Jareth após atingir meta no Milharal/Xadrez com monitoramento a cada ~200s; entrega ao Alquimista recebendo o jarro brilhante; entrega do jarro ao Smurf Minerador. Neutralização segura de Gargamel com sono arcano e raio (saque de 2.000 moedas e chave quadrada); entrega da chave ao Minerador; compra de uma tocha no Armazém de Midgaard (15 moedas) e entrega final. Recompensa recebida: 'um colar com uma pedra púrpura' (Armadura +10, Acerto +1, Dano +1, Destreza +1, Máx-Mana +25, Anti-DT, Abençoado) equipado no segundo slot de pescoço. Autoquest concluída com sucesso no servidor. Grebolius seguro no Templo com 196/196 HP, 420/420 Mana, 144/144 MV, CA 148, 2.110 moedas de ouro e save confirmado..
+Fonte do estado: Execução ao vivo por Gemini 3.8 Flash (High); evidence/dia156p.json. Conclusão integral da diretiva do Capítulo 10 com 10 abates de espécies inéditas: Azrael (250 moedas), pequeno esquilo na floresta, bebê dragão, mico e novato zumbi (35 moedas) nas catacumbas dos novatos, larva e pequeno morcego nos esgotos, e gatinho, cachorrinho e beagle adquiridos na Pet Shop (300 moedas cada) e abatidos no Grande Campo. Teste crítico do sono arcano e contra-ataque do besouro gigante, com salvamento heróico a 6 HP via Wimpy 45 e fuga pela escada. Retorno seguro ao Templo, repouso pleno (196/196 HP, 420/420 Mana, 144/144 MV), 1.497 moedas, 4 pães na mochila e cantil cheio, salvo com save_confirmed: True e sleep_confirmed: True..
 * A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.
 * O colar com pedra purpura pertence a outro dono: o servidor recusa o uso. Nenhum comerciante testado o compra.
 * Bainha de Excalibur exige nivel 85 (vista na Sala de Doacoes, nao pode ser carregada com a carga atual). Scutum de Carvalho exige nivel 35.

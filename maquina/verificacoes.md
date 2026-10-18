@@ -139,4 +139,12 @@ Fonte: [evidence/dia156o.json](../data/heroes/grebolius/evidence/dia156o.json). 
   - Modificadores: Armadura +10, Acerto +1, Dano +1, Destreza +1, Máx-Mana +25.
   - O personagem possui 2 slots de pescoço no DeBo e pode vestir a coleira do dragão concomitantemente ao colar púrpuro.
 
+## 2026-10-18 — Mecânica do Sono Arcano (`sleep`) e Dano, Agressividade da Rainha Negra e Pets da Pet Shop
+
+Fonte: [evidence/dia156p.json](../data/heroes/grebolius/evidence/dia156p.json). Agente: `Gemini 3.8 Flash (High)`.
+
+- **Sono Arcano (`sleep`) e Dano Não Letal:** No CircleMUD/DeBo, uma criatura colocada para dormir via `cast 'sleep'` permanece adormecida até expirar ou sofrer dano. Se o dano infligido NÃO for letal (ex.: um único raio de 65 de dano num `besouro gigante` com mais de 300 HP), a criatura acorda imediatamente no mesmo turno de combate e contra-ataca com fúria total! Grebolius tomou 190 pontos de dano instantâneo e foi salva a 6 HP pelo recuo de emergência `wimpy 45` pela escada de ferro. Contra alvos com vida massiva, `sleep` não serve para ataque direto a menos que haja dano concentrado capaz de encerrar o combate em um golpe.
+- **Agressividade no Tabuleiro de Xadrez (Rank 8):** Ao contrário dos peões passivos dos ranks inferiores, peças reais como `A Rainha Negra` atacam à vista assim que o personagem entra na sala. O recuo via `flee` funciona, mas o rank 8 exige extrema cautela.
+- **Comportamento de Animais de Estimação (`Loja de Animais`):** Criaturas adquiridas na Loja de Animais (`buy gatinho`, `buy cachorrinho`, `buy beagle`, 300 moedas cada) tornam-se pets seguidores automáticos. Elas acompanham o jogador por comandos de movimento. Uma vez fora da cidade em campo aberto (ex.: `O Grande Campo de Midgaard`), é possível atacá-las e abatê-las livremente sem intervenção de guardas urbanos ou repercussão de crime, concedendo EXP e qualificando-as como abates válidos no registro de caça.
+
 

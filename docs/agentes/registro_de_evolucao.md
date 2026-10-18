@@ -849,3 +849,17 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Custo:** Nenhum. Zero mortes, economia fortalecida com 2.110 moedas em mãos, mana aumentada para 420 e personagem protegida por item Anti-DT.
 - **Próximo:** Executar o Plano 019: explorar o mundo para caçar e abater 10 criaturas inéditas para o bestiário de Grebolius com táticas arrojadas e planos criativos, mantendo sempre a segurança de wimpy 45 e recuo.
 
+### 2026-10-18 · Dia 156 (sessão 11) · Gemini 3.8 Flash (High)
+- **Mudou:** `data/heroes/grebolius/capitulos.json` (Capítulo 10 "Dez Cabeças Inéditas" concluído com 10 abates registrados, parts, crônica narrativa em 1ª pessoa e excerpt preenchidos), `data/heroes/grebolius/monstros.md` (10 novas espécies catalogadas e notas de perigo para Besouro Gigante e Rainha Negra), `data/heroes/grebolius/conhecimento.md` (§53 adicionada), `maquina/verificacoes.md` (mecânica do sono arcano e despertar por dano não letal, agressividade no xadrez e pets da Pet Shop), `data/heroes/grebolius/state.json` (EXP elevada a 6.851.196, ouro em 1.497, 4 pães, status dormindo), `data/heroes/grebolius/evidence/dia156p.json`, derivados via `sync_hero.py`, e criação de `data/heroes/grebolius/planos/plano020.md`.
+- **Por quê:** Execução vitoriosa e integral da diretiva `/goal mandabala` do autor para o Capítulo 10: *"a próxima missão vai ser matar 10 bichos que ela ainda não matou mesmo que ela tenha que fazer planos malucos e ser muito criativa"*.
+- **Como foi verificado:**
+  1. Dez abates de criaturas inéditas executados e confirmados ao vivo no servidor: Azrael no covil de Gargamel (250 moedas saqueadas), pequeno esquilo na floresta densa, bebê dragão na área dos novatos, mico e novato zumbi (35 moedas) nas catacumbas, larva e pequeno morcego nos esgotos de Midgaard, e gatinho, cachorrinho e beagle adquiridos na Pet Shop (300 moedas cada), conduzidos ao Grande Campo e abatidos em campo aberto.
+  2. Sobrevivência heróica a 6 HP contra o contra-ataque de 190 de dano do besouro gigante no poço dos esgotos, confirmando na prática que dano quebra o sono arcano (`sleep`) imediatamente; acionamento instantâneo do Wimpy 45 e fuga pela escada, evitando a 9ª morte histórica.
+  3. Grebolius recolhida ao Templo de Midgaard, recuperada com 196/196 HP e 420/420 Mana, alimentada, salva (`save`) e adormecida (`sleep`), live daemon encerrado de forma limpa.
+  4. `python scripts/sync_hero.py --hero grebolius` e `--check` (exit 0).
+  5. `python scripts/check_project.py` (0 erros).
+  6. `python scripts/devolutiva.py` (0 falhas).
+- **Custo:** 900 moedas investidas na compra dos 3 pets da Pet Shop e 30 moedas em pães; compensadas com 287 moedas de espólio e ganho massivo de EXP, encerrando com 1.497 moedas vivas na mão e EXP a apenas 148.804 do Nível 32.
+- **Próximo:** Executar o Plano 020: acordar no Templo, farmar os 148.804 de EXP restantes para alcançar o Nível 32 e aguardar a próxima grande diretriz do autor Peter.
+
+

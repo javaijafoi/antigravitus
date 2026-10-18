@@ -26,11 +26,18 @@ Estes ela **já matou** ou o jogo diz que é fácil. É a lista de trabalho.
 | **líder dos monstros** | O Milharal Destruído | **3** | — | Abate |
 | **monstro novato** | O Milharal Destruído | **1** | — | Abate |
 | **Gargamel** | O Covil de Gargamel | **1** | "É uma perda de tempo" (Nível: Muito fácil, Poder: Você tem PROBLEMAS!?) | Abate (Dia 156) |
-| **Azrael** | O Covil de Gargamel | — | "É uma perda de tempo" (Nível: Muito fácil, Poder: Fácil) | consider (Dia 156) |
+| **Azrael** | O Covil de Gargamel | **1** | "É uma perda de tempo" (Nível: Muito fácil, Poder: Fácil) | Abate (Dia 156, Cap 10) |
+| **pequeno esquilo** | Uma Parte Densa da Floresta | **1** | "É uma perda de tempo" | Abate (Dia 156, Cap 10) |
+| **bebê dragão** | Área dos Novatos (Um Outro Canto) | **1** | "É uma perda de tempo" | Abate (Dia 156, Cap 10) |
+| **mico / diabinho** | Subsolo dos Novatos | **1** | "É uma perda de tempo" | Abate (Dia 156, Cap 10) |
+| **novato zumbi** | Subsolo dos Novatos (Mais Outro Canto)| **1** | "É uma perda de tempo" | Abate (Dia 156, Cap 10) |
+| **larva / larva gigante** | Esgotos de Midgaard (Curva Regular) | **1** | "É uma perda de tempo" (Nível: Muito fácil) | Abate (Dia 156, Cap 10) |
+| **pequeno morcego** | Esgotos de Midgaard (Outra Interseção)| **1** | "É uma perda de tempo" | Abate (Dia 156, Cap 10) |
+| **gatinho** | O Grande Campo (origem: Pet Shop) | **1** | "É uma perda de tempo" | Abate (Dia 156, Cap 10) |
+| **cachorrinho** | O Grande Campo (origem: Pet Shop) | **1** | "É uma perda de tempo" | Abate (Dia 156, Cap 10) |
+| **beagle** | O Grande Campo (origem: Pet Shop) | **1** | "É uma perda de tempo" | Abate (Dia 156, Cap 10) |
 | **kobold** | Uma Divisão da Trilha (floresta) | — | "É uma perda de tempo" | consider |
-| **zumbi** | O Começo Da Passagem, O Corredor Sujo | — | "É uma perda de tempo" | consider |
 | **lobo** | A Loja de Animais | — | "É uma perda de tempo" | consider |
-| **gatinho** | A Entrada da Guilda dos Guerreiros | — | "É uma perda de tempo" | consider |
 
 **Os quatro monstros do milharal são a cota do fazendeiro** (missão *Problemas Agrícolas*): onze
 abates acumulados contra cota de dez, e o gatilho de entrega nunca veio. Eles **chegam andando** —
@@ -47,6 +54,8 @@ sozinho** — ver a seção 4.
 |---|---|---|---|
 | **ferreiro** | A Loja de Armas | "Você é LOUCO!" | **Sim** — atrás do balcão, vende |
 | **prefeito** | Rua Principal | "Você é LOUCO!" | **Sim** — autoridade de Midgaard |
+| **a Rainha Negra** | Tabuleiro de Xadrez (rank 8) | "Você é LOUCO!" | não — agressiva, ataca à vista |
+| **besouro gigante** | Abaixo do Poço Escuro (Esgotos) | "Você é LOUCO!" (Nível: PROBLEMAS!?) | não — acorda com dano e bate 60-84 HP |
 | **torre** / **castelo** | Uma Casa Preta (xadrez) | "Você é LOUCO!" | não — peças do tabuleiro |
 | **peao** / **peão** | Uma Casa Branca (xadrez) | "Você é louco?" | não — peças do tabuleiro |
 | **rato** | A Junção no Esgoto | "Você é LOUCO!" | não, mas o veredito engana |

@@ -1,0 +1,112 @@
+{
+  "hero_id": "grebolius",
+  "day": 156,
+  "agent": "Gemini 3.8 Flash (High)",
+  "via": "automato",
+  "at": "2026-10-18T02:45:00-03:00",
+  "recorded_on": "2026-10-18",
+  "sources": [
+    "automato/nucleo/driver/live_daemon.py",
+    "automato/rotinas/xadrez_v3.py",
+    "automato/rotinas/esgoto.py",
+    "automato/rotinas/milharal_v2.py"
+  ],
+  "summary": "Execução da diretiva do Capítulo 10: abater 10 criaturas ou monstros inéditos para o bestiário pessoal de Grebolius com planos arrojados e criativos. Todos os 10 abates confirmados e registrados: 1) Azrael no Covil de Gargamel (saque de 250 ouro); 2) Um pequeno esquilo na floresta densa; 3) O bebê dragão na Área dos Novatos; 4) O mico/diabinho nas catacumbas dos novatos; 5) O novato zumbi nas catacumbas dos novatos (saque de 35 ouro); 6) Uma larva nos esgotos de Midgaard (saque de 2 ouro); 7) Um pequeno morcego no poço dos esgotos; 8) Um gatinho (adquirido na Loja de Animais por 300 moedas, levado ao Grande Campo e abatido); 9) Um cachorrinho (adquirido por 300 moedas, levado ao Grande Campo e abatido); 10) Um beagle (adquirido por 300 moedas, levado ao Grande Campo e abatido). Sobrevivência extrema com acionamento de Wimpy 45 e proteção do Colar Anti-DT a 6 HP contra o besouro gigante no fundo do poço, após comprovação mecânica de que dano acorda criaturas em sono arcano. Grebolius salvo e dormindo no Templo de Midgaard com 196/196 HP, 420/420 Mana, 1.497 ouro, 4 pães e cantil cheio.",
+  "vitals": {
+    "hp": 196,
+    "max_hp": 196,
+    "mana": 420,
+    "max_mana": 420,
+    "mv": 144,
+    "max_mv": 144,
+    "gold": 1497,
+    "exp": 6851196,
+    "level": 31,
+    "wimpy": 45
+  },
+  "quest_status": {
+    "Uma Lição em Gargamel": "completed"
+  },
+  "kills_ineditos": [
+    {
+      "numero": 1,
+      "alvo": "Azrael",
+      "local": "O Covil de Gargamel",
+      "metodo": "Sono em Gargamel + lightning bolt em Azrael",
+      "xp": 612,
+      "ouro": 250
+    },
+    {
+      "numero": 2,
+      "alvo": "um pequeno esquilo",
+      "local": "Uma Parte Densa da Floresta",
+      "metodo": "lightning bolt",
+      "xp": 324,
+      "ouro": 0
+    },
+    {
+      "numero": 3,
+      "alvo": "o bebê dragão",
+      "local": "Um Outro Canto (Área dos Novatos)",
+      "metodo": "lightning bolt + golpe de espada curta",
+      "xp": 1116,
+      "ouro": 0
+    },
+    {
+      "numero": 4,
+      "alvo": "o mico",
+      "local": "Uma Interseção Das Passagens (Subsolo Novatos)",
+      "metodo": "lightning bolt",
+      "xp": 612,
+      "ouro": 0
+    },
+    {
+      "numero": 5,
+      "alvo": "o novato zumbi",
+      "local": "Mais Outro Canto (Subsolo Novatos)",
+      "metodo": "lightning bolt",
+      "xp": 936,
+      "ouro": 35
+    },
+    {
+      "numero": 6,
+      "alvo": "uma larva",
+      "local": "A Curva Regular (Esgotos de Midgaard)",
+      "metodo": "lightning bolt",
+      "xp": 540,
+      "ouro": 2
+    },
+    {
+      "numero": 7,
+      "alvo": "um pequeno morcego",
+      "local": "Outra Interseção (Esgotos de Midgaard)",
+      "metodo": "lightning bolt x2",
+      "xp": 3284,
+      "ouro": 0
+    },
+    {
+      "numero": 8,
+      "alvo": "um gatinho",
+      "local": "O Grande Campo de Midgaard (adquirido na Pet Shop)",
+      "metodo": "lightning bolt",
+      "xp": 252,
+      "ouro": 0
+    },
+    {
+      "numero": 9,
+      "alvo": "um cachorrinho",
+      "local": "O Grande Campo de Midgaard (adquirido na Pet Shop)",
+      "metodo": "lightning bolt",
+      "xp": 288,
+      "ouro": 0
+    },
+    {
+      "numero": 10,
+      "alvo": "um beagle",
+      "local": "O Grande Campo de Midgaard (adquirido na Pet Shop)",
+      "metodo": "lightning bolt",
+      "xp": 522,
+      "ouro": 0
+    }
+  ]
+}

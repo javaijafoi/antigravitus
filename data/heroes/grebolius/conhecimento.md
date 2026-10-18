@@ -2219,7 +2219,30 @@ Fonte: [evidence/dia156k.json](evidence/dia156k.json). Sessão ao vivo via `auto
   - **Flags:** BRILHO MÁGICO ABENÇOADO NÃO-VENDER ANTI-DT ENTALHADO.
   - **Equipado com Sucesso:** Grebolius passou a usar dois itens no pescoço (a coleira do dragão + o colar com pedra púrpura), elevando a Mana Máxima para 420, CA para 148, Acerto para 16 e Destreza para 17.
 
+---
 
+## 53. O Desafio das Dez Cabeças Inéditas (Capítulo 10) e Lições Críticas de Combate (Dia 156)
 
+- **Diretiva do Autor:** *"a próxima missão vai ser matar 10 bichos que ela ainda não matou mesmo que ela tenha que fazer planos malucos e ser muito criativa"*.
+- **Os 10 Abates Inéditos Executados e Confirmados (Fonte: `evidence/dia156p.json`):**
+  1. `Azrael` (*O Covil de Gargamel*): Neutralizado com `cast 'sleep' azrael` e eliminado com `cast 'lightning bolt' azrael`. Espólio: 250 moedas de ouro saqueadas do cadáver (+612 EXP).
+  2. `Um pequeno esquilo` (*Uma Parte Densa da Floresta*): Rastreamento nas matas a oeste de Midgaard. Abatido com raio (+324 EXP).
+  3. `O bebê dragão` (*Área dos Novatos / Masmorra*): Exploração além da grade das catacumbas. Abatido com raio elétrico seguido de golpe marcial (+1.116 EXP).
+  4. `O mico` / `diabinho` (*Subsolo dos Novatos / Catacumbas*): Abatido com relâmpago arcano (+612 EXP).
+  5. `O novato zumbi` (*Subsolo dos Novatos / Catacumbas*): Eliminado com raio (+936 EXP, 35 moedas).
+  6. `Uma larva` (*Esgotos de Midgaard / Curva Regular*): Criatura invertebrada dos esgotos. Eletrocutada com raio (+540 EXP, 2 moedas).
+  7. `Um pequeno morcego` (*Esgotos de Midgaard / Poço Escuro*): Alvo alado veloz. Derrubado com dois raios elétricos (+3.284 EXP).
+  8. `Um gatinho` (*O Grande Campo de Midgaard*): Criatividade tática — adquirido por 300 moedas na Loja de Animais de Midgaard (`buy gatinho`), conduzido como seguidor para fora dos portões seguros da cidade e abatido no campo aberto (+252 EXP).
+  9. `Um cachorrinho` (*O Grande Campo de Midgaard*): Adquirido na Loja de Animais por 300 moedas, conduzido aos ermos do campo e abatido com raio (+288 EXP).
+  10. `Um beagle` (*O Grande Campo de Midgaard*): Cão de caça adquirido por 300 moedas na Pet Shop, conduzido ao campo e abatido com raio (+522 EXP), selando a 10ª cabeça inédita.
 
+- **O Incidente do Besouro Gigante e a Regra do Sono Arcano (`sleep`):**
+  - **Acontecimento:** No fundo do Poço Escuro dos esgotos, Grebolius enfrentou um `besouro gigante`. Aplicou `cast 'sleep' besouro`, que adormeceu a criatura com sucesso.
+  - **O Erro Tático:** Em seguida, conjurou `cast 'lightning bolt' besouro`. O raio causou 65 de dano, mas a criatura possuía centenas de pontos de vida.
+  - **A Revelação Mecânica:** O dano da magia acordou o besouro imediatamente no mesmo turno de combate! O besouro desferiu uma sequência brutal de ataques físicos, arrancando 190 pontos de vida de Grebolius num piscar de olhos.
+  - **O Milagre da Sobrevivência:** Com a vida despencando para **6 HP** (de 196), o sistema de recuo de emergência **`wimpy 45`** entrou em ação instantaneamente, executando fuga automática para cima (`u`) pela escada de ferro enferrujada. O Colar com Pedra Púrpura (ANTI-DT) e a fuga rápida impediram a 9ª morte histórica de Grebolius.
+  - **Regra de Ouro:** *Nunca usar `sleep` para atacar alvos de vida massiva se a magia subsequente não for capaz de matá-los num único golpe! O dano remove o sono instantaneamente.*
 
+- **Agressividade no Tabuleiro de Xadrez (Rank 8):**
+  - Ao inspecionar os ranks superiores do tabuleiro de xadrez em busca de peças ainda não catalogadas, Grebolius encontrou `A Rainha Negra` na sala do Rank 8.
+  - Ao contrário dos peões passivos, as peças da realeza negra são **extremamente agressivas** e engajam combate à primeira vista sem aviso prévio. Grebolius precisou recuar em fuga imediata (`flee`).
