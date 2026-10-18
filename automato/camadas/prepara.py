@@ -231,7 +231,14 @@ def itens_no_chao():
     t, _, _ = run('look')
     achados = []
     for linha in (t or '').split('\n'):
-        l = re.sub(r'^\(x\d+\)\s*', '', linha.strip())
+        linha_crua = linha.strip()
+        low = sem_acento(linha_crua)
+        # NUNCA dar get em itens explicitamente amaldiçoados ou com aura vermelha/maligna:
+        # Apenas barramos se houver sinal expresso de perigo na descrição, sem bloquear itens por nome
+        if any(bad in low for bad in ['aura vermelha', 'amaldic', 'maldic', 'malign']):
+            print('[PREPARA] doacoes: ignorando item com aura vermelha/maldição no chão: %r' % linha_crua, flush=True)
+            continue
+        l = re.sub(r'^\(x\d+\)\s*', '', linha_crua)
         m = re.match(r'^(.{4,60}?)\s+(?:est[aá]|foi|foram|repousa|est[aã]o)\b', l, re.I)
         if not m:
             continue
@@ -309,7 +316,12 @@ def revisar_doacoes():
         chave = pegar_do_chao(nome)
         if chave is None:
             continue
-        run('identify ' + chave, timeout=15.0)      # diretiva §10: identificar ANTES de vestir
+        t_id, _, _ = run('identify ' + chave, timeout=15.0)      # diretiva §10: identificar ANTES de vestir
+        id_sem = sem_acento(t_id)
+        if any(bad in id_sem for bad in ['maldic', 'amaldic', 'no_drop', 'nodrop', 'aura vermelha']):
+            print('[PREPARA] doacoes: %r eh AMALDICOADO - devolvido sem vestir' % nome, flush=True)
+            run('drop ' + chave)
+            continue
 
         antigo = next((k for k in vestido if chave in palavras_chave(k)), None)
         if antigo is None:

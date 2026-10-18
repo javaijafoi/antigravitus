@@ -5,7 +5,7 @@
   "verification": {
     "mode": "live",
     "autoquest_check_day": 156,
-    "autoquest_check_note": "Estado conferido no servidor ao fim do Capítulo 07 (Dia 156g, evidence/dia156g.json). Concluídas: A Coleira do Dragão, Altruísmo, Ninguém Segura Esse Bebê, Novela dos Novatos, Limpando Monstros e Problemas Agrícolas. Elegíveis abertas: Dicas Mágicas e Uma Lição em Gargamel."
+    "autoquest_check_note": "Estado conferido no servidor ao vivo (Dia 156o, evidence/dia156o.json). Concluídas: A Coleira do Dragão, Altruísmo, Ninguém Segura Esse Bebê, Novela dos Novatos, Limpando Monstros, Problemas Agrícolas e Uma Lição em Gargamel. Elegíveis abertas: Dicas Mágicas."
   },
   "items": [
     {
@@ -475,11 +475,12 @@
       "id": "uma-licao-em-gargamel",
       "title": "Uma Lição em Gargamel",
       "type": "official",
-      "status": "active",
+      "status": "completed",
       "accepted_day": 156,
       "last_progress_day": 156,
       "objective": "Autoquest de níveis 20-80 (encarnações 1-4, qualquer alinhamento/classe/raça), iniciada com o smurf minerador na Vila dos Smurfs.",
-      "next_step": "Conferir o estado real e completar o saldo para a poção aquosa de Clariss (9.750; faltam 5.521 moedas), sem quit/reset: o Alquimista já pediu a poção e score marcou entregar objeto. Usar a rota pelo norte/Jareth comprovada no transcript156j, nunca a rota curta do plano011. Rever os guardas da caça antes de automatizar; o worker temporário teve falso alarme e não comprovou rendimento. Com peso 109/115 kg, conferir capacidade. Ao ter a poção, entregar somente com objetivo vigente e aguardar o jarro no diálogo completo. Não abrir outra conexão automaticamente em falha.",
+      "next_step": "Concluída integralmente com o Smurf Minerador em O Fim Do Túnel. Entregues poção aquosa (ao Alquimista), jarro brilhante, chave quadrada e tocha. Recompensa recebida: um colar com uma pedra púrpura (Anti-DT, Abençoado, Armadura +10, Acerto +1, Dano +1, Des +1, Max-Mana +25) e 2.000 moedas de ouro de Gargamel.",
+      "reward": "um colar com uma pedra púrpura e 2.000 moedas de ouro",
       "evidence": [
         {
           "document": "evidence/dia156g.json",
@@ -500,6 +501,11 @@
           "document": "evidence/dia156j.json",
           "day": 156,
           "note": "Conclusão de Limpando sem quit; Gargamel permanece ativa."
+        },
+        {
+          "document": "evidence/dia156o.json",
+          "day": 156,
+          "note": "Conclusão integral da autoquest 'Uma Lição em Gargamel' no servidor. Compra da poção aquosa em Clariss (9.750), entrega ao Alquimista, entrega do jarro ao Minerador, abate de Gargamel com sono/raio obtendo a chave quadrada e 2.000 moedas, entrega da chave e entrega de uma tocha do Armazém (15 moedas). Recebimento do colar com uma pedra púrpura e parabéns do servidor. Agente: Gemini 3.8 Flash (High)."
         }
       ]
     }

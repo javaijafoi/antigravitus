@@ -113,3 +113,30 @@ Fonte: [evidence/dia156h.json](../data/heroes/grebolius/evidence/dia156h.json). 
 ## 2026-10-17 — respostas intercaladas e histórico de morte
 
 Agente: GPT-6 / Codex (versão específica não informada). Fonte: [dia156j](../data/heroes/grebolius/evidence/dia156j.json). Transcript72663a: linha202 entrega recompensa do Alquimista sob eat pao,com consumo em preroll203;274 recebe DICA para exits,saídas em idle275;300 recebe saídas para n,chegada em preroll301/look302. Prompt isolado não confirma a semântica esperada. Conter por sala/saídas/objetivo e não repetir comando de risco por resposta incompleta. Palavra morte em histórico ou relato não equivale a morte atual; consultar estado real. Não houve alteração do código do driver nesta reconciliação.
+
+## 2026-10-17 — Sub-etapas de Autoquest em `score tudo` (Invariante 13)
+
+Fonte: [evidence/dia156n.json](../data/heroes/grebolius/evidence/dia156n.json). Agente: Gemini 3.8 Flash (High).
+- No DeBo, a listagem de uma autoquest sob `[Autoquests em andamento]` não indica prontidão para entrega. O servidor possui sub-etapas discretas:
+  - Quando a quest está apenas aceita (etapa 0), o título aparece sozinho sem instruções adicionais. Entregar (`give`) neste estado resulta na perda do item sem avanço da missão nem recebimento de recompensa.
+  - Apenas após a cadeia de diálogos e ativações necessárias ser concluída (ex: Minerador monologar completamente e Alquimista dialogar com identificação), o servidor altera o cabeçalho para exibir a instrução de etapa:
+    `[Autoquests em andamento] Uma Lição em Gargamel: Você deve entregar objeto ao personagem.`
+  - A presença da string literal `: Você deve entregar objeto ao personagem.` é a confirmação técnica de que o servidor habilitou o manipulador de entrega do NPC.
+
+## 2026-10-18 — `identify` como comando, consider de Gargamel/Azrael e propriedades do Colar Púrpuro
+
+Fonte: [evidence/dia156o.json](../data/heroes/grebolius/evidence/dia156o.json). Agente: `Gemini 3.8 Flash (High)`.
+
+- **`identify` opera como comando até o nível 80:** Invocar `cast identify colar` acarreta falhas ("Sua magia falha e desaparece") ou requer sintaxe de magia. O comando direto `identify colar` é gratuito, não consome mana e retorna imediatamente a ficha completa do objeto carregado.
+- **Vereditos de `consider` em *O Covil de Gargamel*:**
+  - `Gargamel`: Nível: "Muito fácil!", Vida: "É uma perda de tempo", Poder: "Você tem PROBLEMAS!?", Precisão: "Muito fácil!", Armadura: "Fácil!". O veredito indica poder de ataque bruto elevado se acertar, mas precisão e vida irrisórias contra um personagem de Nível 31 com CA 138.
+  - `Azrael`: Nível: "Muito fácil!", Vida: "É uma perda de tempo", Poder: "Fácil!", Precisão: "Fácil!", Armadura: "Fácil!". Mob completamente inofensivo.
+- **Eficácia de `cast 'sleep'` em chefes de missão:**
+  - Gargamel não possui imunidade a sono arcano: `cast 'sleep' gargamel` (95% proficiência) colocou-o para dormir na primeira tentativa, concedendo +1.200 EXP e neutralizando completamente qualquer contra-ataque. Em seguida, um único `cast 'lightning bolt' gargamel` desferiu 66 de dano e encerrou a luta (+1.080 EXP), sem nenhum ponto de vida perdido por Grebolius.
+- **Propriedades mecânicas de `um colar com uma pedra púrpura`:**
+  - Objeto: Tipo ARMADURA, slot PEGAR PESCOÇO, Peso 1, Valor 20.000.000, Nível 10, Encarnação 1.
+  - Flags: `BRILHO MÁGICO ABENÇOADO NÃO-VENDER ANTI-DT ENTALHADO`.
+  - Modificadores: Armadura +10, Acerto +1, Dano +1, Destreza +1, Máx-Mana +25.
+  - O personagem possui 2 slots de pescoço no DeBo e pode vestir a coleira do dragão concomitantemente ao colar púrpuro.
+
+

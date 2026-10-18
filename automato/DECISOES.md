@@ -141,3 +141,22 @@ Cada entrada responde a três perguntas: **por que** (o problema real), **o que*
 ## 2026-10-17 — retomada011: confirmar contexto antes de agir
 
 Agente: GPT-6 / Codex (versão específica não informada); fonte: data/heroes/grebolius/evidence/dia156j.json. Decisão: cruzar resposta com sala-marco,vitais,objetivo e falas em idle/preroll; não confiar em prompt isolado ou palavra morte em histórico como morte vigente. Exemplo: recompensa sob eat pao e saídas sob n no transcript72663a. Alertas/guardas temporários são de worker no workspace; nenhum reparo geral do motor foi aplicado. Custo: consultas adicionais e interrupção manual em ambiguidade. Seguir AGENTS§13 para retirada/handoff ao atingir10% da janela5h.
+
+
+---
+
+## 10. Diálogos de missão NUNCA automatizados — resposta direta do agente ao vivo (Dia 156 — diretiva do autor)
+
+- **Por que**: Scripts que automatizam conversas com NPCs (`say sim`, `say Grebolius`, `give`) com tempos arbitrários de espera (`time.sleep`) repetidamente causaram falhas graves: atropelam falas longas de NPCs antes do término, ativam quests concorrentes na mesma sala (ex.: ativar *Limpando Monstros* ao invés de avançar *Gargamel*) e entregam itens antes de o NPC registrar o diálogo correto, consumindo itens raros e ouro sem conceder a recompensa.
+- **O que**: Fica expressamente **proibido** automatizar falas e entregas de missão em scripts em lote (`automato/acoes/` ou `automato/rotinas/`). O motor apenas navega até a sala do NPC e garante a segurança física. A conversa, a leitura atenta da fala do NPC, a conferência de `score tudo` e a entrega de itens devem ser feitas **diretamente pelo agente consciente em resposta ao contexto em tempo real**.
+- **Custo**: Exige que o agente conduza pessoalmente a interação social passo a passo em cada etapa de missão, impedindo a execução autônoma "às cegas" durante conversas e entregas.
+- **Próximo desafio**: Adaptar scripts de apoio em `automato/acoes/` para atuarem apenas como navegadores/posicionadores e limpadores de sala, deixando comandos de `say` e `give` para o terminal ao vivo do agente.
+
+
+---
+
+## 11. Guarda de Cota Inteligente e Handoff Automatizado (v1.6.7, Dia 156 — diretiva do autor)
+- **Por que**: A diretiva do AGENTS.md §13 determina que o agente interrompa ações e faça handoff ao atingir 10% da janela de 5 horas. Porém, checar a cota manualmente a cada 5 minutos pelo operador consome foco, e checagens excessivas por script geram tráfego desnecessário no language server.
+- **O que**: Criado o módulo `automato/camadas/guarda_cota.py` que consulta o endpoint local RPC do Antigravity com frequência adaptativa (a cada 35 min se cota > 40%; a cada 10-15 min se entre 20%-40%; a cada 1-5 min se próxima de 10%). Ao bater <= 10% (tolerância 5%-10%), o automato aborta a caça, recolhe a personagem com segurança no Templo, alimenta, hidrata, salva, deita, fecha a conexão e gera o próximo plano numerado de handoff.
+- **Custo**: Uma consulta local HTTP a cada 10-35 minutos; em falha de conexão com o server, o script registra aviso e não interrompe bruscamente o bot.
+- **Próximo desafio**: Monitorar a taxa de consumo por ciclo (burn rate de tokens/hora) para prever o momento exato do corte.

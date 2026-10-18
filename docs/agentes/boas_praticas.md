@@ -113,7 +113,7 @@ python -B -m unittest discover -s scripts -p "test_*.py"
 | Aviso de DT: *"algo perigoso por perto"* → **parar e voltar** | armadilha mortal mata na hora e destrói itens |
 | `save`, **nunca `quit`**, com missão em andamento | `quit` apaga o progresso das missões |
 | Ouro dorme no banco; reserva na mão só para comprar | a morte leva o que está no bolso |
-| **Proibido vender armaduras** (Torre Negra ou peão); `xadrez` não reativar | diretiva do autor no Dia 150 |
+| **Proibido itens amaldiçoados**; Torre Negra permitida apenas se NÃO for amaldiçoada (dupla checagem com `identify` no chão antes do `get`) | diretiva do autor (Dia 150, atualizada Dia 156) |
 | Invisibilidade **bloqueia comércio** | o balconista recusa: *"Não negocio com quem não vejo!"* — `visible` antes de `list`/`buy` |
 | Conjurar **fora** do Templo e da Loja de Magias | essas salas bloqueiam magia; a falha diz "desaparece", palavra que também aparece no sucesso |
 | Não concluir que um alvo é invencível sem ler a doutrina do modo | já se declarou o Minotauro invencível atacando de adaga, sendo ela maga |

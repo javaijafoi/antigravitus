@@ -25,6 +25,8 @@ Estes ela **já matou** ou o jogo diz que é fácil. É a lista de trabalho.
 | **monstro agressivo** | O Milharal Destruído | **18** | — | Abate |
 | **líder dos monstros** | O Milharal Destruído | **3** | — | Abate |
 | **monstro novato** | O Milharal Destruído | **1** | — | Abate |
+| **Gargamel** | O Covil de Gargamel | **1** | "É uma perda de tempo" (Nível: Muito fácil, Poder: Você tem PROBLEMAS!?) | Abate (Dia 156) |
+| **Azrael** | O Covil de Gargamel | — | "É uma perda de tempo" (Nível: Muito fácil, Poder: Fácil) | consider (Dia 156) |
 | **kobold** | Uma Divisão da Trilha (floresta) | — | "É uma perda de tempo" | consider |
 | **zumbi** | O Começo Da Passagem, O Corredor Sujo | — | "É uma perda de tempo" | consider |
 | **lobo** | A Loja de Animais | — | "É uma perda de tempo" | consider |

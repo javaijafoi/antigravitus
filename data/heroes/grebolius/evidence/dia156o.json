@@ -1,0 +1,83 @@
+{
+  "hero_id": "grebolius",
+  "day": 156,
+  "agent": "Gemini 3.8 Flash (High)",
+  "via": "automato",
+  "at": "2026-10-18T02:05:00-03:00",
+  "recorded_on": "2026-10-18",
+  "sources": [
+    "automato/nucleo/driver/live_daemon.py",
+    "automato/acoes/atingir_meta_pocao.py",
+    "automato/acoes/comprar_pocao.py",
+    "scripts/local/batalha_gargamel.py",
+    "scripts/local/comprar_tocha.py",
+    "scripts/local/ir_ao_minerador_entregar_tocha.py"
+  ],
+  "summary": "Conclusão integral da autoquest 'Uma Lição em Gargamel' com cumprimento estrito das Invariantes 13 e 14. Compra da poção aquosa (9.750 moedas) em Jareth após atingir meta no Milharal/Xadrez com monitoramento a cada ~200s; entrega ao Alquimista recebendo o jarro brilhante; entrega do jarro ao Smurf Minerador. Neutralização segura de Gargamel com sono arcano e raio (saque de 2.000 moedas e uma chave quadrada); entrega da chave ao Minerador; compra de uma tocha no Armazém de Midgaard (15 moedas) e entrega final. Recompensa recebida: 'um colar com uma pedra púrpura' (Armadura +10, Acerto +1, Dano +1, Destreza +1, Máx-Mana +25, Anti-DT, Abençoado) equipado no segundo slot de pescoço. Autoquest concluída com sucesso no servidor. Grebolius seguro no Templo com 196/196 HP, 420/420 Mana, 144/144 MV, CA 148, 2.110 moedas de ouro e save confirmado.",
+  "vitals": {
+    "hp": 196,
+    "max_hp": 196,
+    "mana": 420,
+    "max_mana": 420,
+    "mv": 144,
+    "max_mv": 144,
+    "gold": 2110,
+    "exp": 6840487,
+    "level": 31,
+    "wimpy": 45
+  },
+  "quest_status": {
+    "Uma Lição em Gargamel": "completed"
+  },
+  "records": [
+    {
+      "step": "compra_pocao_aquosa",
+      "result": "sucesso",
+      "loja": "As Misturas de Clariss (Jareth)",
+      "custo": 9750,
+      "item": "uma poção aquosa"
+    },
+    {
+      "step": "entrega_pocao_alquimista",
+      "result": "sucesso",
+      "npc": "Novato Alquimista",
+      "item_entregue": "uma poção aquosa",
+      "item_recebido": "um jarro brilhante"
+    },
+    {
+      "step": "entrega_jarro_minerador",
+      "result": "sucesso",
+      "npc": "o smurf minerador",
+      "item_entregue": "um jarro brilhante"
+    },
+    {
+      "step": "combate_gargamel",
+      "result": "vitoria_sem_dano",
+      "local": "O Covil de Gargamel",
+      "magia_controle": "sleep (95%)",
+      "magia_dano": "lightning bolt [66 de dano]",
+      "espólios": "2.000 moedas de ouro e uma chave quadrada"
+    },
+    {
+      "step": "entrega_chave_minerador",
+      "result": "sucesso",
+      "npc": "o smurf minerador",
+      "item_entregue": "uma chave quadrada"
+    },
+    {
+      "step": "compra_tocha_armazem",
+      "result": "sucesso",
+      "loja": "O Armazém (Midgaard)",
+      "custo": 15,
+      "item": "uma tocha"
+    },
+    {
+      "step": "entrega_tocha_conclusao",
+      "result": "sucesso_absoluto",
+      "npc": "o smurf minerador",
+      "item_entregue": "uma tocha",
+      "fala_final": "Muito obrigado! Agora sim, não preciso de mais nada. Encontrei uma jóia por aqui, e fiz um colar com ela. Aceite isso, como forma de pagamento! ... Parabéns, você completou a aventura!",
+      "recompensa": "um colar com uma pedra púrpura (Anti-DT, Abençoado, CA +10, Acerto +1, Dano +1, Des +1, Max-Mana +25)"
+    }
+  ]
+}

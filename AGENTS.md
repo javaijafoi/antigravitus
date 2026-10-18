@@ -119,11 +119,25 @@ Se você sentir vontade de copiar um dado de um arquivo para outro, provavelment
 8. **`save`, nunca `quit`, com missão em andamento.** `quit` apaga o progresso das missões.
 9. **Segredos ficam em `automato/runtime/`** (fora do git). Nunca colar senha, token ou transcrição com
    credencial em documento, log ou mensagem de commit.
-10. **Diretivas do autor vencem.** Ex.: **proibido vender armaduras** (Torre Negra ou peão); rotina
-    `xadrez` suspensa em `automato/rotinas/_suspensas/` — não reativar sem ordem expressa.
+10. **Diretivas do autor vencem.** Ex.: **proibido pegar ou comercializar itens/armaduras amaldiçoados**
+    (itens da Torre Negra ou de peão são permitidos se NÃO forem amaldiçoados; fazer dupla checagem com `identify`
+    no chão antes do `get`, pois NODROP impede descarte); rotina xadrez só coleta espólios limpos com triagem prévia.
 11. **Encerrar sessão = `save`.** A publicação é passo separado e explícito.
 12. **Editar arquivo e executá-lo não cabem no mesmo bloco de ferramentas** — elas rodam em paralelo;
     edite, confira o arquivo e só então execute, em chamadas separadas.
+13. **Estar na etapa certa para fazer a coisa certa — NUNCA entregar item (`give`) ou comprar suprimento caro sem confirmação formal da etapa** (diretiva urgente do autor, Dia 156).
+    O comando `give <item> <npc>` consome o item de forma irreversível e compras de alto valor (ex.: poção aquosa de 9.750 moedas) drenam o caixa do herói.
+    - **Regra de Ouro:** Estar na etapa certa antes de agir. Constar a quest em `score tudo` **não basta** se não estiver na **sub-etapa exata** de entrega.
+    - **Como validar a etapa:** Rodar `score tudo` e confirmar que a autoquest sob `[Autoquests em andamento]` exibe a **instrução específica da etapa**, por exemplo:
+      `Uma Lição em Gargamel: Você deve entregar objeto ao personagem.`
+      Se constar apenas o título da quest (ex.: `Uma Lição em Gargamel`) sem a instrução de entrega, a etapa anterior (monólogo de ativação do NPC anterior, direcionamento ou pergunta do NPC alvo) AINDA NÃO FOI CONCLUÍDA e o NPC **não** reconhecerá a entrega, consumindo o item no vazio!
+    - Todo diálogo prévio com NPCs da cadeia deve ser ouvido integralmente até o fim (sem cortar monólogos nem dar `recall` no meio da fala);
+    - Nunca responder `say sim` a convites de outras quests concorrentes na mesma sala antes da entrega;
+    - Confirmar presença no `inventory`;
+    - Parar se o estado não for o esperado — nunca doar item no escuro.
+14. **Falar com NPC em missões NUNCA é automatizado** (diretiva do autor, Dia 156).
+    Interações verbais de missão (`say`, `ask`, `whisper`, gatilhos de diálogo) **jamais** devem ser executadas por scripts automáticos em lote. A interação é feita **exclusivamente por resposta direta do agente ao contexto em tempo real**: lendo a fala integral do NPC, checando o objetivo em `score tudo`, verificando a sala e o inventário, e respondendo conscientemente para evitar aceitar missões erradas, engolir etapas ou perder itens.
+
 
 ---
 

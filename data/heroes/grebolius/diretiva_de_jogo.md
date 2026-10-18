@@ -125,16 +125,16 @@ Implementado em `scripts/local/guarda.py` e injetado no `run()` de **todos** os 
 - A **guarda de repetição** já disparou duas vezes em produção nesta rodada: uma em *"Em que você deseja lançar a magia?"*, outra em *"Você não pode ir por aí..."* — o robô parou, salvou e saiu, em vez de insistir.
 
 
-## 15. PROIBIDO vender armaduras (diretiva do autor, Dia 150)
-> **"NÃO VAMOS MAIS VENDER ESSAS ARMADURAS, PERDEMOS MAIS DINHEIRO DO QUE GANHAMOS COM ELAS, OK?"**
+## 15. Restrição de Armaduras e Maldições (atualizado pelo autor, Dia 156)
+> Diretiva original (Dia 150): *"NÃO VAMOS MAIS VENDER ESSAS ARMADURAS, PERDEMOS MAIS DINHEIRO DO QUE GANHAMOS COM ELAS, OK?"*
+> Ajuste do autor (Dia 156): *"a armadura de cavaleiro só nao pode se oega por causa da maldição, se nao tiver amaldiçoada, de boa. Ajusta jsso"*
+> Esclarecimento do autor (Dia 156): *"não era para ser proibido pegar coisas da torre Negra é proibido só pegar coisas amaldiçoadas... dar um double cheque se for torre Negra verificar se é amaldiçoado"*
 
-Regra permanente e vale para todas as temporadas:
-- **Nenhuma** rotina de venda de armaduras — nem as da **Torre Negra** (8.500), nem as de **peão** (150);
-- **Não** comprar o pergaminho de remover maldições (8.509) com a intenção de vender a armadura;
-- A rotina **`xadrez` foi suspensa** e guardada em `scripts/local/rotinas/_suspensas/` (nao reativar sem ordem expressa);
-- Os scripts antigos `farm_armaduras.py` e `ciclo_peao.py` ficam **igualados a suspenso**.
-
-**Onde buscar ouro, então:** espolio de combate, recompensas de missao/autoquest, itens unicos e o **banco do Templo** (que já guarda 7.032). Nada de transporte de armadura.
+Regra vigente ajustada:
+- **PROIBIDO:** pegar qualquer item **amaldiçoado** (ex: Armadura da Torre Negra amaldiçoada / itens com flag `ITEM_NODROP` ou maldição). Se pegar um item amaldiçoado, não é possível largá-lo (`drop`) nem doá-lo, ficando preso ao inventário e exigindo pergaminho de remover maldição (8.509 moedas) para liberar.
+- **PERMITIDO:** pegar e vender armaduras e equipamentos da Torre Negra, de cavaleiro ou de peão que **NÃO estejam amaldiçoados** (como armaduras limpas encontradas no tabuleiro ou na sala de doação), desde que respeitem o limite de peso e caixa do armeiro/mercador.
+- **Identificação prévia OBRIGATÓRIA (dupla checagem no chão):** antes de executar `get` em armaduras da Torre Negra caídas no chão, usar `identify armadura` no chão para confirmar que não possui maldição ou NO-DROP. Se estiver amaldiçoada, NUNCA pegar.
+- As rotinas de farm automático devem sempre aplicar essa triagem prévia antes do recolhimento.
 
 
 ## 16. RISCO AUTORIZADO — o Capítulo 06 inverte a regra da fuga (diretiva do autor, Dia 156)
@@ -153,7 +153,7 @@ vitória e o corpo a corpo estava desligado por precaução.
   não é coragem, é desperdício de rodada.
 - **Morrer é aceitável.** Não é falha de execução; é custo previsto. **Mas** as regras de segurança
   continuam valendo: `stand` antes de andar, `score` antes de agir, e `save` — **nunca `quit`**.
-- **O que NÃO muda:** §15 (proibido vender armaduras), §6 (armadilhas mortais — **DT continua sendo o
+- **O que NÃO muda:** §15 (proibido pegar itens amaldiçoados; Torre Negra permitida se limpa com pré-checagem), §6 (armadilhas mortais — **DT continua sendo o
   único risco que o `wimpy` não segura**, e é por isso que o brinco ANTI-DT importa), e a proibição de
   `quit` com missão em andamento.
 - **A justificativa narrativa é dela, e vai para a crônica:** a morte já não a atinge como antes; a
@@ -196,3 +196,78 @@ um capítulo em que ela **vai morrer muito** — e para que a morte deixe de ser
 - **Morrer no Capítulo 06 é custo previsto, não falha** — a crônica não trata morte como derrota.
 
 **Registro completo, com os cinco mapeamentos:** `capitulos.json` → capítulo 6 → `directive.fiction_layer`.
+
+## 18. A Mochila de Pellinore — Contêiner Mágico de Redução de Peso (Bag of Holding)
+
+- **Natureza do Item:** `a mochila de Pellinore` é um contêiner encantado com propriedade de `weight_reduction`. Conforme comprovado pela carta de Merlin em seu interior (*"Usando esta mochila, o peso dos itens que você carregar irá diminuir. Assim, você poderá viajar longas distâncias sem se cansar"*), itens guardados nela têm seu peso efetivo no inventário drasticamente reduzido.
+- **Importância Vital para Grebolius:** Grebolius é maga de Força 11 (limite máximo de 115 kg). Com a `Armadura da Torre Negra` pesando 60 kg e os demais equipamentos vestidos somando ~25 kg, resta uma margem minúscula de carga livre. A mochila é o que permite carregar reservas de armadura (como a OME de 2.250 ouros), chifres de minotauro, comida e espólios sem sobrecarga.
+- **Diretrizes Operacionais:**
+  1. **Proibição Absoluta de Perda:** A mochila **NUNCA** deve ser vendida, doada, largada (`drop`) ou descartada (`junk`).
+  2. **Armazenamento Ativo:** Toda rotina e agente deve guardar espólios e rações imediatamente com `put <item> mochila`.
+  3. **Controle de Carga:** Manter a carga total sempre abaixo de 110 kg para preservar mobilidade e fôlego em trânsito e combate.
+
+## 19. PROTOCOLO OBRIGATÓRIO DE ENTREGA DE ITENS E AUTOQUESTS (Diretiva Urgente do Autor, Dia 156)
+
+> **"Tem que atualizar urgente que sempre temos que ver a situacao da missao antes de dar itens , ja oerdemos itens demais !!!"**
+
+O comando `give <item> <npc>` é estritamente irreversível no motor MUD. Se executado quando a missão não estiver no passo exato ou se houver diálogo concorrente, o NPC simplesmente consome o item sem disparar a recompensa/avanço.
+
+### Checklist Obrigatório ANTES de Qualquer `give`:
+1. **Conferência em `score tudo`:**
+   - A autoquest alvo **DEVE** constar sob o cabeçalho `[Autoquests em andamento]`. Se o cabeçalho estiver vazio ou a missão estiver apenas em `autoquest listar` (disponível), **NÃO ENTREGAR**. Reativar com o NPC inicial primeiro.
+   - O texto descritivo do objetivo no servidor deve ser exatamente a etapa de entrega (ex: *"Você deve entregar objeto ao personagem"*).
+2. **Isolamento de Diálogos Concorrentes:**
+   - **NUNCA** responder `say sim` ou interagir com saudações de outras quests do NPC antes da entrega.
+   - Exemplo clássico observado: ao entrar na Sala do Alquimista com a poção aquosa (para Gargamel), o Alquimista diz *"Ei, você poderia me ajudar?"*. Responder `say sim` ativa a autoquest própria dele (*Limpando Monstros*), fazendo com que ele consuma a poção sem entregar o *jarro brilhante*.
+3. **Conferência de `inventory`:**
+   - Garantir que o item está no inventário principal da personagem (e não guardado dentro da mochila de Pellinore ou ausente). Se estiver na mochila: `get <item> mochila`.
+4. **Validação Imediata Pós-Entrega:**
+   - Executar `inventory` e `score tudo` logo após o `give`. Se o item de troca não for recebido ou o texto da missão não mudar, interromper a automação imediatamente e registrar no log.
+
+## 20. DIÁLOGOS DE MISSÃO COM NPCS NUNCA SÃO AUTOMATIZADOS (Diretiva do Autor, Dia 156)
+
+> **"falar com npc quando envolve missões, nunca é feito automatizado e sim por resposta direto do agente ao contexto, para evitar dar merda"**
+
+Falar com NPC quando envolve missões (`say`, `ask`, `whisper`, `tell`, gatilhos verbais de missão) **NUNCA é feito de forma automatizada por script**, e sim exclusivamente por **resposta direta do agente ao contexto em tempo real**.
+
+### Motivo da Diretiva ("Para evitar dar merda"):
+Scripts cegos ou com tempos fixos (`sleep`) que disparam comandos verbais em lote causaram erros graves na campanha:
+1. **Atropelamento de falas longas:** NPCs de autoquest frequentemente têm falas em múltiplos passos; o script dispara a próxima fala antes de receber a instrução completa.
+2. **Aceitação acidental de missões concorrentes:** Na presença de NPCs com múltiplas quests (como o Alquimista ou em salas públicas), disparar `say sim` automaticamente faz a personagem entrar em outra missão indesejada, travando ou quebrando o fluxo da missão principal.
+3. **Perda de itens valiosos:** Emitir falas automáticas seguidas de `give` sem confirmar a resposta textual exata do NPC fez com que itens caros (como poções de 9.750 moedas) fossem consumidos sem retorno.
+
+### Protocolo Operacional Obrigatório:
+1. **Separação de Papéis:** O motor ou script pode apenas **navegar** até a sala do NPC e **eliminar ameaças hostis imediatas** na sala (se houver combate).
+2. **Parada Mandatória:** Chegando diante do NPC, a automação para. Nenhum comando de fala é enviado por lote.
+3. **Controle Consciente pelo Agente:** O agente operando ao vivo:
+   - Lê o texto integral da fala do NPC;
+   - Consulta a situação exata da missão em `score tudo`;
+   - Confere os itens no `inventory`;
+   - Avalia o contexto e responde manualmente com o comando verbal exato exigido pelo servidor (`say <termo>`, etc.).
+
+## 21. ESTAR NA ETAPA CERTA PARA FAZER A COISA CERTA (Diretiva do Autor, Dia 156)
+
+> **"Vamos reforçar na documentação que temos que estar na etapa certa para fazer a coisa certa"**
+
+### O Princípio Fundamental:
+No Devil's Bob MUD, quests automáticas possuem máquinas de estados rígidas no servidor. Uma ação mecanicamente correta (como entregar uma poção, comprar um item ou falar uma palavra-chave) torna-se catastrófica se executada **fora da sub-etapa exata**.
+
+### O Caso Real da Poção Aquosa (Várias poções perdidas, ~30.000 moedas):
+- Ao longo do Dia 156, múltiplos agentes compraram `uma poção aquosa` por 9.750 moedas em Clariss e foram entregar ao Alquimista com a missão `Uma Lição em Gargamel` aberta no `score tudo`.
+- O Alquimista consumiu as poções uma a uma sem entregar `o jarro brilhante`.
+- **Causa Raiz Comprovada ao Vivo:** O Smurf Minerador em *O Fim Do Túnel* não havia completado sua fala de direcionamento (*"Converse com o novato alquimista... Estarei te esperando com o que preciso."*). Por consequência, o Alquimista não havia formulado sua pergunta-chave (*"Deixe-me adivinhar: você quer um jarro brilhante, certo?"*). O servidor mantinha a autoquest apenas como `Uma Lição em Gargamel` (etapa genérica/incompleta), sem aceitar a entrega do item de troca!
+- **A Virada Definitiva:** Assim que o agente foi ao Minerador, aguardou pacientemente cada linha de sua fala até o encerramento, e em seguida foi à Sala do Alquimista responder conscientemente `say Grebolius` -> `say sim`, o servidor mudou formalmente para:
+  ```text
+  [Autoquests em andamento]
+     Uma Lição em Gargamel: Você deve entregar objeto ao personagem.
+  ```
+
+### Regras de Ouro Operacionais:
+1. **Gatilho de Compra:** Jamais gaste moedas de ouro em itens de missão caros (> 1.000 moedas) antes que a missão esteja formalmente ativada e na etapa exata de requisição daquele item.
+2. **Gatilho de Entrega (`give`):**
+   - O `score tudo` **TEM** que exibir os dois-pontos e a instrução exata da etapa:
+     `Uma Lição em Gargamel: Você deve entregar objeto ao personagem.`
+   - Se estiver apenas `Uma Lição em Gargamel` sem sub-etapa, **É PROIBIDO DAR GIVE**. O NPC engolirá o item sem retorno.
+3. **Paciência com Falas de NPCs:** NPCs do MUD possuem intervalos de 3 a 8 segundos entre falas. Nunca emita `recall` ou comandos seguintes antes da mensagem final de fechamento do diálogo.
+
+

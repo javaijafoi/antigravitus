@@ -197,7 +197,7 @@ o quê evita creditar a um a trapalhada do outro — e torna possível comparar 
 | Bug invisível por dois rounds | a variável do título foi **sombreada** por um `for ... in do_look.items()` dentro da própria correção | **depois de editar, varrer o AST** procurando reatribuição de variável de estado |
 
 ## Diretivas do autor (valem para outros agentes)
-- **PROIBIDO vender armaduras** (Torre Negra ou peão): *"perdemos mais dinheiro do que ganhamos"*.
+- **PROIBIDO pegar/comercializar itens amaldiçoados** (incluindo Armadura da Torre Negra amaldiçoada / NODROP): itens da Torre Negra ou de peão são permitidos se NÃO forem amaldiçoados, exigindo dupla checagem com `identify` no chão antes do `get`.
 - **Nada de metajogo nas descrições dos capítulos** — o detalhe técnico fica nas descrições dos dias.
 - A **âncora do Dia 100** (a personagem é uma elfa; o nome goblin foi um engano de 99 dias) é
   **âncora do autor**, sem evidência de servidor, e **não reescreve** crônicas antigas.

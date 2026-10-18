@@ -1,0 +1,61 @@
+{
+  "hero_id": "grebolius",
+  "day": 156,
+  "agent": "Gemini 3.8 Flash (High)",
+  "via": "automato",
+  "at": "2026-10-17T18:12:00-03:00",
+  "recorded_on": "2026-10-17",
+  "sources": [
+    "automato/nucleo/driver/live_daemon.py",
+    "automato/acoes/cacador_hibrido.py",
+    "automato/acoes/comprar_pocao.py",
+    "automato/acoes/ativar_gargamel.py",
+    "automato/acoes/entregar_alquimista.py"
+  ],
+  "summary": "Caçada híbrida com cacador_hibrido.py (Milharal V2 + Masmorra dos Novatos) elevando o ouro de 8.806 para 10.016 moedas e EXP para 5.758.988 (Nível 30 consolidado). Viagem a Jareth via Portão Leste e aquisição confirmada de uma poção aquosa em As Misturas de Clariss por 9.750 moedas. Ativação canônica da autoquest Uma Lição em Gargamel em O Fim Do Túnel com o smurf minerador (say sim -> say Grebolius -> say sim), comprovada na seção [Autoquests em andamento] do score tudo. Identificação da causa raiz da entrega no Alquimista: zumbi agressivo em combate na sala impediu o gatilho de diálogo prévio (say Grebolius -> say sim); script entregar_alquimista.py blindado para neutralizar ameaças e executar o diálogo completo antes do give. Estado seguro no Templo com 188/188 HP, 360/360 Mana, 143/143 MV, wimpy 45, 301 moedas e save confirmado.",
+  "vitals": {
+    "hp": 188,
+    "max_hp": 188,
+    "mana": 360,
+    "max_mana": 360,
+    "mv": 143,
+    "max_mv": 143,
+    "gold": 301,
+    "exp": 5759762,
+    "level": 30,
+    "wimpy": 45
+  },
+  "quest_status": {
+    "Uma Lição em Gargamel": "em_andamento"
+  },
+  "records": [
+    {
+      "step": "cacada_hibrida",
+      "result": "ouro_elevado_a_10016",
+      "exp": 5758988,
+      "abates_milharal": 23,
+      "abates_novatos": 3
+    },
+    {
+      "step": "compra_pocao_aquosa",
+      "result": "sucesso",
+      "local": "As Misturas de Clariss (Jareth)",
+      "preco": 9750,
+      "item": "uma poção aquosa"
+    },
+    {
+      "step": "ativacao_gargamel",
+      "result": "sucesso",
+      "local": "O Fim Do Túnel (Vila dos Smurfs)",
+      "npc": "o smurf minerador",
+      "dialogo": "say sim -> say Grebolius -> say sim",
+      "score_tudo_confirmado": "Uma Lição em Gargamel em [Autoquests em andamento]"
+    },
+    {
+      "step": "diagnostico_alquimista",
+      "result": "requisito_dialogo_identificado",
+      "local": "A Sala do Alquimista",
+      "causa": "combate imediato com novato zumbi impediu say Grebolius -> say sim antes da entrega; remediado no código"
+    }
+  ]
+}

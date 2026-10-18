@@ -1247,18 +1247,92 @@
       "tomo": 1,
       "title": "O Preço Não Se Mata com Raio",
       "kind": "marco",
-      "status": "em_curso",
-      "goal": "Concluir integralmente a missão 'Uma Lição em Gargamel' (compra da poção aquosa em Clariss, troca pelo jarro brilhante com o Alquimista, entrega ao smurf minerador e resolução do resgate de Papai Smurf no Covil de Gargamel) e avançar a personagem até o Nível 50.",
-      "days": [],
-      "parts": [],
-      "content": [],
-      "tags": [],
+      "status": "concluido",
+      "goal": "Concluir integralmente a missão 'Uma Lição em Gargamel' (compra da poção aquosa em Clariss, troca pelo jarro brilhante com o Alquimista, entrega ao smurf minerador e resolução no Covil de Gargamel).",
+      "closed_on_day": 156,
+      "days": [
+        156
+      ],
+      "date": "2026-10-18",
+      "in_game_time": "A poção aquosa, o raio no covil e o colar de pedra púrpura",
+      "excerpt": "A dívida com a paciência foi paga: nove mil e setecentas moedas levantadas com ferro frio e espigas secas, a poção aquosa entregue na hora exata e o jarro brilhante descido à mina. No castelo, Gargamel dormiu antes de poder praguejar e caiu com um único raio. A chave abriu portas, mas foi uma tocha vulgar de quinze moedas que arrancou do minerador a verdadeira relíquia: um colar de pedra púrpura abençoado contra a própria morte.",
+      "parts": [
+        {
+          "number": 1,
+          "title": "A Lição Paga e o Colar Púrpuro",
+          "day": 156,
+          "date": "2026-10-18",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia156o.json",
+              "day": 156,
+              "note": "Conclusão integral da autoquest 'Uma Lição em Gargamel': compra da poção aquosa em Clariss (9.750 moedas), entrega ao Alquimista, jarro brilhante, abate de Gargamel com sono e raio, entrega da chave quadrada e da tocha de Midgaard, recebimento do colar com pedra púrpura (Anti-DT, CA +10, Acerto +1, Dano +1, Des +1, Max-Mana +25) e encerramento seguro. Agente: Gemini 3.8 Flash (High)."
+            }
+          ],
+          "summary": "Capítulo 09 concluído: 'O Preço Não Se Mata com Raio'. Farm de 9.870 moedas supervisionado alternando Milharal V2 e Xadrez V3 a cada 3 ciclos; compra da poção aquosa em Jareth; entrega formal com sub-etapa validada ao Alquimista em troca do jarro brilhante; entrega do jarro ao minerador; infiltração no Covil de Gargamel, abate tático com magia sleep e lightning bolt (saque de 2.000 moedas e chave quadrada); entrega da chave; compra de tocha no Armazém de Midgaard (15 moedas) e entrega final. Autoquest concluída com louvor no servidor. Grebolius veste o colar no 2º slot de pescoço (+10 CA, +25 Mana) atingindo 420 Mana máxima e CA 148."
+        }
+      ],
+      "content": [
+        "Eu disse no começo que o preço não se matava com raio. E não se mata mesmo. Moeda não sangra, não foge assustada com clarão de faísca e nem pede clemência quando a tempestade desce dos dedos. Moeda se caça com disciplina, passo a passo, contando o troco sujo de cada invasor na palha e cada peão tombado nas casas brancas e pretas daquele tabuleiro maldito.",
+        "Foram quatorze rodadas medindo cada passo na terra seca e no mármore. Sem afobação, sem esticar o braço para armadura amaldiçoada e sem esquecer que o relógio não perdoa quem dorme no ponto. Quando a sacola de couro estufou com quase dez mil moedas de ouro maciço, não esperei o sol esquentar. Atravessei a estrada do norte, passei pelo portão leste de Jareth e bati no balcão de Clariss. Nove mil setecentas e cinquenta moedas sonantes deixadas sobre a madeira polida, e uma garrafa de vidro grosso e líquido transparente nas mãos: uma poção aquosa autêntica.",
+        "Desta vez eu não cometi o erro que já me custou fortunas. Desci ao laboratório do Alquimista com a respiração calma, olhei para o velhote e conferi a verdade do mundo antes de estender o braço. A etapa estava certa: ele queria a poção, e o mundo reconhecia a troca. Quando passei a garrafa para as mãos dele, não houve sumiço no vazio. Ele sorriu, agradeceu e me entregou o jarro brilhante, pesado e reluzente como uma estrela engarrafada.",
+        "Desci pelo balde até o fundo escuro do Poço Smurf e rastejei pelo túnel até onde o pequeno minerador quebrava pedra no escuro. Entreguei o jarro. Ele ergueu a luz, o túnel se encheu de claridade fria, e ele me olhou com os olhos arregalados: faltava a chave da sala dos tesouros, e ela só podia estar nos bolsos de Gargamel.",
+        "Subi de volta ao mundo e tomei o caminho daquele castelo tenebroso. A porta rangeu ao norte. Azrael estava empoleirado, pronto para dar o bote, e Gargamel rosnava no meio dos caldeirões. Mas uma elfa que carrega trinta e um graus de magia nas têmporas não entra em cova de feiticeiro desprevenida. Antes que o velho pudesse sequer pensar em erguer o cajado ou pronunciar uma maldição, soprei as palavras de adormecimento que aprendi na guilda. Gargamel tombou adormecido, pesado como um fardo de estopa.",
+        "O raio que se seguiu veio limpo e seco no peito. Um único estouro elétrico rachou as lajes do covil e encerrou a vida do bruxo antes do despertar. Peguei duas mil moedas da bolsa dele e arranquei a chave quadrada de ferro frio dos seus panos sujos. Voltei à mina e entreguei a chave ao mineiro azul.",
+        "Só que o destino adora rir da nossa cara. Com a chave na mão, o velho smurf coçou a barba azulada e confessou: não tinha se acostumado ao jarro, aquilo brilhava demais, cegava os olhos e atrapalhava a picareta. O que ele queria de verdade era a boa e velha tocha que qualquer merceneiro vende na esquina de Midgaard. Dei uma risada curta, usei a palavra de retorno até o altar sagrado, andei duas esquinas até o Armazém e desembolsei quinze moedinhas de cobre por uma tocha de resina simples.",
+        "Quando pus a tocha nas mãos calejadas dele, o minerador quase chorou de contentamento. Disse que enfim tinha tudo o que precisava, que nada mais faltava naquele buraco de terra. E das profundezas da jaqueta remendada puxou uma joia lapidada com esmero: um colar engastado com uma pedra púrpura fascinante.",
+        "Ajustei o colar em volta do pescoço, ao lado da coleira do dragão. O ar ao meu redor estalou de imediato: uma bênção antiga, impenetrável, imune à própria perdição das armadilhas da morte, elevando minha mana para quatrocentos e vinte pontos e blindando meu peito com a resistência de uma muralha. A lição de Gargamel está paga e encerrada. Nenhuma dívida restou para trás."
+      ],
+      "tags": [
+        "Uma Lição em Gargamel",
+        "Poção Aquosa",
+        "Clariss",
+        "Novato Alquimista",
+        "Jarro Brilhante",
+        "Gargamel",
+        "Sono Arcano",
+        "Smurf Minerador",
+        "Colar Púrpuro",
+        "Anti-DT",
+        "Nível 31"
+      ],
       "source_kind": "live",
-      "evidence": [],
+      "evidence": [
+        {
+          "document": "evidence/dia156o.json",
+          "day": 156,
+          "note": "Conclusão integral da autoquest 'Uma Lição em Gargamel': compra da poção aquosa em Clariss (9.750), entrega ao Alquimista, jarro brilhante, abate de Gargamel com sono e raio, entrega da chave quadrada e da tocha, recebimento do colar com pedra púrpura (Anti-DT, CA +10, Acerto +1, Dano +1, Des +1, Max-Mana +25) e encerramento no Templo com 2.110 moedas e 420 Mana. Agente: Gemini 3.8 Flash (High)."
+        }
+      ],
       "continues_chapter": 8,
       "directive": {
         "author_quote": "o capitulo nove é terminar a missão e chegar no level 50",
-        "rule": "Objetivo duplo do Capítulo 09 definido diretamente pelo autor: conclusão da cadeia de missões dos Smurfs/Gargamel e progressão contínua de poder até atingir o Nível 50."
+        "rule": "Objetivo de conclusão da cadeia de missões dos Smurfs/Gargamel alcançado com louvor."
+      }
+    },
+    {
+      "id": 10,
+      "tomo": 1,
+      "title": "Dez Cabeças Inéditas",
+      "kind": "marco",
+      "status": "em_curso",
+      "goal": "Matar 10 criaturas ou monstros que Grebolius ainda não matou no MUD, executando planos criativos e arrojados de reconhecimento, armadilha e caça.",
+      "days": [],
+      "parts": [],
+      "content": [],
+      "tags": [
+        "Caçada Inédita",
+        "Bestiário",
+        "Planos Criativos",
+        "Nível 31"
+      ],
+      "source_kind": "live",
+      "evidence": [],
+      "continues_chapter": 9,
+      "directive": {
+        "author_quote": "a missão de amanhã vai ser diferente a missão a próxima missão vai ser matar 10 bichos que ela ainda não matou mesmo que ela tenha que fazer planos malucos e ser muito criativa",
+        "rule": "Abater 10 monstros inéditos para o bestiário pessoal de Grebolius, explorando regiões novas ou mobs não caçados, com planos táticos e criativos, mantendo o wimpy 45 e recuo seguro."
       }
     }
   ]

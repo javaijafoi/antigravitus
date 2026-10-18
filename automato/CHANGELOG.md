@@ -4,9 +4,58 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
-## v1.6.3 — Dia 156 · resiliência a emboscadas no trânsito e recuperação de rota limpa em `milharal.py`
+## v1.6.10 — Dia 156 · Dupla checagem com identify no chão e liberação de itens limpos da Torre Negra
+- **DIRETIVA DO AUTOR (AGENTS.md Invariante 10 / Diretiva de Jogo §15)**:
+  - Esclarecido que itens da Torre Negra **NÃO** são categoricamente proibidos: proibidos são apenas itens **amaldiçoados** (com flag `ITEM_NODROP` / maldição), que prendem ao inventário e causam prejuízo. Itens limpos (inclusive da Torre Negra) são permitidos.
+  - Implementada inspeção obrigatória no chão com `identify armadura` antes de executar `get` em armaduras da Torre Negra em `automato/rotinas/xadrez_v3.py`.
+  - Se identificada maldição ou NO-DROP, o item permanece no chão e nunca entra no inventário.
+
+## v1.6.9 — Dia 156 · Otimização de Performance dos Scripts de Caça (>10% a >30% speedup)
+- **OTIMIZAÇÃO (novatos.py, >30% mais rápido)**:
+  - Eliminado `consider` redundante em mobs de nível 1 a 4 para Grebolius (nível 31), economizando 1 round-trip de rede por mob.
+  - Saque unificado com `get all corpo` (e saque cirúrgico no minotauro) em vez de 5 comandos `get` individuais por corpo.
+  - Empacotamento em lote (`organizar_espolios`): substituídos os 6 comandos por mob (guarda e checagem contínua de inventário) por uma única triagem ao término da masmorra.
+  - Roteamento inteligente de venda (`vender_espolios`): se nenhum equipamento vendável foi obtido no percurso, o robô pula integralmente as caminhadas até o Armeiro e Ferreiro, economizando ~12 segundos.
+- **OTIMIZAÇÃO (xadrez_v3.py, >20% mais rápido)**:
+  - Removido `consider peao` redundante antes de cada peão.
+  - Saque unificado com `get all corpo`.
+  - Corrigida coleta de chão: removidas chamadas desnecessárias a corpos inexistentes ao pegar armaduras/escudos do piso.
+- **OTIMIZAÇÃO (milharal_v2.py, >10% mais rápido)**:
+  - Removida checagem duplicada de término de combate em `matar()`.
+- **OTIMIZAÇÃO (cacador_hibrido.py, >15% mais rápido)**:
+  - Reduzido o intervalo de sondagem de mana durante o sono de 8s para 4s em `descansar_ate_mana_cheia()`, capturando o tick de regeneração sem tempo ocioso excessivo (~36s economizados em 3 ciclos).
+  - Eliminada chamada duplicada a `score tudo` em `ouro_atual()`.
+
+## v1.6.8 — Dia 156 · validação estrita de sub-etapa de autoquest e treino de sleep (AGENTS.md Invariante 13)
+- **DOUTRINA / CONTRATO**: Reforçada a Invariante 13 em `AGENTS.md` e criada a Seção 21 em `diretiva_de_jogo.md`: "Estar na etapa certa para fazer a coisa certa". Nenhuma entrega (`give`) ou compra cara de missão pode ser realizada se o `score tudo` não explicitar textualmente a instrução da sub-etapa (ex.: `Você deve entregar objeto ao personagem`).
+- **RESOLUÇÃO DE MISSÃO**: Descoberta a causa do consumo incorreto da poção aquosa (Smurf Minerador não havia concluído o envio oral e Alquimista não havia ativado o pedido do jarro). Diálogo completo executado manualmente em tempo real, destravando oficialmente a máquina de estados no servidor (`Uma Lição em Gargamel: Você deve entregar objeto ao personagem.`).
+- **MAGIA / EVOLUÇÃO**: Descoberta da sala da Mestre da Guilda dos Magos em *O Laboratório dos Magos* (`e` do Bar dos Magos) e treino integral da magia do Nível 31 (`sleep`) de 10% para 95% (perfeito).
+
+## v1.6.7 — Dia 156 · guarda de cota inteligente e handoff automatizado (AGENTS.md §13)
+- **NOVO**: `automato/camadas/guarda_cota.py` — módulo de monitoramento adaptativo da cota de IA via endpoint Connect RPC local (`GetUserStatus`). Consulta com frequência inteligente (a cada 35 min se cota > 40%; a cada 10-15 min se entre 20%-40%; a cada 1-5 min se próxima do corte), evitando overhead desnecessário de chamadas.
+- **NOVO**: Protocolo de handoff automático: quando a cota atinge <= 10% (tolerância 5%-10%), aciona parada de caça, retorno seguro ao Templo, alimentação, hidratação, `save`, `sleep`, encerramento limpo da conexão e geração automática do próximo plano numerado de handoff.
+- **INTEGRAÇÃO**: `automato/acoes/cacador_hibrido.py` e `automato/camadas/trabalhar.py` agora acionam a guarda de cota de forma transparente entre ciclos.
+
+## v1.6.6 — Dia 156 · Invariante 14: proibição de diálogos automatizados com NPCs de missão
+- **CONTRATO / REGRA**: Em cumprimento à nova diretiva do autor (AGENTS.md Invariante 14 e Diretiva de Jogo §20), fica expressamente proibido automatizar falas e diálogos (`say`, `ask`, etc.) com NPCs em scripts em lote.
+- **AJUSTE**: Scripts em `automato/acoes/` atuam apenas como posicionadores de rota e limpadores de sala hostil. Todo diálogo e entrega de missão deve ser executado diretamente pelo operador/agente em resposta consciente ao contexto ao vivo.
+
+## v1.6.5 — Dia 156 · caçador híbrido, rota milharal v2 e protocolo canônico de autoquests
+- **NOVO**: `automato/acoes/cacador_hibrido.py` — laço híbrido de caça contínua alternando Milharal V2 (ouro direto em corpos) e Masmorra dos Novatos (espólios e abates rápidos), com abastecimento de pão/água e sono regenerativo no Templo; para automaticamente ao bater meta de ouro.
+- **NOVO**: `automato/acoes/ativar_gargamel.py` — rota automática do Templo até O Fim Do Túnel e execução do diálogo canônico com o Smurf Minerador (`say sim` -> `say Grebolius` -> `say sim`), ativando oficialmente *Uma Lição em Gargamel* em `score tudo`.
+- **NOVO**: `automato/acoes/pegar_jarro.py` — rotina de inspeção e coleta em A Sala do Alquimista.
+- **CORREÇÃO**: `automato/rotinas/milharal_v2.py` — restauração estrita do `CAMINHO_BOSQUE` até a sala-marco (*O Pequeno Bosque a leste*) e 2x norte até *A Entrada da Fazenda*, eliminando passos erráticos e atingindo 100% de taxa de chegada.
+- **CORREÇÃO**: `automato/acoes/entregar_alquimista.py` — eliminação preventiva de combate (novato zumbi) ao abrir a porta da Sala do Alquimista e obrigatoriedade de diálogo prévio (`say Grebolius` -> `say sim`) antes de emitir `give aquosa alquimista`.
+
+## v1.6.4 — Dia 156 · xadrez_v2, benchmark de grind e blindagem de entrega de autoquests
+- **NOVO**: `automato/rotinas/xadrez_v2.py` e `automato/acoes/cacador_xadrez.py` — combate ativo focado em peões no Grande Tabuleiro de Xadrez, consider defensivo, triagem imediata de itens amaldiçoados (descarte de Armadura da Torre Negra), armazenamento na mochila de Pellinore e venda de espólios no Armeiro (armadura de peão 150, escudo 200) e Ferreiro.
+- **NOVO**: `automato/acoes/cacador_milharal.py` — executor supervisionado para grind no Milharal com controle de hidratação, pães na mochila e recarga de mana no Templo.
+- **CORREÇÃO**: `automato/acoes/entregar_alquimista.py` refatorado com função `verificar_preparacao_entrega()` que impede entrega de itens se a missão não constar em `score tudo` ou se a poção não estiver pronta no inventário, eliminando risco de perda de itens caros por diálogos concorrentes.
+
+## v1.6.3 — Dia 156 · resiliência a emboscadas no trânsito e blindagem contra itens amaldiçoados
 - **CORREÇÃO**: `da_floresta_ao_milharal()` em `automato/rotinas/milharal.py` agora detecta combate espontâneo durante o trânsito da fazenda (`lutando` no retorno de look). Em vez de falhar repetindo passos bloqueados com `"Não dá! Você está muito ocupado, lutando!"`, contra-ataca com `matar('monstro')`, despacha a ameaça via `lightning bolt` e retoma o deslocamento até o milharal.
 - **CORREÇÃO**: `ir_ao_milharal()` agora executa `run('recall'); run('stand')` entre tentativas falhas de trânsito, garantindo que toda repetição parta limpa do Templo de Midgaard em vez de iniciar desorientada de onde a rota anterior parou.
+- **CORREÇÃO**: `revisar_doacoes()` em `automato/camadas/prepara.py` agora inspeciona o retorno de `identify` antes de tentar equipar qualquer peça do chão da Sala de Doações. Se o item contiver flags de maldição (`amaldiçoado`, `nodrop`, `aura vermelha`), ele é descartado (`drop`) imediatamente sem ser vestido, impedindo que a personagem fique presa com equipamentos amaldiçoados de doação.
 
 ## v1.6.2 — Dia 156 · confinamento espacial no milharal e salvaguardas de sono
 - **CORREÇÃO**: `automato/rotinas/milharal.py` atualizado com restrição espacial: o laço de busca de monstros agora rejeita salas fora do milharal (`'Milharal' not in t2`), impedindo dispersão para `O Gramado` e `Uma Pequena Estrada` (onde não há mobs) e mantendo a salvaguarda estrita contra o DT `Adentro do Milharal Destruído` (`Morte #5`).

@@ -107,6 +107,11 @@ OP = {'n': 's', 's': 'n', 'e': 'w', 'w': 'e', 'u': 'd', 'd': 'u'}
 INICIO = time.time()
 
 
+def reiniciar_relogio():
+    global INICIO
+    INICIO = time.time()
+
+
 def estourou(segundos=config.LIMITE_TEMPO):
     return time.time() - INICIO > segundos
 

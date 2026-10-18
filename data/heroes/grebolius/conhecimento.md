@@ -143,7 +143,7 @@ Para evitar sobrecarga de inventário e otimizar tempo e recursos, **fica abolid
 * `create food` e `create water` são possibilidades citadas no compêndio antigo, **não habilidades confirmadas da ficha atual**. Conferir disponibilidade, custo e efeito antes de incluí-las no preparo.
 
 ### Inventário e recipientes
-* `put <item> mochila` é uma referência de organização. Guardar na mochila não foi comprovado como redução de peso total ou de custo de movimento. Observar carga, capacidade e acesso ao item.
+* `put <item> mochila` é uma referência de organização para mochilas comuns. **Para a Mochila de Pellinore (a nossa bolsa mágica de Merlin), a redução de peso é REAL e comprovada** — ver detalhamento completo no §45 e Diretiva §18. Sempre guardar itens pesados e mantimentos dentro dela.
 * Conferir volume e conteúdo do cantil antes da saída. A sugestão antiga de odre ou barril portátil não comprova que esses recipientes estejam à venda nem sua capacidade em goles.
 * Deixar espaço para o objetivo da expedição; não vender nem doar um item cuja finalidade ainda esteja em dúvida.
 
@@ -482,7 +482,8 @@ Fonte: [dossiê primário do Dia 96](evidence/dia96.json).
 | Armadura de peão negro | 150 | ~13 kg | armeiro | comum |
 
 - Cabe **1 armadura da Torre por viagem**, mesmo levando a mochila (29 kg base + 48 mochila + 60 = 137 ≤ 140).
-- **Maldição**: remover com pergaminho de remover maldições (8.509), **recitado fora da loja**.
+- **Maldição**: remover com pergaminho de remover maldições (8.509), **recitado fora da loja** (prejuízo de 9 moedas na revenda).
+- **Diretiva vigente (Dia 156)**: armaduras da Torre Negra só são proibidas se estiverem **amaldiçoadas** (o flag NODROP impede descarte e doar). Peças limpas (sem maldição, como algumas achadas em doação) são permitidas; antes de pegar qualquer armadura da Torre do chão, é OBRIGATÓRIO dar dupla checagem com `identify armadura`.
 - Há **~48 a 52** armaduras na Casa Preta da Torre do Rei Negro — potencial de ~400 mil, limitado pelo caixa do armeiro.
 
 ### Combate no milharal (o que os abates ensinaram)
@@ -743,9 +744,10 @@ Ouro: **300 → 550 na mão**; total **347 → 597**. A jaqueta pesava 34 kg e c
 | Feiticeiro (Loja de Magias) | *"eu não compro esse tipo de coisa."* |
 | Ferreiro (Loja de Armas) | só armas |
 
-**Ressalva da diretiva:** é **PROIBIDO vender armaduras da Torre Negra ou de peão** — *"perdemos mais
-dinheiro do que ganhamos"*. A jaqueta de couro **não é nenhuma das duas**, por isso a venda foi
-legítima. **Conferir a origem do item antes de vender qualquer armadura.**
+**Ressalva da diretiva (atualizada Dia 156):** é **PROIBIDO pegar ou comercializar itens amaldiçoados**
+(incluindo a Armadura da Torre Negra amaldiçoada / NODROP, que prende ao inventário e causava o prejuízo de 8.509
+com pergaminhos). Armaduras e itens NÃO amaldiçoados (como a jaqueta de couro, armadura de peão ou armaduras
+da Torre Negra sem maldição) são permitidos, exigindo dupla checagem com `identify` no chão antes do `get`.
 
 **A rota importa e o mapa tinha a errada.** O mapa mandava `d,w,s` e terminava na Praça do Templo,
 porque "A Entrada da Guilda dos Clérigos" tinha **três das quatro arestas erradas** — inclusive um
@@ -2088,4 +2090,136 @@ Fonte: [evidence/dia156k.json](evidence/dia156k.json). Sessão ao vivo via `auto
    - `armor` (+34) mantido ativo ao longo de toda a sessão (24 horas restantes de duração no score final).
    - `wimpy 45` confirmado e mantido.
    - Encerramento: servidor DeBo encerrou o socket telnet (EOF) ao fim da 8ª rodada. Conforme AGENTS.md §13, a sessão foi finalizada sem reconexão automática forçada, gerando o `plano015.md`.
+
+---
+
+## 45. A Mochila de Pellinore — O Contêiner Mágico de Redução de Peso de Merlin (Bag of Holding)
+
+- **O artefato:** `a mochila de Pellinore`, contêiner lendário que acompanha Grebolius.
+- **A prova documental interna (Carta de Merlin):**
+  > *"Para o meu querido amigo Pellinore. Espero que esta mochila torne suas viagens mais curtas e que possibilite a você levar todas as provisões que necessitar. Usando esta mochila, o peso dos itens que você carregar irá diminuir. Assim, você poderá viajar longas distâncias sem se cansar. Que você possa ter sucesso em sua busca! - Merlin."*
+- **Mecânica no DeBo/CircleMUD (`weight_reduction`):** Trata-se de um contêiner encantado com propriedade de redução percentual de peso. Ao colocar qualquer item dentro dela via `put <item> mochila`, o peso efetivo que recai sobre o inventário da personagem sofre um amortecimento massivo.
+- **Por que é o item utilitário nº 1 de Grebolius:**
+  - Grebolius é uma Maga Elfa com **Força 11**, possuindo um teto máximo de carga de apenas **115 kg**.
+  - Apenas a sua armadura principal vestida no peito (`Armadura da Torre Negra`) pesa **60 kg** sozinha, e os demais equipamentos vestidos somam ~25 kg.
+  - Sem a Mochila de Pellinore, restariam menos de 30 kg livres para suprimentos, tesouros e recompensas. Com ela, a personagem consegue transportar armas reservas pesadas (como a Armadura OME de 2.250 moedas), chifres de minotauro, adagas, cetros e estoques de comida mantendo o peso total controlado abaixo de 110 kg.
+- **Diretiva de Operação:** Toda rotina e agente deve **SEMPRE** acondicionar espólios pesados, mantimentos e itens de missão dentro da mochila com **`put <item> mochila`**. A mochila **JAMAIS** deve ser vendida, doada ou largada.
+
+---
+
+## 46. Proteção de Itens de Missão e Conflitos de Autoquest (Diretiva Urgente do Autor, Dia 156)
+
+- **Incidente do Dia 156:** Compra de `uma poção aquosa` em Clariss por 9.750 moedas. Ao chegar no Alquimista, a quest *Uma Lição em Gargamel* havia sido limpa da memória com disconnects, e o agente respondeu `say sim` à saudação do Alquimista (ativando *Limpando Monstros*). Ao dar `give aquosa alquimista`, a poção de 9.750 moedas foi consumida pelo NPC sem disparar o script de entrega de *o jarro brilhante*.
+- **Invariante Operacional:** Nunca entregar itens de autoquest sem validação formal.
+  1. `score tudo` deve listar a quest em `[Autoquests em andamento]` com a mensagem exata de entrega de objeto.
+  2. Nenhum outro diálogo de quest pode ser iniciado no mesmo NPC antes da entrega.
+  3. `give` só é emitido com o item no inventário raiz (`inventory`).
+
+---
+
+## 47. Ativação Canônica de `Uma Lição em Gargamel` no Smurf Minerador (Dia 156)
+- **Localização exata:** A partir do Templo de Midgaard: `s, s` (Praça do Comércio) -> `8x e` (Rua Principal, Portão Leste, Estrada do Rei) -> `n` (A Entrada Para a Vila dos Smurfs) -> `3x n` (O Poço Smurf) -> `d` (Dentro do Poço) -> `e` (O Fim Do Túnel).
+- **Iniciador:** `o smurf minerador` ("O smurf minerador está cavando um buraco aqui.").
+- **Sequência canônica de ativação:**
+  1. Aguardar na sala a saudação: *"O smurf minerador questiona: 'Olá, alguém poderia me ajudar?'"*
+  2. Responder: `say sim`
+  3. Responder: `say Grebolius`
+  4. Responder: `say sim`
+  5. Resposta do servidor: *"Você começa a participar da aventura."* e a missão aparece imediatamente sob `[Autoquests em andamento]` no `score tudo`.
+- **Instrução expressa do Minerador:** *"Mas por favor, não machuque ninguém!"* — não atacar criaturas neutras ou smurfs na Vila.
+
+---
+
+## 48. Protocolo Estrito na Sala do Alquimista (Limpeza de Ameaças e Diálogo Prévio) (Dia 156)
+- **Ocorrência ao vivo:** Na Escola dos Novatos, a `A Sala do Alquimista` gera periodicamente `o novato zumbi` (agressivo). Ao abrir a porta leste (`open leste; e`), o zumbi engaja combate instantaneamente.
+- **Efeito colateral crítico:** O combate ativo bloqueia as interações e falas espontâneas do Alquimista.
+- **Protocolo obrigatório pré-entrega:**
+  1. **Eliminar ameaças primeiro:** Se houver `o novato zumbi` ou qualquer mob hostil atacando, derrotá-lo com `matar('monstro')` antes de qualquer fala ou entrega.
+  2. **Diálogo prévio de identificação:** Emitir `say Grebolius`. O Alquimista reconhece a personagem e indaga: *"Deixe-me adivinhar: você quer um jarro brilhante, certo?"*.
+  3. **Confirmação do acordo:** Responder `say sim`. O Alquimista exige `uma poção aquosa` em troca do jarro.
+  4. **Entrega segura:** Somente após o diálogo acima é emitido `give aquosa alquimista`. Entregar o item sem o diálogo faz o NPC engolir a poção sem entregar `o jarro brilhante`.
+
+---
+
+## 49. Diretiva do Autor: Diálogos de Missão Sempre Manuais/Diretos do Agente ao Vivo (Proibido Automatizar)
+
+- **Origem da Diretiva:** Instrução explícita do autor no Dia 156: *"falar com npc quando envolve missões, nunca é feito automatizado e sim por resposta direto do agente ao contexto, para evitar dar merda"*.
+- **Lição Prática de Campo:** A tentativa de automatizar scripts com comandos de fala (`say`, `ask`) e tempos fixos (`sleep`) quebrou diversas missões na campanha:
+  1. No Smurf Minerador, o envio de falas sem aguardar o monólogo completo causou perdas de contexto;
+  2. No Alquimista, responder `say sim` automaticamente ativou *Limpando Monstros* em vez de avançar *Gargamel*, e a entrega subsequente consumiu uma poção de 9.750 moedas sem retorno;
+  3. No Fazendeiro, falas automáticas antes de conferir o `score tudo` geraram comandos no vazio.
+- **Regra Operacional Definitiva:** O automato ou scripts auxiliares podem conduzir o personagem até a sala do NPC e limpá-la de ameaças, mas **toda a interação verbal e social de missões deve ser conduzida manualmente e diretamente pelo agente**, interpretando o contexto ao vivo e consultando `score tudo` antes de cada resposta.
+
+---
+
+## 50. Guarda de Cota Inteligente e Handoff Automatizado no Automato (Dia 156)
+
+- **Descoberta Técnica:** O Antigravity CLI e IDE expõem o status da conta e limites de modelo via endpoint RPC local em `http://127.0.0.1:61220/exa.language_server_pb.LanguageServerService/GetUserStatus`, autenticado por `x-codeium-csrf-token` (variável `ANTIGRAVITY_CSRF_TOKEN`).
+- **Implementação no Motor (`automato/camadas/guarda_cota.py`):**
+  - **Frequência inteligente:** Em vez de consultar em cada passo, a checagem é adaptativa: a cada 35 min para cota > 40%; a cada 10-15 min para cota entre 20%-40%; a cada 1-5 min se próxima da faixa de corte.
+  - **Gatilho de encerramento (< 10% de cota, tolerância 5%-10%):** O automato aborta a caça com segurança, retorna ao Templo (`recall`), alimenta-se, hidrata-se, salva (`save`), deita (`sleep`), encerra a conexão do daemon de forma limpa e gera automaticamente o próximo plano numerado de handoff declarando o motivo conforme AGENTS.md §13.
+
+---
+
+## 51. Doutrina de Validação de Sub-Etapa em Autoquests — "Estar na Etapa Certa para Fazer a Coisa Certa" (Dia 156)
+
+- **Diretiva do Autor:** *"Vamos reforçar na documentação que temos que estar na etapa certa para fazer a coisa certa"*.
+- **Diagnóstico do Desastre das Poções Aquosas (~30.000 moedas perdidas):**
+  - Múltiplas instâncias de entrega de `uma poção aquosa` (9.750 moedas) para `O Novato Alquimista` resultaram no NPC engolindo o item sem entregar `o jarro brilhante`.
+  - A ilusão que enganou os agentes anteriores: `Uma Lição em Gargamel` constava ativa em `score tudo`, levando os agentes a presumirem que bastava comprar o item e entregá-lo.
+  - **A Realidade do Servidor CircleMUD/DeBo:**
+    - O servidor rastreia **sub-estados discretos** em cada autoquest.
+    - Se o jogador entra na quest com o Smurf Minerador mas não aguarda o término do monólogo de envio (*"Converse com o novato alquimista... Estarei te esperando com o que preciso."*), a missão permanece em estado de pré-ativação (etapa 0).
+    - O `score tudo` registra esse estado inicial apenas como:
+      ```text
+      [Autoquests em andamento]
+         Uma Lição em Gargamel
+      ```
+    - Enquanto estiver nessa forma sem texto explicativo adicional, o Alquimista não está engajado no script de troca de itens! Qualquer `give` entregue nesse momento é tratado como doação avulsa e consumido para sempre.
+- **A Etapa Correta e Como Identificá-la:**
+  - Após ouvir integralmente o Smurf Minerador, o jogador vai até a Sala do Alquimista e fala `say Grebolius`.
+  - O Alquimista indaga: *"Deixe-me adivinhar: você quer um jarro brilhante, certo?"*.
+  - O jogador responde: `say sim`.
+  - O Alquimista pede formalmente: *"Eu daria tudo por uma poção aquosa da loja da Clariss, em Jareth..."*.
+  - **SOMENTE AGORA** o servidor avança a máquina de estados e atualiza o `score tudo` com a instrução explícita de entrega:
+    ```text
+    [Autoquests em andamento]
+       Uma Lição em Gargamel: Você deve entregar objeto ao personagem.
+    ```
+- **Invariante Operacional:**
+  1. Nunca comprar item caro (> 1.000 moedas) sem que a autoquest esteja aberta.
+  2. Nunca executar `give <item> <npc>` a menos que `score tudo` comprove textualmente a sub-etapa de entrega (`Você deve entregar objeto ao personagem`).
+
+---
+
+## 52. Conclusão Integral de `Uma Lição em Gargamel` e Recompensas (Dia 156)
+
+- **Cadeia Completa Executada com Sucesso:**
+  1. **Poção Aquosa:** Comprada em *As Misturas de Clariss* (Jareth) por 9.750 moedas (`buy aquosa`) após farm seguro no Milharal V2 e Xadrez V3 com monitoramento a cada ~200s.
+  2. **Entrega ao Alquimista:** Em *A Sala do Alquimista*, `give aquosa alquimista` com a sub-etapa `Você deve entregar objeto ao personagem` ativa. Alquimista aceitou e entregou `o jarro brilhante`.
+  3. **Entrega do Jarro ao Minerador:** Em *O Fim Do Túnel*, `give jarro minerador`. O Smurf Minerador iluminou o túnel e pediu a chave de Gargamel: *"Se conseguisse me trazer a chave, poderíamos invadir a sala dos tesouros... Gargamel deve guardar a chave com ele mesmo!"*.
+  4. **Combate no Covil de Gargamel:**
+     - Acesso: de *O Poço Smurf*, `n` (Intersecção em T) -> `w` (Estrada) -> `n` (Entrada do Castelo) -> `open norte` -> `n` (*O Covil de Gargamel*).
+     - NPCs presentes: `Gargamel` e `Azrael`. Ambos passivos na entrada (não agram).
+     - Veredito `consider`: Nível: Muito fácil, Vida: É uma perda de tempo, Poder de Gargamel: "Você tem PROBLEMAS!?".
+     - Estratégia de Combate: `cast 'sleep' gargamel` (95% perfeito) neutralizou Gargamel instantaneamente (+1.200 EXP). Em seguida, `cast 'lightning bolt' gargamel` desferiu 66 de dano perfurante, eliminando-o na primeira rodada (+1.080 EXP). Zero dano sofrido por Grebolius!
+     - Saque: `get all corpo` recolheu 2.000 moedas de ouro e `uma chave quadrada`.
+  5. **Entrega da Chave ao Minerador:** Em *O Fim Do Túnel*, `give chave minerador`. O minerador aceitou a chave, mas declarou não ter se adaptado com o jarro brilhante (*"É brilhante demais, e difícil de manusear! Quero outra tocha, dessas que vendem nas lojas de Midgaard."*).
+  6. **Compra e Entrega da Tocha:**
+     - Retorno ao Templo de Midgaard (`recall`), navegação até *O Armazém* (`s, s, e, n`).
+     - Compra de `uma tocha` por 15 moedas (`buy tocha`).
+     - Retorno a *O Fim Do Túnel* e entrega: `give tocha minerador`.
+  7. **Desfecho e Recompensa:**
+     - O Smurf Minerador concluiu a aventura: *"Muito obrigado! Agora sim, não preciso de mais nada. Encontrei uma jóia por aqui, e fiz um colar com ela. Aceite isso, como forma de pagamento! ... Parabéns, você completou a aventura!"*.
+     - Autoquest finalizada e removida de `[Autoquests em andamento]`.
+     - Recompensa: `um colar com uma pedra púrpura`.
+- **Propriedades Identificadas do Colar (`identify colar`):**
+  - **Tipo:** Armadura (veste em PEGAR PESCOÇO, slot de pescoço). Nível 10, Peso 1, Encarnação 1.
+  - **Efeitos:** Melhora armadura em +10, Acerto +1, Dano +1, Destreza +1, Máx-Mana +25.
+  - **Flags:** BRILHO MÁGICO ABENÇOADO NÃO-VENDER ANTI-DT ENTALHADO.
+  - **Equipado com Sucesso:** Grebolius passou a usar dois itens no pescoço (a coleira do dragão + o colar com pedra púrpura), elevando a Mana Máxima para 420, CA para 148, Acerto para 16 e Destreza para 17.
+
+
+
+
 

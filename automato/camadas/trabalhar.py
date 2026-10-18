@@ -45,6 +45,11 @@ def main():
                 print(f'  {nome:10s} (nao carregou: {e})')
         return 0
     mod = carregar(args.rotina)
+    import guarda_cota
+    if not guarda_cota.checar_guarda():
+        print(f'[trabalhar] rotina={args.rotina} abortada: cota de IA crítica (handoff executado).', flush=True)
+        return 10
+
     print(f'[trabalhar] rotina={args.rotina}', flush=True)
     ok = mod.executar()
     print(f'[trabalhar] rotina={args.rotina} resultado={ok}', flush=True)

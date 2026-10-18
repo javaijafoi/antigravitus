@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "hero_id": "grebolius",
+  "day": 156,
+  "title": "Capítulo 09 (em andamento) — Ativação de Gargamel no Minerador, Benchmark Xadrez V2 vs Milharal V2, Blindagem de Entrega de Itens e 2.936 Moedas",
+  "agent": "Gemini 3.8 Flash (High)",
+  "via": "automato",
+  "verification": "live",
+  "summary": "Execução ao vivo por Gemini 3.8 Flash (High). 1) Investigação do incidente da poção aquosa: o saldo anterior bateu 10.622 moedas e a poção foi comprada na Clariss por 9.750 moedas; a entrega falhou porque 'Uma Lição em Gargamel' havia descolado da memória do servidor e 'say sim' ativou 'Limpando Monstros', fazendo o Alquimista consumir a poção sem entregar o jarro. 2) Grebolius viajou à Vila dos Smurfs e ativou oficialmente 'Uma Lição em Gargamel' com o Smurf Minerador em 'O Fim Do Túnel', confirmada ativa em score tudo. 3) Atualizado o protocolo em AGENTS.md (Invariante 13), diretiva_de_jogo.md (§19) e conhecimento.md (§46) proibindo give sem checagem de score tudo e isolamento de diálogos concorrentes. 4) Desenvolvido e testado o xadrez_v2.py e cacador_xadrez.py: combate ativo com lightning bolt em peões negros, fuga tratada, triagem de maldição, alívio de peso na mochila de Pellinore e venda de espólios no armeiro (150 moedas por armadura). 5) Benchmark de 3 rodadas no Xadrez: +500 moedas e +17.352 EXP em 153s; saldo final elevado a 2.936 moedas e 4.833.750 EXP (faltam 166.250 para Nível 30). Retorno ao Templo, save e sono confirmados.",
+  "observations": [
+    {
+      "kind": "autoquest_ativacao",
+      "command": "score tudo / autoquest listar",
+      "target": "o smurf minerador",
+      "response": "[Autoquests em andamento]\n   Uma Lição em Gargamel\n   Limpando Monstros",
+      "note": "Diálogo completo executado em O Fim Do Túnel; Uma Lição em Gargamel agora está oficialmente ativa no servidor."
+    },
+    {
+      "kind": "blindagem_protocolo",
+      "command": "diretiva_de_jogo.md / AGENTS.md / entregar_alquimista.py",
+      "target": "Protocolo de Entrega",
+      "response": "Invariante 13 e Seção 19 adicionadas; entregar_alquimista.py validado para abortar se a quest não estiver em andamento.",
+      "note": "Evita perda futura de itens e consumíveis por conflitos de diálogo de NPCs."
+    },
+    {
+      "kind": "benchmark_xadrez_v2",
+      "command": "automato/acoes/cacador_xadrez.py --rodadas 3",
+      "target": "O Grande Tabuleiro de Xadrez",
+      "response": "3 rodadas em 153.7s: 4 abates de peões, armadura vendida ao armeiro por 150 moedas; +500 moedas e +17.352 EXP líquidas.",
+      "note": "Xadrez V2 provou ser mais rápido para rajadas de ouro (~200 moedas/min), mas peões demoram a renascer; Milharal V2 é superior para grind de EXP rumo ao Nível 50."
+    },
+    {
+      "kind": "economia_estado",
+      "command": "score tudo",
+      "target": "Grebolius",
+      "response": "Carregando: 2.936 moedas na mão. Experiência: 4.833.750 (próximo nível: 166.250).",
+      "note": "Saldo elevado de 1.836 para 2.936 moedas na sessão. Restam apenas 166.250 EXP para o Nível 30."
+    }
+  ]
+}
