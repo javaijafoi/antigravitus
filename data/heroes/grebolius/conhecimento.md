@@ -2344,3 +2344,35 @@ Fonte: [evidence/dia156k.json](evidence/dia156k.json). Sessão ao vivo via `auto
   - **A Coroa da Rainha Negra:** Identificada com `cast 'identify'`. Objeto: ARMADURA (slot cabeça). Flags: `ZUMBIDO MÁGICO ANTI-BOM NOBITS` (NÃO é NODROP!). Peso 4, Valor 3.000 moedas, Nível 18. Propriedades: CA +25, Inteligência +1, Sabedoria +1, Carisma +2. Guardada na mochila de Pellinore para revenda ou reserva.
   - **Missão Diária "Todo Dia um Pouco":** O servidor possui uma autoquest diária silenciosa que premia o aventureiro com um baú de recompensas surpresa. Ao ser aberto com `open bau`, o baú se desfaz em luz e concede itens de alta sacralidade (um segundo **rosário sagrado** foi obtido).
 
+---
+
+## 59. Anatomia do Cancelamento de Autoquests no DeBo MUD: Morte × Quit (Dia 156)
+
+- **A Dúvida Fundamental:** Por que a autoquest `Xeque-mate` resetou? As quests falham quando damos `quit` ou quando morremos?
+- **Resposta Técnica e Comprovada:** **EM AMBOS OS CASOS!**
+  
+1. **Cancelamento por Morte (Comprovado ao Vivo no Dia 156 contra o Rei Negro):**
+   - Quando a vida atinge 0 e o personagem tomba, o tratador de morte do servidor executa o cancelamento forçado da aventura ativa.
+   - Mensagem literal disparada pelo servidor no log (`session_live_dia156_20261018_124258_79991b.log:11259`):
+     ```text
+     Você está morto!
+     Você perdeu 4.173 pontos de experiência pela sua morte.
+     *Você falhou em sua aventura! Se quiser concluí-la deverá recomeçá-la!*
+     ```
+   - O servidor remove a missão imediatamente de `[Autoquests em andamento]`. Se o jogador quiser concluí-la, deve retornar ao NPC patrono (o Bispo Branco em F1) e reiniciar a cadeia a partir da Etapa 1.
+
+2. **Cancelamento por Comando `quit` (Deslogar Voluntário):**
+   - O comando de desconexão formal `quit` limpa as variáveis de sessão e descarta autoquests ativas, exibindo a clássica mensagem:
+     `*Você falhou em suas aventuras! Se quiser concluí-las deverá recomeçá-las!*`
+   - É por essa razão que a **Invariante 8** do `AGENTS.md` estipula: *"save, nunca quit, com missão em andamento"*. Para deslogar preservando missão ativa (quando não há morte), deve-se usar `save` e simplesmente fechar o socket TCP.
+
+3. **O Que a Morte Reseta vs. O Que Ela Preserva:**
+   - **O que RESETA:** Apenas o estado em andamento da autoquest ativa no NPC patrono (o ciclo de tarefas volta ao início).
+   - **O que PRESERVA (Intacto):**
+     - O nível alcançado (**Nível 32** permanece gravado na pedra com 7.225.102 EXP);
+     - Os vitais expandidos (**199 HP, 430 Mana, 145 MV**);
+     - Os espólios no inventário e mochila (**A Coroa da Rainha Negra**, os rosários, etc.);
+     - As moedas de ouro ganhas e depositadas no banco (**14.589 moedas**);
+     - O alinhamento moral conquistado (**412 - Bom**).
+
+

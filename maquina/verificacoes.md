@@ -208,3 +208,20 @@ Fonte: Consolidação das referências `maquina/commands.md` e `docs/circlemud/0
 - **Sistemas de Mensagens:**
   - MMS nos Correios (sala 3062): testar `check`, `receive` e sintaxe de `mail`.
   - Murais comunitários: testar `read 1` e leitura de tópicos na Praça do Comércio.
+
+## 2026-10-18 — Comportamento do Servidor DeBo: Cancelamento de Autoquest por Morte e por Quit
+
+Fonte: Captura literal do log de combate contra o Rei Negro em `automato/runtime/session_live_dia156_20261018_124258_79991b.log:11259` e verificação de desconexão voluntária.
+
+- **Morte em Combate:**
+  - Resposta literal do servidor ao atingir 0 HP:
+    ```text
+    Você está morto!
+    Você perdeu 4.173 pontos de experiência pela sua morte.
+    *Você falhou em sua aventura! Se quiser concluí-la deverá recomeçá-la!*
+    ```
+  - Efeito mecânico: cancela a aventura ativa e remove-a da lista `[Autoquests em andamento]`. O progresso nas etapas da missão é zerado (deve-se reiniciar com o patrono), mas o nível, equipamentos, vitais e ouro permanecem intactos.
+- **Comando `quit`:**
+  - O comando `quit` (ao contrário de `save` seguido de fechamento de socket) executa a rotina de encerramento de sessão que limpa os slots de autoquest ativa exibindo: `*Você falhou em suas aventuras! Se quiser concluí-las deverá recomeçá-las!*`.
+- **Conclusão:** Autoquests falham **tanto na morte quanto no `quit`**. Para preservar autoquest ativa entre pausas, deve-se usar `save` e repouso (`sleep`), nunca `quit`, e evitar mortes em combate.
+
