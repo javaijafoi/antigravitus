@@ -4,6 +4,12 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.6.11 — Dia 156 · Preservação de Moral e Alinhamento (AGENTS.md Invariante 15)
+- **DIRETIVA DO AUTOR (AGENTS.md Invariante 15 / Diretiva de Jogo §22)**:
+  - Estabelecida a regra mandatória de preservação de alinhamento moral: qualquer ação ou abate que reduza a moral de Grebolius (compass `{<<<<<>----}` e valor numérico no `score` / `score tudo`) exige parada imediata da sessão, auditoria de causa raiz no log e proibição permanente de reincidência.
+  - Banido em definitivo o abate de animais domésticos da Pet Shop (gatinhos, cachorrinhos, beagles, rottweilers) e criaturas inocentes.
+- **PARSER**: Adicionada função pura `parse_alignment(text)` em `automato/nucleo/driver/parsers.py` para extração determinística do valor numérico, representação visual do compass e descrição textual do alinhamento a partir de saídas de `score`.
+
 ## v1.6.10 — Dia 156 · Dupla checagem com identify no chão e liberação de itens limpos da Torre Negra
 - **DIRETIVA DO AUTOR (AGENTS.md Invariante 10 / Diretiva de Jogo §15)**:
   - Esclarecido que itens da Torre Negra **NÃO** são categoricamente proibidos: proibidos são apenas itens **amaldiçoados** (com flag `ITEM_NODROP` / maldição), que prendem ao inventário e causam prejuízo. Itens limpos (inclusive da Torre Negra) são permitidos.

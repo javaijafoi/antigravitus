@@ -270,4 +270,20 @@ No Devil's Bob MUD, quests automáticas possuem máquinas de estados rígidas no
    - Se estiver apenas `Uma Lição em Gargamel` sem sub-etapa, **É PROIBIDO DAR GIVE**. O NPC engolirá o item sem retorno.
 3. **Paciência com Falas de NPCs:** NPCs do MUD possuem intervalos de 3 a 8 segundos entre falas. Nunca emita `recall` ou comandos seguintes antes da mensagem final de fechamento do diálogo.
 
+## 22. PRESERVAÇÃO DE MORAL E ALINHAMENTO — PARAR SE A MORAL CAIR (Diretiva do Autor, Dia 156)
+
+> **"sempre que a gente fizer alguma coisa que abaixe a nossa moral, que a gente pare e veja o que aconteceu e não faça de novo. Diretiva."**
+
+### Regra Operacional Obrigatória:
+Sempre que uma ação (abate de criatura, compra/sacrifício de animais domésticos, ataque a cidadãos/inocentes ou escolha em missão) resultar em **redução da pontuação de alinhamento moral** de Grebolius (visível na barra compass `{<<<<<>----}` e valor numérico no `score` / `score tudo`):
+1. **PARADA IMEDIATA:** Interromper imediatamente o script, rotina de caça ou sessão em curso.
+2. **AUDITORIA DE CAUSA RAIZ:** Conferir o log/transcrição da sessão para identificar com precisão cirúrgica qual mob, comando ou interação provocou a perda de alinhamento.
+3. **NÃO REPETIR:** Registrar o alvo ou ação na lista de restrições (`conhecimento.md`, rotinas e planos) como terminantemente proibido para caça ou interação, blindando o herói contra novas perdas.
+
+### Origem e Contexto Real (Dia 156):
+- Na busca pelas 10 espécies inéditas do Capítulo 10, foram comprados e abatidos 4 animais domésticos da Pet Shop (gatinho, cachorrinho, beagle e rottweiler).
+- O ato derrubou o alinhamento moral de Grebolius de **289** para **198** (-91 pontos). Embora ela permaneça em "um pouco bom" (faixa de 100 a 349), aproximou-se perigosamente do alinhamento Neutro (99 a -99).
+- **Decisão:** Animais domésticos e criaturas inocentes/boas não são alvos de caça válidos para uma maga elfa virtuosa. Queda de moral é sinal vermelho de parada mandatória.
+
+
 

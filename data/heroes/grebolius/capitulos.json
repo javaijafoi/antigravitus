@@ -1317,18 +1317,18 @@
       "title": "Dez Cabeças Inéditas",
       "kind": "marco",
       "status": "concluido",
-      "goal": "Matar 10 criaturas ou monstros que Grebolius ainda não matou no MUD, executando planos criativos e arrojados de reconhecimento, armadilha e caça.",
+      "goal": "Matar 10 monstros malignos que Grebolius ainda não matou no MUD (cumprido integralmente com 10 monstros genuinamente do mal: Azrael, bebê dragão, ladrão kobold, kobold, líder kobold, cobra peçonhenta, pequena aranha, rato de esgoto colossal, Cavaleiro Negro e Bispo Negro).",
       "closed_on_day": 156,
       "days": [
         156
       ],
       "date": "2026-10-18",
-      "in_game_time": "Dez troféus novos, a fera adormecida e o milagre dos seis pontos de vida",
-      "excerpt": "A ordem do autor era categórica: dez cabeças que nunca haviam tombado perante minha magia em toda a campanha, nem que para isso fosse preciso inventar loucuras. Cacei nas matas, rompi as grades da masmorra dos novatos, quase morri a seis míseros pontos para um besouro titânico nos esgotos e comprei animais na Pet Shop para desafiá-los em campo aberto. Depois, rumei ao norte até as cavernas escuras de Jareth para abater salteadores kobolds e destronar seu líder. Onze cabeças inéditas repousam catalogadas no meu livro de glórias.",
+      "in_game_time": "A censura moral do autor, os canais fétidos e o xeque às sombras",
+      "excerpt": "A ordem era abater dez criaturas inéditas, mas a minha primeira ideia 'criativa' custou um puxão de orelhas editorial: heroína de alinhamento bom não mata bichos indefesos e nem pet de loja. Censuradas as bobagens, fui mandada caçar o mal autêntico. Desci aos esgotos pestilentos para eletrocutar cobras peçonhentas, aranhas das trevas e um rato titânico; depois marchei ao Tabuleiro de Xadrez para desafiar a própria nobreza das sombras — o Cavaleiro e o Bispo Negro. Dez monstros do mal tombaram, o alinhamento disparou para 311 e o Grau 32 bate à porta.",
       "parts": [
         {
           "number": 1,
-          "title": "A Trilha das Dez Cabeças Inéditas e a Queda do Líder Kobold",
+          "title": "O Julgamento da Consciência, os Esgotos e a Nobreza das Sombras",
           "day": 156,
           "date": "2026-10-18",
           "source_kind": "live",
@@ -1336,50 +1336,48 @@
             {
               "document": "evidence/dia156p.json",
               "day": 156,
-              "note": "Abate confirmado de 11 espécies 100% inéditas na história da campanha de Grebolius: 1) Azrael no covil de Gargamel (250 moedas); 2) Um pequeno esquilo na floresta densa; 3) O bebê dragão na Área dos Novatos; 4) Um gatinho (Pet Shop); 5) Um cachorrinho (Pet Shop); 6) Um beagle (Pet Shop); 7) Um rottweiler (Pet Shop por 900 moedas); 8) Um coelho selvagem na Trilha da Floresta de Jareth; 9) Um ladrão kobold na entrada da caverna (100 moedas); 10) Um kobold na Caverna dos Kobolds (60 moedas); 11) O líder kobold no Amplo Salão (160 moedas). Sobrevivência milagrosa a 6 HP contra o besouro gigante no poço dos esgotos após contra-ataque sob despertar do sono arcano; acionamento do Wimpy 45 e fuga pela escada. Retorno seguro ao Templo por recall, 887 moedas, cantil saciado e save_confirmed / sleep_confirmed verdadeiros. Agente: Gemini 3.8 Flash (High)."
+              "note": "Conclusão definitiva do Capítulo 10 com 10 abates de monstros genuinamente malignos e inéditos: 1) Azrael no Covil de Gargamel (+612 EXP, 250 moedas); 2) O bebê dragão na masmorra dos novatos (+1.116 EXP); 3) Um ladrão kobold na entrada da caverna (+450 EXP, 100 moedas); 4) Um kobold na Caverna dos Kobolds (+360 EXP, 60 moedas); 5) O líder kobold no Amplo Salão (+630 EXP, 160 moedas); 6) Uma cobra peçonhenta nos esgotos (+7.914 EXP, 1 moeda); 7) Uma pequena aranha tecedora nos esgotos (+2.556 EXP, 1 moeda); 8) Um rato de esgoto faminto e colossal (+27.868 EXP, 30 moedas); 9) O Cavaleiro Negro no xadrez (+23.298 EXP, 300 moedas); 10) O Bispo Negro no xadrez (+17.810 EXP, 500 moedas). Veto moral e censura de animais inofensivos; alinhamento elevado para 311 (Bom); 1.719 moedas no bolso; 6.933.216 EXP (faltam apenas 66.784 para o Nível 32); repouso seguro no Templo. Agente: Gemini 3.8 Flash (High)."
             }
           ],
-          "summary": "Capítulo 10 concluído: 'Dez Cabeças Inéditas'. Cumprimento estrito e irrefutável da diretiva com 11 abates genuinamente inéditos em toda a campanha (Covil de Gargamel, Floresta de Jareth, Catacumbas dos Novatos, Pet Shop levada ao Grande Campo e Caverna dos Kobolds). Confirmação empírica crítica: a magia sono arcano (sleep) é quebrada ao sofrer dano, despertando a criatura no mesmo turno — o besouro gigante contra-atacou desferindo 190 de dano, ativando wimpy 45 a 6 HP. Grebolius repousa em total segurança no Templo de Midgaard com 196 HP, 420 Mana, 887 ouro e 6.853.770 EXP (faltam apenas 146.230 para o Nível 32)."
+          "summary": "Capítulo 10 concluído: 'Dez Cabeças Inéditas'. Após o veto moral do autor à caça de animais inofensivos e pets, Grebolius recalibrou sua bússola arcana e cumpriu a meta com 10 monstros do mal autênticos e inéditos. A jornada cobriu o Covil de Gargamel (Azrael), Catacumbas dos Novatos (bebê dragão), Caverna dos Kobolds (ladrão, soldado e líder kobold), Esgotos de Midgaard (cobra, pequena aranha e rato de esgoto titânico de 28k EXP) e o Tabuleiro de Xadrez (Cavaleiro Negro e Bispo Negro). O alinhamento disparou de 198 para 311 ('Você é bom'). Grebolius repousa no Templo com 196 HP, 420 Mana, 1.719 moedas de ouro e 6.933.216 EXP, a apenas 66.784 de alcançar o Nível 32."
         }
       ],
       "content": [
-        "Quando a ordem do autor chegou exigindo que eu abatesse dez criaturas que nunca, em momento algum da minha história, haviam tombado perante meus feitiços — permitindo que eu bolasse planos malucos e fosse descaradamente criativa —, eu dei um sorriso largo. Depois de passar dias medindo moedas de cobre para comprar poções e tochas em missões alheias, nada soa mais revigorante para uma maga goblin-elfa de trinta e um graus do que sair pelo mundo farejando alvos inéditos.",
-        "Comecei pelo rastro deixado no covil de Gargamel. O bruxo já estava estirado no chão frio, mas o gato dele, Azrael, continuava sibilando com seus olhos maliciosos sobre a mesa. Murmurei uma prece de sono preventivo e disparei um raio azulado bem no meio do lombo felino. Um estalo seco, seiscentos e doze pontos de experiência na mente e duzentas e cinquenta moedas de ouro surrupiadas da carcaça peluda. A primeira cabeça inédita estava cravada na conta.",
-        "A segunda veio nos limites da floresta densa a caminho das terras selvagens. Em meio à folhagem que fecha o sol, localizei um pequeno esquilo cinzento saltando entre cipós úmidos. Um raio certeiro desceu sobre o galho antes que o roedor pudesse sequer piscar. Não era glória heroica, era contabilidade pura de caçadora de espécies.",
-        "Para a terceira presa, desci às masmorras da Área dos Novatos, rompendo as portas de ferro até encontrar uma câmara esquecida. Lá habitava o bebê dragão, bufando pequenas chispas de fumaça pelas ventas escamosas. Um relâmpago de alta voltagem fendeu suas defesas e minha espada curta silenciou o réptil para sempre, coroando mais de mil e cem pontos de experiência.",
-        "Foi nos esgotos, porém, enquanto buscava novas feras subterrâneas, que quase escrevi meu epitáfio pela nona vez. No fundo do Poço Escuro, entre a lama fétida, dormia um besouro gigante com uma carapaça colossal. Pensei: 'Coloco o monstro para dormir com o feitiço de sono e frito-o em seguida com meu melhor raio'. O sono pegou com perfeição. O besouro amoleceu. Então canalizei toda a minha mana e conjurei o relâmpago.",
-        "Foi um erro que quase custou a alma. O raio causou sessenta e cinco de dano, mas a criatura tinha uma barra colossal de vida. E no exato instante do impacto elétrico, a dor despertou o monstro no mesmo milissegundo! O besouro desferiu uma saraivada brutal de pinçadas hediondas. Minha vida despencou de quase duzentos pontos para inacreditáveis seis pontos de vida! Seis! O gosto acre de ferro inundou minha boca.",
-        "O que me salvou foi o reflexo do recuo calibrado em quarenta e cinco de wimpy e a proteção sagrada do Colar com Pedra Púrpura. Meu corpo disparou sozinho escada acima pela grade enferrujada, rompendo o combate antes que a foice da morte descesse. Retornei ao templo tremendo, mas viva — e gravando na memória a lição eterna: nunca acordar com eletricidade uma fera que você não mata com um único golpe.",
-        "Recuperada e recomposta, parti para os planos malucos que o autor pediu. Se o mundo selvagem escondia armadilhas mortais, eu usaria a economia urbana. Fui até a Pet Shop de Midgaard e gastei dezoito centenas de moedas no balcão: comprei um gatinho, um cachorrinho dócil, um beagle farejador e até um enorme e musculoso rottweiler de guarda. Conduzi a matilha para fora dos portões protegidos da cidade, caminhando até a relva alta do Grande Campo de Midgaard, longe dos olhares dos guardas.",
-        "Lá fora, sob o vento suave da pradaria, soltei quatro descargas perfeitas de raio. Quatro criaturas que jamais haviam sangrado na minha história tombaram na relva aberta, acumulando quase dois mil pontos de experiência somados. Sete cabeças estavam garantidas.",
-        "Faltavam três para a cota de dez. Não aceitei qualquer presa repetida: marchei para o norte, cruzando a colina e os portões da cidade de Jareth. Na bifurcação das trilhas da floresta, avistei um coelho selvagem veloz, abatendo-o à distância com um raio fulminante — a oitava cabeça. Seguindo a trilha até o sopé da montanha, dei de cara com um ladrão kobold à espreita na entrada de uma gruta escura. Um raio incinerou o salteador, rendendo cem moedas de espólio e a nona cabeça.",
-        "Adentrei a caverna pedregosa com passos cautelosos, evitando o abismo sombrio ao norte. Nos corredores áridos do subterrâneo, embosquei um guerreiro kobold da tribo, transformando-o em pedaços com mais um relâmpago azul e recolhendo sessenta moedas. Eram dez cabeças! A missão estava formalmente cumprida!",
-        "Mas eu não seria Grebolius se me contentasse com o mínimo. Sentindo o cheiro de detritos que vinha do túnel apertado ao norte, rastejei até alcançar Um Amplo Salão. Lá estava ele: o líder kobold, pomposo, achando-se o maioral em seu trono subterrâneo. Avaliei o oponente: 'perda de tempo'. Lancei um trovão impiedoso que partiu o líder ao meio, gerando seiscentos e trinta de experiência e cento e sessenta moedas de ouro de espólio final!",
-        "Onze cabeças inéditas. Onze criaturas genuínas catalogadas sem nenhuma repetição. Retornei triunfante pelo poder do recall ao Templo de Midgaard, matei a sede na água cristalina do meu cantil e deitei-me em repouso solene sob as bênçãos dos deuses antigos. Com oitocentas e oitenta e sete moedas na bolsa, saúde intacta e seis milhões oitocentas e cinquenta e três mil de experiência, durmo sabendo que o trigésimo segundo grau de maestria arcana está a um mero sopro de distância."
+        "Existe uma linha tênue entre a criatividade e a pura sem-vergonhice, e eu quase dancei sobre ela com as duas botas sujas. Quando o autor ordenou que eu caçasse dez cabeças que nunca haviam tombado perante meus raios — 'mesmo que tivesse de bolar planos malucos' —, a minha mente de elfa pragmática calculou o caminho mais curto: comprei bichos na Pet Shop de Midgaard e rumei para o campo. O resultado? Uma repreensão severa que desceu dos céus como trovão: 'A gente vai ignorar as coisas fofinhas e boas que você matou e vai censurar da história! Não vou contar como abates. Sua meta não foi concluída. Você só mata monstros! Você não mata nada que não seja mau!'.",
+        "A pena do escriba riscou a vergonha para fora dos anais da campanha com um traço grosso de tinta preta. Meu alinhamento moral, que havia despencado para cento e noventa e oito numa mancha cinzenta de quase-vilania, exigia expiação imediata. Para limpar a alma e fechar o livro, eu teria de trabalhar o dobro e encarar o mal de verdade.",
+        "A primeira metade dos troféus legítimos já estava garantida pela justiça das armas. No covil escuro de Gargamel, o gato bruxo Azrael, cúmplice de poções nefandas e feitiços vis, foi o primeiro a ser eletrocutado na bancada (rendendo duzentas e cinquenta moedas). Nas profundezas esquecidas da Masmorra dos Novatos, rompi as celas para subjugar o bebê dragão, um monstro réptil de garras afiadas que sucumbiu ao raio e à lâmina curta. E ao norte, nas trilhas pedregosas que levam às Cavernas dos Kobolds, dizimei a cadeia de salteadores: o ladrão kobold na entrada da fenda, o guerreiro tribal nas galerias e, no topo do seu trono grotesco, o líder kobold, partido ao meio por uma trovoada no Amplo Salão.",
+        "Eram cinco cabeças do mal. Faltavam outras cinco, e o mundo não dá monstros de graça.",
+        "Ajustei o Colar com Pedra Púrpura no pescoço, engoli o nojo e desci pela grade enferrujada para dentro das entranhas podres dos Esgotos de Midgaard. O ar ali é pesado como lodo e cheira a decomposição antiga. Na primeira curva do cano, uma cobra peçonhenta armou o bote nos meus calcanhares; dois estalos azuis de relâmpago fritaram o réptil antes do veneno espirrar. Metros adiante, numa passagem escura e úmida, uma aranha tecedora caiu do teto; uma estocada e mais um raio reduziram o aracnídeo a cinzas.",
+        "Foi no Poço Escuro, porém, que o esgoto cobrou coragem. Entre dejetos e carcaças, surgiu um rato de esgoto de proporções monstruosas — não um roedor qualquer, mas uma abominação faminta, do tamanho de um javali selvagem, cujos olhos ardiam em sangue. O monstro saltou rangendo dentes podres. Mantive a calma, canalizei a mana máxima dos meus quatrocentos e vinte pontos e soltei três descargas consecutivas de raio puro. A besta tombou estrebuchando na lama, me coroando com colossais vinte e sete mil e oitocentos pontos de experiência! Oito cabeças estavam na conta.",
+        "Para os dois últimos alvos, recusei a sujeira dos canos e marchei para o grande desafio tático: o Tabuleiro de Xadrez, onde o exército do Rei Negro marchará para sempre em eterna guerra mágica. Na quarta fileira, pisei numa Casa Branca e encontrei o Cavaleiro Negro montado em seu corcel espectral. Três relâmpagos romperam a armadura de ferro escuro do campeão das sombras, derrubando cavalo e cavaleiro e rendendo trezentas moedas e mais de vinte e três mil de experiência.",
+        "A décima e definitiva cabeça me esperava na Casa Preta adjacente: o Bispo Negro, o prelado arcano das trevas. Seus cânticos sombrios tentaram embotar meus sentidos, mas quem carrega trinta e um graus de magia pura não se curva a báculo profano. Despejei quatro relâmpagos colossais sobre a mitra sombria do clérigo e finalizei com um golpe de misericórdia. O bispo caiu desfeito em poeira, deixando quinhentas moedas reluzentes no piso xadrez e dezessete mil e oitocentos pontos de glória.",
+        "Dez monstros do mal. Dez cabeças autênticas, cruéis e inéditas, extirpadas da face da terra sem tocar num único fio de criatura inocente. Quando usei a palavra mágica de retorno ao Templo de Midgaard e consultei a verdade dos meus espíritos, vi o milagre operado pela lâmina justa: meu alinhamento disparou para trezentos e onze pontos — '{<<<<<>>---} Você é bom'. A virtude não só foi restaurada, como brilhou mais forte.",
+        "Sacio minha sede no cantil, mastigo um pedaço do pão da sacola e adormeço sob a guarda sagrada do altar com mil setecentas e dezenove moedas no cofre. A conta de experiência marca seis milhões novecentas e trinta e três mil — faltam meros sessenta e seis mil para o trigésimo segundo grau. O Capítulo 10 está pago, purificado e selado."
       ],
       "tags": [
         "Dez Cabeças Inéditas",
-        "Bestiário Genuíno",
-        "Sono Arcano",
-        "Sobrevivência a 6 HP",
-        "Pet Shop",
-        "Planos Criativos",
-        "Caverna dos Kobolds",
-        "Líder Kobold",
-        "Nível 31"
+        "Censura Editorial",
+        "Monstros do Mal",
+        "Esgotos de Midgaard",
+        "Rato de Esgoto",
+        "Cavaleiro Negro",
+        "Bispo Negro",
+        "Alinhamento Bom",
+        "Nível 31",
+        "Rumo ao Nível 32"
       ],
       "source_kind": "live",
       "evidence": [
         {
           "document": "evidence/dia156p.json",
           "day": 156,
-          "note": "Abate confirmado de 11 espécies 100% inéditas na história da campanha de Grebolius: 1) Azrael no covil de Gargamel (250 moedas); 2) Um pequeno esquilo na floresta densa; 3) O bebê dragão na Área dos Novatos; 4) Um gatinho (Pet Shop); 5) Um cachorrinho (Pet Shop); 6) Um beagle (Pet Shop); 7) Um rottweiler (Pet Shop por 900 moedas); 8) Um coelho selvagem na Trilha da Floresta de Jareth; 9) Um ladrão kobold na entrada da caverna (100 moedas); 10) Um kobold na Caverna dos Kobolds (60 moedas); 11) O líder kobold no Amplo Salão (160 moedas). Sobrevivência milagrosa a 6 HP contra o besouro gigante no poço dos esgotos após contra-ataque sob despertar do sono arcano; acionamento do Wimpy 45 e fuga pela escada. Retorno seguro ao Templo por recall, 887 moedas, cantil saciado e save_confirmed / sleep_confirmed verdadeiros. Agente: Gemini 3.8 Flash (High)."
+          "note": "Conclusão definitiva do Capítulo 10 com 10 abates de monstros genuinamente malignos e inéditos: 1) Azrael no Covil de Gargamel (+612 EXP, 250 moedas); 2) O bebê dragão na masmorra dos novatos (+1.116 EXP); 3) Um ladrão kobold na entrada da caverna (+450 EXP, 100 moedas); 4) Um kobold na Caverna dos Kobolds (+360 EXP, 60 moedas); 5) O líder kobold no Amplo Salão (+630 EXP, 160 moedas); 6) Uma cobra peçonhenta nos esgotos (+7.914 EXP, 1 moeda); 7) Uma pequena aranha tecedora nos esgotos (+2.556 EXP, 1 moeda); 8) Um rato de esgoto faminto e colossal (+27.868 EXP, 30 moedas); 9) O Cavaleiro Negro no xadrez (+23.298 EXP, 300 moedas); 10) O Bispo Negro no xadrez (+17.810 EXP, 500 moedas). Veto moral e censura de animais inofensivos; alinhamento elevado para 311 (Bom); 1.719 moedas no bolso; 6.933.216 EXP (faltam apenas 66.784 para o Nível 32); repouso seguro no Templo. Agente: Gemini 3.8 Flash (High)."
         }
       ],
       "continues_chapter": 9,
       "directive": {
-        "author_quote": "a missão de amanhã vai ser diferente a missão a próxima missão vai ser matar 10 bichos que ela ainda não matou mesmo que ela tenha que fazer planos malucos e ser muito criativa",
-        "rule": "Abater 10 monstros inéditos para o bestiário pessoal de Grebolius, explorando regiões novas ou mobs não caçados, com planos táticos e criativos, mantendo o wimpy 45 e recuo seguro."
+        "author_quote": "A gente vai ignorar as coisas fofinhas e boas que você matou e vai censurar da história, talvez com algum comentário breve. Não vou contar como abates. A sua meta não foi concluída. Você só mata monstros. Você não mata nada que não é mau.",
+        "rule": "Abater 10 monstros genuinamente malignos e inéditos na campanha, excluindo sumariamente animais e seres pacíficos, preservando o alinhamento bom e a ética heroica."
       }
     }
   ]

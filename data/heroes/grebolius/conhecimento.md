@@ -2224,31 +2224,42 @@ Fonte: [evidence/dia156k.json](evidence/dia156k.json). Sessão ao vivo via `auto
 ## 53. O Desafio das Dez Cabeças Inéditas (Capítulo 10) e Lições Críticas de Combate (Dia 156)
 
 - **Diretiva do Autor:** *"a próxima missão vai ser matar 10 bichos que ela ainda não matou mesmo que ela tenha que fazer planos malucos e ser muito criativa"*.
-- **Os 10+1 Abates Inéditos Executados e Confirmados (Fonte: `evidence/dia156p.json`):**
-  1. `Azrael` (*O Covil de Gargamel*): Neutralizado com `cast 'sleep' azrael` e eliminado com `cast 'lightning bolt' azrael`. Espólio: 250 moedas de ouro saqueadas do cadáver (+612 EXP).
-  2. `Um pequeno esquilo` (*Uma Parte Densa da Floresta*): Rastreamento nas matas a oeste de Midgaard. Abatido com raio (+324 EXP).
-  3. `O bebê dragão` (*Área dos Novatos / Masmorra*): Exploração além da grade das catacumbas. Abatido com raio elétrico seguido de golpe marcial (+1.116 EXP).
-  4. `Um gatinho` (*O Grande Campo de Midgaard*): Criatividade tática — adquirido por 300 moedas na Loja de Animais de Midgaard (`buy gatinho`), conduzido como seguidor para fora dos portões seguros da cidade e abatido no campo aberto (+252 EXP).
-  5. `Um cachorrinho` (*O Grande Campo de Midgaard*): Adquirido na Loja de Animais por 300 moedas, conduzido aos ermos do campo e abatido com raio (+288 EXP).
-  6. `Um beagle` (*O Grande Campo de Midgaard*): Cão de caça adquirido por 300 moedas na Pet Shop, conduzido ao campo e abatido com raio (+522 EXP).
-  7. `Um rottweiler` (*O Grande Campo de Midgaard*): Cão de guarda de grande porte adquirido por 900 moedas na Pet Shop (`buy rottweiler`), conduzido ao campo e abatido com raio (+810 EXP).
-  8. `Um coelho selvagem` (*Uma Divisão da Trilha*, floresta de Jareth): Encontrado na trilha da floresta ao norte de Jareth. Abatido com raio (+324 EXP).
-  9. `Um ladrão kobold` (*O Fim da Trilha*, entrada da caverna): Kobold saqueador emboscado na boca da caverna. Abatido com raio (+450 EXP, 100 moedas de ouro).
-  10. `Um kobold` (*Continuando na Caverna*): Criatura tribal no interior árido da caverna subterrânea. Abatido com raio (+360 EXP, 60 moedas de ouro).
-  11. `O líder kobold` (*Um Amplo Salão*, Caverna dos Kobolds): Chefe da tribo kobold, localizado via `where lider` e eliminado com raio fulminante (+630 EXP, 160 moedas de ouro). Bônus de prestígio que fecha a jornada com 11 espécies inéditas!
+- **Os 10 Abates de Monstros Genuinamente Malignos e Inéditos (Fonte: `evidence/dia156p.json`):**
+  1. `Azrael` (*O Covil de Gargamel*): Gato familiar do bruxo maligno Gargamel. Neutralizado com sono e raio (+612 EXP, 250 moedas de ouro).
+  2. `O bebê dragão` (*Área dos Novatos / Masmorra*): Monstro reptiliano lendário das catacumbas profundas. Abatido com raio e espada (+1.116 EXP).
+  3. `Um ladrão kobold` (*O Fim da Trilha*, entrada da caverna): Kobold salteador na boca da caverna. Abatido com raio (+450 EXP, 100 moedas de ouro).
+  4. `Um kobold` (*Continuando na Caverna*): Criatura tribal humanoide das cavernas subterrâneas. Abatido com raio (+360 EXP, 60 moedas de ouro).
+  5. `O líder kobold` (*Um Amplo Salão*, Caverna dos Kobolds): Chefe supremo da tribo kobold. Eliminado com raio fulminante (+630 EXP, 160 moedas de ouro).
+  6. `Uma cobra` (*Uma Curva no Cano de Esgoto*, Esgotos de Midgaard): Serpente peçonhenta e vil dos canais subterrâneos. Eletrocutada com dois raios (+7.914 EXP, 1 moeda).
+  7. `Uma pequena aranha` (*A Passagem Escura*, Esgotos de Midgaard): Aracnídeo peçonhento dos dutos escuros. Abatida com golpe e raio (+2.556 EXP, 1 moeda).
+  8. `Um rato de esgoto` (*O Poço Escuro*, Esgotos de Midgaard): Monstro roedor faminto e colossal. Abatido com três descargas elétricas maciças (+27.868 EXP, 30 moedas de ouro).
+  9. `O Cavaleiro Negro` (*Uma Casa Branca*, Tabuleiro de Xadrez): O Cavalo do Rei Negro, tropa pesada do exército das sombras. Abatido com três raios (+23.298 EXP, 300 moedas de ouro).
+  10. `O Bispo Negro` (*Uma Casa Preta*, Tabuleiro de Xadrez): Prelado arcano e sombrio do exército negro. Abatido com quatro raios e estocada final no coração (+17.810 EXP, 500 moedas de ouro).
+
+- **Censura Editorial e Veto Moral a Animais Inofensivos:**
+  - Qualquer tentativa anterior de computar animais domésticos da Pet Shop ou bichos inofensivos da mata foi expressamente censurada e rejeitada pelo autor Peter e pelo código de conduta da heroína. Grebolius possui alinhamento bom e só caça criaturas do mal.
 
 - **A Caverna dos Kobolds (Geografia e Perigos ao Norte de Jareth):**
   - Acesso a partir de *A Entrada da Floresta*: `n` (*Adentrando-se na Floresta*) -> `n` (*Uma Divisão da Trilha*) -> `n` (*A Trilha na Floresta*) -> `n` (*Seguindo a Trilha*) -> `n` (*O Fim da Trilha*) -> `w` (*Na Porta da Caverna*) -> `w` (*Entrando na Caverna*).
   - Interior: `s` (*Avançando na Caverna*) -> `w, w, n, n` (*Continuando na Caverna*) -> `n` (*Um Pequeno Túnel*) -> `n` (*Um Amplo Salão*, covil do Líder Kobold).
   - Alerta de Perigo Extremo: A saída norte de *Entrando na Caverna* conduz a *Um Pequeno Abismo* (potencial Death Trap/queda). Nunca avançar ao norte na entrada inicial da caverna.
 
-- **O Incidente do Besouro Gigante e a Regra do Sono Arcano (`sleep`):**
-  - **Acontecimento:** No fundo do Poço Escuro dos esgotos, Grebolius enfrentou um `besouro gigante`. Aplicou `cast 'sleep' besouro`, que adormeceu a criatura com sucesso.
-  - **O Erro Tático:** Em seguida, conjurou `cast 'lightning bolt' besouro`. O raio causou 65 de dano, mas a criatura possuía centenas de pontos de vida.
-  - **A Revelação Mecânica:** O dano da magia acordou o besouro imediatamente no mesmo turno de combate! O besouro desferiu uma sequência brutal de ataques físicos, arrancando 190 pontos de vida de Grebolius num piscar de olhos.
-  - **O Milagre da Sobrevivência:** Com a vida despencando para **6 HP** (de 196), o sistema de recuo de emergência **`wimpy 45`** entrou em ação instantaneamente, executando fuga automática para cima (`u`) pela escada de ferro enferrujada. O Colar com Pedra Púrpura (ANTI-DT) e a fuga rápida impediram a 9ª morte histórica de Grebolius.
-  - **Regra de Ouro:** *Nunca usar `sleep` para atacar alvos de vida massiva se a magia subsequente não for capaz de matá-los num único golpe! O dano remove o sono instantaneamente.*
+- **Perigos dos Esgotos: Monstro da Lama e Besouro Gigante:**
+  - Na sala *Uma Curva Lamacenta no Sistema de Esgoto*, habitam dois `monstros da lama`. Veredito `consider`: Vida "Você é LOUCO!", Poder "Você tem PROBLEMAS!?". Fuga imediata recomendada.
+  - No fundo do Poço Escuro, o `besouro gigante` acorda instantaneamente ao tomar dano sob `sleep` e desferiu 190 de dano, ativando `wimpy 45` a 6 HP. Nunca usar sono seguido de dano fraco contra alvos gigantescos.
 
-- **Agressividade no Tabuleiro de Xadrez (Rank 8):**
-  - Ao inspecionar os ranks superiores do tabuleiro de xadrez em busca de peças ainda não catalogadas, Grebolius encontrou `A Rainha Negra` na sala do Rank 8.
-  - Ao contrário dos peões passivos, as peças da realeza negra são **extremamente agressivas** e engajam combate à primeira vista sem aviso prévio. Grebolius precisou recuar em fuga imediata (`flee`).
+- **Combate contra a Nobreza das Sombras (Tabuleiro de Xadrez):**
+  - O Cavaleiro Negro (rank 4, casa do cavalo) possui 300 moedas, armadura pesada e causa 10-18 de dano por turno; cede a três raios consecutivos.
+  - O Bispo Negro (rank 4, casa do bispo) possui 500 moedas, alta resistência a magia e requer quatro a cinco descargas de raio para tombar.
+
+---
+
+## 54. Impacto Moral e Diretiva de Preservação do Alinhamento (Dia 156)
+
+- **A Queda de Alinhamento e a Restauração Triunfal:**
+  - Após os testes errôneos com animais domésticos, o alinhamento moral havia caído para 198.
+  - Ao executar a caçada aos 10 monstros autênticos do mal (Azrael, cobra peçonhenta, rato gigante de esgoto, aranha das trevas, Cavaleiro Negro e Bispo Negro), o alinhamento de Grebolius disparou para **311** (`{<<<<<>>---} Você é bom`).
+  - O resultado comprovou matematicamente o sistema moral do DeBo MUD: matar criaturas malignas eleva expressivamente a virtude do herói.
+- **Diretiva Absoluta do Autor Peter:**
+  - Grebolius só mata o que for comprovadamente maligno ou monstruoso. Animais indefesos e criaturas pacíficas são estritamente intocáveis.
+

@@ -873,6 +873,24 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
   5. `python scripts/check_project.py` (0 erros).
   6. `python scripts/devolutiva.py` (0 falhas).
 - **Custo:** 900 moedas gastas no rottweiler, mitigadas por 320 moedas de saques de kobolds; Grebolius preservada viva com 887 moedas no bolso e a um passo do Nível 32.
-- **Próximo:** Executar o Plano 021: despertar no Templo, farmar os 146.230 EXP restantes no Milharal ou Masmorra para consagrar o Nível 32 e iniciar a próxima missão do autor Peter.
+### 2026-10-18 · Dia 156 (sessão 13) · Gemini 3.8 Flash (High)
+- **Mudou:** `AGENTS.md` (Invariante 15), `data/heroes/grebolius/diretiva_de_jogo.md` (§22), `data/heroes/grebolius/conhecimento.md` (§54), `automato/README.md`, `docs/agentes/boas_praticas.md` (§5), `automato/nucleo/driver/parsers.py` (`parse_alignment`) e `automato/CHANGELOG.md` (v1.6.11).
+- **Por quê:** Nova diretiva mandatória do autor Peter: *"sempre que a gente fizer alguma coisa que abaixe a nossa moral, que a gente pare e veja o que aconteceu e não faça de novo. Diretiva."* Diagnóstico comprovou que a compra e abate de 4 animais domésticos da Pet Shop no Capítulo 10 derrubou o alinhamento moral de Grebolius de 289 para 198 (-91 pontos). Embora ela permaneça em "um pouco bom" (100 a 349), qualquer queda de moral agora é tratada como sinal vermelho e proibição definitiva daquele alvo/ação.
+- **Como foi verificado:**
+  1. Criação da Invariante 15 em `AGENTS.md` e Seção 22 na `diretiva_de_jogo.md`.
+  2. Implementação de `parse_alignment` em `parsers.py` com extração do valor numérico, compass `{<<<<<>----}` e descrição textual.
+  3. Suíte de testes unitários (`test_*.py`: 141 testes OK), `check_project.py` (0 erros), `automato/verificar.py` (18/18 OK).
+- **Custo:** Nenhum. Blinda o alinhamento virtuoso de Grebolius, impedindo que ela deslize inadvertidamente para o alinhamento Neutro ou Mau.
+- **Próximo:** Seguir o Plano 021 rumo ao Nível 32, caçando apenas monstros hostis ou malignos que não penalizam a moral da heroína.
 
+### 2026-10-18 · Dia 156 (sessão 14) · Gemini 3.8 Flash (High)
+- **Mudou:** `data/heroes/grebolius/capitulos.json` (Capítulo 10 "Dez Cabeças Inéditas" concluído com narrativa revisada e 10 monstros comprovadamente malignos), `data/heroes/grebolius/evidence/dia156p.json` (consolidação dos 10 monstros do mal), `data/heroes/grebolius/monstros.md` (removidos pets/animais e adicionadas cobras, aranhas, rato gigante, cavaleiro e bispo negro), `data/heroes/grebolius/state.json` (Alinhamento 311, 1.719 moedas, 6.933.216 EXP), `data/heroes/grebolius/conhecimento.md` (§53 e §54), `maquina/verificacoes.md` (nobreza do xadrez, rato gigante de esgoto e escala de alinhamento moral), derivados por `sync_hero.py`, e criação de `data/heroes/grebolius/planos/plano022.md`.
+- **Por quê:** Diretiva categórica do autor Peter após /grill-me: *"A gente vai ignorar as coisas fofinhas e boas que você matou e vai censurar da história, talvez com algum comentário breve. Não vou contar como abates. A sua meta não foi concluída. Você só mata monstros. Você não mata nada que não é mau."* As presas indefesas foram censuradas e descartadas da contagem, exigindo caçar mais 5 monstros autênticos do mal para cumprir as 10 cabeças inéditas.
+- **Como foi verificado:**
+  1. Caçada viva aos 5 monstros malignos adicionais: cobra peçonhenta nos esgotos (+7.914 EXP, 1 moeda), pequena aranha nos esgotos (+2.556 EXP, 1 moeda), rato de esgoto gigante no Poço Escuro (+27.868 EXP, 30 moedas), Cavaleiro Negro no xadrez (+23.298 EXP, 300 moedas) e Bispo Negro no xadrez (+17.810 EXP, 500 moedas).
+  2. Alinhamento moral saltou de 198 para 311 (`{<<<<<>>---} Você é bom`), comprovando matematicamente no servidor que matar o mal eleva a virtude de Grebolius.
+  3. Grebolius recolhida ao Templo de Midgaard por `recall`, saciada com água do cantil e pão da sacola, salva (`save`) e adormecida (`sleep`), live_daemon finalizado limpo com `closed: True, save_confirmed: True, sleep_confirmed: True`. Vitals consolidados: HP 196/196, Mana 420/420, MV 144/144, 1.719 moedas de ouro, 6.933.216 EXP (faltam apenas 66.784 para o Nível 32!).
+  4. Validações formais: `sync_hero.py --hero grebolius --check`, `check_project.py` (0 erros) e `devolutiva.py` (0 falhas).
+- **Custo:** Nenhum. Zero mortes, caixa líquido aumentado em +832 moedas (totalizando 1.719 moedas), alinhamento recuperado para Bom (311) e EXP acumulada deixando o Nível 32 a um passo minúsculo.
+- **Próximo:** Executar o Plano 022: acordar no Templo, farmar os 66.784 de EXP restantes no xadrez/esgotos para conquistar o Nível 32 e aguardar a próxima aventura definida pelo autor Peter.
 

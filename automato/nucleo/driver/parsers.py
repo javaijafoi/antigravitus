@@ -112,6 +112,23 @@ def parse_vitals(text):
 
     return {"hp": hp, "mana": mana, "mv": mv}
 
+def parse_alignment(text):
+    """
+    Extrai o alinhamento moral a partir de 'score' ou 'score tudo':
+    Exemplo:
+        Alinhamento: {<<<<<>----}   223 - Você é um pouco bom.
+    Retorna dicionário com 'value' (int), 'compass' (str), 'description' (str), ou None.
+    """
+    if not text:
+        return None
+    match = re.search(r'Alinhamento:\s*(\{.*?\})?\s*(-?\d+)\s*-\s*([^\r\n]+)', text, re.IGNORECASE)
+    if match:
+        compass = (match.group(1) or "").strip()
+        val = int(match.group(2))
+        desc = match.group(3).strip()
+        return {"value": val, "compass": compass, "description": desc}
+    return None
+
 def parse_supplies(text):
     """Fome e sede a partir do que o servidor mostra.
 

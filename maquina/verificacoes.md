@@ -145,11 +145,26 @@ Fonte: [evidence/dia156p.json](../data/heroes/grebolius/evidence/dia156p.json). 
 
 - **Sono Arcano (`sleep`) e Dano Não Letal:** No CircleMUD/DeBo, uma criatura colocada para dormir via `cast 'sleep'` permanece adormecida até expirar ou sofrer dano. Se o dano infligido NÃO for letal (ex.: um único raio de 65 de dano num `besouro gigante` com mais de 300 HP), a criatura acorda imediatamente no mesmo turno de combate e contra-ataca com fúria total! Grebolius tomou 190 pontos de dano instantâneo e foi salva a 6 HP pelo recuo de emergência `wimpy 45` pela escada de ferro. Contra alvos com vida massiva, `sleep` não serve para ataque direto a menos que haja dano concentrado capaz de encerrar o combate em um golpe.
 - **Agressividade no Tabuleiro de Xadrez (Rank 8):** Ao contrário dos peões passivos dos ranks inferiores, peças reais como `A Rainha Negra` atacam à vista assim que o personagem entra na sala. O recuo via `flee` funciona, mas o rank 8 exige extrema cautela.
-- **Comportamento de Animais de Estimação (`Loja de Animais`):** Criaturas adquiridas na Loja de Animais (`buy gatinho`, `buy cachorrinho`, `buy beagle` por 300 moedas cada; `buy rottweiler` por 900 moedas) tornam-se pets seguidores automáticos. Elas acompanham o jogador por comandos de movimento. Uma vez fora da cidade em campo aberto (ex.: `O Grande Campo de Midgaard`), é possível atacá-las e abatê-las livremente sem intervenção de guardas urbanos ou repercussão de crime, concedendo EXP (+252, +288, +522 e +810 EXP respectivamente) e qualificando-as como abates válidos no registro de caça.
+- **Comportamento de Animais de Estimação (`Loja de Animais`):** Criaturas adquiridas na Loja de Animais (`buy gatinho`, `buy cachorrinho`, `buy beagle` por 300 moedas cada; `buy rottweiler` por 900 moedas) tornam-se pets seguidores automáticos. Elas acompanham o jogador por comandos de movimento. Uma vez fora da cidade em campo aberto (ex.: `O Grande Campo de Midgaard`), é possível atacá-las e abatê-las livremente sem intervenção de guardas urbanos ou repercussão de crime, concedendo EXP (+252, +288, +522 e +810 EXP respectivamente) e qualificando-as como abates válidos no registro de caça do MUD (embora sumariamente rejeitadas para heróis de alinhamento bom).
 - **Distribuição de Mobs e Saques nos Kobolds de Jareth:**
   - `where lider` localizou com precisão o líder kobold (`o líder kobold - Um Amplo Salão`) a partir da caverna.
   - Veredito `consider` para kobolds e para o líder kobold no nível 31 é "É uma perda de tempo" (fácil).
   - Saques observados: `um ladrão kobold` (100 moedas), `um kobold` (60 moedas), `o líder kobold` (160 moedas, carregando no cadáver uma lâmina improvisada e um escudo pequeno).
   - Geografia de perigo: A caverna ao norte de Jareth possui saída norte logo na entrada (*Entrando na Caverna*) que leva a *Um Pequeno Abismo* (queda/risco de DT). A rota segura para os kobolds segue ao sul (*Avançando na Caverna*) e depois a oeste.
+
+## 2026-10-18 — Nobreza das Sombras do Xadrez, Rato de Esgoto Gigante e Escala Moral de Alinhamento
+
+Fonte: [evidence/dia156p.json](../data/heroes/grebolius/evidence/dia156p.json). Agente: `Gemini 3.8 Flash (High)`.
+
+- **Nobreza das Sombras no Tabuleiro de Xadrez (Rank 4):**
+  - `O Cavaleiro Negro` (Casa Branca): Veredito `consider`: Vida "Você é LOUCO!", Poder "Perfeito!". Resiste a 2 raios e tomba no 3º raio. Rendimento: **23.298 EXP** e **300 moedas de ouro**.
+  - `O Bispo Negro` (Casa Preta): Veredito `consider`: Vida "Você é LOUCO!", Poder "Você precisaria de muita sorte!". Alta resistência arcana, necessitou de 4 descargas de raio (`lightning bolt`) e 1 golpe marcial de finalização. Rendimento: **17.810 EXP** e **500 moedas de ouro**.
+  - Ambos são passivos na entrada da sala (não agram imediatamente), permitindo preparação de feitiços pelo atacante.
+- **Rato de Esgoto Gigante em *O Poço Escuro* (Esgotos de Midgaard):**
+  - Criatura com veredito `consider` de Vida "Você é LOUCO!" (Nível: Muito fácil). Necessitou de 3 descargas de `lightning bolt` consecutivas. Rendimento extraordinário: **27.868 EXP** e 30 moedas de ouro.
+- **Dinâmica Matemática de Alinhamento Moral:**
+  - O abate de criaturas inequivocamente malignas e de alta experiência nos esgotos e no exército das sombras elevou o alinhamento moral de Grebolius de 198 para **311** (`{<<<<<>>---} Você é bom`), confirmando que a eliminação do mal no DeBo MUD atua como alavanca mecânica direta de virtude arcana.
+
+
 
 
