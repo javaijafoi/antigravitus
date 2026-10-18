@@ -11,6 +11,15 @@
       "chapter_start": 0,
       "chapter_end": 10,
       "subtitle": "Um prólogo e os capítulos de uma identidade em reconstrução."
+    },
+    {
+      "id": "tomo-2",
+      "number": 2,
+      "roman": "II",
+      "title": "Tomo II — As Chaves do Tabuleiro",
+      "chapter_start": 11,
+      "chapter_end": 20,
+      "subtitle": "As grandes jogadas de poder, as autoquests arcanas e os segredos do reino."
     }
   ],
   "chapters": [
@@ -1314,17 +1323,17 @@
     {
       "id": 10,
       "tomo": 1,
-      "title": "Dez Cabeças Inéditas",
+      "title": "Dez Cabeças Inéditas e o Fecho do Primeiro Tomo",
       "kind": "marco",
       "status": "concluido",
-      "goal": "Matar 10 monstros malignos que Grebolius ainda não matou no MUD (cumprido integralmente com 10 monstros genuinamente do mal: Azrael, bebê dragão, ladrão kobold, kobold, líder kobold, cobra peçonhenta, pequena aranha, rato de esgoto colossal, Cavaleiro Negro e Bispo Negro).",
+      "goal": "Matar 10 monstros malignos que Grebolius ainda não matou no MUD (cumprido integralmente com 10 monstros genuinamente do mal: Azrael, bebê dragão, ladrão kobold, kobold, líder kobold, cobra peçonhenta, pequena aranha, rato de esgoto colossal, Cavaleiro Negro e Bispo Negro) e fechar o Tomo I com a reflexão dos Capítulos 0 a 10.",
       "closed_on_day": 156,
       "days": [
         156
       ],
       "date": "2026-10-18",
-      "in_game_time": "A censura moral do autor, os canais fétidos e o xeque às sombras",
-      "excerpt": "A ordem era abater dez criaturas inéditas, mas a minha primeira ideia 'criativa' custou um puxão de orelhas editorial: heroína de alinhamento bom não mata bichos indefesos e nem pet de loja. Censuradas as bobagens, fui mandada caçar o mal autêntico. Desci aos esgotos pestilentos para eletrocutar cobras peçonhentas, aranhas das trevas e um rato titânico; depois marchei ao Tabuleiro de Xadrez para desafiar a própria nobreza das sombras — o Cavaleiro e o Bispo Negro. Dez monstros do mal tombaram, o alinhamento disparou para 311 e o Grau 32 bate à porta.",
+      "in_game_time": "A censura moral do autor, os monstros autênticos e a consagração do Primeiro Tomo",
+      "excerpt": "A ordem era abater dez criaturas inéditas, mas a minha primeira ideia 'criativa' custou um puxão de orelhas editorial: heroína de alinhamento bom não mata bichos indefesos e nem pet de loja. Censuradas as bobagens, fui mandada caçar o mal autêntico. Desci aos esgotos pestilentos para eletrocutar cobras peçonhentas, aranhas das trevas e um rato titânico; depois marchei ao Tabuleiro de Xadrez para desafiar a nobreza das sombras — o Cavaleiro e o Bispo Negro. Dez monstros do mal tombaram, o alinhamento disparou para 311 e o Tomo I se encerra com uma reflexão solene: a elfa que acordou sem nome no lixo agora tem virtude, poder arcano e honra cravada na pedra.",
       "parts": [
         {
           "number": 1,
@@ -1339,7 +1348,7 @@
               "note": "Conclusão definitiva do Capítulo 10 com 10 abates de monstros genuinamente malignos e inéditos: 1) Azrael no Covil de Gargamel (+612 EXP, 250 moedas); 2) O bebê dragão na masmorra dos novatos (+1.116 EXP); 3) Um ladrão kobold na entrada da caverna (+450 EXP, 100 moedas); 4) Um kobold na Caverna dos Kobolds (+360 EXP, 60 moedas); 5) O líder kobold no Amplo Salão (+630 EXP, 160 moedas); 6) Uma cobra peçonhenta nos esgotos (+7.914 EXP, 1 moeda); 7) Uma pequena aranha tecedora nos esgotos (+2.556 EXP, 1 moeda); 8) Um rato de esgoto faminto e colossal (+27.868 EXP, 30 moedas); 9) O Cavaleiro Negro no xadrez (+23.298 EXP, 300 moedas); 10) O Bispo Negro no xadrez (+17.810 EXP, 500 moedas). Veto moral e censura de animais inofensivos; alinhamento elevado para 311 (Bom); 1.719 moedas no bolso; 6.933.216 EXP (faltam apenas 66.784 para o Nível 32); repouso seguro no Templo. Agente: Gemini 3.8 Flash (High)."
             }
           ],
-          "summary": "Capítulo 10 concluído: 'Dez Cabeças Inéditas'. Após o veto moral do autor à caça de animais inofensivos e pets, Grebolius recalibrou sua bússola arcana e cumpriu a meta com 10 monstros do mal autênticos e inéditos. A jornada cobriu o Covil de Gargamel (Azrael), Catacumbas dos Novatos (bebê dragão), Caverna dos Kobolds (ladrão, soldado e líder kobold), Esgotos de Midgaard (cobra, pequena aranha e rato de esgoto titânico de 28k EXP) e o Tabuleiro de Xadrez (Cavaleiro Negro e Bispo Negro). O alinhamento disparou de 198 para 311 ('Você é bom'). Grebolius repousa no Templo com 196 HP, 420 Mana, 1.719 moedas de ouro e 6.933.216 EXP, a apenas 66.784 de alcançar o Nível 32."
+          "summary": "Capítulo 10 concluído: 'Dez Cabeças Inéditas e o Fecho do Primeiro Tomo'. Após o veto moral do autor à caça de animais inofensivos e pets, Grebolius recalibrou sua bússola arcana e cumpriu a meta com 10 monstros do mal autênticos e inéditos. A jornada cobriu o Covil de Gargamel (Azrael), Catacumbas dos Novatos (bebê dragão), Caverna dos Kobolds (ladrão, soldado e líder kobold), Esgotos de Midgaard (cobra, pequena aranha e rato de esgoto titânico de 28k EXP) e o Tabuleiro de Xadrez (Cavaleiro Negro e Bispo Negro). O alinhamento disparou de 198 para 311 ('Você é bom'). Grebolius repousa no Templo com 196 HP, 420 Mana, 1.719 moedas de ouro e 6.933.216 EXP, selando o Tomo I."
         }
       ],
       "content": [
@@ -1352,10 +1361,16 @@
         "Para os dois últimos alvos, recusei a sujeira dos canos e marchei para o grande desafio tático: o Tabuleiro de Xadrez, onde o exército do Rei Negro marchará para sempre em eterna guerra mágica. Na quarta fileira, pisei numa Casa Branca e encontrei o Cavaleiro Negro montado em seu corcel espectral. Três relâmpagos romperam a armadura de ferro escuro do campeão das sombras, derrubando cavalo e cavaleiro e rendendo trezentas moedas e mais de vinte e três mil de experiência.",
         "A décima e definitiva cabeça me esperava na Casa Preta adjacente: o Bispo Negro, o prelado arcano das trevas. Seus cânticos sombrios tentaram embotar meus sentidos, mas quem carrega trinta e um graus de magia pura não se curva a báculo profano. Despejei quatro relâmpagos colossais sobre a mitra sombria do clérigo e finalizei com um golpe de misericórdia. O bispo caiu desfeito em poeira, deixando quinhentas moedas reluzentes no piso xadrez e dezessete mil e oitocentos pontos de glória.",
         "Dez monstros do mal. Dez cabeças autênticas, cruéis e inéditas, extirpadas da face da terra sem tocar num único fio de criatura inocente. Quando usei a palavra mágica de retorno ao Templo de Midgaard e consultei a verdade dos meus espíritos, vi o milagre operado pela lâmina justa: meu alinhamento disparou para trezentos e onze pontos — '{<<<<<>>---} Você é bom'. A virtude não só foi restaurada, como brilhou mais forte.",
-        "Sacio minha sede no cantil, mastigo um pedaço do pão da sacola e adormeço sob a guarda sagrada do altar com mil setecentas e dezenove moedas no cofre. A conta de experiência marca seis milhões novecentas e trinta e três mil — faltam meros sessenta e seis mil para o trigésimo segundo grau. O Capítulo 10 está pago, purificado e selado."
+        "Mas ao sentar nos degraus de mármore do Templo para recuperar o fôlego, percebi que este décimo capítulo não encerrava apenas uma tarde de relâmpagos. Ele fecha o primeiro tomo de toda a minha existência. 'Tomo I — O Nome no Vazio'. Um título que durante muito tempo pareceu mais uma sentença do que uma promessa.",
+        "Olho para trás e quase não reconheço a criatura que acordou no chão fétido do Depósito de Lixo no Prólogo. Eu era um nada sem memória, vestindo um capuz surrado de homem para não ser linchada, engolindo humilhações e inventando a lenda de um reino goblin que nem existia na minha carne elfa. A cidade me quebrou os ossos e me ensinou a sangrar. No escuro dos esgotos, a serpente me arrancou a vida e o Vazio devorou o rosto de minha mãe e as canções que eu sequer lembrava ter cantado. Morri quatro vezes. Renasci quatro vezes na Fonte da Vida, sempre mais fria, sempre com menos certezas sobre quem eu era.",
+        "Mas a dor forjou a disciplina. O ferro da Torre Negra e as armaduras do xadrez me ensinaram que o ouro tem peso e que ganância cega atrai maldições. O milharal me ensinou que para colher vitória é preciso contar passos e ter paciência para ouvir treze falas de um patrono sem cortar a voz de quem ensina. E a jornada até a mina dos Smurfs me deu a lição mais preciosa de todas: o preço não se mata com raio. Moeda se conquista com trabalho limpo, e a verdadeira luz não estava na ambição cega de um jarro de estrelas, mas na humildade de uma tocha de quinze moedas entregue a quem tinha medo do escuro.",
+        "E hoje, a última lição do tomo: poder mágico sem honra é tirania. O escriba me puxou pela gola quando tentei o atalho covarde, e o mundo me recompensou quando enfrentei as feras autênticas das sombras. Não sou mais um bicho assustado que precisa mentir a própria voz nos becos, nem uma mercenária que vende a alma por números. Tenho trinta e um graus de sabedoria nos punhos, quatrocentos e vinte pontos de mana pulsando sob o peito, um colar de pedra púrpura que zomba das ciladas da morte, e uma bússola moral inabalável.",
+        "O Tomo I começou com um corpo sem nome acordando no lixo. E termina aqui, com uma elfa em paz diante dos deuses, cujo nome ecoa forte demais para que o Vazio possa apagar. O primeiro volume está escrito, corrigido e selado. Que venham os tabuleiros do próximo tomo."
       ],
       "tags": [
         "Dez Cabeças Inéditas",
+        "Fecho do Tomo I",
+        "O Nome no Vazio",
         "Censura Editorial",
         "Monstros do Mal",
         "Esgotos de Midgaard",
@@ -1363,8 +1378,7 @@
         "Cavaleiro Negro",
         "Bispo Negro",
         "Alinhamento Bom",
-        "Nível 31",
-        "Rumo ao Nível 32"
+        "Nível 31"
       ],
       "source_kind": "live",
       "evidence": [
@@ -1378,6 +1392,58 @@
       "directive": {
         "author_quote": "A gente vai ignorar as coisas fofinhas e boas que você matou e vai censurar da história, talvez com algum comentário breve. Não vou contar como abates. A sua meta não foi concluída. Você só mata monstros. Você não mata nada que não é mau.",
         "rule": "Abater 10 monstros genuinamente malignos e inéditos na campanha, excluindo sumariamente animais e seres pacíficos, preservando o alinhamento bom e a ética heroica."
+      }
+    },
+    {
+      "id": 11,
+      "tomo": 2,
+      "title": "Xeque-Mate nas Sombras",
+      "kind": "missao",
+      "status": "em_curso",
+      "goal": "Executar a autoquest Xeque-mate no Grande Tabuleiro de Xadrez (desbloqueada no Nível 30); caso seja resolvida rapidamente (em menos de 3 horas de tempo real), avançar para a autoquest Ajuda Mágica.",
+      "days": [
+        156
+      ],
+      "date": "2026-10-18",
+      "in_game_time": "A abertura do Tomo II e o primeiro lance contra as peças negras",
+      "excerpt": "Abertura do Tomo II: com o Nível 31 consolidado e as defesas reforçadas, Grebolius aceita a convocação do Grande Tabuleiro de Xadrez para a autoquest Xeque-mate. Se o xeque for imposto em menos de três horas do mundo real, a marcha segue imediatamente para os mistérios de Ajuda Mágica.",
+      "parts": [
+        {
+          "number": 1,
+          "title": "A Convocação do Segundo Tomo",
+          "day": 156,
+          "date": "2026-10-18",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia156p.json",
+              "day": 156,
+              "note": "Preparativos do Capítulo 11 e abertura do Tomo II: Grebolius repousa em segurança no Templo de Midgaard (196/196 HP, 420/420 Mana, 1.719 moedas de ouro, Alinhamento 311 e 6.933.216 EXP, a 66.784 EXP do Nível 32). Agente: Gemini 3.8 Flash (High)."
+            }
+          ],
+          "summary": "Capítulo 11 aberto no Tomo II. Meta definida pelo autor: resolver Xeque-mate no Xadrez e, se concluído em menos de 3 horas de tempo real, executar também Ajuda Mágica."
+        }
+      ],
+      "tags": [
+        "Xeque-mate",
+        "Ajuda Mágica",
+        "Tomo II",
+        "Autoquest",
+        "Grande Tabuleiro de Xadrez",
+        "Nível 31"
+      ],
+      "source_kind": "live",
+      "evidence": [
+        {
+          "document": "evidence/dia156p.json",
+          "day": 156,
+          "note": "Capítulo 11 aberto no Tomo II com Grebolius em repouso no Templo de Midgaard. Agente: Gemini 3.8 Flash (High)."
+        }
+      ],
+      "continues_chapter": 10,
+      "directive": {
+        "author_quote": "um cap 11 vai ser fazer xeque mate e se for facil (terminar em menos de 3h do mundo real) fazer tbm ajuda magica.",
+        "rule": "Prioridade 1: Executar a autoquest Xeque-mate no Grande Tabuleiro de Xadrez. Prioridade 2: Se terminar em menos de 3h de tempo real, emendar imediatamente com a autoquest Ajuda Mágica."
       }
     }
   ]

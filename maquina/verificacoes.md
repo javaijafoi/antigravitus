@@ -179,6 +179,17 @@ Fonte: [evidence/dia156p.json](../data/heroes/grebolius/evidence/dia156p.json). 
   - Imunidade ou resistência a sono (`save vs spell`) em criaturas do tipo monstro da lama/elementais.
   - Duração do sono com Grebolius no nível 31 (420 mana).
 
+## 2026-10-18 — Autoquests de Nível 30+ no DeBo: `Xeque-mate` e `Ajuda Mágica`
+
+Fonte: [evidence/dia156j.json](../data/heroes/grebolius/evidence/dia156j.json:1022) (`autoquest listar`). Agente: `Gemini 3.8 Flash (High)`.
+
+- **Desbloqueio de Autoquests ao Atingir o Nível 30:**
+  - `Xeque-mate`: Requisito: A partir do nível 30, qualquer alinhamento. Desenvolve-se no Grande Tabuleiro de Xadrez.
+  - `Ajuda Mágica`: Requisito: A partir do nível 30, qualquer alinhamento.
+  - O catálogo do DeBo MUD remove automaticamente de `Autoquests Disponíveis Futuramente Nesta Encarnação` as missões cujos requisitos de nível forem preenchidos, movendo-as para `Autoquests Disponíveis Agora:`.
+  - Como Grebolius está no Nível 31, ambas tornaram-se elegíveis para ativação direta sem barreira de nível ou classe.
+  - Protocolo operacional (Capítulo 11): priorizar `Xeque-mate`; se concluída em menos de 3h de relógio no mundo real, emendar imediatamente com `Ajuda Mágica`.
+
 
 
 

@@ -124,13 +124,14 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 * Peso 102/115 kg; conferir capacidade antes de comprar poção.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
-**Capítulo 11: Alcançar o Nível 32 e Nova Expedição ou Autoquest**
-Com Grebolius descansada, abastecida e a apenas 66.784 de EXP para o Nível 32, realizar uma sessão de caça rápida no Milharal ou Masmorra para alcançar o nível 32, ou avançar para nova autoquest recomendada pelo autor.
+**Capítulo 11: Xeque-Mate nas Sombras (Tomo II) e Ajuda Mágica**
+No Tomo II, executar a autoquest Xeque-mate no Grande Tabuleiro de Xadrez; se for rápida (< 3h de tempo real), avançar para a autoquest Ajuda Mágica.
 * Suprimentos plenos: cantil saciado e pães na mochila de Pellinore.
 * Vitals e mana restaurados ao máximo (196 HP, 420 Mana).
 * Colar com pedra púrpura (ANTI-DT) e coleira do dragão equipados no pescoço (CA 143, Wimpy 45).
 * Ouro: 1.719 moedas na mão.
 * EXP: faltam míseros 66.784 pontos para atingir o Nível 32.
+* Identificar o NPC iniciador da autoquest Xeque-mate no Tabuleiro de Xadrez.
 
 ## ✦ Origem e Incertezas
 Fonte do estado: Execução ao vivo por Gemini 3.8 Flash (High); evidence/dia156p.json. Conclusão integral do Capítulo 10 com 10 abates de monstros puramente malignos e inéditos após censura e expurgo editorial de animais inofensivos: 1) Azrael (250 moedas); 2) Bebê dragão; 3) Ladrão kobold (100 moedas); 4) Kobold (60 moedas); 5) Líder kobold (160 moedas); 6) Cobra dos esgotos (1 moeda); 7) Pequena aranha dos esgotos (1 moeda); 8) Rato de esgoto no Poço Escuro (30 moedas, 28k EXP); 9) O Cavaleiro Negro no Tabuleiro (300 moedas, 23k EXP); 10) O Bispo Negro no Tabuleiro (500 moedas, 18k EXP). Retorno ao Templo por recall, repouso pleno salvo e dormindo com 196/196 HP, 420/420 Mana, 144/144 MV, 1.719 moedas de ouro, Alinhamento 311 (Bom) e 6.933.216 EXP (faltam apenas 66.784 para o Nível 32)..

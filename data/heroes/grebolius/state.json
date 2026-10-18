@@ -83,16 +83,17 @@
   },
   "next_objective": {
     "mission_id": "capitulo-11",
-    "title": "Capítulo 11: Alcançar o Nível 32 e Nova Expedição ou Autoquest",
-    "next_step": "Com Grebolius descansada, abastecida e a apenas 66.784 de EXP para o Nível 32, realizar uma sessão de caça rápida no Milharal ou Masmorra para alcançar o nível 32, ou avançar para nova autoquest recomendada pelo autor.",
+    "title": "Capítulo 11: Xeque-Mate nas Sombras (Tomo II) e Ajuda Mágica",
+    "next_step": "No Tomo II, executar a autoquest Xeque-mate no Grande Tabuleiro de Xadrez; se for rápida (< 3h de tempo real), avançar para a autoquest Ajuda Mágica.",
     "missing_preparation": [
       "Suprimentos plenos: cantil saciado e pães na mochila de Pellinore.",
       "Vitals e mana restaurados ao máximo (196 HP, 420 Mana).",
       "Colar com pedra púrpura (ANTI-DT) e coleira do dragão equipados no pescoço (CA 143, Wimpy 45).",
       "Ouro: 1.719 moedas na mão.",
-      "EXP: faltam míseros 66.784 pontos para atingir o Nível 32."
+      "EXP: faltam míseros 66.784 pontos para atingir o Nível 32.",
+      "Identificar o NPC iniciador da autoquest Xeque-mate no Tabuleiro de Xadrez."
     ],
-    "plan_document": "planos/plano022.md"
+    "plan_document": "planos/plano024.md"
   },
   "skills": [
     {

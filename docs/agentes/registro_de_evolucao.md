@@ -925,7 +925,20 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
   5. Suíte `scripts/test_guarda_cota.py` atualizada com 7 testes unitários cobrindo thresholds, intervalos, handoffs diário/semanal e isolamento contra falsos positivos.
   6. Testes globais (`test_*.py`: 148 testes OK), `check_project.py` (0 erros), `automato/verificar.py` (18/18 OK).
 - **Custo:** Nenhum.
-- **Próximo:** Seguir o Plano 023 para atingir o Nível 32 e testar controle de multidão com sono arcano contra os monstros da lama.
+- **Próximo:** Seguir o Plano 024 para iniciar a autoquest Xeque-mate no Tabuleiro de Xadrez e, se em menos de 3h, executar Ajuda Mágica.
+
+### 2026-10-18 · Dia 156 (sessão 18) · Gemini 3.8 Flash (High)
+- **Mudou:** `data/heroes/grebolius/capitulos.json`, `data/heroes/grebolius/conhecimento.md` (§56), `maquina/verificacoes.md`, `data/heroes/grebolius/state.json`, `data/heroes/grebolius/ficha.md` e `data/heroes/grebolius/planos/plano024.md`.
+- **Por quê:** Diretiva direta do autor Peter: *"Escreve o capitulo 10, que tem que trazer não só o que foi feito no cap mas uma reflexao desse tomo (tomo I= cap 1 a 10). Adiciona um novo tomo, um cap 11 vai ser fazer xeque mate e se for facil (terminar em menos de 3h do mundo real) fazer tbm ajuda magica."*
+- **Como foi verificado:**
+  1. `capitulos.json`: Capítulo 10 atualizado para *"Dez Cabeças Inéditas e o Fecho do Primeiro Tomo"*, incorporando a narrativa da caçada aos 10 monstros do mal inéditos, o veto moral e uma reflexão completa do Tomo I (do despertar no lixo no Prólogo, as mortes, o ferro da Torre, a sabedoria dos Smurfs/Gargamel até a consolidação da virtude e poder arcano).
+  2. `tomos` em `capitulos.json` expandido com o **Tomo II ("As Chaves do Tabuleiro")**, cobrindo os capítulos 11 a 20.
+  3. Capítulo 11 aberto no Tomo II com status `em_curso`, com meta estabelecida para a autoquest `Xeque-mate` e avanço imediato para `Ajuda Mágica` se resolvida em menos de 3h de tempo real.
+  4. Criação do `plano024.md` estruturando o ponto de continuação para execução do Capítulo 11.
+  5. `sync_hero.py --hero grebolius` e `--check` (derivados conferidos).
+  6. `check_project.py` (0 erros, 8 avisos esperados), `mandabala.py` validando o Plano 024 e `devolutiva.py` (0 falhas).
+- **Custo:** Nenhum.
+- **Próximo:** Executar o Plano 024: iniciar a autoquest Xeque-mate no Grande Tabuleiro de Xadrez e, caso rápida (< 3h de tempo real), avançar para Ajuda Mágica.
 
 
 

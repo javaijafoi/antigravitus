@@ -2281,5 +2281,20 @@ Fonte: [evidence/dia156k.json](evidence/dia156k.json). Sessão ao vivo via `auto
   2. A salvaguarda contra magia (`save vs spell`) dos monstros da lama resiste ao sono arcano?
   3. A duração do sono no Nível 31 de Grebolius (420 mana) é suficiente para derrotar o primeiro monstro antes do despertar espontâneo do segundo?
 
+---
+
+## 56. Tomo II: Desbloqueio das Autoquests de Nível 30+ e o Tabuleiro das Sombras (Dia 156)
+
+- **Fechamento do Tomo I e Abertura do Tomo II:**
+  - O Tomo I ("O Nome no Vazio", Capítulos 0 a 10) consolidou a reconstrução da identidade de Grebolius, o domínio da economia de suprimentos, o alcance de 420 de mana, o Colar com Pedra Púrpura anti-DT e a ética heroica inegociável.
+  - O Tomo II ("As Chaves do Tabuleiro", Capítulos 11 a 20) foca na resolução das grandes autoquests urbanas e mundanas desbloqueadas a partir do Nível 30.
+- **Catálogo de Autoquests Desbloqueadas no Nível 30:**
+  - `Xeque-mate`: Exige nível 30+ (qualquer alinhamento). Desenvolve-se no Grande Tabuleiro de Xadrez, desafiando a estratégia das peças mágicas.
+  - `Ajuda Mágica`: Exige nível 30+ (qualquer alinhamento). Focada nas tradições arcanas da cidade.
+- **Diretiva Temporal e Estratégica do Autor Peter:**
+  - Prioridade máxima no Capítulo 11: Iniciar e executar a autoquest `Xeque-mate`.
+  - Condição de extensão: Se a autoquest `Xeque-mate` for concluída com rapidez (menos de 3 horas de tempo real), a sessão deve emendar imediatamente com a autoquest `Ajuda Mágica`.
+
+
 
 
