@@ -11,10 +11,11 @@ As datas usam o **dia de jogo**.
   - Em ambos os casos de corte, executa-se o mesmo protocolo rigoroso: retorno ao Templo por `recall`, alimentação com pão, hidratação com água do cantil, salvamento (`save`), sono (`sleep`), fechamento limpo de socket e geração do plano de handoff numerado documentando o motivo e tempo até o reset.
 - **MOTOR (`automato/camadas/guarda_cota.py`)**:
   - Implementada função `consultar_detalhes_cota(modelo_alvo)` com extração precisa de `horas_restantes`, `is_weekly`, `tipo` ("semanal" vs "diario"), `threshold` (0.05 vs 0.10) e `reset_formatado`.
+  - **ISOLAMENTO ESTRITO DO MODELO ATIVO**: Removido qualquer fallback para outros modelos em `consultar_detalhes_cota()`. O automato monitora única e exclusivamente o modelo que está rodando a sessão (`gemini-3.8-flash` por padrão ou via `MUD_MODEL`/`ANTIGRAVITY_MODEL`). Se a cota de outro modelo (ex.: Argon em 0.6%) estiver esgotada, ela é 100% ignorada e jamais interrompe a execução.
   - Função `intervalo_recomendado` adaptada para janelas semanais (35 min para >20%, 15 min para >10%, 5 min para >6%, 1 min para <=6%).
 - **CLI (`scripts/checar_cota.py`)**:
   - Exibição de colunas `Tipo` (Semanal/Diário), `Corte` (5%/10%), `Reseta Em` e `Status` (OK/ATENÇÃO/CRÍTICO).
-- **TESTES**: Suíte `scripts/test_guarda_cota.py` criada com 5 testes unitários validando thresholds, intervalos adaptativos e disparos de handoff (147 testes OK no projeto).
+- **TESTES**: Suíte `scripts/test_guarda_cota.py` com 7 testes unitários validando thresholds, intervalos, handoffs e garantia de isolamento do modelo ativo contra falsos positivos (148 testes OK no projeto).
 
 ## v1.6.12 — Dia 156 · Postura Heroica Proativa e Dever de Questionar o Autor (AGENTS.md Invariante 15)
 - **DIRETIVA DO AUTOR (AGENTS.md Invariante 15 / Diretiva de Jogo §22)**:

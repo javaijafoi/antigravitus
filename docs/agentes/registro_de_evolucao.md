@@ -916,15 +916,17 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 
 ### 2026-10-18 · Dia 156 (sessão 17) · Gemini 3.8 Flash (High)
 - **Mudou:** `automato/camadas/guarda_cota.py`, `scripts/checar_cota.py`, `scripts/test_guarda_cota.py`, `automato/CHANGELOG.md` (v1.6.13), `automato/DECISOES.md` (§12) e `AGENTS.md` (§13).
-- **Por quê:** Diretiva direta do autor Peter: *"Adiciona monitorar o weekly limit do modelo tbm, se tiver abaixo de 5%, vas o mesmo que faz hj qdo o diario ta acabando"*. Modelos como o Gemini possuem quotas com reset semanal (~129h-130h) em que um corte prematuro a 10% desperdiçaria horas de execução útil, mas deixar esgotar sem corte paralisaria o agente por dias.
+- **Por quê:** Diretivas explícitas do autor Peter: *"Adiciona monitorar o weekly limit do modelo tbm, se tiver abaixo de 5%, vas o mesmo que faz hj qdo o diario ta acabando"* e *"Importante, eu só estou me preocupando de cortar o modelo que está rodando. Então, se eu estou rodando o 3.8 e o semanal do outro modelo está acabando, não me importa."*
 - **Como foi verificado:**
   1. `guarda_cota.py` atualizado com `consultar_detalhes_cota`: calcula tempo restante até reset e classifica em `semanal` (> 24h) com corte em `<= 5%` (0.05) ou `diario` (<= 24h) com corte em `<= 10%` (0.10).
-  2. Ajustado `intervalo_recomendado` com janelas adaptativas específicas para semanal.
-  3. `checar_cota.py` atualizado exibindo colunas de Tipo (Semanal/Diário), Limite Crítico (5%/10%), Reseta Em e Status (OK/ATENÇÃO/CRÍTICO).
-  4. Suíte `scripts/test_guarda_cota.py` criada com 5 testes unitários cobrindo thresholds, intervalos e handoffs diário/semanal.
-  5. Testes globais (`test_*.py`: 147 testes OK), `check_project.py` (0 erros), `automato/verificar.py` (18/18 OK).
+  2. **Isolamento estrito do modelo ativo**: Removido qualquer fallback genérico para outros modelos. O automato consulta e avalia única e exclusivamente o modelo em execução (`gemini-3.8-flash` ou via `MUD_MODEL`/`ANTIGRAVITY_MODEL`). Outros modelos com cota esgotada (ex.: Argon em 0.6%) são expressamente ignorados e não afetam a sessão.
+  3. Ajustado `intervalo_recomendado` com janelas adaptativas específicas para semanal.
+  4. `checar_cota.py` atualizado exibindo colunas de Tipo (Semanal/Diário), Limite Crítico (5%/10%), Reseta Em e Status (OK/ATENÇÃO/CRÍTICO).
+  5. Suíte `scripts/test_guarda_cota.py` atualizada com 7 testes unitários cobrindo thresholds, intervalos, handoffs diário/semanal e isolamento contra falsos positivos.
+  6. Testes globais (`test_*.py`: 148 testes OK), `check_project.py` (0 erros), `automato/verificar.py` (18/18 OK).
 - **Custo:** Nenhum.
 - **Próximo:** Seguir o Plano 023 para atingir o Nível 32 e testar controle de multidão com sono arcano contra os monstros da lama.
+
 
 
 

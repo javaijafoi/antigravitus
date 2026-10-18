@@ -59,7 +59,7 @@ class TestGuardaCota(unittest.TestCase):
         }
         # Cota de 4% em limite semanal (corte 5%) -> deve disparar handoff e retornar False
         self.assertFalse(guarda_cota.checar_guarda(forcar=True))
-        mock_handoff.assert_called_once_with(0.04, tipo="semanal", reset_fmt="120h 00m")
+        mock_handoff.assert_called_once_with(0.04, tipo="semanal", reset_fmt="120h 00m", modelo="gemini-3.8-flash")
 
     @patch("guarda_cota.executar_handoff_completo")
     @patch("guarda_cota.consultar_detalhes_cota")
@@ -75,8 +75,48 @@ class TestGuardaCota(unittest.TestCase):
         }
         # Cota de 9% em limite diário (corte 10%) -> deve disparar handoff e retornar False
         self.assertFalse(guarda_cota.checar_guarda(forcar=True))
-        mock_handoff.assert_called_once_with(0.09, tipo="diario", reset_fmt="4h 00m")
+        mock_handoff.assert_called_once_with(0.09, tipo="diario", reset_fmt="4h 00m", modelo="gemini-3.8-flash")
+
+    @patch("guarda_cota.urllib.request.urlopen")
+    def test_ignora_outro_modelo_esgotado(self, mock_urlopen):
+        import json
+        # Simula resposta do server onde Argon está em 0.6% (crítico), mas Flash está em 18% (seguro)
+        mock_resp = MagicMock()
+        mock_resp.read.return_value = json.dumps({
+            "userStatus": {
+                "cascadeModelConfigData": {
+                    "clientModelConfigs": [
+                        {
+                            "modelId": "gemini-4-argon-high",
+                            "label": "Gemini 4 Argon (High)",
+                            "quotaInfo": {
+                                "remainingFraction": 0.006,  # 0.6% - CRÍTICO!
+                                "resetTime": "2026-10-24T00:00:00Z"
+                            }
+                        },
+                        {
+                            "modelId": "gemini-3.8-flash-high",
+                            "label": "Gemini 3.8 Flash (High)",
+                            "quotaInfo": {
+                                "remainingFraction": 0.18,  # 18% - SEGURO!
+                                "resetTime": "2026-10-24T00:00:00Z"
+                            }
+                        }
+                    ]
+                }
+            }
+        }).encode("utf-8")
+        mock_resp.__enter__.return_value = mock_resp
+        mock_urlopen.return_value = mock_resp
+
+        # Quando checar o modelo ativo (3.8 Flash), NÃO deve cortar mesmo que o Argon esteja esgotado!
+        detalhes = guarda_cota.consultar_detalhes_cota("gemini-3.8-flash")
+        self.assertIsNotNone(detalhes)
+        self.assertEqual(detalhes["modelo"], "Gemini 3.8 Flash (High)")
+        self.assertEqual(detalhes["frac"], 0.18)
+        self.assertTrue(guarda_cota.checar_guarda(modelo_alvo="gemini-3.8-flash", forcar=True))
 
 
 if __name__ == "__main__":
     unittest.main()
+

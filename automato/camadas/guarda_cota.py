@@ -29,7 +29,7 @@ try:
 except ImportError:
     pass
 
-MODELO_PADRAO = 'gemini-3.8-flash'
+MODELO_PADRAO = os.environ.get('MUD_MODEL', os.environ.get('ANTIGRAVITY_MODEL', 'gemini-3.8-flash'))
 THRESHOLD_DIARIO = 0.10   # 10% para limite diário / janela curta (<= 24h)
 THRESHOLD_SEMANAL = 0.05  # 5% para limite semanal / weekly (> 24h)
 THRESHOLD_CRITICO = THRESHOLD_DIARIO  # retrocompatibilidade
@@ -39,6 +39,7 @@ _ULTIMA_CONSULTA = 0.0
 _ULTIMA_COTA = 1.0       # Começa otimista
 _ULTIMO_TIPO = 'diario'
 _ULTIMO_RESET = ''
+_ULTIMO_MODELO = ''
 
 
 def obter_porta_e_token():
@@ -54,10 +55,14 @@ def obter_porta_e_token():
 
 
 def consultar_detalhes_cota(modelo_alvo=MODELO_PADRAO):
-    """Consulta detalhes completos da cota do modelo alvo no language server local.
+    """Consulta detalhes completos da cota EXCLUSIVAMENTE do modelo ativo em execução.
+    
+    Diretiva do autor: Cortar APENAS se o modelo que está rodando atingir o limite.
+    Se o semanal ou diário de outro modelo estiver acabando, ele é expressamente ignorado.
 
     Retorna um dicionário:
         {
+            "modelo": str,
             "frac": float,
             "reset_str": str,
             "horas_restantes": float,
@@ -66,9 +71,9 @@ def consultar_detalhes_cota(modelo_alvo=MODELO_PADRAO):
             "threshold": float (0.05 se semanal, 0.10 se diário),
             "reset_formatado": str
         }
-    ou None se falhar.
+    ou None se o modelo ativo não tiver quota ou falhar a consulta.
     """
-    global _ULTIMA_CONSULTA, _ULTIMA_COTA, _ULTIMO_TIPO, _ULTIMO_RESET
+    global _ULTIMA_CONSULTA, _ULTIMA_COTA, _ULTIMO_TIPO, _ULTIMO_RESET, _ULTIMO_MODELO
 
     port, token = obter_porta_e_token()
     url = f"http://127.0.0.1:{port}/exa.language_server_pb.LanguageServerService/GetUserStatus"
@@ -107,6 +112,7 @@ def consultar_detalhes_cota(modelo_alvo=MODELO_PADRAO):
     alvo_slug = modelo_alvo.lower().replace(" ", "").replace("-", "").replace(".", "")
 
     chosen_quota = None
+    matched_label = modelo_alvo
     for m in models:
         m_id = m.get("modelId", "").lower().replace("-", "").replace(".", "")
         m_label = m.get("label", "").lower().replace(" ", "").replace("-", "").replace(".", "")
@@ -114,16 +120,12 @@ def consultar_detalhes_cota(modelo_alvo=MODELO_PADRAO):
             quota = m.get("quotaInfo", {})
             if quota.get("remainingFraction") is not None:
                 chosen_quota = quota
+                matched_label = m.get("label", modelo_alvo)
                 break
 
     if not chosen_quota:
-        for m in models:
-            quota = m.get("quotaInfo", {})
-            if quota.get("remainingFraction") is not None:
-                chosen_quota = quota
-                break
-
-    if not chosen_quota:
+        # IMPORTANTE: Nunca pegar cota de outro modelo! Se o modelo ativo não foi encontrado, encerra sem tocar nos demais.
+        print(f"[GUARDA_COTA] Modelo ativo '{modelo_alvo}' não encontrado com quotaInfo. Outros modelos são ignorados.", flush=True)
         return None
 
     frac = float(chosen_quota.get("remainingFraction", 1.0))
@@ -154,8 +156,10 @@ def consultar_detalhes_cota(modelo_alvo=MODELO_PADRAO):
     _ULTIMA_COTA = frac
     _ULTIMO_TIPO = tipo
     _ULTIMO_RESET = reset_formatado
+    _ULTIMO_MODELO = matched_label
 
     return {
+        "modelo": matched_label,
         "frac": frac,
         "reset_str": reset_str,
         "horas_restantes": horas_restantes,
@@ -205,13 +209,14 @@ def deve_verificar_agora():
 
 
 def checar_guarda(modelo_alvo=MODELO_PADRAO, forcar=False):
-    """Verifica a cota de forma inteligente e aciona o encerramento seguro se:
-    - Limite diário (janela <= 24h): cota <= 10% (0.10)
-    - Limite semanal / weekly (> 24h): cota <= 5% (0.05)
+    """Verifica a cota EXCLUSIVAMENTE do modelo ativo em execução.
+    
+    Diretiva do autor Peter: Só cortar se o modelo que está rodando atingir o limite.
+    Se o limite semanal/diário de outro modelo estiver acabando, ele é completamente ignorado.
 
     Retorna:
         True: se estiver tudo seguro para continuar operando.
-        False: se a cota atingiu o limite crítico correspondente e o handoff foi acionado.
+        False: se o modelo ativo atingiu o limite crítico (5% semanal / 10% diário) e o handoff foi acionado.
     """
     if not forcar and not deve_verificar_agora():
         return True
@@ -224,28 +229,29 @@ def checar_guarda(modelo_alvo=MODELO_PADRAO, forcar=False):
     tipo = detalhes["tipo"]
     threshold = detalhes["threshold"]
     reset_fmt = detalhes["reset_formatado"]
+    mod_nome = detalhes.get("modelo", modelo_alvo)
 
     print(
-        f"[GUARDA_COTA] Cota do modelo ({modelo_alvo}): {cota * 100:.1f}% restante "
+        f"[GUARDA_COTA] Cota do modelo ativo ({mod_nome}): {cota * 100:.1f}% restante "
         f"[Tipo: {tipo.upper()} | Reseta em: {reset_fmt} | Limite Crítico: {threshold * 100:.0f}%]",
         flush=True,
     )
 
     if cota <= threshold:
         print(
-            f"\n[GUARDA_COTA] ALERTA CRÍTICO: Cota {tipo.upper()} atingiu {cota * 100:.1f}% <= {threshold * 100:.0f}%!",
+            f"\n[GUARDA_COTA] ALERTA CRÍTICO: Cota {tipo.upper()} do modelo ativo ({mod_nome}) atingiu {cota * 100:.1f}% <= {threshold * 100:.0f}%!",
             flush=True,
         )
-        print(f"[GUARDA_COTA] Disparando protocolo de encerramento seguro e handoff por limite {tipo}...", flush=True)
-        executar_handoff_completo(cota, tipo=tipo, reset_fmt=reset_fmt)
+        print(f"[GUARDA_COTA] Disparando protocolo de encerramento seguro e handoff por limite {tipo} do modelo ativo...", flush=True)
+        executar_handoff_completo(cota, tipo=tipo, reset_fmt=reset_fmt, modelo=mod_nome)
         return False
 
     return True
 
 
-def executar_handoff_completo(cota, tipo="diario", reset_fmt=""):
+def executar_handoff_completo(cota, tipo="diario", reset_fmt="", modelo=""):
     """Executa a rotina completa de segurança física, salvamento e handoff documental."""
-    print("[GUARDA_COTA] 1. Retornando em segurança ao Templo...", flush=True)
+    print(f"[GUARDA_COTA] 1. Retornando em segurança ao Templo (corte do modelo ativo: {modelo})...", flush=True)
     try:
         run('recall')
         run('stand')
@@ -259,10 +265,10 @@ def executar_handoff_completo(cota, tipo="diario", reset_fmt=""):
         print(f"[GUARDA_COTA] Aviso durante comandos de segurança: {e}", flush=True)
 
     # Criação do plano numerado de handoff
-    criar_plano_handoff(cota, tipo=tipo, reset_fmt=reset_fmt)
+    criar_plano_handoff(cota, tipo=tipo, reset_fmt=reset_fmt, modelo=modelo)
 
 
-def criar_plano_handoff(cota, tipo="diario", reset_fmt=""):
+def criar_plano_handoff(cota, tipo="diario", reset_fmt="", modelo=""):
     """Cria o próximo plano numerado de handoff e atualiza o estado."""
     planos_dir = ROOT / 'data' / 'heroes' / 'grebolius' / 'planos'
     planos = sorted(planos_dir.glob('plano[0-9][0-9][0-9].md'))
@@ -273,6 +279,7 @@ def criar_plano_handoff(cota, tipo="diario", reset_fmt=""):
 
     novo_plano = planos_dir / f"plano{proximo_num:03d}.md"
     hoje = datetime.now().strftime("%Y-%m-%d")
+    mod_str = modelo or "Gemini 3.8 Flash (High)"
 
     limite_desc = "Limite Semanal (< 5%)" if tipo == "semanal" else "Limite Diário (< 10%)"
 
@@ -281,16 +288,17 @@ def criar_plano_handoff(cota, tipo="diario", reset_fmt=""):
 | | |
 |---|---|
 | **Criado em** | {hoje} · Dia 156 |
-| **Por** | Gemini 3.8 Flash (High) |
+| **Por** | {mod_str} |
 | **Herói** | grebolius |
-| **Objetivo** | Retomada da campanha após handoff automático por cota crítica ({tipo}: {cota * 100:.1f}%, reset em {reset_fmt}) |
+| **Objetivo** | Retomada da campanha após handoff automático por cota crítica do modelo ativo ({tipo}: {cota * 100:.1f}%, reset em {reset_fmt}) |
 | **Sessão encerrada?** | sim — personagem em segurança no Templo; HP/Mana cheios, save e sono confirmados; socket fechado |
 
 ---
 
 ## 1. Motivo do Handoff (AGENTS.md §13)
 
-A guarda de cota automática (`guarda_cota.py`) detectou que a cota do modelo ({tipo.upper()}) atingiu **{cota * 100:.1f}% restantes** (reset previsto em **{reset_fmt}**), cumprindo a diretiva expressa do autor Peter:
+A guarda de cota automática (`guarda_cota.py`) detectou que a cota do modelo ativo ({mod_str} - {tipo.upper()}) atingiu **{cota * 100:.1f}% restantes** (reset previsto em **{reset_fmt}**), cumprindo a diretiva expressa do autor Peter:
+> *"Importante: eu só estou me preocupando de cortar o modelo que está rodando. Se o semanal de outro modelo está acabando, não me importa."*
 > *"quando o limite de 5h/diário cair abaixo de 10%, ou o weekly limit cair abaixo de 5%, faça o handoff"*
 
 A personagem foi conduzida imediatamente ao Templo de Midgaard, alimentada com pão da sacola, hidratada com água do cantil, salva (`save`) e colocada em repouso solene (`sleep`). O daemon e a conexão telnet foram encerrados de forma limpa.
