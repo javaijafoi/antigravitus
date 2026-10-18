@@ -4,6 +4,18 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.6.13 — Dia 156 · Monitoramento de Weekly Limit (< 5%) e Janela Curta (< 10%) na Guarda de Cota
+- **DIRETIVA DO AUTOR (AGENTS.md §13 / Guarda de Cota)**:
+  - Adicionado monitoramento do **weekly limit** do modelo: se o tempo de reset for superior a 24 horas (como a janela semanal do Gemini de ~129h), o corte crítico de segurança é acionado ao atingir **<= 5%** (`0.05`).
+  - Para limites diários / janelas curtas (reset <= 24h), mantém-se o corte crítico em **<= 10%** (`0.10`).
+  - Em ambos os casos de corte, executa-se o mesmo protocolo rigoroso: retorno ao Templo por `recall`, alimentação com pão, hidratação com água do cantil, salvamento (`save`), sono (`sleep`), fechamento limpo de socket e geração do plano de handoff numerado documentando o motivo e tempo até o reset.
+- **MOTOR (`automato/camadas/guarda_cota.py`)**:
+  - Implementada função `consultar_detalhes_cota(modelo_alvo)` com extração precisa de `horas_restantes`, `is_weekly`, `tipo` ("semanal" vs "diario"), `threshold` (0.05 vs 0.10) e `reset_formatado`.
+  - Função `intervalo_recomendado` adaptada para janelas semanais (35 min para >20%, 15 min para >10%, 5 min para >6%, 1 min para <=6%).
+- **CLI (`scripts/checar_cota.py`)**:
+  - Exibição de colunas `Tipo` (Semanal/Diário), `Corte` (5%/10%), `Reseta Em` e `Status` (OK/ATENÇÃO/CRÍTICO).
+- **TESTES**: Suíte `scripts/test_guarda_cota.py` criada com 5 testes unitários validando thresholds, intervalos adaptativos e disparos de handoff (147 testes OK no projeto).
+
 ## v1.6.12 — Dia 156 · Postura Heroica Proativa e Dever de Questionar o Autor (AGENTS.md Invariante 15)
 - **DIRETIVA DO AUTOR (AGENTS.md Invariante 15 / Diretiva de Jogo §22)**:
   - Reorientação doutrinária fundamental: a conduta moral de Grebolius é **proativa e heroica**, não apenas reativa.

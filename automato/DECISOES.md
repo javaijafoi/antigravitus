@@ -160,3 +160,11 @@ Agente: GPT-6 / Codex (versão específica não informada); fonte: data/heroes/g
 - **O que**: Criado o módulo `automato/camadas/guarda_cota.py` que consulta o endpoint local RPC do Antigravity com frequência adaptativa (a cada 35 min se cota > 40%; a cada 10-15 min se entre 20%-40%; a cada 1-5 min se próxima de 10%). Ao bater <= 10% (tolerância 5%-10%), o automato aborta a caça, recolhe a personagem com segurança no Templo, alimenta, hidrata, salva, deita, fecha a conexão e gera o próximo plano numerado de handoff.
 - **Custo**: Uma consulta local HTTP a cada 10-35 minutos; em falha de conexão com o server, o script registra aviso e não interrompe bruscamente o bot.
 - **Próximo desafio**: Monitorar a taxa de consumo por ciclo (burn rate de tokens/hora) para prever o momento exato do corte.
+
+---
+
+## 12. Monitoramento de Weekly Limit (< 5%) além do Diário (< 10%) na Guarda de Cota (v1.6.13, Dia 156 — diretiva do autor)
+- **Por que**: Modelos como Gemini possuem limites com janelas semanais (~7 dias / ~130h de reset) além ou no lugar de janelas curtas de 5 horas. Se o corte fosse fixado rigidamente em 10% para uma janela semanal, o bot pararia prematuramente quando ainda restava considerável volume de requisições utilizáveis; ao mesmo tempo, se a cota semanal chegasse a zero, o agente ficaria travado por dias. A diretiva do autor estabeleceu: *"se tiver abaixo de 5%, faz o mesmo que faz hoje quando o diário está acabando"*.
+- **O que**: Atualizado `automato/camadas/guarda_cota.py` e `scripts/checar_cota.py` para distinguir automaticamente janelas semanais (> 24h até o reset) de janelas curtas/diárias (<= 24h). Para janelas semanais, o corte crítico de handoff é acionado em `<= 5%` (0.05); para diárias, mantém-se em `<= 10%` (0.10). O handoff executa o mesmo protocolo seguro (recall, pão, cantil, save, sleep, fechamento de socket e plano numerado documentando se foi semanal ou diário).
+- **Custo**: Nenhum. Melhora o aproveitamento seguro do saldo do modelo e protege contra esgotamento semanal.
+

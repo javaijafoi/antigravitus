@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""checar_cota.py - Consulta em tempo real o saldo de cota e a janela de 5 horas do Antigravity.
+"""checar_cota.py - Consulta em tempo real o saldo de cota e a janela de limites do Antigravity.
 
-Endpoint interno descoberto:
-http://127.0.0.1:61220/exa.language_server_pb.LanguageServerService/GetUserStatus
-com header 'x-codeium-csrf-token' obtido da variavel de ambiente ANTIGRAVITY_CSRF_TOKEN.
+Monitora:
+- Limite Diário / Janela Curta (reset <= 24h): corte crítico em <= 10%
+- Limite Semanal / Weekly (reset > 24h): corte crítico em <= 5%
+
+Endpoint interno:
+http://127.0.0.1:<port>/exa.language_server_pb.LanguageServerService/GetUserStatus
+com header 'x-codeium-csrf-token' obtido da variável ANTIGRAVITY_CSRF_TOKEN.
 """
 
 import os
@@ -70,39 +74,58 @@ def consultar_cota():
         reset_str = quota.get("resetTime")
 
         tempo_restante = "—"
+        is_weekly = False
+        horas_restantes = 0.0
+
         if reset_str:
             try:
                 dt = datetime.fromisoformat(reset_str.replace("Z", "+00:00"))
                 diff = dt - now
                 if diff.total_seconds() > 0:
+                    horas_restantes = diff.total_seconds() / 3600.0
                     horas = int(diff.total_seconds() // 3600)
                     minutos = int((diff.total_seconds() % 3600) // 60)
                     tempo_restante = f"{horas}h {minutos:02d}m"
+                    is_weekly = (horas_restantes > 24.0)
                 else:
                     tempo_restante = "reseta agora"
             except Exception:
                 tempo_restante = reset_str
 
-        pct = f"{frac * 100:.1f}%" if frac is not None else "100.0% (sem limite fracionado)"
+        tipo = "Semanal" if is_weekly else "Diário"
+        threshold = 0.05 if is_weekly else 0.10
+        pct = f"{frac * 100:.1f}%" if frac is not None else "100.0%"
 
-        # Agrupar por família para não poluir
+        if frac is not None:
+            if frac <= threshold:
+                estado = "CRÍTICO (<= corte)"
+            elif frac <= threshold * 2:
+                estado = "ATENÇÃO"
+            else:
+                estado = "OK"
+        else:
+            estado = "OK (sem limite)"
+
         familia = label.split("(")[0].strip()
         if familia not in agrupados:
             agrupados[familia] = {
                 "frac": frac,
                 "pct": pct,
+                "tipo": tipo,
+                "threshold_pct": f"{threshold * 100:.0f}%",
                 "reset": tempo_restante,
                 "reset_iso": reset_str,
+                "estado": estado,
             }
 
-    print("==========================================================================")
+    print("==========================================================================================")
     print(f"ANTIGRAVITY · COTA E JANELA DE LIMITES · Plano: {plan_name}")
-    print("==========================================================================")
-    print(f"{'Modelo / Família':<32} | {'Saldo Restante':<15} | {'Reseta Em':<15}")
-    print("-" * 74)
+    print("==========================================================================================")
+    print(f"{'Modelo / Família':<22} | {'Saldo':<8} | {'Tipo':<9} | {'Corte':<6} | {'Reseta Em':<12} | {'Status'}")
+    print("-" * 90)
     for fam, info in agrupados.items():
-        print(f"{fam:<32} | {info['pct']:<15} | {info['reset']:<15}")
-    print("==========================================================================")
+        print(f"{fam:<22} | {info['pct']:<8} | {info['tipo']:<9} | {info['threshold_pct']:<6} | {info['reset']:<12} | {info['estado']}")
+    print("==========================================================================================")
     return agrupados
 
 
