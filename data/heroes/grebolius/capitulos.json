@@ -1486,6 +1486,36 @@
         "author_quote": "um cap 11 vai ser fazer xeque mate e se for facil (terminar em menos de 3h do mundo real) fazer tbm ajuda magica.",
         "rule": "Executar a autoquest Xeque-mate no Grande Tabuleiro de Xadrez, testar mecânicas inéditas e avançar para Nível 32."
       }
+    },
+    {
+      "id": 12,
+      "tomo": 2,
+      "title": "Ajuda Mágica e a Coroa do Rei",
+      "kind": "missao",
+      "status": "em_curso",
+      "goal": "Concluir a autoquest Ajuda Mágica com Lemin em Notre Dame/Lyon, registrando as etapas e a confirmação do servidor. Reconhecer e mapear a rota; Xeque-mate é objetivo opcional condicionado à viabilidade tática.",
+      "days": [
+        157
+      ],
+      "parts": [
+        {
+          "day": 157,
+          "summary": "Rota até Notre Dame e Lyon reconhecida sem combate; Lemin localizado no Centro da Cidade, Ajuda Mágica aceita e teste de Merlin superado. Primeira entrega pede tomo grosso de pergaminho usado; fonte ainda desconhecida. Lojas e doação verificadas; castelo reconhecido parcialmente. Retorno salvo e dormindo no Templo, sem gastos, mortes ou perda de alinhamento. Capítulo permanece em curso.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia157-cap12.json",
+              "day": 157,
+              "note": "Sessão ao vivo supervisionada de 2026-10-19; comandos e encerramento confirmados no transcript."
+            }
+          ],
+          "date": "2026-10-19"
+        }
+      ],
+      "content": [],
+      "tags": [],
+      "source_kind": "live",
+      "evidence": []
     }
   ]
 }

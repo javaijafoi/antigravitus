@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "hero_id": "grebolius",
-  "as_of_day": 156,
+  "as_of_day": 157,
   "verification": {
     "mode": "live",
     "autoquest_check_day": 156,
@@ -542,6 +542,25 @@
           "document": "evidence/dia156q.json",
           "day": 156,
           "note": "Progressão épica da autoquest Xeque-mate no Grande Tabuleiro de Xadrez até a etapa do Rei Negro. Abate da Rainha Negra e saque da Coroa da Rainha Negra. Agente: Gemini 3.8 Flash (High)."
+        }
+      ]
+    },
+    {
+      "id": "ajuda-magica",
+      "title": "Ajuda Mágica",
+      "type": "official",
+      "status": "active",
+      "accepted_day": 157,
+      "last_progress_day": 157,
+      "objective": "Ajudar Lemin a reconstruir o livro de magias de Merlin.",
+      "next_step": "Localizar e obter um tomo de pergaminho bem grosso, que pode ser usado, e entregar a Lemin no Centro da Cidade de Lyon somente após reconfirmar a subetapa.",
+      "blocker": "Fonte e identidade exata do tomo desconhecidas; lojas verificadas sem tomo e doação histórica ausente.",
+      "reward": "Desconhecida; não houve conclusão.",
+      "evidence": [
+        {
+          "document": "evidence/dia157-cap12.json",
+          "day": 157,
+          "note": "Sessão ao vivo supervisionada de 2026-10-19; comandos e encerramento confirmados no transcript."
         }
       ]
     }

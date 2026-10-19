@@ -2655,5 +2655,34 @@
       }
     ],
     "editorial_note": "A queda, a travessia, o renascimento e o repouso vêm do registro do servidor. A origem elfa e o Dia 0 são âncoras estabelecidas pelo autor, descritas nas notas editoriais; a crônica mantém a investigação da personagem em aberto."
+  },
+  {
+    "id": 157,
+    "day": "Dia 157",
+    "title": "O livro que ainda não existe",
+    "date": "2026-10-19",
+    "in_game_time": "Reconhecimento da França e audiência com Lemin; repouso no Templo",
+    "excerpt": "O livro que ainda não existe",
+    "tags": [
+      "Capítulo 12",
+      "Ajuda Mágica",
+      "Lyon",
+      "Exploração"
+    ],
+    "content": [
+      "Saí de Midgaard pela estrada oeste, protegida por meus encantamentos. A trilha de Haon-Dor se estreitou entre as árvores; acompanhei suas curvas até encontrar a pequena estrada que se abria para a França. Não precisei erguer a espada contra ninguém.",
+      "Entrei na catedral de Notre Dame, passei por suas colunas e pelos bancos da nave até o altar de Richelieu. Mas o rapaz que eu procurava estava em outro lugar. Atravessei a ponte sobre o Sena e cheguei a Lyon, onde até a fonte da praça oferecia vinho.",
+      "Lemin andava de um lado para o outro, aflito. Antes de confiar em mim, quis saber o nome do mago que fizera a mochila de um rei lendário. Merlin: a assinatura na carta da minha própria mochila não me deixaria esquecer. O rapaz contou que assustara o mestre durante um feitiço, causando a destruição de seu livro. Agora precisava refazê-lo, sob a ameaça de acabar transformado num minúsculo troll.",
+      "O primeiro pedido parecia simples: um tomo grosso de pergaminho, mesmo usado. Pierre e Toulouse não o vendiam. Voltei a Midgaard para conferir uma antiga pista na sala de doações, mas o tomo já não estava lá. Procurei também entre os caminhos abertos do castelo de Welmar, sem encontrar o material.",
+      "Regressei ao Templo, comi e bebi. Minha bolsa ainda guardava as mesmas moedas; o compromisso com Lemin continuava por cumprir. O livro de Merlin teria de esperar mais um pouco, enquanto eu procurava suas primeiras páginas."
+    ],
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Sessão ao vivo supervisionada de 2026-10-19; comandos e encerramento confirmados no transcript."
+      }
+    ]
   }
 ]

@@ -69,13 +69,13 @@
       "hp": "199 / 199",
       "mana": "430 / 430",
       "mv": "145 / 145",
-      "ac": "AC 89 (124 com armor; registro)",
+      "ac": "AC 89 (165 com armor; registro)",
       "weapon": "Espada curta empunhada; ataques iniciados por magias. Brinco de novato equipado na orelha direita e belo cinturão de rodeio na cintura.",
       "weapon_icon": "🗡️",
       "sanctuary": "O Panteao dos Centenarios",
       "location": "O Templo de Midgaard",
       "camp": "O Templo de Midgaard",
-      "as_of_day": 156,
+      "as_of_day": 157,
       "verification": "live"
     },
     "voice": {

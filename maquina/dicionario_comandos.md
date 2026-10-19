@@ -44,3 +44,11 @@ Ver [diferenças importantes](comparacao_commands.md), [tips](tips.md) e [evidê
 | `score tudo` | Conferir etapa atual antes de fala/entrega. | Falas continuam após o eco do comando; não antecipar entrega. |
 
 As palavras exigidas em falas de missão podem diferir do alias usado pelo operador. Ver [verificações e fonte literal](verificacoes.md).
+
+### Verificação complementar — Dia 157 (2026-10-19)
+
+- `where <NPC>`: testado com Lemin, retornando Centro da Cidade de Lyon na região Notre Dame.
+- `cast 'locate object' <objeto>`: recusado no nível 32; help locate informa Mago 34 e espelho localizador. Requisitos superiores ainda não testados.
+- `score tudo`: conferir a instrução específica de Ajuda Mágica após cada monólogo; uma resposta antecipada Merlin não avançou a etapa, enquanto a resposta após a fala final foi reconhecida.
+
+Fonte e limites: [verificações de 2026-10-19](verificacoes.md), evidence/dia157-cap12.json. Agente: GPT-6 / Codex (versão específica não informada).

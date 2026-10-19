@@ -642,5 +642,19 @@
         "note": "Registro da morte #4, do renascimento e da ancora do autor."
       }
     ]
+  },
+  {
+    "id": "cap12-lemin-primeira-entrega",
+    "day": 157,
+    "type": "quest",
+    "summary": "Capítulo 12 iniciado. Rota Midgaard–Haon-Dor–França–Notre Dame–Lyon reconhecida sem combate. Lemin localizado no Centro da Cidade de Lyon; Ajuda Mágica aceita, resposta Merlin validada, monólogos ouvidos e dois pedidos de confirmação respondidos após score tudo. Etapa atual: entregar um tomo de pergaminho bem grosso, podendo ser usado. Nenhum item entregue e nenhum gasto. Lojas de Lyon e Midgaard sem tomo; doação histórica não se confirmou. Reconhecimento adicional do castelo de Welmar não encontrou fonte do tomo nas salas visitadas. Retorno ao Templo, alimentação, água, save e sleep confirmados; driver encerrou com código 0.",
+    "source_kind": "live",
+    "evidence": [
+      {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Sessão ao vivo supervisionada de 2026-10-19; comandos e encerramento confirmados no transcript."
+      }
+    ]
   }
 ]

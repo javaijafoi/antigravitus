@@ -2,10 +2,10 @@
   "schema_version": 1,
   "hero_id": "grebolius",
   "as_of": {
-    "day": 156,
+    "day": 157,
     "verification": "live",
     "live_verified": true,
-    "source": "Execução ao vivo do Plano 026 por Gemini 3.8 Flash (Medium); evidence/dia156r.json. Resolução da nutrição e água (cantil saciado na fonte de mármore azul), reposição do estoque de segurança na Padaria de Midgaard (compra de 5 pães recheados, totalizando 6 na mochila de Pellinore), venda mercantil de alto valor da Coroa da Rainha Negra no Armeiro por 1.500 moedas sem vesti-la (eliminando o risco da flag ANTI-GOOD e aliviando 4 kg de peso morto), depósito de 1.700 moedas no Banco do Templo (elevando a reserva para 15.700 moedas e patrimônio total para 16.059 moedas, mantendo 359 moedas na mão). Auditoria in-game de help autoquest e help notre dame comprovando que o patrono Lemin e a autoquest Ajuda Mágica localizam-se em Notre Dame/França (e não em Midgaard). Retorno em segurança ao Templo de Midgaard com vitais 199/199 HP, 430/430 Mana, 145/145 MV, Alinhamento 412 (Bom), save e sono confirmados."
+    "source": "Execução parcial do Capítulo 12 em 2026-10-19 por GPT-6 / Codex (versão específica não informada); evidence/dia157-cap12.json. Missão ativa na primeira entrega; repouso salvo no Templo."
   },
   "level": 32,
   "mechanical_race": "Elfo",
@@ -38,16 +38,16 @@
   "attributes": {
     "STR": 11,
     "DEX": 17,
-    "CON": 10,
+    "CON": 9,
     "INT": 19,
     "WIS": 17,
     "CHA": 12
   },
   "armor": {
     "base": 89,
-    "with_armor": 124,
+    "with_armor": 165,
     "effect_verified": true,
-    "note": "CA 89 equipado no Templo (sem armadura da torre que foi vendida por 8.500 moedas e sem buff arcano ativo no sono); CA 124 verificado durante a batalha com armor arcana; evidence/dia156q.json."
+    "note": "CA 165 no score final com armor +36 e invisibility +40; base 89. Não atribuir 165 somente a armor. Buffs expiram; renovar antes da próxima saída. evidence/dia157-cap12.json."
   },
   "hitroll": 16,
   "damroll": 5,
@@ -55,7 +55,7 @@
   "training_sessions": 68,
   "operational_mode": {
     "current": "padrao",
-    "description": "Capítulo 11 concluído por Gemini 3.8 Flash (High): Nível 32 consolidado, abate dos peões, bispos, cavalos, torres e Rainha Negra no Xadrez. Venda da armadura da torre por 8.500 moedas, saque da Coroa da Rainha Negra, conclusão de Todo Dia um Pouco com prêmio de rosário sagrado. Repouso pleno no Templo com 14.589 moedas de ouro (14.000 no banco, 589 na mão), vitais 199/199 HP, 430/430 Mana, 145/145 MV, save e sono confirmados.",
+    "description": "Capítulo 12 em curso; reconhecimento em modo batedor sem combate. Ajuda Mágica ativa: entregar tomo a Lemin, Centro da Cidade de Lyon. Sessão salva, dormindo no Templo, driver fechado.",
     "wimpy_profile": {
       "padrao": 17,
       "batedor": 33,
@@ -78,21 +78,18 @@
     "name": "O Panteao dos Centenarios"
   },
   "last_event": {
-    "day": 156,
-    "summary": "Sessão ao vivo por Gemini 3.8 Flash (High): Conclusão das batalhas do Capítulo 11 no Grande Tabuleiro de Xadrez com ascensão e consolidação do Nível 32 (7.225.102 EXP, HP max 199, Mana max 430, MV max 145). Abate inédito de 2 Bispos Negros, 2 Cavalos Negros, 2 Torres Negras e da Rainha Negra com Santuário. Validação magistral de sleep, blindness, curse, identify e value. Venda da armadura por 8.500 moedas, saque da Coroa da Rainha Negra, e missão diária Todo Dia um Pouco concedendo rosário sagrado. Grebolius descansa no Templo de Midgaard com 14.589 moedas de ouro e Alinhamento Bom (412)."
+    "day": 157,
+    "summary": "Capítulo 12 iniciado. Rota Midgaard–Haon-Dor–França–Notre Dame–Lyon reconhecida sem combate. Lemin localizado no Centro da Cidade de Lyon; Ajuda Mágica aceita, resposta Merlin validada, monólogos ouvidos e dois pedidos de confirmação respondidos após score tudo. Etapa atual: entregar um tomo de pergaminho bem grosso, podendo ser usado. Nenhum item entregue e nenhum gasto. Lojas de Lyon e Midgaard sem tomo; doação histórica não se confirmou. Reconhecimento adicional do castelo de Welmar não encontrou fonte do tomo nas salas visitadas. Retorno ao Templo, alimentação, água, save e sleep confirmados; driver encerrou com código 0."
   },
   "next_objective": {
-    "mission_id": "capitulo-12",
-    "title": "Capítulo 12: Ajuda Mágica e a Coroa do Rei",
-    "next_step": "Iniciar e executar a autoquest Ajuda Mágica em Midgaard, ou preparar abordagem tática refinada para o Cetro do Rei Negro.",
+    "mission_id": "ajuda-magica",
+    "title": "Capítulo 12: reconstruir o livro de Merlin",
+    "next_step": "Após recuperar cota, investigar autonomamente a biblioteca de Jareth como pista documental do tomo pedido por Lemin; não afirmar disponibilidade antes de observar. Conferir etapa, pedido e inventário antes de entregar.",
     "missing_preparation": [
-      "Suprimentos plenos: cantil abastecido e pães na mochila de Pellinore.",
-      "Vitals e mana restaurados ao máximo (199 HP, 430 Mana).",
-      "Vender a Coroa da Rainha Negra (valor 3.000) no Armeiro de Midgaard para liberar espaço e caixa.",
-      "Ouro: 14.589 moedas (14.000 no banco, 589 na mão).",
-      "Nível 32 consolidado com 7.225.102 EXP."
+      "Fonte do tomo ainda não identificada.",
+      "Revalidar buffs ao acordar; armor estava próxima de expirar."
     ],
-    "plan_document": "planos/plano026.md"
+    "plan_document": "planos/plano029.md"
   },
   "skills": [
     {
@@ -308,69 +305,68 @@
       {
         "name": "um rosário",
         "quantity": 1,
-        "source": "evidence/dia156q.json"
+        "source": "evidence/dia157-cap12.json"
       },
       {
         "name": "um cantil",
         "quantity": 1,
-        "source": "evidence/dia156q.json"
+        "source": "evidence/dia157-cap12.json"
       },
       {
         "name": "a mochila de Pellinore",
         "quantity": 1,
-        "source": "evidence/dia156q.json"
+        "source": "evidence/dia157-cap12.json"
       },
       {
         "name": "um pergaminho de sabedoria",
         "quantity": 1,
-        "source": "evidence/dia156r.json"
+        "source": "evidence/dia157-cap12.json"
       },
       {
         "name": "um pão recheado",
-        "quantity": 6,
-        "source": "evidence/dia156r.json",
+        "quantity": 3,
+        "source": "evidence/dia157-cap12.json",
         "container": "a mochila de Pellinore"
       },
       {
         "name": "um manto de pano",
         "quantity": 1,
-        "source": "evidence/dia156r.json",
+        "source": "evidence/dia157-cap12.json",
         "container": "a mochila de Pellinore"
       },
       {
         "name": "um colar com uma pedra púrpura",
         "quantity": 1,
-        "source": "evidence/dia156q.json",
+        "source": "evidence/dia157-cap12.json",
         "container": "a mochila de Pellinore"
       },
       {
         "name": "a bainha de Excalibur",
         "quantity": 1,
-        "source": "evidence/dia156q.json",
+        "source": "evidence/dia157-cap12.json",
         "container": "a mochila de Pellinore"
       },
       {
         "name": "uma Cruz Ansada",
         "quantity": 1,
-        "source": "evidence/dia156q.json",
+        "source": "evidence/dia157-cap12.json",
         "container": "a mochila de Pellinore"
       },
       {
         "name": "o Cetro do Bispo Negro",
         "quantity": 1,
-        "source": "evidence/dia156q.json",
+        "source": "evidence/dia157-cap12.json",
         "container": "a mochila de Pellinore"
       }
     ],
     "pending_verification": []
   },
   "conditions": [
-    "Execução ao vivo do plano014 por Gemini 3.8 Flash (High): 8 rodadas de caça no Milharal (57 abates), ouro vivo elevado a 7.189 moedas (+2.960 líquido), EXP a 4.191.978 (+191.977).",
-    "Ouro: 7189 na mão + 0 no banco; 6 pães registrados (3 na mochila, 3 na mão); cantil cheio.",
-    "Save confirmado: True; sono confirmado: True; conexão fechada: True.",
-    "Oito mortes e uma armadilha mortal históricas na consulta da retomada; nenhum resgate de Papai Smurf confirmado.",
-    "Alimentada e sem sede; cantil cheio; armor +34 por 24 horas de jogo no score final.",
-    "Peso 102/115 kg; conferir capacidade antes de comprar poção."
+    "Save e sono confirmados no Templo; conexão fechada sem quit.",
+    "Sem fome nem sede; 3 pães na mochila, cantil reabastecido na fonte e utilizado no encerramento.",
+    "9 mortes e 1 DT históricas; nenhum combate, morte, gasto ou alteração de alinhamento nesta sessão.",
+    "Ouro: 15.700 banco + 359 mão = 16.059. Peso 74/115 kg.",
+    "Ajuda Mágica ativa na primeira entrega: tomo de pergaminho bem grosso, que pode ser usado. Nenhum give executado."
   ],
   "uncertainties": [
     "A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.",
@@ -381,7 +377,8 @@
     "Dia 156: a semente do levantamento tem contaminacao por salas homonimas - 'A Sala de Doacoes de Midgaard' carrega as saidas do Templo (n->altar, s->praca, u->panteao). Isso e defeito do digestor, ainda nao corrigido na origem; a navegacao contorna usando o grafo corrigido pelo que se ve ao vivo.",
     "Dia 156: restam 33 destinos nomeados e nunca visitados no levantamento cartografico.",
     "Dia 156: nao ha como inspecionar as propriedades de um item a venda em lojas comuns (apenas na loja divina de Pontos de Aventura via 'list <num>').",
-    "§42/plano011: reset obrigatório e conflito de autoquests eram hipóteses não isoladas; ver conhecimento §43."
+    "§42/plano011: reset obrigatório e conflito de autoquests eram hipóteses não isoladas; ver conhecimento §43.",
+    "Dia 157: conferir conhecimento §61 e Plano 028 para fonte ainda desconhecida do tomo; não confundir pergaminho de sabedoria carregado com o item solicitado."
   ],
   "evidence": [
     {
@@ -533,6 +530,11 @@
       "document": "evidence/dia156p.json",
       "day": 156,
       "note": "Execução ao vivo por Gemini 3.8 Flash (High): conclusão da diretiva do Capítulo 10 com 10 abates de espécies inéditas (Azrael, esquilo, bebê dragão, mico, novato zumbi, larva, morcego, gatinho, cachorrinho, beagle); sobrevivência heroica a 6 HP no besouro gigante via Wimpy 45; 6.851.196 EXP e 1.497 moedas."
+    },
+    {
+      "document": "evidence/dia157-cap12.json",
+      "day": 157,
+      "note": "Sessão ao vivo supervisionada de 2026-10-19; comandos e encerramento confirmados no transcript."
     }
   ],
   "narrative_style": "ladra arcana",
@@ -547,5 +549,5 @@
     "mechanical_race_confirmed": "Elfo",
     "editorial_note": "ANCORA DO AUTOR, sem evidencia de servidor: primeira morte no Dia 0 e origem elfa. A cronica do Dia 100 narra a lembranca no Vazio; as cronicas antigas permanecem intactas e ganham segunda leitura. Ver notas_editoriais.md."
   },
-  "as_of_day": 156
+  "as_of_day": 157
 }

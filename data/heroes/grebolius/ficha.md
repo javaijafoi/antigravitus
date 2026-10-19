@@ -1,6 +1,6 @@
 # 🧌 Ficha Atual de Grebolius (Último Estado Registrado)
 
-> Referência: Dia 156. Estado verificado em sessão; consultar a origem registrada.
+> Referência: Dia 157. Estado verificado em sessão; consultar a origem registrada.
 > Este documento reúne o último estado e as missões registrados; as incertezas aparecem ao final.
 
 ## ✦ Identificação e Registro
@@ -11,7 +11,7 @@
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **32**
 * **Alinhamento Moral:** 412 (Bom)
-* **Localização Atual:** O Templo de Midgaard (último registro: Dia 156)
+* **Localização Atual:** O Templo de Midgaard (último registro: Dia 157)
 * **Acampamento Registrado:** O Templo de Midgaard
 * **Santuário de Referência:** O Panteao dos Centenarios
 
@@ -31,14 +31,14 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 ## ✦ Atributos Base
 * **Força (STR):** 11
 * **Destreza (DEX):** 17
-* **Constituição (CON):** 10
+* **Constituição (CON):** 9
 * **Inteligência (INT):** 19
 * **Sabedoria (WIS):** 17
 * **Carisma (CHA):** 12
 
 ### Métricas de Combate
-* **Classe de Armadura (AC):** 89 (base) / **124** (com `armor`, conforme registro)
-CA 89 equipado no Templo (sem armadura da torre que foi vendida por 8.500 moedas e sem buff arcano ativo no sono); CA 124 verificado durante a batalha com armor arcana; evidence/dia156q.json.
+* **Classe de Armadura (AC):** 89 (base) / **165** (com `armor`, conforme registro)
+CA 165 no score final com armor +36 e invisibility +40; base 89. Não atribuir 165 somente a armor. Buffs expiram; renovar antes da próxima saída. evidence/dia157-cap12.json.
 * **Bônus de Acerto (Hitroll):** 16
 * **Bônus de Dano (Damroll):** +5
 * **Configuração de Fuga (Wimpy):** **45 HP** (referência de 25%; não garante fuga antes de golpe letal)
@@ -64,6 +64,8 @@ CA 89 equipado no Templo (sem armadura da torre que foi vendida por 8.500 moedas
   * Próximo passo: Concluída integralmente no Dia 156. Baú de recompensas surpresa recebido e aberto, entregando um rosário sagrado ao herói.
 * **Xeque-mate — Ativa:** Autoquest de nível 30+, iniciada com o Bispo Branco no Grande Tabuleiro de Xadrez.
   * Próximo passo: Avanço estruturado até a etapa 6: peões -> 2 bispos -> 2 cavalos -> 2 torres -> Rainha Negra (abatida com sono e cegueira). Instrução final alcançada: 'Agora, é hora do xeque-mate. Traga o cetro daquele rei nefasto como prova do seu feito'. Resetada ao renascer na Fonte da Vida; rota e mecânica completamente mapeadas para reexecução rápida no Capítulo 12.
+* **Ajuda Mágica — Ativa:** Ajudar Lemin a reconstruir o livro de magias de Merlin.
+  * Próximo passo: Localizar e obter um tomo de pergaminho bem grosso, que pode ser usado, e entregar a Lemin no Centro da Cidade de Lyon somente após reconfirmar a subetapa.
 
 Objetivos pessoais e investigações ficam separados das autoquests no catálogo de missões.
 
@@ -103,38 +105,34 @@ Equipamento conforme os últimos documentos disponíveis; conferir no próximo a
 
 ## ✦ Inventário e Suprimentos
 Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
-* `um rosário` (x1) — evidence/dia156q.json
-* `um cantil` (x1) — evidence/dia156q.json
-* `a mochila de Pellinore` (x1) — evidence/dia156q.json
-* `um pergaminho de sabedoria` (x1) — evidence/dia156r.json
-* `um pão recheado` (x6) — evidence/dia156r.json
-* `um manto de pano` (x1) — evidence/dia156r.json
-* `um colar com uma pedra púrpura` (x1) — evidence/dia156q.json
-* `a bainha de Excalibur` (x1) — evidence/dia156q.json
-* `uma Cruz Ansada` (x1) — evidence/dia156q.json
-* `o Cetro do Bispo Negro` (x1) — evidence/dia156q.json
+* `um rosário` (x1) — evidence/dia157-cap12.json
+* `um cantil` (x1) — evidence/dia157-cap12.json
+* `a mochila de Pellinore` (x1) — evidence/dia157-cap12.json
+* `um pergaminho de sabedoria` (x1) — evidence/dia157-cap12.json
+* `um pão recheado` (x3) — evidence/dia157-cap12.json
+* `um manto de pano` (x1) — evidence/dia157-cap12.json
+* `um colar com uma pedra púrpura` (x1) — evidence/dia157-cap12.json
+* `a bainha de Excalibur` (x1) — evidence/dia157-cap12.json
+* `uma Cruz Ansada` (x1) — evidence/dia157-cap12.json
+* `o Cetro do Bispo Negro` (x1) — evidence/dia157-cap12.json
 
 ### Pendências de inventário
 
 ## ✦ Condições Registradas
-* Execução ao vivo do plano014 por Gemini 3.8 Flash (High): 8 rodadas de caça no Milharal (57 abates), ouro vivo elevado a 7.189 moedas (+2.960 líquido), EXP a 4.191.978 (+191.977).
-* Ouro: 7189 na mão + 0 no banco; 6 pães registrados (3 na mochila, 3 na mão); cantil cheio.
-* Save confirmado: True; sono confirmado: True; conexão fechada: True.
-* Oito mortes e uma armadilha mortal históricas na consulta da retomada; nenhum resgate de Papai Smurf confirmado.
-* Alimentada e sem sede; cantil cheio; armor +34 por 24 horas de jogo no score final.
-* Peso 102/115 kg; conferir capacidade antes de comprar poção.
+* Save e sono confirmados no Templo; conexão fechada sem quit.
+* Sem fome nem sede; 3 pães na mochila, cantil reabastecido na fonte e utilizado no encerramento.
+* 9 mortes e 1 DT históricas; nenhum combate, morte, gasto ou alteração de alinhamento nesta sessão.
+* Ouro: 15.700 banco + 359 mão = 16.059. Peso 74/115 kg.
+* Ajuda Mágica ativa na primeira entrega: tomo de pergaminho bem grosso, que pode ser usado. Nenhum give executado.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
-**Capítulo 12: Ajuda Mágica e a Coroa do Rei**
-Iniciar e executar a autoquest Ajuda Mágica em Midgaard, ou preparar abordagem tática refinada para o Cetro do Rei Negro.
-* Suprimentos plenos: cantil abastecido e pães na mochila de Pellinore.
-* Vitals e mana restaurados ao máximo (199 HP, 430 Mana).
-* Vender a Coroa da Rainha Negra (valor 3.000) no Armeiro de Midgaard para liberar espaço e caixa.
-* Ouro: 14.589 moedas (14.000 no banco, 589 na mão).
-* Nível 32 consolidado com 7.225.102 EXP.
+**Capítulo 12: reconstruir o livro de Merlin**
+Após recuperar cota, investigar autonomamente a biblioteca de Jareth como pista documental do tomo pedido por Lemin; não afirmar disponibilidade antes de observar. Conferir etapa, pedido e inventário antes de entregar.
+* Fonte do tomo ainda não identificada.
+* Revalidar buffs ao acordar; armor estava próxima de expirar.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Execução ao vivo do Plano 026 por Gemini 3.8 Flash (Medium); evidence/dia156r.json. Resolução da nutrição e água (cantil saciado na fonte de mármore azul), reposição do estoque de segurança na Padaria de Midgaard (compra de 5 pães recheados, totalizando 6 na mochila de Pellinore), venda mercantil de alto valor da Coroa da Rainha Negra no Armeiro por 1.500 moedas sem vesti-la (eliminando o risco da flag ANTI-GOOD e aliviando 4 kg de peso morto), depósito de 1.700 moedas no Banco do Templo (elevando a reserva para 15.700 moedas e patrimônio total para 16.059 moedas, mantendo 359 moedas na mão). Auditoria in-game de help autoquest e help notre dame comprovando que o patrono Lemin e a autoquest Ajuda Mágica localizam-se em Notre Dame/França (e não em Midgaard). Retorno em segurança ao Templo de Midgaard com vitais 199/199 HP, 430/430 Mana, 145/145 MV, Alinhamento 412 (Bom), save e sono confirmados..
+Fonte do estado: Execução parcial do Capítulo 12 em 2026-10-19 por GPT-6 / Codex (versão específica não informada); evidence/dia157-cap12.json. Missão ativa na primeira entrega; repouso salvo no Templo..
 * A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.
 * O colar com pedra purpura pertence a outro dono: o servidor recusa o uso. Nenhum comerciante testado o compra.
 * Bainha de Excalibur exige nivel 85 (vista na Sala de Doacoes, nao pode ser carregada com a carga atual). Scutum de Carvalho exige nivel 35.
@@ -144,3 +142,4 @@ Fonte do estado: Execução ao vivo do Plano 026 por Gemini 3.8 Flash (Medium); 
 * Dia 156: restam 33 destinos nomeados e nunca visitados no levantamento cartografico.
 * Dia 156: nao ha como inspecionar as propriedades de um item a venda em lojas comuns (apenas na loja divina de Pontos de Aventura via 'list <num>').
 * §42/plano011: reset obrigatório e conflito de autoquests eram hipóteses não isoladas; ver conhecimento §43.
+* Dia 157: conferir conhecimento §61 e Plano 028 para fonte ainda desconhecida do tomo; não confundir pergaminho de sabedoria carregado com o item solicitado.
