@@ -1,0 +1,40 @@
+{
+  "hero_id": "grebolius",
+  "day": 157,
+  "agent": "Claude Opus 5.5 (claude-opus-5-5)",
+  "via": "automato",
+  "recorded_on": "2026-10-19",
+  "source_kind": "sessao_ao_vivo",
+  "source": "automato/runtime/transcript_dia158_20261019_152259_a5c65c.jsonl e session_live_dia158_20261019_152259_a5c65c.log (o driver foi aberto com MUD_DAY=158 por engano; a data de jogo e a mesma do Dia 157, 2026-10-19). Uma unica conexao; play.py a mao, um comando por decisao, e laco curto por sala-marco que para na primeira divergencia. Nenhuma fala de missao com Lemin nesta sessao; nenhum give.",
+  "plan_executed": "planos/plano033.md",
+  "findings": {
+    "quest_state": "No login e no encerramento, score tudo: 'Ajuda Magica: Voce deve entregar objeto ao personagem.' A missao segue ativa; o tomo nao foi achado.",
+    "jareth_library_found": "A Biblioteca da cidade de Jareth fica no Caminho de Tabuas, ao norte do rio: de Uma Praca (lb013) n,n,n,n (Rua do Rio, Rua do Rio, Sobre a Ponte, A Rua do Rio) e,e,e,e,e (Caminho ao Longo da Margem x5) n (caminho de madeira) w (Caminho de Tabuas, Academia ao sul) w (Caminho de Tabuas: 'Voce pode entrar na Biblioteca se seguir ao sul') s. help mapa 2 ja dizia que o Caminho de Tabuas tem 'os Correios, o Hospital, entre outros'.",
+    "jareth_library_content": "Sala 'A Biblioteca': a assistente de bibliotecaria e a bibliotecaria. look na assistente disparou 'Eu preciso de ajuda! Pode me ajudar? Sim?' (Arrumando a Biblioteca, nivel 60+) - NAO respondido. Aviso: treino temporario de atributos (PRATICAR). look livros/prateleiras/obras: nada; list: 'Voce nao pode fazer isto aqui!'. Nenhum tomo.",
+    "pergaminhos_e_afins": "Catalogo lido pela primeira vez: cajado retorcido 18.859, bastao de metal 6.784, rolo de pergaminho 103, remover maldicoes 4.369, bastao cinza de invisibilidade 46.112, retorno 6.209. Comprado 1 rolo de pergaminho (103); identify: NOTA, peso 1, valor 90 - uma folha, nao o tomo grosso. Guardado, nao entregue.",
+    "dalston": "Dalston Tralhas e Cia: mala 99, mochila 7, lanterna de brasas 10, tocha 15. Sem tomo.",
+    "jareth_north_district": "Bar Salazar, O Cassino, Iscas e Pescas, Butique Franz e A Academia visitados; nenhum livro a venda nem no chao.",
+    "champs_elysees": "Norte da Entrada Para a Franca: A Entrada da Champs Elysees. Portao dourado fechado (open norte). Aviso: 'N L N O S O N O'. Rota testada: portao N e depois L,N,O,S,O,N,O ate O Centro Historico da Franca; volta L,S,L,N,L,S,O e S pelo portao. Labirinto de salas homonimas com esquilos e Degas, o eremita.",
+    "paris": "Praca de Paris (3x3) varrida: Entrada da Praca Luis XIV (bilhete de Robespierre), Centro da Praca (estatua), Continuacoes, Pracas Luis XIV, Pracas da Revolucao (guilhotina), Hotel Frances (fechado para reformas). Porta norte do QG/escola dos Mosqueteiros TRANCADA; mosqueteiro em servico dormindo na entrada (consider: nivel muito facil, vida 'Voce e louco?') - nao atacado, nao forcado.",
+    "where_results": "Na regiao: Pierre, o mago - A Loja de Magias da Franca; o padre Tintoreto - A Pequena Capela; o corcunda - O Campanario da Catedral; Lemin - O Centro da Cidade; um mosqueteiro em servico - A Entrada do QG. Sem resultado: esmeralda, rei, quasimodo, degas, eremita, cigana, toulouse, bibliotecario, monge, frade, escriba, sacristao, sineiro, rainha.",
+    "cathedral": "A catedral tem alas leste e oeste fora do mapa anterior: Atrios de Notre Dame (bacias de prata), Corredores e Naves Oriental/Ocidental. Do Corredor Oriental norte, leste: A Sala de Espera da Catedral, porta leste (open leste) para A Pequena Capela (padre Tintoreto, protegido por luz forte). Nada de tomo. O Campanario existe (where), mas nenhuma entrada foi achada pela catedral, pela Rua Notre Dame nem pelo Fim da Rua. No Altar: o cardeal Richelieu (luz forte) e 5 aneis de rubi e 6 capas vermelhas no chao - nao tocados.",
+    "lyon": "Rua Principal de Lyon: leste Uma Casa de Lyon (vazia), oeste O Parque de Lyon (poodle amarrado). Fim da Rua Principal: leste Uma Cabana em Lyon (comerciante, papeis na mesa nao examinaveis, list recusado), oeste Outra Casa de Lyon (vazia), sul A Estacao de Carruagens (aviso: Lyon 50, centro de Paris 85; nao usada), leste dela Um Tunel Escuro.",
+    "alignment_drop": "No Tunel Escuro, 'um rato preto' atacou primeiro ('Um rato preto tenta te morder, mas erra'); o contra-ataque automatico o matou (+162 EXP). O alinhamento caiu de 412 para 393. Diretiva §22 aplicada: parada, causa auditada no log, tunel banido; nao se seguiu para O Beco Sem Saida.",
+    "temple_magic_repeat": "Erro de metodo: tres cast 'armor' e tres cast 'invisibility' dentro do Templo de Midgaard ('Sua magia falha e desaparece'), embora a diretiva §7 e o conhecimento §25.1 ja digam que o Templo bloqueia magia. Na Praca do Templo a armadura pegou de primeira. O autor cobrou: estudar os documentos antes de adivinhar."
+  },
+  "state_end": {
+    "location": "O Templo de Midgaard, dormindo",
+    "hp": "199/199",
+    "mana": "430/430",
+    "mv": "145/145",
+    "level": 32,
+    "exp": 7225093,
+    "alignment": 393,
+    "gold": "220 na mao, 15700 no banco (total 15920)",
+    "deaths": "9 e 1 DT, sem mudanca",
+    "armor": "+36, 29 horas restantes",
+    "inventory_note": "3 paes na mochila de Pellinore, cantil com agua, um rolo de pergaminho (NOTA) comprado nesta sessao",
+    "quest_line": "Ajuda Magica: Voce deve entregar objeto ao personagem.",
+    "closing": "save_confirmed=True sleep_confirmed=True via _CLOSE sleep; daemon finalizado com codigo 0; sem quit."
+  }
+}

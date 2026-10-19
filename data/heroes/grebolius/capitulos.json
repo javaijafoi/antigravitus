@@ -1530,12 +1530,32 @@
               "date": "2026-10-19"
             }
           ]
+        },
+        {
+          "day": 157,
+          "source_kind": "live",
+          "date": "2026-10-19",
+          "summary": "Terceira parte do dia. Grebolius achou enfim a biblioteca da cidade de Jareth, escondida no caminho de tábuas ao norte do rio, mas ali só havia as bibliotecárias e nenhum tomo; recusou em silêncio o pedido de ajuda da assistente para não trair a promessa feita a Lemin. Comprou numa loja de magia uma folha de pergaminho, que não era o livro grosso pedido, e a guardou. Atravessou o labirinto do bosque de Champs Elysées seguindo o aviso do portão até as praças de Paris, percorreu as alas escondidas da catedral até a pequena capela e visitou as casas de Lyon. Num túnel escuro um rato a atacou e morreu no revide, e ela sentiu a consciência pesar; decidiu não voltar ali. Sem o tomo, voltou ao Templo, salvou e dormiu. A aventura segue aberta.",
+          "evidence": [
+            {
+              "document": "evidence/dia157-biblioteca-paris.json",
+              "day": 157,
+              "date": "2026-10-19",
+              "note": "Biblioteca de Jareth achada sem tomo; Champs Elysées, Paris, catedral e Lyon varridos; missão segue na etapa de entrega. Agente: Claude Opus 5.5."
+            }
+          ]
         }
       ],
       "content": [],
       "tags": [],
       "source_kind": "live",
-      "evidence": []
+      "evidence": [
+        {
+          "document": "evidence/dia157-biblioteca-paris.json",
+          "day": 157,
+          "note": "Biblioteca de Jareth achada sem tomo; Champs Elysées, Paris, catedral e Lyon varridos; missão segue na etapa de entrega. Agente: Claude Opus 5.5."
+        }
+      ]
     }
   ]
 }

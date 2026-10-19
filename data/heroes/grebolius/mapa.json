@@ -2,8 +2,8 @@
   "hero_id": "grebolius",
   "hero_name": "Grebolius",
   "sanctuary_id": "panteao_centenarios",
-  "last_updated_cycle": "Dia 157 — reconhecimento manual do Capítulo 12, 2026-10-19",
-  "total_rooms": 590,
+  "last_updated_cycle": "Dia 157 — Plano 033: biblioteca de Jareth, Paris, alas da catedral e Lyon, 2026-10-19",
+  "total_rooms": 640,
   "layers": [
     {
       "id": "superficie",
@@ -4742,7 +4742,9 @@
       "icon": "🗺️",
       "exits": {
         "e": "lb014",
-        "w": "lb016"
+        "w": "lb016",
+        "s": "jr_rio_sul_1",
+        "n": "jr_rio_norte_1"
       },
       "npcs": [],
       "notes": "Aqui o caminho é mais movimentado em razão do portão oeste se encontrar Você se encontra no cruzamento entre a Avenida Floris e a Rua do Rio. apenas algumas centenas de metros a oeste. Ao noroeste, você pode ver um complexo de altas construções que seguem por alguma distância. Ao norte da cidade. o ",
@@ -12198,7 +12200,8 @@
       "icon": "🧭",
       "exits": {
         "e": "cap12_013",
-        "s": "cap12_023"
+        "s": "cap12_023",
+        "n": "ce_entrada"
       },
       "npcs": [],
       "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
@@ -12302,7 +12305,9 @@
       "icon": "🧭",
       "exits": {
         "s": "cap12_017",
-        "n": "cap12_015"
+        "n": "cap12_015",
+        "e": "nd_atrio_leste",
+        "w": "nd_atrio_oeste"
       },
       "npcs": [],
       "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
@@ -12329,7 +12334,9 @@
       "icon": "🧭",
       "exits": {
         "s": "cap12_018",
-        "n": "cap12_016"
+        "n": "cap12_016",
+        "e": "nd_corr_oriental_n",
+        "w": "nd_corr_ocidental_n"
       },
       "npcs": [],
       "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
@@ -12356,7 +12363,9 @@
       "icon": "🧭",
       "exits": {
         "s": "cap12_019",
-        "n": "cap12_017"
+        "n": "cap12_017",
+        "e": "nd_nave_oriental_1",
+        "w": "nd_nave_ocidental"
       },
       "npcs": [],
       "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
@@ -12383,7 +12392,9 @@
       "icon": "🧭",
       "exits": {
         "s": "cap12_020",
-        "n": "cap12_018"
+        "n": "cap12_018",
+        "e": "nd_nave_oriental_2",
+        "w": "nd_corr_ocidental_m"
       },
       "npcs": [],
       "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
@@ -12410,7 +12421,9 @@
       "icon": "🧭",
       "exits": {
         "s": "cap12_021",
-        "n": "cap12_019"
+        "n": "cap12_019",
+        "e": "nd_corr_oriental_s",
+        "w": "nd_corr_ocidental_s"
       },
       "npcs": [],
       "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
@@ -12439,7 +12452,7 @@
         "n": "cap12_020"
       },
       "npcs": [],
-      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido. 2026-10-19: o cardeal Richelieu (protegido por luz forte) e itens no chao (5 aneis de rubi, 6 capas vermelhas); nao tocados.",
       "discovered_in": "Dia 157",
       "source": {
         "document": "evidence/dia157-cap12.json",
@@ -12462,7 +12475,7 @@
         "w": "cap12_015"
       },
       "npcs": [],
-      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido. 2026-10-19: muro a leste; campanario visivel. \"O Campanario da Catedral\" existe (where corcunda) mas a entrada nao foi achada.",
       "discovered_in": "Dia 157",
       "source": {
         "document": "evidence/dia157-cap12.json",
@@ -12506,7 +12519,8 @@
       "risk_code": "unknown",
       "icon": "🧭",
       "exits": {
-        "s": "cap12_025"
+        "s": "cap12_025",
+        "n": "cap12_023"
       },
       "npcs": [],
       "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
@@ -12530,7 +12544,10 @@
       "risk_code": "unknown",
       "icon": "🧭",
       "exits": {
-        "s": "cap12_026"
+        "s": "cap12_026",
+        "n": "cap12_024",
+        "e": "ly_casa",
+        "w": "ly_parque"
       },
       "npcs": [],
       "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
@@ -12558,7 +12575,8 @@
       "exits": {
         "e": "cap12_027",
         "w": "cap12_028",
-        "s": "cap12_029"
+        "s": "cap12_029",
+        "n": "cap12_025"
       },
       "npcs": [
         "Lemin"
@@ -12631,7 +12649,12 @@
       "risk": "Sem combate observado; segurança não garantida",
       "risk_code": "unknown",
       "icon": "🧭",
-      "exits": {},
+      "exits": {
+        "n": "cap12_026",
+        "e": "ly_cabana",
+        "w": "ly_outra_casa",
+        "s": "ly_estacao"
+      },
       "npcs": [],
       "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
       "discovered_in": "Dia 157",
@@ -13724,6 +13747,1061 @@
       "fontes": [
         "evidence/dia157-biblioteca.json"
       ]
+    },
+    {
+      "id": "jr_rio_sul_1",
+      "name": "A Rua do Rio",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "lb013",
+        "w": "jr_pergaminhos"
+      },
+      "npcs": [],
+      "notes": "Parte sul da Rua do Rio, logo ao sul de Uma Praca. Oeste: Pergaminhos e Afins; leste: Misturas de Clariss; sul: mais lojas e o Posto Avancado.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "jr_pergaminhos",
+      "name": "Pergaminhos e Afins",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "e": "jr_rio_sul_1"
+      },
+      "npcs": [],
+      "notes": "Loja de magia. Catalogo 2026-10-19: cajado retorcido 18.859, bastao de metal 6.784, rolo de pergaminho 103 (NOTA, peso 1 - nao e o tomo de Lemin), remover maldicoes 4.369, bastao cinza de invisibilidade 46.112, retorno 6.209 (mais baratos que em Midgaard).",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "jr_rio_norte_1",
+      "name": "A Rua do Rio",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "s": "lb013",
+        "n": "jr_rio_norte_2"
+      },
+      "npcs": [],
+      "notes": "Logo ao norte de Uma Praca. Oeste: muro de residencias; leste: fundos da Sapataria.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "jr_rio_norte_2",
+      "name": "Rua do Rio",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "s": "jr_rio_norte_1",
+        "n": "jr_ponte_rio"
+      },
+      "npcs": [],
+      "notes": "Ponte ao norte; leste: Loja de Barcos do Capitao Vulcevic.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "jr_ponte_rio",
+      "name": "Sobre a Ponte na Rua do Rio",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "s": "jr_rio_norte_2",
+        "n": "jr_rio_norte_3"
+      },
+      "npcs": [],
+      "notes": "Ponte sobre o Rio Alquandon.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "jr_rio_norte_3",
+      "name": "A Rua do Rio",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "s": "jr_ponte_rio",
+        "e": "jr_margem_1"
+      },
+      "npcs": [],
+      "notes": "Distrito de artes e entretenimento. Norte: curva ate o Posto Avancado.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "jr_margem_1",
+      "name": "Um Caminho ao Longo da Margem",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "w": "jr_rio_norte_3",
+        "n": "jr_bar_salazar",
+        "e": "jr_margem_2"
+      },
+      "npcs": [],
+      "notes": "Primeira sala da margem.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "jr_bar_salazar",
+      "name": "Bar Salazar",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "s": "jr_margem_1"
+      },
+      "npcs": [],
+      "notes": "Bar; o Pacificador e Salazar estavam la.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "jr_margem_2",
+      "name": "Um Caminho ao Longo da Margem",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "w": "jr_margem_1",
+        "n": "jr_cassino",
+        "e": "jr_margem_3"
+      },
+      "npcs": [],
+      "notes": "Cassino ao norte.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "jr_cassino",
+      "name": "O Cassino",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "s": "jr_margem_2"
+      },
+      "npcs": [],
+      "notes": "Carteador e aviso na parede.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "jr_margem_3",
+      "name": "Um Caminho ao Longo da Margem",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "w": "jr_margem_2",
+        "n": "jr_iscas",
+        "e": "jr_margem_4"
+      },
+      "npcs": [],
+      "notes": "Iscas e Pescas ao norte.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "jr_iscas",
+      "name": "Iscas e Pescas",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "s": "jr_margem_3"
+      },
+      "npcs": [],
+      "notes": "Grigor, materiais de pesca.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "jr_margem_4",
+      "name": "Um Caminho ao Longo da Margem",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "w": "jr_margem_3",
+        "n": "jr_franz",
+        "e": "jr_margem_5"
+      },
+      "npcs": [],
+      "notes": "Butique Franz ao norte.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "jr_franz",
+      "name": "Butique Franz",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "s": "jr_margem_4"
+      },
+      "npcs": [],
+      "notes": "Franz, estilista.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "jr_margem_5",
+      "name": "Um Caminho ao Longo da Margem",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "w": "jr_margem_4",
+        "n": "jr_margem_6"
+      },
+      "npcs": [],
+      "notes": "Curva da margem (saidas norte e oeste).",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "jr_margem_6",
+      "name": "Um Caminho ao Longo da Margem",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "s": "jr_margem_5",
+        "w": "jr_tabuas_1"
+      },
+      "npcs": [],
+      "notes": "Caminho de madeira; oeste: Caminho de Tabuas.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "jr_tabuas_1",
+      "name": "Um Caminho de Tábuas",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "e": "jr_margem_6",
+        "s": "jr_academia",
+        "w": "jr_tabuas_2"
+      },
+      "npcs": [],
+      "notes": "Muralha norte; Sala de Exercicios (A Academia) ao sul.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "jr_academia",
+      "name": "A Academia",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "jr_tabuas_1"
+      },
+      "npcs": [],
+      "notes": "Instrutor e aviso. Nao interagido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "jr_tabuas_2",
+      "name": "Um Caminho de Tábuas",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "e": "jr_tabuas_1",
+        "s": "jr_biblioteca"
+      },
+      "npcs": [],
+      "notes": "\"Voce pode entrar na Biblioteca se seguir ao sul.\" Oeste nao andado.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "jr_biblioteca",
+      "name": "A Biblioteca",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "jr_tabuas_2"
+      },
+      "npcs": [
+        "a assistente de bibliotecária",
+        "a bibliotecária"
+      ],
+      "notes": "BIBLIOTECA DA CIDADE DE JARETH (a da Assistente de Bibliotecaria, autoquest Arrumando a Biblioteca, nivel 60+). A assistente convida: \"Eu preciso de ajuda! Pode me ajudar? Sim?\" - NAO responder com Ajuda Magica ativa. Aviso: treino temporario de atributos (PRATICAR). Sem objetos, sem list, look livros/prateleiras nada. Nao tem o tomo de Lemin. help mapa 2 ja indicava a biblioteca no Caminho de Tabuas.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "ce_entrada",
+      "name": "A Entrada da Champs Elysées",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "s": "cap12_012"
+      },
+      "npcs": [],
+      "notes": "Portao dourado ao norte (fechado; open norte abre). Aviso: \"N L N O S O N O\" = rota do labirinto ate O Centro Historico da Franca: portao N, depois L N O S O N O (testada). Volta do Centro Historico: L S L N L S O e S pelo portao (testada). Salas do labirinto sao homonimas \"Champs Elysees\" (esquilos - animais inocentes; Degas, o eremita) e NAO foram mapeadas como arestas.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "pa_centro_historico",
+      "name": "O Centro Histórico da França",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "pa_entrada_praca"
+      },
+      "npcs": [],
+      "notes": "Fim do labirinto. Leste volta ao labirinto.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "pa_entrada_praca",
+      "name": "A Entrada Da Praça Luís XIV",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "pa_centro_praca",
+        "e": "pa_luis_leste",
+        "w": "pa_luis_oeste",
+        "s": "pa_centro_historico"
+      },
+      "npcs": [],
+      "notes": "Bilhete de Robespierre.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "pa_centro_praca",
+      "name": "O Centro da Praça",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "pa_qg_entrada",
+        "e": "pa_cont_leste",
+        "w": "pa_cont_oeste",
+        "s": "pa_entrada_praca"
+      },
+      "npcs": [],
+      "notes": "Estatua de bronze de Luis XIV.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "pa_cont_leste",
+      "name": "A Continuação da Praça",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "pa_revol_leste",
+        "s": "pa_luis_leste",
+        "w": "pa_centro_praca"
+      },
+      "npcs": [],
+      "notes": "Ala leste.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "pa_cont_oeste",
+      "name": "A Continuação da Praça",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "pa_revol_oeste",
+        "e": "pa_centro_praca",
+        "s": "pa_luis_oeste"
+      },
+      "npcs": [],
+      "notes": "Ala oeste.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "pa_luis_leste",
+      "name": "Praça Luís XIV",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "pa_cont_leste",
+        "w": "pa_entrada_praca"
+      },
+      "npcs": [],
+      "notes": "Ala sudeste.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "pa_luis_oeste",
+      "name": "Praça Luís XIV",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "pa_cont_oeste",
+        "e": "pa_entrada_praca"
+      },
+      "npcs": [],
+      "notes": "Ala sudoeste.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "pa_revol_leste",
+      "name": "A Praça Da Revolução",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "e": "pa_hotel",
+        "s": "pa_cont_leste",
+        "w": "pa_qg_entrada"
+      },
+      "npcs": [],
+      "notes": "Um revolucionario.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "pa_revol_oeste",
+      "name": "A Praça Da Revolução",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "e": "pa_qg_entrada",
+        "s": "pa_cont_oeste"
+      },
+      "npcs": [],
+      "notes": "Guilhotina ensanguentada.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "pa_hotel",
+      "name": "Um Hotel Francês",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "w": "pa_revol_leste"
+      },
+      "npcs": [],
+      "notes": "Fechado para reformas; recepcionista. Beco sem saida.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "pa_qg_entrada",
+      "name": "A Entrada do Quartel General dos Mosqueteiros",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "e": "pa_revol_leste",
+        "w": "pa_revol_oeste",
+        "s": "pa_centro_praca"
+      },
+      "npcs": [],
+      "notes": "Porta norte para a escola de mosqueteiros e o QG: TRANCADA (\"Parece estar trancada\"). Nao forcada. Mosqueteiro em servico dormindo (consider: nivel muito facil, vida \"Voce e louco?\"); guarda, nao e alvo.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "nd_atrio_leste",
+      "name": "O Átrio de Notre Dame",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "w": "cap12_016"
+      },
+      "npcs": [],
+      "notes": "Bacia de prata na parede. Sem saida.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "nd_atrio_oeste",
+      "name": "O Átrio de Notre Dame",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "e": "cap12_016"
+      },
+      "npcs": [],
+      "notes": "Bacia de prata na parede. Sem saida.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "nd_corr_oriental_n",
+      "name": "O Corredor Oriental",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "e": "nd_sala_espera",
+        "s": "nd_nave_oriental_1",
+        "w": "cap12_017"
+      },
+      "npcs": [],
+      "notes": "\"A sala que leva a capela fica a leste daqui.\"",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "nd_sala_espera",
+      "name": "A Sala de Espera da Catedral",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "w": "nd_corr_oriental_n",
+        "e": "nd_capela"
+      },
+      "npcs": [],
+      "notes": "Porta leste fechada (open leste abre).",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "nd_capela",
+      "name": "A Pequena Capela",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "w": "nd_sala_espera"
+      },
+      "npcs": [
+        "o padre Tintoreto"
+      ],
+      "notes": "O padre Tintoreto (protegido por luz forte; \"nao o perturbe\"). Sem objetos.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "nd_nave_oriental_1",
+      "name": "A Nave Oriental",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "nd_corr_oriental_n",
+        "w": "cap12_018",
+        "s": "nd_nave_oriental_2"
+      },
+      "npcs": [],
+      "notes": "Aviso: dizimo.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "nd_nave_oriental_2",
+      "name": "A Nave Oriental",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "nd_nave_oriental_1",
+        "w": "cap12_019",
+        "s": "nd_corr_oriental_s"
+      },
+      "npcs": [],
+      "notes": "",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "nd_corr_oriental_s",
+      "name": "O Corredor Oriental",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "nd_nave_oriental_2",
+        "w": "cap12_020"
+      },
+      "npcs": [],
+      "notes": "Fim do corredor oriental.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "nd_corr_ocidental_s",
+      "name": "O Corredor Ocidental",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "nd_corr_ocidental_m",
+        "e": "cap12_020"
+      },
+      "npcs": [],
+      "notes": "",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "nd_corr_ocidental_m",
+      "name": "O Corredor Ocidental",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "nd_nave_ocidental",
+        "e": "cap12_019",
+        "s": "nd_corr_ocidental_s"
+      },
+      "npcs": [],
+      "notes": "",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "nd_nave_ocidental",
+      "name": "A Nave Ocidental",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "nd_corr_ocidental_n",
+        "e": "cap12_018",
+        "s": "nd_corr_ocidental_m"
+      },
+      "npcs": [],
+      "notes": "",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "nd_corr_ocidental_n",
+      "name": "O Corredor Ocidental",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "e": "cap12_017",
+        "s": "nd_nave_ocidental"
+      },
+      "npcs": [],
+      "notes": "",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "ly_casa",
+      "name": "Uma Casa de Lyon",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "w": "cap12_025"
+      },
+      "npcs": [],
+      "notes": "Mesa e cama. Vazia.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "ly_parque",
+      "name": "O Parque de Lyon",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "e": "cap12_025"
+      },
+      "npcs": [],
+      "notes": "Poodle branco amarrado (animal inocente; protegido por luz forte).",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "ly_cabana",
+      "name": "Uma Cabana em Lyon",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "w": "cap12_029"
+      },
+      "npcs": [],
+      "notes": "Quadros de \"Van Gogh\", papeis na mesa (look papeis/mesa: nada). Comerciante frances (luz forte); list: \"Voce nao pode fazer isto aqui!\".",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "ly_outra_casa",
+      "name": "Outra Casa de Lyon",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "e": "cap12_029"
+      },
+      "npcs": [],
+      "notes": "Mesa e cama. Vazia.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "ly_estacao",
+      "name": "A Estação de Carruagens",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; seguranca nao garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "cap12_029",
+        "e": "ly_tunel"
+      },
+      "npcs": [],
+      "notes": "Aviso: carruagem para o centro de Lyon 50 moedas, para o centro da cidade de Paris 85. Nao usada.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
+    },
+    {
+      "id": "ly_tunel",
+      "name": "Um Túnel Escuro",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Rato agressivo; matar custa alinhamento",
+      "risk_code": "danger",
+      "icon": "🧭",
+      "exits": {
+        "w": "ly_estacao"
+      },
+      "npcs": [],
+      "notes": "PERIGO MORAL: \"um rato preto\" agressivo ataca ao entrar; o contra-ataque automatico o matou e o ALINHAMENTO CAIU 412 -> 393. Nao voltar. Leste: O Beco Sem Saida (nao andado).",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-biblioteca-paris.json",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-19 (Plano 033); exits lidos em cada sala. Agente: Claude Opus 5.5."
+      }
     }
   ],
   "last_updated_day": 157,
@@ -13772,6 +14850,7 @@
     "Dia 156: levantamento refundido (342 salas digeridas: 103 pareadas com o curado, 239 novas). Chaves 'l'/'o' normalizadas para 'e'/'w' - no servidor 'l' e' look e 'o' e' order, nunca direcao. O derivado e refeito a cada rodada; o curado nunca e sobrescrito. Conflito de aresta mantem o valor curado.",
     "Dia 156, continuação: saídas da ala iluminada, escadarias e sacadas conferidas por exits e travessias. Retirada a aresta leste indevida de Mais Corredor; oeste é porta observada no look. Homônimos distinguidos pelas saídas. Nenhuma sala removida e nenhum corpus parcial digerido. Fonte: evidence/dia156e.json.",
     "Dia 156: levantamento refundido (497 salas digeridas: 129 pareadas com o curado, 368 novas). Chaves 'l'/'o' normalizadas para 'e'/'w' - no servidor 'l' e' look e 'o' e' order, nunca direcao. O derivado e refeito a cada rodada; o curado nunca e sobrescrito. Conflito de aresta mantem o valor curado.",
-    "Dia 157 (Claude Sonnet 5.5): castelo do Lorde de Jareth e Beco Escuro de Jareth levantados a pé (29 salas novas, prefixo jz_). Biblioteca privada do Lorde achada no ramo leste do corredor; não é a biblioteca da Assistente de Bibliotecária, ainda não localizada. Ligações a partir de lb021 (norte) e lv136 (oeste). Fonte: evidence/dia157-biblioteca.json."
+    "Dia 157 (Claude Sonnet 5.5): castelo do Lorde de Jareth e Beco Escuro de Jareth levantados a pé (29 salas novas, prefixo jz_). Biblioteca privada do Lorde achada no ramo leste do corredor; não é a biblioteca da Assistente de Bibliotecária, ainda não localizada. Ligações a partir de lb021 (norte) e lv136 (oeste). Fonte: evidence/dia157-biblioteca.json.",
+    "Dia 157 (Claude Opus 5.5, Plano 033): +50 salas (jr_ Jareth norte e biblioteca; ce_/pa_ Champs Elysees e Paris; nd_ alas da catedral; ly_ Lyon). Arestas so onde andadas ou lidas em exits. Labirinto do Champs Elysees fica como nota de rota em ce_entrada. Fonte: evidence/dia157-biblioteca-paris.json."
   ]
 }

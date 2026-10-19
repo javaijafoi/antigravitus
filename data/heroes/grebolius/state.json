@@ -5,7 +5,7 @@
     "day": 157,
     "verification": "live",
     "live_verified": true,
-    "source": "Sessões do Capítulo 12 em 2026-10-19: GPT-6 / Codex (evidence/dia157-cap12.json) e Claude Sonnet 5.5 (evidence/dia157-biblioteca.json, dia157-lemin-reativacao.json, dia157-jareth-varredura.json). Última conexão fechada com save e sleep confirmados no Templo, sem quit; Ajuda Mágica ativa na etapa de entrega."
+    "source": "Sessões do Capítulo 12 em 2026-10-19: GPT-6 / Codex (evidence/dia157-cap12.json) e Claude Sonnet 5.5 (evidence/dia157-biblioteca.json, dia157-lemin-reativacao.json, dia157-jareth-varredura.json). Última conexão fechada com save e sleep confirmados no Templo, sem quit; Ajuda Mágica ativa na etapa de entrega. Sessão seguinte (Claude Opus 5.5, Plano 033, evidence/dia157-biblioteca-paris.json): uma conexão, encerrada no Templo com save e sleep confirmados, sem quit; missão ainda na etapa de entrega."
   },
   "level": 32,
   "mechanical_race": "Elfo",
@@ -13,7 +13,7 @@
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
   "alignment": {
-    "value": 412,
+    "value": 393,
     "label": "Bom"
   },
   "vitals": {
@@ -31,10 +31,10 @@
     }
   },
   "experience": {
-    "current": 7225102,
+    "current": 7225093,
     "next_level": 8000000
   },
-  "gold": 16059,
+  "gold": 15920,
   "attributes": {
     "STR": 11,
     "DEX": 17,
@@ -47,7 +47,7 @@
     "base": 89,
     "with_armor": 165,
     "effect_verified": true,
-    "note": "CA 165 no score final da sessão GPT com armor +36 e invisibility +40; base 89. Não atribuir 165 somente a armor. Na última sessão Claude armor +36 foi relançada (cerca de 17 horas no score) e invisibility lançada; valores exatos não reconferidos ao fechar. Buffs expiram; renovar antes da próxima saída. evidence/dia157-cap12.json."
+    "note": "CA 165 no score final da sessão GPT com armor +36 e invisibility +40; base 89. Não atribuir 165 somente a armor. Na última sessão Claude armor +36 foi relançada (cerca de 17 horas no score) e invisibility lançada; valores exatos não reconferidos ao fechar. Buffs expiram; renovar antes da próxima saída. evidence/dia157-cap12.json. Plano 033: score final com armor +36 (29 horas) e CA 125; invisibility não lançada (falhou por concentração)."
   },
   "hitroll": 16,
   "damroll": 5,
@@ -55,7 +55,7 @@
   "training_sessions": 68,
   "operational_mode": {
     "current": "padrao",
-    "description": "Capítulo 12 em curso; reconhecimento em modo batedor, com duas fugas por recall no Beco Escuro de Jareth. Ajuda Mágica ativa: entregar tomo a Lemin, Centro da Cidade de Lyon. Sessão salva, dormindo no Templo, driver fechado.",
+    "description": "Capítulo 12 em curso; batedor. Biblioteca de Jareth achada (sem tomo); Paris, catedral e Lyon varridos. Ajuda Mágica ativa: entregar tomo a Lemin, Centro da Cidade de Lyon. Sessão salva, dormindo no Templo, driver fechado.",
     "wimpy_profile": {
       "padrao": 17,
       "batedor": 33,
@@ -79,17 +79,17 @@
   },
   "last_event": {
     "day": 157,
-    "summary": "Capítulo 12 iniciado. Rota Midgaard–Haon-Dor–França–Notre Dame–Lyon reconhecida sem combate. Lemin localizado no Centro da Cidade de Lyon; Ajuda Mágica aceita, resposta Merlin validada, monólogos ouvidos e dois pedidos de confirmação respondidos após score tudo. Etapa atual: entregar um tomo de pergaminho bem grosso, podendo ser usado. Nenhum item entregue e nenhum gasto. Lojas de Lyon e Midgaard sem tomo; doação histórica não se confirmou. Reconhecimento adicional do castelo de Welmar não encontrou fonte do tomo nas salas visitadas. Retorno ao Templo, alimentação, água, save e sleep confirmados; driver encerrou com código 0. Segunda parte do dia (Claude Sonnet 5.5): a missão apareceu inativa no login e foi reativada com Lemin, seguindo a mesma cadeia, e voltou à etapa de entrega do tomo; sobreviveu a fechar e reabrir o driver. Varredura das ruas de Jareth, do castelo do Lorde e de salas vizinhas não achou a biblioteca da Assistente nem o tomo; o Beco Escuro de Jareth (malandros hostis) ficou fora por decisão do autor. Duas fugas por recall com cerca de 50 de vida; nenhuma morte nem queda de alinhamento. Sessão encerrada no Templo com save e sleep confirmados, sem quit."
+    "summary": "Capítulo 12 iniciado. Rota Midgaard–Haon-Dor–França–Notre Dame–Lyon reconhecida sem combate. Lemin localizado no Centro da Cidade de Lyon; Ajuda Mágica aceita, resposta Merlin validada, monólogos ouvidos e dois pedidos de confirmação respondidos após score tudo. Etapa atual: entregar um tomo de pergaminho bem grosso, podendo ser usado. Nenhum item entregue e nenhum gasto. Lojas de Lyon e Midgaard sem tomo; doação histórica não se confirmou. Reconhecimento adicional do castelo de Welmar não encontrou fonte do tomo nas salas visitadas. Retorno ao Templo, alimentação, água, save e sleep confirmados; driver encerrou com código 0. Segunda parte do dia (Claude Sonnet 5.5): a missão apareceu inativa no login e foi reativada com Lemin, seguindo a mesma cadeia, e voltou à etapa de entrega do tomo; sobreviveu a fechar e reabrir o driver. Varredura das ruas de Jareth, do castelo do Lorde e de salas vizinhas não achou a biblioteca da Assistente nem o tomo; o Beco Escuro de Jareth (malandros hostis) ficou fora por decisão do autor. Duas fugas por recall com cerca de 50 de vida; nenhuma morte nem queda de alinhamento. Sessão encerrada no Templo com save e sleep confirmados, sem quit. Terceira parte (Claude Opus 5.5, Plano 033): a Biblioteca da cidade de Jareth foi achada no Caminho de Tábuas, ao norte do rio, sem tomo; lojas Pergaminhos e Afins e Dalston sem tomo (comprado um rolo de pergaminho por 103, que é uma nota, não entregue). Champs Elysées atravessado pela rota do aviso até Paris; praça, hotel, alas da catedral, capela e casas de Lyon sem tomo. Um rato preto atacou no Túnel Escuro de Lyon e morreu no contra-ataque; o alinhamento caiu de 412 para 393 e o túnel foi banido. Por decisão do autor a sessão foi encerrada no Templo com save e sleep confirmados, sem quit."
   },
   "next_objective": {
     "mission_id": "ajuda-magica",
     "title": "Capítulo 12: reconstruir o livro de Merlin",
-    "next_step": "Decidir com o autor como tratar a porta trancada da Loja de Trapos da Vovó e o Beco Escuro de Jareth (sem matar os malandros sem autorização); conferir antes `score tudo` para ver se a missão segue na etapa de entrega. Conferir etapa, pedido e inventário antes de qualquer give.",
+    "next_step": "Abrir com `score tudo` e conferir Ajuda Mágica na etapa de entrega; depois seguir a pista escolhida no Plano 034 §5 (livros-guia da Sala de Doações: identificar antes de qualquer give). Nunca entregar sem a etapa confirmada.",
     "missing_preparation": [
-      "Fonte do tomo ainda não identificada; a biblioteca da cidade de Jareth não foi localizada.",
-      "Revalidar buffs ao acordar com score tudo."
+      "Fonte do tomo ainda não identificada; Biblioteca de Jareth, lojas de pergaminho, Paris, catedral e Lyon já descartados.",
+      "Revalidar buffs com score tudo (armor tinha 29 horas no fechamento)."
     ],
-    "plan_document": "planos/plano033.md"
+    "plan_document": "planos/plano034.md"
   },
   "skills": [
     {
@@ -325,7 +325,7 @@
       {
         "name": "um pão recheado",
         "quantity": 3,
-        "source": "evidence/dia157-cap12.json",
+        "source": "evidence/dia157-biblioteca-paris.json",
         "container": "a mochila de Pellinore"
       },
       {
@@ -357,16 +357,22 @@
         "quantity": 1,
         "source": "evidence/dia157-cap12.json",
         "container": "a mochila de Pellinore"
+      },
+      {
+        "name": "um rolo de pergaminho",
+        "quantity": 1,
+        "source": "evidence/dia157-biblioteca-paris.json",
+        "note": "NOTA, peso 1, valor 90; comprado por 103 na Pergaminhos e Afins; não é o tomo de Lemin."
       }
     ],
     "pending_verification": []
   },
   "conditions": [
     "Save e sono confirmados no Templo; conexão fechada sem quit.",
-    "Sem fome nem sede; 3 pães na mochila, cantil reabastecido na fonte e utilizado no encerramento.",
-    "9 mortes e 1 DT históricas; nenhum combate, morte, gasto ou alteração de alinhamento nesta sessão.",
-    "Ouro: 15.700 banco + 359 mão = 16.059. Peso 74/115 kg.",
-    "Ajuda Mágica ativa na primeira entrega: tomo de pergaminho bem grosso, que pode ser usado. Nenhum give executado."
+    "Sem fome nem sede; 3 pães na mochila; cantil reabastecido na Praça do Templo.",
+    "9 mortes e 1 DT históricas; um combate não iniciado por ela (rato preto em Lyon) com queda de alinhamento 412 -> 393.",
+    "Ouro: 15.700 banco + 220 mão = 15.920 (gastos: rolo de pergaminho 103, seis pães 36). Peso 69/115 kg.",
+    "Ajuda Mágica ativa na etapa de entrega: tomo de pergaminho bem grosso, que pode ser usado. Nenhum give executado."
   ],
   "uncertainties": [
     "A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.",
@@ -535,6 +541,11 @@
       "document": "evidence/dia157-cap12.json",
       "day": 157,
       "note": "Sessão ao vivo supervisionada de 2026-10-19; comandos e encerramento confirmados no transcript."
+    },
+    {
+      "document": "evidence/dia157-biblioteca-paris.json",
+      "day": 157,
+      "note": "Plano 033 executado por Claude Opus 5.5: biblioteca de Jareth achada sem tomo; Champs Elysées, Paris, catedral e Lyon varridos; queda de alinhamento por rato preto; encerrado no Templo."
     }
   ],
   "narrative_style": "ladra arcana",

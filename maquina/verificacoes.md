@@ -264,3 +264,15 @@ Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: data/heroes/grebolius/evid
 - **recall em combate funcionou:** duas vezes, com 49 e 50 de vida, a personagem voltou ao Templo sem perda de itens. Nenhuma falha vista (sorte não excluída).
 - **Fugir andando tem custo:** recuar de uma sala com dois malandros arruaceiros hostis gastou ~150 de vida em três passos; preferir `recall` assim que a vida cair, em vez de andar.
 - **open <direção> é suficiente para portas sem tranca no castelo de Jareth** (norte e sul do Grande Salão, norte do Saguão, oeste do corredor, norte do quarto de hóspedes, norte do fim do corredor leste).
+
+## 2026-10-19 — Dia 157 (Plano 033): mapas de ajuda, lojas comuns e where como radar
+
+Agente: Claude Opus 5.5 (claude-opus-5-5). Fonte: data/heroes/grebolius/evidence/dia157-biblioteca-paris.json.
+
+- **`help mapas` e `help mapa <n>` existem e dão rota:** a lista tem 33 regiões (2 = Jareth, 19 = Notre Dame, 29 = Torre da Magia). `help mapa 2` descreve o Caminho de Tábuas (onde está a Biblioteca) e `help mapa 19` cita Lyon e o bosque de Champs Elysées. Ajuda consultada; as rotas de Jareth e de Paris foram depois percorridas.
+- **`list <número>` em loja comum não inspeciona:** na Pergaminhos e Afins respondeu "Por enquanto, nada disto está sendo vendido." Só na loja dos deuses (`autoquest loja`) ele mostra os atributos (conhecimento §32.2). `buy #<número>` funcionou ("Você comprou um rolo de pergaminho").
+- **`list` fora de loja:** "Você não pode fazer isto aqui!" (Biblioteca de Jareth, Cabana em Lyon).
+- **`look <npc>` pode disparar a fala de missão do NPC:** `look bibliotecaria` casou com a assistente, que respondeu "Eu preciso de ajuda! Pode me ajudar? Sim?". Olhar não aceita missão, mas exige não responder em seguida.
+- **`where <nome>` revela salas fora do mapa:** em Notre Dame devolveu "o padre Tintoreto - A Pequena Capela" e "o corcunda - O Campanário da Catedral" antes de qualquer caminhada.
+- **O Templo de Midgaard bloqueia magia (de novo):** três `cast 'armor'` responderam "Sua magia falha e desaparece"; na Praça do Templo, "Você sente alguém te protegendo". Já constava na diretiva §7; a repetição foi erro de método, não divergência do servidor.
+- **`identify` sobe com o uso:** "Você sente seu 'identify' melhorar." na primeira conjuração bem-sucedida da sessão.

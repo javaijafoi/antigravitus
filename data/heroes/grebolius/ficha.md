@@ -10,7 +10,7 @@
 * **Raça Mecânica no MUD:** Elfo
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **32**
-* **Alinhamento Moral:** 412 (Bom)
+* **Alinhamento Moral:** 393 (Bom)
 * **Localização Atual:** O Templo de Midgaard (último registro: Dia 157)
 * **Acampamento Registrado:** O Templo de Midgaard
 * **Santuário de Referência:** O Panteao dos Centenarios
@@ -24,9 +24,9 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 | **Pontos de Mana (MP)** | 430 | 430 | 100% |
 | **Estamina / Movimento (MV)** | 145 | 145 | 100% |
 
-* **Experiência Acumulada:** **7.225.102 EXP**
-* **Experiência Necessária p/ Grau 33:** **774.898 EXP** (Meta: 8.000.000 EXP)
-* **Ouro Líquido:** **16.059 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **7.225.093 EXP**
+* **Experiência Necessária p/ Grau 33:** **774.907 EXP** (Meta: 8.000.000 EXP)
+* **Ouro Líquido:** **15.920 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 11
@@ -38,7 +38,7 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 
 ### Métricas de Combate
 * **Classe de Armadura (AC):** 89 (base) / **165** (com `armor`, conforme registro)
-CA 165 no score final da sessão GPT com armor +36 e invisibility +40; base 89. Não atribuir 165 somente a armor. Na última sessão Claude armor +36 foi relançada (cerca de 17 horas no score) e invisibility lançada; valores exatos não reconferidos ao fechar. Buffs expiram; renovar antes da próxima saída. evidence/dia157-cap12.json.
+CA 165 no score final da sessão GPT com armor +36 e invisibility +40; base 89. Não atribuir 165 somente a armor. Na última sessão Claude armor +36 foi relançada (cerca de 17 horas no score) e invisibility lançada; valores exatos não reconferidos ao fechar. Buffs expiram; renovar antes da próxima saída. evidence/dia157-cap12.json. Plano 033: score final com armor +36 (29 horas) e CA 125; invisibility não lançada (falhou por concentração).
 * **Bônus de Acerto (Hitroll):** 16
 * **Bônus de Dano (Damroll):** +5
 * **Configuração de Fuga (Wimpy):** **45 HP** (referência de 25%; não garante fuga antes de golpe letal)
@@ -109,30 +109,31 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 * `um cantil` (x1) — evidence/dia157-cap12.json
 * `a mochila de Pellinore` (x1) — evidence/dia157-cap12.json
 * `um pergaminho de sabedoria` (x1) — evidence/dia157-cap12.json
-* `um pão recheado` (x3) — evidence/dia157-cap12.json
+* `um pão recheado` (x3) — evidence/dia157-biblioteca-paris.json
 * `um manto de pano` (x1) — evidence/dia157-cap12.json
 * `um colar com uma pedra púrpura` (x1) — evidence/dia157-cap12.json
 * `a bainha de Excalibur` (x1) — evidence/dia157-cap12.json
 * `uma Cruz Ansada` (x1) — evidence/dia157-cap12.json
 * `o Cetro do Bispo Negro` (x1) — evidence/dia157-cap12.json
+* `um rolo de pergaminho` (x1) — evidence/dia157-biblioteca-paris.json
 
 ### Pendências de inventário
 
 ## ✦ Condições Registradas
 * Save e sono confirmados no Templo; conexão fechada sem quit.
-* Sem fome nem sede; 3 pães na mochila, cantil reabastecido na fonte e utilizado no encerramento.
-* 9 mortes e 1 DT históricas; nenhum combate, morte, gasto ou alteração de alinhamento nesta sessão.
-* Ouro: 15.700 banco + 359 mão = 16.059. Peso 74/115 kg.
-* Ajuda Mágica ativa na primeira entrega: tomo de pergaminho bem grosso, que pode ser usado. Nenhum give executado.
+* Sem fome nem sede; 3 pães na mochila; cantil reabastecido na Praça do Templo.
+* 9 mortes e 1 DT históricas; um combate não iniciado por ela (rato preto em Lyon) com queda de alinhamento 412 -> 393.
+* Ouro: 15.700 banco + 220 mão = 15.920 (gastos: rolo de pergaminho 103, seis pães 36). Peso 69/115 kg.
+* Ajuda Mágica ativa na etapa de entrega: tomo de pergaminho bem grosso, que pode ser usado. Nenhum give executado.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
 **Capítulo 12: reconstruir o livro de Merlin**
-Decidir com o autor como tratar a porta trancada da Loja de Trapos da Vovó e o Beco Escuro de Jareth (sem matar os malandros sem autorização); conferir antes `score tudo` para ver se a missão segue na etapa de entrega. Conferir etapa, pedido e inventário antes de qualquer give.
-* Fonte do tomo ainda não identificada; a biblioteca da cidade de Jareth não foi localizada.
-* Revalidar buffs ao acordar com score tudo.
+Abrir com `score tudo` e conferir Ajuda Mágica na etapa de entrega; depois seguir a pista escolhida no Plano 034 §5 (livros-guia da Sala de Doações: identificar antes de qualquer give). Nunca entregar sem a etapa confirmada.
+* Fonte do tomo ainda não identificada; Biblioteca de Jareth, lojas de pergaminho, Paris, catedral e Lyon já descartados.
+* Revalidar buffs com score tudo (armor tinha 29 horas no fechamento).
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessões do Capítulo 12 em 2026-10-19: GPT-6 / Codex (evidence/dia157-cap12.json) e Claude Sonnet 5.5 (evidence/dia157-biblioteca.json, dia157-lemin-reativacao.json, dia157-jareth-varredura.json). Última conexão fechada com save e sleep confirmados no Templo, sem quit; Ajuda Mágica ativa na etapa de entrega..
+Fonte do estado: Sessões do Capítulo 12 em 2026-10-19: GPT-6 / Codex (evidence/dia157-cap12.json) e Claude Sonnet 5.5 (evidence/dia157-biblioteca.json, dia157-lemin-reativacao.json, dia157-jareth-varredura.json). Última conexão fechada com save e sleep confirmados no Templo, sem quit; Ajuda Mágica ativa na etapa de entrega. Sessão seguinte (Claude Opus 5.5, Plano 033, evidence/dia157-biblioteca-paris.json): uma conexão, encerrada no Templo com save e sleep confirmados, sem quit; missão ainda na etapa de entrega..
 * A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.
 * O colar com pedra purpura pertence a outro dono: o servidor recusa o uso. Nenhum comerciante testado o compra.
 * Bainha de Excalibur exige nivel 85 (vista na Sala de Doacoes, nao pode ser carregada com a carga atual). Scutum de Carvalho exige nivel 35.

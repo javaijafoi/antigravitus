@@ -2455,3 +2455,16 @@ Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: evidence/dia157-jareth-var
 - **Porta leste da Vovó:** trancada (`open leste`: "parece estar trancado"). Não forçada. Seria o próximo candidato a levar a algo.
 - **A biblioteca da cidade de Jareth continua sem localização.** Restam: Beco Escuro (decisão do autor: não matar os malandros), portas trancadas/fechadas, castelo do Lorde (leste e sul do Saguão).
 - **Rota Templo → Praça de Jareth** agora é script: `automato/rotas/nav.py templo-praca-jareth`.
+
+## 66. Biblioteca de Jareth achada, Paris e as alas da catedral — e o tomo continua sem fonte (Dia 157, Plano 033)
+
+Agente: Claude Opus 5.5 (claude-opus-5-5). Fonte: evidence/dia157-biblioteca-paris.json.
+
+- **A biblioteca estava no `help mapa 2`.** O verbete de Jareth diz que o Caminho de Tábuas, ao norte do rio, tem "os Correios, o Hospital, entre outros". A Biblioteca é a segunda sala do Caminho de Tábuas: de **Uma Praça** `n,n,n,n,e,e,e,e,e,n,w,w,s` (no `mapa.json`: `jr_biblioteca`). **Lição:** antes de varrer uma cidade, ler `help mapa <n>` (lista em `help mapas`, 33 regiões).
+- **A biblioteca não tem o tomo.** Só a assistente (convite de *Arrumando a Biblioteca*, nível 60+: "Pode me ajudar? Sim?" — não responder) e a bibliotecária; aviso de treino temporário de atributos (`PRATICAR`); nada no chão, `list` recusado.
+- **Lojas de Jareth sem tomo:** Pergaminhos e Afins (vende um **rolo de pergaminho** por 103, que é NOTA de peso 1 — folha, não tomo; retorno 6.209 e remover maldições 4.369, mais baratos que em Midgaard) e Dalston Tralhas e Cia (malas, mochila, lanterna, tocha).
+- **Champs Elysées → Paris:** ao norte da Entrada Para a França; portão dourado (`open norte`); o aviso do portão é a rota do labirinto, **N L N O S O N O**, até *O Centro Histórico da França*. Volta: L S L N L S O e S. Paris é uma praça 3×3, um hotel fechado e o QG dos Mosqueteiros com a **porta trancada** (mosqueteiro de guarda dormindo; não é alvo).
+- **A catedral é maior que o mapa antigo:** átrios e alas leste/oeste; do Corredor Oriental norte, leste → Sala de Espera → `open leste` → **A Pequena Capela** (padre Tintoreto). **O Campanário da Catedral** existe (`where corcunda`), mas a entrada não foi achada.
+- **Lyon:** casas, parque, cabana (comerciante), estação de carruagens (Lyon 50, centro de Paris 85) e o Túnel Escuro. **No Túnel Escuro, um rato preto ataca sozinho e matá-lo custa alinhamento (412 → 393).** Não entrar lá.
+- **`where` é o radar de salas escondidas:** com NPCs da região, revelou A Pequena Capela e O Campanário antes de qualquer caminhada.
+- **Ainda sem fonte do tomo:** a mochila, a cidade de Lemin e os dois candidatos óbvios (biblioteca e lojas de pergaminho) foram descartados. Restam: o Campanário (entrada desconhecida), o QG trancado dos Mosqueteiros, a carruagem para o "centro da cidade de Paris", a Torre da Magia (`help mapa 29`) e os livros-guia da Sala de Doações (nunca identificados).
