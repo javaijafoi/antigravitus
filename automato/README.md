@@ -133,8 +133,8 @@ execute (fica no repositório só como histórico).
 | Comer/beber/magias em campo | `camadas/cuidar.py` | canônica |
 | Recarga na cidade | `camadas/prepara.py` | canônica |
 | Despachar rotina | `camadas/trabalhar.py` | canônica |
-| **Andar de A até B** | `camadas/navegar.py` | **canônica** (pelo `mapa.json`, confere cada sala) |
-| Andar rota fixa Templo→Jareth | `rotas/nav.py` | legado: verificada ao vivo no Dia 157. Rota nova vai para o `mapa.json` e para o `navegar.py` |
+| **Andar de A até B** | `camadas/navegar.py` | **canônica** (pelo `mapa.json`, confere cada sala; aceita o título sem o sufixo de curadoria `(…)`; origem homônima: prefere a sala curada ou pede `--de`). Templo→Praça de Jareth: `--para lb013` |
+| Andar rota fixa Templo→Jareth | `rotas/nav.py` | legado: só avisa e repassa ao `navegar.py` (a rota virou arestas do `mapa.json` no Dia 157). Rota nova vai para o `mapa.json` |
 | Cota do modelo e handoff | `camadas/guarda_cota.py` | canônica (só Antigravity) |
 | Fechar a sessão com segurança | `acoes/seguro.py` | canônica |
 | Mapa: levantar / digerir / fundir | `rotinas/cartografa.py`, `acoes/mapear.py`, `acoes/digerir_mapa.py`, `acoes/fundir_mapa.py` | canônica |

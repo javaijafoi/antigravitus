@@ -3,7 +3,7 @@
   "hero_name": "Grebolius",
   "sanctuary_id": "panteao_centenarios",
   "last_updated_cycle": "Dia 157 — reconhecimento manual do Capítulo 12, 2026-10-19",
-  "total_rooms": 590,
+  "total_rooms": 591,
   "layers": [
     {
       "id": "superficie",
@@ -316,8 +316,7 @@
         "y": 560
       },
       "exits": {
-        "s": "rua_oeste_1",
-        "n": "grande_campo_norte"
+        "s": "rua_oeste_1"
       },
       "npcs": [
         "Padeiro",
@@ -327,7 +326,8 @@
       "discovered_in": "Ciclo I (Dia 1)",
       "visitas_registradas": 113,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ],
       "arestas_do_levantamento": [
         "n"
@@ -1164,16 +1164,15 @@
       },
       "exits": {
         "s": "altar_templo",
-        "n": "grande_campo_sul",
-        "e": "grande_campo_norte",
-        "w": "corredor_sujo"
+        "n": "grande_campo_sul"
       },
       "npcs": [],
       "notes": "Trilha descendo a encosta do templo em direção aos descampados.",
       "discovered_in": "Ciclo II (Dia 14)",
       "visitas_registradas": 603,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ],
       "arestas_do_levantamento": [
         "e",
@@ -1195,7 +1194,6 @@
       "exits": {
         "s": "atras_do_altar",
         "n": "grande_campo_bifurcacao",
-        "e": "lv050",
         "w": "vila_residencial_entrada"
       },
       "npcs": [
@@ -1205,11 +1203,15 @@
       "discovered_in": "Ciclo II (Dia 14)",
       "visitas_registradas": 1078,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ],
       "arestas_do_levantamento": [
         "e",
         "w"
+      ],
+      "aliases": [
+        "O Grande Campo de Midgaard"
       ]
     },
     {
@@ -1235,7 +1237,11 @@
       "discovered_in": "Ciclo II (Dia 14)",
       "visitas_registradas": 626,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
+      ],
+      "aliases": [
+        "O Grande Campo de Midgaard"
       ]
     },
     {
@@ -1455,9 +1461,7 @@
         "y": 360
       },
       "exits": {
-        "e": "mais_corredor",
-        "s": "lb032",
-        "w": "fazenda_fim_estrada"
+        "e": "mais_corredor"
       },
       "npcs": [
         "Guarda Novato em Apuros"
@@ -1466,7 +1470,8 @@
       "discovered_in": "Ciclo II (Dia 14)",
       "visitas_registradas": 41,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ],
       "arestas_do_levantamento": [
         "s",
@@ -2218,10 +2223,14 @@
       },
       "visitas_registradas": 592,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ],
       "arestas_do_levantamento": [
         "e"
+      ],
+      "aliases": [
+        "O Grande Campo de Midgaard"
       ]
     },
     {
@@ -3995,7 +4004,7 @@
       },
       "exits": {
         "s": "caminho_campos_jareth",
-        "n": "estrada_posto_guarda_sul"
+        "n": "lb009"
       },
       "npcs": [
         "Um apressado aventureiro"
@@ -4004,7 +4013,8 @@
       "discovered_in": "Dia 96",
       "visitas_registradas": 231,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ]
     },
     {
@@ -4020,7 +4030,7 @@
         "y": 900
       },
       "exits": {
-        "s": "estrada_comeco",
+        "s": "estrada_mj_antes_posto_sul",
         "n": "vila_estrada_sul"
       },
       "npcs": [
@@ -4030,7 +4040,8 @@
       "discovered_in": "Dia 96",
       "visitas_registradas": 329,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ]
     },
     {
@@ -4077,8 +4088,7 @@
       },
       "exits": {
         "s": "vila_estrada_sul",
-        "n": "vila_estrada_norte",
-        "e": "lb012"
+        "n": "vila_estrada_norte"
       },
       "npcs": [
         "Um apressado aventureiro"
@@ -4087,7 +4097,8 @@
       "discovered_in": "Dia 96",
       "visitas_registradas": 181,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ],
       "arestas_do_levantamento": [
         "e"
@@ -4159,7 +4170,6 @@
       },
       "exits": {
         "s": "estrada_posto_guarda_norte",
-        "e": "estrada_colina_topo",
         "n": "lb040"
       },
       "npcs": [
@@ -4169,7 +4179,8 @@
       "discovered_in": "Dia 96",
       "visitas_registradas": 469,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ],
       "arestas_do_levantamento": [
         "n"
@@ -4187,25 +4198,22 @@
         "x": 200,
         "y": 400
       },
-      "exits": {
-        "w": "estrada_colina_subida",
-        "e": "estrada_proxima_jareth",
-        "n": "estrada_posto_guarda_sul",
-        "s": "lb009"
-      },
+      "exits": {},
       "npcs": [
         "Uma pequenina halfling"
       ],
-      "notes": "Mirante privilegiado com vista para Midgaard.",
+      "notes": "Duplicata curada do topo da colina (lb012). Saídas apagadas no Dia 157: eram atalhos falsos que pulavam 5 salas da estrada. Mirante privilegiado com vista para Midgaard.",
       "discovered_in": "Dia 96",
       "visitas_registradas": 169,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ],
       "arestas_do_levantamento": [
         "n",
         "s"
-      ]
+      ],
+      "duplicata_de": "lb012"
     },
     {
       "id": "estrada_proxima_jareth",
@@ -4220,7 +4228,7 @@
         "y": 400
       },
       "exits": {
-        "w": "estrada_colina_topo",
+        "w": "lb022",
         "e": "jareth_portao_oeste"
       },
       "npcs": [
@@ -4230,7 +4238,8 @@
       "discovered_in": "Dia 96",
       "visitas_registradas": 164,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ]
     },
     {
@@ -4247,7 +4256,7 @@
       },
       "exits": {
         "w": "estrada_proxima_jareth",
-        "e": "jareth_centro"
+        "e": "lb016"
       },
       "npcs": [
         "Guarda da Cidade de Jareth"
@@ -4256,7 +4265,8 @@
       "discovered_in": "Dia 96",
       "visitas_registradas": 159,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ]
     },
     {
@@ -4272,8 +4282,8 @@
         "y": 400
       },
       "exits": {
-        "w": "jareth_portao_oeste",
-        "e": "jareth_portao_leste",
+        "w": "lb015",
+        "e": "lb017",
         "s": "jareth_clube_kitty_kat",
         "n": "lv074"
       },
@@ -4284,7 +4294,8 @@
       "discovered_in": "Dia 96",
       "visitas_registradas": 159,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ],
       "arestas_do_levantamento": [
         "n"
@@ -4303,7 +4314,7 @@
         "y": 400
       },
       "exits": {
-        "w": "jareth_centro",
+        "w": "lb025",
         "e": "floresta_entrada",
         "n": "lv089",
         "s": "lv089"
@@ -4316,7 +4327,8 @@
       "discovered_in": "Dia 96",
       "visitas_registradas": 145,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ],
       "arestas_do_levantamento": [
         "n",
@@ -4645,7 +4657,8 @@
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 169,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ]
     },
     {
@@ -4657,7 +4670,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "n": "estrada_colina_topo",
+        "n": "estrada_mj_antes_posto_sul",
         "s": "estrada_comeco"
       },
       "npcs": [],
@@ -4665,7 +4678,8 @@
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 168,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ]
     },
     {
@@ -4685,7 +4699,8 @@
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 166,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ]
     },
     {
@@ -4722,14 +4737,15 @@
       "icon": "🗺️",
       "exits": {
         "e": "lb008",
-        "w": "estrada_colina_subida"
+        "w": "lb040"
       },
       "npcs": [],
       "notes": "Você está na estrada que, de acordo com as placas, é a via principal colina. Ao longe você pode avistar com facilidade um pequeno ponto, que entre Midgaard e Jareth, duas importantes cidades. A vista deste ponto parece ser a cidade de Midgaard e seus arredores. Ao leste e oeste você pode continuar p",
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 160,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ]
     },
     {
@@ -4749,7 +4765,8 @@
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 160,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ]
     },
     {
@@ -4770,7 +4787,8 @@
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 159,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ]
     },
     {
@@ -4783,7 +4801,6 @@
       "icon": "🗺️",
       "exits": {
         "e": "jareth_centro",
-        "n": "jareth_centro",
         "w": "lb014"
       },
       "npcs": [],
@@ -4791,7 +4808,8 @@
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 159,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ]
     },
     {
@@ -4811,7 +4829,8 @@
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 158,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ]
     },
     {
@@ -4832,7 +4851,8 @@
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 158,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ]
     },
     {
@@ -4852,7 +4872,8 @@
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 157,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ]
     },
     {
@@ -4872,7 +4893,8 @@
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 157,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ]
     },
     {
@@ -4892,7 +4914,8 @@
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 156,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ]
     },
     {
@@ -4913,7 +4936,8 @@
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 155,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ]
     },
     {
@@ -4933,7 +4957,8 @@
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 152,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ]
     },
     {
@@ -4953,7 +4978,8 @@
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 152,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ]
     },
     {
@@ -4994,7 +5020,8 @@
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 142,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ]
     },
     {
@@ -5156,7 +5183,6 @@
       "icon": "🗺️",
       "exits": {
         "e": "lb035",
-        "n": "pequena_sala_guarda",
         "s": "fazenda_entrada_casa",
         "w": "fazenda_gramado_casa"
       },
@@ -5165,7 +5191,8 @@
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 73,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ]
     },
     {
@@ -5412,7 +5439,6 @@
       "icon": "🗺️",
       "exits": {
         "e": "lb012",
-        "n": "estrada_colina_subida",
         "s": "estrada_colina_subida"
       },
       "npcs": [],
@@ -5420,7 +5446,8 @@
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 28,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ]
     },
     {
@@ -6945,7 +6972,6 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lb008",
         "w": "vila_estrada_norte"
       },
       "npcs": [],
@@ -6953,7 +6979,8 @@
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 7,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ]
     },
     {
@@ -7139,16 +7166,15 @@
       "icon": "🗺️",
       "exits": {
         "e": "corredor_sujo",
-        "n": "lb116",
-        "s": "mais_corredor",
-        "w": "grande_campo_sul"
+        "s": "mais_corredor"
       },
       "npcs": [],
       "notes": "Uma saída ao leste te leva ao corredor, e ao sul retorna para a entrada. Você está entrando em um longo corredor, podendo escutar o som de criaturas por perto, mas sem poder contar exatamente a origem do som.",
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 6,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ]
     },
     {
@@ -11373,15 +11399,14 @@
       "risk": "Desconhecido",
       "risk_code": "unknown",
       "icon": "🗺️",
-      "exits": {
-        "n": "estrada_colina_topo"
-      },
+      "exits": {},
       "npcs": [],
       "notes": "Você está na estrada que, de acordo com as placas, é a via principal convergentes para cá, esse trecho parece ser o ponto de encontro de entre Midgaard e Jareth, duas importantes cidades. Cercado de trilhas mas que dependem dela de algum jeito. várias tribos e grupos que não moram em nenhum das duas",
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 1,
       "fontes": [
-        "levantamento_sessoes"
+        "levantamento_sessoes",
+        "rota_verificada_dia157"
       ]
     },
     {
@@ -13724,6 +13749,25 @@
       "fontes": [
         "evidence/dia157-biblioteca.json"
       ]
+    },
+    {
+      "id": "estrada_mj_antes_posto_sul",
+      "name": "A Estrada Midgaard-Jareth (antes do Posto Sul)",
+      "layer": "jareth_fazenda",
+      "zone": "Estrada Midgaard-Jareth",
+      "risk": "Seguro",
+      "risk_code": "safe",
+      "icon": "🛣️",
+      "exits": {
+        "s": "lb009",
+        "n": "estrada_posto_guarda_sul"
+      },
+      "npcs": [],
+      "notes": "Segundo trecho de estrada ao norte do Começo da Estrada, logo antes do posto de guarda sul. Saídas: norte e sul.",
+      "discovered_in": "Dia 156",
+      "fontes": [
+        "rota_verificada_dia157"
+      ]
     }
   ],
   "last_updated_day": 157,
@@ -13772,6 +13816,7 @@
     "Dia 156: levantamento refundido (342 salas digeridas: 103 pareadas com o curado, 239 novas). Chaves 'l'/'o' normalizadas para 'e'/'w' - no servidor 'l' e' look e 'o' e' order, nunca direcao. O derivado e refeito a cada rodada; o curado nunca e sobrescrito. Conflito de aresta mantem o valor curado.",
     "Dia 156, continuação: saídas da ala iluminada, escadarias e sacadas conferidas por exits e travessias. Retirada a aresta leste indevida de Mais Corredor; oeste é porta observada no look. Homônimos distinguidos pelas saídas. Nenhuma sala removida e nenhum corpus parcial digerido. Fonte: evidence/dia156e.json.",
     "Dia 156: levantamento refundido (497 salas digeridas: 129 pareadas com o curado, 368 novas). Chaves 'l'/'o' normalizadas para 'e'/'w' - no servidor 'l' e' look e 'o' e' order, nunca direcao. O derivado e refeito a cada rodada; o curado nunca e sobrescrito. Conflito de aresta mantem o valor curado.",
-    "Dia 157 (Claude Sonnet 5.5): castelo do Lorde de Jareth e Beco Escuro de Jareth levantados a pé (29 salas novas, prefixo jz_). Biblioteca privada do Lorde achada no ramo leste do corredor; não é a biblioteca da Assistente de Bibliotecária, ainda não localizada. Ligações a partir de lb021 (norte) e lv136 (oeste). Fonte: evidence/dia157-biblioteca.json."
+    "Dia 157 (Claude Sonnet 5.5): castelo do Lorde de Jareth e Beco Escuro de Jareth levantados a pé (29 salas novas, prefixo jz_). Biblioteca privada do Lorde achada no ramo leste do corredor; não é a biblioteca da Assistente de Bibliotecária, ainda não localizada. Ligações a partir de lb021 (norte) e lv136 (oeste). Fonte: evidence/dia157-biblioteca.json.",
+    "Dia 157 (Claude Opus 5.5): rota Templo -> Praça de Jareth do automato/rotas/nav.py migrada para as arestas (fonte rota_verificada_dia157; saídas reais em evidence/dia156j.json). Cortados atalhos falsos: Atrás do Altar leste/oeste, Portão Oeste->Centro e Centro->Portão Leste diretos, Aclive->Topo->Proximidades. Nova sala estrada_mj_antes_posto_sul; estrada_colina_topo vira duplicata de lb012. Também cortados: Padaria norte, Centro do Vilarejo leste, Casebre (lv042) leste e Pequena Sala do Guarda oeste. Também cortados: Grande Campo (Sul) leste, Começo da Passagem (lv050) oeste e norte (\"[ Saídas: leste e sul ]\", 7 looks), Pequena Sala do Guarda sul e o Gramado (lb032) norte."
   ]
 }

@@ -101,9 +101,60 @@ def titulo(texto):
     return ''
 
 
+SUFIXO_CURADO = re.compile(r'\s*\([^()]*\)\s*$')
+
+
+def nomes_aceitos(sala):
+    """Títulos que o jogo pode mostrar para a sala, normalizados.
+
+    O mapa.json acrescenta ao nome um sufixo de curadoria entre parênteses para
+    distinguir salas homônimas ("A Rua Principal (Oeste)"); o jogo mostra só
+    "A Rua Principal". Os `aliases` da sala também valem.
+    """
+    nomes = set()
+    for nome in [sala.get('name', '')] + list(sala.get('aliases') or []):
+        nomes.add(normalizar(nome))
+        nomes.add(normalizar(SUFIXO_CURADO.sub('', nome)))
+    nomes.discard('')
+    return nomes
+
+
+def confere(sala, t):
+    return normalizar(t) in nomes_aceitos(sala)
+
+
 def candidatos_por_titulo(salas, t):
-    n = normalizar(t)
-    return [i for i, r in salas.items() if normalizar(r['name']) == n]
+    return [i for i, r in salas.items() if confere(r, t)]
+
+
+def curada(sala):
+    """Sala do mapa curado, não um registro bruto do levantamento (ids lb/lv)."""
+    return sala.get('layer') != 'levantamento'
+
+
+def deduzir_origem(salas, t, de=None):
+    """Id da sala atual a partir do título do `look`. Levanta Parada se não der.
+
+    Com `de`, só confere que o título bate com essa sala. Sem `de`, aceita um
+    candidato único; se houver vários, fica com o único curado (as cópias do
+    levantamento repetem nomes de salas curadas, como "A Praça do Templo").
+    """
+    if de:
+        if de not in salas:
+            raise Parada(2, '--de %s não existe no mapa; use --listar' % de)
+        if not confere(salas[de], t):
+            raise Parada(3, '--de %s é "%s", mas o look mostra "%s"' % (de, salas[de]['name'], t))
+        return de
+    cands = candidatos_por_titulo(salas, t)
+    if len(cands) == 1:
+        return cands[0]
+    if not cands:
+        raise Parada(2, 'nenhuma sala do mapa se chama "%s"; passe --de <id> (use --listar)' % t)
+    curadas = [i for i in cands if curada(salas[i])]
+    if len(curadas) == 1:
+        return curadas[0]
+    raise Parada(2, '"%s" tem %d salas no mapa (%s); passe --de <id>'
+                 % (t, len(cands), ', '.join(sorted(curadas or cands))))
 
 
 def buscar(salas, consulta):
@@ -145,7 +196,7 @@ def navegar(salas, origem, destino, run, permitir_risco=False, hp_min=0.60,
         if isinstance(hp, int) and hp_max and hp / hp_max < hp_min:
             raise Parada(4, 'vida %d de %d (<%d%%) no passo %d' % (hp, hp_max, int(hp_min * 100), i))
         t = titulo(texto)
-        if normalizar(t) != normalizar(salas[esperado]['name']):
+        if not confere(salas[esperado], t):
             raise Parada(3, 'passo %d: esperava "%s", cheguei em "%s"' % (i, salas[esperado]['name'], t))
         feitos.append((d, esperado))
         log('[%02d/%02d] %s -> %s' % (i, len(plano), d, t))
@@ -155,7 +206,7 @@ def navegar(salas, origem, destino, run, permitir_risco=False, hp_min=0.60,
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.split('\n')[0])
     ap.add_argument('--para', help='id da sala de destino (use --listar para achar)')
-    ap.add_argument('--de', help='id da sala atual; se omitido, deduz pelo look')
+    ap.add_argument('--de', help='id da sala atual (confere com o look); se omitido, deduz pelo título, preferindo a sala curada')
     ap.add_argument('--listar', metavar='TEXTO', help='procura salas por id ou nome e sai')
     ap.add_argument('--seco', action='store_true', help='só imprime o caminho, sem conectar')
     ap.add_argument('--permitir-risco', action='store_true')
@@ -184,15 +235,9 @@ def main(argv=None):
             print('  %s -> %s (%s)' % (d, salas[i]['name'], i))
         return 0
     from base import run  # importa só aqui: precisa do driver no ar
-    origem = a.de
-    if not origem:
-        texto, _, _ = run('look')
-        cands = candidatos_por_titulo(salas, titulo(texto))
-        if len(cands) != 1:
-            print('não deduzi a sala atual (%r tem %d candidatos); passe --de' % (titulo(texto), len(cands)), file=sys.stderr)
-            return 2
-        origem = cands[0]
     try:
+        texto, _, _ = run('look')
+        origem = deduzir_origem(salas, titulo(texto), a.de)
         navegar(salas, origem, a.para, run, a.permitir_risco, a.hp_min, a.max_passos, a.max_segundos)
     except Parada as p:
         print('PAROU (código %d): %s' % (p.codigo, p.motivo), file=sys.stderr)
