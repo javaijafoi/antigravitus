@@ -292,3 +292,21 @@ O monitoramento mecânico do alinhamento moral atua apenas como última camada d
 
 
 
+
+
+## 23. RITUAL ANTES DE CADA BLOCO DE JOGO: script ou à mão? (Dia 157, Claude Sonnet 5.5)
+
+> Nasceu de uma cobrança do autor: *"não tinha nenhuma diretiva de saber quando usa scripts e quando joga respondendo cada linha?"* Tinha (§9, §14, §20), e foi ignorada: rota conhecida andada sala a sala, comando recusado repetido, recuo a pé com 50 de vida. Ler a regra uma vez não basta; ela precisa ser cobrada **antes de cada bloco**.
+
+**Antes de enviar o próximo bloco de comandos, responda as quatro perguntas:**
+
+| Pergunta | Se sim | Se não |
+| --- | --- | --- |
+| 1. A rota está no `mapa.json`? | **script**: `python automato/camadas/navegar.py --para <id>` (confere o nome de cada sala, para em combate, recusa, vida baixa ou sala inesperada; recusa salas `danger` sem `--permitir-risco`) | andar **à mão**, um passo por vez, lendo `exits`; depois **gravar a rota no mapa** (§9.1) |
+| 2. Há NPC de missão ou item de missão na jogada? | o script **só navega até lá e para**; fala, `give` e compra são **à mão**, linha a linha (§20, AGENTS #14), com `score tudo` confirmando a etapa (§21, AGENTS #13) | script livre dentro dos limites da §9 |
+| 3. Alguém está lendo o log ou o retorno a cada passo? | seguir | não soltar o script (§14); sem `turno.py`, o laço de leitura é seu |
+| 4. O que eu faço se a vida cair? | `recall` ao primeiro golpe grave. **Não** recuar andando: recuar de duas salas custou ~150 de vida | definir antes de entrar |
+
+**Sinais de que a regra está sendo quebrada** (o auditor pega todos, ver abaixo): o mesmo comando recusado 3 vezes seguidas; `give` sem `Você deve entregar objeto` no último `score tudo`; `say`/`ask` em rajada ou em lote; `quit`; `get all` ou `get` sem `identify`; ataque sem `consider`; alinhamento caindo; andar com vida abaixo de 45%.
+
+**Conferência mecânica, depois da sessão:** `python scripts/auditar_sessao.py` (sem argumentos lê o transcript mais recente). Código 1 = há FALHA; 2 = só AVISO. Um AVISO pede explicação no plano; uma FALHA pede correção ou justificativa. **Limite honesto:** o transcript não registra se o comando veio de script ou de mão, então §9 (andar por script) e §14 (supervisão) **não** são auditáveis daí. Por isso a pergunta 1 acima é de quem joga.

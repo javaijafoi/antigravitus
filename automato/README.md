@@ -29,6 +29,8 @@ turno.py      o encarregado: vigia -> cuidar -> (prepara, se o cuidar pedir) -> 
    |                   saida: 0 resolvido | 2 precisa recarregar | 1 nao resolveu
    +-- prepara.py      RECARREGA. A ida a cidade: padaria, fonte, banco e sono. So' entra quando
    |                   o cuidar devolve 2, ou com --forcar. Decide por ESTOQUE, nunca por fome.
+   +-- navegar.py      ANDA pelo mapa.json: confere o nome de cada sala, para no destino e em qualquer
+   |                   anomalia (combate, vida, recusa, sala errada). Nao fala, nao da, nao compra.
    +-- trabalhar.py    o despachante: --rotina X carrega rotinas/X.py e chama executar()
          |
          +-- rotinas/milharal.py    caca os invasores do milharal (missao Problemas Agricolas)

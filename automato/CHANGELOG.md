@@ -4,6 +4,13 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.6.17 — Dia 157 · Navegador por mapa e auditor de sessão (Claude Sonnet 5.5)
+- **`camadas/navegar.py` (novo):** leva a personagem de uma sala a outra pelo `mapa.json`, conferindo o nome de cada sala. Só envia direções, `look` e `exits`; nunca fala, entrega, compra, pega nem ataca. Para em combate, vida baixa, recusa, porta fechada, sala inesperada ou teto de passos/tempo (códigos 3 a 6). Recusa rotas por sala `danger`/`high`/`fatal`/`critical` sem `--permitir-risco`. `--seco` imprime o caminho sem conectar; `--listar` procura salas.
+- **`scripts/auditar_sessao.py` (novo):** audita um `transcript_*.jsonl` contra regra escrita: recusa repetida, `quit`, `give` sem etapa, fala em lote ou rajada, ataque sem `consider`, `get` sem `identify`/`get all`, compra cara, alinhamento em queda, recuo a pé com vida baixa, sessão sem fecho. Não consegue auditar §9/§14 (origem do comando não é registrada).
+- **Testes:** `scripts/test_auditar_sessao.py` (20 testes, sem conexão com o MUD).
+- **Diretiva de jogo §23:** ritual de quatro perguntas antes de cada bloco de jogo.
+- **Custo:** o navegador confia no `mapa.json`; rota derivada do levantamento pode ter aresta falsa (a conferência de título pega e para). O auditor tem falsos positivos possíveis (AVISO pede explicação, não é veredito).
+
 ## v1.6.16 — Dia 156 · Venda da Coroa da Rainha Negra, Recomposição de Estoque e Geografia de Autoquests (Plano 026)
 - **EXECUÇÃO DO PLANO 026 (Capítulo 12 / Tomo II)**:
   - Cotação (`value coroa`) e venda bem-sucedida da `Coroa da Rainha Negra` no Armeiro de Midgaard por 1.500 moedas de ouro, aliviando 4 kg de peso morto e eliminando riscos da flag ANTI-GOOD sem jamais vesti-la.

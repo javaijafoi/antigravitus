@@ -320,6 +320,7 @@ do vigia.
 - [ ] Sei onde vou escrever e qual é a fonte da verdade daquele dado.
 - [ ] `git status` e `git log -5` conferidos (ver §10).
 - [ ] Se vou jogar: driver no ar, `automato/verificar.py` sem FALHA, supervisão combinada.
+- [ ] Se vou jogar: li o **ritual** de `diretiva_de_jogo.md` §23 e o aplico antes de **cada bloco**: rota no mapa => `automato/camadas/navegar.py`, nunca sala a sala; fala/`give`/compra de missão => à mão, linha a linha; vida cai => `recall`, não recuar andando.
 
 **Antes de encerrar**
 
@@ -330,6 +331,7 @@ do vigia.
 > **estrutura**, não **cobertura**; ele não sabe que uma caminhada aconteceu. Ver §6.2.
 
 - [ ] **`python scripts/devolutiva.py` rodado, com 0 falhas** (avisos lidos, não silenciados).
+- [ ] **`python scripts/auditar_sessao.py`** rodado sobre o transcript da sessão; cada FALHA corrigida ou justificada no plano, cada AVISO explicado (não confere §9/§14: origem do comando não é registrada).
 - [ ] Evidência gravada, com `agent` e origem.
 - [ ] **Plano numerado criado** em `data/heroes/<id>/planos/planoNNN.md` — o **próximo** número,
       **sem editar o anterior** (§6.1). É o ponto de continuação que o autor executa dizendo
