@@ -93,17 +93,26 @@ def checar_plano(heroi, numero_esperado=None):
 
     campos = mandabala.cabecalho_do_plano(texto)
     if not campos.get("Por"):
-        falha(f"{rel} não declara autoria ('Por') — AGENTS.md §0 e §6.1")
+        falha(f"[plano.autoria] {rel} não declara autoria ('Por') — AGENTS.md §0 e §6.1")
     else:
         ok(f"autoria declarada: {campos['Por']}")
 
     tem, real = mandabala.devolutiva_tecnica(texto)
     if not tem:
-        falha(f"{rel} não tem a seção 'Devolutiva técnica'")
+        falha(f"[plano.devolutiva] {rel} não tem a seção 'Devolutiva técnica'")
     elif not real:
-        falha(f"{rel}: a seção 'Devolutiva técnica' está só com o MODELO (placeholders)")
+        falha(f"[plano.devolutiva] {rel}: a seção 'Devolutiva técnica' está só com o MODELO (placeholders)")
     else:
         ok("seção 'Devolutiva técnica' presente e preenchida")
+
+    # Plano v2 (LEIA.md): autossuficiente, §2 em números, §5 executável. FALHA a partir do
+    # PLANO_V2_DESDE; nos anteriores só aviso, porque planos são append-only e não se corrigem.
+    v2 = mandabala.checar_plano_v2(texto)
+    marcar = falha if numero >= mandabala.PLANO_V2_DESDE else aviso
+    for ident, msg in v2:
+        marcar(f"[{ident}] {rel}: {msg}")
+    if not v2:
+        ok("plano v2: autossuficiente, estado em números, próximo passo executável")
 
     return numero, texto
 
@@ -188,7 +197,7 @@ def checar_coerencia_da_devolutiva(heroi, texto, desde, sem_git=False):
             if mudou(caminho, desde, sem_git=sem_git):
                 ok(f"coerência: '{chave}' prometido e {caminho} alterado")
             else:
-                falha(msg + f"  (destino declarado: {destino[:60]})")
+                falha("[devolutiva.coerencia] " + msg + f"  (destino declarado: {destino[:60]})")
 
 
 # --------------------------------------------------------------------------- #
@@ -216,7 +225,7 @@ def checar_capitulos(heroi):
             etiqueta = f"capítulo {cap.get('id')} parte {i}"
             for campo in ("source_kind", "date", "evidence"):
                 if not parte.get(campo):
-                    falha(f"{etiqueta} sem '{campo}' — o check_project.py reprova isso")
+                    falha(f"[capitulo.parts] {etiqueta} sem '{campo}' — o check_project.py reprova isso")
             if parte.get("evidence") and not isinstance(parte["evidence"], list):
                 falha(f"{etiqueta}: 'evidence' precisa ser lista")
         if cap.get("parts"):
@@ -240,7 +249,7 @@ def checar_evidencias(heroi, desde):
             falha(f"{arq.name}: JSON inválido ({e})")
             continue
         if isinstance(dados, dict) and not dados.get("agent"):
-            falha(f"{arq.name} sem o campo 'agent' — AGENTS.md §0")
+            falha(f"[evidencia.autoria] {arq.name} sem o campo 'agent' — AGENTS.md §0")
         elif isinstance(dados, list):
             ok(f"{arq.name}: lista de fontes ({len(dados)} item(ns))")
         else:
@@ -253,7 +262,7 @@ def checar_livro_razao(desde):
         aviso("registro de evolução ausente")
         return
     if not mudou("docs/agentes/registro_de_evolucao.md", desde):
-        aviso("o livro-razão não foi tocado nesta sessão — AGENTS.md §6 pede um bloco novo")
+        aviso("[livro_razao] o livro-razão não foi tocado nesta sessão — AGENTS.md §6 pede um bloco novo")
         return
     texto = arq.read_text(encoding="utf-8", errors="replace")
     if not re.search(r"^### .*·.*·\s*\S", texto, re.MULTILINE):
@@ -300,7 +309,7 @@ def checar_git():
     # segredos: nada de runtime/ ou credencial entrando no git
     codigo, saida = git("ls-files", "--cached", "automato/runtime")
     if saida:
-        falha("há arquivos de automato/runtime/ RASTREADOS no git — segredos! (AGENTS.md §4.9)")
+        falha("[git.segredos] há arquivos de automato/runtime/ RASTREADOS no git — segredos! (AGENTS.md §4.9)")
     else:
         ok("nenhum arquivo de automato/runtime/ rastreado")
 

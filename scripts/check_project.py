@@ -602,7 +602,37 @@ def validate_project(root_dir=ROOT_DIR):
         he, hw = validate_hero_sync(hero, root_dir, max_day)
         errors.extend(he)
         warnings.extend(hw)
+    warnings.extend(validate_tool_registry(root_dir))
     return errors, warnings
+
+
+def validate_tool_registry(root_dir=ROOT_DIR):
+    """[automato.ferramenta_fora_da_tabela] Todo script de automato/ está na tabela Ferramentas do README.
+
+    Uma ferramenta por função (AGENTS §14): sem a tabela, duas sessões criaram em paralelo
+    rotas/nav.py e camadas/navegar.py para a mesma coisa. Aviso, não erro: quem cria o script
+    acrescenta a linha no mesmo commit.
+    """
+    root_dir = Path(root_dir)
+    readme = root_dir / "automato" / "README.md"
+    if not readme.is_file():
+        return []
+    texto = readme.read_text(encoding="utf-8", errors="replace")
+    m = re.search(r"^## Ferramentas\b(.*?)(?=^## |\Z)", texto, re.MULTILINE | re.DOTALL)
+    if not m:
+        return ["[automato.ferramenta_fora_da_tabela] automato/README.md sem a seção 'Ferramentas — uma por função'."]
+    tabela = m.group(1)
+    fora = []
+    for arq in sorted((root_dir / "automato").rglob("*.py")):
+        rel = arq.relative_to(root_dir / "automato").as_posix()
+        if arq.name == "__init__.py" or rel.startswith("runtime/") or "__pycache__" in rel:
+            continue
+        if f"`{rel}`" not in tabela:
+            fora.append(rel)
+    if fora:
+        return [f"[automato.ferramenta_fora_da_tabela] {len(fora)} script(s) de automato/ fora da tabela "
+                f"Ferramentas do README (procure antes de criar; registre ao criar): {', '.join(fora[:8])}"]
+    return []
 
 
 def main():

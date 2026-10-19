@@ -4,6 +4,16 @@
 > campanha: descreve **como o projeto funciona**, **o que é boa prática aqui**, **onde procurar cada
 > coisa** e **onde registrar o que você evoluiu**. A narrativa vive em `data/heroes/<id>/`, não aqui.
 
+> ## ▶ Comece aqui — vale para qualquer modelo
+>
+> 1. `python scripts/mandabala.py` — o plano vigente e a **sequência de abertura**, com a sua primeira ação.
+> 2. [`docs/agentes/PROTOCOLO.md`](docs/agentes/PROTOCOLO.md) — a sessão inteira em comandos:
+>    abertura, cada bloco de jogo, encerramento/handoff. **Se só for ler uma coisa, leia esta.**
+> 3. Para encerrar: `python scripts/encerrar.py --agente "<modelo/versão>"`. Ele cria o esqueleto do
+>    próximo plano e roda todas as verificações.
+>
+> O resto deste arquivo explica **por quê**. As invariantes da §4 valem sempre.
+
 Índice: [Regra zero](#0-regra-zero--identifique-se) ·
 [O repositório](#1-o-que-é-este-repositório) ·
 [Lógica](#2-como-a-lógica-funciona-em-uma-tela) ·
@@ -311,6 +321,10 @@ do vigia.
 
 ## 9. Checklists
 
+> **A versão executável destes checklists é o [PROTOCOLO.md](docs/agentes/PROTOCOLO.md)** (abertura
+> §1, encerramento §3), com `mandabala.py` na entrada e `encerrar.py` na saída. As listas abaixo
+> explicam o conteúdo. Se divergirem do PROTOCOLO, corrija os dois.
+
 **Antes de começar**
 
 - [ ] Li o `README.md` da raiz e este arquivo.
@@ -407,4 +421,27 @@ A guarda de cota (`automato/camadas/guarda_cota.py` e `scripts/checar_cota.py`) 
 - **Weekly limit / janela semanal (reset > 24h):** ao atingir **<= 5%** restantes, interromper a exploração e acionar o handoff.
 
 Em ambos os casos de corte, conduzir a personagem imediatamente a um local seguro (Templo de Midgaard), alimentar com pão, hidratar com cantil, salvar (`save`), colocar em repouso (`sleep`), fechar a conexão do driver e gerar o próximo plano numerado de handoff com local e estado reais, evidências, confirmação do encerramento e tempo restante para reset da janela.
+
+**Passo a passo:** [PROTOCOLO.md §3](docs/agentes/PROTOCOLO.md) e `python scripts/encerrar.py`. O
+`checar_cota.py` só lê a cota do Antigravity. Em outro harness (Claude Code, Codex…), use o indicador
+de uso do próprio harness com os mesmos cortes.
+
+## 14. Catraca — o padrão só muda para melhor (2026-10-19)
+
+Vários modelos trabalham aqui. Para o padrão ser o mesmo para todos e **não regredir**:
+
+1. **Regra nova só vale com verificação.** Ela entra com (a) um check num script (`mandabala.py`,
+   `devolutiva.py`, `auditar_sessao.py`, `encerrar.py` ou `check_project.py`), (b) um teste em
+   `scripts/test_*.py` e (c) o ID dela em [`docs/agentes/catraca.json`](docs/agentes/catraca.json).
+   Prosa sem verificação é sugestão.
+2. **Ninguém remove verificação sozinho.** O `scripts/test_catraca.py` reprova a suíte se um ID da
+   catraca sumir do script. Afrouxar exige a aprovação do autor, citada em `automato/DECISOES.md`, e a
+   edição da catraca no mesmo commit.
+3. **Cada sessão deixa um boletim.** O `encerrar.py --fechar` grava uma linha em
+   `docs/agentes/boletim.jsonl` com o modelo, as falhas e avisos e o avanço declarado. É assim que
+   se compara modelo com dado. Quando um modelo faz algo melhor, isso vira check e passa a valer para
+   todos.
+4. **Uma ferramenta por função.** Antes de criar um script em `automato/`, procure na tabela
+   "Ferramentas" do [`automato/README.md`](automato/README.md#ferramentas--uma-por-função). O
+   `check_project.py` avisa quando surge script fora da tabela.
 

@@ -4,6 +4,16 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.7.0 — Dia 157 · Um padrão para todos os modelos: protocolo, encerramento e catraca (Claude Opus 5.5)
+- **`docs/agentes/PROTOCOLO.md` (novo):** a sessão inteira em comandos — abertura, cada bloco de jogo, encerramento/handoff. O AGENTS.md ganhou um quadro "Comece aqui" que aponta para ele; `CLAUDE.md` e `GEMINI.md` (novos) levam cada harness à mesma porta.
+- **`scripts/mandabala.py`:** imprime a SEQUÊNCIA DE ABERTURA e a primeira ação (o §5 do plano); avisa quando o plano não é autossuficiente ou devolve o próximo passo ao autor (`checar_plano_v2`); a ordem de leitura caiu de ~2.100 linhas para o PROTOCOLO + plano + AGENTS §4 + diretiva §19–§23.
+- **`scripts/encerrar.py` (novo):** handoff em duas etapas. Sem `--fechar`: confere o `_CLOSE sleep` no transcript, roda sync/check/auditor e gera o esqueleto do próximo plano com §2 tirado do `state.json`. Com `--fechar --avanco sim|nao`: plano v2, `devolutiva.py` e uma linha no `docs/agentes/boletim.jsonl`.
+- **`scripts/devolutiva.py`:** regras do plano v2 viram FALHA a partir do plano 034 (`PLANO_V2_DESDE`); mensagens ganharam IDs da catraca.
+- **Catraca:** `docs/agentes/catraca.json` + `scripts/test_catraca.py` — nenhuma verificação some sem decisão registrada (DECISOES §13).
+- **`automato/README.md` — tabela "Ferramentas — uma por função":** cada script como canônico/legado/pontual/PROIBIDO. `navegar.py` é a navegação canônica; `rotas/nav.py` fica como legado. Oito scripts de `acoes/` que automatizam `say`/`ask`/`give`/`buy` de missão ficam marcados PROIBIDOS (AGENTS #13/#14), sem apagar. `check_project.py` avisa sobre script fora da tabela (`validate_tool_registry`).
+- **Testes:** `test_plano_v2.py`, `test_encerrar.py`, `test_catraca.py` (suíte: 199 OK).
+- **Custo:** mais um comando no fim da sessão; planos mais longos (copiam em vez de remeter).
+
 ## v1.6.17 — Dia 157 · Navegador por mapa e auditor de sessão (Claude Sonnet 5.5)
 - **`camadas/navegar.py` (novo):** leva a personagem de uma sala a outra pelo `mapa.json`, conferindo o nome de cada sala. Só envia direções, `look` e `exits`; nunca fala, entrega, compra, pega nem ataca. Para em combate, vida baixa, recusa, porta fechada, sala inesperada ou teto de passos/tempo (códigos 3 a 6). Recusa rotas por sala `danger`/`high`/`fatal`/`critical` sem `--permitir-risco`. `--seco` imprime o caminho sem conectar; `--listar` procura salas.
 - **`scripts/auditar_sessao.py` (novo):** audita um `transcript_*.jsonl` contra regra escrita: recusa repetida, `quit`, `give` sem etapa, fala em lote ou rajada, ataque sem `consider`, `get` sem `identify`/`get all`, compra cara, alinhamento em queda, recuo a pé com vida baixa, sessão sem fecho. Não consegue auditar §9/§14 (origem do comando não é registrada).

@@ -58,9 +58,29 @@ joga, não publica — só lê e mostra.
 3. `docs/agentes/registro_de_evolucao.md` — o que mudou na ferramenta e por quê
 4. `data/heroes/<heroi>/diretiva_de_jogo.md` — **as regras de jogo. Antes de jogar**
 
-## Modelo do plano
+## Modelo do plano — v2 (a partir do plano 034)
 
-Copie isto. O que **não** pode faltar: número, data, **autor**, estado exato, o **próximo passo único**,
+> **Não copie à mão: gere.** `python scripts/encerrar.py --agente "<modelo/versão>"` cria o
+> esqueleto do próximo plano com o cabeçalho e o **§2 já preenchidos a partir do `state.json`**.
+> Você escreve só o julgamento. Sequência completa em
+> [`docs/agentes/PROTOCOLO.md`](../../../../docs/agentes/PROTOCOLO.md) §3.
+
+**As duas regras do v2** (o `devolutiva.py` reprova a partir do plano 034; o `mandabala.py` avisa em
+qualquer plano):
+
+1. **Autossuficiente** (`plano.autossuficiente`, `plano.estado_numerico`). Quem chega lê **só este
+   plano**. É proibido usar "igual ao Plano N", "o do Plano N", "sem mudança desde o Plano N" ou
+   "lê-lo inteiro" como conteúdo de seção: **copie** o que continua valendo. O §2 traz números
+   (vida/mana/MV, nível, ouro, local). *Por quê:* o 033 remetia ao 032 em sete seções e o 029 mandava
+   ler o 028 inteiro, enquanto os planos do Gemini (ex.: 026) traziam tudo. A cadeia de remissões é
+   onde o próximo se perde.
+2. **§5 executável** (`plano.proximo_passo_executavel`). É **uma ação** que o próximo executa sem
+   perguntar. Se houver bloqueio, liste as opções em ordem e marque **a padrão**. "Decidir com o
+   autor" só vale quando AGENTS #13 (give/compra cara) ou #15 (ética), ou uma diretiva expressa,
+   exigem; cite qual. *Por quê:* os planos 032 e 033 terminaram em "decidir com o autor" e o dia
+   rendeu seis planos com pouco avanço no jogo.
+
+Copie isto (ou, melhor, gere com o `encerrar.py`). O que **não** pode faltar: número, data, **autor**, estado exato, o **próximo passo único**,
 e o que **não** repetir.
 
 > ## ⚠️ A **DEVOLUTIVA TÉCNICA** é obrigatória — e é cobrada
@@ -128,7 +148,7 @@ e o que **não** repetir.
 | erro do motor | `automato/DECISOES.md` | <o que travou, ou "nada"> |
 
 ## 9. Como encerrar a sua sessão
-<a obrigação, igual à que gerou este plano>
+<docs/agentes/PROTOCOLO.md §3: _CLOSE sleep, evidência, encerrar.py, preencher, encerrar.py --fechar>
 ```
 
 ## Por que assim

@@ -121,6 +121,93 @@ def devolutiva_tecnica(texto):
     return True, any(util(l) for l in corpo)
 
 
+# --------------------------------------------------------------------------- #
+# Plano v2: autossuficiente e com próximo passo executável (catraca, AGENTS §14)
+# --------------------------------------------------------------------------- #
+
+# A partir deste número as regras do plano v2 são FALHA no devolutiva.py; antes, só aviso.
+# Os planos antigos são append-only e não podem ser corrigidos.
+PLANO_V2_DESDE = 34
+
+# "Igual ao Plano 032", "o do Plano 032", "lê-lo inteiro": a seção manda o leitor a outro plano em
+# vez de trazer o conteúdo. Foi o que os planos 029 e 033 fizeram; os do Gemini (ex.: 026) não.
+REFERENCIA = re.compile(
+    r"\b(igual\s+ao|(?:tudo\s+)?os?\s+do|sem\s+mudan[çc]a\s+desde\s+o|vale\s+o\s+do)\s+plano\s+\d+"
+    r"|l[êe]-lo\s+inteiro",
+    re.IGNORECASE)
+# §5 que devolve a decisão ao autor ("decidir, com o autor, ...") em vez de dizer o que fazer.
+DELEGA = re.compile(
+    r"(decidir|combinar|definir|perguntar|consultar|aguardar)[^.\n]{0,40}\bautor\b"
+    r"|\bcom\s+o\s+autor\b",
+    re.IGNORECASE)
+# Pedir ao autor é legítimo quando a regra manda: give/compra (#13), ética (#15), diretiva expressa.
+DELEGA_LEGITIMA = re.compile(r"#\s*1[35]\b|invariante\s+1[35]|diretiva", re.IGNORECASE)
+
+
+def secao(texto, numero):
+    """Corpo da seção '## <numero>. ...' do plano, sem o título. '' se não houver."""
+    m = re.search(rf"^#{{1,4}}\s*{numero}\.[^\n]*\n(.*?)(?=^#{{1,4}}\s*\d+\.|\Z)",
+                  texto, re.MULTILINE | re.DOTALL)
+    return m.group(1).strip() if m else ""
+
+
+def checar_plano_v2(texto):
+    """[(id, mensagem)] do que o plano v2 exige e este plano não cumpre. Lista vazia = ok.
+
+    IDs na catraca (docs/agentes/catraca.json): plano.autossuficiente, plano.estado_numerico,
+    plano.proximo_passo_executavel.
+    """
+    achados = []
+    for n, nome in ((1, "onde o objetivo está"), (2, "estado exato"), (3, "o que já foi descoberto"),
+                    (4, "bloqueios"), (5, "próximo passo"), (6, "não repita"), (7, "ferramentas")):
+        corpo = secao(texto, n)
+        m = REFERENCIA.search(corpo)
+        if m:
+            achados.append(("plano.autossuficiente",
+                            f"§{n} ({nome}) remete a outro plano (\"{m.group(0)}\") em vez de trazer o "
+                            "conteúdo. Copie o que segue valendo: o próximo lê só este plano."))
+    estado = secao(texto, 2)
+    if len(re.findall(r"\d+", estado)) < 3:
+        achados.append(("plano.estado_numerico",
+                        "§2 (estado exato) sem números: vida/mana/MV, ouro, nível, local. "
+                        "O encerrar.py gera essa seção a partir do state.json."))
+    passo = secao(texto, 5)
+    if not passo:
+        achados.append(("plano.proximo_passo_executavel", "plano sem §5 (o próximo passo, e só ele)."))
+    elif DELEGA.search(passo) and not DELEGA_LEGITIMA.search(passo):
+        achados.append(("plano.proximo_passo_executavel",
+                        "§5 devolve a decisão ao autor. Diga qual ação o próximo executa por padrão; "
+                        "perguntar ao autor só em AGENTS #13/#15 ou diretiva expressa (cite qual)."))
+    return achados
+
+
+def sequencia_abertura(texto, heroi):
+    """Os passos fixos de abertura + a primeira ação, tirada do §5 do plano (PROTOCOLO §1)."""
+    passo = secao(texto, 5) or "(o plano não tem §5 — leia o §1 e o §4 e registre isso no próximo plano)"
+    if len(passo) > 900:
+        passo = passo[:900].rstrip() + " […]"
+    linhas = [
+        "",
+        "=" * 78,
+        "SEQUÊNCIA DE ABERTURA — faça nesta ordem (docs/agentes/PROTOCOLO.md §1)",
+        "=" * 78,
+        "  1. git status --porcelain  e  git log --oneline -5   (há trabalho de outro agente?)",
+        f"  2. leia data/heroes/{heroi}/diretiva_de_jogo.md §19 a §23   (give, fala, etapa, ética, ritual)",
+        "  3. cota: python scripts/checar_cota.py (Antigravity) ou o indicador do seu harness",
+        "     diária <= 10% ou semanal <= 5%  ->  não jogue: vá ao encerramento (PROTOCOLO §3)",
+        "  4. se vai jogar: driver no ar e  python automato/verificar.py  sem FALHA",
+        "  5. ao conectar: score tudo  -> confira com o §2 do plano; divergiu? registre antes de agir",
+        "  6. SUA PRIMEIRA AÇÃO (§5 do plano):",
+    ]
+    linhas += ["       " + l for l in passo.split("\n")]
+    linhas += [
+        "",
+        "  Não pergunte ao autor o que o plano já responde. Pergunte só em AGENTS #13/#15.",
+        "  Para encerrar:  python scripts/encerrar.py --agente \"<modelo/versão>\"",
+    ]
+    return "\n".join(linhas)
+
+
 def bloco_ordem(heroi, numero, caminho, campos, proximo):
     plano_rel = caminho.relative_to(ROOT_DIR).as_posix()
     linhas = []
@@ -140,10 +227,11 @@ def bloco_ordem(heroi, numero, caminho, campos, proximo):
     linhas.append(f"VOCÊ CONTINUA DE ONDE O PLANO {numero:03d} PAROU — como se fosse quem o escreveu.")
     linhas.append("")
     linhas.append("Leia, nesta ordem:")
-    linhas.append("  1. AGENTS.md                                    (como trabalhar aqui)")
-    linhas.append(f"  2. {plano_rel}")
-    linhas.append("  3. docs/agentes/registro_de_evolucao.md         (o que mudou na ferramenta)")
-    linhas.append(f"  4. data/heroes/{heroi}/diretiva_de_jogo.md      (regras de jogo — ANTES de jogar)")
+    linhas.append("  1. docs/agentes/PROTOCOLO.md                    (a sessão inteira em comandos)")
+    linhas.append(f"  2. {plano_rel}   (abaixo, na íntegra)")
+    linhas.append("  3. AGENTS.md §4                                 (as invariantes; o resto é consulta)")
+    linhas.append(f"  4. data/heroes/{heroi}/diretiva_de_jogo.md §19-§23  (regras de jogo — ANTES de jogar)")
+    linhas.append("  O registro_de_evolucao.md é consulta: leia os 3 últimos blocos, não o arquivo todo.")
     linhas.append("")
     linhas.append("Regras que não se negociam:")
     linhas.append(f"  - NÃO edite o plano {numero:03d}. Para encerrar, CRIE o plano {proximo:03d}.")
@@ -249,6 +337,17 @@ def main(argv=None):
         print()
         print("[AVISO] a seção 'Devolutiva técnica' existe mas está só com o MODELO (placeholders).")
         print("        Preencha, ou escreva 'nada' em cada linha que não se aplica.")
+
+    v2 = checar_plano_v2(texto)
+    if v2:
+        print()
+        print(f"[AVISO] o plano {numero:03d} não cumpre o modelo v2 (LEIA.md). Compense na leitura e")
+        print("        NÃO repita isso no seu plano (a partir do "
+              f"{PLANO_V2_DESDE:03d} o devolutiva.py reprova):")
+        for ident, msg in v2:
+            print(f"        - [{ident}] {msg}")
+
+    print(sequencia_abertura(texto, heroi))
     return 0
 
 

@@ -168,3 +168,11 @@ Agente: GPT-6 / Codex (versão específica não informada); fonte: data/heroes/g
 - **O que**: Atualizado `automato/camadas/guarda_cota.py` e `scripts/checar_cota.py` para distinguir automaticamente janelas semanais (> 24h até o reset) de janelas curtas/diárias (<= 24h). Para janelas semanais, o corte crítico de handoff é acionado em `<= 5%` (0.05); para diárias, mantém-se em `<= 10%` (0.10). O handoff executa o mesmo protocolo seguro (recall, pão, cantil, save, sleep, fechamento de socket e plano numerado documentando se foi semanal ou diário).
 - **Custo**: Nenhum. Melhora o aproveitamento seguro do saldo do modelo e protege contra esgotamento semanal.
 
+
+---
+
+## 13. Catraca do padrão entre modelos (v1.7.0, Dia 157 — pedido do autor, Claude Opus 5.5)
+- **Por que**: Vários modelos trabalham na mesma campanha e o padrão variava com o modelo. Nos planos 001–033: planos que remetiam ao anterior em vez de trazer o conteúdo (033 → 032 em sete seções; 029 → "ler o 028 inteiro"), próximo passo devolvido ao autor (032, 033), seis planos num só dia com pouco avanço, duas ferramentas para a mesma função (`rotas/nav.py` × `camadas/navegar.py`) e oito scripts em `acoes/` que ainda automatizam `say`/`give`/`buy` de missão. Toda regra estava em prosa, espalhada por AGENTS, LEIA, diretiva e planos, e só era cumprida quando algum script cobrava.
+- **O que**: o padrão sai da prosa e vai para comandos e verificações. `docs/agentes/PROTOCOLO.md` é o roteiro único. O `mandabala.py` imprime a sequência de abertura e a primeira ação (§5 do plano). O `encerrar.py` gera o próximo plano a partir do `state.json` e grava o boletim. O plano v2 (autossuficiente, §5 executável) vira FALHA a partir do plano 034. `docs/agentes/catraca.json` lista as verificações em vigor e `scripts/test_catraca.py` reprova quem remover uma. A tabela "Ferramentas" do `automato/README.md` marca cada script como canônico, legado, pontual ou PROIBIDO, e o `check_project.py` avisa quando surge script fora dela.
+- **Custo**: mais um passo no fim da sessão (`encerrar.py` em duas etapas). Planos mais longos, porque copiam o que segue valendo. Remover ou afrouxar uma verificação passa a exigir a aprovação do autor citada aqui.
+- **Como afrouxar uma regra**: nova seção neste arquivo, com a frase do autor, e edição de `docs/agentes/catraca.json` no mesmo commit.

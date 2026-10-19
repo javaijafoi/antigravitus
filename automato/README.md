@@ -109,6 +109,44 @@ Apontado por `nucleo/config.py` em `DIR_HEROI`:
 - rede liberada para `debomud.org:4000` (o MUD) e o driver escutando em `127.0.0.1:14888` (local);
 - a senha vem de `MUD_PASS` ou de `automato/runtime/.mud_pass` (nunca versionada).
 
+## Ferramentas — uma por função
+
+> **Antes de criar um script, procure aqui.** Se a função já existe, melhore o que existe. Script
+> novo entra nesta tabela no mesmo commit: o `scripts/check_project.py` avisa sobre script de
+> `automato/` que não está aqui (AGENTS §14). Duas sessões criaram em paralelo `rotas/nav.py` e
+> `camadas/navegar.py` para a mesma função. Esta tabela existe para isso não se repetir.
+
+**Status:** **canônica** = use esta · **legado** = funciona, mas não estenda; use a canônica ·
+**pontual** = feita para um caso, não é ferramenta geral · **PROIBIDA** = viola invariante; não
+execute (fica no repositório só como histórico).
+
+| Função | Arquivo | Status |
+|---|---|---|
+| Sessão viva com o MUD | `nucleo/driver/live_daemon.py` | canônica |
+| Mandar comando ao driver | `nucleo/driver/play.py` | canônica (um comando por decisão) |
+| Cliente telnet / parsing | `nucleo/driver/debo_bot.py`, `nucleo/driver/parsers.py` | canônica (interna) |
+| Caminhos e limites | `nucleo/config.py` | canônica (ponto único) |
+| Infra das rotinas | `nucleo/base.py`, `nucleo/guarda.py`, `nucleo/inventario.py` | canônica (interna) |
+| Autoexame do motor | `verificar.py` | canônica |
+| Supervisionar turno | `camadas/turno.py` | canônica |
+| Diagnóstico agora | `camadas/vigia.py` | canônica |
+| Comer/beber/magias em campo | `camadas/cuidar.py` | canônica |
+| Recarga na cidade | `camadas/prepara.py` | canônica |
+| Despachar rotina | `camadas/trabalhar.py` | canônica |
+| **Andar de A até B** | `camadas/navegar.py` | **canônica** (pelo `mapa.json`, confere cada sala) |
+| Andar rota fixa Templo→Jareth | `rotas/nav.py` | legado: verificada ao vivo no Dia 157. Rota nova vai para o `mapa.json` e para o `navegar.py` |
+| Cota do modelo e handoff | `camadas/guarda_cota.py` | canônica (só Antigravity) |
+| Fechar a sessão com segurança | `acoes/seguro.py` | canônica |
+| Mapa: levantar / digerir / fundir | `rotinas/cartografa.py`, `acoes/mapear.py`, `acoes/digerir_mapa.py`, `acoes/fundir_mapa.py` | canônica |
+| Auditoria de lojas | `rotinas/mercado.py` | canônica |
+| Caça no Milharal | `rotinas/milharal_v2.py` | canônica · `rotinas/milharal.py` = legado |
+| Caça nos Novatos | `rotinas/novatos.py` | canônica |
+| Esgoto | `rotinas/esgoto.py` | legado |
+| Xadrez | `rotinas/xadrez_v2.py`, `rotinas/xadrez_v3.py`, `rotinas/_suspensas/xadrez.py` | legado — **não usar** até corrigir: pegam espólio antes da triagem (Plano 029, diretiva §15) |
+| Executores de benchmark | `acoes/cacador_hibrido.py`, `acoes/cacador_milharal.py`, `acoes/cacador_xadrez.py`, `acoes/cacador_xadrez_v3.py`, `acoes/atingir_meta_pocao.py` | pontual |
+| Testes e reconhecimento | `acoes/testar_abate_peao.py`, `acoes/testar_abate_peao_direto.py`, `acoes/testar_xadrez.py`, `acoes/explorar_tabuleiro.py`, `acoes/checar_magias.py`, `acoes/localizar_smurfs.py`, `acoes/pegar_jarro.py`, `acoes/ressuscitar.py` | pontual |
+| Fala / entrega / compra de missão | `acoes/falar_fazendeiro.py`, `acoes/encontrar_fazendeiro.py`, `acoes/falar_minerador.py`, `acoes/iniciar_gargamel.py`, `acoes/ativar_gargamel.py`, `acoes/interagir_alquimista.py`, `acoes/entregar_alquimista.py`, `acoes/comprar_pocao.py` | **PROIBIDA**: automatizam `say`/`ask`/`give`/`buy` de missão (AGENTS #13 e #14). São anteriores às diretivas do Dia 156. Fala e entrega de missão são à mão |
+
 ## Como rodar
 \`\`\`powershell
 # 1. subir o driver (uma unica sessao viva com o MUD):
