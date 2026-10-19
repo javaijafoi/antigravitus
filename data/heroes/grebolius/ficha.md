@@ -38,7 +38,7 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 
 ### Métricas de Combate
 * **Classe de Armadura (AC):** 89 (base) / **165** (com `armor`, conforme registro)
-CA 165 no score final com armor +36 e invisibility +40; base 89. Não atribuir 165 somente a armor. Buffs expiram; renovar antes da próxima saída. evidence/dia157-cap12.json.
+CA 165 no score final da sessão GPT com armor +36 e invisibility +40; base 89. Não atribuir 165 somente a armor. Na última sessão Claude armor +36 foi relançada (cerca de 17 horas no score) e invisibility lançada; valores exatos não reconferidos ao fechar. Buffs expiram; renovar antes da próxima saída. evidence/dia157-cap12.json.
 * **Bônus de Acerto (Hitroll):** 16
 * **Bônus de Dano (Damroll):** +5
 * **Configuração de Fuga (Wimpy):** **45 HP** (referência de 25%; não garante fuga antes de golpe letal)
@@ -65,7 +65,7 @@ CA 165 no score final com armor +36 e invisibility +40; base 89. Não atribuir 1
 * **Xeque-mate — Ativa:** Autoquest de nível 30+, iniciada com o Bispo Branco no Grande Tabuleiro de Xadrez.
   * Próximo passo: Avanço estruturado até a etapa 6: peões -> 2 bispos -> 2 cavalos -> 2 torres -> Rainha Negra (abatida com sono e cegueira). Instrução final alcançada: 'Agora, é hora do xeque-mate. Traga o cetro daquele rei nefasto como prova do seu feito'. Resetada ao renascer na Fonte da Vida; rota e mecânica completamente mapeadas para reexecução rápida no Capítulo 12.
 * **Ajuda Mágica — Ativa:** Ajudar Lemin a reconstruir o livro de magias de Merlin.
-  * Próximo passo: Localizar e obter um tomo de pergaminho bem grosso, que pode ser usado, e entregar a Lemin no Centro da Cidade de Lyon somente após reconfirmar a subetapa.
+  * Próximo passo: Localizar e obter um tomo de pergaminho bem grosso, que pode ser usado, e entregar a Lemin no Centro da Cidade de Lyon somente após reconfirmar a subetapa em score tudo (Ajuda Mágica: Você deve entregar objeto ao personagem).
 
 Objetivos pessoais e investigações ficam separados das autoquests no catálogo de missões.
 
@@ -127,12 +127,12 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
 **Capítulo 12: reconstruir o livro de Merlin**
-Após recuperar cota, investigar autonomamente a biblioteca de Jareth como pista documental do tomo pedido por Lemin; não afirmar disponibilidade antes de observar. Conferir etapa, pedido e inventário antes de entregar.
-* Fonte do tomo ainda não identificada.
-* Revalidar buffs ao acordar; armor estava próxima de expirar.
+Decidir com o autor como tratar a porta trancada da Loja de Trapos da Vovó e o Beco Escuro de Jareth (sem matar os malandros sem autorização); conferir antes `score tudo` para ver se a missão segue na etapa de entrega. Conferir etapa, pedido e inventário antes de qualquer give.
+* Fonte do tomo ainda não identificada; a biblioteca da cidade de Jareth não foi localizada.
+* Revalidar buffs ao acordar com score tudo.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Execução parcial do Capítulo 12 em 2026-10-19 por GPT-6 / Codex (versão específica não informada); evidence/dia157-cap12.json. Missão ativa na primeira entrega; repouso salvo no Templo..
+Fonte do estado: Sessões do Capítulo 12 em 2026-10-19: GPT-6 / Codex (evidence/dia157-cap12.json) e Claude Sonnet 5.5 (evidence/dia157-biblioteca.json, dia157-lemin-reativacao.json, dia157-jareth-varredura.json). Última conexão fechada com save e sleep confirmados no Templo, sem quit; Ajuda Mágica ativa na etapa de entrega..
 * A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.
 * O colar com pedra purpura pertence a outro dono: o servidor recusa o uso. Nenhum comerciante testado o compra.
 * Bainha de Excalibur exige nivel 85 (vista na Sala de Doacoes, nao pode ser carregada com a carga atual). Scutum de Carvalho exige nivel 35.

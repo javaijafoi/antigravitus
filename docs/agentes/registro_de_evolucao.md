@@ -1042,3 +1042,11 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Como foi verificado:** rota `templo-praca-jareth` de 26 passos executada sem desvio; `live_daemon.py` lido: `_CLOSE` salva, dorme e fecha o socket, sem quit; missão conferida viva após fechar e reabrir; encerramento com save_confirmed e sleep_confirmed True.
 - **Custo:** `nav.py` só cobre rotas já verificadas; mudar o mundo exige atualizar o dicionário `ROTAS`.
 - **Próximo:** Plano 032 — decidir com o autor sobre a porta trancada da Vovó e o Beco Escuro. Não entrei no `CHANGELOG.md` do motor por ser um script de rota, não uma camada.
+
+
+### 2026-10-19 · Dia 157, fecho de pendências de registro · Claude Sonnet 5.5 (claude-sonnet-5-5)
+- **Mudou:** `state.json` (ponteiro para o Plano 033, descrição da segunda parte do dia, buffs), `missoes.json` (bloqueio e evidências novas de Ajuda Mágica), `capitulos.json` (segunda parte do Capítulo 12), Plano 033; `ficha.md` regenerada por `sync_hero.py`. Nenhuma mudança em motor, scripts ou mapa.
+- **Por quê:** o autor perguntou se a rotina de handoff estava completa. Faltavam o ponteiro do `state.json`, a nota de missão, a crônica e a justificativa das falhas do auditor, que a regra de append-only impedia de pôr no Plano 032.
+- **Como foi verificado:** `auditar_sessao.py` sobre os três transcripts da sessão: 5 falhas e 2 avisos na 1ª conexão (recusas repetidas e recuo a pé com pouca vida, causas conferidas no transcript), 0 e 0 nas outras duas; `sync_hero.py --check` ok; `check_project.py` 0 erros; `mandabala.py` lê o Plano 033.
+- **Custo:** nenhum no jogo; nenhuma conexão nova.
+- **Próximo:** Plano 033 — checar `score tudo` na abertura; decidir com o autor a porta da Vovó e o Beco; unificar `nav.py` e `navegar.py`.

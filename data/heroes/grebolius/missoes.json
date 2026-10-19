@@ -553,14 +553,24 @@
       "accepted_day": 157,
       "last_progress_day": 157,
       "objective": "Ajudar Lemin a reconstruir o livro de magias de Merlin.",
-      "next_step": "Localizar e obter um tomo de pergaminho bem grosso, que pode ser usado, e entregar a Lemin no Centro da Cidade de Lyon somente após reconfirmar a subetapa.",
-      "blocker": "Fonte e identidade exata do tomo desconhecidas; lojas verificadas sem tomo e doação histórica ausente.",
+      "next_step": "Localizar e obter um tomo de pergaminho bem grosso, que pode ser usado, e entregar a Lemin no Centro da Cidade de Lyon somente após reconfirmar a subetapa em score tudo (Ajuda Mágica: Você deve entregar objeto ao personagem).",
+      "blocker": "Fonte e identidade exata do tomo desconhecidas; lojas verificadas sem tomo e doação histórica ausente. Biblioteca da cidade de Jareth não localizada; resta o Beco Escuro (decisão do autor: não matar os malandros) e portas trancadas. Cadeia teve de ser refeita em 2026-10-19 porque a missão apareceu inativa no login.",
       "reward": "Desconhecida; não houve conclusão.",
       "evidence": [
         {
           "document": "evidence/dia157-cap12.json",
           "day": 157,
           "note": "Sessão ao vivo supervisionada de 2026-10-19; comandos e encerramento confirmados no transcript."
+        },
+        {
+          "document": "evidence/dia157-lemin-reativacao.json",
+          "day": 157,
+          "note": "Missão reativada com Lemin e levada de volta à etapa de entrega do tomo. Agente: Claude Sonnet 5.5."
+        },
+        {
+          "document": "evidence/dia157-jareth-varredura.json",
+          "day": 157,
+          "note": "Missão sobreviveu a fechar e reabrir o driver; ruas de Jareth varridas sem achar biblioteca nem tomo. Agente: Claude Sonnet 5.5."
         }
       ]
     }

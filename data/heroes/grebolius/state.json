@@ -5,7 +5,7 @@
     "day": 157,
     "verification": "live",
     "live_verified": true,
-    "source": "Execução parcial do Capítulo 12 em 2026-10-19 por GPT-6 / Codex (versão específica não informada); evidence/dia157-cap12.json. Missão ativa na primeira entrega; repouso salvo no Templo."
+    "source": "Sessões do Capítulo 12 em 2026-10-19: GPT-6 / Codex (evidence/dia157-cap12.json) e Claude Sonnet 5.5 (evidence/dia157-biblioteca.json, dia157-lemin-reativacao.json, dia157-jareth-varredura.json). Última conexão fechada com save e sleep confirmados no Templo, sem quit; Ajuda Mágica ativa na etapa de entrega."
   },
   "level": 32,
   "mechanical_race": "Elfo",
@@ -47,7 +47,7 @@
     "base": 89,
     "with_armor": 165,
     "effect_verified": true,
-    "note": "CA 165 no score final com armor +36 e invisibility +40; base 89. Não atribuir 165 somente a armor. Buffs expiram; renovar antes da próxima saída. evidence/dia157-cap12.json."
+    "note": "CA 165 no score final da sessão GPT com armor +36 e invisibility +40; base 89. Não atribuir 165 somente a armor. Na última sessão Claude armor +36 foi relançada (cerca de 17 horas no score) e invisibility lançada; valores exatos não reconferidos ao fechar. Buffs expiram; renovar antes da próxima saída. evidence/dia157-cap12.json."
   },
   "hitroll": 16,
   "damroll": 5,
@@ -55,7 +55,7 @@
   "training_sessions": 68,
   "operational_mode": {
     "current": "padrao",
-    "description": "Capítulo 12 em curso; reconhecimento em modo batedor sem combate. Ajuda Mágica ativa: entregar tomo a Lemin, Centro da Cidade de Lyon. Sessão salva, dormindo no Templo, driver fechado.",
+    "description": "Capítulo 12 em curso; reconhecimento em modo batedor, com duas fugas por recall no Beco Escuro de Jareth. Ajuda Mágica ativa: entregar tomo a Lemin, Centro da Cidade de Lyon. Sessão salva, dormindo no Templo, driver fechado.",
     "wimpy_profile": {
       "padrao": 17,
       "batedor": 33,
@@ -79,17 +79,17 @@
   },
   "last_event": {
     "day": 157,
-    "summary": "Capítulo 12 iniciado. Rota Midgaard–Haon-Dor–França–Notre Dame–Lyon reconhecida sem combate. Lemin localizado no Centro da Cidade de Lyon; Ajuda Mágica aceita, resposta Merlin validada, monólogos ouvidos e dois pedidos de confirmação respondidos após score tudo. Etapa atual: entregar um tomo de pergaminho bem grosso, podendo ser usado. Nenhum item entregue e nenhum gasto. Lojas de Lyon e Midgaard sem tomo; doação histórica não se confirmou. Reconhecimento adicional do castelo de Welmar não encontrou fonte do tomo nas salas visitadas. Retorno ao Templo, alimentação, água, save e sleep confirmados; driver encerrou com código 0."
+    "summary": "Capítulo 12 iniciado. Rota Midgaard–Haon-Dor–França–Notre Dame–Lyon reconhecida sem combate. Lemin localizado no Centro da Cidade de Lyon; Ajuda Mágica aceita, resposta Merlin validada, monólogos ouvidos e dois pedidos de confirmação respondidos após score tudo. Etapa atual: entregar um tomo de pergaminho bem grosso, podendo ser usado. Nenhum item entregue e nenhum gasto. Lojas de Lyon e Midgaard sem tomo; doação histórica não se confirmou. Reconhecimento adicional do castelo de Welmar não encontrou fonte do tomo nas salas visitadas. Retorno ao Templo, alimentação, água, save e sleep confirmados; driver encerrou com código 0. Segunda parte do dia (Claude Sonnet 5.5): a missão apareceu inativa no login e foi reativada com Lemin, seguindo a mesma cadeia, e voltou à etapa de entrega do tomo; sobreviveu a fechar e reabrir o driver. Varredura das ruas de Jareth, do castelo do Lorde e de salas vizinhas não achou a biblioteca da Assistente nem o tomo; o Beco Escuro de Jareth (malandros hostis) ficou fora por decisão do autor. Duas fugas por recall com cerca de 50 de vida; nenhuma morte nem queda de alinhamento. Sessão encerrada no Templo com save e sleep confirmados, sem quit."
   },
   "next_objective": {
     "mission_id": "ajuda-magica",
     "title": "Capítulo 12: reconstruir o livro de Merlin",
-    "next_step": "Após recuperar cota, investigar autonomamente a biblioteca de Jareth como pista documental do tomo pedido por Lemin; não afirmar disponibilidade antes de observar. Conferir etapa, pedido e inventário antes de entregar.",
+    "next_step": "Decidir com o autor como tratar a porta trancada da Loja de Trapos da Vovó e o Beco Escuro de Jareth (sem matar os malandros sem autorização); conferir antes `score tudo` para ver se a missão segue na etapa de entrega. Conferir etapa, pedido e inventário antes de qualquer give.",
     "missing_preparation": [
-      "Fonte do tomo ainda não identificada.",
-      "Revalidar buffs ao acordar; armor estava próxima de expirar."
+      "Fonte do tomo ainda não identificada; a biblioteca da cidade de Jareth não foi localizada.",
+      "Revalidar buffs ao acordar com score tudo."
     ],
-    "plan_document": "planos/plano029.md"
+    "plan_document": "planos/plano033.md"
   },
   "skills": [
     {

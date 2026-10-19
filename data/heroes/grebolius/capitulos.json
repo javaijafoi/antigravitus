@@ -1510,6 +1510,26 @@
             }
           ],
           "date": "2026-10-19"
+        },
+        {
+          "day": 157,
+          "source_kind": "live",
+          "date": "2026-10-19",
+          "summary": "Segunda parte do dia. A aventura de Lemin tinha voltado ao começo, e Grebolius refez a conversa em Lyon até ouvir de novo o pedido do primeiro material, um tomo de pergaminho bem grosso. Procurou o tomo pelas ruas de Jareth e pelo castelo do Lorde, onde havia uma biblioteca, mas a do Lorde estava vazia e a da cidade não apareceu. Recuou duas vezes do Beco Escuro, onde arruaceiros hostis a feriram, sem lutar e sem perder o passo da missão. Não entregou nada nem encontrou o tomo; a aventura segue aberta.",
+          "evidence": [
+            {
+              "document": "evidence/dia157-lemin-reativacao.json",
+              "day": 157,
+              "note": "Missão reativada com Lemin e levada de volta à etapa de entrega. Agente: Claude Sonnet 5.5.",
+              "date": "2026-10-19"
+            },
+            {
+              "document": "evidence/dia157-jareth-varredura.json",
+              "day": 157,
+              "note": "Varredura das ruas de Jareth sem biblioteca nem tomo; missão sobreviveu ao fechamento. Agente: Claude Sonnet 5.5.",
+              "date": "2026-10-19"
+            }
+          ]
         }
       ],
       "content": [],
