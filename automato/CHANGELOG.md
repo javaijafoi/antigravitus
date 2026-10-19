@@ -4,6 +4,16 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.6.16 — Dia 156 · Venda da Coroa da Rainha Negra, Recomposição de Estoque e Geografia de Autoquests (Plano 026)
+- **EXECUÇÃO DO PLANO 026 (Capítulo 12 / Tomo II)**:
+  - Cotação (`value coroa`) e venda bem-sucedida da `Coroa da Rainha Negra` no Armeiro de Midgaard por 1.500 moedas de ouro, aliviando 4 kg de peso morto e eliminando riscos da flag ANTI-GOOD sem jamais vesti-la.
+  - Depósito de 1.700 moedas no Banco do Templo, elevando a reserva bancária para 15.700 moedas (patrimônio total: 16.059 moedas de ouro, mantendo 359 moedas líquidas na mão).
+  - Recomposição do estoque na Padaria de Midgaard: compra de 5 pães recheados por 30 moedas e armazenamento na mochila de Pellinore (estoque restabelecido para 6 pães, atendendo a regra `LIMIAR_PAO = 2`).
+  - Abastecimento completo do cantil com água cristalina na grande fonte da Praça do Templo.
+- **DESCOBERTA DOCUMENTAL DE AUTOQUESTS**:
+  - Auditoria in-game de `help autoquest` e `help notre dame` comprovou que o patrono `Lemin` da autoquest `Ajuda Mágica` localiza-se na zona de **Notre Dame/França** (e não em Midgaard).
+  - Rota terrestre completa até a França e Notre Dame extraída e documentada em `conhecimento.md` §60.
+
 ## v1.6.15 — Dia 156 · Validação Tática de Sleep/Blindness em Chefes e Cotação Mercantil (Capítulo 11)
 - **TÁTICA ARCANA EM COMBATE DE ELITE**:
   - Validação empírica de `cast 'sleep'` em monstros de grande porte e estruturas blindadas (Torre Negra, Rainha Negra), comprovando que o adormecimento impede retaliação e permite preparação tática.

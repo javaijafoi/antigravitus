@@ -57,8 +57,10 @@ def git(*args, cwd=None):
     return r.returncode, (r.stdout or "").strip()
 
 
-def mudou(caminho, desde):
+def mudou(caminho, desde, sem_git=False):
     """O caminho foi tocado no diff? (arquivos versionados + não rastreados)"""
+    if sem_git:
+        return (ROOT / caminho).is_file()
     if desde:
         codigo, saida = git("diff", "--name-only", desde, "--", caminho)
         if codigo == 0 and saida:
@@ -147,7 +149,7 @@ def desde_da_sessao(heroi, explicito):
     return "HEAD"
 
 
-def checar_coerencia_da_devolutiva(heroi, texto, desde):
+def checar_coerencia_da_devolutiva(heroi, texto, desde, sem_git=False):
     """O coração da verificação: prometer no plano e não gravar no artefato.
 
     Só olha as LINHAS DE TABELA da seção (a segunda coluna, "Registrei em") — a prosa explicativa
@@ -183,7 +185,7 @@ def checar_coerencia_da_devolutiva(heroi, texto, desde):
                       f"{' '.join(celulas[2:])[:80]}")
                 continue
             caminho = caminho_tpl.format(heroi=heroi)
-            if mudou(caminho, desde):
+            if mudou(caminho, desde, sem_git=sem_git):
                 ok(f"coerência: '{chave}' prometido e {caminho} alterado")
             else:
                 falha(msg + f"  (destino declarado: {destino[:60]})")
@@ -331,7 +333,7 @@ def main(argv=None):
 
     print("\n2. Coerência da devolutiva técnica (o prometido está no artefato?)")
     if texto:
-        checar_coerencia_da_devolutiva(heroi, texto, desde)
+        checar_coerencia_da_devolutiva(heroi, texto, desde, sem_git=args.sem_git)
     else:
         aviso("sem plano, sem devolutiva a conferir")
 

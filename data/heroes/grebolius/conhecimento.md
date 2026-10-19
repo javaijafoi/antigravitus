@@ -2375,4 +2375,31 @@ Fonte: [evidence/dia156k.json](evidence/dia156k.json). Sessão ao vivo via `auto
      - As moedas de ouro ganhas e depositadas no banco (**14.589 moedas**);
      - O alinhamento moral conquistado (**412 - Bom**).
 
+## 60. Geografia das Autoquests e a Rota Terrestre para Notre Dame (Dia 156)
+
+1. **Desmistificação da Localização de `Ajuda Mágica`:**
+   - O Plano 026 supunha que a autoquest `Ajuda Mágica` e seu patrono `Lemin` se encontravam em Midgaard.
+   - A auditoria in-game através de `help autoquest` revelou a lista canônica das 51 aventuras do servidor.
+   - O item 44 determina expressamente:
+     `44) Ajuda Mágica: Lemin (Notre Dame)`
+   - Outras autoquests correlatas na mesma região francesa:
+     - `36) A Queda de Thalos: Esmeralda, a cigana (Notre Dame)`
+     - `47) Paz Entre Reinos: o Rei da França (Notre Dame)`
+
+2. **A Rota Oficial para a França e a Catedral de Notre Dame (`help notre dame`):**
+   - Rota terrestre a partir do Templo de Midgaard:
+     1. Templo -> `s` até a Praça do Templo e `s` até a Praça do Comércio.
+     2. `w` pela Rua Principal até sair dos portões da cidade em direção a uma `Trilha em Meio a Floresta`.
+     3. Seguir pelo `Caminho Sombreado Através da Floresta`.
+     4. Virar na primeira passagem a oeste (`w`).
+     5. Em `Uma Bifurcação no Caminho`, ir para o norte (`n`) e logo em seguida para o oeste (`w`).
+     6. No Caminho Sombreado, seguir para o norte (`n`) até `Uma Densa Floresta Entre as Colinas`.
+     7. Pegar a estrada a leste (`e`), que leva diretamente até a `Entrada Para a França`.
+   - A região dá acesso à Catedral de Notre Dame, à cidade de Lyon e ao escuro bosque de Champs Elysées.
+
+3. **Economia Mercantil Validada:**
+   - `A Coroa da Rainha Negra` (ANTI-GOOD, valor 3.000): cotada com `value coroa` por 1.500 moedas no Armeiro de Midgaard e vendida com sucesso (`sell coroa`).
+   - Saldo bancário elevado para 15.700 moedas de ouro, garantindo 16.059 moedas de patrimônio total.
+
+
 

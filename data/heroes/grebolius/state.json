@@ -5,7 +5,7 @@
     "day": 156,
     "verification": "live",
     "live_verified": true,
-    "source": "Execução ao vivo por Gemini 3.8 Flash (High); evidence/dia156q.json. Conclusão das batalhas do Capítulo 11 no Grande Tabuleiro de Xadrez com ascensão ao Nível 32 (EXP: 7.225.102): abate dos peões, dois bispos negros, dois cavalos negros, duas torres negras e a própria Rainha Negra (com Santuário). Testadas e validadas as mecânicas de sleep, blindness, curse, identify e value (com venda da armadura da torre por 8.500 moedas). Saque da Coroa da Rainha Negra e conclusão da missão diária Todo Dia um Pouco com prêmio de baú contendo segundo rosário sagrado. Retorno ao Templo de Midgaard com ressurreição na Fonte da Vida, vitais 199/199 HP, 430/430 Mana, 145/145 MV, Alinhamento 412 (Bom), 14.589 moedas de ouro (14.000 no banco, 589 na mão), sono e save confirmados."
+    "source": "Execução ao vivo do Plano 026 por Gemini 3.8 Flash (Medium); evidence/dia156r.json. Resolução da nutrição e água (cantil saciado na fonte de mármore azul), reposição do estoque de segurança na Padaria de Midgaard (compra de 5 pães recheados, totalizando 6 na mochila de Pellinore), venda mercantil de alto valor da Coroa da Rainha Negra no Armeiro por 1.500 moedas sem vesti-la (eliminando o risco da flag ANTI-GOOD e aliviando 4 kg de peso morto), depósito de 1.700 moedas no Banco do Templo (elevando a reserva para 15.700 moedas e patrimônio total para 16.059 moedas, mantendo 359 moedas na mão). Auditoria in-game de help autoquest e help notre dame comprovando que o patrono Lemin e a autoquest Ajuda Mágica localizam-se em Notre Dame/França (e não em Midgaard). Retorno em segurança ao Templo de Midgaard com vitais 199/199 HP, 430/430 Mana, 145/145 MV, Alinhamento 412 (Bom), save e sono confirmados."
   },
   "level": 32,
   "mechanical_race": "Elfo",
@@ -34,7 +34,7 @@
     "current": 7225102,
     "next_level": 8000000
   },
-  "gold": 14589,
+  "gold": 16059,
   "attributes": {
     "STR": 11,
     "DEX": 17,
@@ -323,24 +323,18 @@
       {
         "name": "um pergaminho de sabedoria",
         "quantity": 1,
-        "source": "evidence/dia156q.json"
-      },
-      {
-        "name": "a Coroa da Rainha Negra",
-        "quantity": 1,
-        "source": "evidence/dia156q.json",
-        "container": "a mochila de Pellinore"
+        "source": "evidence/dia156r.json"
       },
       {
         "name": "um pão recheado",
-        "quantity": 2,
-        "source": "evidence/dia156q.json",
+        "quantity": 6,
+        "source": "evidence/dia156r.json",
         "container": "a mochila de Pellinore"
       },
       {
         "name": "um manto de pano",
         "quantity": 1,
-        "source": "evidence/dia156q.json",
+        "source": "evidence/dia156r.json",
         "container": "a mochila de Pellinore"
       },
       {

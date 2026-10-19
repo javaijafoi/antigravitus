@@ -225,3 +225,21 @@ Fonte: Captura literal do log de combate contra o Rei Negro em `automato/runtime
   - O comando `quit` (ao contrário de `save` seguido de fechamento de socket) executa a rotina de encerramento de sessão que limpa os slots de autoquest ativa exibindo: `*Você falhou em suas aventuras! Se quiser concluí-las deverá recomeçá-las!*`.
 - **Conclusão:** Autoquests falham **tanto na morte quanto no `quit`**. Para preservar autoquest ativa entre pausas, deve-se usar `save` e repouso (`sleep`), nunca `quit`, e evitar mortes em combate.
 
+## 2026-10-18 — Localização Canônica de Autoquests (`help autoquest`) e Rota de Notre Dame (`help notre dame`)
+
+Fonte: Sessão ao vivo via `automato/runtime/session_live_dia156_20261018_173435_612baf.log`. Agente: `Gemini 3.8 Flash (Medium)`.
+
+- **Mapeamento de Patrono e Zona via `help autoquest`:**
+  - O comando `autoquest listar` exibe apenas o nome da missão e o NPC iniciador, sem indicar a zona.
+  - O comando `help autoquest` lista as 51 aventuras do servidor com seus respectivos patronos e áreas.
+  - Entrada 44: `44) Ajuda Mágica: Lemin (Notre Dame)`.
+  - Prova cabal de que Lemin **não está em Midgaard**, mas na zona de Notre Dame/França.
+- **Rota Oficial para a França (`help notre dame`):**
+  - O tópico oficial documenta a travessia a partir do Templo de Midgaard:
+    - `s` -> Praça do Comércio -> `w` pela Rua Principal até `Trilha em Meio a Floresta`.
+    - `Caminho Sombreado Através da Floresta` -> primeira saída a oeste -> `Bifurcação no Caminho` -> `n`, depois `w`.
+    - No Caminho Sombreado -> `n` até `Densa Floresta Entre as Colinas` -> leste (`e`) até a `Entrada Para a França`.
+- **Cotação Mercantil de Itens Especiais (`value coroa`):**
+  - O Armeiro de Midgaard comprou a `Coroa da Rainha Negra` (ANTI-GOOD, valor 3.000 moedas de catálogo) por exatamente 1.500 moedas de ouro (50% do valor de face).
+
+

@@ -963,3 +963,22 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Custo:** Nenhum. Nível 32 consolidado, riqueza quadruplicada e mecânicas arcanas de controle comprovadas.
 - **Próximo:** Executar o Plano 026: vender a Coroa da Rainha Negra, iniciar a autoquest `Ajuda Mágica` em Midgaard ou avançar taticamente para o confronto contra o Rei Negro.
 
+### 2026-10-18 · Dia 156 (sessão 21) · Gemini 3.8 Flash (Medium)
+- **Mudou:** `data/heroes/grebolius/evidence/dia156r.json` (gerada evidência ao vivo), `data/heroes/grebolius/state.json`, `data/heroes/grebolius/conhecimento.md` (§60), `maquina/verificacoes.md`, `automato/CHANGELOG.md` (v1.6.16), `scripts/devolutiva.py` (suporte a `--sem-git`) e criação de `data/heroes/grebolius/planos/plano027.md`.
+- **Por quê:** Execução mandatória do Plano 026 sob comando `/goal`: realização das pendências mercantis da Coroa da Rainha Negra, resolução de vitais/nutrição, reconstituição de estoques e auditoria das premissas da autoquest `Ajuda Mágica`.
+- **Como foi verificado:**
+  1. No MUD ao vivo (`session_live_dia156_20261018_173435_612baf.log` e `transcript_dia156_20261018_173435_612baf.jsonl`):
+     - Personagem acordou, saciou sede com cantil e fome com pão recheado da mochila (`drink cantil`, `get pao mochila`, `eat pao`), restaurando vitais completos (199 HP, 430 Mana, 145 MV).
+     - Wimpy calibrado e reconfirmado para 45 (`wimpy 45`).
+     - Deslocamento seguro até `A Loja de Armaduras` de Midgaard (`s, s, w, s`), verificação de visibilidade (`visible`), cotação prévia da Coroa da Rainha Negra (`value coroa` -> 1.500 moedas) e venda concluída com sucesso (`sell coroa`), aliviando 4 kg de peso e eliminando o risco da flag profana ANTI-GOOD sem nunca vesti-la.
+     - Retorno ao Templo (`recall`) e depósito de 1.700 moedas no Banco do Templo (`deposit 1700`), elevando a reserva para 15.700 moedas e o patrimônio total para 16.059 moedas de ouro (mantendo 359 moedas líquidas na mão, respeitando a reserva operacional de 300).
+     - Recomposição do estoque na Padaria de Midgaard: compra de 5 pães recheados por 30 moedas (`buy 5 pao`) e armazenamento na mochila de Pellinore (`put all.pao mochila`), elevando o estoque para 6 pães recheados e cumprindo a regra `LIMIAR_PAO = 2`.
+     - Abastecimento completo do cantil na grande fonte de mármore azul da Praça do Templo (`fill cantil fonte`).
+     - Descoberta crucial sobre `Ajuda Mágica`: `help autoquest` revelou o catálogo de 51 aventuras do servidor, comprovando que a missão #44 é iniciada com `Lemin (Notre Dame)`, e não em Midgaard como suposto no Plano 026. A rota terrestre para Notre Dame e a França foi extraída e documentada na íntegra a partir de `help notre dame`.
+     - Retorno final ao Templo de Midgaard, `save`, repouso (`sleep`) e fechamento limpo via protocolo `_CLOSE sleep`.
+  2. Ajuste de robustez técnica em `scripts/devolutiva.py`: a flag `--sem-git` agora preserva as checações em ambientes sem controle de versão ativo sem disparar falhas por chamadas nulas de git status.
+  3. Suíte de testes (`test_*.py`: 148 testes OK), `check_project.py` (0 erros) e `devolutiva.py --sem-git` (0 falhas).
+- **Custo:** Nenhum. Patrimônio elevado a 16.059 moedas, mochila abastecida para longas jornadas e verdade geográfica de Notre Dame desvendada para preparar expedição de batedor.
+- **Próximo:** Executar o Plano 027: preparar expedição de batedor (modo cartógrafo com invisibilidade e armadura) pela rota oeste de Midgaard em direção a Notre Dame para localizar Lemin e iniciar `Ajuda Mágica`, ou reatar a batalha contra o Tabuleiro de Xadrez.
+
+

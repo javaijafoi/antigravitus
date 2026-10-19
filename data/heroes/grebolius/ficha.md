@@ -26,7 +26,7 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 
 * **Experiência Acumulada:** **7.225.102 EXP**
 * **Experiência Necessária p/ Grau 33:** **774.898 EXP** (Meta: 8.000.000 EXP)
-* **Ouro Líquido:** **14.589 moedas de ouro** (valor documental)
+* **Ouro Líquido:** **16.059 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 11
@@ -106,10 +106,9 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 * `um rosário` (x1) — evidence/dia156q.json
 * `um cantil` (x1) — evidence/dia156q.json
 * `a mochila de Pellinore` (x1) — evidence/dia156q.json
-* `um pergaminho de sabedoria` (x1) — evidence/dia156q.json
-* `a Coroa da Rainha Negra` (x1) — evidence/dia156q.json
-* `um pão recheado` (x2) — evidence/dia156q.json
-* `um manto de pano` (x1) — evidence/dia156q.json
+* `um pergaminho de sabedoria` (x1) — evidence/dia156r.json
+* `um pão recheado` (x6) — evidence/dia156r.json
+* `um manto de pano` (x1) — evidence/dia156r.json
 * `um colar com uma pedra púrpura` (x1) — evidence/dia156q.json
 * `a bainha de Excalibur` (x1) — evidence/dia156q.json
 * `uma Cruz Ansada` (x1) — evidence/dia156q.json
@@ -135,7 +134,7 @@ Iniciar e executar a autoquest Ajuda Mágica em Midgaard, ou preparar abordagem 
 * Nível 32 consolidado com 7.225.102 EXP.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Execução ao vivo por Gemini 3.8 Flash (High); evidence/dia156q.json. Conclusão das batalhas do Capítulo 11 no Grande Tabuleiro de Xadrez com ascensão ao Nível 32 (EXP: 7.225.102): abate dos peões, dois bispos negros, dois cavalos negros, duas torres negras e a própria Rainha Negra (com Santuário). Testadas e validadas as mecânicas de sleep, blindness, curse, identify e value (com venda da armadura da torre por 8.500 moedas). Saque da Coroa da Rainha Negra e conclusão da missão diária Todo Dia um Pouco com prêmio de baú contendo segundo rosário sagrado. Retorno ao Templo de Midgaard com ressurreição na Fonte da Vida, vitais 199/199 HP, 430/430 Mana, 145/145 MV, Alinhamento 412 (Bom), 14.589 moedas de ouro (14.000 no banco, 589 na mão), sono e save confirmados..
+Fonte do estado: Execução ao vivo do Plano 026 por Gemini 3.8 Flash (Medium); evidence/dia156r.json. Resolução da nutrição e água (cantil saciado na fonte de mármore azul), reposição do estoque de segurança na Padaria de Midgaard (compra de 5 pães recheados, totalizando 6 na mochila de Pellinore), venda mercantil de alto valor da Coroa da Rainha Negra no Armeiro por 1.500 moedas sem vesti-la (eliminando o risco da flag ANTI-GOOD e aliviando 4 kg de peso morto), depósito de 1.700 moedas no Banco do Templo (elevando a reserva para 15.700 moedas e patrimônio total para 16.059 moedas, mantendo 359 moedas na mão). Auditoria in-game de help autoquest e help notre dame comprovando que o patrono Lemin e a autoquest Ajuda Mágica localizam-se em Notre Dame/França (e não em Midgaard). Retorno em segurança ao Templo de Midgaard com vitais 199/199 HP, 430/430 Mana, 145/145 MV, Alinhamento 412 (Bom), save e sono confirmados..
 * A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.
 * O colar com pedra purpura pertence a outro dono: o servidor recusa o uso. Nenhum comerciante testado o compra.
 * Bainha de Excalibur exige nivel 85 (vista na Sala de Doacoes, nao pode ser carregada com a carga atual). Scutum de Carvalho exige nivel 35.
