@@ -2,8 +2,8 @@
   "hero_id": "grebolius",
   "hero_name": "Grebolius",
   "sanctuary_id": "panteao_centenarios",
-  "last_updated_cycle": "Dia 156 — reconciliação cartográfica 2026-10-17",
-  "total_rooms": 511,
+  "last_updated_cycle": "Dia 157 — reconhecimento manual do Capítulo 12, 2026-10-19",
+  "total_rooms": 590,
   "layers": [
     {
       "id": "superficie",
@@ -34,6 +34,11 @@
       "id": "levantamento",
       "name": "🗺️ Levantamento Vivo (Dias 96-156)",
       "description": "Salas reconstruidas dos registros de sessao. Derivadas: refeitas a cada mesclagem. Sem posicao grafica; aparecem como ficha, nao como no do desenho."
+    },
+    {
+      "id": "franca_cap12",
+      "name": "Reconhecimento do Capítulo 12",
+      "description": "Reconhecimento manual; ligações somente percorridas."
     }
   ],
   "zones": [
@@ -45,7 +50,8 @@
     "Fazenda próxima a Jareth",
     "Cidade de Jareth",
     "Estrada Midgaard-Jareth",
-    "Levantamento (Dias 96-141)"
+    "Levantamento (Dias 96-141)",
+    "Reconhecimento do Capítulo 12"
   ],
   "rooms": [
     {
@@ -130,7 +136,12 @@
       ],
       "arestas_do_levantamento": [
         "s"
-      ]
+      ],
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      }
     },
     {
       "id": "sala_doacoes",
@@ -160,7 +171,12 @@
       ],
       "arestas_do_levantamento": [
         "s"
-      ]
+      ],
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      }
     },
     {
       "id": "praca_templo",
@@ -194,7 +210,19 @@
       "arestas_do_levantamento": [
         "d",
         "n"
-      ]
+      ],
+      "observed_exit_names_cap12": {
+        "n": "O Templo de Midgaard",
+        "e": "A Entrada da Estalagem Javali Roncador",
+        "s": "A Praça do Comércio",
+        "w": "A Entrada da Guilda dos Clérigos",
+        "u": "O Templo de Midgaard"
+      },
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      }
     },
     {
       "id": "praca_comercio",
@@ -223,7 +251,18 @@
       "visitas_registradas": 209,
       "fontes": [
         "levantamento_sessoes"
-      ]
+      ],
+      "observed_exit_names_cap12": {
+        "n": "A Praça do Templo",
+        "e": "Rua Principal",
+        "s": "A Praça Comum",
+        "w": "A Rua Principal"
+      },
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      }
     },
     {
       "id": "rua_oeste_1",
@@ -251,7 +290,18 @@
       "visitas_registradas": 128,
       "fontes": [
         "levantamento_sessoes"
-      ]
+      ],
+      "observed_exit_names_cap12": {
+        "n": "A Padaria",
+        "e": "A Praça do Comércio",
+        "s": "A Loja de Armaduras",
+        "w": "Rua Principal"
+      },
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      }
     },
     {
       "id": "padaria",
@@ -335,7 +385,18 @@
       "visitas_registradas": 72,
       "fontes": [
         "levantamento_sessoes"
-      ]
+      ],
+      "observed_exit_names_cap12": {
+        "n": "A Loja de Magias",
+        "e": "A Rua Principal",
+        "s": "A Entrada da Guilda dos Magos",
+        "w": "Dentro do Portão Oeste de Midgaard"
+      },
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      }
     },
     {
       "id": "loja_magias",
@@ -360,7 +421,12 @@
       "visitas_registradas": 32,
       "fontes": [
         "levantamento_sessoes"
-      ]
+      ],
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      }
     },
     {
       "id": "guilda_magos",
@@ -386,7 +452,16 @@
       "visitas_registradas": 98,
       "fontes": [
         "levantamento_sessoes"
-      ]
+      ],
+      "observed_exit_names_cap12": {
+        "n": "Rua Principal",
+        "s": "O Bar dos Magos"
+      },
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      }
     },
     {
       "id": "bar_magos",
@@ -413,7 +488,16 @@
       "visitas_registradas": 38,
       "fontes": [
         "levantamento_sessoes"
-      ]
+      ],
+      "observed_exit_names_cap12": {
+        "n": "A Entrada da Guilda dos Magos",
+        "e": "O Laboratório dos Magos"
+      },
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      }
     },
     {
       "id": "laboratorio_magos",
@@ -449,7 +533,12 @@
       "visitas_registradas": 15,
       "fontes": [
         "levantamento_sessoes"
-      ]
+      ],
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      }
     },
     {
       "id": "portao_oeste",
@@ -476,7 +565,17 @@
       "visitas_registradas": 16,
       "fontes": [
         "levantamento_sessoes"
-      ]
+      ],
+      "observed_exit_names_cap12": {
+        "e": "Rua Principal",
+        "s": "A Rua da Muralha",
+        "w": "Fora do Portão Oeste de Midgaard"
+      },
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      }
     },
     {
       "id": "rua_muralha",
@@ -519,11 +618,21 @@
       },
       "exits": {
         "n": "rua_muralha",
-        "s": "canto_afluencia"
+        "s": "canto_afluencia",
+        "w": "cap12_001"
       },
       "npcs": [],
       "notes": "Ponte monumental de pedra sobre corredeiras profundas.",
-      "discovered_in": "Ciclo I (Dia 4)"
+      "discovered_in": "Ciclo I (Dia 4)",
+      "observed_exit_names_cap12": {
+        "e": "Dentro do Portão Oeste de Midgaard",
+        "w": "Uma Estrada Através das Planícies"
+      },
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      }
     },
     {
       "id": "canto_afluencia",
@@ -573,7 +682,18 @@
       "visitas_registradas": 108,
       "fontes": [
         "levantamento_sessoes"
-      ]
+      ],
+      "observed_exit_names_cap12": {
+        "n": "O Armazém",
+        "e": "Rua Principal",
+        "s": "A Loja de Animais",
+        "w": "A Praça do Comércio"
+      },
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      }
     },
     {
       "id": "armazem",
@@ -655,7 +775,18 @@
       "visitas_registradas": 73,
       "fontes": [
         "levantamento_sessoes"
-      ]
+      ],
+      "observed_exit_names_cap12": {
+        "n": "A Loja de Armas",
+        "e": "Dentro do Portão Leste de Midgaard",
+        "s": "A Entrada da Guilda dos Guerreiros",
+        "w": "Rua Principal"
+      },
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      }
     },
     {
       "id": "loja_armas",
@@ -746,7 +877,17 @@
       "arestas_do_levantamento": [
         "e",
         "s"
-      ]
+      ],
+      "observed_exit_names_cap12": {
+        "e": "A Saída Leste de Midgaard",
+        "s": "A Loja de Água",
+        "w": "Rua Principal"
+      },
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      }
     },
     {
       "id": "praca_comum",
@@ -2237,7 +2378,15 @@
       ],
       "arestas_do_levantamento": [
         "s"
-      ]
+      ],
+      "observed_exit_names_cap12": {
+        "e": "O Templo de Midgaard"
+      },
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      }
     },
     {
       "id": "entrada_javali",
@@ -4756,7 +4905,8 @@
       "icon": "🗺️",
       "exits": {
         "e": "lb025",
-        "w": "lb019"
+        "w": "lb019",
+        "n": "jz_rua_pedra_1"
       },
       "npcs": [],
       "notes": "A Avenida Floris continua ao leste em direção ao Portão Leste e ao de pedra plana, aparentemente vazia. oeste em direção ao centro da cidade. Ao norte se encontra uma rua",
@@ -6693,7 +6843,16 @@
       "visitas_registradas": 7,
       "fontes": [
         "levantamento_sessoes"
-      ]
+      ],
+      "observed_exit_names_cap12": {
+        "e": "A Entrada da Cidade",
+        "w": "Dentro do Portão Leste de Midgaard"
+      },
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      }
     },
     {
       "id": "lv040",
@@ -6835,7 +6994,16 @@
       "visitas_registradas": 6,
       "fontes": [
         "levantamento_sessoes"
-      ]
+      ],
+      "observed_exit_names_cap12": {
+        "e": "A Intersecção do Caminho",
+        "w": "A Saída Leste de Midgaard"
+      },
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      }
     },
     {
       "id": "lv045",
@@ -7115,7 +7283,7 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lv056",
+        "e": "cap12_030",
         "w": "lv044"
       },
       "npcs": [],
@@ -7124,7 +7292,24 @@
       "visitas_registradas": 5,
       "fontes": [
         "levantamento_sessoes"
-      ]
+      ],
+      "observed_exit_names_cap12": {
+        "n": "A Estrada",
+        "e": "A Estrada do Rei",
+        "w": "A Entrada da Cidade",
+        "d": "O Caminho para A Vila dos Anões"
+      },
+      "corrections_cap12": [
+        {
+          "direction": "e",
+          "previous": "lv056"
+        }
+      ],
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      }
     },
     {
       "id": "lv058",
@@ -9310,7 +9495,8 @@
       "icon": "🗺️",
       "exits": {
         "n": "lv135",
-        "s": "lv166"
+        "s": "lv166",
+        "w": "jz_beco_jareth_1"
       },
       "npcs": [],
       "notes": "Aaahh... Mas que rua sublime! Bares e tavernas cercam essa rua, cidade. Ao norte você vê uma abundância de bares (surpresa), e ao consegue sobreviver vendendo trapos? da Vovó, uma loja que, apesar de se encontrar em uma parte barra-pesada da cidade, nunca foi vandalizada ou atacada, o que permitiu q",
@@ -9662,7 +9848,8 @@
       "risk_code": "unknown",
       "icon": "🗺️",
       "exits": {
-        "e": "lv227"
+        "e": "lv227",
+        "w": "cap12_004"
       },
       "npcs": [],
       "notes": "Você está no final de uma estrada empoeirada, perto da borda leste da grande floresta adentro. floresta de Haon-Dor. Para o leste você vê a estrada voltando em direção às muralhas de Midgaard, e para o oeste está uma trilha estreita, que segue",
@@ -9670,7 +9857,16 @@
       "visitas_registradas": 1,
       "fontes": [
         "levantamento_sessoes"
-      ]
+      ],
+      "observed_exit_names_cap12": {
+        "e": "Uma Estrada Através das Planícies",
+        "w": "Uma Trilha em Meio a Floresta Iluminada"
+      },
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      }
     },
     {
       "id": "lv153",
@@ -11722,9 +11918,1815 @@
         "day": 156,
         "note": "Separação do Poço Smurf; fontes curadas em recovered_map_records."
       }
+    },
+    {
+      "id": "cap12_001",
+      "name": "Uma Estrada Através das Planícies",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "w": "cap12_002"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "e": "Fora do Portão Oeste de Midgaard",
+        "w": "Uma Estrada Através das Planícies"
+      }
+    },
+    {
+      "id": "cap12_002",
+      "name": "Uma Estrada Através das Planícies",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "w": "cap12_003"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "e": "Uma Estrada Através das Planícies",
+        "w": "Uma Estrada Através das Planícies"
+      }
+    },
+    {
+      "id": "cap12_003",
+      "name": "Uma Estrada Através das Planícies",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "w": "lv152"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "e": "Uma Estrada Através das Planícies",
+        "w": "A Borda da Floresta"
+      }
+    },
+    {
+      "id": "cap12_004",
+      "name": "Uma Trilha em Meio a Floresta Iluminada",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "cap12_005"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "Um Caminho Sombreado Através da Floresta",
+        "e": "A Borda da Floresta",
+        "w": "Uma Trilha em Meio a Floresta Iluminada"
+      }
+    },
+    {
+      "id": "cap12_005",
+      "name": "Um Caminho Sombreado Através da Floresta",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "cap12_006"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "Um Caminho Sombreado Através da Floresta",
+        "s": "Uma Trilha em Meio a Floresta Iluminada"
+      }
+    },
+    {
+      "id": "cap12_006",
+      "name": "Um Caminho Sombreado Através da Floresta",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "w": "cap12_007"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "s": "Um Caminho Sombreado Através da Floresta",
+        "w": "Uma Bifurcação no Caminho Sombreado Através da Floresta"
+      }
+    },
+    {
+      "id": "cap12_007",
+      "name": "Uma Bifurcação no Caminho Sombreado Através da Floresta",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "cap12_008"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "Um Caminho Sombreado Através da Floresta",
+        "e": "Um Caminho Sombreado Através da Floresta",
+        "s": "Um Caminho Sombreado Através da Floresta"
+      }
+    },
+    {
+      "id": "cap12_008",
+      "name": "Um Caminho Sombreado Através da Floresta",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "w": "cap12_009"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "e": "Fora do Caminho na Floresta Sombreada",
+        "s": "Uma Bifurcação no Caminho Sombreado Através da Floresta",
+        "w": "Um Caminho Sombreado Através da Floresta"
+      }
+    },
+    {
+      "id": "cap12_009",
+      "name": "Um Caminho Sombreado Através da Floresta",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "cap12_010"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "Um Caminho Sombreado Através da Floresta",
+        "e": "Um Caminho Sombreado Através da Floresta",
+        "s": "Na Árvore Caída"
+      }
+    },
+    {
+      "id": "cap12_010",
+      "name": "Um Caminho Sombreado Através da Floresta",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "cap12_011"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "Na Densa Floresta Entre as Colinas",
+        "e": "Uma Pequena Trilha Através da Floresta",
+        "s": "Um Caminho Sombreado Através da Floresta"
+      }
+    },
+    {
+      "id": "cap12_011",
+      "name": "Na Densa Floresta Entre as Colinas",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "e": "cap12_012"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "e": "A Entrada Para a França",
+        "s": "Um Caminho Sombreado Através da Floresta"
+      }
+    },
+    {
+      "id": "cap12_012",
+      "name": "A Entrada Para a França",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "e": "cap12_013",
+        "s": "cap12_023"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "A Entrada da Champs Elysées",
+        "e": "O Começo da Rua Notre Dame",
+        "s": "Uma Ponte Francesa",
+        "w": "Na Densa Floresta Entre as Colinas"
+      }
+    },
+    {
+      "id": "cap12_013",
+      "name": "O Começo da Rua Notre Dame",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "e": "cap12_014",
+        "w": "cap12_012"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "e": "Rua Notre Dame",
+        "w": "A Entrada Para a França"
+      }
+    },
+    {
+      "id": "cap12_014",
+      "name": "Rua Notre Dame",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "e": "cap12_015",
+        "w": "cap12_013"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "e": "A Entrada da Catedral",
+        "w": "O Começo da Rua Notre Dame"
+      }
+    },
+    {
+      "id": "cap12_015",
+      "name": "A Entrada da Catedral",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "s": "cap12_016",
+        "e": "cap12_022",
+        "w": "cap12_014"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "e": "O Fim da Rua Notre Dame",
+        "s": "O Átrio da Catedral",
+        "w": "Rua Notre Dame"
+      }
+    },
+    {
+      "id": "cap12_016",
+      "name": "O Átrio da Catedral",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "s": "cap12_017",
+        "n": "cap12_015"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "A Entrada da Catedral",
+        "e": "O Átrio de Notre Dame",
+        "s": "O Corredor Central",
+        "w": "O Átrio de Notre Dame"
+      }
+    },
+    {
+      "id": "cap12_017",
+      "name": "O Corredor Central",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "s": "cap12_018",
+        "n": "cap12_016"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "O Átrio da Catedral",
+        "e": "O Corredor Oriental",
+        "s": "A Nave Central",
+        "w": "O Corredor Ocidental"
+      }
+    },
+    {
+      "id": "cap12_018",
+      "name": "A Nave Central",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "s": "cap12_019",
+        "n": "cap12_017"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "O Corredor Central",
+        "e": "A Nave Oriental",
+        "s": "A Nave Central",
+        "w": "A Nave Ocidental"
+      }
+    },
+    {
+      "id": "cap12_019",
+      "name": "A Nave Central",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "s": "cap12_020",
+        "n": "cap12_018"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "A Nave Central",
+        "e": "A Nave Oriental",
+        "s": "A Nave",
+        "w": "O Corredor Ocidental"
+      }
+    },
+    {
+      "id": "cap12_020",
+      "name": "A Nave",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "s": "cap12_021",
+        "n": "cap12_019"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "A Nave Central",
+        "e": "O Corredor Oriental",
+        "s": "O Altar da Catedral",
+        "w": "O Corredor Ocidental"
+      }
+    },
+    {
+      "id": "cap12_021",
+      "name": "O Altar da Catedral",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "cap12_020"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "A Nave"
+      }
+    },
+    {
+      "id": "cap12_022",
+      "name": "O Fim da Rua Notre Dame",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "w": "cap12_015"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "w": "A Entrada da Catedral"
+      }
+    },
+    {
+      "id": "cap12_023",
+      "name": "Uma Ponte Francesa",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "s": "cap12_024"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "A Entrada Para a França",
+        "s": "A Entrada de Lyon"
+      }
+    },
+    {
+      "id": "cap12_024",
+      "name": "A Entrada de Lyon",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "s": "cap12_025"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "Uma Ponte Francesa",
+        "s": "A Rua Principal de Lyon"
+      }
+    },
+    {
+      "id": "cap12_025",
+      "name": "A Rua Principal de Lyon",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "s": "cap12_026"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "A Entrada de Lyon",
+        "e": "Uma Casa de Lyon",
+        "s": "O Centro da Cidade",
+        "w": "O Parque de Lyon"
+      }
+    },
+    {
+      "id": "cap12_026",
+      "name": "O Centro da Cidade",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "e": "cap12_027",
+        "w": "cap12_028",
+        "s": "cap12_029"
+      },
+      "npcs": [
+        "Lemin"
+      ],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido. Centro de Lyon: patrono de Ajuda Mágica, pergunta sobre Merlin e primeiro pedido de tomo observados nesta sessão.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "A Rua Principal de Lyon",
+        "e": "A Loja de Magias da França",
+        "s": "O Fim da Rua Principal",
+        "w": "Uma Pequena Loja de Itens Variados"
+      }
+    },
+    {
+      "id": "cap12_027",
+      "name": "A Loja de Magias da França",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "w": "cap12_026"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "w": "O Centro da Cidade"
+      }
+    },
+    {
+      "id": "cap12_028",
+      "name": "Uma Pequena Loja de Itens Variados",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "e": "cap12_026"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "e": "O Centro da Cidade"
+      }
+    },
+    {
+      "id": "cap12_029",
+      "name": "O Fim da Rua Principal",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {},
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "O Centro da Cidade",
+        "e": "Uma Cabana em Lyon",
+        "s": "A Estação de Carruagens",
+        "w": "Outra Casa de Lyon"
+      }
+    },
+    {
+      "id": "cap12_030",
+      "name": "A Estrada do Rei",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "e": "cap12_031"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "e": "A Estrada do Rei",
+        "s": "Uma Enorme Trilha",
+        "w": "A Intersecção do Caminho"
+      }
+    },
+    {
+      "id": "cap12_031",
+      "name": "A Estrada do Rei",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "e": "cap12_032"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "A Entrada Para a Vila dos Smurfs",
+        "e": "A Estrada do Rei",
+        "w": "A Estrada do Rei"
+      }
+    },
+    {
+      "id": "cap12_032",
+      "name": "A Estrada do Rei",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "e": "cap12_033"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "e": "Fora do Castelo",
+        "w": "A Estrada do Rei"
+      }
+    },
+    {
+      "id": "cap12_033",
+      "name": "Fora do Castelo",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "cap12_034"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "Na Ponte Levadiça",
+        "w": "A Estrada do Rei"
+      }
+    },
+    {
+      "id": "cap12_034",
+      "name": "Na Ponte Levadiça",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "cap12_035"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "O Saguão de Entrada",
+        "s": "Fora do Castelo"
+      }
+    },
+    {
+      "id": "cap12_035",
+      "name": "O Saguão de Entrada",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "cap12_036"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "O Grande Saguão",
+        "e": "A Sala da Guarda",
+        "s": "Na Ponte Levadiça",
+        "w": "Uma Pequena Passagem"
+      }
+    },
+    {
+      "id": "cap12_036",
+      "name": "O Grande Saguão",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "w": "cap12_037",
+        "s": "cap12_035"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "Ao Redor do Trono no Grande Salão",
+        "e": "O Grande Saguão",
+        "s": "O Saguão de Entrada",
+        "w": "O Grande Saguão"
+      }
+    },
+    {
+      "id": "cap12_037",
+      "name": "O Grande Saguão",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "cap12_038",
+        "e": "cap12_036"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "O Grande Saguão",
+        "e": "O Grande Saguão"
+      }
+    },
+    {
+      "id": "cap12_038",
+      "name": "O Grande Saguão",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "w": "cap12_039",
+        "s": "cap12_037"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "e": "Ao Redor do Trono no Grande Salão",
+        "s": "O Grande Saguão",
+        "w": "A Passagem"
+      }
+    },
+    {
+      "id": "cap12_039",
+      "name": "A Passagem",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "cap12_040",
+        "e": "cap12_038"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "A Passagem",
+        "e": "O Grande Saguão",
+        "s": "A Pequena Passagem"
+      }
+    },
+    {
+      "id": "cap12_040",
+      "name": "A Passagem",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "cap12_041",
+        "s": "cap12_039"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "A Sala das Escadas",
+        "e": "O Corredor dos Empregados",
+        "s": "A Passagem"
+      }
+    },
+    {
+      "id": "cap12_041",
+      "name": "A Sala das Escadas",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "u": "cap12_042",
+        "s": "cap12_040"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "s": "A Passagem",
+        "u": "A Escadaria Principal"
+      }
+    },
+    {
+      "id": "cap12_042",
+      "name": "A Escadaria Principal",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "s": "cap12_043",
+        "d": "cap12_041"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "s": "O Corredor",
+        "u": "No Topo da Torre",
+        "d": "A Sala das Escadas"
+      }
+    },
+    {
+      "id": "cap12_043",
+      "name": "O Corredor",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "s": "cap12_044",
+        "n": "cap12_042"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "A Escadaria Principal",
+        "e": "O Salão de Festas",
+        "s": "O Corredor"
+      }
+    },
+    {
+      "id": "cap12_044",
+      "name": "O Corredor",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "s": "cap12_045",
+        "n": "cap12_043"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "O Corredor",
+        "s": "O Corredor"
+      }
+    },
+    {
+      "id": "cap12_045",
+      "name": "O Corredor",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "s": "cap12_046",
+        "n": "cap12_044"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "O Corredor",
+        "e": "Perto da Sala do Tesouro",
+        "s": "Uma Curva no Corredor"
+      }
+    },
+    {
+      "id": "cap12_046",
+      "name": "Uma Curva no Corredor",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "e": "cap12_047",
+        "n": "cap12_045"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "O Corredor",
+        "e": "O Corredor"
+      }
+    },
+    {
+      "id": "cap12_047",
+      "name": "O Corredor",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "e": "cap12_048",
+        "w": "cap12_046"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "e": "O Corredor",
+        "w": "Uma Curva no Corredor"
+      }
+    },
+    {
+      "id": "cap12_048",
+      "name": "O Corredor",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "e": "cap12_049",
+        "w": "cap12_047"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "e": "Corredor",
+        "w": "O Corredor"
+      }
+    },
+    {
+      "id": "cap12_049",
+      "name": "Corredor",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "cap12_050",
+        "w": "cap12_048"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "observed_exit_names_cap12": {
+        "n": "A Ala de Hóspedes",
+        "w": "O Corredor"
+      }
+    },
+    {
+      "id": "cap12_050",
+      "name": "A Ala de Hóspedes",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "s": "cap12_049"
+      },
+      "npcs": [],
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia157-cap12.json",
+        "day": 157,
+        "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      }
+    },
+    {
+      "id": "jz_rua_pedra_1",
+      "name": "Uma Rua de Pedra Esburacada",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "s": "lb021",
+        "n": "jz_rua_pedra_2"
+      },
+      "npcs": [],
+      "notes": "Norte da Avenida Floris (sala antes do Portão Leste), rumo ao castelo do Lorde.",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_rua_pedra_2",
+      "name": "Uma Rua de Pedra Esburacada",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "s": "jz_rua_pedra_1",
+        "n": "jz_estrada_pedras_1"
+      },
+      "npcs": [],
+      "notes": "Segunda sala da rua de pedra.",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_estrada_pedras_1",
+      "name": "Uma Estrada de Pedras",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "s": "jz_rua_pedra_2",
+        "n": "jz_estrada_pedras_2"
+      },
+      "npcs": [],
+      "notes": "Estrada de pedras rumo ao norte.",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_estrada_pedras_2",
+      "name": "Uma Estrada de Pedras",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "s": "jz_estrada_pedras_1",
+        "n": "jz_paco_lorde"
+      },
+      "npcs": [],
+      "notes": "Última sala antes do Paço do Lorde.",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_paco_lorde",
+      "name": "O Paço do Lorde",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "s": "jz_estrada_pedras_2",
+        "e": "jz_ponte_levadica_1"
+      },
+      "npcs": [],
+      "notes": "Local de cerimônias de boas-vindas à realeza; norte e leste do paço só se vai pela ponte. Sem hostis observados.",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_ponte_levadica_1",
+      "name": "Na Ponte Levadiça",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "w": "jz_paco_lorde",
+        "e": "jz_ponte_levadica_2"
+      },
+      "npcs": [],
+      "notes": "Ponte do castelo do Lorde.",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_ponte_levadica_2",
+      "name": "Sobre à Ponte Levadiça",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "w": "jz_ponte_levadica_1",
+        "e": "jz_salao_recepcao"
+      },
+      "npcs": [],
+      "notes": "Segunda sala da ponte; norte e sul aparecem como saídas com porta.",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_salao_recepcao",
+      "name": "O Grande Salão de Recepção",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "w": "jz_ponte_levadica_2",
+        "e": "jz_saguao_recepcao",
+        "n": "jz_estabulos_lorde",
+        "s": "jz_arsenal"
+      },
+      "npcs": [],
+      "notes": "Portas norte e sul fechadas, abriram com open sem resistência.",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_estabulos_lorde",
+      "name": "Os Estábulos do Lorde",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "s": "jz_salao_recepcao"
+      },
+      "npcs": [],
+      "notes": "Sem saída além do sul. Um cavaleiro espera a montaria (pacífico).",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_arsenal",
+      "name": "O Arsenal",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "n": "jz_salao_recepcao"
+      },
+      "npcs": [],
+      "notes": "Um ferreiro trabalha; não atacado.",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_saguao_recepcao",
+      "name": "O Grande Saguão de Recepção",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "w": "jz_salao_recepcao",
+        "n": "jz_corredor_1"
+      },
+      "npcs": [],
+      "notes": "Portas norte, sul e leste fechadas. Norte aberto e atravessado. Leste (onde o Lorde recebe) e sul NÃO abertos.",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_corredor_1",
+      "name": "Um Corredor",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "s": "jz_saguao_recepcao",
+        "n": "jz_corredor_2"
+      },
+      "npcs": [],
+      "notes": "Corredor norte-sul dos domínios do Lorde.",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_corredor_2",
+      "name": "Um Corredor",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "s": "jz_corredor_1",
+        "n": "jz_corredor_3",
+        "e": "jz_corredor_leste_1"
+      },
+      "npcs": [],
+      "notes": "Bifurcação: saída leste leva à sala de jantar e à biblioteca do Lorde.",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_corredor_3",
+      "name": "Um Corredor",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "s": "jz_corredor_2",
+        "n": "jz_corredor_4",
+        "w": "jz_quarto_hospedes_1"
+      },
+      "npcs": [],
+      "notes": "Porta oeste para quarto de hóspedes (abriu).",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_corredor_4",
+      "name": "Um Corredor",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "s": "jz_corredor_3",
+        "n": "jz_corredor_5"
+      },
+      "npcs": [],
+      "notes": "Porta oeste existe, não aberta.",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_corredor_5",
+      "name": "Um Corredor",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "s": "jz_corredor_4",
+        "n": "jz_corredor_6"
+      },
+      "npcs": [],
+      "notes": "Porta oeste existe, não aberta.",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_corredor_6",
+      "name": "Um Corredor",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "s": "jz_corredor_5",
+        "n": "jz_corredor_7"
+      },
+      "npcs": [],
+      "notes": "Porta oeste existe, não aberta.",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_corredor_7",
+      "name": "Um Corredor",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "s": "jz_corredor_6",
+        "w": "jz_quarto_hospedes_2"
+      },
+      "npcs": [],
+      "notes": "Fim norte do corredor. Porta oeste para segundo quarto de hóspedes (abriu).",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_quarto_hospedes_1",
+      "name": "O Quarto de Hóspedes",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "e": "jz_corredor_3"
+      },
+      "npcs": [],
+      "notes": "Hóspede do Lorde; sem hostilidade.",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_quarto_hospedes_2",
+      "name": "O Quarto de Hóspedes",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "e": "jz_corredor_7",
+        "n": "jz_sala_comum"
+      },
+      "npcs": [],
+      "notes": "Portas duplas ao norte (abriram).",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_sala_comum",
+      "name": "Uma Sala Comum",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "s": "jz_quarto_hospedes_2"
+      },
+      "npcs": [],
+      "notes": "Sala simples com lareira; sem saída além do sul.",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_corredor_leste_1",
+      "name": "Um Corredor",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "w": "jz_corredor_2",
+        "e": "jz_corredor_leste_2"
+      },
+      "npcs": [],
+      "notes": "Ramo leste do corredor; portas norte e sul fechadas, não abertas.",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_corredor_leste_2",
+      "name": "Um Corredor",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "w": "jz_corredor_leste_1",
+        "s": "jz_sala_jantar_lorde",
+        "n": "jz_biblioteca_lorde"
+      },
+      "npcs": [],
+      "notes": "Fim do corredor: sul vê grande sala de jantar; porta norte leva à biblioteca (abriu).",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_sala_jantar_lorde",
+      "name": "Sala de jantar do Lorde (não visitada)",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "n": "jz_corredor_leste_2"
+      },
+      "npcs": [],
+      "notes": "Apenas avistada pela descrição do corredor; NÃO visitada.",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_biblioteca_lorde",
+      "name": "A Biblioteca",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🗺️",
+      "exits": {
+        "s": "jz_corredor_leste_2"
+      },
+      "npcs": [],
+      "notes": "Biblioteca privada do Lorde (\"não tão grande quanto a da cidade\"). Sem objetos visíveis; look prateleiras/mesas/livro/tomo: \"nada parecido\". `where bibliotecaria` falha aqui. Não é a biblioteca da Assistente de Bibliotecária.",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_beco_jareth_1",
+      "name": "O Beco Escuro",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Alto",
+      "risk_code": "danger",
+      "icon": "🗺️",
+      "exits": {
+        "e": "lv136",
+        "s": "jz_beco_jareth_2"
+      },
+      "npcs": [],
+      "notes": "Beco a oeste da 3a sala da Rua Bourbon ao sul do Centro (a sala antes da Loja de Trapos da Vovó). Homônimo do beco de Midgaard.",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_beco_jareth_2",
+      "name": "O Beco Escuro",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Alto",
+      "risk_code": "danger",
+      "icon": "🗺️",
+      "exits": {
+        "n": "jz_beco_jareth_1",
+        "s": "jz_beco_jareth_3"
+      },
+      "npcs": [],
+      "notes": "Segunda sala do beco; passagem até aqui sem hostis.",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_beco_jareth_3",
+      "name": "O Beco Escuro",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Alto",
+      "risk_code": "danger",
+      "icon": "🗺️",
+      "exits": {
+        "n": "jz_beco_jareth_2",
+        "e": "jz_beco_jareth_leste"
+      },
+      "npcs": [
+        "Malandro arruaceiro (hostil)",
+        "Malandro arruaceiro (hostil)"
+      ],
+      "notes": "PERIGO: grupo de malandros arruaceiros hostis (2 vistos na 2a visita; 1 na 1a). Golpe de ~55 de vida por rodada; custou HP de 199 a ~50 ao recuar; a primeira visita foi a 49 de 199. Saída sul existe (atacado ao tentar); leste não explorada.",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
+    },
+    {
+      "id": "jz_beco_jareth_leste",
+      "name": "Beco Escuro (leste, não explorado)",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Alto",
+      "risk_code": "danger",
+      "icon": "🗺️",
+      "exits": {
+        "w": "jz_beco_jareth_3"
+      },
+      "npcs": [],
+      "notes": "Saída leste da 3a sala do beco, não atravessada.",
+      "discovered_in": "Dia 157",
+      "fontes": [
+        "evidence/dia157-biblioteca.json"
+      ]
     }
   ],
-  "last_updated_day": 156,
+  "last_updated_day": 157,
   "verification": "live",
   "current_location_id": "templo_midgaard",
   "camp_id": "templo_midgaard",
@@ -11769,6 +13771,7 @@
     "Dia 156: levantamento refundido (173 salas digeridas: 91 pareadas com o curado, 82 novas). Chaves 'l'/'o' normalizadas para 'e'/'w' - no servidor 'l' e' look e 'o' e' order, nunca direcao. O derivado e refeito a cada rodada; o curado nunca e sobrescrito. Conflito de aresta mantem o valor curado.",
     "Dia 156: levantamento refundido (342 salas digeridas: 103 pareadas com o curado, 239 novas). Chaves 'l'/'o' normalizadas para 'e'/'w' - no servidor 'l' e' look e 'o' e' order, nunca direcao. O derivado e refeito a cada rodada; o curado nunca e sobrescrito. Conflito de aresta mantem o valor curado.",
     "Dia 156, continuação: saídas da ala iluminada, escadarias e sacadas conferidas por exits e travessias. Retirada a aresta leste indevida de Mais Corredor; oeste é porta observada no look. Homônimos distinguidos pelas saídas. Nenhuma sala removida e nenhum corpus parcial digerido. Fonte: evidence/dia156e.json.",
-    "Dia 156: levantamento refundido (497 salas digeridas: 129 pareadas com o curado, 368 novas). Chaves 'l'/'o' normalizadas para 'e'/'w' - no servidor 'l' e' look e 'o' e' order, nunca direcao. O derivado e refeito a cada rodada; o curado nunca e sobrescrito. Conflito de aresta mantem o valor curado."
+    "Dia 156: levantamento refundido (497 salas digeridas: 129 pareadas com o curado, 368 novas). Chaves 'l'/'o' normalizadas para 'e'/'w' - no servidor 'l' e' look e 'o' e' order, nunca direcao. O derivado e refeito a cada rodada; o curado nunca e sobrescrito. Conflito de aresta mantem o valor curado.",
+    "Dia 157 (Claude Sonnet 5.5): castelo do Lorde de Jareth e Beco Escuro de Jareth levantados a pé (29 salas novas, prefixo jz_). Biblioteca privada do Lorde achada no ramo leste do corredor; não é a biblioteca da Assistente de Bibliotecária, ainda não localizada. Ligações a partir de lb021 (norte) e lv136 (oeste). Fonte: evidence/dia157-biblioteca.json."
   ]
 }

@@ -1,0 +1,60 @@
+{
+  "hero_id": "grebolius",
+  "day": 157,
+  "agent": "GPT-6 / Codex (versão específica não informada)",
+  "via": "automato",
+  "recorded_on": "2026-10-19",
+  "source_kind": "live",
+  "sources": [
+    "automato/runtime/transcript_dia157_20261019_110528_01cfdc.jsonl",
+    "automato/runtime/session_live_dia157_20261019_110528_01cfdc.log"
+  ],
+  "status": "sessao_encerrada_capitulo_em_curso",
+  "summary": "Capítulo 12 iniciado. Rota Midgaard–Haon-Dor–França–Notre Dame–Lyon reconhecida sem combate. Lemin localizado no Centro da Cidade de Lyon; Ajuda Mágica aceita, resposta Merlin validada, monólogos ouvidos e dois pedidos de confirmação respondidos após score tudo. Etapa atual: entregar um tomo de pergaminho bem grosso, podendo ser usado. Nenhum item entregue e nenhum gasto. Lojas de Lyon e Midgaard sem tomo; doação histórica não se confirmou. Reconhecimento adicional do castelo de Welmar não encontrou fonte do tomo nas salas visitadas. Retorno ao Templo, alimentação, água, save e sleep confirmados; driver encerrou com código 0.",
+  "uncertainties": [
+    "Missão não concluída; localização e identidade exata do tomo ainda desconhecidas. Tomo druídico anterior não prova equivalência com o pedido de Lemin.",
+    "Driver deu falsos dead_or_menu em janela que continha login ou dica com Menu Principal; ficha e look confirmaram personagem viva. Não houve mudança no motor nem reprodução offline da causa completa.",
+    "Locate object exige Mago nível 34 e espelho localizador segundo help locate; conjuração ao nível 32 foi recusada.",
+    "Armor tinha 2 horas e invisibility 9 horas no score final. Revalidar e renovar fora do Templo ao retomar."
+  ],
+  "final_state": {
+    "level": 32,
+    "hp": 199,
+    "max_hp": 199,
+    "mana": 430,
+    "max_mana": 430,
+    "mv": 145,
+    "max_mv": 145,
+    "exp": 7225102,
+    "alignment": 412,
+    "deaths": 9,
+    "death_traps": 1,
+    "gold": 16059,
+    "bank": 15700,
+    "carried_gold": 359,
+    "bread": 3,
+    "weight_kg": 74,
+    "max_weight_kg": 115,
+    "wimpy": 45,
+    "armor_with_active_effects": 165,
+    "location": "O Templo de Midgaard",
+    "sleep_confirmed": true,
+    "save_confirmed": true,
+    "driver_closed": true
+  },
+  "quest_status": {
+    "Ajuda Mágica": "Você deve entregar objeto ao personagem.",
+    "requested_item": "um tomo de pergaminho bem grosso; pode ser usado",
+    "completed": false
+  },
+  "server_excerpts": [
+    "Lemin questiona: 'Ei, com licença. Você poderia me ajudar?'",
+    "Lemin questiona: 'Diga-me pois: qual o mago mais famoso de todos?'",
+    "Lemin diz: 'Esse mago confeccionou a bolsa de um rei lendário.'",
+    "Lemin exclama: 'Muito bom, você realmente diz a verdade!'",
+    "Lemin diz: 'Primeiro, preciso de um tomo de pergaminho bem grosso. Pode ser usado mesmo.'",
+    "Ajuda Mágica: Você deve entregar objeto ao personagem.",
+    "Salvando os seus atalhos.",
+    "Você se deita e dorme."
+  ]
+}

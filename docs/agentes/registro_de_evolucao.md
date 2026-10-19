@@ -982,3 +982,63 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Próximo:** Executar o Plano 027: preparar expedição de batedor (modo cartógrafo com invisibilidade e armadura) pela rota oeste de Midgaard em direção a Notre Dame para localizar Lemin e iniciar `Ajuda Mágica`, ou reatar a batalha contra o Tabuleiro de Xadrez.
 
 
+
+### 2026-10-19 · Dia 157 · GPT-6 / Codex (versão específica não informada)
+- **Mudou:** Capítulo 12 aberto com critério verificável de concluir Ajuda Mágica, Xeque-mate opcional; parte do Dia 157 salva em capitulos.json. Evidência dia157-cap12.json, crônica factual em posts.json, evento, estado e derivados atualizados. Ajuda Mágica aceita com Lemin no Centro da Cidade de Lyon, etapa de primeira entrega formalmente confirmada. mapa.json recebeu 50 salas novas e ligações percorridas no reconhecimento de França, Lyon, catedral e parte do castelo; total 561 salas. Saídas nomeadas não percorridas ficam como observação, sem aresta inventada. conhecimento.md §61, maquina/verificacoes.md e dicionario_comandos.md recebem fontes e limites; criado Plano 028.
+- **Por quê:** Autor pediu executar o Capítulo 12. A missão exige localizar o tomo grosso de pergaminho; a fonte não foi encontrada nas lojas verificadas, doações, guilda e setores visitados do castelo. Não substituir essa meta por exploração nem declarar o capítulo concluído. Corrigidos o objetivo obsoleto em state.json (ainda apontava Plano 026/Midgaard), CON para 9 e interpretação de CA 165 como armor +36 e invisibility +40.
+- **Como foi verificado:** Servidor ao vivo, respostas integrais e score tudo: missão ativa na etapa de entregar objeto, HP 199/199, mana 430/430, MV 145/145, EXP 7.225.102, alinhamento 412, 16.059 moedas, 3 pães, peso 74/115 kg. Save, sleep e _CLOSE confirmados; daemon finalizado com exit 0. sync_hero.py --check: derivados conferidos. check_project.py: 0 erros, 9 avisos lidos (legado, lacuna de dias após o modelo por capítulos, wimpy, treinos e capítulo em curso). Suíte offline: 148 testes OK. Devolutiva do Plano 028 executada após este registro; consultar sua saída, sem inferir cobertura de fatos só por testes verdes.
+- **Custo:** Três pães consumidos e tempo de reconhecimento; nenhum gasto monetário, combate, morte ou redução de alinhamento. Primeira resposta Merlin antecipou a fala final e não avançou; só a segunda, após conferir a etapa, foi aceita. Falso dead_or_menu auditado com ficha viva, sem mudança de motor. Nenhuma publicação ou commit remoto.
+- **Próximo / handoff:** Capítulo 12 ainda em curso. Executar Plano 028 para identificar fonte atual e correta do tomo pedido e continuar Ajuda Mágica. Pergunta ao autor sobre possível localização ficou pendente no chat. Não exigir nova autorização para jogar; a execução do capítulo continua autorizada. Revalidar buffs antes de sair, pois armor tinha 2 horas restantes. Árvores conferidas via Git com acesso elevado; alterações locais desta sessão permanecem sem commit. Nenhum arquivo de runtime ou segredo deve ser preparado para commit.
+
+### 2026-10-19 · Dia 157 · GPT-6 / Codex (versão específica não informada) — conferência final
+- **Mudou:** complemento do registro imediatamente anterior, sem novo fato de jogo.
+- **Por quê:** fixar o resultado final da devolutiva e os limites da verificação.
+- **Como foi verificado:** devolutiva.py com acesso de leitura ao Git: 0 falhas, 1 aviso, 24 verificações OK. A primeira execução confinada não conseguiu ler .git e produziu falsos negativos; a segunda conferiu efetivamente os arquivos alterados. git diff --check sem erros; HEAD permaneceu 20a0db8. Aviso restante: 15 caminhos locais pendentes, mantidos sem commit e sem publicação por escopo. Nenhum runtime rastreado. Cota final consultada pelo app: 19% na janela de 5h e 87% semanal restantes; não atingiu os cortes do AGENTS §13.
+- **Custo:** nenhum adicional.
+- **Próximo:** Plano 028; Ajuda Mágica ainda exige localizar o tomo. Não marcar o objetivo do chat ou o capítulo como concluído.
+
+### 2026-10-19 · Dia 157, continuação documental · GPT-6 / Codex (versão específica não informada)
+- **Mudou:** nova observação observacoes/pesquisa-tomo-2026-10-19.md, distinguindo candidatos do mundo original do item ainda desconhecido solicitado por Lemin. Plano 028, estado do herói e capítulo aberto preservados.
+- **Por quê:** continuar o Capítulo 12 sem repetir exploração sem fonte nem entregar livro por tentativa.
+- **Como foi verificado:** consulta pública ao mirror CircleMUD citado pelo próprio projeto: índice e 27 arquivos de objetos; livro 2533 da Torre da Magia é grande objeto de cenário no original, e 5315 da Pirâmide é livro de enigmas. Nenhum corresponde inequivocamente ao pedido. Conferência Git: HEAD 20a0db8, alterações anteriores preservadas. Sem conexão nova ao MUD.
+- **Custo:** apenas pesquisa documental; nenhum consumo ou risco adicional para Grebolius.
+- **Próximo:** fonte do tomo ainda precisa ser identificada; pergunta ao autor continua pendente. Não fechar capítulo ou objetivo por ter concluído a pesquisa.
+
+### 2026-10-19 · Dia 157, handoff de cota · GPT-6 / Codex (versão específica não informada)
+- **Mudou:** Plano 029 e evidence/cota-cap12-20261019.json; conhecimento §62 aponta biblioteca de Jareth a partir do catálogo anterior, sem promover hipótese a localização confirmada do tomo. Ponteiro de continuação em state.json atualizado para Plano 029; nenhuma mecânica ou recurso do herói mudou.
+- **Por quê:** Autor pediu investigação autônoma e fim das perguntas sobre solução. Consulta de cota retornou 7% diário, abaixo do corte de 10%; semanal 85%. Não abrir outra conexão com cota crítica.
+- **Como foi verificado:** get_usage_limits e epoch de reset 1792433597: 2026-10-19 15:13:17 -03:00; restavam 12.022 segundos na consulta. Último transcript já confirma Templo, alimentação, água, save, sleep e shutdown; nenhuma nova conexão nesta retomada. Catálogo em evidence/dia156j.json cita a Assistente de Bibliotecária de Jareth.
+- **Custo:** somente pesquisa; sem gasto, combate ou exposição adicional ao jogo.
+- **Próximo / handoff:** Após reset, conferir cota e investigar biblioteca de Jareth por conta própria. Não depender de resposta do autor. Ajuda Mágica e Capítulo 12 continuam incompletos. Não usar xadrez_v2/v3 como atalho: leitura mostrou coleta antes de identificação e possibilidade de atacar peões brancos; não houve execução ou alteração de motor.
+
+
+### 2026-10-19 · Dia 157, execução do Plano 029 · Claude Sonnet 5.5 (claude-sonnet-5-5)
+- **Mudou:** mapa.json (+29 salas `jz_*`, 590 no total), conhecimento §63, maquina/verificacoes.md (bloco do Dia 157), evidence/dia157-biblioteca.json, Plano 030. Motor, scripts e state.json NÃO foram alterados.
+- **Por quê:** o autor pediu para executar o Plano 029: achar a biblioteca da Assistente de Bibliotecária em Jareth e o tomo de Lemin.
+- **Como foi verificado:** sessão ao vivo conduzida à mão com play.py, um comando por decisão; `automato/verificar.py` 18/18 OK antes de jogar; encerramento por `_CLOSE sleep` com save_confirmed e sleep_confirmed True. Cota do Claude consultada por get_usage (5% e 1%), não a do Codex. Resultado: biblioteca da Assistente NÃO achada; tomo NÃO obtido; Ajuda Mágica pode ter saído do estado ativo.
+- **Custo:** duas fugas por recall com ~50 de vida no Beco Escuro de Jareth; nenhuma morte, nenhum gasto, alinhamento 412 intacto. Invisibility não aparece mais no score.
+- **Próximo:** Plano 030 — passar o Beco Escuro com cuidado ou pedir autorização ao autor para os malandros hostis; reativar Ajuda Mágica em Lyon antes de qualquer give.
+
+
+### 2026-10-19 · Dia 157, segunda conexão · Claude Sonnet 5.5 (claude-sonnet-5-5)
+- **Mudou:** Plano 031, evidence/dia157-lemin-reativacao.json, conhecimento §64. Nenhuma mudança em motor, scripts, mapa ou state.json nesta parte.
+- **Por quê:** o autor mandou explorar outras saídas e pesquisar as docs antes de qualquer coisa; a pesquisa mostrou que a missão precisava estar ativa e na etapa certa antes de procurar o tomo.
+- **Como foi verificado:** `score tudo` antes (sem a seção) e depois (Ajuda Mágica: Você deve entregar objeto ao personagem). Pesquisa nos logs achou o único candidato a tomo e a data em que foi destruído. Fechamento com `_CLOSE sleep`: save_confirmed=True, sleep_confirmed=False.
+- **Custo:** nenhum combate, morte, gasto ou queda de alinhamento. Gastei muito contexto andando sala a sala em rotas já mapeadas, contra a diretiva §9/§20; corrigido no Plano 031 (NÃO REPITA).
+- **Próximo:** Plano 031 — conferir se a missão sobreviveu ao fechamento; procurar o tomo pela biblioteca da cidade de Jareth sem entrar no Beco Escuro.
+
+
+### 2026-10-19 · Dia 157, navegador e auditor · Claude Sonnet 5.5 (claude-sonnet-5-5)
+- **Mudou:** `automato/camadas/navegar.py` (novo), `scripts/auditar_sessao.py` e `scripts/test_auditar_sessao.py` (novos), `diretiva_de_jogo.md` §23 (ritual), AGENTS.md (um item no "Antes de começar" e um no "Antes de encerrar"), `automato/README.md` (camada navegar), `automato/CHANGELOG.md` v1.6.17. Nenhum arquivo de estado do herói foi tocado.
+- **Por quê:** o autor apontou que as diretivas §9, §14 e §20 existiam e foram ignoradas na sessão do Plano 029: rota conhecida andada sala a sala, o mesmo comando recusado várias vezes, recuo a pé com 50 de vida. Ler a regra uma vez não bastou; faltava algo que a cobrasse antes de agir e algo que conferisse depois.
+- **Como foi verificado:** `python -B -m unittest scripts.test_auditar_sessao` = 20 testes OK. `navegar.py --seco --de templo_midgaard --para cap12_026` reproduz o trajeto Templo→Lyon já andado; a rota ao Beco Escuro de Jareth dá SEM CAMINHO (exit 2) e só abre com `--permitir-risco`. `auditar_sessao.py` sobre `transcript_dia157_20261019_141906_4cc11d.jsonl` achou 5 FALHAS de recusa repetida e 2 AVISOS de recuo a pé (todas reais, do próprio autor deste bloco); sobre o transcript do GPT-6/Codex (`..._110528_01cfdc`) = 0 achados. O navegador NÃO foi testado ao vivo ainda (só em seco e com um MUD falso nos testes).
+- **Custo:** o navegador confia no `mapa.json`, e rota derivada do levantamento pode ter aresta falsa (a conferência de título para no primeiro erro). O auditor pode gerar falso positivo; AVISO pede explicação, não é veredito. §9 e §14 continuam não auditáveis por máquina.
+- **Próximo:** usar `navegar.py` numa viagem real, curta, supervisionada, antes de confiar nele. Se o transcript passar a registrar a origem do comando (script ou mão), o auditor poderá cobrar §9 e §14.
+
+
+### 2026-10-19 · Dia 157, terceira conexão · Claude Sonnet 5.5 (claude-sonnet-5-5)
+- **Mudou:** novo `automato/rotas/nav.py` (navegação por sala-marco; recusa say/ask/give/quit/kill); Plano 032; evidence/dia157-jareth-varredura.json; conhecimento §65. Nenhuma mudança no driver, nas camadas ou no `state.json`.
+- **Por quê:** o autor pediu para usar script de navegação em vez de andar sala a sala, e desconfiou de desconexões repetidas.
+- **Como foi verificado:** rota `templo-praca-jareth` de 26 passos executada sem desvio; `live_daemon.py` lido: `_CLOSE` salva, dorme e fecha o socket, sem quit; missão conferida viva após fechar e reabrir; encerramento com save_confirmed e sleep_confirmed True.
+- **Custo:** `nav.py` só cobre rotas já verificadas; mudar o mundo exige atualizar o dicionário `ROTAS`.
+- **Próximo:** Plano 032 — decidir com o autor sobre a porta trancada da Vovó e o Beco Escuro. Não entrei no `CHANGELOG.md` do motor por ser um script de rota, não uma camada.

@@ -1,0 +1,23 @@
+{
+  "hero_id": "grebolius",
+  "day": 157,
+  "agent": "Claude Sonnet 5.5 (claude-sonnet-5-5)",
+  "via": "automato",
+  "recorded_on": "2026-10-19",
+  "source_kind": "sessao_ao_vivo",
+  "source": "terceira conexao do dia (apos o Plano 031), uma unica conexao do inicio ao fim; navegacao por automato/rotas/nav.py; sem falas com NPC.",
+  "findings": {
+    "quest_survived_close": "Apos `_CLOSE sleep` e reabertura do driver, `score tudo` ainda mostrava 'Ajuda Magica: Voce deve entregar objeto ao personagem.' Fechar o driver sem quit NAO derruba a missao. A causa de ela ter estado inativa no inicio da sessao anterior continua desconhecida.",
+    "driver_has_no_quit": "automato/nucleo/driver/live_daemon.py: `_CLOSE` faz save, opcionalmente sleep, e fecha o socket; nenhum caminho do driver envia quit (a unica ocorrencia da palavra e o laco interativo de debo_bot.py).",
+    "rooms_checked_no_library": "A Sapataria (norte da 1a Avenida Floris a leste da Praca), Templo de Todos e Ninguem e o desvio `baixo` (Meditacao e Oracao, Guilda dos Clerigos, com guarda), Loja de Trapos da Vovo (porta leste TRANCADA, nao forcada), recepcao e restaurante do Clube Kitty-Kat (so passagem, sem interagir).",
+    "remaining_unexplored": "Beco Escuro de Jareth (excluido por decisao do autor), porta leste trancada da Vovo, porta leste da Delegacia (cadeia), sala de jantar e portas leste/sul do castelo do Lorde, Pequena Passagem do castelo de Welmar. A biblioteca da cidade segue sem localizacao.",
+    "tool": "automato/rotas/nav.py criado: navegacao por sala-marco que para na primeira divergencia, recusa say/ask/give/quit/kill. Rota 'templo-praca-jareth' percorrida com sucesso (26 passos, sem desvio)."
+  },
+  "state_end": {
+    "location": "O Templo de Midgaard",
+    "hp": "199/199",
+    "mana": "430/430",
+    "closing": "save_confirmed=True sleep_confirmed=True, uma unica conexao, sem quit.",
+    "quest_line": "Ajuda Magica: Voce deve entregar objeto ao personagem."
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "hero_id": "grebolius",
+  "day": 157,
+  "agent": "Claude Sonnet 5.5 (claude-sonnet-5-5)",
+  "via": "automato",
+  "recorded_on": "2026-10-19",
+  "source_kind": "sessao_ao_vivo",
+  "source": "automato/runtime/transcript_dia157_20261019_141906_4cc11d.jsonl e session_live_dia157_20261019_141906_4cc11d.log; conduzido a mao com play.py (sem rotina, sem turno.py), um comando por decisao.",
+  "quota_check": {
+    "tool": "mcp__ccd_session_mgmt__get_usage (Claude Pro)",
+    "five_hour_used_percent": 5,
+    "weekly_used_percent": 1,
+    "note": "Cota do Claude consultada no inicio. A cota Codex do Plano 029 (7% restante) e outra conta e nao foi usada como criterio."
+  },
+  "findings": {
+    "library_target": "A Assistente de Bibliotecaria (autoquest Arrumando a Biblioteca, niveis 60-100) responde a `where biblioteca` e `where bibliotecaria` ('a Assistente de Bibliotecaria - A Biblioteca') quando a personagem esta nas ruas de Jareth; dentro do castelo do Lorde responde 'Ninguem com esse nome'. Logo a biblioteca dela esta na zona das ruas, nao na do castelo. Sala ainda NAO encontrada.",
+    "lord_library": "O castelo do Lorde tem uma biblioteca privada ('A Biblioteca', 'Nao tao grande quanto a da cidade'), no ramo leste do corredor. Sem objetos visiveis; look prateleiras, mesas, livro e tomo devolveram 'nada parecido'. Nao e a biblioteca da Assistente. Nenhum tomo obtido.",
+    "beco_escuro_jareth": "Beco a oeste da 3a sala da Rua Bourbon ao sul do Centro. Malandros arruaceiros hostis na 3a sala (1 na 1a visita, 2 na 2a). Um golpe tirou 55 de vida; consider: 'precisaria de muita sorte' para acertar. Duas fugas, ambas por recall: 1a a 49/199, 2a a 50/199 ao recuar. Nenhuma morte, nenhum ataque a inocentes. Saida sul e leste da 3a sala nao exploradas.",
+    "salas_visitadas_sem_biblioteca": "Loja de Arcos, Loja de Barcos do Capitao Vulcevic, Misturas de Clariss, Pergaminhos e Afins, Joalheria, Recepcao e Sala de Leitura da Guilda dos Magos de Jareth, Sala de Treinamento (Mestre da Guilda, nao atacada), Delegacia, Escritorio do Magistrado, Banco, Loja de Armas de Maris, Provisoes, Carriolas, Animais, Montarias, Estabulos, Banco de Sangue, Templo de Todos e Ninguem e salas vizinhas, Abastecedor de Agua, Dalston Tralhas e Cia, Taverna Jahred, Bar Grainy, Loja de Trapos da Vovo, Recepcao do Clube Kitty-Kat (so passagem).",
+    "autoquest_state": "Apos o login, `score tudo` NAO mostra a secao [Autoquests em andamento] e `autoquest todas` lista Ajuda Magica como 'Nao feita'. O Plano 029 dizia 'ativa na primeira entrega'. Nao se sabe quando foi perdida (ver nota abaixo). Reativar com Lemin em Lyon exige refazer o dialogo.",
+    "autoquest_note": "Hipotese NAO confirmada: a conexao do driver da sessao anterior caiu sem quit explicito pelo caminho _CLOSE. A diretiva AGENTS #8 diz que quit apaga o progresso; nao ha prova de que a queda de conexao tambem apague. Conferir antes de supor."
+  },
+  "state_end": {
+    "location": "O Templo de Midgaard",
+    "hp": "199/199",
+    "mana": "430/430",
+    "mv": "145/145",
+    "gold": "359 na mao, 15700 no banco",
+    "deaths": "9 (nenhuma nova)",
+    "alignment": 412,
+    "armor": "armor +36, 17 horas restantes no ultimo score",
+    "invisibility": "expirou ou foi dissipada; nao aparece mais em [Situacao atual]",
+    "closing": "save_confirmed=True sleep_confirmed=True, driver fechado via _CLOSE sleep, sem quit."
+  }
+}

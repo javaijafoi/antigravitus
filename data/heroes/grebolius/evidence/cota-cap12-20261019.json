@@ -1,0 +1,19 @@
+{
+  "hero_id": "grebolius",
+  "day": 157,
+  "agent": "GPT-6 / Codex (versão específica não informada)",
+  "via": "automato",
+  "recorded_on": "2026-10-19",
+  "source_kind": "documental",
+  "source": "mcp__codex_app__get_usage_limits, consulta nesta retomada; consulta documental a evidence/dia156j.json",
+  "quota": {
+    "daily_remaining_percent": 7,
+    "weekly_remaining_percent": 85,
+    "daily_reset_at": "2026-10-19T15:13:17-03:00",
+    "seconds_until_daily_reset_at_check": 12022,
+    "cutoff_daily_remaining_percent": 10
+  },
+  "action": "Handoff por corte de cota do AGENTS §13; nenhuma nova conexão ao jogo aberta.",
+  "safe_state_basis": "evidence/dia157-cap12.json e close/shutdown do transcript_dia157_20261019_110528_01cfdc.jsonl: Templo, alimentação, água, save e sleep confirmados; daemon terminou. Este registro não é nova verificação ao vivo.",
+  "new_lead": "O catálogo help autoquest preservado em evidence/dia156j.json lista Arrumando a Biblioteca, com Assistente de Bibliotecária em Jareth. Biblioteca é pista para investigação, não prova de posse ou venda do tomo pedido por Lemin."
+}

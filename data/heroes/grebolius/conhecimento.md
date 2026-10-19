@@ -2403,3 +2403,55 @@ Fonte: [evidence/dia156k.json](evidence/dia156k.json). Sessão ao vivo via `auto
 
 
 
+
+## 61. Ajuda Mágica: Lemin em Lyon e primeira entrega (Dia 157, 2026-10-19)
+
+Fonte: evidence/dia157-cap12.json e transcript pós-login citado nela. Agente: GPT-6 / Codex (versão específica não informada).
+
+- **Observado:** Lemin está no Centro da Cidade de Lyon, região Notre Dame. `where Lemin` revelou a sala; o ramo leste da Entrada Para a França leva à catedral, enquanto sul leva à ponte, Entrada de Lyon e Rua Principal até o centro.
+- **Cadeia observada:** olhar Lemin aciona convite; aceitar; ouvir a pergunta completa sobre o mago autor da mochila; responder Merlin após o fim da fala; ouvir relato do acidente que destruiu o livro de Merlin; responder às duas confirmações sucessivas somente após o score pedir sim.
+- **Etapa atual:** Ajuda Mágica: Você deve entregar objeto ao personagem. Pedido literal: um tomo de pergaminho bem grosso, podendo ser usado. Fonte e identidade exata do item ainda desconhecidas. Nenhum give executado, nenhuma conclusão ou recompensa.
+- **Fontes descartadas nesta sessão:** catálogos de Pierre e Toulouse em Lyon, Loja de Magias de Midgaard; nenhuma oferta de tomo. Sala de Doações sem objeto reconhecido como tomo; dois livros acessíveis eram guias de equipamento e tiro. Sala de Leitura e Laboratório dos Magos sem material acessível observado. `ask lemin tomo` não forneceu pista adicional.
+- **Correção documental:** o tomo pesado de doações visto em transcrição antiga era um tomo da sabedoria druídica e foi descartado em 2026-10-16. Não prova posse, disponibilidade atual ou equivalência com a requisição de Lemin.
+- **Reconhecimento adicional:** Castelo de Welmar alcançado pela rota leste, Intersecção e Estrada do Rei, com ponte ao norte de Fora do Castelo. Ala oeste e corredores superiores até hóspedes inspecionados, sem fonte do tomo nas salas visitadas. Porta leste da Escadaria Principal trancada; não forçada. Porta oeste do Saguão de Entrada aberta para Uma Pequena Passagem, não atravessada. Não extrapolar isso para ausência do tomo no castelo inteiro.
+- **Limite de magia:** locate object foi recusada ao nível 32. help locate informa nível 34 e espelho localizador, com referência a Albernathy em Silverthorne. Compra, uso do espelho e sucesso da magia não foram testados.
+- **Estado final:** Templo, 199/199 HP, 430/430 mana, 145/145 MV, nível 32, EXP 7.225.102, alinhamento 412, 16.059 moedas (15.700 banco + 359 mão), 3 pães, peso 74/115 kg; alimentação, água, save, sleep e fechamento do driver confirmados. CA 165 com armor +36 e invisibility +40; armor tinha apenas 2 horas restantes. Nenhum combate, gasto ou morte.
+
+## 62. Pista documental: biblioteca de Jareth (2026-10-19, Dia 157)
+
+Agente: GPT-6 / Codex (versão específica não informada). Consulta sem nova conexão ao jogo. Fonte anterior: help autoquest em evidence/dia156j.json, entrada 05: Arrumando a Biblioteca, Assistente de Bibliotecária em Jareth. A biblioteca é uma pista para procurar o tomo de Lemin; não há ainda observação de livro, catálogo, coleta ou venda nessa biblioteca. Usar a topologia já documentada de Jareth (§18) e investigar por sala-marco. Não aceitar missão concorrente automaticamente nem agredir bibliotecários. O autor reiterou investigar autonomamente, sem lhe pedir a localização. Continuação no Plano 029 após recuperação de cota.
+
+
+## 63. Biblioteca do Lorde e Beco Escuro de Jareth (Dia 157, 2026-10-19)
+
+Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: evidence/dia157-biblioteca.json e transcript_dia157_20261019_141906_4cc11d.jsonl. Sessão conduzida à mão, um comando por decisão.
+
+- **Rota Templo → Jareth (verificada por sala-marco):** 6 norte (Altar, Atrás do Altar, 3x Grande Campo, Caminho Dentre os Campos), 1 leste, norte pela Estrada Midgaard-Jareth, Posto de Guarda, Numa Pequena Vila, Centro do Vilarejo, de volta pela Vila, Posto e Estrada até a sala com saídas apenas leste e sul; depois leste: 6x Estrada, Nas Proximidades da Cidade, Portão Oeste, Avenida Floris, Praça.- **where e zonas:** `where biblioteca` e `where bibliotecaria` (sem acento) mostram "a Assistente de Bibliotecária - A Biblioteca" quando a personagem está nas ruas de Jareth; dentro do castelo do Lorde devolvem "Ninguem com esse nome". Com acento ("bibliotecária") falha. Leitura: where só enxerga a zona atual. Isso prova que a biblioteca dela fica na zona das ruas, não no castelo. A sala continua desconhecida.
+- **Castelo do Lorde:** norte da Avenida Floris (a sala logo antes do Portão Leste), rua de pedra, estrada de pedras, Paço do Lorde, leste pela Ponte Levadiça até o Grande Salão de Recepção. Estábulos (norte) e Arsenal (sul) são becos sem saída; portas abrem com `open`. Saguão: norte abre para o corredor; leste (recepção do Lorde) e sul NÃO abertos. Corredor com dois quartos de hóspedes a oeste e uma Sala Comum; o ramo leste termina com a biblioteca privada ao norte e uma sala de jantar ao sul (avistada, não visitada). Ninguém hostil.
+- **Biblioteca privada do Lorde:** "A Biblioteca", descrita como menor que a da cidade. Sem objetos visíveis; `look prateleiras/mesas/livro/tomo` não achou nada. NÃO é a do autoquest e NÃO forneceu tomo.
+- **PERIGO — Beco Escuro de Jareth:** oeste da 3ª sala da Rua Bourbon ao sul do Centro (a que fica antes da Loja de Trapos da Vovó). Terceira sala do beco: malandros arruaceiros hostis e agressivos (1 e depois 2). Um golpe tirou 55 de vida; recuar também custou muita vida (199 → 50). Duas fugas por `recall`. `consider malandro`: precisão "precisaria de muita sorte". Não lutar sem plano e sem vida cheia; nunca contra 2 de uma vez (diretiva de combate §2).
+- **Salas já descartadas como biblioteca:** ver lista em evidence/dia157-biblioteca.json. Ainda sem exploração: saídas sul e leste da 3ª sala do beco, sala de jantar e porta leste do castelo.
+- **Autoquest perdida?** Após o login `score tudo` não mostra [Autoquests em andamento] e `autoquest todas` marca Ajuda Mágica como "Não feita", contra o Plano 029. Causa não provada.
+
+
+## 64. Ajuda Mágica reativada e o tomo (Dia 157, 2026-10-19, segunda conexão)
+
+Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: evidence/dia157-lemin-reativacao.json.
+
+- **A missão estava inativa no login**, ao contrário do Plano 029: `score tudo` sem [Autoquests em andamento] e `autoquest todas` com Ajuda Mágica "Não feita". Cadeia refeita ao vivo com Lemin em Lyon (look lemin; say sim; esperar o fim da pergunta; say Merlin; say sim quando o score pedir; say sim ao "pode trazê-los?"). Fim: "Ajuda Mágica: Você deve entregar objeto ao personagem." O primeiro material é "um tomo de pergaminho bem grosso. Pode ser usado mesmo." Lemin repete isso a cada ~30 s.
+- **Hipótese aberta:** fechar o driver com `_CLOSE` pode derrubar a missão. §59 diz que fechar o socket preserva; esta sessão achou o contrário, sem prova. Conferir `score tudo` logo na próxima abertura.
+- **Candidato ao tomo:** "Um rústico e pesado tomo de livro", no chão da Sala de Doações de Midgaard em 16 e 17/10; nome do objeto: "um tomo da sabedoria druídica". Foi pego e destruído com junk em session_live_dia156_20261016_203814_342115.log:43705-43707 (o junk dá "recompensado pelos deuses"). Sem prova de ser o item de Lemin. A sala recebe doações de outros jogadores; hoje só tinha o guia de Jooh, 2x "A Lenda de Nambor" e um guia de tiro.
+- **Pergaminho de sabedoria carregado** = "A Lenda de Nambor" (tipo OUTRO, valor 100). Não serve ao Lemin.
+- **Fome durante a conversa:** "morrendo de fome" (-3hp, -5mn, -2mv por ciclo) durante os monólogos; comer da mochila (`get pao mochila`, `eat pao`) e beber não interrompe a fala.
+- **Erro de rota evitável:** andei 2 salas de Trilha Iluminada a mais ao oeste; a primeira tem saída norte, a seguinte não. Usar script por sala-marco.
+
+
+## 65. Ruas de Jareth esgotadas e a missão sobrevive ao fechamento (Dia 157, terceira conexão)
+
+Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: evidence/dia157-jareth-varredura.json.
+
+- **Ajuda Mágica sobrevive a `_CLOSE`:** após fechar e reabrir o driver, `score tudo` manteve "Você deve entregar objeto ao personagem". O driver nunca envia `quit`.
+- **Salas acrescentadas à lista de descartadas:** Sapataria (norte da 1ª Avenida Floris a leste da Praça), Templo de Todos e Ninguém e `baixo` (Meditação e Oração; Guilda dos Clérigos com guarda), restaurante do Clube Kitty-Kat, Loja de Trapos da Vovó.
+- **Porta leste da Vovó:** trancada (`open leste`: "parece estar trancado"). Não forçada. Seria o próximo candidato a levar a algo.
+- **A biblioteca da cidade de Jareth continua sem localização.** Restam: Beco Escuro (decisão do autor: não matar os malandros), portas trancadas/fechadas, castelo do Lorde (leste e sul do Saguão).
+- **Rota Templo → Praça de Jareth** agora é script: `automato/rotas/nav.py templo-praca-jareth`.

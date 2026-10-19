@@ -243,3 +243,24 @@ Fonte: Sessão ao vivo via `automato/runtime/session_live_dia156_20261018_173435
   - O Armeiro de Midgaard comprou a `Coroa da Rainha Negra` (ANTI-GOOD, valor 3.000 moedas de catálogo) por exatamente 1.500 moedas de ouro (50% do valor de face).
 
 
+
+## 2026-10-19 — Dia 157: Lemin, locate object e proteções
+
+Agente: GPT-6 / Codex (versão específica não informada). Fonte: data/heroes/grebolius/evidence/dia157-cap12.json e transcript citado.
+
+- **where Lemin executado:** mostrou Lemin no Centro da Cidade, em Lyon. Esse uso localiza NPC na região; where sem argumento havia mostrado apenas jogadores.
+- **Ajuda Mágica executada parcialmente:** convite por look lemin; resposta Merlin aceita após pergunta integral. Primeira resposta prematura não avançou. Pedidos de sim aparecem na ficha; monólogos longos não devem ser truncados. Etapa de entrega confirmada com dois-pontos e instrução específica; nenhum give foi feito.
+- **locate object testada:** conjuração em nível 32 recusada por falta de experiência. help locate informa Mago nível 34 e necessidade de espelho localizador. Isso é ajuda consultada, não execução bem-sucedida ao 34 nem compra testada.
+- **Armor/invisibility executadas:** score no nível 32 mostrou armor +36 e invisibility +40; CA base 89 passou a 165. Não atribuir o total somente a armor. Durações decrescem; último score: armor 2 horas, invisibility 9 horas.
+- **Saída leste/castelo:** ajuda omite salas intermediárias; trajeto observado passa pela Entrada da Cidade, Intersecção e Estrada do Rei antes de Fora do Castelo e ponte ao norte. Abrir portão norte funcionou; porta leste da Escadaria Principal estava trancada.
+- **Diagnóstico de driver:** dead_or_menu apareceu com personagem viva, 199 HP, sem combate e prompt normal. A janela contém histórico de login ou dica citando Menu Principal; look e score limpos voltaram a in_game. Causa completa e correção permanecem pendentes; não ignorar alerta sem auditar.
+
+
+## 2026-10-19 — Dia 157 (sessão Claude): where por zona e fuga por recall
+
+Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: data/heroes/grebolius/evidence/dia157-biblioteca.json.
+
+- **where <nome> só vê a zona atual:** `where bibliotecaria` respondeu "a Assistente de Bibliotecária - A Biblioteca" nas ruas de Jareth e "Ninguem com esse nome" dentro do castelo do Lorde; a forma acentuada "bibliotecária" também falhou. Hipótese operacional, vista em quatro tentativas, não lida em ajuda.
+- **recall em combate funcionou:** duas vezes, com 49 e 50 de vida, a personagem voltou ao Templo sem perda de itens. Nenhuma falha vista (sorte não excluída).
+- **Fugir andando tem custo:** recuar de uma sala com dois malandros arruaceiros hostis gastou ~150 de vida em três passos; preferir `recall` assim que a vida cair, em vez de andar.
+- **open <direção> é suficiente para portas sem tranca no castelo de Jareth** (norte e sul do Grande Salão, norte do Saguão, oeste do corredor, norte do quarto de hóspedes, norte do fim do corredor leste).
