@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+raise SystemExit('PROIBIDO: este script automatiza fala/entrega/compra de missao (AGENTS #13/#14). Veja automato/acoes/_proibidos/LEIA.md')  # trava: _proibidos
 """iniciar_gargamel.py - Espera o minerador falar, responde 'say sim', confirma inicio da quest."""
 import time
 import sys

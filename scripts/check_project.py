@@ -603,7 +603,39 @@ def validate_project(root_dir=ROOT_DIR):
         errors.extend(he)
         warnings.extend(hw)
     warnings.extend(validate_tool_registry(root_dir))
+    errors.extend(validate_forbidden_imports(root_dir))
     return errors, warnings
+
+
+# Pastas de código conferidas; scripts/local/ é legado fora do git.
+_PASTAS_CODIGO = ("automato", "scripts")
+_USO_PROIBIDO = re.compile(r"_proibidos")
+
+
+def validate_forbidden_imports(root_dir=ROOT_DIR):
+    """[automato.import_proibido] Nenhum código usa automato/acoes/_proibidos/.
+
+    Os oito scripts de lá automatizam fala/entrega/compra de missão (AGENTS #13/#14). Import,
+    sys.path, runpy ou subprocess apontando para a pasta é ERRO. Comentários não contam; a própria
+    pasta, este verificador e os testes dele ficam de fora.
+    """
+    root_dir = Path(root_dir)
+    erros = []
+    for pasta in _PASTAS_CODIGO:
+        base = root_dir / pasta
+        if not base.is_dir():
+            continue
+        for arq in sorted(base.rglob("*.py")):
+            rel = arq.relative_to(root_dir).as_posix()
+            if ("/_proibidos/" in rel or rel.startswith("scripts/local/") or "__pycache__" in rel
+                    or arq.name in ("check_project.py", "test_catraca.py")):
+                continue
+            for n, linha in enumerate(arq.read_text(encoding="utf-8", errors="replace").splitlines(), 1):
+                codigo = linha.split("#", 1)[0]
+                if _USO_PROIBIDO.search(codigo):
+                    erros.append(f"[automato.import_proibido] {rel}:{n} usa automato/acoes/_proibidos/ — "
+                                 "esses scripts automatizam fala/entrega/compra de missão (AGENTS #13/#14).")
+    return erros
 
 
 def validate_tool_registry(root_dir=ROOT_DIR):

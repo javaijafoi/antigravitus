@@ -1057,3 +1057,10 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Como foi verificado:** suíte offline 199 OK; `check_project.py` 0 erros; `verificar.py` 18/18; `devolutiva.py` 0 falhas; `mandabala.py` sobre o 033 dá 8 avisos v2 (7 remissões + §5 delegado), sobre o 026 nenhum, sobre o 034 (da sessão concorrente, escrito antes desta regra) nenhum; `encerrar.py --simular` nas duas etapas gera o esqueleto com §2 do `state.json` e a linha do boletim.
 - **Custo:** um comando a mais no encerramento; planos mais longos. Os oito scripts PROIBIDOS de `automato/acoes/` continuam no repositório (só marcados): apagá-los é decisão do autor.
 - **Próximo:** o primeiro `encerrar.py --fechar` real cria o `docs/agentes/boletim.jsonl`. Pendências que ficam: `navegar.py` não tolera sufixo de curadoria nem sala homônima na origem (bloco anterior); migrar a rota de `nav.py` para o `mapa.json`; adaptar ou remover os scripts PROIBIDOS.
+
+### 2026-10-19 · Dia 157, quarentena dos scripts proibidos · Claude Opus 5.5 (claude-opus-5-5)
+- **Mudou:** oito scripts de `automato/acoes/` movidos para `automato/acoes/_proibidos/` (com trava `raise SystemExit` na primeira linha e `LEIA.md`); `scripts/check_project.py` ganhou `validate_forbidden_imports` (ERRO `automato.import_proibido`); `docs/agentes/catraca.json` +2 IDs; `scripts/test_catraca.py` +5 testes; `automato/README.md` (tabela Ferramentas), `docs/agentes/glossario.md`, `automato/CHANGELOG.md` v1.7.1.
+- **Por quê:** pedido do autor, depois de a tabela Ferramentas (v1.7.0) marcar esses scripts como PROIBIDOS por automatizarem fala, entrega e compra de missão (AGENTS #13/#14).
+- **Como foi verificado:** cada script, rodado direto, sai com código 1 e a mensagem PROIBIDO; suíte offline 204 OK; `check_project.py` 0 erros; `verificar.py` 18/18; nenhum código do repositório os importava antes da mudança (grep).
+- **Custo:** evidências do Dia 156 citam os caminhos antigos; ficaram como estão.
+- **Próximo:** nada aberto desta mudança.

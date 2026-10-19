@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+raise SystemExit('PROIBIDO: este script automatiza fala/entrega/compra de missao (AGENTS #13/#14). Veja automato/acoes/_proibidos/LEIA.md')  # trava: _proibidos
 """falar_minerador.py - Vai até o smurf minerador na Vila dos Smurfs e inicia 'Uma Lição em Gargamel'."""
 import sys
 from pathlib import Path

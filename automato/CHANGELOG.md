@@ -4,6 +4,12 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.7.1 — Dia 157 · Quarentena dos scripts que falam/entregam por conta própria (Claude Opus 5.5)
+- **`automato/acoes/_proibidos/` (nova):** os oito scripts que automatizam `say`/`ask`/`give`/`buy` de missão (`falar_fazendeiro`, `encontrar_fazendeiro`, `falar_minerador`, `iniciar_gargamel`, `ativar_gargamel`, `interagir_alquimista`, `entregar_alquimista`, `comprar_pocao`) foram movidos para lá com `git mv`. Cada um ganhou na primeira linha `raise SystemExit('PROIBIDO …')`. Fecha o "próximo desafio" da DECISOES §10. `LEIA.md` na pasta explica.
+- **`scripts/check_project.py` — `validate_forbidden_imports`:** **ERRO** (`automato.import_proibido`) se qualquer `.py` de `automato/` ou `scripts/` fora da pasta mencionar `_proibidos` em código (import, sys.path, runpy, subprocess). Comentários não contam.
+- **Catraca:** `automato.import_proibido` e a trava dos scripts entram em `docs/agentes/catraca.json`. Cinco testes novos em `test_catraca.py` (suíte: 204 OK).
+- **Custo:** evidências antigas (`dia156l/m/o.json`) citam os caminhos antigos em `automato/acoes/`. Ficaram intactas (legado), e o `LEIA.md` da pasta registra a mudança.
+
 ## v1.7.0 — Dia 157 · Um padrão para todos os modelos: protocolo, encerramento e catraca (Claude Opus 5.5)
 - **`docs/agentes/PROTOCOLO.md` (novo):** a sessão inteira em comandos — abertura, cada bloco de jogo, encerramento/handoff. O AGENTS.md ganhou um quadro "Comece aqui" que aponta para ele; `CLAUDE.md` e `GEMINI.md` (novos) levam cada harness à mesma porta.
 - **`scripts/mandabala.py`:** imprime a SEQUÊNCIA DE ABERTURA e a primeira ação (o §5 do plano); avisa quando o plano não é autossuficiente ou devolve o próximo passo ao autor (`checar_plano_v2`); a ordem de leitura caiu de ~2.100 linhas para o PROTOCOLO + plano + AGENTS §4 + diretiva §19–§23.

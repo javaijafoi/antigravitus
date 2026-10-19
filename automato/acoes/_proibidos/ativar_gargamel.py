@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+raise SystemExit('PROIBIDO: este script automatiza fala/entrega/compra de missao (AGENTS #13/#14). Veja automato/acoes/_proibidos/LEIA.md')  # trava: _proibidos
 """ativar_gargamel.py - Vai até O Fim Do Túnel na Vila dos Smurfs e ativa 'Uma Lição em Gargamel'.
 
 Rota:

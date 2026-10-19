@@ -48,8 +48,8 @@ class TestCatraca(unittest.TestCase):
         self.assertEqual(len(ausentes(dados)), 1)
 
 
-class TestTabelaFerramentas(unittest.TestCase):
-    """automato.ferramenta_fora_da_tabela: script novo sem linha na tabela do README é avisado."""
+class _BaseTmp(unittest.TestCase):
+    """Raiz temporária com automato/camadas/navegar.py, e o check_project importado."""
 
     def setUp(self):
         import shutil
@@ -63,6 +63,10 @@ class TestTabelaFerramentas(unittest.TestCase):
         (self.tmp / "automato" / "camadas").mkdir(parents=True)
         (self.tmp / "automato" / "camadas" / "navegar.py").write_text("", encoding="utf-8")
         (self.tmp / "automato" / "camadas" / "__init__.py").write_text("", encoding="utf-8")
+
+
+class TestTabelaFerramentas(_BaseTmp):
+    """automato.ferramenta_fora_da_tabela: script novo sem linha na tabela do README é avisado."""
 
     def readme(self, tabela):
         (self.tmp / "automato" / "README.md").write_text(
@@ -83,6 +87,37 @@ class TestTabelaFerramentas(unittest.TestCase):
 
     def test_repositorio_real_sem_script_fora(self):
         self.assertEqual(self.check.validate_tool_registry(ROOT), [])
+
+
+class TestImportProibido(_BaseTmp):
+    """automato.import_proibido: código que importa ou chama acoes/_proibidos/ é ERRO."""
+
+    def escrever(self, rel, texto):
+        arq = self.tmp / rel
+        arq.parent.mkdir(parents=True, exist_ok=True)
+        arq.write_text(texto, encoding="utf-8")
+
+    def test_import_e_erro(self):
+        self.escrever("automato/rotinas/x.py", "from acoes._proibidos import falar_minerador\n")
+        erros = self.check.validate_forbidden_imports(self.tmp)
+        self.assertEqual(len(erros), 1)
+        self.assertIn("rotinas/x.py:1", erros[0])
+
+    def test_subprocess_e_erro(self):
+        self.escrever("scripts/y.py", "run(['python', 'automato/acoes/_proibidos/comprar_pocao.py'])\n")
+        self.assertEqual(len(self.check.validate_forbidden_imports(self.tmp)), 1)
+
+    def test_comentario_e_a_propria_pasta_nao_contam(self):
+        self.escrever("automato/rotinas/x.py", "# nada de acoes/_proibidos aqui\n")
+        self.escrever("automato/acoes/_proibidos/z.py", "import _proibidos\n")
+        self.assertEqual(self.check.validate_forbidden_imports(self.tmp), [])
+
+    def test_repositorio_real_limpo(self):
+        self.assertEqual(self.check.validate_forbidden_imports(ROOT), [])
+
+    def test_scripts_proibidos_tem_trava(self):
+        for arq in (ROOT / "automato" / "acoes" / "_proibidos").glob("*.py"):
+            self.assertIn("raise SystemExit('PROIBIDO", arq.read_text(encoding="utf-8"), arq.name)
 
 
 if __name__ == "__main__":

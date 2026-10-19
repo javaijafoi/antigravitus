@@ -29,6 +29,8 @@
     {"id": "encerrar.fecho", "arquivo": "scripts/encerrar.py", "desde": "2026-10-19", "regra": "_CLOSE sleep com save e sleep confirmados"},
     {"id": "encerrar.plano_preenchido", "arquivo": "scripts/encerrar.py", "desde": "2026-10-19", "regra": "plano sem <placeholders> no §1/§5 ao fechar"},
     {"id": "encerrar.boletim", "arquivo": "scripts/encerrar.py", "desde": "2026-10-19", "regra": "uma linha por sessão no boletim.jsonl"},
+    {"id": "automato.import_proibido", "arquivo": "scripts/check_project.py", "desde": "2026-10-19", "regra": "nenhum código importa ou chama automato/acoes/_proibidos/ (ERRO)"},
+    {"id": "raise SystemExit('PROIBIDO", "arquivo": "automato/acoes/_proibidos/comprar_pocao.py", "desde": "2026-10-19", "regra": "scripts proibidos têm trava na primeira linha"},
     {"id": "automato.ferramenta_fora_da_tabela", "arquivo": "scripts/check_project.py", "desde": "2026-10-19", "regra": "todo script do automato está na tabela Ferramentas do README"}
   ]
 }

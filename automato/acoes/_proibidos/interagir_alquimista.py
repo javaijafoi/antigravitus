@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+raise SystemExit('PROIBIDO: este script automatiza fala/entrega/compra de missao (AGENTS #13/#14). Veja automato/acoes/_proibidos/LEIA.md')  # trava: _proibidos
 import sys
 from pathlib import Path
 

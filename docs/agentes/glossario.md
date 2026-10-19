@@ -198,8 +198,7 @@ termina quando a primeira crônica real é gravada.
 | `acoes/ressuscitar.py` | Caminho de volta após a morte (porta do Paraíso/Inferno → Purgatório → Fonte da Vida) ⚠️ o cabeçalho do arquivo ainda diz "farm_armaduras.py": **docstring desatualizada**, o código é de ressurreição |
 | `acoes/digerir_mapa.py` | Reconstrói o mapa a partir dos `transcript_*.jsonl`, com identidade de sala por **posição no grafo**; aceita `--glob` **repetível** (precisa cobrir todo o corpus — recorte encolhe o mapa) |
 | `acoes/fundir_mapa.py` | Absorve o levantamento no mapa curado de forma **idempotente** (curado nunca é sobrescrito; a camada `levantamento` é refeita a cada rodada), com `ALIAS_CAMINHADA` e `ARESTAS_VERIFICADAS` |
-| `acoes/encontrar_fazendeiro.py` | Busca o fazendeiro nos cômodos da casa e entrega a missão |
-| `acoes/falar_fazendeiro.py` | Navega até a casa da fazenda e dialoga com o fazendeiro |
+| `acoes/_proibidos/` | **Não executar.** Oito scripts antigos que automatizam `say`/`ask`/`give`/`buy` de missão (`falar_fazendeiro.py`, `encontrar_fazendeiro.py`, `falar_minerador.py`, `iniciar_gargamel.py`, `ativar_gargamel.py`, `interagir_alquimista.py`, `entregar_alquimista.py`, `comprar_pocao.py`). Violam AGENTS #13/#14. Estão aqui só como histórico; o `check_project.py` dá erro se algum código os importar ou chamar |
 
 ### 5.6 `automato/runtime/` — segredos, logs e transcrições (**não versionado**)
 

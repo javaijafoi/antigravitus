@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+raise SystemExit('PROIBIDO: este script automatiza fala/entrega/compra de missao (AGENTS #13/#14). Veja automato/acoes/_proibidos/LEIA.md')  # trava: _proibidos
 """comprar_pocao.py - Viaja até Jareth (As Misturas de Clariss) e compra 'uma poção aquosa'.
 
 Preço: 9.750 moedas de ouro.
