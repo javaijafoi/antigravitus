@@ -153,7 +153,12 @@ def expected_outputs(root, hero_id):
     if sum(item.get('id') == hero_id for item in catalog) != 1:
         raise ValueError('O herói deve ter uma única entrada no catálogo.')
     catalog = [hero if item.get('id') == hero_id else item for item in catalog]
-    return {f'data/heroes/{hero_id}/hero.json':json_text(hero), 'data/heroes.json':json_text(catalog), f'data/heroes/{hero_id}/ficha.md':render_ficha(hero,state,missions)}
+    outputs = {f'data/heroes/{hero_id}/hero.json':json_text(hero), 'data/heroes.json':json_text(catalog), f'data/heroes/{hero_id}/ficha.md':render_ficha(hero,state,missions)}
+    if (directory / 'mapa.json').is_file():
+        # o mapa em grade do site (mapa.html + js/mapa_grade.js) é derivado do mapa.json
+        import gerar_mapa_grade
+        outputs[f'data/heroes/{hero_id}/mapa_grade.json'] = gerar_mapa_grade.json_texto(read_json(directory / 'mapa.json'))
+    return outputs
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)

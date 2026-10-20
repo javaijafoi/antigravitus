@@ -138,6 +138,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
     localStorage.setItem("active_hero", hero.id);
     applyHeroContext(hero);
+    // O mapa em grade (js/mapa_grade.js) ouve este evento para carregar o herói ativo.
+    document.dispatchEvent(new CustomEvent("hero:activated", { detail: { hero } }));
     if (seasonSelect) await loadSeasonsForHero(hero, version);
     const tasks = [loadStateForHero(hero, version)];
     if (postsContainer) tasks.push(loadPostsForHero(hero, version));

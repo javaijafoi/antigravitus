@@ -39,6 +39,16 @@ class SyncHeroTests(unittest.TestCase):
         self.assertEqual(local['quick_stats']['hp'],'30 / 52')
         self.assertIn('| **Pontos de Vida (HP)** | 30 | 52 |',outputs['data/heroes/grebolius/ficha.md'])
 
+    def test_mapa_em_grade_e_derivado_do_mapa_json(self):
+        outputs = sync_hero.expected_outputs(self.root,'grebolius')
+        self.assertNotIn('data/heroes/grebolius/mapa_grade.json',outputs)   # sem mapa.json, sem derivado
+        mapa = {'hero_name':'Grebolius','rooms':[{'id':'a','name':'A','zone':'Z','exits':{'e':'b'}},
+                                                 {'id':'b','name':'B','zone':'Z','exits':{'w':'a'}}]}
+        (self.root/'data/heroes/grebolius/mapa.json').write_text(json.dumps(mapa),encoding='utf-8')
+        grade = json.loads(sync_hero.expected_outputs(self.root,'grebolius')['data/heroes/grebolius/mapa_grade.json'])
+        self.assertEqual(grade['total'],2)
+        self.assertEqual([s['id'] for s in grade['zonas'][0]['salas']],['a','b'])
+
     def test_invalid_resource_stops_before_any_write(self):
         self.update_state(lambda s:s['vitals']['hp'].update(current=999))
         path = self.root/'data/heroes/grebolius/ficha.md'

@@ -11,12 +11,15 @@ segunda vai para a casa livre mais próxima e o corredor sai torto (tracejado). 
 saída não recíproca, destino inexistente, saída pendente e duplicata vira um AVISO na aba
 "Avisos" do HTML: é a lista para validar o mapa.
 
-O HTML é autocontido (dados, estilo e script embutidos; nada de fetch nem biblioteca externa)
-e abre direto do disco.
+Saídas:
+  - data/heroes/<id>/mapa_grade.json, o DERIVADO que o site lê (mapa.html + js/mapa_grade.js).
+    Quem o grava no fluxo normal é o sync_hero.py; `--check` dele acusa se ficou velho.
+  - com --html, um mapa_grade.html avulso na raiz para validar fora do site (usa os mesmos
+    css/ e js/ do site, com os dados embutidos; abre direto do disco). Fica fora do git.
 
 Uso:
-    python scripts/gerar_mapa_grade.py                       # grebolius -> mapa_grade.html
-    python scripts/gerar_mapa_grade.py --hero grebolius --saida caminho.html
+    python scripts/gerar_mapa_grade.py                       # grebolius -> mapa_grade.json
+    python scripts/gerar_mapa_grade.py --hero grebolius --html
 """
 import argparse
 import json
@@ -204,6 +207,11 @@ def montar(mapa):
     }
 
 
+def json_texto(mapa):
+    """O conteúdo do derivado data/heroes/<id>/mapa_grade.json (estável: chaves ordenadas)."""
+    return json.dumps(montar(mapa), ensure_ascii=False, separators=(',', ':'), sort_keys=True) + '\n'
+
+
 def html(dados, template=None):
     texto = (template or TEMPLATE.read_text(encoding='utf-8'))
     blob = json.dumps(dados, ensure_ascii=False, separators=(',', ':'), sort_keys=True).replace('</', '<\\/')
@@ -215,12 +223,17 @@ def main(argv=None):
         sys.stdout.reconfigure(encoding='utf-8', errors='replace')
     ap = argparse.ArgumentParser(description='Desenha o mapa.json em grade num HTML autocontido.')
     ap.add_argument('--hero', default='grebolius')
-    ap.add_argument('--saida', default=str(ROOT / 'mapa_grade.html'))
+    ap.add_argument('--html', action='store_true', help='também escreve o mapa_grade.html avulso')
+    ap.add_argument('--saida', default=str(ROOT / 'mapa_grade.html'), help='caminho do HTML avulso')
     a = ap.parse_args(argv)
-    mapa = json.loads((ROOT / 'data' / 'heroes' / a.hero / 'mapa.json').read_text(encoding='utf-8'))
+    pasta = ROOT / 'data' / 'heroes' / a.hero
+    mapa = json.loads((pasta / 'mapa.json').read_text(encoding='utf-8'))
     dados = montar(mapa)
-    Path(a.saida).write_text(html(dados), encoding='utf-8')
-    print('%d salas em %d zonas -> %s' % (dados['total'], len(dados['zonas']), a.saida))
+    (pasta / 'mapa_grade.json').write_text(json_texto(mapa), encoding='utf-8')
+    print('%d salas em %d zonas -> %s' % (dados['total'], len(dados['zonas']), pasta / 'mapa_grade.json'))
+    if a.html:
+        Path(a.saida).write_text(html(dados), encoding='utf-8')
+        print('HTML avulso -> %s' % a.saida)
     for z in dados['zonas']:
         tortas = sum(e['torta'] for e in z['arestas'])
         print('  %-45s %4d salas  %3d corredores tortos' % (z['nome'], z['n'], tortas))

@@ -81,12 +81,39 @@ class TestHTML(unittest.TestCase):
         m = mapa(sala('a', {'e': 'b'}), sala('b', {'w': 'a'}))
         self.assertEqual(G.html(G.montar(m), self.TEMPLATE), G.html(G.montar(m), self.TEMPLATE))
 
-    def test_template_real_sem_rede(self):
+    def test_avulso_usa_o_mesmo_desenho_do_site(self):
         t = G.TEMPLATE.read_text(encoding='utf-8')
         self.assertIn('__DADOS_JSON__', t)
         self.assertNotIn('fetch(', t)
-        self.assertNotIn('<script src', t)
-        self.assertNotIn('<link rel="stylesheet"', t)
+        self.assertIn('<script src="js/mapa_grade.js">', t)
+        self.assertIn('href="css/mapa_grade.css"', t)
+        self.assertNotIn('https://', t)
+
+    def test_json_texto_estavel(self):
+        m = mapa(sala('a', {'e': 'b'}), sala('b', {'w': 'a'}))
+        self.assertEqual(G.json_texto(m), G.json_texto(m))
+        self.assertTrue(G.json_texto(m).endswith('}\n'))
+
+
+class TestSite(unittest.TestCase):
+    """O mapa.html do site usa o mapa em grade; o main.js avisa o herói ativo."""
+
+    def test_pagina_ligada_ao_mapa_em_grade(self):
+        pagina = (G.ROOT / 'mapa.html').read_text(encoding='utf-8')
+        self.assertIn('id="mapa-grade"', pagina)
+        self.assertIn('href="css/mapa_grade.css"', pagina)
+        self.assertLess(pagina.index('js/mapa_grade.js'), pagina.index('js/main.js'))   # ouvinte antes do aviso
+        self.assertNotIn('id="map-canvas-wrap"', pagina)                               # o grafo antigo saiu
+        main = (G.ROOT / 'js' / 'main.js').read_text(encoding='utf-8')
+        self.assertIn('new CustomEvent("hero:activated"', main)
+        js = (G.ROOT / 'js' / 'mapa_grade.js').read_text(encoding='utf-8')
+        self.assertIn('"hero:activated"', js)
+        self.assertIn('/mapa_grade.json', js)
+
+    def test_derivado_publicado_existe(self):
+        for heroi in ('grebolius', 'antigravitus'):
+            grade = json.loads((G.ROOT / 'data' / 'heroes' / heroi / 'mapa_grade.json').read_text(encoding='utf-8'))
+            self.assertGreater(grade['total'], 0, heroi)
 
 
 class TestMapaReal(unittest.TestCase):

@@ -108,7 +108,7 @@ Detalhamento completo em [arquitetura.md](docs/agentes/arquitetura.md).
 | Estado mecânico do herói | `data/heroes/<id>/state.json` | `ficha.md`, `hero.json`, cartões em `data/heroes.json` |
 | Crônicas | `posts.json` (dias) e `capitulos.json` (capítulos) | `site` (leitura), `ciclos.json` para blocos fechados |
 | Missões | `missoes.json` | `ficha.md`, `missoes.md` (leitura editorial) |
-| Mapa | `mapa.json` (curado) | `mapa_vivo.json` (levantamento derivado), `mapa.md` é **histórico** |
+| Mapa | `mapa.json` (curado) | `mapa_grade.json` (o mapa em grade do site, por `sync_hero.py`), `mapa_vivo.json` (levantamento derivado), `mapa.md` é **histórico** |
 | Rotas e economia | `conhecimento.md` | — |
 | Regras de como jogar | `diretiva_de_jogo.md` | rotinas e camadas do `automato/` |
 | Referência de servidor | `maquina/` e `docs/circlemud/` | `docs/expedicao_comandos.md` |

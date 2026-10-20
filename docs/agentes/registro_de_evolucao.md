@@ -1175,3 +1175,11 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Como foi verificado:** `test_gerar_mapa_grade.py` (10 OK; o tabuleiro sai 8×8 de `xadrez_A1` a `H8`); no navegador do app, as abas Monte Sagrado, Tabuleiro e Levantamento, o clique em sala, a saída para outra zona trocando a aba, a largura de celular sem rolagem lateral e o console sem erros.
 - **Custo:** o MUD não é euclidiano, então parte das salas sai fora do lugar real (56 colisões no mapa de 710 salas).
 - **Próximo:** o autor valida; depois decidir se vira página do site.
+
+### 2026-10-20 · Dia 157, o mapa do site vira o mapa em grade · Claude Opus 5.5 (claude-opus-5-5)
+- **Mudou:** `mapa.html` (o grafo de pontos saiu; entra `#mapa-grade`), novos `js/mapa_grade.js` e `css/mapa_grade.css`, `js/main.js` (dispara `hero:activated` em `activateHero`), `scripts/gerar_mapa_grade.py` (escreve `data/heroes/<id>/mapa_grade.json`; `--html` para o avulso), `scripts/mapa_grade_template.html` (o avulso agora usa os mesmos `css/` e `js/` do site), `scripts/sync_hero.py` (o `mapa_grade.json` entra nos derivados e no `--check`), testes, `AGENTS.md` §3.
+- **Por que:** o autor validou o mapa em grade e pediu para trocar o mapa do site por ele, com a identidade visual do site.
+- **Visual:** as variáveis do `chronicle-shell` (verde-noite, dourado envelhecido, Georgia, rótulos em caixa-alta espaçada); as abas reaproveitam `.layer-tab-btn`, a busca `.map-search-input` e os controles `.map-ctrl-btn`; as salas são pergaminho sobre o fundo escuro, e a selecionada ganha brilho dourado.
+- **Como foi verificado:** servidor local (`python -m http.server 8790`): Grebolius e Antigravitus carregam, `#sala=xadrez_F1` abre a casa, a busca e os painéis funcionam, o celular fica sem rolagem lateral e o console não tem erro do mapa (os 404 de `antigravitus/state.json` e `temporadas.json` já existiam). Suíte offline com 312 testes OK.
+- **Custo:** o código do grafo antigo no `main.js` (`loadMapForHero`) ficou inerte, porque a página não tem mais `#map-canvas-wrap`; dá para remover num passo próprio. O `mapa_grade.json` publicado foi gerado do `mapa.json` do HEAD; a sessão do Campanário, que ainda não commitou, deve rodar `sync_hero.py` antes do commit dela.
+- **Próximo:** remover o código morto do grafo antigo do `main.js`.
