@@ -23,8 +23,14 @@
           "document": "posts.json",
           "day": 31,
           "note": "Entrega e conclusão narradas; o Dia 30 já descreve uma entrega, com cronologia ambígua."
+        },
+        {
+          "document": "missoes.md",
+          "day": 157,
+          "note": "Equivalência registrada em 2026-10-20 por Claude Opus 5.5: o servidor lista 'Ninguém Segura Esse Bebê: o guarda novato (Zona dos Novatos)' e não tem missão 'A Coleira do Dragão'; logs session_live_dia156_* (autoquest todas)."
         }
-      ]
+      ],
+      "completion_note": "Mesma missão que 'ninguem-segura-esse-bebe' (nome do servidor; patrono: o guarda novato). Entrada mantida por ser o registro histórico do Dia 31; não contar duas vezes. Receita em missoes.md, 'Como fizemos cada missão'."
     },
     {
       "id": "altruismo",
@@ -462,12 +468,17 @@
       "last_progress_day": null,
       "objective": "Autoquest de todos os níveis (encarnações 1-4), qualquer alinhamento e classe.",
       "next_step": "CONCLUÍDA. Estado confirmado no servidor em 2026-10-16 pelo comando \"autoquest todas\": \"Ninguém Segura Esse Bebê — Concluída\".",
-      "completion_note": "REGISTRO ATRASADO: a conclusão ocorreu antes do Dia 98 (já aparecia como Concluída no log de sessão daquele dia) e nunca havia sido anotada. Não repetir.",
+      "completion_note": "REGISTRO ATRASADO: a conclusão ocorreu antes do Dia 98 (já aparecia como Concluída no log de sessão daquele dia) e nunca havia sido anotada. Não repetir. É a mesma missão registrada como 'coleira-dragao' no Dia 31: a coleira do bebê dragão do Alquimista entregue ao Guarda Novato (posts.json Dias 14, 27 e 31). Receita em missoes.md.",
       "evidence": [
         {
           "document": "evidence/autoquests-dia143.json",
           "day": 143,
           "note": "Texto capturado de autoquest todas + score tudo."
+        },
+        {
+          "document": "missoes.md",
+          "day": 157,
+          "note": "Equivalência registrada em 2026-10-20 por Claude Opus 5.5: o servidor lista 'Ninguém Segura Esse Bebê: o guarda novato (Zona dos Novatos)' e não tem missão 'A Coleira do Dragão'; logs session_live_dia156_* (autoquest todas)."
         }
       ]
     },
