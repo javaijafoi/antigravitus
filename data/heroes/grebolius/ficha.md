@@ -64,8 +64,8 @@ CA 165 no score final da sessão GPT com armor +36 e invisibility +40; base 89. 
   * Próximo passo: Concluída integralmente no Dia 156. Baú de recompensas surpresa recebido e aberto, entregando um rosário sagrado ao herói.
 * **Xeque-mate — Ativa:** Autoquest de nível 30+, iniciada com o Bispo Branco no Grande Tabuleiro de Xadrez.
   * Próximo passo: Avanço estruturado até a etapa 6: peões -> 2 bispos -> 2 cavalos -> 2 torres -> Rainha Negra (abatida com sono e cegueira). Instrução final alcançada: 'Agora, é hora do xeque-mate. Traga o cetro daquele rei nefasto como prova do seu feito'. Resetada ao renascer na Fonte da Vida; rota e mecânica completamente mapeadas para reexecução rápida no Capítulo 12.
-* **Ajuda Mágica — Ativa:** Ajudar Lemin a reconstruir o livro de magias de Merlin.
-  * Próximo passo: Localizar e obter um tomo de pergaminho bem grosso, que pode ser usado, e entregar a Lemin no Centro da Cidade de Lyon somente após reconfirmar a subetapa em score tudo (Ajuda Mágica: Você deve entregar objeto ao personagem).
+* **Ajuda Mágica — Bloqueada:** Ajudar Lemin a reconstruir o livro de magias de Merlin.
+  * Próximo passo: 1) Reaceitar com Lemin, à mão, no Centro da Cidade de Lyon (navegar.py --de templo_midgaard --para cap12_026): olhar Lemin aciona o convite; aceitar; ouvir a pergunta inteira; responder Merlin só no fim da fala; ouvir o relato; responder às confirmações conferindo score tudo, até 'Ajuda Mágica: Você deve entregar objeto ao personagem.' (conhecimento §61 e §64). 2) Só então testar o livro de Jooh, já no inventário (pista a do Plano 034): give apenas com a etapa confirmada (AGENTS #13).
 
 Objetivos pessoais e investigações ficam separados das autoquests no catálogo de missões.
 
@@ -116,24 +116,28 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 * `uma Cruz Ansada` (x1) — evidence/dia157-cap12.json
 * `o Cetro do Bispo Negro` (x1) — evidence/dia157-cap12.json
 * `um rolo de pergaminho` (x1) — evidence/dia157-biblioteca-paris.json
+* `o livro "Equipamentos para Primeira Encarnação", de Jooh` (x1) — evidence/dia157-handoff-lyon.json
 
 ### Pendências de inventário
 
 ## ✦ Condições Registradas
 * Save e sono confirmados no Templo; conexão fechada sem quit.
-* Sem fome nem sede; 3 pães na mochila; cantil reabastecido na Praça do Templo.
+* Sem fome nem sede às 22:14 (cantil bebido no Templo); pães na mochila não reconferidos.
 * 9 mortes e 1 DT históricas; um combate não iniciado por ela (rato preto em Lyon) com queda de alinhamento 412 -> 393.
 * Ouro: 15.700 banco + 220 mão = 15.920 (gastos: rolo de pergaminho 103, seis pães 36). Peso 69/115 kg.
-* Ajuda Mágica ativa na etapa de entrega: tomo de pergaminho bem grosso, que pode ser usado. Nenhum give executado.
+* Ajuda Mágica INATIVA no servidor no login de 22:07 do Dia 157: score tudo sem [Autoquests em andamento]; autoquest listar a mostra como disponível, iniciada com Lemin. Causa desconhecida (segunda vez no dia; a primeira está no conhecimento §64). Nenhum give executado.
+* CA 125 no score tudo de 22:13, só com armor +36 (23 horas); invisibility ausente.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
 **Capítulo 12: reconstruir o livro de Merlin**
-Abrir com `score tudo` e conferir Ajuda Mágica na etapa de entrega; depois seguir a pista escolhida no Plano 034 §5 (livros-guia da Sala de Doações: identificar antes de qualquer give). Nunca entregar sem a etapa confirmada.
-* Fonte do tomo ainda não identificada; Biblioteca de Jareth, lojas de pergaminho, Paris, catedral e Lyon já descartados.
-* Revalidar buffs com score tudo (armor tinha 29 horas no fechamento).
+Reaceitar Ajuda Mágica com Lemin, à mão (cadeia no conhecimento §61/§64: olhar Lemin aciona o convite; aceitar; ouvir a pergunta inteira; responder Merlin só no fim da fala; ouvir o relato; responder às confirmações conferindo score tudo), confirmar 'Você deve entregar objeto ao personagem' em score tudo e só então testar o livro de Jooh. Nunca entregar sem a etapa.
+* Missão inativa no servidor: reaceitar com Lemin antes de qualquer give.
+* Fonte do tomo ainda não identificada; o livro de Jooh é só um teste barato (guia de equipamentos, não confirmado como o tomo).
+* Conferir os pães dentro da mochila (look in mochila): não foram reconferidos nesta sessão.
+* Revalidar buffs com score tudo (armor com 23 horas às 22:13; invisibility ausente).
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessões do Capítulo 12 em 2026-10-19: GPT-6 / Codex (evidence/dia157-cap12.json) e Claude Sonnet 5.5 (evidence/dia157-biblioteca.json, dia157-lemin-reativacao.json, dia157-jareth-varredura.json). Última conexão fechada com save e sleep confirmados no Templo, sem quit; Ajuda Mágica ativa na etapa de entrega. Sessão seguinte (Claude Opus 5.5, Plano 033, evidence/dia157-biblioteca-paris.json): uma conexão, encerrada no Templo com save e sleep confirmados, sem quit; missão ainda na etapa de entrega..
+Fonte do estado: Sessões do Capítulo 12 em 2026-10-19: GPT-6 / Codex (evidence/dia157-cap12.json) e Claude Sonnet 5.5 (evidence/dia157-biblioteca.json, dia157-lemin-reativacao.json, dia157-jareth-varredura.json). Última conexão fechada com save e sleep confirmados no Templo, sem quit; Ajuda Mágica ativa na etapa de entrega. Sessão seguinte (Claude Opus 5.5, Plano 033, evidence/dia157-biblioteca-paris.json): uma conexão, encerrada no Templo com save e sleep confirmados, sem quit; missão ainda na etapa de entrega. Sessão seguinte (Claude Haiku 5.5, Plano 034, evidence/dia157-handoff-lyon.json): uma conexão (transcript_dia157_20261019_220653_b7ecb1.jsonl) fechada com save e sleep confirmados; missão encontrada inativa; livro de Jooh pego. Uma segunda conexão, aberta depois do handoff, ficou parada no Centro de Lyon e foi fechada às 22:23 por Claude Opus 5.5 (recall + _CLOSE sleep, save e sleep confirmados; transcript_dia157_20261019_221556_ac6f76.jsonl). Estado conferido no score tudo de 22:13 e no inventory de 22:14..
 * A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.
 * O colar com pedra purpura pertence a outro dono: o servidor recusa o uso. Nenhum comerciante testado o compra.
 * Bainha de Excalibur exige nivel 85 (vista na Sala de Doacoes, nao pode ser carregada com a carga atual). Scutum de Carvalho exige nivel 35.
@@ -144,3 +148,4 @@ Fonte do estado: Sessões do Capítulo 12 em 2026-10-19: GPT-6 / Codex (evidence
 * Dia 156: nao ha como inspecionar as propriedades de um item a venda em lojas comuns (apenas na loja divina de Pontos de Aventura via 'list <num>').
 * §42/plano011: reset obrigatório e conflito de autoquests eram hipóteses não isoladas; ver conhecimento §43.
 * Dia 157: conferir conhecimento §61 e Plano 028 para fonte ainda desconhecida do tomo; não confundir pergaminho de sabedoria carregado com o item solicitado.
+* Dia 157: Ajuda Mágica apareceu inativa no login duas vezes no mesmo dia, depois de sessões encerradas com save e sleep e sem quit nem morte. Causa desconhecida; não é o _CLOSE (conhecimento §65).

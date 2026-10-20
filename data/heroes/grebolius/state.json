@@ -5,7 +5,7 @@
     "day": 157,
     "verification": "live",
     "live_verified": true,
-    "source": "Sessões do Capítulo 12 em 2026-10-19: GPT-6 / Codex (evidence/dia157-cap12.json) e Claude Sonnet 5.5 (evidence/dia157-biblioteca.json, dia157-lemin-reativacao.json, dia157-jareth-varredura.json). Última conexão fechada com save e sleep confirmados no Templo, sem quit; Ajuda Mágica ativa na etapa de entrega. Sessão seguinte (Claude Opus 5.5, Plano 033, evidence/dia157-biblioteca-paris.json): uma conexão, encerrada no Templo com save e sleep confirmados, sem quit; missão ainda na etapa de entrega."
+    "source": "Sessões do Capítulo 12 em 2026-10-19: GPT-6 / Codex (evidence/dia157-cap12.json) e Claude Sonnet 5.5 (evidence/dia157-biblioteca.json, dia157-lemin-reativacao.json, dia157-jareth-varredura.json). Última conexão fechada com save e sleep confirmados no Templo, sem quit; Ajuda Mágica ativa na etapa de entrega. Sessão seguinte (Claude Opus 5.5, Plano 033, evidence/dia157-biblioteca-paris.json): uma conexão, encerrada no Templo com save e sleep confirmados, sem quit; missão ainda na etapa de entrega. Sessão seguinte (Claude Haiku 5.5, Plano 034, evidence/dia157-handoff-lyon.json): uma conexão (transcript_dia157_20261019_220653_b7ecb1.jsonl) fechada com save e sleep confirmados; missão encontrada inativa; livro de Jooh pego. Uma segunda conexão, aberta depois do handoff, ficou parada no Centro de Lyon e foi fechada às 22:23 por Claude Opus 5.5 (recall + _CLOSE sleep, save e sleep confirmados; transcript_dia157_20261019_221556_ac6f76.jsonl). Estado conferido no score tudo de 22:13 e no inventory de 22:14."
   },
   "level": 32,
   "mechanical_race": "Elfo",
@@ -55,7 +55,7 @@
   "training_sessions": 68,
   "operational_mode": {
     "current": "padrao",
-    "description": "Capítulo 12 em curso; batedor. Biblioteca de Jareth achada (sem tomo); Paris, catedral e Lyon varridos. Ajuda Mágica ativa: entregar tomo a Lemin, Centro da Cidade de Lyon. Sessão salva, dormindo no Templo, driver fechado.",
+    "description": "Capítulo 12 em curso; batedor. Ajuda Mágica INATIVA no servidor no login de 22:07 do Dia 157: score tudo sem [Autoquests em andamento]; autoquest listar a mostra como disponível, iniciada com Lemin. Causa desconhecida (segunda vez no dia; a primeira está no conhecimento §64). Reaceitar com Lemin antes de qualquer entrega; tomo ainda sem fonte. Sessão salva, dormindo no Templo, driver fechado.",
     "wimpy_profile": {
       "padrao": 17,
       "batedor": 33,
@@ -79,17 +79,19 @@
   },
   "last_event": {
     "day": 157,
-    "summary": "Capítulo 12 iniciado. Rota Midgaard–Haon-Dor–França–Notre Dame–Lyon reconhecida sem combate. Lemin localizado no Centro da Cidade de Lyon; Ajuda Mágica aceita, resposta Merlin validada, monólogos ouvidos e dois pedidos de confirmação respondidos após score tudo. Etapa atual: entregar um tomo de pergaminho bem grosso, podendo ser usado. Nenhum item entregue e nenhum gasto. Lojas de Lyon e Midgaard sem tomo; doação histórica não se confirmou. Reconhecimento adicional do castelo de Welmar não encontrou fonte do tomo nas salas visitadas. Retorno ao Templo, alimentação, água, save e sleep confirmados; driver encerrou com código 0. Segunda parte do dia (Claude Sonnet 5.5): a missão apareceu inativa no login e foi reativada com Lemin, seguindo a mesma cadeia, e voltou à etapa de entrega do tomo; sobreviveu a fechar e reabrir o driver. Varredura das ruas de Jareth, do castelo do Lorde e de salas vizinhas não achou a biblioteca da Assistente nem o tomo; o Beco Escuro de Jareth (malandros hostis) ficou fora por decisão do autor. Duas fugas por recall com cerca de 50 de vida; nenhuma morte nem queda de alinhamento. Sessão encerrada no Templo com save e sleep confirmados, sem quit. Terceira parte (Claude Opus 5.5, Plano 033): a Biblioteca da cidade de Jareth foi achada no Caminho de Tábuas, ao norte do rio, sem tomo; lojas Pergaminhos e Afins e Dalston sem tomo (comprado um rolo de pergaminho por 103, que é uma nota, não entregue). Champs Elysées atravessado pela rota do aviso até Paris; praça, hotel, alas da catedral, capela e casas de Lyon sem tomo. Um rato preto atacou no Túnel Escuro de Lyon e morreu no contra-ataque; o alinhamento caiu de 412 para 393 e o túnel foi banido. Por decisão do autor a sessão foi encerrada no Templo com save e sleep confirmados, sem quit."
+    "summary": "Capítulo 12 iniciado. Rota Midgaard–Haon-Dor–França–Notre Dame–Lyon reconhecida sem combate. Lemin localizado no Centro da Cidade de Lyon; Ajuda Mágica aceita, resposta Merlin validada, monólogos ouvidos e dois pedidos de confirmação respondidos após score tudo. Etapa atual: entregar um tomo de pergaminho bem grosso, podendo ser usado. Nenhum item entregue e nenhum gasto. Lojas de Lyon e Midgaard sem tomo; doação histórica não se confirmou. Reconhecimento adicional do castelo de Welmar não encontrou fonte do tomo nas salas visitadas. Retorno ao Templo, alimentação, água, save e sleep confirmados; driver encerrou com código 0. Segunda parte do dia (Claude Sonnet 5.5): a missão apareceu inativa no login e foi reativada com Lemin, seguindo a mesma cadeia, e voltou à etapa de entrega do tomo; sobreviveu a fechar e reabrir o driver. Varredura das ruas de Jareth, do castelo do Lorde e de salas vizinhas não achou a biblioteca da Assistente nem o tomo; o Beco Escuro de Jareth (malandros hostis) ficou fora por decisão do autor. Duas fugas por recall com cerca de 50 de vida; nenhuma morte nem queda de alinhamento. Sessão encerrada no Templo com save e sleep confirmados, sem quit. Terceira parte (Claude Opus 5.5, Plano 033): a Biblioteca da cidade de Jareth foi achada no Caminho de Tábuas, ao norte do rio, sem tomo; lojas Pergaminhos e Afins e Dalston sem tomo (comprado um rolo de pergaminho por 103, que é uma nota, não entregue). Champs Elysées atravessado pela rota do aviso até Paris; praça, hotel, alas da catedral, capela e casas de Lyon sem tomo. Um rato preto atacou no Túnel Escuro de Lyon e morreu no contra-ataque; o alinhamento caiu de 412 para 393 e o túnel foi banido. Por decisão do autor a sessão foi encerrada no Templo com save e sleep confirmados, sem quit. Quarta parte (Claude Haiku 5.5, Plano 034): no login a Ajuda Mágica estava inativa; o livro 'Equipamentos para Primeira Encarnação', de Jooh, foi pego na Sala de Doações (identify falhou duas vezes na sala); ida a Lyon a pé; `ask lemin ajuda` sem resposta; nenhum give. Encerrada no Templo com save e sleep confirmados."
   },
   "next_objective": {
     "mission_id": "ajuda-magica",
     "title": "Capítulo 12: reconstruir o livro de Merlin",
-    "next_step": "Abrir com `score tudo` e conferir Ajuda Mágica na etapa de entrega; depois seguir a pista escolhida no Plano 034 §5 (livros-guia da Sala de Doações: identificar antes de qualquer give). Nunca entregar sem a etapa confirmada.",
+    "next_step": "Reaceitar Ajuda Mágica com Lemin, à mão (cadeia no conhecimento §61/§64: olhar Lemin aciona o convite; aceitar; ouvir a pergunta inteira; responder Merlin só no fim da fala; ouvir o relato; responder às confirmações conferindo score tudo), confirmar 'Você deve entregar objeto ao personagem' em score tudo e só então testar o livro de Jooh. Nunca entregar sem a etapa.",
     "missing_preparation": [
-      "Fonte do tomo ainda não identificada; Biblioteca de Jareth, lojas de pergaminho, Paris, catedral e Lyon já descartados.",
-      "Revalidar buffs com score tudo (armor tinha 29 horas no fechamento)."
+      "Missão inativa no servidor: reaceitar com Lemin antes de qualquer give.",
+      "Fonte do tomo ainda não identificada; o livro de Jooh é só um teste barato (guia de equipamentos, não confirmado como o tomo).",
+      "Conferir os pães dentro da mochila (look in mochila): não foram reconferidos nesta sessão.",
+      "Revalidar buffs com score tudo (armor com 23 horas às 22:13; invisibility ausente)."
     ],
-    "plan_document": "planos/plano034.md"
+    "plan_document": "planos/plano035.md"
   },
   "skills": [
     {
@@ -326,7 +328,8 @@
         "name": "um pão recheado",
         "quantity": 3,
         "source": "evidence/dia157-biblioteca-paris.json",
-        "container": "a mochila de Pellinore"
+        "container": "a mochila de Pellinore",
+        "note": "Não reconferido no Dia 157 (Plano 034/035): o inventory mostra a mochila, não o que está dentro. O Plano 035 diz 'não há pão', mas nunca abriu a mochila; conferir com look in mochila."
       },
       {
         "name": "um manto de pano",
@@ -363,16 +366,23 @@
         "quantity": 1,
         "source": "evidence/dia157-biblioteca-paris.json",
         "note": "NOTA, peso 1, valor 90; comprado por 103 na Pergaminhos e Afins; não é o tomo de Lemin."
+      },
+      {
+        "name": "o livro \"Equipamentos para Primeira Encarnação\", de Jooh",
+        "quantity": 1,
+        "source": "evidence/dia157-handoff-lyon.json",
+        "note": "Pego na Sala de Doações sem identify (a magia falhou 2/2 na sala). Guia de equipamentos; não confirmado como o tomo de Lemin."
       }
     ],
     "pending_verification": []
   },
   "conditions": [
     "Save e sono confirmados no Templo; conexão fechada sem quit.",
-    "Sem fome nem sede; 3 pães na mochila; cantil reabastecido na Praça do Templo.",
+    "Sem fome nem sede às 22:14 (cantil bebido no Templo); pães na mochila não reconferidos.",
     "9 mortes e 1 DT históricas; um combate não iniciado por ela (rato preto em Lyon) com queda de alinhamento 412 -> 393.",
     "Ouro: 15.700 banco + 220 mão = 15.920 (gastos: rolo de pergaminho 103, seis pães 36). Peso 69/115 kg.",
-    "Ajuda Mágica ativa na etapa de entrega: tomo de pergaminho bem grosso, que pode ser usado. Nenhum give executado."
+    "Ajuda Mágica INATIVA no servidor no login de 22:07 do Dia 157: score tudo sem [Autoquests em andamento]; autoquest listar a mostra como disponível, iniciada com Lemin. Causa desconhecida (segunda vez no dia; a primeira está no conhecimento §64). Nenhum give executado.",
+    "CA 125 no score tudo de 22:13, só com armor +36 (23 horas); invisibility ausente."
   ],
   "uncertainties": [
     "A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.",
@@ -384,7 +394,8 @@
     "Dia 156: restam 33 destinos nomeados e nunca visitados no levantamento cartografico.",
     "Dia 156: nao ha como inspecionar as propriedades de um item a venda em lojas comuns (apenas na loja divina de Pontos de Aventura via 'list <num>').",
     "§42/plano011: reset obrigatório e conflito de autoquests eram hipóteses não isoladas; ver conhecimento §43.",
-    "Dia 157: conferir conhecimento §61 e Plano 028 para fonte ainda desconhecida do tomo; não confundir pergaminho de sabedoria carregado com o item solicitado."
+    "Dia 157: conferir conhecimento §61 e Plano 028 para fonte ainda desconhecida do tomo; não confundir pergaminho de sabedoria carregado com o item solicitado.",
+    "Dia 157: Ajuda Mágica apareceu inativa no login duas vezes no mesmo dia, depois de sessões encerradas com save e sleep e sem quit nem morte. Causa desconhecida; não é o _CLOSE (conhecimento §65)."
   ],
   "evidence": [
     {
@@ -546,6 +557,11 @@
       "document": "evidence/dia157-biblioteca-paris.json",
       "day": 157,
       "note": "Plano 033 executado por Claude Opus 5.5: biblioteca de Jareth achada sem tomo; Champs Elysées, Paris, catedral e Lyon varridos; queda de alinhamento por rato preto; encerrado no Templo."
+    },
+    {
+      "document": "evidence/dia157-handoff-lyon.json",
+      "day": 157,
+      "note": "Plano 034 executado por Claude Haiku 5.5: missão inativa, livro de Jooh pego, encerrado no Templo. Estado corrigido por Claude Opus 5.5 a partir do transcript."
     }
   ],
   "narrative_style": "ladra arcana",

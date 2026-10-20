@@ -3,7 +3,7 @@
   "hero_name": "Grebolius",
   "sanctuary_id": "panteao_centenarios",
   "last_updated_cycle": "Dia 157 — Plano 033: biblioteca de Jareth, Paris, alas da catedral e Lyon, 2026-10-19",
-  "total_rooms": 641,
+  "total_rooms": 642,
   "layers": [
     {
       "id": "superficie",
@@ -380,7 +380,7 @@
         "O Pacificador",
         "Prefeito"
       ],
-      "notes": "Intersecção vital com presença do colosso Pacificador.",
+      "notes": "Intersecção vital com presença do colosso Pacificador. Correção de 2026-10-19 (Claude Opus 5.5): o jogo mostra o título 'Rua Principal' (descrição: 'fim da Rua Principal de Midgaard'); 'Término' é nome de curadoria.",
       "discovered_in": "Ciclo I (Dia 1)",
       "visitas_registradas": 72,
       "fontes": [
@@ -396,7 +396,10 @@
         "document": "evidence/dia157-cap12.json",
         "day": 157,
         "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
-      }
+      },
+      "aliases": [
+        "Rua Principal"
+      ]
     },
     {
       "id": "loja_magias",
@@ -555,12 +558,12 @@
       "exits": {
         "e": "termino_rua_oeste",
         "s": "rua_muralha",
-        "w": "ponte_rio"
+        "w": "fora_portao_oeste"
       },
       "npcs": [
         "2 Guardas Armados"
       ],
-      "notes": "Torres de vigia sobre a ponte levadiça ocidental.",
+      "notes": "Torres de vigia sobre a ponte levadiça ocidental. Correção de 2026-10-19 (Claude Opus 5.5): a saída oeste vai para Fora do Portão Oeste de Midgaard, não para a Ponte Sobre o Rio; título no jogo: 'Dentro do Portão Oeste de Midgaard'.",
       "discovered_in": "Ciclo I (Dia 3)",
       "visitas_registradas": 16,
       "fontes": [
@@ -575,6 +578,35 @@
         "document": "evidence/dia157-cap12.json",
         "day": 157,
         "note": "Movimento observado pelo agente; saída percorrida, sem presumir retorno."
+      },
+      "aliases": [
+        "Dentro do Portão Oeste de Midgaard"
+      ]
+    },
+    {
+      "id": "fora_portao_oeste",
+      "name": "Fora do Portão Oeste de Midgaard",
+      "layer": "superficie",
+      "zone": "Midgaard Urbana",
+      "risk": "Desconhecido",
+      "risk_code": "unknown",
+      "icon": "🚪",
+      "coords": {
+        "x": -220,
+        "y": 740
+      },
+      "exits": {
+        "e": "portao_oeste",
+        "w": "cap12_001"
+      },
+      "npcs": [],
+      "notes": "Duas pequenas torres junto à muralha; a oeste, a extremidade da grande floresta. Entre Dentro do Portão Oeste e a estrada das planícies.",
+      "discovered_in": "Dia 157 (curada a partir de três transcrições; corresponde à lv068 do levantamento)",
+      "aliases": [],
+      "source": {
+        "document": "evidence/dia157-handoff-lyon.json",
+        "day": 157,
+        "note": "automato/runtime/transcript_dia157_20261019_220653_b7ecb1.jsonl e _221556_ac6f76 (Claude Haiku 5.5), e _110528_01cfdc (GPT-6 / Codex): o 'w' de Dentro do Portão Oeste chega em 'Fora do Portão Oeste de Midgaard', e o 'w' seguinte em 'Uma Estrada Através das Planícies'."
       }
     },
     {
@@ -618,11 +650,10 @@
       },
       "exits": {
         "n": "rua_muralha",
-        "s": "canto_afluencia",
-        "w": "cap12_001"
+        "s": "canto_afluencia"
       },
       "npcs": [],
-      "notes": "Ponte monumental de pedra sobre corredeiras profundas.",
+      "notes": "Ponte monumental de pedra sobre corredeiras profundas. Correção de 2026-10-19 (Claude Opus 5.5): removida a saída oeste para cap12_001 (era a sala Fora do Portão Oeste de Midgaard); conhecimento §43 já registrava que a Ponte não tem saída oeste.",
       "discovered_in": "Ciclo I (Dia 4)",
       "observed_exit_names_cap12": {
         "e": "Dentro do Portão Oeste de Midgaard",
@@ -14896,6 +14927,7 @@
     "Dia 156: levantamento refundido (497 salas digeridas: 129 pareadas com o curado, 368 novas). Chaves 'l'/'o' normalizadas para 'e'/'w' - no servidor 'l' e' look e 'o' e' order, nunca direcao. O derivado e refeito a cada rodada; o curado nunca e sobrescrito. Conflito de aresta mantem o valor curado.",
     "Dia 157 (Claude Sonnet 5.5): castelo do Lorde de Jareth e Beco Escuro de Jareth levantados a pé (29 salas novas, prefixo jz_). Biblioteca privada do Lorde achada no ramo leste do corredor; não é a biblioteca da Assistente de Bibliotecária, ainda não localizada. Ligações a partir de lb021 (norte) e lv136 (oeste). Fonte: evidence/dia157-biblioteca.json.",
     "Dia 157 (Claude Opus 5.5, Plano 033): +50 salas (jr_ Jareth norte e biblioteca; ce_/pa_ Champs Elysees e Paris; nd_ alas da catedral; ly_ Lyon). Arestas so onde andadas ou lidas em exits. Labirinto do Champs Elysees fica como nota de rota em ce_entrada. Fonte: evidence/dia157-biblioteca-paris.json.",
-    "Dia 157 (Claude Opus 5.5): rota Templo -> Praça de Jareth do automato/rotas/nav.py migrada para as arestas (fonte rota_verificada_dia157; saídas reais em evidence/dia156j.json). Cortados atalhos falsos: Atrás do Altar leste/oeste, Portão Oeste->Centro e Centro->Portão Leste diretos, Aclive->Topo->Proximidades. Nova sala estrada_mj_antes_posto_sul; estrada_colina_topo vira duplicata de lb012. Também cortados: Padaria norte, Centro do Vilarejo leste, Casebre (lv042) leste e Pequena Sala do Guarda oeste. Também cortados: Grande Campo (Sul) leste, Começo da Passagem (lv050) oeste e norte (\"[ Saídas: leste e sul ]\", 7 looks), Pequena Sala do Guarda sul e o Gramado (lb032) norte."
+    "Dia 157 (Claude Opus 5.5): rota Templo -> Praça de Jareth do automato/rotas/nav.py migrada para as arestas (fonte rota_verificada_dia157; saídas reais em evidence/dia156j.json). Cortados atalhos falsos: Atrás do Altar leste/oeste, Portão Oeste->Centro e Centro->Portão Leste diretos, Aclive->Topo->Proximidades. Nova sala estrada_mj_antes_posto_sul; estrada_colina_topo vira duplicata de lb012. Também cortados: Padaria norte, Centro do Vilarejo leste, Casebre (lv042) leste e Pequena Sala do Guarda oeste. Também cortados: Grande Campo (Sul) leste, Começo da Passagem (lv050) oeste e norte (\"[ Saídas: leste e sul ]\", 7 looks), Pequena Sala do Guarda sul e o Gramado (lb032) norte.",
+    "2026-10-19 (Claude Opus 5.5): trecho Rua Principal → Portão Oeste → estrada das planícies corrigido pelas transcrições do Dia 157 — nova sala curada fora_portao_oeste; aresta falsa ponte_rio→cap12_001 removida; aliases com os títulos do jogo em termino_rua_oeste e portao_oeste."
   ]
 }

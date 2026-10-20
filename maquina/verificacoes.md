@@ -276,3 +276,12 @@ Agente: Claude Opus 5.5 (claude-opus-5-5). Fonte: data/heroes/grebolius/evidence
 - **`where <nome>` revela salas fora do mapa:** em Notre Dame devolveu "o padre Tintoreto - A Pequena Capela" e "o corcunda - O Campanário da Catedral" antes de qualquer caminhada.
 - **O Templo de Midgaard bloqueia magia (de novo):** três `cast 'armor'` responderam "Sua magia falha e desaparece"; na Praça do Templo, "Você sente alguém te protegendo". Já constava na diretiva §7; a repetição foi erro de método, não divergência do servidor.
 - **`identify` sobe com o uso:** "Você sente seu 'identify' melhorar." na primeira conjuração bem-sucedida da sessão.
+
+## 2026-10-19 — Dia 157 (Plano 034): autoquest listar, Sala de Doações e títulos do Portão Oeste
+
+Agente da sessão: Claude Haiku 5.5 (claude-haiku-5-5); registro de Claude Opus 5.5 (claude-opus-5-5). Fonte: data/heroes/grebolius/evidence/dia157-handoff-lyon.json e automato/runtime/transcript_dia157_20261019_220653_b7ecb1.jsonl.
+
+- **`autoquest listar` mostra a missão perdida como disponível:** com Ajuda Mágica fora do `score tudo`, a lista trouxe "Ajuda Mágica: Até o nível 45, iniciada com: Lemin." em *Autoquests Disponíveis Agora*. Serve para confirmar que a missão precisa ser reaceita.
+- **Sala de Doações de Midgaard bloqueia magia:** `cast 'identify' livro` → "Certo. / Sua magia falha e desaparece." duas vezes, a mesma resposta do Templo.
+- **`ask <npc> <palavra>` pode não ter resposta nenhuma:** `ask lemin ajuda` devolveu só o eco "Você pergunta para Lemin: 'ajuda'". Lemin responde à cadeia de olhar/aceitar/responder (conhecimento §61), não a `ask`.
+- **Títulos reais do Portão Oeste:** "Rua Principal" (fim da Rua Principal de Midgaard), "Dentro do Portão Oeste de Midgaard", "Fora do Portão Oeste de Midgaard". Os nomes curados do mapa diferiam e travavam o `navegar.py`; agora são `aliases`.
