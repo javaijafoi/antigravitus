@@ -2509,3 +2509,20 @@ Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: evidence/dia157-xadrez-eta
 - **Ajuda Mágica:** Lemin não deu o convite em ~25 min; o convite vem por temporizador do NPC e a resposta é `say sim` (a sessão de 22:06 respondeu `ask ajuda`). Autor abandonou a missão.
 - **Concorrência:** outro agente (também Claude) comandou a mesma personagem durante a sessão e embaralhou as movimentações: eu concorri comigo mesmo. Conferir antes de conectar se já há driver no ar.
 - **Ideia a testar:** nível 33 libera `charm person`; com o Rei enfeitiçado, `order rei drop cetro` (ou `give`). Faltam 344.334 EXP.
+
+## 70. Charm person, a cascata refeita e a morte #10 (Dia 157, 2026-10-20, segunda sessão)
+
+Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: evidence/dia157-xadrez-charm.json.
+
+- **A missão cai ao fechar a conexão** (`_CLOSE sleep`, 3ª vez no dia). Socket caído sem fechar deixa a personagem linkdead e preserva a missão; reiniciar o daemon retoma.
+- **Cascata refeita em ~1h30** com idas curtas: dormir antes de entrar (`n;cast 'sleep' alvo` no mesmo envio), debuffs só em alvo que não está dormindo, 1 a 3 raios, recall a 150 de vida. Detalhes de cada peça no plano 038 §3.
+- **Peões:** 40+ acumulados; a ordem do Bispo avança com ~8 mortes depois da aceitação, com atraso ao voltar a F1.
+- **Torres:** empilham em A8 (2 a 4). `cast 'sleep' 1.torre` e `2.torre`; raios só em uma; blindness/curse acordam quem dorme.
+- **Rainha Negra:** 5 idas de 1 a 3 raios; cada rodada dela chega a 94 de dano.
+- **`charm person` (nível 33):** treinar com `practice charm person` no Laboratório dos Magos (10% -> 95% em 2 sessões). Funciona em nível <= 33: Cavaleiro e Bispo Negro seguiram. A Rainha é de nível maior e não encanta (`consider`: "um pouco de sorte").
+- **Cetro do Rei:** o servidor recusa o Cetro do Bispo Negro ("não é o item correto ou você não é o dono original"). O cetro só vale se o Rei for morto por mim.
+- **Morte #10:** Rainha + um Cavaleiro Negro extra, sangramento, wimpy "tenta fugir... PÂNICO!"; perda de 4.465 EXP; missão cancelada. Contagem de DT segue 1.
+- **Depois da morte o equipamento fica no inventário, desvestido** (não no cadáver). Reequipar com `wear <palavra>`; aspas simples não funcionam em nomes; guardar surplus e itens ANTI-BOM na mochila e vesti-la, senão o peso passa de 300 kg.
+- **Lojas sem caixa:** Armeiro ("tente um feiticeiro") e Ferreiro ("não posso pagar") recusam Armadura da Torre Branca, Coroa da Negra e lanças de 4.000.
+- **`prepara.py --forcar`** guarda ouro e revisa a Sala de Doações (3 trocas hoje); rodar antes de sair.
+- **Keen** (nível 55) estava em D8 limpando a Rainha, bispo e cavaleiro; usa itens iguais aos meus (colar de missão, brinco de novato); não roubou nada.

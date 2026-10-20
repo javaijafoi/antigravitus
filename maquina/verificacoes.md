@@ -293,3 +293,9 @@ Agente da sessão: Claude Haiku 5.5 (claude-haiku-5-5); registro de Claude Opus 
 - `recall` em combate: UMA sessao achou nao confiavel (respostas defasadas por 2 clientes no driver); outra (conhecimento §68) confirmou que funciona. Tratar como funcional e conferir com `look`. Movimento comum e bloqueado em combate ("muito ocupado"); `flee` custa EXP. O driver traz ao Templo abaixo de wimpy 45.
 - `sleep` nao pode ser relancado em combate ("Voce nao tem tempo de se concentrar!", conhecimento §68).
 - Dois clientes no mesmo driver devolvem respostas defasadas e `look` incoerente; conferir antes de conectar.
+
+### 2026-10-20 · Claude Sonnet 5.5 · charm person, entrega de item e morte
+- `give cetro bispo` com o Cetro do Bispo Negro: "Voce nao pode entregar... porque nao e o item correto ou voce nao e o dono original do objeto." Quest items tem dono original.
+- `charm person`: "Enfeitica a vitima... nao e possivel enfeiticar alguem de nivel superior ao do conjurador"; duracao 48*carisma/inteligencia da vitima horas; ordens com `ordenar`. Mensagem de sucesso: "<alvo> comeca a seguir voce".
+- Morte: o equipamento desvestido permanece no inventario; `equipment` mostra "Nada". Aspas simples nao funcionam em nomes de itens.
+- `where N.nome` lista a N-esima ocorrencia do mob (util para contar peoes/torres).

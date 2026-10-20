@@ -1,0 +1,25 @@
+{
+  "hero_id": "grebolius",
+  "day": 157,
+  "agent": "Claude Sonnet 5.5 (claude-sonnet-5-5)",
+  "via": "automato",
+  "recorded_on": "2026-10-20",
+  "source_kind": "sessao_ao_vivo",
+  "source": "automato/runtime/transcript_dia157_20261020_*.jsonl e session_live_dia157_20261020_*.log (conexões de 09:03 a 12:55); falas de missão respondidas à mão; rotinas de combate supervisionadas em segundo plano.",
+  "findings": {
+    "sessao_fecha_missao": "Autoquest cai ao fechar a conexão com _CLOSE sleep (terceira vez no dia). Queda de socket sem fechar (linkdead) preserva; a reconexão pelo daemon retoma a personagem com a missão.",
+    "cascata_refeita": "Peões (8 mortes, ordem chega depois de atraso), bispos F8 e C8, cavalos G8 e B8, torres (A8 abriga 2 a 4), Rainha Negra (5 idas curtas de 1 a 3 raios, recall a 150 de vida) e etapa final do cetro. Idas de 2 a 3 min cada com sono antes de entrar.",
+    "peoes": "Dezenas de peões negros acumulam (where N.peao lista 40+). A ordem avança por contagem de mortes depois da aceitação (~8), não por todos mortos.",
+    "torres": "Torres empilham em A8 (2 a 4). Dormir as duas (cast 'sleep' 1.torre e 2.torre), depois só raios em uma; blindness/curse acordam a que dorme. Uma rodada de duas torres acordadas tira até 80.",
+    "cetro_dono_original": "give cetro bispo com o Cetro do Bispo Negro: 'Você não pode entregar... porque não é o item correto ou você não é o dono original do objeto'. O cetro do Rei só serve se o Rei for morto por mim.",
+    "charm_person": "Treinado de 10% para 95% com 'practice charm person' no Laboratório dos Magos (2 sessões). Duração 48*carisma/inteligência-da-vítima horas; só em alvo de nível <= 33. Funcionou em Cavaleiro Negro e Bispo Negro ('começa a seguir você'); a Rainha Negra é de nível maior (consider: 'um pouco de sorte') e não encanta.",
+    "morte_10": "Morri na casa da Rainha Negra (D8): Rainha + um Cavaleiro Negro extra, sangramento, wimpy 'tenta fugir... PÂNICO! Você não pode escapar!'. Perdeu 4.465 EXP; a missão foi cancelada. A contagem de DT continua 1.",
+    "equipamento_pos_morte": "Depois de morrer o equipamento fica no inventário, desvestido ('Você está usando: Nada'), não no cadáver. Reequipar com wear <palavra> e guardar surplus na mochila (aspas simples não funcionam em nomes).",
+    "peso": "A mochila só reduz peso quando vestida; sem ela o peso foi 312 kg. Fora da mochila 151 > 140 kg.",
+    "lojas_sem_caixa": "Armeiro: 'caro demais, tente um feiticeiro' para Armadura da Torre Branca e Coroa; só comprou escudo (50). Ferreiro pagou espada longa 240 e curta 24, mas 'não posso pagar' por lança (valor 4.000).",
+    "prepara": "scripts: automato/camadas/prepara.py --forcar deposita ouro e revisa a Sala de Doações (3 trocas: Armadura da Torre Branca, Coroa da Negra, gorro). Rodar antes de sair.",
+    "keen": "Keen, o Mestre Espadachim (nível 55), estava no D8 matando a Rainha, bispo e cavaleiro; usa itens iguais aos meus (colar de missão, brinco de novato), não roubou nada.",
+    "cota": "mcp get_usage: janela de 5 h passou de 99% para zero e voltou a 40% durante a sessão; semanal 14%."
+  },
+  "state_end": {"location": "O Templo de Midgaard", "level": 33, "hp": "226/226", "mana": "490/490", "exp": 8023660, "alignment": 491, "gold_total": 67601, "closing": "save_confirmed=True, sleep_confirmed=True; driver parado; sem quit"}
+}

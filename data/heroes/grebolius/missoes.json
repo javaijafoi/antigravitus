@@ -531,11 +531,11 @@
       "id": "xeque-mate",
       "title": "Xeque-mate",
       "type": "official",
-      "status": "active",
+      "status": "blocked",
       "accepted_day": 157,
       "last_progress_day": 157,
       "objective": "Autoquest de nível 30+, iniciada com o Bispo Branco no Grande Tabuleiro de Xadrez.",
-      "next_step": "Etapa 6 ativa (entregar o cetro do Rei Negro). Reaceita em 2026-10-20 com o Bispo Branco (F1): say sim duas vezes. Cascata refeita: peões, 2 bispos (F8, C8), 2 cavalos (G8, B8), 2 torres (H8, A8), Rainha (D8, morta com raios após debuffs). Falta o Rei Negro (E8): acorda no primeiro raio e dá ~190/rodada. Plano: nível 33 -> charm person -> 'order rei drop cetro'. Morrer cancela a missão.",
+      "next_step": "Cancelada pela morte #10 em 2026-10-20 (Rainha + cavaleiro). Recomeçar no Bispo Branco (F1): say sim x2. Cascata refeita nesta sessão em ~1h30 com tática de dormir + raios e idas curtas; etapa final exige matar o Rei Negro pessoalmente (cetro tem dono original). Ver conhecimento §70 e plano038.",
       "reward": "EXP massiva em cascata (mais de 150.000 EXP acumulada)",
       "evidence": [
         {
@@ -547,8 +547,14 @@
           "document": "evidence/dia157-xadrez-etapa6.json",
           "day": 157,
           "note": "Cascata refeita até a etapa do cetro. Agente: Claude Sonnet 5.5 (claude-sonnet-5-5)"
+        },
+        {
+          "document": "evidence/dia157-xadrez-charm.json",
+          "day": 157,
+          "note": "Cascata refeita ate a etapa do cetro e perdida por morte. Agente: Claude Sonnet 5.5 (claude-sonnet-5-5)"
         }
-      ]
+      ],
+      "blocker": "Cancelada pela morte #10 (2026-10-20); recomeçar com o Bispo Branco. Etapa final exige matar o Rei Negro pessoalmente."
     },
     {
       "id": "ajuda-magica",

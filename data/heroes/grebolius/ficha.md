@@ -9,8 +9,8 @@
 * **Raça / Aparência Narrativa:** Mulher goblin; aventureira sem véu
 * **Raça Mecânica no MUD:** Elfo
 * **Classe Mecânica no MUD:** Mago (Magic-User)
-* **Grau / Nível Atual:** **32**
-* **Alinhamento Moral:** 434 (Bom)
+* **Grau / Nível Atual:** **33**
+* **Alinhamento Moral:** 491 (Bom)
 * **Localização Atual:** O Templo de Midgaard (último registro: Dia 157)
 * **Acampamento Registrado:** O Templo de Midgaard
 * **Santuário de Referência:** O Panteao dos Centenarios
@@ -20,13 +20,13 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 ## ✦ Status Vitais
 | Recurso | Atual | Máximo | Porcentagem |
 | :--- | :---: | :---: | :---: |
-| **Pontos de Vida (HP)** | 199 | 199 | 100% |
-| **Pontos de Mana (MP)** | 430 | 430 | 100% |
-| **Estamina / Movimento (MV)** | 145 | 145 | 100% |
+| **Pontos de Vida (HP)** | 226 | 226 | 100% |
+| **Pontos de Mana (MP)** | 490 | 490 | 100% |
+| **Estamina / Movimento (MV)** | 146 | 146 | 100% |
 
-* **Experiência Acumulada:** **7.655.666 EXP**
-* **Experiência Necessária p/ Grau 33:** **344.334 EXP** (Meta: 8.000.000 EXP)
-* **Ouro Líquido:** **60.509 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **8.023.660 EXP**
+* **Experiência Necessária p/ Grau 34:** **976.340 EXP** (Meta: 9.000.000 EXP)
+* **Ouro Líquido:** **67.601 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 11
@@ -37,8 +37,8 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 * **Carisma (CHA):** 12
 
 ### Métricas de Combate
-* **Classe de Armadura (AC):** 89 (base) / **165** (com `armor`, conforme registro)
-CA 165 no score final da sessão GPT com armor +36 e invisibility +40; base 89. Não atribuir 165 somente a armor. Na última sessão Claude armor +36 foi relançada (cerca de 17 horas no score) e invisibility lançada; valores exatos não reconferidos ao fechar. Buffs expiram; renovar antes da próxima saída. evidence/dia157-cap12.json. Plano 033: score final com armor +36 (29 horas) e CA 125; invisibility não lançada (falhou por concentração).
+* **Classe de Armadura (AC):** 112 (base) / **165** (com `armor`, conforme registro)
+CA 112 no score tudo final (Dia 157, 2026-10-20) com tudo vestido, sem buffs; reequipado depois da morte #10.
 * **Bônus de Acerto (Hitroll):** 16
 * **Bônus de Dano (Damroll):** +5
 * **Configuração de Fuga (Wimpy):** **45 HP** (referência de 25%; não garante fuga antes de golpe letal)
@@ -62,8 +62,8 @@ CA 165 no score final da sessão GPT com armor +36 e invisibility +40; base 89. 
   * Próximo passo: Concluída integralmente com o Smurf Minerador em O Fim Do Túnel. Entregues poção aquosa (ao Alquimista), jarro brilhante, chave quadrada e tocha. Recompensa recebida: um colar com uma pedra púrpura (Anti-DT, Abençoado, Armadura +10, Acerto +1, Dano +1, Des +1, Max-Mana +25) e 2.000 moedas de ouro de Gargamel.
 * **Todo Dia um Pouco — Concluída:** Missão diária do servidor Devil's Bob.
   * Próximo passo: Concluída integralmente no Dia 156. Baú de recompensas surpresa recebido e aberto, entregando um rosário sagrado ao herói.
-* **Xeque-mate — Ativa:** Autoquest de nível 30+, iniciada com o Bispo Branco no Grande Tabuleiro de Xadrez.
-  * Próximo passo: Etapa 6 ativa (entregar o cetro do Rei Negro). Reaceita em 2026-10-20 com o Bispo Branco (F1): say sim duas vezes. Cascata refeita: peões, 2 bispos (F8, C8), 2 cavalos (G8, B8), 2 torres (H8, A8), Rainha (D8, morta com raios após debuffs). Falta o Rei Negro (E8): acorda no primeiro raio e dá ~190/rodada. Plano: nível 33 -> charm person -> 'order rei drop cetro'. Morrer cancela a missão.
+* **Xeque-mate — Bloqueada:** Autoquest de nível 30+, iniciada com o Bispo Branco no Grande Tabuleiro de Xadrez.
+  * Próximo passo: Cancelada pela morte #10 em 2026-10-20 (Rainha + cavaleiro). Recomeçar no Bispo Branco (F1): say sim x2. Cascata refeita nesta sessão em ~1h30 com tática de dormir + raios e idas curtas; etapa final exige matar o Rei Negro pessoalmente (cetro tem dono original). Ver conhecimento §70 e plano038.
 * **Ajuda Mágica — Abandonada:** Ajudar Lemin a reconstruir o livro de magias de Merlin.
   * Próximo passo: 1) Reaceitar com Lemin, à mão, no Centro da Cidade de Lyon (navegar.py --de templo_midgaard --para cap12_026): olhar Lemin aciona o convite; aceitar; ouvir a pergunta inteira; responder Merlin só no fim da fala; ouvir o relato; responder às confirmações conferindo score tudo, até 'Ajuda Mágica: Você deve entregar objeto ao personagem.' (conhecimento §61 e §64). 2) Só então testar o livro de Jooh, já no inventário (pista a do Plano 034): give apenas com a etapa confirmada (AGENTS #13).
 
@@ -121,21 +121,21 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 ### Pendências de inventário
 
 ## ✦ Condições Registradas
-* Save e sono confirmados no Templo; conexão fechada sem quit (Dia 157, 2026-10-20).
-* Sem fome nem sede ao fechar (pão comido, cantil cheio).
-* Xeque-mate ATIVA na etapa 6: 'Você deve entregar objeto ao personagem' (cetro do Rei Negro). Rainha e as duas torres já mortas nesta rodada; o Rei Negro (E8) está vivo.
-* Alinhamento 434. O Cavaleiro Branco (G1) foi morto por raio durante uma luta que ele começou: o alinhamento caiu 455 -> 402 logo depois; tratar as peças brancas como BOAS e não atacar mais.
-* Ouro 60.509 (15.700 banco + 44.809 mão): veio de outro agente na mesma sessão; origem exata não auditada.
+* Save e sono confirmados no Templo; conexão fechada sem quit (Dia 157, 2026-10-20, 12:5x).
+* Nível 33 (HP 226, mana 490, MV 146); EXP 8.023.660; alinhamento 491; CA 112 com tudo vestido; morreu 10 vezes e 1 DT.
+* Xeque-mate CANCELADA pela morte (Rainha Negra + cavaleiro, fuga do wimpy falhou: PÂNICO). Recomeçar no Bispo Branco (F1) e refazer a cascata numa única conexão.
+* Mochila de Pellinore vestida com Coroa da Rainha Negra, Armadura da Torre Branca, 4 lanças (valem 4.000 cada) e cetro do Bispo: Armeiro e Ferreiro sem caixa; vender depois.
+* Colar com pedra púrpura (ANTI-DT) vestido; um segundo colar igual está na mochila.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
 **Capítulo 12: Xeque-mate, cetro do Rei Negro**
-Subir ao nível 33 (faltam 344.334 EXP) matando peças negras que reaparecem; no 33, praticar charm person, enfeitiçar o Rei Negro (E8) e usar 'order rei drop cetro'; entregar o cetro ao Bispo Branco (F1). Ver planos/plano037.md.
-* Chegar ao nível 33 (faltam 344.334 EXP) para ter charm person.
-* Manter vida, mana, comida e água cheias; renovar armor e invisibility antes de entrar no tabuleiro.
+Recomeçar Xeque-mate com o Bispo Branco e refazer a cascata numa conexão; enfeitiçar cavaleiros/bispos/torres (nível <= 33) como escudo; matar o Rei Negro eu mesma. Ver planos/plano038.md.
+* Vender lanças, coroa e armadura quando Ferreiro e Armeiro tiverem caixa.
+* Manter colar anti-DT vestido; renovar armor e invisibility.
 * Conferir antes de conectar que nenhum outro agente está no driver.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessão de 2026-10-20 (Dia 157) de Claude Sonnet 5.5 (claude-sonnet-5-5) (evidence/dia157-xadrez-etapa6.json): Xeque-mate retomada até a etapa final; conexão fechada no Templo com save e sleep confirmados (transcript_dia157_20261019_235647_9b90bf.jsonl), sem quit. Houve outro agente comandando a mesma personagem em paralelo durante a sessão. Valores do score tudo final: 199/430/145, EXP 7.655.666, alinhamento 434, ouro 60.509 (15.700 banco + 44.809 mão)..
+Fonte do estado: Sessão de 2026-10-20 (Dia 157) de Claude Sonnet 5.5 (claude-sonnet-5-5) (evidence/dia157-xadrez-charm.json): nível 33 alcançado; charm person treinado a 95%; morte #10 pela Rainha Negra + um cavaleiro (Xeque-mate cancelada); reequipada. Fechada com save e sleep confirmados no Templo, sem quit. Ouro 67.601 (67.301 banco + 300 mão)..
 * A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.
 * O colar com pedra purpura pertence a outro dono: o servidor recusa o uso. Nenhum comerciante testado o compra.
 * Bainha de Excalibur exige nivel 85 (vista na Sala de Doacoes, nao pode ser carregada com a carga atual). Scutum de Carvalho exige nivel 35.

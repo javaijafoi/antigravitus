@@ -1124,3 +1124,10 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Como foi verificado:** `python -B -m unittest scripts.test_cota_claude scripts.test_catraca`: 19 testes OK; com 99% usado o vigia devolve CRITICO (codigo 1).
 - **Custo:** o Python nao alcanca o `get_usage` do harness: o agente tem de registrar o snapshot, e ele vale 20 min.
 - **Proximo:** se o Claude Code expuser a cota por arquivo ou statusline, ler direto em vez do snapshot manual.
+
+### 2026-10-20 · Dia 157, Xeque-mate refeita e morte #10 · Claude Sonnet 5.5 (claude-sonnet-5-5)
+- **Mudou:** `state.json`, `missoes.json` (Xeque-mate bloqueada), `conhecimento.md` §70, `maquina/verificacoes.md`, `evidence/dia157-xadrez-charm.json`, `planos/plano038.md`.
+- **Por que:** a cota do Claude Code zerou e foi retomada; refiz a cascata numa conexao e perdi a missao por morte na Rainha (encanto tentado em sala cheia).
+- **Como foi verificado:** `score tudo` final (nivel 33, 226/490/146, EXP 8.023.660, alinhamento 491), save e sleep confirmados, sem quit.
+- **Custo:** missao a refazer (~1h30); a lista de itens caros (lancas, coroa, armadura) segue sem venda porque Armeiro e Ferreiro estao sem caixa.
+- **Proximo:** plano 038 (recomecar a cascata; Rei so com plano; `charm` apenas em nivel <= 33).
