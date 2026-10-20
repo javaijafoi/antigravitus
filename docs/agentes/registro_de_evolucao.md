@@ -1160,3 +1160,10 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Como foi verificado:** `python scripts/mandabala.py --sobre "Rei Negro"` lista as duas lutas (18/10 com MORTE; 20/10) com dano, vida e barra; suíte offline e `check_project.py` no commit.
 - **Custo:** o `--sobre` fica ~3 s mais lento. O alvo casa pela palavra do comando (`rei` pega Rei Negro e Rei Branco).
 - **Próximo:** quem for ao Rei roda o `--sobre` antes; o próximo chefe tem os números gravados no `conhecimento.md` ao fim da luta.
+
+### 2026-10-20 · Dia 157, `ressuscitar.py` pela base · Claude Opus 5.5 (claude-opus-5-5)
+- **Mudou:** `automato/acoes/ressuscitar.py`, `scripts/test_ressuscitar.py`, `automato/CHANGELOG.md` v1.7.11.
+- **Por que:** na listagem dos `.py` do automato, o autor pediu a correção: a docstring era do `farm_armaduras.py` e o script falava com o driver por um cliente próprio, sem a origem da v1.7.9 e com o token num caminho antigo.
+- **Como foi verificado:** `python -m unittest scripts.test_ressuscitar` (7 OK) com textos reais dos logs; suíte offline e `check_project.py` no commit.
+- **Custo:** nenhum fluxo ao vivo exercitado (exige morte).
+- **Próximo:** na próxima morte, conferir no transcript a origem `ressuscitar` e o `_RAW 1` no menu.

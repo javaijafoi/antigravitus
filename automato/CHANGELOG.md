@@ -4,6 +4,12 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.7.11 — Dia 157 · `ressuscitar.py` pela base, com origem e o menu de morte (Claude Opus 5.5)
+
+- `acoes/ressuscitar.py`: a docstring descrevia outro script (`farm_armaduras.py`); agora diz o que ele faz. O cliente próprio saiu: fala com o driver por `base.run`, ou seja, com o token de `automato/runtime/.controller` (antes lia `scripts/local/.controller`, caminho antigo), com a origem `ressuscitar` no transcript e com a guarda de repetição da base.
+- Decisão de cada passo em `proximo_comando(texto)`, função pura: menu de morte → `_RAW 1` (o travamento do §73); Fonte da Vida → `drink fonte`; portal → `enter portal`; Vazio → `n`; dica "chama sua atenção para o <direção>"; e a dica que o código antigo ignorava, "Uma curiosa saída, para cima, chama sua atenção" → `u`. Textos dos logs do Dia 156.
+- Teste novo: `scripts/test_ressuscitar.py` (7). Não exercitado ao vivo (exige morrer).
+
 ## v1.7.10 — Dia 157 · `mandabala.py --sobre` lê o histórico de combate dos transcripts (Claude Opus 5.5)
 
 - `scripts/mandabala.py`: `historico_de_combate(termo)` e `linhas_do_historico()`. O `--sobre <alvo>` passa a listar, por sessão, cada lance contra o alvo (ataque, magia ofensiva ou `consider`; reaproveita `auditar_sessao.alvo_de_ataque`), com vida antes e depois, dano `[N]`, barra de vida do inimigo (`{<<<<<>>>>>} o Rei Negro`, 10 segmentos) e morte. ~3 s sobre os 39 transcripts. ID na catraca: `historico.combate`. Testes: `test_mandabala.py` (+4).
