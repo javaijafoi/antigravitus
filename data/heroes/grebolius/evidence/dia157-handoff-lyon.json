@@ -1,0 +1,33 @@
+{
+  "hero_id": "grebolius",
+  "day": 157,
+  "agent": "Claude Haiku 5.5 (claude-haiku-5-5)",
+  "via": "automato",
+  "recorded_on": "2026-10-19",
+  "source_kind": "sessao_ao_vivo",
+  "source": "automato/runtime/transcript_dia157_20261019_220653_b7ecb1.jsonl e session_live_dia157_20261019_220653_b7ecb1.log. Driver aberto com MUD_DAY=157 e MUD_WIMPY=45. play.py a mao, um comando por decisao. Rota Templo -> Lyon andada com navegar.py ate o passo 5 e depois a mao. Fechado com _CLOSE sleep.",
+  "plan_executed": "planos/plano034.md (sec. 5, parcial)",
+  "findings": {
+    "quest_state": "Divergencia do plano 034 sec. 2: score tudo nao mostra [Autoquests em andamento] com Ajuda Magica; autoquest listar mostra Ajuda Magica como disponivel (iniciada com Lemin). A missao nao estava ativa.",
+    "guide_book": "Sala de Doacoes (sala_doacoes): livro 'Equipamentos para Primeira Encarnacao', de Jooh (guia de equipamentos; nao NOTA). cast 'identify' livro falhou 2 de 2 com 'Sua magia falha e desaparece' (sala aparenta bloquear magia). Pego com get livro, sem identify.",
+    "lemin_location": "Lemin esta em O Centro da Cidade (cap12_026), Lyon. look rapaz: 'Lemin esta com saude perfeita'. ask lemin ajuda: sem resposta.",
+    "route_templo_lyon": "Templo -> d (Praca do Templo) -> s (Praca do Comercio) -> w (Rua Principal) -> w (Dentro do Portao Oeste) -> w (Fora do Portao Oeste) -> w (Estrada) -> w (Estrada) -> w (Borda da Floresta) -> w (Trilha) -> n -> n -> w -> n -> w -> n -> n -> e (Entrada Para a Franca, cap12_012) -> s x4 (O Centro da Cidade, cap12_026)."
+  },
+  "state_end": {
+    "location": "O Templo de Midgaard, dormindo",
+    "hp": "199/199",
+    "mana": "430/430",
+    "mv": "145/145",
+    "level": 32,
+    "alignment": 393,
+    "gold_total": 15920,
+    "fome": "nao",
+    "sede": "nao",
+    "save_confirmed": true,
+    "sleep_confirmed": true
+  },
+  "not_done": [
+    "Reabrir Ajuda Magica com Lemin (palavra de abertura desconhecida).",
+    "give livro lemin: nao executado (missao nao ativa)."
+  ]
+}
