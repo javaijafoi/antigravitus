@@ -9,6 +9,7 @@
 
 | # | Faça | Pronto quando |
 |---|---|---|
+| 0 | `python --version` | 3.10+. Se abrir a Microsoft Store: `powershell -ExecutionPolicy Bypass -File scripts\configurar_python.ps1 -Aplicar`, uma vez por máquina, e reabra o terminal |
 | 1 | `python scripts/mandabala.py` | leu o plano vigente **inteiro** e a "SEQUÊNCIA DE ABERTURA" que ele imprime |
 | 2 | `git status --porcelain` e `git log --oneline -5` | sabe se há trabalho de outro agente na árvore ([AGENTS §10](../../AGENTS.md#10-trabalho-concorrente-leia-antes-de-editar)) |
 | 3 | Leia `data/heroes/<id>/diretiva_de_jogo.md` **§19 a §23** | as regras de `give`, fala de missão, etapa, ética e o ritual de bloco |

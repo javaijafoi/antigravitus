@@ -32,6 +32,13 @@ def main():
 
     # 1. ambiente
     checar('Python 3.10+', sys.version_info >= (3, 10), sys.version.split()[0])
+    # `python` no PATH apontando para o atalho da Microsoft Store (WindowsApps) faz todo agente tropeçar.
+    import shutil
+    no_path = shutil.which('python') or ''
+    checar('python no PATH', bool(no_path) and 'windowsapps' not in no_path.lower(),
+           (no_path or 'ausente') + ('' if no_path and 'windowsapps' not in no_path.lower()
+                                     else ' -> rode scripts\\configurar_python.ps1 -Aplicar'),
+           critico=False)
 
     # 2. o core dentro da pasta
     nucleo = ['config.py', 'base.py', 'guarda.py']

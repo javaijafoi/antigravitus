@@ -4,6 +4,12 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.7.4 — Dia 157 · Python acessível para qualquer agente (Claude Opus 5.5)
+- **`scripts/configurar_python.ps1` (novo):** acha o Python mais novo em `%LOCALAPPDATA%\Programs\Python` e põe a pasta dele, a `Scripts` e o `Launcher` (`py.exe`) na frente do PATH do **usuário** (sem administrador). Guarda o PATH antigo num arquivo de backup. Por padrão só simula; aplica com `-Aplicar`. Causa observada: o Python não estava no PATH do usuário, e o `python` caía no atalho da Microsoft Store (`WindowsApps\python.exe`).
+- **`verificar.py` — item `python no PATH`:** AVISO quando `python` resolve para o `WindowsApps` ou não existe, apontando o script.
+- **AGENTS "Comece aqui" e PROTOCOLO §1 passo 0:** o que fazer quando `python` abre a Store.
+- **Custo:** nenhum no repositório. Aplicar muda o PATH do usuário da máquina (reversível pelo backup).
+
 ## v1.7.3 — Dia 157 · Quatro checagens da auditoria do Haiku (Claude Opus 5.5)
 - **Brecha do #13 (`DELEGA_MESMA_FRASE`, `mandabala.py`):** citar #13/#15 só libera a delegação ao autor na **mesma frase** do §5. O Plano 035 citava #13 ao falar do give e, em outra frase, mandava "perguntar ao autor a palavra de abertura", e passava.
 - **Conhecimento na abertura (`abertura.conhecimento_do_npc`, `--sobre`):** a sequência de abertura lista, para os nomes do §5, as seções do `conhecimento.md` e as linhas mais recentes que os citam. `mandabala.py --sobre <nome>` faz a mesma consulta a qualquer momento. O Haiku tentou `ask lemin ajuda`, e a cadeia (responder "Merlin") estava na §61.

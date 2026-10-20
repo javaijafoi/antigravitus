@@ -12,6 +12,11 @@
 > 3. Para encerrar: `python scripts/encerrar.py --agente "<modelo/versão>"`. Ele cria o esqueleto do
 >    próximo plano e roda todas as verificações.
 >
+> Se `python` abrir a Microsoft Store ou disser "Python was not found", a máquina não tem o Python no
+> PATH: rode **uma vez** `powershell -ExecutionPolicy Bypass -File scripts\configurar_python.ps1 -Aplicar`
+> e reabra o terminal. Até lá, use `py` ou o caminho completo
+> `%LOCALAPPDATA%\Programs\Python\Python312\python.exe`. O `automato/verificar.py` avisa quando isso acontece.
+>
 > O resto deste arquivo explica **por quê**. As invariantes da §4 valem sempre.
 
 Índice: [Regra zero](#0-regra-zero--identifique-se) ·

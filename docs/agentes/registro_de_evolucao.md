@@ -1093,3 +1093,10 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Como foi verificado:** os fatos saíram do transcript `_220653_b7ecb1` (`score tudo` de 22:13, `inventory` de 22:14, `autoquest listar` de 22:08). O trecho do Portão Oeste foi conferido nos transcripts do Haiku e no do GPT (`_110528_01cfdc`). Um replay do trajeto real do transcript `_221556_ac6f76` dentro do `navegar.navegar()` chega a `cap12_026` em 23 passos sem parar (antes, parava no passo 4). `sync_hero.py --check` ok; `check_project.py` 0 erros; suíte 231 OK.
 - **Custo:** nenhum no jogo. O plano 035 continua como está (append-only), com as leituras erradas; este bloco e o conhecimento §67 corrigem por acréscimo.
 - **Próximo:** quem executar o plano 035 deve usar a cadeia da §61 com Lemin, não "perguntar ao autor".
+
+### 2026-10-19 · Dia 157, Python acessível · Claude Opus 5.5 (claude-opus-5-5)
+- **Mudou:** `scripts/configurar_python.ps1` (novo), `automato/verificar.py` (item `python no PATH`), `AGENTS.md` (quadro "Comece aqui"), `docs/agentes/PROTOCOLO.md` (§1 passo 0), `automato/CHANGELOG.md` v1.7.4.
+- **Por quê:** pedido do autor ("a máquina tá toda hora reclamando de acessar o python"). Diagnóstico: o PATH do usuário não tinha a pasta do Python, e `python` resolvia para `C:\Users\peter\AppData\Local\Microsoft\WindowsApps\python.exe`, o atalho da Store. Os planos 034 a 036 tiveram de registrar o caminho completo.
+- **Como foi verificado:** `verificar.py` mostra AVISO `python no PATH ... WindowsApps\python.EXE`; `configurar_python.ps1` sem `-Aplicar` lista as três pastas certas e sai com 2 (simulação).
+- **Custo:** nenhum. Aplicar exige reabrir os terminais e o app.
+- **Próximo:** depois de aplicado, o caminho completo do Python pode sair do §7 dos planos novos.
