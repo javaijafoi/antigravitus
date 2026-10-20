@@ -2577,3 +2577,15 @@ Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: evidence/dia157-xadrez-rei
 - **Esperas:** o `look` isolado pode trazer a mensagem "A noite começou." no lugar do título e quebrar o `navegar.py` ("esperava X, cheguei em A noite começou"); se acontecer, `recall` e refazer.
 - **`ressuscitar.py` trava no menu de morte**: mandar `_RAW 1` antes ("Escolha uma das opções do menu"); o `live_daemon` pode cair sozinho e deve ser reiniciado só ele (por PID).
 - **Tudo fecha sem pão:** a mochila ficou sem pão; `prepara.py --forcar` antes de sair.
+
+## 76. Os números do Rei Negro que ficaram no transcript do Dia 156 (registro de 2026-10-20)
+
+Agente: Claude Opus 5.5 (claude-opus-5-5). Fonte: `automato/runtime/transcript_dia156_20261018_124258_79991b.jsonl` (13:31:57 a 13:36:02) e `transcript_dia157_20261020_150616_3868b2.jsonl` (15:58 a 16:02). O §58 registrou esta luta só em adjetivos; os números abaixo são do transcript.
+
+- **Barra de vida do inimigo:** o prompt de combate traz `{<<<<<>>>>>} o Rei Negro`, **10 segmentos** (medido com `mandabala.py --sobre "Rei Negro"`). 18/10: cheia depois de 62 e 55 (idas 1 e 2); `{-<<<<>>>>>}` depois do raio de 79 na ida 3 (~200 somados) e assim nos de 78 e 77; `{--<<<>>>>>}` no quarto raio (~430 somados). 20/10: `{-<<<<>>>>>}` depois de 67+81 (~150) e **ainda** `{-<<<<>>>>>}` depois de 83+70 na ida seguinte, ou seja, ele regenerou entre as idas. Estimativa: ~150 a 215 de dano por segmento → **vida de 1.500 a 2.200**, com regeneração.
+- **Dano dela no Rei:** 55 a 83 por `lightning bolt` (já com o Santuário).
+- **Dano do Rei nela:** de 80 a 173 por rodada. 18/10: 199 → 119 → 84 → 45 → morte; 20/10: 226 → 101 e 226 → 87.
+- **Sair andando de E8 depois de acordá-lo custa uma rodada inteira:** 18/10, 13:33:50: `sleep`, 1 raio, `s` → 199 → 23 de vida. Só `recall` serve de saída.
+- **`sleep`, `blindness` e `curse` pegam no Rei** (18/10: "vai dormir", "parece estar cego", "cor esquisita"); o primeiro raio o acorda.
+- **Conta:** com ~70 por raio e 1.500 a 2.200 de vida que regenera entre as idas, são **25 a 35 raios seguidos**. O kite de 1 a 2 raios por ida não fecha; isso já estava medido em 18/10, antes das três cascatas de 20/10.
+- **Como medir da próxima vez:** ler a barra depois de cada raio; se uma ida inteira não tira um segmento, parar.

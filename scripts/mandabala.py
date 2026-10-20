@@ -283,6 +283,118 @@ def sobre(termo, heroi, maximo=6):
     return list(reversed(secoes)), linhas[:maximo], len(do_conhecimento) + len(das_missoes)
 
 
+# --------------------------------------------------------------------------- #
+# Histórico de combate nos transcripts (historico.combate, --sobre)
+# --------------------------------------------------------------------------- #
+# Caso real (revisão de 20/10, conhecimento §76): o kite no Rei Negro de 20/10 repetiu o de 18/10,
+# cujos números (dano por raio, vida perdida por rodada, barra do Rei) só estavam no transcript.
+# O conhecimento.md tinha adjetivos. Três cascatas de ~1h30 e três mortes depois, a conta foi refeita.
+
+_BARRA = re.compile(r"\{([<>\-]{8,12})\}\s+(?:o |a )?([^\n{]+?)\s{2,}")
+_DANO = re.compile(r"\[(\d+)\]")
+_MORTE_TX = re.compile(r"Voc.{1,2} est.{1,2} morto", re.IGNORECASE)
+
+
+def _sem_acento(texto):
+    import unicodedata
+    t = unicodedata.normalize("NFKD", texto or "")
+    return "".join(c for c in t if not unicodedata.combining(c)).lower()
+
+
+def _palavras(termo):
+    return {p for p in re.findall(r"[a-z]{3,}", _sem_acento(termo))}
+
+
+def _contra(cmd, palavras):
+    """True se o comando ataca ou considera um alvo cujo nome cai nas palavras do termo."""
+    import auditar_sessao
+    alvo = auditar_sessao.alvo_de_ataque(cmd)
+    c = _sem_acento(cmd).strip()
+    if alvo is None and c.startswith("consider "):
+        alvo = auditar_sessao._alvo(c.split(" ", 1)[1])
+    return bool(alvo) and _sem_acento(alvo) in palavras
+
+
+def _barra_do_alvo(texto, palavras):
+    for barra, nome in _BARRA.findall(texto or ""):
+        if _palavras(nome) & palavras:
+            return "{" + barra + "}"
+    return None
+
+
+def historico_de_combate(termo, pasta=None):
+    """[{transcript, inicio, lances, dano, vida_inicio, vida_fim, vida_min, barra_inicio, barra_fim,
+    morte}] das sessões com lances contra o termo, da mais antiga para a mais nova. ID: historico.combate.
+
+    Cada lance: {at, cmd, vida_antes, vida_depois, dano, barra}. A 'vida_antes' é a do comando anterior
+    do transcript; a barra é a do inimigo no prompt de combate (`{<<<<<>>>>>} o Rei Negro`).
+    """
+    import json
+    palavras = _palavras(termo)
+    if not palavras:
+        return []
+    sessoes = []
+    for caminho in transcripts(pasta=pasta):
+        texto_arq = caminho.read_text(encoding="utf-8", errors="replace")
+        baixo = texto_arq.lower()
+        if not any(p in baixo for p in palavras):        # filtro barato: comandos são digitados sem acento
+            continue
+        lances, vida, morte_pendente, morreu = [], None, False, False
+        for linha in texto_arq.splitlines():
+            try:
+                r = json.loads(linha)
+            except ValueError:
+                continue
+            texto = r.get("text") or ""
+            if morte_pendente and _MORTE_TX.search(texto):
+                morreu = True                            # a morte chega muitas vezes num registro 'idle'
+            if r.get("kind") != "command":
+                continue
+            hp = (r.get("vitals") or {}).get("hp")
+            hp = hp if isinstance(hp, int) else None
+            if _contra(r.get("cmd") or "", palavras):
+                danos = _DANO.findall(texto)
+                lances.append({"at": r.get("at", ""), "cmd": r.get("cmd"), "vida_antes": vida,
+                               "vida_depois": hp, "dano": int(danos[0]) if danos else None,
+                               "barra": _barra_do_alvo(texto, palavras)})
+                morte_pendente = True
+                if _MORTE_TX.search(texto):
+                    morreu = True
+            if hp is not None:
+                vida = hp
+        if not lances:
+            continue
+        vidas = [v for l in lances for v in (l["vida_antes"], l["vida_depois"]) if v is not None]
+        barras = [l["barra"] for l in lances if l["barra"]]
+        sessoes.append({
+            "transcript": caminho.stem, "inicio": lances[0]["at"][:16], "lances": lances,
+            "dano": sum(l["dano"] or 0 for l in lances),
+            "vida_inicio": lances[0]["vida_antes"], "vida_fim": lances[-1]["vida_depois"],
+            "vida_min": min(vidas) if vidas else None,
+            "barra_inicio": barras[0] if barras else None, "barra_fim": barras[-1] if barras else None,
+            "morte": morreu,
+        })
+    return sessoes
+
+
+def linhas_do_historico(sessoes, lances_por_sessao=6, ultimas=4):
+    """Texto do histórico de combate: resumo por sessão e os últimos lances das mais recentes."""
+    if not sessoes:
+        return ["  nenhum lance contra esse alvo nos transcripts."]
+    saida = []
+    for s in sessoes[-ultimas:]:
+        barra = (f", barra {s['barra_inicio']} -> {s['barra_fim']}" if s["barra_inicio"] else ", barra não lida")
+        saida.append(f"  {s['transcript']} ({s['inicio'].replace('T', ' ')}): {len(s['lances'])} lance(s), "
+                     f"dano {s['dano']}, vida {s['vida_inicio']} -> {s['vida_fim']} (mín {s['vida_min']})"
+                     f"{barra}{', MORTE' if s['morte'] else ''}")
+        for l in s["lances"][-lances_por_sessao:]:
+            saida.append(f"      {l['at'][11:19]}  {l['cmd']:<32} vida {l['vida_antes']} -> {l['vida_depois']}"
+                         f"  dano {l['dano'] if l['dano'] is not None else '-'}  {l['barra'] or ''}")
+    if len(sessoes) > ultimas:
+        saida.insert(0, f"  ({len(sessoes) - ultimas} sessão(ões) mais antiga(s) omitida(s))")
+    return saida
+
+
 def termos_do_passo(passo):
     """Nomes próprios do §5 (NPC, lugar, item), na ordem em que aparecem, sem repetição.
 
@@ -414,6 +526,12 @@ def main(argv=None):
             print(f"  {a}")
         if not achados:
             print("  nada registrado. Se descobrir algo, grave no conhecimento.md (devolutiva técnica).")
+        sessoes = historico_de_combate(args.sobre)
+        print(f"\nHistórico de combate contra '{args.sobre}' nos transcripts ({len(sessoes)} sessão(ões)):")
+        for linha in linhas_do_historico(sessoes):
+            print(linha)
+        if sessoes:
+            print("  Antes de repetir uma tática: se ela já falhou aqui, mostre estes números ao autor.")
         return 0
 
     if args.listar:

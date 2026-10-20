@@ -229,6 +229,64 @@ class TestMain(BasePlanos):
             self.assertEqual(mandabala.main(["--hero", "nao_tem"]), 1)
 
 
+
+class TestHistoricoDeCombate(unittest.TestCase):
+    """historico.combate: o --sobre traz o que os transcripts já mediram contra o alvo (conhecimento §76)."""
+
+    # textos reais de transcript_dia156_20261018_124258_79991b.jsonl (13:35)
+    RAIO = ("Certo.\r\nO raio acerta o Rei Negro com impacto total! [79]\r\n"
+            "{-<<<<>>>>>} o Rei Negro                                  Grebolius {<<<<<>>>>>}\r\n\r\n199hp 329mn 145mv > ")
+    MORTE = "O Rei Negro acerta você com um golpe que quebra sua espinha!\r\nVocê está morto!\r\n"
+
+    def setUp(self):
+        self.tmp = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, self.tmp, True)
+
+    def transcript(self, nome, registros):
+        import json
+        arq = self.tmp / f"transcript_{nome}.jsonl"
+        arq.write_text("\n".join(json.dumps(r, ensure_ascii=False) for r in registros), encoding="utf-8")
+        return arq
+
+    @staticmethod
+    def cmd(c, texto="", hp=199, at="2026-10-18T13:35:00-03:00"):
+        return {"kind": "command", "cmd": c, "text": texto, "vitals": {"hp": hp}, "at": at}
+
+    def test_lances_vida_dano_barra_e_morte(self):
+        self.transcript("a", [
+            self.cmd("look", hp=199),
+            self.cmd("consider rei", "Você  Oponente", hp=199),
+            self.cmd("cast 'lightning bolt' rei", self.RAIO, hp=119, at="2026-10-18T13:35:27-03:00"),
+            self.cmd("cast 'lightning bolt' peao", "[30]", hp=110),      # outro alvo: fora do histórico
+            {"kind": "idle", "text": self.MORTE},
+        ])
+        sessoes = mandabala.historico_de_combate("Rei Negro", pasta=self.tmp)
+        self.assertEqual(len(sessoes), 1)
+        s = sessoes[0]
+        self.assertEqual([l["cmd"] for l in s["lances"]], ["consider rei", "cast 'lightning bolt' rei"])
+        raio = s["lances"][1]
+        self.assertEqual((raio["vida_antes"], raio["vida_depois"], raio["dano"]), (199, 119, 79))
+        self.assertEqual(raio["barra"], "{-<<<<>>>>>}")       # a barra do Rei, não a dela
+        self.assertTrue(s["morte"])
+        self.assertEqual(s["dano"], 79)
+
+    def test_sem_lance_contra_o_alvo_nao_vira_sessao(self):
+        self.transcript("b", [self.cmd("say rei"), self.cmd("cast 'armor'"), self.cmd("look", "o Rei Negro está aqui")])
+        self.assertEqual(mandabala.historico_de_combate("Rei Negro", pasta=self.tmp), [])
+        self.assertEqual(mandabala.linhas_do_historico([]), ["  nenhum lance contra esse alvo nos transcripts."])
+
+    def test_alvo_numerado_e_acento(self):
+        self.transcript("c", [self.cmd("cast 'sleep' 2.torre", hp=200), self.cmd("kill peao", hp=200)])
+        self.assertEqual(len(mandabala.historico_de_combate("Torre", pasta=self.tmp)[0]["lances"]), 1)
+        self.assertEqual(len(mandabala.historico_de_combate("Peão Negro", pasta=self.tmp)[0]["lances"]), 1)
+
+    def test_linhas_trazem_resumo_e_barra(self):
+        self.transcript("d", [self.cmd("look", hp=199), self.cmd("cast 'lightning bolt' rei", self.RAIO, hp=119)])
+        texto = "\n".join(mandabala.linhas_do_historico(mandabala.historico_de_combate("rei", pasta=self.tmp)))
+        self.assertIn("1 lance(s), dano 79, vida 199 -> 119", texto)
+        self.assertIn("{-<<<<>>>>>}", texto)
+
+
 class TestRepositorioReal(unittest.TestCase):
     """O repositório precisa ter o plano 001 do grebolius legível e com autoria."""
 

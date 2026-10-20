@@ -4,6 +4,12 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.7.10 — Dia 157 · `mandabala.py --sobre` lê o histórico de combate dos transcripts (Claude Opus 5.5)
+
+- `scripts/mandabala.py`: `historico_de_combate(termo)` e `linhas_do_historico()`. O `--sobre <alvo>` passa a listar, por sessão, cada lance contra o alvo (ataque, magia ofensiva ou `consider`; reaproveita `auditar_sessao.alvo_de_ataque`), com vida antes e depois, dano `[N]`, barra de vida do inimigo (`{<<<<<>>>>>} o Rei Negro`, 10 segmentos) e morte. ~3 s sobre os 39 transcripts. ID na catraca: `historico.combate`. Testes: `test_mandabala.py` (+4).
+- Motivo: o kite no Rei de 20/10 repetiu o de 18/10, cujos números só estavam no transcript (conhecimento §76, adendo da revisão de 10 dias). A ferramenta corrigiu a própria revisão: a barra do Rei **mexeu** em 20/10 e tem 10 segmentos, não 11.
+- Limite: casa o alvo pela primeira palavra do comando (`rei`, `torre`), então `--sobre "Rei Negro"` também traz lances contra o Rei Branco se houver; os textos ficam no transcript.
+
 ## v1.7.9 — Dia 157 · O transcript diz de onde veio cada comando; catracas da revisão de 10 dias (Claude Opus 5.5)
 
 Origem: `data/heroes/grebolius/observacoes/revisao-10-dias-2026-10-20.md`. De 16 a 20/10 o `turno.py` não rodou nenhuma vez depois de 16/10 15:10; em 20/10 houve 1 `consider` em 589 magias e as três mortes no tabuleiro vieram de táticas testadas ao vivo.

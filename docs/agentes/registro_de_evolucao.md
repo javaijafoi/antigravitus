@@ -1153,3 +1153,10 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Como foi verificado:** `python -B -m unittest discover -s scripts -p "test_*.py"` e `check_project.py` (resultado no commit). Nada exercitado ao vivo.
 - **Custo:** o `live_daemon` precisa ser reiniciado para gravar a origem. Sessão que joga por `play.py` passa a ter FALHA acima de 80 passos ou 30 ataques; mapear área nova à mão exige `MUD_ORIGEM=mapear`.
 - **Próximo:** o mutirão de XP do plano 040 por `turno.py --rotina <caça>`; ajustar os limites 80/30 se a primeira sessão real mostrar falso positivo.
+
+### 2026-10-20 · Dia 157, o xadrez do último dia e o histórico de combate no `--sobre` · Claude Opus 5.5 (claude-opus-5-5)
+- **Mudou:** `scripts/mandabala.py` (`historico_de_combate`, `--sobre`), `scripts/test_mandabala.py`, `docs/agentes/catraca.json` (`historico.combate`), `docs/agentes/PROTOCOLO.md` §2, `automato/CHANGELOG.md` v1.7.10, `conhecimento.md` §76, adendo em `observacoes/revisao-10-dias-2026-10-20.md`.
+- **Por que:** o autor sentiu que o último dia ignorou o aprendizado e reinventou a roda no xadrez. Confirmado: o kite no Rei de 20/10 repetiu o de 18/10, cujos números estavam só no transcript; o §58 tinha adjetivos. Cetros comprados por 45.998 já estavam na mochila sem `identify`; o `xadrez_v3` foi substituído em vez de corrigido.
+- **Como foi verificado:** `python scripts/mandabala.py --sobre "Rei Negro"` lista as duas lutas (18/10 com MORTE; 20/10) com dano, vida e barra; suíte offline e `check_project.py` no commit.
+- **Custo:** o `--sobre` fica ~3 s mais lento. O alvo casa pela palavra do comando (`rei` pega Rei Negro e Rei Branco).
+- **Próximo:** quem for ao Rei roda o `--sobre` antes; o próximo chefe tem os números gravados no `conhecimento.md` ao fim da luta.

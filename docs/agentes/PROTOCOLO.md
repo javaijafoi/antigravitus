@@ -30,6 +30,8 @@ Fonte: [diretiva §23](../../data/heroes/grebolius/diretiva_de_jogo.md).
 1. **A rota está no `mapa.json`?** Sim → `python automato/camadas/navegar.py --para <id>`. Não → à mão,
    um passo, `exits`, e depois **grave a rota no `mapa.json`**.
 2. **Há NPC ou item de missão?** **Antes da primeira fala:** `python scripts/mandabala.py --sobre <nome>`.
+   O mesmo comando vale **antes de lutar com um chefe ou repetir uma tática**: ele traz o histórico de
+   combate dos transcripts (vida, dano, barra do inimigo, morte). Se a tática já falhou, mostre os números ao autor.
    A cadeia de diálogo muitas vezes já está no `conhecimento.md` (o Haiku tentou `ask lemin ajuda`,
    e a resposta "Merlin" estava na §61). Fala, `give` e compra são **à mão, linha a linha**, com
    `score tudo` mostrando a sub-etapa exata ([AGENTS #13/#14](../../AGENTS.md#4-invariantes-não-quebrar)).

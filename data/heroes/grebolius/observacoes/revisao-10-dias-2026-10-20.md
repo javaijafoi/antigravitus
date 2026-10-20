@@ -63,3 +63,42 @@ Pelo §4 do `PROTOCOLO.md`, uma regra só vale com verificação em script, test
 - `auditar_sessao.py`: **FALHA** (hoje é AVISO) para `ataque-sem-consider` contra um alvo que ainda não teve `consider` na sessão.
 - `devolutiva.py`: reprovar plano que marque uma FALHA do auditor como "justificada" sem citar a mudança de código que a evita.
 - `xadrez_cascata.py`: `consider` automático no primeiro encontro com cada peça, e parar a ida **antes** do segundo raio com vida < 100 (o §73 já pede isso).
+
+## Adendo — o último dia (20/10) e a Xeque-mate: o que já se sabia e foi refeito
+
+Pedido do autor: *"senti que o modelo ignorou quase todo o aprendizado e tentou reinventar a roda, principalmente na missão do xadrez"*. Fonte: `conhecimento.md` §18, §19 e §58 (todos anteriores a 20/10), `transcript_dia156_20261018_124258_79991b.jsonl` (13:31 a 13:36) e os transcripts de 20/10.
+
+### O ataque ao Rei de 20/10 já tinha sido feito em 18/10, quase igual
+
+| | 18/10 (Dia 156, Gemini) | 20/10 (Dia 157, Sonnet) |
+|---|---|---|
+| Abertura | `sleep` + `blindness` + `curse` + raios | `sleep` + `curse` + `blindness` + raios |
+| Kite de 1 raio | 13:33: dorme, 1 raio [55], sai **andando** (`s`): o Rei a pega na saída, 199 → 23 de vida | ida de 1 a 2 raios e `recall` |
+| Dano por raio | 55 a 79 | 67 a 83 |
+| Vida perdida por rodada do Rei | 80 a 173 | 125 a 139 |
+| Barra de vida do Rei (10 segmentos) | cheia depois de 62 e 55; `{-<<<<>>>>>}` com ~200 somados; `{--<<<>>>>>}` com ~430 | `{-<<<<>>>>>}` depois de ~150; ainda `{-<<<<>>>>>}` depois de mais ~150 na ida seguinte (regenerou) |
+| Fim | morte no 4º raio da ida 3 (missão cancelada, §59) | morte na ida 3 (missão cancelada) |
+
+**O que estava escrito antes de 20/10:** o §58 já tinha a cascata inteira (peões → bispos F8/C8 → cavalos G8/B8 → torres A8/H8 → Rainha D8 → cetro), a geometria das casas, o Santuário do Rei e da Rainha, os "golpes mortais" de 60 a 75, o `sleep` funcionando nas peças grandes e a Armadura da Torre Negra ANTI-BOM. O plano 038 §4 resumiu: *"Dia 156: sono + cegueira + maldição + raios, morreu em 2 rodadas"*. Mesmo assim, os planos 037 a 040 trataram tudo isso como descoberta (§68, §69) e gastaram três cascatas de ~1h30 até chegar à conta "o kite não fecha", que o transcript de 18/10 já dava: **ao ritmo de 1 segmento em 10 a cada ~150 a 215 de dano, com o Rei regenerando entre as idas, seriam 25 a 35 raios seguidos.**
+
+### Outras rodas reinventadas no xadrez
+
+- **Cetros (45.998 de ouro):** a mochila já tinha um *Cetro do Bispo Negro* (plano 039 §2). Um `identify` nele, de graça, dava o que a compra revelou: BASTAO de `sanctuary`, ANTI-BOM.
+- **Lanças sem comprador:** a diretiva §4 e §11 já dizia que armeiro e ferreiro têm caixa finito. A personagem carregou 4 lanças (72 kg) por três sessões.
+- **Rotina do tabuleiro:** `rotinas/xadrez_v2.py` e `xadrez_v3.py` já iam ao tabuleiro e caçavam peões. Em vez de corrigir a triagem delas (o motivo da suspensão), as sessões escreveram laços em PowerShell no scratchpad, que perderam a posição e mataram em E1, e depois um módulo novo. O README manda melhorar a ferramenta existente (PROTOCOLO §2).
+- **Geometria do tabuleiro:** remapeada à mão em 20/10, embora o §58 já desse cada peça na sua casa.
+
+### Por que o aprendizado não passou de uma sessão para a outra
+
+1. **O §58 guardou adjetivos, não números.** "Efeito devastador", "funciona perfeitamente", "exige controle estrito". O dano por raio, a vida perdida por rodada e a barra do Rei ficaram só no transcript, onde ninguém procura.
+2. **A barra de vida do inimigo nunca foi lida.** O prompt de combate mostra `{<<<<<>>>>>} o Rei Negro`, o instrumento para medir se uma tática fecha. Nenhuma sessão citou a barra (a correção desta revisão também saiu dela: `mandabala.py --sobre` agora a mostra).
+3. **"Tática do autor" foi executada sem mostrar a ele que ela já tinha falhado.** O plano 039 registra o kite como "decidido pelo autor". A evidência de 18/10 (o kite de 1 raio quase matou na saída) devia ter ido para o autor antes da primeira ida, como manda o dever de questionar (§22.2), que vale também para o risco, não só para a ética.
+4. **`mandabala.py --sobre "Rei Negro"` achava o §58, mas não os transcripts.** Corrigido: o `--sobre` agora traz o histórico de combate (v1.7.10).
+
+### O que aprendi com o último dia
+
+1. **Antes de uma tática contra um chefe já enfrentado, puxar o histórico de combate dele nos transcripts**: cada comando contra o alvo, com a vida antes e depois e a barra dele. Se a tática já foi tentada, mostrar os números ao autor antes de ir.
+2. **Depois de cada luta contra chefe, gravar números no `conhecimento.md`**: dano por golpe, vida perdida por rodada, segmentos da barra, regeneração entre idas, raios necessários estimados. Adjetivo não serve de medida.
+3. **Ler a barra do inimigo em cada lance.** Se ela não se mexe em uma ida inteira, a tática não fecha: recall e parar.
+4. **`identify` no que já está na mochila antes de comprar** (e a compra cara pede o autor, §25).
+5. **Corrigir a rotina existente antes de escrever outra**, e nada de laço de jogo em PowerShell.

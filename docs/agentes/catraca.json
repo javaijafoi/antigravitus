@@ -319,6 +319,12 @@
       "arquivo": "automato/acoes/xadrez_cascata.py",
       "desde": "2026-10-20",
       "regra": "consider no primeiro encontro com cada peça; perigo duro para a etapa"
+    },
+    {
+      "id": "historico.combate",
+      "arquivo": "scripts/mandabala.py",
+      "desde": "2026-10-20",
+      "regra": "--sobre <alvo> traz o histórico de combate dos transcripts (lances, vida antes/depois, dano, barra do inimigo, morte) antes de repetir uma tática"
     }
   ]
 }
