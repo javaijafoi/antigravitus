@@ -1848,7 +1848,7 @@
         "n": "lv003"
       },
       "npcs": [],
-      "notes": "Portão gigantesco de ferro em arco de pedra. Dia 60: confronto fatal com Cavaleiro Branco na região; casa exata e posição atual da criatura não confirmadas. | Dia 157: o oeste leva a casa H5 (xadrez_H5); as 64 casas estao em xadrez_A1..xadrez_H8. | Dia 157: o oeste leva a casa H5 (xadrez_H5); as 64 casas estao em xadrez_A1..xadrez_H8.",
+      "notes": "Portão gigantesco de ferro em arco de pedra. Dia 60: confronto fatal com Cavaleiro Branco na região; casa exata e posição atual da criatura não confirmadas. | Dia 157: o oeste leva a casa H5 (xadrez_H5); as 64 casas estao em xadrez_A1..xadrez_H8. | Dia 157: o oeste leva a casa H5 (xadrez_H5); as 64 casas estao em xadrez_A1..xadrez_H8. | Dia 157: o oeste leva a casa H5 (xadrez_H5); as 64 casas estao em xadrez_A1..xadrez_H8. | Dia 157: o oeste leva a casa H5 (xadrez_H5); as 64 casas estao em xadrez_A1..xadrez_H8.",
       "discovered_in": "Ciclo II (Dia 18)",
       "visitas_registradas": 38,
       "fontes": [
@@ -1856,6 +1856,9 @@
       ],
       "arestas_do_levantamento": [
         "n"
+      ],
+      "aliases": [
+        "O Grande Tabuleiro de Xadrez de Midgaard"
       ]
     },
     {
@@ -14883,8 +14886,8 @@
       "name": "Uma Casa Preta",
       "layer": "novatos",
       "zone": "O Grande Tabuleiro de Xadrez",
-      "risk": "Medio",
-      "risk_code": "medium",
+      "risk": "Alto",
+      "risk_code": "danger",
       "icon": "♟️",
       "coords": {
         "x": -240,
@@ -14932,8 +14935,8 @@
       "name": "Uma Casa Preta",
       "layer": "novatos",
       "zone": "O Grande Tabuleiro de Xadrez",
-      "risk": "Medio",
-      "risk_code": "medium",
+      "risk": "Alto",
+      "risk_code": "danger",
       "icon": "♟️",
       "coords": {
         "x": 0,
@@ -14957,8 +14960,8 @@
       "name": "Uma Casa Branca",
       "layer": "novatos",
       "zone": "O Grande Tabuleiro de Xadrez",
-      "risk": "Medio",
-      "risk_code": "medium",
+      "risk": "Alto",
+      "risk_code": "danger",
       "icon": "♟️",
       "coords": {
         "x": 120,

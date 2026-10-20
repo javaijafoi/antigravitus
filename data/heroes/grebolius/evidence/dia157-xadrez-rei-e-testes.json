@@ -1,0 +1,29 @@
+{
+  "hero_id": "grebolius",
+  "day": 157,
+  "agent": "Claude Sonnet 5.5 (claude-sonnet-5-5)",
+  "via": "automato",
+  "recorded_on": "2026-10-20",
+  "source_kind": "sessao_ao_vivo",
+  "source": "automato/runtime/session_live_dia157_20261020_*.log; xadrez_cascata.py (peões a torres) e scripts de teste do scratchpad (teste_acorda.py, teste_bispos.py).",
+  "findings": {
+    "cascata": "Python rodou peões, bispos, cavalos e torres sem intervenção; Rainha já estava morta; Bispo pediu o cetro (score: Você deve entregar objeto ao personagem).",
+    "rei_kite": "sleep falhou na ida 1 (recall); idas 2 e 3 dormiram, 2 raios por ida (~70 cada) custaram 226->101->87 de vida; na ida 3 o Rei deu golpe mortal (-87) e matou. Missão cancelada.",
+    "acordar": "Peão, bispo e cavalo dormindo: curse e poison NÃO acordam; blindness ACORDA (bispo F8 e cavalo G8). Lançar magia dá EXP (curse 1.680, poison 960, blindness 780, sleep 900).",
+    "magias": "Sem dispel para a maga; poison reduz só força; color spray (36) 9d16+9; fireball (45).",
+    "cetros": "Cetro do Bispo Negro/Branco (22.999): bastão sanctuary 5 cargas, afeta os outros, não o usuário; Negro ANTI-BOM (choque), Branco ANTI-MAU. Dois comprados (45.998), um revendido por 3.000.",
+    "armor": "CA 121 -> 157 com armor; dura horas; agora em prepara.garantir_armor().",
+    "cruz_ansada": "Pescoço, máx-mana +10, máx-vida +5, ANTI-NEUTRO; vestida no lugar da coleira.",
+    "diretivas": "diretiva_de_jogo.md §25: compras acima de 5% do ouro só com permissão; armor no preparo; kite só com o Rei dormindo.",
+    "otimizacao": "xadrez_cascata.py: descanso só até 250 de mana, comida só com fome/sede, esperas curtas."
+  },
+  "state_end": {
+    "location": "O Templo de Midgaard",
+    "level": 33,
+    "hp": "211/211",
+    "mana": "500/500",
+    "gold_total": 33438,
+    "alignment": 486,
+    "closing": "save_confirmed=True, sleep_confirmed=True; driver parado; sem quit; sem pão"
+  }
+}

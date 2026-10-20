@@ -158,6 +158,30 @@ def ir_fonte():
     return True
 
 
+CA_COM_ARMOR = 140   # sem a magia a CA e' 112; com `armor`, 148 (dura horas)
+
+
+def ca_do_score(texto):
+    m = re.search(r'Classe de Armadura:\s*(-?\d+)', texto or '')
+    return int(m.group(1)) if m else None
+
+
+def garantir_armor():
+    """Mantem a magia `armor` ligada, como a comida: confere a CA e relanca se caiu.
+
+    O Templo bloqueia magia, entao o lance e' na Praca do Templo (`s` do Templo)."""
+    ca = ca_do_score(situacao()['texto'])
+    if ca is None or ca >= CA_COM_ARMOR:
+        return False
+    run('recall')
+    run('stand')
+    andar('s')
+    run("cast 'armor'")
+    nova = ca_do_score(situacao()['texto'])
+    print('[PREPARA] armor lancado: CA %s -> %s' % (ca, nova), flush=True)
+    return True
+
+
 def guardar_ouro():
     s = situacao()
     ouro = s['ouro'] or 0
@@ -362,6 +386,7 @@ def main():
     run('stand')
     print('[PREPARA] inicio (recarga)', flush=True)
 
+    garantir_armor()
     falta = precisa_repor()
     if not args.forcar and not any(falta[k] for k in ('pao', 'agua', 'banco')):
         print('[PREPARA] nada a recarregar (paes=%s agua=%s) - fome e sede sao do cuidar.py'

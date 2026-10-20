@@ -39,6 +39,10 @@ class TestVerificacao(unittest.TestCase):
         with self.assertRaises(xc.Perdida):
             xc.verificar_casa(F1, *xc.parse_casa('E1'))
 
+    def test_aviso_de_sede_antes_do_titulo(self):
+        com_sede = "Você está morrendo de sede! (-3hp, -6mn e -2mv)\n" + F1
+        xc.verificar_casa(com_sede, *xc.parse_casa('F1'))
+
     def test_cor_errada_e_pega(self):
         with self.assertRaises(xc.Perdida):
             xc.verificar_casa(MEIO, *xc.parse_casa('D4'))   # D4 = 4+4 par = Preta, texto Branca
@@ -68,6 +72,29 @@ class TestVerificacao(unittest.TestCase):
         self.assertEqual(xc.cor_casa(*xc.parse_casa('D8')), 'Preta')
 
 
+class TestPresenca(unittest.TestCase):
+    CADAVER = ("O corpo de o Cavaleiro Negro está jogado aqui, todo chamuscado.\n"
+               "(x11) A Lança do Cavaleiro Negro está aqui, aguardando para ser empunhada.\n")
+    VIVO = "Aqui está um magnífico cavaleiro negro, te olhando com desprezo.\n"
+
+    def casa(self, chave, texto):
+        import re
+        return re.search(xc.PRESENCA[chave], xc.normalizar(texto)) is not None
+
+    def test_lanca_e_cadaver_nao_sao_cavaleiro_vivo(self):
+        self.assertFalse(self.casa('cavaleiro', self.CADAVER))
+        self.assertTrue(self.casa('cavaleiro', self.VIVO))
+        self.assertTrue(self.casa('cavaleiro', "O Cavaleiro Negro está aqui, lutando contra VOCÊ!"))
+
+    def test_bispo_cadaver_nao_conta(self):
+        self.assertFalse(self.casa('bispo', "O corpo totalmente dilacerado de o Bispo Negro está jogado aqui, às moscas."))
+        self.assertTrue(self.casa('bispo', "O Bispo Negro está aqui."))
+
+    def test_rainha_dormindo(self):
+        self.assertTrue(self.casa('rainha', "A Rainha Negra está dormindo aqui."))
+        self.assertFalse(self.casa('rainha', "O corpo de a Rainha Negra está jogado aqui."))
+
+
 class TestCaminho(unittest.TestCase):
     def test_nunca_passa_por_casas_proibidas(self):
         for destino in ('F1', 'A8', 'H8', 'D7', 'C8', 'A1', 'H1', 'F8'):
@@ -78,6 +105,26 @@ class TestCaminho(unittest.TestCase):
                 casa = (casa[0] + dc, casa[1] + df)
                 if xc.nome_casa(*casa) != destino:
                     self.assertNotIn(xc.nome_casa(*casa), xc.PROIBIDAS)
+
+    def test_fileira_1_toda_proibida_menos_F1_e_H1(self):
+        for c in 'ABCDEG':
+            self.assertIn(c + '1', xc.PROIBIDAS)
+        self.assertNotIn('F1', xc.PROIBIDAS)
+        self.assertNotIn('H1', xc.PROIBIDAS)
+
+    def test_rota_f1_pela_borda_leste(self):
+        casa, vistas = xc.parse_casa('H5'), []
+        for d in xc.ROTA_F1:
+            dc, df = xc.DIRS[d]
+            casa = (casa[0] + dc, casa[1] + df)
+            vistas.append(xc.nome_casa(*casa))
+        self.assertEqual(vistas, ['H4', 'H3', 'H2', 'G2', 'F2', 'F1'])
+
+    def test_vida_abaixo_de_100_so_recall(self):
+        f7 = G7.replace('mármore preto', 'mármore branco').replace('Uma Casa Preta', 'Uma Casa Branca')
+        tab = xc.Tabuleiro('G7', lambda d: (f7, {'hp': 80}, False))
+        with self.assertRaises(xc.Perdida):
+            tab.passo('w')
 
     def test_F1_vem_por_F2(self):
         rota = xc.caminho_grade('H5', 'F1')
@@ -102,6 +149,24 @@ class TestCaminho(unittest.TestCase):
         # de F2 vai para F1 mas a resposta e' a de E1 (o erro da morte #12)
         with self.assertRaises(xc.Perdida):
             xc.Tabuleiro('F2', lambda d: (E1, {}, False)).passo('s')
+
+    def test_resposta_vazia_confere_com_look(self):
+        f7 = G7.replace('mármore preto', 'mármore branco').replace('Uma Casa Preta', 'Uma Casa Branca')
+        chamadas = []
+
+        def run(c):
+            chamadas.append(c)
+            return ('', {}, False) if c == 'w' else (f7, {}, False)
+        tab = xc.Tabuleiro('G7', run)
+        tab.passo('w')
+        self.assertEqual(tab.casa, 'F7')
+        self.assertEqual(chamadas, ['w', 'look'])
+
+    def test_resposta_vazia_e_nao_andou_repete_uma_vez(self):
+        respostas = iter([('', {}, False), (G7, {}, False), (G7.replace('mármore preto', 'mármore branco').replace('Uma Casa Preta', 'Uma Casa Branca'), {}, False)])
+        tab = xc.Tabuleiro('G7', lambda c: next(respostas))
+        tab.passo('w')
+        self.assertEqual(tab.casa, 'F7')
 
     def test_recusa_levanta(self):
         tab = xc.Tabuleiro('F2', lambda d: ('Nah... você está muito relaxado..', {}, False))

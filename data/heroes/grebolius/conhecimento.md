@@ -2539,3 +2539,41 @@ Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: evidence/dia157-xadrez-cas
 - **Torres:** empilham em A8; sono nas duas, raios só em uma; a segunda pode só aparecer no repop (~30 min).
 - **Python do projeto:** `prepara.py --forcar` deposita ouro e revisa doações; `ressuscitar.py` ressuscita; nunca derrubar todos os Python (há um `http.server` de outro projeto na porta 8768).
 - **Charm person** não vale em alvos com Santuário (Rainha e Rei), mesmo que o nível permita.
+
+
+## 72. Regras do tabuleiro ditadas pelo autor (Dia 157, 2026-10-20)
+
+Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Diretiva do autor Peter depois da morte #12.
+
+- **O Rei Branco (E1) mata quem entra visível.** Sem a invisibilidade ele ataca na hora; com a Xeque-mate ativa ainda grita "Herege! Você deu xeque-mate no rei errado!". Nunca entrar nem parar em E1.
+- **Nunca descer até a fileira 1 numa coluna qualquer.** A âncora é a borda leste (coluna H): ir até H2 (ou H1), de lá `w w` até F2 e `s` para F1. As casas A1, B1, C1, D1, E1 e G1 são proibidas no `xadrez_cascata.py` e `danger` no `mapa.json`.
+- **Com a vida abaixo de 100, só `recall`.** Nada de andar nem de fugir pelo tabuleiro: o `Tabuleiro.passo` levanta e o chamador faz recall.
+
+## 73. Kite no Rei Negro falhou: morte do Rei, 12ª no score (Dia 157, 2026-10-20, quarta sessão)
+
+Agente: Claude Sonnet 5.5 (claude-sonnet-5-5).
+
+- A cascata em Python rodou até o fim (peões, bispos, cavalos, torres; a Rainha já estava morta) e o Bispo deu "Agora, é hora do xeque-mate"; `score tudo` mostrou "Você deve entregar objeto ao personagem".
+- `--etapa rei --rei --idas 3`: o `sleep` falhou (o Rei acorda/não dorme), cada ida deu 2 raios (~70 cada, a barra do Rei quase não mexeu) e custou ~125 de vida (226 → 101 → 87). Na ida 3 o Rei, em combate, deu "golpe mortal" (-87) e matou: morte #13, missão perdida. Conta: ~25 raios para um Rei com 1.500+ de vida e regeneração, contra 2 raios por ida; o kite de 1 a 2 raios por ida não fecha.
+- O módulo deve parar a ida com vida < 100 antes do segundo raio; hoje só confere depois. Nada de nova ida ao Rei sem tática nova (mais dano por rodada ou mais vida).
+- `ressuscitar.py` ficou parado no menu "Escolha uma das opções do menu!": mandar `_RAW 1` antes. Depois da morte: vida máxima 188 (penalidade), renasceu no Templo com 56.
+- **Magias contra o Rei (consulta no jogo, Dia 157):** não há dispel/cancellation para a maga; `poison` só reduz força em 2 (sem dano, inútil); `color spray` (nível 36) dá 9d16+9 (~85 por acerto, pouco acima do raio de ~70); `fireball` só no nível 45. Sanctuary corta o dano pela metade, então subir de nível não resolve sozinho: a Xeque-mate exige tática nova ou muito mais nível.
+
+## 74. Cetros da Loja de Magias e Cruz Ansada (Dia 157, 2026-10-20, quarta sessão)
+
+- **`cast 'armor'` dá CA 112 -> 148** e agora é lançado ao chegar em H5 (`xadrez_cascata.py`). Magia não funciona no Templo nem dentro da Loja de Magias ("Sua magia falha e desaparece").
+- **Cetro do Bispo Negro / Branco** (Loja de Magias, 22.999 cada, nível 13): BASTAO que conjura `sanctuary`, 5 cargas, SEGURAR, dano +1, máx-mana +5, armadura -1. O Negro é **ANTI-BOM** (choque: "Você toma um choque ao tentar vestir"); o Branco é **ANTI-MAU** e a personagem boa o segura. `use cetro` (alvo opcional) só "bate no chão três vezes": como staff, afeta os outros na sala e **não a mim**, e o score não mudou. Comprados dois por 45.998: não resolvem o Santuário em mim. O cetro do Rei é o objeto da missão; o da loja não serve de substituto.
+- **Cruz Ansada** (ANTI-NEUTRO): pescoço, máx-mana +10, máx-vida +5. Vestida no lugar da coleira do dragão (vida máx 226 -> 231).
+- Sacar do banco só no Templo (`recall`, `withdraw N`). Para tirar item da mochila vestida: `remove mochila`, `get X mochila`, `wear mochila`.
+
+## 75. Quem acorda um mob dormindo, e o resultado do kite no Rei (Dia 157, 2026-10-20, quarta sessão)
+
+Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: evidence/dia157-xadrez-rei-e-testes.json.
+
+- **Teste ao vivo, mob dormindo (sleep pegou antes):** `curse` NÃO acorda (peão, bispo, cavalo); `poison` NÃO acorda; **`blindness` ACORDA** (bispo F8 e cavalo G8). Ordem do autor para o próximo teste: sleep, curse, poison, blindness por último. O raio acorda por ser dano.
+- **Lançar magia em mob dá EXP** ("Você recebe N pontos de experiência"): sleep 900, curse 1.680, poison 960, blindness 780 por lance, cada vez.
+- **`sleep` só funciona fora de combate:** com o peão já atacando, "Você não conseguiu se concentrar!"; o `look` mostra "lutando contra você".
+- **Rei Negro:** a ida 1 não dormiu; nas idas 2 e 3 dormiu e acordou no primeiro raio; 2 raios (~70 cada) custaram ~125 de vida; na ida 3 morreu a 87 de vida (score: 12 mortes + 1 DT). O kite de 1 a 2 raios por ida não fecha a conta. O módulo agora faz 1 raio por ida.
+- **Esperas:** o `look` isolado pode trazer a mensagem "A noite começou." no lugar do título e quebrar o `navegar.py` ("esperava X, cheguei em A noite começou"); se acontecer, `recall` e refazer.
+- **`ressuscitar.py` trava no menu de morte**: mandar `_RAW 1` antes ("Escolha uma das opções do menu"); o `live_daemon` pode cair sozinho e deve ser reiniciado só ele (por PID).
+- **Tudo fecha sem pão:** a mochila ficou sem pão; `prepara.py --forcar` antes de sair.

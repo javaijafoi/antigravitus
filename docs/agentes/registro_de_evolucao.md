@@ -1139,3 +1139,10 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Como foi verificado:** suíte `unittest discover -s scripts`: 258 testes OK; `check_project.py`: 0 erros; sessão fechada com save e sleep.
 - **Custo:** a missão tem de ser refeita (~1h30). O módulo novo só foi testado nas partes puras; o fluxo ao vivo falta exercitar.
 - **Próximo:** plano 039.
+
+### 2026-10-20 · Dia 157, kite no Rei falhou, testes de "quem acorda" e rotina mais rápida · Claude Sonnet 5.5 (claude-sonnet-5-5)
+- **Mudou:** `automato/camadas/prepara.py` (`garantir_armor`), `automato/acoes/xadrez_cascata.py` (descanso e esperas mais curtos, 1 raio por ida), `scripts/test_prepara_armor.py`, `automato/CHANGELOG.md` v1.7.8, `diretiva_de_jogo.md` §25, `conhecimento.md` §73 a §75, `state.json`, `missoes.json`, `evidence/dia157-xadrez-rei-e-testes.json`, plano 040.
+- **Por que:** o autor pediu `armor` na rotina de preparo (dura horas), kite só com o Rei dormindo, compras acima de 5% do ouro só com permissão, e cobrou lentidão. Ele também pediu os testes de quais magias acordam um mob dormindo.
+- **Como foi verificado:** `unittest` de `test_prepara_armor` e `test_xadrez_cascata` (26 OK); testes ao vivo em peão, bispo e cavalo; sessão fechada com save e sleep, sem quit.
+- **Custo:** a Xeque-mate foi perdida de novo e o Rei não morreu; 45.998 de ouro gastos em dois cetros inúteis (um revendido por 3.000), contra a diretiva que o autor deu em seguida.
+- **Próximo:** plano 040 (decidir a tática do Rei com o autor antes de refazer a cascata).

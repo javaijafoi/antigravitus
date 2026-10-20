@@ -53,7 +53,7 @@ def risco(col, fil):
     nome = COLUNAS[col] + str(fil)
     if nome == 'E8' or nome == 'E1':
         return 'Extremo', 'danger'
-    if fil == 8 or nome in ('B1', 'G1'):
+    if fil == 8 or (fil == 1 and nome not in ('F1', 'H1')):
         return 'Alto', 'danger'
     return 'Medio', 'medium'
 
@@ -104,6 +104,9 @@ def aplicar(mapa):
     portao['exits']['w'] = 'xadrez_H5'
     portao['risk'] = 'Medio (so a passagem; o perigo esta em E8, E1, B1, G1 e na fileira 8)'
     portao['risk_code'] = 'medium'
+    aliases = set(portao.get('aliases') or [])
+    aliases.add('O Grande Tabuleiro de Xadrez de Midgaard')   # titulo real no jogo
+    portao['aliases'] = sorted(aliases)
     portao['notes'] = (portao.get('notes', '') + ' | Dia 157: o oeste leva a casa H5 (xadrez_H5); '
                        'as 64 casas estao em xadrez_A1..xadrez_H8.').strip(' |')
     mapa['total_rooms'] = len(mapa['rooms'])

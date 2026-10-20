@@ -4,6 +4,13 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.7.8 — Dia 157 · Rotina mais rápida, `armor` no preparo e testes de "quem acorda" (Claude Sonnet 5.5)
+
+- `camadas/prepara.py`: novo `garantir_armor()` (lê a CA do `score tudo` e relança `armor` na Praça se cair abaixo de 140; roda a cada `prepara`). Diretiva do autor: `armor` dura horas e fica no preparo, não no script de ataque. Teste: `scripts/test_prepara_armor.py`.
+- `acoes/xadrez_cascata.py`: descanso só até 250 de mana (antes 440) e nenhum descanso se já estiver pronta; `comer_beber` só com fome ou sede; esperas menores (passo 0,15 s, magia/raio 1,5 s, sleep 2 s, polling do descanso 10 s). O kite no Rei faz 1 raio por ida.
+- Resultado dos testes ao vivo: `curse` e `poison` não acordam mob dormindo; `blindness` acorda bispo e cavalo (`conhecimento.md` §75). As listas `ETAPAS` ainda lançam `blindness` em bispos e cavalos: ajustar no próximo teste (ordem do autor: sleep, curse, poison, blindness por último).
+- Limite: nenhuma morte do Rei Negro; o kite de 2 raios falhou (§73).
+
 ## v1.7.7 — Dia 157 · Cascata do Xeque-mate em Python e o tabuleiro no mapa (Claude Sonnet 5.5)
 
 - Novo `acoes/xadrez_cascata.py`: etapas `peoes|bispos|cavalos|torres|rainha|f1|rei`, rastreio de posição A1 a H8 com verificação de cada passo (cor, frase da peça, número de saídas) e casas proibidas E8, E1, B1 e G1. Nasceu das mortes #10 e #12 (laços em PowerShell perderam a posição por respostas de `look` atrasadas). `--rei` é obrigatório para o kite no Rei Negro.

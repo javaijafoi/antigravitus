@@ -322,3 +322,12 @@ O monitoramento mecânico do alinhamento moral atua apenas como última camada d
 - **A única trava é a maldição** (AGENTS #10, §15): `cast 'identify'` no objeto **antes** do `get`; flag `AMALDIÇOADO`/`NODROP` = deixar. Medido: Armadura da Torre Negra = **BRILHO AMALDIÇOADO** (proibida); Lança do Cavaleiro Negro (valor 10.000, ferreiro paga 4.000), armadura/espada de peão e Coroa da Rainha = limpas. Use seletor numerado (`get 2.armadura`) quando duas coisas partilham a palavra.
 - **Destino:** vender o que o comércio comprar (ferreiro só armas e tem caixa limitado: "Eu não posso pagar por uma arma dessas!"; armeiro só armaduras); guardar o resto na mochila **vestida**; item que vale **menos de 1.000** e não vende pode ser **doado** (Sala de Doações).
 - **Verificação no código:** `config.ESPOLIOS_PROIBIDOS`/`ESPOLIOS_LIMPOS`, `base.espolio_proibido()`, `base.guardar_na_mochila()` e a triagem de `rotinas/xadrez_v3.py` (que não usa mais `get all corpo` às cegas).
+
+## 25. COMPRAS ACIMA DE 5% DO OURO SÓ COM PERMISSÃO; `armor` NA ROTINA DE PREPARO; KITE SÓ COM O REI DORMINDO (diretivas do autor, Dia 157)
+
+> *"não compre nada que seja mais que 5% do ouro que temos sem me pedir (diretiva MUITO IMPORTANTE)"* · *"armor dura HORAS ... poderia estar em outra rotina, tipo, que nem comer e tudo, sempre verificar se está com armor, e não no script de atacar"* · *"no kite, se o sleep falhou, tem que sair, curar e tentar de novo, não dá pra começar a luta sem ele dormir"*
+
+- **Compra > 5% do ouro total (mão + banco): perguntar ao autor antes**, dizendo item, preço, motivo e risco. Vale para "comprar só para identificar". Custou caro no Dia 157: dois Cetros de Bispo (22.999 cada) que não serviam (o Negro é ANTI-BOM; bastão não protege quem usa). O lojista recomprou um por 3.000 e se recusa a recomprar bastão usado.
+- **`armor` fica no preparo**, como comida e água: `prepara.garantir_armor()` lê a CA do `score tudo` e relança se ficar abaixo de 140 (112 sem a magia, 148 com ela). O Templo bloqueia magia, então o lance é na Praça. O script de ataque não lança `armor`.
+- **Kite no Rei:** se o `sleep` falhar, `recall`, curar e tentar de novo; nunca iniciar a luta com ele acordado. Um raio por ida (`kite_rei`).
+- **Vender as lanças:** o ferreiro continua sem caixa ("Eu não posso pagar por uma arma dessas!"); o ouro gasto na Loja de Magias não chega a ele.

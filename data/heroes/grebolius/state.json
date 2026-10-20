@@ -5,7 +5,7 @@
     "day": 157,
     "verification": "live",
     "live_verified": true,
-    "source": "Sessão de 2026-10-20 (Dia 157) de Claude Sonnet 5.5 (claude-sonnet-5-5) (evidence/dia157-xadrez-cascata.json): cascata do Xeque-mate refeita até a Rainha Negra e perdida pela morte #12 (parada em E1, casa do Rei Branco); mapa do tabuleiro e rotina Python criados. Fechada com save e sleep confirmados no Templo, sem quit. Ouro 72.078 (67.301 banco + 4.777 mão); morreu 11 vezes e 1 DT; EXP 8.315.136; alinhamento 486."
+    "source": "Sessão de 2026-10-20 (Dia 157, quarta parte) de Claude Sonnet 5.5 (claude-sonnet-5-5) (evidence/dia157-xadrez-rei-e-testes.json): cascata refeita até o cetro (peões, bispos, cavalos, torres; Rainha já morta), kite no Rei Negro falhou e matou (score: 12 mortes e 1 DT), autoquest Xeque-mate cancelada. Testes de acordar: curse e poison não acordam bispo, cavalo nem peão; blindness acorda bispo e cavalo. Compra de dois Cetros de Bispo (45.998) sem serventia. Fechada com save e sleep confirmados no Templo, sem quit. Ouro 33.438 (32.513 banco + 925 mão); sem pão."
   },
   "level": 33,
   "mechanical_race": "Elfo",
@@ -18,12 +18,12 @@
   },
   "vitals": {
     "hp": {
-      "current": 226,
-      "max": 226
+      "current": 211,
+      "max": 211
     },
     "mana": {
-      "current": 426,
-      "max": 490
+      "current": 500,
+      "max": 500
     },
     "mv": {
       "current": 146,
@@ -31,10 +31,10 @@
     }
   },
   "experience": {
-    "current": 8315136,
+    "current": 8577141,
     "next_level": 9000000
   },
-  "gold": 72078,
+  "gold": 33438,
   "attributes": {
     "STR": 11,
     "DEX": 17,
@@ -44,10 +44,10 @@
     "CHA": 12
   },
   "armor": {
-    "base": 112,
-    "with_armor": 165,
+    "base": 121,
+    "with_armor": 157,
     "effect_verified": true,
-    "note": "CA 112 no score tudo de 2026-10-20 (Dia 157), tudo vestido, sem buffs; 148 com armor."
+    "note": "Dia 157: 121 sem a magia armor (Cruz Ansada no lugar da coleira) e 157 com ela; armor dura horas e fica em prepara.garantir_armor()."
   },
   "hitroll": 16,
   "damroll": 5,

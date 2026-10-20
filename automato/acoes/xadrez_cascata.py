@@ -30,7 +30,8 @@ sys.path.insert(0, str(RAIZ / 'automato' / 'camadas'))
 
 COLUNAS = 'ABCDEFGH'
 DIRS = {'n': (0, 1), 's': (0, -1), 'e': (1, 0), 'w': (-1, 0)}
-PROIBIDAS = {'E8', 'E1', 'B1', 'G1'}      # Rei Negro, Rei Branco, cavaleiros brancos
+PROIBIDAS = {'E8', 'A1', 'B1', 'C1', 'D1', 'E1', 'G1'}   # Rei Negro, Rei Branco (E1 mata quem entra visivel) e a fileira 1 inteira (menos F1 e H1)
+ROTA_F1 = ['s', 's', 's', 'w', 'w', 's']                  # de H5: H4, H3, H2, G2, F2, F1 (nunca pela fileira 1)
 RECUSAS = ('nao pode ir', 'muito relaxado', 'muito ocupado', 'voce esta dormindo', 'nao pode fazer isso dormindo')
 
 # frase que a casa mostra depois de "casa " (normalizada, sem acento); None = casa sem peca (fileiras 3 a 6)
@@ -99,9 +100,15 @@ def contar_saidas(texto):
     return len([p for p in re.split(r',| e ', m.group(1)) if p.strip()])
 
 
+def titulo_casa(texto):
+    """'Uma Casa Branca' ou 'Uma Casa Preta' onde quer que apareca (avisos de sede/fome podem vir antes)."""
+    m = re.search(r'Uma Casa (Branca|Preta)', texto or '')
+    return m.group(0) if m else titulo_sala(texto)
+
+
 def verificar_casa(texto, col, fil):
     """Levanta Perdida se o texto de chegada nao e' o da casa (col, fil). Pura: testavel sem jogo."""
-    t = titulo_sala(texto)
+    t = titulo_casa(texto)
     if normalizar(t) != normalizar('Uma Casa %s' % cor_casa(col, fil)):
         raise Perdida('titulo "%s" nao e a cor de %s' % (t, nome_casa(col, fil)))
     nome = nome_casa(col, fil)
@@ -160,8 +167,25 @@ class Tabuleiro:
         baixo = normalizar(texto)
         if any(r in baixo for r in RECUSAS):
             raise Perdida('passo %s recusado: %r' % (d, titulo_sala(texto)[:60]))
+        if 'Uma Casa' not in texto:
+            # resposta perdida ou atrasada: um look decide se andou (nova casa) ou nao (casa antiga)
+            time.sleep(1.5)
+            texto2, vitals2, combate2 = self.run('look')
+            try:
+                verificar_casa(texto2, nc, nf)
+                texto, vitals, combate = texto2, vitals2, combate2
+            except Perdida:
+                try:
+                    verificar_casa(texto2, self.col, self.fil)
+                except Perdida:
+                    raise Perdida('resposta vazia no passo %s e o look nao bate nem com %s nem com %s'
+                                  % (d, nome_casa(nc, nf), self.casa))
+                texto, vitals, combate = self.run(d)      # nao andou: repete uma vez
         verificar_casa(texto, nc, nf)
         self.col, self.fil = nc, nf
+        hp = (vitals or {}).get('hp')
+        if isinstance(hp, int) and 0 < hp < 100:
+            raise Perdida('vida %d < 100: so recall, nada de andar' % hp)
         return texto, vitals, combate
 
     def ir(self, destino, proibidas=PROIBIDAS):
@@ -171,7 +195,7 @@ class Tabuleiro:
         ultimo = ('', {}, False)
         for d in rota:
             ultimo = self.passo(d)
-            time.sleep(0.4)
+            time.sleep(0.15)
         return ultimo
 
 
@@ -197,6 +221,26 @@ def contar_no_log(padrao):
     return len(re.findall(padrao, p.read_text(encoding='utf-8', errors='replace')))
 
 
+def desde_aceite(padrao):
+    """Mortes (regex) contadas so' DEPOIS da ultima aceitacao da missao no log da sessao."""
+    p = log_atual()
+    if not p:
+        return 0
+    txt = p.read_text(encoding='utf-8', errors='replace')
+    i = txt.rfind('participar da aventura')
+    return len(re.findall(padrao, txt[i:] if i >= 0 else txt))
+
+
+def desde_marca(marca, padrao):
+    """Ocorrencias de `padrao` depois da ULTIMA `marca` no log da sessao (toda a sessao se nao houver marca)."""
+    p = log_atual()
+    if not p:
+        return 0
+    txt = p.read_text(encoding='utf-8', errors='replace')
+    i = txt.rfind(marca)
+    return len(re.findall(padrao, txt[i:] if i >= 0 else txt))
+
+
 def mortes(tipo):
     return contar_no_log(r'%s Negr[oa] est.{1,2} mort[oa]!' % tipo)
 
@@ -219,13 +263,17 @@ ETAPAS = {
     'rainha':  [('D8', 'rainha', 'Rainha', ['curse', 'blindness'], True)],
 }
 PRESENCA = {
-    'bispo': r'(o|a) bispo negro est.{1,2} aqui',
-    'cavaleiro': r'magn.fico cavaleiro negro|(o|a) cavaleiro negro est.{1,2} aqui',
+    'bispo': r'(?m)^(o|a) bispo negro est.{1,2} aqui',
+    'cavaleiro': r'(?m)^(aqui est.{1,2} um magn.fico cavaleiro negro|(o|a) cavaleiro negro est.{1,2} aqui)',
     'torre': r'castelo negro',
-    'rainha': r'a rainha negra est.{1,2} (aqui|dormindo)',
+    'rainha': r'(?m)^a rainha negra est.{1,2} (aqui|dormindo)',
 }
+# frase com que o Bispo Branco abre cada etapa: as mortes valem so' depois da ultima vez que ele a disse
+ORDEM = {'bispos': 'Elimine os dois bispos', 'cavalos': 'elimine os cavaleiros negros',
+         'torres': 'Elimine as duas torres', 'rainha': 'elimine a Rainha Negra'}
 LIMITE_VIDA = 150
 HP_MIN_ENTRAR = 215
+MANA_MIN_ENTRAR = 250   # uma ida gasta 100 a 170; descansar ate' 440 so' desperdicava minutos
 
 
 class Ctx:
@@ -244,16 +292,36 @@ class Ctx:
     def no_templo(self):
         return 'templo de midgaard' in normalizar(titulo_sala(self.sala()))
 
-    def comer_beber(self):
-        for c in ('eat pao', 'drink cantil'):
-            self.cmd(c, 1.5)
+    def garantir_templo(self, tentativas=3):
+        """Confere o Templo; se nao estiver, faz recall e confere de novo (o look pode chegar atrasado)."""
+        for i in range(tentativas):
+            texto = self.sala()
+            if not texto.strip():
+                raise Perdida('driver desconectado (resposta vazia): reinicie o live_daemon so pelo PID e confira a missao')
+            if 'templo de midgaard' in normalizar(titulo_sala(texto)):
+                return True
+            self.cmd('recall', 4)
+            time.sleep(2)
+        return self.no_templo()
 
-    def descansar(self, hp_min=HP_MIN_ENTRAR, mn_min=440, max_s=420):
-        self.cmd('wake', 1)
-        self.cmd('rest', 1)
+    def comer_beber(self):
+        """So' come/bebe com fome ou sede (o driver reporta); None = nao sei, entao come por seguranca."""
+        import base
+        sup = base.suprimentos()
+        if sup.get('fome') in (False, 'nao', 0) and sup.get('sede') in (False, 'nao', 0):
+            return
+        for c in ('eat pao', 'drink cantil'):
+            self.cmd(c, 0.8)
+
+    def descansar(self, hp_min=HP_MIN_ENTRAR, mn_min=MANA_MIN_ENTRAR, max_s=420):
+        _t, vit0, _c = self.run('look')
+        if vida(vit0) >= hp_min and mana(vit0) >= mn_min:
+            return vit0          # ja' pronta: nada de descansar
+        self.cmd('wake', 0.5)
+        self.cmd('rest', 0.5)
         t0, vit = time.time(), {}
         while time.time() - t0 < max_s:
-            time.sleep(20)
+            time.sleep(10)
             texto, vit, combate = self.run('look')
             if combate or 'lutando contra voce' in normalizar(texto):
                 raise Perdida('atacada enquanto descansava')
@@ -287,25 +355,28 @@ def esperar_presenca(ctx, tipo, max_s=720):
     return None
 
 
-def atacar_peca(ctx, tab, casa, alvo, tipo, magias, dorme, meta, log=print):
+def atacar_peca(ctx, tab, casa, alvo, tipo, magias, dorme, meta, log=print, espera=True):
     """Uma ida: chega na casa, dorme (se for o caso), debuffs, raios com limite de vida. Devolve o resultado."""
     tab.ir(casa)
     m0 = mortes(tipo)
     entrada = ctx.cmd('look', 0.5)[0]
     pat = PRESENCA[alvo]
     if not re.search(pat, normalizar(entrada)):
+        if not espera:
+            log('  %s: sem %s agora; tento a outra casa' % (casa, alvo))
+            return 'ausente'
         log('  %s: sem %s agora; esperando o repop' % (casa, alvo))
         entrada = esperar_presenca(ctx, alvo)
         if entrada is None:
             return 'ausente'
     if dorme:
-        ctx.cmd("cast 'sleep' %s" % ('1.' + alvo if alvo == 'torre' else alvo), 4)
+        ctx.cmd("cast 'sleep' %s" % ('1.' + alvo if alvo == 'torre' else alvo), 2)
         if alvo == 'torre' and len(re.findall('castelo negro', normalizar(entrada))) >= 2:
-            ctx.cmd("cast 'sleep' 2.torre", 4)
+            ctx.cmd("cast 'sleep' 2.torre", 2)
     for m in magias:
-        ctx.cmd("cast '%s' %s" % (m, alvo), 3)
+        ctx.cmd("cast '%s' %s" % (m, alvo), 1.5)
     for i in range(1, 9):
-        texto, vit, combate = ctx.cmd("cast 'lightning bolt' %s" % ('1.torre' if alvo == 'torre' else alvo), 3)
+        texto, vit, combate = ctx.cmd("cast 'lightning bolt' %s" % ('1.torre' if alvo == 'torre' else alvo), 1.5)
         h = vida(vit)
         log('  raio %d vida=%s mana=%s mortes=%d' % (i, h, mana(vit), mortes(tipo)))
         if mortes(tipo) > m0:
@@ -320,30 +391,32 @@ def cumprir_etapa(nome, log=print):
     ctx = Ctx()
     alvos = ETAPAS[nome]
     tipo = alvos[0][2]
-    meta = mortes(tipo) + len(alvos)
-    log('etapa %s: mortes de %s agora=%d, meta=%d' % (nome, tipo, mortes(tipo), meta))
+    padrao_morte = r'%s Negr[oa] est.{1,2} mort[oa]!' % tipo
+    feitas = lambda: desde_marca(ORDEM[nome], padrao_morte)   # noqa: E731
+    meta = len(alvos)
+    log('etapa %s: mortes de %s desde a ordem=%d, meta=%d' % (nome, tipo, feitas(), meta))
     for tentativa in range(1, 31):
-        if mortes(tipo) >= meta:
+        if feitas() >= meta:
             log('etapa %s cumprida' % nome)
             return 0
-        if not ctx.no_templo():
-            raise Perdida('as idas comecam no Templo; recall antes')
+        if not ctx.garantir_templo():
+            raise Perdida('nao consegui confirmar o Templo')
         ctx.comer_beber()
         ctx.descansar()
         ctx.ir_h5()
         ctx.cmd("cast 'invisibility'", 3)
         tab = Tabuleiro('H5', ctx.run)
         for casa, alvo, tp, magias, dorme in alvos:
-            if mortes(tipo) >= meta:
+            if feitas() >= meta:
                 break
             try:
-                res = atacar_peca(ctx, tab, casa, alvo, tp, magias, dorme, meta, log)
+                res = atacar_peca(ctx, tab, casa, alvo, tp, magias, dorme, meta, log, espera=(tentativa % 2 == 0))
             except Perdida as e:
                 log('POSICAO INCERTA: %s -> recall' % e)
                 ctx.recall()
                 return 3
             log('ida %d %s: %s' % (tentativa, casa, res))
-            if res in ('recall', 'ausente'):
+            if res == 'recall':
                 break
         ctx.recall()
     return 1
@@ -352,10 +425,12 @@ def cumprir_etapa(nome, log=print):
 def varrer_peoes(meta_mortes=9, log=print):
     """Etapa 1: varre as fileiras 7 a 2 matando peoes negros ate' somar `meta_mortes` mortes no log."""
     ctx = Ctx()
-    base = contar_no_log(r'Pe.{1,2}o Negro do Tabuleiro est.{1,2} morto!')
-    alvo = base + meta_mortes
-    if not ctx.no_templo():
-        raise Perdida('a varredura comeca no Templo; recall antes')
+    base = desde_aceite(r'Pe.{1,2}o Negro do Tabuleiro est.{1,2} morto!')
+    log('peoes: %d mortes desde a aceitacao; meta %d' % (base, meta_mortes))
+    if base >= meta_mortes:
+        return 0
+    if not ctx.garantir_templo():
+        raise Perdida('nao consegui confirmar o Templo')
     ctx.comer_beber()
     ctx.descansar()
     ctx.ir_h5()
@@ -375,7 +450,7 @@ def varrer_peoes(meta_mortes=9, log=print):
                     if 'em que voce' in normalizar(t2):
                         break
                 time.sleep(2)
-            feitas = contar_no_log(r'Pe.{1,2}o Negro do Tabuleiro est.{1,2} morto!') - base
+            feitas = desde_aceite(r'Pe.{1,2}o Negro do Tabuleiro est.{1,2} morto!')
             if feitas >= meta_mortes:
                 log('peoes: %d mortes desde o inicio' % feitas)
                 ctx.recall()
@@ -386,6 +461,7 @@ def varrer_peoes(meta_mortes=9, log=print):
                 ctx.recall()
                 return 1
         sentido = -sentido
+    log('peoes: fim da varredura com %d mortes; recall' % desde_aceite(r'Pe.{1,2}o Negro do Tabuleiro est.{1,2} morto!'))
     ctx.recall()
     return 1
 
@@ -397,8 +473,8 @@ def kite_rei(idas=1, log=print):
         if mortes('Rei') > 0:
             log('o Rei Negro ja morreu')
             return 0
-        if not ctx.no_templo():
-            raise Perdida('o kite comeca no Templo; recall antes')
+        if not ctx.garantir_templo():
+            raise Perdida('nao consegui confirmar o Templo')
         ctx.comer_beber()
         ctx.descansar(hp_min=222, mn_min=460)
         ctx.ir_h5()
@@ -417,7 +493,7 @@ def kite_rei(idas=1, log=print):
                 continue
             for magia in ('curse', 'blindness'):
                 ctx.cmd("cast '%s' rei" % magia, 3)
-            for i in (1, 2):
+            for i in (1,):   # tatica do autor: 1 raio por ida
                 _t, vit, _c = ctx.cmd("cast 'lightning bolt' rei", 3)
                 h = vida(vit)
                 log('  raio %d vida=%s mana=%s' % (i, h, mana(vit)))
@@ -442,9 +518,13 @@ def main(argv=None):
     try:
         if a.etapa == 'f1':
             ctx = Ctx()
+            ctx.comer_beber()
             ctx.ir_h5()
             tab = Tabuleiro('H5', ctx.run)
-            tab.ir('F1')
+            for d in ROTA_F1:          # ancora pela borda leste: H2, depois w w ate' F2 e s para F1
+                tab.passo(d)
+                time.sleep(0.4)
+            assert tab.casa == 'F1'
             print('em F1')
             return 0
         if a.etapa == 'peoes':
@@ -456,7 +536,11 @@ def main(argv=None):
             return kite_rei(a.idas)
         return cumprir_etapa(a.etapa)
     except Perdida as e:
-        print('PARADO: %s' % e)
+        print('PARADO: %s -> recall' % e)
+        try:
+            Ctx().recall()
+        except Exception as e2:   # noqa: BLE001 - o recall e' o ultimo recurso
+            print('recall falhou: %s' % e2)
         return 3
 
 

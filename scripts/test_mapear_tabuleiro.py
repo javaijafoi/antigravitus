@@ -41,6 +41,12 @@ class TestTabuleiro(unittest.TestCase):
                 if destino in self.salas:
                     self.assertEqual(self.salas[destino]['exits'][oposto[d]], sala['id'])
 
+    def test_fileira_1_perigosa_menos_F1_e_H1(self):
+        for c in 'ABCDEG':
+            self.assertEqual(self.salas['xadrez_%s1' % c]['risk_code'], 'danger')
+        self.assertNotEqual(self.salas['xadrez_F1']['risk_code'], 'danger')
+        self.assertNotEqual(self.salas['xadrez_H1']['risk_code'], 'danger')
+
     def test_riscos_do_rei(self):
         self.assertEqual(self.salas['xadrez_E8']['risk_code'], 'danger')
         self.assertEqual(self.salas['xadrez_E8']['risk'], 'Extremo')
@@ -56,6 +62,7 @@ class TestTabuleiro(unittest.TestCase):
         self.assertEqual(mapa['rooms'][0]['exits']['w'], 'xadrez_H5')
         self.assertEqual(mapa['total_rooms'], 65)
         self.assertEqual(mapa['rooms'][0]['risk_code'], 'medium')
+        self.assertIn('O Grande Tabuleiro de Xadrez de Midgaard', mapa['rooms'][0]['aliases'])
 
 
 if __name__ == '__main__':
