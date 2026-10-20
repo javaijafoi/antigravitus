@@ -2494,3 +2494,18 @@ Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: automato/runtime/session_l
 - **Xeque-mate (Bispo Branco em F1):** convite chega por temporizador do NPC; `say sim` duas vezes ("Entendido?"). O texto do `score tudo` fica "matar criaturas" em todas as etapas; o sinal de avanço é o Bispo falar ao retorno. Etapas já cumpridas hoje: peões → 2 bispos → 2 cavaleiros → 2 torres. A Rainha Negra morreu por **sangramento** no 1º ataque e a etapa não avançou; matá-la de novo com golpe final do próprio raio. As peças negras renascem (peões a cada poucos minutos, bispo, torre, rainha).
 - **Rei Negro (E8):** ~1.500 de vida estimada, acorda ao primeiro raio, até 3 "golpes mortais" por rodada (54–72 cada, ~190); `sleep` não pode ser relançado em combate ("Você não tem tempo de se concentrar!"). `recall` funciona em combate; o `wimpy 45` foge a tempo. A vida do alvo regenera devagar entre as visitas (kite viável).
 - **Perigos:** o Cavaleiro Branco (B1) ataca quem passa visível; entrar em E8 por engano custa ~100 de vida. Saídas do `play.py` podem chegar atrasadas: conferir a sala pelo log do daemon antes de andar em lote.
+
+## 69. Xeque-mate refeita até o cetro, o Rei Negro e o Cavaleiro Branco (Dia 157, 2026-10-20)
+
+Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: evidence/dia157-xadrez-etapa6.json.
+
+- **Reaceita:** Bispo Branco em F1; convite "Vamos dar um xeque-mate...": `say sim`; "Entendido?": `say sim`. Cascata: peões, 2 bispos, 2 cavalos, 2 torres, Rainha, e a etapa 6 (cetro do Rei Negro).
+- **Peões:** reaparecem e vagam pelo tabuleiro. O Bispo só avança quando todos os peões vivos morrem; varrer as fileiras 1 a 7 antes de voltar a F1. Gastam muita mana se forem tratados a raio: 2 raios por peão.
+- **Geometria (colunas A a H de oeste a leste, fileiras 1 a 8 de sul a norte):** entrada em H5; F1 = Bispo Branco; H1 Torre do Rei Branco; A1 Torre da Rainha Branca; fileira 8 preta: A8 Torre da Rainha, B8 Cavalo da Rainha, C8 Bispo da Rainha, D8 Rainha (saída oculta `baixo` para a Tesouraria Negra), E8 REI, F8 Bispo do Rei, G8 Cavalo do Rei, H8 Torre do Rei. Nunca entrar em E8 sem plano: custou 93 de vida só na entrada.
+- **Rei Negro:** acorda no primeiro raio, até 3 golpes mortais por rodada (54 a 72), cerca de 1.500+ de vida, Santuário. Movimento é bloqueado em combate ("muito ocupado"); só `flee` (perde EXP) ou o recall do driver abaixo de 45 de vida.
+- **Rainha Negra:** cega e amaldiçoada, cai em ~10 raios, divididos em três idas (ela não segue quem sai). Dano dela 25 a 45 por rodada.
+- **Cavaleiro Branco:** ataca quem entra visível. Foi morto (+58.000 EXP) numa luta que ele começou e o alinhamento caiu 455 -> 402. Tratar peças brancas como boas; não atacar. Coroa da Rainha Branca é ANTI-MAU e a da Negra ANTI-BOM (identify).
+- **Armadura da Torre Negra:** `identify` = BRILHO AMALDIÇOADO ANTI-BOM NOBITS, 60 kg, valor 17.000. Proibida (diretiva §15).
+- **Ajuda Mágica:** Lemin não deu o convite em ~25 min; o convite vem por temporizador do NPC e a resposta é `say sim` (a sessão de 22:06 respondeu `ask ajuda`). Autor abandonou a missão.
+- **Concorrência:** outro agente (também Claude) comandou a mesma personagem durante a sessão e embaralhou as movimentações: eu concorri comigo mesmo. Conferir antes de conectar se já há driver no ar.
+- **Ideia a testar:** nível 33 libera `charm person`; com o Rei enfeitiçado, `order rei drop cetro` (ou `give`). Faltam 344.334 EXP.

@@ -1,0 +1,22 @@
+{
+  "hero_id": "grebolius",
+  "day": 157,
+  "agent": "Claude Sonnet 5.5 (claude-sonnet-5-5)",
+  "via": "automato",
+  "recorded_on": "2026-10-20",
+  "source_kind": "sessao_ao_vivo",
+  "source": "automato/runtime/transcript_dia157_20261019_235647_9b90bf.jsonl e session_live_dia157_20261019_235647_9b90bf.log; falas de missão respondidas à mão; outro agente comandou a mesma personagem em paralelo durante parte da sessão.",
+  "findings": {
+    "ajuda_magica": "Lemin não fez o convite ('Ei, com licença...') em ~25 minutos no Centro de Lyon; olhar Lemin NÃO é o gatilho, o convite chega por temporizador do NPC e a resposta é 'say sim'. Autor mandou largar a missão.",
+    "xeque_mate": "Reaceita com o Bispo Branco (F1): convite 'Vamos dar um xeque-mate...' -> say sim; 'Entendido?' -> say sim. Cascata refeita: peões -> 2 bispos -> 2 cavalos -> 2 torres -> Rainha -> etapa 6 (entregar o cetro). O Bispo só fala depois de TODOS os peões vivos terem morrido ao mesmo tempo (eles reaparecem e vagam) e depois de um atraso.",
+    "geometria_tabuleiro": "Entrada = H5 (casa branca, portão a leste). Sul: H4 preta, H3 branca, H2 preta (peão), H1 branca (Torre do Rei Branco). F1 = Bispo Branco. Norte de H5: H6, H7 (peão do Rei Negro), H8 (Torre do Rei Negro). Rei Negro em E8, Rainha em D8 (tem saída oculta 'baixo' para a Tesouraria Negra), Bispo do Rei F8, Cavalo do Rei G8, Bispo da Rainha C8, Cavalo da Rainha B8, Torre da Rainha A8. A1 = Torre da Rainha Branca.",
+    "rei_negro": "Acorda no primeiro raio; 3 'golpes mortais' por rodada (54-72 cada, ate ~190). Entrar na sala E8 sem querer custou 93 de vida. Tem Santuário e ~1.500+ de vida estimada.",
+    "rainha_negra": "Morta com sono (so antes de entrar), cegueira, maldição e ~10 raios em 3 idas; ela nao segue quem sai da sala. Dano dela ~25-45 por rodada.",
+    "cavaleiro_branco": "O Cavaleiro Branco (G1/B1) ataca quem entra visível. Morto por raio (+58.000 EXP) durante luta que ele começou; logo depois o alinhamento caiu 455 -> 402. Indício forte de que é do bem: nao atacar mais.",
+    "alinhamento_branco": "Coroa da Rainha Branca = ANTI-MAU; Coroa da Rainha Negra = ANTI-BOM. Detect alignment e magia de clerigo (nao disponivel); nao ha forma gratuita de ver aura.",
+    "armadura_torre_negra": "identify: BRILHO AMALDIÇOADO ANTI-BOM NOBITS, peso 60, valor 17000 -> PROIBIDO pegar (diretiva 15).",
+    "driver": "O play.py devolve respostas defasadas quando outro cliente comanda a mesma personagem; recall e fuga podem chegar tarde. Wimpy 45 e o driver trazem de volta ao Templo ao cair a vida.",
+    "cota": "mcp get_usage do Claude Code: janela de 5 h com 93% usada (restavam 7%) ao encerrar; semanal 7% usada."
+  },
+  "state_end": {"location": "O Templo de Midgaard", "hp": "199/199", "mana": "430/430", "exp": 7655666, "alignment": 434, "gold_total": 60509, "closing": "save_confirmed=True, sleep_confirmed=True; driver parado; sem quit"}
+}

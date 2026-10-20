@@ -10,7 +10,7 @@
 * **Raça Mecânica no MUD:** Elfo
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **32**
-* **Alinhamento Moral:** 393 (Bom)
+* **Alinhamento Moral:** 434 (Bom)
 * **Localização Atual:** O Templo de Midgaard (último registro: Dia 157)
 * **Acampamento Registrado:** O Templo de Midgaard
 * **Santuário de Referência:** O Panteao dos Centenarios
@@ -24,9 +24,9 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 | **Pontos de Mana (MP)** | 430 | 430 | 100% |
 | **Estamina / Movimento (MV)** | 145 | 145 | 100% |
 
-* **Experiência Acumulada:** **7.225.093 EXP**
-* **Experiência Necessária p/ Grau 33:** **774.907 EXP** (Meta: 8.000.000 EXP)
-* **Ouro Líquido:** **15.920 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **7.655.666 EXP**
+* **Experiência Necessária p/ Grau 33:** **344.334 EXP** (Meta: 8.000.000 EXP)
+* **Ouro Líquido:** **60.509 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 11
@@ -63,8 +63,8 @@ CA 165 no score final da sessão GPT com armor +36 e invisibility +40; base 89. 
 * **Todo Dia um Pouco — Concluída:** Missão diária do servidor Devil's Bob.
   * Próximo passo: Concluída integralmente no Dia 156. Baú de recompensas surpresa recebido e aberto, entregando um rosário sagrado ao herói.
 * **Xeque-mate — Ativa:** Autoquest de nível 30+, iniciada com o Bispo Branco no Grande Tabuleiro de Xadrez.
-  * Próximo passo: Avanço estruturado até a etapa 6: peões -> 2 bispos -> 2 cavalos -> 2 torres -> Rainha Negra (abatida com sono e cegueira). Instrução final alcançada: 'Agora, é hora do xeque-mate. Traga o cetro daquele rei nefasto como prova do seu feito'. Resetada ao renascer na Fonte da Vida; rota e mecânica completamente mapeadas para reexecução rápida no Capítulo 12.
-* **Ajuda Mágica — Bloqueada:** Ajudar Lemin a reconstruir o livro de magias de Merlin.
+  * Próximo passo: Etapa 6 ativa (entregar o cetro do Rei Negro). Reaceita em 2026-10-20 com o Bispo Branco (F1): say sim duas vezes. Cascata refeita: peões, 2 bispos (F8, C8), 2 cavalos (G8, B8), 2 torres (H8, A8), Rainha (D8, morta com raios após debuffs). Falta o Rei Negro (E8): acorda no primeiro raio e dá ~190/rodada. Plano: nível 33 -> charm person -> 'order rei drop cetro'. Morrer cancela a missão.
+* **Ajuda Mágica — Abandonada:** Ajudar Lemin a reconstruir o livro de magias de Merlin.
   * Próximo passo: 1) Reaceitar com Lemin, à mão, no Centro da Cidade de Lyon (navegar.py --de templo_midgaard --para cap12_026): olhar Lemin aciona o convite; aceitar; ouvir a pergunta inteira; responder Merlin só no fim da fala; ouvir o relato; responder às confirmações conferindo score tudo, até 'Ajuda Mágica: Você deve entregar objeto ao personagem.' (conhecimento §61 e §64). 2) Só então testar o livro de Jooh, já no inventário (pista a do Plano 034): give apenas com a etapa confirmada (AGENTS #13).
 
 Objetivos pessoais e investigações ficam separados das autoquests no catálogo de missões.
@@ -121,23 +121,21 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 ### Pendências de inventário
 
 ## ✦ Condições Registradas
-* Save e sono confirmados no Templo; conexão fechada sem quit.
-* Sem fome nem sede às 22:14 (cantil bebido no Templo); pães na mochila não reconferidos.
-* 9 mortes e 1 DT históricas; um combate não iniciado por ela (rato preto em Lyon) com queda de alinhamento 412 -> 393.
-* Ouro: 15.700 banco + 220 mão = 15.920 (gastos: rolo de pergaminho 103, seis pães 36). Peso 69/115 kg.
-* Ajuda Mágica INATIVA no servidor no login de 22:07 do Dia 157: score tudo sem [Autoquests em andamento]; autoquest listar a mostra como disponível, iniciada com Lemin. Causa desconhecida (segunda vez no dia; a primeira está no conhecimento §64). Nenhum give executado.
-* CA 125 no score tudo de 22:13, só com armor +36 (23 horas); invisibility ausente.
+* Save e sono confirmados no Templo; conexão fechada sem quit (Dia 157, 2026-10-20).
+* Sem fome nem sede ao fechar (pão comido, cantil cheio).
+* Xeque-mate ATIVA na etapa 6: 'Você deve entregar objeto ao personagem' (cetro do Rei Negro). Rainha e as duas torres já mortas nesta rodada; o Rei Negro (E8) está vivo.
+* Alinhamento 434. O Cavaleiro Branco (G1) foi morto por raio durante uma luta que ele começou: o alinhamento caiu 455 -> 402 logo depois; tratar as peças brancas como BOAS e não atacar mais.
+* Ouro 60.509 (15.700 banco + 44.809 mão): veio de outro agente na mesma sessão; origem exata não auditada.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
-**Capítulo 12: reconstruir o livro de Merlin**
-Reaceitar Ajuda Mágica com Lemin, à mão (cadeia no conhecimento §61/§64: olhar Lemin aciona o convite; aceitar; ouvir a pergunta inteira; responder Merlin só no fim da fala; ouvir o relato; responder às confirmações conferindo score tudo), confirmar 'Você deve entregar objeto ao personagem' em score tudo e só então testar o livro de Jooh. Nunca entregar sem a etapa.
-* Missão inativa no servidor: reaceitar com Lemin antes de qualquer give.
-* Fonte do tomo ainda não identificada; o livro de Jooh é só um teste barato (guia de equipamentos, não confirmado como o tomo).
-* Conferir os pães dentro da mochila (look in mochila): não foram reconferidos nesta sessão.
-* Revalidar buffs com score tudo (armor com 23 horas às 22:13; invisibility ausente).
+**Capítulo 12: Xeque-mate, cetro do Rei Negro**
+Subir ao nível 33 (faltam 344.334 EXP) matando peças negras que reaparecem; no 33, praticar charm person, enfeitiçar o Rei Negro (E8) e usar 'order rei drop cetro'; entregar o cetro ao Bispo Branco (F1). Ver planos/plano037.md.
+* Chegar ao nível 33 (faltam 344.334 EXP) para ter charm person.
+* Manter vida, mana, comida e água cheias; renovar armor e invisibility antes de entrar no tabuleiro.
+* Conferir antes de conectar que nenhum outro agente está no driver.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessões do Capítulo 12 em 2026-10-19: GPT-6 / Codex (evidence/dia157-cap12.json) e Claude Sonnet 5.5 (evidence/dia157-biblioteca.json, dia157-lemin-reativacao.json, dia157-jareth-varredura.json). Última conexão fechada com save e sleep confirmados no Templo, sem quit; Ajuda Mágica ativa na etapa de entrega. Sessão seguinte (Claude Opus 5.5, Plano 033, evidence/dia157-biblioteca-paris.json): uma conexão, encerrada no Templo com save e sleep confirmados, sem quit; missão ainda na etapa de entrega. Sessão seguinte (Claude Haiku 5.5, Plano 034, evidence/dia157-handoff-lyon.json): uma conexão (transcript_dia157_20261019_220653_b7ecb1.jsonl) fechada com save e sleep confirmados; missão encontrada inativa; livro de Jooh pego. Uma segunda conexão, aberta depois do handoff, ficou parada no Centro de Lyon e foi fechada às 22:23 por Claude Opus 5.5 (recall + _CLOSE sleep, save e sleep confirmados; transcript_dia157_20261019_221556_ac6f76.jsonl). Estado conferido no score tudo de 22:13 e no inventory de 22:14..
+Fonte do estado: Sessão de 2026-10-20 (Dia 157) de Claude Sonnet 5.5 (claude-sonnet-5-5) (evidence/dia157-xadrez-etapa6.json): Xeque-mate retomada até a etapa final; conexão fechada no Templo com save e sleep confirmados (transcript_dia157_20261019_235647_9b90bf.jsonl), sem quit. Houve outro agente comandando a mesma personagem em paralelo durante a sessão. Valores do score tudo final: 199/430/145, EXP 7.655.666, alinhamento 434, ouro 60.509 (15.700 banco + 44.809 mão)..
 * A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.
 * O colar com pedra purpura pertence a outro dono: o servidor recusa o uso. Nenhum comerciante testado o compra.
 * Bainha de Excalibur exige nivel 85 (vista na Sala de Doacoes, nao pode ser carregada com a carga atual). Scutum de Carvalho exige nivel 35.

@@ -532,16 +532,21 @@
       "title": "Xeque-mate",
       "type": "official",
       "status": "active",
-      "accepted_day": 156,
-      "last_progress_day": 156,
+      "accepted_day": 157,
+      "last_progress_day": 157,
       "objective": "Autoquest de nível 30+, iniciada com o Bispo Branco no Grande Tabuleiro de Xadrez.",
-      "next_step": "Avanço estruturado até a etapa 6: peões -> 2 bispos -> 2 cavalos -> 2 torres -> Rainha Negra (abatida com sono e cegueira). Instrução final alcançada: 'Agora, é hora do xeque-mate. Traga o cetro daquele rei nefasto como prova do seu feito'. Resetada ao renascer na Fonte da Vida; rota e mecânica completamente mapeadas para reexecução rápida no Capítulo 12.",
+      "next_step": "Etapa 6 ativa (entregar o cetro do Rei Negro). Reaceita em 2026-10-20 com o Bispo Branco (F1): say sim duas vezes. Cascata refeita: peões, 2 bispos (F8, C8), 2 cavalos (G8, B8), 2 torres (H8, A8), Rainha (D8, morta com raios após debuffs). Falta o Rei Negro (E8): acorda no primeiro raio e dá ~190/rodada. Plano: nível 33 -> charm person -> 'order rei drop cetro'. Morrer cancela a missão.",
       "reward": "EXP massiva em cascata (mais de 150.000 EXP acumulada)",
       "evidence": [
         {
           "document": "evidence/dia156q.json",
           "day": 156,
           "note": "Progressão épica da autoquest Xeque-mate no Grande Tabuleiro de Xadrez até a etapa do Rei Negro. Abate da Rainha Negra e saque da Coroa da Rainha Negra. Agente: Gemini 3.8 Flash (High)."
+        },
+        {
+          "document": "evidence/dia157-xadrez-etapa6.json",
+          "day": 157,
+          "note": "Cascata refeita até a etapa do cetro. Agente: Claude Sonnet 5.5 (claude-sonnet-5-5)"
         }
       ]
     },
@@ -549,12 +554,12 @@
       "id": "ajuda-magica",
       "title": "Ajuda Mágica",
       "type": "official",
-      "status": "blocked",
+      "status": "abandoned",
       "accepted_day": 157,
       "last_progress_day": 157,
       "objective": "Ajudar Lemin a reconstruir o livro de magias de Merlin.",
       "next_step": "1) Reaceitar com Lemin, à mão, no Centro da Cidade de Lyon (navegar.py --de templo_midgaard --para cap12_026): olhar Lemin aciona o convite; aceitar; ouvir a pergunta inteira; responder Merlin só no fim da fala; ouvir o relato; responder às confirmações conferindo score tudo, até 'Ajuda Mágica: Você deve entregar objeto ao personagem.' (conhecimento §61 e §64). 2) Só então testar o livro de Jooh, já no inventário (pista a do Plano 034): give apenas com a etapa confirmada (AGENTS #13).",
-      "blocker": "Ajuda Mágica INATIVA no servidor no login de 22:07 do Dia 157: score tudo sem [Autoquests em andamento]; autoquest listar a mostra como disponível, iniciada com Lemin. Causa desconhecida (segunda vez no dia; a primeira está no conhecimento §64). Depois de reaceita, segue o bloqueio do tomo: Fonte do tomo desconhecida. Descartados com observação: lojas de Lyon, Midgaard e Jareth (Pergaminhos e Afins só tem um rolo de pergaminho, que é nota), Biblioteca da cidade de Jareth (achada no Caminho de Tábuas, sem tomo), biblioteca do Lorde, Paris, alas da catedral, A Pequena Capela e as casas de Lyon. Abertos: O Campanário da Catedral (entrada não achada), QG trancado dos Mosqueteiros, carruagem para o centro de Paris, Torre da Magia, livros-guia da Sala de Doações.",
+      "blocker": "Abandonada por decisão do autor em 2026-10-20 (Dia 157). Lemin não fez o convite nesta sessão apesar de várias tentativas; o convite chega por temporizador do NPC e a resposta é 'say sim' (um agente anterior respondeu 'ask ajuda'). Reabrir só se o autor pedir.",
       "reward": "Desconhecida; não houve conclusão.",
       "evidence": [
         {

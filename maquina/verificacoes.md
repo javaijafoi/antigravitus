@@ -285,3 +285,11 @@ Agente da sessão: Claude Haiku 5.5 (claude-haiku-5-5); registro de Claude Opus 
 - **Sala de Doações de Midgaard bloqueia magia:** `cast 'identify' livro` → "Certo. / Sua magia falha e desaparece." duas vezes, a mesma resposta do Templo.
 - **`ask <npc> <palavra>` pode não ter resposta nenhuma:** `ask lemin ajuda` devolveu só o eco "Você pergunta para Lemin: 'ajuda'". Lemin responde à cadeia de olhar/aceitar/responder (conhecimento §61), não a `ask`.
 - **Títulos reais do Portão Oeste:** "Rua Principal" (fim da Rua Principal de Midgaard), "Dentro do Portão Oeste de Midgaard", "Fora do Portão Oeste de Midgaard". Os nomes curados do mapa diferiam e travavam o `navegar.py`; agora são `aliases`.
+
+### 2026-10-20 · Claude Sonnet 5.5 (claude-sonnet-5-5) · Autoquests e driver
+- Convite de autoquest vem por temporizador do NPC (ex.: "Lemin questiona: ..."), nao por `look`. Resposta: `say sim`. Fonte: session_live_dia157_20261019_220653_b7ecb1.log:542 e transcript_dia157_20261019_235647_9b90bf.jsonl.
+- `where <nome>` funciona para mobs (mostra so a primeira ocorrencia) e nao para objetos.
+- `detect alignment`, `detect evil` e `detect good` sao de clerigo; mago recebe "Voce ainda nao tem experiencia". Nao ha forma gratuita de ver aura; pista indireta: flag ANTI-MAU ou ANTI-BOM nos itens (`identify`).
+- `recall` em combate: UMA sessao achou nao confiavel (respostas defasadas por 2 clientes no driver); outra (conhecimento §68) confirmou que funciona. Tratar como funcional e conferir com `look`. Movimento comum e bloqueado em combate ("muito ocupado"); `flee` custa EXP. O driver traz ao Templo abaixo de wimpy 45.
+- `sleep` nao pode ser relancado em combate ("Voce nao tem tempo de se concentrar!", conhecimento §68).
+- Dois clientes no mesmo driver devolvem respostas defasadas e `look` incoerente; conferir antes de conectar.

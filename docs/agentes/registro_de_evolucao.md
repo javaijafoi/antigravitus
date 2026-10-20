@@ -1107,3 +1107,13 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Como foi verificado:** pesos no jogo (63 → 99 kg na mão; 44 → 50 kg vestida; 123 kg na mão com 4 lanças contra 50 vestida), `identify` no chão, vendas no ferreiro (4.000 por lança até esgotar o caixa); suíte offline 231 OK.
 - **Custo:** `xadrez_v3` segue suspenso; a rotina nova não foi rodada ao vivo. Trocar manto por mochila perde o manto no slot.
 - **Próximo:** a missão Xeque-mate segue na Rainha Negra (golpe final com raio) e no kite do Rei Negro; os itens limpos do tabuleiro ainda estão no chão/na mochila.
+
+### 2026-10-20 · Dia 157, Xeque-mate refeita e concorrencia de agentes · Claude Sonnet 5.5 (claude-sonnet-5-5)
+- **Mudou:** `state.json`, `missoes.json` (Xeque-mate ativa na etapa 6; Ajuda Magica abandonada pelo autor), `conhecimento.md` §69, `maquina/verificacoes.md`, `evidence/dia157-xadrez-etapa6.json`, `planos/plano037.md`.
+- **Por que:** o autor trocou a Ajuda Magica (Lemin nao deu o convite) pela Xeque-mate. Refiz a cascata ate o cetro do Rei Negro, que acorda no primeiro raio e nao cede a raios.
+- **Concorrencia (leia):** outra instancia de Claude comandou a MESMA personagem no mesmo driver durante a sessao. Eu concorri comigo mesmo, e por isso as movimentacoes de hoje sairam embaralhadas (look incoerente, rest/recall que eu nao dei, respostas defasadas). O autor pediu pausa e confirmou depois que o outro agente saiu. Regra nova: antes de conectar, verificar driver no ar (`_STATUS`, processos python, logs `session_live_*` recentes) e comparar dois `look`.
+- **Erro meu a registrar:** um raio meu matou o Cavaleiro Branco (+58.000 EXP) numa luta que ele comecou; o alinhamento caiu 455 -> 402. Peças brancas sao tratadas como boas (diretiva 22); nao atacar mais.
+- **Cota:** o `checar_cota.py` so le o Antigravity. No Claude Code a cota vem de `get_usage` (5 h e semanal); parei a 7% restantes na janela de 5 h (corte de 10%). Falta um vigia em Python equivalente para o Claude Code (o autor pediu; nao implementado nesta sessao).
+- **Como foi verificado:** transcript_dia157_20261019_235647_9b90bf.jsonl, `score tudo` final (199/430/145, EXP 7.655.666, alinhamento 434), save e sleep confirmados.
+- **Custo:** nenhuma regra afrouxada; `auditar_sessao.py` aponta falhas de repeticao de recusa e queda de alinhamento causadas pela concorrencia e pela morte do Cavaleiro Branco, justificadas no plano 037.
+- **Proximo:** subir ao nivel 33, `charm person` no Rei Negro, `order rei drop cetro` (ou kite); implementar a guarda de cota para o Claude Code.
