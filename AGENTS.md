@@ -428,7 +428,7 @@ A guarda de cota (`automato/camadas/guarda_cota.py` e `scripts/checar_cota.py`) 
 Em ambos os casos de corte, conduzir a personagem imediatamente a um local seguro (Templo de Midgaard), alimentar com pão, hidratar com cantil, salvar (`save`), colocar em repouso (`sleep`), fechar a conexão do driver e gerar o próximo plano numerado de handoff com local e estado reais, evidências, confirmação do encerramento e tempo restante para reset da janela.
 
 **Passo a passo:** [PROTOCOLO.md §3](docs/agentes/PROTOCOLO.md) e `python scripts/encerrar.py`. O
-`checar_cota.py` só lê a cota do Antigravity. Em outro harness (Claude Code, Codex…), use o indicador
+`checar_cota.py` só lê a cota do Antigravity. No Claude Code use `scripts/cota_claude.py` (chame `get_usage`, registre com `--registrar --5h <% usado> --semanal <% usado>`; ele corta em 10% e 5% restantes). Em outro harness (Codex…), use o indicador
 de uso do próprio harness com os mesmos cortes.
 
 ## 14. Catraca — o padrão só muda para melhor (2026-10-19)

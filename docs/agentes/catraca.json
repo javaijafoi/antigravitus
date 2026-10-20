@@ -2,41 +2,239 @@
   "_leia": "Catraca do padrão (AGENTS.md §14). Cada item é uma verificação em vigor: o 'id' tem de aparecer literalmente no 'arquivo'. scripts/test_catraca.py reprova a suíte se algum sumir. Acrescentar: livre, com teste. Remover ou afrouxar: só com aprovação do autor citada em automato/DECISOES.md, no mesmo commit.",
   "schema_version": 1,
   "verificacoes": [
-    {"id": "plano.autossuficiente", "arquivo": "scripts/mandabala.py", "desde": "2026-10-19", "regra": "o plano não remete a outro plano como conteúdo de seção"},
-    {"id": "plano.estado_numerico", "arquivo": "scripts/mandabala.py", "desde": "2026-10-19", "regra": "§2 do plano em números"},
-    {"id": "plano.proximo_passo_executavel", "arquivo": "scripts/mandabala.py", "desde": "2026-10-19", "regra": "§5 é uma ação; não devolve a decisão ao autor fora de #13/#15"},
-    {"id": "PLANO_V2_DESDE", "arquivo": "scripts/devolutiva.py", "desde": "2026-10-19", "regra": "regras do plano v2 viram FALHA a partir do plano 034"},
-    {"id": "plano.autoria", "arquivo": "scripts/devolutiva.py", "desde": "2026-10-16", "regra": "plano declara 'Por' (AGENTS §0)"},
-    {"id": "plano.devolutiva", "arquivo": "scripts/devolutiva.py", "desde": "2026-10-16", "regra": "seção 'Devolutiva técnica' presente e preenchida"},
-    {"id": "devolutiva.coerencia", "arquivo": "scripts/devolutiva.py", "desde": "2026-10-16", "regra": "o artefato prometido na devolutiva mudou no git"},
-    {"id": "capitulo.parts", "arquivo": "scripts/devolutiva.py", "desde": "2026-10-16", "regra": "parte de capítulo com source_kind, date e evidence"},
-    {"id": "evidencia.autoria", "arquivo": "scripts/devolutiva.py", "desde": "2026-10-16", "regra": "evidência com campo 'agent'"},
-    {"id": "livro_razao", "arquivo": "scripts/devolutiva.py", "desde": "2026-10-16", "regra": "bloco novo no registro de evolução"},
-    {"id": "git.segredos", "arquivo": "scripts/devolutiva.py", "desde": "2026-10-16", "regra": "nada de automato/runtime/ rastreado"},
-    {"id": "repeticao-de-recusa", "arquivo": "scripts/auditar_sessao.py", "desde": "2026-10-19", "regra": "mesma recusa 3x seguidas (diretiva §12)"},
-    {"id": "'quit (AGENTS #8)'", "arquivo": "scripts/auditar_sessao.py", "desde": "2026-10-19", "regra": "quit apaga missões"},
-    {"id": "give-sem-etapa", "arquivo": "scripts/auditar_sessao.py", "desde": "2026-10-19", "regra": "give só com a sub-etapa no último score tudo (AGENTS #13)"},
-    {"id": "fala-em-lote", "arquivo": "scripts/auditar_sessao.py", "desde": "2026-10-19", "regra": "fala de missão não vai em lote (AGENTS #14)"},
-    {"id": "fala-em-rajada", "arquivo": "scripts/auditar_sessao.py", "desde": "2026-10-19", "regra": "fala de missão em rajada < 2 s (AGENTS #14)"},
-    {"id": "ataque-sem-consider", "arquivo": "scripts/auditar_sessao.py", "desde": "2026-10-19", "regra": "consider antes de atacar (diretiva §2/§22)"},
-    {"id": "get-all", "arquivo": "scripts/auditar_sessao.py", "desde": "2026-10-19", "regra": "sem get all (diretiva §15)"},
-    {"id": "get-sem-identify", "arquivo": "scripts/auditar_sessao.py", "desde": "2026-10-19", "regra": "identify antes de get (diretiva §15)"},
-    {"id": "compra-cara", "arquivo": "scripts/auditar_sessao.py", "desde": "2026-10-19", "regra": "compra >= 1000 com etapa confirmada (AGENTS #13)"},
-    {"id": "alinhamento-caiu", "arquivo": "scripts/auditar_sessao.py", "desde": "2026-10-19", "regra": "alinhamento não cai (AGENTS #15)"},
-    {"id": "recuo-a-pe", "arquivo": "scripts/auditar_sessao.py", "desde": "2026-10-19", "regra": "vida baixa => recall, não andar"},
-    {"id": "sessao-sem-fecho", "arquivo": "scripts/auditar_sessao.py", "desde": "2026-10-19", "regra": "sessão termina com close"},
-    {"id": "save-nao-confirmado", "arquivo": "scripts/auditar_sessao.py", "desde": "2026-10-19", "regra": "close com save confirmado"},
-    {"id": "encerrar.fecho", "arquivo": "scripts/encerrar.py", "desde": "2026-10-19", "regra": "_CLOSE sleep com save e sleep confirmados"},
-    {"id": "encerrar.plano_preenchido", "arquivo": "scripts/encerrar.py", "desde": "2026-10-19", "regra": "plano sem <placeholders> no §1/§5 ao fechar"},
-    {"id": "encerrar.boletim", "arquivo": "scripts/encerrar.py", "desde": "2026-10-19", "regra": "uma linha por sessão no boletim.jsonl"},
-    {"id": "automato.import_proibido", "arquivo": "scripts/check_project.py", "desde": "2026-10-19", "regra": "nenhum código importa ou chama automato/acoes/_proibidos/ (ERRO)"},
-    {"id": "raise SystemExit('PROIBIDO", "arquivo": "automato/acoes/_proibidos/comprar_pocao.py", "desde": "2026-10-19", "regra": "scripts proibidos têm trava na primeira linha"},
-    {"id": "automato.ferramenta_fora_da_tabela", "arquivo": "scripts/check_project.py", "desde": "2026-10-19", "regra": "todo script do automato está na tabela Ferramentas do README"},
-    {"id": "DELEGA_MESMA_FRASE", "arquivo": "scripts/mandabala.py", "desde": "2026-10-19", "regra": "citar #13/#15 libera só a delegação da mesma frase do §5"},
-    {"id": "abertura.conhecimento_do_npc", "arquivo": "scripts/mandabala.py", "desde": "2026-10-19", "regra": "a abertura mostra o que conhecimento.md/missoes.json sabem dos nomes do §5"},
-    {"id": "--sobre", "arquivo": "scripts/mandabala.py", "desde": "2026-10-19", "regra": "consulta ao repositório sobre NPC, missão ou lugar antes de falar"},
-    {"id": "state.desatualizado", "arquivo": "scripts/devolutiva.py", "desde": "2026-10-19", "regra": "conexão ao jogo na sessão exige state.json atualizado"},
-    {"id": "sessao.aberta", "arquivo": "scripts/devolutiva.py", "desde": "2026-10-19", "regra": "a última conexão termina com close/shutdown"},
-    {"id": "sessao.aberta", "arquivo": "scripts/mandabala.py", "desde": "2026-10-19", "regra": "a abertura avisa se a última conexão ficou aberta"}
+    {
+      "id": "plano.autossuficiente",
+      "arquivo": "scripts/mandabala.py",
+      "desde": "2026-10-19",
+      "regra": "o plano não remete a outro plano como conteúdo de seção"
+    },
+    {
+      "id": "plano.estado_numerico",
+      "arquivo": "scripts/mandabala.py",
+      "desde": "2026-10-19",
+      "regra": "§2 do plano em números"
+    },
+    {
+      "id": "plano.proximo_passo_executavel",
+      "arquivo": "scripts/mandabala.py",
+      "desde": "2026-10-19",
+      "regra": "§5 é uma ação; não devolve a decisão ao autor fora de #13/#15"
+    },
+    {
+      "id": "PLANO_V2_DESDE",
+      "arquivo": "scripts/devolutiva.py",
+      "desde": "2026-10-19",
+      "regra": "regras do plano v2 viram FALHA a partir do plano 034"
+    },
+    {
+      "id": "plano.autoria",
+      "arquivo": "scripts/devolutiva.py",
+      "desde": "2026-10-16",
+      "regra": "plano declara 'Por' (AGENTS §0)"
+    },
+    {
+      "id": "plano.devolutiva",
+      "arquivo": "scripts/devolutiva.py",
+      "desde": "2026-10-16",
+      "regra": "seção 'Devolutiva técnica' presente e preenchida"
+    },
+    {
+      "id": "devolutiva.coerencia",
+      "arquivo": "scripts/devolutiva.py",
+      "desde": "2026-10-16",
+      "regra": "o artefato prometido na devolutiva mudou no git"
+    },
+    {
+      "id": "capitulo.parts",
+      "arquivo": "scripts/devolutiva.py",
+      "desde": "2026-10-16",
+      "regra": "parte de capítulo com source_kind, date e evidence"
+    },
+    {
+      "id": "evidencia.autoria",
+      "arquivo": "scripts/devolutiva.py",
+      "desde": "2026-10-16",
+      "regra": "evidência com campo 'agent'"
+    },
+    {
+      "id": "livro_razao",
+      "arquivo": "scripts/devolutiva.py",
+      "desde": "2026-10-16",
+      "regra": "bloco novo no registro de evolução"
+    },
+    {
+      "id": "git.segredos",
+      "arquivo": "scripts/devolutiva.py",
+      "desde": "2026-10-16",
+      "regra": "nada de automato/runtime/ rastreado"
+    },
+    {
+      "id": "repeticao-de-recusa",
+      "arquivo": "scripts/auditar_sessao.py",
+      "desde": "2026-10-19",
+      "regra": "mesma recusa 3x seguidas (diretiva §12)"
+    },
+    {
+      "id": "'quit (AGENTS #8)'",
+      "arquivo": "scripts/auditar_sessao.py",
+      "desde": "2026-10-19",
+      "regra": "quit apaga missões"
+    },
+    {
+      "id": "give-sem-etapa",
+      "arquivo": "scripts/auditar_sessao.py",
+      "desde": "2026-10-19",
+      "regra": "give só com a sub-etapa no último score tudo (AGENTS #13)"
+    },
+    {
+      "id": "fala-em-lote",
+      "arquivo": "scripts/auditar_sessao.py",
+      "desde": "2026-10-19",
+      "regra": "fala de missão não vai em lote (AGENTS #14)"
+    },
+    {
+      "id": "fala-em-rajada",
+      "arquivo": "scripts/auditar_sessao.py",
+      "desde": "2026-10-19",
+      "regra": "fala de missão em rajada < 2 s (AGENTS #14)"
+    },
+    {
+      "id": "ataque-sem-consider",
+      "arquivo": "scripts/auditar_sessao.py",
+      "desde": "2026-10-19",
+      "regra": "consider antes de atacar (diretiva §2/§22)"
+    },
+    {
+      "id": "get-all",
+      "arquivo": "scripts/auditar_sessao.py",
+      "desde": "2026-10-19",
+      "regra": "sem get all (diretiva §15)"
+    },
+    {
+      "id": "get-sem-identify",
+      "arquivo": "scripts/auditar_sessao.py",
+      "desde": "2026-10-19",
+      "regra": "identify antes de get (diretiva §15)"
+    },
+    {
+      "id": "compra-cara",
+      "arquivo": "scripts/auditar_sessao.py",
+      "desde": "2026-10-19",
+      "regra": "compra >= 1000 com etapa confirmada (AGENTS #13)"
+    },
+    {
+      "id": "alinhamento-caiu",
+      "arquivo": "scripts/auditar_sessao.py",
+      "desde": "2026-10-19",
+      "regra": "alinhamento não cai (AGENTS #15)"
+    },
+    {
+      "id": "recuo-a-pe",
+      "arquivo": "scripts/auditar_sessao.py",
+      "desde": "2026-10-19",
+      "regra": "vida baixa => recall, não andar"
+    },
+    {
+      "id": "sessao-sem-fecho",
+      "arquivo": "scripts/auditar_sessao.py",
+      "desde": "2026-10-19",
+      "regra": "sessão termina com close"
+    },
+    {
+      "id": "save-nao-confirmado",
+      "arquivo": "scripts/auditar_sessao.py",
+      "desde": "2026-10-19",
+      "regra": "close com save confirmado"
+    },
+    {
+      "id": "encerrar.fecho",
+      "arquivo": "scripts/encerrar.py",
+      "desde": "2026-10-19",
+      "regra": "_CLOSE sleep com save e sleep confirmados"
+    },
+    {
+      "id": "encerrar.plano_preenchido",
+      "arquivo": "scripts/encerrar.py",
+      "desde": "2026-10-19",
+      "regra": "plano sem <placeholders> no §1/§5 ao fechar"
+    },
+    {
+      "id": "encerrar.boletim",
+      "arquivo": "scripts/encerrar.py",
+      "desde": "2026-10-19",
+      "regra": "uma linha por sessão no boletim.jsonl"
+    },
+    {
+      "id": "automato.import_proibido",
+      "arquivo": "scripts/check_project.py",
+      "desde": "2026-10-19",
+      "regra": "nenhum código importa ou chama automato/acoes/_proibidos/ (ERRO)"
+    },
+    {
+      "id": "raise SystemExit('PROIBIDO",
+      "arquivo": "automato/acoes/_proibidos/comprar_pocao.py",
+      "desde": "2026-10-19",
+      "regra": "scripts proibidos têm trava na primeira linha"
+    },
+    {
+      "id": "automato.ferramenta_fora_da_tabela",
+      "arquivo": "scripts/check_project.py",
+      "desde": "2026-10-19",
+      "regra": "todo script do automato está na tabela Ferramentas do README"
+    },
+    {
+      "id": "DELEGA_MESMA_FRASE",
+      "arquivo": "scripts/mandabala.py",
+      "desde": "2026-10-19",
+      "regra": "citar #13/#15 libera só a delegação da mesma frase do §5"
+    },
+    {
+      "id": "abertura.conhecimento_do_npc",
+      "arquivo": "scripts/mandabala.py",
+      "desde": "2026-10-19",
+      "regra": "a abertura mostra o que conhecimento.md/missoes.json sabem dos nomes do §5"
+    },
+    {
+      "id": "--sobre",
+      "arquivo": "scripts/mandabala.py",
+      "desde": "2026-10-19",
+      "regra": "consulta ao repositório sobre NPC, missão ou lugar antes de falar"
+    },
+    {
+      "id": "state.desatualizado",
+      "arquivo": "scripts/devolutiva.py",
+      "desde": "2026-10-19",
+      "regra": "conexão ao jogo na sessão exige state.json atualizado"
+    },
+    {
+      "id": "sessao.aberta",
+      "arquivo": "scripts/devolutiva.py",
+      "desde": "2026-10-19",
+      "regra": "a última conexão termina com close/shutdown"
+    },
+    {
+      "id": "sessao.aberta",
+      "arquivo": "scripts/mandabala.py",
+      "desde": "2026-10-19",
+      "regra": "a abertura avisa se a última conexão ficou aberta"
+    },
+    {
+      "id": "cota.claude.corte",
+      "arquivo": "scripts/cota_claude.py",
+      "desde": "2026-10-20",
+      "regra": "vigia de cota do Claude Code: janela de 5 h restando <= 10% ou semanal restando <= 5% -> handoff (AGENTS §13)"
+    },
+    {
+      "id": "cota.claude.fresco",
+      "arquivo": "scripts/cota_claude.py",
+      "desde": "2026-10-20",
+      "regra": "snapshot de cota com mais de 20 min ou ausente é FALHA: registrar de novo com get_usage"
+    },
+    {
+      "id": "cota.claude.abertura",
+      "arquivo": "scripts/mandabala.py",
+      "desde": "2026-10-20",
+      "regra": "a abertura manda registrar a cota do Claude Code com cota_claude.py"
+    }
   ]
 }

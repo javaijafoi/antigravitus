@@ -1117,3 +1117,10 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Como foi verificado:** transcript_dia157_20261019_235647_9b90bf.jsonl, `score tudo` final (199/430/145, EXP 7.655.666, alinhamento 434), save e sleep confirmados.
 - **Custo:** nenhuma regra afrouxada; `auditar_sessao.py` aponta falhas de repeticao de recusa e queda de alinhamento causadas pela concorrencia e pela morte do Cavaleiro Branco, justificadas no plano 037.
 - **Proximo:** subir ao nivel 33, `charm person` no Rei Negro, `order rei drop cetro` (ou kite); implementar a guarda de cota para o Claude Code.
+
+### 2026-10-20 · Dia 157, vigia de cota do Claude Code · Claude Sonnet 5.5 (claude-sonnet-5-5)
+- **Mudou:** `scripts/cota_claude.py`, `scripts/test_cota_claude.py`, `scripts/mandabala.py` (passo 3 da abertura), `docs/agentes/catraca.json` (3 IDs `cota.claude.*`), `AGENTS.md` §13, `automato/CHANGELOG.md` v1.7.6.
+- **Por que:** o autor lembrou da diretiva de cota (§13) e que deveria haver um Python vigiando, como no Gemini; o `checar_cota.py` so le o Antigravity.
+- **Como foi verificado:** `python -B -m unittest scripts.test_cota_claude scripts.test_catraca`: 19 testes OK; com 99% usado o vigia devolve CRITICO (codigo 1).
+- **Custo:** o Python nao alcanca o `get_usage` do harness: o agente tem de registrar o snapshot, e ele vale 20 min.
+- **Proximo:** se o Claude Code expuser a cota por arquivo ou statusline, ler direto em vez do snapshot manual.

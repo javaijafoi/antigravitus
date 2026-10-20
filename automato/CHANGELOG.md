@@ -4,6 +4,11 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.7.6 — Dia 157 · Vigia de cota para o Claude Code (Claude Sonnet 5.5)
+
+- Novo `scripts/cota_claude.py` + `scripts/test_cota_claude.py`: le um snapshot em `automato/runtime/cota_claude.json` registrado a partir do `get_usage` do harness; corta com a janela de 5 h restando <= 10% ou a semanal restando <= 5% (AGENTS §13) e recusa snapshot com mais de 20 min. IDs na catraca: `cota.claude.corte`, `cota.claude.fresco`, `cota.claude.abertura`.
+- `mandabala.py` passa a mandar registrar a cota na abertura. Limite: o Python nao alcanca o `get_usage` sozinho; o agente precisa registrar.
+
 ## v1.7.5 — Dia 158 · Mochila vestida e espólios dos corpos (Claude Sonnet 5.5)
 - **`nucleo/config.py`:** `ESPOLIOS_PROIBIDOS`, `ESPOLIOS_LIMPOS`, `FLAGS_DE_MALDICAO`, `MOCHILA` (medidos ao vivo, `conhecimento.md` §68).
 - **`nucleo/base.py`:** `guardar_na_mochila()` (tira → `put` → veste; tira o manto se o slot estiver ocupado) e `espolio_proibido()`.
