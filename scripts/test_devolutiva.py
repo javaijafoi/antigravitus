@@ -196,6 +196,7 @@ class TestRepositorioReal(unittest.TestCase):
              mock.patch.object(devolutiva, "checar_git"), \
              mock.patch.object(devolutiva, "checar_evidencias"), \
              mock.patch.object(devolutiva, "checar_livro_razao"), \
+             mock.patch.object(devolutiva, "checar_sessao_ao_vivo"), \
              mock.patch.object(devolutiva, "checar_plano", return_value=(1, None)), \
              mock.patch("sys.stdout"):
             codigo = devolutiva.main(["--hero", "grebolius"])

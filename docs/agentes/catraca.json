@@ -31,6 +31,12 @@
     {"id": "encerrar.boletim", "arquivo": "scripts/encerrar.py", "desde": "2026-10-19", "regra": "uma linha por sessão no boletim.jsonl"},
     {"id": "automato.import_proibido", "arquivo": "scripts/check_project.py", "desde": "2026-10-19", "regra": "nenhum código importa ou chama automato/acoes/_proibidos/ (ERRO)"},
     {"id": "raise SystemExit('PROIBIDO", "arquivo": "automato/acoes/_proibidos/comprar_pocao.py", "desde": "2026-10-19", "regra": "scripts proibidos têm trava na primeira linha"},
-    {"id": "automato.ferramenta_fora_da_tabela", "arquivo": "scripts/check_project.py", "desde": "2026-10-19", "regra": "todo script do automato está na tabela Ferramentas do README"}
+    {"id": "automato.ferramenta_fora_da_tabela", "arquivo": "scripts/check_project.py", "desde": "2026-10-19", "regra": "todo script do automato está na tabela Ferramentas do README"},
+    {"id": "DELEGA_MESMA_FRASE", "arquivo": "scripts/mandabala.py", "desde": "2026-10-19", "regra": "citar #13/#15 libera só a delegação da mesma frase do §5"},
+    {"id": "abertura.conhecimento_do_npc", "arquivo": "scripts/mandabala.py", "desde": "2026-10-19", "regra": "a abertura mostra o que conhecimento.md/missoes.json sabem dos nomes do §5"},
+    {"id": "--sobre", "arquivo": "scripts/mandabala.py", "desde": "2026-10-19", "regra": "consulta ao repositório sobre NPC, missão ou lugar antes de falar"},
+    {"id": "state.desatualizado", "arquivo": "scripts/devolutiva.py", "desde": "2026-10-19", "regra": "conexão ao jogo na sessão exige state.json atualizado"},
+    {"id": "sessao.aberta", "arquivo": "scripts/devolutiva.py", "desde": "2026-10-19", "regra": "a última conexão termina com close/shutdown"},
+    {"id": "sessao.aberta", "arquivo": "scripts/mandabala.py", "desde": "2026-10-19", "regra": "a abertura avisa se a última conexão ficou aberta"}
   ]
 }

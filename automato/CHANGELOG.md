@@ -4,6 +4,13 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.7.3 — Dia 157 · Quatro checagens da auditoria do Haiku (Claude Opus 5.5)
+- **Brecha do #13 (`DELEGA_MESMA_FRASE`, `mandabala.py`):** citar #13/#15 só libera a delegação ao autor na **mesma frase** do §5. O Plano 035 citava #13 ao falar do give e, em outra frase, mandava "perguntar ao autor a palavra de abertura", e passava.
+- **Conhecimento na abertura (`abertura.conhecimento_do_npc`, `--sobre`):** a sequência de abertura lista, para os nomes do §5, as seções do `conhecimento.md` e as linhas mais recentes que os citam. `mandabala.py --sobre <nome>` faz a mesma consulta a qualquer momento. O Haiku tentou `ask lemin ajuda`, e a cadeia (responder "Merlin") estava na §61.
+- **`state.desatualizado` (`devolutiva.py`):** se houve conexão ao jogo depois do commit que abriu a sessão e o `state.json` não mudou, FALHA.
+- **`sessao.aberta` (`devolutiva.py` + `mandabala.py`):** a última conexão sem `close`/`shutdown` reprova no fechamento e gera aviso na abertura seguinte. Caso real: uma conexão depois do handoff deixou a personagem parada em Lyon. PROTOCOLO §3: depois do handoff, não reconecte sem novo handoff.
+- **Testes:** `scripts/test_checagens_haiku.py` (13). A catraca aceita o mesmo id em dois arquivos (`sessao.aberta`). Suíte: 231 OK.
+
 ## v1.7.2 — Dia 157 · navegar.py tolera o nome curado e absorve a rota do nav.py (Claude Opus 5.5)
 - **`camadas/navegar.py`:** a conferência de sala aceita o título do jogo sem o sufixo de curadoria entre parênteses ("A Rua Principal" bate com "A Rua Principal (Oeste)") e os `aliases` da sala (`nomes_aceitos`, `confere`). A origem sai de `deduzir_origem`: candidato único; entre homônimos, a única sala curada (fora da camada `levantamento`; "A Praça do Templo" → `praca_templo`); senão para com código 2 listando os ids e pedindo `--de`. Com `--de`, o `look` inicial confere que a personagem está mesmo ali (código 3 se não).
 - **`data/heroes/grebolius/mapa.json`:** a rota Templo → Praça de Jareth do `nav.py` virou arestas (fonte `rota_verificada_dia157`; saídas reais em `evidence/dia156j.json`). Sala nova `estrada_mj_antes_posto_sul`; `estrada_colina_topo` marcada como duplicata de `lb012`; alias "O Grande Campo de Midgaard" nos três Grandes Campos. Cortados os atalhos falsos que o BFS preferia: Atrás do Altar leste/oeste, Padaria norte, Grande Campo (Sul) leste, Começo da Passagem oeste/norte, Pequena Sala do Guarda oeste/sul ↔ fazenda, Centro do Vilarejo leste, Casebre leste, Aclive→Topo→Proximidades e Portão Oeste/Leste ↔ Centro de Jareth diretos (a Avenida Floris entra no meio).

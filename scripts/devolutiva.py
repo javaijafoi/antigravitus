@@ -204,6 +204,40 @@ def checar_coerencia_da_devolutiva(heroi, texto, desde, sem_git=False):
 # 3. Capítulo, evidência, livro-razão
 # --------------------------------------------------------------------------- #
 
+def momento_do_commit(desde):
+    """Epoch do commit que marca o começo da sessão (0 se não houver git)."""
+    codigo, saida = git("log", "-1", "--format=%ct", desde or "HEAD")
+    return float(saida) if codigo == 0 and saida.strip().isdigit() else 0.0
+
+
+def checar_sessao_ao_vivo(heroi, desde, sem_git=False):
+    """Se houve conexão ao jogo nesta sessão: state.json atualizado e última conexão fechada.
+
+    IDs: state.desatualizado, sessao.aberta. Caso real (Plano 035, Dia 157): a sessão jogou, mudou
+    inventário e descobriu que a missão estava inativa, e o state.json seguiu apontando para o
+    Plano 034. Depois do handoff, uma conexão nova ficou aberta em Lyon, sem `_CLOSE`.
+    """
+    import mandabala
+    desde_ts = 0.0 if sem_git else momento_do_commit(desde)
+    jogadas = [t for t in mandabala.transcripts(desde_ts)
+               if '"kind": "command"' in t.read_text(encoding="utf-8", errors="replace")]
+    if not jogadas:
+        ok("nenhuma conexão ao jogo nesta sessão")
+        return
+    caminho = f"data/heroes/{heroi}/state.json"
+    if mudou(caminho, desde, sem_git=sem_git) and not sem_git:
+        ok(f"{len(jogadas)} conexão(ões) ao jogo e state.json atualizado")
+    elif not sem_git:
+        falha(f"[state.desatualizado] houve {len(jogadas)} conexão(ões) ao jogo nesta sessão "
+              f"({jogadas[-1].name}), mas {caminho} não mudou. Atualize local, vitais, ouro, "
+              "inventário, next_objective e as_of com a origem (PROTOCOLO §3, passo 3).")
+    if mandabala.sessao_aberta(jogadas[-1]):
+        falha(f"[sessao.aberta] {jogadas[-1].name} não tem close/shutdown: a personagem ficou no mundo. "
+              "`recall` e `_CLOSE sleep` antes de encerrar; depois do handoff, não reconecte sem novo handoff.")
+    else:
+        ok(f"última conexão fechada ({jogadas[-1].name})")
+
+
 def checar_capitulos(heroi):
     arq = ROOT / "data" / "heroes" / heroi / "capitulos.json"
     if not arq.is_file():
@@ -346,7 +380,8 @@ def main(argv=None):
     else:
         aviso("sem plano, sem devolutiva a conferir")
 
-    print("\n3. Capítulo, evidências e livro-razão")
+    print("\n3. Sessão ao vivo, capítulo, evidências e livro-razão")
+    checar_sessao_ao_vivo(heroi, desde, sem_git=args.sem_git)
     checar_capitulos(heroi)
     if not args.sem_git:
         checar_evidencias(heroi, desde)

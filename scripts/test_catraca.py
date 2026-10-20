@@ -30,8 +30,9 @@ def ausentes(dados, raiz=ROOT):
 class TestCatraca(unittest.TestCase):
     def test_catraca_bem_formada(self):
         dados = carregar()
-        ids = [v["id"] for v in dados["verificacoes"]]
-        self.assertEqual(len(ids), len(set(ids)), "id repetido na catraca")
+        # o mesmo id pode valer em dois scripts (ex.: sessao.aberta na abertura e no fechamento)
+        pares = [(v["id"], v["arquivo"]) for v in dados["verificacoes"]]
+        self.assertEqual(len(pares), len(set(pares)), "par (id, arquivo) repetido na catraca")
         for v in dados["verificacoes"]:
             for campo in ("id", "arquivo", "desde", "regra"):
                 self.assertTrue(v.get(campo), f"{v.get('id')}: falta '{campo}'")

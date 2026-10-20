@@ -28,8 +28,10 @@ Fonte: [diretiva §23](../../data/heroes/grebolius/diretiva_de_jogo.md).
 
 1. **A rota está no `mapa.json`?** Sim → `python automato/camadas/navegar.py --para <id>`. Não → à mão,
    um passo, `exits`, e depois **grave a rota no `mapa.json`**.
-2. **Há NPC ou item de missão?** Fala, `give` e compra são **à mão, linha a linha**, com `score tudo`
-   mostrando a sub-etapa exata ([AGENTS #13/#14](../../AGENTS.md#4-invariantes-não-quebrar)).
+2. **Há NPC ou item de missão?** **Antes da primeira fala:** `python scripts/mandabala.py --sobre <nome>`.
+   A cadeia de diálogo muitas vezes já está no `conhecimento.md` (o Haiku tentou `ask lemin ajuda`,
+   e a resposta "Merlin" estava na §61). Fala, `give` e compra são **à mão, linha a linha**, com
+   `score tudo` mostrando a sub-etapa exata ([AGENTS #13/#14](../../AGENTS.md#4-invariantes-não-quebrar)).
 3. **Alguém está lendo o retorno a cada passo?** Rotina só com `turno.py` ou leitura do log a cada ~60 s.
 4. **Se a vida cair?** `recall` ao primeiro golpe grave. Nunca recuar andando.
 
@@ -51,6 +53,12 @@ função, melhore a existente.
 | 5 | Preencha o esqueleto: §1, §3–§6, §8. Regras do plano v2 ([LEIA.md](../../data/heroes/grebolius/planos/LEIA.md)) | o plano **se sustenta sozinho** e o §5 é **uma ação executável** |
 | 6 | `python scripts/encerrar.py --agente "<modelo/versão>" --fechar` | 0 FALHA; o boletim da sessão foi gravado |
 | 7 | Bloco no [registro de evolução](registro_de_evolucao.md) se mexeu na ferramenta; commit com caminhos explícitos e `[agente: …]` | **sem push** se não houve pedido ([AGENTS §12](../../AGENTS.md)) |
+
+**Depois do handoff, não reconecte.** Se precisar voltar ao jogo, é uma sessão nova: ela também
+termina com `recall` + `_CLOSE sleep` e com um handoff novo. Personagem não fica no mundo sem
+ninguém olhando. Caso real: uma conexão aberta depois do handoff ficou parada em Lyon, perto do
+Túnel Escuro do rato agressivo. O `devolutiva.py` reprova (`sessao.aberta`) e o `mandabala.py`
+avisa na abertura seguinte. Também reprova jogar sem atualizar o `state.json` (`state.desatualizado`).
 
 ## 4. Como o padrão muda (só para melhor)
 

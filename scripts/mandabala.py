@@ -144,6 +144,20 @@ DELEGA = re.compile(
 DELEGA_LEGITIMA = re.compile(r"#\s*1[35]\b|invariante\s+1[35]|diretiva", re.IGNORECASE)
 
 
+def delegacao_sem_motivo(passo):
+    """Primeira frase do §5 que devolve a decisão ao autor sem citar #13/#15/diretiva NA MESMA FRASE.
+
+    DELEGA_MESMA_FRASE: a citação vale só para a frase em que aparece. A brecha real (Plano 035):
+    o §5 citava "AGENTS #13 e #14" ao falar do give e, em outra frase, mandava "perguntar ao autor a
+    palavra de abertura", que estava no conhecimento.md. Citar #13 em qualquer lugar não pode
+    liberar todas as delegações do parágrafo.
+    """
+    for frase in re.split(r"(?<=[.;:!?])\s+|\n+", passo):
+        if DELEGA.search(frase) and not DELEGA_LEGITIMA.search(frase):
+            return frase.strip()
+    return None
+
+
 def secao(texto, numero):
     """Corpo da seção '## <numero>. ...' do plano, sem o título. '' se não houver."""
     m = re.search(rf"^#{{1,4}}\s*{numero}\.[^\n]*\n(.*?)(?=^#{{1,4}}\s*\d+\.|\Z)",
@@ -174,11 +188,130 @@ def checar_plano_v2(texto):
     passo = secao(texto, 5)
     if not passo:
         achados.append(("plano.proximo_passo_executavel", "plano sem §5 (o próximo passo, e só ele)."))
-    elif DELEGA.search(passo) and not DELEGA_LEGITIMA.search(passo):
-        achados.append(("plano.proximo_passo_executavel",
-                        "§5 devolve a decisão ao autor. Diga qual ação o próximo executa por padrão; "
-                        "perguntar ao autor só em AGENTS #13/#15 ou diretiva expressa (cite qual)."))
+    else:
+        frase = delegacao_sem_motivo(passo)
+        if frase:
+            achados.append(("plano.proximo_passo_executavel",
+                            f"§5 devolve a decisão ao autor (\"{frase[:90]}\"). Diga qual ação o próximo "
+                            "executa por padrão. Perguntar ao autor só em AGENTS #13/#15 ou diretiva "
+                            "expressa, citada na mesma frase. Antes, procure a resposta: "
+                            "python scripts/mandabala.py --sobre <termo>."))
     return achados
+
+
+# --------------------------------------------------------------------------- #
+# Sessão deixada aberta (sessao.aberta)
+# --------------------------------------------------------------------------- #
+
+RUNTIME_DIR = ROOT_DIR / "automato" / "runtime"
+
+
+def transcripts(desde_ts=0.0, pasta=None):
+    """Transcripts com conteúdo modificados depois de desde_ts (epoch), do mais antigo ao mais novo."""
+    pasta = pasta or RUNTIME_DIR
+    if not pasta.is_dir():
+        return []
+    achados = [p for p in pasta.glob("transcript_*.jsonl")
+               if p.stat().st_size > 0 and p.stat().st_mtime > desde_ts]
+    return sorted(achados, key=lambda p: p.stat().st_mtime)
+
+
+def sessao_aberta(caminho):
+    """True se o transcript tem comando e não termina com close/shutdown. ID: sessao.aberta.
+
+    Caso real (Dia 157): depois do commit do handoff, uma conexão nova levou a personagem a Lyon e
+    ficou aberta, parada, sem `_CLOSE`. O driver grava 'close' e 'shutdown' ao fechar; sem eles, a
+    personagem está no mundo, sem ninguém olhando.
+    """
+    import json
+    tipos = []
+    for linha in caminho.read_text(encoding="utf-8", errors="replace").splitlines():
+        try:
+            tipos.append(json.loads(linha).get("kind"))
+        except ValueError:
+            continue
+    return "command" in tipos and not ({"close", "shutdown"} & set(tipos))
+
+
+# --------------------------------------------------------------------------- #
+# O que o repositório já sabe (abertura.conhecimento_do_npc, --sobre)
+# --------------------------------------------------------------------------- #
+
+# Palavras com maiúscula que não são nome de NPC, lugar ou missão (início de frase, rótulos).
+_NAO_NOMES = {"Antes", "Depois", "Opção", "Se", "Só", "Não", "Nunca", "Ir", "Ler", "Abrir", "Voltar",
+              "Parar", "Confirmar", "Testar", "Levar", "Registrar", "Seguir", "Usar", "Fazer",
+              "Agents", "Plano", "Capítulo", "Templo", "Midgaard", "Sala", "Você", "Ajuda", "Mágica",
+              "Entrada", "Centro", "Cidade", "Rua", "Python", "Ainda", "Quando", "Sempre"}
+# Termo que aparece em mais linhas que isto é genérico demais para ajudar (ex.: Templo: 83).
+_GENERICO = 25
+
+
+def _fontes(heroi):
+    pasta = HEROES_DIR / heroi
+    return [pasta / "conhecimento.md", pasta / "missoes.json"]
+
+
+# Linhas de missoes.json que só apontam arquivo não dizem nada sobre o NPC.
+_LINHA_VAZIA = re.compile(r'^\s*"(document|evidence|source|day|agent)"\s*:')
+
+
+def sobre(termo, heroi, maximo=6):
+    """O que conhecimento.md e missoes.json dizem sobre o termo.
+
+    Devolve (secoes, linhas, total): as seções '## ' do conhecimento.md que citam o termo, da mais
+    nova para a mais antiga; as linhas, com as do conhecimento.md primeiro e as mais recentes antes;
+    e o total de menções. Arquivo ausente = nada a mostrar.
+    """
+    secoes, do_conhecimento, das_missoes = [], [], []
+    for arq in _fontes(heroi):
+        if not arq.is_file():
+            continue
+        secao_atual = ""
+        for n, linha in enumerate(arq.read_text(encoding="utf-8", errors="replace").splitlines(), 1):
+            if linha.startswith("## "):
+                secao_atual = linha[3:].strip()
+            if termo.lower() not in linha.lower() or _LINHA_VAZIA.match(linha):
+                continue
+            item = f"{arq.name}:{n}  {linha.strip()[:220]}"
+            if arq.name == "conhecimento.md":
+                do_conhecimento.append(item)
+                if secao_atual and secao_atual not in secoes:
+                    secoes.append(secao_atual)
+            else:
+                das_missoes.append(item)
+    linhas = list(reversed(do_conhecimento)) + list(reversed(das_missoes))
+    return list(reversed(secoes)), linhas[:maximo], len(do_conhecimento) + len(das_missoes)
+
+
+def termos_do_passo(passo):
+    """Nomes próprios do §5 (NPC, lugar, item), na ordem em que aparecem, sem repetição.
+
+    Verbo no infinitivo com maiúscula ('Reabrir', 'Ir') é início de frase, não nome.
+    """
+    vistos = []
+    for t in re.findall(r"\b[A-ZÀ-Ý][a-zà-ÿ]{3,}\b", passo or ""):
+        if t in _NAO_NOMES or t in vistos or re.search(r"(ar|er|ir)$", t):
+            continue
+        vistos.append(t)
+    return vistos
+
+
+def conhecimento_para(texto, heroi, max_termos=4, por_termo=3):
+    """Bloco 'O QUE O REPOSITÓRIO JÁ SABE' sobre os nomes do §5. ID: abertura.conhecimento_do_npc.
+
+    Existe porque o Haiku (Plano 035) foi a Lemin, tentou `ask lemin ajuda` e mandou perguntar ao
+    autor a palavra de abertura. A cadeia (olhar Lemin, aceitar, responder Merlin) estava no
+    conhecimento.md §61. Ler 2.400 linhas não acontece; apontar as seções certas acontece.
+    """
+    linhas = []
+    for termo in termos_do_passo(secao(texto, 5))[:max_termos]:
+        secoes, achados, total = sobre(termo, heroi, por_termo)
+        if not achados or total > _GENERICO:
+            continue
+        linhas.append(f"  • {termo} ({total} menções). Leia estas seções do conhecimento.md:")
+        linhas += [f"      § {s[:90]}" for s in secoes[:6]]
+        linhas += [f"      {a}" for a in achados]
+    return linhas
 
 
 def sequencia_abertura(texto, heroi):
@@ -197,12 +330,20 @@ def sequencia_abertura(texto, heroi):
         "     diária <= 10% ou semanal <= 5%  ->  não jogue: vá ao encerramento (PROTOCOLO §3)",
         "  4. se vai jogar: driver no ar e  python automato/verificar.py  sem FALHA",
         "  5. ao conectar: score tudo  -> confira com o §2 do plano; divergiu? registre antes de agir",
+        "     e mantenha o state.json atualizado: jogou sem atualizar, o devolutiva.py reprova",
         "  6. SUA PRIMEIRA AÇÃO (§5 do plano):",
     ]
     linhas += ["       " + l for l in passo.split("\n")]
+    saber = conhecimento_para(texto, heroi)
+    if saber:
+        linhas += ["", "  7. O QUE O REPOSITÓRIO JÁ SABE sobre os nomes do §5 (leia ANTES de falar com NPC):"]
+        linhas += saber
+        linhas.append("     Mais: python scripts/mandabala.py --sobre <nome>   (NPC, missão, lugar, item)")
+    else:
+        linhas += ["", "  7. Antes de falar com NPC de missão: python scripts/mandabala.py --sobre <nome>"]
     linhas += [
         "",
-        "  Não pergunte ao autor o que o plano já responde. Pergunte só em AGENTS #13/#15.",
+        "  Não pergunte ao autor o que o plano ou o conhecimento.md já respondem. Pergunte só em AGENTS #13/#15.",
         "  Para encerrar:  python scripts/encerrar.py --agente \"<modelo/versão>\"",
     ]
     return "\n".join(linhas)
@@ -255,7 +396,24 @@ def main(argv=None):
     p.add_argument("--listar", action="store_true", help="lista os planos de todos os heróis")
     p.add_argument("--so-caminho", action="store_true",
                    help="imprime apenas o caminho do plano, para usar em script")
+    p.add_argument("--sobre", metavar="TERMO",
+                   help="o que conhecimento.md e missoes.json já dizem sobre um NPC, missão ou lugar")
     args = p.parse_args(argv)
+
+    if args.sobre:
+        heroi, erro = resolver_heroi(args.heroi)
+        if erro:
+            print(f"[MANDABALA] {erro}", file=sys.stderr)
+            return 1
+        secoes, achados, total = sobre(args.sobre, heroi, maximo=20)
+        print(f"O que o repositório sabe sobre '{args.sobre}' ({total} menção(ões); mais recentes primeiro):")
+        for s in secoes:
+            print(f"  § {s}")
+        for a in achados:
+            print(f"  {a}")
+        if not achados:
+            print("  nada registrado. Se descobrir algo, grave no conhecimento.md (devolutiva técnica).")
+        return 0
 
     if args.listar:
         disponiveis = heroes_com_planos()
@@ -337,6 +495,14 @@ def main(argv=None):
         print()
         print("[AVISO] a seção 'Devolutiva técnica' existe mas está só com o MODELO (placeholders).")
         print("        Preencha, ou escreva 'nada' em cada linha que não se aplica.")
+
+    recentes = transcripts()
+    if recentes and sessao_aberta(recentes[-1]):
+        print()
+        print(f"[AVISO] [sessao.aberta] a última conexão ({recentes[-1].name}) NÃO foi fechada: a")
+        print("        personagem pode estar parada no mundo, sem ninguém olhando. ANTES de tudo:")
+        print("        se o driver estiver no ar, `play.py \"recall\"` e `play.py \"_CLOSE sleep\"`;")
+        print("        se não estiver, conecte, `score tudo`, `recall`, `_CLOSE sleep`. Registre no plano.")
 
     v2 = checar_plano_v2(texto)
     if v2:
