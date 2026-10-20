@@ -4,6 +4,12 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.7.5 — Dia 158 · Mochila vestida e espólios dos corpos (Claude Sonnet 5.5)
+- **`nucleo/config.py`:** `ESPOLIOS_PROIBIDOS`, `ESPOLIOS_LIMPOS`, `FLAGS_DE_MALDICAO`, `MOCHILA` (medidos ao vivo, `conhecimento.md` §68).
+- **`nucleo/base.py`:** `guardar_na_mochila()` (tira → `put` → veste; tira o manto se o slot estiver ocupado) e `espolio_proibido()`.
+- **`rotinas/xadrez_v3.py` (legado, ainda "não usar"):** a triagem lista o corpo e pega item por item (nunca `get all corpo` às cegas; a Armadura da Torre Negra é deixada), pega lança/espada/coroa/escudo/cetro, guarda na mochila VESTIDA, e a venda tira a mochila antes de `get ... mochila` e para de vender lança quando o ferreiro diz que não pode pagar.
+- **Custo:** a rotina continua suspensa até a revisão do autor; sem teste novo (fluxo ao vivo). Suíte: 231 OK.
+
 ## v1.7.4 — Dia 157 · Python acessível para qualquer agente (Claude Opus 5.5)
 - **`scripts/configurar_python.ps1` (novo):** acha o Python mais novo em `%LOCALAPPDATA%\Programs\Python` e põe a pasta dele, a `Scripts` e o `Launcher` (`py.exe`) na frente do PATH do **usuário** (sem administrador). Guarda o PATH antigo num arquivo de backup. Por padrão só simula; aplica com `-Aplicar`. Causa observada: o Python não estava no PATH do usuário, e o `python` caía no atalho da Microsoft Store (`WindowsApps\python.exe`).
 - **`verificar.py` — item `python no PATH`:** AVISO quando `python` resolve para o `WindowsApps` ou não existe, apontando o script.

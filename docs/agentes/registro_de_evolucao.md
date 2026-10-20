@@ -1100,3 +1100,10 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Como foi verificado:** `verificar.py` mostra AVISO `python no PATH ... WindowsApps\python.EXE`; `configurar_python.ps1` sem `-Aplicar` lista as três pastas certas e sai com 2 (simulação).
 - **Custo:** nenhum. Aplicar exige reabrir os terminais e o app.
 - **Próximo:** depois de aplicado, o caminho completo do Python pode sair do §7 dos planos novos.
+
+### 2026-10-20 · Dia 158, mochila vestida e espólios · Claude Sonnet 5.5 (claude-sonnet-5-5)
+- **Mudou:** `automato/nucleo/config.py`, `automato/nucleo/base.py`, `automato/rotinas/xadrez_v3.py`, `automato/CHANGELOG.md` (v1.7.5), `data/heroes/grebolius/diretiva_de_jogo.md` (§18 correção datada, §24 nova), `conhecimento.md` (§45 nota, §68 nova).
+- **Por quê:** o autor cobrou que os espólios dos corpos não estavam sendo pegos e que a mochila de Pellinore "ajuda no peso". Medido ao vivo: a redução só vale com a mochila vestida, o `put` não funciona com ela vestida, a Armadura da Torre Negra é amaldiçoada e a Lança do Cavaleiro Negro (10.000) é limpa.
+- **Como foi verificado:** pesos no jogo (63 → 99 kg na mão; 44 → 50 kg vestida; 123 kg na mão com 4 lanças contra 50 vestida), `identify` no chão, vendas no ferreiro (4.000 por lança até esgotar o caixa); suíte offline 231 OK.
+- **Custo:** `xadrez_v3` segue suspenso; a rotina nova não foi rodada ao vivo. Trocar manto por mochila perde o manto no slot.
+- **Próximo:** a missão Xeque-mate segue na Rainha Negra (golpe final com raio) e no kite do Rei Negro; os itens limpos do tabuleiro ainda estão no chão/na mochila.

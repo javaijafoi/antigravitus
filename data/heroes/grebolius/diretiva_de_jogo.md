@@ -310,3 +310,15 @@ O monitoramento mecânico do alinhamento moral atua apenas como última camada d
 **Sinais de que a regra está sendo quebrada** (o auditor pega todos, ver abaixo): o mesmo comando recusado 3 vezes seguidas; `give` sem `Você deve entregar objeto` no último `score tudo`; `say`/`ask` em rajada ou em lote; `quit`; `get all` ou `get` sem `identify`; ataque sem `consider`; alinhamento caindo; andar com vida abaixo de 45%.
 
 **Conferência mecânica, depois da sessão:** `python scripts/auditar_sessao.py` (sem argumentos lê o transcript mais recente). Código 1 = há FALHA; 2 = só AVISO. Um AVISO pede explicação no plano; uma FALHA pede correção ou justificativa. **Limite honesto:** o transcript não registra se o comando veio de script ou de mão, então §9 (andar por script) e §14 (supervisão) **não** são auditáveis daí. Por isso a pergunta 1 acima é de quem joga.
+
+
+> **Correção datada (Dia 158, 2026-10-20, Claude Sonnet 5.5) ao §18 — medida ao vivo:** a mochila de Pellinore **só reduz o peso quando está VESTIDA** (slot *sobre o corpo*, o mesmo do manto de pano: `remove manto`, `wear mochila`). Na mão, o conteúdo pesa cheio (4 lanças: 123 kg, acima do teto de 115; vestida: 50 kg). O `put` **não enxerga** a mochila vestida ("Não há nenhuma mochila aqui"); o fluxo é **`remove mochila` → `put <item> mochila` → `wear mochila`** (`base.guardar_na_mochila()`). Detalhes em `conhecimento.md` §68.
+
+## 24. PEGAR OS ESPÓLIOS DOS CORPOS IMPORTA (cobrança do autor, Dia 158)
+
+> *"as orientações não falam pra gente pegar os espólios?"* · *"pega tudo e vende tudo que der, o que não der guarda na bolsa mágica"* · *"tudo que vale menos que 1000 que não dê pra vender, pode doar"*
+
+- **Pegar os itens dos corpos é parte do trabalho**, não só o ouro (o ouro vem sozinho). Depois de cada abate importante, olhar o corpo (`look in corpo`) e o chão da sala.
+- **A única trava é a maldição** (AGENTS #10, §15): `cast 'identify'` no objeto **antes** do `get`; flag `AMALDIÇOADO`/`NODROP` = deixar. Medido: Armadura da Torre Negra = **BRILHO AMALDIÇOADO** (proibida); Lança do Cavaleiro Negro (valor 10.000, ferreiro paga 4.000), armadura/espada de peão e Coroa da Rainha = limpas. Use seletor numerado (`get 2.armadura`) quando duas coisas partilham a palavra.
+- **Destino:** vender o que o comércio comprar (ferreiro só armas e tem caixa limitado: "Eu não posso pagar por uma arma dessas!"; armeiro só armaduras); guardar o resto na mochila **vestida**; item que vale **menos de 1.000** e não vende pode ser **doado** (Sala de Doações).
+- **Verificação no código:** `config.ESPOLIOS_PROIBIDOS`/`ESPOLIOS_LIMPOS`, `base.espolio_proibido()`, `base.guardar_na_mochila()` e a triagem de `rotinas/xadrez_v3.py` (que não usa mais `get all corpo` às cegas).

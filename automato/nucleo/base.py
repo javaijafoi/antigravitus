@@ -171,3 +171,34 @@ def mana_baixa():
 def vida_frac():
     t, _, _ = run('score')
     return hp_frac(t)
+
+
+# --- mochila de Pellinore ---------------------------------------------------
+# Ela so' reduz o peso do que guarda quando esta VESTIDA (slot "sobre o corpo",
+# o mesmo do manto de pano); na mao, o conteudo pesa cheio. O `put` nao enxerga a
+# mochila vestida ("Nao ha nenhuma mochila aqui"). Medido ao vivo, conhecimento
+# par.68: 4 lancas na mochila na mao = 123 kg (acima do teto de 115); vestida = 50.
+def guardar_na_mochila(*seletores):
+    """Guarda itens na mochila e a deixa VESTIDA: tira -> put -> veste.
+
+    `seletores` sao os alvos do put (ex.: 'all.lanca', 'coroa'). Devolve a lista
+    de (seletor, texto). Se o slot estiver ocupado pelo manto, tira o manto antes.
+    """
+    resultados = []
+    run('remove %s' % config.MOCHILA)
+    for sel in seletores:
+        t, _, _ = run('put %s %s' % (sel, config.MOCHILA))
+        resultados.append((sel, t))
+    t, _, _ = run('wear %s' % config.MOCHILA)
+    if 'já está usando' in t or 'ja esta usando' in t.lower():
+        run('remove manto')
+        run('wear %s' % config.MOCHILA)
+    return resultados
+
+
+def espolio_proibido(nome_ou_identify):
+    """True se o texto (nome do item ou saida do identify) indica item proibido."""
+    t = (nome_ou_identify or '').lower()
+    if any(p in t for p in config.ESPOLIOS_PROIBIDOS):
+        return True
+    return any(f in t for f in config.FLAGS_DE_MALDICAO)

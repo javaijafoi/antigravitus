@@ -91,3 +91,25 @@ RISCO_A_EVITAR = ('danger', 'high', 'fatal', 'critical')
 # prepara AVISA em vez de seguir calado - a decisao e' do autor.
 SAQUE_PARA_COMPRAR = 300
 
+
+# --- espolios: pegar dos corpos IMPORTA (diretiva do autor, Dia 157/158) ---
+#
+# O autor cobrou: pegar os itens dos corpos e' parte do trabalho, nao so' o ouro.
+# O que decide se um item pode ser pego e' o `identify` DO PROPRIO OBJETO no chao
+# (flag AMALDICOADO / NODROP = proibido; AGENTS #10 e diretiva_de_jogo.md par.15).
+#
+# Medido ao vivo (conhecimento.md par.68), nome como aparece no jogo:
+#   PROIBIDO  - Armadura da Torre Negra: BRILHO AMALDICOADO, peso 60, valor 17000.
+#   PERMITIDO - Lanca do Cavaleiro Negro (18 kg, valor 10000; ferreiro paga 4000),
+#               Armadura/Espada do Peao Negro (ANTI-BOM, sem maldicao),
+#               Coroa da Rainha Negra (ANTI-BOM, nao NODROP).
+# Item que nao esta nas duas listas: `cast 'identify'` no chao antes do `get`.
+ESPOLIOS_PROIBIDOS = ('torre negra',)
+ESPOLIOS_LIMPOS = ('lanca do cavaleiro', 'armadura de um peao', 'armadura do peao',
+                   'espada do peao', 'coroa da rainha')
+FLAGS_DE_MALDICAO = ('amaldi', 'nodrop', 'no-drop', 'nao-largar', 'nao-doar')
+
+# --- mochila de Pellinore: so' REDUZ PESO quando esta VESTIDA (par.68) ---
+# Slot "sobre o corpo" (o mesmo do manto). Vestida, 4 lancas (72 kg) pesam ~6 kg;
+# na mao, pesam cheio. `put` NAO enxerga a mochila vestida: tirar, guardar, vestir.
+MOCHILA = 'mochila'

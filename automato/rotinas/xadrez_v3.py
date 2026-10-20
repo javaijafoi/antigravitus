@@ -45,24 +45,33 @@ def ir_ao_tabuleiro():
 
 
 def triagem_e_guarda_espolios():
-    """Garante que nenhum item amaldiçoado permaneça no inventário e guarda espólios na mochila."""
-    # Saque unificado de moedas e equipamentos em 1 comando
-    run('get all corpo')
+    """Pega os espólios do corpo (IMPORTA: o autor cobrou itens, não só ouro) e os guarda.
 
-    # Triagem de segurança: descarta APENAS itens com flag amaldiçoada (Diretiva do autor Dia 156)
-    # Itens da Torre Negra são permitidos se não forem amaldiçoados
+    A triagem acontece ANTES do `get` (item amaldiçoado não pode ser largado depois):
+    lista o corpo, pula o que `base.espolio_proibido` reconhece (Armadura da Torre
+    Negra = BRILHO AMALDIÇOADO) e pega o resto. Depois guarda na mochila VESTIDA
+    (`base.guardar_na_mochila`): só vestida ela reduz o peso (conhecimento.md §68).
+    """
+    corpo, _, _ = run('look in corpo')
+    run('get moedas corpo')
+    for chave in ('lanca', 'espada', 'coroa', 'escudo', 'cetro'):
+        if chave in corpo.lower().replace('ç', 'c'):
+            run('get all.%s corpo' % chave)
+    # `armadura` casa com a da Torre Negra (proibida): só pega se o corpo não a lista.
+    linhas_armadura = [l for l in corpo.splitlines() if 'armadura' in l.lower()]
+    if linhas_armadura and not any(espolio_proibido(l) for l in linhas_armadura):
+        run('get all.armadura corpo')
+    elif linhas_armadura:
+        print("[xadrez_v3] Armadura proibida (amaldiçoada) no corpo: deixada.", flush=True)
+
+    # Confere o inventário: se ainda assim algo amaldiçoado entrou, avisa e para.
     inv, _, _ = run('inventory')
-    inv_lower = inv.lower()
+    if espolio_proibido(inv):
+        print("[xadrez_v3] ALERTA: item amaldiçoado no inventário! Parar e avisar o autor.", flush=True)
+        raise SystemExit(9)
 
-    if 'amaldiçoada' in inv_lower or 'amaldiçoado' in inv_lower:
-        print("[xadrez_v3] ALERTA: Item com flag amaldiçoada detectado! Descartando imediatamente...", flush=True)
-        run('drop all.amaldiçoada')
-        run('drop all.amaldiçoado')
-
-    # Guarda espólios limpos na mochila de Pellinore para alívio de peso
-    run('put all.armadura mochila')
-    run('put all.escudo mochila')
-    run('put all.espada mochila')
+    guardar_na_mochila('all.lanca', 'all.espada', 'all.armadura', 'all.coroa',
+                       'all.escudo', 'all.cetro')
 
 
 def matar_peao():
@@ -154,6 +163,9 @@ def vender_espolios():
     voltar_ao_templo()
     run('stand')
 
+    # A mochila VESTIDA não aceita `get ... mochila` nem `put`: tirar primeiro, vestir ao final.
+    run('remove mochila')
+
     # 1. Venda no Armeiro (escudos por 200 moedas, armaduras por 150 moedas)
     run('get all.escudo mochila')
     run('get all.armadura mochila')
@@ -179,6 +191,7 @@ def vender_espolios():
     voltar_ao_templo()
     run('stand')
     run('get all.espada mochila')
+    run('get all.lanca mochila')   # Lança do Cavaleiro Negro: ferreiro paga 4000 (até esgotar o caixa)
 
     # Templo -> s, s, e, e, n (Loja de Armas)
     for m in ['s', 's', 'e', 'e', 'n']:
@@ -188,11 +201,16 @@ def vender_espolios():
         print("[xadrez_v3] No Ferreiro: vendendo espadas em lote...", flush=True)
         run('sell 5 espada')
         run('sell espada')
+        for _ in range(5):          # lanças: para quando o ferreiro disser que não pode pagar
+            t, _, _ = run('sell lanca')
+            if 'não posso pagar' in t.lower() or 'nao posso pagar' in t.lower():
+                break
     else:
         print("[xadrez_v3] AVISO: Não alcançou a Loja de Armas.", flush=True)
 
-    # Retorno seguro ao Templo
+    # Retorno seguro ao Templo; o que sobrou volta para a mochila, que fica VESTIDA (peso).
     voltar_ao_templo()
+    guardar_na_mochila('all.lanca', 'all.armadura', 'all.espada', 'all.escudo', 'all.coroa')
     run('save')
     return True
 
