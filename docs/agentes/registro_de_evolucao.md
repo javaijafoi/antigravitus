@@ -1167,3 +1167,11 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Como foi verificado:** `python -m unittest scripts.test_ressuscitar` (7 OK) com textos reais dos logs; suíte offline e `check_project.py` no commit.
 - **Custo:** nenhum fluxo ao vivo exercitado (exige morte).
 - **Próximo:** na próxima morte, conferir no transcript a origem `ressuscitar` e o `_RAW 1` no menu.
+
+### 2026-10-20 · Dia 157, mapa em grade interativo · Claude Opus 5.5 (claude-opus-5-5)
+- **Mudou:** novos `scripts/gerar_mapa_grade.py`, `scripts/mapa_grade_template.html` e `scripts/test_gerar_mapa_grade.py`; o gerador escreve `mapa_grade.html` na raiz, que fica fora do git até o autor validar.
+- **Por que:** o autor pediu o mundo como mapa de masmorra (salas quadradas numeradas, corredores, legenda), mais bonito, num HTML para validar, com clique na sala mostrando o que o `mapa.json` sabe dela.
+- **Como funciona:** a posição de cada sala sai das saídas n/s/e/w, por zona (BFS a partir do santuário ou da sala mais visitada). Quando duas salas querem a mesma casa, a segunda vai para a casa livre mais próxima e o corredor sai tracejado. Ilhas desconectadas ficam lado a lado, as maiores primeiro. HTML autocontido (SVG, sem rede): abas por zona, legenda numerada (com o id quando o nome se repete), busca, painel da sala com saídas clicáveis entre zonas, zoom e arraste, `#sala=<id>`, e a aba "Avisos" (colisões, saídas sem volta, destinos inexistentes, saídas pendentes, duplicatas).
+- **Como foi verificado:** `test_gerar_mapa_grade.py` (10 OK; o tabuleiro sai 8×8 de `xadrez_A1` a `H8`); no navegador do app, as abas Monte Sagrado, Tabuleiro e Levantamento, o clique em sala, a saída para outra zona trocando a aba, a largura de celular sem rolagem lateral e o console sem erros.
+- **Custo:** o MUD não é euclidiano, então parte das salas sai fora do lugar real (56 colisões no mapa de 710 salas).
+- **Próximo:** o autor valida; depois decidir se vira página do site.
