@@ -10,7 +10,7 @@
 * **Raça Mecânica no MUD:** Elfo
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **33**
-* **Alinhamento Moral:** 491 (Bom)
+* **Alinhamento Moral:** 486 (Bom)
 * **Localização Atual:** O Templo de Midgaard (último registro: Dia 157)
 * **Acampamento Registrado:** O Templo de Midgaard
 * **Santuário de Referência:** O Panteao dos Centenarios
@@ -21,12 +21,12 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 | Recurso | Atual | Máximo | Porcentagem |
 | :--- | :---: | :---: | :---: |
 | **Pontos de Vida (HP)** | 226 | 226 | 100% |
-| **Pontos de Mana (MP)** | 490 | 490 | 100% |
+| **Pontos de Mana (MP)** | 426 | 490 | 87% |
 | **Estamina / Movimento (MV)** | 146 | 146 | 100% |
 
-* **Experiência Acumulada:** **8.023.660 EXP**
-* **Experiência Necessária p/ Grau 34:** **976.340 EXP** (Meta: 9.000.000 EXP)
-* **Ouro Líquido:** **67.601 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **8.315.136 EXP**
+* **Experiência Necessária p/ Grau 34:** **684.864 EXP** (Meta: 9.000.000 EXP)
+* **Ouro Líquido:** **72.078 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 11
@@ -38,7 +38,7 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 
 ### Métricas de Combate
 * **Classe de Armadura (AC):** 112 (base) / **165** (com `armor`, conforme registro)
-CA 112 no score tudo final (Dia 157, 2026-10-20) com tudo vestido, sem buffs; reequipado depois da morte #10.
+CA 112 no score tudo de 2026-10-20 (Dia 157), tudo vestido, sem buffs; 148 com armor.
 * **Bônus de Acerto (Hitroll):** 16
 * **Bônus de Dano (Damroll):** +5
 * **Configuração de Fuga (Wimpy):** **45 HP** (referência de 25%; não garante fuga antes de golpe letal)
@@ -63,7 +63,7 @@ CA 112 no score tudo final (Dia 157, 2026-10-20) com tudo vestido, sem buffs; re
 * **Todo Dia um Pouco — Concluída:** Missão diária do servidor Devil's Bob.
   * Próximo passo: Concluída integralmente no Dia 156. Baú de recompensas surpresa recebido e aberto, entregando um rosário sagrado ao herói.
 * **Xeque-mate — Bloqueada:** Autoquest de nível 30+, iniciada com o Bispo Branco no Grande Tabuleiro de Xadrez.
-  * Próximo passo: Cancelada pela morte #10 em 2026-10-20 (Rainha + cavaleiro). Recomeçar no Bispo Branco (F1): say sim x2. Cascata refeita nesta sessão em ~1h30 com tática de dormir + raios e idas curtas; etapa final exige matar o Rei Negro pessoalmente (cetro tem dono original). Ver conhecimento §70 e plano038.
+  * Próximo passo: Recomeçar no Bispo Branco (F1): say sim x2; cascata pelo automato/acoes/xadrez_cascata.py; Rei por kite com --rei. Ver conhecimento §71 e plano039.
 * **Ajuda Mágica — Abandonada:** Ajudar Lemin a reconstruir o livro de magias de Merlin.
   * Próximo passo: 1) Reaceitar com Lemin, à mão, no Centro da Cidade de Lyon (navegar.py --de templo_midgaard --para cap12_026): olhar Lemin aciona o convite; aceitar; ouvir a pergunta inteira; responder Merlin só no fim da fala; ouvir o relato; responder às confirmações conferindo score tudo, até 'Ajuda Mágica: Você deve entregar objeto ao personagem.' (conhecimento §61 e §64). 2) Só então testar o livro de Jooh, já no inventário (pista a do Plano 034): give apenas com a etapa confirmada (AGENTS #13).
 
@@ -121,21 +121,21 @@ Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
 ### Pendências de inventário
 
 ## ✦ Condições Registradas
-* Save e sono confirmados no Templo; conexão fechada sem quit (Dia 157, 2026-10-20, 12:5x).
-* Nível 33 (HP 226, mana 490, MV 146); EXP 8.023.660; alinhamento 491; CA 112 com tudo vestido; morreu 10 vezes e 1 DT.
-* Xeque-mate CANCELADA pela morte (Rainha Negra + cavaleiro, fuga do wimpy falhou: PÂNICO). Recomeçar no Bispo Branco (F1) e refazer a cascata numa única conexão.
-* Mochila de Pellinore vestida com Coroa da Rainha Negra, Armadura da Torre Branca, 4 lanças (valem 4.000 cada) e cetro do Bispo: Armeiro e Ferreiro sem caixa; vender depois.
-* Colar com pedra púrpura (ANTI-DT) vestido; um segundo colar igual está na mochila.
+* Save e sono confirmados no Templo; conexão fechada sem quit (Dia 157, 2026-10-20).
+* Nível 33 (HP 226, mana 490, MV 146); CA 112 com tudo vestido; morreu 11 vezes e 1 DT; EXP 8.315.136; alinhamento 486.
+* Xeque-mate CANCELADA: o Rei Branco em E1 mata quem está na Xeque-mate ('Herege! Você deu xeque-mate no rei errado!'). Recomeçar com o Bispo Branco em F1.
+* Ouro 72.078 (67.301 banco + 4.777 mão): rodar prepara.py --forcar para guardar. Mochila vestida com 4 lanças (4.000 cada), coroas da Negra, Armadura da Torre Branca e itens; Armeiro e Ferreiro sem caixa.
+* Colar com pedra púrpura (ANTI-DT) vestido.
 
 ## ✦ Próximo Objetivo (Plano, ainda não executado)
 **Capítulo 12: Xeque-mate, cetro do Rei Negro**
-Recomeçar Xeque-mate com o Bispo Branco e refazer a cascata numa conexão; enfeitiçar cavaleiros/bispos/torres (nível <= 33) como escudo; matar o Rei Negro eu mesma. Ver planos/plano038.md.
-* Vender lanças, coroa e armadura quando Ferreiro e Armeiro tiverem caixa.
-* Manter colar anti-DT vestido; renovar armor e invisibility.
-* Conferir antes de conectar que nenhum outro agente está no driver.
+Recomeçar a Xeque-mate pelo Bispo Branco e rodar a cascata pelo xadrez_cascata.py (peoes, bispos, cavalos, torres, rainha); no Rei: kite (sleep, curse, blind, 1 raio, recall) com --rei. Ver planos/plano039.md.
+* Rodar automato/camadas/prepara.py --forcar (guardar 4.777 de ouro).
+* Conferir a posição pela resposta do movimento, nunca por look isolado; nunca parar em E1, E8, B1, G1.
+* Testar o módulo xadrez_cascata.py ao vivo em uma etapa curta antes de confiar nele.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessão de 2026-10-20 (Dia 157) de Claude Sonnet 5.5 (claude-sonnet-5-5) (evidence/dia157-xadrez-charm.json): nível 33 alcançado; charm person treinado a 95%; morte #10 pela Rainha Negra + um cavaleiro (Xeque-mate cancelada); reequipada. Fechada com save e sleep confirmados no Templo, sem quit. Ouro 67.601 (67.301 banco + 300 mão)..
+Fonte do estado: Sessão de 2026-10-20 (Dia 157) de Claude Sonnet 5.5 (claude-sonnet-5-5) (evidence/dia157-xadrez-cascata.json): cascata do Xeque-mate refeita até a Rainha Negra e perdida pela morte #12 (parada em E1, casa do Rei Branco); mapa do tabuleiro e rotina Python criados. Fechada com save e sleep confirmados no Templo, sem quit. Ouro 72.078 (67.301 banco + 4.777 mão); morreu 11 vezes e 1 DT; EXP 8.315.136; alinhamento 486..
 * A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.
 * O colar com pedra purpura pertence a outro dono: o servidor recusa o uso. Nenhum comerciante testado o compra.
 * Bainha de Excalibur exige nivel 85 (vista na Sala de Doacoes, nao pode ser carregada com a carga atual). Scutum de Carvalho exige nivel 35.

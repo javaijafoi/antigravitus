@@ -2526,3 +2526,16 @@ Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: evidence/dia157-xadrez-cha
 - **Lojas sem caixa:** Armeiro ("tente um feiticeiro") e Ferreiro ("não posso pagar") recusam Armadura da Torre Branca, Coroa da Negra e lanças de 4.000.
 - **`prepara.py --forcar`** guarda ouro e revisa a Sala de Doações (3 trocas hoje); rodar antes de sair.
 - **Keen** (nível 55) estava em D8 limpando a Rainha, bispo e cavaleiro; usa itens iguais aos meus (colar de missão, brinco de novato); não roubou nada.
+
+
+## 71. A morte em E1, o look atrasado e a cascata em Python (Dia 157, 2026-10-20, terceira sessão)
+
+Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: evidence/dia157-xadrez-cascata.json.
+
+- **E1 é a casa do Rei Branco e mata quem está na Xeque-mate.** Com a missão ativa, o Rei Branco ("protegido por uma luz muito forte") diz "Herege! Você deu xeque-mate no rei errado!" e mutila (-94 mais um golpe). Nunca parar em E1; evitar também B1 e G1 (Cavaleiro Branco) e a fileira 1 além de F1, indo por F2.
+- **O `look` pode chegar atrasado.** A reancoragem por `look` me deixou em E1 julgando estar em F1. A única conferência confiável é o texto da resposta do próprio movimento (cor da casa, frase da peça "casa do Bispo do Rei Branco", número de saídas). O `automato/acoes/xadrez_cascata.py` faz isso a cada passo.
+- **Mapa do tabuleiro:** as 64 casas (`xadrez_A1` a `xadrez_H8`) estão no `mapa.json` por `scripts/mapear_tabuleiro.py`; o `navegar.py` anda até lá sem `--permitir-risco` (portão `medium`). D8 e D1 listam uma saída oculta `!baixo` a mais.
+- **Rainha Negra:** com `curse` e `blindness` caiu em 2 idas de 3 raios; sem `curse`, em 5 idas. Uma rodada dela chega a 100.
+- **Torres:** empilham em A8; sono nas duas, raios só em uma; a segunda pode só aparecer no repop (~30 min).
+- **Python do projeto:** `prepara.py --forcar` deposita ouro e revisa doações; `ressuscitar.py` ressuscita; nunca derrubar todos os Python (há um `http.server` de outro projeto na porta 8768).
+- **Charm person** não vale em alvos com Santuário (Rainha e Rei), mesmo que o nível permita.

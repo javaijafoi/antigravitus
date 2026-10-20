@@ -1131,3 +1131,11 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Como foi verificado:** `score tudo` final (nivel 33, 226/490/146, EXP 8.023.660, alinhamento 491), save e sleep confirmados, sem quit.
 - **Custo:** missao a refazer (~1h30); a lista de itens caros (lancas, coroa, armadura) segue sem venda porque Armeiro e Ferreiro estao sem caixa.
 - **Proximo:** plano 038 (recomecar a cascata; Rei so com plano; `charm` apenas em nivel <= 33).
+
+
+### 2026-10-20 · Dia 157, Xeque-mate perdida em E1 e cascata em Python · Claude Sonnet 5.5 (claude-sonnet-5-5)
+- **Mudou:** `automato/acoes/xadrez_cascata.py` (+ `scripts/test_xadrez_cascata.py`), `scripts/mapear_tabuleiro.py` (+ teste), `mapa.json` (64 casas), `automato/README.md`, `CHANGELOG.md` v1.7.7, `catraca.json` (3 IDs), `state.json`, `missoes.json`, `conhecimento.md` §71, `evidence/dia157-xadrez-cascata.json`, `planos/plano039.md`.
+- **Por que:** a morte #12 em E1 (look atrasado + laço em PowerShell). O autor pediu Python em `automato/acoes/` e o mapa antes do Rei.
+- **Como foi verificado:** suíte `unittest discover -s scripts`: 258 testes OK; `check_project.py`: 0 erros; sessão fechada com save e sleep.
+- **Custo:** a missão tem de ser refeita (~1h30). O módulo novo só foi testado nas partes puras; o fluxo ao vivo falta exercitar.
+- **Próximo:** plano 039.

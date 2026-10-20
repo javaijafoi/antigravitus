@@ -5,7 +5,7 @@
     "day": 157,
     "verification": "live",
     "live_verified": true,
-    "source": "Sessão de 2026-10-20 (Dia 157) de Claude Sonnet 5.5 (claude-sonnet-5-5) (evidence/dia157-xadrez-charm.json): nível 33 alcançado; charm person treinado a 95%; morte #10 pela Rainha Negra + um cavaleiro (Xeque-mate cancelada); reequipada. Fechada com save e sleep confirmados no Templo, sem quit. Ouro 67.601 (67.301 banco + 300 mão)."
+    "source": "Sessão de 2026-10-20 (Dia 157) de Claude Sonnet 5.5 (claude-sonnet-5-5) (evidence/dia157-xadrez-cascata.json): cascata do Xeque-mate refeita até a Rainha Negra e perdida pela morte #12 (parada em E1, casa do Rei Branco); mapa do tabuleiro e rotina Python criados. Fechada com save e sleep confirmados no Templo, sem quit. Ouro 72.078 (67.301 banco + 4.777 mão); morreu 11 vezes e 1 DT; EXP 8.315.136; alinhamento 486."
   },
   "level": 33,
   "mechanical_race": "Elfo",
@@ -13,7 +13,7 @@
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
   "alignment": {
-    "value": 491,
+    "value": 486,
     "label": "Bom"
   },
   "vitals": {
@@ -22,7 +22,7 @@
       "max": 226
     },
     "mana": {
-      "current": 490,
+      "current": 426,
       "max": 490
     },
     "mv": {
@@ -31,10 +31,10 @@
     }
   },
   "experience": {
-    "current": 8023660,
+    "current": 8315136,
     "next_level": 9000000
   },
-  "gold": 67601,
+  "gold": 72078,
   "attributes": {
     "STR": 11,
     "DEX": 17,
@@ -47,7 +47,7 @@
     "base": 112,
     "with_armor": 165,
     "effect_verified": true,
-    "note": "CA 112 no score tudo final (Dia 157, 2026-10-20) com tudo vestido, sem buffs; reequipado depois da morte #10."
+    "note": "CA 112 no score tudo de 2026-10-20 (Dia 157), tudo vestido, sem buffs; 148 com armor."
   },
   "hitroll": 16,
   "damroll": 5,
@@ -79,17 +79,17 @@
   },
   "last_event": {
     "day": 157,
-    "summary": "Xeque-mate refeita ate o cetro e perdida por morte. Nivel 33 e charm person 95%. Rei Negro exige ser morto por mim (cetro tem dono original)."
+    "summary": "Cascata refeita até a Rainha (peões, bispos, cavalos, torres e Rainha mortos) e perdida por morte em E1. Tabuleiro mapeado e rotina Python criada (xadrez_cascata.py)."
   },
   "next_objective": {
     "mission_id": "xeque-mate",
     "title": "Capítulo 12: Xeque-mate, cetro do Rei Negro",
-    "next_step": "Recomeçar Xeque-mate com o Bispo Branco e refazer a cascata numa conexão; enfeitiçar cavaleiros/bispos/torres (nível <= 33) como escudo; matar o Rei Negro eu mesma. Ver planos/plano038.md.",
+    "next_step": "Recomeçar a Xeque-mate pelo Bispo Branco e rodar a cascata pelo xadrez_cascata.py (peoes, bispos, cavalos, torres, rainha); no Rei: kite (sleep, curse, blind, 1 raio, recall) com --rei. Ver planos/plano039.md.",
     "status": "active",
     "missing_preparation": [
-      "Vender lanças, coroa e armadura quando Ferreiro e Armeiro tiverem caixa.",
-      "Manter colar anti-DT vestido; renovar armor e invisibility.",
-      "Conferir antes de conectar que nenhum outro agente está no driver."
+      "Rodar automato/camadas/prepara.py --forcar (guardar 4.777 de ouro).",
+      "Conferir a posição pela resposta do movimento, nunca por look isolado; nunca parar em E1, E8, B1, G1.",
+      "Testar o módulo xadrez_cascata.py ao vivo em uma etapa curta antes de confiar nele."
     ]
   },
   "skills": [
@@ -376,11 +376,11 @@
     "pending_verification": []
   },
   "conditions": [
-    "Save e sono confirmados no Templo; conexão fechada sem quit (Dia 157, 2026-10-20, 12:5x).",
-    "Nível 33 (HP 226, mana 490, MV 146); EXP 8.023.660; alinhamento 491; CA 112 com tudo vestido; morreu 10 vezes e 1 DT.",
-    "Xeque-mate CANCELADA pela morte (Rainha Negra + cavaleiro, fuga do wimpy falhou: PÂNICO). Recomeçar no Bispo Branco (F1) e refazer a cascata numa única conexão.",
-    "Mochila de Pellinore vestida com Coroa da Rainha Negra, Armadura da Torre Branca, 4 lanças (valem 4.000 cada) e cetro do Bispo: Armeiro e Ferreiro sem caixa; vender depois.",
-    "Colar com pedra púrpura (ANTI-DT) vestido; um segundo colar igual está na mochila."
+    "Save e sono confirmados no Templo; conexão fechada sem quit (Dia 157, 2026-10-20).",
+    "Nível 33 (HP 226, mana 490, MV 146); CA 112 com tudo vestido; morreu 11 vezes e 1 DT; EXP 8.315.136; alinhamento 486.",
+    "Xeque-mate CANCELADA: o Rei Branco em E1 mata quem está na Xeque-mate ('Herege! Você deu xeque-mate no rei errado!'). Recomeçar com o Bispo Branco em F1.",
+    "Ouro 72.078 (67.301 banco + 4.777 mão): rodar prepara.py --forcar para guardar. Mochila vestida com 4 lanças (4.000 cada), coroas da Negra, Armadura da Torre Branca e itens; Armeiro e Ferreiro sem caixa.",
+    "Colar com pedra púrpura (ANTI-DT) vestido."
   ],
   "uncertainties": [
     "A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.",

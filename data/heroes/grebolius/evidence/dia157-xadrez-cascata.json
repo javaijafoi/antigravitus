@@ -1,0 +1,20 @@
+{
+  "hero_id": "grebolius",
+  "day": 157,
+  "agent": "Claude Sonnet 5.5 (claude-sonnet-5-5)",
+  "via": "automato",
+  "recorded_on": "2026-10-20",
+  "source_kind": "sessao_ao_vivo",
+  "source": "automato/runtime/transcript_dia157_20261020_*.jsonl e session_live_dia157_20261020_*.log (conexões de 12:33 a 15:05); falas de missão respondidas à mão; laços de combate em PowerShell no scratchpad, supervisionados.",
+  "findings": {
+    "cascata": "Refeita em ~1h30: peões (9 mortes), bispos F8 e C8, cavalos G8 e B8, torres (duas mortes depois da ordem), Rainha Negra (com curse caiu em 2 idas). A ordem do Bispo chega com atraso, depois de ~8 mortes de peão ou de todos os vivos morrerem.",
+    "morte_12": "Parada em E1 (casa do Rei Branco) esperando a ordem do Bispo: o Rei Branco, 'protegido por uma luz muito forte', matou com 'Herege! Você deu xeque-mate no rei errado!' (-94 e outro golpe, estando com 78 de vida). Causa: a reancoragem IrF1 leu um look atrasado e concluiu que estava em F1.",
+    "look_atrasado": "Respostas de look chegam defasadas quando há tráfego do servidor; só a resposta do próprio movimento é confiável. xadrez_cascata.py verifica cor, frase da peça e saídas a cada passo.",
+    "rainha": "Cada rodada chega a 100 de dano; curse reduz; cai em 2 a 5 idas de 1 a 3 raios com recall a 150. Rainha e Rei têm Santuário: charm person não pega (docs/circlemud #50).",
+    "charm_person": "95% (perfeito). Funciona em cavalo e bispo (sem Santuário), não na Rainha nem no Rei.",
+    "regen": "Dormir e descansar regeneram; dormir em F1 por 3,5 min não atraiu ataques. Não há poção de cura nos catálogos conhecidos.",
+    "ferramentas": "navegar.py agora anda até H5 e dentro do tabuleiro (mapa de 64 casas); prepara.py --forcar deposita ouro e revisa doações; ressuscitar.py ressuscita.",
+    "outros_processos": "Os processos Python 24140 e 26392 (porta 8768) são um http.server de outro projeto: nunca derrubar todos os Python."
+  },
+  "state_end": {"location": "O Templo de Midgaard", "level": 33, "hp": "226/226", "mana": "426/490", "exp": 8315136, "alignment": 486, "gold_total": 72078, "closing": "save_confirmed=True, sleep_confirmed=True; driver parado; sem quit"}
+}

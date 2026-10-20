@@ -142,6 +142,7 @@ execute (fica no repositório só como histórico).
 | Caça no Milharal | `rotinas/milharal_v2.py` | canônica · `rotinas/milharal.py` = legado |
 | Caça nos Novatos | `rotinas/novatos.py` | canônica |
 | Esgoto | `rotinas/esgoto.py` | legado |
+| Xeque-mate (cascata) | `acoes/xadrez_cascata.py` | **canônica** — etapas peoes/bispos/cavalos/torres/rainha, `f1` e o kite do Rei (`--rei`); rastreia a casa A1 a H8 e confere cada passo pelo texto da resposta; casas proibidas E8/E1/B1/G1. Substitui as rotinas `xadrez_v2/v3` |
 | Xadrez | `rotinas/xadrez_v2.py`, `rotinas/xadrez_v3.py`, `rotinas/_suspensas/xadrez.py` | legado — **não usar** até corrigir: pegam espólio antes da triagem (Plano 029, diretiva §15) |
 | Executores de benchmark | `acoes/cacador_hibrido.py`, `acoes/cacador_milharal.py`, `acoes/cacador_xadrez.py`, `acoes/cacador_xadrez_v3.py`, `acoes/atingir_meta_pocao.py` | pontual |
 | Testes e reconhecimento | `acoes/testar_abate_peao.py`, `acoes/testar_abate_peao_direto.py`, `acoes/testar_xadrez.py`, `acoes/explorar_tabuleiro.py`, `acoes/checar_magias.py`, `acoes/localizar_smurfs.py`, `acoes/pegar_jarro.py`, `acoes/ressuscitar.py` | pontual |

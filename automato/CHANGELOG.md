@@ -4,6 +4,12 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.7.7 — Dia 157 · Cascata do Xeque-mate em Python e o tabuleiro no mapa (Claude Sonnet 5.5)
+
+- Novo `acoes/xadrez_cascata.py`: etapas `peoes|bispos|cavalos|torres|rainha|f1|rei`, rastreio de posição A1 a H8 com verificação de cada passo (cor, frase da peça, número de saídas) e casas proibidas E8, E1, B1 e G1. Nasceu das mortes #10 e #12 (laços em PowerShell perderam a posição por respostas de `look` atrasadas). `--rei` é obrigatório para o kite no Rei Negro.
+- Novo `scripts/mapear_tabuleiro.py` + testes: grava as 64 casas (`xadrez_A1` a `xadrez_H8`) no `mapa.json` pela grade da zona 36 e baixa o portão para `medium`, de modo que o `navegar.py` anda até o tabuleiro sem `--permitir-risco`.
+- Limite honesto: o módulo foi testado só nas partes puras (verificação, grade, caminho); o fluxo ao vivo ainda não foi exercitado. Nunca derrubar todos os processos Python: há um `http.server` de outro projeto na porta 8768 (derrubar só o `live_daemon`).
+
 ## v1.7.6 — Dia 157 · Vigia de cota para o Claude Code (Claude Sonnet 5.5)
 
 - Novo `scripts/cota_claude.py` + `scripts/test_cota_claude.py`: le um snapshot em `automato/runtime/cota_claude.json` registrado a partir do `get_usage` do harness; corta com a janela de 5 h restando <= 10% ou a semanal restando <= 5% (AGENTS §13) e recusa snapshot com mais de 20 min. IDs na catraca: `cota.claude.corte`, `cota.claude.fresco`, `cota.claude.abertura`.

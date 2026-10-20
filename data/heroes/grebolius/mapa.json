@@ -3,7 +3,7 @@
   "hero_name": "Grebolius",
   "sanctuary_id": "panteao_centenarios",
   "last_updated_cycle": "Dia 157 — Plano 033: biblioteca de Jareth, Paris, alas da catedral e Lyon, 2026-10-19",
-  "total_rooms": 642,
+  "total_rooms": 706,
   "layers": [
     {
       "id": "superficie",
@@ -1835,8 +1835,8 @@
       "name": "O Grande Tabuleiro de Xadrez",
       "layer": "novatos",
       "zone": "O Grande Tabuleiro de Xadrez",
-      "risk": "Alto; morte registrada na região",
-      "risk_code": "danger",
+      "risk": "Medio (so a passagem; o perigo esta em E8, E1, B1, G1 e na fileira 8)",
+      "risk_code": "medium",
       "icon": "♟️",
       "coords": {
         "x": 120,
@@ -1844,11 +1844,11 @@
       },
       "exits": {
         "e": "caminho_sujo_xadrez",
-        "w": "casa_branca_xadrez",
+        "w": "xadrez_H5",
         "n": "lv003"
       },
       "npcs": [],
-      "notes": "Portão gigantesco de ferro em arco de pedra. Dia 60: confronto fatal com Cavaleiro Branco na região; casa exata e posição atual da criatura não confirmadas.",
+      "notes": "Portão gigantesco de ferro em arco de pedra. Dia 60: confronto fatal com Cavaleiro Branco na região; casa exata e posição atual da criatura não confirmadas. | Dia 157: o oeste leva a casa H5 (xadrez_H5); as 64 casas estao em xadrez_A1..xadrez_H8. | Dia 157: o oeste leva a casa H5 (xadrez_H5); as 64 casas estao em xadrez_A1..xadrez_H8.",
       "discovered_in": "Ciclo II (Dia 18)",
       "visitas_registradas": 38,
       "fontes": [
@@ -14876,6 +14876,1639 @@
       "discovered_in": "Dia 156",
       "fontes": [
         "rota_verificada_dia157"
+      ]
+    },
+    {
+      "id": "xadrez_A1",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": -240,
+        "y": 120
+      },
+      "exits": {
+        "n": "xadrez_A2",
+        "e": "xadrez_B1"
+      },
+      "npcs": [],
+      "notes": "Casa A1 do tabuleiro (zona 36). Torre da Rainha Branca",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_B1",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Alto",
+      "risk_code": "danger",
+      "icon": "♟️",
+      "coords": {
+        "x": -120,
+        "y": 120
+      },
+      "exits": {
+        "n": "xadrez_B2",
+        "e": "xadrez_C1",
+        "w": "xadrez_A1"
+      },
+      "npcs": [],
+      "notes": "Casa B1 do tabuleiro (zona 36). Cavalo da Rainha Branca (o Cavaleiro Branco ataca quem entra visivel)",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_C1",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 0,
+        "y": 120
+      },
+      "exits": {
+        "n": "xadrez_C2",
+        "e": "xadrez_D1",
+        "w": "xadrez_B1"
+      },
+      "npcs": [],
+      "notes": "Casa C1 do tabuleiro (zona 36). Bispo da Rainha Branca",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_D1",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 120,
+        "y": 120
+      },
+      "exits": {
+        "n": "xadrez_D2",
+        "e": "xadrez_E1",
+        "w": "xadrez_C1"
+      },
+      "npcs": [],
+      "notes": "Casa D1 do tabuleiro (zona 36). Rainha Branca",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_E1",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Extremo",
+      "risk_code": "danger",
+      "icon": "♟️",
+      "coords": {
+        "x": 240,
+        "y": 120
+      },
+      "exits": {
+        "n": "xadrez_E2",
+        "e": "xadrez_F1",
+        "w": "xadrez_D1"
+      },
+      "npcs": [],
+      "notes": "Casa E1 do tabuleiro (zona 36). REI BRANCO: mata quem esta na Xeque-mate (\"Herege!\")",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_F1",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 360,
+        "y": 120
+      },
+      "exits": {
+        "n": "xadrez_F2",
+        "e": "xadrez_G1",
+        "w": "xadrez_E1"
+      },
+      "npcs": [],
+      "notes": "Casa F1 do tabuleiro (zona 36). Bispo Branco, patrono da Xeque-mate",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_G1",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Alto",
+      "risk_code": "danger",
+      "icon": "♟️",
+      "coords": {
+        "x": 480,
+        "y": 120
+      },
+      "exits": {
+        "n": "xadrez_G2",
+        "e": "xadrez_H1",
+        "w": "xadrez_F1"
+      },
+      "npcs": [],
+      "notes": "Casa G1 do tabuleiro (zona 36). Cavalo do Rei Branco (o Cavaleiro Branco ataca quem entra visivel)",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_H1",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 600,
+        "y": 120
+      },
+      "exits": {
+        "n": "xadrez_H2",
+        "w": "xadrez_G1"
+      },
+      "npcs": [],
+      "notes": "Casa H1 do tabuleiro (zona 36). Torre do Rei Branco",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_A2",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": -240,
+        "y": 240
+      },
+      "exits": {
+        "n": "xadrez_A3",
+        "s": "xadrez_A1",
+        "e": "xadrez_B2"
+      },
+      "npcs": [],
+      "notes": "Casa A2 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_B2",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": -120,
+        "y": 240
+      },
+      "exits": {
+        "n": "xadrez_B3",
+        "s": "xadrez_B1",
+        "e": "xadrez_C2",
+        "w": "xadrez_A2"
+      },
+      "npcs": [],
+      "notes": "Casa B2 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_C2",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 0,
+        "y": 240
+      },
+      "exits": {
+        "n": "xadrez_C3",
+        "s": "xadrez_C1",
+        "e": "xadrez_D2",
+        "w": "xadrez_B2"
+      },
+      "npcs": [],
+      "notes": "Casa C2 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_D2",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 120,
+        "y": 240
+      },
+      "exits": {
+        "n": "xadrez_D3",
+        "s": "xadrez_D1",
+        "e": "xadrez_E2",
+        "w": "xadrez_C2"
+      },
+      "npcs": [],
+      "notes": "Casa D2 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_E2",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 240,
+        "y": 240
+      },
+      "exits": {
+        "n": "xadrez_E3",
+        "s": "xadrez_E1",
+        "e": "xadrez_F2",
+        "w": "xadrez_D2"
+      },
+      "npcs": [],
+      "notes": "Casa E2 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_F2",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 360,
+        "y": 240
+      },
+      "exits": {
+        "n": "xadrez_F3",
+        "s": "xadrez_F1",
+        "e": "xadrez_G2",
+        "w": "xadrez_E2"
+      },
+      "npcs": [],
+      "notes": "Casa F2 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_G2",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 480,
+        "y": 240
+      },
+      "exits": {
+        "n": "xadrez_G3",
+        "s": "xadrez_G1",
+        "e": "xadrez_H2",
+        "w": "xadrez_F2"
+      },
+      "npcs": [],
+      "notes": "Casa G2 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_H2",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 600,
+        "y": 240
+      },
+      "exits": {
+        "n": "xadrez_H3",
+        "s": "xadrez_H1",
+        "w": "xadrez_G2"
+      },
+      "npcs": [],
+      "notes": "Casa H2 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_A3",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": -240,
+        "y": 360
+      },
+      "exits": {
+        "n": "xadrez_A4",
+        "s": "xadrez_A2",
+        "e": "xadrez_B3"
+      },
+      "npcs": [],
+      "notes": "Casa A3 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_B3",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": -120,
+        "y": 360
+      },
+      "exits": {
+        "n": "xadrez_B4",
+        "s": "xadrez_B2",
+        "e": "xadrez_C3",
+        "w": "xadrez_A3"
+      },
+      "npcs": [],
+      "notes": "Casa B3 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_C3",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 0,
+        "y": 360
+      },
+      "exits": {
+        "n": "xadrez_C4",
+        "s": "xadrez_C2",
+        "e": "xadrez_D3",
+        "w": "xadrez_B3"
+      },
+      "npcs": [],
+      "notes": "Casa C3 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_D3",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 120,
+        "y": 360
+      },
+      "exits": {
+        "n": "xadrez_D4",
+        "s": "xadrez_D2",
+        "e": "xadrez_E3",
+        "w": "xadrez_C3"
+      },
+      "npcs": [],
+      "notes": "Casa D3 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_E3",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 240,
+        "y": 360
+      },
+      "exits": {
+        "n": "xadrez_E4",
+        "s": "xadrez_E2",
+        "e": "xadrez_F3",
+        "w": "xadrez_D3"
+      },
+      "npcs": [],
+      "notes": "Casa E3 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_F3",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 360,
+        "y": 360
+      },
+      "exits": {
+        "n": "xadrez_F4",
+        "s": "xadrez_F2",
+        "e": "xadrez_G3",
+        "w": "xadrez_E3"
+      },
+      "npcs": [],
+      "notes": "Casa F3 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_G3",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 480,
+        "y": 360
+      },
+      "exits": {
+        "n": "xadrez_G4",
+        "s": "xadrez_G2",
+        "e": "xadrez_H3",
+        "w": "xadrez_F3"
+      },
+      "npcs": [],
+      "notes": "Casa G3 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_H3",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 600,
+        "y": 360
+      },
+      "exits": {
+        "n": "xadrez_H4",
+        "s": "xadrez_H2",
+        "w": "xadrez_G3"
+      },
+      "npcs": [],
+      "notes": "Casa H3 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_A4",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": -240,
+        "y": 480
+      },
+      "exits": {
+        "n": "xadrez_A5",
+        "s": "xadrez_A3",
+        "e": "xadrez_B4"
+      },
+      "npcs": [],
+      "notes": "Casa A4 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_B4",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": -120,
+        "y": 480
+      },
+      "exits": {
+        "n": "xadrez_B5",
+        "s": "xadrez_B3",
+        "e": "xadrez_C4",
+        "w": "xadrez_A4"
+      },
+      "npcs": [],
+      "notes": "Casa B4 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_C4",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 0,
+        "y": 480
+      },
+      "exits": {
+        "n": "xadrez_C5",
+        "s": "xadrez_C3",
+        "e": "xadrez_D4",
+        "w": "xadrez_B4"
+      },
+      "npcs": [],
+      "notes": "Casa C4 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_D4",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 120,
+        "y": 480
+      },
+      "exits": {
+        "n": "xadrez_D5",
+        "s": "xadrez_D3",
+        "e": "xadrez_E4",
+        "w": "xadrez_C4"
+      },
+      "npcs": [],
+      "notes": "Casa D4 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_E4",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 240,
+        "y": 480
+      },
+      "exits": {
+        "n": "xadrez_E5",
+        "s": "xadrez_E3",
+        "e": "xadrez_F4",
+        "w": "xadrez_D4"
+      },
+      "npcs": [],
+      "notes": "Casa E4 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_F4",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 360,
+        "y": 480
+      },
+      "exits": {
+        "n": "xadrez_F5",
+        "s": "xadrez_F3",
+        "e": "xadrez_G4",
+        "w": "xadrez_E4"
+      },
+      "npcs": [],
+      "notes": "Casa F4 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_G4",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 480,
+        "y": 480
+      },
+      "exits": {
+        "n": "xadrez_G5",
+        "s": "xadrez_G3",
+        "e": "xadrez_H4",
+        "w": "xadrez_F4"
+      },
+      "npcs": [],
+      "notes": "Casa G4 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_H4",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 600,
+        "y": 480
+      },
+      "exits": {
+        "n": "xadrez_H5",
+        "s": "xadrez_H3",
+        "w": "xadrez_G4"
+      },
+      "npcs": [],
+      "notes": "Casa H4 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_A5",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": -240,
+        "y": 600
+      },
+      "exits": {
+        "n": "xadrez_A6",
+        "s": "xadrez_A4",
+        "e": "xadrez_B5"
+      },
+      "npcs": [],
+      "notes": "Casa A5 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_B5",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": -120,
+        "y": 600
+      },
+      "exits": {
+        "n": "xadrez_B6",
+        "s": "xadrez_B4",
+        "e": "xadrez_C5",
+        "w": "xadrez_A5"
+      },
+      "npcs": [],
+      "notes": "Casa B5 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_C5",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 0,
+        "y": 600
+      },
+      "exits": {
+        "n": "xadrez_C6",
+        "s": "xadrez_C4",
+        "e": "xadrez_D5",
+        "w": "xadrez_B5"
+      },
+      "npcs": [],
+      "notes": "Casa C5 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_D5",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 120,
+        "y": 600
+      },
+      "exits": {
+        "n": "xadrez_D6",
+        "s": "xadrez_D4",
+        "e": "xadrez_E5",
+        "w": "xadrez_C5"
+      },
+      "npcs": [],
+      "notes": "Casa D5 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_E5",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 240,
+        "y": 600
+      },
+      "exits": {
+        "n": "xadrez_E6",
+        "s": "xadrez_E4",
+        "e": "xadrez_F5",
+        "w": "xadrez_D5"
+      },
+      "npcs": [],
+      "notes": "Casa E5 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_F5",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 360,
+        "y": 600
+      },
+      "exits": {
+        "n": "xadrez_F6",
+        "s": "xadrez_F4",
+        "e": "xadrez_G5",
+        "w": "xadrez_E5"
+      },
+      "npcs": [],
+      "notes": "Casa F5 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_G5",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 480,
+        "y": 600
+      },
+      "exits": {
+        "n": "xadrez_G6",
+        "s": "xadrez_G4",
+        "e": "xadrez_H5",
+        "w": "xadrez_F5"
+      },
+      "npcs": [],
+      "notes": "Casa G5 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_H5",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 600,
+        "y": 600
+      },
+      "exits": {
+        "n": "xadrez_H6",
+        "s": "xadrez_H4",
+        "w": "xadrez_G5",
+        "e": "grande_tabuleiro_portao"
+      },
+      "npcs": [],
+      "notes": "Casa H5 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_A6",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": -240,
+        "y": 720
+      },
+      "exits": {
+        "n": "xadrez_A7",
+        "s": "xadrez_A5",
+        "e": "xadrez_B6"
+      },
+      "npcs": [],
+      "notes": "Casa A6 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_B6",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": -120,
+        "y": 720
+      },
+      "exits": {
+        "n": "xadrez_B7",
+        "s": "xadrez_B5",
+        "e": "xadrez_C6",
+        "w": "xadrez_A6"
+      },
+      "npcs": [],
+      "notes": "Casa B6 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_C6",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 0,
+        "y": 720
+      },
+      "exits": {
+        "n": "xadrez_C7",
+        "s": "xadrez_C5",
+        "e": "xadrez_D6",
+        "w": "xadrez_B6"
+      },
+      "npcs": [],
+      "notes": "Casa C6 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_D6",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 120,
+        "y": 720
+      },
+      "exits": {
+        "n": "xadrez_D7",
+        "s": "xadrez_D5",
+        "e": "xadrez_E6",
+        "w": "xadrez_C6"
+      },
+      "npcs": [],
+      "notes": "Casa D6 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_E6",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 240,
+        "y": 720
+      },
+      "exits": {
+        "n": "xadrez_E7",
+        "s": "xadrez_E5",
+        "e": "xadrez_F6",
+        "w": "xadrez_D6"
+      },
+      "npcs": [],
+      "notes": "Casa E6 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_F6",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 360,
+        "y": 720
+      },
+      "exits": {
+        "n": "xadrez_F7",
+        "s": "xadrez_F5",
+        "e": "xadrez_G6",
+        "w": "xadrez_E6"
+      },
+      "npcs": [],
+      "notes": "Casa F6 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_G6",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 480,
+        "y": 720
+      },
+      "exits": {
+        "n": "xadrez_G7",
+        "s": "xadrez_G5",
+        "e": "xadrez_H6",
+        "w": "xadrez_F6"
+      },
+      "npcs": [],
+      "notes": "Casa G6 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_H6",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 600,
+        "y": 720
+      },
+      "exits": {
+        "n": "xadrez_H7",
+        "s": "xadrez_H5",
+        "w": "xadrez_G6"
+      },
+      "npcs": [],
+      "notes": "Casa H6 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_A7",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": -240,
+        "y": 840
+      },
+      "exits": {
+        "n": "xadrez_A8",
+        "s": "xadrez_A6",
+        "e": "xadrez_B7"
+      },
+      "npcs": [],
+      "notes": "Casa A7 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_B7",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": -120,
+        "y": 840
+      },
+      "exits": {
+        "n": "xadrez_B8",
+        "s": "xadrez_B6",
+        "e": "xadrez_C7",
+        "w": "xadrez_A7"
+      },
+      "npcs": [],
+      "notes": "Casa B7 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_C7",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 0,
+        "y": 840
+      },
+      "exits": {
+        "n": "xadrez_C8",
+        "s": "xadrez_C6",
+        "e": "xadrez_D7",
+        "w": "xadrez_B7"
+      },
+      "npcs": [],
+      "notes": "Casa C7 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_D7",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 120,
+        "y": 840
+      },
+      "exits": {
+        "n": "xadrez_D8",
+        "s": "xadrez_D6",
+        "e": "xadrez_E7",
+        "w": "xadrez_C7"
+      },
+      "npcs": [],
+      "notes": "Casa D7 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_E7",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 240,
+        "y": 840
+      },
+      "exits": {
+        "n": "xadrez_E8",
+        "s": "xadrez_E6",
+        "e": "xadrez_F7",
+        "w": "xadrez_D7"
+      },
+      "npcs": [],
+      "notes": "Casa E7 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_F7",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 360,
+        "y": 840
+      },
+      "exits": {
+        "n": "xadrez_F8",
+        "s": "xadrez_F6",
+        "e": "xadrez_G7",
+        "w": "xadrez_E7"
+      },
+      "npcs": [],
+      "notes": "Casa F7 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_G7",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 480,
+        "y": 840
+      },
+      "exits": {
+        "n": "xadrez_G8",
+        "s": "xadrez_G6",
+        "e": "xadrez_H7",
+        "w": "xadrez_F7"
+      },
+      "npcs": [],
+      "notes": "Casa G7 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_H7",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Medio",
+      "risk_code": "medium",
+      "icon": "♟️",
+      "coords": {
+        "x": 600,
+        "y": 840
+      },
+      "exits": {
+        "n": "xadrez_H8",
+        "s": "xadrez_H6",
+        "w": "xadrez_G7"
+      },
+      "npcs": [],
+      "notes": "Casa H7 do tabuleiro (zona 36).",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_A8",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Alto",
+      "risk_code": "danger",
+      "icon": "♟️",
+      "coords": {
+        "x": -240,
+        "y": 960
+      },
+      "exits": {
+        "s": "xadrez_A7",
+        "e": "xadrez_B8"
+      },
+      "npcs": [],
+      "notes": "Casa A8 do tabuleiro (zona 36). Torre da Rainha Negra (as torres empilham aqui)",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_B8",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Alto",
+      "risk_code": "danger",
+      "icon": "♟️",
+      "coords": {
+        "x": -120,
+        "y": 960
+      },
+      "exits": {
+        "s": "xadrez_B7",
+        "e": "xadrez_C8",
+        "w": "xadrez_A8"
+      },
+      "npcs": [],
+      "notes": "Casa B8 do tabuleiro (zona 36). Cavalo da Rainha Negra",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_C8",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Alto",
+      "risk_code": "danger",
+      "icon": "♟️",
+      "coords": {
+        "x": 0,
+        "y": 960
+      },
+      "exits": {
+        "s": "xadrez_C7",
+        "e": "xadrez_D8",
+        "w": "xadrez_B8"
+      },
+      "npcs": [],
+      "notes": "Casa C8 do tabuleiro (zona 36). Bispo da Rainha Negra",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_D8",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Alto",
+      "risk_code": "danger",
+      "icon": "♟️",
+      "coords": {
+        "x": 120,
+        "y": 960
+      },
+      "exits": {
+        "s": "xadrez_D7",
+        "e": "xadrez_E8",
+        "w": "xadrez_C8"
+      },
+      "npcs": [],
+      "notes": "Casa D8 do tabuleiro (zona 36). Rainha Negra; saida oculta `baixo` para a Tesouraria Negra",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_E8",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Extremo",
+      "risk_code": "danger",
+      "icon": "♟️",
+      "coords": {
+        "x": 240,
+        "y": 960
+      },
+      "exits": {
+        "s": "xadrez_E7",
+        "e": "xadrez_F8",
+        "w": "xadrez_D8"
+      },
+      "npcs": [],
+      "notes": "Casa E8 do tabuleiro (zona 36). REI NEGRO: Santuario, ~1.500 de vida, ate 3 golpes mortais por rodada. NAO entrar sem plano",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_F8",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Alto",
+      "risk_code": "danger",
+      "icon": "♟️",
+      "coords": {
+        "x": 360,
+        "y": 960
+      },
+      "exits": {
+        "s": "xadrez_F7",
+        "e": "xadrez_G8",
+        "w": "xadrez_E8"
+      },
+      "npcs": [],
+      "notes": "Casa F8 do tabuleiro (zona 36). Bispo do Rei Negro",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_G8",
+      "name": "Uma Casa Branca",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Alto",
+      "risk_code": "danger",
+      "icon": "♟️",
+      "coords": {
+        "x": 480,
+        "y": 960
+      },
+      "exits": {
+        "s": "xadrez_G7",
+        "e": "xadrez_H8",
+        "w": "xadrez_F8"
+      },
+      "npcs": [],
+      "notes": "Casa G8 do tabuleiro (zona 36). Cavalo do Rei Negro",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
+      ]
+    },
+    {
+      "id": "xadrez_H8",
+      "name": "Uma Casa Preta",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Alto",
+      "risk_code": "danger",
+      "icon": "♟️",
+      "coords": {
+        "x": 600,
+        "y": 960
+      },
+      "exits": {
+        "s": "xadrez_H7",
+        "w": "xadrez_G8"
+      },
+      "npcs": [],
+      "notes": "Casa H8 do tabuleiro (zona 36). Torre do Rei Negro",
+      "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
+      "fontes": [
+        "docs/circlemud/05-mundo-padrao-vs-mapa.md",
+        "evidence/dia157-xadrez-etapa6.json"
       ]
     }
   ],

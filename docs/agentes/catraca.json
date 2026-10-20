@@ -235,6 +235,24 @@
       "arquivo": "scripts/mandabala.py",
       "desde": "2026-10-20",
       "regra": "a abertura manda registrar a cota do Claude Code com cota_claude.py"
+    },
+    {
+      "id": "def verificar_casa",
+      "arquivo": "automato/acoes/xadrez_cascata.py",
+      "desde": "2026-10-20",
+      "regra": "cada passo no tabuleiro e' conferido pelo texto da propria resposta (cor, frase da peca, saidas); divergencia = Perdida + recall"
+    },
+    {
+      "id": "PROIBIDAS",
+      "arquivo": "automato/acoes/xadrez_cascata.py",
+      "desde": "2026-10-20",
+      "regra": "a rota nunca passa por E8, E1, B1, G1 (Rei Negro, Rei Branco, cavaleiros brancos)"
+    },
+    {
+      "id": "def aplicar",
+      "arquivo": "scripts/mapear_tabuleiro.py",
+      "desde": "2026-10-20",
+      "regra": "as 64 casas do tabuleiro estao no mapa.json (grade 8x8) e o portao e' medium"
     }
   ]
 }
