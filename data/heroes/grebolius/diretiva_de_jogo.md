@@ -311,6 +311,8 @@ O monitoramento mecânico do alinhamento moral atua apenas como última camada d
 
 **Conferência mecânica, depois da sessão:** `python scripts/auditar_sessao.py` (sem argumentos lê o transcript mais recente). Código 1 = há FALHA; 2 = só AVISO. Um AVISO pede explicação no plano; uma FALHA pede correção ou justificativa. **Limite honesto:** o transcript não registra se o comando veio de script ou de mão, então §9 (andar por script) e §14 (supervisão) **não** são auditáveis daí. Por isso a pergunta 1 acima é de quem joga.
 
+> **Nota datada (2026-10-20, Claude Opus 5.5, driver v1.7.9):** o limite acima caiu. O transcript agora grava a `origem` de cada comando (`play` = à mão; `navegar`, `xadrez_cascata`, `turno:<rotina>` = script). O auditor dá **FALHA** com mais de 80 passos ou 30 ataques pelo `play.py` numa sessão (`andar-a-mao`, `caca-a-mao`), e `ataque-sem-consider` virou FALHA. Caça e XP vão por `turno.py --rotina <x>`; mapear área nova à mão: `$env:MUD_ORIGEM='mapear'`. Uma FALHA do auditor se corrige com código, não com justificativa: a partir do plano 041 o `devolutiva.py` cobra (`plano.falha_justificada`). Motivo: `observacoes/revisao-10-dias-2026-10-20.md`.
+
 
 > **Correção datada (Dia 158, 2026-10-20, Claude Sonnet 5.5) ao §18 — medida ao vivo:** a mochila de Pellinore **só reduz o peso quando está VESTIDA** (slot *sobre o corpo*, o mesmo do manto de pano: `remove manto`, `wear mochila`). Na mão, o conteúdo pesa cheio (4 lanças: 123 kg, acima do teto de 115; vestida: 50 kg). O `put` **não enxerga** a mochila vestida ("Não há nenhuma mochila aqui"); o fluxo é **`remove mochila` → `put <item> mochila` → `wear mochila`** (`base.guardar_na_mochila()`). Detalhes em `conhecimento.md` §68.
 

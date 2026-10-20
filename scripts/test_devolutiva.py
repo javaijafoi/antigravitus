@@ -112,6 +112,41 @@ class TestCoerencia(BaseTmp):
         self.assertEqual(falha.call_count, 0)
 
 
+class TestFalhaJustificada(unittest.TestCase):
+    """plano.falha_justificada: FALHA do auditor se corrige com código, não com parágrafo (planos 037-039)."""
+
+    # linha real do plano 039 §4
+    REAL = ("- **Auditor:** as FALHAS de `auditar_sessao.py` deste dia (repetição de recusa por clientes "
+            "simultâneos) estão explicadas nos planos 037 e 038 e no conhecimento §68 a §71.")
+    CORRIGIDA = ("- **Auditor:** a FALHA de recuo-a-pe do auditar_sessao.py está justificada e corrigida em "
+                 "`automato/acoes/xadrez_cascata.py` (piso de vida antes de cada lance).")
+
+    def _rodar(self, numero, texto, mudou_retorno=False):
+        with mock.patch.object(devolutiva, "mudou", return_value=mudou_retorno), \
+             mock.patch.object(devolutiva, "ok") as m_ok, \
+             mock.patch.object(devolutiva, "falha") as m_falha, \
+             mock.patch.object(devolutiva, "aviso") as m_aviso:
+            devolutiva.checar_falhas_justificadas(numero, texto, "HEAD")
+        return m_ok, m_falha, m_aviso
+
+    def test_acha_a_linha_real_sem_codigo(self):
+        self.assertEqual(devolutiva.falhas_justificadas(self.REAL), [(self.REAL, [])])
+        self.assertEqual(devolutiva.falhas_justificadas("o auditor passou limpo"), [])
+
+    def test_sem_codigo_e_falha_a_partir_do_041(self):
+        _, falha, aviso = self._rodar(41, self.REAL)
+        self.assertEqual((falha.call_count, aviso.call_count), (1, 0))
+        _, falha, aviso = self._rodar(40, self.REAL)          # planos antigos não se corrigem: só aviso
+        self.assertEqual((falha.call_count, aviso.call_count), (0, 1))
+
+    def test_codigo_citado_tem_de_ter_mudado(self):
+        self.assertEqual(devolutiva.falhas_justificadas(self.CORRIGIDA)[0][1], ["automato/acoes/xadrez_cascata.py"])
+        _, falha, _ = self._rodar(41, self.CORRIGIDA, mudou_retorno=False)
+        self.assertEqual(falha.call_count, 1)
+        _, falha, _ = self._rodar(41, self.CORRIGIDA, mudou_retorno=True)
+        self.assertEqual(falha.call_count, 0)
+
+
 class TestJanelaDaSessao(BaseTmp):
     def test_sem_plano_anterior_usa_head(self):
         self.plano(1)

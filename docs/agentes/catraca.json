@@ -253,6 +253,72 @@
       "arquivo": "scripts/mapear_tabuleiro.py",
       "desde": "2026-10-20",
       "regra": "as 64 casas do tabuleiro estao no mapa.json (grade 8x8) e o portao e' medium"
+    },
+    {
+      "id": "andar-a-mao",
+      "arquivo": "scripts/auditar_sessao.py",
+      "desde": "2026-10-20",
+      "regra": "mais de 80 passos pelo play.py numa sessão = FALHA: rota conhecida vai por navegar.py; área nova com MUD_ORIGEM=mapear (diretiva §23)"
+    },
+    {
+      "id": "caca-a-mao",
+      "arquivo": "scripts/auditar_sessao.py",
+      "desde": "2026-10-20",
+      "regra": "mais de 30 ataques pelo play.py numa sessão = FALHA: caça e XP vão por turno.py --rotina (README do automato, diretiva §23)"
+    },
+    {
+      "id": "achar(FALHA, 'ataque-sem-consider",
+      "arquivo": "scripts/auditar_sessao.py",
+      "desde": "2026-10-20",
+      "regra": "ataque (kill ou magia ofensiva, incluindo sleep/curse/blindness/charm) a alvo sem consider na sessão é FALHA, uma vez por alvo (diretiva §2)"
+    },
+    {
+      "id": "def ler_cabecalho",
+      "arquivo": "automato/nucleo/driver/live_daemon.py",
+      "desde": "2026-10-20",
+      "regra": "o daemon grava a origem de cada comando no transcript (\"<token>\t<origem>\")"
+    },
+    {
+      "id": "origem = os.environ.get('MUD_ORIGEM') or 'play'",
+      "arquivo": "automato/nucleo/driver/play.py",
+      "desde": "2026-10-20",
+      "regra": "play.py se identifica como origem 'play' (jogo à mão)"
+    },
+    {
+      "id": "+ origem() +",
+      "arquivo": "automato/nucleo/base.py",
+      "desde": "2026-10-20",
+      "regra": "rotinas e scripts se identificam pelo nome (base.origem())"
+    },
+    {
+      "id": "MUD_ORIGEM='turno:'",
+      "arquivo": "automato/camadas/turno.py",
+      "desde": "2026-10-20",
+      "regra": "rotina lançada pelo turno aparece como turno:<rotina> no transcript"
+    },
+    {
+      "id": "def considerar",
+      "arquivo": "automato/nucleo/base.py",
+      "desde": "2026-10-20",
+      "regra": "consider uma vez por alvo antes do primeiro ataque; perigo duro = não atacar (diretiva §2)"
+    },
+    {
+      "id": "plano.falha_justificada",
+      "arquivo": "scripts/devolutiva.py",
+      "desde": "2026-10-20",
+      "regra": "plano (desde o 041) não dá FALHA do auditor por justificada sem citar o .py alterado que a evita"
+    },
+    {
+      "id": "def pode_lancar",
+      "arquivo": "automato/acoes/xadrez_cascata.py",
+      "desde": "2026-10-20",
+      "regra": "nenhum lance com vida < 100: a ida para antes do próximo lance, não depois (conhecimento §73)"
+    },
+    {
+      "id": "ctx.considerar(",
+      "arquivo": "automato/acoes/xadrez_cascata.py",
+      "desde": "2026-10-20",
+      "regra": "consider no primeiro encontro com cada peça; perigo duro para a etapa"
     }
   ]
 }

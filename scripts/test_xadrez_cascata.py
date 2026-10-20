@@ -174,5 +174,93 @@ class TestCaminho(unittest.TestCase):
             tab.passo('s')
 
 
+class FalsoCtx:
+    """Ctx sem driver: respostas roteirizadas por comando (prefixo), consider e recall registrados."""
+    def __init__(self, respostas, perigo=None):
+        self.respostas, self.perigo, self.enviados, self.recalls, self.considerados = respostas, perigo, [], 0, []
+
+    def cmd(self, c, espera=1.0):
+        self.enviados.append(c)
+        return next(v for k, v in self.respostas if c.startswith(k))
+
+    def considerar(self, alvo, log=print):
+        self.considerados.append(alvo)
+        return self.perigo
+
+    def recall(self):
+        self.recalls += 1
+
+
+class FalsoTab:
+    def ir(self, casa):
+        pass
+
+
+BISPO = 'Uma Casa Preta\nO Bispo Negro está aqui.'
+
+
+class TestLances(unittest.TestCase):
+    """Revisão de 16 a 20/10: consider antes de cada peça e nenhum lance com vida < 100 (§73)."""
+
+    def setUp(self):
+        self._mortes = xc.mortes
+        xc.mortes = lambda tipo: 0
+
+    def tearDown(self):
+        xc.mortes = self._mortes
+
+    def test_pode_lancar(self):
+        self.assertTrue(xc.pode_lancar({'hp': 150}))
+        self.assertFalse(xc.pode_lancar({'hp': 99}))
+        self.assertTrue(xc.pode_lancar({}))            # vida desconhecida não trava
+
+    def test_para_antes_do_proximo_lance_com_vida_baixa(self):
+        ctx = FalsoCtx([('look', (BISPO, {'hp': 220}, False)),
+                        ("cast 'blindness'", ('', {'hp': 90}, True)),
+                        ('cast', ('', {'hp': 90}, True))])
+        res = xc.atacar_peca(ctx, FalsoTab(), 'F8', 'bispo', 'Bispo', ['blindness', 'curse'], False, 1, log=lambda *_: None)
+        self.assertEqual(res, 'recall')
+        self.assertEqual(ctx.enviados, ['look', "cast 'blindness' bispo"])   # o curse não saiu
+        self.assertEqual(ctx.recalls, 1)
+        self.assertEqual(ctx.considerados, ['bispo'])
+
+    def test_perigo_duro_no_consider_nao_ataca(self):
+        ctx = FalsoCtx([('look', (BISPO, {'hp': 220}, False))], perigo='suicid')
+        res = xc.atacar_peca(ctx, FalsoTab(), 'F8', 'bispo', 'Bispo', ['blindness'], False, 1, log=lambda *_: None)
+        self.assertEqual(res, 'perigo')
+        self.assertFalse([c for c in ctx.enviados if c.startswith('cast')])
+
+
+class TestConsiderarNaBase(unittest.TestCase):
+    def setUp(self):
+        sys.path.insert(0, str(RAIZ / 'automato' / 'nucleo'))
+        import base
+        self.base = base
+        self._run = base.run
+        base._CONSIDERADOS.clear()
+
+    def tearDown(self):
+        self.base.run = self._run
+        self.base._CONSIDERADOS.clear()
+
+    def test_perigo_duro(self):
+        self.assertEqual(self.base.perigo_duro('Vida:  196   Seria suicídio!'), 'suicid')
+        self.assertIsNone(self.base.perigo_duro('Nível:  31   Muito fácil!\nVida:  196   Você é LOUCO!'))
+
+    def test_um_consider_por_alvo_e_nao_guarda_alvo_ausente(self):
+        enviados = []
+        respostas = {'consider peao': 'Você  Oponente\nNível: 20  Muito fácil!', 'consider rei': 'Comparar sua força com a de quem?'}
+
+        def run(c):
+            enviados.append(c)
+            return respostas[c], {}, False
+        self.base.run = run
+        self.assertIsNone(self.base.considerar('peao'))
+        self.assertIsNone(self.base.considerar('2.peao'))
+        self.base.considerar('rei')
+        self.base.considerar('rei')
+        self.assertEqual(enviados, ['consider peao', 'consider rei', 'consider rei'])
+
+
 if __name__ == '__main__':
     unittest.main()

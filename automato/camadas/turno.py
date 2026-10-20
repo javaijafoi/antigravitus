@@ -22,6 +22,7 @@ from pathlib import Path as _Path
 _sys.path.insert(0, str(_Path(__file__).resolve().parents[1] / 'nucleo'))
 
 import argparse
+import os
 import subprocess
 import sys
 import time
@@ -58,8 +59,10 @@ def motor_em_segundo_plano(rotina):
     log = open(LOCAL / 'rotina.log', 'a', encoding='utf-8', errors='replace')
     log.write(f'\n=== {time.strftime("%H:%M:%S")} rotina={rotina} ===\n')
     log.flush()
+    # o transcript marca cada comando como "turno:<rotina>" (base.origem()): prova de jogo supervisionado
+    env = dict(os.environ, MUD_ORIGEM='turno:' + rotina)
     return subprocess.Popen([PY, str(LOCAL / 'camadas' / 'trabalhar.py'), '--rotina', rotina],
-                            stdout=log, stderr=subprocess.STDOUT)
+                            stdout=log, stderr=subprocess.STDOUT, env=env)
 
 
 def socorrer():

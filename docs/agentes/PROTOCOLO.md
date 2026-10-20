@@ -34,6 +34,9 @@ Fonte: [diretiva §23](../../data/heroes/grebolius/diretiva_de_jogo.md).
    e a resposta "Merlin" estava na §61). Fala, `give` e compra são **à mão, linha a linha**, com
    `score tudo` mostrando a sub-etapa exata ([AGENTS #13/#14](../../AGENTS.md#4-invariantes-não-quebrar)).
 3. **Alguém está lendo o retorno a cada passo?** Rotina só com `turno.py` ou leitura do log a cada ~60 s.
+   **Caça e XP vão por `turno.py --rotina <x>`, não pelo `play.py`.** O transcript grava a origem de cada
+   comando, e mais de 80 passos ou 30 ataques pelo `play.py` numa sessão são FALHA no auditor
+   (`andar-a-mao`, `caca-a-mao`). Mapear área nova à mão: `$env:MUD_ORIGEM='mapear'`.
 4. **Se a vida cair?** `recall` ao primeiro golpe grave. Nunca recuar andando.
 
 Sempre: `save`, nunca `quit` · não ataque o que não é ameaça · `identify` antes de `get` · descoberta

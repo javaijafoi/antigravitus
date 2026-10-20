@@ -49,7 +49,12 @@ def count_mobs(text):
     return n, alvo
 
 
-def matar(alvo, maximo=12):
+def matar(alvo, maximo=12, defesa=False):
+    # diretiva §2: consider antes do primeiro ataque a cada alvo; em defesa (ja' atacada) so' registra
+    perigo = considerar(alvo)
+    if perigo and not defesa:
+        print(f'[milharal_v2] consider {alvo}: "{perigo}" -> nao ataco', flush=True)
+        return 'perigo'
     falhas = 0
     primeiro_golpe = True
     for _ in range(maximo):
@@ -174,7 +179,7 @@ def da_floresta_ao_milharal():
     for _ in range(6):
         nome = _sala_nome()
         if 'lutando' in nome.lower():
-            matar('monstro')
+            matar('monstro', defesa=True)
             nome = _sala_nome()
         if 'Milharal' in nome:
             print('[milharal_v2] no Milharal', flush=True)

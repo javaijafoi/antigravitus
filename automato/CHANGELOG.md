@@ -4,6 +4,18 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.7.9 — Dia 157 · O transcript diz de onde veio cada comando; catracas da revisão de 10 dias (Claude Opus 5.5)
+
+Origem: `data/heroes/grebolius/observacoes/revisao-10-dias-2026-10-20.md`. De 16 a 20/10 o `turno.py` não rodou nenhuma vez depois de 16/10 15:10; em 20/10 houve 1 `consider` em 589 magias e as três mortes no tabuleiro vieram de táticas testadas ao vivo.
+
+- **Protocolo do driver:** a primeira linha do pedido passa a ser `<token>\t<origem>` (`live_daemon.ler_cabecalho`; cliente antigo sem origem continua aceito). Cada comando do transcript ganha o campo `origem`: `play` (play.py, à mão), o nome do script (`base.origem()`: `navegar`, `xadrez_cascata`...) ou `turno:<rotina>` (o `turno.py` exporta `MUD_ORIGEM`). Para mapear área nova à mão: `MUD_ORIGEM=mapear`. **Reiniciar o `live_daemon` para valer.**
+- **`scripts/auditar_sessao.py`:** novas FALHAS `andar-a-mao` (mais de 80 passos pelo play.py) e `caca-a-mao` (mais de 30 ataques pelo play.py); `ataque-sem-consider` passa de AVISO a FALHA, uma vez por alvo, e passa a cobrir `sleep`, `curse`, `blindness`, `poison`, `charm person`, `color spray` e `fireball`; o consider de `torre` vale para `1.torre`/`2.torre`. Transcript antigo, sem origem, fica fora das duas regras novas (INFO `origem-ausente`).
+- **`nucleo/base.py`:** `considerar(alvo)` (um `consider` por alvo e por processo; devolve o perigo duro da diretiva §2) e `perigo_duro()`. `rotinas/milharal_v2.py` e `rotinas/novatos.py` não atacam com perigo duro.
+- **`acoes/xadrez_cascata.py`:** `consider` no primeiro encontro com cada peça (perigo duro para a etapa, código 4; no Rei só registra, porque `--rei` é a autorização) e `pode_lancar()`: nenhum lance com vida abaixo de 100 (a ida para **antes** do próximo lance, como o §73 pediu).
+- **`scripts/devolutiva.py`:** `plano.falha_justificada`: a partir do plano 041, dar uma FALHA do auditor por "justificada/explicada" exige citar o `.py` que a evita, e ele tem de ter mudado na sessão.
+- **Testes:** `test_auditar_sessao.py` (+8), `test_xadrez_cascata.py` (+5), `test_devolutiva.py` (+3). 11 IDs novos no `catraca.json`.
+- **Limite:** nada disso foi exercitado ao vivo; os limites 80 e 30 são escolha minha a partir da revisão e podem precisar de ajuste.
+
 ## v1.7.8 — Dia 157 · Rotina mais rápida, `armor` no preparo e testes de "quem acorda" (Claude Sonnet 5.5)
 
 - `camadas/prepara.py`: novo `garantir_armor()` (lê a CA do `score tudo` e relança `armor` na Praça se cair abaixo de 140; roda a cada `prepara`). Diretiva do autor: `armor` dura horas e fica no preparo, não no script de ataque. Teste: `scripts/test_prepara_armor.py`.

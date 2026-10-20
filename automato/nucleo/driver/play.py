@@ -37,10 +37,12 @@ def controller_ok():
 
 def call(command, timeout=60.0):
     token = os.environ.get('MUD_CTRL_TOKEN', '')
+    # origem gravada no transcript: play.py = jogo a mao. Mapear area nova a mao: MUD_ORIGEM=mapear
+    origem = os.environ.get('MUD_ORIGEM') or 'play'
     sock = socket.socket()
     sock.settimeout(timeout)
     sock.connect((HOST, PORT))
-    sock.sendall((token + '\n' + command + '\n').encode('utf-8'))
+    sock.sendall((token + '\t' + origem + '\n' + command + '\n').encode('utf-8'))
     chunks = []
     while True:
         chunk = sock.recv(65536)

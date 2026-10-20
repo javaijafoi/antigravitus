@@ -6,10 +6,11 @@ Por que existe: ler as regras uma vez não garante segui-las. Este script lê o
 `in_combat`) e aponta o que quebrou regra escrita. Não substitui julgamento: um AVISO pede
 explicação; uma FALHA pede correção ou justificativa registrada no plano.
 
-Cada achado cita a regra de origem. O que NÃO dá para auditar daqui (o transcript não diz de
-onde veio o comando): se a sessão passou pelo turno.py/vigia (README do automato, diretiva §14)
-e se uma rota conhecida foi andada à mão em vez de por script (diretiva §9). Para isso há
-`automato/camadas/navegar.py`.
+Cada achado cita a regra de origem. Desde o driver v1.7.9 cada comando traz o campo `origem`
+(`play` = play.py, à mão; `navegar`, `xadrez_cascata`, `turno:<rotina>`... = script). Com ele o
+auditor cobra a forma de jogar do automato (README, diretiva §23): andar muito ou caçar muito
+pelo play.py é FALHA. Transcripts mais antigos não têm origem e ficam fora dessas duas regras.
+Para mapear área nova à mão (diretiva §9.1), `MUD_ORIGEM=mapear` antes do play.py.
 
 Uso:
     python scripts/auditar_sessao.py                      # o transcript mais recente
@@ -31,6 +32,13 @@ ASSINATURAS_FALHA = ('não pode ir', 'Em que você deseja', 'muito relaxado', 'c
                      'Como?!?', 'Você não tem', 'Você não vê', 'A porta está fechada',
                      'não tem experiência')
 ENTREGA = 'Você deve entregar objeto'
+# magias que começam uma luta: pedem consider antes (diretiva §2; morte #10 foi charm sem consider)
+OFENSIVAS = ('burning hands', 'magic missile', 'chill touch', 'shocking grasp', 'lightning bolt',
+             'color spray', 'fireball', 'sleep', 'curse', 'blindness', 'poison', 'charm person')
+ORIGENS_A_MAO = {'play'}
+# revisão de 16 a 20/10: ~80 mil comandos à mão e nenhuma rotina supervisionada
+LIMITE_MOV_A_MAO = 80
+LIMITE_ATAQUE_A_MAO = 30
 
 
 def _rx(frase):
@@ -63,6 +71,24 @@ def _primeira_palavra(cmd):
     return (cmd or '').strip().split(' ')[0].lower()
 
 
+def _alvo(texto):
+    """'2.torre negra' -> 'torre': o consider de 'torre' vale para '1.torre' e '2.torre'."""
+    primeiro = (texto or '').strip().lower().split(' ')[0]
+    return re.sub(r'^\d+\.', '', primeiro)
+
+
+def alvo_de_ataque(cmd):
+    """Alvo de um comando que começa luta (kill/hit ou magia ofensiva), ou None."""
+    c = (cmd or '').strip().lower()
+    p = _primeira_palavra(c)
+    if p in {'kill', 'hit', 'attack', 'k'}:
+        return _alvo(c.split(' ', 1)[1]) if ' ' in c else None
+    m = re.match(r"cast\s+'([^']+)'\s+(\S+)", c)
+    if p == 'cast' and m and m.group(1) in OFENSIVAS:
+        return _alvo(m.group(2))
+    return None
+
+
 def auditar(regs):
     """Recebe a lista de registros e devolve achados: dicts {nivel, regra, onde, detalhe}."""
     achados = []
@@ -73,15 +99,36 @@ def auditar(regs):
     comandos = [(i, r) for i, r in enumerate(regs) if r.get('kind') == 'command']
     wimpy = next((r.get('wimpy') for r in regs if r.get('kind') == 'open' and r.get('wimpy')), 45)
     hp_max, ultimo_score_entrega, alinh_ant = 0, False, None
-    consideradas, identificadas = set(), set()
+    consideradas, identificadas, cobradas = set(), set(), set()
     seq_falha, seq_cmd = 0, None
     verbais_recentes = []
+    por_origem = {}
+    mov_mao = ataque_mao = 0
 
     for n, (i, r) in enumerate(comandos):
         cmd = (r.get('cmd') or '').strip()
         texto = r.get('text') or ''
         p = _primeira_palavra(cmd)
         alvo = ' '.join(cmd.lower().split(' ')[1:])
+        origem = r.get('origem')
+        if origem:
+            por_origem[origem] = por_origem.get(origem, 0) + 1
+        a_mao = origem in ORIGENS_A_MAO
+        atacado = alvo_de_ataque(cmd)
+
+        # 0. a forma de jogar (diretiva §23, README do automato): rota e caça vão por script/rotina
+        if a_mao and p in DIRECOES:
+            mov_mao += 1
+            if mov_mao == LIMITE_MOV_A_MAO + 1:
+                achar(FALHA, 'andar-a-mao (diretiva §23)', i,
+                      'mais de %d passos pelo play.py: rota conhecida vai por navegar.py; área nova '
+                      'à mão com MUD_ORIGEM=mapear e a rota gravada no mapa.json' % LIMITE_MOV_A_MAO)
+        if a_mao and atacado:
+            ataque_mao += 1
+            if ataque_mao == LIMITE_ATAQUE_A_MAO + 1:
+                achar(FALHA, 'caca-a-mao (diretiva §23)', i,
+                      'mais de %d ataques pelo play.py: caça e XP vão por turno.py --rotina <x>, '
+                      'supervisionado; se não há rotina para a zona, escrever a rotina' % LIMITE_ATAQUE_A_MAO)
         vitals = r.get('vitals') or {}
         hp = vitals.get('hp') if isinstance(vitals.get('hp'), int) else None
         if hp:
@@ -121,15 +168,13 @@ def auditar(regs):
                     achar(AVISO, 'fala-em-rajada (AGENTS #14)', i,
                           '%r e %r com menos de 2 s de intervalo: pode ter sido automático' % (a[2], b[2]))
 
-        # 5. atacar sem consider (diretiva §2, §22)
+        # 5. atacar sem consider (diretiva §2, §22): FALHA uma vez por alvo nunca considerado na sessão
         if p == 'consider':
-            consideradas.add(alvo.split(' ')[0])
-        if p in {'kill', 'hit', 'attack', 'k'} and alvo.split(' ')[0] not in consideradas:
-            achar(AVISO, 'ataque-sem-consider (diretiva §2/§22)', i, '%r sem consider prévio do alvo' % cmd)
-        if p == 'cast' and re.search(r"'(burning hands|magic missile|chill touch|shocking grasp|lightning bolt)'\s+(\S+)", cmd.lower()):
-            alvo_c = re.search(r"'[^']+'\s+(\S+)", cmd.lower()).group(1)
-            if alvo_c not in consideradas:
-                achar(AVISO, 'ataque-sem-consider (diretiva §2/§22)', i, '%r sem consider prévio de %s' % (cmd, alvo_c))
+            consideradas.add(_alvo(alvo))
+        if atacado and atacado not in consideradas and atacado not in cobradas:
+            cobradas.add(atacado)
+            achar(FALHA, 'ataque-sem-consider (diretiva §2/§22)', i,
+                  '%r sem consider prévio de %s nesta sessão' % (cmd, atacado))
 
         # 6. get sem identify (diretiva §15)
         if p == 'identify' or (p == 'cast' and 'identify' in cmd.lower()):
@@ -176,9 +221,15 @@ def auditar(regs):
     elif fecho is not None and not fecho.get('save_confirmed', fecho.get('save', True)):
         achar(FALHA, 'save-nao-confirmado (AGENTS #11)', regs.index(fecho), 'close sem save_confirmed')
 
-    # 12. o que o transcript não permite auditar
-    achados.append({'nivel': 'INFO', 'regra': 'limite-do-auditor', 'onde': None,
-                    'detalhe': 'origem do comando (script ou à mão) não é registrada: §9/§14 não são auditáveis aqui'})
+    # 12. de onde vieram os comandos
+    if comandos and not por_origem:
+        achados.append({'nivel': 'INFO', 'regra': 'origem-ausente', 'onde': None,
+                        'detalhe': 'transcript sem campo origem (driver anterior a v1.7.9): '
+                                   'andar-a-mao e caca-a-mao não auditáveis aqui'})
+    elif por_origem:
+        achados.append({'nivel': 'INFO', 'regra': 'origem', 'onde': None,
+                        'detalhe': 'comandos por origem: ' + ', '.join(
+                            '%s=%d' % kv for kv in sorted(por_origem.items(), key=lambda kv: -kv[1]))})
     return achados
 
 

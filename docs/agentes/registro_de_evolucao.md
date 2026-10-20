@@ -1146,3 +1146,10 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Como foi verificado:** `unittest` de `test_prepara_armor` e `test_xadrez_cascata` (26 OK); testes ao vivo em peão, bispo e cavalo; sessão fechada com save e sleep, sem quit.
 - **Custo:** a Xeque-mate foi perdida de novo e o Rei não morreu; 45.998 de ouro gastos em dois cetros inúteis (um revendido por 3.000), contra a diretiva que o autor deu em seguida.
 - **Próximo:** plano 040 (decidir a tática do Rei com o autor antes de refazer a cascata).
+
+### 2026-10-20 · Dia 157, revisão de 10 dias e catracas da forma de jogar · Claude Opus 5.5 (claude-opus-5-5)
+- **Mudou:** `automato/nucleo/driver/live_daemon.py` e `play.py`, `automato/nucleo/base.py`, `automato/camadas/turno.py`, `automato/rotinas/milharal_v2.py` e `novatos.py`, `automato/acoes/xadrez_cascata.py`, `scripts/auditar_sessao.py`, `scripts/devolutiva.py` e os testes deles, `docs/agentes/catraca.json` (11 IDs), `automato/CHANGELOG.md` v1.7.9, `diretiva_de_jogo.md` §23 (nota datada), `docs/agentes/PROTOCOLO.md` §2, `data/heroes/grebolius/observacoes/revisao-10-dias-2026-10-20.md`.
+- **Por que:** o autor cobrou que a forma melhor de jogar (o automato: `turno.py` + rotina + vigia/prepara) vinha sendo ignorada. A revisão dos 39 transcripts de 16 a 20/10 confirmou: nenhuma rotina supervisionada desde 16/10 15:10, 1 `consider` em 589 magias em 20/10, 3 mortes no tabuleiro por tática testada ao vivo, e falhas do auditor dadas por justificadas nos planos 037 a 039.
+- **Como foi verificado:** `python -B -m unittest discover -s scripts -p "test_*.py"` e `check_project.py` (resultado no commit). Nada exercitado ao vivo.
+- **Custo:** o `live_daemon` precisa ser reiniciado para gravar a origem. Sessão que joga por `play.py` passa a ter FALHA acima de 80 passos ou 30 ataques; mapear área nova à mão exige `MUD_ORIGEM=mapear`.
+- **Próximo:** o mutirão de XP do plano 040 por `turno.py --rotina <caça>`; ajustar os limites 80/30 se a primeira sessão real mostrar falso positivo.

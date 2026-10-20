@@ -272,14 +272,28 @@ PRESENCA = {
 ORDEM = {'bispos': 'Elimine os dois bispos', 'cavalos': 'elimine os cavaleiros negros',
          'torres': 'Elimine as duas torres', 'rainha': 'elimine a Rainha Negra'}
 LIMITE_VIDA = 150
+VIDA_PISO_LANCE = 100   # conhecimento par.73: a ida tem de parar ANTES do proximo lance, nao depois
 HP_MIN_ENTRAR = 215
 MANA_MIN_ENTRAR = 250   # uma ida gasta 100 a 170; descansar ate' 440 so' desperdicava minutos
+
+
+def pode_lancar(vitals, piso=VIDA_PISO_LANCE):
+    """False se a vida conhecida esta abaixo do piso: nada de outro lance, so' recall. Pura."""
+    h = (vitals or {}).get('hp')
+    return not (isinstance(h, int) and 0 < h < piso)
 
 
 class Ctx:
     def __init__(self):
         self.run, self.nav = _jogo()
         self.salas = self.nav.carregar_mapa()
+
+    def considerar(self, alvo, log=print):
+        """consider uma vez por peca e por processo (diretiva par.2); devolve o perigo duro ou None."""
+        import base
+        perigo = base.considerar(alvo)
+        log('  consider %s: %s' % (alvo, perigo or 'sem perigo duro'))
+        return perigo
 
     def cmd(self, c, espera=1.0):
         r = self.run(c)
@@ -359,7 +373,7 @@ def atacar_peca(ctx, tab, casa, alvo, tipo, magias, dorme, meta, log=print, espe
     """Uma ida: chega na casa, dorme (se for o caso), debuffs, raios com limite de vida. Devolve o resultado."""
     tab.ir(casa)
     m0 = mortes(tipo)
-    entrada = ctx.cmd('look', 0.5)[0]
+    entrada, ultimo, _c = ctx.cmd('look', 0.5)
     pat = PRESENCA[alvo]
     if not re.search(pat, normalizar(entrada)):
         if not espera:
@@ -369,14 +383,40 @@ def atacar_peca(ctx, tab, casa, alvo, tipo, magias, dorme, meta, log=print, espe
         entrada = esperar_presenca(ctx, alvo)
         if entrada is None:
             return 'ausente'
+    mira = '1.' + alvo if alvo == 'torre' else alvo
+    if ctx.considerar(mira, log):
+        ctx.recall()
+        return 'perigo'
+
+    def lance(magia, alvo_magia, espera):
+        nonlocal ultimo
+        if not pode_lancar(ultimo):
+            raise _Recuar()
+        r = ctx.cmd("cast '%s' %s" % (magia, alvo_magia), espera)
+        ultimo = r[1] or ultimo
+        return r
+
+    try:
+        return _ida(ctx, lance, alvo, tipo, magias, dorme, entrada, m0, log)
+    except _Recuar:
+        log('  vida abaixo de %d antes do lance: recall' % VIDA_PISO_LANCE)
+        ctx.recall()
+        return 'recall'
+
+
+class _Recuar(Exception):
+    """Vida abaixo do piso antes de um lance."""
+
+
+def _ida(ctx, lance, alvo, tipo, magias, dorme, entrada, m0, log):
     if dorme:
-        ctx.cmd("cast 'sleep' %s" % ('1.' + alvo if alvo == 'torre' else alvo), 2)
+        lance('sleep', '1.' + alvo if alvo == 'torre' else alvo, 2)
         if alvo == 'torre' and len(re.findall('castelo negro', normalizar(entrada))) >= 2:
-            ctx.cmd("cast 'sleep' 2.torre", 2)
+            lance('sleep', '2.torre', 2)
     for m in magias:
-        ctx.cmd("cast '%s' %s" % (m, alvo), 1.5)
+        lance(m, alvo, 1.5)
     for i in range(1, 9):
-        texto, vit, combate = ctx.cmd("cast 'lightning bolt' %s" % ('1.torre' if alvo == 'torre' else alvo), 1.5)
+        texto, vit, combate = lance('lightning bolt', '1.torre' if alvo == 'torre' else alvo, 1.5)
         h = vida(vit)
         log('  raio %d vida=%s mana=%s mortes=%d' % (i, h, mana(vit), mortes(tipo)))
         if mortes(tipo) > m0:
@@ -416,6 +456,9 @@ def cumprir_etapa(nome, log=print):
                 ctx.recall()
                 return 3
             log('ida %d %s: %s' % (tentativa, casa, res))
+            if res == 'perigo':
+                log('consider deu perigo duro em %s: etapa parada (diretiva §2)' % casa)
+                return 4
             if res == 'recall':
                 break
         ctx.recall()
@@ -445,7 +488,15 @@ def varrer_peoes(meta_mortes=9, log=print):
                 tab.ir(nome_casa(col, fil))
             texto = ctx.cmd('look', 0.5)[0]
             if re.search(r'pe.{1,2}o negro aqui', normalizar(texto)) or 'peao negro aqui' in normalizar(texto):
+                if ctx.considerar('peao negro', log):
+                    ctx.recall()
+                    return 1
+                vit = None
                 for _ in range(5):
+                    if vit is not None and not pode_lancar(vit):
+                        log('vida abaixo de %d antes do lance: recall' % VIDA_PISO_LANCE)
+                        ctx.recall()
+                        return 1
                     t2, vit, _c = ctx.cmd("cast 'lightning bolt' peao negro", 2)
                     if 'em que voce' in normalizar(t2):
                         break
@@ -491,9 +542,15 @@ def kite_rei(idas=1, log=print):
                 log('o Rei nao dormiu; recall')
                 ctx.recall()
                 continue
+            ctx.considerar('rei', log)   # so' registra: o --rei ja' e' a autorizacao explicita do autor
             for magia in ('curse', 'blindness'):
-                ctx.cmd("cast '%s' rei" % magia, 3)
+                if not pode_lancar(vit):
+                    raise Perdida('vida %s abaixo de %d antes de %s' % (vida(vit), VIDA_PISO_LANCE, magia))
+                _t, v2, _c = ctx.cmd("cast '%s' rei" % magia, 3)
+                vit = v2 or vit
             for i in (1,):   # tatica do autor: 1 raio por ida
+                if not pode_lancar(vit):
+                    raise Perdida('vida %s abaixo de %d antes do raio' % (vida(vit), VIDA_PISO_LANCE))
                 _t, vit, _c = ctx.cmd("cast 'lightning bolt' rei", 3)
                 h = vida(vit)
                 log('  raio %d vida=%s mana=%s' % (i, h, mana(vit)))

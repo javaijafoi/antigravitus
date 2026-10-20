@@ -12,7 +12,8 @@ Garantias:
 - Log de sessao nomeado por dia + carimbo e transcricao JSONL de evidencia.
 - _RESYNC reafirma wake/stand/wear all/wimpy; _CLOSE confirma save (e sleep).
 
-Protocolo: uma conexao TCP em 127.0.0.1:14888, payload = "<token>\n<comando>".
+Protocolo: uma conexao TCP em 127.0.0.1:14888, payload = "<token>[\t<origem>]\n<comando>".
+  A origem (play, navegar, trabalhar...) vai para cada comando do transcript (campo "origem").
   _PING | _STATUS | _RESYNC [wimpy] | _CLOSE [sleep] | _RAW <cmd> | <cmd[;cmd...]>
 """
 import json
@@ -98,10 +99,13 @@ class Session:
                         in_combat=bool(self.client.in_combat), state=self.client.current_state)
         return text
 
-    def run(self, command, timeout=8.0):
+    def run(self, command, timeout=8.0, origem=None):
         pre = self.drain('preroll')
         result = self.client.send_prompt(command, timeout=timeout)
         result['preroll'] = pre.strip()
+        if origem:
+            # quem mandou (play, navegar, trabalhar...): o auditar_sessao.py separa jogo a mao de rotina
+            result['origem'] = origem
         self.record('command', **result)
         return result
 
@@ -147,7 +151,14 @@ def connect():
     raise SystemExit(f'[DAEMON] Nao foi possivel conectar: {last}')
 
 
-def handle(session, cmd, token):
+def ler_cabecalho(linha):
+    """Primeira linha do pedido: "<token>" ou "<token>\\t<origem>". Clientes antigos mandam so' o token
+    e ficam sem origem; play.py manda "play", as rotinas mandam o nome do script (base.origem())."""
+    token, _, origem = linha.strip('\r\n ').partition('\t')
+    return token.strip(), (origem.strip()[:40] or None)
+
+
+def handle(session, cmd, token, origem=None):
     raw = cmd.strip()
     if not raw:
         return {'ok': False, 'error': 'comando vazio'}
@@ -172,7 +183,7 @@ def handle(session, cmd, token):
         commands = [raw[5:].strip()]
     else:
         commands = [part.strip() for part in raw.split(';') if part.strip()]
-    out = [session.run(command, timeout=8.0) for command in commands]
+    out = [session.run(command, timeout=8.0, origem=origem) for command in commands]
     return {'ok': True, 'commands': out, **session.status()}
 
 
@@ -228,7 +239,7 @@ def main():
                 conn.settimeout(60.0)
                 data = conn.recv(8192).decode('utf-8', errors='replace')
                 token, _, cmd = data.partition('\n')
-                token = token.strip()
+                token, origem = ler_cabecalho(token)
                 if expected and token != expected:
                     session.record('rejected', cmd=cmd.strip()[:200])
                     conn.sendall((json.dumps({'ok': False, 'error': 'unauthorized'}) + '\n').encode('utf-8'))
@@ -236,7 +247,7 @@ def main():
                 if not cmd.strip():
                     conn.close()
                     continue
-                payload = handle(session, cmd, token)
+                payload = handle(session, cmd, token, origem=origem)
                 conn.sendall((json.dumps(payload, ensure_ascii=False) + '\n').encode('utf-8', errors='replace'))
                 if payload.get('closed'):
                     session.alive = False

@@ -200,6 +200,47 @@ def checar_coerencia_da_devolutiva(heroi, texto, desde, sem_git=False):
                 falha("[devolutiva.coerencia] " + msg + f"  (destino declarado: {destino[:60]})")
 
 
+# Planos 037 a 039 deram as FALHAS do auditar_sessao.py por "justificadas" e seguiram; a queda de
+# alinhamento 491 -> 464 ficou sem causa. FALHA do auditor se corrige com código, não com parágrafo.
+FALHA_JUSTIFICADA_DESDE = 41
+_FALA_DO_AUDITOR = re.compile(r"auditar_sessao|auditor", re.IGNORECASE)
+_JUSTIFICA = re.compile(r"\bfalhas?\b.*\b(justificad|explicad)|\b(justificad|explicad)\w*.*\bfalhas?\b",
+                        re.IGNORECASE)
+_CODIGO = re.compile(r"[\w./-]+\.py\b")
+
+
+def falhas_justificadas(texto):
+    """[(linha, [arquivos .py citados])] das linhas que dão FALHA do auditor por justificada.
+
+    O próprio auditar_sessao.py não conta como correção: citar o auditor não é mudar o jogo.
+    """
+    achados = []
+    for linha in (texto or "").split("\n"):
+        if _FALA_DO_AUDITOR.search(linha) and _JUSTIFICA.search(linha):
+            codigo = [c for c in _CODIGO.findall(linha) if not c.endswith("auditar_sessao.py")]
+            achados.append((linha.strip(), codigo))
+    return achados
+
+
+def checar_falhas_justificadas(numero, texto, desde, sem_git=False):
+    """ID plano.falha_justificada: justificar FALHA do auditor exige citar o .py que a evita, alterado."""
+    marcar = falha if (numero or 0) >= FALHA_JUSTIFICADA_DESDE else aviso
+    achados = falhas_justificadas(texto)
+    for linha, codigo in achados:
+        if not codigo:
+            marcar(f"[plano.falha_justificada] o plano dá FALHA do auditor por justificada sem citar a "
+                   f"mudança de código que a evita: {linha[:100]}")
+            continue
+        mudados = [c for c in codigo if mudou(c, desde, sem_git=sem_git)]
+        if mudados:
+            ok(f"FALHA do auditor tratada com código: {', '.join(mudados)}")
+        else:
+            marcar(f"[plano.falha_justificada] cita {', '.join(codigo)}, mas nada disso mudou nesta "
+                   f"sessão: {linha[:80]}")
+    if not achados:
+        ok("nenhuma FALHA do auditor dada por justificada no plano")
+
+
 # --------------------------------------------------------------------------- #
 # 3. Capítulo, evidência, livro-razão
 # --------------------------------------------------------------------------- #
@@ -377,6 +418,7 @@ def main(argv=None):
     print("\n2. Coerência da devolutiva técnica (o prometido está no artefato?)")
     if texto:
         checar_coerencia_da_devolutiva(heroi, texto, desde, sem_git=args.sem_git)
+        checar_falhas_justificadas(numero, texto, desde, sem_git=args.sem_git)
     else:
         aviso("sem plano, sem devolutiva a conferir")
 

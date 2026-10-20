@@ -57,6 +57,38 @@ class TestAuditor(unittest.TestCase):
         self.assertIn('ataque-sem-consider', regras([cmd('kill malandro')]))
         self.assertNotIn('ataque-sem-consider', regras([cmd('consider malandro'), cmd('kill malandro')]))
 
+    def test_ataque_sem_consider_e_falha_uma_vez_por_alvo(self):
+        seq = [cmd("cast 'lightning bolt' bispo")] * 4 + [cmd("cast 'charm person' rainha")]
+        achados = [a for a in A.auditar(seq) if a['regra'].startswith('ataque-sem-consider')]
+        self.assertEqual([a['nivel'] for a in achados], [A.FALHA, A.FALHA])   # bispo e rainha, uma vez cada
+
+    def test_consider_vale_para_alvo_numerado_e_debuffs(self):
+        seq = [cmd('consider torre'), cmd("cast 'sleep' 2.torre"), cmd("cast 'lightning bolt' 1.torre")]
+        self.assertNotIn('ataque-sem-consider', regras(seq))
+        self.assertIn('ataque-sem-consider', regras([cmd("cast 'curse' rei")]))
+        self.assertNotIn('ataque-sem-consider', regras([cmd("cast 'armor'"), cmd("cast 'invisibility'")]))
+
+    def test_andar_a_mao(self):
+        a_mao = [dict(cmd('e'), origem='play') for _ in range(A.LIMITE_MOV_A_MAO + 1)]
+        self.assertIn('andar-a-mao', regras(a_mao))
+        self.assertNotIn('andar-a-mao', regras(a_mao[:-1]))
+        por_script = [dict(cmd('e'), origem='navegar') for _ in range(200)]
+        self.assertNotIn('andar-a-mao', regras(por_script))
+        mapeando = [dict(cmd('e'), origem='mapear') for _ in range(200)]
+        self.assertNotIn('andar-a-mao', regras(mapeando))
+
+    def test_caca_a_mao(self):
+        tiros = [cmd('consider peao')] + [dict(cmd("cast 'lightning bolt' peao"), origem='play')
+                                          for _ in range(A.LIMITE_ATAQUE_A_MAO + 1)]
+        self.assertIn('caca-a-mao', regras(tiros))
+        rotina = [dict(c, origem='turno:novatos') for c in tiros]
+        self.assertNotIn('caca-a-mao', regras(rotina))
+
+    def test_transcript_antigo_sem_origem_nao_cobra_a_forma(self):
+        antigos = [cmd('e')] * 300
+        self.assertNotIn('andar-a-mao', regras(antigos))
+        self.assertIn('origem-ausente', regras(antigos))
+
     def test_get_all_e_get_sem_identify(self):
         self.assertIn('get-all', regras([cmd('get all corpo')]))
         self.assertIn('get-sem-identify', regras([cmd('get armadura')]))
@@ -82,6 +114,26 @@ class TestAuditor(unittest.TestCase):
     def test_sessao_limpa_nao_tem_falha(self):
         seq = [cmd('look'), cmd('n'), cmd('score tudo', 'Alinhamento: {<<<>>}   412')]
         self.assertFalse([a for a in A.auditar(seq) if a['nivel'] == A.FALHA])
+
+
+class TestOrigemNoDriver(unittest.TestCase):
+    """O cabeçalho "<token>\\t<origem>" do live_daemon (v1.7.9); cliente antigo manda só o token."""
+
+    def setUp(self):
+        sys.path.insert(0, str(RAIZ / 'automato' / 'nucleo' / 'driver'))
+        import live_daemon
+        self.ler = live_daemon.ler_cabecalho
+
+    def test_cabecalho_com_e_sem_origem(self):
+        self.assertEqual(self.ler('abc\tplay'), ('abc', 'play'))
+        self.assertEqual(self.ler('abc'), ('abc', None))
+        self.assertEqual(self.ler('\tturno:novatos\r'), ('', 'turno:novatos'))
+
+    def test_clientes_mandam_a_origem(self):
+        play = (RAIZ / 'automato' / 'nucleo' / 'driver' / 'play.py').read_text(encoding='utf-8')
+        base = (RAIZ / 'automato' / 'nucleo' / 'base.py').read_text(encoding='utf-8')
+        self.assertIn("'\\t' + origem + '\\n'", play)
+        self.assertIn("'\\t' + origem() + '\\n'", base)
 
 
 MAPA = {

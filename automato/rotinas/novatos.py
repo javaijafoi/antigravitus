@@ -43,6 +43,10 @@ def ir_aos_novatos():
 
 
 def matar_alvo(alvo):
+    perigo = considerar(alvo)   # diretiva §2: consider antes do primeiro ataque a cada alvo
+    if perigo:
+        print(f'[novatos] consider {alvo}: "{perigo}" -> nao ataco', flush=True)
+        return False
     print(f"[novatos] Atacando {alvo} com Lightning Bolt...", flush=True)
     t, v, em_combate = run(f"cast 'lightning bolt' {alvo}")
     if 'morreu' in t.lower() or 'morto' in t.lower() or 'cai sem vida' in t.lower() or not em_combate:

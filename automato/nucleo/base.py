@@ -37,11 +37,17 @@ def token():
         return ''
 
 
+def origem():
+    """Quem manda o comando, para o transcript: MUD_ORIGEM ou o nome do script (navegar, trabalhar,
+    xadrez_cascata...). O auditar_sessao.py so' conta como jogo a mao o que vem do play.py."""
+    return (os.environ.get('MUD_ORIGEM') or Path(sys.argv[0] or 'automato').stem or 'automato')[:40]
+
+
 def call(command, timeout=60.0):
     sock = socket.socket()
     sock.settimeout(timeout)
     sock.connect((HOST, PORT))
-    sock.sendall((token() + '\n' + command + '\n').encode('utf-8'))
+    sock.sendall((token() + '\t' + origem() + '\n' + command + '\n').encode('utf-8'))
     chunks = []
     while True:
         chunk = sock.recv(65536)
@@ -202,3 +208,39 @@ def espolio_proibido(nome_ou_identify):
     if any(p in t for p in config.ESPOLIOS_PROIBIDOS):
         return True
     return any(f in t for f in config.FLAGS_DE_MALDICAO)
+
+
+# --- consider antes de atacar (diretiva §2) --------------------------------
+# Revisao de 16 a 20/10: 1 consider em 589 magias no dia das tres mortes do tabuleiro. O consider
+# fica no script porque, a mao, ele nao acontece. O auditar_sessao.py da FALHA no primeiro ataque a
+# um alvo sem consider na sessao.
+PERIGO_DURO = ('suicid', 'mataria', 'menor chance', 'muito superior', 'sem chance', 'massacrad')
+_CONSIDERADOS = {}
+
+
+def _sem_acento(texto):
+    import unicodedata
+    t = unicodedata.normalize('NFKD', texto or '')
+    return ''.join(c for c in t if not unicodedata.combining(c)).lower()
+
+
+def perigo_duro(texto_do_consider):
+    """O primeiro sinal de perigo duro na resposta do consider, ou None (diretiva §2: nao atacar)."""
+    t = _sem_acento(texto_do_consider)
+    return next((p for p in PERIGO_DURO if p in t), None)
+
+
+def considerar(alvo):
+    """`consider <alvo>` uma vez por alvo e por processo. Devolve o perigo duro achado ou None.
+
+    Sem o alvo na sala ("Comparar sua forca com a de quem?") nada fica guardado: tenta de novo
+    no proximo encontro.
+    """
+    chave = re.sub(r'^\d+\.', '', (alvo or '').strip().lower().split(' ')[0])
+    if chave in _CONSIDERADOS:
+        return _CONSIDERADOS[chave]
+    t, _, _ = run('consider %s' % alvo)
+    if 'oponente' not in _sem_acento(t):
+        return None
+    _CONSIDERADOS[chave] = perigo_duro(t)
+    return _CONSIDERADOS[chave]
