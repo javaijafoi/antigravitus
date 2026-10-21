@@ -193,5 +193,61 @@ class TestPosturaAntesDeAndar(unittest.TestCase):
         self.assertEqual(mud.enviados, ['e', 'wake', 'stand', 'e', 'e'])
 
 
+class TestSonoObservado(unittest.TestCase):
+    """O sono consulta o vigia durante a dormida (diretiva §13; vigia.do_driver é IPC, sem comando)."""
+
+    def _rodar(self, estados):
+        """Roda P.dormir() com relógio falso e o vigia devolvendo `estados` em ordem."""
+        enviados, relogio = [], {'t': 0.0}
+
+        class Tempo:
+            @staticmethod
+            def time():
+                relogio['t'] += 10
+                return relogio['t']
+
+            @staticmethod
+            def sleep(s):
+                relogio['t'] += s
+
+        def driver():
+            if estados:
+                return estados.pop(0)
+            return {'supplies': {}, 'vitals': {'hp': 999}}
+
+        with mock.patch.object(P, 'time', Tempo), \
+             mock.patch.object(P, 'SONO_FATIA_S', 1), \
+             mock.patch.object(P, 'minutos_de_sono', return_value=2), \
+             mock.patch.object(P, 'voltar_ao_templo'), \
+             mock.patch.object(P, 'situacao', return_value={'texto': 'Vida: 150 de 200'}): 
+            with mock.patch.object(P, 'run', side_effect=lambda c, timeout=60.0: enviados.append(c) or ('', {}, False)), \
+                 mock.patch.object(P, 'vigia') as v, \
+                 mock.patch.object(P, 'comer_beber', return_value=['comeu']) as comeu:
+                v.do_driver.side_effect = driver
+                P.dormir()
+        return enviados, comeu
+
+    def test_fome_no_meio_acorda_e_come(self):
+        enviados, comeu = self._rodar([
+            {'supplies': {'fome': True}, 'vitals': {'hp': 150}},
+            {'supplies': {'fome': False}, 'vitals': {'hp': 160}},
+            {'supplies': {'fome': False}, 'vitals': {'hp': 170}},
+            {'supplies': {'fome': False}, 'vitals': {'hp': 180}},
+        ])
+        self.assertTrue(comeu.called, 'com fome no meio do sono, tem de comer')
+        self.assertIn('wake', enviados)
+        self.assertIn('sleep', enviados)
+
+    def test_vida_parada_para_o_sono(self):
+        enviados, comeu = self._rodar([
+            {'supplies': {}, 'vitals': {'hp': 150}},
+            {'supplies': {}, 'vitals': {'hp': 150}},
+            {'supplies': {}, 'vitals': {'hp': 150}},
+            {'supplies': {}, 'vitals': {'hp': 150}},
+        ])
+        self.assertFalse(comeu.called)
+        self.assertLessEqual(enviados.count('sleep'), 3, 'não pode dormir sem ganho')
+
+
 if __name__ == '__main__':
     unittest.main()

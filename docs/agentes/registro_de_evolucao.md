@@ -1258,3 +1258,10 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Como foi verificado:** suÃ­te 366 OK; `check_project.py` 0 erros com o capÃ­tulo 12 jÃ¡ preenchido; os 8 testes cobrem fecho sem confirmaÃ§Ã£o, critÃ©rio aberto, bypass com e sem motivo, critÃ©rio done sem evidÃªncia, capÃ­tulo sem critÃ©rios, e o legado abaixo do 12 nÃ£o cobrado.
 - **Custo:** abrir capÃ­tulo novo agora exige declarar os alvos do fecho na hora (do 12 em diante). O check prova o registro, nÃ£o a conversa: um `confirmed_with_author: true` mentiroso passa â€” o que ele impede Ã© o fecho silencioso, que foi o erro real.
 - **PrÃ³ximo:** quando o Xeque-mate ou a Ajuda MÃ¡gica fecharem, marcar o critÃ©rio com `done: true` e `evidence` da sessÃ£o; o fecho sÃ³ depois de falar com o autor (ou com bypass registrado).
+
+### 2026-10-21 Â· Dia 158 Â· DeepSeek deepseek-flash (dsh)
+- **Mudou:** `automato/camadas/prepara.py` (`dormir` em fatias consultando `vigia.do_driver()`, `comer_beber`), `scripts/test_sobrevivencia.py` (+2), `automato/CHANGELOG.md` v1.7.19.
+- **Por quÃª:** o autor apontou que o `vigia.py` jÃ¡ olha os vitais e deveria resolver o sono. O `sleep()` de bloco Ãºnico ficava cego durante a dormida: passada a saciedade, o fim do sono era com fome, e fome tira ~3 hp/tick â€” saldo possivelmente negativo, nÃ£o sÃ³ desperdÃ­cio.
+- **Como foi verificado:** suÃ­te 368 OK; `check_project.py` 0 erros. Os 2 testes novos usam relÃ³gio falso e um falso driver: fome no meio do sono acorda e come; vida parada em duas fatias encerra o sono.
+- **Custo:** o `dormir` agora faz uma leitura de IPC a cada 2 min (barato, nÃ£o manda comando ao MUD). Se o driver estiver fora do ar, `do_driver()` devolve None e o sono segue atÃ© o teto de 45 min sem observaÃ§Ã£o â€” degradaÃ§Ã£o aceitÃ¡vel, mas nÃ£o Ã© vigilÃ¢ncia.
+- **PrÃ³ximo:** medir a janela real de saciedade numa sessÃ£o (o `conhecimento.md` ainda trata "ticks de 45â€“60 s" como hipÃ³tese). Com o nÃºmero medido, dÃ¡ para encurtar o teto de 45 min.

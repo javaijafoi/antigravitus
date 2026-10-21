@@ -28,6 +28,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'nucleo'))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import config          # noqa: E402
 import inventario      # noqa: E402
+import vigia           # noqa: E402
 from base import run, andar, voltar_ao_templo   # noqa: E402
 
 LIMIAR_PAO = 2      # abaixo disto a viagem se justifica
@@ -205,6 +206,7 @@ def guardar_ouro():
 # e mana". A vida nunca foi objetivo, e por isso a personagem acordava achando
 # que estava pronta com 100 de vida faltando.
 TAXA_HP_POR_MINUTO = 5.0
+SONO_FATIA_S = 120          # de quanto em quanto tempo o vigia olha os vitais
 SONO_MINUTOS_MAX = 45
 SONO_MINUTOS_MIN = 3
 
@@ -225,31 +227,65 @@ def minutos_de_sono(atual, maximo, taxa=None, alvo=0.98):
     return int(min(SONO_MINUTOS_MAX, max(SONO_MINUTOS_MIN, round(falta / (taxa or TAXA_HP_POR_MINUTO)))))
 
 
-def dormir():
-    """Dorme o necessario para a VIDA, nao um tempo fixo.
+def comer_beber():
+    """Come e bebe do que já está na bolsa. Devolve o que fez."""
+    feito = []
+    s = situacao()
+    if s['fome'] and conta_pao() != 0:
+        run('eat pao')
+        feito.append('comeu')
+    if s['sede'] and agua_no_cantil() != 0.0:
+        run('drink cantil')
+        feito.append('bebeu')
+    return feito
 
-    A mana e o movimento voltam em minutos; a vida volta a ~5 hp/min, e so se a
-    personagem estiver alimentada e hidratada. Devolve False quando ha' fome ou
-    sede: nesse estado o sono nao recupera, e quem chamou tem de comer primeiro.
+
+def dormir():
+    """Dorme para recuperar VIDA, olhando os vitais durante o sono.
+
+    O `vigia.do_driver()` lê fome, sede e vida pelo IPC, **sem mandar comando ao
+    MUD** — é o observador que já existe. Aqui ele é consultado a cada fatia, e é
+    ele que decide acordar: se a fome aparece, o sono é interrompido, come-se e
+    volta-se a dormir. Sem isso, o `time.sleep()` de antes dormia cego: passada a
+    saciedade, os minutos finais eram com fome, e fome tira ~3 hp por tick
+    (medido: `-3hp, -6mn`) — o fim do sono podia ser negativo.
     """
     voltar_ao_templo()
     s = situacao()
-    if s['fome'] or s['sede']:
-        print('[PREPARA] com fome/sede o sono nao recupera vida: comer e beber antes', flush=True)
-        return False
     hp, hp_max = hp_do_score(s['texto'])
-    minutos = minutos_de_sono(hp, hp_max)
-    if minutos == 0:
-        print('[PREPARA] vida em %s/%s; sono curto so para mana e movimento' % (hp, hp_max), flush=True)
-        minutos = SONO_MINUTOS_MIN
-    run('sleep')
-    time.sleep(minutos * 60)
-    run('wake')
-    run('stand')
-    depois = situacao()
-    hp2, _ = hp_do_score(depois['texto'])
-    print('[PREPARA] sono %d min: vida %s -> %s de %s (taxa medida ~%.1f hp/min)'
-          % (minutos, hp, hp2, hp_max, TAXA_HP_POR_MINUTO), flush=True)
+    alvo_hp = (hp_max or 0) * 0.98
+    limite = time.time() + (minutos_de_sono(hp, hp_max) or SONO_MINUTOS_MIN) * 60
+    dormindo, ultimo_hp, sem_ganho = False, hp, 0
+    while time.time() < limite:
+        if not dormindo:
+            run('sleep')
+            dormindo = True
+        time.sleep(SONO_FATIA_S)
+        d = vigia.do_driver() or {}
+        supply = d.get('supplies') or {}
+        hp_agora = (d.get('vitals') or {}).get('hp')
+        if supply.get('fome') or supply.get('sede'):
+            run('wake')
+            run('stand')
+            dormindo = False
+            feito = comer_beber()
+            print('[PREPARA] fome/sede no meio do sono: acordou e %s'
+                  % (', '.join(feito) or 'não havia estoque'), flush=True)
+            continue
+        if isinstance(hp_agora, int) and isinstance(ultimo_hp, int):
+            sem_ganho = sem_ganho + 1 if hp_agora <= ultimo_hp else 0
+            ultimo_hp = hp_agora
+            if alvo_hp and hp_agora >= alvo_hp:
+                break
+            if sem_ganho >= 2:
+                print('[PREPARA] a vida parou de subir (sem ganho em duas fatias): parar', flush=True)
+                break
+    if dormindo:
+        run('wake')
+        run('stand')
+    depois = hp_do_score(situacao()['texto'])[0]
+    print('[PREPARA] fim do sono: vida %s -> %s de %s (taxa ~%.1f hp/min)'
+          % (hp, depois, hp_max, TAXA_HP_POR_MINUTO), flush=True)
     return True
 
 

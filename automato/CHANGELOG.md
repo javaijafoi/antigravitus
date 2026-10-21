@@ -4,6 +4,15 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.7.19 — Dia 158 · O sono passa a consultar o vigia em vez de dormir cego (DeepSeek deepseek-flash)
+
+Origem: o autor apontou o desenho — *"tem um py que olha o vitals e deveria resolver isso"*. Ele tem: o `vigia.do_driver()` lê fome, sede e vida pelo IPC **sem mandar comando ao MUD**. O defeito era que o `dormir()` da v1.7.12 chamava `time.sleep()` e ficava **cego** justamente durante o sono: passada a saciedade, os minutos finais eram dormidos com fome, e fome tira ~3 hp/tick (`-3hp, -6mn`, medido) — o fim do sono podia ter saldo negativo.
+
+- **`camadas/prepara.py`:** `dormir()` deixa de ser um bloco único e passa a dormir em **fatias de 2 min**, consultando o vigia a cada fatia. Fome ou sede → acorda, `comer_beber()`, volta a dormir. Vida parada em duas fatias seguidas → para em vez de insistir. Vida ≥ 98% do máximo → para.
+- **`comer_beber()`** separado, para ser usado também fora do sono.
+- **A janela de saciedade não é medida:** o `conhecimento.md` registra "ticks de 45 a 60 s" como **hipótese herdada**, não como fato. Por isso a decisão vem da observação do estado, não de uma constante de minutos — o que também dispensa acertar o número.
+- **Testes:** `test_sobrevivencia.py` (+2): fome no meio do sono acorda e come; vida parada para o sono. Suíte: 368 OK.
+
 ## v1.7.18 — Dia 158 · Fecho de capítulo com critério ou bypass do autor (DeepSeek deepseek-flash)
 
 Origem: Lote C da decisão sobre as seções sem trava, refinado por uma exigência do autor — *"pra fechar tem que confirmar comigo se não obedeceu, porque eu posso dar bypass"*. A regra vivia em prosa na diretiva §11 e já tinha falhado uma vez (Dia 136: o capítulo foi fechado com a fortuna parcial e o próprio servidor devolveu para `em_curso`).
