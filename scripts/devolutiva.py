@@ -368,6 +368,21 @@ def rodar(cmd, rotulo):
         falha(f"{rotulo} retornou {r.returncode}: {saida[-300:]}")
 
 
+def codigo_mudou(desde):
+    """Algum `.py` mudou desde o commit-base? Sem git, presume que sim (conservador).
+
+    A suíte de 326 testes é verificação de CÓDIGO, não de sessão: rodá-la quando a
+    sessão só mexeu em `data/` custa 7 s e não prova nada de novo. Quando o diff da
+    sessão não tem `.py`, ela é pulada com uma linha de aviso.
+    """
+    if not desde:
+        return True
+    codigo, saida = git("diff", "--name-only", desde)
+    if codigo != 0:
+        return True
+    return any(linha.strip().endswith(".py") for linha in saida.splitlines())
+
+
 def checar_git():
     codigo, saida = git("status", "--porcelain")
     if codigo != 0:
@@ -432,7 +447,10 @@ def main(argv=None):
     print("\n4. Validações")
     rodar(["scripts/check_project.py"], "check_project.py")
     rodar(["automato/verificar.py"], "verificar.py")
-    rodar(["-B", "-m", "unittest", "discover", "-s", "scripts", "-p", "test_*.py"], "suíte offline")
+    if codigo_mudou(desde):
+        rodar(["-B", "-m", "unittest", "discover", "-s", "scripts", "-p", "test_*.py"], "suíte offline")
+    else:
+        ok(f"suíte offline: pulada (nenhum .py mudou desde {str(desde)[:8]})")
 
     if not args.sem_git:
         print("\n5. Git")

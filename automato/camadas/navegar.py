@@ -233,6 +233,8 @@ def main(argv=None):
     ap.add_argument('--max-segundos', type=int, default=300)
     ap.add_argument('--sem-cuidado', action='store_true',
                     help='pula o portão de comida/sede/armadura (só para teste ou mapeamento)')
+    ap.add_argument('--sem-brief', action='store_true',
+                    help='não liga o modo breve (use ao explorar área nova com esta rota)')
     a = ap.parse_args(argv)
     salas = carregar_mapa()
     if a.listar:
@@ -265,7 +267,10 @@ def main(argv=None):
             print('PAROU (código 1): o cuidado não resolveu (sem pão, sem água ou armadura fora '
                   'do Templo); resolver antes de sair (diretiva §26)', file=sys.stderr)
             return 1
-    from base import run  # importa só aqui: precisa do driver no ar
+    from base import run, brief  # importa só aqui: precisa do driver no ar
+    # Modo breve (diretiva §26): rota conhecida nao precisa da descricao da sala,
+    # e ela custa ~85 tokens por passo. Restaura o estado anterior ao sair.
+    breve_antes = brief(True) if not a.sem_brief else None
     try:
         texto, _, _ = run('look')
         origem = deduzir_origem(salas, titulo(texto), a.de)
@@ -273,6 +278,9 @@ def main(argv=None):
     except Parada as p:
         print('PAROU (código %d): %s' % (p.codigo, p.motivo), file=sys.stderr)
         return p.codigo
+    finally:
+        if breve_antes is not None:
+            brief(breve_antes)
     print('CHEGOU: %s. Daqui em diante é manual: fala de missão, give e compras (AGENTS #14, #13).'
           % salas[a.para]['name'])
     return 0

@@ -228,6 +228,7 @@ class TestRepositorioReal(unittest.TestCase):
         O que se prova aqui é que o mock foi usado — ou seja, nenhuma suíte rodou de verdade.
         """
         with mock.patch.object(devolutiva, "rodar") as m_rodar, \
+             mock.patch.object(devolutiva, "codigo_mudou", return_value=True), \
              mock.patch.object(devolutiva, "checar_git"), \
              mock.patch.object(devolutiva, "checar_evidencias"), \
              mock.patch.object(devolutiva, "checar_livro_razao"), \
@@ -237,6 +238,21 @@ class TestRepositorioReal(unittest.TestCase):
             codigo = devolutiva.main(["--hero", "grebolius"])
         self.assertEqual(m_rodar.call_count, 3)        # check_project, verificar, suíte — todos mockados
         self.assertIn(codigo, (0, 1, 2))
+
+    def test_sessao_sem_py_pula_a_suite(self):
+        """Sessão que só mexeu em data/ não paga 7 s de suíte."""
+        with mock.patch.object(devolutiva, "rodar") as m_rodar, \
+             mock.patch.object(devolutiva, "codigo_mudou", return_value=False), \
+             mock.patch.object(devolutiva, "checar_git"), \
+             mock.patch.object(devolutiva, "checar_evidencias"), \
+             mock.patch.object(devolutiva, "checar_livro_razao"), \
+             mock.patch.object(devolutiva, "checar_sessao_ao_vivo"), \
+             mock.patch.object(devolutiva, "checar_plano", return_value=(1, None)), \
+             mock.patch("sys.stdout"):
+            devolutiva.main(["--hero", "grebolius"])
+        self.assertEqual(m_rodar.call_count, 2)        # check_project e verificar
+        rotulos = [c.args[1] for c in m_rodar.call_args_list]
+        self.assertNotIn("suíte offline", rotulos)
 
     def test_leia_exige_a_secao(self):
         leia = Path(devolutiva.ROOT) / "data" / "heroes" / "grebolius" / "planos" / "LEIA.md"

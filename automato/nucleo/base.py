@@ -230,6 +230,33 @@ def perigo_duro(texto_do_consider):
     return next((p for p in PERIGO_DURO if p in t), None)
 
 
+def display_breve():
+    """O `brief` esta' ligado? Lido do proprio servidor pelo `toggle`."""
+    t, _, _ = run('toggle')
+    return 'modo breve: sim' in _sem_acento(t)
+
+
+def brief(ligar):
+    """Liga/desliga o modo breve e devolve o estado ANTERIOR, para restaurar.
+
+    Medido em 2026-10-20: cada passo devolve a descricao inteira da sala (~304
+    caracteres, ~85 tokens). Em modo breve o servidor manda so' o nome, as
+    pessoas e os objetos (~15 tokens): ~80% menos texto por passo.
+
+    Vale para ROTA CONHECIDA (`navegar.py`) e CACADA (`turno.py`), nunca para
+    modo `explorar`: la' a descricao e' o dado que se quer (diretiva §9.1).
+    Toggle e' do servidor, entao quem liga tem de desligar: devolvemos o estado
+    anterior para o chamador restaurar num `finally`.
+    """
+    antes = display_breve()
+    if antes != bool(ligar):
+        try:
+            run('brief')
+        except Exception:
+            pass
+    return antes
+
+
 def considerar(alvo):
     """`consider <alvo>` uma vez por alvo e por processo. Devolve o perigo duro achado ou None.
 

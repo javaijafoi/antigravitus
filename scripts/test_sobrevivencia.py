@@ -15,6 +15,7 @@ sys.path.insert(0, str(RAIZ / 'automato' / 'camadas'))
 sys.path.insert(0, str(RAIZ / 'automato' / 'nucleo'))
 
 import auditar_sessao as A  # noqa: E402
+import base as B  # noqa: E402
 import navegar as N  # noqa: E402
 import prepara as P  # noqa: E402
 
@@ -91,6 +92,38 @@ class TestPortaoDoNavegar(unittest.TestCase):
         with mock.patch('subprocess.run') as r:
             r.return_value = mock.Mock(returncode=1, stdout='', stderr='')
             self.assertEqual(N.cuidado_antes(), 1)
+
+
+class TestModoBreve(unittest.TestCase):
+    """O `brief` corta a descrição da sala; quem liga tem de restaurar."""
+
+    def test_le_o_estado_do_toggle(self):
+        with mock.patch.object(B, 'run', return_value=('Modo breve: NAO', {}, False)):
+            self.assertFalse(B.display_breve())
+        with mock.patch.object(B, 'run', return_value=('Modo breve: SIM', {}, False)):
+            self.assertTrue(B.display_breve())
+
+    def test_nao_manda_brief_quando_ja_esta_ligado(self):
+        enviados = []
+
+        def falso(c, timeout=60.0):
+            enviados.append(c)
+            return ('Modo breve: SIM', {}, False)
+
+        with mock.patch.object(B, 'run', side_effect=falso):
+            self.assertTrue(B.brief(True))
+        self.assertEqual(enviados, ['toggle'])
+
+    def test_liga_e_devolve_o_estado_anterior_para_restaurar(self):
+        enviados = []
+
+        def falso(c, timeout=60.0):
+            enviados.append(c)
+            return ('Modo breve: NAO', {}, False) if c == 'toggle' else ('', {}, False)
+
+        with mock.patch.object(B, 'run', side_effect=falso):
+            self.assertFalse(B.brief(True))
+        self.assertEqual(enviados, ['toggle', 'brief'])
 
 
 if __name__ == '__main__':

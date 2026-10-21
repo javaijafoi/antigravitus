@@ -32,6 +32,7 @@ LOCAL = Path(__file__).resolve().parents[1]        # automato/
 PY = sys.executable
 sys.path.insert(0, str(LOCAL / 'camadas'))
 sys.path.insert(0, str(LOCAL / 'nucleo'))
+import base  # noqa: E402
 import vigia  # noqa: E402
 
 MINUTOS_POR_TURNO = 6
@@ -82,6 +83,18 @@ def main():
     args = ap.parse_args()
 
     print(f'[turno] rotina={args.rotina}', flush=True)
+    # Modo breve (diretiva §26): a cacada nao precisa da descricao de cada sala,
+    # e ela custa ~85 tokens por passo. Restaura o estado do servidor ao sair.
+    breve_antes = base.brief(True)
+    try:
+        _laco(args)
+    finally:
+        base.brief(breve_antes)
+    print('[turno] fim', flush=True)
+    return 0
+
+
+def _laco(args):
     # Diretiva §26: o turno nao comeca com fome, sede ou sem armadura. O vigia
     # nao acusa armadura, entao o cuidado roda uma vez ANTES do laco, sempre.
     socorrer()
@@ -120,8 +133,6 @@ def main():
         if estado == 'MORTA':
             print('[turno] ressuscitando', flush=True)
             roda('acoes/ressuscitar.py')
-    print('[turno] fim', flush=True)
-    return 0
 
 
 if __name__ == '__main__':

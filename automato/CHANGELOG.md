@@ -4,6 +4,17 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.7.13 — Dia 158 · Modo breve, fechamento em um comando e AGENTS.md pela metade (DeepSeek deepseek-flash)
+
+Origem: pedido do autor — "otimizar para garantir menos regras escritas que podem ser ignoradas" e "não usar um monte de token de forma boba (verificações excessivas ou jogar de forma burra)". Medido: 85 a 110 tokens por comando de jogo; 3,1 milhões de tokens em 14 sessões; 24% dos comandos são movimento, cada um devolvendo a descrição inteira da sala (~304 chars, ~85 tokens); o protocolo custava ~19 mil tokens fixos por sessão, dos quais 8.345 só de `AGENTS.md`.
+
+- **`nucleo/base.py`:** `display_breve()` e `brief(ligar)` — leem o estado do `toggle` e só trocam quando precisa, devolvendo o estado anterior para restaurar. `navegar.py` liga o modo breve na rota conhecida e restaura no `finally` (`--sem-brief` para mapear); `turno.py` faz o mesmo em volta do laço (novo `_laco`, para o `finally` cobrir tudo). Nunca em `explorar`: ali a descrição é o dado.
+- **`scripts/devolutiva.py`:** `codigo_mudou(desde)` — a suíte de 330 testes só roda se algum `.py` mudou desde o commit-base. Sessão que só mexeu em `data/` deixava de provar qualquer coisa e custava 7,3 s (o `devolutiva.py` inteiro levava 17,9 s).
+- **`AGENTS.md`:** 30.043 → 14.344 bytes (~8.345 → ~3.984 tokens, −52%). Saiu a prosa duplicada (o detalhe já vive no `PROTOCOLO`, `arquitetura` e `glossario`), saiu o §11 "estado verificado" (números de 16/10, stale). Ficaram as 15 invariantes, a regra zero, a fonte da verdade, o registro, os checklists, a concorrência e as diretivas §12/§13/§14. O checklist de encerramento passa a mandar **um** comando: `devolutiva.py` (que já roda `check_project`, `verificar` e a suíte condicional).
+- **§14.5 nova:** ordem de preferência — **default no código > check > prosa**. Regra que não vira nenhum dos dois é dívida.
+- **Testes:** `test_sobrevivencia.py` (+3 do modo breve) e `test_devolutiva.py` (+1: sessão sem `.py` pula a suíte). Suíte: 330 OK. 4 IDs novos na catraca.
+- **Limite:** nada exercitado ao vivo. O `brief` depende de o DeBo aceitar o `toggle` (o texto "Modo breve: SIM/NÃO" foi visto em 17/10); se o servidor responder outra coisa, `display_breve()` devolve `False` e o par liga/restaura continua correto. O corte de `look` não foi feito: são 78 chamadas legítimas de posição nos scripts, e o `brief` já barateia todas.
+
 ## v1.7.12 — Dia 157/158 · O portão da §26: fome, sede e armadura antes de sair, e os cinco modos (DeepSeek deepseek-flash)
 
 Origem: o autor cobrou que "não passar fome nem sono nem ficar sem armadura", que a estrutura de fluxo "seja obedecida e não contornada", e que "tudo que é novo entre na estrutura de forma estruturada". Medido nos transcripts de 16 a 20/10: última rotina supervisionada em 16/10 15:10; nas últimas 24 h, 5 de 11 sessões sem nenhum `armor`, 159 linhas de fome e 2 `consider` em 846 magias.

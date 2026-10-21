@@ -361,6 +361,30 @@
       "arquivo": "scripts/mandabala.py",
       "desde": "2026-10-20",
       "regra": "a abertura mostra o estado registrado (vida/mana/mv, CA, dias desde a última rotina) e a tabela dos cinco modos da diretiva 26"
+    },
+    {
+      "id": "def brief",
+      "arquivo": "automato/nucleo/base.py",
+      "desde": "2026-10-21",
+      "regra": "modo breve corta a descrição da sala (~85 para ~15 tokens por passo) e devolve o estado anterior para o chamador restaurar"
+    },
+    {
+      "id": "breve_antes",
+      "arquivo": "automato/camadas/navegar.py",
+      "desde": "2026-10-21",
+      "regra": "navegar liga o brief na rota conhecida e restaura no finally; --sem-brief para explorar"
+    },
+    {
+      "id": "base.brief(True)",
+      "arquivo": "automato/camadas/turno.py",
+      "desde": "2026-10-21",
+      "regra": "turno liga o brief na caçada e restaura no finally"
+    },
+    {
+      "id": "codigo_mudou",
+      "arquivo": "scripts/devolutiva.py",
+      "desde": "2026-10-21",
+      "regra": "a suíte só roda se algum .py mudou desde o commit-base: sessão que só mexeu em data/ não paga 7 s"
     }
   ]
 }
