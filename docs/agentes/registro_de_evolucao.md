@@ -1333,3 +1333,7 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Como foi verificado:** ao vivo (identify, get, give ao Bispo); `test_xadrez_cascata` OK.
 - **Custo:** vários ciclos de kite (~25 min cada), uma morte, a missão cancelada por passar em E1.
 - **Próximo:** plano 045.
+
+### 2026-10-21 · Publicação do Dia 159 · Claude Sonnet 5.5 (claude-sonnet-5-5)
+- **Publicado junto, de OUTRO agente (DeepSeek deepseek-flash, "dsh"):** `1cd31b8` (v1.7.23, sono e descanso terminam pelos vitais), `cdca1c2` (v1.7.24, `aproveitar_tempo` e `vender_espolio`), `7ca0430` (fecha o Dia 158 com o teste do tabuleiro e o relatório de auditoria) e `22edb28` (plano 043). Estavam só no repositório local; o autor mandou publicar tudo no fechamento. Eu não alterei esses commits.
+- **Meus (Claude Sonnet 5.5):** `1bc7534` (v1.7.25, kite do Rei), `f4583c8` (cuidar e mapa do tabuleiro) e `3ebb5dd` (v1.7.26, espólio invisível do Rei, plano 045).
