@@ -542,11 +542,11 @@
       "id": "xeque-mate",
       "title": "Xeque-mate",
       "type": "official",
-      "status": "blocked",
+      "status": "active",
       "accepted_day": 157,
       "last_progress_day": 157,
       "objective": "Autoquest de nível 30+, iniciada com o Bispo Branco no Grande Tabuleiro de Xadrez.",
-      "next_step": "Achar onde está o Cetro do Rei Negro: `cast 'locate object' cetro` (sei a magia desde o nível 34) exige o espelho localizador de Albernathy (Silverthorne, rota desconhecida; compra pede o autor). Se o cetro estiver com um mob, matar; se com jogador, decisão do autor. Refazer a cascata custa ~25 min e o Rei cai em ~30 idas.",
+      "next_step": "Cascata: peões (faltam 3 de 9), bispos, cavalos, torres, Rainha; ao ver \"Você deve entregar objeto ao personagem\" dar `give cetro bispo` (tenho 2 Cetros do Rei Negro invisíveis no inventário; precisa de `detect invisibility` para listá-los). NÃO passar por E1 com a missão ativa. Se faltar cetro: E8 tem mais 6 no chão (invisíveis).",
       "reward": "EXP massiva em cascata (mais de 150.000 EXP acumulada)",
       "evidence": [
         {
@@ -578,9 +578,14 @@
           "document": "evidence/dia159-rei-morto.json",
           "day": 157,
           "note": "Rei Negro morto pelo kite; sem cetro; Claude Sonnet 5.5 (claude-sonnet-5-5)"
+        },
+        {
+          "document": "evidence/dia159-cetro-invisivel.json",
+          "day": 157,
+          "note": "Cetro e chave do Rei são invisíveis; entregue 1 ao Bispo com a missão inativa. Claude Sonnet 5.5 (claude-sonnet-5-5)"
         }
       ],
-      "blocker": "O Rei Negro foi morto (kite de 1 raio + recall imediato), mas ele nasce SEM equipamento (\"o Rei usa: NADA\") e o corpo só tinha ouro; o servidor recusa outros cetros (\"não é o item correto ou você não é o dono original\"). O cetro único provavelmente já existe em outro lugar do mundo."
+      "blocker": ""
     },
     {
       "id": "ajuda-magica",

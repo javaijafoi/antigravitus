@@ -611,7 +611,7 @@ def varrer_peoes(meta_mortes=9, log=print):
 
 def inspecionar_corpo_do_rei(ctx, log):
     """Logo apos a morte do Rei, SEM recall: sala, corpo e o cetro (Dia 159: o recall imediato me tirou de E8 e o corpo voltou vazio)."""
-    for c in ('look', 'look in corpo', 'get cetro corpo', 'inventory'):
+    for c in ('look', 'look in corpo', 'get all corpo', 'get cetro', 'get chave', 'get cetro corpo', 'get chave corpo', 'inventory'):
         t = ctx.cmd(c, 0.6)[0]
         log('  [%s] %s' % (c, ' | '.join(l.strip() for l in t.splitlines() if l.strip() and not re.match(r'^-?\d+hp', l.strip()))[:420]))
 
@@ -635,6 +635,7 @@ def kite_rei(idas=1, log=print):
         ctx.ir_h5()
         if n == 1 or n % 12 == 0:           # invisibilidade dura horas; recastar a cada ida desperdicava mana
             ctx.cmd("cast 'invisibility'", 2)
+            ctx.cmd("cast 'detect invisibility'", 2)   # os itens do Rei (cetro, chave) sao INVISIVEIS: sem isto o corpo parece vazio
         tab = Tabuleiro('H5', ctx.run)
         try:
             tab.ir('E7')

@@ -5,7 +5,7 @@
     "day": 157,
     "verification": "live",
     "live_verified": true,
-    "source": "Sessão de 2026-10-21 de Claude Sonnet 5.5 (claude-sonnet-5-5) (evidence/dia159-rei-morto.json): cascata do Xeque-mate refeita duas vezes; Rei Negro MORTO por kite de 1 raio com recall imediato (+36.846 EXP, nível 34, locate object aprendido), mas sem cetro (o Rei nasce sem equipamento). Uma morte da personagem (recall com 3 s de espera). Fechada com save e sleep confirmados no Templo, sem quit; a autoquest cai no fechamento. Ouro 27.186 (21.486 banco + 5.700 mão); EXP 9.015.232; alinhamento 512."
+    "source": "Sessão de 2026-10-21 (2ª parte) de Claude Sonnet 5.5 (claude-sonnet-5-5) (evidence/dia159-cetro-invisivel.json): ACHADO: os itens do Rei Negro (Cetro e Chave do Tesouro Negro) são INVISÍVEIS; com `detect invisibility` aparecem no chão de E8. Peguei 3 cetros e 2 chaves; um cetro foi aceito pelo Bispo Branco, mas a Xeque-mate já estava cancelada (provável: passagem por E1). Missão reaceita e em \"matar criaturas\" (peões 6 de 9). Fechada com save e sleep, sem quit. Nível 34, EXP 9.411.382, alinhamento 510 (subiu 512→568 com doações e caiu com abates), ouro 38.490 (38.190 banco + 300 mão)."
   },
   "level": 34,
   "mechanical_race": "Elfo",
@@ -13,7 +13,7 @@
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
   "alignment": {
-    "value": 512,
+    "value": 510,
     "label": "Bom"
   },
   "vitals": {
@@ -22,7 +22,7 @@
       "max": 214
     },
     "mana": {
-      "current": 405,
+      "current": 510,
       "max": 510
     },
     "mv": {
@@ -31,10 +31,10 @@
     }
   },
   "experience": {
-    "current": 9015232,
+    "current": 9411382,
     "next_level": 10000000
   },
-  "gold": 27186,
+  "gold": 38490,
   "attributes": {
     "STR": 11,
     "DEX": 17,

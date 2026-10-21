@@ -2816,3 +2816,35 @@ Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: `automato/runtime/tabuleir
 - **Peças vivas e o que usam (`look <peça>`, bloco "->"):** bispos (negros e brancos) = "segurando -> o Cetro do Bispo da cor"; rainhas = "na cabeça -> a Coroa da Rainha da cor"; cavaleiros = nada (a lança fica no chão da casa); torres ("grande castelo sobre rodas") = nada visível; **Rei Negro (E8) = NADA; Rei Branco (E1) = NADA**. Passar invisível por E1 e E8 funcionou (o Rei Negro só acordou e lutou quando fiquei na casa; recolhi).
 - **Chão (62 casas):** espadas e armaduras de peão (16 e 14 nas negras, 2 e 1 nas brancas), lanças de cavaleiro, "armadura feita com o que sobrou da torre", cetros do bispo (18 em C8), coroas, uma pilha de moedas. **Nenhuma chave, sinal, aviso ou objeto fora do padrão.** H5 só tem o portão enferrujado.
 - **Leitura:** só os dois reis nascem sem o item temático. Pela regra do autor (missão linear; só vale item do próprio roteiro), o cetro (e a chave da tesouraria abaixo de D8, "trancado") deve nascer de um passo do roteiro ainda não disparado. Hipótese não testada: o Rei só gera o cetro se morrer enquanto o passo é "matar criaturas"; testar exige reiniciar o roteiro (morte ou `quit`), o que o autor interrompeu com "para".
+
+## 90. Linha do tempo: encontros com o Rei Negro × fases da Xeque-mate (registro de 2026-10-21)
+
+Agente: Claude Opus 5.5 (claude-opus-5-5). Fonte: `automato/runtime/session_live_dia156*` a `dia159*` (marcos: convite "xeque-mate de vez", fala "hora do xeque-mate", "falhou em sua aventura", "O Rei Negro está aqui", sleep, raio, corpo). Teste da hipótese do autor: "passamos pelo Rei antes da fase dele e por isso ele não nasceu com o cetro?".
+
+| Dia / ciclo | Antes da fase 6 | Na fase 6 | Fim |
+|---|---|---|---|
+| 156 (18/10, `124258`) | fuga para E8 com 22 de vida; o Rei lá, sem luta | 3 idas (sleep + raio) | personagem morreu; Rei vivo |
+| 157 (19/10, `224556`/`235647`) | 2 fugas para E8; numa o Rei atacou (-81, -93) | nenhuma ida | missão caiu |
+| 157 (20/10, `101605`/`112019`) | fuga para E8 (24 de vida) | nenhuma ida | personagem morreu; Rei vivo |
+| 157 (20/10, `150616`) | nada | 2 idas | personagem morreu; Rei vivo |
+| 159 ciclo 1 (`024150`) | nada | ~55 idas; **1º `look rei`: "saúde perfeita", nenhum equipamento** | Rei mortalmente ferido, recall, **sangrou e morreu sozinho** (sem crédito); corpo em E8 não inspecionado; o Rei renascido matou a personagem |
+| 159 ciclo 2 (`024150`) | nada | ~40 idas; morto pelo meu raio | corpo vazio, só ouro |
+| 159 ciclo 3 (`102027`) | nada | ~45 idas; morto pelo meu raio | corpo vazio; o Bispo segue pedindo o cetro |
+| Dias 97 a 111 (`scripts/local/transcript_dia98…111`) | só casas de peões e torres; E8 nunca | — | — |
+
+- **Leitura:** antes da fase 6 só houve fugas aleatórias para E8 e uma luta curta; o Rei **nunca morreu** antes do Dia 159. No ciclo 1 do Dia 159 o Rei já estava sem equipamento **antes** de qualquer morte dele no dia, então a morte sem crédito (sangramento) não explica o cetro ausente. A hipótese "passamos pelo Rei antes da fase" não se sustenta pelos logs.
+- **Limites:** ninguém fez `look rei` antes do Dia 159 (não se sabe se algum Rei já teve o cetro); o `look` mostra só o que a peça veste ou segura, não o inventário (os dois corpos com crédito estavam vazios).
+- **Sobra:** o cetro nasceria de um passo do roteiro ainda não disparado (§86, §87), por exemplo no Rei morto pela dona da missão num momento específico. Nada nos logs mostra esse passo.
+
+- **Opções automáticas (Dia 159):** `autogold` (aka `autoouro` no help, mas só `autogold` responde) ALTERNA: 'Você não vai mais pegar o ouro automaticamente' = desligado; repetir liga. Não existe `autoloot` de itens. `autosplit` existe. Não alternar às cegas; o ouro do corpo do Rei era autoloot (ligado por padrão).
+
+## 88. O Cetro e a Chave do Rei Negro são INVISÍVEIS: `detect invisibility` resolve (Dia 159, 2026-10-21)
+
+Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: evidence/dia159-cetro-invisivel.json.
+
+- **A causa de "o corpo do Rei estar vazio":** o espólio do Rei é **invisível**. Com `detect invisibility` ligado, a sala E8 mostrou no chão "(x4) Você vê uma sinistra chave negra jogada aqui. (invisível)" e "(x9) O Cetro do Rei Negro está jogado aqui, colecionando poeira. (invisível) ..Isso emite um som estridente!". `look in corpo`, `get all corpo` e `get cetro corpo` não os acham sem a magia. Os itens caem no chão quando o corpo some (~2 min depois da morte) e ficam lá; a pilha vem de todas as mortes dos reis (a minha e as de outros).
+- **Itens (identify no chão):** *o Cetro do Rei Negro* = TESOURO, ZUMBIDO INVISÍVEL MÁGICO ANTI-BOM NOBITS, peso 10, valor 85.000, nível 26, FOR +1, ACERTO +2, DANO +2, ARMADURA -2 (vestir: não, ANTI-BOM); *a Chave do Tesouro Negro* = CHAVE, DETERIORA NÃO-DOAR INVISÍVEL NÃO-VENDER, peso 1, valor 1.000 (deteriora: usar logo; abre o `baixo` de D8, a Tesouraria Negra, ainda não aberta).
+- **Entrega:** `give cetro bispo` foi aceito pelo Bispo Branco (sem a recusa de "dono original") mesmo com a autoquest inativa, mas ela só conclui com o passo "entregar objeto" ativo. Tenho **2 cetros e 2 chaves** invisíveis no inventário (a listagem só os mostra com `detect invisibility`).
+- **`detect invisibility`:** duração **12 horas** (Acumula: Duração); custo medido ~**16 de mana** (500 → 484 no teste do Dia 157; mago nível 2). Barato: **lançar sempre que a mana estiver sobrando e ao entrar em sala onde se procura espólio, chave ou item de missão; "invisível" também esconde itens de roteiro**. O `kite_rei` agora o lança junto da invisibilidade (v1.7.26).
+- **Armadilha do roteiro:** passar por **E1** (casa do Rei Branco) com a Xeque-mate ativa a cancela, mesmo invisível; foi o que provavelmente derrubou a missão na varredura das peças. Nunca entrar em E1 com a missão ativa.
+- **Moral da história:** quando um corpo ou sala parece vazio, lançar `detect invisibility` (e `detect magic`) antes de concluir; muitos itens de missão do DeBo são invisíveis.

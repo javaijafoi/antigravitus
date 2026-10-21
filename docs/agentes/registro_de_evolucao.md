@@ -1326,3 +1326,10 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Como foi verificado:** ao vivo (Rei morto, +36.846 EXP, nível 34); `test_xadrez_cascata` 32 OK; sessão fechada com save e sleep, sem quit.
 - **Custo:** uma morte da personagem (recall atrasado) e a Xeque-mate refeita duas vezes (~25 min cada); o cetro não veio.
 - **Próximo:** plano 044.
+
+### 2026-10-21 · Dia 159 (2ª parte), o espólio do Rei é invisível · Claude Sonnet 5.5 (claude-sonnet-5-5)
+- **Mudou:** `automato/acoes/xadrez_cascata.py` (detect invisibility, get do chão), `automato/camadas/cuidar.py`, `automato/CHANGELOG.md` v1.7.26, `conhecimento.md` §83 a §88, `state.json`, `missoes.json`, `evidence/dia159-cetro-invisivel.json`, plano 045.
+- **Por que:** o autor pediu para esperar o Rei invisível e "ver o que ele tem" e para ligar detect; com `detect invisibility` o cetro e a chave apareceram.
+- **Como foi verificado:** ao vivo (identify, get, give ao Bispo); `test_xadrez_cascata` OK.
+- **Custo:** vários ciclos de kite (~25 min cada), uma morte, a missão cancelada por passar em E1.
+- **Próximo:** plano 045.

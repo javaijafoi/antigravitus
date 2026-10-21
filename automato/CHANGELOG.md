@@ -4,6 +4,11 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.7.26 — Dia 159 · Espólio invisível do Rei: `detect invisibility` no kite e `get` do chão (Claude Sonnet 5.5)
+
+- `acoes/xadrez_cascata.py`: `kite_rei` lança `detect invisibility` com a invisibilidade (1ª ida e a cada 12); `inspecionar_corpo_do_rei` pega `get cetro`/`get chave` do chão além do corpo; antes, `get all corpo` respondia "vazio" porque o espólio do Rei é invisível (conhecimento §88). `cuidar.situacao()` volta a devolver o `texto` do score.
+- Achado do dia, sem código: o Cetro e a Chave do Rei Negro existem (invisíveis) e o Bispo aceita o cetro; a missão só conclui com o passo "entregar objeto" ativo.
+
 ## v1.7.25 — Dia 159 · Kite do Rei Negro que fecha a conta: recall imediato, sem retry perigoso, leitura da barra (Claude Sonnet 5.5)
 
 - `acoes/xadrez_cascata.py` (`kite_rei`): 1 raio por ida **seguido de `recall` imediato** (`ctx.run`, sem espera de 3 s, que matou a personagem); só `sleep` antes do raio (curse e blindness saíram do kite); **uma** nova tentativa de `sleep` e sai se a vida cair; mensagem "mortalmente ferido" = ficar e rematar para ter crédito; log da barra do Rei, do dano e do equipamento dele (`o Rei usa`); invisibilidade só na 1ª ida e a cada 12; contagem de mortes do Rei **relativa à execução**.

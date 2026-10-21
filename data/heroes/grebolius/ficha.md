@@ -10,7 +10,7 @@
 * **Raça Mecânica no MUD:** Elfo
 * **Classe Mecânica no MUD:** Mago (Magic-User)
 * **Grau / Nível Atual:** **34**
-* **Alinhamento Moral:** 512 (Bom)
+* **Alinhamento Moral:** 510 (Bom)
 * **Localização Atual:** O Templo de Midgaard (último registro: Dia 157)
 * **Acampamento Registrado:** O Templo de Midgaard
 * **Santuário de Referência:** O Panteao dos Centenarios
@@ -21,12 +21,12 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 | Recurso | Atual | Máximo | Porcentagem |
 | :--- | :---: | :---: | :---: |
 | **Pontos de Vida (HP)** | 214 | 214 | 100% |
-| **Pontos de Mana (MP)** | 405 | 510 | 79% |
+| **Pontos de Mana (MP)** | 510 | 510 | 100% |
 | **Estamina / Movimento (MV)** | 146 | 146 | 100% |
 
-* **Experiência Acumulada:** **9.015.232 EXP**
-* **Experiência Necessária p/ Grau 35:** **984.768 EXP** (Meta: 10.000.000 EXP)
-* **Ouro Líquido:** **27.186 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **9.411.382 EXP**
+* **Experiência Necessária p/ Grau 35:** **588.618 EXP** (Meta: 10.000.000 EXP)
+* **Ouro Líquido:** **38.490 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 11
@@ -62,8 +62,8 @@ Dia 157: 121 sem a magia armor (Cruz Ansada no lugar da coleira) e 157 com ela; 
   * Próximo passo: Concluída integralmente com o Smurf Minerador em O Fim Do Túnel. Entregues poção aquosa (ao Alquimista), jarro brilhante, chave quadrada e tocha. Recompensa recebida: um colar com uma pedra púrpura (Anti-DT, Abençoado, Armadura +10, Acerto +1, Dano +1, Des +1, Max-Mana +25) e 2.000 moedas de ouro de Gargamel.
 * **Todo Dia um Pouco — Concluída:** Missão diária do servidor Devil's Bob.
   * Próximo passo: Concluída integralmente no Dia 156. Baú de recompensas surpresa recebido e aberto, entregando um rosário sagrado ao herói.
-* **Xeque-mate — Bloqueada:** Autoquest de nível 30+, iniciada com o Bispo Branco no Grande Tabuleiro de Xadrez.
-  * Próximo passo: Achar onde está o Cetro do Rei Negro: `cast 'locate object' cetro` (sei a magia desde o nível 34) exige o espelho localizador de Albernathy (Silverthorne, rota desconhecida; compra pede o autor). Se o cetro estiver com um mob, matar; se com jogador, decisão do autor. Refazer a cascata custa ~25 min e o Rei cai em ~30 idas.
+* **Xeque-mate — Ativa:** Autoquest de nível 30+, iniciada com o Bispo Branco no Grande Tabuleiro de Xadrez.
+  * Próximo passo: Cascata: peões (faltam 3 de 9), bispos, cavalos, torres, Rainha; ao ver "Você deve entregar objeto ao personagem" dar `give cetro bispo` (tenho 2 Cetros do Rei Negro invisíveis no inventário; precisa de `detect invisibility` para listá-los). NÃO passar por E1 com a missão ativa. Se faltar cetro: E8 tem mais 6 no chão (invisíveis).
 * **Ajuda Mágica — Bloqueada:** Ajudar Lemin a reconstruir o livro de magias de Merlin.
   * Próximo passo: Primeiro achar o tomo (SPELLBOOK/livro de verdade): Loja do Escriba e Albernathy em Silverthorne (rota desconhecida), livro de enigmas da Pirâmide (zona 53), Torre da Magia (help mapa 29). Só então reabrir com Lemin (~6 min: look lemin, say sim, esperar a pergunta, say Merlin, say sim, say sim).
 
@@ -136,7 +136,7 @@ Recomeçar a Xeque-mate pelo Bispo Branco e rodar a cascata pelo xadrez_cascata.
 * Testar o módulo xadrez_cascata.py ao vivo em uma etapa curta antes de confiar nele.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessão de 2026-10-21 de Claude Sonnet 5.5 (claude-sonnet-5-5) (evidence/dia159-rei-morto.json): cascata do Xeque-mate refeita duas vezes; Rei Negro MORTO por kite de 1 raio com recall imediato (+36.846 EXP, nível 34, locate object aprendido), mas sem cetro (o Rei nasce sem equipamento). Uma morte da personagem (recall com 3 s de espera). Fechada com save e sleep confirmados no Templo, sem quit; a autoquest cai no fechamento. Ouro 27.186 (21.486 banco + 5.700 mão); EXP 9.015.232; alinhamento 512..
+Fonte do estado: Sessão de 2026-10-21 (2ª parte) de Claude Sonnet 5.5 (claude-sonnet-5-5) (evidence/dia159-cetro-invisivel.json): ACHADO: os itens do Rei Negro (Cetro e Chave do Tesouro Negro) são INVISÍVEIS; com `detect invisibility` aparecem no chão de E8. Peguei 3 cetros e 2 chaves; um cetro foi aceito pelo Bispo Branco, mas a Xeque-mate já estava cancelada (provável: passagem por E1). Missão reaceita e em "matar criaturas" (peões 6 de 9). Fechada com save e sleep, sem quit. Nível 34, EXP 9.411.382, alinhamento 510 (subiu 512→568 com doações e caiu com abates), ouro 38.490 (38.190 banco + 300 mão)..
 * A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.
 * O colar com pedra purpura pertence a outro dono: o servidor recusa o uso. Nenhum comerciante testado o compra.
 * Bainha de Excalibur exige nivel 85 (vista na Sala de Doacoes, nao pode ser carregada com a carga atual). Scutum de Carvalho exige nivel 35.

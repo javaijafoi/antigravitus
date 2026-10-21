@@ -1,0 +1,25 @@
+{
+  "hero_id": "grebolius",
+  "day": 157,
+  "agent": "Claude Sonnet 5.5 (claude-sonnet-5-5)",
+  "via": "automato",
+  "recorded_on": "2026-10-21",
+  "source_kind": "sessao_ao_vivo",
+  "source": "automato/runtime/session_live_*.log do Dia 159; scripts olha_pecas, mapeia_tabuleiro, limpa_tabuleiro, espera_rei no scratchpad.",
+  "findings": {
+    "cetro_invisivel": "Com `detect invisibility`, E8 mostrou \"(x4) sinistra chave negra (invisível)\" e \"(x9) O Cetro do Rei Negro ... (invisível)\". Identify: Cetro = TESOURO, ZUMBIDO INVISÍVEL MÁGICO ANTI-BOM, valor 85.000, nível 26, FOR+1 ACERTO+2 DANO+2 ARMADURA-2. Chave do Tesouro Negro = CHAVE, DETERIORA NÃO-DOAR INVISÍVEL NÃO-VENDER.",
+    "entrega": "`give cetro bispo` com a missão INATIVA: \"Você entrega o Cetro do Rei Negro para o Bispo Branco\" (aceito, sem a recusa de dono original), mas `autoquest todas` seguiu \"Não feita\". A missão tinha caído antes.",
+    "queda_da_missao": "Provável causa: passada de olha_pecas por E1 (Rei Branco cancela a missão de quem está nela, mesmo invisível). Antes disso o _CLOSE sleep não derruba a autoquest.",
+    "pecas": "Bispos seguram o cetro da cor, rainhas a coroa, cavaleiros nada, torres nada visível; os dois reis sem equipamento visível (itens invisíveis).",
+    "limpeza": "Doei ~235 itens do chão (68 espadas, 63 armaduras, 76 lanças, 18 cetros do bispo, 10 coroas); fileira 1 e Armadura da Torre Negra (maldita) ficaram. Ouro +476; alinhamento 512→540→568.",
+    "ajuda": "Sem help por autoquest; `autogold` alterna o ouro automático; sem autoloot de itens; `pegar tudo dentro de corpo` = get all corpo."
+  },
+  "state_end": {
+    "location": "O Templo de Midgaard",
+    "level": 34,
+    "hp": "214/214",
+    "mana": "510/510",
+    "gold_total": 38490,
+    "closing": "save_confirmed=True, sleep_confirmed=True; sem quit; Xeque-mate ativa em \"matar criaturas\""
+  }
+}
