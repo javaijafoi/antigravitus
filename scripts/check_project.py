@@ -421,9 +421,9 @@ def validate_fecho_do_capitulo(chapter, cid, context):
     return errors
 
 
-def validate_capitulos(hero_id, data, max_day, hero_dir=None):
+def validate_capitulos(hero_id, data, max_day, hero_dir=None, filename="capitulos.json"):
     errors, warnings = [], []
-    context = f"'{hero_id}'/capitulos.json"
+    context = f"'{hero_id}'/{filename}"
     if not isinstance(data, dict) or not isinstance(data.get("chapters"), list):
         return [f"{context}: objeto com lista chapters é obrigatório."], warnings
     if data.get("hero_id") != hero_id or data.get("schema_version") != 1 or not nonempty(data.get("season")):
@@ -609,13 +609,38 @@ def validate_hero_sync(hero_entry, root_dir=ROOT_DIR, max_day=None):
                 if not nonempty(event.get("type")) or not nonempty(event.get("summary")) or event.get("source_kind") not in ("document", "documental", "live"):
                     errors.append(f"'{hero_id}': evento {event['id']} precisa de type, summary e source_kind explícito.")
                 errors.extend(validate_evidence(event.get("evidence"), f"{hero_id}/evento {event['id']}", max_day, hero_dir))
-    for filename, validator in (("temporadas.json", validate_temporadas), ("capitulos.json", validate_capitulos)):
+    # capitulos.json (Season 02) e qualquer outra fonte de temporada por capítulos declarada no
+    # catálogo, como o capitulos_s01.json (a Season 01 reescrita em tomo; a original segue em posts.json).
+    chapter_files = ["capitulos.json"]
+    seasons_data = None
+    for filename in ("temporadas.json", "capitulos.json"):
         path = hero_dir / filename
         if path.is_file():
             data, errs = check_json_file(path)
             errors.extend(errs)
             if not errs:
-                ve, vw = validator(hero_id, data, effective_max, hero_dir)
+                if filename == "temporadas.json":
+                    seasons_data = data
+                    ve, vw = validate_temporadas(hero_id, data, effective_max, hero_dir)
+                else:
+                    ve, vw = validate_capitulos(hero_id, data, effective_max, hero_dir)
+                errors.extend(ve)
+                warnings.extend(vw)
+    if isinstance(seasons_data, dict) and isinstance(seasons_data.get("seasons"), list):
+        for season in seasons_data["seasons"]:
+            source = season.get("source") if isinstance(season, dict) else None
+            if season.get("model") != "capitulos" or not nonempty(source) or source in chapter_files:
+                continue
+            chapter_files.append(source)
+            path = hero_dir / source
+            if not path.is_file():
+                continue  # validate_temporadas já acusa a fonte ausente
+            data, errs = check_json_file(path)
+            errors.extend(errs)
+            if not errs:
+                if data.get("season") != season.get("id"):
+                    errors.append(f"'{hero_id}'/{source}: season deve ser '{season.get('id')}', a temporada que o declara.")
+                ve, vw = validate_capitulos(hero_id, data, effective_max, hero_dir, filename=source)
                 errors.extend(ve)
                 warnings.extend(vw)
     return errors, warnings

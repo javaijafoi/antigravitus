@@ -1,0 +1,1877 @@
+{
+  "schema_version": 1,
+  "hero_id": "grebolius",
+  "season": "s01",
+  "tomos": [
+    {
+      "id": "tomo-1",
+      "number": 1,
+      "roman": "I",
+      "title": "Tomo I — As Crônicas de Midgaard",
+      "chapter_start": 1,
+      "chapter_end": 10,
+      "subtitle": "Os cem primeiros dias de Grebolius em dez capítulos: do despertar no lixo à pergunta do Dia 100."
+    }
+  ],
+  "chapters": [
+    {
+      "id": 1,
+      "tomo": 1,
+      "title": "O Capuz e a Primeira Faca",
+      "kind": "missao",
+      "status": "concluido",
+      "goal": "Sobreviver aos primeiros dias em Midgaard sob o disfarce de homem, aprender a cidade e derramar o primeiro sangue.",
+      "closed_on_day": 10,
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "date": "2026-10-23",
+      "in_game_time": "Midgaard — do Depósito de Lixo ao Laboratório dos Magos",
+      "excerpt": "Uma goblin acorda no lixo, se disfarça de homem e passa dez dias aprendendo a cidade antes de tirar a faca da bainha.",
+      "tags": [
+        "Despertar",
+        "Disfarce",
+        "Panteão dos Centenários",
+        "Primeiro Sangue",
+        "Reflexão Decenal"
+      ],
+      "content": [
+        "Abri os olhos no chão do Depósito de Lixo e o cheiro de podridão me recebeu como se me conhecesse. Em terra de gente grande, goblin é tratada como praga; mulher goblin, duas vezes. Então ajustei as correias da armadura rústica, puxei o capuz sobre os olhos, engrossei a voz e passei a andar como um ladrão homem. Enquanto me tomassem por mais um mercenário de faca afiada, ninguém ia me subestimar.",
+        "Eu tinha uma meta só, e ela não aceitava conversa: chegar ao topo do poder o mais rápido possível e erguer um reino livre, onde nenhum goblin fosse pisado.",
+        "Os primeiros dias foram de olhar. Cruzei a Praça Comum e a Praça do Comércio, segui a Rua Principal e achei quatro cães revirando o lixo diante da Guilda dos Guerreiros. Na Padaria, o cheiro de massa quente me puxou para dentro e me mostrou uma cena cheia demais: um padeiro, um cão, um veterano procurando trabalho e um guarda plantado na porta. A faca coçou na minha mão. Não tirei. Ladra que quer ser rainha não vai para a masmorra por causa de migalha.",
+        "No oeste, anotei a Loja de Magias, a entrada da Guilda dos Magos e o Portão Oeste, com duas espadas longas largadas no chão entre os guardas. Subi a montanha até o Templo e dormi na pedra fria. Na manhã seguinte a fome me acordou, e foi ali, mastigando carne seca, que vi Omorfos, o Malandro, cruzar a nave voando dentro de uma aura de todas as cores. Ele nem me viu. Enquanto eu fosse fraca, seria poeira para gente como ele.",
+        "Foi subindo a escadaria interna do Templo que achei o Panteão dos Centenários. Colunas sem fim, um sol preso no teto e, sobre o altar, as estátuas dos que chegaram à glória: Deck, Kara, Brandon, Wolf, Tommyknocker, Magnus, Sakura. Fiquei pequena diante deles, uma goblin de capuz. Mas eles também começaram desconhecidos. Deitei aos pés do altar, e aquele chão virou a minha cama por muitas noites.",
+        "Na Praça do Templo, ao lado da fonte, o Pacificador baixou os olhos para mim e disse que eu voltasse quando estivesse mais forte, para ajudá-lo. Guardei a frase como quem guarda uma promessa. Desci aos becos e decorei cada um: o Beco Escuro, que é território de lâmina e negócio sujo, e o Beco Pobre, onde vi nos olhos dos que rastejam o destino de qualquer goblin sem fibra. Se a guarda fechasse as ruas grandes, os becos seriam as minhas saídas.",
+        "Na Loja de Armas havia uma lâmina com uma aura fraca sobre a bancada. Não toquei: roubar um ferreiro antes de saber me esconder é suicídio. Fui até a Guilda dos Guerreiros de peito erguido, e o sentinela me empurrou pelo ombro e me barrou o bar como se eu fosse refugo. Engoli. Memorizei a cara dele debaixo do elmo e fui embora.",
+        "A Sala de Doações do Templo foi o primeiro tesouro. Os aventureiros ricos deixam ali o que já não querem, e eu levei o que coube: um punhal com aura encantada, uma veste, um elmo, uma picareta e um anel arcano que pulsava frio. Na Sala de Leitura, Winkan, o Engenheiro do Caos, meditava dentro de uma barreira de luz enquanto Carecacabeludo montava guarda. Na Praça Comum, o Pranteador da Cidade chorava sobre as pedras e ninguém parava. E, tateando a parede úmida ao sul do Beco Escuro, achei a entrada da Guilda dos Ladrões.",
+        "Entrei no dia seguinte. O ar cheirava a sebo, fumaça de cachimbo e metal frio. Um vigia deu um passo à frente e me barrou de novo: fraca demais para beber com os renegados. Duas guildas, duas humilhações em três dias, primeiro os homens da lei e depois os canalhas do esgoto. Trinquei os dentes até a gengiva doer e não disse nada. Ladra esperta não grita no covil dos outros. Transformei a raiva em foco e marchei pela cidade até as pernas tremerem.",
+        "No nono dia acabou a espera. Desci pela boca de pedra do lixo até a primeira câmara dos esgotos, olhei a escuridão viva lá embaixo e subi de volta. Na Rua Principal Oeste, revirando detritos, estava um fido bestial de pelo eriçado e olhos vermelhos de fome. Medi a distância, o peso nas botas, a guarda do bicho. Avancei. O punhal entrou fundo e um segundo golpe terminou o serviço. Quando o último ganido se apagou, o sangue me gelou por um instante: era o som de uma vida acabando na minha mão. Depois veio o calor, a força nova correndo pelos músculos. A hesitação morreu ali.",
+        "No décimo dia, a Guilda dos Magos não me barrou. O Bar dos Magos era um delírio de ilusões dançando nas paredes. No Laboratório, a Mestre da Guilda estudava um tomo antigo atrás de uma muralha de luz, entre pentagramas e uma lousa coberta de runas. No canto, um buraco negro descia para a escuridão, e dele subia o mesmo fedor que eu tinha sentido nos esgotos. O submundo e os mestres arcanos estavam ligados por um furo no chão.",
+        "Sentei com as costas na pedra e o punhal manchado no colo e fiz as contas dos primeiros dez dias. O disfarce me protegia da violência à toa, mas não abria porta de guilda; só poder de verdade abriria. A luta contra o fido confirmou a regra de só tirar a lâmina com a vitória certa, mas caçar bicho de rua era lento demais. Dali em diante seriam três frentes: os esgotos, o mundo além dos portões e o ouro para comprar as armas que me negavam. O primeiro decênio terminou com o punhal sujo de sangue."
+      ],
+      "source_kind": "documental",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 10,
+          "note": "Reescrita dos Dias 1 a 10 da Season 01 original (Legacy), sem fato novo."
+        }
+      ],
+      "parts": [
+        {
+          "day": 1,
+          "date": "2026-10-14",
+          "summary": "Desperta no Depósito de Lixo, veste o capuz, engrossa a voz e passa a andar como um ladrão homem. Mapeia as praças e acha quatro cães no lixo da Guilda dos Guerreiros.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 1,
+              "note": "Crônica do Dia 1."
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "date": "2026-10-15",
+          "summary": "Entra na Padaria de Midgaard, vê um cão, um guarda na porta e um veterano à procura de missões, e segura a faca: briga com testemunha é coisa de amador.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 2,
+              "note": "Crônica do Dia 2."
+            }
+          ]
+        },
+        {
+          "day": 3,
+          "date": "2026-10-16",
+          "summary": "Mapeia o oeste da cidade: Loja de Magias, Guilda dos Magos e o Portão Oeste com duas espadas no chão. Dorme pela primeira vez no Templo.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 3,
+              "note": "Crônica do Dia 3."
+            }
+          ]
+        },
+        {
+          "day": 4,
+          "date": "2026-10-17",
+          "summary": "A fome aperta no Templo. Omorfos, o Malandro, cruza a nave voando numa aura multicolorida e some ao sul. O cantil está seco.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 4,
+              "note": "Crônica do Dia 4."
+            }
+          ]
+        },
+        {
+          "day": 5,
+          "date": "2026-10-18",
+          "summary": "Enche o cantil na Fonte Azul e descobre o Panteão dos Centenários, com as estátuas de Deck, Kara, Brandon, Sakura e outros. Passa a dormir aos pés do altar.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 5,
+              "note": "Crônica do Dia 5."
+            }
+          ]
+        },
+        {
+          "day": 6,
+          "date": "2026-10-19",
+          "summary": "O Pacificador pede que ela volte quando estiver mais forte. Mapeia os becos e a Loja de Armas, e é barrada e empurrada pelo sentinela da Guilda dos Guerreiros.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 6,
+              "note": "Crônica do Dia 6."
+            }
+          ]
+        },
+        {
+          "day": 7,
+          "date": "2026-10-20",
+          "summary": "Recolhe punhal, elmo, veste e um anel arcano na Sala de Doações, vê Winkan meditando e acha a Guilda dos Ladrões ao sul do Beco Escuro.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 7,
+              "note": "Crônica do Dia 7."
+            }
+          ]
+        },
+        {
+          "day": 8,
+          "date": "2026-10-21",
+          "summary": "Entra na Guilda dos Ladrões e é barrada de novo, agora por fraqueza. Engole a segunda humilhação e marcha até o limite do fôlego.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 8,
+              "note": "Crônica do Dia 8."
+            }
+          ]
+        },
+        {
+          "day": 9,
+          "date": "2026-10-22",
+          "summary": "Desce à primeira câmara dos esgotos e volta. Na Rua Principal Oeste, mata um fido bestial com o punhal: o primeiro sangue.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 9,
+              "note": "Crônica do Dia 9."
+            }
+          ]
+        },
+        {
+          "day": 10,
+          "date": "2026-10-23",
+          "summary": "A Guilda dos Magos abre as portas: o Bar, o Laboratório, a Mestre e o buraco que desce aos esgotos. Faz a primeira reflexão decenal.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 10,
+              "note": "Crônica do Dia 10."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "tomo": 1,
+      "title": "O Que o Vazio Levou",
+      "kind": "marco",
+      "status": "concluido",
+      "goal": "Atravessar a primeira morte, transformar o luto em juramento e arrancar da Guilda dos Magos o primeiro feitiço.",
+      "closed_on_day": 13,
+      "days": [
+        11,
+        12,
+        13
+      ],
+      "date": "2026-10-26",
+      "in_game_time": "Esgotos de Midgaard, o Vazio e o Laboratório dos Magos",
+      "excerpt": "Uma serpente cor de lodo a mata nos esgotos. No Vazio ela perde a mãe, o clã e as canções, e volta jurando nunca mais.",
+      "tags": [
+        "Morte #1",
+        "Serpente dos Esgotos",
+        "O Vazio",
+        "Fonte da Vida",
+        "Projétil Mágico"
+      ],
+      "content": [
+        "O fedor dos canos devia ter bastado de aviso, mas o primeiro abate tinha me deixado confiante demais. Desci pela abertura escura decidida a fazer dos esgotos o meu território de caça. Passei pela Junção, contornei a Curva Regular de punhal na mão e passos abafados. Os canos gotejavam uma gosma fria.",
+        "Na bifurcação mais funda, onde uma coluna de ar parecia furar o teto, uma serpente enorme, de escamas cor de lodo, saiu de uma fenda lateral. Saltei para trás tentando armar a guarda; o meu golpe cortou o nada. Antes que os meus pés tocassem a lama, as presas entraram no meu flanco com a força de um aríete, e o veneno começou a queimar por dentro.",
+        "Caí de joelhos. O ar não entrava. Ouvi o meu próprio estertor e depois um silêncio pesado. Eu estava morrendo na sarjeta, exatamente como o cadáver sem nome que eu tinha jurado nunca ser.",
+        "Não houve escuridão. Acordei deitada numa grama macia e perfumada, sob árvores e um sol tímido. O Paraíso. Uma paz doce e enjoativa tentava me convencer de que a luta tinha acabado e que eu merecia descansar. O ódio subiu no meu peito como lava. Descansar? Eu tinha vindo a este mundo para quebrar as correntes do meu povo. Levantei, segui uma vibração mágica a leste e descobri que o tronco de uma das árvores era de metal. Dentro dele girava um portal. Entrei sem pensar duas vezes.",
+        "Do outro lado não havia chão nem teto. Um Caminho no Vazio. Ali, no meio do nada, entendi o preço de morrer: a morte não leva só a carne, leva pedaços da alma. Senti as lembranças mais antigas sendo arrancadas uma a uma. O rosto da minha mãe nos ermos de pedra. A voz do meu clã em volta da fogueira de ossos. As canções de guerra da infância. Tudo se desfez como cinza ao vento. Eu odeio morrer. Odeio com cada fibra.",
+        "Corri pelo caminho suspenso com medo de perder o resto, até cair numa câmara clara onde uma bacia de pedra brilhava: a Fonte da Vida. Bebi com uma sede que não era do corpo. O ar queimou os pulmões, o coração disparou, e acordei no mármore do Templo de Midgaard, inteira por fora e em carne viva por dentro. As minhas coisas tinham voltado comigo. Vesti tudo com pressa e apertei o punhal até os dedos ficarem brancos.",
+        "Subi ao Panteão e caí de joelhos diante das estátuas. Jurei ali: nunca mais a morte me pegaria desse jeito. A serpente ia perder a cabeça debaixo da minha bota. E eu ia aprender cada feitiço da guilda como uma arma de longe, sem largar o punhal para quem chegasse perto.",
+        "No dia seguinte, ainda com a queimadura invisível na alma, bebi na Fonte Azul e ouvi o Pacificador repetir o convite de sempre. Fui direto ao Laboratório dos Magos tentar decifrar a fórmula do projétil arcano na lousa. Não consegui. A Mestre da Guilda me mediu como quem olha uma noviça que cheira a sarjeta. Não me curvei. Se os magos guardam os segredos debaixo de sete chaves, eu ia arrancá-los por teimosia.",
+        "Voltei no terceiro dia e, desta vez, não tentei pronunciar as palavras como os cortesãos humanos. Usei a cadência dura da minha própria língua de sobrevivência. O ar estalou. Fagulhas azuis correram entre os meus dedos, e o segredo do Projétil Mágico se abriu na minha cabeça. A Mestre ergueu os olhos do grimório por um segundo, surpresa.",
+        "No Bar dos Magos, um mago veterano me olhou de cima a baixo e debochou: 'Ah, olhe só para você! Começando suas aventuras?'. Não respondi. Só inclinei a cabeça debaixo do capuz. Ele via uma novata arrogante; eu via um tolo que ainda ia assistir a uma goblin pôr uma coroa.",
+        "Fui ao Portão Oeste, onde as espadas longas continuavam largadas entre as botas dos guardas. Esperei o sentinela virar o rosto para a estrada, me agachei e peguei uma lâmina comprida e equilibrada. O peso do aço nas mãos me fez o sangue ferver.",
+        "Três dias antes eu tinha morrido no lodo. Agora tinha uma faca invisível, capaz de ferir de longe antes que qualquer garra me alcançasse, e uma espada tirada debaixo do nariz da guarda. O luto tinha virado ferramenta."
+      ],
+      "source_kind": "documental",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 13,
+          "note": "Reescrita dos Dias 11 a 13 da Season 01 original (Legacy), sem fato novo."
+        }
+      ],
+      "parts": [
+        {
+          "day": 11,
+          "date": "2026-10-24",
+          "summary": "Morre nos esgotos, picada por uma serpente cor de lodo. No Vazio perde o rosto da mãe, a voz do clã e as canções; volta pela Fonte da Vida jurando vingança.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 11,
+              "note": "Crônica do Dia 11."
+            }
+          ]
+        },
+        {
+          "day": 12,
+          "date": "2026-10-25",
+          "summary": "Bebe na Fonte Azul, ouve de novo o Pacificador e tenta aprender o projétil arcano, mas a Mestre da Guilda não entrega a fórmula.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 12,
+              "note": "Crônica do Dia 12."
+            }
+          ]
+        },
+        {
+          "day": 13,
+          "date": "2026-10-26",
+          "summary": "Aprende o Projétil Mágico na cadência da própria língua, ignora o deboche de um mago veterano e pega uma espada longa no Portão Oeste.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 13,
+              "note": "Crônica do Dia 13."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "tomo": 1,
+      "title": "A Escola dos Novatos",
+      "kind": "missao",
+      "status": "concluido",
+      "goal": "Aprender a caçar com magia e lâmina na Área dos Novatos, fazer o primeiro capital e vencer o próprio medo da morte.",
+      "closed_on_day": 20,
+      "days": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "date": "2026-11-02",
+      "in_game_time": "Grande Campo e Área dos Novatos",
+      "excerpt": "Na masmorra dos novatos ela aprende a medir cada presa, junta o primeiro ouro e descobre que a cautela também pode ser covardia.",
+      "tags": [
+        "Área dos Novatos",
+        "Filhote de Dragão",
+        "Monstro Novato",
+        "Terceiro Grau",
+        "Coragem"
+      ],
+      "content": [
+        "O medo do Vazio não me paralisou; virou um veneno frio que me deixava atenta a tudo. Voltei ao Laboratório e gastei até a última gota de concentração na fórmula, até o Projétil Mágico ficar perfeito. Depois saí da cidade pela primeira vez, pelo norte, atrás do Altar. O Grande Campo de Midgaard tinha grama cortada, carvalhos e pássaros cantando, e eu andei por ele com os sentidos abertos, porque goblin que se distrai com passarinho vira carcaça.",
+        "Numa curva do pasto achei a Entrada da Área dos Novatos. Na rocha, uma inscrição antiga contava a formatura de Pina, o novato camarada, guiado por Rimbaud. Logo na primeira galeria, entre roupas largadas, achei uma coleira de dragão de couro grosso e a afivelei no pescoço.",
+        "Em Um Outro Canto, um filhote de dragão andava desnorteado. Um guerreiro tolo atacaria em busca de glória. Eu medi o bicho, e a resposta foi um choque: aquele filhote tinha vida para triturar qualquer novato. Recuei sem fazer barulho. No Fim do Corredor estava a presa certa, o Monstro Novato, grande e sem força de verdade. Disparei o raio, aparei a garra no escudo e cravei o punhal na garganta dele. Caiu sem me arranhar. Levei vinte moedas e um punhal de novato de reserva.",
+        "No dia seguinte a mochila pesava nas minhas costas, e entendi que ferro morto só me deixava lenta. Troquei o gorro surrado pelo elmo de novato da Sala de Doações e senti uma proteção de verdade na cabeça. Depois fui ao ferreiro: a picareta, a lâmina tosca e a espada dos guardas viraram quatrocentas e oitenta e quatro moedas. O gorro rendeu mais setenta e cinco no armeiro, e na volta achei trinta e quatro moedas largadas ao lado da fonte. Em uma manhã, passei de miserável a dona de mais de seiscentas moedas.",
+        "Prometi a mim mesma que, se a vida despencasse perto do limite, eu correria sem vergonha nenhuma. Comprei uma mochila de lona por trinta moedas e voltei à masmorra. Em Mais Corredor, uma porta rústica estava entreaberta. Lá dentro, numa sala cheia de coleiras partidas, um rapaz com roupa de guarda andava em círculos, roendo as unhas: era o Guarda Novato, desesperado porque tinha perdido o dragão de estimação. O filhote dos corredores era dele. Fechei a porta devagar e guardei o segredo.",
+        "Na manhã seguinte tentei pôr o anel arcano no dedo, e ele me repeliu com um estalo. A joia pedia uma maturidade que eu ainda não tinha. Guardei sem rancor e fui atrás de comida: na Padaria comprei um pão recheado, uma broa e uma rosquinha malhada para emergência, e comi encostada na parede. Enchi os dois cantis na Fonte Azul. Pela primeira vez desde o lixo, eu não era uma fugitiva com fome; era uma caçadora abastecida.",
+        "Naquele dia achei também uma abertura no fundo do Fim do Corredor, por onde o vento soprava forte. Do outro lado havia Um Campo Aberto, e uma trilha que subia direto para o Grande Campo. A masmorra tinha uma saída pelos fundos. Agora eu podia entrar por um lado e sair pelo outro.",
+        "Então acordei com vergonha. Olhei para o punhal e vi o que eu vinha sendo: uma ratazana que recuava a cada farfalhar, com a desculpa do Vazio. A morte tinha levado o meu passado; a covardia ia levar o futuro inteiro. Quem tem medo da morte já está enterrado vivo. No caminho, avistei pela primeira vez o Grande Tabuleiro de Xadrez de Midgaard, um portal de ferro enferrujado aberto para um piso imenso de ébano e alabastro. Guardei o enigma para depois. Naquele dia o compromisso era com o ferro.",
+        "Fui direto ao Monstro Novato, com o filhote a poucos metros. Não houve recuo. Disparei o projétil no peito dele, plantei os pés e aparei a investida no escudo, disparei de novo à queima-roupa e enfiei o punhal no flanco. Quando o corpo bateu no chão, uma onda de poder me varreu de uma vez e me levou direto ao Terceiro Grau. Junto com a força nova, a minha mente acordou para os feitiços de enxergar o invisível e de sentir a magia escondida.",
+        "No dia seguinte a guilda me mostrou seis sessões de treino liberadas. Voltei à masmorra e matei o Monstro Novato em três respirações, sem que ele encostasse um dedo em mim. Saí com três punhais encantados, um na mão e dois na mochila.",
+        "No vigésimo dia percorri a masmorra inteira sem lutar e voltei ao Panteão para a segunda reflexão. Encarei a ferida maior: o Vazio. Cada morte é um pedaço da alma que não volta, e eu odeio morrer. Mas o ódio à morte tinha virado uma cautela doentia. Por dias eu hesitei e recuei diante de sombra. Prudência demais nunca ia me fazer rainha de nada. Não se trata de pular no poço sem corda; trata-se de abraçar o risco certo, de cravar a lâmina quando o momento exige.",
+        "A prova estava no campo: foi quebrando a covardia que dei o maior salto da minha vida. O trauma virou fúria disciplinada, e a ladra passou a andar de mãos dadas com a maga de guerra. O trono dos goblins não aceita rainha covarde."
+      ],
+      "source_kind": "documental",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 20,
+          "note": "Reescrita dos Dias 14 a 20 da Season 01 original (Legacy), sem fato novo."
+        }
+      ],
+      "parts": [
+        {
+          "day": 14,
+          "date": "2026-10-27",
+          "summary": "Leva o projétil à perfeição, descobre o Grande Campo e a Área dos Novatos, afivela uma coleira de dragão, recua do filhote e mata o Monstro Novato.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 14,
+              "note": "Crônica do Dia 14."
+            }
+          ]
+        },
+        {
+          "day": 15,
+          "date": "2026-10-28",
+          "summary": "Troca o gorro pelo elmo de novato, vende picareta, lâmina e espada, acha moedas na praça e passa das seiscentas moedas. Recua outra vez do filhote.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 15,
+              "note": "Crônica do Dia 15."
+            }
+          ]
+        },
+        {
+          "day": 16,
+          "date": "2026-10-29",
+          "summary": "Promete fugir quando a vida despencar. Compra uma mochila e encontra o Guarda Novato desesperado: o filhote de dragão é o bicho de estimação dele.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 16,
+              "note": "Crônica do Dia 16."
+            }
+          ]
+        },
+        {
+          "day": 17,
+          "date": "2026-10-30",
+          "summary": "O anel arcano recusa o dedo dela. Come na Padaria, enche dois cantis e descobre o Campo Aberto, a saída dos fundos da masmorra.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 17,
+              "note": "Crônica do Dia 17."
+            }
+          ]
+        },
+        {
+          "day": 18,
+          "date": "2026-10-31",
+          "summary": "Envergonha-se da própria cautela, avista o Grande Tabuleiro de Xadrez e enfrenta o Monstro Novato sem recuar: salta ao Terceiro Grau.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 18,
+              "note": "Crônica do Dia 18."
+            }
+          ]
+        },
+        {
+          "day": 19,
+          "date": "2026-11-01",
+          "summary": "Vê seis sessões de treino liberadas na guilda e mata o Monstro Novato sem ser tocada. Agora carrega três punhais encantados.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 19,
+              "note": "Crônica do Dia 19."
+            }
+          ]
+        },
+        {
+          "day": 20,
+          "date": "2026-11-02",
+          "summary": "Varre a masmorra sem lutar e faz a segunda reflexão decenal: o medo da morte virou cautela doentia, e prudência demais não faz rainha.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 20,
+              "note": "Crônica do Dia 20."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "tomo": 1,
+      "title": "Os Outros Caminhos",
+      "kind": "missao",
+      "status": "concluido",
+      "goal": "Descobrir que o poder não vem só da lâmina: os serviços da cidade, as rotas além dos muros, os informantes e o Tabuleiro de Xadrez.",
+      "closed_on_day": 26,
+      "days": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "date": "2026-11-08",
+      "in_game_time": "Becos, Rua da Muralha, Ponte Sobre o Rio e Grande Tabuleiro de Xadrez",
+      "excerpt": "Ela sai da masmorra para conhecer o resto do tabuleiro: editais, necromantes, uma ponte sobre o rio, uma taverna de informantes e a primeira casa branca do xadrez.",
+      "tags": [
+        "Editais de Aventura",
+        "Guilda dos Necromantes",
+        "Taverna Encardida",
+        "Tabuleiro de Xadrez",
+        "Quarto Grau"
+      ],
+      "content": [
+        "No Terceiro Grau, a época de me esconder da própria sombra tinha acabado. Uma futura rainha não vive só de pilhar monstros em tocas; ela precisa ser notada, prestar serviços, acumular favores. Fui até o Pacificador sem baixar a cabeça, e ele me olhou com outro respeito. Foi assim que conheci os editais de aventura de Midgaard, onde qualquer aventureiro de fibra se alista para caçadas com recompensa.",
+        "No Beco Pobre, uma viela ao norte me levou à Entrada da Guilda dos Necromantes. O ar era gelado e cheirava a túmulo. Um sentinela protegido por uma barreira de ossos e crânios rosnou com voz de catacumba: 'Só necromantes entram aqui.' Recuei sem discutir. Se os magos da luz guardam livros, os necromantes guardam o outro lado do véu.",
+        "Segui a Rua da Muralha, lendo os símbolos que os sentinelas gravaram nos blocos de granito ao longo dos séculos, até a rua se abrir sobre A Ponte Sobre o Rio. Lá embaixo a água rugia e mergulhava por uma fenda na muralha rumo aos ermos. Dormi ali mesmo, sobre as pedras da ponte, com o rio me fazendo companhia.",
+        "Acordei com uma clareza nova. Até ali, o meu instinto mandava crescer cravando a lâmina em presas no escuro. Mas quem só sabe lutar morre cercado ou cai na primeira armadilha bem feita. O poder também vem da informação colhida nas esquinas, dos contratos, das rotas, de conhecer cada palmo de terra. Se os mestres das guildas me olham de cima, não preciso derrubá-los no braço: posso me tornar indispensável.",
+        "Com essa bússola, olhei a ponte de novo e vi uma trilha que seguia para o sul pela margem de fora dos muros: o Canto Noroeste da Afluência, terras do rio longe dos magistrados. Anotei e deixei para depois. De volta, cruzei com o grande aventureiro veterano que vive de alugar a espada e estudei os modos dele, e no fim do Beco Pobre achei a entrada da Taverna Encardida.",
+        "No dia seguinte entrei. O ar era grosso de cerveja azeda, fumaça de cachimbo barato e poeira de décadas. Atrás de um balcão pegajoso estava Filthy, de avental manchado e olhar de quem já viu de tudo, vendendo cospefogo e aguardente em canecos lascados enquanto mendigos pediam esmola nos cantos. Não é lugar de cortesão. É a trincheira onde marinheiro sem navio e mercador clandestino soltam segredos pela língua bêbada. A fome me fez voltar cedo: Fonte Azul, Panteão, e dormir prometendo pão ao amanhecer.",
+        "Acordei, comi a rosquinha malhada que guardava fazia dias e desci correndo. No Templo, o ar estalou: Wacabayaxe, um dos maiores heróis das lendas deste mundo, meditava dentro de uma barreira de todas as cores que fazia o chão tremer. Mestres daquele porte não perdem um dia hesitando.",
+        "Atravessei o Grande Campo para o oeste até o arco de pedra do Grande Tabuleiro de Xadrez e pisei na primeira laje: Uma Casa Branca, de alabastro polido e frio. Ao norte, a oeste e ao sul, o piso afundava em obsidiana, as casas pretas por onde as peças gigantes andam. O silêncio era tenso. Dormi junto à muralha do portão, com a minha bandeira fincada no tabuleiro dos titãs.",
+        "De manhã, nas casas pretas, achei a armadura de placas e a espada larga de um Peão Negro. Tentei vestir a cota e o peso me venceu: o meu corpo ainda não tinha músculo para aquele ferro. Larguei tudo no mármore e corri de volta à masmorra dos novatos com uma ideia só: sangrar quem estivesse no caminho até o corpo mudar.",
+        "Matei o monstro novato do primeiro corredor com o raio e o punhal, explodi uma abominação rastejante contra a parede do Cruzamento e derrubei mais um guardião. Quando ele caiu, algo se rompeu dentro de mim: pulmões mais largos, mana transbordando, músculos de gato. O Quarto Grau. E na ponta dos dedos começou a crepitar uma névoa gelada: o toque gélido tinha acordado. Fui direto à Mestre da Guilda e treinei sem parar o gelo, a visão do invisível e a natação.",
+        "No sexto dia daquela semana, os músculos chiavam e o estômago reclamava. Comprei quatro pães recheados, comi dois na hora e guardei dois. Na Praça do Comércio, diante do mural encantado, entoei o chamado das aventuras. O mundo respondeu que nenhum édito novo tinha sido proclamado naquele instante. Não importava: eu tinha aprendido como responder quando as trombetas soassem.",
+        "Voltei ao portão do Tabuleiro e dormi de olhos semicerrados junto ao arco de pedra. O corpo estava alimentado, o mapa estava maior, e no dia seguinte o ferro ia voltar a falar."
+      ],
+      "source_kind": "documental",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 26,
+          "note": "Reescrita dos Dias 21 a 26 da Season 01 original (Legacy), sem fato novo."
+        }
+      ],
+      "parts": [
+        {
+          "day": 21,
+          "date": "2026-11-03",
+          "summary": "Descobre os editais de aventura da cidade, é barrada na Guilda dos Necromantes e dorme na Ponte Sobre o Rio.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 21,
+              "note": "Crônica do Dia 21."
+            }
+          ]
+        },
+        {
+          "day": 22,
+          "date": "2026-11-04",
+          "summary": "Entende que lutar é só um dos caminhos. Acha o Canto Noroeste da Afluência e a entrada da Taverna Encardida.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 22,
+              "note": "Crônica do Dia 22."
+            }
+          ]
+        },
+        {
+          "day": 23,
+          "date": "2026-11-05",
+          "summary": "Entra na Taverna Encardida e conhece o balcão de Filthy. Volta pela fome à Fonte Azul e ao Panteão.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 23,
+              "note": "Crônica do Dia 23."
+            }
+          ]
+        },
+        {
+          "day": 24,
+          "date": "2026-11-06",
+          "summary": "Come a rosquinha malhada, vê Wacabayaxe meditando no Templo e pisa na primeira casa branca do Tabuleiro de Xadrez, onde dorme.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 24,
+              "note": "Crônica do Dia 24."
+            }
+          ]
+        },
+        {
+          "day": 25,
+          "date": "2026-11-07",
+          "summary": "Larga a armadura de Peão Negro, pesada demais, mata três criaturas na masmorra e alcança o Quarto Grau com o toque gélido. Treina tudo na guilda.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 25,
+              "note": "Crônica do Dia 25."
+            }
+          ]
+        },
+        {
+          "day": 26,
+          "date": "2026-11-08",
+          "summary": "Compra quatro pães, aprende a chamar as aventuras no mural (nenhuma no momento) e dorme no portão do Tabuleiro.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 26,
+              "note": "Crônica do Dia 26."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "tomo": 1,
+      "title": "Palavra Dada",
+      "kind": "missao",
+      "status": "concluido",
+      "goal": "Encontrar o Bebê Dragão do Alquimista para o Guarda Novato e cumprir a promessa até o fim.",
+      "closed_on_day": 31,
+      "days": [
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "date": "2026-11-13",
+      "in_game_time": "Área dos Novatos — a sala do Guarda Novato",
+      "excerpt": "Um guarda em pânico, um dragão fugido e uma promessa. Cumprir a palavra rende a ela o Quinto e o Sexto Graus e o feitiço de sumir.",
+      "tags": [
+        "Bebê Dragão",
+        "Guarda Novato",
+        "Pergaminho de Retorno",
+        "Infravisão",
+        "Invisibilidade"
+      ],
+      "content": [
+        "Acordei no limiar do Tabuleiro e fui à masmorra com o sol nascendo. Em Mais Corredor, forcei com o ombro a porta emperrada da sala escondida. O Guarda Novato andava entre coleiras rasgadas, de olhos arregalados. Quando me viu, avançou implorando. O Bebê Dragão era do temível Alquimista de Midgaard, e tinha fugido. 'O Mestre vai arrancar minha cabeça se eu não achá-lo! Me dê uma mãozinha aqui!'",
+        "Interroguei o rapaz com frieza. O Alquimista não era qualquer um: a gratidão dele, ou o domínio daquele bicho, valia muito. Mal pus o pé no corredor, o ar esquentou com cheiro de enxofre e fumaça. Rastejando pela saída sul, de escamas brilhantes e olhos em brasa, lá estava o Bebê Dragão. O coração bateu na garganta. Atacar às cegas, sem nada para contê-lo, seria arrogância suicida. Gravei a rota e saí pelo Campo Aberto.",
+        "Quem quer um império não pode ser amadora com os próprios recursos. O ferreiro desdenhou dos meus punhais básicos, e entendi a regra sem rancor: tralha comum não sustenta rainha. Na Loja de Magias, no fim da Rua Principal, comprei a peça mais importante de qualquer combatente: o Pergaminho de Retorno, que com uma palavra me arranca de qualquer masmorra e me põe no Templo. Levei também uma poção amarela que rasga os véus do invisível.",
+        "Acampei junto aos pilares do Tabuleiro, ouvindo o vento entre as lajes. Com a fuga garantida, não haveria mais hesitação. No dia seguinte limpei as galerias com o toque gélido e os mísseis, pregando as criaturas nas paredes antes que rosnassem. Reafirmei ao guarda o meu compromisso e, perto das pedras úmidas, ainda senti o calor do filhote no ar.",
+        "No trigésimo dia, comi os pães da mochila, aliviei a carga para esquivar melhor e corri para os túneis. No Cruzamento, um monstro guardião saltou de punhos fechados. Congelei o ar em volta dele, aparei no escudo e a minha estocada o fez explodir. Quando caiu, uma torrente rompeu as amarras dos meus ossos: eu tinha chegado ao Quinto Grau. E nos meus olhos acendeu uma luz vermelha e quente, a Infravisão.",
+        "Com a visão do calor rasgando a penumbra, achei o pequeno dragão se esgueirando, assustado, pelas passagens de cima, deixando para trás as coleiras arrebentadas. Abri a porta da câmara secreta, pus a coleira sobre a mesa do guarda, que ainda tremia, contei onde estava a criatura e tomei as rédeas da operação. Quem lidera não deixa promessa pela metade.",
+        "Corri ao Laboratório e gastei as sessões acumuladas até a Infravisão ficar perfeita: nenhuma emboscada no escuro ia escapar dos meus olhos. Na Praça do Templo, o Pacificador bradou em reconhecimento ao meu crescimento. Trinta dias de sangue, cálculo e aço tinham feito de uma goblin do lixo uma senhora do Quinto Grau.",
+        "Acordei no chão da câmara secreta. Arrumei as lâminas de reserva no fundo da mochila para deixar os braços livres e fui até o guarda, que ainda roía as unhas com medo do Alquimista. Puxei a coleira de couro e a depositei firme na mesa. A missão estava cumprida. Quando os olhos dele se encheram de alívio, o mundo me respondeu com uma força enorme: o meu pulso místico quase dobrou, e chegou o Sexto Grau.",
+        "Pela porta norte voltei ao Corredor Sujo e vi o Bebê Dragão andando tranquilo pelas reentrâncias, com a coleira brilhando no pescoço, sem o pânico de antes. O labirinto, que antes cheirava a perigo, parecia se curvar à minha passagem. Saí para o Grande Campo com a serenidade de quem não deve nada a ninguém.",
+        "No Templo, a Sala de Doações me deu frutas frescas, e guardei-as no fundo da mochila. O Pacificador renovou a promessa de tarefas grandes para quando eu estivesse ainda mais forte.",
+        "O dia chegou ao topo no Laboratório dos Magos. Na lousa, o Sexto Grau tinha destravado a arte mais cobiçada: a Invisibilidade. Treinei feitiço após feitiço, dobrando a luz e o ar, até a ocultação ficar impecável. Além de enxergar o calor no escuro, agora eu podia sumir diante dos olhos de qualquer criatura.",
+        "Subi ao Panteão e curvei a cabeça diante de Pedroportugal, Sakura, Brandon e de todos os que abriram o caminho antes de mim. Palavra de goblin que mira um trono não é moeda falsa. Eu tinha dado a minha a um guarda assustado, e ela me pagou com dois graus de poder e o feitiço de desaparecer."
+      ],
+      "source_kind": "documental",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 31,
+          "note": "Reescrita dos Dias 27 a 31 da Season 01 original (Legacy), sem fato novo."
+        }
+      ],
+      "parts": [
+        {
+          "day": 27,
+          "date": "2026-11-09",
+          "summary": "O Guarda Novato pede ajuda: o Bebê Dragão do Alquimista fugiu. Ela encontra o filhote no corredor e decide não atacar.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 27,
+              "note": "Crônica do Dia 27."
+            }
+          ]
+        },
+        {
+          "day": 28,
+          "date": "2026-11-10",
+          "summary": "Compra o Pergaminho de Retorno e uma poção amarela na Loja de Magias e acampa junto ao Tabuleiro para a caçada do dragão.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 28,
+              "note": "Crônica do Dia 28."
+            }
+          ]
+        },
+        {
+          "day": 29,
+          "date": "2026-11-11",
+          "summary": "Limpa as galerias com gelo e mísseis, reafirma a promessa ao guarda e fica a um passo do Quinto Grau.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 29,
+              "note": "Crônica do Dia 29."
+            }
+          ]
+        },
+        {
+          "day": 30,
+          "date": "2026-11-12",
+          "summary": "Mata um monstro guardião e alcança o Quinto Grau com a Infravisão. Com ela, localiza o filhote e leva a posição ao guarda.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 30,
+              "note": "Crônica do Dia 30."
+            }
+          ]
+        },
+        {
+          "day": 31,
+          "date": "2026-11-13",
+          "summary": "Devolve a coleira, cumpre a promessa e sobe ao Sexto Grau. Aprende a Invisibilidade até a perfeição.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 31,
+              "note": "Crônica do Dia 31."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "tomo": 1,
+      "title": "A Couraça Invisível",
+      "kind": "missao",
+      "status": "concluido",
+      "goal": "Firmar as alianças com o Mago Aventureiro e o Alquimista, aceitar as primeiras missões formais e alcançar o Sétimo Grau com a Armadura Arcana.",
+      "closed_on_day": 40,
+      "days": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "date": "2026-11-22",
+      "in_game_time": "Bar dos Magos, Sala do Alquimista e as galerias dos novatos",
+      "excerpt": "Ela diz sim a um mago e a um alquimista, cumpre a missão Altruísmo doando o que sobra e chega aos quarenta dias vestida de uma armadura que ninguém vê.",
+      "tags": [
+        "Dicas Mágicas",
+        "Novato Alquimista",
+        "Limpeza de Monstros",
+        "Altruísmo",
+        "Armadura Arcana",
+        "Sétimo Grau"
+      ],
+      "content": [
+        "O filhote do Alquimista agora zanzava em paz pelas passagens de cima. No meio do labirinto, a fome me cobrou o tributo de sempre. Antes eu teria recuado assustada; desta vez abri a mochila, comi a fruta da Sala de Doações, bebi do cantil e segui sem abandonar o posto. Quem governa pelos próprios estoques não foge por causa do estômago.",
+        "Na Praça do Comércio, diante do mural, a lista das grandes tarefas da cidade se abriu com clareza. Entre os pedidos dos novatos e os expurgos de aberrações, destacava-se a jornada das Dicas Mágicas, conduzida por um viajante que frequenta os recintos arcanos. No Bar dos Magos, ao lado do garçom calado, encontrei o Mago Aventureiro. Ele me perguntou, altivo: 'Começando suas aventuras?'. Ergui o queixo sob o capuz e respondi: 'Sim'. O ar vibrou e o mundo selou o começo da tarefa.",
+        "Na manhã seguinte ele me olhou com um brilho de afeto e murmurou: 'Isso me lembra meus dias de iniciante...'. Guardei os conselhos e fui provar que sabedoria sem sangue é só teoria. No Cruzamento, um monstro novato ergueu os braços; o projétil explodiu no peito dele e o punhal entrou até o cabo. Em Um Outro Canto, perto do dragão adormecido, uma segunda aberração caiu do mesmo jeito. O Sétimo Grau já estava à vista.",
+        "Uma guerreira ágil não carrega peso morto. Doei a túnica mágica excedente na Sala de Doações e voltei à masmorra atrás de algo que os apressados não veem: a porta de madeira escura na parede leste de Um Outro Canto. Forcei o trinco. As dobradiças gemeram e a porta se abriu para A Sala do Alquimista. Cheiro de enxofre, cinza e ervas secas; fórmulas fluorescentes nas paredes; frascos fervendo num pedestal, vigiados por um diabinho saltitante. E O Novato Alquimista, de avental chamuscado, resmungando sobre as pragas que infestavam as suas câmaras. No fundo, uma escadaria descia para a escuridão.",
+        "Não desci. Poder de verdade sabe quando recuar para planejar. No dia seguinte matei outra aberração no Cruzamento e voltei à sala. O Alquimista viu a lâmina suja de sangue no meu cinto e perguntou, sério: 'Ei, você poderia me ajudar?'.",
+        "Voltei mais uma vez e respondi 'Sim'. O ar da câmara vibrou: eu tinha entrado na Limpeza de Monstros. Junto à escada, uma placa de ferro dizia: 'Se você está sem equipamentos e sozinho, saia já daqui! Ou então não culpe ninguém por sua morte...'. Do poço subiam rosnados que arrepiavam a espinha. Estrategista não se precipita: o expurgo começaria pelas câmaras de cima, onde a vitória era certa. Matei dois monstros e voltei com a mochila tão cheia que pendurei os troféus nas correias de fora.",
+        "No dia seguinte desci à Sala de Doações e deixei a túnica sobressalente nos cestos. Quando o tecido tocou o chão, uma fumaça prateada explodiu no ar e a voz do mundo anunciou: a missão Altruísmo estava cumprida. Abrir mão do que sobra para amparar os que chegam tinha virado honra. Doei também o punhal reserva e saí leve como o vento.",
+        "A fome voltou, e a carne fresca deixada na Sala de Doações resolveu. O Pacificador repetiu o convite, e cada vez que ele repetia eu sentia que a cidade começava a reparar em mim. No dia seguinte parei nos degraus do Templo para olhar o meu próprio método: cada erro antigo, a carga demais, a hesitação diante dos editais, o descuido com a comida, tinha virado regra. Desci e fiz uma caçada dupla, até o Fim do Corredor.",
+        "No quadragésimo dia, doei as lâminas que sobravam, bebi da Fonte Azul e desci com a certeza de que aquele dia abria outra era. O monstro de guarda saiu das sombras e caiu sob o feitiço e a sequência de estocadas. Um calor enorme subiu pelo meu peito e destravou o Sétimo Grau.",
+        "No Laboratório, ajoelhei diante da Mestre da Guilda e repeti as palavras novas até ela assentir. Ali mesmo conjurei: uma couraça invisível se moldou à minha pele, e a minha defesa quase triplicou. Saí sob o olhar quieto dos escribas.",
+        "No Panteão, olhei para trás. Quarenta dias de fome, aço, sangue e mistério. A goblin assustada do lixo tinha dado lugar a uma maga de guerra, com uma pequena fortuna no cinto, dormindo no santuário dos maiores heróis da história."
+      ],
+      "source_kind": "documental",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 40,
+          "note": "Reescrita dos Dias 32 a 40 da Season 01 original (Legacy), sem fato novo."
+        }
+      ],
+      "parts": [
+        {
+          "day": 32,
+          "date": "2026-11-14",
+          "summary": "Come no meio da masmorra sem abandonar o posto e aceita a jornada das Dicas Mágicas com o Mago Aventureiro.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 32,
+              "note": "Crônica do Dia 32."
+            }
+          ]
+        },
+        {
+          "day": 33,
+          "date": "2026-11-15",
+          "summary": "O Mago Aventureiro se lembra dos próprios começos. Ela mata dois monstros e o Sétimo Grau fica à vista.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 33,
+              "note": "Crônica do Dia 33."
+            }
+          ]
+        },
+        {
+          "day": 34,
+          "date": "2026-11-16",
+          "summary": "Doa uma túnica e abre a porta leste de Um Outro Canto: a Sala do Alquimista, com seus frascos, um diabinho e uma escada para baixo.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 34,
+              "note": "Crônica do Dia 34."
+            }
+          ]
+        },
+        {
+          "day": 35,
+          "date": "2026-11-17",
+          "summary": "Mata outra aberração e o Novato Alquimista pergunta se ela pode ajudá-lo.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 35,
+              "note": "Crônica do Dia 35."
+            }
+          ]
+        },
+        {
+          "day": 36,
+          "date": "2026-11-18",
+          "summary": "Aceita a Limpeza de Monstros, lê a placa da escada que avisa os sozinhos, mata dois monstros e volta de mochila cheia.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 36,
+              "note": "Crônica do Dia 36."
+            }
+          ]
+        },
+        {
+          "day": 37,
+          "date": "2026-11-19",
+          "summary": "Doa a túnica sobressalente e cumpre a missão Altruísmo. Volta ao Mago Aventureiro e caça em Mais Corredor.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 37,
+              "note": "Crônica do Dia 37."
+            }
+          ]
+        },
+        {
+          "day": 38,
+          "date": "2026-11-20",
+          "summary": "Come carne da Sala de Doações, ouve o Pacificador outra vez e mata outra aberração no Cruzamento.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 38,
+              "note": "Crônica do Dia 38."
+            }
+          ]
+        },
+        {
+          "day": 39,
+          "date": "2026-11-21",
+          "summary": "Revê os próprios erros de carga, de editais e de comida, e faz uma caçada dupla até o limiar do Sétimo Grau.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 39,
+              "note": "Crônica do Dia 39."
+            }
+          ]
+        },
+        {
+          "day": 40,
+          "date": "2026-11-22",
+          "summary": "Mata o monstro de guarda, alcança o Sétimo Grau e aprende a Armadura Arcana, que quase triplica a defesa.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 40,
+              "note": "Crônica do Dia 40."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "tomo": 1,
+      "title": "A Rotina da Predadora",
+      "kind": "missao",
+      "status": "concluido",
+      "goal": "Transformar a caça diária em método, cruzar os cinquenta dias, ganhar o fogo e abrir a porta trancada ao norte do Cruzamento.",
+      "closed_on_day": 59,
+      "days": [
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "date": "2026-12-11",
+      "in_game_time": "As galerias dos novatos, do Cruzamento à Sala da Estátua",
+      "excerpt": "Dezenove dias de caçada metódica: a fortuna passa de mil moedas, o fogo nasce nas mãos dela e uma porta trancada cede.",
+      "tags": [
+        "Rotina",
+        "Cinquenta Dias",
+        "Juramento",
+        "Mãos Flamejantes",
+        "Oitavo Grau",
+        "Caminho Iluminado"
+      ],
+      "content": [
+        "A couraça arcana vibrava como uma corda de arco antes mesmo de eu abrir os olhos. Cruzando a cidade, ouvi pelo éter a voz de Negelok, que tagarelava para Midgaard inteira: na Loja de Magias havia poções amarelas que rasgam o véu do invisível. Guardei a informação como se guarda uma adaga envenenada e desci à masmorra. Dois monstros caíram sem arranhar a barreira que me cobria.",
+        "Na Loja de Magias, o ar era quase sólido de enxofre, cera e pergaminho velho. O feiticeiro lojista falava sem mexer a boca. Havia pergaminhos de tempestade por centenas de milhares de moedas, e a poção amarela custava mais de cinco mil. Toquei o forro da mochila em silêncio: uma igual já estava ali dentro, junto com o anel. Eu carregava uma fortuna discreta sem pagar pedágio a mercador humano.",
+        "O anel continuava me recusando. No Templo, vi Negelok flutuando nas costas d'O Grifo Real, uma fera de penas douradas numa aura de todas as cores, enquanto Damasco olhava tudo com a frieza dos procurados. Ver grandeza viva me deu certeza de que o meu destino não seria menor.",
+        "Os dias seguintes tiveram a mesma forma, e eu aprendi a gostar dela. Armadura antes de qualquer sombra, raio para abrir a guarda, punhal para fechar. Conversei com o Alquimista sobre o expurgo e fui doando no Templo o ferro que não me servia. De longe, pelo Caminho Sujo, olhei o portão do Tabuleiro e prometi voltar quando as minhas lâminas pedissem um palco maior. A bolsa passou das oitocentas moedas.",
+        "Um dia, num corredor do Templo, o reflexo da armadura de Valgren, o Guerreiro da Luz, cortou a bruma da manhã. Sustentei o olhar por baixo do elmo, e ele me deixou passar com um aceno. Na masmorra, encontrei um silêncio de sepulcro: o massacre dos dias anteriores tinha esvaziado as galerias. Há uma grandeza sutil em andar por uma masmorra deserta sabendo que a ausência de inimigos é obra do próprio ferro.",
+        "Na véspera do cinquentenário fiz da reflexão o meu primeiro ato de guerra. A armadura sobe ao meu peito antes de qualquer perigo, o anel que me recusa é guardado com paciência de rainha e nenhuma rotina me prende a ritual previsível. Desci e matei dois monstros com a mesma frieza.",
+        "Cinquenta dias. Olhei as palmas das mãos: cinquenta manhãs antes, esses dedos reviravam carcaça podre no lixo atrás de casca de pão mofado. Agora sustentavam magia, e novecentas moedas tilintavam no meu cinto. A fome me pegou na sala do Alquimista, mas não me assustou mais; quem tem ouro não mendiga migalha. Naquela noite, no Panteão, jurei para os dez dias seguintes: varrer as últimas pragas da masmorra, tirar de Midgaard cada missão que oferecessem e, quando as lâminas estivessem prontas, descer aos esgotos e arrancar a cabeça da serpente que me matou.",
+        "Comecei mudando um hábito. Voltar ao Templo a cada escaramuça é coisa de novata medrosa: gasta os calcanhares e dá tempo para as feras se multiplicarem. Passei a descansar dentro do território, sentada na Pequena Sala do Guarda Novato, esperando o fôlego e a mana voltarem sem ceder um palmo de terreno.",
+        "Três monstros caíram seguidos debaixo do meu punhal, e a torrente de calor que veio depois me levou ao Oitavo Grau. Na lousa da guilda, apareceu a fórmula das Mãos Flamejantes. Ela me ensinou no dia seguinte: no círculo de carvão, duas labaredas azuis dançaram na minha pele sem queimar. Na masmorra, abri os braços contra um monstro novato e o cone de fogo o reduziu a brasa antes que ele tocasse o chão. Das cinzas tirei as moedas que passaram a minha bolsa das mil. Uma goblin que não tinha moeda furada para comprar água carregava agora o resgate de um nobre.",
+        "Aprendi também a comer na hora certa: com a carne nutrida antes de o pulso do mundo virar, a mana e a vida se regeneram por inteiro. Com pão no estômago, armadura e fogo nas mãos, fiz das galerias um forno. Num dia só, três criaturas tentaram barrar o meu caminho, e as três viraram cinza com cheiro de ozônio.",
+        "Foi assim que dei com a porta. No Cruzamento, onde o chão de terra vira laje talhada, uma folha pesada de madeira, reforçada com cravos de ferro, fechava a passagem para o norte. O ferrolho estava corrido. Não me frustrou. Se há porta trancada no fundo da terra, há algo de valor respirando do outro lado. Queimei os monstros das câmaras laterais, descansei na sala do guarda e voltei no dia seguinte para estudar as ombreiras e as dobradiças.",
+        "No terceiro dia, o ferrolho estalou sob o comando da minha vontade. Empurrei a madeira e senti cheiro de cal recém-passada, pedra limpa e alfazema. Um Caminho Iluminado: paredes brancas, decoradas com simetria, e no chão o traçado de um projeto engenhoso, coisa de quem lida com destilarias e fórmulas. Recuei um passo e guardei a posição para entrar com toda a energia.",
+        "Ao norte daquele caminho ficava A Sala da Estátua, banhada por uma luz mansa, com uma figura enorme entalhada na rocha e cheiro de pó de pedra e óleo perfumado. A leste, um arco abria para os laboratórios de dentro. Sentei na base do monumento para clarear a cabeça. No escuro, quem se cega pela pressa ou pelo medo morre cedo. Quem governa observa o terreno e escolhe a hora. A passagem estava aberta, e o sexto decênio estava chegando."
+      ],
+      "source_kind": "documental",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 59,
+          "note": "Reescrita dos Dias 41 a 59 da Season 01 original (Legacy), sem fato novo."
+        }
+      ],
+      "parts": [
+        {
+          "day": 41,
+          "date": "2026-11-23",
+          "summary": "Ouve Negelok contar à cidade da poção amarela na Loja de Magias e mata dois monstros sob a couraça invisível.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 41,
+              "note": "Crônica do Dia 41."
+            }
+          ]
+        },
+        {
+          "day": 42,
+          "date": "2026-11-24",
+          "summary": "Vê pergaminhos e poções caríssimos na Loja de Magias e percebe que já carrega uma poção amarela e um anel de valor.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 42,
+              "note": "Crônica do Dia 42."
+            }
+          ]
+        },
+        {
+          "day": 43,
+          "date": "2026-11-25",
+          "summary": "O anel recusa o dedo outra vez. Vê Negelok montado no Grifo Real e segue caçando sob a Armadura Arcana.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 43,
+              "note": "Crônica do Dia 43."
+            }
+          ]
+        },
+        {
+          "day": 44,
+          "date": "2026-11-26",
+          "summary": "Rompe mais um marco de experiência e conversa com o Alquimista sobre o expurgo das galerias.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 44,
+              "note": "Crônica do Dia 44."
+            }
+          ]
+        },
+        {
+          "day": 45,
+          "date": "2026-11-27",
+          "summary": "Olha o portão do Tabuleiro de longe, dá um salto grande de poder numa só caçada e ultrapassa as oitocentas moedas.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 45,
+              "note": "Crônica do Dia 45."
+            }
+          ]
+        },
+        {
+          "day": 46,
+          "date": "2026-11-28",
+          "summary": "Mais uma caçada nas pedras molhadas, e a bolsa chega a oitocentas e vinte e nove moedas.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 46,
+              "note": "Crônica do Dia 46."
+            }
+          ]
+        },
+        {
+          "day": 47,
+          "date": "2026-11-29",
+          "summary": "Cruza com Valgren, o Guerreiro da Luz, e encontra a masmorra vazia: o massacre dos dias anteriores limpou as galerias.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 47,
+              "note": "Crônica do Dia 47."
+            }
+          ]
+        },
+        {
+          "day": 48,
+          "date": "2026-11-30",
+          "summary": "Um único abate rende um salto grande de poder. Oitocentas e quarenta e nove moedas, na véspera de rever a doutrina.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 48,
+              "note": "Crônica do Dia 48."
+            }
+          ]
+        },
+        {
+          "day": 49,
+          "date": "2026-12-01",
+          "summary": "Revê a doutrina, faz um abate duplo e se aproxima do Oitavo Grau.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 49,
+              "note": "Crônica do Dia 49."
+            }
+          ]
+        },
+        {
+          "day": 50,
+          "date": "2026-12-02",
+          "summary": "Cinquenta dias. Lembra do lixo e jura varrer a masmorra, cumprir as missões da cidade e descer aos esgotos para arrancar a cabeça da serpente.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 50,
+              "note": "Crônica do Dia 50."
+            }
+          ]
+        },
+        {
+          "day": 51,
+          "date": "2026-12-03",
+          "summary": "Come na Padaria e passa a descansar dentro da masmorra, na sala do guarda, em vez de voltar ao Templo a cada luta.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 51,
+              "note": "Crônica do Dia 51."
+            }
+          ]
+        },
+        {
+          "day": 52,
+          "date": "2026-12-04",
+          "summary": "Mata três monstros seguidos e alcança o Oitavo Grau. A lousa da guilda mostra as Mãos Flamejantes.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 52,
+              "note": "Crônica do Dia 52."
+            }
+          ]
+        },
+        {
+          "day": 53,
+          "date": "2026-12-05",
+          "summary": "Aprende as Mãos Flamejantes, queima um monstro no primeiro cone de fogo e passa das mil moedas.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 53,
+              "note": "Crônica do Dia 53."
+            }
+          ]
+        },
+        {
+          "day": 54,
+          "date": "2026-12-06",
+          "summary": "Come antes de lutar para aproveitar a regeneração, descansa na sala do guarda e mata outra fera com fogo.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 54,
+              "note": "Crônica do Dia 54."
+            }
+          ]
+        },
+        {
+          "day": 55,
+          "date": "2026-12-07",
+          "summary": "Três criaturas caem diante das Mãos Flamejantes. Mais de mil e cinquenta moedas.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 55,
+              "note": "Crônica do Dia 55."
+            }
+          ]
+        },
+        {
+          "day": 56,
+          "date": "2026-12-08",
+          "summary": "Encontra uma porta reforçada e trancada ao norte do Cruzamento e queima os monstros das câmaras laterais.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 56,
+              "note": "Crônica do Dia 56."
+            }
+          ]
+        },
+        {
+          "day": 57,
+          "date": "2026-12-09",
+          "summary": "Volta ao Grande Campo, testa as dobradiças das passagens e mata outra fera com fogo.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 57,
+              "note": "Crônica do Dia 57."
+            }
+          ]
+        },
+        {
+          "day": 58,
+          "date": "2026-12-10",
+          "summary": "O ferrolho da porta norte cede: atrás dela fica Um Caminho Iluminado, de paredes alvas, a antecâmara do laboratório.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 58,
+              "note": "Crônica do Dia 58."
+            }
+          ]
+        },
+        {
+          "day": 59,
+          "date": "2026-12-11",
+          "summary": "Chega à Sala da Estátua, senta na base do monumento para pensar e vê o arco que leva ao interior.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 59,
+              "note": "Crônica do Dia 59."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "tomo": 1,
+      "title": "Abaixo do Laboratório",
+      "kind": "missao",
+      "status": "concluido",
+      "goal": "Levantar da derrota para o Cavaleiro Branco, descer às Catacumbas sob a Sala do Alquimista e cumprir a prova dele até a queda do Grande Minotauro.",
+      "closed_on_day": 70,
+      "days": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70
+      ],
+      "date": "2026-12-22",
+      "in_game_time": "Grande Tabuleiro de Xadrez e as Catacumbas Subterrâneas",
+      "excerpt": "O Cavaleiro Branco a mata no Tabuleiro. Ela volta, troca o Panteão por um chão de laboratório e desce às catacumbas até derrubar o Minotauro.",
+      "tags": [
+        "Morte #2",
+        "Cavaleiro Branco",
+        "Catacumbas",
+        "Grande Minotauro",
+        "Décimo Grau"
+      ],
+      "content": [
+        "As minhas botas estalaram no mármore preto do Grande Tabuleiro de Xadrez. O ar cheirava a ferro frio e ozônio. Diante de mim, o Cavaleiro Branco, numa armadura polida que brilhava de desprezo, baixou a lança pesada na minha direção. O impacto esmagou as minhas costelas como um trovão. A dor foi real, rápida e devastadora, e arrancou o meu fôlego antes que o leque de chamas chegasse a se abrir.",
+        "Acordei pela segunda vez nos campos enjoativos do Paraíso e cuspi sangue na grama perfumada. A morte não é fim para quem tem um reino para erguer; é uma curva ruim na estrada. Ignorei o canto das árvores, mergulhei no portal de metal, atravessei correndo a mudez do Caminho no Vazio e bebi da Fonte da Vida. A carne se curou com violência, e eu voltei ao mundo inteira e armada.",
+        "Não perdi um segundo lamentando. Refiz a armadura, comi um pão quente na praça e fui à masmorra renovar a promessa ao Alquimista, olhando a escada que descia ao desconhecido. Mas a mudança maior daquele dia foi outra: quebrei o hábito de subir ao Panteão. Guerreira que quer trono não corre para debaixo da saia dos deuses a cada pôr do sol. Dormi no Laboratório dos Magos, sobre os pentagramas, na beira do buraco que desce aos esgotos, de onde sobe o fedor do meu passado.",
+        "Acordei com a dor fantasma da lança ainda nas costelas. A Fonte recompõe os ossos, mas a lembrança de uma queda pede tempo. As missões pesavam no peito e a vontade de descer atrás da serpente gritava. Só que guerreira de cabeça enevoada tropeça na própria sombra. Testei o anel, que me recusou de novo, e decidi que precisava de céu. Atravessei o Grande Campo até a bifurcação da Vila Residencial, cruzei com camponeses meio-elfos e uma halfling apressada, e mais a leste achei a placa da Taverna do Barumafir, na borda de uma floresta iluminada. A caminhada esfriou a cabeça.",
+        "Voltei com o foco no lugar. A dívida do dia era com o Alquimista. Na Sala dele, antes que os meus olhos se acostumassem aos frascos, um novato zumbi me atacou com a carne descarnada rangendo. Aparei as garras no escudo e o punhal achou o vão das costelas. Quando ele caiu, tirei do corpo um troféu inacreditável: os chifres curvos e pesados do Minotauro. O Alquimista, com sangue respingado nas mesas de vidro, gritou para os nojentos se calarem. Acampei ali, entre alambiques.",
+        "De manhã, li a placa da escada outra vez e sorri de lado: para quem já atravessou o Vazio duas vezes, aviso em madeira não é ameaça. Entreguei os chifres ao Alquimista. Outro zumbi apareceu e caiu sob três estocadas. Então o mestre das fórmulas me deu a ordem que eu procurava: 'Vá lá, mate um desses insetos rastejantes, e volte aqui em seguida. Mas preste atenção para não se perder!'. Desci a escada até A Entrada, um chão de lodo gelado de onde saíam galerias para norte, sul e oeste, cheias de estalos de bichos que eu não via. Sem tocha, recuei para dormir lá em cima.",
+        "Comi o último pão e desci para mapear. Um Cruzamento de Corredores em ruínas, com o teto rachado ameaçando cair. Um Canto no Corredor, onde fungos verdes luminescentes brotavam das frestas. Ao sul, uma curva com cheiro de carniça tão forte que queimava a garganta. A oeste, um corredor de fungos viscosos que se grudavam na roupa e se abriam para duas câmaras colossais: Uma Grande Sala e Uma Sala Enorme, tão grande que a escuridão parecia não ter parede.",
+        "No dia seguinte vi um vulto pequeno e ágil, como um diabinho ou um mico, se esgueirando entre o mofo. Na Grande Sala só havia garrafas de cospefogo e lâminas enferrujadas no pó. Na Longa Passagem Leste-Oeste, um zumbi me bloqueou a saída e rasgou parte das minhas roupas antes de cair com o punhal no peito. De volta ao laboratório, a dor de um estômago completamente vazio me avisou: as provisões tinham acabado.",
+        "Subi até a Padaria e paguei trinta moedas por cinco pães recheados. Comi dois ali mesmo e voltei às catacumbas para varrer tudo até cansar as botas. Dois zumbis caíram sob os dardos luminosos, e um monstro novato saltou das sombras perto da pele velha do Minotauro e caiu também. Deitei no laboratório de barriga cheia, com mais de mil e duzentas moedas nas algibeiras.",
+        "Ao derrubar um zumbi na Grande Sala, senti uma barreira se romper nas têmporas: um mar de mana mais fundo, ossos mais firmes, pulmões maiores. O anel ainda me recusou. Patrulhei cada bifurcação e, no dia seguinte, examinei as fissuras do subsolo com outros olhos. Ao sul, além da carcaça do Minotauro, havia uma trilha escondida para Mais Outro Canto e uma fresta descendo mais. Ao norte, Uma Sala no Canto dava em Outro Canto. As catacumbas eram muito maiores do que o Alquimista imaginava.",
+        "Desci pela ramificação que se abre além de Outra Curva e encontrei um labirinto esquecido de lodo e fungos esmeralda, com um reflexo avermelhado ao longe. Vários zumbis se levantaram contra mim e caíram um a um sob os mísseis. De volta ao laboratório, sentei no chão e olhei para trás. Lembrei de quando acordei no lixo sem um tostão, fingindo ser quem eu não era para não ser esmagada. Agora a magia corria no meu sangue e duas mil duzentas e cinquenta e duas moedas tilintavam a cada respiração. Ninguém mais ia dizer a esta goblin onde ela podia pisar.",
+        "No último dia daquele arco, subi às galerias de cima e, da sacada do saguão norte, vi o Grande Campo inteiro até as montanhas e a cidade desenhada ao sul. O submundo era só uma passagem. Depois desci de novo, e em Outro Canto o Grande Minotauro me esperava, bufando. Aparei as investidas no escudo, alternei estocadas e projéteis, e cravei o golpe de misericórdia no coração dele. O estrondo atraiu uma horda de zumbis para a passagem em T. Quando o último caiu, um raio de energia subiu pela minha espinha: o Décimo Grau. Testei o anel, e ele ainda resistiu.",
+        "Subi e entreguei os chifres ainda gotejando ao Alquimista. Ele recebeu o troféu e voltou à mesma obsessão: os insetos rastejantes. Tranquei a porta e deitei nas lajes, ouvindo o tilintar de duas mil quatrocentas e setenta e duas moedas."
+      ],
+      "source_kind": "documental",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 70,
+          "note": "Reescrita dos Dias 60 a 70 da Season 01 original (Legacy), sem fato novo."
+        }
+      ],
+      "parts": [
+        {
+          "day": 60,
+          "date": "2026-12-12",
+          "summary": "Desafia o Cavaleiro Branco no Tabuleiro e morre pela segunda vez. Volta pela Fonte da Vida e passa a noite no Laboratório dos Magos, não no Panteão.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 60,
+              "note": "Crônica do Dia 60."
+            }
+          ]
+        },
+        {
+          "day": 61,
+          "date": "2026-12-13",
+          "summary": "Caminha até a Vila Residencial e a Taverna do Barumafir para esfriar a cabeça. Mata um zumbi na Sala do Alquimista e acha os chifres do Minotauro.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 61,
+              "note": "Crônica do Dia 61."
+            }
+          ]
+        },
+        {
+          "day": 62,
+          "date": "2026-12-14",
+          "summary": "Entrega os chifres e recebe a ordem de matar um inseto rastejante. Desce a escada até A Entrada das Catacumbas e recua.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 62,
+              "note": "Crônica do Dia 62."
+            }
+          ]
+        },
+        {
+          "day": 63,
+          "date": "2026-12-15",
+          "summary": "Mapeia o Cruzamento em ruínas, os fungos luminescentes, a curva que fede a carniça e as duas grandes salas a oeste.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 63,
+              "note": "Crônica do Dia 63."
+            }
+          ]
+        },
+        {
+          "day": 64,
+          "date": "2026-12-16",
+          "summary": "Explora a Grande Sala e a Sala Enorme, mata um zumbi na Longa Passagem e fica sem nenhuma comida.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 64,
+              "note": "Crônica do Dia 64."
+            }
+          ]
+        },
+        {
+          "day": 65,
+          "date": "2026-12-17",
+          "summary": "Compra cinco pães na Padaria, volta às catacumbas e mata dois zumbis e um monstro. Passa das mil e duzentas moedas.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 65,
+              "note": "Crônica do Dia 65."
+            }
+          ]
+        },
+        {
+          "day": 66,
+          "date": "2026-12-18",
+          "summary": "Ao matar um zumbi, sente o poder crescer, com mais mana e mais fôlego. Mata também um monstro nas galerias superiores.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 66,
+              "note": "Crônica do Dia 66."
+            }
+          ]
+        },
+        {
+          "day": 67,
+          "date": "2026-12-19",
+          "summary": "O anel recusa o dedo mais uma vez. Patrulha as catacumbas inteiras e mata um monstro lá em cima.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 67,
+              "note": "Crônica do Dia 67."
+            }
+          ]
+        },
+        {
+          "day": 68,
+          "date": "2026-12-20",
+          "summary": "Descobre ramificações secretas ao sul e ao norte das catacumbas, maiores do que o Alquimista imagina.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 68,
+              "note": "Crônica do Dia 68."
+            }
+          ]
+        },
+        {
+          "day": 69,
+          "date": "2026-12-21",
+          "summary": "Desce a um labirinto de fungos esmeralda, derruba vários zumbis e, sentada no laboratório, conta duas mil duzentas e cinquenta e duas moedas.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 69,
+              "note": "Crônica do Dia 69."
+            }
+          ]
+        },
+        {
+          "day": 70,
+          "date": "2026-12-22",
+          "summary": "Mata o Grande Minotauro e uma horda de zumbis, alcança o Décimo Grau e entrega os chifres ao Alquimista.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 70,
+              "note": "Crônica do Dia 70."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "tomo": 1,
+      "title": "A Dívida da Serpente",
+      "kind": "missao",
+      "status": "concluido",
+      "goal": "Fechar a caçada aos insetos do Alquimista, juntar forças e voltar aos esgotos para cobrar a serpente.",
+      "closed_on_day": 81,
+      "days": [
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81
+      ],
+      "date": "2027-01-02",
+      "in_game_time": "Grande Campo, Midgaard e os Esgotos — do céu aberto ao Eixo",
+      "excerpt": "Ela respira o céu, paga a dívida dos insetos, aprende a meditar e desce aos esgotos sem dormir. A serpente a espera outra vez.",
+      "tags": [
+        "Céu Aberto",
+        "Insetos Rastejantes",
+        "Meditação",
+        "Décimo Primeiro Grau",
+        "Morte #3"
+      ],
+      "content": [
+        "Depois da queda do Minotauro, o laboratório parecia outro, como se a própria pedra soubesse que o equilíbrio lá embaixo tinha mudado. Saí atrás dos insetos do Alquimista e encontrei só silêncio: tinham se recolhido nas fendas. Não aceitei voltar de mãos vazias e desci às catacumbas, onde um zumbi saiu do mofo e caiu sob dois mísseis e uma estocada na garganta. À noite, a fome e a garganta seca me lembraram que a carne também cobra.",
+        "Na manhã seguinte o enxofre pesava nos pulmões de um jeito que nenhuma magia disfarçava, e as paredes da escola ficaram estreitas demais. Saí. Quando passei o arco de pedra, a brisa das colinas me bagunçou os cabelos e o Grande Campo se abriu num tapete verde de carvalhos e pássaros. Andei pelos caminhos rurais o dia inteiro com duas mil e quinhentas moedas tilintando na cintura, sem depender de favor de guilda. Dormi sob a copa de uma árvore solitária, com o céu de teto.",
+        "Acordei na névoa fria do campo e fui direto à Padaria. Dois pães recheados, doze moedas, comidos ainda quentes. Depois entrei na Loja de Armaduras, que cheira a óleo de forja e metal batido, e dormi num canto seco entre capacetes, escudos e cotas de malha. No dia seguinte segui o fedor de lodo pela Praça Comum até O Depósito de Lixo, onde tudo começou. Ali se abre a boca dos Esgotos de Midgaard. Arrumei a esteira diante da descida e dormi olhando para ela.",
+        "Mas hesitação nunca construiu legado, e pressa também não. Antes de descer a qualquer abismo, eu tinha uma pendência. Voltei à escola, abri a porta ao sul e entrei na Pequena Sala: aos pés do Guarda Novato, atônito, três criaturas rastejantes andavam em círculos. Os mísseis e o punhal derrubaram as três, uma a uma. O guarda suspirou de alívio. No laboratório, anunciei ao Alquimista que a praga tinha acabado. Ele piscou, absorto nos seus pós, e já resmungou um pedido novo. A dívida dos insetos estava paga.",
+        "No dia seguinte o Grande Minotauro rondava de novo o cruzamento das catacumbas. Ergui o broquel contra o avanço dele, esquivei as investidas e enchi o flanco de mísseis até a estocada final. Levei a couraça de couro, os chifres e noventa e cinco moedas, e marchei pelas ramificações até o fôlego acabar. De manhã entreguei os chifres ao Alquimista, que os examinou de olhos brilhando, e fiz um circuito longo pela escola, onde ganhei mais uma lâmina com luz própria.",
+        "Carregar tralha demais amarra as pernas. Joguei fora a pele fedida do Minotauro e os punhais sobrando, e a passada leve voltou. Subi à Padaria, comprei quatro pães, bebi na Fonte Azul sob o olhar amigo do Pacificador e voltei aos portais da escola para mais uma incursão.",
+        "Depois de tanto tempo confinada na umidade, decidi subir ao lugar mais alto de Midgaard. Atravessei o campo dourado, entrei no Templo e subi degrau por degrau a escadaria em espiral até o Panteão dos Centenários. Brandon, Kara, Deck, Wacabayaxe e os outros descansavam sob o sol preso no teto. Sentei encostada no mármore. Não havia mais a urgência aflita do começo. Eu tinha aprendido a viajar leve e a confiar no meu fôlego.",
+        "No dia seguinte fui à Mestre da Guilda pôr à prova cada encantamento: armadura, mísseis, gelo, invisibilidade, visão do calor. Todos estavam no ápice do meu estágio; os feitiços maiores só viriam com muito mais experiência. No Bar dos Magos, o Mago Aventureiro me ensinou a meditação: sentou no chão, fechou os olhos, entrou num transe profundo e levantou com as forças recompostas. Depois me lançou um desafio: comprar um pergaminho de retorno na loja da cidade.",
+        "Nas lojas, a realidade me deu um choque. O pergaminho que ele pedia e as armaduras de bronze capazes de substituir os meus trapos custavam milhares. A minha bolsa mal chegava à metade dos itens mais simples. Ali mesmo tracei a meta: juntar cinco mil moedas, e depois passar das dez mil. Para gastar o resto do dia, saí pelo Portão Oeste e marchei pelas planícies até a borda da floresta de Haon-Dor, e voltei.",
+        "Então decidi descer. Comprei pão, enchi o cantil e jurei que a expedição iria ao extremo: cada gota de mana gasta, cada palmo de fôlego exigido, e nenhum sono enquanto restasse força para empurrar as trevas. Mergulhei pela abertura do lixo e pisei no lodo da Junção Quádrupla. Forcei galerias, curvas encharcadas e junções esquecidas. Quando o corpo fraquejava, eu me sentava nas lajes só o tempo de comer, beber e meditar, e levantava de novo.",
+        "No poço vertical chamado O Eixo, morcegos de guincho estridente guardavam o alto. Labaredas saíram dos meus dedos e iluminaram o musgo das paredes, e os projéteis perseguiram os bichos no ar apertado. Depois de uma retirada arriscada pela escada estreita, voltei e derrubei o último. Quando ele tocou o chão, as fronteiras do meu poder se romperam: o Décimo Primeiro Grau.",
+        "Com a força renovada, desci mais fundo. Numa intersecção fétida, uma larva rastejava na sujeira, e uma serpente esguia, de escamas luzidias e olhar de pura malícia, ergueu o capelo para mim. Usei o fogo e a lâmina, mas a velocidade dela era demais. Duas investidas rasgaram a minha guarda, e antes que o reflexo de fuga me salvasse, uma mordida certeira me abriu a jugular. O sangue quente lavou o meu pescoço e o mundo apagou.",
+        "Acordei nos campos que cantam a falsa doçura do descanso. Recusei, atravessei a árvore de metal, o Vazio e bebi da Fonte. Voltei ao Templo com o equipamento e as mais de duas mil e seiscentas moedas intactos. Sentada no chão do Laboratório, sob os archotes azuis, encarei a verdade sem vaidade: mesmo no Décimo Primeiro Grau, eu ainda não era forte o bastante para aquela maldita cobra. Enfrentá-la com arma de novata e magia elementar tinha custado a minha vida. Juntar cinco mil, dez mil moedas, deixou de ser ambição e virou sobrevivência e vingança. A serpente que esperasse. Na próxima vez, eu não ia descer como presa."
+      ],
+      "source_kind": "documental",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 81,
+          "note": "Reescrita dos Dias 71 a 81 da Season 01 original (Legacy), sem fato novo."
+        }
+      ],
+      "parts": [
+        {
+          "day": 71,
+          "date": "2026-12-23",
+          "summary": "Não acha os insetos no térreo e mata um zumbi nas catacumbas. A fome e a sede voltam.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 71,
+              "note": "Crônica do Dia 71."
+            }
+          ]
+        },
+        {
+          "day": 72,
+          "date": "2026-12-24",
+          "summary": "Sai da masmorra para o Grande Campo, caminha sem rumo pelos pastos e dorme sob uma árvore.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 72,
+              "note": "Crônica do Dia 72."
+            }
+          ]
+        },
+        {
+          "day": 73,
+          "date": "2026-12-25",
+          "summary": "Come dois pães na Padaria e dorme entre escudos e cotas de malha na Loja de Armaduras.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 73,
+              "note": "Crônica do Dia 73."
+            }
+          ]
+        },
+        {
+          "day": 74,
+          "date": "2026-12-26",
+          "summary": "Segue o fedor até o Depósito de Lixo e dorme diante da boca dos esgotos.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 74,
+              "note": "Crônica do Dia 74."
+            }
+          ]
+        },
+        {
+          "day": 75,
+          "date": "2026-12-27",
+          "summary": "Mata as três criaturas rastejantes aos pés do Guarda Novato e anuncia ao Alquimista que a praga acabou.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 75,
+              "note": "Crônica do Dia 75."
+            }
+          ]
+        },
+        {
+          "day": 76,
+          "date": "2026-12-28",
+          "summary": "Mata o Grande Minotauro outra vez, junta noventa e cinco moedas e percorre as catacumbas até o fôlego acabar.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 76,
+              "note": "Crônica do Dia 76."
+            }
+          ]
+        },
+        {
+          "day": 77,
+          "date": "2026-12-29",
+          "summary": "Entrega os novos chifres ao Alquimista e faz um longo circuito pela escola.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 77,
+              "note": "Crônica do Dia 77."
+            }
+          ]
+        },
+        {
+          "day": 78,
+          "date": "2026-12-30",
+          "summary": "Descarta a pele do Minotauro e os punhais sobrando, come na Padaria e volta a caçar.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 78,
+              "note": "Crônica do Dia 78."
+            }
+          ]
+        },
+        {
+          "day": 79,
+          "date": "2026-12-31",
+          "summary": "Sobe ao Panteão dos Centenários e descansa em paz diante das estátuas.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 79,
+              "note": "Crônica do Dia 79."
+            }
+          ]
+        },
+        {
+          "day": 80,
+          "date": "2027-01-01",
+          "summary": "Tem todos os feitiços no ápice, aprende a meditação com o Mago Aventureiro e se põe a meta de cinco mil, e depois dez mil moedas.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 80,
+              "note": "Crônica do Dia 80."
+            }
+          ]
+        },
+        {
+          "day": 81,
+          "date": "2027-01-02",
+          "summary": "Varre os esgotos sem dormir, alcança o Décimo Primeiro Grau no Eixo e morre pela terceira vez, mordida na jugular pela serpente.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 81,
+              "note": "Crônica do Dia 81."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "tomo": 1,
+      "title": "O Nome que Ficou",
+      "kind": "marco",
+      "status": "concluido",
+      "goal": "Conhecer Midgaard por inteiro, cumprir as tarefas abertas, atender ao chamado do Pacificador na fazenda de Jareth e atravessar o Dia 100.",
+      "closed_on_day": 100,
+      "days": [
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100
+      ],
+      "date": "2026-10-15",
+      "in_game_time": "De Midgaard inteira à fazenda sitiada perto de Jareth",
+      "excerpt": "Ela mapeia a cidade, cumpre as tarefas antigas, enriquece no Tabuleiro e parte para salvar uma família. No milharal, morre, e no Vazio aparece uma pergunta que ela não sabe responder.",
+      "tags": [
+        "Mapa de Midgaard",
+        "Dicas Mágicas",
+        "Fazenda de Jareth",
+        "Milharal",
+        "Morte #4",
+        "Identidade"
+      ],
+      "content": [
+        "A mordida da víbora ainda soava como aviso, mas a manhã não pedia sangue. Pedia respiração e reconhecimento. Decidi passar um dia inteiro na superfície, mapeando cada rua, oficina, guilda e refúgio de Midgaard. No Altar do Templo, Odin estava sentado no seu trono de granito, de cabelos prateados, com os corvos Hugin e Munin no espaldar e os lobos Gere e Freke aos pés. Procurei o tomo que Antigravitus tinha deixado ali no passado. O pergaminho se desfez com o tempo, mas a doutrina dele ficou, gravada em quem herda o caminho.",
+        "Na Sala de Doações li num livro de capa vermelha a lenda de um druida cercado por orcs que despertou a própria floresta, e aprendi que o feitiço de animar plantas ergue guardiões entre as árvores. Na Sala de Leitura vi Winkan e Losilly, de vestes de cristal. Na Estalagem do Javali Roncador achei o Correio, com o carteiro de teias de aranha no gibão, quartos para alugar e barris enormes de cerveja à venda. Na Praça do Comércio, o próprio Prefeito inspecionava as ruas. Visitei cada loja, inclusive a de animais, onde cães de guarda e lobos esperam por dono. E no Depósito de Lixo confirmei o meu atalho secreto: uma fresta que despenca direto na Junção Quádrupla dos esgotos. A lição contra a serpente ficou clara: invisibilidade para manobrar, projéteis à distância e retirada antes do perigo. Passei a noite sentada no Templo, de corpo em repouso e mente acordada.",
+        "Na manhã seguinte a Mestre da Guilda confirmou que os meus nove feitiços estavam no ápice que o meu círculo permitia; as sessões acumuladas ficariam guardadas para os círculos de cima. No Bar dos Magos, tirei da mochila o velho pergaminho de retorno que me acompanhava desde o vigésimo oitavo dia e o pus nas mãos do Mago Aventureiro. As Dicas Mágicas desataram o primeiro nó. Descobri também quem dá cada tarefa da cidade: os Problemas Agrícolas estão com o Pacificador, a Novela dos Novatos com um jovem esperto das vielas, a limpeza das pragas com o Alquimista e o aperfeiçoamento da magia com o Mago. Saí pelo Portão Oeste pela Estrada Através das Planícies até ver no horizonte a linha escura de Haon-Dor, voltei pela Ponte Sobre o Rio e dormi sob as torres do portão.",
+        "Na Sala de Doações achei uma capa escura de novato com uma aura sutil, um bracelete de conchas e três pergaminhos de sabedoria. Era dia de batedora. Ergui a armadura, fiquei invisível e percorri a escola em silêncio. Em Mais Corredor, entre adagas largadas, vi a coleira pequena do filhote do Alquimista, abandonada desde que ele ganhou a liberdade. Desci às catacumbas sem desfazer o véu e, no Cruzamento de Corredores, o Grande Minotauro farejava o ar, com um diabinho e outras criaturas ao lado. Não disparei um feitiço. Mapeei cada saída e voltei sem um arranhão.",
+        "Nos dias seguintes terminei o mapa. Atravessei o arco da Sala da Estátua e achei O Salão, ladeado de pinturas finas e figuras ornamentadas, com uma escadaria adiante. Desvendei a ala leste das catacumbas, a Sala no Canto e Outra Curva. Medi a vastidão sem parede da Sala Enorme. Pela Ramificação ao Sul, onde a carcaça do Minotauro apodrecia entre fungos, fechei a malha inteira. No nonagésimo dia, diante de Odin, olhei a trilha. A menina que tateava o medo nas vielas tinha virado maga cartógrafa, respeitada pelos sentinelas e temida pelos mortos.",
+        "Ao descer a escadaria no dia seguinte, o Pacificador me esperava com uma gravidade rara. Uma carta desesperada tinha chegado de uma fazenda ao norte: um colono, a mulher e o filho pequeno estavam encurralados em casa por monstros horrendos. Respondi que sim, e o mundo selou o compromisso. Ele me deu o roteiro: a fazenda fica perto da Floresta dos Kobolds, nas cercanias de Jareth, pela estrada do norte, de onde parte uma carroça da Praça do Comércio.",
+        "Fui. A estrada passou por povoados e postos de guarda até as ruas de Jareth, e depois vieram as árvores, a divisão da trilha e a mata fechada. Na fazenda, havia vidro espalhado na estrada e marcas de correria. O gramado ainda era verde, mas o milharal estava arrancado e seco, e entre os pés que restavam se moviam criaturas verdes e peludas. Um monstro de pelagem azul carregava uma clava; medi a ameaça e não o enfrentei. O dono da casa perguntou se eu tinha vindo ajudar com os bichos. Lá dentro, móveis virados, sangue no tapete, a mulher assustada e a criança gritando. A fome me fez voltar a Midgaard, onde li na parede da Padaria: 'Padaria de Midgaard: Entre e viaje no viagem.'",
+        "Vendi o anel arcano ao armeiro por quinhentas moedas. Tantos dias carregando aquela joia que me recusava, e ela virou espaço livre na mochila. No Salão da escola achei chifres e uma pele de Minotauro abandonados: troquei o elmo pelos chifres e vesti a pele. Uma grade trancada fechava uma escada escura. Cacei micos pelas galerias, passei a empunhar a espada que eu já carregava e, num livro sobre equipamento, li que o jarro brilhante do laboratório era uma boa luz. Ergui o jarro, e o clarão dele rasgou a penumbra das catacumbas. Os zumbis caíram no fio da espada, e um mico ferido fugiu pelas frestas antes que as minhas chamas o alcançassem.",
+        "Medi quanto tempo as galerias levavam para se repovoar, e já era lento demais para o ritmo da minha lâmina. Na rocha oriental da Sala Enorme, à luz do jarro, li uma advertência rabiscada às pressas ao lado da figura de um homem com cabeça de touro. Lá fora, reconheci o portão da Vila Residencial, com o seu velho porteiro, e o caminho até a Taverna do Barumafir.",
+        "Desci aos esgotos pelo lixo para catalogar a malha de canos com calma. Numa sala de paredes estranhamente polidas, ouvi um estalo seco: o chão cedeu e escorreguei por um duto de rocha lisa até ser cuspida numa câmara de pedra, muito abaixo dos canos de Midgaard. A saída de cima não existia mais. O único caminho era a borda de uma garganta sem fundo, uma cornija de poucos dedos de largura. Num recanto, escamas vermelhas imensas brilharam numa aura de todas as cores: um dragão vermelho. Prendi a respiração e passei por ele sem acordá-lo.",
+        "Mais adiante, a pedra guardava outro perigo. Um grupo de cobras saiu das frestas e me cercou. Os dentes atravessaram as minhas defesas e o veneno queimou nas veias. Quando a vista começou a escurecer, o meu limite de sobrevivência disparou um salto para o leste, e caí no Canto Nordeste da Borda com um sopro de vida. Comi o último bocado de pão e deitei na rocha, concentrando toda a vontade para queimar a peçonha durante o sono.",
+        "A febre passou e o dia seguinte começou no Templo. Fui ao Alquimista e declarei cumprida a caçada; ele me deu um manto bem tecido, e o poder me subiu de círculo. No Bar dos Magos, a primeira etapa das Dicas Mágicas me levou ao décimo terceiro nível. Vendi coroas de xadrez a mil e quinhentas moedas cada e juntei 4.232 moedas. O Pacificador renovou o encargo da fazenda. Atravessei Jareth, a Cidade da Liberdade, pela Avenida Floris, olhei a fazenda e voltei para dormir no Clube Kitty-Kat, num estofado macio, para lutar descansada.",
+        "No milharal, os bichos vieram em bando. Por um instante a goblin antiga riu por dentro, certa de que aquele mato era dela. Mas dois ou três de uma vez eram mais do que uma aventureira com fome devia encarar. Algo muito antigo dentro de mim mandou correr, e eu obedeci. Goblin que morre bonito não funda reino nenhum. Das carcaças tirei moedas e dois achados que me queimavam as mãos: uma bainha de Excalibur, que a minha experiência ainda não merecia empunhar, e um colar de pedra púrpura que não me pertencia. Na casa não havia um naco de comida. Dormi faminta num quarto alheio, arrumado no meio da destruição.",
+        "Acordei com o corpo começando a se consumir. O bosque em volta da fazenda é uma armadilha de árvores iguais, e a trilha não me levava a lugar nenhum. Pronunciei a palavra de retorno e abri os olhos no Templo. Na Padaria, comi com farinha nos dedos. Depois o dia virou caça e comércio no Tabuleiro de Xadrez: um Peão Negro me deixou com a vida pela metade, mas venci; recolhi armaduras, espadas, uma lança enorme do Cavaleiro Negro e um cetro de bispo. Vi de longe a Torre Negra sobre rodas, e um arrepio me disse que aquela sombra era a minha tumba. Passei ao largo. O ferreiro pagou quatro mil pela lança, e com o ouro comprei o pergaminho de retorno de nove mil e duzentas moedas que o Mago Aventureiro tinha pedido. Ele mal levantou os olhos do copo, mas o mundo sussurrou que eu tinha atingido o meu objetivo.",
+        "No dia seguinte voltei ao Tabuleiro e recolhi as lanças do Cavaleiro Negro, um cetro de bispo de aura púrpura e um cajado retorcido esquecido na casa da Torre Negra. Ao fim da manhã, a bolsa tinha vinte e duas mil cento e quarenta moedas, e eu, que já dormi no lixo, precisei parar para acreditar. Andei de Midgaard a Jareth, me perdi no bosque, insisti e achei a fazenda. No milharal, escolhi um monstro esfomeado só para mim, longe do bando, e lutei com fogo nas mãos até ele cair. Quando os outros chegaram pelo mato, recuei. O fazendeiro não disse nada. A conta continuava aberta.",
+        "Morri no milharal. O monstro me acertou quando a dor já não deixava espaço para a fuga. Acordei no Paraíso, atravessei o portal e, no Vazio, reconheci a ausência antes do lugar: ali eu já tinha perdido o rosto da minha mãe, a voz do clã, as canções. Havia uma pergunta no que restava. Quando foi que eu soube quem era? No lixo, abri os olhos já me chamando goblin. Mas de onde vinha aquela certeza? Encontrei cacos: o colar de pedra púrpura que não consigo usar, o nome que carrego desde o despertar. Grebolius. Talvez eu tenha chamado de memória o que era uma conclusão. Isso não torna falsos os caminhos que percorri nem o reino livre que desejei. A jornada foi real; a certeza é que pode estar errada. O juramento contra a serpente continua. Bebi da Fonte da Vida e voltei ao Templo. O corpo tinha retornado; a resposta, não. O nome continuava ali, como um fio que ainda não se rompeu."
+      ],
+      "source_kind": "documental",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 100,
+          "note": "Reescrita dos Dias 82 a 100 da Season 01 original (Legacy), sem fato novo."
+        }
+      ],
+      "parts": [
+        {
+          "day": 82,
+          "date": "2026-10-15",
+          "summary": "Mapeia toda a cidade: o Altar de Odin, a Estalagem e o Correio, as lojas, os becos e a fresta do lixo que desce à Junção Quádrupla.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 82,
+              "note": "Crônica do Dia 82."
+            }
+          ]
+        },
+        {
+          "day": 83,
+          "date": "2026-10-15",
+          "summary": "Entrega o velho pergaminho ao Mago Aventureiro, descobre quem dá cada missão e caminha até avistar a floresta de Haon-Dor.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 83,
+              "note": "Crônica do Dia 83."
+            }
+          ]
+        },
+        {
+          "day": 84,
+          "date": "2026-10-15",
+          "summary": "Veste uma capa de novato encantada e percorre, invisível, a escola e as catacumbas sem lutar, passando ao lado do Grande Minotauro.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 84,
+              "note": "Crônica do Dia 84."
+            }
+          ]
+        },
+        {
+          "day": 85,
+          "date": "2026-10-15",
+          "summary": "Atravessa a Sala da Estátua e mapeia O Salão ornamentado e o piso superior da escola.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 85,
+              "note": "Crônica do Dia 85."
+            }
+          ]
+        },
+        {
+          "day": 86,
+          "date": "2026-10-15",
+          "summary": "Mapeia a ala leste das catacumbas: a Sala no Canto e Outra Curva.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 86,
+              "note": "Crônica do Dia 86."
+            }
+          ]
+        },
+        {
+          "day": 87,
+          "date": "2026-10-15",
+          "summary": "Limpa a Grande Sala e mede a vastidão sem paredes da Sala Enorme.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 87,
+              "note": "Crônica do Dia 87."
+            }
+          ]
+        },
+        {
+          "day": 88,
+          "date": "2026-10-15",
+          "summary": "Completa o mapa das catacumbas pela Ramificação ao Sul.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 88,
+              "note": "Crônica do Dia 88."
+            }
+          ]
+        },
+        {
+          "day": 89,
+          "date": "2026-10-15",
+          "summary": "Faz o balanço dos noventa dias diante de Odin e da Sala de Doações.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 89,
+              "note": "Crônica do Dia 89."
+            }
+          ]
+        },
+        {
+          "day": 90,
+          "date": "2026-10-15",
+          "summary": "O Pacificador pede socorro para uma família presa numa fazenda perto de Jareth, e ela aceita.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 90,
+              "note": "Crônica do Dia 90."
+            }
+          ]
+        },
+        {
+          "day": 91,
+          "date": "2026-10-15",
+          "summary": "Viaja até a fazenda, vê o milharal arrancado, os monstros verdes e a família assustada, e volta a Midgaard pela fome.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 91,
+              "note": "Crônica do Dia 91."
+            }
+          ]
+        },
+        {
+          "day": 92,
+          "date": "2026-10-15",
+          "summary": "Vende o anel, veste chifres e a pele do Minotauro, encontra uma grade trancada, mata micos e passa a empunhar a espada.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 92,
+              "note": "Crônica do Dia 92."
+            }
+          ]
+        },
+        {
+          "day": 93,
+          "date": "2026-10-15",
+          "summary": "Ergue o jarro brilhante como luz, derruba zumbis nas catacumbas e deixa escapar um mico ferido.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 93,
+              "note": "Crônica do Dia 93."
+            }
+          ]
+        },
+        {
+          "day": 94,
+          "date": "2026-10-15",
+          "summary": "Mede quanto tempo as galerias levam para se repovoar, lê o aviso sobre o Minotauro e reconhece a Vila Residencial e o Barumafir.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 94,
+              "note": "Crônica do Dia 94."
+            }
+          ]
+        },
+        {
+          "day": 95,
+          "date": "2026-10-15",
+          "summary": "Cai por uma armadilha dos esgotos até a borda de uma garganta sem fundo, passa por um dragão vermelho e escapa de cobras venenosas por um fio.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 95,
+              "note": "Crônica do Dia 95."
+            }
+          ]
+        },
+        {
+          "day": 96,
+          "date": "2026-10-15",
+          "summary": "Cumpre a caçada do Alquimista, conclui a primeira etapa das Dicas Mágicas, chega ao nível 13, junta 4.232 moedas e dorme em Jareth.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 96,
+              "note": "Crônica do Dia 96."
+            }
+          ]
+        },
+        {
+          "day": 97,
+          "date": "2026-10-15",
+          "summary": "Luta no milharal, recua de um bando, acha a bainha de Excalibur e um colar de pedra púrpura e dorme faminta num quarto alheio.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 97,
+              "note": "Crônica do Dia 97."
+            }
+          ]
+        },
+        {
+          "day": 98,
+          "date": "2026-10-15",
+          "summary": "Volta pela palavra de retorno, vende uma lança do Cavaleiro Negro, compra o pergaminho de 9.200 moedas e o entrega ao Mago Aventureiro.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 98,
+              "note": "Crônica do Dia 98."
+            }
+          ]
+        },
+        {
+          "day": 99,
+          "date": "2026-10-15",
+          "summary": "Vende lanças, cetro e cajado do Tabuleiro, chega a 22.140 moedas, volta à fazenda e mata um monstro sozinho.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 99,
+              "note": "Crônica do Dia 99."
+            }
+          ]
+        },
+        {
+          "day": 100,
+          "date": "2026-10-15",
+          "summary": "Morre no milharal. No Vazio, pergunta de onde veio a certeza de ser goblin. Volta pela Fonte da Vida com o nome e sem a resposta.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 100,
+              "note": "Crônica do Dia 100."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
