@@ -347,6 +347,14 @@ termina quando a primeira crônica real é gravada.
 
 ---
 
+**Os três "relaxamentos" que parecem bug** (movidos da diretiva §10 em 2026-10-21):
+
+| Sintoma | Causa real | Quem resolve |
+| --- | --- | --- |
+| *"Nah... você está muito relaxado.."* | a personagem está descansando/dormindo | `wake; stand` — default em `base.andar` desde a v1.7.17 |
+| Caçada com muitos *"inconclusivo"* | mana seca; a magia falha | sono (`cuidar.py` / `prepara.dormir`) |
+| Combate fraco e regeneração ruim | fome e sede | comer/beber (`cuidar.py`) |
+
 ## 12. Dívidas de documentação conhecidas
 
 Registradas aqui para que ninguém as descubra por acidente:

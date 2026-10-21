@@ -95,19 +95,28 @@ Regra-mãe: **nunca sair de aventura sem preparo, e nunca lutar do jeito errado.
 6. **Nunca** deixar caçada em segundo plano. Se o programa estourar o tempo, o script continua sem supervisão e a personagem morre — mortes #5, #6 e #7 vieram todas daí.
 7. **Gravar o caminho quando ele funciona** e reproduzi-lo depois (o motor imprime `CAMINHO BOSQUE: ...`).
 
-## 10. Higiene de personagem — os três "relaxamentos" que parecem bug
-| Sintoma | Causa real | Correção |
-|---|---|---|
-| *"Nah... você está muito relaxado.."* | a personagem está **descansando**; o jogo recusa andar | **`wake; stand`** antes de qualquer deslocamento |
-| Caçada com muitos *"inconclusivo"* | **mana seca** (chegou a 10 de 240); a magia falha | **`sleep` ~80 s** antes de sair (20 → 218 de mana) |
-| Combate fraco e regeneração ruim | **fome e sede**: "morrendo de fome!" | comer na **padaria** e beber do **cantil** a cada ciclo |
+## 10. Higiene de personagem — hoje é diagnóstico, não regra (2026-10-21)
 
-Outras conferências de rotina: `score tudo` (peso/limite, ouro, fome, sede), `equipment` (o que está no corpo), `identify` **antes** de vestir, `consider` **antes** de atacar.
+Os três "relaxamentos" que pareciam bug viraram **estado do vigia** (`TRAVADO`, `MANA_BAIXA`, `FOME`)
+e são resolvidos por `cuidar.py`/`prepara.py`: *"muito relaxado"* → `wake; stand` (agora **default** em
+`base.andar`, v1.7.17); mana seca → sono; combate fraco → comeu/bebeu. A tabela sintoma→causa está no
+[`docs/agentes/glossario.md`](../../../docs/agentes/glossario.md) §11 — duplicá-la aqui era manter duas
+cópias, e a do código é a que não envelhece.
 
-## 11. O que é limite do MUNDO, e não da personagem
-- O **armeiro de Midgaard** tem bolso finito: paga ~3 armaduras de 8.500 e seca. O **feiticeiro** não compra armaduras nem bastões usados. O **ferreiro** compra armas.
-- Quando o gargalo é o **caixa de um NPC**, registrar e parar — insistir é só gastar rodada.
-- **Não fechar capítulo antes dos alvos:** fechei o Capítulo 2 no Dia 136 com a fortuna parcial, e o próprio sistema devolveu o capítulo para `em_curso`. Fechar é ato final, não pausa.
+O que continua **operativo**:
+
+- `score tudo` antes de cada bloco (peso/limite, ouro, fome, sede) e `equipment` para o que está no corpo.
+- **`identify` antes de vestir** e **`consider` antes de atacar**.
+
+
+## 11. O que é limite do MUNDO, e não da personagem (consolidado 2026-10-21)
+
+Os fatos de comércio (caixa de cada NPC) saíram para o [`conhecimento.md`](conhecimento.md) §85 — fato
+do mundo mora lá, não em regra de jogo. Aqui fica o processo:
+
+- **Quando o gargalo é o caixa de um NPC, registrar e parar** — insistir é só gastar rodada.
+- **Não fechar capítulo antes dos alvos:** fechar é ato final, não pausa (Dia 136: o capítulo voltou a
+  `em_curso` sozinho). Vira campo `fechado_quando` no `capitulos.json` — pendente no Lote C.
 
 
 ## 12. Guarda de repetição — o vigia dos robôs (ideia do autor, Dia 143)
@@ -179,36 +188,16 @@ de Lixo* → e **`u`** volta. **NUNCA descer pelo buraco do Laboratório dos Mag
 mão única.
 
 
-## 17. A CAMADA DE FICÇÃO sobre morte e memória (declarada pelo autor, Dia 156)
+## 17. A camada de FICÇÃO sobre morte e memória (movida em 2026-10-21)
 
-> **"estou dando uma camada só de ficção porque na verdade morrer quando tá level baixo 'tirou o passado
-> dela', mas agora a gente vai morrer a beça e queria tirar esse peso, e como ela tem muito mais xp,
-> agora ela perde algo novo e não algo velho. são adaptações do metajogo"**
+O texto completo está em [`notas_editoriais.md`](notas_editoriais.md), e o registro canônico continua em
+`capitulos.json` → capítulo 6 → `directive.fiction_layer`. Esta seção não é regra de jogo; é instrução
+editorial para a crônica.
 
-**Isto é ADAPTAÇÃO DELIBERADA do metajogo, não fato do servidor.** Serve para tirar o peso narrativo de
-um capítulo em que ela **vai morrer muito** — e para que a morte deixe de ser derrota na crônica.
+Em uma linha: **é adaptação deliberada do metajogo, não fato do servidor.** Pode narrar a morte como
+perda do aprendizado recente; **não pode** afirmar imunidade a morte como fato, e **não usa número cru**
+de XP/HP/mana.
 
-| Mecânica real | Camada de ficção |
-|---|---|
-| Morrer custa experiência | *"A morte tira o passado dela."* |
-| Em nível baixo a XP era escassa — a perda doía proporcionalmente muito | *"Morrer cedo tirou o passado dela"* — perdia-se história acumulada |
-| Com muito mais XP acumulada, a mesma perda vira fração pequena | *"Agora ela perde algo novo, e não algo velho."* |
-| O aprendizado recente é o que ainda não se consolidou | *"A memória tem ficado mais clara: ela só perde o que aprendeu recentemente, como se não dormisse depois de um aprendizado."* |
-| **Não há imunidade a morte no servidor.** O que existe é o **brinco com flag ANTI-DT**, que protege de **armadilha mortal** e **nunca foi testado** | *"O poder que ela tem a protege, pelo menos por enquanto, das mortes."* |
-
-### Como escrever
-
-- **Pode** narrar como **percepção dela**, em primeira pessoa, sem hedge — é a voz do diário.
-- **Não** afirmar **imunidade a morte como fato**: o texto mantém o *"por enquanto"* / *"parece"*. A
-  promessa de imunidade seria mentira mecânica.
-- **Não** usar **número cru** de XP/HP/mana na crônica. **O validador é estreito, então não confie nele
-  como rede:** o `META` de `scripts/check_project.py` pega `<número> XP|EXP|HP|MP|MV|%`,
-  `mana|armadura|dano|experiência: <número>` e `pontos de mana|couraça|experiência` — mas **deixa passar**
-  *"ganhei 67068 de experiencia"* (o número não está colado na unidade). **A regra é a intenção, não o
-  regex:** *"subi um grau"* é a forma certa; *"oito mil de experiência"* não é, ainda que escape.
-- **Morrer no Capítulo 06 é custo previsto, não falha** — a crônica não trata morte como derrota.
-
-**Registro completo, com os cinco mapeamentos:** `capitulos.json` → capítulo 6 → `directive.fiction_layer`.
 
 ## 18. A Mochila de Pellinore — Contêiner Mágico de Redução de Peso (Bag of Holding)
 
@@ -331,12 +320,16 @@ O monitoramento mecânico do alinhamento moral atua apenas como última camada d
 
 ## 24. PEGAR OS ESPÓLIOS DOS CORPOS IMPORTA (cobrança do autor, Dia 158)
 
-> *"as orientações não falam pra gente pegar os espólios?"* · *"pega tudo e vende tudo que der, o que não der guarda na bolsa mágica"* · *"tudo que vale menos que 1000 que não dê pra vender, pode doar"*
+- **Pegar os itens dos corpos é parte do trabalho**, não só o ouro (o ouro vem sozinho). Depois de cada
+  abate importante, olhar o corpo (`look in corpo`) e o chão da sala.
+- **A única trava é a maldição** (AGENTS #10, §15): `cast 'identify'` no objeto **antes** do `get`; flag
+  `AMALDIÇOADO`/`NODROP` = deixar. Use seletor numerado (`get 2.armadura`) quando duas coisas partilham
+  a palavra.
+- **Destino dos itens:** política de venda, doação e o caixa de cada NPC estão no
+  [`conhecimento.md`](conhecimento.md) §85.
+- **Verificação no código:** `config.ESPOLIOS_PROIBIDOS`/`ESPOLIOS_LIMPOS`, `base.espolio_proibido()`,
+  `base.guardar_na_mochila()` e a triagem de `rutinas/xadrez_v3.py`.
 
-- **Pegar os itens dos corpos é parte do trabalho**, não só o ouro (o ouro vem sozinho). Depois de cada abate importante, olhar o corpo (`look in corpo`) e o chão da sala.
-- **A única trava é a maldição** (AGENTS #10, §15): `cast 'identify'` no objeto **antes** do `get`; flag `AMALDIÇOADO`/`NODROP` = deixar. Medido: Armadura da Torre Negra = **BRILHO AMALDIÇOADO** (proibida); Lança do Cavaleiro Negro (valor 10.000, ferreiro paga 4.000), armadura/espada de peão e Coroa da Rainha = limpas. Use seletor numerado (`get 2.armadura`) quando duas coisas partilham a palavra.
-- **Destino:** vender o que o comércio comprar (ferreiro só armas e tem caixa limitado: "Eu não posso pagar por uma arma dessas!"; armeiro só armaduras); guardar o resto na mochila **vestida**; item que vale **menos de 1.000** e não vende pode ser **doado** (Sala de Doações).
-- **Verificação no código:** `config.ESPOLIOS_PROIBIDOS`/`ESPOLIOS_LIMPOS`, `base.espolio_proibido()`, `base.guardar_na_mochila()` e a triagem de `rotinas/xadrez_v3.py` (que não usa mais `get all corpo` às cegas).
 
 ## 25. COMPRAS ACIMA DE 5% DO OURO SÓ COM PERMISSÃO; `armor` NA ROTINA DE PREPARO; KITE SÓ COM O REI DORMINDO (diretivas do autor, Dia 157)
 

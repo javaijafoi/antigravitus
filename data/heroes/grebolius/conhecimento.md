@@ -2684,3 +2684,17 @@ Números das duas lutas, tirados dos transcripts e do adendo da revisão de 10 d
 - **A conta que fecha a discussão:** ~1 segmento a cada 150 a 215 de dano, com regeneração entre as idas → seriam **25 a 35 raios seguidos**. Com 1 a 2 raios por ida, o kite não termina antes do Rei matar.
 - **O que estava escrito antes:** o §58 já tinha a cascata, a geometria, os golpes de 60 a 75 e o `sleep` funcionando nas peças grandes — mas em **adjetivos** ("efeito devastador"), não em números. Por isso a tática foi refeita duas vezes.
 - **Regra que sai disto:** antes de repetir tática contra chefe já enfrentado, `python scripts/mandabala.py --sobre "<alvo>"`; depois da luta, gravar aqui dano/golpe, vida perdida por rodada, segmentos da barra e regeneração.
+
+## 85. Comércio e espólios: onde cada item vai (consolidado 2026-10-21)
+
+Fatos de mundo que estavam escritos como regra na diretiva (§11 e §24). Fonte: diretiva do autor, Dias 136 a 158; sem fato novo aqui — é consolidação de lugar.
+
+| NPC | Compra | Limite |
+| --- | --- | --- |
+| Armeiro de Midgaard | armaduras | bolso finito: paga ~3 peças de 8.500 e seca |
+| Feiticeiro | não compra armaduras nem bastões usados | — |
+| Ferreiro | armas | caixa limitado: "Eu não posso pagar por uma arma dessas!" |
+
+- **Destino dos espólios:** vender o que o comércio comprar → guardar o resto na mochila **vestida** → item que vale **menos de 1.000** e não vende pode ser **doado** (Sala de Doações).
+- **A trava é só a maldição:** `identify` no chão antes do `get`; `AMALDIÇOADO`/`NODROP` = deixar.
+- **Quando o gargalo é o caixa do NPC, parar de insistir** — é limite do mundo, não da personagem.
