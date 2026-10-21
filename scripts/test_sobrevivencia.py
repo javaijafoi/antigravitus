@@ -251,6 +251,35 @@ class TestSonoObservado(unittest.TestCase):
         self.assertLessEqual(enviados.count('sleep'), 3, 'não pode dormir sem ganho')
 
 
+    def test_sono_avisa_o_agente_quando_nao_enchE(self):
+        """Diretiva 2026-10-21: passou do teto sem encher -> False + aviso, não silêncio."""
+        enviados, relogio = [], {'t': 0.0}
+
+        class Tempo:
+            @staticmethod
+            def time():
+                relogio['t'] += 10
+                return relogio['t']
+
+            @staticmethod
+            def sleep(s):
+                relogio['t'] += s
+
+        with mock.patch.object(P, 'time', Tempo), \
+             mock.patch.object(P, 'SONO_FATIA_S', 1), \
+             mock.patch.object(P, 'minutos_de_sono', return_value=2), \
+             mock.patch.object(P, 'voltar_ao_templo'), \
+             mock.patch.object(P, 'situacao', return_value={'texto': 'Vida: 150 de 200'}), \
+             mock.patch.object(P, 'run', side_effect=lambda c, timeout=60.0: enviados.append(c) or ('', {}, False)), \
+             mock.patch('sys.stdout') as saida:
+            with mock.patch.object(P, 'vigia') as v:
+                v.do_driver.return_value = {'supplies': {}, 'vitals': {'hp': 150}}
+                resultado = P.dormir()
+        self.assertFalse(resultado, 'sem encher, o sono tem de devolver False')
+        texto = ''.join(str(c) for c in saida.write.call_args_list)
+        self.assertIn('ATENCAO', texto)
+
+
 class TestEscalaDoTempo(unittest.TestCase):
     """Hora de JOGO x hora real: o `score` fala em horas de jogo (ID: horas_de_jogo_para_segundos_reais)."""
 

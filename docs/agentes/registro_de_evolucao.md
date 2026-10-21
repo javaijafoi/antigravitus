@@ -1286,3 +1286,20 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Como foi verificado:** suÃ­te 379 OK; `check_project.py` 0 erros; 5 testes novos cobrem leitura das horas, ausÃªncia = inativa, recast abaixo do mÃ­nimo, nÃ£o-recast com sobra e recast sÃ³ da magia baixa.
 - **Custo:** `manter_magias` agora roda um `score tudo` antes de decidir (um comando a mais por `cuidar`). Se o score nÃ£o trouxer a linha da magia, ela Ã© tratada como inativa e recastada â€” o lado seguro.
 - **PrÃ³ximo:** exercitar ao vivo e conferir se a linha do `score` aparece sempre; se o servidor variar o texto, ajustar `RX_BUFF`.
+
+### 2026-10-21 · Dia 158 · DeepSeek deepseek-flash (dsh)
+- **Mudou:** `automato/camadas/prepara.py` (`dormir`: fatia 120 s → 5 s, teto 45 min → 3 min via `SONO_TETO_MIN`,
+  para após 30 s sem ganho, e devolve `False` com `ATENCAO` quando não enche) e `automato/acoes/xadrez_cascata.py`
+  (`descansar`: alvo = 95% da barra atual por `alvo_de_vida()`, `hp_min=222` do kite removido, `max_s` 420 → 180 s
+  com aviso ao estourar; `_vida_maxima()` lê o `score tudo`). Testes em `scripts/test_sobrevivencia.py` (+1) e
+  `scripts/test_xadrez_cascata.py` (+4); 2 IDs na catraca; `CHANGELOG.md` v1.7.23.
+- **Por quê:** o autor cobrou a doutrina "rotina por dado, timer só como teto que chama o agente". O `dormir`
+  decidia pelo relógio (5 hp/min, teto de 45 min) e só olhava a vida a cada 2 min; o `descansar` tinha alvo 215/222
+  que não cabe na vida máxima atual (211) e por isso rodava os 420 s inteiros em cada ida ao tabuleiro.
+- **Como foi verificado:** medição ao vivo de 2026-10-21 (+26 de vida por tick de ~3,5 s; barra cheia em ~20 s,
+  `conhecimento.md` §89) e as suítes `test_sobrevivencia.py` (35 OK) e `test_xadrez_cascata.py` (31 OK);
+  `test_catraca.py` 11 OK; `check_project.py` 0 erros.
+- **Custo:** o sono passa a consultar o vigia a cada 5 s (IPC local, sem comando ao MUD); se a regeneração real for
+  mais lenta noutro dia, o `sem ganho` (30 s) pode encerrar o sono cedo — o aviso `ATENCAO` cobre esse caso.
+- **Próximo:** medir `use cajado` em combate (3 cargas de `sleep`) e, se funcionar, tirar o `recall` do ciclo do
+  tabuleiro; medir sentado/deitado/andando com o mesmo amostrador.

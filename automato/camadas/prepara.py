@@ -205,10 +205,19 @@ def guardar_ouro():
 # Antes disto o `dormir` dormia 75 s fixos e a docstring dizia o alvo: "movimento
 # e mana". A vida nunca foi objetivo, e por isso a personagem acordava achando
 # que estava pronta com 100 de vida faltando.
-TAXA_HP_POR_MINUTO_REAL = 5.0
-SONO_FATIA_S = 120          # de quanto em quanto tempo o vigia olha os vitais
+# Diretiva do autor (2026-10-21): *"a rotina devia durar até estar recuperado — ela
+# sabe pelos números — em vez de timer; o timer é só a parte de segurança, e se
+# demorar mais que isso chama o agente para ver o que está acontecendo."*
+# Medido ao vivo em 2026-10-21 (conhecimento §89): a vida sobe ~+26 por tick
+# (~3,5 s) — a barra de 211 enche em ~20 s, não em 45 min. Por isso o sono agora
+# termina pelos VITAIS (quem lê é o vigia, por IPC, sem mandar comando), e o
+# tempo é só rede de segurança.
+TAXA_HP_POR_MINUTO_REAL = 5.0   # mantida: é o orçamento de segurança, não a taxa real
+SONO_FATIA_S = 5            # o vigia lê os vitais por IPC; 5 s basta para acordar cheio
 SONO_MINUTOS_REAIS_MAX = 45
 SONO_MINUTOS_REAIS_MIN = 3
+SONO_TETO_MIN = 3           # teto do sono: passou disso sem encher, acorda e avisa o agente
+SONO_FATIAS_SEM_GANHO = 6   # 30 s sem a vida subir (fatias de 5 s): parar
 
 
 def hp_do_score(texto):
@@ -241,7 +250,11 @@ def comer_beber():
 
 
 def dormir():
-    """Dorme para recuperar VIDA, olhando os vitais durante o sono.
+    """Dorme para recuperar VIDA, olhando os vitais durante o sono. ID: sono_por_vitais.
+
+    Quem decide acordar são os números do vigia (`hp >= 98%`); o relógio é só teto de
+    segurança (SONO_TETO_MIN) e, se estourar sem encher, o sono avisa o agente e devolve
+    False — em vez de dormir calado por 45 min.
 
     O `vigia.do_driver()` lê fome, sede e vida pelo IPC, **sem mandar comando ao
     MUD** — é o observador que já existe. Aqui ele é consultado a cada fatia, e é
@@ -254,7 +267,8 @@ def dormir():
     s = situacao()
     hp, hp_max = hp_do_score(s['texto'])
     alvo_hp = (hp_max or 0) * 0.98
-    limite = time.time() + (minutos_de_sono(hp, hp_max) or SONO_MINUTOS_REAIS_MIN) * 60
+    # Quem decide acordar é a vida; o relógio é só a rede de segurança (diretiva de 2026-10-21).
+    limite = time.time() + min(minutos_de_sono(hp, hp_max), SONO_TETO_MIN) * 60
     dormindo, ultimo_hp, sem_ganho = False, hp, 0
     while time.time() < limite:
         if not dormindo:
@@ -277,15 +291,21 @@ def dormir():
             ultimo_hp = hp_agora
             if alvo_hp and hp_agora >= alvo_hp:
                 break
-            if sem_ganho >= 2:
-                print('[PREPARA] a vida parou de subir (sem ganho em duas fatias): parar', flush=True)
+            if sem_ganho >= SONO_FATIAS_SEM_GANHO:
+                print('[PREPARA] a vida parou de subir (%d s sem ganho): parar'
+                      % (SONO_FATIAS_SEM_GANHO * SONO_FATIA_S), flush=True)
                 break
     if dormindo:
         run('wake')
         run('stand')
     depois = hp_do_score(situacao()['texto'])[0]
-    print('[PREPARA] fim do sono: vida %s -> %s de %s (taxa ~%.1f hp/min)'
+    print('[PREPARA] fim do sono: vida %s -> %s de %s (taxa ~%.1f hp/min de orçamento)'
           % (hp, depois, hp_max, TAXA_HP_POR_MINUTO_REAL), flush=True)
+    if alvo_hp and isinstance(depois, int) and depois < alvo_hp:
+        print('[PREPARA] ATENCAO: o sono parou em %s de %s (alvo %.0f) — a vida nao encheu; '
+              'pode ser fome/sede, mob na sala ou sono bloqueado. Agente: ver o que travou.'
+              % (depois, hp_max, alvo_hp), flush=True)
+        return False
     return True
 
 

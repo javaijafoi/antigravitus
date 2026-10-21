@@ -277,6 +277,18 @@ HP_MIN_ENTRAR = 215
 MANA_MIN_ENTRAR = 250   # uma ida gasta 100 a 170; descansar ate' 440 so' desperdicava minutos
 
 
+def alvo_de_vida(hp_max, fracao=0.95, piso=150):
+    """Vida-alvo para descansar: 95% da barra, nunca abaixo do `piso`.
+
+    Antes era 215/222 fixos; com a vida maxima em 211 (penalidade de morte) o alvo
+    era inalcancavel e cada ida parava os 420 s inteiros do `descansar` (conhecimento
+    §89). Pura: nao fala com o MUD. ID: descanso_por_fracao_da_barra.
+    """
+    if not hp_max:
+        return HP_MIN_ENTRAR
+    return min(int(hp_max), max(int(piso), int(hp_max * fracao)))
+
+
 def pode_lancar(vitals, piso=VIDA_PISO_LANCE):
     """False se a vida conhecida esta abaixo do piso: nada de outro lance, so' recall. Pura."""
     h = (vitals or {}).get('hp')
@@ -327,8 +339,23 @@ class Ctx:
         for c in ('eat pao', 'drink cantil'):
             self.cmd(c, 0.8)
 
-    def descansar(self, hp_min=HP_MIN_ENTRAR, mn_min=MANA_MIN_ENTRAR, max_s=420):
+    def _vida_maxima(self):
+        """Vida máxima lida do `score tudo` (o alvo de descanso tem de caber na barra)."""
+        texto, _vit, _c = self.run('score tudo')
+        m = re.search(r'Vida:\s*(?:\{[^}]*\})?\s*\d+\s+de\s+(\d+)', texto or '')
+        return int(m.group(1)) if m else None
+
+    def descansar(self, hp_min=None, mn_min=MANA_MIN_ENTRAR, max_s=180):
+        """Descansa até os VITAIS dizerem que está pronta; `max_s` é só a rede de segurança.
+
+        Diretiva do autor (2026-10-21): a rotina dura até estar recuperada, medida nos
+        números — e se passar do teto, para e avisa o agente em vez de esperar cego.
+        O alvo padrão é 95% da vida máxima: antes era 215/222 fixos, inalcançáveis com a
+        barra em 211, e cada ida parava os 420 s inteiros (conhecimento §89).
+        """
         _t, vit0, _c = self.run('look')
+        if hp_min is None:
+            hp_min = alvo_de_vida(self._vida_maxima())
         if vida(vit0) >= hp_min and mana(vit0) >= mn_min:
             return vit0          # ja' pronta: nada de descansar
         self.cmd('wake', 0.5)
@@ -341,6 +368,10 @@ class Ctx:
                 raise Perdida('atacada enquanto descansava')
             if vida(vit) >= hp_min and mana(vit) >= mn_min:
                 break
+        else:
+            print('[XADREZ] ATENCAO: descanso de %d s sem chegar a vida %s/mana %s '
+                  '(vida %s, mana %s) — agente: ver o que travou'
+                  % (max_s, hp_min, mn_min, vida(vit), mana(vit)), flush=True)
         self.cmd('stand', 2)
         return vit
 
@@ -527,7 +558,7 @@ def kite_rei(idas=1, log=print):
         if not ctx.garantir_templo():
             raise Perdida('nao consegui confirmar o Templo')
         ctx.comer_beber()
-        ctx.descansar(hp_min=222, mn_min=460)
+        ctx.descansar(mn_min=460)
         ctx.ir_h5()
         ctx.cmd("cast 'invisibility'", 3)
         tab = Tabuleiro('H5', ctx.run)

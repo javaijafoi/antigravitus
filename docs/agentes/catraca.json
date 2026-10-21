@@ -469,6 +469,18 @@
       "arquivo": "automato/camadas/prepara.py",
       "desde": "2026-10-21",
       "regra": "espera de estado (sono) é governada pela leitura dos vitais a cada fatia e tem teto de segurança; não é só time.sleep"
+    },
+    {
+      "id": "sono_por_vitais",
+      "arquivo": "automato/camadas/prepara.py",
+      "desde": "2026-10-21",
+      "regra": "o sono termina pelos vitais (98% da vida); o relogio e teto de seguranca e avisa o agente quando estoura"
+    },
+    {
+      "id": "descanso_por_fracao_da_barra",
+      "arquivo": "automato/acoes/xadrez_cascata.py",
+      "desde": "2026-10-21",
+      "regra": "o alvo de vida do descanso e 95% da barra atual, nao um numero fixo (215/222 ficaram inalcancaveis)"
     }
   ]
 }

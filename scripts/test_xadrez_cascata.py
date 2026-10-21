@@ -262,5 +262,24 @@ class TestConsiderarNaBase(unittest.TestCase):
         self.assertEqual(enviados, ['consider peao', 'consider rei', 'consider rei'])
 
 
+class TestAlvoDeDescanso(unittest.TestCase):
+    """O alvo de vida do descanso vem da barra atual, não de um número fixo (conhecimento §89)."""
+
+    def test_95_por_cento_da_barra(self):
+        self.assertEqual(xc.alvo_de_vida(211), 200)
+        self.assertEqual(xc.alvo_de_vida(226), 214)
+
+    def test_sem_barra_cai_no_piso_antigo(self):
+        self.assertEqual(xc.alvo_de_vida(None), xc.HP_MIN_ENTRAR)
+
+    def test_barra_pequena_usa_a_barra_inteira(self):
+        """Barra máxima abaixo do piso: o alvo é a própria barra (senão fica inalcançável)."""
+        self.assertEqual(xc.alvo_de_vida(50), 50)
+
+    def test_alvo_sempre_cabe_na_barra(self):
+        for maximo in (120, 180, 211, 226, 300):
+            self.assertLessEqual(xc.alvo_de_vida(maximo), maximo)
+
+
 if __name__ == '__main__':
     unittest.main()

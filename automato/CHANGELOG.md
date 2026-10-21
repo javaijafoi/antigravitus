@@ -4,6 +4,16 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.7.23 — Dia 158 · Sono e descanso terminam pelos vitais; o relógio é só teto que avisa (DeepSeek deepseek-flash)
+
+Origem: diretiva do autor — *"a rotina devia durar até estar recuperado… ela sabe pelos números… o máximo que a gente tem é uma parte de segurança dizendo: se demorar mais que tanto tempo, chama o agente"*. Auditoria: o `descansar` já era por vitais, mas parava **7 min por ida** porque o alvo (215/222) não cabia na barra de 211; o `dormir` era por relógio (5 hp/min, teto de 45 min) e só olhava a vida a cada 120 s.
+
+- **`prepara.dormir()`**: fatia de **120 s → 5 s**; teto **45 min → 3 min** (`SONO_TETO_MIN`); sem ganho em **30 s** para; e se o teto estourar sem encher, imprime `ATENCAO` e devolve **False** — o agente vê o que travou em vez de dormir calado.
+- **`xadrez_cascata.descansar()`**: alvo padrão agora é **95% da barra atual** (`alvo_de_vida`), lido do `score tudo`; o `hp_min=222` do kite do Rei saiu; `max_s` **420 → 180 s**, e ao estourar imprime `ATENCAO` com vida/mana.
+- **Medição que originou:** 2026-10-21, **+26 de vida por tick (~3,5 s)** — a barra de 211 enche em **~20 s**, não em 40 min (`conhecimento.md` §89).
+- **Testes:** +4 em `test_xadrez_cascata.py` (alvo por fração da barra) e +1 em `test_sobrevivencia.py` (o sono avisa e devolve False); suítes 31 e 35 OK. 2 IDs na catraca (`sono_por_vitais`, `descanso_por_fracao_da_barra`).
+- **Limite:** a taxa de regeneração medida num dia pode não valer noutro; por isso o alvo é por número (vida) e o tempo só teto — se a vida parar de subir, quem decide é o `sem ganho`, não o relógio.
+
 ## v1.7.22 — Dia 158 · Rotina por dado, timer só como teto: o recast de magia sai do relógio (DeepSeek deepseek-flash)
 
 Origem: o autor resumiu a doutrina — *"as rotinas deviam ser em relação aos vitais; o máximo que a gente tem é uma parte de segurança dizendo: se demorar mais que tanto tempo, chama o agente"*. Auditoria feita: **quase tudo já era assim; uma coisa não era.**
