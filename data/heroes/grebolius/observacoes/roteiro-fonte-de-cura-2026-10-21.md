@@ -10,6 +10,21 @@ saturação 24 e "tick" — nada disso está medido nos transcripts. Trate como 
 a resposta literal. O que **está** medido: fome/sede custam ~3 hp/tick, o sono devolve ~5 hp/min,
 e magia falha no Templo e na Loja de Magias ("Sua magia falha e desaparece").
 
+## Status em 2026-10-21 (sessão do Dia 158, DeepSeek deepseek-flash) — leia antes de repetir
+
+- **Feito:** A1 (Guilda dos Clérigos, `Como?!?`, interior bloqueado por guarda), A2 (Loja de Magias:
+  10 itens, nenhum de cura), A4 (fonte: "Você bebe água cristalina", sem efeito medível a 211/211),
+  B3/B4 (Templo de Todos e Ninguém e Banco de Sangue: `curar` = `Como?!?`), e o **Hospital de Jareth**
+  (achado, mapeado, `curar` = `Como?!?` com vida cheia).
+- **Correções ao roteiro:** `list <número>` **não inspeciona** na Loja de Magias ("Por enquanto, nada
+  disto está sendo vendido") — use `list <palavra>`. Sala de Doações é a **leste** (`e`), não `l`
+  (`l` é `look`). O Hospital não estava no blocos: fica em `jr_tabuas_3` (oeste de `jr_tabuas_2`) → sul.
+- **Pendente e é o teste que decide:** `curar` **com vida abaixo do máximo** (Hospital e Salão dos
+  Deuses); Bloco C (Lyon, de dia); A3 (Sala de Doações não enumera o chão — só por nome de item).
+- **Fechado (não repetir):** guildas de clérigos (classe bloqueada), Banco de Sangue como cura
+  (`give blood` é doação: −10 hp e moedas, vida volta), catálogo da Loja de Magias.
+- **Detalhe literal de tudo:** `conhecimento.md` §86–§87 e `maquina/verificacoes.md` (2026-10-21).
+
 ## 0. Regras do teste (para não custar caro)
 
 - **`list` é grátis.** Nenhum teste abaixo compra nada sem OK explícito do autor.
