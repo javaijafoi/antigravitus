@@ -5,7 +5,7 @@
     "day": 157,
     "verification": "live",
     "live_verified": true,
-    "source": "Sessão de 2026-10-20 (Dia 158) de Claude Sonnet 5.5 (claude-sonnet-5-5) (evidence/dia158-campanario.json): Campanário e segundo andar de Notre Dame explorados, tomo druídico testado (recusado), pergaminho de identificação testado (dissolve), bateria de mecânicas do Plano 025, vendas e doações. Fechada por cota (5 h a 99%) com save e sleep confirmados no Templo, sem quit. Ouro 31.769 (27.814 banco + 3.955 mão); nível 33; HP 211/211; mana 500; CA 121 sem armor, 157 com ela."
+    "source": "Sessão de 2026-10-21 (Dia 158) de DeepSeek deepseek-flash (dsh) — sondagem de cura do Plano 041 (subtrama \"fonte de cura\", ordem do autor). Testados: Templo de Midgaard, Guilda dos Clérigos (bloqueada por guarda), Loja de Magias (catálogo sem cura; `list <n>` não inspeciona), Templo de Todos e Ninguém, Banco de Sangue (`give blood`), Hospital de Jareth e Salão dos Deuses. `curar` deu `Como?!?` em todos com vida cheia; teste com déficit pendente. Fechada no Templo de Midgaard, dormindo, com save e sleep confirmados (sem quit). Ouro 31.445 (30.445 banco + ~300 mão + trocados da doação); HP 211/211; mana 500; CA 177 com armor."
   },
   "level": 33,
   "mechanical_race": "Elfo",
@@ -34,7 +34,7 @@
     "current": 8577141,
     "next_level": 9000000
   },
-  "gold": 31769,
+  "gold": 31445,
   "attributes": {
     "STR": 11,
     "DEX": 17,
@@ -78,8 +78,8 @@
     "name": "O Panteao dos Centenarios"
   },
   "last_event": {
-    "day": 157,
-    "summary": "Cascata refeita até a Rainha (peões, bispos, cavalos, torres e Rainha mortos) e perdida por morte em E1. Tabuleiro mapeado e rotina Python criada (xadrez_cascata.py)."
+    "day": 158,
+    "summary": "Sondagem de cura (subtrama do cap. 12): Hospital de Jareth achado e mapeado; `curar` não respondeu em seis salas com vida cheia; `give blood` custa 10 hp e devolve moedas; guildas de clérigos bloqueadas para mago."
   },
   "next_objective": {
     "mission_id": "xeque-mate",
@@ -393,7 +393,8 @@
     "Dia 156: nao ha como inspecionar as propriedades de um item a venda em lojas comuns (apenas na loja divina de Pontos de Aventura via 'list <num>').",
     "§42/plano011: reset obrigatório e conflito de autoquests eram hipóteses não isoladas; ver conhecimento §43.",
     "Dia 157: conferir conhecimento §61 e Plano 028 para fonte ainda desconhecida do tomo; não confundir pergaminho de sabedoria carregado com o item solicitado.",
-    "Dia 157: Ajuda Mágica apareceu inativa no login duas vezes no mesmo dia, depois de sessões encerradas com save e sleep e sem quit nem morte. Causa desconhecida; não é o _CLOSE (conhecimento §65)."
+    "Dia 157: Ajuda Mágica apareceu inativa no login duas vezes no mesmo dia, depois de sessões encerradas com save e sleep e sem quit nem morte. Causa desconhecida; não é o _CLOSE (conhecimento §65).",
+    "Dia 157 (sessao de 2026-10-21): nenhuma sala testada reconheceu 'curar' com vida cheia (211/211), inclusive o Hospital de Jareth, que anuncia atendimento e fica a oeste e depois ao sul de jr_tabuas_2. Hipotese: o gatilho exige vida abaixo do maximo. Proximo teste: criar deficit (doacao de sangue ou combate curto) e repetir 'curar' no Hospital e no Salao dos Deuses."
   ],
   "evidence": [
     {

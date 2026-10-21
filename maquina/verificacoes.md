@@ -306,3 +306,26 @@ Agente da sessão: Claude Haiku 5.5 (claude-haiku-5-5); registro de Claude Opus 
 - **Fome e sede cancelam o ganho:** `Você está morrendo de fome! (-3hp, -6mn ...)`; há episódio de sono com saldo **−11 hp**. Dormir alimentado é condição, não recomendação.
 - **`sleep` em 75 s fixos era o bug de projeto:** devolvia mana e deixava a vida faltando; o `prepara.dormir()` agora calcula `minutos_de_sono()` a ~5 hp/min (CHANGELOG v1.7.12).
 - Fonte: `automato/runtime/transcript_*.jsonl` de 16 a 20/10, contagem por script; números crus também em `conhecimento.md` §83.
+
+### 2026-10-21 · DeepSeek deepseek-flash (dsh) · Sondagem de cura (Dia 158)
+
+Fonte: `automato/runtime/transcript_dia158_20261021_005520_d2dca7.jsonl` (sessão ao vivo, modo missão/sondagem, sem compra; vida 211/211 em todos os testes).
+
+| # | Local | Comando | Resposta literal | Preço | HP antes→depois | Veredito |
+|---|---|---|---|---|---|---|
+| E | Templo de Midgaard (controle) | `curar` | `Como?!?` | — | 211→211 | sem serviço |
+| A1 | Entrada da Guilda dos Clérigos (Midgaard) | `curar` | `Como?!?` | — | 211→211 | sem serviço |
+| A1b | Guilda dos Clérigos, interior | `n` | `O guarda te humilha e não deixa você passar.` | — | — | classe bloqueada |
+| A2 | Loja de Magias (Midgaard) | `list` | 10 itens, nenhum de cura | — | — | sem item de cura |
+| A2b | Loja de Magias | `list 1` | `Por enquanto, nada disto está sendo vendido.` | — | — | `list <n>` não inspeciona |
+| A2c | Loja de Magias | `list pergaminho` | filtra a lista por palavra | — | — | sintaxe correta |
+| B3 | Templo de Todos e Ninguém (Jareth) | `curar` | `Como?!?` | — | 211→211 | sem serviço |
+| B4 | Banco de Sangue (Jareth) | `curar` | `Como?!?` | — | 211→211 | sem serviço |
+| B4b | Banco de Sangue | `give blood` | `A enfermeira tira seu sangue. Você se sente mais fraco.` + moedas | ganha | 211→201→211 | doação, não cura |
+| B6 | Hospital (Jareth) | `curar` | `Como?!?` | — | 211→211 | **inconclusivo: testar com déficit** |
+| B6b | Hospital | `heal` | `Como?!?` | — | 211→211 | idem |
+| B7 | Meditação e Oração (Jareth) | `curar` | `Como?!?` | — | 211→211 | sem serviço |
+
+- **`help curar`:** *"Alguns lugares fornecem serviços de cura e restauração de pontos. Quando encontrar um deles, e precisar ser curado, utilize este comando."* O comando existe na ajuda e não foi aceito em nenhuma das seis salas — com vida cheia.
+- **`baixo` (por extenso)** no Templo de Todos e Ninguém: `Como?!?`; a saída existe como `d`.
+- **Sala de Doações (Midgaard):** `look`/`look chao`/`look all`/`look junk` não enumeram — só "Há muitos objetos jogados aqui."

@@ -26,7 +26,7 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 
 * **Experiência Acumulada:** **8.577.141 EXP**
 * **Experiência Necessária p/ Grau 34:** **422.859 EXP** (Meta: 9.000.000 EXP)
-* **Ouro Líquido:** **31.769 moedas de ouro** (valor documental)
+* **Ouro Líquido:** **31.445 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 11
@@ -135,7 +135,7 @@ Recomeçar a Xeque-mate pelo Bispo Branco e rodar a cascata pelo xadrez_cascata.
 * Testar o módulo xadrez_cascata.py ao vivo em uma etapa curta antes de confiar nele.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessão de 2026-10-20 (Dia 158) de Claude Sonnet 5.5 (claude-sonnet-5-5) (evidence/dia158-campanario.json): Campanário e segundo andar de Notre Dame explorados, tomo druídico testado (recusado), pergaminho de identificação testado (dissolve), bateria de mecânicas do Plano 025, vendas e doações. Fechada por cota (5 h a 99%) com save e sleep confirmados no Templo, sem quit. Ouro 31.769 (27.814 banco + 3.955 mão); nível 33; HP 211/211; mana 500; CA 121 sem armor, 157 com ela..
+Fonte do estado: Sessão de 2026-10-21 (Dia 158) de DeepSeek deepseek-flash (dsh) — sondagem de cura do Plano 041 (subtrama "fonte de cura", ordem do autor). Testados: Templo de Midgaard, Guilda dos Clérigos (bloqueada por guarda), Loja de Magias (catálogo sem cura; `list <n>` não inspeciona), Templo de Todos e Ninguém, Banco de Sangue (`give blood`), Hospital de Jareth e Salão dos Deuses. `curar` deu `Como?!?` em todos com vida cheia; teste com déficit pendente. Fechada no Templo de Midgaard, dormindo, com save e sleep confirmados (sem quit). Ouro 31.445 (30.445 banco + ~300 mão + trocados da doação); HP 211/211; mana 500; CA 177 com armor..
 * A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.
 * O colar com pedra purpura pertence a outro dono: o servidor recusa o uso. Nenhum comerciante testado o compra.
 * Bainha de Excalibur exige nivel 85 (vista na Sala de Doacoes, nao pode ser carregada com a carga atual). Scutum de Carvalho exige nivel 35.
@@ -147,3 +147,4 @@ Fonte do estado: Sessão de 2026-10-20 (Dia 158) de Claude Sonnet 5.5 (claude-so
 * §42/plano011: reset obrigatório e conflito de autoquests eram hipóteses não isoladas; ver conhecimento §43.
 * Dia 157: conferir conhecimento §61 e Plano 028 para fonte ainda desconhecida do tomo; não confundir pergaminho de sabedoria carregado com o item solicitado.
 * Dia 157: Ajuda Mágica apareceu inativa no login duas vezes no mesmo dia, depois de sessões encerradas com save e sleep e sem quit nem morte. Causa desconhecida; não é o _CLOSE (conhecimento §65).
+* Dia 157 (sessao de 2026-10-21): nenhuma sala testada reconheceu 'curar' com vida cheia (211/211), inclusive o Hospital de Jareth, que anuncia atendimento e fica a oeste e depois ao sul de jr_tabuas_2. Hipotese: o gatilho exige vida abaixo do maximo. Proximo teste: criar deficit (doacao de sangue ou combate curto) e repetir 'curar' no Hospital e no Salao dos Deuses.

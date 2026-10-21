@@ -2698,3 +2698,24 @@ Fatos de mundo que estavam escritos como regra na diretiva (§11 e §24). Fonte:
 - **Destino dos espólios:** vender o que o comércio comprar → guardar o resto na mochila **vestida** → item que vale **menos de 1.000** e não vende pode ser **doado** (Sala de Doações).
 - **A trava é só a maldição:** `identify` no chão antes do `get`; `AMALDIÇOADO`/`NODROP` = deixar.
 - **Quando o gargalo é o caixa do NPC, parar de insistir** — é limite do mundo, não da personagem.
+
+## 86. A fonte de cura: o que o Dia 158 mediu (2026-10-21)
+
+Agente: DeepSeek deepseek-flash (dsh). Fonte: `automato/runtime/transcript_dia158_20261021_005520_d2dca7.jsonl` (sessão ao vivo, modo *missão/sondagem*, sem compra) e os transcripts do Dia 157 citados.
+
+- **`curar` existe e não respondeu em nenhum dos seis lugares testados.** `help curar` diz: *"Alguns lugares fornecem serviços de cura e restauração de pontos. Quando encontrar um deles, e precisar ser curado, utilize este comando."* Resposta literal em todos: **`Como?!?`** — Templo de Midgaard (controle), Entrada da Guilda dos Clérigos (Midgaard), Templo de Todos e Ninguém, Banco de Sangue, Hospital de Jareth e Meditação/Oração (Jareth). Todos com **vida cheia (211/211)**.
+- **Hipótese que sobra (não medida):** o gatilho da sala só existe com **vida abaixo do máximo** — um spec-proc que devolve 0 quando não há o que curar faz o parser cair em `Como?!?`. O teste decisivo exige déficit e ficou pendente; não repetir `curar` com vida cheia esperando outra resposta.
+- **O `Como?!?` não distingue "não existe" de "não aqui":** `help curar`/`help heal` devolvem o mesmo verbete, então a existência do comando está confirmada pela ajuda, não pelo uso. Já `preparar`, `procurar`, `inventario` etc. também dão `Como?!?` — é a resposta genérica do servidor.
+- **Hospital de Jareth existe e anuncia atendimento:** *"Aqui você pode receber atendimento para curar sua feridas ou simplesmente dar uma 'recarregada'..."* Rota: de `jr_tabuas_2` (Caminho de Tábuas, o da Biblioteca) **oeste** → Caminho de Tábuas ("Ao sul você pode seguir para o Hospital") → **sul**. Enfermeira e Pacificador na sala. `heal` também `Como?!?`; `say oi`, `ask enfermeira curar` e `ask enfermeira ajuda` não tiveram resposta.
+- **Banco de Sangue é o inverso de cura:** aviso na parede — *"Simplesmente digite GIVE BLOOD e será recompensado."* Medido: `give blood` → *"A enfermeira tira seu sangue. Você se sente mais fraco."* (211→201 hp) e *"te dá algumas moedas e você começa a se sentir melhor"*; no comando seguinte a vida já era 211/211. Não usar como fonte de vida.
+- **Salão dos Deuses (leste do Templo de Todos e Ninguém):** *"ventos sagrados, que curam qualquer ferida mais rapidamente do que o normal"* — é **regeneração acelerada**, não serviço; medir com déficit.
+- **Guildas dos Clérigos são fechadas para mago**, em Midgaard e em Jareth: *"O guarda te humilha e não deixa você passar."* O interior (bar/salão de meditação) não é alcançável por Grebolius.
+- **`list <número>` não inspeciona item na Loja de Magias de Midgaard:** devolve *"Por enquanto, nada disto está sendo vendido."* O que funciona é `list <palavra>` como filtro (`list pergaminho`). Confirmado também em Pergaminhos e Afins (§78). O catálogo da Loja de Magias (10 itens) **não tem cura**: cetro branco 22.999 (nível 13), pergaminho de tempestades 574.999, câmera 68.999, cetro negro 22.999, remover maldições 8.509, cajado retorcido 14.570 (nível 38), bastão de invisibilidade 92.233 (nível 29), pergaminho de retorno 9.202, poção de detectar invisibilidade 5.370, pergaminho de identificação 4.601.
+- **Sala de Doações de Midgaard não enumera o chão:** "Há muitos objetos jogados aqui."; `look`, `look chao`, `look all`, `look junk`, `look in junk` não listam. Para achar algo é preciso saber o nome (`look pergaminho`) ou usar `get all` (proibido).
+- **Direções por extenso não funcionam:** `baixo` respondeu `Como?!?` no Templo de Todos e Ninguém (exits mostram "baixo"); usar `d`/`u`. Mesmo padrão de `oeste`/`l` já registrado.
+- **CA medida no Dia 158:** 147 logo após o login (armor 29 h ativo) e **177** depois do `prepara`/`cuidar` (armor relançado). Os 30 de diferença não estão explicados — medir de novo antes de usar 177 como base.
+
+## 87. O que a sondagem de cura fechou e o que deixou aberto (2026-10-21)
+
+- **Fechado:** não há item de cura no catálogo da Loja de Magias de Midgaard; guildas de clérigos não são acessíveis a mago; Banco de Sangue não cura; nenhuma sala testada reconheceu `curar` com vida cheia.
+- **Aberto (ordem de custo):** (1) `curar` no Hospital e no Salão dos Deuses **com vida abaixo do máximo** (o teste que falta); (2) `list` + `list <palavra>` em Pierre/Toulouse (Lyon, de dia) — poção mágica 9.835, cajado mágico 3.150; (3) Sala de Doações por nome de item; (4) Guilda dos Magos de Jareth (Recepção/Sala de Leitura) se houver loja.

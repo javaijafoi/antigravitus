@@ -3,7 +3,7 @@
   "hero_name": "Grebolius",
   "sanctuary_id": "panteao_centenarios",
   "last_updated_cycle": "Dia 157 — Plano 033: biblioteca de Jareth, Paris, alas da catedral e Lyon, 2026-10-19",
-  "total_rooms": 720,
+  "total_rooms": 731,
   "layers": [
     {
       "id": "superficie",
@@ -4943,10 +4943,11 @@
       "icon": "🗺️",
       "exits": {
         "e": "lb019",
-        "w": "lb023"
+        "w": "lb023",
+        "s": "jv_veneracao_3"
       },
       "npcs": [],
-      "notes": "Ao sul você vê a entrada para a Loja de Provisões. Todos os tipos de Aqui a Avenida parece estar em sua mais bem cuidada passagem. As Floris continua a leste e oeste. e da balbúrdia comumente vista nas ruas de Jareth. O Banco de Jareth mntimentos de que você precisar pode encontrar nesse local. A Av",
+      "notes": "Ao sul você vê a entrada para a Loja de Provisões. Todos os tipos de Aqui a Avenida parece estar em sua mais bem cuidada passagem. As Floris continua a leste e oeste. e da balbúrdia comumente vista nas ruas de Jareth. O Banco de Jareth mntimentos de que você precisar pode encontrar nesse local. A Av Dia 158: ao norte a Delegacia (não andado), ao sul a Via da Veneração.",
       "discovered_in": "Ciclo X (Dias 96-156)",
       "visitas_registradas": 156,
       "fontes": [
@@ -14195,7 +14196,8 @@
       "icon": "🧭",
       "exits": {
         "e": "jr_tabuas_1",
-        "s": "jr_biblioteca"
+        "s": "jr_biblioteca",
+        "w": "jr_tabuas_3"
       },
       "npcs": [],
       "notes": "\"Voce pode entrar na Biblioteca se seguir ao sul.\" Oeste nao andado.",
@@ -16813,6 +16815,258 @@
         "document": "evidence/dia158-campanario.json",
         "day": 157,
         "note": "Percorrido ao vivo por Claude Sonnet 5.5 (claude-sonnet-5-5) em 2026-10-20; saídas lidas com exits."
+      }
+    },
+    {
+      "id": "jr_tabuas_3",
+      "name": "Um Caminho de Tábuas",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Sem combate observado com a Guarda e o Pacificador na sala",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "e": "jr_tabuas_2",
+        "s": "jr_hospital"
+      },
+      "npcs": [
+        "um membro da guarda da cidade",
+        "o pacificador",
+        "um magro e pálido menino de rua"
+      ],
+      "notes": "\"Ao sul você pode seguir para o Hospital.\" Oeste não andado (muralha norte continua). É a terceira sala a oeste de jr_tabuas_2.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "automato/runtime/transcript_dia158_20261021_005520_d2dca7.jsonl",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-21 (sondagem de cura, Plano 041). Agente: DeepSeek deepseek-flash (dsh)"
+      }
+    },
+    {
+      "id": "jr_hospital",
+      "name": "Hospital",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Sem combate observado; enfermaria cheia de pacientes",
+      "risk_code": "unknown",
+      "icon": "🏥",
+      "exits": {
+        "n": "jr_tabuas_3"
+      },
+      "npcs": [
+        "uma enfermeira",
+        "o pacificador"
+      ],
+      "notes": "\"Aqui você pode receber atendimento para curar suas feridas ou simplesmente dar uma 'recarregada'\". `curar` respondeu \"Como?!?\" com 211/211 de vida — teste com déficit continua pendente (hipótese: o gatilho só existe com vida abaixo do máximo). `heal` também \"Como?!?\"; `say oi`, `ask enfermeira curar` e `ask enfermeira ajuda` não tiveram resposta.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "automato/runtime/transcript_dia158_20261021_005520_d2dca7.jsonl",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-21 (sondagem de cura, Plano 041). Agente: DeepSeek deepseek-flash (dsh)"
+      }
+    },
+    {
+      "id": "jv_veneracao_3",
+      "name": "A Via da Veneração",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Rua pública; zelador circulando",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "lb020",
+        "s": "jv_veneracao_2"
+      },
+      "npcs": [
+        "um zelador"
+      ],
+      "notes": "Primeira sala ao sul da Avenida Floris (lb020, a que tem a Delegacia ao norte). Ao oeste a parede leste da Loja de Provisões, a leste a parede oeste da Loja de Carriolas.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "automato/runtime/transcript_dia158_20261021_005520_d2dca7.jsonl",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-21 (sondagem de cura, Plano 041). Agente: DeepSeek deepseek-flash (dsh)"
+      }
+    },
+    {
+      "id": "jv_veneracao_2",
+      "name": "A Via da Veneração",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Rua pública",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "jv_veneracao_3",
+        "s": "jv_veneracao_1"
+      },
+      "npcs": [
+        "um cidadão de jareth",
+        "o pacificador"
+      ],
+      "notes": "Ao oeste a Guilda dos Necromantes, a leste a Loja de Animais.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "automato/runtime/transcript_dia158_20261021_005520_d2dca7.jsonl",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-21 (sondagem de cura, Plano 041). Agente: DeepSeek deepseek-flash (dsh)"
+      }
+    },
+    {
+      "id": "jv_veneracao_1",
+      "name": "Via da Veneração",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Rua pública; paladino protegido por luz forte ao leste",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "jv_veneracao_2",
+        "s": "templo_todos",
+        "w": "jv_banco_sangue"
+      },
+      "npcs": [
+        "um zelador",
+        "um homem alto (Guilda dos Paladinos, luz forte)"
+      ],
+      "notes": "Entrada do Templo de Todos e Ninguém: \"Ao oeste se encontra o Banco de Sangue... ao leste a Guilda dos Paladinos\". Leste não andado (guarda humilha).",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "automato/runtime/transcript_dia158_20261021_005520_d2dca7.jsonl",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-21 (sondagem de cura, Plano 041). Agente: DeepSeek deepseek-flash (dsh)"
+      }
+    },
+    {
+      "id": "jv_banco_sangue",
+      "name": "O Banco de Sangue",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Sem combate; doação custa 10 de vida",
+      "risk_code": "unknown",
+      "icon": "🩸",
+      "exits": {
+        "e": "jv_veneracao_1"
+      },
+      "npcs": [
+        "uma enfermeira (com seringa)"
+      ],
+      "notes": "Aviso na parede: \"Doação de sangue... Simplesmente digite GIVE BLOOD e será recompensado.\" Medido: 211→201 hp, enfermeira dá moedas e \"você começa a se sentir melhor\"; no comando seguinte a vida já estava 211/211. Não é serviço de cura — é doação remunerada.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "automato/runtime/transcript_dia158_20261021_005520_d2dca7.jsonl",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-21 (sondagem de cura, Plano 041). Agente: DeepSeek deepseek-flash (dsh)"
+      }
+    },
+    {
+      "id": "templo_todos",
+      "name": "O Templo de Todos e Ninguém",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Templo; sacerdotes pacíficos",
+      "risk_code": "unknown",
+      "icon": "⛪",
+      "exits": {
+        "n": "jv_veneracao_1",
+        "s": "templo_capela_altar",
+        "e": "templo_salao_deuses",
+        "w": "templo_sala_sugestoes",
+        "d": "templo_meditacao"
+      },
+      "npcs": [
+        "sacerdotes de cabeças raspadas"
+      ],
+      "notes": "`curar` aqui respondeu \"Como?!?\" com 211/211. Direções por extenso (\"baixo\") dão Como?!? — usar d/u. O Salão dos Deuses (leste) \"é conhecido por seus supostos poderes medicinais\".",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "automato/runtime/transcript_dia158_20261021_005520_d2dca7.jsonl",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-21 (sondagem de cura, Plano 041). Agente: DeepSeek deepseek-flash (dsh)"
+      }
+    },
+    {
+      "id": "templo_salao_deuses",
+      "name": "O Salão dos Deuses",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Sala de regeneração; sem NPC hostil",
+      "risk_code": "unknown",
+      "icon": "⛪",
+      "exits": {
+        "w": "templo_todos"
+      },
+      "npcs": [],
+      "notes": "\"Ficar aqui, diz a lenda, têm como recompensa ventos sagrados, que curam qualquer ferida mais rapidamente do que o normal.\" É regeneração acelerada, não serviço: medir com déficit.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "automato/runtime/transcript_dia158_20261021_005520_d2dca7.jsonl",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-21 (sondagem de cura, Plano 041). Agente: DeepSeek deepseek-flash (dsh)"
+      }
+    },
+    {
+      "id": "templo_capela_altar",
+      "name": "O Altar da Capela",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Sem combate",
+      "risk_code": "unknown",
+      "icon": "⛪",
+      "exits": {
+        "n": "templo_todos"
+      },
+      "npcs": [
+        "um alto e belo padre"
+      ],
+      "notes": "Capela decorada para casamento; padre cantarolando. Sem serviço testado.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "automato/runtime/transcript_dia158_20261021_005520_d2dca7.jsonl",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-21 (sondagem de cura, Plano 041). Agente: DeepSeek deepseek-flash (dsh)"
+      }
+    },
+    {
+      "id": "templo_sala_sugestoes",
+      "name": "A Sala de Sugestões",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Sem combate",
+      "risk_code": "unknown",
+      "icon": "📜",
+      "exits": {
+        "e": "templo_todos"
+      },
+      "npcs": [],
+      "notes": "Sala para jogadores registrarem sugestões ao jogo (não é quadro de missão).",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "automato/runtime/transcript_dia158_20261021_005520_d2dca7.jsonl",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-21 (sondagem de cura, Plano 041). Agente: DeepSeek deepseek-flash (dsh)"
+      }
+    },
+    {
+      "id": "templo_meditacao",
+      "name": "Meditação e Oração",
+      "layer": "jareth_fazenda",
+      "zone": "Cidade de Jareth",
+      "risk": "Guarda da Guilda presente; entrada na guilda bloqueada para mago",
+      "risk_code": "unknown",
+      "icon": "⛪",
+      "exits": {
+        "u": "templo_todos"
+      },
+      "npcs": [
+        "o guarda da guilda dos clérigos"
+      ],
+      "notes": "Escada em espiral do Templo de Todos e Ninguém. Oeste leva à Guilda dos Clérigos de Jareth: \"O guarda te humilha e não deixa você passar.\" — classe bloqueada para maga, igual à de Midgaard. `curar` aqui: Como?!?.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "automato/runtime/transcript_dia158_20261021_005520_d2dca7.jsonl",
+        "day": 157,
+        "note": "Sessao ao vivo de 2026-10-21 (sondagem de cura, Plano 041). Agente: DeepSeek deepseek-flash (dsh)"
       }
     }
   ],
