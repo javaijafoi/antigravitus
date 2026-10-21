@@ -1,0 +1,24 @@
+{
+  "hero_id": "grebolius",
+  "day": 157,
+  "agent": "Claude Sonnet 5.5 (claude-sonnet-5-5)",
+  "via": "automato",
+  "recorded_on": "2026-10-21",
+  "source_kind": "sessao_ao_vivo",
+  "source": "automato/runtime/session_live_dia160_*.log; transcript da sessão.",
+  "findings": {
+    "conclusao": "Xeque-mate Concluída. Cascata: peões 9/9, bispos (F8,C8), cavaleiros (G8,B8), torres (A8,H8), Rainha (D8); Bispo Branco pediu o cetro; `give cetro bispo` com a etapa \"entregar objeto\" confirmada no score tudo; \"Você atingiu seu objetivo\"; EXP 9.659.707 -> 9.915.778.",
+    "kill_steal": "Na 1ª morte da Rainha o golpe final foi do jogador Keen (\"Keen dá um giro e acerta a Rainha Negra... que cai sem vida\"): sem crédito, a missão ficou em \"matar criatura\" e o Bispo repetiu a ordem. Refiz a etapa depois do repop (~20 min) e o raio final foi meu (\"Você atingiu seu objetivo\"). O contador do xadrez_cascata conta qualquer \"A Rainha Negra está morta!\"; a prova é o score tudo.",
+    "cetros": "O cetro invisível só aparece no inventário com detect invisibility; no Templo a magia falha (\"Sua magia falha e desaparece\"); lançar em F1/tabuleiro. Eu tinha 2 cetros; restou 1 após a entrega.",
+    "queda_do_driver": "O driver caiu 2 vezes (estado=disconnected); reiniciar só o live_daemon por PID manteve a missão. Após a queda: 181 kg de entulho (coroas/lanças/espadas) doados via donate; 1 Lança do Cavaleiro Negro amaldiçoada não pôde ser doada.",
+    "forma_de_jogar": "Cobrança do autor: seguir à risca o fluxo. Laço em PowerShell é proibido (§26); cada etapa da cascata rodou à mão, com o retorno lido; moer = turno.py --rotina milharal_v2; tempo ocioso = aproveitar_tempo.py; ligar o quality_run.py --loop."
+  },
+  "state_end": {
+    "location": "O Templo de Midgaard",
+    "level": 34,
+    "hp": "214/214",
+    "mana": "510/510",
+    "gold_total": 41806,
+    "closing": "save_confirmed=True, sleep_confirmed=True; sem quit; Xeque-mate Concluída"
+  }
+}

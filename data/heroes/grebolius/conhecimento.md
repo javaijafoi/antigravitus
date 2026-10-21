@@ -2848,3 +2848,13 @@ Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: evidence/dia159-cetro-invi
 - **`detect invisibility`:** duração **12 horas** (Acumula: Duração); custo medido ~**16 de mana** (500 → 484 no teste do Dia 157; mago nível 2). Barato: **lançar sempre que a mana estiver sobrando e ao entrar em sala onde se procura espólio, chave ou item de missão; "invisível" também esconde itens de roteiro**. O `kite_rei` agora o lança junto da invisibilidade (v1.7.26).
 - **Armadilha do roteiro:** passar por **E1** (casa do Rei Branco) com a Xeque-mate ativa a cancela, mesmo invisível; foi o que provavelmente derrubou a missão na varredura das peças. Nunca entrar em E1 com a missão ativa.
 - **Moral da história:** quando um corpo ou sala parece vazio, lançar `detect invisibility` (e `detect magic`) antes de concluir; muitos itens de missão do DeBo são invisíveis.
+
+## 89. Xeque-mate CONCLUÍDA: a cascata inteira, o roubo de abate do Keen e a entrega do cetro (Dia 160, 2026-10-21)
+
+Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: evidence/dia160-xeque-mate-concluida.json.
+
+- **Ordem exata do Bispo Branco (F1), cada uma ~100 s depois de voltar a F1:** (1) peões, 9 mortes; (2) "Elimine os dois bispos hereges" (F8, C8); (3) "Volte lá e elimine os cavaleiros negros" (G8, B8); (4) "Elimine as duas torres negras" (A8, H8); (5) "elimine a Rainha Negra, mas tome cuidado com a força dela" (D8); (6) "Agora, é hora do xeque-mate. Traga o cetro daquele rei nefasto como prova do seu feito." (`score tudo`: "Você deve entregar objeto ao personagem"). Quem já tem o cetro pula a morte do Rei: `give cetro bispo` concluiu a missão (+256 mil EXP).
+- **Outro jogador rouba o abate:** o jogador **Keen** fica no tabuleiro. Se o golpe final na Rainha for dele ("Keen ... chute, que cai sem vida"), não há crédito: `score tudo` segue "matar criatura" (singular) e o Bispo repete a ordem. O crédito vem com "Você atingiu seu objetivo." depois da morte. O contador de `xadrez_cascata.py` conta qualquer "A Rainha Negra está morta!"; só o `score tudo` prova. Refazer após o repop (~20 min).
+- **Cetro invisível:** só aparece com `detect invisibility`, que **falha no Templo** ("Sua magia falha e desaparece"): lançar em F1 ou no tabuleiro.
+- **Queda do driver:** a personagem pode ficar parada no tabuleiro; ao reconectar, `recall`, ver o peso (`score tudo`) e doar o entulho (`donate`) antes de seguir; o `cuidar` pede `prepara` se o estoque de pão for 0.
+- **Forma de jogar (cobrança do autor):** laço em PowerShell é proibido (§26 da diretiva). Rodar cada etapa da cascata à mão, ler o retorno, e usar `turno.py --rotina milharal_v2` para moer e `aproveitar_tempo.py` para o tempo ocioso. Ligar `quality_run.py --loop` na abertura.
