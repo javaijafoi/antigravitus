@@ -1183,3 +1183,9 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Como foi verificado:** servidor local (`python -m http.server 8790`): Grebolius e Antigravitus carregam, `#sala=xadrez_F1` abre a casa, a busca e os painéis funcionam, o celular fica sem rolagem lateral e o console não tem erro do mapa (os 404 de `antigravitus/state.json` e `temporadas.json` já existiam). Suíte offline com 312 testes OK.
 - **Custo:** o código do grafo antigo no `main.js` (`loadMapForHero`) ficou inerte, porque a página não tem mais `#map-canvas-wrap`; dá para remover num passo próprio. O `mapa_grade.json` publicado foi gerado do `mapa.json` do HEAD; a sessão do Campanário, que ainda não commitou, deve rodar `sync_hero.py` antes do commit dela.
 - **Próximo:** remover o código morto do grafo antigo do `main.js`.
+
+### 2026-10-20 · Dia 157, código do mapa antigo removido do main.js · Claude Opus 5.5 (claude-opus-5-5)
+- **Mudou:** `js/main.js` (2.321 → 1.421 linhas): saíram `loadMapForHero` e tudo o que só ele usava (camadas, filtros, tabela tática, inspetor, pan e zoom do grafo), `updateMapSeasonContext`, `mapCanvasWrap` e `mapListenersController`.
+- **Por que:** desde o commit anterior o `mapa.html` usa o mapa em grade (`js/mapa_grade.js`) e não tem mais `#map-canvas-wrap`; o código estava inerte.
+- **Como foi verificado:** `node --check`; servidor local com Crônicas (e troca de temporada), Ficha, Mapa (clique e troca de personagem), Sobre e Abates, sem erro de script (só os 404 já existentes de `favicon.ico` e de `antigravitus/state.json`/`temporadas.json`); suíte offline.
+- **Custo:** nenhum. As regras do grafo antigo no `css/style.css` (`.map-canvas-wrap`, `.map-node-*`, inspetor e tabela) também ficaram sem uso; dá para limpar num passo próprio.
