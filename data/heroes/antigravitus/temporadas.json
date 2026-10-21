@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "hero_id": "antigravitus",
+  "current": "s01",
+  "seasons": [
+    {
+      "id": "s01",
+      "number": 1,
+      "title": "Temporada 1 — O Grande Compêndio",
+      "subtitle": "Os cinquenta dias, recontados em sete capítulos.",
+      "model": "capitulos",
+      "unit": "Capítulo",
+      "source": "capitulos_s01.json",
+      "started_day": 1,
+      "range": [
+        1,
+        50
+      ],
+      "status": "concluida",
+      "rewrite_of": "s01-legacy",
+      "summary": "Cinquenta dias entre o Templo, as praças e a muralha, agora num tomo de sete capítulos. A jornada de Antigravitus, do corpo quase usurpado ao compêndio no Altar de Odin."
+    },
+    {
+      "id": "s01-legacy",
+      "number": 1,
+      "title": "Temporada 1 — Legacy: os cinquenta dias",
+      "subtitle": "O diário original, dia a dia, como foi publicado.",
+      "model": "dias",
+      "unit": "Dia",
+      "source": "posts.json",
+      "cycles": "ciclos.json",
+      "range": [
+        1,
+        50
+      ],
+      "status": "arquivo",
+      "summary": "Os cinquenta dias na forma original, preservados sem alteração. A versão em capítulos está no Tomo I da Temporada 1.",
+      "legacy": true
+    }
+  ]
+}

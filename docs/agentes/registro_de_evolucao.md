@@ -574,6 +574,13 @@ não foi a minha.
 - **Custo:** o S02 Prólogo (capítulo 0) continua resumindo a S01, agora em paralelo ao tomo. Quem tinha `s01` salvo no navegador passa a abrir o tomo, não os dias.
 - **Próximo:** revisão editorial do autor nos 10 capítulos; decidir se o Prólogo da S02 deve apontar para o tomo.
 
+### 2026-10-21 · — · Claude Opus 5.5 (claude-opus-5-5)
+- **Mudou:** o Antigravitus ganhou a mesma versão em tomo. `data/heroes/antigravitus/capitulos_s01.json` (novo): Tomo I com 7 capítulos por arco (Dias 1–5, 6–10, 11–15, 16–20, 21–30, 31–40, 41–50), texto reescrito em primeira pessoa e uma `part` por dia com o resumo. `data/heroes/antigravitus/temporadas.json` (novo): `s01` é o tomo (`rewrite_of: s01-legacy`, `current`) e os 50 dias originais ficam em `s01-legacy`, com `posts.json` e `ciclos.json` intocados. Nenhuma mudança de código: o site e o `check_project.py` do PR anterior já tratam qualquer herói com temporada reescrita. Nota em `docs/season_capitulos.md`.
+- **Por quê:** pedido do autor (Peter): fazer com as histórias do Antigravitus o mesmo tomo da Season 01 da Grebolius, com o número de capítulos a critério do agente.
+- **Como foi verificado:** `check_project.py` 0 erros e os mesmos 9 avisos de antes (e 1 erro proposital ao apontar um capítulo para tomo inexistente, confirmando que o arquivo novo é validado); `unittest discover -s scripts` 402 OK; o texto novo não dispara o filtro `META`; site servido localmente no Chromium (seletor com T1 e Legacy, abertura no Capítulo 1, "Resumo dos dias", link antigo `?season=s01&day=5` cai na Legacy, Grebolius continua abrindo na S02). O único 404 é o `state.json` do Antigravitus, que já não existia antes.
+- **Custo:** quem tinha a temporada `s01` salva no navegador para o Antigravitus passa a abrir o tomo, não os dias.
+- **Próximo:** revisão editorial do autor nos 7 capítulos.
+
 ---
 
 ## 6. Concorrência na prática (caso real e verificado)
