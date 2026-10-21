@@ -116,7 +116,9 @@ do mundo mora lá, não em regra de jogo. Aqui fica o processo:
 
 - **Quando o gargalo é o caixa de um NPC, registrar e parar** — insistir é só gastar rodada.
 - **Não fechar capítulo antes dos alvos:** fechar é ato final, não pausa (Dia 136: o capítulo voltou a
-  `em_curso` sozinho). Vira campo `fechado_quando` no `capitulos.json` — pendente no Lote C.
+  `em_curso` sozinho). Desde 2026-10-21 isso é check: o capítulo (do 12 em diante) declara
+  `closing_criteria` e só fecha com `closing.confirmed_with_author`; critério aberto exige **bypass
+  explícito do autor** com motivo (`fecho.do_capitulo`).
 
 
 ## 12. Guarda de repetição — o vigia dos robôs (ideia do autor, Dia 143)

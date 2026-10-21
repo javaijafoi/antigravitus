@@ -279,6 +279,22 @@ def checar_sessao_ao_vivo(heroi, desde, sem_git=False):
         ok(f"última conexão fechada ({jogadas[-1].name})")
 
 
+def bypass_do_ultimo_fecho(capitulos):
+    """(id, fecho) se o capítulo concluído mais recente fechou por bypass; senão None.
+
+    ID na catraca: fecho.bypass_visivel. Bypass do autor não pode sumir no JSON: se ele
+    existe, a crônica precisa dizer que aquele capítulo não fechou por cumprimento.
+    """
+    fechados = [c for c in capitulos if c.get("status") == "concluido"]
+    if not fechados:
+        return None
+    ultimo = max(fechados, key=lambda c: c.get("id", -1))
+    fecho = ultimo.get("closing") or {}
+    if fecho.get("decision") == "bypass":
+        return ultimo.get("id"), fecho
+    return None
+
+
 def checar_capitulos(heroi):
     arq = ROOT / "data" / "heroes" / heroi / "capitulos.json"
     if not arq.is_file():
@@ -292,6 +308,14 @@ def checar_capitulos(heroi):
     em_curso = [c for c in capitulos if c.get("status") == "em_curso"]
     fechados = [c for c in capitulos if c.get("status") == "concluido"]
     print(f"  [info]  capítulos: {len(fechados)} concluído(s), {len(em_curso)} em curso")
+
+    # bypass do autor não pode sumir no JSON: se o capítulo mais recente fechou por bypass,
+    # a crônica precisa dizer isso (ID na catraca: fecho.bypass_visivel).
+    achado = bypass_do_ultimo_fecho(capitulos)
+    if achado:
+        cid, fecho = achado
+        aviso(f"capítulo {cid} fechado por BYPASS do autor em {fecho.get('at')}: "
+              f"{fecho.get('reason')} — a crônica não deve tratar como cumprimento normal")
 
     for cap in capitulos:
         if cap.get("status") != "concluido":

@@ -1494,6 +1494,21 @@
       "kind": "missao",
       "status": "em_curso",
       "goal": "Concluir a autoquest Ajuda Mágica com Lemin em Notre Dame/Lyon, registrando as etapas e a confirmação do servidor. Reconhecer e mapear a rota; Xeque-mate é objetivo opcional condicionado à viabilidade tática.",
+      "closing_criteria": [
+        {
+          "id": "xeque-mate",
+          "text": "Concluir a missão Xeque-mate (cetro do Rei Negro) com a autoquest concluída no score",
+          "done": false,
+          "evidence": null
+        },
+        {
+          "id": "ajuda-magica",
+          "text": "Concluir Ajuda Mágica com Lemin: entregar o tomo com a etapa confirmada no score tudo",
+          "done": false,
+          "evidence": null
+        }
+      ],
+      "closing": null,
       "days": [
         157
       ],

@@ -4,6 +4,21 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.7.18 — Dia 158 · Fecho de capítulo com critério ou bypass do autor (DeepSeek deepseek-flash)
+
+Origem: Lote C da decisão sobre as seções sem trava, refinado por uma exigência do autor — *"pra fechar tem que confirmar comigo se não obedeceu, porque eu posso dar bypass"*. A regra vivia em prosa na diretiva §11 e já tinha falhado uma vez (Dia 136: o capítulo foi fechado com a fortuna parcial e o próprio servidor devolveu para `em_curso`).
+
+- **`capitulos.json`:** o capítulo passa a ter `closing_criteria` (os alvos do fecho, cada um com `done` e `evidence`) e `closing` (`confirmed_with_author`, `at`, `decision` = `cumprido|bypass`, `reason`). O capítulo 12 nasceu com dois: **Xeque-mate** e **Ajuda Mágica**.
+- **`check_project.validate_fecho_do_capitulo`** (`fecho.do_capitulo`), a partir do capítulo 12 — o legado 0–11 fica intocado:
+  - `concluido` sem `closing.confirmed_with_author` + `at` → **ERRO** (fechou sem falar com o autor);
+  - critério aberto com `decision: cumprido` → **ERRO** (o caso do Dia 136);
+  - `decision: bypass` sem `reason` → **ERRO** (bypass sem motivo é esquecimento);
+  - critério `done: true` sem `evidence` → **ERRO** (fato sem fonte).
+- **`devolutiva.bypass_do_ultimo_fecho`** (`fecho.bypass_visivel`): capítulo fechado por bypass gera **aviso** no fechamento, para a crônica não tratar como cumprimento normal.
+- **Diretiva §11:** a linha "vira campo no `capitulos.json` — pendente no Lote C" passou a descrever o check em vigor.
+- **Testes:** `test_check_project.py` (+8) e `test_devolutiva.py` (+3). Suíte: 366 OK. 2 IDs novos na catraca.
+- **Limite:** o check prova que existe o **registro** da confirmação, não que a pergunta foi feita — registro falso é o mesmo problema que evidência falsa. O que ele impede é o fecho **silencioso**. E critério frouxo passa: se o alvo declarado for vago, o check aceita.
+
 ## v1.7.17 — Dia 158 · §6 e §8 viram default no código: a armadilha aborta e a postura não custa a viagem (DeepSeek deepseek-flash)
 
 Origem: a decisão sobre as 8 seções da diretiva sem trava. Duas delas não eram dívida de documento, eram **lacuna de comportamento**:

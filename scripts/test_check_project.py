@@ -251,5 +251,56 @@ class PublishTests(unittest.TestCase):
             self.assertEqual(publish_daily.git(root, "remote"), "")
 
 
+def capitulo_fecho(cid=12, status="concluido", closing=None, criterios=None):
+    return {"id": cid, "status": status, "closing_criteria": criterios, "closing": closing}
+
+
+class TestFechoDoCapitulo(unittest.TestCase):
+    """§11/diretiva: capítulo fecha com critério cumprido OU bypass do autor (fecho.do_capitulo)."""
+
+    def erros(self, cap):
+        return check.validate_fecho_do_capitulo(cap, cap["id"], "teste")
+
+    def criterios(self, done=False, evidence=None):
+        return [{"id": "xeque-mate", "text": "Concluir o Xeque-mate", "done": done, "evidence": evidence}]
+
+    def test_legado_abaixo_do_12_nao_e_cobrado(self):
+        self.assertEqual(self.erros(capitulo_fecho(cid=11, closing=None)), [])
+
+    def test_concluido_sem_closing_e_erro(self):
+        cap = capitulo_fecho(criterios=self.criterios(done=True, evidence="e"))
+        self.assertTrue(any("confirmação do autor" in e for e in self.erros(cap)))
+
+    def test_criterio_aberto_com_cumprido_e_erro(self):
+        cap = capitulo_fecho(closing={"confirmed_with_author": True, "at": "2026-10-21",
+                                      "decision": "cumprido", "reason": None},
+                             criterios=self.criterios(done=False))
+        self.assertTrue(any("critério aberto" in e for e in self.erros(cap)))
+
+    def test_bypass_com_motivo_passa(self):
+        cap = capitulo_fecho(closing={"confirmed_with_author": True, "at": "2026-10-21",
+                                      "decision": "bypass", "reason": "o autor mandou fechar"},
+                             criterios=self.criterios(done=False))
+        self.assertEqual(self.erros(cap), [])
+
+    def test_bypass_sem_motivo_e_erro(self):
+        cap = capitulo_fecho(closing={"confirmed_with_author": True, "at": "2026-10-21",
+                                      "decision": "bypass", "reason": ""},
+                             criterios=self.criterios(done=False))
+        self.assertTrue(any("sem reason" in e for e in self.erros(cap)))
+
+    def test_criterio_done_sem_evidence_e_erro(self):
+        cap = capitulo_fecho(status="em_curso", criterios=self.criterios(done=True, evidence=None))
+        self.assertTrue(any("sem evidence" in e for e in self.erros(cap)))
+
+    def test_capitulo_sem_criterios_e_erro(self):
+        cap = capitulo_fecho(status="em_curso", criterios=[])
+        self.assertTrue(any("closing_criteria" in e for e in self.erros(cap)))
+
+    def test_em_curso_com_tudo_aberto_nao_e_erro(self):
+        cap = capitulo_fecho(status="em_curso", criterios=self.criterios(done=False))
+        self.assertEqual(self.erros(cap), [])
+
+
 if __name__ == "__main__":
     unittest.main()

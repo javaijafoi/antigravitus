@@ -433,6 +433,18 @@
       "arquivo": "automato/camadas/navegar.py",
       "desde": "2026-10-21",
       "regra": "navegar para com código 7 no aviso de armadilha mortal e levanta uma vez na recusa por postura (diretivas 6 e 8)"
+    },
+    {
+      "id": "fecho.do_capitulo",
+      "arquivo": "scripts/check_project.py",
+      "desde": "2026-10-21",
+      "regra": "capítulo (do 12 em diante) só fecha com closing.confirmed_with_author + at; critério aberto exige decision=bypass com reason; critério done exige evidence"
+    },
+    {
+      "id": "fecho.bypass_visivel",
+      "arquivo": "scripts/devolutiva.py",
+      "desde": "2026-10-21",
+      "regra": "capítulo fechado por bypass do autor gera aviso no fechamento — a crônica não trata como cumprimento normal"
     }
   ]
 }

@@ -263,5 +263,27 @@ class TestRepositorioReal(unittest.TestCase):
         self.assertIn("OBRIGATÓRIA", texto.upper())
 
 
+class TestBypassVisivel(unittest.TestCase):
+    """O bypass do autor não pode sumir no JSON (fecho.bypass_visivel)."""
+
+    def test_sem_capitulos_fechados(self):
+        self.assertIsNone(devolutiva.bypass_do_ultimo_fecho([]))
+        self.assertIsNone(devolutiva.bypass_do_ultimo_fecho([{"id": 12, "status": "em_curso"}]))
+
+    def test_fecho_normal_nao_avisa(self):
+        caps = [{"id": 12, "status": "concluido",
+                 "closing": {"decision": "cumprido", "confirmed_with_author": True, "at": "2026-10-21"}}]
+        self.assertIsNone(devolutiva.bypass_do_ultimo_fecho(caps))
+
+    def test_bypass_do_ultimo_aparece(self):
+        caps = [{"id": 11, "status": "concluido", "closing": {"decision": "cumprido"}},
+                {"id": 12, "status": "concluido",
+                 "closing": {"decision": "bypass", "at": "2026-10-21", "reason": "autor mandou"}}]
+        achado = devolutiva.bypass_do_ultimo_fecho(caps)
+        self.assertIsNotNone(achado)
+        self.assertEqual(achado[0], 12)
+        self.assertEqual(achado[1]["reason"], "autor mandou")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

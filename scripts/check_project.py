@@ -369,6 +369,58 @@ def validate_temporadas(hero_id, data, max_day, hero_dir=None):
     return errors, warnings
 
 
+FECHO_DESDE = 12   # critérios de fecho obrigatórios a partir deste capítulo; 0–11 é legado intocado
+
+
+def validate_fecho_do_capitulo(chapter, cid, context):
+    """Capítulo só fecha com critério cumprido OU bypass explícito do autor. ID: fecho.do_capitulo.
+
+    A regra vivia em prosa na diretiva §11 e falhou no Dia 136: o capítulo foi fechado com a
+    fortuna parcial e o próprio servidor devolveu para `em_curso`. Aqui ela vira check:
+    fechar exige `closing.confirmed_with_author` + `at`, e critério aberto só passa com
+    `decision: 'bypass'` e um `reason` — o autor pode dar bypass, mas ele fica registrado.
+    """
+    errors = []
+    if cid < FECHO_DESDE:
+        return errors
+    criterios = chapter.get("closing_criteria")
+    if not isinstance(criterios, list) or not criterios:
+        errors.append(f"{context}: capítulo {cid} precisa de closing_criteria (os alvos do fecho) "
+                      f"desde o capítulo {FECHO_DESDE}.")
+        criterios = []
+    vistos = set()
+    for c in criterios:
+        if not isinstance(c, dict) or not nonempty(c.get("id")) or not nonempty(c.get("text")):
+            errors.append(f"{context}: critério inválido no capítulo {cid} (precisa de id e text).")
+            continue
+        if c["id"] in vistos:
+            errors.append(f"{context}: critério duplicado '{c['id']}' no capítulo {cid}.")
+        vistos.add(c["id"])
+        if c.get("done") and not c.get("evidence"):
+            errors.append(f"{context}: critério '{c['id']}' do capítulo {cid} está done sem evidence "
+                          f"(AGENTS #1: fato sem fonte não vale).")
+    if chapter.get("status") != "concluido":
+        return errors
+    fecho = chapter.get("closing")
+    if not isinstance(fecho, dict) or not fecho.get("confirmed_with_author") or not nonempty(fecho.get("at")):
+        errors.append(f"{context}: capítulo {cid} concluído sem registro de confirmação do autor "
+                      f"(closing.confirmed_with_author e closing.at são obrigatórios).")
+        return errors
+    decisao = fecho.get("decision")
+    if decisao not in ("cumprido", "bypass"):
+        errors.append(f"{context}: closing.decision do capítulo {cid} deve ser 'cumprido' ou 'bypass'.")
+        return errors
+    abertos = [c["id"] for c in criterios
+               if isinstance(c, dict) and c.get("id") and not c.get("done")]
+    if abertos and decisao != "bypass":
+        errors.append(f"{context}: capítulo {cid} fechado como 'cumprido' com critério aberto: "
+                      f"{', '.join(abertos)}. Feche o alvo ou peça bypass ao autor.")
+    if decisao == "bypass" and not nonempty(fecho.get("reason")):
+        errors.append(f"{context}: bypass do capítulo {cid} sem reason — bypass sem motivo não é "
+                      f"decisão, é esquecimento.")
+    return errors
+
+
 def validate_capitulos(hero_id, data, max_day, hero_dir=None):
     errors, warnings = [], []
     context = f"'{hero_id}'/capitulos.json"
@@ -429,6 +481,7 @@ def validate_capitulos(hero_id, data, max_day, hero_dir=None):
             errors.append(f"{context}: capítulo {cid} concluído precisa de evidence.")
         if chapter.get("source_kind") not in ("documental", "live"):
             errors.append(f"{context}: capítulo {cid} precisa de source_kind.")
+        errors.extend(validate_fecho_do_capitulo(chapter, cid, context))
         if chapter.get("status") == "concluido":
             content = chapter.get("content")
             if not isinstance(content, list) or not content or any(not nonempty(p) for p in content):
