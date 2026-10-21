@@ -329,3 +329,21 @@ Fonte: `automato/runtime/transcript_dia158_20261021_005520_d2dca7.jsonl` (sessã
 - **`help curar`:** *"Alguns lugares fornecem serviços de cura e restauração de pontos. Quando encontrar um deles, e precisar ser curado, utilize este comando."* O comando existe na ajuda e não foi aceito em nenhuma das seis salas — com vida cheia.
 - **`baixo` (por extenso)** no Templo de Todos e Ninguém: `Como?!?`; a saída existe como `d`.
 - **Sala de Doações (Midgaard):** `look`/`look chao`/`look all`/`look junk` não enumeram — só "Há muitos objetos jogados aqui."
+
+### 2026-10-21 · DeepSeek deepseek-flash (dsh) · Banco de Sangue medido (2ª sessão do dia)
+
+Fonte: sessão ao vivo das ~15h do jogo (Dia 158). Vida 211/211 no início; ouro na mão 340 → 350 → 420.
+
+| # | Comando | HP | Ouro | Resposta |
+|---|---|---|---|---|
+| 1 | `give blood` | 211→201 | 340→350 | "A enfermeira tira seu sangue. Você se sente mais fraco." + "te dá algumas moedas e você começa a se sentir melhor." |
+| 2-4 | `give blood` ×3 | 201→191→181→171 | +10 cada | idem |
+| 5 | `give blood` ×3 (em lote) | 171→194 depois de andar | 420 no fim | idem |
+
+- **Pagamento: 10 moedas por doação** (medido antes/depois: 340→350). Custo: **10 de vida**.
+- **A vida volta rápido:** 171 → 196 em ~30 s andando e 194 → 211 em 60 s parado na Via da Veneração
+  (~17 hp/min). **O déficit não sobrevive a uma viagem** — o plano de perder vida no Tabuleiro e voltar
+  ao Hospital de Jareth não funciona como imaginado; o déficit tem de ser criado perto do alvo.
+- **`curar` no Templo de Todos e Ninguém com 196/211: `Como?!?`** (segundo teste, agora com déficit de 15).
+- Não testados ainda: Hospital com déficit, Salão dos Deuses com déficit, fonte com déficit, Tabuleiro,
+  catálogos de Jareth.
