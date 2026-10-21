@@ -5,7 +5,7 @@
     "day": 157,
     "verification": "live",
     "live_verified": true,
-    "source": "Sessão de 2026-10-21 (Dia 158) de DeepSeek deepseek-flash (dsh) — 3ª sessão do dia: compra do cajado retorcido em Jareth (18.859) e medição da regeneração segundo a segundo. Regen medida: +12 a +13 de vida por tick (~2,5 s com comandos frequentes), 32→211 em ~38 s; na rua 189→211 em ~6 s. O número antigo de 5 hp/min (sono) não se reproduz hoje. Ouro 13.928 (12.565 banco + 1.363 mão); HP 211/211; CA 147."
+    "source": "Sessão de 2026-10-21 (Dia 158) de DeepSeek deepseek-flash (dsh) — 4ª do dia: teste de ciclo de combate na Rainha Negra (D8). Medido: ela ataca ao entrar; `sleep` não funciona em combate; andar em combate é bloqueado (\"muito ocupado\"); `recall` sai em 0,7 s e custa ~552 EXP; barra cheia em ~20 s depois do recall. Fechada no Templo com save e sleep confirmados, sem quit. Ouro 13.922; EXP 8.575.839; HP 211/211."
   },
   "level": 33,
   "mechanical_race": "Elfo",
@@ -31,10 +31,10 @@
     }
   },
   "experience": {
-    "current": 8577141,
+    "current": 8575839,
     "next_level": 9000000
   },
-  "gold": 13928,
+  "gold": 13922,
   "attributes": {
     "STR": 11,
     "DEX": 17,
@@ -79,7 +79,7 @@
   },
   "last_event": {
     "day": 158,
-    "summary": "Comprou o cajado retorcido (18.859; BASTÃO MÁGICO nível 10, 3 cargas de sleep) e mediu a regeneração de vida por segundo: ~+12,5 por tick, barra cheia em menos de 1 min."
+    "summary": "Ciclo de combate medido no tabuleiro: recall instantâneo e barato em tempo (552 EXP), sair andando impossível em combate, regeneração de ~20 s. Rainha Negra levada a ~40% da barra."
   },
   "next_objective": {
     "mission_id": "xeque-mate",

@@ -24,9 +24,9 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 | **Pontos de Mana (MP)** | 500 | 500 | 100% |
 | **Estamina / Movimento (MV)** | 146 | 146 | 100% |
 
-* **Experiência Acumulada:** **8.577.141 EXP**
-* **Experiência Necessária p/ Grau 34:** **422.859 EXP** (Meta: 9.000.000 EXP)
-* **Ouro Líquido:** **13.928 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **8.575.839 EXP**
+* **Experiência Necessária p/ Grau 34:** **424.161 EXP** (Meta: 9.000.000 EXP)
+* **Ouro Líquido:** **13.922 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 11
@@ -136,7 +136,7 @@ Recomeçar a Xeque-mate pelo Bispo Branco e rodar a cascata pelo xadrez_cascata.
 * Testar o módulo xadrez_cascata.py ao vivo em uma etapa curta antes de confiar nele.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessão de 2026-10-21 (Dia 158) de DeepSeek deepseek-flash (dsh) — 3ª sessão do dia: compra do cajado retorcido em Jareth (18.859) e medição da regeneração segundo a segundo. Regen medida: +12 a +13 de vida por tick (~2,5 s com comandos frequentes), 32→211 em ~38 s; na rua 189→211 em ~6 s. O número antigo de 5 hp/min (sono) não se reproduz hoje. Ouro 13.928 (12.565 banco + 1.363 mão); HP 211/211; CA 147..
+Fonte do estado: Sessão de 2026-10-21 (Dia 158) de DeepSeek deepseek-flash (dsh) — 4ª do dia: teste de ciclo de combate na Rainha Negra (D8). Medido: ela ataca ao entrar; `sleep` não funciona em combate; andar em combate é bloqueado ("muito ocupado"); `recall` sai em 0,7 s e custa ~552 EXP; barra cheia em ~20 s depois do recall. Fechada no Templo com save e sleep confirmados, sem quit. Ouro 13.922; EXP 8.575.839; HP 211/211..
 * A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.
 * O colar com pedra purpura pertence a outro dono: o servidor recusa o uso. Nenhum comerciante testado o compra.
 * Bainha de Excalibur exige nivel 85 (vista na Sala de Doacoes, nao pode ser carregada com a carga atual). Scutum de Carvalho exige nivel 35.

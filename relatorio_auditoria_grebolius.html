@@ -221,27 +221,27 @@
       <h1>Relatório de Auditoria e Conformidade — Motor MUD Grebolius</h1>
       <div class="subtitle">Correções Críticas P0, Confiabilidade de Conexão, Buffer Telnet e Regime Zero-Network</div>
       <div class="badges">
-        <span class="badge badge-success">100% CONFORME (APROVADO)</span>
+        <span class="badge badge-warning">AUDITORIA EM ANDAMENTO (M_TEST)</span>
         <span class="badge badge-p0">Severidade P0</span>
         <span class="badge badge-info">100% Offline (Zero-Network)</span>
         <span class="badge badge-success">Mocks Telnet Ativos</span>
       </div>
       <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
-        Data da Auditoria: <strong>2026-10-15 23:00:51 UTC</strong> | Alvo: <code>scripts/local/*.py</code> | Ambiente: Python 3.10 (Windows)
+        Data da Auditoria: <strong>2026-10-21 05:14:53 UTC</strong> | Alvo: <code>scripts/local/*.py</code> | Ambiente: Python 3.10 (Windows)
       </p>
     </header>
 
     <div class="kpi-grid">
       <div class="kpi-card">
-        <div class="kpi-value gold">87</div>
+        <div class="kpi-value gold">96</div>
         <div class="kpi-label">Testes Automatizados</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-value emerald">87</div>
+        <div class="kpi-value emerald">93</div>
         <div class="kpi-label">Testes Aprovados</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-value emerald">0</div>
+        <div class="kpi-value crimson">3</div>
         <div class="kpi-label">Pendências / Falhas</div>
       </div>
       <div class="kpi-card">
@@ -249,7 +249,7 @@
         <div class="kpi-label">Vazamentos de Rede Externa</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-value emerald">6.44s</div>
+        <div class="kpi-value emerald">3.84s</div>
         <div class="kpi-label">Tempo de Execução</div>
       </div>
     </div>
@@ -296,7 +296,7 @@
             <td>Vitais Negativos e Máquina de Estados<br><span class="badge badge-p0">P0 Crítico</span></td>
             <td>Suporte a vitais negativos (<code>-30hp</code>), classificação estrita em 6 estados operacionais (<code>in_game</code>, <code>in_combat</code>, <code>incapacitated</code>, <code>dead_or_menu</code>, <code>disconnected</code>, <code>unknown</code>).</td>
             <td><code>test_t1_r2_positive_vitals_parsed</code><br><code>test_t2_r2_negative_hp_in_prompt</code><br><code>test_t2_r2_incapacitated_state</code></td>
-            <td><span class="status-badge status-ok">CONFORME</span></td>
+            <td><span class="status-badge status-pending">EM IMPLEMENTAÇÃO (M1)</span></td>
           </tr>
           <tr>
             <td><strong>R3 (T03)</strong></td>
@@ -310,7 +310,7 @@
             <td>Preservação de Logs e Sanitização<br><span class="badge badge-p0">P0 Crítico</span></td>
             <td>Prevenção de sobrescrita de logs no mesmo dia (nomes versionados/identificados), flush imediato e censura estrita de <code>MUD_PASS</code> (<code>***REDACTED***</code>).</td>
             <td><code>test_t1_r4_session_logging_and_flush</code><br><code>test_t2_r4_credential_sanitization_outgoing</code><br><code>test_t4_distinct_session_log_filenames_same_day</code></td>
-            <td><span class="status-badge status-ok">CONFORME</span></td>
+            <td><span class="status-badge status-pending">PENDENTE (M2/M3: Sanitização/Logs)</span></td>
           </tr>
           <tr>
             <td><strong>R5 (T05)</strong></td>
@@ -372,142 +372,178 @@
     <section id="logs">
       <h2>5. Registro Verbatim da Suíte de Testes</h2>
       <p>Log completo gerado durante a execução dos testes automatizados sob guarda Zero-Network:</p>
-      <pre><code>test_commit_is_single_local_revision_and_does_not_stage_unrelated_files (test_check_project.PublishTests) ... ok
-test_default_without_checkout_is_dry_run (test_check_project.PublishTests) ... ok
-test_publication_excludes_local_and_sensitive_paths (test_check_project.PublishTests) ... ok
-test_push_requires_publish_and_validation_blocks_commit (test_check_project.PublishTests) ... ok
-test_absent_parse_is_explicit_not_zero (test_check_project.ValidatorTests) ... ok
-test_empty_posts_require_explicit_draft (test_check_project.ValidatorTests) ... ok
-test_evidence_cannot_escape_hero_directory (test_check_project.ValidatorTests) ... ok
-test_full_catalog_metadata_and_unparsed_vitals_fail (test_check_project.ValidatorTests) ... ok
-test_future_cycle_and_bad_limits_are_errors (test_check_project.ValidatorTests) ... ok
-test_legacy_metagame_is_warning_and_not_rewritten (test_check_project.ValidatorTests) ... ok
-test_malformed_posts_report_errors_without_crashing (test_check_project.ValidatorTests) ... ok
-test_manual_new_day_cannot_bypass_evidence_policy (test_check_project.ValidatorTests) ... ok
-test_map_accepts_legacy_day_interval_and_warns_staleness (test_check_project.ValidatorTests) ... ok
-test_map_allows_one_way_connections (test_check_project.ValidatorTests) ... ok
-test_map_rejects_broken_targets_duplicates_totals (test_check_project.ValidatorTests) ... ok
-test_map_state_distinguishes_camp_and_sanctuary (test_check_project.ValidatorTests) ... ok
-test_markdown_bold_hp_and_wimpy_are_parsed (test_check_project.ValidatorTests) ... ok
-test_nested_malformed_data_reports_errors (test_check_project.ValidatorTests) ... ok
-test_new_post_future_or_missing_evidence_fails (test_check_project.ValidatorTests) ... ok
-test_order_duplicate_and_placeholder_are_invalid (test_check_project.ValidatorTests) ... ok
-test_cli_requires_real_content_and_evidence (test_check_project.WritingTests) ... ok
-test_create_hero_is_draft_without_invented_day_or_numbers (test_check_project.WritingTests) ... ok
-test_existing_day_requires_explicit_replace_and_preserves_bytes (test_check_project.WritingTests) ... ok
-test_future_cycle_does_not_overwrite_file (test_check_project.WritingTests) ... ok
-test_recorded_post_keeps_real_content_and_origin (test_check_project.WritingTests) ... ok
-test_unknown_hero_never_falls_back_to_other_character (test_check_project.WritingTests) ... ok
-test_check_detects_stale_without_rewriting_chronicles (test_sync_hero.SyncHeroTests) ... ok
-test_documental_source_cannot_claim_live_verification (test_sync_hero.SyncHeroTests) ... ok
-test_future_state_is_rejected (test_sync_hero.SyncHeroTests) ... ok
-test_invalid_resource_stops_before_any_write (test_sync_hero.SyncHeroTests) ... ok
-test_one_state_updates_both_catalogs_and_ficha (test_sync_hero.SyncHeroTests) ... ok
-test_pending_ring_is_not_added_as_confirmed_inventory (test_sync_hero.SyncHeroTests) ... ok
-test_classify_game_state_dead_or_menu (test_parsers.TestParsers)
+      <pre><code>test_commit_is_single_local_revision_and_does_not_stage_unrelated_files (test_check_project.PublishTests.test_commit_is_single_local_revision_and_does_not_stage_unrelated_files) ... ok
+test_default_without_checkout_is_dry_run (test_check_project.PublishTests.test_default_without_checkout_is_dry_run) ... ok
+test_publication_excludes_local_and_sensitive_paths (test_check_project.PublishTests.test_publication_excludes_local_and_sensitive_paths) ... ok
+test_push_requires_publish_and_validation_blocks_commit (test_check_project.PublishTests.test_push_requires_publish_and_validation_blocks_commit) ... ok
+test_bypass_com_motivo_passa (test_check_project.TestFechoDoCapitulo.test_bypass_com_motivo_passa) ... ok
+test_bypass_sem_motivo_e_erro (test_check_project.TestFechoDoCapitulo.test_bypass_sem_motivo_e_erro) ... ok
+test_capitulo_sem_criterios_e_erro (test_check_project.TestFechoDoCapitulo.test_capitulo_sem_criterios_e_erro) ... ok
+test_concluido_sem_closing_e_erro (test_check_project.TestFechoDoCapitulo.test_concluido_sem_closing_e_erro) ... ok
+test_criterio_aberto_com_cumprido_e_erro (test_check_project.TestFechoDoCapitulo.test_criterio_aberto_com_cumprido_e_erro) ... ok
+test_criterio_done_sem_evidence_e_erro (test_check_project.TestFechoDoCapitulo.test_criterio_done_sem_evidence_e_erro) ... ok
+test_em_curso_com_tudo_aberto_nao_e_erro (test_check_project.TestFechoDoCapitulo.test_em_curso_com_tudo_aberto_nao_e_erro) ... ok
+test_legado_abaixo_do_12_nao_e_cobrado (test_check_project.TestFechoDoCapitulo.test_legado_abaixo_do_12_nao_e_cobrado) ... ok
+test_absent_parse_is_explicit_not_zero (test_check_project.ValidatorTests.test_absent_parse_is_explicit_not_zero) ... ok
+test_empty_posts_require_explicit_draft (test_check_project.ValidatorTests.test_empty_posts_require_explicit_draft) ... ok
+test_evidence_cannot_escape_hero_directory (test_check_project.ValidatorTests.test_evidence_cannot_escape_hero_directory) ... ok
+test_full_catalog_metadata_and_unparsed_vitals_fail (test_check_project.ValidatorTests.test_full_catalog_metadata_and_unparsed_vitals_fail) ... ok
+test_future_cycle_and_bad_limits_are_errors (test_check_project.ValidatorTests.test_future_cycle_and_bad_limits_are_errors) ... ok
+test_legacy_metagame_is_warning_and_not_rewritten (test_check_project.ValidatorTests.test_legacy_metagame_is_warning_and_not_rewritten) ... ok
+test_malformed_posts_report_errors_without_crashing (test_check_project.ValidatorTests.test_malformed_posts_report_errors_without_crashing) ... ok
+test_manual_new_day_cannot_bypass_evidence_policy (test_check_project.ValidatorTests.test_manual_new_day_cannot_bypass_evidence_policy) ... ok
+test_map_accepts_legacy_day_interval_and_warns_staleness (test_check_project.ValidatorTests.test_map_accepts_legacy_day_interval_and_warns_staleness) ... ok
+test_map_allows_one_way_connections (test_check_project.ValidatorTests.test_map_allows_one_way_connections) ... ok
+test_map_rejects_broken_targets_duplicates_totals (test_check_project.ValidatorTests.test_map_rejects_broken_targets_duplicates_totals) ... ok
+test_map_state_distinguishes_camp_and_sanctuary (test_check_project.ValidatorTests.test_map_state_distinguishes_camp_and_sanctuary) ... ok
+test_markdown_bold_hp_and_wimpy_are_parsed (test_check_project.ValidatorTests.test_markdown_bold_hp_and_wimpy_are_parsed) ... ok
+test_nested_malformed_data_reports_errors (test_check_project.ValidatorTests.test_nested_malformed_data_reports_errors) ... ok
+test_new_post_future_or_missing_evidence_fails (test_check_project.ValidatorTests.test_new_post_future_or_missing_evidence_fails) ... ok
+test_order_duplicate_and_placeholder_are_invalid (test_check_project.ValidatorTests.test_order_duplicate_and_placeholder_are_invalid) ... ok
+test_cli_requires_real_content_and_evidence (test_check_project.WritingTests.test_cli_requires_real_content_and_evidence) ... ok
+test_create_hero_is_draft_without_invented_day_or_numbers (test_check_project.WritingTests.test_create_hero_is_draft_without_invented_day_or_numbers) ... ok
+test_existing_day_requires_explicit_replace_and_preserves_bytes (test_check_project.WritingTests.test_existing_day_requires_explicit_replace_and_preserves_bytes) ... ok
+test_future_cycle_does_not_overwrite_file (test_check_project.WritingTests.test_future_cycle_does_not_overwrite_file) ... ok
+test_recorded_post_keeps_real_content_and_origin (test_check_project.WritingTests.test_recorded_post_keeps_real_content_and_origin) ... ok
+test_unknown_hero_never_falls_back_to_other_character (test_check_project.WritingTests.test_unknown_hero_never_falls_back_to_other_character) ... ok
+test_check_detects_stale_without_rewriting_chronicles (test_sync_hero.SyncHeroTests.test_check_detects_stale_without_rewriting_chronicles) ... ok
+test_documental_source_cannot_claim_live_verification (test_sync_hero.SyncHeroTests.test_documental_source_cannot_claim_live_verification) ... ok
+test_future_state_is_rejected (test_sync_hero.SyncHeroTests.test_future_state_is_rejected) ... ok
+test_invalid_resource_stops_before_any_write (test_sync_hero.SyncHeroTests.test_invalid_resource_stops_before_any_write) ... ok
+test_mapa_em_grade_e_derivado_do_mapa_json (test_sync_hero.SyncHeroTests.test_mapa_em_grade_e_derivado_do_mapa_json) ... ok
+test_one_state_updates_both_catalogs_and_ficha (test_sync_hero.SyncHeroTests.test_one_state_updates_both_catalogs_and_ficha) ... ok
+test_pending_ring_is_not_added_as_confirmed_inventory (test_sync_hero.SyncHeroTests.test_pending_ring_is_not_added_as_confirmed_inventory) ... ok
+test_classify_game_state_dead_or_menu (test_parsers.TestParsers.test_classify_game_state_dead_or_menu)
 Morte (HP <= -10 ou mensagem de morte) e telas de menu devem retornar 'dead_or_menu'. ... ok
-test_classify_game_state_disconnected (test_parsers.TestParsers)
+test_classify_game_state_disconnected (test_parsers.TestParsers.test_classify_game_state_disconnected)
 is_connected=False deve retornar estritamente 'disconnected'. ... ok
-test_classify_game_state_in_combat (test_parsers.TestParsers)
+test_classify_game_state_in_combat (test_parsers.TestParsers.test_classify_game_state_in_combat)
 Detecção de combate por medidor ({...>>}) ou mensagens agressivas retorna 'in_combat'. ... ok
-test_classify_game_state_in_game (test_parsers.TestParsers)
+test_classify_game_state_in_game (test_parsers.TestParsers.test_classify_game_state_in_game)
 Conectada com HP > 0 e sem ameaça retorna 'in_game'. ... ok
-test_classify_game_state_incapacitated (test_parsers.TestParsers)
+test_classify_game_state_incapacitated (test_parsers.TestParsers.test_classify_game_state_incapacitated)
 HP <= 0 e HP > -10 classifica como 'incapacitated'. ... ok
-test_classify_game_state_unknown (test_parsers.TestParsers)
+test_classify_game_state_unknown (test_parsers.TestParsers.test_classify_game_state_unknown)
 Vitais ausentes ou vitals['hp'] is None deve retornar 'unknown' para interromper automação. ... ok
-test_deboclient_parsers_and_rejections (test_parsers.TestParsers) ... ok
-test_detect_combat_target_absence (test_parsers.TestParsers)
+test_deboclient_parsers_and_rejections (test_parsers.TestParsers.test_deboclient_parsers_and_rejections) ... ok
+test_detect_combat_target_absence (test_parsers.TestParsers.test_detect_combat_target_absence)
 Alvos ausentes devem retornar True para evitar falso positivo de vitória. ... ok
-test_detect_rejections (test_parsers.TestParsers) ... ok
-test_direction_opposites (test_parsers.TestParsers) ... ok
-test_parse_exits_basic (test_parsers.TestParsers) ... ok
-test_parse_exits_quad_cardinal (test_parsers.TestParsers) ... ok
-test_parse_room_full (test_parsers.TestParsers) ... ok
-test_parse_vitals_from_prompt (test_parsers.TestParsers) ... ok
-test_parse_vitals_from_score (test_parsers.TestParsers) ... ok
-test_parse_vitals_negative_prompt (test_parsers.TestParsers)
+test_detect_rejections (test_parsers.TestParsers.test_detect_rejections) ... ok
+test_direction_opposites (test_parsers.TestParsers.test_direction_opposites) ... ok
+test_parse_exits_basic (test_parsers.TestParsers.test_parse_exits_basic) ... ok
+test_parse_exits_quad_cardinal (test_parsers.TestParsers.test_parse_exits_quad_cardinal) ... ok
+test_parse_room_full (test_parsers.TestParsers.test_parse_room_full) ... ok
+test_parse_vitals_from_prompt (test_parsers.TestParsers.test_parse_vitals_from_prompt) ... ok
+test_parse_vitals_from_score (test_parsers.TestParsers.test_parse_vitals_from_score) ... ok
+test_parse_vitals_negative_prompt (test_parsers.TestParsers.test_parse_vitals_negative_prompt)
 Verifica se HP negativo (ex: -30hp) é extraído como número inteiro com sinal. ... ok
-test_parse_vitals_negative_score (test_parsers.TestParsers)
+test_parse_vitals_negative_score (test_parsers.TestParsers.test_parse_vitals_negative_score)
 Verifica se HP negativo no score é extraído corretamente. ... ok
-test_parse_vitals_zero_and_missing (test_parsers.TestParsers)
+test_parse_vitals_zero_and_missing (test_parsers.TestParsers.test_parse_vitals_zero_and_missing)
 Verifica parsing de vitais zerados e entradas vazias ou ausentes. ... ok
-test_real_historical_log_file (test_parsers.TestParsers) ... ok
-test_real_historical_rejection_step4 (test_parsers.TestParsers) ... ok
-test_strip_accents (test_parsers.TestParsers) ... ok
-test_verify_save_confirmation (test_parsers.TestParsers)
+test_real_historical_log_file (test_parsers.TestParsers.test_real_historical_log_file) ... ok
+test_real_historical_rejection_step4 (test_parsers.TestParsers.test_real_historical_rejection_step4) ... ok
+test_strip_accents (test_parsers.TestParsers.test_strip_accents) ... ok
+test_verify_save_confirmation (test_parsers.TestParsers.test_verify_save_confirmation)
 Confirmação estrita de salvamento sem falsos positivos. ... ok
-test_t1_r1_lifecycle_normal_close (test_mud_automation.TestTier1FeatureCoverage)
+test_t1_r1_lifecycle_normal_close (test_mud_automation.TestTier1FeatureCoverage.test_t1_r1_lifecycle_normal_close)
 R1 (T01): Client close routine releases socket cleanly without hanging or error. ... ok
-test_t1_r1_save_confirmed_explicit (test_mud_automation.TestTier1FeatureCoverage)
+test_t1_r1_save_confirmed_explicit (test_mud_automation.TestTier1FeatureCoverage.test_t1_r1_save_confirmed_explicit)
 R1 (T01): Explicit canonical save confirmation strings are verified. ... ok
-test_t1_r2_positive_vitals_parsed (test_mud_automation.TestTier1FeatureCoverage)
+test_t1_r2_positive_vitals_parsed (test_mud_automation.TestTier1FeatureCoverage.test_t1_r2_positive_vitals_parsed)
 R2 (T02): Standard positive vitals in prompt are extracted accurately. ... ok
-test_t1_r2_state_classification_in_game (test_mud_automation.TestTier1FeatureCoverage)
+test_t1_r2_state_classification_in_game (test_mud_automation.TestTier1FeatureCoverage.test_t1_r2_state_classification_in_game)
 R2 (T02): Operational state is classified as 'in_game' during normal exploration. ... ok
-test_t1_r3_stream_reception (test_mud_automation.TestTier1FeatureCoverage)
+test_t1_r3_stream_reception (test_mud_automation.TestTier1FeatureCoverage.test_t1_r3_stream_reception)
 R3 (T03): Mock socket receives prompt and updates client vitals. ... ok
-test_t1_r4_session_logging_and_flush (test_mud_automation.TestTier1FeatureCoverage)
+test_t1_r4_session_logging_and_flush (test_mud_automation.TestTier1FeatureCoverage.test_t1_r4_session_logging_and_flush)
 R4 (T04): Session log writes and flushes continuously to disk. ... ok
-test_t1_r5_runner_dry_run_allowed (test_mud_automation.TestTier1FeatureCoverage)
+test_t1_r5_runner_dry_run_allowed (test_mud_automation.TestTier1FeatureCoverage.test_t1_r5_runner_dry_run_allowed)
 R5 (T05): Runner executes normally without --quest in dry-run mode. ... ok
-test_t1_r6_successful_move_updates_room (test_mud_automation.TestTier1FeatureCoverage)
+test_t1_r6_successful_move_updates_room (test_mud_automation.TestTier1FeatureCoverage.test_t1_r6_successful_move_updates_room)
 R6 (T06): Valid movement updates room title and exits without rejection. ... ok
-test_t1_r7_zero_network_allows_localhost (test_mud_automation.TestTier1FeatureCoverage)
+test_t1_r7_zero_network_allows_localhost (test_mud_automation.TestTier1FeatureCoverage.test_t1_r7_zero_network_allows_localhost)
 R7 (T16): ZeroNetworkGuard allows loopback TCP connections to 127.0.0.1. ... ok
-test_t2_r1_eof_drop_during_close (test_mud_automation.TestTier2BoundaryAndCorners)
+test_t2_r1_eof_drop_during_close (test_mud_automation.TestTier2BoundaryAndCorners.test_t2_r1_eof_drop_during_close)
 R1 (T01): EOF / sudden drop during close is handled without unhandled exception. ... ok
-test_t2_r1_save_loose_ok_rejected (test_mud_automation.TestTier2BoundaryAndCorners)
+test_t2_r1_save_loose_ok_rejected (test_mud_automation.TestTier2BoundaryAndCorners.test_t2_r1_save_loose_ok_rejected)
 R1 (T01): Server output containing 'ok' in arbitrary words must NOT confirm save. ... ok
-test_t2_r1_save_rejected_in_combat (test_mud_automation.TestTier2BoundaryAndCorners)
+test_t2_r1_save_rejected_in_combat (test_mud_automation.TestTier2BoundaryAndCorners.test_t2_r1_save_rejected_in_combat)
 R1 (T01): Save attempted during combat is rejected and not confirmed. ... ok
-test_t2_r1_save_rejected_while_sleeping (test_mud_automation.TestTier2BoundaryAndCorners)
+test_t2_r1_save_rejected_while_sleeping (test_mud_automation.TestTier2BoundaryAndCorners.test_t2_r1_save_rejected_while_sleeping)
 R1 (T01): Save attempted while sleeping/resting is rejected. ... ok
-test_t2_r2_dead_or_menu_state (test_mud_automation.TestTier2BoundaryAndCorners)
+test_t2_r2_dead_or_menu_state (test_mud_automation.TestTier2BoundaryAndCorners.test_t2_r2_dead_or_menu_state)
 R2 (T02): Death text or menu prompt is classified as 'dead_or_menu'. ... ok
-test_t2_r2_incapacitated_state (test_mud_automation.TestTier2BoundaryAndCorners)
+test_t2_r2_incapacitated_state (test_mud_automation.TestTier2BoundaryAndCorners.test_t2_r2_incapacitated_state)
 R2 (T02): Character with HP <= 0 and > -10 is classified as 'incapacitated'. ... ok
-test_t2_r2_missing_vitals_classified_unknown (test_mud_automation.TestTier2BoundaryAndCorners)
+test_t2_r2_missing_vitals_classified_unknown (test_mud_automation.TestTier2BoundaryAndCorners.test_t2_r2_missing_vitals_classified_unknown)
 R2 (T02): Unparseable prompt or missing vitals must be classified as 'unknown'. ... ok
-test_t2_r2_negative_hp_in_prompt (test_mud_automation.TestTier2BoundaryAndCorners)
+test_t2_r2_negative_hp_in_prompt (test_mud_automation.TestTier2BoundaryAndCorners.test_t2_r2_negative_hp_in_prompt)
 R2 (T02): Negative HP in prompt (-30hp) is extracted as integer -30. ... ok
-test_t2_r2_negative_hp_in_score (test_mud_automation.TestTier2BoundaryAndCorners)
+test_t2_r2_negative_hp_in_score (test_mud_automation.TestTier2BoundaryAndCorners.test_t2_r2_negative_hp_in_score)
 R2 (T02): Negative HP in score screen (Vida: {---} -15 de 52) extracts -15. ... ok
-test_t2_r3_split_prompt_word_assembly (test_mud_automation.TestTier2BoundaryAndCorners)
+test_t2_r3_split_prompt_word_assembly (test_mud_automation.TestTier2BoundaryAndCorners.test_t2_r3_split_prompt_word_assembly)
 R3 (T03): Prompt split in the middle of words is accumulated. ... ok
-test_t2_r3_telnet_iac_split_across_chunks (test_mud_automation.TestTier2BoundaryAndCorners)
+test_t2_r3_telnet_iac_split_across_chunks (test_mud_automation.TestTier2BoundaryAndCorners.test_t2_r3_telnet_iac_split_across_chunks)
 R3 (T03): Telnet IAC command split across TCP chunk boundaries is defragmented. ... ok
-test_t2_r4_credential_sanitization_incoming (test_mud_automation.TestTier2BoundaryAndCorners)
-R4 (T04): Server echoing password back is redacted from logs. ... ok
-test_t2_r4_credential_sanitization_outgoing (test_mud_automation.TestTier2BoundaryAndCorners)
-R4 (T04): Passwords are redacted from command logs. ... ok
-test_t2_r5_block_quest_cli_flag_pre_connection (test_mud_automation.TestTier2BoundaryAndCorners)
+test_t2_r4_credential_sanitization_incoming (test_mud_automation.TestTier2BoundaryAndCorners.test_t2_r4_credential_sanitization_incoming)
+R4 (T04): Server echoing password back is redacted from logs. ... FAIL
+test_t2_r4_credential_sanitization_outgoing (test_mud_automation.TestTier2BoundaryAndCorners.test_t2_r4_credential_sanitization_outgoing)
+R4 (T04): Passwords are redacted from command logs. ... FAIL
+test_t2_r5_block_quest_cli_flag_pre_connection (test_mud_automation.TestTier2BoundaryAndCorners.test_t2_r5_block_quest_cli_flag_pre_connection)
 R5 (T05): Starting creative_runner with --quest exits with error code before connecting. ... ok
-test_t2_r6_combat_target_absence_not_victory (test_mud_automation.TestTier2BoundaryAndCorners)
+test_t2_r6_combat_target_absence_not_victory (test_mud_automation.TestTier2BoundaryAndCorners.test_t2_r6_combat_target_absence_not_victory)
 R6 (T06): Target not found does not count as combat victory. ... ok
-test_t2_r6_movement_rejection_preserves_room (test_mud_automation.TestTier2BoundaryAndCorners)
+test_t2_r6_movement_rejection_preserves_room (test_mud_automation.TestTier2BoundaryAndCorners.test_t2_r6_movement_rejection_preserves_room)
 R6 (T06): Rejected movement keeps the current room unchanged. ... ok
-test_t2_r7_zero_network_blocks_external_ip (test_mud_automation.TestTier2BoundaryAndCorners)
+test_t2_r7_zero_network_blocks_external_ip (test_mud_automation.TestTier2BoundaryAndCorners.test_t2_r7_zero_network_blocks_external_ip)
 R7 (T16): Socket connection to external host raises ZeroNetworkViolation. ... ok
-test_t3_connection_reset_winerror_handled_cleanly (test_mud_automation.TestTier3CrossFeatureCombinations)
+test_t3_connection_reset_winerror_handled_cleanly (test_mud_automation.TestTier3CrossFeatureCombinations.test_t3_connection_reset_winerror_handled_cleanly)
 R1 + R3: ConnectionResetError during recv is handled gracefully with state transition. ... ok
-test_t3_save_rejection_in_combat_triggers_alert (test_mud_automation.TestTier3CrossFeatureCombinations)
+test_t3_save_rejection_in_combat_triggers_alert (test_mud_automation.TestTier3CrossFeatureCombinations.test_t3_save_rejection_in_combat_triggers_alert)
 R1 + R2: Attempting save while in combat fails and avoids claiming persistent save. ... ok
-test_t3_spontaneous_mob_attack_updates_state (test_mud_automation.TestTier3CrossFeatureCombinations)
+test_t3_spontaneous_mob_attack_updates_state (test_mud_automation.TestTier3CrossFeatureCombinations.test_t3_spontaneous_mob_attack_updates_state)
 R3 + R2: Spontaneous mob attack text while idle updates state to in_combat. ... ok
-test_t3_wimpy_panic_retreat_invalidates_route (test_mud_automation.TestTier3CrossFeatureCombinations)
+test_t3_wimpy_panic_retreat_invalidates_route (test_mud_automation.TestTier3CrossFeatureCombinations.test_t3_wimpy_panic_retreat_invalidates_route)
 R6 + R2: Wimpy panic retreat clears route queue and forces reorientation. ... ok
-test_t4_distinct_session_log_filenames_same_day (test_mud_automation.TestTier4RealWorldScenarios)
+test_t4_distinct_session_log_filenames_same_day (test_mud_automation.TestTier4RealWorldScenarios.test_t4_distinct_session_log_filenames_same_day)
 R4 (T04): Two sessions started on the same day must produce distinct log filenames. ... ok
-test_t4_full_mock_session_lifecycle (test_mud_automation.TestTier4RealWorldScenarios)
+test_t4_full_mock_session_lifecycle (test_mud_automation.TestTier4RealWorldScenarios.test_t4_full_mock_session_lifecycle)
 R1 + R2 + R3 + R7: Complete session lifecycle against MockTelnetServer loopback. ... ok
-test_t4_no_unmasked_credentials_in_session_output (test_mud_automation.TestTier4RealWorldScenarios)
-R4 (T04): Generated session log file must contain zero plaintext passwords. ... ok
+test_t4_no_unmasked_credentials_in_session_output (test_mud_automation.TestTier4RealWorldScenarios.test_t4_no_unmasked_credentials_in_session_output)
+R4 (T04): Generated session log file must contain zero plaintext passwords. ... FAIL
+
+======================================================================
+FAIL: test_t2_r4_credential_sanitization_incoming (test_mud_automation.TestTier2BoundaryAndCorners.test_t2_r4_credential_sanitization_incoming)
+R4 (T04): Server echoing password back is redacted from logs.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\peter\OneDrive\Dokumente\antigravitus_peter_rio_2026\scripts\local\test_mud_automation.py", line 311, in test_t2_r4_credential_sanitization_incoming
+    self.assertNotIn("169933715", sanitized)
+AssertionError: '169933715' unexpectedly found in "Echo: Senha '169933715' aceita com sucesso."
+
+======================================================================
+FAIL: test_t2_r4_credential_sanitization_outgoing (test_mud_automation.TestTier2BoundaryAndCorners.test_t2_r4_credential_sanitization_outgoing)
+R4 (T04): Passwords are redacted from command logs.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\peter\OneDrive\Dokumente\antigravitus_peter_rio_2026\scripts\local\test_mud_automation.py", line 297, in test_t2_r4_credential_sanitization_outgoing
+    self.assertNotIn("169933715", sanitized)
+AssertionError: '169933715' unexpectedly found in '>>> SEND: 169933715'
+
+======================================================================
+FAIL: test_t4_no_unmasked_credentials_in_session_output (test_mud_automation.TestTier4RealWorldScenarios.test_t4_no_unmasked_credentials_in_session_output)
+R4 (T04): Generated session log file must contain zero plaintext passwords.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\peter\OneDrive\Dokumente\antigravitus_peter_rio_2026\scripts\local\test_mud_automation.py", line 518, in test_t4_no_unmasked_credentials_in_session_output
+    self.assertNotIn(
+AssertionError: '169933715' unexpectedly found in '>>> CMD: login Grebolius\n>>> CMD: 169933715\nServer response: Senha 169933715 aceita.\n' : Plaintext password '169933715' found in session log file! Credential sanitization required. (Pending M3)
 
 ----------------------------------------------------------------------
-Ran 87 tests in 6.431s
+Ran 96 tests in 3.837s
 
-OK
+FAILED (failures=3)
 </code></pre>
     </section>
 
