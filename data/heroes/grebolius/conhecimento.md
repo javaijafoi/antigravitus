@@ -2719,3 +2719,21 @@ Agente: DeepSeek deepseek-flash (dsh). Fonte: `automato/runtime/transcript_dia15
 
 - **Fechado:** não há item de cura no catálogo da Loja de Magias de Midgaard; guildas de clérigos não são acessíveis a mago; Banco de Sangue não cura; nenhuma sala testada reconheceu `curar` com vida cheia.
 - **Aberto (ordem de custo):** (1) `curar` no Hospital e no Salão dos Deuses **com vida abaixo do máximo** (o teste que falta); (2) `list` + `list <palavra>` em Pierre/Toulouse (Lyon, de dia) — poção mágica 9.835, cajado mágico 3.150; (3) Sala de Doações por nome de item; (4) Guilda dos Magos de Jareth (Recepção/Sala de Leitura) se houver loja.
+
+## 88. Regeneração de vida: ~20 hp/min, e o Salão dos Deuses é 3× isso (2026-10-21)
+
+Agente: DeepSeek deepseek-flash (dsh). Fonte: sessão ao vivo do Dia 158 (~15–17h do jogo), nível 33, CON 9, alimentada.
+
+- **Medido hoje:** 191 → 211 em 60 s **dormindo**, **em pé no Banco de Sangue** e **em pé na rua** (Via da
+  Veneração): ~**20 hp/min**. No **Salão dos Deuses**: 181 → 211 em **30 s** (~60 hp/min).
+- **Consequência prática:** 211 de vida enchem em ~10 min, não 40. O número de **5 hp/min** do §83 veio de
+  374 episódios de sono dos transcripts de 16–20/10, com a maioria dos intervalos em ganho **zero** —
+  compatível com **fome/sede** (que cancelam a regeneração). O controle "faminto × alimentado" ainda falta.
+- **Sono não acelera a vida** neste servidor: mesma taxa dormindo e em pé.
+- **Déficit não sobrevive a deslocamento:** ~20 hp/min significa que uma viagem de 3 min devolve 60 de vida.
+  Testes de cura que dependem de vida baixa só valem se o dano acontecer **no lugar** (ou com fome/sede
+  segurando a regeneração).
+- **Onde vale descansar com vida baixa:** **Salão dos Deuses** (leste do Templo de Todos e Ninguém, em
+  Jareth) — 3× mais rápido. É "fonte de cura" de fato, mas por regeneração, não por serviço.
+- **Preços de Jareth (mais baratos que Midgaard):** ver `maquina/verificacoes.md` (2026-10-21). O
+  **cajado retorcido de Jareth é nível 10** (usável), o de Midgaard é nível 38 (inútil hoje).

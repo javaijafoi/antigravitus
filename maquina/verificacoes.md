@@ -347,3 +347,46 @@ Fonte: sessão ao vivo das ~15h do jogo (Dia 158). Vida 211/211 no início; ouro
 - **`curar` no Templo de Todos e Ninguém com 196/211: `Como?!?`** (segundo teste, agora com déficit de 15).
 - Não testados ainda: Hospital com déficit, Salão dos Deuses com déficit, fonte com déficit, Tabuleiro,
   catálogos de Jareth.
+
+### 2026-10-21 · DeepSeek deepseek-flash (dsh) · Regeneração de vida medida e catálogos de Jareth
+
+Sessão ao vivo (~15–17h do jogo, Dia 158), nível 33, CON 9, alimentada e saciada.
+
+**Regeneração de vida (a dúvida dos "40 minutos")**
+
+| Onde | Intervalo | Vida | Taxa |
+|---|---|---|---|
+| Banco de Sangue (dormindo) | 60 s | 191 → 211 | ~20 hp/min |
+| Banco de Sangue (em pé, acordada) | 60 s | 191 → 211 | ~20 hp/min |
+| Via da Veneração (rua, em pé) | 60 s | 191 → 211 | ~20 hp/min |
+| **Salão dos Deuses** (Jareth) | **30 s** | 181 → 211 | **~60 hp/min** |
+
+- **A taxa de hoje é ~20 hp/min, não 5.** Barra de 211 enche do zero em ~10–11 min, não 40. O número
+  antigo (5 hp/min, `conhecimento.md` §83) saiu de 374 episódios de sono nos transcripts de 16–20/10, em
+  que a maioria dos intervalos tinha ganho **zero** — o que é compatível com **fome/sede** (que cancelam a
+  regeneração) e com o personagem em condição pior. Falta um controle "faminto × alimentado" para fechar
+  a conta; a hipótese mais forte é essa.
+- **Dormir e ficar em pé deram a mesma taxa** no mesmo minuto e na mesma sala: o sono não acelera a vida
+  neste servidor (o que reforça que o dado antigo media outra condição).
+- **Salão dos Deuses é o melhor lugar de cura encontrado:** +30 de vida em 30 s (~3× a taxa normal),
+  "ventos sagrados" — regeneração, não serviço pago.
+
+**`curar`**
+
+- Templo de Todos e Ninguém com **196/211**: `Como?!?` (segundo teste, agora com déficit).
+- Hospital de Jareth: `curar` e `heal` já testados com 211/211 — `Como?!?`. **Com déficit não foi
+  possível**: a vida volta a 211 em ~1 min, e o caminho do Banco de Sangue até o Hospital leva mais que isso.
+
+**Catálogos de Jareth (todos os preços por unidade, à vista)**
+
+- **As Misturas de Clariss** (`lv114`, ao sul da Avenida Floris): poção amarela de detectar invisibilidade
+  **4.605** (nível 10); poção aquosa **9.750** (nível 10). Nenhuma de cura.
+- **Pergaminhos e Afins** (`jr_pergaminhos`, na Rua do Rio): cajado retorcido **18.859** (nível 10);
+  bastão de metal **6.784** (nível 10); rolo de pergaminho **103**; pergaminho de remover maldições
+  **4.369** (nível 10); bastão cinza de invisibilidade **46.112** (nível 10); pergaminho de retorno
+  **6.209** (nível 10). Nenhum de cura.
+- **Jareth é mais barato que Midgaard nos itens repetidos:** remover maldições 4.369 × 8.509;
+  retorno 6.209 × 9.202; bastão de invisibilidade 46.112 × 92.233; cajado retorcido 18.859 (nível 10)
+  contra 14.570 (nível 38) da Loja de Magias de Midgaard — mesmo nome, nível diferente: conferir com
+  `identify` antes de comprar. **O cajado de Jareth é nível 10, ou seja, usável por Grebolius (33)**;
+  o de Midgaard (nível 38) não.
