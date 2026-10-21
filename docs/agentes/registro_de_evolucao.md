@@ -1319,3 +1319,10 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
   a tarefa de espera pode levar a personagem ao Templo (a cascata recomeça a ida, por desenho).
 - **Próximo:** rodar `aproveitar 2 --simular` numa sessão real, medir o custo do prepara curto e decidir se
   `vender_espolio` entra na pilha padrão ou só por `--tarefas`.
+
+### 2026-10-21 · Dia 159, o Rei Negro morre por kite e o bloqueio muda para o cetro · Claude Sonnet 5.5 (claude-sonnet-5-5)
+- **Mudou:** `automato/acoes/xadrez_cascata.py` (kite com recall imediato, descanso por sleep, retries, leitura da barra), `scripts/test_xadrez_cascata.py`, `automato/CHANGELOG.md` v1.7.25, `conhecimento.md` §83 e §84, `state.json`, `missoes.json`, `evidence/dia159-rei-morto.json`, plano 044.
+- **Por que:** o plano 043 pedia tática nova contra o Rei; a medição da barra mostrou que o kite de 1 raio com recall imediato converge (~30 idas) e que o recall com 3 s de espera matava.
+- **Como foi verificado:** ao vivo (Rei morto, +36.846 EXP, nível 34); `test_xadrez_cascata` 32 OK; sessão fechada com save e sleep, sem quit.
+- **Custo:** uma morte da personagem (recall atrasado) e a Xeque-mate refeita duas vezes (~25 min cada); o cetro não veio.
+- **Próximo:** plano 044.

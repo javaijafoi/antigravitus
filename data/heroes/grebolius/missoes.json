@@ -546,7 +546,7 @@
       "accepted_day": 157,
       "last_progress_day": 157,
       "objective": "Autoquest de nível 30+, iniciada com o Bispo Branco no Grande Tabuleiro de Xadrez.",
-      "next_step": "Antes de refazer a cascata (~1h30): decidir a tática do Rei com o autor (plano 040 §5). Se refizer: Bispo Branco em F1 (say sim x2), cascata por xadrez_cascata.py; bispos e cavalos sem blindness (acorda), só curse/poison.",
+      "next_step": "Achar onde está o Cetro do Rei Negro: `cast 'locate object' cetro` (sei a magia desde o nível 34) exige o espelho localizador de Albernathy (Silverthorne, rota desconhecida; compra pede o autor). Se o cetro estiver com um mob, matar; se com jogador, decisão do autor. Refazer a cascata custa ~25 min e o Rei cai em ~30 idas.",
       "reward": "EXP massiva em cascata (mais de 150.000 EXP acumulada)",
       "evidence": [
         {
@@ -573,9 +573,14 @@
           "document": "evidence/dia157-xadrez-rei-e-testes.json",
           "day": 157,
           "note": "Cascata até o cetro, kite no Rei falhou, testes curse/poison/blindness. Agente: Claude Sonnet 5.5 (claude-sonnet-5-5)"
+        },
+        {
+          "document": "evidence/dia159-rei-morto.json",
+          "day": 157,
+          "note": "Rei Negro morto pelo kite; sem cetro; Claude Sonnet 5.5 (claude-sonnet-5-5)"
         }
       ],
-      "blocker": "Cancelada pela morte no Rei Negro (kite de 2 raios/ida: ~70 por raio contra 1.500+ de vida, Santuário e regeneração; ele mata em 1 a 2 rodadas). Falta tática nova ou muito mais dano; não repetir o kite com o dano atual."
+      "blocker": "O Rei Negro foi morto (kite de 1 raio + recall imediato), mas ele nasce SEM equipamento (\"o Rei usa: NADA\") e o corpo só tinha ouro; o servidor recusa outros cetros (\"não é o item correto ou você não é o dono original\"). O cetro único provavelmente já existe em outro lugar do mundo."
     },
     {
       "id": "ajuda-magica",

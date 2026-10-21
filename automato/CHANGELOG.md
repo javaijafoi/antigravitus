@@ -4,6 +4,12 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.7.25 — Dia 159 · Kite do Rei Negro que fecha a conta: recall imediato, sem retry perigoso, leitura da barra (Claude Sonnet 5.5)
+
+- `acoes/xadrez_cascata.py` (`kite_rei`): 1 raio por ida **seguido de `recall` imediato** (`ctx.run`, sem espera de 3 s, que matou a personagem); só `sleep` antes do raio (curse e blindness saíram do kite); **uma** nova tentativa de `sleep` e sai se a vida cair; mensagem "mortalmente ferido" = ficar e rematar para ter crédito; log da barra do Rei, do dano e do equipamento dele (`o Rei usa`); invisibilidade só na 1ª ida e a cada 12; contagem de mortes do Rei **relativa à execução**.
+- `Ctx.descansar`: `sleep` em vez de `rest` (regenera mais), checagem de ataque por texto ou queda de vida (o sinal de combate do driver demora a limpar depois do `recall`), `wake`+`stand` ao terminar; `Ctx.ir_h5`: até 3 tentativas após `Parada`; `Tabuleiro.passo`: espera e repete quando o passo é recusado por "muito ocupado" (peão fugindo); `LIMITE_VIDA` 190.
+- Resultado ao vivo: Rei morto em ~30 idas (+36.846 EXP, nível 34). **Limite:** o Rei nasce sem cetro (§84); o módulo não resolve isso. Testes: `test_xadrez_cascata.py` 32 OK.
+
 ## v1.7.24 — Dia 158 · `aproveitar_tempo` e `vender_espolio`: tempo ocioso vira trabalho (DeepSeek deepseek-flash)
 
 Origem: o autor pediu *"aproveitar 2 min faz X; aproveitar 4 min faz X, Y e Z"* e a rotina de venda de espólio, depois de ver a espera de repop custar 720 s parada.

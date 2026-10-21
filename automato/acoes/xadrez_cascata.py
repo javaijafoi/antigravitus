@@ -165,6 +165,13 @@ class Tabuleiro:
             raise Perdida('passo %s sai do tabuleiro a partir de %s' % (d, self.casa))
         texto, vitals, combate = self.run(d)
         baixo = normalizar(texto)
+        # "muito ocupado, lutando": o peao pode ter fugido em panico e o combate ainda nao fechou; espera e repete
+        for _ in range(3):
+            if 'muito ocupado' not in baixo:
+                break
+            time.sleep(2.5)
+            texto, vitals, combate = self.run(d)
+            baixo = normalizar(texto)
         if any(r in baixo for r in RECUSAS):
             raise Perdida('passo %s recusado: %r' % (d, titulo_sala(texto)[:60]))
         if 'Uma Casa' not in texto:
@@ -271,7 +278,7 @@ PRESENCA = {
 # frase com que o Bispo Branco abre cada etapa: as mortes valem so' depois da ultima vez que ele a disse
 ORDEM = {'bispos': 'Elimine os dois bispos', 'cavalos': 'elimine os cavaleiros negros',
          'torres': 'Elimine as duas torres', 'rainha': 'elimine a Rainha Negra'}
-LIMITE_VIDA = 150
+LIMITE_VIDA = 190   # plano 043: a Rainha dá ate' ~100 por rodada; recall a 190 deixa margem de uma rodada
 VIDA_PISO_LANCE = 100   # conhecimento par.73: a ida tem de parar ANTES do proximo lance, nao depois
 HP_MIN_ENTRAR = 215
 MANA_MIN_ENTRAR = 250   # uma ida gasta 100 a 170; descansar ate' 440 so' desperdicava minutos
@@ -359,27 +366,56 @@ class Ctx:
         if vida(vit0) >= hp_min and mana(vit0) >= mn_min:
             return vit0          # ja' pronta: nada de descansar
         self.cmd('wake', 0.5)
-        self.cmd('rest', 0.5)
-        t0, vit = time.time(), {}
+        self.cmd('sleep', 0.5)       # dormir regenera 3 a 4x mais que `rest` (conhecimento §4); no Templo e' seguro
+        t0, vit, vida_ant = time.time(), {}, vida(vit0)
         while time.time() - t0 < max_s:
-            time.sleep(10)
+            time.sleep(5)
             texto, vit, combate = self.run('look')
-            if combate or 'lutando contra voce' in normalizar(texto):
+            # o driver mantem "em combate" por alguns segundos depois de um recall: so' conta como ataque o que o texto
+            # diz ou uma queda de vida durante o descanso
+            if 'lutando contra voce' in normalizar(texto) or (vida(vit) and vida_ant and vida(vit) < vida_ant - 5):
                 raise Perdida('atacada enquanto descansava')
+            vida_ant = vida(vit) or vida_ant
             if vida(vit) >= hp_min and mana(vit) >= mn_min:
                 break
         else:
             print('[XADREZ] ATENCAO: descanso de %d s sem chegar a vida %s/mana %s '
                   '(vida %s, mana %s) — agente: ver o que travou'
                   % (max_s, hp_min, mn_min, vida(vit), mana(vit)), flush=True)
-        self.cmd('stand', 2)
+        self.cmd('wake', 0.5)
+        self.cmd('stand', 1.5)
         return vit
 
     def ir_h5(self):
-        self.nav.navegar(self.salas, 'templo_midgaard', 'xadrez_H5', self.run)
+        # logo apos um recall o driver pode manter "em combate" por alguns segundos; o navegar para com Parada(4).
+        # Espera, recolhe de novo ao Templo e repete (ate' 3 tentativas) em vez de abortar a etapa.
+        for tentativa in range(3):
+            try:
+                self.nav.navegar(self.salas, 'templo_midgaard', 'xadrez_H5', self.run)
+                return
+            except Exception as e:                      # navegar.Parada
+                if getattr(e, 'codigo', None) not in (3, 4) and 'combate' not in str(e) and 'esperava' not in str(e):
+                    raise
+                if tentativa == 2:
+                    raise
+                time.sleep(8)
+                self.recall()
+                time.sleep(6)
 
     def recall(self):
         self.cmd('recall', 3)
+
+    def armor(self):
+        """Garante a magia armor (CA >= 140) pelo prepara.garantir_armor; ele deixa a personagem na Praca, entao volta ao Templo."""
+        import sys as _s
+        _s.path.insert(0, str(Path(__file__).resolve().parents[1] / 'camadas'))
+        try:
+            import prepara
+            if prepara.garantir_armor():
+                self.recall()
+                time.sleep(2)
+        except Exception as e:          # nunca derruba a etapa por causa disto; o auditor acusa se a CA ficar baixa
+            print('[XADREZ] armor nao confirmado: %s' % e, flush=True)
 
 
 ESPERA_PRESENCA_S = 60      # diretiva 2026-10-21: peca ausente nao se espera 12 min parado
@@ -576,41 +612,81 @@ def varrer_peoes(meta_mortes=9, log=print):
 def kite_rei(idas=1, log=print):
     """Etapa final, tatica do autor: chegar, sleep, curse, blind, 1 raio e recall (kite). Exige --rei."""
     ctx = Ctx()
+    base_mortes = mortes('Rei')       # mortes anteriores do Rei no log nao contam: so' a desta execucao
     for n in range(1, idas + 1):
-        if mortes('Rei') > 0:
+        if mortes('Rei') > base_mortes:
             log('o Rei Negro ja morreu')
             return 0
+        ctx.cmd('wake', 0.5)       # o descanso dorme; um laco interrompido deixa a personagem dormindo e o look falha
+        ctx.cmd('stand', 0.5)
         if not ctx.garantir_templo():
             raise Perdida('nao consegui confirmar o Templo')
         ctx.comer_beber()
-        ctx.descansar(mn_min=460)
+        if n == 1 or n % 10 == 0:
+            ctx.armor()                    # diretiva §26: armor ligada antes de atacar (o auditor reprova CA < 140)
+        ctx.descansar(mn_min=130)          # uma ida gasta ~35 mana (sleep + raio); descansar ate' 460 triplicava o ciclo
         ctx.ir_h5()
-        ctx.cmd("cast 'invisibility'", 3)
+        if n == 1 or n % 12 == 0:           # invisibilidade dura horas; recastar a cada ida desperdicava mana
+            ctx.cmd("cast 'invisibility'", 2)
         tab = Tabuleiro('H5', ctx.run)
         try:
             tab.ir('E7')
-            real = tab.run
-            tab.run = lambda d: ctx.run(d + ";cast 'sleep' rei")   # entra e dorme no mesmo envio
             texto, vit, _c = tab.passo('n')
-            tab.run = real
             log('E8: %s' % titulo_sala(texto))
-            if 'dormindo' not in normalizar(texto) and 'vai dormir' not in normalizar(texto):
-                log('o Rei nao dormiu; recall')
+            ctx.considerar('rei', log)        # antes do 1o sleep (diretiva §2/§22); so' registra: --rei e' a autorizacao do autor
+            texto, v_s, _c = ctx.cmd("cast 'sleep' rei", 1.5)
+            vit = v_s or vit
+            if 'em que voce deseja' in normalizar(texto):
+                # sem alvo: o Rei morreu e ainda nao reapareceu. Insistir em `sleep` gera dezenas de recusas seguidas
+                # (auditor repeticao-de-recusa, Dia 159); recolhe e espera o repop em vez disso.
+                log('o Rei Negro esta ausente (repop pendente); recall e espera 45 s')
+                ctx.recall()
+                time.sleep(45)
+                continue
+            dormiu = 'dormindo' in normalizar(texto) or 'vai dormir' in normalizar(texto)
+            for _t2 in range(1):                 # UMA nova tentativa: com o Rei acordado e me vendo, cada uma custa uma rodada (-76/-84 no Dia 158)
+                if dormiu:
+                    break
+                t2, v2, c2 = ctx.cmd("cast 'sleep' rei", 1.5)
+                if c2 or 'lutando contra voce' in normalizar(t2) or (vida(v2) and vida(v2) < 200):
+                    break
+                dormiu = 'vai dormir' in normalizar(t2) or 'dormindo' in normalizar(t2)
+            if not dormiu:
+                log('o Rei nao dormiu (3 tentativas); recall')
                 ctx.recall()
                 continue
             ctx.considerar('rei', log)   # so' registra: o --rei ja' e' a autorizacao explicita do autor
-            for magia in ('curse', 'blindness'):
-                if not pode_lancar(vit):
-                    raise Perdida('vida %s abaixo de %d antes de %s' % (vida(vit), VIDA_PISO_LANCE, magia))
-                _t, v2, _c = ctx.cmd("cast '%s' rei" % magia, 3)
-                vit = v2 or vit
+            saude = ctx.cmd('look rei', 0.5)[0]
+            m_s = re.search(r'Rei Negro est. com ([^\n.]+)', saude)
+            log('  saude do Rei ao chegar: %s' % (m_s.group(1).strip() if m_s else '?'))
+            usa = [l.strip() for l in saude.splitlines() if '->' in l]
+            log('  o Rei usa: %s' % (' | '.join(usa) if usa else 'NADA (sem equipamento visivel)'))
+            # curse e blindness saem do kite de 1 raio (Dia 158): o Rei nunca revida antes do recall, entao nao ha' o que reduzir,
+            # e cada um custava ~3 s e mana por ida (o ciclo caia de ~35 s para ~85 s).
             for i in (1,):   # tatica do autor: 1 raio por ida
                 if not pode_lancar(vit):
                     raise Perdida('vida %s abaixo de %d antes do raio' % (vida(vit), VIDA_PISO_LANCE))
-                _t, vit, _c = ctx.cmd("cast 'lightning bolt' rei", 3)
+                _t, vit, _c = ctx.run("cast 'lightning bolt' rei")      # SEM espera: cada segundo aqui pode custar uma rodada do Rei
+                if not re.search(r'mortalmente ferido|morrer. logo', normalizar(_t)):
+                    ctx.run('recall')           # imediato (Dia 158: 3 s de espera antes do recall = -62, -63 e morte)
                 h = vida(vit)
-                log('  raio %d vida=%s mana=%s' % (i, h, mana(vit)))
-                if mortes('Rei') > 0:
+                barras = re.findall(r'(\{[-<>]{10}\})\s+o Rei Negro', _t)
+                dano = re.findall(r'impacto total! \[(\d+)\]', _t)
+                log('  raio %d vida=%s mana=%s dano=%s barra_do_rei=%s' % (i, h, mana(vit), dano, barras[-1] if barras else '?'))
+                # "mortalmente ferido" (barra vazia): o mob NAO luta mais e morre sozinho em instantes, SEM credito
+                # se eu for embora (aconteceu no Dia 158: recall nessa hora = Rei morto sem EXP e sem cetro). Fica e remata.
+                if re.search(r'mortalmente ferido|morrer. logo', normalizar(_t)):
+                    log('  Rei MORTALMENTE FERIDO: ficando para rematar e pegar o cetro')
+                    for _k in range(5):
+                        tk, vit, _c = ctx.cmd("cast 'lightning bolt' rei", 2)
+                        if 'esta morto' in normalizar(tk) or 'em pedacos' in normalizar(tk) or mortes('Rei') > base_mortes:
+                            break
+                    ctx.cmd('get cetro corpo', 1.5)
+                    log('  cetro: %s' % (' | '.join(l.strip() for l in ctx.cmd('inventory', 0.5)[0].splitlines() if 'etro' in l) or 'NAO PEGO'))
+                    ctx.recall()
+                    log('REI NEGRO MORTO; confira o cetro no inventario e entregue ao Bispo (give a mao)')
+                    return 0
+                if mortes('Rei') > base_mortes:
                     log('REI NEGRO MORTO; pegue o cetro a mao (get cetro corpo) e entregue ao Bispo')
                     return 0
                 if h and h <= LIMITE_VIDA + 10:

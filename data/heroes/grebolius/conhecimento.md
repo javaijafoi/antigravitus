@@ -2769,3 +2769,23 @@ Agente: DeepSeek deepseek-flash (dsh). Fonte: amostragem a cada ~1 s com `score`
 - Equipado com `hold cajado` ("segurando -> um cajado retorcido"); dano e CA não mudaram (Dano 5, CA 147).
 - Utilidade provável: **kite do Rei Negro** (§76/§84) — `sleep` nele sem gastar mana, 3 tentativas por
   compra. Testar só com o Rei dormindo e vida cheia.
+
+## 83. O Rei Negro MORREU por kite de 1 raio (Dia 159, 2026-10-21): o método e o que faltou
+
+Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: session_live_dia159 (linha ~94488).
+
+- **O método que funciona:** `xadrez_cascata.py --etapa rei --rei --idas N`: por ida, `sleep` no Rei (entrando em E8 invisível, no mesmo envio do passo), **1 `lightning bolt` e `recall` IMEDIATO** (`ctx.run`, sem espera). Vida da personagem **211 em todas as idas**. Dano ~40 a 100 por raio (média ~70). Ritmo de ~25 s por ida com descanso até 130 de mana (`sleep` regenera mais que `rest`). ~30 idas (~15 a 20 min) levam a barra a `{----------}` apesar da regeneração dele.
+- **Ler a barra:** `{------>>>>}` = 10 segmentos, `-` perdido, `>` restante. Barra vazia + mensagem *"O Rei Negro está mortalmente ferido e morrerá logo"* = ele **não luta mais** e morre sozinho em instantes; ir embora nessa hora = **morte SEM crédito, EXP nem espólio** (aconteceu antes).
+- **Morte da personagem (Dia 159):** `ctx.cmd` esperava 3 s depois do raio antes do `recall`; com o Rei acordado isso custou duas rodadas (-62, -63) e o golpe final. Missão cancelada (-4.680 EXP). **Nunca esperar entre o raio e o recall.** Tentativas extras de `sleep` com o Rei acordado também custam rodadas (-76/-84).
+- **Depois da morte:** a personagem renasce no Templo **com o equipamento no inventário, desvestido** (vida 188 e mana 390 até vestir); `wear all` veste tudo; empunhar com `wield ferro` e segurar o cajado com `hold cajado`. A vida máxima volta (211) ao vestir. Gastei ~25 min para refazer a cascata (peões precisam de 2 a 4 varreduras para chegar a 9 mortes porque reaparecem aos poucos).
+- **Morte do Rei pelo meu raio:** *"Seu raio transforma o Rei Negro em pedaços! O Rei Negro está morto!"*, **+36.846 EXP, nível 34 (+3 vida, +10 mana, +2 mov), aprendi `locate object`** (ainda exige o espelho). Autoloot pegou **2×2.000 moedas**; o corpo ficou **vazio** ("Nada") e o `get cetro corpo` respondeu "Não há nenhum cetro no corpo". A Xeque-mate segue em *"Você deve entregar objeto ao personagem"*.
+- **Hipótese para o cetro ausente:** no mundo-base cada peça nasce equipada com o seu item (zona 36, mobs 3600-3611); a carga de um objeto limitado não repete se uma cópia já existe no mundo. O primeiro Rei morreu sangrando, longe de mim, e o cetro dele pode ter ficado perdido. Próximo teste: com o Rei vivo e dormindo, `look rei` mostra o que ele usa (o Bispo Branco aparece "segurando -> o Cetro do Bispo Branco").
+
+## 84. O Rei nasce sem cetro: o bloqueio da Xeque-mate muda de natureza (Dia 159, 2026-10-21)
+
+Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: evidence/dia159-rei-morto.json.
+
+- **Fato:** `look rei` (Rei dormindo) não lista equipamento: dois reis seguidos, "o Rei usa: NADA". O corpo do que eu matei só tinha ouro (2x2.000, autoloot) e as tesourarias do tabuleiro (docs/circlemud §96) guardam ouro e chaves, não cetro. Os bispos, em contraste, nascem com o cetro (o Bispo Branco "segura o Cetro do Bispo Branco").
+- **Hipótese forte:** o Cetro do Rei Negro é item único (limite de 1 no mundo): se uma cópia já existe (com jogador, em loja, ou largada), o reset não carrega outra no Rei. O Rei que matei por kite não tinha como largar o que não tinha.
+- **Como saber:** `locate object cetro` lista onde há cetros e quem os usa; a magia já está aprendida (nível 34) mas exige o espelho localizador de Albernathy (Silverthorne, rota ausente do jogo; compra pede o autor pela diretiva dos 5%). Alternativas: um espelho "encontrado pelo mundo"; ou perguntar ao autor se há conhecimento do cetro com outro jogador.
+- **O método do kite e as armadilhas dele** estão no §83; as falhas do módulo corrigidas neste dia: recall imediato, uma só nova tentativa de sleep, `wake;stand` no começo, contagem de mortes por execução, `ir_h5` com nova tentativa, descanso por `sleep`.

@@ -9,8 +9,8 @@
 * **Raça / Aparência Narrativa:** Mulher goblin; aventureira sem véu
 * **Raça Mecânica no MUD:** Elfo
 * **Classe Mecânica no MUD:** Mago (Magic-User)
-* **Grau / Nível Atual:** **33**
-* **Alinhamento Moral:** 486 (Bom)
+* **Grau / Nível Atual:** **34**
+* **Alinhamento Moral:** 512 (Bom)
 * **Localização Atual:** O Templo de Midgaard (último registro: Dia 157)
 * **Acampamento Registrado:** O Templo de Midgaard
 * **Santuário de Referência:** O Panteao dos Centenarios
@@ -20,13 +20,13 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 ## ✦ Status Vitais
 | Recurso | Atual | Máximo | Porcentagem |
 | :--- | :---: | :---: | :---: |
-| **Pontos de Vida (HP)** | 211 | 211 | 100% |
-| **Pontos de Mana (MP)** | 500 | 500 | 100% |
+| **Pontos de Vida (HP)** | 214 | 214 | 100% |
+| **Pontos de Mana (MP)** | 405 | 510 | 79% |
 | **Estamina / Movimento (MV)** | 146 | 146 | 100% |
 
-* **Experiência Acumulada:** **8.575.839 EXP**
-* **Experiência Necessária p/ Grau 34:** **424.161 EXP** (Meta: 9.000.000 EXP)
-* **Ouro Líquido:** **13.922 moedas de ouro** (valor documental)
+* **Experiência Acumulada:** **9.015.232 EXP**
+* **Experiência Necessária p/ Grau 35:** **984.768 EXP** (Meta: 10.000.000 EXP)
+* **Ouro Líquido:** **27.186 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 11
@@ -63,7 +63,7 @@ Dia 157: 121 sem a magia armor (Cruz Ansada no lugar da coleira) e 157 com ela; 
 * **Todo Dia um Pouco — Concluída:** Missão diária do servidor Devil's Bob.
   * Próximo passo: Concluída integralmente no Dia 156. Baú de recompensas surpresa recebido e aberto, entregando um rosário sagrado ao herói.
 * **Xeque-mate — Bloqueada:** Autoquest de nível 30+, iniciada com o Bispo Branco no Grande Tabuleiro de Xadrez.
-  * Próximo passo: Antes de refazer a cascata (~1h30): decidir a tática do Rei com o autor (plano 040 §5). Se refizer: Bispo Branco em F1 (say sim x2), cascata por xadrez_cascata.py; bispos e cavalos sem blindness (acorda), só curse/poison.
+  * Próximo passo: Achar onde está o Cetro do Rei Negro: `cast 'locate object' cetro` (sei a magia desde o nível 34) exige o espelho localizador de Albernathy (Silverthorne, rota desconhecida; compra pede o autor). Se o cetro estiver com um mob, matar; se com jogador, decisão do autor. Refazer a cascata custa ~25 min e o Rei cai em ~30 idas.
 * **Ajuda Mágica — Bloqueada:** Ajudar Lemin a reconstruir o livro de magias de Merlin.
   * Próximo passo: Primeiro achar o tomo (SPELLBOOK/livro de verdade): Loja do Escriba e Albernathy em Silverthorne (rota desconhecida), livro de enigmas da Pirâmide (zona 53), Torre da Magia (help mapa 29). Só então reabrir com Lemin (~6 min: look lemin, say sim, esperar a pergunta, say Merlin, say sim, say sim).
 
@@ -136,7 +136,7 @@ Recomeçar a Xeque-mate pelo Bispo Branco e rodar a cascata pelo xadrez_cascata.
 * Testar o módulo xadrez_cascata.py ao vivo em uma etapa curta antes de confiar nele.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessão de 2026-10-21 (Dia 158) de DeepSeek deepseek-flash (dsh) — 4ª do dia: teste de ciclo de combate na Rainha Negra (D8). Medido: ela ataca ao entrar; `sleep` não funciona em combate; andar em combate é bloqueado ("muito ocupado"); `recall` sai em 0,7 s e custa ~552 EXP; barra cheia em ~20 s depois do recall. Fechada no Templo com save e sleep confirmados, sem quit. Ouro 13.922; EXP 8.575.839; HP 211/211..
+Fonte do estado: Sessão de 2026-10-21 de Claude Sonnet 5.5 (claude-sonnet-5-5) (evidence/dia159-rei-morto.json): cascata do Xeque-mate refeita duas vezes; Rei Negro MORTO por kite de 1 raio com recall imediato (+36.846 EXP, nível 34, locate object aprendido), mas sem cetro (o Rei nasce sem equipamento). Uma morte da personagem (recall com 3 s de espera). Fechada com save e sleep confirmados no Templo, sem quit; a autoquest cai no fechamento. Ouro 27.186 (21.486 banco + 5.700 mão); EXP 9.015.232; alinhamento 512..
 * A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.
 * O colar com pedra purpura pertence a outro dono: o servidor recusa o uso. Nenhum comerciante testado o compra.
 * Bainha de Excalibur exige nivel 85 (vista na Sala de Doacoes, nao pode ser carregada com a carga atual). Scutum de Carvalho exige nivel 35.

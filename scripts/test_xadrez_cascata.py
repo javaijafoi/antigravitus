@@ -168,6 +168,13 @@ class TestCaminho(unittest.TestCase):
         tab.passo('w')
         self.assertEqual(tab.casa, 'F7')
 
+    def test_ocupado_espera_o_combate_fechar(self):
+        f7 = G7.replace('mármore preto', 'mármore branco').replace('Uma Casa Preta', 'Uma Casa Branca')
+        respostas = iter([('Não dá! Você está muito ocupado, lutando!', {}, True), (f7, {}, False)])
+        tab = xc.Tabuleiro('G7', lambda d: next(respostas))
+        tab.passo('w')
+        self.assertEqual(tab.casa, 'F7')
+
     def test_recusa_levanta(self):
         tab = xc.Tabuleiro('F2', lambda d: ('Nah... você está muito relaxado..', {}, False))
         with self.assertRaises(xc.Perdida):

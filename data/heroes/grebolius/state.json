@@ -5,25 +5,25 @@
     "day": 157,
     "verification": "live",
     "live_verified": true,
-    "source": "Sessão de 2026-10-21 (Dia 158) de DeepSeek deepseek-flash (dsh) — 4ª do dia: teste de ciclo de combate na Rainha Negra (D8). Medido: ela ataca ao entrar; `sleep` não funciona em combate; andar em combate é bloqueado (\"muito ocupado\"); `recall` sai em 0,7 s e custa ~552 EXP; barra cheia em ~20 s depois do recall. Fechada no Templo com save e sleep confirmados, sem quit. Ouro 13.922; EXP 8.575.839; HP 211/211."
+    "source": "Sessão de 2026-10-21 de Claude Sonnet 5.5 (claude-sonnet-5-5) (evidence/dia159-rei-morto.json): cascata do Xeque-mate refeita duas vezes; Rei Negro MORTO por kite de 1 raio com recall imediato (+36.846 EXP, nível 34, locate object aprendido), mas sem cetro (o Rei nasce sem equipamento). Uma morte da personagem (recall com 3 s de espera). Fechada com save e sleep confirmados no Templo, sem quit; a autoquest cai no fechamento. Ouro 27.186 (21.486 banco + 5.700 mão); EXP 9.015.232; alinhamento 512."
   },
-  "level": 33,
+  "level": 34,
   "mechanical_race": "Elfo",
   "mechanical_class": "Mago (Magic-User)",
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
   "alignment": {
-    "value": 486,
+    "value": 512,
     "label": "Bom"
   },
   "vitals": {
     "hp": {
-      "current": 211,
-      "max": 211
+      "current": 214,
+      "max": 214
     },
     "mana": {
-      "current": 500,
-      "max": 500
+      "current": 405,
+      "max": 510
     },
     "mv": {
       "current": 146,
@@ -31,10 +31,10 @@
     }
   },
   "experience": {
-    "current": 8575839,
-    "next_level": 9000000
+    "current": 9015232,
+    "next_level": 10000000
   },
-  "gold": 13922,
+  "gold": 27186,
   "attributes": {
     "STR": 11,
     "DEX": 17,

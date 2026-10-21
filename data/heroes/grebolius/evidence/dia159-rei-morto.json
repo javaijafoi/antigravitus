@@ -1,0 +1,25 @@
+{
+  "hero_id": "grebolius",
+  "day": 157,
+  "agent": "Claude Sonnet 5.5 (claude-sonnet-5-5)",
+  "via": "automato",
+  "recorded_on": "2026-10-21",
+  "source_kind": "sessao_ao_vivo",
+  "source": "automato/runtime/session_live_*.log do Dia 159 e xadrez_cascata.py (kite_rei, etapas).",
+  "findings": {
+    "cascata": "Duas cascatas completas (peões 9 mortes, bispos, cavalos, torres, Rainha); a segunda por script encadeado (cadeia.ps1 no scratchpad) em ~25 min.",
+    "kite": "Rei morto por kite de 1 raio: sleep, raio e recall imediato; ~30 idas; vida 211 em todas; barra {----------} e morte pelo raio (+36.846 EXP, nível 34, locate object).",
+    "erros_do_modulo": "Esperar 3 s antes do recall matou a personagem (-62, -63); retry de sleep com o Rei acordado custou -76/-84; sleep do descanso deixava a personagem dormindo; contagem de mortes do Rei no log inteiro; sinal de combate velho pós-recall.",
+    "sem_cetro": "look rei: \"o Rei usa: NADA\" em dois reis; corpo vazio (\"Nada\"), só 2x2.000 de ouro (autoloot); get cetro corpo: \"Não há nenhum cetro\".",
+    "locate_object": "Aprendida no nível 34; exige conjurar a partir de um espelho localizador (Albernathy, Silverthorne).",
+    "morte": "Uma morte (13 no score): equipamento volta ao inventário desvestido; wear all, wield ferro, hold cajado."
+  },
+  "state_end": {
+    "location": "O Templo de Midgaard",
+    "level": 34,
+    "hp": "214/214",
+    "mana": "405/510",
+    "gold_total": 27186,
+    "closing": "save_confirmed=True, sleep_confirmed=True; sem quit; Xeque-mate cai no fechamento"
+  }
+}
