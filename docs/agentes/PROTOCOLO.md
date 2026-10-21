@@ -61,7 +61,7 @@ função, melhore a existente.
 | 1 | No jogo: Templo (`recall`), comer pão, beber do cantil, `_CLOSE sleep` (faz stand + save + sleep com confirmação) | o driver devolve `save_confirmed` e `sleep_confirmed`. **Nunca `quit`** |
 | 2 | Grave a evidência com `"agent": "<modelo/versão>"` | — |
 | 3 | Atualize `state.json`, `missoes.json`, `mapa.json`, `conhecimento.md` com a origem; crônica se houve fato novo | — |
-| 4 | `python scripts/encerrar.py --agente "<modelo/versão>"` | ele roda sync/check/auditor/devolutiva e **cria o esqueleto do próximo plano** com o estado do `state.json` |
+| 4 | `python scripts/encerrar.py --agente "<modelo/versão>"` | ele roda `sync_hero --check`, `check_project` e o auditor, e **cria o esqueleto do próximo plano** com o estado do `state.json` |
 | 5 | Preencha o esqueleto: §1, §3–§6, §8. Regras do plano v2 ([LEIA.md](../../data/heroes/grebolius/planos/LEIA.md)) | o plano **se sustenta sozinho** e o §5 é **uma ação executável** |
 | 6 | `python scripts/encerrar.py --agente "<modelo/versão>" --fechar --tipo <chefe\|moagem\|expedicao\|mapeamento\|missao\|outro>` | 0 FALHA; o boletim da sessão foi gravado, com as métricas do transcript e o tipo de conteúdo |
 | 7 | Bloco no [registro de evolução](registro_de_evolucao.md) se mexeu na ferramenta; commit com caminhos explícitos e `[agente: …]` | **sem push** se não houve pedido ([AGENTS §12](../../AGENTS.md)) |

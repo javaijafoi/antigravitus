@@ -10,9 +10,11 @@
 > 2. [`docs/agentes/PROTOCOLO.md`](docs/agentes/PROTOCOLO.md) — a sessão inteira em comandos.
 > 3. `data/heroes/<id>/diretiva_de_jogo.md` §19–§26 — as regras que custaram caro.
 >
-> **Encerrar são dois comandos:** `python scripts/encerrar.py --agente "<modelo/versão>"` e
-> `python scripts/devolutiva.py`. O `devolutiva.py` já roda `check_project.py`, `verificar.py` e
-> — só se algum `.py` mudou — a suíte. **Não rode esses três de novo à parte.**
+> **O encerramento é UM comando:** `python scripts/encerrar.py --agente "<modelo/versão>" --fechar
+> --avanco sim|nao --tipo <conteúdo>`. Ele roda `sync_hero`, `check_project`, o auditor e o
+> `devolutiva.py` (que, por sua vez, já roda `check_project`, `verificar` e — só se algum `.py` mudou
+> — a suíte), e grava o boletim. **Não rode nada disso de novo à parte.**
+> Rode `python scripts/devolutiva.py` sozinho apenas para investigar uma falha antes de refechar.
 >
 > Se `python` abrir a Microsoft Store, rode **uma vez**
 > `powershell -ExecutionPolicy Bypass -File scripts\configurar_python.ps1 -Aplicar` e reabra o terminal.
@@ -148,7 +150,7 @@ repetir. Modelo em [`LEIA.md`](data/heroes/grebolius/planos/LEIA.md). Para retom
 
 **A devolutiva técnica (§8 do plano) é conferida contra o `git diff`.** Uma descoberta que não virou
 artefato não existe para o próximo. `PENDENTE` é resposta honesta; prometer mapa e não mexer no
-`mapa.json` é falha. Rode `python scripts/devolutiva.py` e **resolva as FALHAS**.
+`mapa.json` é falha. Quem reprova é o `devolutiva.py`, que o `encerrar.py --fechar` já roda.
 
 Formato do bloco no livro-razão (append-only; não edite bloco alheio):
 
@@ -204,9 +206,10 @@ A versão executável é o [PROTOCOLO.md](docs/agentes/PROTOCOLO.md). Se divergi
 
 **Antes de encerrar**
 
-- [ ] `python scripts/encerrar.py --agente "<modelo/versão>"`.
-- [ ] **`python scripts/devolutiva.py` com 0 falhas** (avisos lidos, não silenciados).
-      Ele já cobre `check_project`, `verificar` e a suíte — **não repita os três à parte**.
+- [ ] `python scripts/encerrar.py --agente "<modelo/versão>"` (cria o esqueleto do próximo plano).
+- [ ] Preencha o plano (§1, §3–§6, §8) e feche:
+      `--fechar --avanco sim|nao --tipo <chefe|moagem|expedicao|mapeamento|missao|outro>`, com **0 falhas**.
+      Esse comando já roda `sync_hero`, `check_project`, o auditor e o `devolutiva.py`: **não repita à parte**.
 - [ ] Evidência gravada, com `agent` e origem.
 - [ ] **Plano seguinte criado**, sem editar o anterior.
 - [ ] `state.json`, missões, mapa e conhecimento atualizados com a origem de cada mudança.

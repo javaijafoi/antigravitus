@@ -409,6 +409,12 @@
       "arquivo": "scripts/quality_run.py",
       "desde": "2026-10-21",
       "regra": "radar de uso: USO_ANOMALO quando o modo da diretiva 26 é contradito; silêncio dormindo ou com rotina recente"
+    },
+    {
+      "id": "modos.batem_com_a_diretiva",
+      "arquivo": "scripts/test_mandabala.py",
+      "desde": "2026-10-21",
+      "regra": "a tabela MODOS impressa na abertura tem de ser igual à tabela da diretiva §26, na mesma ordem"
     }
   ]
 }

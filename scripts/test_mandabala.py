@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Testes do scripts/mandabala.py — descoberta do plano vigente e ordem de leitura."""
 import shutil
+import re
 import sys
 import tempfile
 import unittest
@@ -10,6 +11,8 @@ from unittest import mock
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import mandabala  # noqa: E402
+
+RAIZ = Path(__file__).resolve().parents[1]
 
 
 PLANO_MODELO = """\
@@ -305,6 +308,27 @@ class TestRepositorioReal(unittest.TestCase):
         texto = leia.read_text(encoding="utf-8")
         self.assertIn("append-only", texto)
         self.assertIn("Nunca edite um plano antigo", texto)
+
+
+class TestModosBatemComADiretiva(unittest.TestCase):
+    """modos.batem_com_a_diretiva: a tabela impressa pelo mandabala não pode divergir da §26.
+
+    `MODOS` é uma cópia da tabela da diretiva para caber na abertura. Cópia sem
+    check envelhece — foi assim que o projeto acumulou regra que ninguém seguia.
+    Este teste é o check: mudou a §26, o `python -B -m unittest` reprova.
+    """
+
+    def test_nomes_dos_modos_iguais_aos_da_diretiva(self):
+        caminho = RAIZ / "data" / "heroes" / "grebolius" / "diretiva_de_jogo.md"
+        if not caminho.is_file():
+            self.skipTest("diretiva_de_jogo.md não existe")
+        texto = caminho.read_text(encoding="utf-8")
+        i = texto.find("## 26.")
+        self.assertGreater(i, 0, "a diretiva perdeu a seção §26")
+        fim = texto.find("\n## ", i + 5)
+        trecho = texto[i:fim if fim > 0 else len(texto)]
+        na_diretiva = re.findall(r"^\|\s*\*\*([^*|]+)\*\*\s*\|", trecho, re.M)
+        self.assertEqual([m[0] for m in mandabala.MODOS], na_diretiva)
 
 
 if __name__ == "__main__":

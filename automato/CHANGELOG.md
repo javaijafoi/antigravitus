@@ -4,6 +4,15 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.7.16 — Dia 158 · Coesão: um comando de fechamento e a tabela de modos presa à diretiva (DeepSeek deepseek-flash)
+
+Origem: auditoria de coesão pedida pelo autor. Duas contradições reais, as duas nascidas do que eu mesmo escrevi antes:
+
+- **`AGENTS.md` dizia "encerrar são dois comandos"** (`encerrar.py` e `devolutiva.py`), mas o `encerrar.py --fechar` **já roda** o `devolutiva.py` internamente. O agente pagaria 18 s e uma suíte de novo por nada. Agora o fechamento é **um** comando; o `devolutiva.py` sozinho só para investigar uma falha. O checklist e o §6 foram alinhados.
+- **`PROTOCOLO.md` §3 dizia que o `encerrar.py` (fase de preparo, sem `--fechar`) rodava o `devolutiva.py`.** Ele não roda: nessa fase são `sync_hero --check`, `check_project` e o auditor.
+- **`mandabala.MODOS` é cópia da tabela da §26.** Cópia sem check envelhece — foi assim que o projeto acumulou regra sem verificação. Novo teste `modos.batem_com_a_diretiva` lê a §26 e compara nome a nome, na ordem; mudar a diretiva sem mudar o `MODOS` reprova a suíte.
+- **Testes:** `test_mandabala.py` (+1). Suíte: 349 OK. 1 ID novo na catraca.
+
 ## v1.7.15 — Dia 158 · O radar de uso: a ferramenta existe e não está sendo usada (DeepSeek deepseek-flash)
 
 Origem: proposta do autor — "deveria ter um `quality_run.py` vendo se o número de vezes que os scripts rodaram parece normal… e perguntar se ele leu e está fazendo de acordo com a diretiva". Não existia nada assim: o `vigia.py` olha o **estado** da personagem, o `auditar_sessao.py` olha o **uso depois** da sessão, e nada olhava o uso **durante**. Foi por isso que 4 dias passaram sem rotina supervisionada com o vigia respondendo OK.
