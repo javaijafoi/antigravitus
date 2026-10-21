@@ -1189,3 +1189,9 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Por que:** desde o commit anterior o `mapa.html` usa o mapa em grade (`js/mapa_grade.js`) e não tem mais `#map-canvas-wrap`; o código estava inerte.
 - **Como foi verificado:** `node --check`; servidor local com Crônicas (e troca de temporada), Ficha, Mapa (clique e troca de personagem), Sobre e Abates, sem erro de script (só os 404 já existentes de `favicon.ico` e de `antigravitus/state.json`/`temporadas.json`); suíte offline.
 - **Custo:** nenhum. As regras do grafo antigo no `css/style.css` (`.map-canvas-wrap`, `.map-node-*`, inspetor e tabela) também ficaram sem uso; dá para limpar num passo próprio.
+
+### 2026-10-20 · Dia 157, CSS do mapa antigo removido · Claude Opus 5.5 (claude-opus-5-5)
+- **Mudou:** `css/style.css` (2.495 → 2.029 linhas): saíram 79 regras do grafo antigo, sem uso em nenhum HTML ou JS (`.map-canvas-wrap`, `.map-node-*`, `.map-edge-line`, `.map-legend-box`/`.legend-*`, inspetor `.inspector-*`/`.exit-btn`/`.npc-pill`, tabela `.tactical-*`, `.map-layer-notice`, `.map-layers-bar`, `.map-toolbar`, `.map-select-filter`, `@keyframes sanctuaryPulse`).
+- **Como foi feito:** um filtro por regra, só na região do mapa antigo: tira o seletor quando alguma classe dele não aparece em nenhum `*.html`, `js/*.js` nem no template do mapa avulso. Ficaram as regras que o mapa em grade reaproveita (`.layer-tab-btn`, `.map-search-*`, `.map-btn-tool`, `.map-ctrl-btn`, `.map-floating-controls`) e as de status (`.load-status`, `.document-status`, `.audio-error`).
+- **Como foi verificado:** chaves balanceadas; estilo calculado das abas, da busca e do zoom no mapa; Crônicas, Ficha, Mapa e Abates no navegador, sem erro de script; suíte offline.
+- **Fora deste passo:** outras classes sem uso no `style.css` que não são do mapa (ciclos, dias, dock etc.) ficaram como estavam.
