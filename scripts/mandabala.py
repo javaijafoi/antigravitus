@@ -443,6 +443,29 @@ def _par(vitais, chave):
     return (atual, maximo) if isinstance(atual, int) and isinstance(maximo, int) else (None, None)
 
 
+def subtramas_abertas(heroi):
+    """Subtramas do capítulo em curso ainda não concluídas. ID na catraca: subtramas_abertas.
+
+    Existe porque o roteiro de uma subtrama vive num arquivo à parte e o agente abre a
+    sessão lendo o PLANO — sem esta linha, a subtrama não entra na fila do dia.
+    """
+    arq = HEROES_DIR / heroi / "capitulos.json"
+    if not arq.is_file():
+        return []
+    try:
+        dados = json.loads(arq.read_text(encoding="utf-8", errors="replace"))
+    except ValueError:
+        return []
+    saida = []
+    for cap in dados.get("chapters") or []:
+        if not isinstance(cap, dict) or cap.get("status") != "em_curso":
+            continue
+        for s in cap.get("subplots") or []:
+            if isinstance(s, dict) and s.get("status") != "concluido":
+                saida.append((cap.get("id"), s))
+    return sorted(saida, key=lambda par: (par[1].get("order") or 99))
+
+
 def pre_voo(heroi):
     """O estado REGISTRADO, a última rotina e a tabela de modos (diretiva §26).
 
@@ -493,6 +516,12 @@ def pre_voo(heroi):
     for nome, intencao, dono in MODOS:
         linhas.append(f"    {nome:<9} {intencao:<42} {dono}")
     linhas.append("  Se a intenção não cabe em nenhum modo: pare e proponha ao autor, com número.")
+
+    subtramas = subtramas_abertas(heroi)
+    if subtramas:
+        linhas += ["", "  SUBTRAMAS ABERTAS — vêm ANTES do objetivo do plano (ordem do autor):"]
+        for cid, s in subtramas:
+            linhas.append(f"    cap {cid} · {s.get('title')} — {s.get('note')}")
     return "\n".join(linhas)
 
 

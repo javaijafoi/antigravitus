@@ -1265,3 +1265,10 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Como foi verificado:** suÃ­te 368 OK; `check_project.py` 0 erros. Os 2 testes novos usam relÃ³gio falso e um falso driver: fome no meio do sono acorda e come; vida parada em duas fatias encerra o sono.
 - **Custo:** o `dormir` agora faz uma leitura de IPC a cada 2 min (barato, nÃ£o manda comando ao MUD). Se o driver estiver fora do ar, `do_driver()` devolve None e o sono segue atÃ© o teto de 45 min sem observaÃ§Ã£o â€” degradaÃ§Ã£o aceitÃ¡vel, mas nÃ£o Ã© vigilÃ¢ncia.
 - **PrÃ³ximo:** medir a janela real de saciedade numa sessÃ£o (o `conhecimento.md` ainda trata "ticks de 45â€“60 s" como hipÃ³tese). Com o nÃºmero medido, dÃ¡ para encurtar o teto de 45 min.
+
+### 2026-10-21 Â· Dia 158 Â· DeepSeek deepseek-flash (dsh)
+- **Mudou:** `data/heroes/grebolius/capitulos.json` (capÃ­tulo 12 com `subplots[]`: `fonte-de-cura`, `order: 1`), `scripts/mandabala.py` (`subtramas_abertas`, impresso no prÃ©-voo), `scripts/test_mandabala.py` (+2), `docs/agentes/catraca.json` (+1), `data/heroes/grebolius/observacoes/roteiro-fonte-de-cura-2026-10-21.md` (novo), `automato/CHANGELOG.md` v1.7.20.
+- **Por quÃª:** ordem do autor: a subtrama "em busca de uma fonte de cura" vem antes das missÃµes do capÃ­tulo 12. O roteiro vive em arquivo e a abertura sÃ³ mostrava o plano â€” sem uma linha no prÃ©-voo, ninguÃ©m executaria a subtrama primeiro.
+- **Como foi verificado:** suÃ­te 370 OK; `check_project.py` 0 erros; `mandabala.py` imprime "SUBTRAMAS ABERTAS â€” vÃªm ANTES do objetivo do plano" com o cap 12 e o caminho do roteiro.
+- **Custo:** subtrama nova exige uma linha em `capitulos.json`; se o `status` nÃ£o for mudado para `concluido`, ela continua aparecendo na abertura para sempre.
+- **PrÃ³ximo:** o roteiro marca o que Ã© hipÃ³tese (saturaÃ§Ã£o 24, tick, comandos inexistentes) e o que Ã© medido; a sessÃ£o que o executar deve preencher a tabela de registro em `maquina/verificacoes.md`.

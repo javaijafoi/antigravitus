@@ -445,6 +445,12 @@
       "arquivo": "scripts/devolutiva.py",
       "desde": "2026-10-21",
       "regra": "capítulo fechado por bypass do autor gera aviso no fechamento — a crônica não trata como cumprimento normal"
+    },
+    {
+      "id": "subtramas_abertas",
+      "arquivo": "scripts/mandabala.py",
+      "desde": "2026-10-21",
+      "regra": "a abertura lista as subtramas abertas do capítulo em curso (subplots[]), antes do objetivo — o roteiro vive em arquivo e sem essa linha não entra na fila do dia"
     }
   ]
 }

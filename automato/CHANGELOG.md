@@ -4,6 +4,15 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.7.20 — Dia 158 · Subtramas do capítulo entram na abertura (DeepSeek deepseek-flash)
+
+Origem: o autor declarou uma subtrama do capítulo 12 — *"em busca de uma fonte de cura"* — que vem **antes** das missões. O roteiro é um arquivo à parte, e o agente abre a sessão lendo o **plano**: sem uma linha na abertura, a subtrama não entrava na fila do dia.
+
+- **`capitulos.json` → capítulo 12 → `subplots[]`:** `{id, title, status, order, note}`, com `fonte-de-cura` em `order: 1`. Subtrama **não** é critério de fecho: os `closing_criteria` continuam Xeque-mate e Ajuda Mágica — a subtrama é trilha paralela, não condição de fechamento.
+- **`mandabala.subtramas_abertas(heroi)`** (`subtramas_abertas`): lista as subtramas não concluídas do capítulo `em_curso`, em ordem, e o `pre_voo()` as imprime **antes** do objetivo, rotuladas "vêm ANTES do objetivo do plano (ordem do autor)".
+- **Roteiro:** `data/heroes/grebolius/observacoes/roteiro-fonte-de-cura-2026-10-21.md` — os blocos A–E, a tabela de registro e o controle negativo, com a autoria declarada e a marcação do que é **hipótese** (saturação, tick, comandos inexistentes) e do que é medido.
+- **Testes:** `test_mandabala.py` (+2): ordem por `order`, ignora concluída e capítulo fechado, e não explode sem `capitulos.json`. Suíte: 370 OK. 1 ID novo na catraca.
+
 ## v1.7.19 — Dia 158 · O sono passa a consultar o vigia em vez de dormir cego (DeepSeek deepseek-flash)
 
 Origem: o autor apontou o desenho — *"tem um py que olha o vitals e deveria resolver isso"*. Ele tem: o `vigia.do_driver()` lê fome, sede e vida pelo IPC **sem mandar comando ao MUD**. O defeito era que o `dormir()` da v1.7.12 chamava `time.sleep()` e ficava **cego** justamente durante o sono: passada a saciedade, os minutos finais eram dormidos com fome, e fome tira ~3 hp/tick (`-3hp, -6mn`, medido) — o fim do sono podia ter saldo negativo.

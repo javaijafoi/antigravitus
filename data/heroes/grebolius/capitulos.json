@@ -1494,6 +1494,15 @@
       "kind": "missao",
       "status": "em_curso",
       "goal": "Concluir a autoquest Ajuda Mágica com Lemin em Notre Dame/Lyon, registrando as etapas e a confirmação do servidor. Reconhecer e mapear a rota; Xeque-mate é objetivo opcional condicionado à viabilidade tática.",
+      "subplots": [
+        {
+          "id": "fonte-de-cura",
+          "title": "Em busca de uma fonte de cura",
+          "status": "aberto",
+          "order": 1,
+          "note": "Sondagem barata de servicos e itens de cura em Midgaard, Jareth e Lyon. Roteiro: observacoes/roteiro-fonte-de-cura-2026-10-21.md. Vem ANTES das missoes do capitulo (ordem do autor, 2026-10-21)."
+        }
+      ],
       "closing_criteria": [
         {
           "id": "xeque-mate",

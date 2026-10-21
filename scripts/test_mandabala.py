@@ -331,5 +331,32 @@ class TestModosBatemComADiretiva(unittest.TestCase):
         self.assertEqual([m[0] for m in mandabala.MODOS], na_diretiva)
 
 
+class TestSubtramasAbertas(unittest.TestCase):
+    """subtramas_abertas: o roteiro da subtrama tem de aparecer na abertura (ID: subtramas_abertas)."""
+
+    def test_lista_em_ordem_e_ignora_concluida(self):
+        import json
+        import tempfile
+        with tempfile.TemporaryDirectory() as temp:
+            raiz = Path(temp)
+            hero = raiz / "heroi_teste"
+            hero.mkdir()
+            (hero / "capitulos.json").write_text(json.dumps({"chapters": [
+                {"id": 11, "status": "concluido", "subplots": [{"id": "x", "status": "aberto"}]},
+                {"id": 12, "status": "em_curso", "subplots": [
+                    {"id": "b", "title": "Segunda", "status": "aberto", "order": 2},
+                    {"id": "a", "title": "Primeira", "status": "aberto", "order": 1},
+                    {"id": "c", "title": "Feita", "status": "concluido", "order": 3},
+                ]},
+            ]}), encoding="utf-8")
+            with mock.patch.object(mandabala, "HEROES_DIR", raiz):
+                achados = mandabala.subtramas_abertas("heroi_teste")
+        self.assertEqual([s["id"] for _, s in achados], ["a", "b"])
+
+    def test_sem_capitulos_nao_explode(self):
+        with mock.patch.object(mandabala, "HEROES_DIR", Path("nao_existe")):
+            self.assertEqual(mandabala.subtramas_abertas("ninguem"), [])
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
