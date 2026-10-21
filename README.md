@@ -4,7 +4,7 @@ Diário de roleplay e compêndio de múltiplos personagens em Devil's Bob MUD (`
 
 ## Temporadas e capítulos
 
-A obra de cada herói é dividida em **temporadas**. A **Season 01** é narrada por **dias** (`posts.json` + `ciclos.json`) e está encerrada no Dia 100. A partir da **Season 02** a narrativa passa a ser por **capítulos**: cada capítulo tem um objetivo verificável, pode durar quantos dias forem necessários e **não fecha quando se dorme** — fecha quando a meta é cumprida. Capítulos são agrupados de dez em dez em **tomos**; o Tomo I cobre os capítulos 0 a 10, começando pelo Prólogo (capítulo 0).
+A obra de cada herói é dividida em **temporadas**. A **Season 01** foi narrada por **dias** (`posts.json` + `ciclos.json`) e está encerrada no Dia 100; esses cem dias ficam preservados como **S01 — Legacy**, e a Temporada 1 do site passou a ser o mesmo período recontado num tomo de dez capítulos (`capitulos_s01.json`), com o resumo de cada dia embaixo. A partir da **Season 02** a narrativa passa a ser por **capítulos**: cada capítulo tem um objetivo verificável, pode durar quantos dias forem necessários e **não fecha quando se dorme** — fecha quando a meta é cumprida. Capítulos são agrupados de dez em dez em **tomos**; o Tomo I cobre os capítulos 0 a 10, começando pelo Prólogo (capítulo 0).
 
 Ferramentas: `data/heroes/<id>/temporadas.json` (catálogo), `data/heroes/<id>/capitulos.json` (tomos e capítulos) e [add_chapter.py](add_chapter.py). O método está em [docs/season_capitulos.md](docs/season_capitulos.md) e na skill [mud-capitulo](skills/mud-capitulo/SKILL.md). O sono e o `save` encerram a **sessão**; a publicação é do **capítulo**.
 

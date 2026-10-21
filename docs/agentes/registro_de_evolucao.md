@@ -567,6 +567,13 @@ não foi a minha.
   `publish_daily.py` varre não rastreados (§10), o que arrastaria o trabalho da outra sessão para o meu
   commit.
 
+### 2026-10-21 · — · Claude Opus 5.5 (claude-opus-5-5)
+- **Mudou:** a Season 01 da Grebolius ganhou uma versão em tomo. `data/heroes/grebolius/capitulos_s01.json` (novo): Tomo I com 10 capítulos por arco (Dias 1–10, 11–13, 14–20, 21–26, 27–31, 32–40, 41–59, 60–70, 71–81, 82–100), texto reescrito em primeira pessoa e uma `part` por dia com o resumo. `temporadas.json`: `s01` passa a ser o tomo (`rewrite_of: s01-legacy`) e os cem dias originais viram `s01-legacy`, com `posts.json` e `ciclos.json` intocados. `scripts/check_project.py` valida toda fonte de temporada por capítulos, não só o `capitulos.json`. `js/main.js`: "Resumo dos dias" no lugar de "Partes registradas" na temporada reescrita, botão "Continuar na Temporada 2" no último capítulo, "Ler desde o início" abre o Capítulo 1 e link antigo `?season=s01&day=N` cai na Legacy. Docs: README, AGENTS §2, `docs/season_capitulos.md`.
+- **Por quê:** pedido do autor (Peter): renomear a Season 01 para legacy e transformar os dias em 10 capítulos num tomo, no formato da Season 02, mais bem escritos e com o resumo dos dias embaixo. Divisão por arcos e tamanho parecido com a S02, decididos por ele.
+- **Como foi verificado:** `check_project.py` 0 erros (e 1 erro proposital ao apontar um capítulo para tomo inexistente, confirmando que o arquivo novo é validado); `unittest discover -s scripts` 402 OK; site servido localmente e conferido no Chromium (seletor com T1, T2 e Legacy; abertura padrão na S02; resumo dos dias; botão para a S02; link antigo de dia; sem erro de JS). O texto novo não dispara o filtro de metajogo (`META`).
+- **Custo:** o S02 Prólogo (capítulo 0) continua resumindo a S01, agora em paralelo ao tomo. Quem tinha `s01` salvo no navegador passa a abrir o tomo, não os dias.
+- **Próximo:** revisão editorial do autor nos 10 capítulos; decidir se o Prólogo da S02 deve apontar para o tomo.
+
 ---
 
 ## 6. Concorrência na prática (caso real e verificado)

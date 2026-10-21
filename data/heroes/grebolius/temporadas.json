@@ -7,17 +7,18 @@
       "id": "s01",
       "number": 1,
       "title": "Temporada 1 — As Crônicas de Midgaard",
-      "subtitle": "Do despertar em Midgaard ao retorno da Fonte da Vida.",
-      "model": "dias",
-      "unit": "Dia",
-      "source": "posts.json",
-      "cycles": "ciclos.json",
+      "subtitle": "Os cem primeiros dias, recontados em dez capítulos.",
+      "model": "capitulos",
+      "unit": "Capítulo",
+      "source": "capitulos_s01.json",
+      "started_day": 1,
       "range": [
         1,
         100
       ],
       "status": "concluida",
-      "summary": "Cem dias entre becos, magia e recomeços. A primeira jornada de Grebolius, do despertar à dúvida sobre a própria memória."
+      "rewrite_of": "s01-legacy",
+      "summary": "Cem dias entre becos, magia e recomeços, agora num tomo de dez capítulos. A primeira jornada de Grebolius, do despertar à dúvida sobre a própria memória."
     },
     {
       "id": "s02",
@@ -30,6 +31,23 @@
       "started_day": 101,
       "status": "em_curso",
       "summary": "Um nome permanece quando as certezas se desfazem. A jornada continua, agora em capítulos."
+    },
+    {
+      "id": "s01-legacy",
+      "number": 1,
+      "title": "Temporada 1 — Legacy: os cem dias",
+      "subtitle": "O diário original da primeira temporada, dia a dia, como foi publicado.",
+      "model": "dias",
+      "unit": "Dia",
+      "source": "posts.json",
+      "cycles": "ciclos.json",
+      "range": [
+        1,
+        100
+      ],
+      "status": "arquivo",
+      "summary": "Os cem dias da Season 01 na forma original, preservados sem alteração. A versão em capítulos está no Tomo I da Temporada 1.",
+      "legacy": true
     }
   ]
 }

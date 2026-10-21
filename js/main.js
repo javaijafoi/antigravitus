@@ -431,7 +431,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     const seasons = seasonsCatalog.seasons;
     const params = new URLSearchParams(location.search);
     const stored = localStorage.getItem("active_season:"+hero.id);
-    const resolved = seasons.find(s => s.id === params.get("season")) || seasons.find(s => s.id === stored) || seasons.find(s => s.id === seasonsCatalog.current) || seasons[0];
+    let resolved = seasons.find(s => s.id === params.get("season")) || seasons.find(s => s.id === stored) || seasons.find(s => s.id === seasonsCatalog.current) || seasons[0];
+    // Link antigo de dia (?season=s01&day=N): a Season 01 virou tomo, e os dias vivem na versão Legacy.
+    if (params.get("day") && resolved.model === "capitulos") resolved = seasons.find(s => s.model === "dias" && s.number === resolved.number) || resolved;
     await activateSeason(resolved.id, version);
   }
 
@@ -515,7 +517,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   function renderChapterParts(chapter) {
     if (!Array.isArray(chapter.parts) || chapter.parts.length === 0) return "";
-    let html = '<section class="chapter-parts"><h3 class="chapter-parts-title">Partes registradas</h3>';
+    const heading = activeSeason && activeSeason.rewrite_of ? "Resumo dos dias" : "Partes registradas";
+    let html = '<section class="chapter-parts"><h3 class="chapter-parts-title">' + heading + "</h3>";
     chapter.parts.forEach(part => {
       html += '<div class="chapter-part">';
       html += '<div class="chapter-part-head"><span class="chapter-part-day">Dia ' + escapeHtml(String(part.day)) + "</span>";
@@ -569,13 +572,16 @@ document.addEventListener("DOMContentLoaded", async () => {
     const ordered = [...chapters].sort((a,b)=>a.id-b.id);
     const index = ordered.findIndex(c=>c.id===activeChapterId);
     const previous = ordered[index-1], following = ordered[index+1];
-    if (index >= 0 && (previous || following)) html += '<nav class="chapter-reader-nav" aria-label="Seguir a leitura">'
+    const followingSeason = !following && index >= 0 ? seasonsCatalog?.seasons?.filter(s=>s.number>(activeSeason?.number || 1)).sort((a,b)=>a.number-b.number)[0] : null;
+    if (index >= 0 && (previous || following || followingSeason)) html += '<nav class="chapter-reader-nav" aria-label="Seguir a leitura">'
       + (previous ? '<button data-nav-chapter="'+previous.id+'">← '+escapeHtml(previous.kind === "prologo" ? "Voltar ao prólogo" : "Capítulo "+previous.id)+'</button>' : '<span></span>')
-      + (following ? '<button data-nav-chapter="'+following.id+'">'+escapeHtml(following.status === "concluido" ? "Próximo capítulo" : "Próximo capítulo · Em andamento")+' →</button>' : '') + '</nav>';
+      + (following ? '<button data-nav-chapter="'+following.id+'">'+escapeHtml(following.status === "concluido" ? "Próximo capítulo" : "Próximo capítulo · Em andamento")+' →</button>' : '')
+      + (followingSeason ? '<button data-next-season="'+escapeHtml(followingSeason.id)+'">Continuar na Temporada '+followingSeason.number+' →</button>' : '') + '</nav>';
     postsContainer.innerHTML = html;
     postsContainer.querySelectorAll('[data-nav-chapter]').forEach(button=>button.addEventListener('click',()=>{
       activeChapterId=Number(button.dataset.navChapter); syncReadingUrl(); renderChapterView();updateJourneyPresentation();focusReader();
     }));
+    postsContainer.querySelectorAll('[data-next-season]').forEach(button=>button.addEventListener('click',async()=>{await activateSeason(button.dataset.nextSeason,undefined,true);focusReader();}));
     if (postCountEl) {
       const published = chapters.filter(c => c.status === "concluido").length;
       const ongoing = chapters.length - published;
@@ -1397,7 +1403,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const seasonName = activeSeason ? seasonTitleShort(activeSeason) : "Arquivo de jornadas";
     document.getElementById("feature-eyebrow").textContent = seasonName;
     document.getElementById("feature-description").textContent = activeSeason?.summary || "Acompanhe as escolhas, os encontros e as marcas de uma jornada em Midgaard.";
-    document.getElementById("library-title").textContent = isChapterSeason() ? "Uma nova temporada" : "O diário da jornada";
+    document.getElementById("library-title").textContent = isChapterSeason() ? (activeSeason?.rewrite_of ? "O tomo da primeira temporada" : "Uma nova temporada") : "O diário da jornada";
     const selected = isChapterSeason() ? chaptersData?.chapters?.find(c=>c.id===activeChapterId) : allPosts.find(p=>p.id===activeDay);
     document.getElementById("reader-breadcrumb").textContent = currentHero.name + " / " + (activeSeason ? "Temporada "+activeSeason.number : "Arquivo") + " / " + (selected ? (isChapterSeason() ? (selected.kind === "prologo" ? "Prólogo" : "Capítulo "+selected.id) : "Dia "+selected.id) : "Leitura");
     document.getElementById("feature-read").disabled = isChapterSeason() ? (chaptersLoadError || !chaptersData) : (postsLoadError || !allPosts.length);
@@ -1405,7 +1411,14 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
   document.getElementById("feature-read")?.addEventListener("click",()=>focusReader());
   document.getElementById("feature-start")?.addEventListener("click",async()=>{
-    if (seasonsCatalog?.seasons?.some(s=>s.id==="s01") && activeSeason?.id!=="s01") await activateSeason("s01",undefined,true);
+    const first = seasonsCatalog?.seasons?.find(s=>s.id==="s01");
+    if (first && activeSeason?.id!=="s01") await activateSeason("s01",undefined,true);
+    if (first?.model === "capitulos") {
+      // A Season 01 agora é um tomo: começa pelo primeiro capítulo, não pelo Dia 1.
+      const ids = (chaptersData?.chapters || []).map(c=>c.id);
+      if (ids.length) { activeChapterId = Math.min(...ids); syncReadingUrl(); renderChapterView(); updateJourneyPresentation(); focusReader(); }
+      return;
+    }
     if (allPosts.length) jumpToPost(Math.min(...allPosts.map(p=>p.id)));
   });
   if (matchMedia("(max-width:800px)").matches && document.getElementById("archive-index")) document.getElementById("archive-index").open=false;

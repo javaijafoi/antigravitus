@@ -66,7 +66,8 @@ Detalhe em [arquitetura.md](docs/agentes/arquitetura.md).
 derivados por `sync_hero.py` → `check_project.py` → publicação.
 
 **A regra que costura os dois:** nada entra em `data/` sem fonte registrada, e nenhum derivado é
-editado à mão. Season 01 publica por **dia**; da Season 02 em diante, por **capítulo**.
+editado à mão. Season 01 publicou por **dia** (preservada como S01 Legacy, recontada em tomo no
+`capitulos_s01.json`); da Season 02 em diante, por **capítulo**.
 
 **Os cinco modos de jogar estão na diretiva §26.** Declare o modo antes do bloco; se a intenção não
 cabe em nenhum, pare e proponha ao autor — não invente um sexto.

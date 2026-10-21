@@ -11,7 +11,13 @@
 ## Arquivos
 - `data/heroes/<id>/temporadas.json` — catálogo de temporadas e ferramenta de seleção.
 - `data/heroes/<id>/capitulos.json` — tomos e capítulos da Season 02.
-- Season 01 continua em `posts.json` e `ciclos.json` (intocados).
+- Season 01 continua em `posts.json` e `ciclos.json` (intocados), exposta no site como **S01 — Legacy** (`id: s01-legacy`).
+- `data/heroes/<id>/capitulos_s01.json` — a Season 01 **recontada** em um tomo de 10 capítulos (`id: s01`, `rewrite_of: s01-legacy`). Mesmo formato do `capitulos.json`; cada capítulo cobre um arco de dias e as `parts` trazem o resumo de cada dia, com `posts.json` como fonte. Não traz fato novo: é reescrita editorial do legado.
+
+### Season reescrita em tomo
+- Toda temporada com `model: "capitulos"` no `temporadas.json` tem a sua fonte validada pelo `check_project.py` com as mesmas regras do `capitulos.json`, e o campo `season` do arquivo precisa casar com o `id` da temporada.
+- `rewrite_of` aponta para a versão original preservada; no site, as partes aparecem como "Resumo dos dias".
+- Link antigo de dia (`?season=s01&day=N`) cai na versão Legacy, que tem o mesmo número de temporada.
 
 ## `temporadas.json`
 ```json
