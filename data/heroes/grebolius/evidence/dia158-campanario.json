@@ -1,0 +1,31 @@
+{
+  "hero_id": "grebolius",
+  "day": 158,
+  "agent": "Claude Sonnet 5.5 (claude-sonnet-5-5)",
+  "via": "automato",
+  "recorded_on": "2026-10-20",
+  "source_kind": "sessao_ao_vivo",
+  "source": "automato/runtime/session_live_*.log e transcript do Dia 158 (play.py, navegar.py, explorar.py do scratchpad com origem \"mapear\").",
+  "findings": {
+    "ajuda_magica": "Cadeia com Lemin refeita à mão (say sim, say Merlin, say sim x2) até \"Você deve entregar objeto ao personagem\". give recusado sem consumir (pergaminho de sabedoria, rolo, livro de Jooh): \"não é o item correto ou você não é o dono original\". A autoquest caiu depois, com o driver desconectado e reiniciado (3ª vez).",
+    "tomo_fontes_descartadas": "Pierre e Toulouse (Lyon, de dia), Campanário e segundo andar de Notre Dame, Sala de Doações, mural, lojas já vistas. Pistas abertas: Loja do Escriba e Albernathy em Silverthorne (rota desconhecida), Torre da Magia, locate object (nível 34 + espelho).",
+    "campanario": "Porta oeste fechada do Corredor Ocidental Norte -> Pequena Sala -> Escadas -> Segundo Andar -> alçapão -> Campanário. Corcunda grita Esmeralda (possível quest secreta, anotada como corcunda-esmeralda). Armadilha mortal descendo do Fim do Corredor Central. Gárgula atacou quem ficou parado (211 -> 77, recall).",
+    "mecanicas": "Testados: detect invisibility/magic, infravision, detect poison, sip, taste, norepeat, balance, check/receive, read mural, practice, time, where, bandage (guerreiro), atadura. Não testados/pendentes: diagnose em combate, pour, recitar, portão do prefeito, corte do Rei Welmar, Fido/janitors/Puff, ask/whisper com NPC comum. Vetados: junk, donate, cashcard (60.000), mail.",
+    "prefeito": "Visto às 3h (Rua Principal, Rua da Muralha) e às 22h (Ponte Sobre o Rio); não achado às 7h e às 20h. Não segue o 6h/20h do código-base.",
+    "compras": "Dois Cetros de Bispo (45.998; um revendido por 3.000) e uma atadura (300): sem retorno. Diretiva dos 5% em diretiva_de_jogo.md §25.",
+    "tomo_druidico": "Sala de Doações tinha \"tomo da sabedoria druídica\": SPELLBOOK REMORT, NÃO-DOAR NÃO-VENDER ABENÇOADO ANTI-LOCATE, valor 200.000, nível 37, classe Druida. give recusado.",
+    "pergaminho_identificacao": "Comprado em Midgaard (4.601, autorizado). `recite identificação bainha`: o pergaminho DISSOLVE, não sobra papel. Bainha de Excalibur: armadura +65, vida +125, dano +8, acerto +8, nível 85, encarnação 17 (não veste).",
+    "varredura_maldicao": "Corpo e mochila identificados item a item; nenhum amaldiçoado. Veste de escamas: CA 8, vida +20, FOR +2 (opção). Armadura da Torre Branca: CA 21, CON +1, 60 kg.",
+    "vendas_doacoes": "Vendidos: Cetro Branco 3.000, espada longa 240, Espada do Peão Branco 40. Doados (11 itens de pouco valor). Mantidos para revenda: 4 lanças, 4 coroas da Rainha Negra, Armadura da Torre Branca. Armeiro e ferreiro seguem sem caixa; feiticeiro só compra o que vende.",
+    "silverthorne": "Hub com Loja do Escriba, Albernathy (espelho do locate object) e teletransporte para Midgaard/Jareth/Sundhaven. Nenhum help mapa liga Midgaard a Silverthorne.",
+    "cota": "Janela de 5 h em 99% usada (reinicia 55 min); semanal 39%. Handoff por cota."
+  },
+  "state_end": {
+    "location": "O Templo de Midgaard",
+    "level": 33,
+    "hp": "211/211",
+    "mana": "500/500",
+    "gold_total": 31769,
+    "closing": "save_confirmed=True, sleep_confirmed=True; sem quit; autoquests derrubadas pelo _CLOSE"
+  }
+}

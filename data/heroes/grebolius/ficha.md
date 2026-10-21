@@ -26,7 +26,7 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 
 * **Experiência Acumulada:** **8.577.141 EXP**
 * **Experiência Necessária p/ Grau 34:** **422.859 EXP** (Meta: 9.000.000 EXP)
-* **Ouro Líquido:** **33.438 moedas de ouro** (valor documental)
+* **Ouro Líquido:** **31.769 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 11
@@ -64,8 +64,8 @@ Dia 157: 121 sem a magia armor (Cruz Ansada no lugar da coleira) e 157 com ela; 
   * Próximo passo: Concluída integralmente no Dia 156. Baú de recompensas surpresa recebido e aberto, entregando um rosário sagrado ao herói.
 * **Xeque-mate — Bloqueada:** Autoquest de nível 30+, iniciada com o Bispo Branco no Grande Tabuleiro de Xadrez.
   * Próximo passo: Antes de refazer a cascata (~1h30): decidir a tática do Rei com o autor (plano 040 §5). Se refizer: Bispo Branco em F1 (say sim x2), cascata por xadrez_cascata.py; bispos e cavalos sem blindness (acorda), só curse/poison.
-* **Ajuda Mágica — Abandonada:** Ajudar Lemin a reconstruir o livro de magias de Merlin.
-  * Próximo passo: 1) Reaceitar com Lemin, à mão, no Centro da Cidade de Lyon (navegar.py --de templo_midgaard --para cap12_026): olhar Lemin aciona o convite; aceitar; ouvir a pergunta inteira; responder Merlin só no fim da fala; ouvir o relato; responder às confirmações conferindo score tudo, até 'Ajuda Mágica: Você deve entregar objeto ao personagem.' (conhecimento §61 e §64). 2) Só então testar o livro de Jooh, já no inventário (pista a do Plano 034): give apenas com a etapa confirmada (AGENTS #13).
+* **Ajuda Mágica — Bloqueada:** Ajudar Lemin a reconstruir o livro de magias de Merlin.
+  * Próximo passo: Primeiro achar o tomo (SPELLBOOK/livro de verdade): Loja do Escriba e Albernathy em Silverthorne (rota desconhecida), livro de enigmas da Pirâmide (zona 53), Torre da Magia (help mapa 29). Só então reabrir com Lemin (~6 min: look lemin, say sim, esperar a pergunta, say Merlin, say sim, say sim).
 
 Objetivos pessoais e investigações ficam separados das autoquests no catálogo de missões.
 
@@ -135,7 +135,7 @@ Recomeçar a Xeque-mate pelo Bispo Branco e rodar a cascata pelo xadrez_cascata.
 * Testar o módulo xadrez_cascata.py ao vivo em uma etapa curta antes de confiar nele.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessão de 2026-10-20 (Dia 157, quarta parte) de Claude Sonnet 5.5 (claude-sonnet-5-5) (evidence/dia157-xadrez-rei-e-testes.json): cascata refeita até o cetro (peões, bispos, cavalos, torres; Rainha já morta), kite no Rei Negro falhou e matou (score: 12 mortes e 1 DT), autoquest Xeque-mate cancelada. Testes de acordar: curse e poison não acordam bispo, cavalo nem peão; blindness acorda bispo e cavalo. Compra de dois Cetros de Bispo (45.998) sem serventia. Fechada com save e sleep confirmados no Templo, sem quit. Ouro 33.438 (32.513 banco + 925 mão); sem pão..
+Fonte do estado: Sessão de 2026-10-20 (Dia 158) de Claude Sonnet 5.5 (claude-sonnet-5-5) (evidence/dia158-campanario.json): Campanário e segundo andar de Notre Dame explorados, tomo druídico testado (recusado), pergaminho de identificação testado (dissolve), bateria de mecânicas do Plano 025, vendas e doações. Fechada por cota (5 h a 99%) com save e sleep confirmados no Templo, sem quit. Ouro 31.769 (27.814 banco + 3.955 mão); nível 33; HP 211/211; mana 500; CA 121 sem armor, 157 com ela..
 * A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.
 * O colar com pedra purpura pertence a outro dono: o servidor recusa o uso. Nenhum comerciante testado o compra.
 * Bainha de Excalibur exige nivel 85 (vista na Sala de Doacoes, nao pode ser carregada com a carga atual). Scutum de Carvalho exige nivel 35.

@@ -2589,3 +2589,67 @@ Agente: Claude Opus 5.5 (claude-opus-5-5). Fonte: `automato/runtime/transcript_d
 - **`sleep`, `blindness` e `curse` pegam no Rei** (18/10: "vai dormir", "parece estar cego", "cor esquisita"); o primeiro raio o acorda.
 - **Conta:** com ~70 por raio e 1.500 a 2.200 de vida que regenera entre as idas, são **25 a 35 raios seguidos**. O kite de 1 a 2 raios por ida não fecha; isso já estava medido em 18/10, antes das três cascatas de 20/10.
 - **Como medir da próxima vez:** ler a barra depois de cada raio; se uma ida inteira não tira um segmento, parar.
+
+## 77. O Campanário de Notre Dame e o corcunda (Dia 158, 2026-10-20)
+
+Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: evidence/dia158-campanario.json.
+
+- **Rota do Campanário:** do Corredor Ocidental Norte (`nd_corr_ocidental_n`), `open oeste` → A Pequena Sala → norte: As Escadas Para o Campanário ("suba por sua conta em risco"; colar ANTI-DT vestido) → cima: O Segundo Andar de Notre Dame → `open cima` (alçapão) → cima: O Campanário da Catedral. Espelha a porta leste que leva à Capela.
+- **Campanário:** dúzia de sinos de bronze; o corcunda (protegido por luz forte, grita "Esmeralda"), um pombo branco, 2 morcegos cinzas cegos dormindo, 10 camisas verdes e 10 calças sujas. Sem tomo. `look leste` não mostra saída apesar do "vento frio do leste". O Segundo Andar tem uma saída leste ("O Corredor") ainda não percorrida.
+- **Possível quest secreta:** o servidor diz haver 5 autoquests secretas disponíveis agora (`autoquest listar`); o corcunda chamando Esmeralda é candidato. Anotada em `missoes.json` como `corcunda-esmeralda` (pista). Só falar com ele depois de esgotar a busca do tomo e com a concordância do autor.
+- **Lojas de Lyon à noite:** Pierre e Toulouse respondem "Volte mais tarde!"/"Desculpe, volte amanhã." quando é noite no jogo (a hora anda ~75 s reais por hora). O catálogo só se lê de dia.
+- **Mapa:** `cap12_023` (Ponte Francesa) ganhou a saída norte; 4 salas novas (`nd_pequena_sala`, `nd_escadas_campanario`, `nd_segundo_andar`, `nd_campanario`).
+
+## 78. Segundo andar de Notre Dame completo e bateria de mecânicas do Plano 025 (Dia 158, 2026-10-20)
+
+Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: evidence/dia158-campanario.json.
+
+- **Segundo andar (10 salas, mapa `nd2_*`):** corredores com colunas dóricas; a Sala do Quasimodo (cama de palha, figuras do cardeal e de uma mulher da floresta, nada para pegar); Sala Oriental e Sala Ocidental com um gárgula de pedra cada (protegido por luz forte) e 10 peças de pedra no chão; monge Jean limpando. **Nenhum tomo, livro ou pergaminho.** O Fim do Corredor Central tem uma saída `baixo` = **A Armadilha Mortal de Notre Dame** ("NÃO DESÇA"): `nd2_armadilha`, risco fatal.
+- **Sandálias sagradas** (identify no chão): PÉS, armadura -3, máx-movimento +20, acerto +2, ANTI-LADRÃO, sem maldição; uma delas pega.
+- **Mecânicas do Plano 025 testadas (sem custo):** `cast 'detect invisibility'`, `'detect magic'`, `'infravision'` e `'detect poison' cantil` funcionam; `detect alignment` e `sense life` ("Você ainda não tem experiência"); `sip` e `taste` do cantil dão "gosto de água cristalina"; `track` ("Você nem imagina como se faz isso": maga não tem a habilidade); `diagnose` exige alvo na sala; `norepeat` alterna ligado/desligado; `reply` sem ninguém para responder; `whisper` em si mesma recusa; `ventriloquate` sem ajuda. Não testados por custo ou perda: `junk`, `donate`, `cashcard`, `mail`. `locate object` exige nível 34 e espelho.
+- **Dica do servidor:** "Para recitar um pergaminho, utilize o comando RECITAR."
+- **Gárgulas de Notre Dame atacam quem fica parado** (Sala Ocidental do Segundo Andar): "protegido por uma luz muito forte", mas lutou contra mim quando fiquei ~1 a 2 min na sala sem agir e tirou 211 → 77 de vida (`recall` salvou, sem morte). Passar de relance pela Sala Oriental não provocou. Regra: nunca deixar a personagem parada numa sala com gárgula; sair para o corredor antes de qualquer tarefa longa.
+
+## 79. Atadura, cartão de crédito e a queda da Ajuda Mágica por reconexão (Dia 158, 2026-10-20)
+
+Agente: Claude Sonnet 5.5 (claude-sonnet-5-5).
+
+- **O Armazém de Midgaard** (`armazem`, 4 passos do Templo) vende: atadura 300, **cartão de crédito (`cashcard`) 60.000**, mala 75, mochila 30, lanterna 75, tocha 15. O cartão custa mais que o ouro total (33.414); fora do alcance e da diretiva dos 5%.
+- **Atadura:** item tipo OUTRO, valor 200, sem efeito; `use`/`apply`/`hold` recusam. A habilidade `bandage` ("só pode ser usada em si", recupera vida e gasta movimento) é de **guerreiro nível 32**; a maga não a tem ("Você não tem ideia de como fazer isso"). O Armazém não recompra a atadura. Gasto: 300 sem retorno.
+- **`curar`:** serviço de cura de curandeiros (comando existe, "Como?!?" fora de um); não achado em Midgaard.
+- **Reconexão derruba a autoquest outra vez:** com o driver `disconnected` por um tempo e reiniciado o `live_daemon`, o `autoquest listar` voltou a mostrar a Ajuda Mágica como disponível (3ª vez; §64, §67). Evitar deixar o driver cair com missão ativa: conferir `_STATUS` a cada poucos minutos e reiniciar logo ao primeiro `disconnected`.
+- **`score tudo` tem a seção `[ Duração ]`** com as magias ativas e as horas restantes (`detect invisibility ( 1 horas )`): serve para saber se o `armor` ainda vale.
+- **Hora do jogo:** ~75 s reais por hora; lojas de Lyon (Pierre, Toulouse) fecham de noite.
+
+- **Prefeito de Midgaard (observado em 2026-10-20, Dia 158):** às 3h do jogo estava andando (Rua Principal, depois Rua da Muralha); às 7h o `where prefeito` não o achou. Não bate com o código-base (acorda às 6h e 20h): no DeBo ele já circulava de madrugada. Portão do bazar não observado.
+- **Mural da Praça do Comércio:** 117 mensagens de jogadores reais (compra e venda de itens, de 2014 a 2026); nada sobre tomo, Lemin ou missões. **Correios:** `check`/`receive` respondem 'não tem nenhuma correspondência'. **Banco:** `balance` funciona no Templo.
+
+- **Catálogos de Lyon de dia (2026-10-20, ~7h do jogo):** Pierre (Loja de Magias da França): cajado mágico 3.150 (nível 1), poção mágica 9.835, poção cor de creme 21.462, poção amarela de detectar invisibilidade 8.172, poção marrom 2.940. Toulouse (Itens Variados): tábua de madeira 1.800, suéter fresco 7.500 (nível 5), jarro de madeira de água cristalina 2.250, colar de pérolas 127.500 (nível 20), corrente de ferro 7.500 (nível 10). **Nenhum vende tomo.**
+
+## 80. Bateria de mecânicas do Plano 025 dada por cumprida, com pendências (Dia 158, 2026-10-20)
+
+Decisão do autor: "damos por sucesso testar tudo (com pendências futuras)". Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: evidence/dia158-campanario.json.
+
+- **Testado:** detect invisibility, detect magic, infravision, detect poison, sip, taste, norepeat, balance, check/receive, read/look no mural, practice, time, where, bandage (habilidade de guerreiro), atadura (item sem efeito), catálogos de Pierre e Toulouse, Campanário e segundo andar de Notre Dame, prefeito (3h Rua Principal/Muralha; 7h e 20h ausente; 22h na Ponte Sobre o Rio).
+- **Pendências futuras:** `diagnose` durante um combate; `pour cantil out`; `recitar` (precisa de pergaminho de magia); portão do bazar do prefeito; corte do Rei Welmar às 12h (Capitão Peter, Jerry, Tim e Tom); Fido, janitors e Puff; `ask`/`whisper` com NPC comum; rota até Silverthorne (Loja do Escriba, Albernathy, teletransporte).
+- **Vetadas:** `junk`, `donate` (perdem item), `cashcard` 60.000 e `mail` 150 (gastam). **Impossíveis:** `locate object` (nível 34 + espelho), `detect alignment`, `sense life`, `ventriloquate`, `track`, `curar` (sem curandeiro).
+
+## 81. O tomo druídico não serve a Lemin; "dono original" como pista (Dia 158, 2026-10-20)
+
+Agente: Claude Sonnet 5.5 (claude-sonnet-5-5).
+
+- **Reabertura:** com Lemin em Lyon, `look lemin` não disparou o convite; um `say sim` à toa abriu a autoquest ("Você começa a participar da aventura") e a cadeia seguiu: pergunta (esperar "Lemin ergue a sobrancelha... esperando a resposta"), `say Merlin`, `say sim`, `say sim` → `Ajuda Mágica: Você deve entregar objeto ao personagem.` Do começo ao passo de entrega: ~6 minutos reais, tudo à mão.
+- **Sala de Doações:** hoje tinha "Um rústico e pesado tomo de livro" = **tomo da sabedoria druídica**. `identify`: **SPELLBOOK REMORT**, NÃO-DOAR NÃO-VENDER ABENÇOADO ANTI-LOCATE NÃO-GUARDAR, peso 5, valor 200.000, nível 37, classe Druida; melhora `animate plant` em 1%. Pegar exigiu liberar peso (mochila vestida). Também há 3 pergaminhos "A Lenda de Nambor" (= "pergaminho de sabedoria", tipo OUTRO).
+- **`give tomo lemin` recusado** sem perda: "não é o item correto ou você não é o dono original". Mesma resposta dos outros itens. Hipótese: o tomo precisa vir da **fonte original** (loja ou mob que o carrega), não de doação, como o cetro do Rei na Xeque-mate.
+- **`recitar`** só aceita SCROLL ou runa; nota (rolo) e OUTRO (pergaminho de sabedoria) não.
+- **Pistas abertas:** Loja do Escriba e Albernathy (Silverthorne, rota desconhecida); "a book of riddles" (livro de pergaminho de tamanho médio com **páginas usadas**, zona 53, Pirâmide, com um NPC) combina com "pode ser usado"; Torre da Magia (`the book of magic`).
+
+- **Pergaminho de identificação (Midgaard, 4.601) — testado (Dia 158):** o comando é `recite <pergaminho> <alvo>` (`recitar` dá 'Como?!?'). `recite identificação bainha` -> 'Você recita um pergaminho de identificação, que dissolve.': **o pergaminho some, não sobra papel**; não serve de item para Lemin. Bainha de Excalibur identificada: ARMADURA para a cintura, armadura +65, vida máx +125, dano +8, acerto +8, CAR +1, BRILHO MÁGICO ANTI-MAU NÃO-VENDER ANTI-LOCATE, **nível 85 e encarnação 17** (não dá para vestir). Ouro depois: ~28.5 mil (banco + mão).
+
+## 82. Fim do Dia 158: o que ficou e o que sobra (2026-10-20)
+
+Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: evidence/dia158-campanario.json.
+
+- **Silverthorne é hub** (regiões partem "a oeste da Praça Central"), mas nenhum `help mapa N` liga Midgaard a ela; os 29 verbetes estão copiados em `automato/runtime/help_mapas_dia158.txt`. O teletransporte vai de Silverthorne para Midgaard, Jareth e Sundhaven, não o inverso.
+- **Itens identificados e limpos** (corpo e mochila): veste de escamas CA 8 / vida +20 / FOR +2; túnica dourada CA 18; espada longa 4D6; Armadura da Torre Branca CA 21 / CON +1 / 60 kg; bainha de Excalibur nível 85 (inútil agora).
+- **Cota:** com a janela de 5 h em 99% foi preciso fechar; a Ajuda Mágica caiu no `_CLOSE`, como esperado.

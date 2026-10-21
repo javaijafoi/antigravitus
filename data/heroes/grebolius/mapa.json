@@ -3,7 +3,7 @@
   "hero_name": "Grebolius",
   "sanctuary_id": "panteao_centenarios",
   "last_updated_cycle": "Dia 157 — Plano 033: biblioteca de Jareth, Paris, alas da catedral e Lyon, 2026-10-19",
-  "total_rooms": 706,
+  "total_rooms": 720,
   "layers": [
     {
       "id": "superficie",
@@ -12554,10 +12554,11 @@
       "risk_code": "unknown",
       "icon": "🧭",
       "exits": {
-        "s": "cap12_024"
+        "s": "cap12_024",
+        "n": "cap12_012"
       },
       "npcs": [],
-      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Retorno só consta quando percorrido.",
+      "notes": "Homônimos distinguidos pela sequência contínua de deslocamentos. Saída norte (retorno à Entrada Para a França) confirmada com `exits` ao vivo em 2026-10-20, Dia 158 (Claude Sonnet 5.5).",
       "discovered_in": "Dia 157",
       "source": {
         "document": "evidence/dia157-cap12.json",
@@ -14730,10 +14731,11 @@
       "icon": "🧭",
       "exits": {
         "e": "cap12_017",
-        "s": "nd_nave_ocidental"
+        "s": "nd_nave_ocidental",
+        "w": "nd_pequena_sala"
       },
       "npcs": [],
-      "notes": "",
+      "notes": " Porta oeste fechada (\"velha porta de madeira\"): `open oeste` leva à Pequena Sala e ao Campanário (Dia 158).",
       "discovered_in": "Dia 157",
       "source": {
         "document": "evidence/dia157-biblioteca-paris.json",
@@ -16513,6 +16515,305 @@
         "docs/circlemud/05-mundo-padrao-vs-mapa.md",
         "evidence/dia157-xadrez-etapa6.json"
       ]
+    },
+    {
+      "id": "nd_pequena_sala",
+      "name": "A Pequena Sala",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "nd_escadas_campanario",
+        "e": "nd_corr_ocidental_n"
+      },
+      "npcs": [],
+      "notes": "Suja, pouca luz. Ao norte as escadas para o campanário.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia158-campanario.json",
+        "day": 157,
+        "note": "Percorrido ao vivo por Claude Sonnet 5.5 (claude-sonnet-5-5) em 2026-10-20; saídas lidas com exits."
+      }
+    },
+    {
+      "id": "nd_escadas_campanario",
+      "name": "As Escadas Para o Campanário",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "s": "nd_pequena_sala",
+        "u": "nd_segundo_andar"
+      },
+      "npcs": [],
+      "notes": "Sala escura com uma tocha; velha escada de madeira (\"suba por sua conta em risco\"). O colar ANTI-DT estava vestido.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia158-campanario.json",
+        "day": 157,
+        "note": "Percorrido ao vivo por Claude Sonnet 5.5 (claude-sonnet-5-5) em 2026-10-20; saídas lidas com exits."
+      }
+    },
+    {
+      "id": "nd_segundo_andar",
+      "name": "O Segundo Andar de Notre Dame",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "d": "nd_escadas_campanario",
+        "u": "nd_campanario",
+        "e": "nd2_corredor"
+      },
+      "npcs": [],
+      "notes": "Vista de Paris. `open cima` abre o alçapão para o campanário. Saída leste (O Corredor) NÃO percorrida.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia158-campanario.json",
+        "day": 157,
+        "note": "Percorrido ao vivo por Claude Sonnet 5.5 (claude-sonnet-5-5) em 2026-10-20; saídas lidas com exits."
+      }
+    },
+    {
+      "id": "nd_campanario",
+      "name": "O Campanário da Catedral",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "d": "nd_segundo_andar"
+      },
+      "npcs": [
+        "o corcunda",
+        "um pombo branco",
+        "um morcego cinza"
+      ],
+      "notes": "Dúzia de sinos de bronze. O corcunda (protegido por luz forte; grita \"Esmeralda\"), um pombo branco, 2 morcegos cinzas cegos dormindo, 10 camisas verdes e 10 calças sujas no chão. Sem tomo. \"Do leste vem vento frio\", mas `look leste` não mostra saída.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia158-campanario.json",
+        "day": 157,
+        "note": "Percorrido ao vivo por Claude Sonnet 5.5 (claude-sonnet-5-5) em 2026-10-20; saídas lidas com exits."
+      }
+    },
+    {
+      "id": "nd2_corredor",
+      "name": "O Corredor",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "e": "nd2_central_n",
+        "s": "nd2_corredor_s",
+        "w": "nd_segundo_andar"
+      },
+      "npcs": [],
+      "notes": "Colunas dóricas; leste do Segundo Andar.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia158-campanario.json",
+        "day": 157,
+        "note": "Percorrido ao vivo por Claude Sonnet 5.5 (claude-sonnet-5-5) em 2026-10-20; saídas lidas com exits."
+      }
+    },
+    {
+      "id": "nd2_central_n",
+      "name": "O Corredor Central do Segundo Andar",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "w": "nd2_corredor",
+        "e": "nd2_quasimodo",
+        "s": "nd2_central_m"
+      },
+      "npcs": [],
+      "notes": "Placa/aviso: sala pequena a leste.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia158-campanario.json",
+        "day": 157,
+        "note": "Percorrido ao vivo por Claude Sonnet 5.5 (claude-sonnet-5-5) em 2026-10-20; saídas lidas com exits."
+      }
+    },
+    {
+      "id": "nd2_quasimodo",
+      "name": "A Sala do Quasimodo",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "w": "nd2_central_n"
+      },
+      "npcs": [],
+      "notes": "Cama de palha; figuras do cardeal e de uma mulher da floresta; janela em arco a leste (vento frio). Sem objetos.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia158-campanario.json",
+        "day": 157,
+        "note": "Percorrido ao vivo por Claude Sonnet 5.5 (claude-sonnet-5-5) em 2026-10-20; saídas lidas com exits."
+      }
+    },
+    {
+      "id": "nd2_central_m",
+      "name": "O Corredor Central do Segundo Andar",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "nd2_central_n",
+        "s": "nd2_fim_central",
+        "w": "nd2_corredor_s"
+      },
+      "npcs": [],
+      "notes": "Jean, o monge que limpa o andar.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia158-campanario.json",
+        "day": 157,
+        "note": "Percorrido ao vivo por Claude Sonnet 5.5 (claude-sonnet-5-5) em 2026-10-20; saídas lidas com exits."
+      }
+    },
+    {
+      "id": "nd2_fim_central",
+      "name": "O Fim do Corredor Central",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "nd2_central_m",
+        "e": "nd2_sala_oriental",
+        "w": "nd2_fim",
+        "d": "nd2_armadilha"
+      },
+      "npcs": [],
+      "notes": "PERIGO: saída para baixo = A Armadilha Mortal de Notre Dame. NUNCA descer.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia158-campanario.json",
+        "day": 157,
+        "note": "Percorrido ao vivo por Claude Sonnet 5.5 (claude-sonnet-5-5) em 2026-10-20; saídas lidas com exits."
+      }
+    },
+    {
+      "id": "nd2_sala_oriental",
+      "name": "A Sala Oriental do Segundo Andar",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "w": "nd2_fim_central"
+      },
+      "npcs": [],
+      "notes": "Gárgula de pedra (protegida por luz forte); 10 braçadeiras e 10 escudos de pedra, sandálias sagradas.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia158-campanario.json",
+        "day": 157,
+        "note": "Percorrido ao vivo por Claude Sonnet 5.5 (claude-sonnet-5-5) em 2026-10-20; saídas lidas com exits."
+      }
+    },
+    {
+      "id": "nd2_corredor_s",
+      "name": "Um Corredor no Segundo Andar",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "n": "nd2_corredor",
+        "s": "nd2_fim",
+        "e": "nd2_central_m"
+      },
+      "npcs": [],
+      "notes": "Sandálias sagradas (identify: armadura -3, mov +20, acerto +2, limpas) foram pegas.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia158-campanario.json",
+        "day": 157,
+        "note": "Percorrido ao vivo por Claude Sonnet 5.5 (claude-sonnet-5-5) em 2026-10-20; saídas lidas com exits."
+      }
+    },
+    {
+      "id": "nd2_fim",
+      "name": "O Fim do Corredor",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "e": "nd2_fim_central",
+        "n": "nd2_corredor_s",
+        "w": "nd2_sala_ocidental"
+      },
+      "npcs": [],
+      "notes": "Vista da estação de carruagens ao norte.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia158-campanario.json",
+        "day": 157,
+        "note": "Percorrido ao vivo por Claude Sonnet 5.5 (claude-sonnet-5-5) em 2026-10-20; saídas lidas com exits."
+      }
+    },
+    {
+      "id": "nd2_sala_ocidental",
+      "name": "A Sala Ocidental do Segundo Andar",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Sem combate observado; segurança não garantida",
+      "risk_code": "unknown",
+      "icon": "🧭",
+      "exits": {
+        "e": "nd2_fim"
+      },
+      "npcs": [],
+      "notes": "Gárgula de pedra (protegida); 10 calças e 10 escudos de pedra.",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia158-campanario.json",
+        "day": 157,
+        "note": "Percorrido ao vivo por Claude Sonnet 5.5 (claude-sonnet-5-5) em 2026-10-20; saídas lidas com exits."
+      }
+    },
+    {
+      "id": "nd2_armadilha",
+      "name": "A Armadilha Mortal de Notre Dame",
+      "layer": "franca_cap12",
+      "zone": "Reconhecimento do Capítulo 12",
+      "risk": "Armadilha mortal (DT): nunca entrar",
+      "risk_code": "fatal",
+      "icon": "☠️",
+      "exits": {},
+      "npcs": [],
+      "notes": "Descer pelo Fim do Corredor Central: \"NÃO DESÇA OU VOCÊ CERTAMENTE MORRERÁ\".",
+      "discovered_in": "Dia 157",
+      "source": {
+        "document": "evidence/dia158-campanario.json",
+        "day": 157,
+        "note": "Percorrido ao vivo por Claude Sonnet 5.5 (claude-sonnet-5-5) em 2026-10-20; saídas lidas com exits."
+      }
     }
   ],
   "last_updated_day": 157,

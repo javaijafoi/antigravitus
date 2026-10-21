@@ -581,12 +581,12 @@
       "id": "ajuda-magica",
       "title": "Ajuda Mágica",
       "type": "official",
-      "status": "abandoned",
+      "status": "blocked",
       "accepted_day": 157,
       "last_progress_day": 157,
       "objective": "Ajudar Lemin a reconstruir o livro de magias de Merlin.",
-      "next_step": "1) Reaceitar com Lemin, à mão, no Centro da Cidade de Lyon (navegar.py --de templo_midgaard --para cap12_026): olhar Lemin aciona o convite; aceitar; ouvir a pergunta inteira; responder Merlin só no fim da fala; ouvir o relato; responder às confirmações conferindo score tudo, até 'Ajuda Mágica: Você deve entregar objeto ao personagem.' (conhecimento §61 e §64). 2) Só então testar o livro de Jooh, já no inventário (pista a do Plano 034): give apenas com a etapa confirmada (AGENTS #13).",
-      "blocker": "Abandonada por decisão do autor em 2026-10-20 (Dia 157). Lemin não fez o convite nesta sessão apesar de várias tentativas; o convite chega por temporizador do NPC e a resposta é 'say sim' (um agente anterior respondeu 'ask ajuda'). Reabrir só se o autor pedir.",
+      "next_step": "Primeiro achar o tomo (SPELLBOOK/livro de verdade): Loja do Escriba e Albernathy em Silverthorne (rota desconhecida), livro de enigmas da Pirâmide (zona 53), Torre da Magia (help mapa 29). Só então reabrir com Lemin (~6 min: look lemin, say sim, esperar a pergunta, say Merlin, say sim, say sim).",
+      "blocker": "Reaberta e levada ao passo de entrega duas vezes no Dia 158; derrubada pela reconexão do driver (1ª) e pelo _CLOSE de fim de sessão (2ª). Tomo druídico, pergaminho de sabedoria, rolo e livro de Jooh recusados (\"não é o item correto ou você não é o dono original\"). O item parece exigir a fonte original (loja ou mob), não doação.",
       "reward": "Desconhecida; não houve conclusão.",
       "evidence": [
         {
@@ -613,6 +613,30 @@
           "document": "evidence/dia157-handoff-lyon.json",
           "day": 157,
           "note": "Claude Haiku 5.5: missão encontrada inativa; livro de Jooh pego na Sala de Doações (identify falhou 2/2); nenhum give. Registro corrigido por Claude Opus 5.5 a partir do transcript."
+        },
+        {
+          "document": "evidence/dia158-campanario.json",
+          "day": 157,
+          "note": "Cadeia refeita; give recusado; Claude Sonnet 5.5 (claude-sonnet-5-5)."
+        }
+      ]
+    },
+    {
+      "id": "corcunda-esmeralda",
+      "title": "O Corcunda e Esmeralda (possível quest secreta)",
+      "type": "investigation",
+      "status": "discovered",
+      "accepted_day": null,
+      "last_progress_day": 157,
+      "objective": "Investigar o corcunda do Campanário de Notre Dame, que grita chamando Esmeralda; pode ser uma das 5 autoquests secretas que o servidor diz estarem disponíveis.",
+      "next_step": "Só depois de esgotar a busca do tomo da Ajuda Mágica: consultar o autor, e então falar com o corcunda à mão (AGENTS #14). Cuidado: só há uma autoquest ativa por vez; falar pode iniciar outra e derrubar a Ajuda Mágica.",
+      "blocker": "Autor: \"depois vemos o lance do quasimodo\". Nada foi dito ao corcunda; ele tem Santuário, não atacar.",
+      "reward": "Desconhecida.",
+      "evidence": [
+        {
+          "document": "evidence/dia158-campanario.json",
+          "day": 157,
+          "note": "Campanário achado pela porta oeste do Corredor Ocidental Norte. Agente: Claude Sonnet 5.5 (claude-sonnet-5-5)"
         }
       ]
     }
