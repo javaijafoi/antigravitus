@@ -11,7 +11,7 @@
 Substitui o plano 045 (meu antecessor, não é editado).
 
 ## 1. Onde o objetivo está
-**A Xeque-mate está CONCLUÍDA** (`autoquest todas` = Concluída): o Cetro do Rei Negro foi entregue ao Bispo Branco em F1 com o `score tudo` mostrando "Você deve entregar objeto ao personagem", e a entrega rendeu +256 mil de EXP (9.659.707 para 9.915.778). Falta pouco para o nível 35 (84.222 de EXP). As frentes abertas são a Ajuda Mágica (sem tomo) e a Tesouraria Negra (porta `baixo` de D8).
+**A Xeque-mate está CONCLUÍDA** (`autoquest todas` = Concluída): o Cetro do Rei Negro foi entregue ao Bispo Branco em F1 com o `score tudo` mostrando "Você deve entregar objeto ao personagem", e a entrega rendeu +256 mil de EXP (9.659.707 para 9.915.778). Falta pouco para o nível 35 (84.222 de EXP). **O Capítulo 12 está FECHADO e publicado** (por ordem do autor, 2026-10-21, com bypass registrado do critério `ajuda-magica`; a pendência está em `carried_over` do capítulo, no último parágrafo da crônica e aqui). As frentes abertas, herdadas para o Capítulo 13 (a abrir com `add_chapter.py --chapter 13 --tomo 2 ...`), são a Ajuda Mágica (sem tomo), a Tesouraria Negra (porta `baixo` de D8) e a pista do corcunda e de Esmeralda.
 
 ## 2. Estado exato
 - **Local:** Templo de Midgaard, dormindo.

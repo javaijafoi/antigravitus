@@ -1492,7 +1492,7 @@
       "tomo": 2,
       "title": "Ajuda Mágica e a Coroa do Rei",
       "kind": "missao",
-      "status": "em_curso",
+      "status": "concluido",
       "goal": "Concluir a autoquest Ajuda Mágica com Lemin em Notre Dame/Lyon, registrando as etapas e a confirmação do servidor. Reconhecer e mapear a rota; Xeque-mate é objetivo opcional condicionado à viabilidade tática.",
       "subplots": [
         {
@@ -1507,8 +1507,8 @@
         {
           "id": "xeque-mate",
           "text": "Concluir a missão Xeque-mate (cetro do Rei Negro) com a autoquest concluída no score",
-          "done": false,
-          "evidence": null
+          "done": true,
+          "evidence": "evidence/dia160-xeque-mate-concluida.json"
         },
         {
           "id": "ajuda-magica",
@@ -1517,9 +1517,17 @@
           "evidence": null
         }
       ],
-      "closing": null,
+      "closing": {
+        "decision": "bypass",
+        "confirmed_with_author": true,
+        "at": "2026-10-21",
+        "reason": "O autor mandou fechar o capítulo (\"não, termina o capítulo, publica o capítulo e faz o handoff completo\", 2026-10-21) com a Xeque-mate cumprida e a Ajuda Mágica ainda sem tomo; a pendência segue em carried_over, no último parágrafo e no plano 046."
+      },
       "days": [
-        157
+        157,
+        158,
+        159,
+        160
       ],
       "parts": [
         {
@@ -1568,18 +1576,102 @@
               "note": "Biblioteca de Jareth achada sem tomo; Champs Elysées, Paris, catedral e Lyon varridos; missão segue na etapa de entrega. Agente: Claude Opus 5.5."
             }
           ]
+        },
+        {
+          "day": 158,
+          "summary": "Quarta parte. Grebolius explorou a catedral de Notre Dame até o campanário e o segundo andar, mapeou salas novas e achou a armadilha fatal do segundo andar sem cair nela. Anotou o corcunda e a Esmeralda como uma possível missão futura. Sem tomo para a Ajuda Mágica.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia158-campanario.json",
+              "day": 158,
+              "note": "Quarta parte. Grebolius explorou a catedral de Notre Dame até o campanário e o segundo andar, mapeou salas novas e achou Agente: Claude Sonnet 5.5 (claude-sonnet-5-5)"
+            }
+          ],
+          "date": "2026-10-20"
+        },
+        {
+          "day": 159,
+          "summary": "Quinta parte. Voltando ao tabuleiro, descobriu como matar o Rei Negro: entrar invisível em E8, adormecê-lo, lançar um raio e fazer recall na mesma hora, cerca de trinta idas sem perder vida. O Rei morreu, mas o corpo parecia vazio.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia159-rei-morto.json",
+              "day": 159,
+              "note": "Quinta parte. Voltando ao tabuleiro, descobriu como matar o Rei Negro: entrar invisível em E8, adormecê-lo, lançar um ra Agente: Claude Sonnet 5.5 (claude-sonnet-5-5)"
+            }
+          ],
+          "date": "2026-10-21"
+        },
+        {
+          "day": 159,
+          "summary": "Sexta parte. O espólio do Rei Negro é invisível: com detect invisibility apareceram no chão de E8 nove Cetros e quatro Chaves do Tesouro Negro. Grebolius pegou cetros e chaves; o Bispo Branco aceitou um cetro, mas a Xeque-mate já havia caído por uma passagem pela casa E1 (a do Rei Branco). Reaceitou a missão e ficou em matar criaturas.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia159-cetro-invisivel.json",
+              "day": 159,
+              "note": "Sexta parte. O espólio do Rei Negro é invisível: com detect invisibility apareceram no chão de E8 nove Cetros e quatro C Agente: Claude Sonnet 5.5 (claude-sonnet-5-5)"
+            }
+          ],
+          "date": "2026-10-21"
+        },
+        {
+          "day": 160,
+          "summary": "Sétima parte. Refez a cascata (peões, bispos, cavaleiros, torres e Rainha); na primeira morte da Rainha o jogador Keen deu o golpe final e a missão não contou, então a matou outra vez depois que renasceu. Com o score tudo no passo entregar objeto, deu o cetro ao Bispo Branco: Xeque-mate concluída, mais 256 mil de experiência, nível 34.",
+          "source_kind": "live",
+          "evidence": [
+            {
+              "document": "evidence/dia160-xeque-mate-concluida.json",
+              "day": 160,
+              "note": "Sétima parte. Refez a cascata (peões, bispos, cavaleiros, torres e Rainha); na primeira morte da Rainha o jogador Keen d Agente: Claude Sonnet 5.5 (claude-sonnet-5-5)"
+            }
+          ],
+          "date": "2026-10-21"
         }
       ],
-      "content": [],
-      "tags": [],
+      "content": [
+        "Este capítulo nasceu de uma promessa feita a um velho em Lyon: a de levar um tomo de pergaminho bem grosso a Lemin, para que a Ajuda Mágica seguisse adiante. Percorri Notre Dame, Jareth, o castelo do Lorde, a biblioteca escondida ao norte do rio, os bosques de Champs Elysées e as praças de Paris. Achei casas, bibliotecárias, ratos num túnel escuro e uma capela pequena, mas o tomo nunca apareceu. Sem ele, a promessa ficou de pé, e eu passei a cumprir a outra missão que o capítulo guardava.",
+        "Foi no Campanário de Notre Dame que o capítulo mudou de rumo. Subi até o alto da catedral, mapeei o segundo andar sala a sala e registrei no mapa uma armadilha fatal, para que ninguém caísse nela. Ouvi falar do corcunda e de Esmeralda e guardei a pista como missão para depois. De volta a Midgaard, minha atenção voltou ao Grande Tabuleiro de Xadrez, onde o Bispo Branco esperava em F1 por um cetro que eu ainda não sabia como conseguir.",
+        "O Rei Negro não se vence a golpes. Descobri o método depois de muitas idas: entrar invisível em E8, fazê-lo dormir, soltar um único raio e fazer recall no mesmo instante, antes que ele acordasse. Repeti isso umas trinta vezes sem perder um ponto de vida. Quando ele finalmente tombou, o corpo parecia vazio, e eu fiquei com uma pergunta que não me deixava dormir: onde estava o cetro?",
+        "A resposta veio de uma magia que eu quase não usava. Com detect invisibility, o chão de E8 mostrou-se coberto de cetros e chaves do Tesouro Negro: o espólio do Rei era invisível, e eu tinha olhado para ele sem enxergar. Guardei cetros e chaves, mas descobri em seguida que a Xeque-mate tinha caído: a passagem pela casa do Rei Branco a cancelara, mesmo invisível. O Bispo aceitou o cetro, mas a missão não contou. Reaceitei a conversa e recomecei do começo.",
+        "Refiz a cascata do tabuleiro. Os peões tombaram um a um, depois os bispos, os cavaleiros, as torres, e a Rainha. A Rainha cedeu na primeira vez, mas o golpe final foi de um outro jogador, Keen, e o servidor não me creditou nada. Esperei que ela renascesse, voltei, e dessa vez o raio foi meu: 'Você atingiu seu objetivo'. O Bispo Branco, enfim, disse que era hora do xeque-mate e pediu o cetro daquele rei nefasto.",
+        "Com o score tudo no passo de entregar objeto, estendi o cetro ao Bispo Branco. A Xeque-mate se fechou como Concluída e o mundo me deu mais de duzentos e cinquenta mil pontos de experiência de uma vez só: nível 34, a meros oitenta e quatro mil do nível 35. Deixei a Armadura da Torre Negra maldita onde estava e não passei mais pela casa E1.",
+        "Mas este capítulo termina com uma dívida. Por ordem do autor, ele se fecha com a Xeque-mate cumprida e a Ajuda Mágica ainda por fazer: o tomo grosso que Lemin pediu continua sem fonte conhecida. Também ficam abertas a Tesouraria Negra, atrás da porta que dá para baixo em D8, e a pista do corcunda e de Esmeralda. O próximo capítulo começa por elas."
+      ],
+      "tags": [
+        "Xeque-mate",
+        "Rei Negro",
+        "Cetro invisível",
+        "detect invisibility",
+        "Keen",
+        "Nível 34",
+        "Campanário",
+        "Ajuda Mágica pendente"
+      ],
       "source_kind": "live",
       "evidence": [
         {
+          "document": "evidence/dia160-xeque-mate-concluida.json",
+          "day": 160,
+          "note": "Cascata completa e entrega do cetro; autoquest todas = Concluída. Agente: Claude Sonnet 5.5 (claude-sonnet-5-5)"
+        },
+        {
+          "document": "evidence/dia159-cetro-invisivel.json",
+          "day": 159,
+          "note": "Espólio do Rei invisível. Agente: Claude Sonnet 5.5 (claude-sonnet-5-5)"
+        },
+        {
           "document": "evidence/dia157-biblioteca-paris.json",
           "day": 157,
-          "note": "Biblioteca de Jareth achada sem tomo; Champs Elysées, Paris, catedral e Lyon varridos; missão segue na etapa de entrega. Agente: Claude Opus 5.5."
+          "note": "Biblioteca de Jareth, Paris e Lyon varridos sem tomo. Agente: Claude Opus 5.5"
         }
-      ]
+      ],
+      "carried_over": "Ajuda Mágica (Lemin, Lyon): entrega do tomo grosso de pergaminho pendente; a fonte do tomo segue desconhecida (Escriba/Albernathy em Silverthorne sem rota; Torre da Magia). Tesouraria Negra (porta baixo de D8) e a pista do corcunda e da Esmeralda também seguem abertas. Plano 046.",
+      "excerpt": "Capítulo 12 fecha com a Xeque-mate concluída: o Rei Negro morto por kite, o espólio invisível achado com detect invisibility, a Rainha refeita depois de um roubo de abate e o cetro entregue ao Bispo Branco. A Ajuda Mágica segue pendente.",
+      "date": "2026-10-21",
+      "in_game_time": "O fecho do cetro, a pendência do tomo e o nível 34",
+      "closed_on_day": 160
     }
   ]
 }
