@@ -1279,3 +1279,10 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Como foi verificado:** trÃªs transiÃ§Ãµes do comando `time` nos transcripts (61 s, 60 s, 78 s por hora de jogo); suÃ­te 374 OK; `check_project.py` 0 erros; `mandabala.py` imprime a escala no prÃ©-voo.
 - **Custo:** `SEGUNDOS_POR_HORA_DO_JOGO = 75` Ã© mÃ©dia de trÃªs amostras e pode variar no servidor; a unidade (hora de jogo no `score`) Ã© que nÃ£o Ã© aproximaÃ§Ã£o. Renomear constantes quebrou nada fora dos arquivos listados.
 - **PrÃ³ximo:** medir mais transiÃ§Ãµes de `time` numa sessÃ£o longa para apertar a escala; e, ao ler qualquer "horas" no `score` ou em plano antigo, converter com `config.horas_de_jogo_para_segundos_reais()`.
+
+### 2026-10-21 Â· Dia 158 Â· DeepSeek deepseek-flash (dsh)
+- **Mudou:** `automato/camadas/cuidar.py` (`horas_restantes`, `manter_magias` por dado; cache de 25 min removido), `automato/nucleo/config.py` (constante marcada como referÃªncia, nÃ£o critÃ©rio), `scripts/test_sobrevivencia.py` (+5), `docs/agentes/catraca.json` (+2), `automato/CHANGELOG.md` v1.7.22.
+- **Por quÃª:** doutrina dada pelo autor â€” rotina por estado (vitais), timer sÃ³ como teto de seguranÃ§a. Auditoria: `xadrez_cascata.descansar/esperar_presenca`, `rotinas` (meta + `estourou()`) e `prepara.dormir` jÃ¡ eram por estado. O `manter_magias` nÃ£o era: decidia por cache de 25 min, quando o `score` informa as horas restantes.
+- **Como foi verificado:** suÃ­te 379 OK; `check_project.py` 0 erros; 5 testes novos cobrem leitura das horas, ausÃªncia = inativa, recast abaixo do mÃ­nimo, nÃ£o-recast com sobra e recast sÃ³ da magia baixa.
+- **Custo:** `manter_magias` agora roda um `score tudo` antes de decidir (um comando a mais por `cuidar`). Se o score nÃ£o trouxer a linha da magia, ela Ã© tratada como inativa e recastada â€” o lado seguro.
+- **PrÃ³ximo:** exercitar ao vivo e conferir se a linha do `score` aparece sempre; se o servidor variar o texto, ajustar `RX_BUFF`.

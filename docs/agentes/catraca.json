@@ -457,6 +457,18 @@
       "arquivo": "automato/nucleo/config.py",
       "desde": "2026-10-21",
       "regra": "as 'horas' do score são de JOGO (1 h ≈ 75 s reais): existe conversão nomeada e a validade das magias é derivada dela, não escrita à mão"
+    },
+    {
+      "id": "horas_restantes",
+      "arquivo": "automato/camadas/cuidar.py",
+      "desde": "2026-10-21",
+      "regra": "recastar magia é decisão por DADO (horas restantes no score), não por timer; o cache de 25 min saiu"
+    },
+    {
+      "id": "vigia.do_driver",
+      "arquivo": "automato/camadas/prepara.py",
+      "desde": "2026-10-21",
+      "regra": "espera de estado (sono) é governada pela leitura dos vitais a cada fatia e tem teto de segurança; não é só time.sleep"
     }
   ]
 }

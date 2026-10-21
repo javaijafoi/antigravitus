@@ -4,6 +4,16 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.7.22 — Dia 158 · Rotina por dado, timer só como teto: o recast de magia sai do relógio (DeepSeek deepseek-flash)
+
+Origem: o autor resumiu a doutrina — *"as rotinas deviam ser em relação aos vitais; o máximo que a gente tem é uma parte de segurança dizendo: se demorar mais que tanto tempo, chama o agente"*. Auditoria feita: **quase tudo já era assim; uma coisa não era.**
+
+- **O que já estava certo (não mexi):** `xadrez_cascata.descansar()` e `esperar_presenca()` esperam por vida/mana/peça e só têm `max_s` como teto; `rotinas` (milharal, novatos) param por meta de abates com `estourou()` de segurança; `prepara.dormir()` (v1.7.19) consulta o vigia.
+- **O que estava errado — `cuidar.manter_magias()`:** decidia re-conjurar por um **cache de 25 minutos**, um chute sobre a duração. Só que o `score` **mostra** a duração real em horas de jogo (`armor ( 24 horas )`). Agora `horas_restantes(texto, magia)` lê dali e a decisão é por dado: abaixo de `HORAS_MINIMAS_MAGIA = 4` (≈5 min reais) re-conjura; e só re-conjura **a magia que está baixa**, não as duas.
+- **Cache removido:** `VALIDADE_SEGUNDOS` saiu de `cuidar.py`; `config.VALIDADE_MAGIAS_SEGUNDOS` fica como **referência documentada**, marcada como não-critério.
+- **Efeito:** personagem não fica sem armadura por estimativa errada, e não gasta mana re-conjurando magia que ainda tem 20 horas.
+- **Testes:** `test_sobrevivencia.py` (+5): lê as horas, ausência = inativa, abaixo do mínimo recasta, com sobra não recasta, e recasta só o que está baixo. Suíte: 379 OK. 2 IDs novos na catraca.
+
 ## v1.7.21 — Dia 158 · Hora de jogo × hora real: a unidade agora tem nome (DeepSeek deepseek-flash)
 
 Origem: dúvida do autor — *"existe a chance da gente estar confundindo minutos do tempo real com minutos do jogo?"*. A varredura respondeu: **o código está coerente, a prosa não estava.**

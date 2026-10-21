@@ -88,6 +88,9 @@ def segundos_reais_para_horas_de_jogo(segundos, escala=None):
 # importado do CircleMUD (`maquina/spells.md`). E' PROVAVEL, nao confirmado
 # para o DeBo - a ajuda e' do CircleMUD e o servidor pode divergir.
 # Derivado da escala medida, nao escrito a mao: 24 x 75 s x 0,83 = 1494 -> 25 min.
+# ATENCAO: isto e' REFERENCIA, nao criterio. Quem decide recastar e' o `cuidar.py`,
+# lendo as horas restantes do `score` (`horas_restantes()`); o timer de 25 min
+# deixou de ser usado em 2026-10-21 porque era um chute sobre a duracao real.
 VALIDADE_MAGIAS_SEGUNDOS = int(horas_de_jogo_para_segundos_reais(24) * MARGEM_MAGIA)
 
 # --- invisibilidade: opcional, e NAO e' mais a protecao padrao (Dia 156) ---

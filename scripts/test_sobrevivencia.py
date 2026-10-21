@@ -17,6 +17,7 @@ sys.path.insert(0, str(RAIZ / 'automato' / 'nucleo'))
 import auditar_sessao as A  # noqa: E402
 import base as B  # noqa: E402
 import config as C  # noqa: E402
+import cuidar as CU  # noqa: E402
 import navegar as N  # noqa: E402
 import prepara as P  # noqa: E402
 
@@ -266,6 +267,43 @@ class TestEscalaDoTempo(unittest.TestCase):
 
     def test_escala_customizada(self):
         self.assertEqual(C.horas_de_jogo_para_segundos_reais(3, escala=60), 180)
+
+
+class TestMagiaPorDado(unittest.TestCase):
+    """Recastar é decisão por DADO (horas no `score`), não por timer (ID: horas_restantes)."""
+
+    def test_le_as_horas_de_jogo_do_score(self):
+        texto = ('armor                 (  24 horas ) +30 em ARMADURA\n'
+                 'invisibility          (  12 horas ) +40 em ARMADURA')
+        self.assertEqual(CU.horas_restantes(texto, 'armor'), 24)
+        self.assertEqual(CU.horas_restantes(texto, 'invisibility'), 12)
+
+    def test_magia_ausente_do_score_e_none(self):
+        self.assertIsNone(CU.horas_restantes('nada de magia aqui', 'armor'))
+
+    def test_abaixo_do_minimo_manda_reconjurar(self):
+        self.assertLess(CU.horas_restantes('armor ( 2 horas )', 'armor'), CU.HORAS_MINIMAS_MAGIA)
+
+    def test_com_horas_de_sobra_nao_reconjura(self):
+        texto = 'armor ( 24 horas )\ninvisibility ( 12 horas )'
+        with mock.patch.object(CU, 'situacao', return_value={'texto': texto}), \
+             mock.patch.object(CU, 'config') as cfg, \
+             mock.patch.object(CU, '_conjurar') as conj:
+            cfg.USAR_INVISIBILIDADE = True
+            r = CU.manter_magias()
+        self.assertFalse(conj.called)
+        self.assertTrue(r['cache'])
+
+    def test_so_reconjura_o_que_esta_baixo(self):
+        texto = 'armor ( 2 horas )\ninvisibility ( 12 horas )'
+        with mock.patch.object(CU, 'situacao', return_value={'texto': texto}), \
+             mock.patch.object(CU, 'sala_atual', return_value='praca do templo'), \
+             mock.patch.object(CU, 'vida_frac', return_value=0.9), \
+             mock.patch.object(CU, 'config') as cfg, \
+             mock.patch.object(CU, '_conjurar', return_value=(True, 'sente alguem te protegendo')) as conj:
+            cfg.USAR_INVISIBILIDADE = True
+            CU.manter_magias()
+        self.assertEqual([c.args[0] for c in conj.call_args_list], ['armor'])
 
 
 if __name__ == '__main__':

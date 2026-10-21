@@ -38,18 +38,10 @@ LIMIAR_AGUA = 0.0       # cantil vazio e' o gatilho; meio cantil nao e'
 AREA_SEM_MAGIA = 'templo de midgaard'
 PRACA = 'praca do templo'
 
-# Quanto tempo uma conjuracao confirmada vale antes de re-conjurar.
-#
-# A duracao real nao foi cronometrada ate' o fim, mas agora tem base: o manual
-# importado do CircleMUD (`maquina/spells.md`) diz **24 horas de jogo** para
-# `armor` e `invisibility`, e a hora do jogo foi MEDIDA ao vivo em ~75 s reais
-# (duas transicoes do comando `time`: 61 s e ~78 s). 24 x 75 = 1800 s = 30 min.
-#
-# E' PROVAVEL, nao confirmado para o DeBo - a ajuda e' do CircleMUD. Por isso
-# re-conjuramos com margem: 25 min em vez de 30. Cada resposta crua continua
-# sendo registrada em `_MAGIAS['respostas']`, para que a mensagem de expiracao
-# real apareca sozinha no log e a estimativa seja corrigida por evidencia.
-VALIDADE_SEGUNDOS = config.VALIDADE_MAGIAS_SEGUNDOS
+# A decisao de re-conjurar e' por DADO, nao por relogio: o `score` mostra as horas de
+# JOGO que restam (`armor ( 24 horas )`), e `horas_restantes()` le dali. O cache por
+# tempo que existia antes (25 min) era um chute sobre a duracao — e chute errado deixa
+# a personagem sem armadura sem ninguem perceber. Ver `config.horas_de_jogo_para_segundos_reais()`.
 _MAGIAS = {'armadura': None, 'invisibilidade': None, 'em': 0.0,
            'local': None, 'respostas': {}}
 
@@ -182,18 +174,45 @@ def sair_da_area_sem_magia():
     return True, nome
 
 
-def manter_magias(forcar=False):
-    """Armadura e invisibilidade, com validade explicita.
+RX_BUFF = re.compile(r"(armor|invisibility|invisibilidade)\s*\(\s*(\d+)\s*horas?\s*\)", re.I)
+# Abaixo disto, re-conjura. 4 horas de JOGO ~ 5 min reais (1 h de jogo ~ 75 s).
+HORAS_MINIMAS_MAGIA = 4
 
-    Sem `forcar` e com conjuracao recente, nao gasta mana de novo: devolve o
-    que ja' foi confirmado. Com `forcar`, ou passada a validade, re-conjura.
+
+def horas_restantes(texto, magia):
+    """Horas de JOGO que restam da magia, lidas do `score`. ID: horas_restantes.
+
+    `None` = a magia nao aparece no score, ou seja, nao esta' ativa. Antes a decisao de
+    re-conjurar era um cache de 25 min: um chute sobre a duracao. O `score` diz a
+    duracao de verdade (`armor ( 24 horas )`), e ela e' em horas de JOGO.
     """
-    agora = time.time()
-    idade = agora - _MAGIAS['em']
-    if (not forcar and _MAGIAS['armadura'] and _MAGIAS['invisibilidade']
-            and idade < VALIDADE_SEGUNDOS):
+    alvo = sem_acento(magia)[:5]
+    for m in RX_BUFF.finditer(texto or ''):
+        if sem_acento(m.group(1))[:5] == alvo:
+            return int(m.group(2))
+    return None
+
+
+def manter_magias(forcar=False):
+    """Armadura e invisibilidade decididas pelo DADO: as horas que o `score` mostra.
+
+    Sem `forcar`, so' re-conjura o que caiu abaixo de HORAS_MINIMAS_MAGIA. O cache por
+    tempo saiu: ele era um chute sobre a duracao, e um chute errado deixa a personagem
+    sem armadura sem ninguem perceber.
+    """
+    texto = situacao()['texto']
+    arm_h = horas_restantes(texto, 'armor')
+    inv_h = horas_restantes(texto, 'invisibility')
+    falta_arm = forcar or arm_h is None or arm_h < HORAS_MINIMAS_MAGIA
+    falta_inv = forcar or (config.USAR_INVISIBILIDADE
+                           and (inv_h is None or inv_h < HORAS_MINIMAS_MAGIA))
+    if not falta_arm and not falta_inv:
+        if not config.USAR_INVISIBILIDADE:
+            # Comercio exige personagem visivel; `visible` e' inofensivo quando ja' esta'.
+            run('visible')
         return {'armadura': True, 'invisibilidade': True, 'local': _MAGIAS['local'],
-                'motivo': '', 'cache': True, 'idade_s': int(idade)}
+                'motivo': '', 'cache': True,
+                'horas': {'armor': arm_h, 'invisibility': inv_h}}
 
     onde = sala_atual()
     if AREA_SEM_MAGIA in onde and PRACA not in onde:
@@ -205,22 +224,29 @@ def manter_magias(forcar=False):
         return {'armadura': False, 'invisibilidade': False, 'local': onde,
                 'motivo': 'vida baixa demais para gastar mana', 'cache': False}
 
-    arm, resp_a = _conjurar('armor', OK_ARMADURA, JA_ATIVA)
+    if falta_arm:
+        arm, resp_a = _conjurar('armor', OK_ARMADURA, JA_ATIVA)
+    else:
+        arm, resp_a = True, 'ainda ativa (%s horas no score)' % arm_h
     if config.USAR_INVISIBILIDADE:
-        inv, resp_i = _conjurar('invisibility', OK_INVISIBILIDADE, JA_ATIVA)
+        if falta_inv:
+            inv, resp_i = _conjurar('invisibility', OK_INVISIBILIDADE, JA_ATIVA)
+        else:
+            inv, resp_i = True, 'ainda ativa (%s horas no score)' % inv_h
     else:
         # Visibilidade e' requisito de comercio: "Nao negocio com quem nao vejo!".
         # Sem a magia, a protecao vem da ROTA - evitar as salas de risco alto.
         # `visible` e' inofensivo quando ja' esta' visivel, entao roda sempre.
         t, _, _ = run('visible')
         inv, resp_i = True, ' '.join(sem_acento(t).split())[:90]
-    _MAGIAS.update({'armadura': arm, 'invisibilidade': inv, 'em': agora, 'local': onde,
+    _MAGIAS.update({'armadura': arm, 'invisibilidade': inv, 'em': time.time(), 'local': onde,
                     'respostas': {'armor': ' '.join(resp_a.split())[:160],
                                   'invisibility': ' '.join(resp_i.split())[:160]}})
     print('[CUIDAR] armor=%s (%s) | invisibility=%s (%s)'
           % ('ok' if arm else 'nao', ' '.join(resp_a.split())[:60],
              'ok' if inv else 'nao', ' '.join(resp_i.split())[:60]), flush=True)
     return {'armadura': arm, 'invisibilidade': inv, 'local': onde, 'cache': False,
+            'horas': {'armor': arm_h, 'invisibility': inv_h},
             'resposta_armor': _MAGIAS['respostas']['armor'],
             'resposta_invisibility': _MAGIAS['respostas']['invisibility'],
             'motivo': '' if (arm and inv) else 'conjuracao nao confirmada'}
