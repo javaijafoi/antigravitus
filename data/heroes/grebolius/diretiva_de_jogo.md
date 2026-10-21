@@ -35,6 +35,9 @@ Regra-mãe: **nunca sair de aventura sem preparo, e nunca lutar do jeito errado.
 
 **27 sessões de treino disponíveis.** Próximas magias por nível: 16 detect poison, 20 **lightning bolt**, 21 curse, 22 identify. Guardar treino para o lightning bolt ou subir shocking grasp são as opções.
 
+> **2026-10-21 — etiqueta:** tabela de **referência** (fatos do herói), não regra. A única parte
+> operativa é "shocking grasp 10%: não usar", e ela não tem check.
+
 ## 4. Economia e logística
 - **Armeiro de Midgaard compra SÓ armaduras** (paga 8.500 na Armadura da Torre Negra, 150 na do Peão) e **tem caixa limitado**: quando ele diz "caro demais — tente um feiticeiro", é caixa, não item. Tentar vender de novo mais tarde.
 - **Feiticeiro (Loja de Magias) compra bastões/cajados**, não armaduras. Também vende pergaminhos (retorno 9.202, remover maldições 8.509, identificação 4.601).
@@ -56,6 +59,10 @@ Regra-mãe: **nunca sair de aventura sem preparo, e nunca lutar do jeito errado.
 - **Wimpy não salva de DT** e nem sempre salva de atordoamento: subir para **45** e, ainda assim, tratar vida < 60% em zona densa como hora de sair.
 
 
+> **2026-10-21 — virou default:** o aviso "algo perigoso por perto" passou a abortar em **todo**
+> script (`base.PerigoMortal`; `navegar` para com código 7). Antes só o milharal tratava, e as outras
+> rotinas andavam para dentro da armadilha.
+
 ## 7. Duas regras de magia e covardia (Dia 113, verificadas no servidor)
 - **Wimpy tem teto: metade da vida máxima.** Com 87 de vida, `wimpy 45` foi recusado (*"Você não pode ajustar seu nível de covardia acima da metade de seus pontos de vida"*); **`wimpy 43`** foi aceito. Reajustar sempre que a vida máxima subir.
 - **O Templo de Midgaard BLOQUEIA magia.** Dentro dele, `cast 'armor'` (e qualquer feitiço) responde *"Sua magia falha e desaparece"*. **Conjurar na Praça do Templo** ou em qualquer sala comum: ali a armadura pegou de primeira.
@@ -63,12 +70,18 @@ Regra-mãe: **nunca sair de aventura sem preparo, e nunca lutar do jeito errado.
   - Se `armor` falhar fora dessas salas, é azar: **insistir** até *"Você sente alguém te protegendo"*.
 
 
+> **2026-10-21 — etiqueta:** **referência**. O comportamento já está no código
+> (`cuidar.sair_da_area_sem_magia`, `prepara.garantir_armor`); a regra escrita é consulta, não trava.
+
 ## 8. SEMPRE `stand` antes de andar (a lição que custou rodadas)
 - O jogo recusa movimento enquanto a personagem está **descansando/dormindo**: a resposta é *"Nah... você está muito relaxado.."*. Parece falha de rota, mas é postura.
 - **Todo script de deslocamento deve começar com `wake; stand`** — e, de preferência, reconferir depois de qualquer `rest`/`sleep`.
 - Isso explica boa parte das "viagens que falhavam" entre os Dias 110 e 122: eu culpava o parser e a rota, quando era a postura.
 - Rota curta confirmada para o tabuleiro: `recall` → `stand` → 4 norte (Grande Campo) → oeste (Caminho Sujo) → oeste (Grande Tabuleiro) → oeste (Casa Branca) → norte, norte.
 
+
+> **2026-10-21 — virou default:** `base.andar` e `navegar` mandam `wake; stand` e repetem o passo
+> **uma vez**; a recusa por postura deixou de custar a viagem inteira (antes `navegar` parava com código 5).
 
 ## 9. Método de automação — a lição que custou três mortes (Dias 110-140)
 > Regra-mãe: **o motor só anda sozinho depois de provar que anda.** Enquanto não provou, cada passo é observado.

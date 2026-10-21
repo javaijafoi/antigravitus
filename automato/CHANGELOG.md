@@ -4,6 +4,16 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.7.17 — Dia 158 · §6 e §8 viram default no código: a armadilha aborta e a postura não custa a viagem (DeepSeek deepseek-flash)
+
+Origem: a decisão sobre as 8 seções da diretiva sem trava. Duas delas não eram dívida de documento, eram **lacuna de comportamento**:
+
+- **§6 (armadilha mortal).** O aviso *"Você percebe que há algo perigoso por perto!"* só era tratado em `milharal.py` e `milharal_v2.py`. `navegar`, `xadrez_cascata`, `esgoto` e `novatos` andavam para dentro. Agora `base._checar_dt()` levanta `PerigoMortal` em todo `andar()` e o `navegar.py` para com **código 7** antes de dar o passo.
+- **§8 (`stand` antes de andar).** O `navegar.py` tratava "muito relaxado" como recusa de rota e parava com código 5 — a viagem inteira morria por postura. Agora `base.andar()` e o `navegar.py` mandam `wake; stand` e repetem **uma vez**.
+- **Diretiva:** §3 e §7 ganharam etiqueta de **referência** (fatos e mecânica que o código já cumpre); §6 e §8 ganharam **nota datada** dizendo que viraram default. Sem apagar nada do autor.
+- **Testes:** `test_sobrevivencia.py` (+6): aborto no aviso, código 7 no navegar, levantada única, recusa de rota ainda falsa. Suíte: 355 OK. 3 IDs novos na catraca.
+- **Limite:** nada exercitado ao vivo. O risco do §6 é **falso positivo** — se o servidor usar a frase em contexto inofensivo, a rotina para. Por isso o aborto é explícito e registrado no log; medir numa sessão antes de confiar.
+
 ## v1.7.16 — Dia 158 · Coesão: um comando de fechamento e a tabela de modos presa à diretiva (DeepSeek deepseek-flash)
 
 Origem: auditoria de coesão pedida pelo autor. Duas contradições reais, as duas nascidas do que eu mesmo escrevi antes:

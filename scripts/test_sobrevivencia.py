@@ -126,5 +126,72 @@ class TestModoBreve(unittest.TestCase):
         self.assertEqual(enviados, ['toggle', 'brief'])
 
 
+MAPA = {
+    'a': {'id': 'a', 'name': 'Praça', 'exits': {'e': 'b'}},
+    'b': {'id': 'b', 'name': 'Rua Larga', 'exits': {'w': 'a', 'e': 'c'}},
+    'c': {'id': 'c', 'name': 'Biblioteca', 'exits': {'w': 'b'}},
+}
+
+
+class FalsoMUD:
+    def __init__(self, respostas):
+        self.respostas, self.i, self.enviados = respostas, 0, []
+
+    def __call__(self, c):
+        self.enviados.append(c)
+        if c in ('wake', 'stand'):
+            return 'Você já está em pé.', {'hp': 199}, False
+        t = self.respostas[min(self.i, len(self.respostas) - 1)]
+        self.i += 1
+        return t, {'hp': 199}, False
+
+
+class TestGuardaDeArmadilha(unittest.TestCase):
+    """§6: o aviso de armadilha mortal aborta em qualquer script, não só no milharal."""
+
+    def test_andar_aborta_no_aviso(self):
+        with mock.patch.object(B, 'run', return_value=('Você percebe que há algo perigoso por perto!', {}, False)):
+            with self.assertRaises(B.PerigoMortal):
+                B.andar('n')
+
+    def test_navegar_para_com_codigo_7(self):
+        mud = FalsoMUD(['Você percebe que há algo perigoso por perto!'])
+        with self.assertRaises(N.Parada) as ctx:
+            N.navegar(MAPA, 'a', 'c', mud, log=lambda *_: None)
+        self.assertEqual(ctx.exception.codigo, 7)
+
+    def test_passos_normais_nao_acionam(self):
+        with mock.patch.object(B, 'run', return_value=('Rua Larga', {}, False)):
+            self.assertTrue(B.andar('n'))
+
+
+class TestPosturaAntesDeAndar(unittest.TestCase):
+    """§8: recusa por postura custa um `wake; stand` e uma nova tentativa."""
+
+    def test_andar_levanta_e_repete(self):
+        enviados = []
+
+        def falso(c, timeout=60.0):
+            enviados.append(c)
+            if c == 'n' and enviados.count('n') == 1:
+                return ('Nah... você está muito relaxado..', {}, False)
+            return ('Rua Larga', {}, False)
+
+        with mock.patch.object(B, 'run', side_effect=falso):
+            self.assertTrue(B.andar('n'))
+        self.assertEqual(enviados, ['n', 'wake', 'stand', 'n'])
+
+    def test_recusa_de_rota_continua_falsa(self):
+        with mock.patch.object(B, 'run', return_value=('Você não pode ir por aí...', {}, False)):
+            self.assertFalse(B.andar('n'))
+
+    def test_navegar_levanta_uma_vez_e_segue(self):
+        mud = FalsoMUD(['Nah... você está muito relaxado..',
+                        'Rua Larga\n[ Saídas: oeste, leste ]',
+                        'Biblioteca\n[ Saídas: oeste ]'])
+        N.navegar(MAPA, 'a', 'c', mud, log=lambda *_: None)
+        self.assertEqual(mud.enviados, ['e', 'wake', 'stand', 'e', 'e'])
+
+
 if __name__ == '__main__':
     unittest.main()

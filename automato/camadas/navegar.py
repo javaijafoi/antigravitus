@@ -187,6 +187,18 @@ def navegar(salas, origem, destino, run, permitir_risco=False, hp_min=0.60,
             raise Parada(6, 'teto de tempo (%ds) no passo %d de %d' % (max_segundos, i, len(plano)))
         texto, vitals, combate = run(d)
         baixo = texto.lower()
+        if 'algo perigoso por perto' in normalizar(texto):
+            raise Parada(7, 'aviso de ARMADILHA MORTAL no passo %d: parar e voltar por onde veio '
+                            '(diretiva §6)' % i)
+        if 'muito relaxado' in baixo:
+            # diretiva §8: é postura, não rota. Levanta e repete o passo UMA vez.
+            run('wake')
+            run('stand')
+            texto, vitals, combate = run(d)
+            baixo = texto.lower()
+            if 'algo perigoso por perto' in normalizar(texto):
+                raise Parada(7, 'aviso de ARMADILHA MORTAL no passo %d: parar e voltar por onde veio '
+                                '(diretiva §6)' % i)
         if any(r in baixo for r in RECUSAS):
             raise Parada(5, 'passo %d (%s para %s) recusado: %r' % (i, d, salas[esperado]['name'], titulo(texto)[:80]))
         hp = (vitals or {}).get('hp')

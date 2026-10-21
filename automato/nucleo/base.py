@@ -138,9 +138,39 @@ def sala():
     return ex, t
 
 
+AVISO_DT = 'algo perigoso por perto'
+
+
+class PerigoMortal(Exception):
+    """O servidor avisou de armadilha mortal (diretiva §6): parar e sair por onde veio.
+
+    Antes esta regra existia so' em prosa, e o aviso so' era tratado no milharal:
+    as rotinas de esgoto, novatos e o xadrez andavam para dentro da armadilha.
+    """
+
+
+def _checar_dt(texto):
+    """Aborta no aviso de armadilha mortal. ID na catraca: PerigoMortal."""
+    if AVISO_DT in _sem_acento(texto or ''):
+        raise PerigoMortal('aviso de armadilha mortal: pare e volte por onde veio (diretiva §6)')
+
+
 def andar(d):
+    """Um passo. Recusa por postura custa um `wake; stand` e uma nova tentativa (§8).
+
+    Antes, dormindo ou descansando, `andar` devolvia False e quem chamou tratava como
+    "sem caminho" — foi assim que viagens inteiras morreram por postura, nao por rota.
+    """
     r, _, _ = run(d)
-    return 'não pode ir' not in r
+    b = _sem_acento(r or '')
+    _checar_dt(b)
+    if 'relaxado' in b:
+        run('wake')
+        run('stand')
+        r, _, _ = run(d)
+        b = _sem_acento(r or '')
+        _checar_dt(b)
+    return 'nao pode ir' not in b
 
 
 def ate(d, marca, lim=32):

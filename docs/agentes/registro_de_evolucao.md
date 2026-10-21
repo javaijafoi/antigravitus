@@ -1237,3 +1237,10 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Como foi verificado:** `sync_hero.py --check` ok (derivados nÃ£o usam o campo), `check_project.py` 0 erros, `state.json` sem `operational_mode` e com `postura.current = "padrao"`.
 - **Custo:** nenhum no jogo. Quem tiver script local antigo lendo `operational_mode` precisa renomear; nÃ£o hÃ¡ nenhum no repositÃ³rio.
 - **PrÃ³ximo:** os cinco modos continuam **fora** do `state.json` de propÃ³sito: modo Ã© escolha de bloco de jogo, vive no plano e no transcript; gravar no estado criaria um valor sempre velho.
+
+### 2026-10-21 Â· Dia 158 Â· DeepSeek deepseek-flash (dsh)
+- **Mudou:** `automato/nucleo/base.py` (`PerigoMortal`, `_checar_dt`, `andar` com levantada), `automato/camadas/navegar.py` (cÃ³digo 7 para armadilha e levantada Ãºnica na recusa por postura), `data/heroes/grebolius/diretiva_de_jogo.md` (Â§3 e Â§7 etiquetadas referÃªncia; Â§6 e Â§8 com nota datada de default), `scripts/test_sobrevivencia.py` (+6), `docs/agentes/catraca.json` (+3), `automato/CHANGELOG.md` v1.7.17.
+- **Por quÃª:** decisÃ£o sobre as 8 seÃ§Ãµes da diretiva sem trava. Â§6 e Â§8 nÃ£o eram dÃ­vida de documento: o aviso de armadilha mortal sÃ³ era tratado no milharal, e a recusa por postura fazia o `navegar` parar com cÃ³digo 5, matando a viagem.
+- **Como foi verificado:** suÃ­te 355 OK; `check_project.py` 0 erros; os 6 testes novos cobrem aborto no aviso, cÃ³digo 7 no navegar, levantada Ãºnica e recusa de rota legÃ­tima.
+- **Custo:** pode haver falso positivo se o servidor usar "algo perigoso por perto" fora de armadilha â€” o aborto Ã© explÃ­cito e o `turno` verÃ¡ o motor terminar; medir numa sessÃ£o real antes de confiar. A levantada gasta 2 comandos por recusa de postura.
+- **PrÃ³ximo:** Lote B (Â§10 sai, Â§17 muda de arquivo, Â§11 e Â§24 tÃªm fatos para o `conhecimento.md`) e Lote C (campo `fechado_quando` no `capitulos.json`).

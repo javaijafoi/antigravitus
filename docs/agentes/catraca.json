@@ -415,6 +415,24 @@
       "arquivo": "scripts/test_mandabala.py",
       "desde": "2026-10-21",
       "regra": "a tabela MODOS impressa na abertura tem de ser igual à tabela da diretiva §26, na mesma ordem"
+    },
+    {
+      "id": "PerigoMortal",
+      "arquivo": "automato/nucleo/base.py",
+      "desde": "2026-10-21",
+      "regra": "o aviso de armadilha mortal aborta o passo em qualquer rotina que ande por base.andar (diretiva 6)"
+    },
+    {
+      "id": "if 'relaxado' in b",
+      "arquivo": "automato/nucleo/base.py",
+      "desde": "2026-10-21",
+      "regra": "recusa por postura (dormindo/descansando) manda wake + stand e repete o passo uma vez (diretiva 8)"
+    },
+    {
+      "id": "aviso de ARMADILHA MORTAL",
+      "arquivo": "automato/camadas/navegar.py",
+      "desde": "2026-10-21",
+      "regra": "navegar para com código 7 no aviso de armadilha mortal e levanta uma vez na recusa por postura (diretivas 6 e 8)"
     }
   ]
 }
