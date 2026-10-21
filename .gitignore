@@ -17,3 +17,9 @@ audio/test_samples/
 
 # automato: segredos e execucao ficam fora do git
 automato/runtime/
+
+# Claude Code: configuracao local e worktrees de sessao (copia inteira do repo)
+.claude/
+
+# gerar_mapa_grade.py --html: mapa avulso para validar fora do site (o proprio script diz que fica fora do git)
+mapa_grade.html
