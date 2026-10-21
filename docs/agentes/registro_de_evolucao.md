@@ -1230,3 +1230,10 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 - **Como foi verificado:** suÃ­te 349 OK; `check_project.py` 0 erros; busca por instruÃ§Ã£o de rodar `check_project`/suÃ­te Ã  parte em `AGENTS.md` e `PROTOCOLO.md` agora nÃ£o encontra nenhuma. O teste de deriva compara `mandabala.MODOS` com as linhas em negrito da tabela da Â§26, na ordem.
 - **Custo:** o teste de deriva depende do formato da tabela da Â§26 (linhas `| **modo** |`); reformatar a seÃ§Ã£o quebra o teste, e Ã© para quebrar mesmo â€” avisa que a cÃ³pia precisa acompanhar.
 - **PrÃ³ximo:** as 8 seÃ§Ãµes da diretiva sem trava (Â§3, Â§6, Â§7, Â§8, Â§10, Â§11, Â§17, Â§24) continuam sendo a maior dÃ­vida de coesÃ£o; depende de decisÃ£o do autor sobre apagar, virar check ou virar default no cÃ³digo.
+
+### 2026-10-21 Â· Dia 158 Â· DeepSeek deepseek-flash (dsh)
+- **Mudou:** `data/heroes/grebolius/state.json` (`operational_mode` â†’ `postura`, mesmo conteÃºdo), `docs/agentes/glossario.md` (Â§10: entrada `postura`, com a distinÃ§Ã£o explÃ­cita para os cinco modos da diretiva Â§26).
+- **Por quÃª:** colisÃ£o de nome apontada na auditoria de coesÃ£o. O `state.json` tinha `operational_mode.current = "padrao"`, que **nÃ£o Ã©** nenhum dos modos da Â§26 â€” dois conceitos com a mesma palavra, e o prÃ³ximo agente ia confundir. NÃ£o havia consumidor em cÃ³digo: o campo sÃ³ existia no estado.
+- **Como foi verificado:** `sync_hero.py --check` ok (derivados nÃ£o usam o campo), `check_project.py` 0 erros, `state.json` sem `operational_mode` e com `postura.current = "padrao"`.
+- **Custo:** nenhum no jogo. Quem tiver script local antigo lendo `operational_mode` precisa renomear; nÃ£o hÃ¡ nenhum no repositÃ³rio.
+- **PrÃ³ximo:** os cinco modos continuam **fora** do `state.json` de propÃ³sito: modo Ã© escolha de bloco de jogo, vive no plano e no transcript; gravar no estado criaria um valor sempre velho.

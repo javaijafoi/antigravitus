@@ -320,6 +320,7 @@ termina quando a primeira crônica real é gravada.
 | `evidence` / `document` / `note` | referências de crônica e evento | fonte exigida para registrar um fato |
 | `evidence_policy.legacy_through_day` | `hero.json` | até que dia o legado é aceito **sem** evidência estruturada |
 | `record_status` | `hero.json` | `draft` = rascunho sem observação real |
+| `postura` | `state.json` | perfil operacional durável (`current`, `description`, `wimpy_profile`, `rules`), ex. "batedor". **Não confundir com os cinco modos da diretiva §26** (`caminhar`, `explorar`, `moer`, `missão`, `chefe`): o modo é a escolha de **um bloco de jogo** e vive no plano; a postura é estado da personagem. Chamava-se `operational_mode` até 2026-10-21 — o nome colidia com "modo" e foi renomeado. |
 | `inventory.pending_verification` | `state.json` | item visto no passado cuja posse atual é incerta |
 | `risk_code` | `mapa.json` | classe de risco da sala |
 | `layers[]` / `rooms[]` / `exits{}` | `mapa.json` | camadas, salas e saídas (a chave da saída é **convenção de arquivo**, não comando a enviar) |
