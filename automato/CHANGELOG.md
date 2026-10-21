@@ -4,6 +4,16 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.7.24 — Dia 158 · `aproveitar_tempo` e `vender_espolio`: tempo ocioso vira trabalho (DeepSeek deepseek-flash)
+
+Origem: o autor pediu *"aproveitar 2 min faz X; aproveitar 4 min faz X, Y e Z"* e a rotina de venda de espólio, depois de ver a espera de repop custar 720 s parada.
+
+- **`acoes/aproveitar_tempo.py` (novo):** `selecionar(minutos, tarefas)` empilha por prioridade o que cabe no orçamento (pula o que não cabe e continua); `aproveitar()` executa em ordem, mede o relógio, roda `try/except` por tarefa e para no orçamento (`GRACE_S = 30` é teto, e a tarefa em curso nunca é cortada). CLI com `--minutos`, `--tarefas` e `--simular`.
+- **`rotinas/vender_espolio.py` (novo):** `value` antes do `sell`, whitelist de armas/armaduras/escudos (tomo, cetro, coroa, mochila, joias e equipamento vestido nunca são tocados), oferta mínima configurável, **para quando o caixa do comerciante seca** e devolve relatório com ouro antes/depois e estado dos dois caixas.
+- **`xadrez_cascata.esperar_presenca`:** 720 s → **60 s**, polling de 20 → 10 s, e quando a peça não vem chama a tarefa de espera (`aproveitar(2)`), devolvendo `'tarefa'` para a cascata recomeçar a ida.
+- **`prepara.dormir`:** teto 3 min → **90 s**, com **+30 s** (até 2 extensões) enquanto a vida estiver subindo; a barra enche em ~20 s (§89), o resto é dia lento.
+- **Testes:** `test_aproveitar_tempo.py` (9) e `test_vender_espolio.py` (8); `test_sobrevivencia.py` 35 OK, `test_xadrez_cascata.py` 31 OK, `test_catraca.py` 11 OK; 2 IDs novos.
+
 ## v1.7.23 — Dia 158 · Sono e descanso terminam pelos vitais; o relógio é só teto que avisa (DeepSeek deepseek-flash)
 
 Origem: diretiva do autor — *"a rotina devia durar até estar recuperado… ela sabe pelos números… o máximo que a gente tem é uma parte de segurança dizendo: se demorar mais que tanto tempo, chama o agente"*. Auditoria: o `descansar` já era por vitais, mas parava **7 min por ida** porque o alvo (215/222) não cabia na barra de 211; o `dormir` era por relógio (5 hp/min, teto de 45 min) e só olhava a vida a cada 120 s.

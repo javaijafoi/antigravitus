@@ -382,8 +382,26 @@ class Ctx:
         self.cmd('recall', 3)
 
 
-def esperar_presenca(ctx, tipo, max_s=720):
-    """Fica na casa ate' a peca reaparecer. Devolve o texto da sala ou None."""
+ESPERA_PRESENCA_S = 60      # diretiva 2026-10-21: peca ausente nao se espera 12 min parado
+ESPERA_POLL_S = 10
+
+
+def tarefa_de_espera(ctx=None):
+    """O que fazer enquanto a peca nao volta: empilha tarefas curtas (aproveitar_tempo)."""
+    try:
+        import aproveitar_tempo
+        return aproveitar_tempo.aproveitar(2)
+    except Exception as e:      # noqa: BLE001 - tarefa nunca derruba a cascata
+        print('[XADREZ] ATENCAO: tarefa de espera falhou (%s); seguindo' % e, flush=True)
+        return None
+
+
+def esperar_presenca(ctx, tipo, max_s=ESPERA_PRESENCA_S, tarefa=None):
+    """Espera a peca por `max_s` (default 60 s). Se nao vier, roda `tarefa` e devolve None.
+
+    Quem chama decide o que fazer com o None: `atacar_peca` devolve 'tarefa' e a cascata
+    recomeca a ida (a personagem pode ter saido do tabuleiro para trabalhar).
+    """
     padrao = re.compile(PRESENCA[normalizar(tipo)] if normalizar(tipo) in PRESENCA else PRESENCA['bispo'])
     ctx.cmd('rest', 1)
     t0 = time.time()
@@ -395,12 +413,19 @@ def esperar_presenca(ctx, tipo, max_s=720):
         if padrao.search(normalizar(texto)):
             ctx.cmd('stand', 1)
             return texto
-        time.sleep(20)
+        time.sleep(ESPERA_POLL_S)
     ctx.cmd('stand', 1)
+    if tarefa is not None:
+        print('[XADREZ] %s nao apareceu em %d s; aproveitando o tempo' % (tipo, max_s), flush=True)
+        try:
+            tarefa(ctx)
+        except Exception as e:      # noqa: BLE001
+            print('[XADREZ] ATENCAO: tarefa falhou (%s)' % e, flush=True)
     return None
 
 
-def atacar_peca(ctx, tab, casa, alvo, tipo, magias, dorme, meta, log=print, espera=True):
+def atacar_peca(ctx, tab, casa, alvo, tipo, magias, dorme, meta, log=print, espera=True,
+                tarefa=tarefa_de_espera):
     """Uma ida: chega na casa, dorme (se for o caso), debuffs, raios com limite de vida. Devolve o resultado."""
     tab.ir(casa)
     m0 = mortes(tipo)
@@ -411,9 +436,9 @@ def atacar_peca(ctx, tab, casa, alvo, tipo, magias, dorme, meta, log=print, espe
             log('  %s: sem %s agora; tento a outra casa' % (casa, alvo))
             return 'ausente'
         log('  %s: sem %s agora; esperando o repop' % (casa, alvo))
-        entrada = esperar_presenca(ctx, alvo)
+        entrada = esperar_presenca(ctx, alvo, tarefa=tarefa)
         if entrada is None:
-            return 'ausente'
+            return 'tarefa'      # a personagem pode ter saido: a cascata recomeca a ida
     mira = '1.' + alvo if alvo == 'torre' else alvo
     if ctx.considerar(mira, log):
         ctx.recall()
@@ -490,7 +515,7 @@ def cumprir_etapa(nome, log=print):
             if res == 'perigo':
                 log('consider deu perigo duro em %s: etapa parada (diretiva §2)' % casa)
                 return 4
-            if res == 'recall':
+            if res in ('recall', 'tarefa'):
                 break
         ctx.recall()
     return 1

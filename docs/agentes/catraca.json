@@ -481,6 +481,18 @@
       "arquivo": "automato/acoes/xadrez_cascata.py",
       "desde": "2026-10-21",
       "regra": "o alvo de vida do descanso e 95% da barra atual, nao um numero fixo (215/222 ficaram inalcancaveis)"
+    },
+    {
+      "id": "aproveitar_tempo",
+      "arquivo": "automato/acoes/aproveitar_tempo.py",
+      "desde": "2026-10-21",
+      "regra": "tempo ocioso vira tarefa curta empilhada por orcamento de minutos; o relogio e teto, nao criterio"
+    },
+    {
+      "id": "vender_espolio",
+      "arquivo": "automato/rotinas/vender_espolio.py",
+      "desde": "2026-10-21",
+      "regra": "venda consulta `value` antes do `sell`, so vende whitelist de armas/armaduras/escudos e para quando o caixa do comerciante seca"
     }
   ]
 }

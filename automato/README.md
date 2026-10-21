@@ -137,6 +137,8 @@ execute (fica no repositório só como histórico).
 | **Andar de A até B** | `camadas/navegar.py` | **canônica** (pelo `mapa.json`, confere cada sala; aceita o título sem o sufixo de curadoria `(…)`; origem homônima: prefere a sala curada ou pede `--de`). Templo→Praça de Jareth: `--para lb013` |
 | Andar rota fixa Templo→Jareth | `rotas/nav.py` | legado: só avisa e repassa ao `navegar.py` (a rota virou arestas do `mapa.json` no Dia 157). Rota nova vai para o `mapa.json` |
 | Cota do modelo e handoff | `camadas/guarda_cota.py` | canônica (só Antigravity) |
+| **Aproveitar tempo ocioso** | `acoes/aproveitar_tempo.py` | **canônica** — empilha tarefas curtas até um orçamento de minutos (`--minutos 2`, `--simular`); o relógio é teto, não critério |
+| **Vender espólio** | `rotinas/vender_espolio.py` | **canônica** — `value` antes do `sell`, whitelist de armas/armaduras/escudos, para quando o caixa do comerciante seca e devolve o relatório dos dois |
 | Fechar a sessão com segurança | `acoes/seguro.py` | canônica |
 | Mapa: levantar / digerir / fundir | `rotinas/cartografa.py`, `acoes/mapear.py`, `acoes/digerir_mapa.py`, `acoes/fundir_mapa.py` | canônica |
 | Auditoria de lojas | `rotinas/mercado.py` | canônica |

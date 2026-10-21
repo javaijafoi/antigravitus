@@ -1303,3 +1303,19 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
   mais lenta noutro dia, o `sem ganho` (30 s) pode encerrar o sono cedo — o aviso `ATENCAO` cobre esse caso.
 - **Próximo:** medir `use cajado` em combate (3 cargas de `sleep`) e, se funcionar, tirar o `recall` do ciclo do
   tabuleiro; medir sentado/deitado/andando com o mesmo amostrador.
+
+### 2026-10-21 · Dia 158 · DeepSeek deepseek-flash (dsh)
+- **Mudou:** `automato/acoes/aproveitar_tempo.py` (novo: `selecionar`/`aproveitar`, CLI `--minutos/--simular`,
+  catálogo explícito de tarefas com custo estimado), `automato/rotinas/vender_espolio.py` (novo: `value` antes do
+  `sell`, whitelist, parada por caixa, relatório), `xadrez_cascata.esperar_presenca` (720 s → 60 s, polling 10 s,
+  tarefa de espera = `aproveitar(2)`, retorno `'tarefa'`) e `prepara.dormir` (teto 90 s + 2 extensões de 30 s
+  enquanto a vida sobe). Testes `scripts/test_aproveitar_tempo.py` (9) e `scripts/test_vender_espolio.py` (8);
+  README (2 linhas na tabela Ferramentas); 2 IDs na catraca; `CHANGELOG.md` v1.7.24.
+- **Por quê:** diretiva do autor — *"aproveitar 2 min faz X; aproveitar 4 min faz X, Y e Z"* — e a espera de repop
+  de 12 min parada, com a frustração de "ficar mais tempo deitado do que batendo".
+- **Como foi verificado:** `test_sobrevivencia.py` 35 OK, `test_xadrez_cascata.py` 31 OK, `test_catraca.py` 11 OK,
+  `check_project.py` 0 erros; `--simular` do aproveitar imprime a pilha sem tocar no MUD.
+- **Custo:** `vender_espolio` é irreversível por natureza — mitigado por whitelist, `value` antes e mínimo de oferta;
+  a tarefa de espera pode levar a personagem ao Templo (a cascata recomeça a ida, por desenho).
+- **Próximo:** rodar `aproveitar 2 --simular` numa sessão real, medir o custo do prepara curto e decidir se
+  `vender_espolio` entra na pilha padrão ou só por `--tarefas`.

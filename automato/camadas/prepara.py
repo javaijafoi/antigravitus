@@ -216,7 +216,9 @@ TAXA_HP_POR_MINUTO_REAL = 5.0   # mantida: é o orçamento de segurança, não a
 SONO_FATIA_S = 5            # o vigia lê os vitais por IPC; 5 s basta para acordar cheio
 SONO_MINUTOS_REAIS_MAX = 45
 SONO_MINUTOS_REAIS_MIN = 3
-SONO_TETO_MIN = 3           # teto do sono: passou disso sem encher, acorda e avisa o agente
+SONO_TETO_S = 90           # teto do sono; a vida costuma encher em ~20 s (§89)
+SONO_EXTENSAO_S = 30        # +30 s se a vida ainda estiver subindo
+SONO_EXTENSOES_MAX = 2      # ... no máximo 2 vezes (150 s no total)
 SONO_FATIAS_SEM_GANHO = 6   # 30 s sem a vida subir (fatias de 5 s): parar
 
 
@@ -253,8 +255,8 @@ def dormir():
     """Dorme para recuperar VIDA, olhando os vitais durante o sono. ID: sono_por_vitais.
 
     Quem decide acordar são os números do vigia (`hp >= 98%`); o relógio é só teto de
-    segurança (SONO_TETO_MIN) e, se estourar sem encher, o sono avisa o agente e devolve
-    False — em vez de dormir calado por 45 min.
+    segurança (SONO_TETO_S = 90 s, +30 s enquanto a vida subir) e, se estourar sem encher,
+    o sono avisa o agente e devolve False — em vez de dormir calado por 45 min.
 
     O `vigia.do_driver()` lê fome, sede e vida pelo IPC, **sem mandar comando ao
     MUD** — é o observador que já existe. Aqui ele é consultado a cada fatia, e é
@@ -267,10 +269,20 @@ def dormir():
     s = situacao()
     hp, hp_max = hp_do_score(s['texto'])
     alvo_hp = (hp_max or 0) * 0.98
-    # Quem decide acordar é a vida; o relógio é só a rede de segurança (diretiva de 2026-10-21).
-    limite = time.time() + min(minutos_de_sono(hp, hp_max), SONO_TETO_MIN) * 60
-    dormindo, ultimo_hp, sem_ganho = False, hp, 0
-    while time.time() < limite:
+    # Quem decide acordar é a vida; o relógio é só a rede de segurança (diretiva de 2026-10-21):
+    # 90 s de teto, com +30 s enquanto a vida ainda estiver subindo (até 2 extensões).
+    limite = time.time() + SONO_TETO_S
+    dormindo, ultimo_hp, sem_ganho, ganhou, extensoes = False, hp, 0, False, 0
+    while True:
+        if time.time() >= limite:
+            if (alvo_hp and isinstance(ultimo_hp, int) and ultimo_hp < alvo_hp
+                    and ganhou and extensoes < SONO_EXTENSOES_MAX):
+                extensoes += 1
+                limite += SONO_EXTENSAO_S
+                print('[PREPARA] ainda subindo: +%d s de sono (extensão %d/%d, vida %s)'
+                      % (SONO_EXTENSAO_S, extensoes, SONO_EXTENSOES_MAX, ultimo_hp), flush=True)
+                continue
+            break
         if not dormindo:
             run('sleep')
             dormindo = True
@@ -287,7 +299,8 @@ def dormir():
                   % (', '.join(feito) or 'não havia estoque'), flush=True)
             continue
         if isinstance(hp_agora, int) and isinstance(ultimo_hp, int):
-            sem_ganho = sem_ganho + 1 if hp_agora <= ultimo_hp else 0
+            ganhou = hp_agora > ultimo_hp
+            sem_ganho = sem_ganho + 1 if not ganhou else 0
             ultimo_hp = hp_agora
             if alvo_hp and hp_agora >= alvo_hp:
                 break
