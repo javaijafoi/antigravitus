@@ -35,7 +35,7 @@ sys.path.insert(0, str(LOCAL / 'nucleo'))
 import base  # noqa: E402
 import vigia  # noqa: E402
 
-MINUTOS_POR_TURNO = 6
+MINUTOS_REAIS_POR_TURNO = 6
 TURNOS = 4
 PROBLEMAS = ('MORTA', 'FOME', 'SEDE', 'VIDA_BAIXA', 'MANA_BAIXA', 'TRAVADO', 'EM_COMBATE')
 PRECISA_RECARGA = 2
@@ -110,7 +110,7 @@ def _laco(args):
 
         p = motor_em_segundo_plano(args.rotina)
         estado = 'OK'
-        for minuto in range(1, MINUTOS_POR_TURNO + 1):
+        for minuto in range(1, MINUTOS_REAIS_POR_TURNO + 1):
             time.sleep(60)
             d = vigia.diagnosticar()
             estado = d['estado']

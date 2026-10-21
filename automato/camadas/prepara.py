@@ -205,10 +205,10 @@ def guardar_ouro():
 # Antes disto o `dormir` dormia 75 s fixos e a docstring dizia o alvo: "movimento
 # e mana". A vida nunca foi objetivo, e por isso a personagem acordava achando
 # que estava pronta com 100 de vida faltando.
-TAXA_HP_POR_MINUTO = 5.0
+TAXA_HP_POR_MINUTO_REAL = 5.0
 SONO_FATIA_S = 120          # de quanto em quanto tempo o vigia olha os vitais
-SONO_MINUTOS_MAX = 45
-SONO_MINUTOS_MIN = 3
+SONO_MINUTOS_REAIS_MAX = 45
+SONO_MINUTOS_REAIS_MIN = 3
 
 
 def hp_do_score(texto):
@@ -224,7 +224,7 @@ def minutos_de_sono(atual, maximo, taxa=None, alvo=0.98):
     falta = maximo * alvo - atual
     if falta <= 0:
         return 0
-    return int(min(SONO_MINUTOS_MAX, max(SONO_MINUTOS_MIN, round(falta / (taxa or TAXA_HP_POR_MINUTO)))))
+    return int(min(SONO_MINUTOS_REAIS_MAX, max(SONO_MINUTOS_REAIS_MIN, round(falta / (taxa or TAXA_HP_POR_MINUTO_REAL)))))
 
 
 def comer_beber():
@@ -254,7 +254,7 @@ def dormir():
     s = situacao()
     hp, hp_max = hp_do_score(s['texto'])
     alvo_hp = (hp_max or 0) * 0.98
-    limite = time.time() + (minutos_de_sono(hp, hp_max) or SONO_MINUTOS_MIN) * 60
+    limite = time.time() + (minutos_de_sono(hp, hp_max) or SONO_MINUTOS_REAIS_MIN) * 60
     dormindo, ultimo_hp, sem_ganho = False, hp, 0
     while time.time() < limite:
         if not dormindo:
@@ -285,7 +285,7 @@ def dormir():
         run('stand')
     depois = hp_do_score(situacao()['texto'])[0]
     print('[PREPARA] fim do sono: vida %s -> %s de %s (taxa ~%.1f hp/min)'
-          % (hp, depois, hp_max, TAXA_HP_POR_MINUTO), flush=True)
+          % (hp, depois, hp_max, TAXA_HP_POR_MINUTO_REAL), flush=True)
     return True
 
 

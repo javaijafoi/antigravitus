@@ -451,6 +451,12 @@
       "arquivo": "scripts/mandabala.py",
       "desde": "2026-10-21",
       "regra": "a abertura lista as subtramas abertas do capítulo em curso (subplots[]), antes do objetivo — o roteiro vive em arquivo e sem essa linha não entra na fila do dia"
+    },
+    {
+      "id": "horas_de_jogo_para_segundos_reais",
+      "arquivo": "automato/nucleo/config.py",
+      "desde": "2026-10-21",
+      "regra": "as 'horas' do score são de JOGO (1 h ≈ 75 s reais): existe conversão nomeada e a validade das magias é derivada dela, não escrita à mão"
     }
   ]
 }

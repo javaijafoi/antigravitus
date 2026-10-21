@@ -500,6 +500,8 @@ def pre_voo(heroi):
     if isinstance(armadura, dict) and armadura.get("base"):
         linhas.append(f"  CA {armadura.get('base')} sem a magia `armor`, "
                       f"{armadura.get('with_armor')} com ela (o portão da §26 exige CA >= 140)")
+    linhas.append("  relógio: 1 h de JOGO ≈ 75 s reais — as 'horas' do `score` são de jogo: "
+                  "24 h de jogo ≈ 30 min reais")
     registro = dados.get("as_of") or {}
     if isinstance(registro, dict) and registro.get("day"):
         linhas.append(f"  estado do Dia {registro['day']} — confirme com `score tudo` ao conectar")

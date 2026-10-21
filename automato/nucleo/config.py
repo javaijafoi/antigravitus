@@ -59,16 +59,36 @@ TITULOS_LABIRINTO = {
 
 # --- relogio do jogo e duracao de magia (medido e provavel, Dia 156) ---
 #
-# ESCALA MEDIDA AO VIVO: a hora do jogo anda ~75 s reais. Duas transicoes
-# cronometradas com o comando `time`: 61 s e ~78 s. Bate com o padrao do
-# CircleMUD. E' aproximacao suficiente - nao precisamos de exatidao.
+# ESCALA MEDIDA AO VIVO: a hora do jogo anda ~75 s reais. Transicoes
+# cronometradas com o comando `time` (2026-10-16): 11h->meio-dia 61 s,
+# meio-dia->13h 60 s, 13h->14h 78 s. Bate com o padrao do CircleMUD.
+#
+# ATENCAO A UNIDADE: o `score` fala em **horas de jogo** ("armor ( 24 horas )",
+# "invisibility ( 12 horas )"). Quem ler "2 horas restantes" e esperar 2 horas
+# REAIS erra por ~48x: 24 h de jogo = 24 x 75 s = 30 min reais.
 SEGUNDOS_POR_HORA_DO_JOGO = 75
+MARGEM_MAGIA = 0.83      # re-conjura antes de vencer: 24 h de jogo -> 25 min reais
+
+
+def horas_de_jogo_para_segundos_reais(horas, escala=None):
+    """HORAS DE JOGO (as do `score`) -> segundos REAIS. ID: horas_de_jogo_para_segundos_reais.
+
+    Existe para o numero do `score` nao ser lido como relogio de parede. 24 horas de
+    jogo dao ~30 minutos reais; 2 horas dao ~2,5 minutos.
+    """
+    return (horas or 0) * (escala or SEGUNDOS_POR_HORA_DO_JOGO)
+
+
+def segundos_reais_para_horas_de_jogo(segundos, escala=None):
+    """O inverso: quantas HORAS DE JOGO cabem em N segundos reais."""
+    return (segundos or 0) / (escala or SEGUNDOS_POR_HORA_DO_JOGO)
+
 
 # Duracao de ARMOR e INVISIBILITY: **24 horas de jogo**, segundo o manual
 # importado do CircleMUD (`maquina/spells.md`). E' PROVAVEL, nao confirmado
 # para o DeBo - a ajuda e' do CircleMUD e o servidor pode divergir.
-# 24 h x 75 s = 1800 s = 30 min. Re-conjuramos com margem: 25 min.
-VALIDADE_MAGIAS_SEGUNDOS = 1500
+# Derivado da escala medida, nao escrito a mao: 24 x 75 s x 0,83 = 1494 -> 25 min.
+VALIDADE_MAGIAS_SEGUNDOS = int(horas_de_jogo_para_segundos_reais(24) * MARGEM_MAGIA)
 
 # --- invisibilidade: opcional, e NAO e' mais a protecao padrao (Dia 156) ---
 #

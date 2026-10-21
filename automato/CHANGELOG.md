@@ -4,6 +4,19 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.7.21 — Dia 158 · Hora de jogo × hora real: a unidade agora tem nome (DeepSeek deepseek-flash)
+
+Origem: dúvida do autor — *"existe a chance da gente estar confundindo minutos do tempo real com minutos do jogo?"*. A varredura respondeu: **o código está coerente, a prosa não estava.**
+
+- **Medição:** três transições do comando `time` em 2026-10-16 dão **1 hora de jogo ≈ 60 a 78 s reais** (61 s, 60 s, 78 s). Adotado 75 s.
+- **O `score` fala em horas de JOGO:** `armor ( 24 horas )`, `invisibility ( 12 horas )`. 24 h de jogo ≈ **30 min reais**; 2 h ≈ **2,5 min**. Era aqui que a confusão podia nascer — e os planos registram "2 horas restantes", "43 horas restantes" sem dizer de que relógio.
+- **`config.py`:** `horas_de_jogo_para_segundos_reais()` e `segundos_reais_para_horas_de_jogo()`; `VALIDADE_MAGIAS_SEGUNDOS` passou a ser **derivada** da escala (24 × 75 × 0,83 = 1494 s), não escrita à mão.
+- **Nomes explícitos:** `MINUTOS_POR_TURNO` → `MINUTOS_REAIS_POR_TURNO`; `SONO_MINUTOS_MAX/MIN` → `SONO_MINUTOS_REAIS_MAX/MIN`; `TAXA_HP_POR_MINUTO` → `TAXA_HP_POR_MINUTO_REAL`; `vigia.SONO_MINUTOS` → `SONO_MINUTOS_REAIS`.
+- **Abertura:** o `pre_voo()` passou a imprimir a escala (`1 h de JOGO ≈ 75 s reais`), para o número do `score` não ser lido como relógio de parede.
+- **Glossário §9.2 e `maquina/verificacoes.md`:** a escala com as três transições e a conversão nomeada.
+- **Testes:** `test_sobrevivencia.py` (+4). Suíte: 374 OK. 1 ID novo na catraca.
+- **Limite:** `SEGUNDOS_POR_HORA_DO_JOGO = 75` é a média de três amostras; a escala pode variar com o servidor. O que não é aproximação é a **unidade**: o `score` sempre fala em horas de jogo.
+
 ## v1.7.20 — Dia 158 · Subtramas do capítulo entram na abertura (DeepSeek deepseek-flash)
 
 Origem: o autor declarou uma subtrama do capítulo 12 — *"em busca de uma fonte de cura"* — que vem **antes** das missões. O roteiro é um arquivo à parte, e o agente abre a sessão lendo o **plano**: sem uma linha na abertura, a subtrama não entrava na fila do dia.

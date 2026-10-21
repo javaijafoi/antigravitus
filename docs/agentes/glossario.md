@@ -281,6 +281,7 @@ termina quando a primeira crônica real é gravada.
 | **Autoquest** | Missão automática/repetível do servidor. Inicia quando o NPC fala primeiro e a personagem responde `sim`; o objetivo se revela no `score`. Não há como abandonar; **`quit` apaga o progresso** |
 | **Quest oficial / investigação / intenção pessoal** | Três naturezas distintas registradas em `missoes.json`; não confundir intenção com tarefa concedida pelo servidor |
 | **DT (armadilha mortal)** | `death trap`: mata na hora e pode destruir itens. Aviso: *"Você percebe que há algo perigoso por perto!"* → parar e voltar |
+| **Hora de jogo × hora real** | O `score` mede duração de magia em **horas de jogo** (`armor ( 24 horas )`, `invisibility ( 12 horas )`). A escala medida é **1 hora de jogo ≈ 75 s reais**: 24 h de jogo ≈ **30 min reais**, 2 h ≈ **2,5 min**. Ler "2 horas restantes" como relógio de parede erra por ~48×. Conversão no código: `config.horas_de_jogo_para_segundos_reais()`. Fonte: três transições do comando `time` em 2026-10-16 (61 s, 60 s, 78 s) |
 | **Wimpy** | Nível de covardia: a personagem foge automaticamente ao cair abaixo dele. Tem **teto de metade da vida máxima** e não salva de DT nem sempre de atordoamento |
 | **Sala-marco** | Sala cujo nome/identidade confirma a chegada; a navegação correta é por marco, não por contagem de passos |
 | **Labirinto homônimo** | Região com muitas salas de texto idêntico (202 no corpus). Identidade vem da **posição no grafo**, não do texto |

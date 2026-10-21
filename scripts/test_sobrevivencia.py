@@ -16,6 +16,7 @@ sys.path.insert(0, str(RAIZ / 'automato' / 'nucleo'))
 
 import auditar_sessao as A  # noqa: E402
 import base as B  # noqa: E402
+import config as C  # noqa: E402
 import navegar as N  # noqa: E402
 import prepara as P  # noqa: E402
 
@@ -64,9 +65,9 @@ class TestAlvoDoSono(unittest.TestCase):
         self.assertEqual(P.minutos_de_sono(176, 226), 9)
 
     def test_respeita_o_teto_e_o_piso(self):
-        self.assertEqual(P.minutos_de_sono(1, 1000), P.SONO_MINUTOS_MAX)
+        self.assertEqual(P.minutos_de_sono(1, 1000), P.SONO_MINUTOS_REAIS_MAX)
         # déficit pequeno não vira 0: o piso é o sono curto de mana/movimento
-        self.assertEqual(P.minutos_de_sono(220, 226), P.SONO_MINUTOS_MIN)
+        self.assertEqual(P.minutos_de_sono(220, 226), P.SONO_MINUTOS_REAIS_MIN)
 
     def test_le_a_vida_do_score(self):
         self.assertEqual(P.hp_do_score('Vida: {<<<<<>>>>>} 180 de 226'), (180, 226))
@@ -247,6 +248,24 @@ class TestSonoObservado(unittest.TestCase):
         ])
         self.assertFalse(comeu.called)
         self.assertLessEqual(enviados.count('sleep'), 3, 'não pode dormir sem ganho')
+
+
+class TestEscalaDoTempo(unittest.TestCase):
+    """Hora de JOGO x hora real: o `score` fala em horas de jogo (ID: horas_de_jogo_para_segundos_reais)."""
+
+    def test_24_horas_de_jogo_sao_30_minutos_reais(self):
+        self.assertEqual(C.horas_de_jogo_para_segundos_reais(24), 1800)
+        self.assertEqual(C.segundos_reais_para_horas_de_jogo(1800), 24)
+
+    def test_2_horas_de_jogo_sao_2_minutos_e_meio(self):
+        self.assertEqual(C.horas_de_jogo_para_segundos_reais(2), 150)
+
+    def test_validade_da_magia_vem_da_escala_e_tem_margem(self):
+        self.assertLess(C.VALIDADE_MAGIAS_SEGUNDOS, C.horas_de_jogo_para_segundos_reais(24))
+        self.assertGreater(C.VALIDADE_MAGIAS_SEGUNDOS, 20 * 60)
+
+    def test_escala_customizada(self):
+        self.assertEqual(C.horas_de_jogo_para_segundos_reais(3, escala=60), 180)
 
 
 if __name__ == '__main__':

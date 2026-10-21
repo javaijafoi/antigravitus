@@ -184,7 +184,7 @@ def diagnosticar():
 JANELA_USO_MIN = 30
 LIMITE_PASSOS_MAO = 60      # na janela; o auditor usa 80 na sessao inteira
 LIMITE_ATAQUES_MAO = 25     # na janela; o auditor usa 30 na sessao inteira
-SONO_MINUTOS = 50           # o dormir() novo pode bloquear 45 min: silencio
+SONO_MINUTOS_REAIS = 50           # o dormir() novo pode bloquear 45 min: silencio
 ROTINA_RECENTE_MIN = 10     # rotina.log mexido agora = turno supervisionado
 LINHAS_USO = 8000           # teto de leitura: ~30 min de jogo cabe de sobra
 MOVIMENTOS = {'n', 's', 'e', 'w', 'u', 'd', 'ne', 'nw', 'se', 'sw',
@@ -252,7 +252,7 @@ def uso_do_transcript(caminho=None, janela_min=JANELA_USO_MIN, agora=None):
     if ultimo:
         at, cmd = ultimo
         uso['ultimo_ha_min'] = round((agora - at).total_seconds() / 60)
-        uso['dormindo'] = (cmd in ('sleep', 'rest') and uso['ultimo_ha_min'] <= SONO_MINUTOS)
+        uso['dormindo'] = (cmd in ('sleep', 'rest') and uso['ultimo_ha_min'] <= SONO_MINUTOS_REAIS)
     return uso
 
 

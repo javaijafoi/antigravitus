@@ -398,3 +398,10 @@ Sessão ao vivo (~15–17h do jogo, Dia 158), nível 33, CON 9, alimentada e sac
 - **Cajado retorcido** comprado em Pergaminhos e Afins (Jareth) por **18.859**: identify fora da loja =>
   BASTAO MAGICO NOBITS, nível 10, **cargas 3/3 de `sleep`**, peso 17, valor 16.400. NOBITS: não recompra.
   `hold cajado` equipa ("segurando"); Dano 5 e CA 147 não mudaram.
+
+### 2026-10-21 · DeepSeek deepseek-flash (dsh) · Relógio do jogo × relógio real
+- **1 hora de jogo ≈ 60 a 78 s reais** (três transições do comando `time` em 2026-10-16: 11h→meio-dia 61 s; meio-dia→13h 60 s; 13h→14h 78 s). Adotado `config.SEGUNDOS_POR_HORA_DO_JOGO = 75`.
+- **O `score` fala em horas de JOGO:** `armor ( 24 horas ) +30 em ARMADURA`, `invisibility ( 12 horas ) +40`. Não é relógio de parede: 24 h de jogo ≈ **30 min reais**; 2 h ≈ **2,5 min**.
+- **Conversão no código:** `config.horas_de_jogo_para_segundos_reais()` e `segundos_reais_para_horas_de_jogo()`. `VALIDADE_MAGIAS_SEGUNDOS` passou a ser derivada da escala (24 h × 75 s × 0,83 = 1494 s), não escrita à mão.
+- **Risco que isto fecha:** ler "2 horas restantes" no `score` como 2 horas reais erra por ~48× — a magia vence em ~2,5 min e a conclusão sai errada.
+- Fonte: `automato/runtime/transcript_*.jsonl`, comandos `time` e `score tudo`.
