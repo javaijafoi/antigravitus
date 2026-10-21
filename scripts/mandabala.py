@@ -13,8 +13,10 @@ Uso:
     python scripts/mandabala.py --so-caminho       # imprime só o caminho do plano
 """
 import argparse
+import json
 import re
 import sys
+import time
 from pathlib import Path
 
 for _stream in (sys.stdout, sys.stderr):
@@ -426,6 +428,74 @@ def conhecimento_para(texto, heroi, max_termos=4, por_termo=3):
     return linhas
 
 
+MODOS = (
+    ("caminhar", "chegar a um lugar que o mapa.json já tem", "camadas/navegar.py --para <id>"),
+    ("explorar", "descobrir área nova", "à mão, um passo por vez, gravando no mapa.json"),
+    ("moer", "matar muito / XP", "camadas/turno.py --rotina milharal_v2|novatos"),
+    ("missão", "fala de NPC, give, compra", "à mão, linha a linha (AGENTS #14 e #13)"),
+    ("chefe", "tática contra alvo já enfrentado", "roteiro medido antes: mandabala.py --sobre <alvo>"),
+)
+
+
+def _par(vitais, chave):
+    d = vitais.get(chave) or {}
+    atual, maximo = d.get("current"), d.get("max")
+    return (atual, maximo) if isinstance(atual, int) and isinstance(maximo, int) else (None, None)
+
+
+def pre_voo(heroi):
+    """O estado REGISTRADO, a última rotina e a tabela de modos (diretiva §26).
+
+    É leitura, não portão: mostra o número e deixa a decisão com o agente. O
+    portão de verdade (comer, beber, vestir armadura) fica em cuidar.py, que o
+    navegar.py e o turno.py chamam antes de sair.
+    """
+    linhas = ["", "=" * 78,
+              "PRÉ-VOO — leia antes de decidir COMO jogar (diretiva §26)", "=" * 78]
+    estado = HEROES_DIR / heroi / "state.json"
+    dados = {}
+    if estado.is_file():
+        try:
+            dados = json.loads(estado.read_text(encoding="utf-8", errors="replace"))
+        except ValueError:
+            dados = {}
+    vitais = dados.get("vitals") or {}
+    hp, hp_max = _par(vitais, "hp")
+    mn, mn_max = _par(vitais, "mana")
+    mv, mv_max = _par(vitais, "mv")
+    if hp is not None:
+        linhas.append(f"  último registrado: vida {hp}/{hp_max} ({100.0 * hp / hp_max:.0f}%)  "
+                      f"mana {mn}/{mn_max}  movimento {mv}/{mv_max}")
+        falta = max(0, int(hp_max * 0.98) - hp)
+        if falta:
+            minutos = max(1, round(falta / 5.0))
+            linhas.append(f"  para a vida chegar a ~98%: ~{minutos} min de sono "
+                          f"(medido ~5 hp/min; a mana volta em ~3 min)")
+        else:
+            linhas.append("  vida já em ~98%: sono curto, só para mana e movimento")
+    armadura = dados.get("armor") or {}
+    if isinstance(armadura, dict) and armadura.get("base"):
+        linhas.append(f"  CA {armadura.get('base')} sem a magia `armor`, "
+                      f"{armadura.get('with_armor')} com ela (o portão da §26 exige CA >= 140)")
+    registro = dados.get("as_of") or {}
+    if isinstance(registro, dict) and registro.get("day"):
+        linhas.append(f"  estado do Dia {registro['day']} — confirme com `score tudo` ao conectar")
+
+    log = ROOT_DIR / "automato" / "rotina.log"
+    if log.is_file():
+        horas = (time.time() - log.stat().st_mtime) / 3600.0
+        quando = "%.0f h" % horas if horas < 48 else "%.0f dias" % (horas / 24.0)
+        linhas.append(f"  última rotina supervisionada: há {quando} (automato/rotina.log)")
+    else:
+        linhas.append("  última rotina supervisionada: NUNCA (automato/rotina.log não existe)")
+
+    linhas += ["", "  Os cinco modos — escolha um e NÃO invente outro (diretiva §26):"]
+    for nome, intencao, dono in MODOS:
+        linhas.append(f"    {nome:<9} {intencao:<42} {dono}")
+    linhas.append("  Se a intenção não cabe em nenhum modo: pare e proponha ao autor, com número.")
+    return "\n".join(linhas)
+
+
 def sequencia_abertura(texto, heroi):
     """Os passos fixos de abertura + a primeira ação, tirada do §5 do plano (PROTOCOLO §1)."""
     passo = secao(texto, 5) or "(o plano não tem §5 — leia o §1 e o §4 e registre isso no próximo plano)"
@@ -632,6 +702,7 @@ def main(argv=None):
         for ident, msg in v2:
             print(f"        - [{ident}] {msg}")
 
+    print(pre_voo(heroi))
     print(sequencia_abertura(texto, heroi))
     return 0
 

@@ -32,6 +32,10 @@ ASSINATURAS_FALHA = ('não pode ir', 'Em que você deseja', 'muito relaxado', 'c
                      'Como?!?', 'Você não tem', 'Você não vê', 'A porta está fechada',
                      'não tem experiência')
 ENTREGA = 'Você deve entregar objeto'
+# Sobrevivência (diretiva §26): fome, sede e armadura são estado literal, não proxy.
+FOME = 'morrendo de fome'
+SEDE = 'morrendo de sede'
+CA_COM_ARMOR = 140   # sem a magia `armor` a CA e' 112; com ela, 148 a 157
 # magias que começam uma luta: pedem consider antes (diretiva §2; morte #10 foi charm sem consider)
 OFENSIVAS = ('burning hands', 'magic missile', 'chill touch', 'shocking grasp', 'lightning bolt',
              'color spray', 'fireball', 'sleep', 'curse', 'blindness', 'poison', 'charm person')
@@ -50,6 +54,7 @@ _FALHAS = [_rx(s) for s in ASSINATURAS_FALHA]
 _ENTREGA = _rx(ENTREGA)
 _MORTE = _rx('Você está morto')
 _ALINH = re.compile(r'Alinhamento:\s*\{[^}]*\}\s*(-?\d+)')
+_CA = re.compile(r'Classe de Armadura:\s*(-?\d+)')
 _PRECO = re.compile(r'(\d[\d\.]*)\s*moedas', re.I)
 
 
@@ -104,6 +109,8 @@ def auditar(regs):
     verbais_recentes = []
     por_origem = {}
     mov_mao = ataque_mao = 0
+    ca_atual = None
+    avisou_fome = avisou_sede = avisou_ca = False
 
     for n, (i, r) in enumerate(comandos):
         cmd = (r.get('cmd') or '').strip()
@@ -133,6 +140,25 @@ def auditar(regs):
         hp = vitals.get('hp') if isinstance(vitals.get('hp'), int) else None
         if hp:
             hp_max = max(hp_max, hp)
+
+        # 0b. sobrevivência (diretiva §26): fome, sede e armadura são estado, não proxy
+        m_ca = _CA.search(texto)
+        if m_ca:
+            ca_atual = int(m_ca.group(1))
+        if FOME in texto.lower() and not avisou_fome:
+            avisou_fome = True
+            achar(FALHA, 'fome-em-sessao (diretiva §26)', i,
+                  'a personagem passou fome: o `cuidar.py` come antes de sair, e fome cancela '
+                  'a recuperação de vida no sono')
+        if SEDE in texto.lower() and not avisou_sede:
+            avisou_sede = True
+            achar(FALHA, 'sede-em-sessao (diretiva §26)', i,
+                  'a personagem passou sede: o `cuidar.py` bebe antes de sair')
+        if atacado and ca_atual is not None and ca_atual < CA_COM_ARMOR and not avisou_ca:
+            avisou_ca = True
+            achar(FALHA, 'armadura-ausente (diretiva §26)', i,
+                  'ataque com CA %d (< %d): a magia `armor` estava caída; o portão da §26 '
+                  'obriga vestir antes de sair' % (ca_atual, CA_COM_ARMOR))
 
         # 1. mesma recusa repetida (diretiva §12, guarda de repetição)
         if _falhou(texto) and p not in {'look', 'score', 'inventory', 'exits'}:

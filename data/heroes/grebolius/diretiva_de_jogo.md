@@ -333,3 +333,25 @@ O monitoramento mecânico do alinhamento moral atua apenas como última camada d
 - **`armor` fica no preparo**, como comida e água: `prepara.garantir_armor()` lê a CA do `score tudo` e relança se ficar abaixo de 140 (112 sem a magia, 148 com ela). O Templo bloqueia magia, então o lance é na Praça. O script de ataque não lança `armor`.
 - **Kite no Rei:** se o `sleep` falhar, `recall`, curar e tentar de novo; nunca iniciar a luta com ele acordado. Um raio por ida (`kite_rei`).
 - **Vender as lanças:** o ferreiro continua sem caixa ("Eu não posso pagar por uma arma dessas!"); o ouro gasto na Loja de Magias não chega a ele.
+
+## 26. OS CINCO MODOS DE JOGAR (diretiva do autor, Dia 157 — 2026-10-20)
+
+> *"não ficar esquecendo as mecânicas que a gente tem; se vai mudar a forma de jogar, analisa, justifica e muda, mas não fica inventando sem base... montamos uma estrutura de fluxo importante que deve ser obedecida e não contornada"* · *"tudo que é novo deve entrar na estrutura de forma estruturada"* · *"andar por aí em caminho conhecido já temos; explorar já temos; modo matar um monte de bicho já temos"*
+
+**Antes de cada bloco, declare o modo.** Se a intenção não cabe em nenhum dos cinco, não invente um sexto: pare e proponha ao autor, com número.
+
+| Modo | Intenção | Dono (a ferramenta) | Proibido neste modo |
+| --- | --- | --- | --- |
+| **caminhar** | chegar a um lugar que o `mapa.json` já tem | `camadas/navegar.py --para <id>` | rota conhecida andada passo a passo; parar fora do previsto |
+| **explorar** | descobrir área nova | à mão, um passo por vez, gravando a rota no mapa | atacar sem `consider`; sair sem gravar a rota (§9.1) |
+| **moer** | matar muito / XP | `camadas/turno.py --rotina milharal_v2\|novatos` | laço em PowerShell; caça à mão (§23) |
+| **missão** | fala de NPC, `give`, compra | à mão, linha a linha | qualquer automação de fala (#14) e `give` sem a etapa (#13) |
+| **chefe** | tática contra alvo já enfrentado | roteiro medido antes: `mandabala.py --sobre <alvo>` | tática nova sem medir; entrar com vida < 100 |
+
+**O portão de sobrevivência (a) vale nos cinco modos.** Antes de sair, `cuidar.py` come, bebe e veste `armor` — e agora `navegar.py` e `turno.py` o chamam **antes** de sair, não no meio do caminho. Se falta pão ou água, o bloco **para** e quem recarrega é o `prepara.py`; não se contorna indo assim mesmo. Fome e sede **cancelam a recuperação de vida no sono** (medido: `morrendo de fome! (-3hp, -6mn)`), então passar fome não é incômodo, é perda de vida.
+
+**O sono tem alvo, não tempo.** `prepara.dormir()` mira a vida (~5 hp/min medidos; ~45 min para a barra cheia de 226, ~3 min para a mana). Dormir 75 s fixos devolvia mana e deixava a vida faltando.
+
+**O que é novo entra estruturado (c):** ferramenta, rotina ou modo novo só entra com linha na tabela "Ferramentas" do `automato/README.md`, decisão em `automato/DECISOES.md`, ID em `docs/agentes/catraca.json` e teste em `scripts/test_*.py`, no mesmo commit. Sem isso, é invenção sem base e o `check_project.py` acusa.
+
+**Verificação no código:** `navegar.cuidado_antes()`; `turno.py` (socorrer antes do laço); `auditar_sessao.py` (`fome-em-sessao`, `sede-em-sessao`, `armadura-ausente`); `mandabala.pre_voo()`.

@@ -195,15 +195,61 @@ def guardar_ouro():
     return True
 
 
+# O sono nao faz a mesma coisa para mana e para vida. Medido nos transcripts de
+# 16 a 20/10 (374 episodios de sono, mediana de 3 min):
+#   * mana: enche em ~3 min (mediana +18, ate +231 por episodio);
+#   * vida: +0 na mediana; quando sobe, ~5 hp/min (34 de 591 intervalos fora de
+#     combate tiveram ganho). Com 226 de vida maxima, a barra cheia custa ~45 min;
+#   * com fome ou sede o ganho nao acontece: "morrendo de fome! (-3hp, -6mn)".
+# Antes disto o `dormir` dormia 75 s fixos e a docstring dizia o alvo: "movimento
+# e mana". A vida nunca foi objetivo, e por isso a personagem acordava achando
+# que estava pronta com 100 de vida faltando.
+TAXA_HP_POR_MINUTO = 5.0
+SONO_MINUTOS_MAX = 45
+SONO_MINUTOS_MIN = 3
+
+
+def hp_do_score(texto):
+    """(atual, maximo) de vida no texto do `score`; (None, None) se nao veio."""
+    m = re.search(r'Vida:\s*(?:\{[^}]*\})?\s*(-?\d+)\s+de\s+(\d+)', texto or '')
+    return (int(m.group(1)), int(m.group(2))) if m else (None, None)
+
+
+def minutos_de_sono(atual, maximo, taxa=None, alvo=0.98):
+    """Quanto dormir para chegar a `alvo` da vida. Puro: nao fala com o MUD."""
+    if not atual or not maximo or atual < 0:
+        return 0
+    falta = maximo * alvo - atual
+    if falta <= 0:
+        return 0
+    return int(min(SONO_MINUTOS_MAX, max(SONO_MINUTOS_MIN, round(falta / (taxa or TAXA_HP_POR_MINUTO)))))
+
+
 def dormir():
-    """O sono recupera movimento e mana. 75 s de relogio real."""
+    """Dorme o necessario para a VIDA, nao um tempo fixo.
+
+    A mana e o movimento voltam em minutos; a vida volta a ~5 hp/min, e so se a
+    personagem estiver alimentada e hidratada. Devolve False quando ha' fome ou
+    sede: nesse estado o sono nao recupera, e quem chamou tem de comer primeiro.
+    """
     voltar_ao_templo()
+    s = situacao()
+    if s['fome'] or s['sede']:
+        print('[PREPARA] com fome/sede o sono nao recupera vida: comer e beber antes', flush=True)
+        return False
+    hp, hp_max = hp_do_score(s['texto'])
+    minutos = minutos_de_sono(hp, hp_max)
+    if minutos == 0:
+        print('[PREPARA] vida em %s/%s; sono curto so para mana e movimento' % (hp, hp_max), flush=True)
+        minutos = SONO_MINUTOS_MIN
     run('sleep')
-    time.sleep(75)
+    time.sleep(minutos * 60)
     run('wake')
     run('stand')
-    s = situacao()
-    print('[PREPARA] apos o sono: mv=%s fome=%s sede=%s' % (s['mv_frac'], s['fome'], s['sede']), flush=True)
+    depois = situacao()
+    hp2, _ = hp_do_score(depois['texto'])
+    print('[PREPARA] sono %d min: vida %s -> %s de %s (taxa medida ~%.1f hp/min)'
+          % (minutos, hp, hp2, hp_max, TAXA_HP_POR_MINUTO), flush=True)
     return True
 
 

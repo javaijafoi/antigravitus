@@ -325,6 +325,42 @@
       "arquivo": "scripts/mandabala.py",
       "desde": "2026-10-20",
       "regra": "--sobre <alvo> traz o histórico de combate dos transcripts (lances, vida antes/depois, dano, barra do inimigo, morte) antes de repetir uma tática"
+    },
+    {
+      "id": "fome-em-sessao",
+      "arquivo": "scripts/auditar_sessao.py",
+      "desde": "2026-10-20",
+      "regra": "passar fome numa sessão é FALHA (uma por sessão): o cuidar.py come antes de sair, e fome cancela a recuperação de vida no sono (diretiva 26)"
+    },
+    {
+      "id": "sede-em-sessao",
+      "arquivo": "scripts/auditar_sessao.py",
+      "desde": "2026-10-20",
+      "regra": "passar sede numa sessão é FALHA (uma por sessão): o cuidar.py bebe antes de sair (diretiva 26)"
+    },
+    {
+      "id": "armadura-ausente",
+      "arquivo": "scripts/auditar_sessao.py",
+      "desde": "2026-10-20",
+      "regra": "atacar com CA < 140 (sem a magia armor) é FALHA: o portão da diretiva 26 obriga vestir antes de sair"
+    },
+    {
+      "id": "minutos_de_sono",
+      "arquivo": "automato/camadas/prepara.py",
+      "desde": "2026-10-20",
+      "regra": "o sono mira a vida (~5 hp/min medidos), não 75 s fixos: dormir devolvia mana e deixava a vida faltando"
+    },
+    {
+      "id": "cuidado_antes",
+      "arquivo": "automato/camadas/navegar.py",
+      "desde": "2026-10-20",
+      "regra": "navegar.py roda o cuidar.py antes de sair e para se falta comida/água (0/2/1); não se contorna o portão da diretiva 26"
+    },
+    {
+      "id": "pre_voo",
+      "arquivo": "scripts/mandabala.py",
+      "desde": "2026-10-20",
+      "regra": "a abertura mostra o estado registrado (vida/mana/mv, CA, dias desde a última rotina) e a tabela dos cinco modos da diretiva 26"
     }
   ]
 }

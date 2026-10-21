@@ -25,6 +25,7 @@ import argparse
 import collections
 import json
 import re
+import subprocess
 import sys
 import time
 import unicodedata
@@ -203,6 +204,23 @@ def navegar(salas, origem, destino, run, permitir_risco=False, hp_min=0.60,
     return feitos
 
 
+def cuidado_antes():
+    """Portão da diretiva §26: comer, beber e vestir armadura ANTES de sair.
+
+    Roda o `cuidar.py` e respeita o contrato dele (0 tudo em ordem, 2 precisa
+    recarregar, 1 não resolveu sozinha). Não resolve no improviso: se falta pão
+    ou água, a viagem é do `prepara.py`, e a decisão é de quem chamou.
+    """
+    caminho = Path(__file__).with_name('cuidar.py')
+    if not caminho.is_file():
+        return 0
+    r = subprocess.run([sys.executable, str(caminho)], capture_output=True,
+                       text=True, encoding='utf-8', errors='replace')
+    for linha in (r.stdout or '').strip().splitlines()[-6:]:
+        print(linha, flush=True)
+    return r.returncode
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.split('\n')[0])
     ap.add_argument('--para', help='id da sala de destino (use --listar para achar)')
@@ -213,6 +231,8 @@ def main(argv=None):
     ap.add_argument('--hp-min', type=float, default=0.60)
     ap.add_argument('--max-passos', type=int, default=80)
     ap.add_argument('--max-segundos', type=int, default=300)
+    ap.add_argument('--sem-cuidado', action='store_true',
+                    help='pula o portão de comida/sede/armadura (só para teste ou mapeamento)')
     a = ap.parse_args(argv)
     salas = carregar_mapa()
     if a.listar:
@@ -234,6 +254,17 @@ def main(argv=None):
         for d, i in p:
             print('  %s -> %s (%s)' % (d, salas[i]['name'], i))
         return 0
+    if not a.sem_cuidado:
+        codigo = cuidado_antes()
+        if codigo == 2:
+            print('PAROU (código 2): falta comida/água — rode '
+                  'python automato/camadas/prepara.py --forcar antes de sair (diretiva §26)',
+                  file=sys.stderr)
+            return 2
+        if codigo not in (0, 2):
+            print('PAROU (código 1): o cuidado não resolveu (sem pão, sem água ou armadura fora '
+                  'do Templo); resolver antes de sair (diretiva §26)', file=sys.stderr)
+            return 1
     from base import run  # importa só aqui: precisa do driver no ar
     try:
         texto, _, _ = run('look')

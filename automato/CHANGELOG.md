@@ -4,6 +4,19 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.7.12 — Dia 157/158 · O portão da §26: fome, sede e armadura antes de sair, e os cinco modos (DeepSeek deepseek-flash)
+
+Origem: o autor cobrou que "não passar fome nem sono nem ficar sem armadura", que a estrutura de fluxo "seja obedecida e não contornada", e que "tudo que é novo entre na estrutura de forma estruturada". Medido nos transcripts de 16 a 20/10: última rotina supervisionada em 16/10 15:10; nas últimas 24 h, 5 de 11 sessões sem nenhum `armor`, 159 linhas de fome e 2 `consider` em 846 magias.
+
+- **`camadas/prepara.py`:** `dormir()` deixa de dormir 75 s fixos e passa a mirar a **vida**. Funções puras `hp_do_score()` e `minutos_de_sono()` (taxa medida ~5 hp/min; teto de 45 min; piso de 3). Medido nos 374 episódios de sono: a mana enche em ~3 min (+231 num episódio), a vida dá **+0 na mediana** e só sobe em 34 de 591 intervalos fora de combate; com fome/sede o ganho não acontece (`morrendo de fome! (-3hp, -6mn)`), então `dormir()` devolve `False` e manda comer primeiro.
+- **`camadas/navegar.py`:** `cuidado_antes()` roda o `cuidar.py` antes de sair e respeita o contrato dele (0 segue, 2 manda rodar o `prepara.py`, 1 para). `--sem-cuidado` para teste/mapeamento. Sai com 2 ou 1 em vez de andar com fome.
+- **`camadas/turno.py`:** `socorrer()` roda uma vez **antes** do laço, sempre — o vigia não acusa armadura, e ela estava sendo esquecida.
+- **`scripts/auditar_sessao.py`:** três FALHAS de estado, não de proxy: `fome-em-sessao` e `sede-em-sessao` (uma por sessão) e `armadura-ausente` (ataque com CA < 140 no último `score`). Sem CA no transcript, não inventa.
+- **`data/heroes/grebolius/diretiva_de_jogo.md` §26:** os cinco modos (`caminhar`, `explorar`, `moer`, `missão`, `chefe`) com dono e proibição, e a regra do que é novo (tabela de ferramentas + `DECISOES.md` + catraca + teste no mesmo commit).
+- **`scripts/mandabala.py`:** `pre_voo()` na abertura — vida/mana/mv registrados, minutos de sono até ~98%, CA com e sem `armor`, há quantos dias não roda rotina supervisionada, e a tabela dos cinco modos.
+- **Testes:** `scripts/test_sobrevivencia.py` (14). Suíte: 326 OK. 6 IDs novos na catraca. `check_project.py` 0 erros, `verificar.py` 19/19.
+- **Limite:** nada exercitado ao vivo. Os limiares (98% de vida, 45 min, CA 140) vêm de medição, mas a taxa de 5 hp/min tem amostra pequena (34 intervalos) e deve ser reconferida na primeira sessão que dormir de verdade.
+
 ## v1.7.11 — Dia 157 · `ressuscitar.py` pela base, com origem e o menu de morte (Claude Opus 5.5)
 
 - `acoes/ressuscitar.py`: a docstring descrevia outro script (`farm_armaduras.py`); agora diz o que ele faz. O cliente próprio saiu: fala com o driver por `base.run`, ou seja, com o token de `automato/runtime/.controller` (antes lia `scripts/local/.controller`, caminho antigo), com a origem `ressuscitar` no transcript e com a guarda de repetição da base.

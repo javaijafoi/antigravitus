@@ -82,6 +82,9 @@ def main():
     args = ap.parse_args()
 
     print(f'[turno] rotina={args.rotina}', flush=True)
+    # Diretiva §26: o turno nao comeca com fome, sede ou sem armadura. O vigia
+    # nao acusa armadura, entao o cuidado roda uma vez ANTES do laco, sempre.
+    socorrer()
     for turno in range(1, args.turnos + 1):
         d = vigia.diagnosticar()
         print(f'[turno {turno}] vigia={d["estado"]} {d.get("vitais", "")} '
