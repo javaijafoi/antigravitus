@@ -2653,3 +2653,34 @@ Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: evidence/dia158-campanario
 - **Silverthorne é hub** (regiões partem "a oeste da Praça Central"), mas nenhum `help mapa N` liga Midgaard a ela; os 29 verbetes estão copiados em `automato/runtime/help_mapas_dia158.txt`. O teletransporte vai de Silverthorne para Midgaard, Jareth e Sundhaven, não o inverso.
 - **Itens identificados e limpos** (corpo e mochila): veste de escamas CA 8 / vida +20 / FOR +2; túnica dourada CA 18; espada longa 4D6; Armadura da Torre Branca CA 21 / CON +1 / 60 kg; bainha de Excalibur nível 85 (inútil agora).
 - **Cota:** com a janela de 5 h em 99% foi preciso fechar; a Ajuda Mágica caiu no `_CLOSE`, como esperado.
+
+## 83. O sono em números: mana em 3 min, vida a 5 hp/min (2026-10-21)
+
+Medido nos 374 episódios de sono dos transcripts de 16 a 20/10 (agente: DeepSeek deepseek-flash; fonte: `automato/runtime/transcript_*.jsonl`, contagem por script).
+
+| medida | valor |
+|---|---|
+| duração mediana do sono | 3 min |
+| mana por episódio | +18 na mediana, até **+231** |
+| vida por episódio | **+0** na mediana |
+| vida quando sobe | ~**5 hp/min** (34 de 591 intervalos fora de combate) |
+| barra cheia (226 de vida) | ~45 min do zero; ~10 min para 50 pontos |
+
+- **Fome e sede cancelam:** `Você está morrendo de fome! (-3hp, -6mn ...)`; um episódio de sono teve saldo **−11 hp**. Dormir sem comer não recupera, consome.
+- **Consequência prática:** dormir 3 min enche a mana e **não** enche a vida. Quem entra em luta depois de um sono curto começa com o déficit da luta anterior. O `prepara.dormir()` passou a mirar a vida (CHANGELOG v1.7.12).
+- Ver também `maquina/verificacoes.md` (2026-10-21).
+
+## 84. Rei Negro em números: o kite não fecha (lutas de 18/10 e 20/10)
+
+Números das duas lutas, tirados dos transcripts e do adendo da revisão de 10 dias (`observacoes/revisao-10-dias-2026-10-20.md`). Fonte: `mandabala.py --sobre "Rei Negro"`.
+
+| medida | 18/10 (Dia 156) | 20/10 (Dia 157) |
+|---|---|---|
+| dano por raio | 55 a 79 | 67 a 83 |
+| vida perdida por rodada do Rei | 80 a 173 | 125 a 139 |
+| barra do Rei (10 segmentos) | `{-<<<<>>>>>}` com ~430 de dano somado | `{-<<<<>>>>>}` após ~150, e ainda igual após mais ~150 na ida seguinte (regenerou) |
+| fim | morte na ida 3 (autoquest cancelada) | morte na ida 3 (autoquest cancelada) |
+
+- **A conta que fecha a discussão:** ~1 segmento a cada 150 a 215 de dano, com regeneração entre as idas → seriam **25 a 35 raios seguidos**. Com 1 a 2 raios por ida, o kite não termina antes do Rei matar.
+- **O que estava escrito antes:** o §58 já tinha a cascata, a geometria, os golpes de 60 a 75 e o `sleep` funcionando nas peças grandes — mas em **adjetivos** ("efeito devastador"), não em números. Por isso a tática foi refeita duas vezes.
+- **Regra que sai disto:** antes de repetir tática contra chefe já enfrentado, `python scripts/mandabala.py --sobre "<alvo>"`; depois da luta, gravar aqui dano/golpe, vida perdida por rodada, segmentos da barra e regeneração.

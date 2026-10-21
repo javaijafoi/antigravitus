@@ -58,6 +58,74 @@ def _num(v):
     return f"{v:,}".replace(",", ".") if isinstance(v, int) else str(v)
 
 
+RX_VIDA = re.compile(r"Vida:\s*(?:\{[^}]*\})?\s*(-?\d+)\s+de\s+(\d+)")
+_MORTO = "voce esta morto"
+
+
+def _sem_acento(texto):
+    import unicodedata
+    t = unicodedata.normalize("NFKD", texto or "")
+    return "".join(c for c in t if not unicodedata.combining(c)).lower()
+
+
+def metricas_do_transcript(registros):
+    """Números da sessão, tirados do transcript e não da impressão. ID: metricas_do_transcript.
+
+    É o que permite comparar MODELO com MODELO (AGENTS §14.3): comandos por sessão,
+    taxa de `consider` por magia, armadura relançada, fome, recalls, mortes e a vida
+    com que a sessão começou. Sem estes campos, "sinto que o X ignora" não se prova.
+    """
+    from datetime import datetime
+    comandos = [r for r in registros if r.get("kind") == "command"]
+    inicio = fim = None
+    consider = casts = armor = recalls = fome = mortes = 0
+    hp_max = hp_primeiro = None
+    for r in comandos:
+        cmd = (r.get("cmd") or "").strip().lower()
+        p = cmd.split(" ")[0] if cmd else ""
+        if p == "consider":
+            consider += 1
+        if p == "cast":
+            casts += 1
+        if "armor" in cmd:
+            armor += 1
+        if p == "recall":
+            recalls += 1
+        texto = r.get("text") or ""
+        b = _sem_acento(texto)
+        if "morrendo de fome" in b:
+            fome += 1
+        if _MORTO in b:
+            mortes += 1
+        m = RX_VIDA.search(texto)
+        if m:
+            hp_max = int(m.group(2))
+        hp = (r.get("vitals") or {}).get("hp")
+        if isinstance(hp, int):
+            hp_primeiro = hp if hp_primeiro is None else hp_primeiro
+            hp_max = max(hp_max or 0, hp)
+        try:
+            at = datetime.fromisoformat(r["at"])
+        except Exception:
+            at = None
+        if at:
+            inicio = inicio or at
+            fim = at
+    minutos = round((fim - inicio).total_seconds() / 60) if inicio and fim else 0
+    return {
+        "comandos": len(comandos),
+        "minutos": minutos,
+        "consider": consider,
+        "casts": casts,
+        "armor": armor,
+        "recalls": recalls,
+        "fome": fome,
+        "mortes": mortes,
+        "vida_inicio_pct": round(100.0 * hp_primeiro / hp_max) if hp_primeiro and hp_max else None,
+        "consider_por_100_magias": round(100.0 * consider / casts, 1) if casts else None,
+    }
+
+
 def estado_do_state(state):
     """§2 'Estado exato' do plano, em números, a partir do state.json."""
     vit = state.get("vitals") or {}
@@ -151,14 +219,68 @@ RX_DEVOLUTIVA = r"RESULTADO:\s*(\d+)\s*falha\(s\),\s*(\d+)\s*aviso"
 RX_AUDITOR = r"Resumo:\s*(\d+)\s*falha\(s\),\s*(\d+)\s*aviso"
 
 
-def linha_boletim(hoje, agente, heroi, plano, fecho, devolutiva, auditor, avanco, v2):
+def linha_boletim(hoje, agente, heroi, plano, fecho, devolutiva, auditor, avanco, v2,
+                  metricas=None, tipo=None):
     """Uma linha JSON do boletim. ID na catraca: encerrar.boletim."""
-    return {
+    linha = {
         "data": hoje, "agente": agente, "heroi": heroi, "plano": plano,
         "sessao_fechada": fecho, "devolutiva": {"falhas": devolutiva[0], "avisos": devolutiva[1]},
         "auditor": {"falhas": auditor[0], "avisos": auditor[1]},
         "plano_v2": [i for i, _ in v2], "avanco_declarado": avanco,
     }
+    if tipo:
+        linha["tipo"] = tipo
+    if metricas:
+        linha["metricas"] = metricas
+    return linha
+
+
+def placar(caminho=None):
+    """Tabela por MODELO, do boletim.jsonl. ID na catraca: encerrar.placar.
+
+    O §14.3 promete comparar modelo com dado. Sem esta tabela, o dado existe e
+    ninguém o lê; o placar é a leitura.
+    """
+    caminho = caminho or BOLETIM
+    if not caminho.is_file():
+        return "boletim.jsonl ainda não existe — nenhuma sessão fechada com --fechar."
+    por = {}
+    for bruto in caminho.read_text(encoding="utf-8", errors="replace").splitlines():
+        try:
+            d = json.loads(bruto)
+        except ValueError:
+            continue
+        por.setdefault(d.get("agente") or "?", []).append(d)
+    if not por:
+        return "boletim.jsonl sem linha legível."
+
+    def media(valores):
+        valores = [v for v in valores if isinstance(v, (int, float))]
+        return (sum(valores) / len(valores)) if valores else 0.0
+
+    cab = ("MODELO", "SESS", "DEV-F", "AUD-F", "CMD/S", "MIN/S", "CONS/MAG", "MORTES", "AVANÇO")
+    linhas = ["%-38s %4s %5s %5s %7s %6s %8s %6s %6s" % cab,
+              "-" * 90]
+    for agente in sorted(por, key=lambda a: -len(por[a])):
+        s = por[agente]
+        met = [d.get("metricas") or {} for d in s]
+        com_met = [m for m in met if m.get("comandos") is not None]
+        cons = [m.get("consider_por_100_magias") for m in met if m.get("consider_por_100_magias") is not None]
+        avancou = sum(1 for d in s if d.get("avanco_declarado") == "sim")
+        cmd_s = ("%.0f" % media([m.get("comandos") for m in com_met])) if com_met else "—"
+        min_s = ("%.0f" % media([m.get("minutos") for m in com_met])) if com_met else "—"
+        linhas.append("%-38s %4d %5d %5d %7s %6s %8s %6d %5d%%" % (
+            agente[:38], len(s),
+            sum((d.get("devolutiva") or {}).get("falhas") or 0 for d in s),
+            sum((d.get("auditor") or {}).get("falhas") or 0 for d in s),
+            cmd_s, min_s,
+            ("%.1f" % media(cons)) if cons else "—",
+            sum(m.get("mortes") or 0 for m in com_met),
+            round(100 * avancou / len(s))))
+    linhas.append("")
+    linhas.append("CONS/MAG = considers por 100 magias (mede se o básico foi feito). "
+                  "Sessão antiga não tem métricas: aparece 0.")
+    return "\n".join(linhas)
 
 
 # --------------------------------------------------------------------------- #
@@ -198,15 +320,22 @@ def rodar(args, rotulo):
 
 def main(argv=None):
     p = argparse.ArgumentParser(description="Encerramento e handoff de sessão (PROTOCOLO §3).")
-    p.add_argument("--agente", required=True, help='modelo/versão, ex.: "Gemini 3.8 Flash (High)"')
+    p.add_argument("--agente", help='modelo/versão, ex.: "Gemini 3.8 Flash (High)"')
     p.add_argument("--hero", dest="heroi")
     p.add_argument("--fechar", action="store_true", help="etapa final: devolutiva + boletim")
     p.add_argument("--avanco", choices=("sim", "nao"),
                    help="com --fechar: a sessão avançou o objetivo do plano?")
+    p.add_argument("--tipo", choices=("chefe", "moagem", "expedicao", "mapeamento", "missao", "outro"),
+                   help="com --fechar: o tipo de conteúdo jogado (deixa o placar comparável)")
+    p.add_argument("--placar", action="store_true",
+                   help="mostra a tabela por modelo desde o boletim.jsonl e sai")
     p.add_argument("--simular", action="store_true", help="não grava nada")
     a = p.parse_args(argv)
 
-    if "<" in a.agente or len(a.agente.strip()) < 3:
+    if a.placar:
+        print(placar())
+        return 0
+    if not a.agente or "<" in a.agente or len(a.agente.strip()) < 3:
         print("[ENCERRAR] --agente precisa do seu modelo/versão real (AGENTS §0).", file=sys.stderr)
         return 1
     if a.fechar and not a.avanco:
@@ -227,7 +356,9 @@ def main(argv=None):
 
     # 1. fecho no jogo
     tr = transcript_recente()
-    fecho = fecho_do_transcript(ler_jsonl(tr)) if tr else None
+    registros = ler_jsonl(tr) if tr else []
+    fecho = fecho_do_transcript(registros) if tr else None
+    metricas = metricas_do_transcript(registros) if registros else None
     if not tr:
         avisos.append("[encerrar.fecho] nenhum transcript em automato/runtime/ — se não jogou, ok")
     elif not fecho["fechou"]:
@@ -289,7 +420,7 @@ def main(argv=None):
         if codigo == 1:
             falhas.append(f"devolutiva.py: {devol[0]} falha(s) — veja a saída acima")
         linha = linha_boletim(hoje, a.agente, heroi, f"plano{numero:03d}", fecho, devol, auditor,
-                              a.avanco, v2)
+                              a.avanco, v2, metricas=metricas, tipo=a.tipo)
         if a.simular:
             print(f"  [sim]   gravaria no boletim: {json.dumps(linha, ensure_ascii=False)}")
         else:

@@ -4,6 +4,18 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.7.14 — Dia 158 · O placar do boletim e os números do sono e do Rei (DeepSeek deepseek-flash)
+
+Origem: as fases 4 e 5 do plano de solução — "sinto que o Claude ignora" só se prova com dado, e o `boletim.jsonl` tinha 10 linhas, todas Claude, sem nenhum número de jogo dentro.
+
+- **`scripts/encerrar.py`:** `metricas_do_transcript()` — comandos, minutos, `consider`, `casts`, `armor`, `recalls`, linhas de fome, mortes, vida com que a sessão começou e `consider_por_100_magias`. Tudo do transcript, nada declarado pelo agente.
+- **Boletim:** a linha ganha `metricas` e `tipo` (`--tipo chefe|moagem|expedicao|mapeamento|missao|outro`). Sem o tipo, "20 minutos no Rei" e "20 minutos no milharal" viram o mesmo número.
+- **`--placar`:** tabela por modelo — sessões, falhas da devolutiva e do auditor, comandos/sessão, minutos/sessão, considers por 100 magias, mortes e % de avanço declarado. Sessão antiga, sem métricas, aparece como `—` e não como zero.
+- **`conhecimento.md` §83:** o sono em números (mana em 3 min, vida a ~5 hp/min, fome cancela). **§84:** o Rei Negro em números nas duas lutas — dano por raio, vida perdida por rodada, 10 segmentos, regeneração, e a conta de 25 a 35 raios que fecha o kite como inviável.
+- **`maquina/verificacoes.md`:** o sono como mecânica do servidor, com data e fonte.
+- **Testes:** `test_encerrar.py` (+7). Suíte: 336 OK. 2 IDs novos na catraca.
+- **Limite:** o placar só fica comparável daqui para frente — as 10 linhas antigas não têm `metricas` e não dá para reconstruir o tipo de conteúdo delas. `mortes` conta a linha "Você está morto" e pode contar duas vezes se o servidor repetir a mensagem.
+
 ## v1.7.13 — Dia 158 · Modo breve, fechamento em um comando e AGENTS.md pela metade (DeepSeek deepseek-flash)
 
 Origem: pedido do autor — "otimizar para garantir menos regras escritas que podem ser ignoradas" e "não usar um monte de token de forma boba (verificações excessivas ou jogar de forma burra)". Medido: 85 a 110 tokens por comando de jogo; 3,1 milhões de tokens em 14 sessões; 24% dos comandos são movimento, cada um devolvendo a descrição inteira da sala (~304 chars, ~85 tokens); o protocolo custava ~19 mil tokens fixos por sessão, dos quais 8.345 só de `AGENTS.md`.

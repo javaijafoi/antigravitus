@@ -385,6 +385,18 @@
       "arquivo": "scripts/devolutiva.py",
       "desde": "2026-10-21",
       "regra": "a suíte só roda se algum .py mudou desde o commit-base: sessão que só mexeu em data/ não paga 7 s"
+    },
+    {
+      "id": "metricas_do_transcript",
+      "arquivo": "scripts/encerrar.py",
+      "desde": "2026-10-21",
+      "regra": "o boletim leva comandos, minutos, consider, magias, armor, recalls, fome, mortes e vida inicial tirados do transcript"
+    },
+    {
+      "id": "encerrar.placar",
+      "arquivo": "scripts/encerrar.py",
+      "desde": "2026-10-21",
+      "regra": "encerrar.py --placar compara modelos com dado do boletim, não com impressão (AGENTS 14.3)"
     }
   ]
 }

@@ -299,3 +299,10 @@ Agente da sessão: Claude Haiku 5.5 (claude-haiku-5-5); registro de Claude Opus 
 - `charm person`: "Enfeitica a vitima... nao e possivel enfeiticar alguem de nivel superior ao do conjurador"; duracao 48*carisma/inteligencia da vitima horas; ordens com `ordenar`. Mensagem de sucesso: "<alvo> comeca a seguir voce".
 - Morte: o equipamento desvestido permanece no inventario; `equipment` mostra "Nada". Aspas simples nao funcionam em nomes de itens.
 - `where N.nome` lista a N-esima ocorrencia do mob (util para contar peoes/torres).
+
+### 2026-10-21 · DeepSeek deepseek-flash (dsh) · Sono, mana e vida (medido nos transcripts)
+- **O sono não recupera mana e vida na mesma velocidade.** Mediana de 374 episódios de sono em 16–20/10: 3 min dormidos → **mana +18** (até +231 no mesmo episódio) e **vida +0**.
+- **Vida sobe devagar:** quando sobe, ~**5 hp/min** (só 34 de 591 intervalos fora de combate tiveram ganho). Com 226 de vida máxima: ~45 min do zero, ~10 min para 50 pontos. Constituição 9 explica a diferença para a mana (baseada em INT).
+- **Fome e sede cancelam o ganho:** `Você está morrendo de fome! (-3hp, -6mn ...)`; há episódio de sono com saldo **−11 hp**. Dormir alimentado é condição, não recomendação.
+- **`sleep` em 75 s fixos era o bug de projeto:** devolvia mana e deixava a vida faltando; o `prepara.dormir()` agora calcula `minutos_de_sono()` a ~5 hp/min (CHANGELOG v1.7.12).
+- Fonte: `automato/runtime/transcript_*.jsonl` de 16 a 20/10, contagem por script; números crus também em `conhecimento.md` §83.

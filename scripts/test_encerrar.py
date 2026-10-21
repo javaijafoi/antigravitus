@@ -92,5 +92,75 @@ class TestResumoEBoletim(unittest.TestCase):
         self.assertEqual(encerrar.main(["--agente", "Modelo X", "--fechar"]), 1)
 
 
+def cmd(c, texto="", hp=200, at="2026-10-20T15:00:00-03:00"):
+    return {"kind": "command", "cmd": c, "text": texto, "vitals": {"hp": hp}, "at": at}
+
+
+class TestMetricas(unittest.TestCase):
+    """O placar só vale se o número vier do transcript, não da opinião."""
+
+    def test_conta_o_basico(self):
+        regs = [
+            {"kind": "open"},
+            cmd("consider peao", "", at="2026-10-20T15:00:00-03:00"),
+            cmd("cast 'lightning bolt' peao", "Você está morto!", at="2026-10-20T15:10:00-03:00"),
+            cmd("cast 'armor'", "", at="2026-10-20T15:20:00-03:00"),
+            cmd("recall", "Você está morrendo de fome! (-3hp)", at="2026-10-20T15:30:00-03:00"),
+            cmd("score tudo", "Vida: {<<<<<>>>>>} 180 de 200", at="2026-10-20T16:00:00-03:00"),
+        ]
+        m = encerrar.metricas_do_transcript(regs)
+        self.assertEqual(m["comandos"], 5)
+        self.assertEqual(m["minutos"], 60)
+        self.assertEqual(m["consider"], 1)
+        self.assertEqual(m["casts"], 2)
+        self.assertEqual(m["armor"], 1)
+        self.assertEqual(m["recalls"], 1)
+        self.assertEqual(m["fome"], 1)
+        self.assertEqual(m["mortes"], 1)
+        self.assertEqual(m["consider_por_100_magias"], 50.0)
+
+    def test_vida_inicial_em_porcento(self):
+        m = encerrar.metricas_do_transcript([cmd("look", hp=150)])
+        self.assertEqual(m["vida_inicio_pct"], 100)      # só hp conhecido: max = 150
+
+    def test_transcript_vazio_nao_quebra(self):
+        m = encerrar.metricas_do_transcript([])
+        self.assertEqual(m["comandos"], 0)
+        self.assertEqual(m["minutos"], 0)
+        self.assertIsNone(m["consider_por_100_magias"])
+
+    def test_linha_do_boletim_leva_tipo_e_metricas(self):
+        linha = encerrar.linha_boletim("2026-10-20", "m", "h", "plano041", {"fechou": True},
+                                       (0, 1), (0, 0), "sim", [], metricas={"comandos": 10},
+                                       tipo="chefe")
+        self.assertEqual(linha["tipo"], "chefe")
+        self.assertEqual(linha["metricas"], {"comandos": 10})
+
+
+class TestPlacar(unittest.TestCase):
+    def test_le_o_boletim_e_agrupa_por_modelo(self):
+        import json
+        import tempfile
+        with tempfile.TemporaryDirectory() as temp:
+            caminho = Path(temp) / "boletim.jsonl"
+            caminho.write_text("\n".join(json.dumps(l) for l in [
+                {"agente": "A", "devolutiva": {"falhas": 1}, "auditor": {"falhas": 2},
+                 "avanco_declarado": "sim", "metricas": {"comandos": 100, "minutos": 50,
+                                                         "consider_por_100_magias": 4.0}},
+                {"agente": "A", "devolutiva": {"falhas": 0}, "auditor": {"falhas": 0},
+                 "avanco_declarado": "nao", "metricas": {"comandos": 200, "minutos": 70}},
+                {"agente": "B", "devolutiva": {"falhas": 0}, "auditor": {"falhas": 0},
+                 "avanco_declarado": "sim"},
+            ]), encoding="utf-8")
+            saida = encerrar.placar(caminho)
+        self.assertIn("A", saida)
+        self.assertIn("B", saida)
+        self.assertIn("150", saida)      # média de comandos: (100+200)/2
+        self.assertIn("50%", saida)      # A avançou 1 de 2
+
+    def test_sem_boletim_nao_explode(self):
+        self.assertIn("não existe", encerrar.placar(Path("nao_existe.jsonl")))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
