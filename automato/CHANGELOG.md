@@ -4,6 +4,19 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.7.15 — Dia 158 · O radar de uso: a ferramenta existe e não está sendo usada (DeepSeek deepseek-flash)
+
+Origem: proposta do autor — "deveria ter um `quality_run.py` vendo se o número de vezes que os scripts rodaram parece normal… e perguntar se ele leu e está fazendo de acordo com a diretiva". Não existia nada assim: o `vigia.py` olha o **estado** da personagem, o `auditar_sessao.py` olha o **uso depois** da sessão, e nada olhava o uso **durante**. Foi por isso que 4 dias passaram sem rotina supervisionada com o vigia respondendo OK.
+
+- **`camadas/vigia.py`:** `uso_do_transcript(janela_min=30)` — lê o transcript mais recente e conta, por `origem`, quantos comandos vieram de cada script, separando passos e ataques feitos pelo `play.py`. `diagnostico_de_uso()` transforma isso em `USO_ANOMALO` acima de **60 passos** ou **25 ataques** à mão na janela (o auditor usa 80/30 na sessão inteira). `rotina_recente()` detecta turno supervisionado pelo `rotina.log`.
+- **Silêncio explícito:** nada de alerta dormindo (o `dormir()` novo bloqueia até 45 min; a janela de silêncio é 50) nem com rotina rodando nos últimos 10 min. Sem isso o radar vira ruído no primeiro dia.
+- **`scripts/quality_run.py`:** `--loop --intervalo 30` para job em segundo plano, `--janela`, `--json`, `--sem-registro`. Grava uma linha por verificação em `automato/runtime/qualidade.jsonl` (fora do git) e só imprime quando há o que dizer. Códigos: 0 ok, 1 anomalia, 2 sem sessão.
+- **O alerta afirma, não pergunta.** Auto-relato já falhou aqui (planos 037–039 "justificaram" falhas do auditor). O texto exige uma resolução: rodar a ferramenta do modo, ou mudar o modo com motivo registrado.
+- **`PROTOCOLO.md`:** §2 manda subir o radar enquanto a sessão for à mão; §3 passa a fechar com `--fechar --tipo <chefe|moagem|expedicao|mapeamento|missao|outro>` (combina com as métricas do boletim).
+- **`automato/README.md`:** linha nova na tabela "Ferramentas".
+- **Testes:** `scripts/test_qualidade.py` (12). 2 IDs novos na catraca.
+- **Limite:** os limiares 60/25 são escolha a partir dos do auditor, não medição — a primeira sessão real calibra. E o radar mede **adesão ao modo**, não qualidade da jogada: tática ruim com o script certo rodando continua passando.
+
 ## v1.7.14 — Dia 158 · O placar do boletim e os números do sono e do Rei (DeepSeek deepseek-flash)
 
 Origem: as fases 4 e 5 do plano de solução — "sinto que o Claude ignora" só se prova com dado, e o `boletim.jsonl` tinha 10 linhas, todas Claude, sem nenhum número de jogo dentro.

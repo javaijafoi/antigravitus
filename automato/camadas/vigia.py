@@ -168,6 +168,133 @@ def diagnosticar():
     return d
 
 
+# ---------------------------------------------------------------------------
+# USO DAS FERRAMENTAS (pedido do autor, Dia 158)
+#
+# O vigia acima olha o ESTADO da personagem. Nao olha se as ferramentas estao
+# sendo usadas — e foi assim que 4 dias passaram sem rotina supervisionada com
+# o vigia respondendo OK o tempo todo: a personagem comia, andava e lutava,
+# so' que tudo a mao.
+#
+# Aqui a pergunta muda: nos ultimos N minutos, QUEM mandou os comandos? Se a
+# maioria veio do play.py e sao passos ou ataques, o modo escrito na diretiva
+# §26 nao esta' sendo seguido — e da' para avisar em 30 min em vez de descobrir
+# numa revisao de transcripts quatro dias depois.
+# ---------------------------------------------------------------------------
+JANELA_USO_MIN = 30
+LIMITE_PASSOS_MAO = 60      # na janela; o auditor usa 80 na sessao inteira
+LIMITE_ATAQUES_MAO = 25     # na janela; o auditor usa 30 na sessao inteira
+SONO_MINUTOS = 50           # o dormir() novo pode bloquear 45 min: silencio
+ROTINA_RECENTE_MIN = 10     # rotina.log mexido agora = turno supervisionado
+LINHAS_USO = 8000           # teto de leitura: ~30 min de jogo cabe de sobra
+MOVIMENTOS = {'n', 's', 'e', 'w', 'u', 'd', 'ne', 'nw', 'se', 'sw',
+              'north', 'south', 'east', 'west', 'up', 'down'}
+ATAQUES = {'kill', 'hit', 'attack', 'k'}
+OFENSIVAS = ('burning hands', 'magic missile', 'chill touch', 'shocking grasp', 'lightning bolt',
+             'color spray', 'fireball', 'sleep', 'curse', 'blindness', 'poison', 'charm person')
+
+
+def transcript_mais_recente():
+    todos = [p for p in LOCAL.glob('transcript_*.jsonl') if p.is_file() and p.stat().st_size > 0]
+    return max(todos, key=lambda p: p.stat().st_mtime) if todos else None
+
+
+def _ataque(cmd):
+    c = (cmd or '').strip().lower()
+    p = c.split(' ')[0] if c else ''
+    if p in ATAQUES:
+        return True
+    m = re.match(r"cast\s+'([^']+)'", c)
+    return bool(m and m.group(1) in OFENSIVAS)
+
+
+def uso_do_transcript(caminho=None, janela_min=JANELA_USO_MIN, agora=None):
+    """Quem mandou os comandos nos ultimos N minutos. ID na catraca: uso_do_transcript.
+
+    Nao julga: devolve numero. Quem decide se e' anomalo e' `diagnostico_de_uso`.
+    """
+    from datetime import datetime, timedelta
+    caminho = caminho or transcript_mais_recente()
+    uso = {'arquivo': caminho.name if caminho else None, 'janela_min': janela_min,
+           'comandos': 0, 'por_origem': {}, 'passos_mao': 0, 'ataques_mao': 0,
+           'dormindo': False, 'ultimo_ha_min': None}
+    if caminho is None or not Path(caminho).is_file():
+        return uso
+    agora = agora or datetime.now().astimezone()
+    corte = agora - timedelta(minutes=janela_min)
+    with open(caminho, encoding='utf-8', errors='replace') as fh:
+        linhas = fh.readlines()[-LINHAS_USO:]
+    ultimo = None
+    for linha in linhas:
+        try:
+            r = json.loads(linha)
+        except ValueError:
+            continue
+        if r.get('kind') != 'command':
+            continue
+        try:
+            at = datetime.fromisoformat(r['at'])
+        except Exception:
+            continue
+        if at < corte:
+            continue
+        cmd = (r.get('cmd') or '').strip().lower()
+        p = cmd.split(' ')[0] if cmd else ''
+        origem = r.get('origem') or 'desconhecida'
+        uso['comandos'] += 1
+        uso['por_origem'][origem] = uso['por_origem'].get(origem, 0) + 1
+        if origem == 'play':
+            if p in MOVIMENTOS:
+                uso['passos_mao'] += 1
+            if _ataque(cmd):
+                uso['ataques_mao'] += 1
+        ultimo = (at, cmd)
+    if ultimo:
+        at, cmd = ultimo
+        uso['ultimo_ha_min'] = round((agora - at).total_seconds() / 60)
+        uso['dormindo'] = (cmd in ('sleep', 'rest') and uso['ultimo_ha_min'] <= SONO_MINUTOS)
+    return uso
+
+
+def rotina_recente(minutos=ROTINA_RECENTE_MIN):
+    """O turno supervisionado mexeu no rotina.log agora? (silencio do radar)"""
+    import time
+    log = Path(config.DIR_LOGS).resolve().parents[1] / 'rotina.log'
+    try:
+        return (time.time() - log.stat().st_mtime) / 60 <= minutos
+    except OSError:
+        return False
+
+
+def diagnostico_de_uso(uso, supervisionado=False):
+    """USO_ANOMALO quando o modo da diretiva §26 nao esta' sendo seguido.
+
+    O numero so' vira alerta se NAO houver explicacao: dormindo (o sono novo
+    bloqueia ate' 45 min) ou com rotina rodando ha pouco, e' silencio.
+    """
+    d = {'estado': 'OK', 'motivos': [], 'uso': uso}
+    if not uso.get('comandos'):
+        d['estado'] = 'SEM_SESSAO'
+        return d
+    if uso.get('dormindo'):
+        d['motivos'].append('dormindo ha %s min: silencio (o sono pode levar 45)' % uso['ultimo_ha_min'])
+        return d
+    if supervisionado:
+        d['motivos'].append('rotina supervisionada rodou nos ultimos %d min' % ROTINA_RECENTE_MIN)
+        return d
+    if uso['passos_mao'] >= LIMITE_PASSOS_MAO:
+        d['estado'] = 'USO_ANOMALO'
+        d['motivos'].append(
+            '%d passos pelo play.py em %d min: rota conhecida vai por navegar.py (diretiva §26, '
+            'modo caminhar)' % (uso['passos_mao'], uso['janela_min']))
+    if uso['ataques_mao'] >= LIMITE_ATAQUES_MAO:
+        d['estado'] = 'USO_ANOMALO'
+        d['motivos'].append(
+            '%d ataques pelo play.py em %d min: cacada vai por turno.py --rotina (diretiva §26, '
+            'modo moer)' % (uso['ataques_mao'], uso['janela_min']))
+    return d
+
+
 def main():
     d = diagnosticar()
     if '--json' in sys.argv:

@@ -397,6 +397,18 @@
       "arquivo": "scripts/encerrar.py",
       "desde": "2026-10-21",
       "regra": "encerrar.py --placar compara modelos com dado do boletim, não com impressão (AGENTS 14.3)"
+    },
+    {
+      "id": "uso_do_transcript",
+      "arquivo": "automato/camadas/vigia.py",
+      "desde": "2026-10-21",
+      "regra": "nos últimos N minutos, quantos passos e ataques vieram do play.py e quantos de cada script (origem no transcript)"
+    },
+    {
+      "id": "def verificar",
+      "arquivo": "scripts/quality_run.py",
+      "desde": "2026-10-21",
+      "regra": "radar de uso: USO_ANOMALO quando o modo da diretiva 26 é contradito; silêncio dormindo ou com rotina recente"
     }
   ]
 }

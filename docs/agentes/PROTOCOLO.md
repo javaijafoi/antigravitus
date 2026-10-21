@@ -41,6 +41,12 @@ Fonte: [diretiva §23](../../data/heroes/grebolius/diretiva_de_jogo.md).
    (`andar-a-mao`, `caca-a-mao`). Mapear área nova à mão: `$env:MUD_ORIGEM='mapear'`.
 4. **Se a vida cair?** `recall` ao primeiro golpe grave. Nunca recuar andando.
 
+**Enquanto a sessão for à mão, suba o radar em segundo plano:**
+`python scripts/quality_run.py --loop --intervalo 30`. Ele compara o uso real das ferramentas com o
+modo da §26 e avisa quando há contradição (passos ou ataques demais pelo `play.py`); fica calado
+durante o sono e quando há rotina supervisionada rodando. Alerta não é pergunta: ou você roda a
+ferramenta do modo, ou muda o modo com motivo registrado.
+
 Sempre: `save`, nunca `quit` · não ataque o que não é ameaça · `identify` antes de `get` · descoberta
 vai para o **artefato** (mapa/verificações/conhecimento/CHANGELOG) **na hora**, não só em prosa.
 
@@ -57,7 +63,7 @@ função, melhore a existente.
 | 3 | Atualize `state.json`, `missoes.json`, `mapa.json`, `conhecimento.md` com a origem; crônica se houve fato novo | — |
 | 4 | `python scripts/encerrar.py --agente "<modelo/versão>"` | ele roda sync/check/auditor/devolutiva e **cria o esqueleto do próximo plano** com o estado do `state.json` |
 | 5 | Preencha o esqueleto: §1, §3–§6, §8. Regras do plano v2 ([LEIA.md](../../data/heroes/grebolius/planos/LEIA.md)) | o plano **se sustenta sozinho** e o §5 é **uma ação executável** |
-| 6 | `python scripts/encerrar.py --agente "<modelo/versão>" --fechar` | 0 FALHA; o boletim da sessão foi gravado |
+| 6 | `python scripts/encerrar.py --agente "<modelo/versão>" --fechar --tipo <chefe\|moagem\|expedicao\|mapeamento\|missao\|outro>` | 0 FALHA; o boletim da sessão foi gravado, com as métricas do transcript e o tipo de conteúdo |
 | 7 | Bloco no [registro de evolução](registro_de_evolucao.md) se mexeu na ferramenta; commit com caminhos explícitos e `[agente: …]` | **sem push** se não houve pedido ([AGENTS §12](../../AGENTS.md)) |
 
 **Depois do handoff, não reconecte.** Se precisar voltar ao jogo, é uma sessão nova: ela também

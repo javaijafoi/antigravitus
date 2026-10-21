@@ -130,6 +130,7 @@ execute (fica no repositório só como histórico).
 | Autoexame do motor | `verificar.py` | canônica |
 | Supervisionar turno | `camadas/turno.py` | canônica |
 | Diagnóstico agora | `camadas/vigia.py` | canônica |
+| Radar de USO das ferramentas | `camadas/vigia.py` (`uso_do_transcript`) + `scripts/quality_run.py` | canônica — compara o uso real com o modo da diretiva §26; cala durante sono e rotina supervisionada |
 | Comer/beber/magias em campo | `camadas/cuidar.py` | canônica |
 | Recarga na cidade | `camadas/prepara.py` | canônica |
 | Despachar rotina | `camadas/trabalhar.py` | canônica |
