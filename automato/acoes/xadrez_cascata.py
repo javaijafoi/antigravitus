@@ -609,6 +609,13 @@ def varrer_peoes(meta_mortes=9, log=print):
     return 1
 
 
+def inspecionar_corpo_do_rei(ctx, log):
+    """Logo apos a morte do Rei, SEM recall: sala, corpo e o cetro (Dia 159: o recall imediato me tirou de E8 e o corpo voltou vazio)."""
+    for c in ('look', 'look in corpo', 'get cetro corpo', 'inventory'):
+        t = ctx.cmd(c, 0.6)[0]
+        log('  [%s] %s' % (c, ' | '.join(l.strip() for l in t.splitlines() if l.strip() and not re.match(r'^-?\d+hp', l.strip()))[:420]))
+
+
 def kite_rei(idas=1, log=print):
     """Etapa final, tatica do autor: chegar, sleep, curse, blind, 1 raio e recall (kite). Exige --rei."""
     ctx = Ctx()
@@ -633,9 +640,13 @@ def kite_rei(idas=1, log=print):
             tab.ir('E7')
             texto, vit, _c = tab.passo('n')
             log('E8: %s' % titulo_sala(texto))
+            sala_dormindo = 'rei negro esta dormindo' in normalizar(texto)   # ele volta a dormir sozinho entre as idas
             ctx.considerar('rei', log)        # antes do 1o sleep (diretiva §2/§22); so' registra: --rei e' a autorizacao do autor
-            texto, v_s, _c = ctx.cmd("cast 'sleep' rei", 1.5)
-            vit = v_s or vit
+            if sala_dormindo:
+                log('  o Rei ja esta dormindo; sem sleep')
+            else:
+                texto, v_s, _c = ctx.cmd("cast 'sleep' rei", 1.5)
+                vit = v_s or vit
             if 'em que voce deseja' in normalizar(texto):
                 # sem alvo: o Rei morreu e ainda nao reapareceu. Insistir em `sleep` gera dezenas de recusas seguidas
                 # (auditor repeticao-de-recusa, Dia 159); recolhe e espera o repop em vez disso.
@@ -643,7 +654,7 @@ def kite_rei(idas=1, log=print):
                 ctx.recall()
                 time.sleep(45)
                 continue
-            dormiu = 'dormindo' in normalizar(texto) or 'vai dormir' in normalizar(texto)
+            dormiu = sala_dormindo or 'dormindo' in normalizar(texto) or 'vai dormir' in normalizar(texto)
             for _t2 in range(1):                 # UMA nova tentativa: com o Rei acordado e me vendo, cada uma custa uma rodada (-76/-84 no Dia 158)
                 if dormiu:
                     break
@@ -667,7 +678,7 @@ def kite_rei(idas=1, log=print):
                 if not pode_lancar(vit):
                     raise Perdida('vida %s abaixo de %d antes do raio' % (vida(vit), VIDA_PISO_LANCE))
                 _t, vit, _c = ctx.run("cast 'lightning bolt' rei")      # SEM espera: cada segundo aqui pode custar uma rodada do Rei
-                if not re.search(r'mortalmente ferido|morrer. logo', normalizar(_t)):
+                if not re.search(r'mortalmente ferido|morrer. logo|esta morto|em pedacos', normalizar(_t)):
                     ctx.run('recall')           # imediato (Dia 158: 3 s de espera antes do recall = -62, -63 e morte)
                 h = vida(vit)
                 barras = re.findall(r'(\{[-<>]{10}\})\s+o Rei Negro', _t)
@@ -681,13 +692,12 @@ def kite_rei(idas=1, log=print):
                         tk, vit, _c = ctx.cmd("cast 'lightning bolt' rei", 2)
                         if 'esta morto' in normalizar(tk) or 'em pedacos' in normalizar(tk) or mortes('Rei') > base_mortes:
                             break
-                    ctx.cmd('get cetro corpo', 1.5)
-                    log('  cetro: %s' % (' | '.join(l.strip() for l in ctx.cmd('inventory', 0.5)[0].splitlines() if 'etro' in l) or 'NAO PEGO'))
-                    ctx.recall()
-                    log('REI NEGRO MORTO; confira o cetro no inventario e entregue ao Bispo (give a mao)')
+                    inspecionar_corpo_do_rei(ctx, log)
+                    log('REI NEGRO MORTO; a personagem FICOU em E8: confira o corpo/cetro a mao e so entao recall')
                     return 0
-                if mortes('Rei') > base_mortes:
-                    log('REI NEGRO MORTO; pegue o cetro a mao (get cetro corpo) e entregue ao Bispo')
+                if mortes('Rei') > base_mortes or re.search(r'esta morto|em pedacos', normalizar(_t)):
+                    inspecionar_corpo_do_rei(ctx, log)
+                    log('REI NEGRO MORTO; a personagem FICOU em E8: confira o corpo/cetro a mao e so entao recall')
                     return 0
                 if h and h <= LIMITE_VIDA + 10:
                     break

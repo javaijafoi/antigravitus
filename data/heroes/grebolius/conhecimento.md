@@ -2789,3 +2789,30 @@ Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: evidence/dia159-rei-morto.
 - **Hipótese forte:** o Cetro do Rei Negro é item único (limite de 1 no mundo): se uma cópia já existe (com jogador, em loja, ou largada), o reset não carrega outra no Rei. O Rei que matei por kite não tinha como largar o que não tinha.
 - **Como saber:** `locate object cetro` lista onde há cetros e quem os usa; a magia já está aprendida (nível 34) mas exige o espelho localizador de Albernathy (Silverthorne, rota ausente do jogo; compra pede o autor pela diretiva dos 5%). Alternativas: um espelho "encontrado pelo mundo"; ou perguntar ao autor se há conhecimento do cetro com outro jogador.
 - **O método do kite e as armadilhas dele** estão no §83; as falhas do módulo corrigidas neste dia: recall imediato, uma só nova tentativa de sleep, `wake;stand` no começo, contagem de mortes por execução, `ir_h5` com nova tentativa, descanso por `sleep`.
+
+## 85. A porta trancada abaixo de D8 e a busca da chave (Dia 159, 2026-10-21)
+
+- **Rei Negro morto pela 2ª vez** (kite, ~19 a 31 idas): a personagem FICOU em E8 e inspecionou na hora: corpo vazio (`look in corpo` = 'Nada'), `get cetro corpo` = 'Não há nenhum cetro no corpo'. O texto cru do `look rei` não tem bloco 'está usando' (o Bispo Branco tem): o Rei nasce sem equipamento.
+- **D8 (Rainha Negra), saída `baixo`:** `open baixo` = **'Parece estar trancado'**; `look baixo` = 'O quadrado está fechado'. É a porta da Tesouraria Negra (mundo-base: abre com a `Black Treasury Key` que o rei carregaria). O corpo da Rainha só tinha coroas (sem chave). A maga não tem magia de abrir; precisa da chave.
+- **A Rainha reaparece em ~20 min** e, acordada, tirou 136 de vida de uma personagem invisível que entrou sem preparo; matá-la antes de mexer na porta custa 3 a 4 idas com o módulo (sleep, curse, blindness, raios, recall a 190).
+- **Pergunta aberta:** onde estão o Cetro e a Chave do Rei Negro? Ambos únicos, ambos ausentes. `locate object cetro` / `locate object chave` (espelho de Albernathy) responderia às duas. Também vale olhar a Sala de Doações e as lojas de Silverthorne.
+- **Falhas do módulo corrigidas no dia:** o `sleep` no Rei já dormindo ('Nada parece acontecer') era lido como falha; `inspecionar_corpo_do_rei` mantém a personagem em E8 após a morte.
+
+## 86. Varredura do tabuleiro, Bispo mudo e a missão que sobrevive ao `_CLOSE` (Dia 159, 2026-10-21)
+
+Agente: Claude Sonnet 5.5 (claude-sonnet-5-5).
+
+- **Varredura do chão das 55 casas** (fileiras 2 a 8, menos E8 e as proibidas), com `look` em cada: **nenhuma chave, tesouro ou Cetro do Rei**; só um monte de 18 Cetros do Bispo Negro em C8. A fileira 1 (Rei Branco) não foi varrida.
+- **Bispo Branco no passo final:** repete sempre "Agora, é hora do xeque-mate. Traga o cetro daquele rei nefasto como prova do seu feito." a `say cetro/rei/chave/xeque-mate/sim/ajuda` e a `ask bispo cetro/rei`. Nada novo. Ele segura o Cetro do Bispo Branco (`look bispo`).
+- **Não há `help` por autoquest** (`help xeque-mate`, `help ajuda magica` = "Não há ajuda para essa palavra"; `autoquest xeque-mate` = comando desconhecido). `pontos autoquest` consta do `help pontos` mas responde "Como?!?". Só o `help autoquest` geral existe.
+- **A autoquest sobreviveu a `_CLOSE sleep` + reinício do `live_daemon`** (4ª vez que isso ocorre; em outros dias caiu). Não dá para contar com o fechamento para reiniciar o roteiro. Meios de reiniciar: morrer ("Você falhou em sua aventura") ou `quit` (proibido pela regra de segurança).
+- **Observação do autor:** missões são lineares e não aceitam itens fora do roteiro. Logo o cetro tem de nascer de um passo do roteiro. Hipóteses abertas: (a) o Rei só gera o cetro se morrer enquanto o passo ainda é "matar criaturas" (precisa reiniciar o roteiro para testar); (b) a chave da tesouraria abaixo de D8 sai de algum passo anterior; (c) o item vem de outro mob do roteiro.
+- **Defeito de ferramenta corrigido:** `cuidar.situacao()` não devolvia o texto do `score` (KeyError em `manter_magias`, v1.7.22) e travava o `navegar.py` pela trava da §26.
+
+## 87. Mapa do tabuleiro: o que cada peça usa e o que há no chão (Dia 159, 2026-10-21)
+
+Agente: Claude Sonnet 5.5 (claude-sonnet-5-5). Fonte: `automato/runtime/tabuleiro_dia159.json` e `look` em cada peça, invisível.
+
+- **Peças vivas e o que usam (`look <peça>`, bloco "->"):** bispos (negros e brancos) = "segurando -> o Cetro do Bispo da cor"; rainhas = "na cabeça -> a Coroa da Rainha da cor"; cavaleiros = nada (a lança fica no chão da casa); torres ("grande castelo sobre rodas") = nada visível; **Rei Negro (E8) = NADA; Rei Branco (E1) = NADA**. Passar invisível por E1 e E8 funcionou (o Rei Negro só acordou e lutou quando fiquei na casa; recolhi).
+- **Chão (62 casas):** espadas e armaduras de peão (16 e 14 nas negras, 2 e 1 nas brancas), lanças de cavaleiro, "armadura feita com o que sobrou da torre", cetros do bispo (18 em C8), coroas, uma pilha de moedas. **Nenhuma chave, sinal, aviso ou objeto fora do padrão.** H5 só tem o portão enferrujado.
+- **Leitura:** só os dois reis nascem sem o item temático. Pela regra do autor (missão linear; só vale item do próprio roteiro), o cetro (e a chave da tesouraria abaixo de D8, "trancado") deve nascer de um passo do roteiro ainda não disparado. Hipótese não testada: o Rei só gera o cetro se morrer enquanto o passo é "matar criaturas"; testar exige reiniciar o roteiro (morte ou `quit`), o que o autor interrompeu com "para".

@@ -110,10 +110,10 @@ def agua_no_cantil():
 
 def situacao():
     """Fome, sede, comida e agua - confirmados pelo servidor."""
-    score()
+    texto = score()
     s = base.suprimentos()
     return {'fome': bool(s.get('fome')), 'sede': bool(s.get('sede')),
-            'comida': conta_comida(), 'agua': agua_no_cantil()}
+            'comida': conta_comida(), 'agua': agua_no_cantil(), 'texto': texto}
 
 
 def comer(limite=6):
