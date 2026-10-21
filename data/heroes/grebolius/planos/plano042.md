@@ -40,9 +40,10 @@ A sondagem de cura do Dia 158 fechou metade: **nenhum item de cura** no catálog
 - **Lyon:** lojas fecham de noite ("Volte mais tarde!"). O jogo anda ~75 s reais por hora; conferir `time` antes de sair.
 - **Tomo (Ajuda Mágica):** nada em Midgaard/Lyon/Jareth, doações, pergaminhos, Campanário e segundo andar de Notre Dame. Abertos: Loja do Escriba (Silverthorne, rota desconhecida), book of riddles (Pirâmide, zona 53), Torre da Magia (`help mapa 29`).
 - **Driver:** já houve duas quedas por reconexão que derrubaram a autoquest; conferir `_STATUS` a cada poucos minutos.
+- **Rota para Jareth passa pelo Altar do Templo e em 2026-10-21 disparou combate ali** (o `navegar` parou no passo 3; `recall` imediato, hp 211/211, sem dano). Ir com `armor`, `consider` em tudo e `recall` ao primeiro golpe grave.
 
 ## 5. O próximo passo, e só ele
-Conectar (`python scripts/mandabala.py`, `live_daemon.py` com `MUD_DAY=158 MUD_WIMPY=45`), `prepara.py --forcar`, `cuidar.py` e, **se o jogo estiver de dia** (`time`), `navegar.py --para cap12_027` e, em Pierre (`cap12_027`) e Toulouse, `list` mais `list` pela palavra do item em cada produto — procurar `heal`/`cure`. **Padrão, se estiver de noite:** ir ao Hospital de Jareth (`jr_hospital`), tirar uma amostra de vida num combate curto com `consider` e rodar `curar` com a vida abaixo do máximo; se curar, medir **ouro ÷ HP** na segunda vez. Nada de compra acima de 5% do ouro (1.572) sem o autor.
+Conectar (`python scripts/mandabala.py`, `live_daemon.py` com `MUD_DAY=158 MUD_WIMPY=45`), `prepara.py --forcar`, `cuidar.py` e executar **`observacoes/roteiro-deficit-e-cura-2026-10-21.md`**: (1) no Banco de Sangue, três medições com `give blood` e `score` para saber se a vida fica baixa ou volta; (2) se voltar, déficit no Tabuleiro (peões pretos, `consider` antes de cada ataque, parar em ~150 hp, sem dormir); (3) com déficit, `curar` na fonte da Praça do Templo, no Hospital de Jareth e no Salão dos Deuses, medindo ouro ÷ HP se algum funcionar. Lyon de dia fica como alternativa se `time` mostrar o dia aberto. Nada de compra acima de 1.572 sem o autor.
 
 ## 6. NÃO REPITA
 - Não testar `curar` com vida cheia (já são seis negativos); não repetir `curar` três vezes seguidas na mesma sala.
