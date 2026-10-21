@@ -26,7 +26,7 @@ O acampamento indica onde houve repouso; não comprova proteção absoluta contr
 
 * **Experiência Acumulada:** **8.577.141 EXP**
 * **Experiência Necessária p/ Grau 34:** **422.859 EXP** (Meta: 9.000.000 EXP)
-* **Ouro Líquido:** **31.445 moedas de ouro** (valor documental)
+* **Ouro Líquido:** **13.928 moedas de ouro** (valor documental)
 
 ## ✦ Atributos Base
 * **Força (STR):** 11
@@ -93,7 +93,6 @@ Equipamento conforme os últimos documentos disponíveis; conferir no próximo a
 * **na orelha direita:** `um diminuto brinco de novato`
 * **no pescoço:** `a coleira do dragão de estimação`
 * **no pescoço:** `um colar com uma pedra púrpura`
-* **sobre o corpo:** `um manto de pano`
 * **na cintura:** `um belo cinturão de rodeio`
 * **nos braços:** `um par de braçadeiras de novato`
 * **nas mãos:** `um par de luvas de couro`
@@ -102,6 +101,8 @@ Equipamento conforme os últimos documentos disponíveis; conferir no próximo a
 * **como escudo:** `um escudo`
 * **nas pernas:** `uma calça de couro`
 * **empunhando:** `uma espada curta`
+* **sobre o corpo:** `a mochila de Pellinore`
+* **segurando:** `um cajado retorcido`
 
 ## ✦ Inventário e Suprimentos
 Itens registrados; disponibilidade e efeitos não foram testados nesta revisão.
@@ -135,7 +136,7 @@ Recomeçar a Xeque-mate pelo Bispo Branco e rodar a cascata pelo xadrez_cascata.
 * Testar o módulo xadrez_cascata.py ao vivo em uma etapa curta antes de confiar nele.
 
 ## ✦ Origem e Incertezas
-Fonte do estado: Sessão de 2026-10-21 (Dia 158) de DeepSeek deepseek-flash (dsh) — sondagem de cura do Plano 041 (subtrama "fonte de cura", ordem do autor). Testados: Templo de Midgaard, Guilda dos Clérigos (bloqueada por guarda), Loja de Magias (catálogo sem cura; `list <n>` não inspeciona), Templo de Todos e Ninguém, Banco de Sangue (`give blood`), Hospital de Jareth e Salão dos Deuses. `curar` deu `Como?!?` em todos com vida cheia; teste com déficit pendente. Fechada no Templo de Midgaard, dormindo, com save e sleep confirmados (sem quit). Ouro 31.445 (30.445 banco + ~300 mão + trocados da doação); HP 211/211; mana 500; CA 177 com armor..
+Fonte do estado: Sessão de 2026-10-21 (Dia 158) de DeepSeek deepseek-flash (dsh) — 3ª sessão do dia: compra do cajado retorcido em Jareth (18.859) e medição da regeneração segundo a segundo. Regen medida: +12 a +13 de vida por tick (~2,5 s com comandos frequentes), 32→211 em ~38 s; na rua 189→211 em ~6 s. O número antigo de 5 hp/min (sono) não se reproduz hoje. Ouro 13.928 (12.565 banco + 1.363 mão); HP 211/211; CA 147..
 * A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.
 * O colar com pedra purpura pertence a outro dono: o servidor recusa o uso. Nenhum comerciante testado o compra.
 * Bainha de Excalibur exige nivel 85 (vista na Sala de Doacoes, nao pode ser carregada com a carga atual). Scutum de Carvalho exige nivel 35.
@@ -148,3 +149,4 @@ Fonte do estado: Sessão de 2026-10-21 (Dia 158) de DeepSeek deepseek-flash (dsh
 * Dia 157: conferir conhecimento §61 e Plano 028 para fonte ainda desconhecida do tomo; não confundir pergaminho de sabedoria carregado com o item solicitado.
 * Dia 157: Ajuda Mágica apareceu inativa no login duas vezes no mesmo dia, depois de sessões encerradas com save e sleep e sem quit nem morte. Causa desconhecida; não é o _CLOSE (conhecimento §65).
 * Dia 157 (sessao de 2026-10-21): nenhuma sala testada reconheceu 'curar' com vida cheia (211/211), inclusive o Hospital de Jareth, que anuncia atendimento e fica a oeste e depois ao sul de jr_tabuas_2. Hipotese: o gatilho exige vida abaixo do maximo. Proximo teste: criar deficit (doacao de sangue ou combate curto) e repetir 'curar' no Hospital e no Salao dos Deuses.
+* Dia 157 (sessao de 2026-10-21): a regeneracao de vida medida segundo a segundo (+12 a +13 por tick de ~2,5 s, 32->211 em 38 s) contradiz o numero de 5 hp/min dos transcripts de sono. Hipotese: o pulso do servidor avanca mais rapido quando se enviam comandos; sem comandos o ganho por tick cai. Falta medir dormindo com a mesma cadencia de comandos.

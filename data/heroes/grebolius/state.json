@@ -5,7 +5,7 @@
     "day": 157,
     "verification": "live",
     "live_verified": true,
-    "source": "Sessão de 2026-10-21 (Dia 158) de DeepSeek deepseek-flash (dsh) — sondagem de cura do Plano 041 (subtrama \"fonte de cura\", ordem do autor). Testados: Templo de Midgaard, Guilda dos Clérigos (bloqueada por guarda), Loja de Magias (catálogo sem cura; `list <n>` não inspeciona), Templo de Todos e Ninguém, Banco de Sangue (`give blood`), Hospital de Jareth e Salão dos Deuses. `curar` deu `Como?!?` em todos com vida cheia; teste com déficit pendente. Fechada no Templo de Midgaard, dormindo, com save e sleep confirmados (sem quit). Ouro 31.445 (30.445 banco + ~300 mão + trocados da doação); HP 211/211; mana 500; CA 177 com armor."
+    "source": "Sessão de 2026-10-21 (Dia 158) de DeepSeek deepseek-flash (dsh) — 3ª sessão do dia: compra do cajado retorcido em Jareth (18.859) e medição da regeneração segundo a segundo. Regen medida: +12 a +13 de vida por tick (~2,5 s com comandos frequentes), 32→211 em ~38 s; na rua 189→211 em ~6 s. O número antigo de 5 hp/min (sono) não se reproduz hoje. Ouro 13.928 (12.565 banco + 1.363 mão); HP 211/211; CA 147."
   },
   "level": 33,
   "mechanical_race": "Elfo",
@@ -34,7 +34,7 @@
     "current": 8577141,
     "next_level": 9000000
   },
-  "gold": 31445,
+  "gold": 13928,
   "attributes": {
     "STR": 11,
     "DEX": 17,
@@ -79,7 +79,7 @@
   },
   "last_event": {
     "day": 158,
-    "summary": "Sondagem de cura (subtrama do cap. 12): Hospital de Jareth achado e mapeado; `curar` não respondeu em seis salas com vida cheia; `give blood` custa 10 hp e devolve moedas; guildas de clérigos bloqueadas para mago."
+    "summary": "Comprou o cajado retorcido (18.859; BASTÃO MÁGICO nível 10, 3 cargas de sleep) e mediu a regeneração de vida por segundo: ~+12,5 por tick, barra cheia em menos de 1 min."
   },
   "next_objective": {
     "mission_id": "xeque-mate",
@@ -256,11 +256,6 @@
       "item": "um colar com uma pedra púrpura"
     },
     {
-      "slot": "sobre o corpo",
-      "name": "um manto de pano",
-      "item": "um manto de pano"
-    },
-    {
       "slot": "na cintura",
       "name": "um belo cinturão de rodeio",
       "item": "um belo cinturão de rodeio"
@@ -299,6 +294,17 @@
       "slot": "empunhando",
       "name": "uma espada curta",
       "item": "uma espada curta"
+    },
+    {
+      "slot": "sobre o corpo",
+      "name": "a mochila de Pellinore",
+      "item": "a mochila de Pellinore"
+    },
+    {
+      "slot": "segurando",
+      "name": "um cajado retorcido",
+      "item": "um cajado retorcido",
+      "note": "BASTAO MAGICO NOBITS, nivel 10, 3 cargas de sleep (3/3 na compra). Comprado em Pergaminhos e Afins (Jareth) por 18.859 em 2026-10-21. Identificado fora da loja."
     }
   ],
   "inventory": {
@@ -394,7 +400,8 @@
     "§42/plano011: reset obrigatório e conflito de autoquests eram hipóteses não isoladas; ver conhecimento §43.",
     "Dia 157: conferir conhecimento §61 e Plano 028 para fonte ainda desconhecida do tomo; não confundir pergaminho de sabedoria carregado com o item solicitado.",
     "Dia 157: Ajuda Mágica apareceu inativa no login duas vezes no mesmo dia, depois de sessões encerradas com save e sleep e sem quit nem morte. Causa desconhecida; não é o _CLOSE (conhecimento §65).",
-    "Dia 157 (sessao de 2026-10-21): nenhuma sala testada reconheceu 'curar' com vida cheia (211/211), inclusive o Hospital de Jareth, que anuncia atendimento e fica a oeste e depois ao sul de jr_tabuas_2. Hipotese: o gatilho exige vida abaixo do maximo. Proximo teste: criar deficit (doacao de sangue ou combate curto) e repetir 'curar' no Hospital e no Salao dos Deuses."
+    "Dia 157 (sessao de 2026-10-21): nenhuma sala testada reconheceu 'curar' com vida cheia (211/211), inclusive o Hospital de Jareth, que anuncia atendimento e fica a oeste e depois ao sul de jr_tabuas_2. Hipotese: o gatilho exige vida abaixo do maximo. Proximo teste: criar deficit (doacao de sangue ou combate curto) e repetir 'curar' no Hospital e no Salao dos Deuses.",
+    "Dia 157 (sessao de 2026-10-21): a regeneracao de vida medida segundo a segundo (+12 a +13 por tick de ~2,5 s, 32->211 em 38 s) contradiz o numero de 5 hp/min dos transcripts de sono. Hipotese: o pulso do servidor avanca mais rapido quando se enviam comandos; sem comandos o ganho por tick cai. Falta medir dormindo com a mesma cadencia de comandos."
   ],
   "evidence": [
     {

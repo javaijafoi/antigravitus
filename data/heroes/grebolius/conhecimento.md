@@ -2737,3 +2737,35 @@ Agente: DeepSeek deepseek-flash (dsh). Fonte: sessão ao vivo do Dia 158 (~15–
   Jareth) — 3× mais rápido. É "fonte de cura" de fato, mas por regeneração, não por serviço.
 - **Preços de Jareth (mais baratos que Midgaard):** ver `maquina/verificacoes.md` (2026-10-21). O
   **cajado retorcido de Jareth é nível 10** (usável), o de Midgaard é nível 38 (inútil hoje).
+
+## 89. Regeneração medida por segundo e o cajado de Jareth (2026-10-21)
+
+Agente: DeepSeek deepseek-flash (dsh). Fonte: amostragem a cada ~1 s com `score` (`automato/runtime/amostra_em_pe.txt` e
+`amostra_rua.txt`), nível 33, CON 9, alimentada.
+
+**Regeneração de vida, amostra a cada segundo**
+
+| Situação | Série | Ganho |
+|---|---|---|
+| em pé, Banco de Sangue (Jareth) | 57 → 211 em 38 s | +12 a +13 a cada ~2,5 s |
+| em pé, rua (Via da Veneração) | 189 → 211 em 6 s | 2 ticks de +13 |
+| doado até 32 hp | 32 → 57 nos primeiros segundos | ticks de +12,5 |
+
+- **Conclusão que muda o plano:** a barra de 211 enche em **menos de 1 minuto**, não 40. O "5 hp/min"
+  do §83 vinha dos transcripts de sono (comandos raros) e não se reproduz com comandos frequentes.
+- **Hipótese (não fechada):** o pulso do servidor avança com os comandos — enviando um `score` por
+  segundo, o tick de vida vem a cada ~2,5 s; parado, o intervalo é muito maior. Isso explica a diferença
+  entre os números antigos e os de hoje.
+- **Não deu para comparar em pé × sentado × dormindo:** a vida enche rápido demais; qualquer comparação
+  exige uma condição em que o ganho seja lento (fome/sede) ou uma barra maior.
+- **Sono não acelera:** nas amostras de 60 s (191→211) dormindo, em pé no banco e em pé na rua, o
+  resultado foi o mesmo — mas todas bateram no teto, então **não servem** como comparação.
+
+**Cajado retorcido (Jareth, Pergaminhos e Afins) — comprado por 18.859**
+
+- `cast 'identify'`: **BASTAO MÁGICO NOBITS**, peso 17, valor 16.400, nível 10, encarnação 1,
+  vestido em PEGAR, **conjura `sleep`, cargas 3 de 3**.
+- **NOBITS = o lojista não recompra**; o dinheiro está gasto. Não é item de cura: é 3 `sleep` de bolso.
+- Equipado com `hold cajado` ("segurando -> um cajado retorcido"); dano e CA não mudaram (Dano 5, CA 147).
+- Utilidade provável: **kite do Rei Negro** (§76/§84) — `sleep` nele sem gastar mana, 3 tentativas por
+  compra. Testar só com o Rei dormindo e vida cheia.

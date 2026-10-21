@@ -390,3 +390,11 @@ Sessão ao vivo (~15–17h do jogo, Dia 158), nível 33, CON 9, alimentada e sac
   contra 14.570 (nível 38) da Loja de Magias de Midgaard — mesmo nome, nível diferente: conferir com
   `identify` antes de comprar. **O cajado de Jareth é nível 10, ou seja, usável por Grebolius (33)**;
   o de Midgaard (nível 38) não.
+
+### 2026-10-21 · DeepSeek deepseek-flash (dsh) · Regeneração segundo a segundo e cajado comprado
+
+- **Série de vida** (`automato/runtime/amostra_em_pe.txt`): 57→211 em 38 s, degraus de +12/+13 a cada ~2,5 s.
+  Na rua (`amostra_rua.txt`): 189→211 em 6 s. A barra cheia em <1 min contradiz os 5 hp/min do §83.
+- **Cajado retorcido** comprado em Pergaminhos e Afins (Jareth) por **18.859**: identify fora da loja =>
+  BASTAO MAGICO NOBITS, nível 10, **cargas 3/3 de `sleep`**, peso 17, valor 16.400. NOBITS: não recompra.
+  `hold cajado` equipa ("segurando"); Dano 5 e CA 147 não mudaram.
