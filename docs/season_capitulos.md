@@ -13,6 +13,7 @@
 - `data/heroes/<id>/capitulos.json` — tomos e capítulos da Season 02.
 - Season 01 continua em `posts.json` e `ciclos.json` (intocados), exposta no site como **S01 — Legacy** (`id: s01-legacy`).
 - `data/heroes/<id>/capitulos_s01.json` — a Season 01 **recontada** em um tomo de 10 capítulos (`id: s01`, `rewrite_of: s01-legacy`). Mesmo formato do `capitulos.json`; cada capítulo cobre um arco de dias e as `parts` trazem o resumo de cada dia, com `posts.json` como fonte. Não traz fato novo: é reescrita editorial do legado.
+- O mesmo vale para outros heróis: o Antigravitus tem os seus 50 dias recontados em um tomo de 7 capítulos (`data/heroes/antigravitus/capitulos_s01.json`), com `temporadas.json` próprio. O número de capítulos segue os arcos da história, não uma conta fixa.
 
 ### Season reescrita em tomo
 - Toda temporada com `model: "capitulos"` no `temporadas.json` tem a sua fonte validada pelo `check_project.py` com as mesmas regras do `capitulos.json`, e o campo `season` do arquivo precisa casar com o `id` da temporada.

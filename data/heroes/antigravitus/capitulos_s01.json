@@ -1,0 +1,1051 @@
+{
+  "schema_version": 1,
+  "hero_id": "antigravitus",
+  "season": "s01",
+  "tomos": [
+    {
+      "id": "tomo-1",
+      "number": 1,
+      "roman": "I",
+      "title": "Tomo I — O Grande Compêndio",
+      "chapter_start": 1,
+      "chapter_end": 7,
+      "subtitle": "Os cinquenta dias de Antigravitus em sete capítulos: do corpo quase usurpado ao compêndio no Altar de Odin."
+    }
+  ],
+  "chapters": [
+    {
+      "id": 1,
+      "tomo": 1,
+      "title": "O Corpo Que Quase Não Era Meu",
+      "kind": "marco",
+      "status": "concluido",
+      "goal": "Sobreviver ao despertar, medir o tamanho do mundo e descobrir para que serve um elfo de ossos frágeis em Midgaard.",
+      "closed_on_day": 5,
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "date": "2026-10-12",
+      "in_game_time": "Templo de Midgaard, Javali Roncador e as praças da cidade",
+      "excerpt": "Acordo no alto do Templo com ossos de graveto e alguém tentando tomar o meu corpo. Cinco dias depois, diante do adeus a Sakura, troco a ambição pela pena.",
+      "tags": [
+        "O Despertar",
+        "Corpo Usurpado",
+        "A Carta de Keen",
+        "Guilda dos Paladinos",
+        "Memorial a Sakura",
+        "Hinata"
+      ],
+      "content": [
+        "Acordei com cheiro de incenso e de pedra polida. As orelhas zuniam. Em vez de céu, havia blocos enormes de pedra pintados com deuses, gigantes cinzentos e camponeses de eras esquecidas. Eu não sabia como tinha chegado ali, mas sabia o meu nome: Antigravitus.",
+        "Fiz o inventário de mim mesmo. Um elfo franzino, de ossos finos como graveto de inverno, que dificilmente aguentaria uma clava. Por dentro, porém, a cabeça queimava como uma fornalha: palavras para conjurar dardos mágicos e um dom estranho para quem acorda no alto de uma montanha, o de saber nadar. No corpo, couro curtido, um gorro, um escudo rústico e uma adaga. Na sacola, comida seca, um cantil e uma tocha apagada.",
+        "Mal terminei a conta e o mundo tentou me tirar de mim. Uma rajada me atravessou como se outra alma quisesse entrar à força na mesma carne. As paredes do santuário pareceram tremer, e uma voz sem dono avisou: 'Esse corpo foi usurpado!'. Segurei as rédeas. Empurrei a presença para fora e fiquei inteiro, com o fôlego no peito e a magia no lugar. Foi o meu primeiro combate, e não havia inimigo à vista.",
+        "Quando o coração sossegou, olhei em volta. Carecacabeludo, o Observador, me media com olhos serenos. Na Sala de Doações, os bancos estavam cheios de comida deixada por desconhecidos. Na Sala de Leitura, Losilly descansava montada num dragonete vermelho que soltava fumaça pelas ventas.",
+        "Desci a escadaria até a Praça do Templo. A fonte azul borbulhava, e o Pacificador fazia a ronda pelas pedras. Ao passar por mim, mediu o meu tamanho e disse: 'Quando você estiver mais forte, volte aqui para me ajudar!'. As ruelas do comércio chamavam lá embaixo. Não fui. Quem acabou de nascer não tem por que gastar a primeira noite num beco. Subi de volta, rezei para gravar a memória do dia e dormi.",
+        "Acordei no fim da tarde, com a pedra do santuário cor de cobre. Num banco da Sala de Doações havia um envelope esquecido. Rompi o lacre: 'Sistema de Correio — Domingo, 11 de outubro de 2026, 23:47. Para: Hinata | De: Keen. Só pra completar a quest diária :)'. Li aquilo muitas vezes. Quem eram Keen e Hinata? Que busca diária era essa, marcada num calendário de fora de qualquer era que eu conhecesse? Não entendi, e por isso mesmo guardei a carta dentro da túnica.",
+        "A leste da praça empurrei a porta de carvalho da Estalagem Javali Roncador. Lá dentro havia lenha estalando, bêbados cantando fora do tom, um taverneiro paciente e uma mosca gigante, o Filhote de Aglandiir, dando rasantes sobre as canecas. Pela primeira vez senti o calor de gente junta. Ao sul, a Guilda dos Paladinos brilhava tão dourada que dei um passo para trás. Dormi num banco perto da lareira.",
+        "Na manhã seguinte, o zelador varrendo o chão me acordou. Abri o grimório que trago por dentro e vi o que a minha ordem guarda: relâmpagos, invisibilidade, encantamentos, o domínio sobre vontades alheias. A ambição subiu como febre. Prometi que seria o maior aventureiro que estas terras já tinham visto.",
+        "Durou até o pórtico dos paladinos. Fui com passo de dono, e o guarda nem tirou a espada. Bastou um olhar e um gesto de desprezo. 'O guarda te humilha e não deixa você passar.' Insisti, e a vergonha se repetiu igual. Voltei para a estalagem com o rosto pegando fogo, e o Pacificador repetiu o conselho de sempre. Sentado no banco, pela primeira vez duvidei: a grandeza de uma cabeça boa estaria mesmo em mendigar respeito de guarda?",
+        "No dia seguinte guardei a glória no bolso e fui conhecer a cidade a pé. A oeste fica a Praça do Comércio, com a sua estátua austera, uma carroça pesada e o mural mágico de pergaminhos flutuando. Andei a Rua Principal para os dois lados, entre o cheiro de feno, a lenha da padaria e o metal da armaria. Um guarda me encarou pela fresta do elmo e disse, com voz de ferro: 'Lembre-se de seguir as regras.' Levei a frase a sério. Toda magia e toda ousadia correm debaixo de leis que alguém teceu antes de nós.",
+        "Ao sul fica a Praça Comum, e ali a cidade mudou de cara. Gente de cabeça baixa entre o Beco Pobre e o Beco Escuro, cães magros no lixo, um cheiro que subia dos depósitos. Nenhuma canção de bardo fala dessa lama, e é nela que as torres se apoiam. Voltei cansado e dormi na Sala de Leitura.",
+        "No quinto dia acordei com companhia: Hatgepetoc, outro elfo noviço, ressonando na pedra ao meu lado. Fui ao Altar e vi pela primeira vez a estátua de Odin. Mas o que mudou a minha vida estava na Sala de Leitura: um quadro de madeira escura com milhares de mensagens, mais de vinte anos de recados.",
+        "Li os mais recentes. Não eram vantagens nem ouro. Eram veteranos, Enkil, Peppe, Vega, Kosmo, Winkan, se despedindo de uma companheira que tinha partido: 'Adeus, Sakura'. 'Somente quem carrega cicatrizes sabe o peso das feridas'. 'Para Sakura, o amor da minha vida'. Fiquei parado diante daquelas tábuas. Midgaard não era um pátio para empilhar cabeças. Era um relicário de vidas de verdade, de laços feitos no perigo e de perdas que ecoam por anos.",
+        "Desci com isso no peito. No Beco Escuro, mercenários vendiam a própria vida por moedas na porta da Guilda dos Ladrões, e aço bom era vendido a peso de ouro para matança sem motivo. Entendi onde acabava o caminho que eu tinha jurado dois dias antes: na sarjeta de aluguel ou como mais um nome pregado no mural. Larguei aquela promessa ali mesmo. Dali em diante eu seria o Cronista, o guardião da memória de Midgaard, e usaria a cabeça para guardar a história de quem luta, proteger a lembrança de quem cai e entender as regras que não se veem.",
+        "Na volta ao Templo dei de cara com Hinata, a Guerreira de Elite, a mesma da carta. Vinha dentro de uma barreira de luz dourada tão forte que quase me cegou. Olhou para mim por um segundo e seguiu para o sul. Pareceu o selo do voto. O noviço ambicioso tinha morrido naquele dia; o cronista estava começando."
+      ],
+      "source_kind": "documental",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 5,
+          "note": "Reescrita dos Dias 1 a 5 da Season 01 original (Legacy), sem fato novo."
+        }
+      ],
+      "parts": [
+        {
+          "day": 1,
+          "date": "2026-10-12",
+          "summary": "Desperta no alto do Templo com ossos frágeis e a mente afiada, resiste a uma presença que tenta usurpar o seu corpo e ouve o primeiro conselho do Pacificador.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 1,
+              "note": "Crônica do Dia 1."
+            }
+          ]
+        },
+        {
+          "day": 2,
+          "date": "2026-10-12",
+          "summary": "Acha na Sala de Doações uma carta de Keen para Hinata que fala de uma 'quest diária', guarda-a e passa a noite na Estalagem Javali Roncador.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 2,
+              "note": "Crônica do Dia 2."
+            }
+          ]
+        },
+        {
+          "day": 3,
+          "date": "2026-10-12",
+          "summary": "Sonha em ser o maior aventureiro de Midgaard e é barrado com desprezo no pórtico da Guilda dos Paladinos.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 3,
+              "note": "Crônica do Dia 3."
+            }
+          ]
+        },
+        {
+          "day": 4,
+          "date": "2026-10-12",
+          "summary": "Percorre a Praça do Comércio e a Rua Principal, ouve de um guarda 'Lembre-se de seguir as regras' e vê a miséria da Praça Comum.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 4,
+              "note": "Crônica do Dia 4."
+            }
+          ]
+        },
+        {
+          "day": 5,
+          "date": "2026-10-12",
+          "summary": "Lê no mural da Sala de Leitura o adeus dos veteranos a Sakura, renuncia à ambição e se declara Cronista de Midgaard; na volta, cruza com Hinata.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 5,
+              "note": "Crônica do Dia 5."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "tomo": 1,
+      "title": "As Ruas Que Sustentam a Cidade",
+      "kind": "missao",
+      "status": "concluido",
+      "goal": "Conhecer as artérias de Midgaard, da água ao comércio, da fé à fronteira e à casa da própria ordem, antes de qualquer bravata.",
+      "closed_on_day": 10,
+      "days": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "date": "2026-10-14",
+      "in_game_time": "Fonte Azul, Rua Principal, Portão Oeste, Altar de Odin e a Guilda dos Magos",
+      "excerpt": "Em vez de procurar briga, decido aprender a cidade: a água da fonte, o comércio da Rua Leste, o rio, o Portão Oeste, o altar de Odin e, por fim, a casa da minha própria ordem.",
+      "tags": [
+        "Fonte Azul",
+        "Margens do Rio",
+        "Portão Oeste",
+        "Altar de Odin",
+        "Guilda dos Magos",
+        "Loja de Magias"
+      ],
+      "content": [
+        "Acordei no canto sudeste do Templo com uma decisão simples: antes de qualquer bravata, eu ia entender o que mantém esta cidade respirando.",
+        "Comecei pela água. Na Praça do Templo, debaixo do olhar do Pacificador, mergulhei as mãos na fonte de mármore azul e bebi devagar. Uma restauração leve correu por dentro e levou embora o cansaço do espírito. Os deuses deixaram bênçãos até nas praças públicas, para quem se abaixa para beber.",
+        "Depois fui ao comércio. Cruzei a Praça do Comércio e segui a Rua Principal para o leste. Anotei o Armazém de Provisões ao norte e a Loja de Animais ao sul: grão seco, feno, bichos de carga. Ninguém canta isso, mas é o que põe os guerreiros de pé antes das guerras.",
+        "No fim da tarde atravessei a Praça Comum e entrei no Beco Escuro com cuidado, desviando dos mercenários encostados na parede úmida. Segui para o leste até a descida das Margens do Rio. Cheiro de água doce, lodo e fumaça de lareira. Fiquei um bom tempo olhando a correnteza, medindo a força dela, e voltei para o Templo antes de escurecer.",
+        "No dia seguinte o sol entrou pelas frestas e acendeu as pinturas da abóbada. Desci e fui para o oeste, até os pórticos da Guilda dos Clérigos. Ouvi os cânticos de cura. A distância entre a fé que move aqueles devotos e o estudo que move um mago me pareceu enorme. Respeitei a fé deles e reafirmei a minha: a razão, e as leis que seguram o mundo.",
+        "À tarde percorri a Rua Principal Oeste inteira, passando pelo calor da padaria e pelos martelos da Loja de Armaduras, até o Portão Oeste. Pela primeira vez encarei os sentinelas de armadura pesada e, além deles, as colinas vazias. Dali dava para ver a linha exata entre o abrigo das muralhas e os ermos sem lei.",
+        "Antes de dormir, passei horas no mural mágico da praça copiando editais de viagem, avisos de guilda e recados de aventureiros de longe. Foi o primeiro material do arquivo.",
+        "O oitavo dia foi de silêncio. Passei a manhã na Sala de Doações catalogando o que os viajantes ricos deixavam nos bancos: comida, frascos, roupas. Pensei no acordo que ninguém assinou e todos cumprem, os veteranos alimentando os recém-chegados para que não morram nos primeiros passos.",
+        "Ao meio-dia subi ao Altar. Odin em mármore, os corvos Hugin e Munin no trono, os lobos Gere e Freke aos pés. Me prostrei e renovei o juramento: não ia empunhar cajado nem chamar relâmpago para a vaidade das tavernas. Ia ser a testemunha fiel deste mundo. À noite olhei para dentro e encontrei a vida em equilíbrio, a magia limpa, o alinhamento neutro e nenhuma vontade de sangue.",
+        "No nono dia acordei dentro da minha própria ordem, no Laboratório de Experiências da Guilda dos Magos. Cheiro de enxofre, cinza fria e erva seca, pentagramas riscados no chão, pedras escuras sobre mesas comidas pelo tempo. A Mestre da Guilda estava ali, envolta numa luz que não se apaga, com o cansaço dos anos no rosto e um mar de saber nos olhos. Me curvei diante dela.",
+        "Aos pés dela havia um buraco escuro e fedorento que descia direto para os esgotos. Senti um frio na espinha. Era o medo que me acompanha desde o primeiro dia, o de morrer sujo e sem nome. Não desci. Um cronista precisa de olhos abertos e pé em chão firme.",
+        "A oeste fica o Bar dos Magos, cheio de miragens e reflexos que entortam as paredes. Um mago veterano ergueu a caneca e sorriu: 'Ah, olhe só para você! Começando suas aventuras?'. Respondi com calma. O garçom, de avental e adaga simples, tinha postura de conjurador aposentado. No quadro de avisos, centenas de recados de irmãos de cajado mostravam uma ordem que vive como família.",
+        "Ao norte, na entrada da guilda, um guardião com uma lâmina longa de brilho azulado vigiava ao lado do Pacificador. Saí pelo portal e entendi o que me escapava: a guilda dá exatamente no fim oeste da Rua Principal. À frente, a Loja de Magias; a oeste, os portões; a leste, a Praça do Comércio. Vi até o Prefeito de Midgaard fazendo a ronda pela calçada. O mapa da cidade começava a fechar.",
+        "No décimo dia entrei na Loja de Magias. Atrás do balcão, um feiticeiro de barba rala andava de um lado para o outro conversando com sombras que só ele via. Nas prateleiras, bastões cinzentos de invisibilidade, pergaminhos de identificação e de retorno, ampolas amareladas para enxergar o oculto. Pensei em quantos aventureiros tinham comprado ali a fuga do último instante de uma luta perdida.",
+        "Cumprimentei o velho em silêncio, de estudante para estudante. Ele mal levantou os olhos, mas o murmúrio dele soou como resposta: cabeça que se dedica ao arcano não descansa nunca. Saí com a certeza de que aqueles frascos são testemunhas da briga diária entre a morte e a engenhosidade."
+      ],
+      "source_kind": "documental",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 10,
+          "note": "Reescrita dos Dias 6 a 10 da Season 01 original (Legacy), sem fato novo."
+        }
+      ],
+      "parts": [
+        {
+          "day": 6,
+          "date": "2026-10-13",
+          "summary": "Bebe na Fonte Azul, mapeia o comércio da Rua Principal Leste e observa a correnteza nas Margens do Rio.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 6,
+              "note": "Crônica do Dia 6."
+            }
+          ]
+        },
+        {
+          "day": 7,
+          "date": "2026-10-13",
+          "summary": "Ouve os cânticos da Guilda dos Clérigos, chega pela primeira vez ao Portão Oeste e copia editais do mural mágico.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 7,
+              "note": "Crônica do Dia 7."
+            }
+          ]
+        },
+        {
+          "day": 8,
+          "date": "2026-10-13",
+          "summary": "Cataloga os bancos da Sala de Doações e, diante da estátua de Odin, jura ser testemunha e não arma da vaidade.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 8,
+              "note": "Crônica do Dia 8."
+            }
+          ]
+        },
+        {
+          "day": 9,
+          "date": "2026-10-13",
+          "summary": "Conhece a Mestre da Guilda, recusa o buraco que desce aos esgotos, visita o Bar dos Magos e descobre que a guilda dá no fim oeste da Rua Principal.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 9,
+              "note": "Crônica do Dia 9."
+            }
+          ]
+        },
+        {
+          "day": 10,
+          "date": "2026-10-14",
+          "summary": "Visita a Loja de Magias, onde um velho feiticeiro conversa com sombras entre bastões de invisibilidade e pergaminhos de retorno.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 10,
+              "note": "Crônica do Dia 10."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "tomo": 1,
+      "title": "O Pão, o Pranto e a Ponte",
+      "kind": "missao",
+      "status": "concluido",
+      "goal": "Conhecer quem alimenta e quem chora a cidade, seguir a muralha até o portão e, por fim, pôr os pés do lado de fora.",
+      "closed_on_day": 15,
+      "days": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "date": "2026-10-19",
+      "in_game_time": "Padaria, Loja de Armaduras, Portão Oeste, Rua da Muralha e o além-muros",
+      "excerpt": "Aprendo com um padeiro e com um homem que chora num canto da armaria. Depois sigo a muralha até o portão e, pela primeira vez, atravesso a ponte.",
+      "tags": [
+        "A Padaria",
+        "O Pranteador",
+        "Portão Oeste",
+        "Rua da Muralha",
+        "Além-Muros"
+      ],
+      "content": [
+        "O vento da Praça do Comércio trouxe cheiro de fermento, manteiga e casca tostada, e eu fui atrás dele até a Padaria de Midgaard. No balcão havia rosquinhas malhadas, broas e os pães de viagem que seguram caravanas por semanas. No fundo, o padeiro virava massa com pressa, limpando farinha e suor do rosto.",
+        "Comprei um pedaço de pão e comi na porta, de olho num cão que esperava os farelos. Enquanto guerreiros forjam aço e magos estudam raios, aquele homem acorda antes da aurora para transformar trigo em comida. A nobreza de uma cidade, pensei, se mede por quem ela alimenta, não pela altura das torres dos magos. Guardei o calor daquela fornalha como remédio contra o orgulho de quem estuda.",
+        "No dia seguinte desci os três degraus da Loja de Armaduras. Óleo, couro cru, ferro batido. O armeiro mostrava cotas de malha, elmos de bronze, peitorais feitos para aguentar machado. Mas o que me prendeu foi um homem num banquinho de canto, encolhido num manto escuro, chorando com o rosto nas mãos: o pranteador da cidade.",
+        "Ninguém olhava para ele. Guardas e mercenários escolhiam braçadeiras ao lado como se o choro fosse parte da mobília. Entendi a cena: armadura só existe porque existe lâmina, e aquele homem chorava pelos corpos que nenhuma cota salvou. Toquei o ombro dele. Ele levantou os olhos vermelhos por um instante, como quem reconhece uma dor dividida, e voltou a soluçar baixo. O aço protege a carne. Não estanca o que a violência deixa em quem fica.",
+        "No terceiro dia fui até onde a Rua Principal aperta entre as fundações da muralha: o Portão Oeste. Entre duas torres pequenas de pedra cinzenta, que ligam a ponte levadiça à cidade, estava o guarda do portão, de ombros largos e espada longa. Encostadas na parede, três espadas longas largadas por aventureiros que saíram e talvez nunca voltaram para buscá-las.",
+        "O olhar dele estava no horizonte, além do fosso, onde as colinas guardam monstros e foras da lei. Quando cheguei perto, ele só acenou com a cabeça. Não havia a arrogância do paladino dos primeiros dias. Havia a seriedade de quem sabe que a morte é uma possibilidade de todo dia na fronteira. A muralha, entendi, também é feita da lealdade desses homens sem nome.",
+        "Depois desviei da via principal e desci a Rua da Muralha, uma viela estreita e úmida colada às pedras das defesas do oeste. Quase ninguém passa por ali. Os passos ecoam entre o contraforte e os fundos das oficinas, e de vez em quando uma seteira mostra um pedaço do descampado. Vi para que serve: quem rompesse o portão ficaria preso naquele corredor, debaixo dos arqueiros dos parapeitos.",
+        "Sentei num degrau e desenhei a proporção daquela artéria no caderno. Como elfo, a geometria dura da pedra humana sempre me pareceu estranha. Naquele dia enxerguei nela a teimosia de um povo que quer sobreviver às feras da noite.",
+        "O décimo quinto dia amanheceu cor de chumbo, com uma pergunta que eu vinha evitando: até quando a prudência do escriba ia servir de desculpa para o medo? Fui ao Portão Oeste, passei debaixo do arco e atravessei a ponte sobre o fosso. Pela primeira vez pisei na terra batida do lado de fora.",
+        "Lá fora o vento uiva sem eco de taverna nem chaminé. Atrás de mim, a muralha era uma montanha cinzenta; à frente, colinas abertas seguiam até a floresta de Haon-Dor, no fim da vista. Cheiro de capim molhado e de uma ameaça que eu não via.",
+        "Fiquei meia hora parado na encruzilhada de terra, sentindo o meu tamanho. Se uma fera aparecesse, os meus poucos feitiços teriam de bastar para a fuga. Não passei do ponto em que o sentinela da ponte ainda me enxergava. Coragem não é suicídio. Voltei para dentro com o sangue correndo rápido e a sensação de que a alma tinha crescido um palmo."
+      ],
+      "source_kind": "documental",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 15,
+          "note": "Reescrita dos Dias 11 a 15 da Season 01 original (Legacy), sem fato novo."
+        }
+      ],
+      "parts": [
+        {
+          "day": 11,
+          "date": "2026-10-15",
+          "summary": "Come pão na porta da Padaria e aprende com o padeiro que a nobreza de uma cidade se mede por quem ela alimenta.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 11,
+              "note": "Crônica do Dia 11."
+            }
+          ]
+        },
+        {
+          "day": 12,
+          "date": "2026-10-16",
+          "summary": "Encontra o pranteador da cidade chorando num canto da Loja de Armaduras e toca o seu ombro.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 12,
+              "note": "Crônica do Dia 12."
+            }
+          ]
+        },
+        {
+          "day": 13,
+          "date": "2026-10-17",
+          "summary": "Observa o guarda do Portão Oeste e as três espadas longas deixadas no chão por quem partiu.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 13,
+              "note": "Crônica do Dia 13."
+            }
+          ]
+        },
+        {
+          "day": 14,
+          "date": "2026-10-18",
+          "summary": "Desce a Rua da Muralha e desenha no caderno o corredor de defesa das muralhas do oeste.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 14,
+              "note": "Crônica do Dia 14."
+            }
+          ]
+        },
+        {
+          "day": 15,
+          "date": "2026-10-19",
+          "summary": "Atravessa pela primeira vez a ponte do Portão Oeste e fica meia hora na encruzilhada de terra, à vista do sentinela.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 15,
+              "note": "Crônica do Dia 15."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "tomo": 1,
+      "title": "Do Panteão ao Lixo",
+      "kind": "reflexao",
+      "status": "concluido",
+      "goal": "Registrar a cidade de cima a baixo, do campo atrás do altar ao depósito de lixo, e fechar os primeiros vinte dias à beira do rio.",
+      "closed_on_day": 20,
+      "days": [
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "date": "2026-10-24",
+      "in_game_time": "Atrás do Altar, Panteão dos Centenários, Depósito de Lixo, Beco Pobre e as Margens do Rio",
+      "excerpt": "Subo ao salão onde as lendas descansam e desço ao pátio onde os pobres reviram o lixo. Entre um e outro, uma senhora me oferece água, e o rio me lembra que nenhum dia é igual ao outro.",
+      "tags": [
+        "Atrás do Altar",
+        "Grande Campo",
+        "Panteão dos Centenários",
+        "Depósito de Lixo",
+        "Beco Pobre",
+        "Margens do Rio"
+      ],
+      "content": [
+        "Depois de dias olhando para o oeste, voltei ao cume e fui até o Altar de Odin. Os corvos de pedra pareciam me perguntar para onde eu ia levar o meu voto. Desta vez não ajoelhei. Contornei a mesa de mármore e saí pelo norte, por uma vereda de terra chamada Atrás do Altar, que desce pela encosta de trás da montanha.",
+        "Dali se vê o Grande Campo de Midgaard: um mar de mato, flores do campo e trilhas de pastor sumindo na bruma do norte. Nada da aridez do oeste. Respirei fundo e entendi que o santuário não foi feito para trancar os fiéis entre paredes, mas como um farol no alto do monte, apontando para fora. Anotei os marcos do caminho e voltei.",
+        "No dia seguinte subi os degraus em espiral que ficam no fundo do Templo, acima das abóbadas de oração, até o Panteão dos Centenários. O ar lá em cima é parado, como se não corresse no mesmo tempo que o resto. Colunas de jaspe seguram uma cúpula de cristal por onde a luz das estrelas entra mesmo no crepúsculo. Placas de prata guardam os nomes dos heróis e sábios que chegaram à centésima consagração.",
+        "Andei na ponta dos pés. Havia inscrições do começo dos anos dois mil, homenagens a guerreiros de quem as tavernas já nem lembram, mas cujos nomes continuam na pedra. Ajoelhei e chorei quieto. Era aquele o meu ofício: ser a pena que não deixa ninguém sumir no vento. Desci convencido de que o poder de um mago está no que ele consegue fazer durar.",
+        "Quem só registra mármore e pão quente mente sobre a cidade. No dia seguinte desci da Praça do Comércio para a Praça Comum e segui o cheiro para o sul, até o Depósito de Lixo de Midgaard. Valas cavadas na pedra baixa, cheias de restos podres, ossos de gado roídos, carne estragada e trapos.",
+        "Cães esqueléticos e bichos sem nome brigavam por carcaças. Camponeses cobertos de pó reviravam o entulho atrás de um pano ou de uma maçã que ainda não tivesse apodrecido. Qualquer romantismo de corte que eu ainda tivesse morreu ali. A glória dos paladinos e dos magos finos está sentada em cima desse pátio. Rezei por quem procura a vida no lixo e jurei que os meus pergaminhos nunca iam disfarçar o cheiro do esgoto com fumaça de incenso.",
+        "A oeste da Praça Comum fica o Beco Pobre, um emaranhado de ruelas mal calçadas. Fechei o manto para esconder os adereços de mago e não assustar ninguém. Casas de viga reaproveitada e palha úmida, crianças descalças correndo atrás de aros de ferro, velhas costurando sacos de juta na soleira. Não havia luxo, mas havia calor de vizinhança.",
+        "Uma senhora viu o meu porte de elfo franzino e me ofereceu uma tigela de água de poço. Bebi com mais gratidão do que teria por qualquer bênção de sacerdote. A pobreza não destrói a nobreza de ninguém; muitas vezes ela lima a soberba e deixa espaço para a empatia que os guerreiros ricos perdem nas guerras de ego. Abençoei o beco em silêncio e prometi ser a voz da dignidade dele na história deste mundo.",
+        "No vigésimo dia fui comemorar sozinho. Desci as pedras molhadas a leste do centro até as Margens do Rio e sentei entre os juncos. A água nasce nas montanhas do norte e atravessa a cidade com uma fúria calma, levando folhas para vales que eu ainda não tive coragem de conhecer.",
+        "Fechei os olhos e pensei no dom que o meu sangue élfico traz desde o começo, o de flutuar e respirar no ritmo da água funda. Ainda é um dom pequeno e mal treinado, mas é uma promessa: um dia os rios vão ser estrada, não barreira. Pus as mãos na água gelada. O rio nunca é o mesmo, e nenhum dia em Midgaard é igual ao anterior. Subi a encosta de pé molhado e cabeça limpa."
+      ],
+      "source_kind": "documental",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 20,
+          "note": "Reescrita dos Dias 16 a 20 da Season 01 original (Legacy), sem fato novo."
+        }
+      ],
+      "parts": [
+        {
+          "day": 16,
+          "date": "2026-10-20",
+          "summary": "Contorna o Altar de Odin, desce a vereda Atrás do Altar e avista o Grande Campo ao norte.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 16,
+              "note": "Crônica do Dia 16."
+            }
+          ]
+        },
+        {
+          "day": 17,
+          "date": "2026-10-21",
+          "summary": "Sobe ao Panteão dos Centenários, lê os nomes dos que alcançaram a centésima consagração e chora em silêncio.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 17,
+              "note": "Crônica do Dia 17."
+            }
+          ]
+        },
+        {
+          "day": 18,
+          "date": "2026-10-22",
+          "summary": "Desce ao Depósito de Lixo e jura que as suas crônicas nunca vão esconder o cheiro do esgoto.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 18,
+              "note": "Crônica do Dia 18."
+            }
+          ]
+        },
+        {
+          "day": 19,
+          "date": "2026-10-23",
+          "summary": "Caminha pelo Beco Pobre, onde uma senhora lhe oferece água de poço, e promete defender a dignidade do lugar.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 19,
+              "note": "Crônica do Dia 19."
+            }
+          ]
+        },
+        {
+          "day": 20,
+          "date": "2026-10-24",
+          "summary": "Fecha os vinte dias nas Margens do Rio, pensando no dom élfico de nadar.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 20,
+              "note": "Crônica do Dia 20."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "tomo": 1,
+      "title": "A Vassoura do Zelador",
+      "kind": "reflexao",
+      "status": "concluido",
+      "goal": "Curar a soberba com quem não tem título, resistir à tentação dos esgotos e prestar contas às cinco perguntas no trigésimo dia.",
+      "closed_on_day": 30,
+      "days": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "date": "2026-11-03",
+      "in_game_time": "Praça do Comércio, Praça do Templo, Altar de Odin, Sala de Leitura e o Laboratório dos Magos",
+      "excerpt": "Um zelador, um pão recheado e uma flor azul me ensinam mais do que os grandes mestres que vejo passar. No trigésimo dia, fecho a porta da Sala de Leitura e presto contas à minha própria alma.",
+      "tags": [
+        "O Zelador",
+        "Munin",
+        "Losilly",
+        "Winkan",
+        "A Tentação dos Esgotos",
+        "As 5 Perguntas"
+      ],
+      "content": [
+        "Abri o caderno à sombra da carroça de carga estacionada ao lado da estátua da Praça do Comércio. O mural flutuava com a brisa, pergaminhos de todas as épocas uns por cima dos outros: aviso de bandoleiro na estrada sul, oferenda a deus esquecido, promessa de vingança entre clãs, anúncio de arma rara.",
+        "Enquanto eu copiava, as caravanas do leste descarregavam lã, cobre e especiarias, e os mercadores gritavam preços em prata. A história não se escreve só nas bibliotecas dos reis. Ela nasce do atrito do comércio, dos enganos de balcão e dos sonhos de dinheiro fácil que trazem gente de todas as raças até estes portões. Quando acenderam as tochas, guardei os rascunhos.",
+        "No dia seguinte, quem me prendeu na Praça do Templo foi o zelador. Ele varria folha, poeira e a terra que os guerreiros traziam da montanha. Homens de armadura passavam sujando o chão recém-limpo sem nem olhar para ele. Ele não se irritava. No passo seguinte, varria de novo.",
+        "Fiquei olhando as mãos enrugadas indo e voltando. Ele me olhou de lado, sorriu cansado e continuou. Ali eu aprendi: a cabeça de quem estuda tem de ser como aquela vassoura, limpando sem parar a vaidade, a soberba e a ambição que o mundo deposita na gente todo dia. Fiz uma mesura funda, e os passantes estranharam. Para eles era um criado. Para mim foi o mestre mais lúcido do dia.",
+        "Na noite seguinte fiquei no Altar depois que as tochas se apagaram. Passei horas olhando Munin no ombro esquerdo de Odin. Hugin é o Pensamento, que voa rápido pelo mundo; Munin é a Memória, que carrega o que foi visto para que o nada não engula o passado. Os guerreiros correm como o Pensamento atrás de masmorras e dragões. A mim cabe ser a asa que pousa no mármore e guarda o registro. Não pedi riqueza nem poder. Pedi lucidez para nunca trair os fatos. O sol me encontrou acordado.",
+        "Na tarde do vigésimo quarto dia o ar esquentou de repente, e um bater de asas fez os sinos do Templo soarem sozinhos. Corri para a sacada e vi Losilly, a artífice, uma das figuras arcanas mais veneradas deste mundo, na sua décima nona encarnação, montada no dragonete de escamas vermelhas. Barreiras de luz prismática flutuavam em volta dela. Pousou alguns minutos no pátio para ver o correio dos deuses, sem nenhum teatro.",
+        "Noviços e guerreiros ficaram mudos. Eu não cheguei perto; só desenhei, rápido, o equilíbrio entre a autoridade dela e a discrição. Quando o dragonete levantou voo para as terras altas, deixou um rastro de brasa perfumada.",
+        "No dia seguinte, na Sala de Leitura, encontrei Winkan, o Engenheiro do Caos, companheiro de jornadas de Losilly. Estava sentado em lótus no chão, dentro de um casulo de luz tão forte que doía olhar. A cabeça dele viajava longe. Alguém com aquele poder podia escolher qualquer salão, e escolheu meditar na sala pública, ao lado dos papéis dos aprendizes. A sabedoria verdadeira não grita na praça. Saí devagar para não perturbá-lo.",
+        "No vigésimo sexto dia gastei as últimas moedas de doação num pão recheado ainda quente e comi no banco de carvalho da Praça do Comércio, de costas para a mureta. Carroças rangendo, guardas trocando o turno com piada, pássaros catando migalha na cabeça da estátua. Por um instante esqueci o medo de perder a alma e a obsessão pelo compêndio. Era só estar vivo no meio de Midgaard. Anotei para os dias escuros: cronista que não ama a vida que descreve acaba escrevendo catálogo de túmulos.",
+        "No dia seguinte voltei ao buraco do Laboratório, de onde sobe o fedor da Junção no Esgoto. A velha soberba sussurrou: 'Você é um elfo de inteligência prodigiosa; por que temer as profundezas da cidade? Não é covardia recuar diante da podridão subterrânea?'. Fiquei de joelhos na beirada, ouvindo pingos caírem longe no escuro.",
+        "Aí a memória do primeiro dia rugiu: o pavor de cair como carcaça sem nome no escuro, sem ninguém saber o que me matou. Heroísmo sem propósito termina na boca dos vermes. Levantei e me afastei do alçapão. Prudência que recusa a temeridade não é fraqueza; escriba morto não entrega livro a ninguém. Me curvei diante da Mestre da Guilda, que me olhava de longe com uma aprovação discreta.",
+        "Na noite do primeiro dia do mês, a névoa cobriu a escadaria, e das portas entreabertas da Guilda dos Clérigos saíam salmos a várias vozes. Sentei perto da Fonte Azul e deixei a música me lavar: preces por viajantes feridos, bênçãos para os doentes, luz de vela atravessando os vitrais. No começo eu desprezava a fé deles como superstição perto da matemática dos feitiços. Naquela noite ouvi um consolo que nenhuma fórmula dá. Razão e fé não precisam brigar; são duas asas do mesmo pássaro.",
+        "De manhã atravessei a vereda Atrás do Altar e desci até as primeiras ondas do Grande Campo. Entre duas lajes de granito rachadas, uma flor pequena, de pétalas azul-cobalto, tinha brotado por teimosia. Colhi com cuidado. Cheirava a orvalho e a terra que ninguém pisou. Frágil na aparência e indomável por dentro, como este mundo. Prensei a flor no compêndio, ao lado dos relatos sobre Sakura e dos conselhos do Pacificador.",
+        "No trigésimo dia fechei a porta da Sala de Leitura e passei o dia prestando contas às cinco perguntas que me definem. O objetivo de erguer o Grande Compêndio das Memórias estava mais claro do que nunca. O medo da morte anônima e da perda da mente tinha servido de escudo entre os becos. A soberba vinha sendo curada por padeiros, zeladores e veteranos generosos. O meu limite continuava o mesmo: nenhum ouro manchado de traição. E o legado de ser o Olho Lúcido de Midgaard começava a criar raiz.",
+        "Queimei um ramo de alecrim em honra aos deuses fundadores, de Jeremy Elson aos mestres do DikuMUD, e agradeci por não ter virado mais um mercenário contando abates. O elfo que sonhava com glória no primeiro dia estava enterrado. Comecei a segunda etapa em paz com o meu lugar."
+      ],
+      "source_kind": "documental",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 30,
+          "note": "Reescrita dos Dias 21 a 30 da Season 01 original (Legacy), sem fato novo."
+        }
+      ],
+      "parts": [
+        {
+          "day": 21,
+          "date": "2026-10-25",
+          "summary": "Passa o dia na Praça do Comércio copiando o mural flutuante e observando as caravanas.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 21,
+              "note": "Crônica do Dia 21."
+            }
+          ]
+        },
+        {
+          "day": 22,
+          "date": "2026-10-26",
+          "summary": "Aprende paciência com o zelador que varre a Praça do Templo sem se irritar com quem suja o chão.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 22,
+              "note": "Crônica do Dia 22."
+            }
+          ]
+        },
+        {
+          "day": 23,
+          "date": "2026-10-27",
+          "summary": "Passa a noite no Altar contemplando Munin, o corvo da Memória, e pede lucidez para não trair os fatos.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 23,
+              "note": "Crônica do Dia 23."
+            }
+          ]
+        },
+        {
+          "day": 24,
+          "date": "2026-10-28",
+          "summary": "Vê Losilly pousar no pátio do Templo montada no seu dragonete vermelho e registra a cena de longe.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 24,
+              "note": "Crônica do Dia 24."
+            }
+          ]
+        },
+        {
+          "day": 25,
+          "date": "2026-10-29",
+          "summary": "Encontra Winkan meditando na Sala de Leitura dentro de um casulo de luz e se afasta para não perturbá-lo.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 25,
+              "note": "Crônica do Dia 25."
+            }
+          ]
+        },
+        {
+          "day": 26,
+          "date": "2026-10-30",
+          "summary": "Come um pão recheado num banco da Praça do Comércio e anota que o cronista precisa amar a vida que descreve.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 26,
+              "note": "Crônica do Dia 26."
+            }
+          ]
+        },
+        {
+          "day": 27,
+          "date": "2026-10-31",
+          "summary": "Resiste à vontade de descer pelo alçapão do Laboratório até os esgotos, lembrando o medo da morte anônima.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 27,
+              "note": "Crônica do Dia 27."
+            }
+          ]
+        },
+        {
+          "day": 28,
+          "date": "2026-11-01",
+          "summary": "Ouve os salmos da Guilda dos Clérigos junto à Fonte Azul e faz as pazes entre razão e fé.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 28,
+              "note": "Crônica do Dia 28."
+            }
+          ]
+        },
+        {
+          "day": 29,
+          "date": "2026-11-02",
+          "summary": "Colhe uma flor azul no Grande Campo e a prensa no compêndio.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 29,
+              "note": "Crônica do Dia 29."
+            }
+          ]
+        },
+        {
+          "day": 30,
+          "date": "2026-11-03",
+          "summary": "Completa trinta dias e presta contas às cinco perguntas da sua identidade na Sala de Leitura.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 30,
+              "note": "Crônica do Dia 30."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "tomo": 1,
+      "title": "O Voto da Torre",
+      "kind": "missao",
+      "status": "concluido",
+      "goal": "Aprofundar o arquivo da cidade, do Prefeito aos ladrões, das runas da estátua à carta perdida, até sentir no quadragésimo dia a passagem de noviço a cronista.",
+      "closed_on_day": 40,
+      "days": [
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "date": "2026-11-13",
+      "in_game_time": "Rua Principal, Beco Escuro, Fonte Azul, Altar de Odin, Praça do Comércio e Sala de Doações",
+      "excerpt": "Vejo o Prefeito fazer a ronda e os ladrões dividirem moedas sujas. Aguento uma tempestade no altar, copio de novo o adeus a Sakura e encontro meia carta de amor esquecida num banco.",
+      "tags": [
+        "O Prefeito",
+        "Guilda dos Ladrões",
+        "Tempestade no Altar",
+        "Memorial a Sakura",
+        "Runas da Estátua",
+        "O Voto da Torre",
+        "Quarenta Ciclos"
+      ],
+      "content": [
+        "Cruzei de novo com o Prefeito de Midgaard na Rua Principal Oeste, onde a rua se divide entre a Loja de Armaduras e a saída para a muralha. Sobrecasaca de veludo vermelho guarnecida de peles, medalhão dourado com as armas da cidade no peito. Andava devagar, olhando o calçamento e as placas das lojas, parando para ouvir queixa de comerciante.",
+        "Os aventureiros acham que mandam no mundo porque carregam espada mágica. É a paciência desse funcionário que faz o lixo ser recolhido, as pontes consertadas e a paz não virar motim. Ele parou um segundo, viu as minhas tintas e pergaminhos e inclinou a cabeça para o ofício das letras. Respondi com uma mesura.",
+        "No dia seguinte, de capa escura, fiquei na esquina da Praça Comum com o Beco Escuro, longe dos rufiões que guardam a porta da Guilda dos Ladrões. Vi mercenários de cara cortada negociando punhal envenenado e dividindo moeda roubada de caravana. Tinham olhar de bicho que sabe que pode ser comido pela própria matilha a qualquer descuido.",
+        "Era o abismo de que eu tinha escapado. Quem vive do golpe não junta riqueza; junta uma corrente de medo, e acaba esfaqueado pelas costas num canto sujo. O caminho do estudo é solitário, mas não mancha a consciência nem atrai faca no escuro. Voltei devagar para a luz da Praça do Comércio.",
+        "Fazia semanas que a escrita pesava nas têmporas. Desci à Praça do Templo e molhei a testa na fonte de mármore azul. Uma vibração azulada passou por dentro, levou a dor de cabeça e pôs a magia de novo em ordem. O Pacificador passou na ronda e falou com a voz de trovão: 'Essa água é mais antiga que as próprias muralhas da cidade, pequeno elfo. Beba dela e guarde suas forças para os dias que virão!'. Sorri para o gigante e passei a tarde escrevendo à beira da fonte.",
+        "No trigésimo quarto dia o céu ficou roxo, e um vento cortante desceu das montanhas do norte sobre as abóbadas abertas do Altar. A temperatura despencou. O meu manto de linho não segurava nada, e os ossos tremiam. Pensei na lareira do Javali Roncador. Fiquei. Cronista que foge do frio da montanha não vai ter coragem de registrar as tempestades da história.",
+        "Me encolhi no pedestal de Odin, entre as patas de mármore de Gere e Freke, e me concentrei na respiração enquanto o granizo estalava nas lajes. Não entrei em pânico. Descobri que o corpo franzino guarda uma resistência que eu não conhecia. O cume amanheceu limpo, coberto de orvalho congelado.",
+        "Trinta dias depois de descobrir os lamentos de Enkil, Vega, Peppe e Kosmo, voltei ao quadro da Sala de Leitura. As bordas do papel amarelo já esfarelavam, mas a tinta continuava firme: 'Adeus, Sakura. Guardaremos sua memória enquanto este mundo existir'. Copiei cada linha, em tinta que não se apaga, para as folhas definitivas do compêndio, com a letra tremida, os borrões de lágrima seca e a data de cada adeus. Aqueles veteranos talvez nunca saibam o meu nome, mas a dor deles está guardada.",
+        "No dia seguinte passei a tarde de joelhos na base da estátua da Praça do Comércio, que quase todo mundo usa só como ponto de encontro. Com lupa e carvão, limpei o musgo e copiei os entalhes do basalto. Eram runas antigas sobre os primeiros dias, quando os arquitetos primordiais assentaram os alicerces do DikuMUD nestas colinas: pactos entre clãs mortais e entidades superiores, a promessa de ressurreição no santuário e a ruína para quem trai os acordos de civilidade.",
+        "Uns comerciantes pararam para ver o que o elfo tanto olhava no chão. Expliquei os símbolos com calma e vi o espanto no rosto deles ao descobrir a história que pisavam todo dia. Saber dividido não diminui.",
+        "Depois fui ao trecho leste da Rua Principal, dos armazéns de grão e das cocheiras. Caixotes de maçã vermelha dos pomares além do rio, fardos de feno, aveia pesada em balança de cobre, luz de outono dourando as telhas. Um carreteiro velho, que traz forragem das planícies, me contou das pontes do leste, dos kobolds nas ravinas e das escoltas que protegem o pão da cidade. Anotei tudo. Um exército de heróis cai em três dias se as carroças de maçã e aveia forem cortadas. Comprei uma maçã e voltei.",
+        "Ao cair da tarde seguinte subi ao parapeito mais alto do Templo bem quando o sol afundava atrás das serras do oeste. O céu pegou fogo em vermelho, cobre e violeta. Lá embaixo a cidade foi acendendo as luzes: primeiro a Praça do Comércio, depois a Rua Principal, a entrada da guilda, até os casebres da Praça Comum. Cada vela era uma família abrigada, um comerciante fechando as contas, um ferreiro largando o martelo. Fiquei lá em cima velando o sono da cidade.",
+        "Na ronda pela Sala de Doações, achei um pedaço amarelado de papel preso entre um banco e a parede. Tirei com cuidado. Era a metade final de uma carta de despedida de um guerreiro para a amada, antes de partir para os pântanos do sul: '...se a névoa me tragar, olhe para o topo da torre de Midgaard ao entardecer; meu espírito estará lá, guardando você'. Sem assinatura, sem destinatário. Ele voltou para abraçá-la, ou virou osso nas charnecas? Copiei a carta inteira no compêndio com o título 'O Voto da Torre'.",
+        "No quadragésimo dia acordei diferente. Onde antes havia ansiedade e medo de ser apagado de repente, havia uma calma de lago. Os dardos mágicos e a natação já não pediam esforço; respondiam a um sussurro. Desci e encarei o Pacificador. Pela primeira vez ele me olhou com outro respeito: 'Você encontrou seu passo, pequeno elfo. Suas palavras têm o peso da rocha e a leveza do vento'. Não comando exércitos nem levo espada mágica, mas tinha erguido por dentro uma coisa que não cai. Faltavam dez dias para fechar o Grande Compêndio."
+      ],
+      "source_kind": "documental",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 40,
+          "note": "Reescrita dos Dias 31 a 40 da Season 01 original (Legacy), sem fato novo."
+        }
+      ],
+      "parts": [
+        {
+          "day": 31,
+          "date": "2026-11-04",
+          "summary": "Acompanha a ronda do Prefeito de Midgaard pela Rua Principal Oeste e recebe dele um aceno ao ofício das letras.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 31,
+              "note": "Crônica do Dia 31."
+            }
+          ]
+        },
+        {
+          "day": 32,
+          "date": "2026-11-05",
+          "summary": "Observa de longe os mercenários da Guilda dos Ladrões no Beco Escuro.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 32,
+              "note": "Crônica do Dia 32."
+            }
+          ]
+        },
+        {
+          "day": 33,
+          "date": "2026-11-06",
+          "summary": "Renova as forças na Fonte Azul e ouve do Pacificador que aquela água é mais antiga que as muralhas.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 33,
+              "note": "Crônica do Dia 33."
+            }
+          ]
+        },
+        {
+          "day": 34,
+          "date": "2026-11-07",
+          "summary": "Aguenta uma tempestade de granizo junto ao pedestal de Odin sem descer para a lareira.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 34,
+              "note": "Crônica do Dia 34."
+            }
+          ]
+        },
+        {
+          "day": 35,
+          "date": "2026-11-08",
+          "summary": "Volta ao mural da Sala de Leitura e copia para o compêndio os adeuses a Sakura.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 35,
+              "note": "Crônica do Dia 35."
+            }
+          ]
+        },
+        {
+          "day": 36,
+          "date": "2026-11-09",
+          "summary": "Decifra as runas na base da estátua da Praça do Comércio e explica os símbolos aos comerciantes.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 36,
+              "note": "Crônica do Dia 36."
+            }
+          ]
+        },
+        {
+          "day": 37,
+          "date": "2026-11-10",
+          "summary": "Percorre os armazéns da Rua Principal Leste e anota as rotas e os perigos contados por um carreteiro.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 37,
+              "note": "Crônica do Dia 37."
+            }
+          ]
+        },
+        {
+          "day": 38,
+          "date": "2026-11-11",
+          "summary": "Vê do parapeito do Templo o sol se pôr e a cidade acender as suas luzes.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 38,
+              "note": "Crônica do Dia 38."
+            }
+          ]
+        },
+        {
+          "day": 39,
+          "date": "2026-11-12",
+          "summary": "Acha na Sala de Doações meia carta de despedida de um guerreiro e a guarda no compêndio como 'O Voto da Torre'.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 39,
+              "note": "Crônica do Dia 39."
+            }
+          ]
+        },
+        {
+          "day": 40,
+          "date": "2026-11-13",
+          "summary": "Completa quarenta dias com a magia respondendo sem esforço e recebe do Pacificador um novo respeito.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 40,
+              "note": "Crônica do Dia 40."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "tomo": 1,
+      "title": "O Grande Compêndio",
+      "kind": "marco",
+      "status": "concluido",
+      "goal": "Revisitar os lugares e as feridas do começo, devolver o que recebeu e depositar o Grande Compêndio das Memórias no Altar de Odin no quinquagésimo dia.",
+      "closed_on_day": 50,
+      "days": [
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ],
+      "date": "2026-11-23",
+      "in_game_time": "Colinas além do Portão Oeste, Laboratório dos Magos, Guilda dos Paladinos, Praça Comum, Sala de Doações e o Altar de Odin",
+      "excerpt": "Volto ao pórtico onde fui humilhado, ouço de um menino que sou o Mago das Histórias e deixo pão para o próximo noviço faminto. No quinquagésimo dia, entrego o compêndio a Odin.",
+      "tags": [
+        "Além-Muros",
+        "Reconciliação",
+        "O Mago das Histórias",
+        "Sala de Doações",
+        "O Grande Compêndio",
+        "Cinquenta Dias"
+      ],
+      "content": [
+        "Atravessei a ponte do Portão Oeste e subi cem passos colina acima, mais longe do que eu jamais tinha ido. Sentei na relva e olhei Midgaard de fora. Daquela distância, muralhas, torres e as abóbadas do Templo eram uma ilha de pedra e ordem no meio de ermos e florestas. Desenhei a silhueta das ameias na luz da manhã. Às vezes é preciso sair da cidade para enxergá-la inteira.",
+        "Na noite seguinte fiquei na guarita entre as duas torres durante a troca da guarda. Quem assumia era um veterano de barba grisalha e olhos gastos de vigiar o escuro. Dividi com ele metade de um pão de viagem, e sentamos na pedra fria. Entre um gole do odre e outro, ele contou o que sobe das ravinas nas noites sem lua: uivo de alcateia, lamento de espírito desterrado, passos pesados de gigantes descendo das serras geladas. Sem vaidade nenhuma. Anotei cada aviso.",
+        "Choveu o dia inteiro, uma chuva mansa enchendo as calhas. Me instalei numa mesa vazia do Laboratório de Experiências, debaixo da luz azulada da Mestre da Guilda, e espalhei todas as folhas desde o primeiro dia. Reli a carta de Keen para Hinata, a vergonha no pórtico dos paladinos, o mural de Sakura, o rio, a fornalha do padeiro. Cada página guardava um pedaço de ingenuidade raspado pela experiência.",
+        "A Mestre chegou em silêncio, olhou os meus mapas e murmurou: 'Você encontrou uma forma de magia que não consome mana, pequeno elfo: a magia de tornar os mortais inesquecíveis'. Nenhuma ordem de magos poderia ter me dado consagração maior.",
+        "No quadragésimo quarto dia passei pelo Javali Roncador e desci a alameda até os portões de bronze da Guilda dos Paladinos. O mesmo sentinela de armadura brilhante estava lá. Parei a três passos. No terceiro dia eu tinha tentado entrar ali com soberba de criança, para provar que um grande aventureiro não aceita barreira. Desta vez me curvei com respeito, reconhecendo o direito dele de guardar aquela porta.",
+        "Ele franziu a testa, surpreso com a falta de arrogância. Não me barrou. Puxou um pouco a lâmina e tocou o peito da couraça em continência: 'Que os deuses justos protejam seu caminho, escriba'. Saí leve. A vitória não era derrubar a porta que me fecharam. Era não precisar mais ser aceito por ela.",
+        "No dia seguinte a Praça Comum desmentiu a própria fama. No meio do cascalho e das poças, meia dúzia de crianças esfarrapadas lutava com espadas de ripa e escudos de tampa de barril. Brincavam de ser Hinata contra dragões, ou o Pacificador defendendo a cidade. Os risos varriam até o cheiro do depósito de lixo.",
+        "Sentei num mourão com um nó na garganta e dividi uns pedaços de rosquinha malhada que tinha comprado na padaria. Os olhos delas brilharam, e um menino me chamou de 'o Mago das Histórias'. Guardei o título como a honraria mais doce que já recebi. Vale mais arrancar um sorriso de criança pobre do que ser o conjurador temido das tavernas.",
+        "Voltei ao Altar, desta vez para olhar Hugin, no ombro direito do Pai de Todos. Se Munin recolhe o que passou, Hugin é a flecha do Pensamento que vai na frente, antecipa perigo, resolve equação, imagina o que ainda não existe. O cronista completo precisa das duas coisas: fidelidade ao passado e coragem para entender o amanhã. Passei horas pensando nos feitiços da minha ordem, o relâmpago, a ilusão, a barreira, todos filhos do pensamento disciplinado.",
+        "No quadragésimo sétimo dia paguei uma dívida. Nos primeiros dias, faminto e sem um cobre, foi a Sala de Doações que me sustentou com o que mãos anônimas deixavam. Entrei lá com uma cesta de broas da padaria, dois pergaminhos de identificação comprados com economia paciente e um frasco de elixir. Pus tudo nos bancos gastos e deixei um bilhete em letra élfica: 'A você que acaba de despertar com medo e fome: este mundo é duro, mas não é desprovido de compaixão. Coma, fortaleça seu espírito e lembre-se de que nenhum passo sincero é dado em vão'.",
+        "Com o quinquagésimo dia chegando, comecei a me despedir dos lugares. Sentei no parapeito de uma seteira, no trecho mais isolado da Rua da Muralha, e fiquei ouvindo o vento assobiar na cantaria, como se contasse a história de todas as sentinelas que já vigiaram aquelas pedras. Olhei os telhados na luz dourada e pensei em quantas histórias teriam se perdido sem alguém para escrevê-las. Passei os dedos na rocha. As pedras falam para quem tem paciência; o meu trabalho foi traduzir.",
+        "Na quadragésima nona noite me tranquei na Sala de Leitura com tinta, penas de ganso e tiras de couro cru, e passei a noite costurando os quarenta e nove fólios. Cada laçada amarrava um pedaço de vida: a humilhação no pórtico, a morte de Sakura, a luz dourada de Hinata, o dragonete de Losilly, a meditação de Winkan, o pão do padeiro, o choro na armaria, a água da Fonte Azul. Não é livro de números nem de façanhas de sangue. Quando apertei a última correia, uma brisa morna passou pelo meu rosto, como se Sakura e Odin assinassem a obra.",
+        "O quinquagésimo dia nasceu claro, com luz em cima das montanhas sagradas. Vesti as roupas élficas limpas e subi ao Altar. Os sacerdotes cantavam hinos de renovação, a Fonte Azul brilhava lá embaixo e o vento do norte trazia cheiro de campo aberto. Diante de Odin, de Hugin e de Munin, pus sobre o mármore o tomo pronto: 'As Crônicas de Antigravitus — O Grande Compêndio das Memórias de Midgaard'.",
+        "Ajoelhei e jurei em voz alta: 'Aqui jazem as vozes dos que caminharam e dos que tombaram. Enquanto este compêndio respirar nas bibliotecas do tempo, nenhum ato de coragem será esquecido, nenhuma lágrima será vã e nenhuma vida em Devil's Bob MUD terá sido descartável. O novato ambicioso morreu há muito; o Olho Lúcido e a Voz Imortal de Midgaard viverá para sempre!'.",
+        "Levantei. Cinquenta dias antes, alguma coisa tinha tentado tomar este corpo de mim. Agora ele tinha um nome, um ofício e um livro em cima do altar. A pena continua firme. Que venham os próximos dias."
+      ],
+      "source_kind": "documental",
+      "evidence": [
+        {
+          "document": "posts.json",
+          "day": 50,
+          "note": "Reescrita dos Dias 41 a 50 da Season 01 original (Legacy), sem fato novo."
+        }
+      ],
+      "parts": [
+        {
+          "day": 41,
+          "date": "2026-11-14",
+          "summary": "Sobe cem passos além do Portão Oeste e desenha Midgaard vista de fora.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 41,
+              "note": "Crônica do Dia 41."
+            }
+          ]
+        },
+        {
+          "day": 42,
+          "date": "2026-11-15",
+          "summary": "Divide pão com o sentinela da noite no Portão Oeste e anota os perigos que ele ouve das ravinas.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 42,
+              "note": "Crônica do Dia 42."
+            }
+          ]
+        },
+        {
+          "day": 43,
+          "date": "2026-11-16",
+          "summary": "Revisa o compêndio no Laboratório num dia de chuva e ouve da Mestre que encontrou a magia de tornar os mortais inesquecíveis.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 43,
+              "note": "Crônica do Dia 43."
+            }
+          ]
+        },
+        {
+          "day": 44,
+          "date": "2026-11-17",
+          "summary": "Volta ao pórtico da Guilda dos Paladinos, curva-se sem ressentimento e recebe a continência do sentinela.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 44,
+              "note": "Crônica do Dia 44."
+            }
+          ]
+        },
+        {
+          "day": 45,
+          "date": "2026-11-18",
+          "summary": "Divide rosquinhas com crianças que brincam de heróis na Praça Comum e ganha o apelido de 'o Mago das Histórias'.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 45,
+              "note": "Crônica do Dia 45."
+            }
+          ]
+        },
+        {
+          "day": 46,
+          "date": "2026-11-19",
+          "summary": "Contempla Hugin, o corvo do Pensamento, e medita sobre os feitiços da sua ordem.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 46,
+              "note": "Crônica do Dia 46."
+            }
+          ]
+        },
+        {
+          "day": 47,
+          "date": "2026-11-20",
+          "summary": "Deixa broas, pergaminhos e um elixir na Sala de Doações com um bilhete para o próximo noviço faminto.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 47,
+              "note": "Crônica do Dia 47."
+            }
+          ]
+        },
+        {
+          "day": 48,
+          "date": "2026-11-21",
+          "summary": "Despede-se da Rua da Muralha ouvindo o vento nas seteiras.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 48,
+              "note": "Crônica do Dia 48."
+            }
+          ]
+        },
+        {
+          "day": 49,
+          "date": "2026-11-22",
+          "summary": "Passa a noite na Sala de Leitura encadernando os quarenta e nove fólios do Grande Compêndio.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 49,
+              "note": "Crônica do Dia 49."
+            }
+          ]
+        },
+        {
+          "day": 50,
+          "date": "2026-11-23",
+          "summary": "Deposita o Grande Compêndio das Memórias no Altar de Odin e faz o juramento do Cronista.",
+          "source_kind": "documental",
+          "evidence": [
+            {
+              "document": "posts.json",
+              "day": 50,
+              "note": "Crônica do Dia 50."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
