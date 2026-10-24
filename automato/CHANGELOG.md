@@ -4,6 +4,66 @@ Versionamento semântico adaptado a um jogo: **MAIOR** muda o contrato das rotin
 **MENOR** acrescenta camada/rotina, **CORREÇÃO** conserta comportamento.
 As datas usam o **dia de jogo**.
 
+## v1.7.36 — Dia 163 · O chão de E8 só com o Rei dormindo (Claude Sonnet 5.5)
+
+- `acoes/tesouro_negro.py` (`chao_de_e8`): `cast 'sleep' rei` antes de qualquer `get`; se o Rei não dormir, sai sem pegar. Motivo: morte #16 (-4.493 EXP): com o Rei Negro acordado ele atacou a personagem mesmo invisível ("Era você que eu estava procurando!", -90, -91, -59 = 240 contra 232 de vida) durante a conferência do chão. Teste: `test_tesouro_negro.py` +1.
+
+## v1.7.35 — Dia 163 · Lado branco: Rei Branco (uma vez) e Tesouro Branco (Claude Sonnet 5.5)
+
+- `acoes/xadrez_cascata.py`: `LADOS` (negro: E7/E8; branco: E2/E1), `mortes_do_lado`, `kite_rei(..., lado=)` e as flags `--lado` e `--excecao-rei-branco` (o branco recusa sem ela). `acoes/tesouro_negro.py`: `--lado branco` (porta em D1, acesso por D2), `obter_chave_branca` com a trava `rei_branco_morto.json` (uma morte só).
+- Origem: exceção de moralidade do autor de 2026-10-22 (`DECISOES.md` §17). Testes: `test_tesouro_negro.py` +4.
+
+## v1.7.34 — Dia 163 · Cada `unlock` gasta uma chave: pegar todas (Claude Sonnet 5.5)
+
+- `acoes/xadrez_cascata.py` (`inspecionar_corpo_do_rei`) e `acoes/tesouro_negro.py`: `get all.chave` (corpo e chão de E8) em vez de `get chave`. O Rei deixa 3 a 4 chaves e cada `unlock baixo` gasta uma (a porta tranca de novo a cada reset da zona, ~13 min): pegar uma só dava 1 tomada por kill de ~35 min. Testes ajustados em `test_tesouro_negro.py`.
+
+## v1.7.33 — Dia 163 · Pão, água e espólio pelo padrão do projeto (Claude Sonnet 5.5)
+
+- Ordem do autor: *"agua e pao deveriam usar o preparar ou o cuidar"* e *"o peso só estourava pq vc não guarda as coisas na bolsa, que deveria ser o que é padrão"*.
+- `acoes/xadrez_cascata.py` (`Ctx.comer_beber`): passa pelas tarefas do `aproveitar_tempo` (`comer_beber`, `repor_pao`, `encher_cantil` do `prepara`, as duas últimas só com falta) e volta ao Templo; saiu a gambiarra "a cada 6 idas" da v1.7.30. Não chama o `cuidar.manter_magias` aqui: ele manda `visible` e tiraria a invisibilidade do kite.
+- `acoes/tesouro_negro.py`: sem `comer_beber` próprio (só `socorrer` = `cuidar` + `prepara`); `guardar_espolio` coloca tudo que não é essencial na mochila vestida com `base.guardar_na_mochila` antes de cada ida.
+- Testes: `test_tesouro_negro.py` +3, `test_xadrez_cascata.py` +2.
+
+## v1.7.32 — Dia 163 · O peso do espólio e a leitura do `identificar_itens` (Claude Sonnet 5.5)
+
+- `acoes/xadrez_cascata.py` (`inspecionar_corpo_do_rei`): só `look`, `look in corpo` e a **chave**; `get all corpo` trouxe 2 cetros, 2 armaduras de peão, uma espada e 160 kg, e o `get moedas` do Tesouro Negro era recusado por peso (e o item entrava sem `identify`, contra a diretiva §29).
+- `acoes/tesouro_negro.py`: `peso_do_score`, `sem_folga` (18 kg livres), resultado `peso` distinto de `sem_tesouro`, e parada se o peso não deixar folga; `acoes/identificar_itens.py` devolve erro se não conseguiu ler `inventory` nem `equipment`.
+- Testes: `test_tesouro_negro.py` +4. Achado do dia: a Chave do Tesouro Negro **deteriora entre sessões** (sumiu no login) e o cajado da mão volta ao inventário no login.
+
+## v1.7.31 — Dia 161 · Rotina do Tesouro Negro (Claude Sonnet 5.5)
+
+- `acoes/tesouro_negro.py` (nova): `uma_ida`, `rodar`, parsers puros (`saidas`, `porta_baixo`, `rainha_acordada`, `moedas_pegas`, `pegou`, `tem_chave`, `proxima_espera_min`). Mede o período de reset e o grava em `automato/runtime/tesouro_negro.jsonl`. Origem: meta do autor de 2026-10-22 (`DECISOES.md` §16).
+- Testes: `test_tesouro_negro.py` (14). Catraca: `def uma_ida`.
+
+## v1.7.30 — Dia 161 · Três falsos alarmes e um lapso de leitura corrigidos no código (Claude Sonnet 5.5)
+
+- `scripts/auditar_sessao.py`: `armadura-ausente` passa a provar a armadura pela magia ativa no `[ Duração ]` do `score` (`armor ( 43 horas )`), não pelo limiar de CA 140: com a veste, a coleira e as botas a CA com `armor` mudou (121 sem as botas e sem `invisibility`) e o limiar velho dava falha com a magia ligada.
+- `camadas/navegar.py`: quando o título da sala é ocupado por uma fala de NPC ("Lux come um pão recheado."), lê a sala de novo uma vez antes de parar com código 3; na origem, lê de novo se o título vier vazio.
+- `acoes/xadrez_cascata.py` (`Ctx.comer_beber`): a cada 6 idas come e bebe mesmo sem o aviso do driver ("morrendo de fome" chega antes dele; cheio, o `eat` não gasta o pão).
+- Testes: `test_auditar_sessao.py` +2, `test_navegar.py` +2.
+
+## v1.7.29 — Dia 161 · Detect invisibility sempre ligado e identify de todos os itens (Claude Sonnet 5.5)
+
+- `nucleo/config.py`: `MANTER_DETECT_INVISIBILITY = True`. `camadas/cuidar.py`: `manter_magias` mantém o detect pelas horas do `score` (confirma pelo `score`, não por texto) e devolve `detect`; `RX_BUFF` casa "detect invisibility" inteiro (antes, "invisibility" dentro dele fazia as horas do detect passarem pelas da invisibilidade).
+- `acoes/identificar_itens.py` (nova): `identify` de cada item do inventário e dos vestidos, conferindo o nome devolvido (homônimos tentam `2.` e `3.`), grava `data/heroes/<id>/itens.json`. `scripts/devolutiva.py`: `checar_itens_identificados` (ID `itens.identificados`).
+- Origem: diretivas do autor de 2026-10-22 (`DECISOES.md` §15, `diretiva_de_jogo.md` §29). Testes: `test_identificar_itens.py` (13), `test_sobrevivencia.py` (+5), `test_devolutiva.py` (+4). Catraca: `MANTER_DETECT_INVISIBILITY`, `itens.identificados`, `def identificar`.
+- Limite: item dentro da mochila vestida não entra; tirar a mochila antes (peso).
+
+## v1.7.28 — Dia 161 · Moral antes de rendimento: rotinas banidas, parada por alinhamento e `consider` só para bicho novo (Claude Sonnet 5.5)
+
+- `nucleo/config.py`: `ROTINAS_BANIDAS_POR_MORAL` (`milharal_v2`, `milharal`). `camadas/turno.py`: `rotina_banida()`, `alinhamento_do_score()`, `ler_alinhamento()`; recusa rotina banida (código 6) e, entre turnos, para se o alinhamento cair (código 7). `camadas/trabalhar.py`: recusa a rotina banida.
+- `scripts/auditar_sessao.py`: `CONHECIDOS` isenta as peças do tabuleiro do `ataque-sem-consider`.
+- Origem: diretiva do autor de 2026-10-22 (`DECISOES.md` §14, `diretiva_de_jogo.md` §27). O `milharal_v2` rendeu +43 mil de EXP em ~10 min, mas o alinhamento caiu de 415 para 312.
+- Testes: `scripts/test_moral.py` (novo). Catraca: `ROTINAS_BANIDAS_POR_MORAL`, `CODIGO_MORAL`, `CONHECIDOS`.
+- Custo: o milharal (a fonte de XP mais rápida conhecida) fica fora até o autor liberar.
+
+## v1.7.27 — Dia 161 · Depois de ressuscitar, reequipar e alimentar (Claude Sonnet 5.5)
+
+- `acoes/ressuscitar.py`: `comandos_pos_morte(inventario)` (pura) e a chamada em `main`: depois do `drink fonte`, `eat pao`, `drink cantil` e `wear`/`wield`/`hold` item a item da lista `REEQUIPAR` (coroa da Rainha Branca, brinco, colar, cruz, mochila de Pellinore no corpo, braçadeiras, luvas, rosário, bracelete, escudo, cinturão, calça, veste de escamas de metal, botas negras, coleira do dragão, os dois anéis, lâmina de ferro, cajado). Nunca `wear all` (a Lança do Cavaleiro Negro é amaldiçoada) e a coroa só veste se for a única do inventário (a da Rainha Negra é ANTI-BOM).
+- Motivo: a morte devolve o equipamento ao inventário desvestido. No Dia 161 a 1ª ressurreição deixou a personagem com CA 37, Acerto 0, 308 kg de carga e fome, e o kite do Rei rodou 18 idas assim (auditor: `armadura-ausente` e `fome-em-sessao`).
+- Testes: `test_ressuscitar.py` +4 (11 OK), com o `inventory` real depois da morte #15.
+- Limite: a lista é fixa e reflete o equipamento do Dia 161; item novo vestido de forma permanente precisa entrar em `REEQUIPAR`.
+
 ## v1.7.26 — Dia 159 · Espólio invisível do Rei: `detect invisibility` no kite e `get` do chão (Claude Sonnet 5.5)
 
 - `acoes/xadrez_cascata.py`: `kite_rei` lança `detect invisibility` com a invisibilidade (1ª ida e a cada 12); `inspecionar_corpo_do_rei` pega `get cetro`/`get chave` do chão além do corpo; antes, `get all corpo` respondia "vazio" porque o espólio do Rei é invisível (conhecimento §88). `cuidar.situacao()` volta a devolver o `texto` do score.

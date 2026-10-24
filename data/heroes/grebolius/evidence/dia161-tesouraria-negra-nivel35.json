@@ -1,0 +1,32 @@
+{
+  "hero_id": "grebolius",
+  "day": 157,
+  "agent": "Claude Sonnet 5.5 (claude-sonnet-5-5)",
+  "via": "automato",
+  "recorded_on": "2026-10-22",
+  "source_kind": "sessao_ao_vivo",
+  "source": "automato/runtime/session_live_dia161_20261022_121339_061bc9.log e transcript da sessão (live_daemon com MUD_DAY=161 MUD_WIMPY=45); /tmp/kite*.out e /tmp/turno.out da sessão.",
+  "findings": {
+    "tesouraria_aberta": "Tesouraria Negra aberta e saqueada. Rota: Rei Negro morto por kite em E8 (3 Chaves do Tesouro Negro invisíveis no corpo, com detect invisibility); com a mochila de Pellinore VESTIDA para caber no peso, `get chave corpo`; entrada por D5, D6, D7 até D8 (sem passar por E8); `cast 'sleep' rainha` ANTES de mexer na porta (+750 EXP); `unlock baixo` (*Click*), `open baixo` (Certo.), `down` -> 'O Tesouro Negro' (saída só `cima`; sala sem magia: identify falha). 'Tesouro Negro da Realeza' = pilha de 20.000 moedas, exige peso livre (peguei a 102 kg).",
+    "chave_nao_deteriorou_na_hora": "A chave nova durou mais de 25 min (recall, sono, prepara, caminhada de volta). As duas chaves do Dia 159 só sumiram de um dia para o outro.",
+    "rainha_e_a_porta": "A Rainha estava acordada ('está aqui') e não atacou a personagem invisível, mas `unlock baixo` com ela acordada iniciou combate: -97 de vida em uma rodada e 'muito ocupado, lutando' ao tentar `down`. Saída: recall (-377 EXP).",
+    "rei_com_cetro": "Desta vez `look rei` mostrou 'segurando -> o Cetro do Rei Negro (invisível)'; o corpo trouxe moedas, Cetro (x6), Cetro do Bispo Negro, armaduras de peão e 3 chaves. O Rei de 21/10 nascia sem cetro (§84/§87).",
+    "kite_numeros": "Rodada 2 (equipada, CA 143): Rei morto na ida 24; 22 idas com 1 raio de 45 a 101 (média ~75), 3 idas em que o Rei não dormiu (recall sem dano), 1 ida com 158 de vida (golpe de 56). Rodada 3 (CA 152): na ida 12 o Rei deu DOIS golpes mortais na mesma rodada (-97 e -118) e matou de 214 de vida antes do recall: morte #15 (-4.883 EXP). O kite de 1 raio com recall imediato não é seguro por ida: a rodada do Rei chega a 215.",
+    "mortes": "Morte #14: recuar a pé de E8 com o Rei acordado (já documentado no §76). Morte #15: kite na ida 12. Total no score: 15 mortes + 1 DT.",
+    "reequipar_apos_morte": "A morte devolve TODO o equipamento ao inventário desvestido. Na 1ª ressurreição esqueci de reequipar e fiz 18 idas do kite com CA 37, Acerto 0 e 308 kg de carga (quase morri por fome também). Reequipar item a item (nunca `wear all`): coroa, brinco, colar, cruz, mochila, braçadeiras, luvas, rosário, bracelete, escudo, cinturão, calça, 2 anéis, `wield ferro`, `hold cajado`. A coleira do dragão e o Cetro do Rei Negro não voltaram.",
+    "peso_e_mochila": "A mochila de Pellinore só reduz o peso VESTIDA (slot sobre o corpo, no lugar do manto): com ela 102 a 112 kg, sem ela 215 kg contra o limite de 115. `get` recusa com 'já está carregando muito peso' mesmo para chave de 1 kg.",
+    "aneis": "Anel dourado (WORN, ACERTO +1, DANO +1, NOBITS, sem maldição) e anel de rubi do Cardeal (ARMADURA +4, ACERTO +2, MÁX-MANA +50, ARMADURA -5 ao afetar, nível 30, sem maldição): vestidos; CA 113 -> 152.",
+    "milharal_v2": "`turno.py --rotina milharal_v2 --turnos 3 --socorrer`: de 9.974.617 para 10.017.688 de EXP (+43.071) em cerca de 10 minutos, 17 abates (8 monstro esfomeado, 5 monstro agressivo, 4 monstro invasor), ~2,5 mil de EXP por abate no nível 34. Alinhamento 415 -> 312 (~6 por abate de alvo neutro). Decisão do autor (2026-10-22): nada que abaixe a moral é abatido, mesmo hostil; milharal_v2 e milharal banidos (config.ROTINAS_BANIDAS_POR_MORAL).",
+    "nivel_35": "Nível 35 atingido nesta sessão (10.017.688 de EXP; próximo nível em 11.000.000).",
+    "falhas_da_ferramenta": "(1) prepara.ir_fonte anda `s` e não acha a fonte: do Templo a Praça é `down` (cantil enchido à mão). (2) xadrez_cascata.descansar espera vida 215 com máximo 214 e gasta 180 s por ida (ATENCAO). (3) automato/runtime/.controller copiado do outro PC estava no nome do Gemini e o play.py bloqueava; o token local desse arquivo é o caminho previsto (base.token()). (4) O monitor só do tail do log fica cego quando o kite para sozinho por 'nao consegui confirmar o Templo' depois de uma morte.",
+    "decisoes_do_autor": "2026-10-22: (1) consider só para bicho novo; as peças do tabuleiro estão isentas (auditar_sessao.CONHECIDOS); (2) nada que abaixe a moral é abatido, mesmo hostil (diretiva §27, DECISOES §14)."
+  },
+  "state_end": {
+    "location": "O Templo de Midgaard",
+    "level": 35,
+    "hp": "212/212",
+    "mana": "480/510",
+    "gold_total": 62638,
+    "closing": "save_confirmed=True, sleep_confirmed=True; sem quit; driver fechado; Xeque-mate Concluída"
+  }
+}

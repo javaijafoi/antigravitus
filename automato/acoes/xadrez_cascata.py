@@ -252,6 +252,17 @@ def mortes(tipo):
     return contar_no_log(r'%s Negr[oa] est.{1,2} mort[oa]!' % tipo)
 
 
+# O kite no Rei serve aos dois lados. O BRANCO e' excecao de moralidade do autor (2026-10-22, DECISOES §17): exige --excecao-rei-branco.
+LADOS = {
+    'negro': {'nome': 'Negro', 'acesso': ('E7', 'n'), 'casa': 'E8', 'morte': r'Rei Negr[oa] est.{1,2} mort[oa]!'},
+    'branco': {'nome': 'Branco', 'acesso': ('E2', 's'), 'casa': 'E1', 'morte': r'Rei Branc[oa] est.{1,2} mort[oa]!'},
+}
+
+
+def mortes_do_lado(lado):
+    return contar_no_log(lado['morte'])
+
+
 def vida(vitals):
     return (vitals or {}).get('hp') or 0
 
@@ -338,13 +349,15 @@ class Ctx:
         return self.no_templo()
 
     def comer_beber(self):
-        """So' come/bebe com fome ou sede (o driver reporta); None = nao sei, entao come por seguranca."""
-        import base
-        sup = base.suprimentos()
-        if sup.get('fome') in (False, 'nao', 0) and sup.get('sede') in (False, 'nao', 0):
-            return
-        for c in ('eat pao', 'drink cantil'):
-            self.cmd(c, 0.8)
+        """Come, bebe e REPOE pao e agua pelas tarefas padrao do `aproveitar_tempo` (prepara.comer_beber, repor_pao, encher_cantil,
+        estas duas so' se a pre-condicao de falta valer). Ordem do autor, Dia 163: pao e agua vao pelo preparar/cuidar, nao por
+        gambiarra do modulo. Nao usa o `cuidar.manter_magias` aqui: ele manda `visible` e tiraria a invisibilidade do kite."""
+        try:
+            import aproveitar_tempo
+            aproveitar_tempo.aproveitar(2, tarefas=aproveitar_tempo.por_nome(['comer_beber', 'repor_pao', 'encher_cantil']), ctx=self)
+        except Exception as e:      # noqa: BLE001 - nunca derruba a etapa; o auditor acusa fome/sede
+            print('[XADREZ] ATENCAO: comer_beber falhou (%s); seguindo' % e, flush=True)
+        self.garantir_templo()      # repor_pao e encher_cantil passam pela cidade
 
     def _vida_maxima(self):
         """Vida máxima lida do `score tudo` (o alvo de descanso tem de caber na barra)."""
@@ -611,18 +624,23 @@ def varrer_peoes(meta_mortes=9, log=print):
 
 def inspecionar_corpo_do_rei(ctx, log):
     """Logo apos a morte do Rei, SEM recall: sala, corpo e o cetro (Dia 159: o recall imediato me tirou de E8 e o corpo voltou vazio)."""
-    for c in ('look', 'look in corpo', 'get all corpo', 'get cetro', 'get chave', 'get cetro corpo', 'get chave corpo', 'inventory'):
+    # so' a CHAVE (e `look`): `get all corpo` trouxe 2 cetros, 2 armaduras de peao, espada e 160 kg (Dia 163), violava o §29 (item
+    # sem identify) e o peso impedia pegar o tesouro. O cetro ja' foi entregue (Xeque-mate concluida).
+    # `all.chave`: o Rei deixa 3 a 4 chaves e cada `unlock` gasta uma (Dia 163): pegar so' uma rendia 1 tomada por kill
+    for c in ('look', 'look in corpo', 'get all.chave corpo', 'get all.chave', 'inventory'):
         t = ctx.cmd(c, 0.6)[0]
         log('  [%s] %s' % (c, ' | '.join(l.strip() for l in t.splitlines() if l.strip() and not re.match(r'^-?\d+hp', l.strip()))[:420]))
 
 
-def kite_rei(idas=1, log=print):
+def kite_rei(idas=1, log=print, lado='negro'):
     """Etapa final, tatica do autor: chegar, sleep, curse, blind, 1 raio e recall (kite). Exige --rei."""
+    L = LADOS[lado]
+    nome_lower = L['nome'].lower()
     ctx = Ctx()
-    base_mortes = mortes('Rei')       # mortes anteriores do Rei no log nao contam: so' a desta execucao
+    base_mortes = mortes_do_lado(L)       # mortes anteriores do Rei no log nao contam: so' a desta execucao
     for n in range(1, idas + 1):
-        if mortes('Rei') > base_mortes:
-            log('o Rei Negro ja morreu')
+        if mortes_do_lado(L) > base_mortes:
+            log('o Rei %s ja morreu' % L['nome'])
             return 0
         ctx.cmd('wake', 0.5)       # o descanso dorme; um laco interrompido deixa a personagem dormindo e o look falha
         ctx.cmd('stand', 0.5)
@@ -638,10 +656,10 @@ def kite_rei(idas=1, log=print):
             ctx.cmd("cast 'detect invisibility'", 2)   # os itens do Rei (cetro, chave) sao INVISIVEIS: sem isto o corpo parece vazio
         tab = Tabuleiro('H5', ctx.run)
         try:
-            tab.ir('E7')
-            texto, vit, _c = tab.passo('n')
-            log('E8: %s' % titulo_sala(texto))
-            sala_dormindo = 'rei negro esta dormindo' in normalizar(texto)   # ele volta a dormir sozinho entre as idas
+            tab.ir(L['acesso'][0])
+            texto, vit, _c = tab.passo(L['acesso'][1])
+            log('%s: %s' % (L['casa'], titulo_sala(texto)))
+            sala_dormindo = ('rei %s esta dormindo' % nome_lower) in normalizar(texto)   # ele volta a dormir sozinho entre as idas
             ctx.considerar('rei', log)        # antes do 1o sleep (diretiva §2/§22); so' registra: --rei e' a autorizacao do autor
             if sala_dormindo:
                 log('  o Rei ja esta dormindo; sem sleep')
@@ -651,7 +669,7 @@ def kite_rei(idas=1, log=print):
             if 'em que voce deseja' in normalizar(texto):
                 # sem alvo: o Rei morreu e ainda nao reapareceu. Insistir em `sleep` gera dezenas de recusas seguidas
                 # (auditor repeticao-de-recusa, Dia 159); recolhe e espera o repop em vez disso.
-                log('o Rei Negro esta ausente (repop pendente); recall e espera 45 s')
+                log('o Rei %s esta ausente (repop pendente); recall e espera 45 s' % L['nome'])
                 ctx.recall()
                 time.sleep(45)
                 continue
@@ -669,7 +687,7 @@ def kite_rei(idas=1, log=print):
                 continue
             ctx.considerar('rei', log)   # so' registra: o --rei ja' e' a autorizacao explicita do autor
             saude = ctx.cmd('look rei', 0.5)[0]
-            m_s = re.search(r'Rei Negro est. com ([^\n.]+)', saude)
+            m_s = re.search(r'Rei %s est. com ([^\n.]+)' % L['nome'], saude)
             log('  saude do Rei ao chegar: %s' % (m_s.group(1).strip() if m_s else '?'))
             usa = [l.strip() for l in saude.splitlines() if '->' in l]
             log('  o Rei usa: %s' % (' | '.join(usa) if usa else 'NADA (sem equipamento visivel)'))
@@ -682,7 +700,7 @@ def kite_rei(idas=1, log=print):
                 if not re.search(r'mortalmente ferido|morrer. logo|esta morto|em pedacos', normalizar(_t)):
                     ctx.run('recall')           # imediato (Dia 158: 3 s de espera antes do recall = -62, -63 e morte)
                 h = vida(vit)
-                barras = re.findall(r'(\{[-<>]{10}\})\s+o Rei Negro', _t)
+                barras = re.findall(r'(\{[-<>]{10}\})\s+o Rei %s' % L['nome'], _t)
                 dano = re.findall(r'impacto total! \[(\d+)\]', _t)
                 log('  raio %d vida=%s mana=%s dano=%s barra_do_rei=%s' % (i, h, mana(vit), dano, barras[-1] if barras else '?'))
                 # "mortalmente ferido" (barra vazia): o mob NAO luta mais e morre sozinho em instantes, SEM credito
@@ -691,14 +709,14 @@ def kite_rei(idas=1, log=print):
                     log('  Rei MORTALMENTE FERIDO: ficando para rematar e pegar o cetro')
                     for _k in range(5):
                         tk, vit, _c = ctx.cmd("cast 'lightning bolt' rei", 2)
-                        if 'esta morto' in normalizar(tk) or 'em pedacos' in normalizar(tk) or mortes('Rei') > base_mortes:
+                        if 'esta morto' in normalizar(tk) or 'em pedacos' in normalizar(tk) or mortes_do_lado(L) > base_mortes:
                             break
                     inspecionar_corpo_do_rei(ctx, log)
-                    log('REI NEGRO MORTO; a personagem FICOU em E8: confira o corpo/cetro a mao e so entao recall')
+                    log('REI %s MORTO; a personagem FICOU em %s: confira o corpo/chaves a mao e so entao recall' % (L['nome'].upper(), L['casa']))
                     return 0
-                if mortes('Rei') > base_mortes or re.search(r'esta morto|em pedacos', normalizar(_t)):
+                if mortes_do_lado(L) > base_mortes or re.search(r'esta morto|em pedacos', normalizar(_t)):
                     inspecionar_corpo_do_rei(ctx, log)
-                    log('REI NEGRO MORTO; a personagem FICOU em E8: confira o corpo/cetro a mao e so entao recall')
+                    log('REI %s MORTO; a personagem FICOU em %s: confira o corpo/chaves a mao e so entao recall' % (L['nome'].upper(), L['casa']))
                     return 0
                 if h and h <= LIMITE_VIDA + 10:
                     break
@@ -712,7 +730,9 @@ def kite_rei(idas=1, log=print):
 def main(argv=None):
     ap = argparse.ArgumentParser(description='Cascata da Xeque-mate no tabuleiro (rastreio de posicao).')
     ap.add_argument('--etapa', required=True, choices=sorted(ETAPAS) + ['f1', 'peoes', 'rei'])
-    ap.add_argument('--rei', action='store_true', help='confirma o kite no Rei Negro (risco de morte)')
+    ap.add_argument('--rei', action='store_true', help='confirma o kite no Rei (risco de morte)')
+    ap.add_argument('--lado', choices=sorted(LADOS), default='negro', help='qual Rei (o branco exige --excecao-rei-branco)')
+    ap.add_argument('--excecao-rei-branco', action='store_true', help='autorizacao do autor (DECISOES §17) para matar o Rei Branco UMA vez')
     ap.add_argument('--idas', type=int, default=1, help='idas do kite (so no Rei)')
     a = ap.parse_args(argv)
     try:
@@ -733,7 +753,10 @@ def main(argv=None):
             if not a.rei:
                 print('o kite no Rei exige --rei (risco de morte; a morte cancela a missao)')
                 return 2
-            return kite_rei(a.idas)
+            if a.lado == 'branco' and not a.excecao_rei_branco:
+                print('o Rei Branco e excecao de moralidade do autor (DECISOES §17): exige --excecao-rei-branco e so mata UMA vez')
+                return 2
+            return kite_rei(a.idas, lado=a.lado)
         return cumprir_etapa(a.etapa)
     except Perdida as e:
         print('PARADO: %s -> recall' % e)

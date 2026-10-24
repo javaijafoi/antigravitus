@@ -319,6 +319,7 @@ class TestMagiaPorDado(unittest.TestCase):
              mock.patch.object(CU, 'config') as cfg, \
              mock.patch.object(CU, '_conjurar') as conj:
             cfg.USAR_INVISIBILIDADE = True
+            cfg.MANTER_DETECT_INVISIBILITY = False
             r = CU.manter_magias()
         self.assertFalse(conj.called)
         self.assertTrue(r['cache'])
@@ -331,8 +332,63 @@ class TestMagiaPorDado(unittest.TestCase):
              mock.patch.object(CU, 'config') as cfg, \
              mock.patch.object(CU, '_conjurar', return_value=(True, 'sente alguem te protegendo')) as conj:
             cfg.USAR_INVISIBILIDADE = True
+            cfg.MANTER_DETECT_INVISIBILITY = False
             CU.manter_magias()
         self.assertEqual([c.args[0] for c in conj.call_args_list], ['armor'])
+
+
+class TestDetectInvisibilitySempreLigado(unittest.TestCase):
+    """Ordem do autor, 2026-10-22: detect invisibility sempre ligado (ID: MANTER_DETECT_INVISIBILITY)."""
+
+    def test_regex_nao_confunde_detect_com_invisibilidade(self):
+        texto = 'armor ( 24 horas )\ndetect invisibility ( 19 horas )'
+        self.assertEqual(CU.horas_restantes(texto, 'detect invisibility'), 19)
+        self.assertIsNone(CU.horas_restantes(texto, 'invisibility'))   # antes lia as 19 h do detect
+        self.assertEqual(CU.horas_restantes(texto, 'armor'), 24)
+
+    def test_ativa_com_horas_de_sobra_nao_reconjura(self):
+        texto = 'armor ( 24 horas )\ndetect invisibility ( 19 horas )'
+        with mock.patch.object(CU, 'run', return_value=('', {}, False)), \
+             mock.patch.object(CU, 'situacao', return_value={'texto': texto}), \
+             mock.patch.object(CU, 'config') as cfg, \
+             mock.patch.object(CU, '_conjurar') as conj:
+            cfg.USAR_INVISIBILIDADE = False
+            cfg.MANTER_DETECT_INVISIBILITY = True
+            r = CU.manter_magias()
+        self.assertFalse(conj.called)
+        self.assertTrue(r['detect'])
+
+    def test_ausente_do_score_conjura_e_confirma_pelo_score(self):
+        antes = 'armor ( 24 horas )'
+        depois = 'armor ( 24 horas )\ndetect invisibility ( 20 horas )'
+        with mock.patch.object(CU, 'run', return_value=('', {}, False)), \
+             mock.patch.object(CU, 'situacao', side_effect=[{'texto': antes}, {'texto': depois}]), \
+             mock.patch.object(CU, 'sala_atual', return_value='praca do templo'), \
+             mock.patch.object(CU, 'vida_frac', return_value=0.9), \
+             mock.patch.object(CU, 'config') as cfg, \
+             mock.patch.object(CU, '_conjurar', return_value=(False, 'certo')) as conj:
+            cfg.USAR_INVISIBILIDADE = False
+            cfg.MANTER_DETECT_INVISIBILITY = True
+            r = CU.manter_magias()
+        self.assertEqual([c.args[0] for c in conj.call_args_list], ['detect invisibility'])
+        self.assertTrue(r['detect'])
+
+    def test_conjura_mas_nao_aparece_no_score_e_incompleto(self):
+        antes = 'armor ( 24 horas )'
+        with mock.patch.object(CU, 'run', return_value=('', {}, False)), \
+             mock.patch.object(CU, 'situacao', side_effect=[{'texto': antes}, {'texto': antes}]), \
+             mock.patch.object(CU, 'sala_atual', return_value='praca do templo'), \
+             mock.patch.object(CU, 'vida_frac', return_value=0.9), \
+             mock.patch.object(CU, 'config') as cfg, \
+             mock.patch.object(CU, '_conjurar', return_value=(False, 'sua magia falha e desaparece')):
+            cfg.USAR_INVISIBILIDADE = False
+            cfg.MANTER_DETECT_INVISIBILITY = True
+            r = CU.manter_magias()
+        self.assertFalse(r['detect'])
+        self.assertEqual(r['motivo'], 'conjuracao nao confirmada')
+
+    def test_config_liga_por_padrao(self):
+        self.assertTrue(C.MANTER_DETECT_INVISIBILITY)
 
 
 if __name__ == '__main__':

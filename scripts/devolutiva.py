@@ -295,6 +295,83 @@ def bypass_do_ultimo_fecho(capitulos):
     return None
 
 
+def itens_esperados(estado):
+    """Nomes dos itens que o state.json diz que a personagem tem (vestidos e inventário). Pura."""
+    nomes = []
+    for e in (estado or {}).get("equipment") or []:
+        nomes.append(e.get("item") or e.get("name"))
+    inv = (estado or {}).get("inventory") or {}
+    for i in (inv.get("recorded") if isinstance(inv, dict) else inv) or []:
+        nomes.append(i.get("name") if isinstance(i, dict) else i)
+    return [n for n in nomes if n]
+
+
+def checar_itens_identificados(heroi):
+    """ID itens.identificados: todo item do state.json está identificado em `itens.json` (diretiva §29).
+
+    Ordem do autor, 2026-10-22: "obrigação sempre identificar todos os itens que temos".
+    """
+    pasta = ROOT / "data" / "heroes" / heroi
+    estado = pasta / "state.json"
+    if not estado.is_file():
+        ok("sem state.json: itens não conferidos")
+        return
+    try:
+        esperados = itens_esperados(json.loads(estado.read_text(encoding="utf-8")))
+    except ValueError:
+        aviso("state.json ilegível: itens não conferidos")
+        return
+    if not esperados:
+        ok("state.json sem itens para conferir")
+        return
+    sys.path.insert(0, str(ROOT / "automato" / "acoes"))
+    import identificar_itens
+    catalogo = None
+    if (pasta / "itens.json").is_file():
+        catalogo = json.loads((pasta / "itens.json").read_text(encoding="utf-8"))
+    falta = identificar_itens.faltando(esperados, catalogo)
+    if falta:
+        falha(f"[itens.identificados] {len(falta)} item(ns) sem identify em itens.json: {', '.join(falta[:6])}"
+              f"{'...' if len(falta) > 6 else ''}. Rode automato/acoes/identificar_itens.py (diretiva §29)")
+    else:
+        ok(f"{len(set(esperados))} itens do state.json identificados em itens.json")
+
+
+_NIVEL_DA_FICHA = re.compile(r"N[ií]vel\s*<b>(\d+)</b>")
+
+
+def nivel_da_ficha(html):
+    """Nível que a ficha de RPG em HTML declara no topo (`Nível <b>35</b>`), ou None. Pura."""
+    m = _NIVEL_DA_FICHA.search(html or "")
+    return int(m.group(1)) if m else None
+
+
+def checar_ficha_rpg(heroi):
+    """ID ficha.rpg_no_nivel: a ficha de RPG (`observacoes/ficha_rpg_*.html`) é atualizada a cada subida de nível.
+
+    Pedido do autor, 2026-10-22: "atualiza ela a cada vez que subir de level, no mínimo". Sem ficha, não há o que cobrar.
+    """
+    pasta = ROOT / "data" / "heroes" / heroi
+    fichas = sorted((pasta / "observacoes").glob("ficha_rpg_*.html")) if (pasta / "observacoes").is_dir() else []
+    estado = pasta / "state.json"
+    if not fichas or not estado.is_file():
+        ok("sem ficha de RPG para conferir")
+        return
+    try:
+        nivel = int(json.loads(estado.read_text(encoding="utf-8")).get("level"))
+    except (ValueError, TypeError):
+        aviso("state.json sem `level` legível: não deu para conferir a ficha de RPG")
+        return
+    da_ficha = nivel_da_ficha(fichas[-1].read_text(encoding="utf-8", errors="replace"))
+    if da_ficha is None:
+        aviso(f"{fichas[-1].name} não declara `Nível <b>N</b>`: não deu para conferir")
+    elif da_ficha < nivel:
+        falha(f"[ficha.rpg_no_nivel] {fichas[-1].name} está no nível {da_ficha} e o state.json no {nivel}: "
+              "atualize a ficha (nível, vitais, equipamento, bolsa, ouro, grimório) e renomeie com o dia")
+    else:
+        ok(f"ficha de RPG no nível {da_ficha} (state.json: {nivel})")
+
+
 def checar_capitulos(heroi):
     arq = ROOT / "data" / "heroes" / heroi / "capitulos.json"
     if not arq.is_file():
@@ -464,6 +541,8 @@ def main(argv=None):
     print("\n3. Sessão ao vivo, capítulo, evidências e livro-razão")
     checar_sessao_ao_vivo(heroi, desde, sem_git=args.sem_git)
     checar_capitulos(heroi)
+    checar_ficha_rpg(heroi)
+    checar_itens_identificados(heroi)
     if not args.sem_git:
         checar_evidencias(heroi, desde)
         checar_livro_razao(desde)

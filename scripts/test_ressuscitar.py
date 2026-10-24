@@ -35,6 +35,60 @@ class TestProximoComando(unittest.TestCase):
         self.assertEqual(R.proximo_comando('O Paraíso\nMagníficos campos verdes.'), 'n')
 
 
+INVENTARIO_APOS_MORTE = """Você está carregando:
+um diminuto brinco de novato ..Isso tem uma pequena aura! (novo)
+um cajado retorcido
+uma lâmina de ferro (novo)
+um bracelete de prata e ouro ..Isso emite um som estridente!
+um rosário ..Isso tem uma pequena aura!
+um belo cinturão de rodeio ..Isso tem uma pequena aura! (novo)
+a mochila de Pellinore
+um escudo de aço (novo)
+um par de braçadeiras de novato (novo)
+um par de luvas de couro (muito gasto)
+uma calça de couro (muito gasto)
+resistentes botas negras (novo)
+uma veste de escamas de metal ..Isso tem uma pequena aura! (novo)
+a coleira do dragão de estimação (novo)
+a Coroa da Rainha Branca ..Isso emite um som estridente! (novo)
+uma Cruz Ansada ..Isso tem uma pequena aura!
+um colar com uma pedra púrpura ..Isso tem uma pequena aura! (novo)
+o anel de rubi do Cardeal ..Isso tem uma pequena aura! (novo)
+um anel dourado
+um tomo da sabedoria druídica(+3L)
+um cantil
+(x4) um pão recheado
+um manto de pano (novo)
+a Lança do Cavaleiro Negro ..Isso emite um som estridente! (novo)
+"""
+
+
+class TestPosMorte(unittest.TestCase):
+    """Dia 161: a morte devolve o equipamento desvestido; a ressurreicao tem de reequipar e alimentar."""
+
+    def test_come_bebe_e_reequipa_item_a_item(self):
+        cmds = R.comandos_pos_morte(INVENTARIO_APOS_MORTE)
+        self.assertEqual(cmds[:2], ['eat pao', 'drink cantil'])
+        for esperado in ('wear coroa', 'wear brinco', 'wear colar', 'wear cruz', 'wear mochila', 'wear bracadeiras',
+                         'wear luvas', 'wear rosario', 'wear bracelete', 'wear escudo', 'wear cinturao',
+                         'wear calca', 'wear dourado', 'wear rubi', 'wear veste', 'wear botas', 'wear coleira', 'wield ferro', 'hold cajado'):
+            self.assertIn(esperado, cmds)
+
+    def test_nunca_wear_all_nem_toca_na_lanca_maldita_ou_no_manto(self):
+        cmds = ' '.join(R.comandos_pos_morte(INVENTARIO_APOS_MORTE))
+        self.assertNotIn('all', cmds)
+        self.assertNotIn('lanca', cmds)
+        self.assertNotIn('manto', cmds)   # a mochila ocupa o corpo; o manto fica no inventario
+
+    def test_duas_coroas_no_inventario_nao_veste_nenhuma(self):
+        inv = INVENTARIO_APOS_MORTE + 'a Coroa da Rainha Negra ..Isso emite um som estridente!\n'
+        self.assertNotIn('wear coroa', R.comandos_pos_morte(inv))
+
+    def test_inventario_vazio_nao_manda_nada(self):
+        self.assertEqual(R.comandos_pos_morte(''), [])
+        self.assertEqual(R.comandos_pos_morte(None), [])
+
+
 class TestUsaABase(unittest.TestCase):
     """Fala com o driver só por base.run: token certo, origem no transcript e guarda de repetição."""
 

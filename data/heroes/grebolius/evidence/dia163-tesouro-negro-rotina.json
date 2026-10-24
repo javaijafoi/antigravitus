@@ -1,0 +1,27 @@
+{
+  "hero_id": "grebolius",
+  "day": 157,
+  "agent": "Claude Sonnet 5.5 (claude-sonnet-5-5)",
+  "via": "automato",
+  "recorded_on": "2026-10-22",
+  "source_kind": "sessao_ao_vivo",
+  "source": "automato/runtime/tesouro_negro.jsonl, session_live_dia163_*.log, /tmp/tesouro*.out (tesouro_negro.py, xadrez_cascata.py); sessao marcada Dia 163 nos registros.",
+  "findings": {
+    "tomadas": "3 tomadas do Tesouro Negro da Realeza pela rotina (+60.000 moedas), alem das 2 manuais do Dia 161 (+40.000). Ouro total 144.548 (banco 144.248 + 300).",
+    "periodo_de_reset": "Entre as tomadas 2 e 3 passaram 13,1 min; nas sondas intermediarias a porta seguia `baixo` (aberta) e sem tesouro; so voltou com a porta `!baixo` (fechada) de novo. O sinal de reset da zona e a porta fechada em D8.",
+    "chave": "Cada `unlock baixo` gasta uma Chave do Tesouro Negro (a que estava no inventario sumiu depois de cada porta fechada). O Rei Negro deixa 3 a 4 chaves; `get all.chave` as pega todas. Chaves tambem somem entre sessoes (login).",
+    "rei_negro_e_a_moral": "Tres mortes do Rei Negro subiram o alinhamento de 312 para 394; a Cruz Ansada (ANTI-NEUTRO) voltou a servir.",
+    "morte_16": "Morte #16 (-4.493 EXP) no Rei Negro: a conferencia do chao de E8 entrou com o Rei acordado; ele atacou a personagem invisivel (-90, -91, -59 = 240 > 232). Corrigido: dorme o Rei antes de pegar qualquer coisa. O menu de morte foi confundido com queda de conexao.",
+    "queda_do_driver": "O driver caiu uma vez na ida 33 do kite (resposta vazia); reiniciado so o live_daemon pelo PID. A personagem reentrou no Templo.",
+    "jogadores": "Falas dirigidas a Grebolius: so \"Darkay diz: oi grebolius\". O canal tagarela e conversa publica (Hinata, Omorfos e outros). Keen (jogador, nivel 55, Lanceiro Campeao) so aparece andando no tabuleiro; ja roubou o golpe final da Rainha.",
+    "lado_branco": "Excecao de moralidade do autor (DECISOES §17): o Rei Branco (E1) morre UMA vez, para abrir o Tesouro Branco (espelho, porta `!baixo` de D1). A rotina `tesouro_negro.py --lado branco --excecao-rei-branco` esta pronta e testada, mas o Rei Branco NAO foi enfrentado nesta sessao (nenhum raio nele)."
+  },
+  "state_end": {
+    "location": "O Templo de Midgaard",
+    "level": 35,
+    "hp": "232/232",
+    "mana": "510/510",
+    "gold_total": 144548,
+    "closing": "save_confirmed=True, sleep_confirmed=True; sem quit; driver fechado"
+  }
+}

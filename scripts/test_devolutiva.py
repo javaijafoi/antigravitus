@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Testes do scripts/devolutiva.py — o verificador de fim de sessão."""
+import json
 import shutil
 import sys
 import tempfile
@@ -56,6 +57,75 @@ class BaseTmp(unittest.TestCase):
         pasta = self.tmp / "data" / "heroes" / "h" / "planos"
         pasta.mkdir(parents=True, exist_ok=True)
         (pasta / f"plano{numero:03d}.md").write_text(texto, encoding="utf-8")
+
+
+class TestFichaRpg(BaseTmp):
+    """ficha.rpg_no_nivel: a ficha de RPG acompanha o nível (pedido do autor, 2026-10-22)."""
+
+    def prepara(self, nivel_estado, nivel_ficha):
+        pasta = self.tmp / "data" / "heroes" / "h"
+        (pasta / "observacoes").mkdir(parents=True, exist_ok=True)
+        (pasta / "state.json").write_text(json.dumps({"level": nivel_estado}), encoding="utf-8")
+        if nivel_ficha is not None:
+            (pasta / "observacoes" / "ficha_rpg_dia161.html").write_text(
+                f'<span class="chip">Nível <b>{nivel_ficha}</b></span>', encoding="utf-8")
+        devolutiva.FALHAS.clear()
+        devolutiva.AVISOS.clear()
+
+    def test_le_o_nivel_do_html(self):
+        self.assertEqual(devolutiva.nivel_da_ficha('<span>Nível <b>35</b></span>'), 35)
+        self.assertEqual(devolutiva.nivel_da_ficha('Nivel <b>7</b>'), 7)
+        self.assertIsNone(devolutiva.nivel_da_ficha('sem nivel'))
+        self.assertIsNone(devolutiva.nivel_da_ficha(None))
+
+    def test_ficha_atrasada_e_falha(self):
+        self.prepara(36, 35)
+        devolutiva.checar_ficha_rpg("h")
+        self.assertTrue(any("ficha.rpg_no_nivel" in f for f in devolutiva.FALHAS))
+
+    def test_ficha_no_nivel_passa(self):
+        self.prepara(35, 35)
+        devolutiva.checar_ficha_rpg("h")
+        self.assertEqual(devolutiva.FALHAS, [])
+
+    def test_sem_ficha_nao_cobra(self):
+        self.prepara(35, None)
+        devolutiva.checar_ficha_rpg("h")
+        self.assertEqual(devolutiva.FALHAS, [])
+
+
+class TestItensIdentificados(BaseTmp):
+    """itens.identificados: todo item do state.json tem identify em itens.json (diretiva §29)."""
+
+    def prepara(self, equip, catalogo):
+        pasta = self.tmp / "data" / "heroes" / "h"
+        pasta.mkdir(parents=True, exist_ok=True)
+        (pasta / "state.json").write_text(json.dumps({"equipment": [{"slot": "x", "item": n} for n in equip],
+                                                      "inventory": {"recorded": [{"name": "um cantil"}]}}),
+                                          encoding="utf-8")
+        if catalogo is not None:
+            (pasta / "itens.json").write_text(json.dumps({"itens": [{"nome": n} for n in catalogo]}), encoding="utf-8")
+        devolutiva.FALHAS.clear()
+
+    def test_lista_os_itens_do_estado(self):
+        estado = {"equipment": [{"item": "um anel dourado"}, {"name": "o escudo"}], "inventory": {"recorded": [{"name": "um cantil"}]}}
+        self.assertEqual(devolutiva.itens_esperados(estado), ["um anel dourado", "o escudo", "um cantil"])
+        self.assertEqual(devolutiva.itens_esperados({}), [])
+
+    def test_item_sem_identify_e_falha(self):
+        self.prepara(["um anel dourado", "a Lança do Cavaleiro Negro"], ["um anel dourado", "um cantil"])
+        devolutiva.checar_itens_identificados("h")
+        self.assertTrue(any("itens.identificados" in f and "Lança" in f for f in devolutiva.FALHAS))
+
+    def test_tudo_identificado_passa(self):
+        self.prepara(["um anel dourado"], ["Um Anel Dourado", "um cantil"])
+        devolutiva.checar_itens_identificados("h")
+        self.assertEqual(devolutiva.FALHAS, [])
+
+    def test_sem_catalogo_e_falha(self):
+        self.prepara(["um anel dourado"], None)
+        devolutiva.checar_itens_identificados("h")
+        self.assertTrue(devolutiva.FALHAS)
 
 
 class TestPendente(unittest.TestCase):

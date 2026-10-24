@@ -5,36 +5,36 @@
     "day": 157,
     "verification": "live",
     "live_verified": true,
-    "source": "Sessão de 2026-10-21 (3ª parte) de Claude Sonnet 5.5 (claude-sonnet-5-5) (evidence/dia160-xeque-mate-concluida.json): XEQUE-MATE CONCLUÍDA. Cascata refeita (peões, bispos, cavaleiros, torres, Rainha), Cetro do Rei Negro entregue ao Bispo Branco em F1; `autoquest todas` = Concluída; EXP 9.659.707 -> 9.915.778 na entrega. Fechada com save e sleep, sem quit. Nível 34, faltam 84.222 de EXP para o 35, alinhamento 382, ouro 41.806 (40.256 banco + 1.550 mão)."
+    "source": "Sessao de 2026-10-22 (3a parte) de Claude Sonnet 5.5 (claude-sonnet-5-5) (evidence/dia163-tesouro-negro-rotina.json): 3 tomadas do Tesouro Negro (+60.000), morte #16 no Rei Negro e ressurreicao, rotina do lado branco pronta. Fechada no Templo com save e sleep confirmados."
   },
-  "level": 34,
+  "level": 35,
   "mechanical_race": "Elfo",
   "mechanical_class": "Mago (Magic-User)",
   "honorific": "o Aprendiz de Mago",
   "appearance": "Mulher goblin; aventureira sem véu",
   "alignment": {
-    "value": 382,
+    "value": 394,
     "label": "Bom"
   },
   "vitals": {
     "hp": {
-      "current": 214,
-      "max": 214
+      "current": 232,
+      "max": 232
     },
     "mana": {
       "current": 510,
       "max": 510
     },
     "mv": {
-      "current": 146,
-      "max": 146
+      "current": 149,
+      "max": 149
     }
   },
   "experience": {
-    "current": 9915778,
-    "next_level": 10000000
+    "current": 10114484,
+    "next_level": 11000000
   },
-  "gold": 41806,
+  "gold": 144548,
   "attributes": {
     "STR": 11,
     "DEX": 17,
@@ -44,12 +44,13 @@
     "CHA": 12
   },
   "armor": {
-    "base": 121,
-    "with_armor": 157,
+    "base": 87,
+    "with_armor": 124,
+    "with_armor_and_invisibility": 164,
     "effect_verified": true,
-    "note": "Dia 157: 121 sem a magia armor (Cruz Ansada no lugar da coleira) e 157 com ela; armor dura horas e fica em prepara.garantir_armor()."
+    "note": "Dia 163, score tudo: 87 sem magias, 124 com `armor`, 164 com `armor` e `invisibility`; sem a tunica dourada (guardada na mochila)."
   },
-  "hitroll": 16,
+  "hitroll": 12,
   "damroll": 5,
   "wimpy": 45,
   "training_sessions": 68,
@@ -78,18 +79,18 @@
     "name": "O Panteao dos Centenarios"
   },
   "last_event": {
-    "day": 158,
-    "summary": "Ciclo de combate medido no tabuleiro: recall instantâneo e barato em tempo (552 EXP), sair andando impossível em combate, regeneração de ~20 s. Rainha Negra levada a ~40% da barra."
+    "day": 157,
+    "summary": "Sessao de 22/10 (3a parte): 3 tomadas do Tesouro Negro pela rotina tesouro_negro.py (+60.000), periodo de reset ~13 min, cada unlock gasta uma chave. Morte #16 no Rei Negro (conferencia do chao de E8 com o Rei acordado); alinhamento 394 (as mortes do Rei Negro o subiram). Excecao do autor: Rei Branco morre uma vez para o Tesouro Branco; rotina pronta, ainda nao executada."
   },
   "next_objective": {
-    "mission_id": "xeque-mate",
-    "title": "Capítulo 12: Xeque-mate, cetro do Rei Negro",
-    "next_step": "Recomeçar a Xeque-mate pelo Bispo Branco e rodar a cascata pelo xadrez_cascata.py (peoes, bispos, cavalos, torres, rainha); no Rei: kite (sleep, curse, blind, 1 raio, recall) com --rei. Ver planos/plano039.md.",
-    "status": "active",
+    "mission_id": "tesouro-branco",
+    "title": "Tesouro Branco: matar o Rei Branco UMA vez (excecao do autor) e abrir a porta de D1",
+    "next_step": "Rodar `python automato/acoes/tesouro_negro.py --lado branco --excecao-rei-branco --tomadas 2`: consider no Rei Branco, kite de 1 raio com recall, `get all.chave`, D1 `unlock baixo`. Conferir o alinhamento antes (394) e depois. Depois, Ajuda Mágica (observacoes/ajuda-magica-padroes-2026-10-22.md §4).",
+    "status": "pending",
     "missing_preparation": [
-      "Rodar automato/camadas/prepara.py --forcar (guardar 4.777 de ouro).",
-      "Conferir a posição pela resposta do movimento, nunca por look isolado; nunca parar em E1, E8, B1, G1.",
-      "Testar o módulo xadrez_cascata.py ao vivo em uma etapa curta antes de confiar nele."
+      "identificar_itens.py no começo da sessão (diretiva §29).",
+      "Rei Branco nunca medido: a 1ª ida é medição.",
+      "Jogadores (Keen e outros) ficam fora da exceção."
     ]
   },
   "skills": [
@@ -247,18 +248,23 @@
     },
     {
       "slot": "no pescoço",
-      "name": "a coleira do dragão de estimação",
-      "item": "a coleira do dragão de estimação"
-    },
-    {
-      "slot": "no pescoço",
       "name": "um colar com uma pedra púrpura",
       "item": "um colar com uma pedra púrpura"
     },
     {
-      "slot": "na cintura",
-      "name": "um belo cinturão de rodeio",
-      "item": "um belo cinturão de rodeio"
+      "slot": "no pescoço",
+      "name": "a coleira do dragão de estimação",
+      "item": "a coleira do dragão de estimação"
+    },
+    {
+      "slot": "sobre o corpo",
+      "name": "a mochila de Pellinore",
+      "item": "a mochila de Pellinore"
+    },
+    {
+      "slot": "no corpo",
+      "name": "uma veste de escamas de metal",
+      "item": "uma veste de escamas de metal"
     },
     {
       "slot": "nos braços",
@@ -272,18 +278,33 @@
     },
     {
       "slot": "no pulso esquerdo",
-      "name": "um rosário",
-      "item": "um rosário"
-    },
-    {
-      "slot": "no pulso direito",
       "name": "um bracelete de prata e ouro",
       "item": "um bracelete de prata e ouro"
     },
     {
+      "slot": "no pulso direito",
+      "name": "um rosário",
+      "item": "um rosário"
+    },
+    {
+      "slot": "no dedo esquerdo",
+      "name": "o anel de rubi do Cardeal",
+      "item": "o anel de rubi do Cardeal"
+    },
+    {
+      "slot": "no dedo direito",
+      "name": "um anel dourado",
+      "item": "um anel dourado"
+    },
+    {
       "slot": "como escudo",
-      "name": "um escudo",
-      "item": "um escudo"
+      "name": "um escudo de aço",
+      "item": "um escudo de aço"
+    },
+    {
+      "slot": "na cintura",
+      "name": "um belo cinturão de rodeio",
+      "item": "um belo cinturão de rodeio"
     },
     {
       "slot": "nas pernas",
@@ -291,102 +312,111 @@
       "item": "uma calça de couro"
     },
     {
-      "slot": "empunhando",
-      "name": "uma espada curta",
-      "item": "uma espada curta"
+      "slot": "nos pés",
+      "name": "resistentes botas negras",
+      "item": "resistentes botas negras"
     },
     {
-      "slot": "sobre o corpo",
-      "name": "a mochila de Pellinore",
-      "item": "a mochila de Pellinore"
+      "slot": "empunhando",
+      "name": "uma lâmina de ferro",
+      "item": "uma lâmina de ferro"
     },
     {
       "slot": "segurando",
       "name": "um cajado retorcido",
-      "item": "um cajado retorcido",
-      "note": "BASTAO MAGICO NOBITS, nivel 10, 3 cargas de sleep (3/3 na compra). Comprado em Pergaminhos e Afins (Jareth) por 18.859 em 2026-10-21. Identificado fora da loja."
+      "item": "um cajado retorcido"
     }
   ],
   "inventory": {
     "recorded": [
       {
-        "name": "um rosário",
-        "quantity": 1,
-        "source": "evidence/dia157-cap12.json"
-      },
-      {
         "name": "um cantil",
         "quantity": 1,
-        "source": "evidence/dia157-cap12.json"
-      },
-      {
-        "name": "a mochila de Pellinore",
-        "quantity": 1,
-        "source": "evidence/dia157-cap12.json"
-      },
-      {
-        "name": "um pergaminho de sabedoria",
-        "quantity": 1,
-        "source": "evidence/dia157-cap12.json"
+        "source": "evidence/dia163-tesouro-negro-rotina.json"
       },
       {
         "name": "um pão recheado",
-        "quantity": 3,
-        "source": "evidence/dia157-biblioteca-paris.json",
-        "container": "a mochila de Pellinore",
-        "note": "Não reconferido no Dia 157 (Plano 034/035): o inventory mostra a mochila, não o que está dentro. O Plano 035 diz 'não há pão', mas nunca abriu a mochila; conferir com look in mochila."
+        "quantity": 2,
+        "source": "evidence/dia163-tesouro-negro-rotina.json"
       },
       {
-        "name": "um manto de pano",
+        "name": "um tomo da sabedoria druídica",
         "quantity": 1,
-        "source": "evidence/dia157-cap12.json",
-        "container": "a mochila de Pellinore"
+        "source": "evidence/dia163-tesouro-negro-rotina.json"
       },
       {
-        "name": "um colar com uma pedra púrpura",
+        "name": "a túnica dourada",
         "quantity": 1,
-        "source": "evidence/dia157-cap12.json",
-        "container": "a mochila de Pellinore"
-      },
-      {
-        "name": "a bainha de Excalibur",
-        "quantity": 1,
-        "source": "evidence/dia157-cap12.json",
+        "source": "evidence/dia163-tesouro-negro-rotina.json",
         "container": "a mochila de Pellinore"
       },
       {
         "name": "uma Cruz Ansada",
         "quantity": 1,
-        "source": "evidence/dia157-cap12.json",
+        "source": "evidence/dia163-tesouro-negro-rotina.json",
+        "container": "a mochila de Pellinore"
+      },
+      {
+        "name": "um manto de pano",
+        "quantity": 1,
+        "source": "evidence/dia163-tesouro-negro-rotina.json",
+        "container": "a mochila de Pellinore"
+      },
+      {
+        "name": "a Lança do Cavaleiro Negro",
+        "quantity": 1,
+        "source": "evidence/dia163-tesouro-negro-rotina.json",
         "container": "a mochila de Pellinore"
       },
       {
         "name": "o Cetro do Bispo Negro",
         "quantity": 1,
-        "source": "evidence/dia157-cap12.json",
+        "source": "evidence/dia163-tesouro-negro-rotina.json",
         "container": "a mochila de Pellinore"
       },
       {
-        "name": "um rolo de pergaminho",
+        "name": "a Armadura do Peão Negro",
         "quantity": 1,
-        "source": "evidence/dia157-biblioteca-paris.json",
-        "note": "NOTA, peso 1, valor 90; comprado por 103 na Pergaminhos e Afins; não é o tomo de Lemin."
+        "source": "evidence/dia163-tesouro-negro-rotina.json",
+        "container": "a mochila de Pellinore"
       },
       {
-        "name": "o livro \"Equipamentos para Primeira Encarnação\", de Jooh",
+        "name": "o Cetro do Rei Negro",
         "quantity": 1,
-        "source": "evidence/dia157-handoff-lyon.json",
-        "note": "Pego na Sala de Doações sem identify (a magia falhou 2/2 na sala). Guia de equipamentos; não confirmado como o tomo de Lemin."
+        "source": "evidence/dia163-tesouro-negro-rotina.json",
+        "container": "a mochila de Pellinore"
+      },
+      {
+        "name": "a bainha de Excalibur",
+        "quantity": 1,
+        "source": "evidence/dia163-tesouro-negro-rotina.json",
+        "container": "a mochila de Pellinore"
+      },
+      {
+        "name": "a Armadura da Torre Branca",
+        "quantity": 1,
+        "source": "evidence/dia163-tesouro-negro-rotina.json",
+        "container": "a mochila de Pellinore"
+      },
+      {
+        "name": "um colar com uma pedra púrpura",
+        "quantity": 1,
+        "source": "evidence/dia163-tesouro-negro-rotina.json",
+        "container": "a mochila de Pellinore"
+      },
+      {
+        "name": "um rosário",
+        "quantity": 1,
+        "source": "evidence/dia163-tesouro-negro-rotina.json",
+        "container": "a mochila de Pellinore"
       }
     ],
     "pending_verification": []
   },
   "conditions": [
-    "Save e sono confirmados no Templo; conexão fechada sem quit (Dia 157, 2026-10-20).",
-    "Nível 33 (HP 226, mana 490, MV 146); CA 112 com tudo vestido; morreu 11 vezes e 1 DT; EXP 8.315.136; alinhamento 486.",
-    "Xeque-mate CANCELADA: o Rei Branco em E1 mata quem está na Xeque-mate ('Herege! Você deu xeque-mate no rei errado!'). Recomeçar com o Bispo Branco em F1.",
-    "Ouro 72.078 (67.301 banco + 4.777 mão): rodar prepara.py --forcar para guardar. Mochila vestida com 4 lanças (4.000 cada), coroas da Negra, Armadura da Torre Branca e itens; Armeiro e Ferreiro sem caixa.",
-    "Colar com pedra púrpura (ANTI-DT) vestido."
+    "Xeque-mate CONCLUÍDA (Dia 160); Tesouraria Negra aberta e saqueada (Dia 161). Autoquests ativas: nenhuma conferida; rodar `score tudo` e `autoquest listar`.",
+    "Colar com pedra púrpura (ANTI-DT) vestido.",
+    "Dia 163: nivel 35, EXP 10.114.484, vida 232, ouro 144.548 (banco 144.248), alinhamento 394, 16 mortes e 1 DT, 3 tomadas do Tesouro Negro. Sem chave no inventario. Save e sono confirmados no Templo, sem quit."
   ],
   "uncertainties": [
     "A Cruz Ansada nao veste: 'Voce toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Motivo desconhecido.",
@@ -401,7 +431,8 @@
     "Dia 157: conferir conhecimento §61 e Plano 028 para fonte ainda desconhecida do tomo; não confundir pergaminho de sabedoria carregado com o item solicitado.",
     "Dia 157: Ajuda Mágica apareceu inativa no login duas vezes no mesmo dia, depois de sessões encerradas com save e sleep e sem quit nem morte. Causa desconhecida; não é o _CLOSE (conhecimento §65).",
     "Dia 157 (sessao de 2026-10-21): nenhuma sala testada reconheceu 'curar' com vida cheia (211/211), inclusive o Hospital de Jareth, que anuncia atendimento e fica a oeste e depois ao sul de jr_tabuas_2. Hipotese: o gatilho exige vida abaixo do maximo. Proximo teste: criar deficit (doacao de sangue ou combate curto) e repetir 'curar' no Hospital e no Salao dos Deuses.",
-    "Dia 157 (sessao de 2026-10-21): a regeneracao de vida medida segundo a segundo (+12 a +13 por tick de ~2,5 s, 32->211 em 38 s) contradiz o numero de 5 hp/min dos transcripts de sono. Hipotese: o pulso do servidor avanca mais rapido quando se enviam comandos; sem comandos o ganho por tick cai. Falta medir dormindo com a mesma cadencia de comandos."
+    "Dia 157 (sessao de 2026-10-21): a regeneracao de vida medida segundo a segundo (+12 a +13 por tick de ~2,5 s, 32->211 em 38 s) contradiz o numero de 5 hp/min dos transcripts de sono. Hipotese: o pulso do servidor avanca mais rapido quando se enviam comandos; sem comandos o ganho por tick cai. Falta medir dormindo com a mesma cadencia de comandos.",
+    "Dia 161: Lamina Negra (+43L, exige nivel 78) ficou no chao do Tesouro Negro; a tunica dourada (CA 18) esta no inventario e disputa o slot do corpo com a veste de escamas (vida +20, FOR +2): decisao do autor. A Cruz Ansada deu choque com alinhamento 312 (ANTI-NEUTRO): hipotese de limiar ~350."
   ],
   "evidence": [
     {

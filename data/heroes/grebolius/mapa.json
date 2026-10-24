@@ -3,7 +3,7 @@
   "hero_name": "Grebolius",
   "sanctuary_id": "panteao_centenarios",
   "last_updated_cycle": "Dia 157 — Plano 033: biblioteca de Jareth, Paris, alas da catedral e Lyon, 2026-10-19",
-  "total_rooms": 731,
+  "total_rooms": 732,
   "layers": [
     {
       "id": "superficie",
@@ -16409,14 +16409,16 @@
       "exits": {
         "s": "xadrez_D7",
         "e": "xadrez_E8",
-        "w": "xadrez_C8"
+        "w": "xadrez_C8",
+        "d": "xadrez_tesouro_negro"
       },
       "npcs": [],
-      "notes": "Casa D8 do tabuleiro (zona 36). Rainha Negra; saida oculta `baixo` para a Tesouraria Negra",
+      "notes": "Casa D8 do tabuleiro (zona 36). Rainha Negra; saida oculta `baixo` para a Tesouraria Negra | Dia 161: `baixo` aberto com a Chave do Tesouro Negro (cai do Rei Negro, invisivel): `cast 'sleep' rainha` ANTES, depois `unlock baixo`, `open baixo`, `down`. Destrancar com a Rainha acordada inicia combate (-97 em uma rodada). Chegar por D5, D6, D7 sem passar por E8.",
       "discovered_in": "Dia 157 (mapa por grade; confirmado ao vivo)",
       "fontes": [
         "docs/circlemud/05-mundo-padrao-vs-mapa.md",
-        "evidence/dia157-xadrez-etapa6.json"
+        "evidence/dia157-xadrez-etapa6.json",
+        "evidence/dia161-tesouraria-negra-nivel35.json"
       ]
     },
     {
@@ -17068,6 +17070,24 @@
         "day": 157,
         "note": "Sessao ao vivo de 2026-10-21 (sondagem de cura, Plano 041). Agente: DeepSeek deepseek-flash (dsh)"
       }
+    },
+    {
+      "id": "xadrez_tesouro_negro",
+      "name": "O Tesouro Negro",
+      "layer": "novatos",
+      "zone": "O Grande Tabuleiro de Xadrez",
+      "risk": "Baixo (sem combate observado)",
+      "risk_code": "low",
+      "icon": "💰",
+      "exits": {
+        "u": "xadrez_D8"
+      },
+      "npcs": [],
+      "notes": "Tesouraria Negra, sob D8. Unica saida: cima. Sala sem magia (\"Sua magia falha e desaparece\"; identify nao funciona). Objeto \"Tesouro Negro da Realeza\" = 20.000 moedas de ouro (get moedas); exige peso livre (peguei a 102 kg de 115). Deixados no chao: Lamina Negra (+44L), botas negras, tunica dourada. Aberta na sessão marcada Dia 161.",
+      "discovered_in": "Dia 157 (sessão marcada Dia 161; aberta ao vivo)",
+      "fontes": [
+        "evidence/dia161-tesouraria-negra-nivel35.json"
+      ]
     }
   ],
   "last_updated_day": 157,

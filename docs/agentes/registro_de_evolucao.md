@@ -1351,3 +1351,33 @@ Validação final desta retomada: derivados conferidos; check_project 0 erros/7 
 ### 2026-10-21 · Publicação do Dia 159 · Claude Sonnet 5.5 (claude-sonnet-5-5)
 - **Publicado junto, de OUTRO agente (DeepSeek deepseek-flash, "dsh"):** `1cd31b8` (v1.7.23, sono e descanso terminam pelos vitais), `cdca1c2` (v1.7.24, `aproveitar_tempo` e `vender_espolio`), `7ca0430` (fecha o Dia 158 com o teste do tabuleiro e o relatório de auditoria) e `22edb28` (plano 043). Estavam só no repositório local; o autor mandou publicar tudo no fechamento. Eu não alterei esses commits.
 - **Meus (Claude Sonnet 5.5):** `1bc7534` (v1.7.25, kite do Rei), `f4583c8` (cuidar e mapa do tabuleiro) e `3ebb5dd` (v1.7.26, espólio invisível do Rei, plano 045).
+
+### 2026-10-22 · Dia 161, Tesouraria Negra, nível 35 e o pós-morte · Claude Sonnet 5.5 (claude-sonnet-5-5)
+- **Mudou:** `automato/acoes/ressuscitar.py` (reequipa e alimenta depois de ressuscitar), `scripts/test_ressuscitar.py` (+4), `automato/CHANGELOG.md` v1.7.27, `conhecimento.md` §91, `mapa.json` (sala `xadrez_tesouro_negro`, saída `d` de `xadrez_D8`), `state.json`, `evidence/dia161-tesouraria-negra-nivel35.json`, plano 047.
+- **Por quê:** o autor pediu a Tesouraria Negra, depois o nível 35. A 1ª morte (recuar a pé de E8) e a ressurreição sem reequipar custaram 18 idas de kite com CA 37 e a fome; a 2ª morte veio do kite (dois golpes de 97 e 118 na mesma rodada).
+- **Como foi verificado:** ao vivo (Tesouraria aberta e saqueada, +20.000 de ouro; `milharal_v2` +43 mil de EXP em ~10 min, nível 35); `test_ressuscitar` 11 OK; sessão fechada com save e sleep, sem quit.
+- **Custo:** duas mortes (~9 mil de EXP) e o Cetro do Rei Negro mais a coleira do dragão perdidos; quase uma hora de kite no Rei que o `milharal_v2` tornava desnecessário.
+- **Pendente (decisão do autor, sem código):** o auditor ainda cobra `consider` contra as peças do tabuleiro, que o autor diz já conhecer; `alinhamento-caiu` dispara a cada abate neutro no milharal. **Pendente (código):** `prepara.ir_fonte` anda `s` (é `down`); `xadrez_cascata.descansar` espera vida 215 com máximo 214.
+- **Próximo:** plano 047.
+
+### 2026-10-22 · Dia 161 (2ª parte), moral antes de rendimento · Claude Sonnet 5.5 (claude-sonnet-5-5)
+- **Mudou:** `automato/nucleo/config.py` (`ROTINAS_BANIDAS_POR_MORAL`), `automato/camadas/turno.py` (recusa a rotina banida, código 6; para se o alinhamento cair entre turnos, código 7), `automato/camadas/trabalhar.py` (recusa), `scripts/auditar_sessao.py` (`CONHECIDOS`), `scripts/test_moral.py` (novo), `scripts/test_auditar_sessao.py` (2 testes atualizados), `docs/agentes/catraca.json` (+3 IDs), `automato/DECISOES.md` §14, `diretiva_de_jogo.md` §27, `automato/CHANGELOG.md` v1.7.28.
+- **Por quê:** frases do autor em 2026-10-22: `consider` só importa para bicho novo ("vc já conhece todos os bixos do tabuleiro") e "não podemos matar nada que abaixe nossa moral, mesmo que for hostil". O `milharal_v2` derrubou o alinhamento de 415 para 312 em 17 abates.
+- **Como foi verificado:** suíte offline completa, 416 testes OK; `devolutiva.py` sem falha.
+- **Custo:** o milharal (~2,5 mil de EXP por abate) fica fora do XP até o autor liberar; `CONHECIDOS` é lista fixa.
+- **Próximo:** achar alvo de XP que não derrube a moral (plano 047 §5).
+
+### 2026-10-22 · Dia 161 (3ª parte), detect permanente, identify de tudo, botas e a veste esquecida · Claude Sonnet 5.5 (claude-sonnet-5-5)
+- **Mudou:** `automato/nucleo/config.py` (`MANTER_DETECT_INVISIBILITY`), `automato/camadas/cuidar.py` (mantém o detect pelo `score`; a regex de duração casa "detect invisibility" inteiro), `automato/acoes/identificar_itens.py` (nova), `automato/acoes/ressuscitar.py` (veste de escamas, botas e coleira), `automato/camadas/navegar.py`, `automato/acoes/xadrez_cascata.py`, `scripts/auditar_sessao.py`, `scripts/devolutiva.py` (`itens.identificados`, `ficha.rpg_no_nivel`), testes (`test_identificar_itens.py` novo, +17 em outros), `docs/agentes/catraca.json` (+6 IDs), `automato/README.md`, `automato/DECISOES.md` §15, `automato/CHANGELOG.md` v1.7.29 e v1.7.30, `diretiva_de_jogo.md` §28 e §29, `conhecimento.md` §92, `itens.json` (29 itens), `state.json`, `mapa.json`, ficha de RPG, plano 047.
+- **Por quê:** ordens do autor em 2026-10-22: detect invisibility sempre ligado, identificar todos os itens, resolver as botas, comparar lança e lâmina, analisar a bolsa, atualizar a ficha a cada nível. A identificação achou itens esquecidos na bolsa (veste de escamas, coleira), mostrou que o Cetro não tinha sido perdido (invisível sem o detect) e o que `(+NL)` significa.
+- **Como foi verificado:** ao vivo (29 itens identificados, bolsa analisada, chave pega do chão de E8, Tesouraria reaberta, botas vestidas, CA 174); suíte offline 453 testes OK; `devolutiva.py` sem falha.
+- **Custo:** uma hora de kite no Rei (35 idas, 1 ida perdida por posição incerta), uma chave por fora (o Rei morreu sem crédito), erro meu ao matar o `turno.py` e deixar o `brief` ligado.
+- **Próximo:** plano 047 §5 (Ajuda Mágica).
+
+### 2026-10-22 · Dia 163, rotina do Tesouro Negro, padrões do projeto e o lado branco · Claude Sonnet 5.5 (claude-sonnet-5-5)
+- **Mudou:** `automato/acoes/tesouro_negro.py` (nova, com `--lado branco`), `automato/acoes/xadrez_cascata.py` (`LADOS`, `kite_rei(lado=)`, `get all.chave`, `comer_beber` pelo `aproveitar_tempo`), `automato/acoes/identificar_itens.py`, testes (`test_tesouro_negro.py` novo; +2 em `test_xadrez_cascata.py`), `automato/README.md`, `automato/DECISOES.md` §16 e §17, `automato/CHANGELOG.md` v1.7.31 a v1.7.36, `diretiva_de_jogo.md` §27 (exceção do Rei Branco) e §29 (mochila), `conhecimento.md` §93, evidência `dia163-tesouro-negro-rotina.json`, `state.json`, ficha de RPG, plano 047.
+- **Por quê:** metas do autor: pegar o tesouro mais 5 vezes sem ficar parado (3 feitas pela rotina), avisos a cada tomada e a cada 5 min, pão e água pelo `prepara`/`cuidar`, espólio na mochila, e a exceção de moralidade do Rei Branco (uma morte) para abrir o Tesouro Branco.
+- **Como foi verificado:** ao vivo (3 tomadas, +60.000; reset ~13 min; `unlock` gasta chave; morte #16 e correção); suíte offline 484 testes OK; `devolutiva.py` sem falha. O Rei Branco não foi enfrentado.
+- **Custo:** a morte #16 (-4.493 EXP) e ~1,5 h de kite e de rotina; erro meu ao confundir o menu de morte com queda de conexão.
+- **Próximo:** plano 047 §5.
+

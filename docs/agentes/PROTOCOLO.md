@@ -64,6 +64,7 @@ função, melhore a existente.
 | 4 | `python scripts/encerrar.py --agente "<modelo/versão>"` | ele roda `sync_hero --check`, `check_project` e o auditor, e **cria o esqueleto do próximo plano** com o estado do `state.json` |
 | 5 | Preencha o esqueleto: §1, §3–§6, §8. Regras do plano v2 ([LEIA.md](../../data/heroes/grebolius/planos/LEIA.md)) | o plano **se sustenta sozinho** e o §5 é **uma ação executável** |
 | 6 | `python scripts/encerrar.py --agente "<modelo/versão>" --fechar --tipo <chefe\|moagem\|expedicao\|mapeamento\|missao\|outro>` | 0 FALHA; o boletim da sessão foi gravado, com as métricas do transcript e o tipo de conteúdo |
+| 6b | Subiu de nível na sessão? Atualize a ficha de RPG (`observacoes/ficha_rpg_dia<N>.html`, diretiva §28) | `devolutiva.py` sem a FALHA `ficha.rpg_no_nivel` |
 | 7 | Bloco no [registro de evolução](registro_de_evolucao.md) se mexeu na ferramenta; commit com caminhos explícitos e `[agente: …]` | **sem push** se não houve pedido ([AGENTS §12](../../AGENTS.md)) |
 
 **Depois do handoff, não reconecte.** Se precisar voltar ao jogo, é uma sessão nova: ela também

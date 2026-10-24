@@ -23,6 +23,7 @@ _sys.path.insert(0, str(_Path(__file__).resolve().parents[1] / 'nucleo'))
 
 import argparse
 import os
+import re
 import subprocess
 import sys
 import time
@@ -33,12 +34,33 @@ PY = sys.executable
 sys.path.insert(0, str(LOCAL / 'camadas'))
 sys.path.insert(0, str(LOCAL / 'nucleo'))
 import base  # noqa: E402
+import config  # noqa: E402
 import vigia  # noqa: E402
 
 MINUTOS_REAIS_POR_TURNO = 6
 TURNOS = 4
 PROBLEMAS = ('MORTA', 'FOME', 'SEDE', 'VIDA_BAIXA', 'MANA_BAIXA', 'TRAVADO', 'EM_COMBATE')
 PRECISA_RECARGA = 2
+CODIGO_BANIDA = 6       # a rotina e' banida pela moral (config.ROTINAS_BANIDAS_POR_MORAL)
+CODIGO_MORAL = 7        # o alinhamento caiu durante o turno: parada imediata (diretiva §22, §27)
+_ALINH = re.compile(r'Alinhamento:\s*\{[^}]*\}\s*(-?\d+)')
+
+
+def rotina_banida(nome):
+    """Motivo (str) se a rotina e' banida pela moral; None se pode rodar. Pura."""
+    return config.ROTINAS_BANIDAS_POR_MORAL.get(nome)
+
+
+def alinhamento_do_score(texto):
+    """Numero do alinhamento no `score tudo`, ou None. Pura."""
+    m = _ALINH.search(texto or '')
+    return int(m.group(1)) if m else None
+
+
+def ler_alinhamento():
+    """So' entre turnos, com o motor parado: mandar `score` com a rotina rodando desincroniza (AGENTS #7)."""
+    texto, _, _ = base.run('score tudo')
+    return alinhamento_do_score(texto)
 
 
 def roda(relativo, extra=()):
@@ -82,22 +104,28 @@ def main():
                     help='aplica cuidado (e recarga, se preciso) antes de comecar')
     args = ap.parse_args()
 
+    motivo = rotina_banida(args.rotina)
+    if motivo:
+        print(f'[turno] rotina {args.rotina} BANIDA pela moral: {motivo}', flush=True)
+        return CODIGO_BANIDA
+
     print(f'[turno] rotina={args.rotina}', flush=True)
     # Modo breve (diretiva §26): a cacada nao precisa da descricao de cada sala,
     # e ela custa ~85 tokens por passo. Restaura o estado do servidor ao sair.
     breve_antes = base.brief(True)
     try:
-        _laco(args)
+        codigo = _laco(args)
     finally:
         base.brief(breve_antes)
     print('[turno] fim', flush=True)
-    return 0
+    return codigo or 0
 
 
 def _laco(args):
     # Diretiva §26: o turno nao comeca com fome, sede ou sem armadura. O vigia
     # nao acusa armadura, entao o cuidado roda uma vez ANTES do laco, sempre.
     socorrer()
+    alinhamento = ler_alinhamento()
     for turno in range(1, args.turnos + 1):
         d = vigia.diagnosticar()
         print(f'[turno {turno}] vigia={d["estado"]} {d.get("vitais", "")} '
@@ -133,6 +161,13 @@ def _laco(args):
         if estado == 'MORTA':
             print('[turno] ressuscitando', flush=True)
             roda('acoes/ressuscitar.py')
+        atual = ler_alinhamento()
+        if alinhamento is not None and atual is not None and atual < alinhamento:
+            print(f'[turno] MORAL: o alinhamento caiu de {alinhamento} para {atual} (diretiva §22, §27): parando. '
+                  'Auditar a causa no log e banir o alvo antes de repetir.', flush=True)
+            return CODIGO_MORAL
+        if atual is not None:
+            alinhamento = atual
 
 
 if __name__ == '__main__':

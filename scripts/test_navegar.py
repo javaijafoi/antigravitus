@@ -68,7 +68,24 @@ class TestSufixoDeCuradoria(unittest.TestCase):
 
     def test_navegar_ainda_para_em_sala_errada(self):
         with self.assertRaises(N.Parada) as ctx:
-            N.navegar(MAPA, 'praca', 'sala', FalsoMUD(['A Praça do Templo\n']), log=lambda *_: None)
+            # a 2a resposta e' a releitura do `look` antes de parar (fala de NPC no titulo, Dia 161)
+            N.navegar(MAPA, 'praca', 'sala', FalsoMUD(['A Praça do Templo\n', 'A Praça do Templo\n']), log=lambda *_: None)
+        self.assertEqual(ctx.exception.codigo, 3)
+
+
+class TestFalaDeNpcNoTitulo(unittest.TestCase):
+    """Uma fala de NPC no lugar do titulo nao para a rota: le a sala de novo uma vez (Dia 161)."""
+
+    def test_le_de_novo_e_segue(self):
+        mud = FalsoMUD(['Lux come um pão recheado.\n', 'A Rua Principal\n[ Saídas: norte, leste ]', 'A Sala de Doações\n[ Saídas: sul ]'])
+        feitos = N.navegar(MAPA, 'praca', 'sala', mud, log=lambda *_: None)
+        self.assertEqual(mud.enviados, ['w', 'look', 'n'])
+        self.assertEqual([i for _, i in feitos], ['rua_o', 'sala'])
+
+    def test_sala_errada_continua_parando_depois_da_segunda_leitura(self):
+        mud = FalsoMUD(['A Praça do Templo\n', 'A Praça do Templo\n'])
+        with self.assertRaises(N.Parada) as ctx:
+            N.navegar(MAPA, 'praca', 'sala', mud, log=lambda *_: None)
         self.assertEqual(ctx.exception.codigo, 3)
 
 

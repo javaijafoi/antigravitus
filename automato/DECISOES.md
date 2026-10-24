@@ -176,3 +176,45 @@ Agente: GPT-6 / Codex (versão específica não informada); fonte: data/heroes/g
 - **O que**: o padrão sai da prosa e vai para comandos e verificações. `docs/agentes/PROTOCOLO.md` é o roteiro único. O `mandabala.py` imprime a sequência de abertura e a primeira ação (§5 do plano). O `encerrar.py` gera o próximo plano a partir do `state.json` e grava o boletim. O plano v2 (autossuficiente, §5 executável) vira FALHA a partir do plano 034. `docs/agentes/catraca.json` lista as verificações em vigor e `scripts/test_catraca.py` reprova quem remover uma. A tabela "Ferramentas" do `automato/README.md` marca cada script como canônico, legado, pontual ou PROIBIDO, e o `check_project.py` avisa quando surge script fora dela.
 - **Custo**: mais um passo no fim da sessão (`encerrar.py` em duas etapas). Planos mais longos, porque copiam o que segue valendo. Remover ou afrouxar uma verificação passa a exigir a aprovação do autor citada aqui.
 - **Como afrouxar uma regra**: nova seção neste arquivo, com a frase do autor, e edição de `docs/agentes/catraca.json` no mesmo commit.
+
+
+---
+
+## 14. `consider` só para bicho novo, e nada que abaixe a moral é abatido (v1.7.28, Dia 161 — diretiva do autor, 2026-10-22, Claude Sonnet 5.5)
+- **Frases do autor:** *"vc já conhece todos os bixos do tabuleiro, para que dar consider?"* · *"consider é importante quando achamos bixos novos, mas pode usar o que estavamos abatendo no milharal? não podemos matar nada que abaixe nossa moral, mesmo que for hostil"*.
+- **Por que:** o auditor dava FALHA `ataque-sem-consider` até para o `sleep` na Rainha, que já foi medida muitas vezes. E o `milharal_v2` rendeu 43 mil de EXP em 10 minutos, mas o alinhamento caiu de 415 para 312 em 17 abates de alvos hostis; o autor proíbe qualquer abate que derrube a moral, hostil ou não.
+- **O que:** (1) `scripts/auditar_sessao.py` ganha `CONHECIDOS` (peão, bispo, cavaleiro/cavalo, torre, rainha, rei): essas peças não exigem `consider` prévio; bicho novo continua exigindo. (2) `automato/nucleo/config.py` ganha `ROTINAS_BANIDAS_POR_MORAL` (`milharal_v2` e `milharal`); `turno.py` e `trabalhar.py` se recusam a rodá-las (código 6). (3) `turno.py` lê o alinhamento entre turnos, com o motor parado, e para com código 7 se ele cair (diretiva §22 aplicada como parada, não só como aviso). (4) `diretiva_de_jogo.md` §27 e três IDs na catraca.
+- **Custo:** o milharal, a fonte de XP mais rápida conhecida (~2,5 mil por abate), fica fora até o autor liberar ou aparecer alvo que não derrube a moral. A isenção do `consider` é uma lista fixa: bicho novo que entre nela sem ser medido escapa do auditor.
+- **Como desfazer:** tirar o nome de `ROTINAS_BANIDAS_POR_MORAL` (só com nova frase do autor registrada aqui) ou o bicho de `CONHECIDOS`.
+
+
+---
+
+## 15. Detect invisibility sempre ligado e identify de todos os itens (v1.7.29, Dia 161 — diretivas do autor, 2026-10-22, Claude Sonnet 5.5)
+- **Frases do autor:** *"detect invisibility sempre ligado"* · *"obrigação sempre identificar todos os itens que temos"*.
+- **Por que:** o espólio do Rei Negro (Cetro e Chave) é invisível e levou 3 dias para aparecer (§88); e sem `identify` o item errado é vestido, vendido ou largado (Dia 161: botas e túnica ficaram para trás sem registro do que faziam).
+- **O que:** (1) `config.MANTER_DETECT_INVISIBILITY = True`; o `cuidar.py` lê as horas do `score` e relança abaixo de 4 h, confirmando pelo `score` (a mensagem de sucesso ainda não foi medida). A regex de duração passou a casar "detect invisibility" inteiro: antes as horas do detect eram lidas como as da invisibilidade. (2) `acoes/identificar_itens.py` identifica inventário e vestidos e grava `itens.json`; `devolutiva.py` (`itens.identificados`) exige o registro de todo item do `state.json`; diretiva §29.
+- **Custo:** ~16 de mana a cada ~20 horas de jogo (~25 min reais); uma ida a mais à Praça do Templo, porque o Templo bloqueia magia. A ferramenta gasta ~2 a 4 comandos por item.
+- **Limite:** item dentro da mochila vestida exige tirar a mochila (peso).
+
+
+---
+
+## 16. Rotina do Tesouro Negro: pegar o tesouro 5 vezes sem ficar parado (v1.7.31, Dia 161 — meta do autor, 2026-10-22, Claude Sonnet 5.5)
+- **Frase do autor:** *"pegar o tesouro do bau mais 5x, não fique parado esperando muito tempo, utilize rotinas ou crie novas"*.
+- **Por quê:** o Tesouro Negro da Realeza (20.000 moedas) reaparece e a porta tranca de novo quando a zona do tabuleiro reinicia, mas o período não estava medido; esperar parado desperdiçava a sessão.
+- **O que:** `acoes/tesouro_negro.py` repete a ida (Templo, H5, D5, D7, D8, `cast 'sleep' rainha`, `unlock`/`open` se `!baixo`, `down`, `get moedas`, `up`, `recall`), nunca por E8. A porta fica aberta: ver `!baixo` de novo é o sinal do reset. Mede o intervalo entre tomadas (mediana) e sonda 1,5 min antes dele; antes de medir, 1ª sonda aos 6 min e depois a cada 3. Entre as sondas empilha tarefas do `aproveitar_tempo` (sem `vender_espolio`) e dorme o resto. Para se faltar a chave, 3 idas seguidas falharem, ou passar do teto de minutos.
+- **Custo:** cada sonda é uma ida de ~1 min (14 passos pelo tabuleiro); o periodo real do reset decide a duração total; a chave deteriora com o tempo e pode acabar no meio.
+- **Limite:** `cast 'sleep' rainha` rende ~750 de EXP por lance (observado 3 vezes); não afeta o alinhamento nas medições feitas (312 antes e depois).
+
+
+---
+
+## 17. EXCEÇÃO de moralidade: o Rei Branco morre uma vez, para abrir o Tesouro Branco (v1.7.35, Dia 163 — decisão do autor, 2026-10-22, Claude Sonnet 5.5)
+- **Frases do autor:** *"vamos tentar matar o rei branco, abrindo uma exceção na política de moralidade"* · justificativa *"todo rei é um tirano, e nossa personagem é rebelde"* · *"e pegar o tesouro dos brancos"* · *"se algum personagem o defende, é tirano como ele!"* · *"deve ser um espelho da tesouraria negra"* · *"mataremos ele só uma vez"*.
+- **O que a exceção cobre (e só isto):** (1) **uma** morte do Rei Branco (E1), pelo kite de 1 raio com recall imediato; (2) combate **de defesa** contra peças NPC do lado branco que o defendam e ataquem a personagem; (3) o Tesouro Branco (porta `!baixo` de D1, espelho do negro), com as chaves que o Rei largar.
+- **O que NÃO cobre:** jogadores reais (o Keen e os demais: PvP fica fora), animais, camponeses e NPCs neutros ou pacíficos (§22 e §27 seguem valendo para tudo o mais), e nenhuma segunda morte do Rei Branco.
+- **Custo esperado, medido antes:** abater peça branca (alvo bom) derruba o alinhamento (Cavaleiro Branco: 455 para 402; o Rei Negro, ao contrário, SOBE a moral: 312 para 394 em três mortes). O alinhamento hoje é 394; abaixo de ~350 a Cruz Ansada (ANTI-NEUTRO) volta a pular do corpo. O Rei Branco nunca foi medido: `consider` obrigatório (bicho novo) e a 1ª ida é medição.
+- **Como:** `xadrez_cascata.py --etapa rei --rei --lado branco --excecao-rei-branco` e `tesouro_negro.py --lado branco --excecao-rei-branco`. A trava `automato/runtime/rei_branco_morto.json` impede um segundo kill. O alinhamento é conferido antes e depois e registrado no plano.
+- **Como desfazer:** apagar este item e o `--excecao-rei-branco`; sem a flag as duas ferramentas recusam o lado branco.
+

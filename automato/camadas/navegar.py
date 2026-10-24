@@ -210,7 +210,12 @@ def navegar(salas, origem, destino, run, permitir_risco=False, hp_min=0.60,
             raise Parada(4, 'vida %d de %d (<%d%%) no passo %d' % (hp, hp_max, int(hp_min * 100), i))
         t = titulo(texto)
         if not confere(salas[esperado], t):
-            raise Parada(3, 'passo %d: esperava "%s", cheguei em "%s"' % (i, salas[esperado]['name'], t))
+            # uma fala de NPC ("Lux come um pao recheado.") pode ocupar o lugar do titulo: le a sala de novo UMA vez (Dia 161)
+            t2 = titulo(run('look')[0])
+            if confere(salas[esperado], t2):
+                t = t2
+            else:
+                raise Parada(3, 'passo %d: esperava "%s", cheguei em "%s"' % (i, salas[esperado]['name'], t))
         feitos.append((d, esperado))
         log('[%02d/%02d] %s -> %s' % (i, len(plano), d, t))
     return feitos
@@ -285,6 +290,8 @@ def main(argv=None):
     breve_antes = brief(True) if not a.sem_brief else None
     try:
         texto, _, _ = run('look')
+        if not a.de and not titulo(texto):      # resposta atrasada ou so' o prompt: le de novo uma vez
+            texto, _, _ = run('look')
         origem = deduzir_origem(salas, titulo(texto), a.de)
         navegar(salas, origem, a.para, run, a.permitir_risco, a.hp_min, a.max_passos, a.max_segundos)
     except Parada as p:

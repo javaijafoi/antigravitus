@@ -58,14 +58,16 @@ class TestAuditor(unittest.TestCase):
         self.assertNotIn('ataque-sem-consider', regras([cmd('consider malandro'), cmd('kill malandro')]))
 
     def test_ataque_sem_consider_e_falha_uma_vez_por_alvo(self):
-        seq = [cmd("cast 'lightning bolt' bispo")] * 4 + [cmd("cast 'charm person' rainha")]
+        # bichos NOVOS (decisao do autor, 2026-10-22: as pecas do tabuleiro ja' sao conhecidas; ver test_moral.py)
+        seq = [cmd("cast 'lightning bolt' lobo")] * 4 + [cmd("cast 'charm person' urso")]
         achados = [a for a in A.auditar(seq) if a['regra'].startswith('ataque-sem-consider')]
-        self.assertEqual([a['nivel'] for a in achados], [A.FALHA, A.FALHA])   # bispo e rainha, uma vez cada
+        self.assertEqual([a['nivel'] for a in achados], [A.FALHA, A.FALHA])   # lobo e urso, uma vez cada
 
     def test_consider_vale_para_alvo_numerado_e_debuffs(self):
         seq = [cmd('consider torre'), cmd("cast 'sleep' 2.torre"), cmd("cast 'lightning bolt' 1.torre")]
         self.assertNotIn('ataque-sem-consider', regras(seq))
-        self.assertIn('ataque-sem-consider', regras([cmd("cast 'curse' rei")]))
+        self.assertIn('ataque-sem-consider', regras([cmd("cast 'curse' lobo")]))
+        self.assertNotIn('ataque-sem-consider', regras([cmd("cast 'curse' rei")]))   # peca conhecida: isenta (DECISOES §14)
         self.assertNotIn('ataque-sem-consider', regras([cmd("cast 'armor'"), cmd("cast 'invisibility'")]))
 
     def test_andar_a_mao(self):
@@ -114,6 +116,23 @@ class TestAuditor(unittest.TestCase):
     def test_sessao_limpa_nao_tem_falha(self):
         seq = [cmd('look'), cmd('n'), cmd('score tudo', 'Alinhamento: {<<<>>}   412')]
         self.assertFalse([a for a in A.auditar(seq) if a['nivel'] == A.FALHA])
+
+
+class TestArmorPeloScore(unittest.TestCase):
+    """O auditor prova a armadura pela magia ativa no score, nao pelo limiar de CA (Dia 161: CA 121 com armor)."""
+
+    SCORE_COM_ARMOR = ('      Destreza: 17            Carisma: 12      Classe de Armadura: 121\n'
+                       '[ Duração ] \n armor                 (  43 horas ) +37 em ARMADURA\n')
+    SCORE_SEM_ARMOR = ('      Destreza: 17            Carisma: 12      Classe de Armadura: 75\n'
+                       '[ Duração ] \n detect invisibility   (  13 horas ) \n')
+
+    def test_armor_ativa_com_ca_baixa_nao_e_falha(self):
+        seq = [cmd('score tudo', self.SCORE_COM_ARMOR), cmd('consider rainha'), cmd("cast 'sleep' rainha")]
+        self.assertNotIn('armadura-ausente', regras(seq))
+
+    def test_sem_armor_no_score_continua_falha(self):
+        seq = [cmd('score tudo', self.SCORE_SEM_ARMOR), cmd('consider lobo'), cmd("cast 'lightning bolt' lobo")]
+        self.assertIn('armadura-ausente', regras(seq))
 
 
 class TestOrigemNoDriver(unittest.TestCase):
@@ -172,7 +191,7 @@ class TestNavegar(unittest.TestCase):
         self.assertEqual(mud.enviados, ['e', 'e'])
 
     def test_para_em_sala_inesperada(self):
-        mud = FalsoMUD(['Praça\n'])
+        mud = FalsoMUD(['Praça\n', 'Praça\n'])     # a 2a resposta e' a releitura do `look` antes de parar
         with self.assertRaises(N.Parada) as ctx:
             N.navegar(MAPA, 'a', 'c', mud, log=lambda *_: None)
         self.assertEqual(ctx.exception.codigo, 3)

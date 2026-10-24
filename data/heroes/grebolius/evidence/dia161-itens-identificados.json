@@ -1,0 +1,24 @@
+{
+  "hero_id": "grebolius",
+  "day": 157,
+  "agent": "Claude Sonnet 5.5 (claude-sonnet-5-5)",
+  "via": "automato",
+  "recorded_on": "2026-10-22",
+  "source_kind": "sessao_ao_vivo",
+  "source": "automato/runtime/session_live_dia162_*.log e transcript (identificar_itens.py, play.py); sessão marcada Dia 162 nos registros, no calendário documental fica no Dia 157.",
+  "findings": {
+    "catalogo": "26 itens identificados e gravados em data/heroes/grebolius/itens.json (inventário, vestidos e bolsa).",
+    "identify_so_ve_inventario": "O comando identify e a magia cast 'identify' só enxergam o inventário. Item vestido: remove, identify, wear (ou wield, hold). Com a mochila vestida, get e put dizem 'Você não tem nenhuma mochila'.",
+    "marca_NL": "(+NL) é o que falta em níveis para usar o item e (+NE) em encarnações: tomo druídico (nível 37) foi de +3L no nível 34 para +2L no 35; bainha de Excalibur (nível 85, enc. 17) mostra +16E; Lâmina Negra +44L = nível 79.",
+    "cruz_ansada": "ANTI-NEUTRO. `wear cruz` com alinhamento 312: 'Você toma um choque ao tentar vestir uma Cruz Ansada, que pula fora de seu corpo.' Estava vestida com 382 no início do dia.",
+    "bolsa": "look in mochila: Armadura da Torre Branca, manto de pano, rosário, bainha de Excalibur (+16E), veste de escamas de metal, coleira do dragão de estimação, colar com pedra púrpura. Capacidade 103kg/650kg.",
+    "veste_de_escamas": "ARMADURA nível 32, CA +8, MÁX-VIDA +20, FORÇA +2, peso 14, ANTI-CLÉRIGO ANTI-HALFLING. Vestida: vida 212 para 232.",
+    "armas": "Lança do Cavaleiro Negro: 6D4 (média 15), TRITURAR, Dano +2, AMALDIÇOADO ANTI-BOM, nível 15, peso 18. Lâmina de ferro: 4D3 (média 8), FERROAR, nível 30, peso 6.",
+    "cetro_nao_perdido": "O Cetro do Rei Negro está no inventário, invisível; só aparece com detect invisibility ligado.",
+    "tesouraria_tranca_de_novo": "Em D8 a saída voltou a !baixo; open baixo: 'Parece estar trancado'. As botas negras e a túnica dourada ficaram dentro."
+  },
+  "state_end": {
+    "location": "O Templo de Midgaard",
+    "closing": "ver evidence/dia161-tesouraria-negra-nivel35.json e o plano 048"
+  }
+}

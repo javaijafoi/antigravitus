@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Ficha de Grebolius</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  /* Conceito: o caderno de uma maga que anota tudo no formato do próprio terminal do MUD.
+     As barras são as do jogo: {<<<<<>>>>>}. Fundo azul-tinta, ouro para dinheiro, um azul arcano só para magia. */
+  :root {
+    --f-display: "Syne", "Trebuchet MS", system-ui, sans-serif;
+    --f-body: "Instrument Sans", system-ui, "Segoe UI", sans-serif;
+    --f-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+    --bg: #e4e9f1;
+    --panel: #f5f7fb;
+    --panel-2: #eaeef6;
+    --ink: #172033;
+    --muted: #556079;
+    --line: #c3cbdb;
+    --arcane: #2f45b8;
+    --arcane-soft: #dfe5fb;
+    --gold: #94620f;
+    --blood: #b0372a;
+    --leaf: #2c7a4d;
+    --mana: #2467b3;
+    --shadow: 0 1px 0 rgba(23, 32, 51, .06), 0 8px 24px -16px rgba(23, 32, 51, .35);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0e1220; --panel: #161b2d; --panel-2: #1d2338; --ink: #e7e9f2; --muted: #98a2bb; --line: #2b3454;
+      --arcane: #94a6ff; --arcane-soft: #232c55; --gold: #e4b552; --blood: #f08572; --leaf: #74d19b; --mana: #75b6f2;
+      --shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 10px 28px -14px rgba(0, 0, 0, .7);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0e1220; --panel: #161b2d; --panel-2: #1d2338; --ink: #e7e9f2; --muted: #98a2bb; --line: #2b3454;
+    --arcane: #94a6ff; --arcane-soft: #232c55; --gold: #e4b552; --blood: #f08572; --leaf: #74d19b; --mana: #75b6f2;
+    --shadow: 0 1px 0 rgba(0, 0, 0, .3), 0 10px 28px -14px rgba(0, 0, 0, .7);
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 15px/1.55 var(--f-body);
+    padding-block: 20px 64px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+  .wrap { max-width: 1120px; margin: 0 auto; display: grid; gap: 18px; }
+  h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; }
+  .mono { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+  code { font-family: var(--f-mono); font-size: .9em; background: var(--panel-2); padding: 1px 5px; border-radius: 4px; }
+  a { color: var(--arcane); }
+  :focus-visible { outline: 2px solid var(--arcane); outline-offset: 2px; border-radius: 4px; }
+
+  /* topo */
+  .top { display: grid; gap: 14px; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); align-items: stretch; }
+  @media (max-width: 860px) { .top { grid-template-columns: minmax(0, 1fr); } }
+  .id { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px; box-shadow: var(--shadow); position: relative; }
+  .eyebrow { font: 600 11px/1 var(--f-mono); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+  .id h1 { font-size: clamp(2rem, 5vw, 3.1rem); line-height: 1.02; margin: 10px 0 6px; font-weight: 800; letter-spacing: -.01em; }
+  .id h1 em { font-style: normal; color: var(--arcane); }
+  .lede { color: var(--muted); max-width: 52ch; margin: 0 0 14px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip { font: 500 12.5px/1 var(--f-mono); border: 1px solid var(--line); background: var(--panel-2); padding: 7px 10px; border-radius: 999px; }
+  .chip b { color: var(--gold); font-weight: 600; }
+  .theme { position: absolute; top: 16px; right: 16px; font: 600 11px/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase;
+           color: var(--ink); background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; cursor: pointer; }
+  .theme:hover { border-color: var(--arcane); }
+
+  /* prompt do MUD */
+  .term { background: #0b0f1a; color: #d9deea; border: 1px solid #263050; border-radius: 14px; padding: 18px 20px; box-shadow: var(--shadow);
+          font: 500 13px/1.55 var(--f-mono); display: grid; gap: 4px; align-content: start; min-width: 0; overflow-x: auto; }
+  .term .dim { color: #7f89a6; }
+  .term .hp { color: #ff8f7d; } .term .mn { color: #7dbcf7; } .term .mv { color: #7fd8a4; } .term .gd { color: #f0c05f; }
+  .term .row { white-space: pre; }
+  .term .prompt { margin-top: 6px; padding-top: 10px; border-top: 1px dashed #2b3656; color: #f4f6fb; }
+
+  /* seções */
+  .sec { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; box-shadow: var(--shadow); min-width: 0; }
+  .sec > h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 4px; }
+  .sec > .hint { color: var(--muted); margin: 0 0 16px; max-width: 70ch; }
+  .nav { display: flex; flex-wrap: wrap; gap: 8px; position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; padding: 8px 0; background: var(--bg); }
+  .nav a { font: 600 12px/1 var(--f-mono); letter-spacing: .06em; text-transform: uppercase; text-decoration: none; color: var(--ink);
+           border: 1px solid var(--line); background: var(--panel); padding: 9px 12px; border-radius: 8px; }
+  .nav a:hover { border-color: var(--arcane); color: var(--arcane); }
+
+  .cols { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .attrs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .attr { border: 1px solid var(--line); background: var(--panel-2); border-radius: 10px; padding: 12px 10px 10px; text-align: center; }
+  .attr .n { font: 700 2rem/1 var(--f-display); }
+  .attr .l { font: 600 10.5px/1.2 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-top: 6px; }
+  .attr .m { height: 4px; border-radius: 2px; background: var(--line); margin-top: 8px; overflow: hidden; }
+  .attr .m i { display: block; height: 100%; background: var(--arcane); }
+
+  .kv { width: 100%; border-collapse: collapse; }
+  .kv th, .kv td { text-align: left; padding: 8px 4px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .kv th { color: var(--muted); font-weight: 500; width: 38%; }
+  .kv tr:last-child th, .kv tr:last-child td { border-bottom: 0; }
+  .kv td.n { text-align: right; font-family: var(--f-mono); overflow-wrap: anywhere; }
+
+  .money { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .money div { border: 1px solid var(--line); background: var(--panel-2); border-radius: 10px; padding: 12px; }
+  .money b { display: block; font: 700 1.5rem/1.1 var(--f-display); color: var(--gold); font-variant-numeric: tabular-nums; }
+  .money span { font: 500 11px/1.3 var(--f-mono); color: var(--muted); letter-spacing: .06em; text-transform: uppercase; }
+
+  /* equipamento */
+  .slots { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); }
+  .slot { border: 1px solid var(--line); background: var(--panel-2); border-radius: 10px; padding: 10px 12px; min-width: 0; }
+  .slot .s { font: 600 10.5px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .slot .i { font-weight: 600; margin-top: 5px; overflow-wrap: anywhere; }
+  .slot .b { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 5px; }
+  .tag { font: 500 11.5px/1 var(--f-mono); padding: 4px 7px; border-radius: 6px; background: var(--arcane-soft); color: var(--arcane); }
+  .tag.gold { background: transparent; border: 1px solid var(--line); color: var(--gold); }
+  .tag.bad { background: transparent; border: 1px solid var(--blood); color: var(--blood); }
+
+  .list { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+  .list li { border: 1px solid var(--line); background: var(--panel-2); border-radius: 10px; padding: 9px 12px; }
+  .list li small { display: block; color: var(--muted); }
+  .bad-t { color: var(--blood); } .ok-t { color: var(--leaf); } .warn-t { color: var(--gold); }
+
+  /* grimório */
+  .tools { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; align-items: center; }
+  .fchip { font: 600 12px/1 var(--f-mono); letter-spacing: .04em; border: 1px solid var(--line); background: var(--panel-2); color: var(--ink);
+           padding: 9px 12px; border-radius: 999px; cursor: pointer; }
+  .fchip[aria-pressed="true"] { background: var(--arcane); border-color: var(--arcane); color: #fff; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .fchip[aria-pressed="true"] { color: #0e1220; } }
+  :root[data-theme="dark"] .fchip[aria-pressed="true"] { color: #0e1220; }
+  .search { margin-left: auto; font: 500 13px/1 var(--f-mono); background: var(--panel-2); color: var(--ink); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; min-width: 190px; }
+  .spells { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); align-items: start; }
+  .spell { border: 1px solid var(--line); background: var(--panel-2); border-radius: 12px; min-width: 0; }
+  .spell[open] { background: var(--panel); border-color: var(--arcane); grid-column: span 2; }
+  @media (max-width: 700px) { .spell[open] { grid-column: span 1; } }
+  .spell summary { list-style: none; cursor: pointer; padding: 12px 14px; display: grid; gap: 7px; }
+  .spell summary::-webkit-details-marker { display: none; }
+  .spell .hd { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+  .spell .nm { font: 700 1.05rem/1.2 var(--f-display); }
+  .spell .en { font: 500 11.5px/1 var(--f-mono); color: var(--muted); }
+  .spell .cat { font: 600 10px/1 var(--f-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--arcane); }
+  .spell .pf { display: flex; align-items: center; gap: 10px; font: 500 12px/1 var(--f-mono); color: var(--muted); }
+  .spell .glyph { color: var(--arcane); letter-spacing: .02em; }
+  .spell .sum { color: var(--ink); font-size: 14px; }
+  .spell .body { padding: 0 14px 14px; display: grid; gap: 12px; }
+  .spell .facts { display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+  .fact { border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; background: var(--panel-2); }
+  .fact .k { font: 600 10px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .fact .v { font: 600 14px/1.3 var(--f-mono); margin-top: 5px; }
+  .spell h3 { font: 600 11px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 4px; }
+  .spell p { margin: 0; }
+  .src { font: 500 11.5px/1.4 var(--f-mono); color: var(--muted); }
+  .empty { color: var(--muted); padding: 10px 0; }
+  .next { border-style: dashed; }
+  footer { color: var(--muted); font-size: 13px; }
+
+  @media (prefers-reduced-motion: no-preference) { .spell, .fchip, .nav a { transition: border-color .15s, background .15s; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <section class="top" id="topo">
+    <div class="id">
+      <button class="theme" id="tema" type="button" aria-label="Alternar tema claro e escuro">Tema</button>
+      <div class="eyebrow">Devil's Bob MUD &middot; Midgaard &middot; Dia 161</div>
+      <h1>Grebolius, <em>o Aprendiz de Mago</em></h1>
+      <p class="lede">Maga elfa na 1&ordf; encarnação. Derrubou o Rei Negro, abriu a Tesouraria Negra cinco vezes e chegou ao nível 35. Todos os itens estão identificados. Dorme no Templo de Midgaard, com o jogo salvo.</p>
+      <div class="chips">
+        <span class="chip">Nível <b>35</b></span>
+        <span class="chip">Mago &middot; Elfo</span>
+        <span class="chip">Alinhamento <b>394</b> Bom</span>
+        <span class="chip">Wimpy <b>45</b></span>
+        <span class="chip">Mortes <b>16</b> + 1 DT</span>
+      </div>
+    </div>
+    <div class="term" aria-label="Prompt do jogo">
+      <div class="row dim">Você é Grebolius, o Aprendiz de Mago.</div>
+      <div class="row"><span class="hp">Vida     </span> <span id="b-hp"></span> 232 de 232</div>
+      <div class="row"><span class="mn">Mana     </span> <span id="b-mn"></span> 510 de 510</div>
+      <div class="row"><span class="mv">Movimento</span> <span id="b-mv"></span> 149 de 149</div>
+      <div class="row"><span class="gd">Alinham. </span> {&lt;&lt;&lt;&lt;&lt;&gt;&gt;---} 394 - Você é bom.</div>
+      <div class="row dim">Próx. nível  885.516 EXP  (10.114.484 / 11.000.000)</div>
+      <div class="row prompt">232hp 510mn 149mv &gt; <span class="dim">save e sleep ok</span></div>
+    </div>
+  </section>
+
+  <nav class="nav" aria-label="Seções">
+    <a href="#personagem">Personagem</a><a href="#equipamento">Equipamento</a><a href="#bolsa">Bolsa e ouro</a>
+    <a href="#grimorio">Grimório</a><a href="#quests">Quests</a>
+  </nav>
+
+  <section class="sec" id="personagem">
+    <h2>Personagem</h2>
+    <p class="hint">Valores do <code>score tudo</code>, já com os bônus dos itens (a veste de escamas dá Força +2).</p>
+    <div class="cols">
+      <div>
+        <div class="attrs" id="attrs"></div>
+      </div>
+      <table class="kv">
+        <tr><th>Classe de Armadura</th><td class="n">97 sem magias<br>134 com <i>armor</i><br>174 com <i>armor</i> e <i>invisibility</i></td></tr>
+        <tr><th>Acerto / Dano</th><td class="n">12 / 5</td></tr>
+        <tr><th>Peso carregado</th><td class="n">91 de 115 kg</td></tr>
+        <tr><th>Itens carregados</th><td class="n">10 de 30</td></tr>
+        <tr><th>Sessões de treino</th><td class="n">68 em 18/10<br><span class="src">saldo de hoje não conferido</span></td></tr>
+        <tr><th>Buffs agora</th><td class="n ok-t"><i>armor</i> 38 h &middot; <i>invisibility</i> 14 h<br><i>detect invisibility</i> 36 h (mantido pelo <code>cuidar</code>)</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="sec" id="equipamento">
+    <h2>Equipamento vestido</h2>
+    <p class="hint">Dezoito peças, todas com <code>identify</code> registrado em <code>itens.json</code>. A mochila de Pellinore ocupa <i>sobre o corpo</i> (só vestida ela reduz o peso); a veste de escamas ocupa <i>no corpo</i>.</p>
+    <div class="slots" id="slots"></div>
+  </section>
+
+  <section class="sec" id="bolsa">
+    <h2>Bolsa e ouro</h2>
+    <p class="hint">Diretriz do autor: nenhuma compra acima de 5% do ouro total (~4.100) sem pedir. Reserva de emergência: 10.000.</p>
+    <div class="money">
+      <div><b>144.248</b><span>no banco</span></div>
+      <div><b>300</b><span>na mão</span></div>
+      <div><b>144.548</b><span>total</span></div>
+    </div>
+    <div class="cols" style="margin-top:14px">
+      <ul class="list">
+        <li><b>No inventário</b></li>
+        <li>Chave do Tesouro Negro <small>invisível; deteriora; abre o <code>baixo</code> de D8 enquanto durar</small></li>
+        <li>Túnica dourada <small>CA +18, nível 20; disputa o slot do corpo com a veste de escamas (decisão do autor)</small></li>
+        <li>Cetro do Rei Negro <small>invisível, valor 85.000, ANTI-BOM (não vestir)</small></li>
+        <li>Tomo da sabedoria druídica <small>nível 37, aparece como (+2L); não doa nem vende</small></li>
+        <li>Cantil cheio &middot; 2 pães recheados &middot; manto de pano</li>
+        <li>Cruz Ansada <small class="warn-t">ANTI-NEUTRO: dá choque e pula fora com alinhamento 312</small></li>
+        <li class="bad-t">Lança do Cavaleiro Negro <small>amaldiçoada, ANTI-BOM: não solta, não usar</small></li>
+      </ul>
+      <ul class="list">
+        <li><b>Dentro da mochila</b> <small>conferido em 22/10</small></li>
+        <li>Armadura da Torre Branca <small>60 kg, CA +21, Con +1, anti-mau</small></li>
+        <li>Bainha de Excalibur <small>CA +65, vida +125, dano +8, acerto +8; nível 85 e encarnação 17 (aparece como +16E)</small></li>
+        <li>Colar com pedra púrpura, rosário e manto de pano <small>reservas</small></li>
+        <li><b>No chão do Tesouro Negro</b></li>
+        <li>Lâmina Negra <small>aparece como (+43L): exige nível 78</small></li>
+      </ul>
+    </div>
+    <h2 style="margin-top:18px;font-size:1rem">Duas armas, lado a lado</h2>
+    <table class="kv">
+      <tr><th>Lâmina de ferro (em uso)</th><td>4D3, média 8, ferroar, nível 30, 6 kg, sem bônus</td></tr>
+      <tr><th>Lança do Cavaleiro Negro</th><td>6D4, média 15, triturar, Dano +2, nível 15, 18 kg. <span class="bad-t">Amaldiçoada e ANTI-BOM.</span> No papel é melhor; na prática não pode ser usada, e uma maga não luta de perto.</td></tr>
+    </table>
+    <p class="small">Em qualquer item, <code>(+NL)</code> é quantos níveis faltam para usar e <code>(+NE)</code> quantas encarnações. Sem a marca, já serve.</p>
+  </section>
+
+  <section class="sec" id="grimorio">
+    <h2>Grimório</h2>
+    <p class="hint">22 magias e habilidades conhecidas, mais as duas próximas da tabela do servidor. Toque numa magia para ver o manual, o que medimos no jogo e como ela é usada na campanha.</p>
+    <div class="tools">
+      <div id="filtros" role="group" aria-label="Filtrar por tipo"></div>
+      <input class="search" id="busca" type="search" placeholder="buscar magia" aria-label="Buscar magia">
+    </div>
+    <div class="spells" id="spells"></div>
+    <p class="src" style="margin-top:12px">Manual = verbetes CircleMUD importados em <code>maquina/spells.md</code> (níveis do manual, nem sempre iguais aos do servidor). Medido = custos, danos e EXP anotados em <code>conhecimento.md</code>. Proficiências: <code>practice</code> de 18/10, mais <i>charm person</i> treinado depois.</p>
+  </section>
+
+  <section class="sec" id="quests">
+    <h2>Autoquests</h2>
+    <p class="hint">No catálogo de 16/10, nenhuma autoquest nova começa exatamente no nível 35 para uma maga de 1&ordf; encarnação. A próxima faixa é <b>Orgulho Ferido</b> (nível 40 a 80). Confirmar com <code>autoquest listar</code> no próximo login.</p>
+    <div class="cols">
+      <ul class="list">
+        <li><b class="ok-t">Concluídas</b><small>Coleira do Dragão &middot; Altruísmo &middot; Limpando Monstros &middot; Novela dos Novatos &middot; Problemas Agrícolas &middot; Ninguém Segura Esse Bebê &middot; Uma Lição em Gargamel &middot; Todo Dia um Pouco &middot; <b>Xeque-mate</b></small></li>
+      </ul>
+      <ul class="list">
+        <li><b class="warn-t">Bloqueada</b><small>Ajuda Mágica (níveis 30 a 45, só magos). Falta o tomo; a faixa fecha no nível 45.</small></li>
+        <li><b>Descobertas</b><small>Convite do Pacificador &middot; Mistério das Guildas Hostis &middot; Mercenários do Beco Escuro &middot; Primeiro passo do Reino Livre &middot; O Corcunda e Esmeralda</small></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>Fontes: <code>state.json</code> (Dia 161), <code>itens.json</code>, último <code>score tudo</code>, <code>conhecimento.md</code> §75, §91, §92, <code>maquina/spells.md</code>, plano 047. Atualizada em 22/10/2026 por Claude Sonnet 5.5 (claude-sonnet-5-5).</footer>
+</div>
+
+<script>
+(function () {
+  // barra no formato do prompt do jogo: 10 casas, "<<<<<>>>>>" cheia, "-" nas vazias
+  function glyph(cur, max) {
+    var n = Math.max(0, Math.min(10, Math.round(10 * cur / max)));
+    return '{' + '<<<<<>>>>>'.slice(0, n) + '-'.repeat(10 - n) + '}';
+  }
+  document.getElementById('b-hp').textContent = glyph(232, 232);
+  document.getElementById('b-mn').textContent = glyph(510, 510);
+  document.getElementById('b-mv').textContent = glyph(149, 149);
+
+  // atributos
+  var A = [['Força', 13], ['Destreza', 17], ['Constituição', 9], ['Inteligência', 19], ['Sabedoria', 17], ['Carisma', 12]];
+  document.getElementById('attrs').innerHTML = A.map(function (a) {
+    return '<div class="attr"><div class="n">' + a[1] + '</div><div class="l">' + a[0] + '</div><div class="m"><i style="width:' + Math.round(a[1] / 25 * 100) + '%"></i></div></div>';
+  }).join('');
+
+  // equipamento
+  var S = [
+    ['Cabeça', 'Coroa da Rainha Branca', ['CA +25', 'Int +1', 'Sab +1', 'Car +2', 'anti-mau']],
+    ['Orelha', 'Diminuto brinco de novato', ['vida máx +15', 'mov máx +15', 'Acerto +1', 'anti-DT']],
+    ['Pescoço', 'Colar com pedra púrpura', ['CA +10', 'Acerto +1', 'Dano +1', 'Des +1', 'Mana +25', 'anti-DT']],
+    ['Pescoço', 'Coleira do dragão de estimação', ['CA +1', 'Acerto +1']],
+    ['Sobre o corpo', 'Mochila de Pellinore', ['reduz o peso vestida', '650 kg de capacidade']],
+    ['No corpo', 'Veste de escamas de metal', ['CA +8', 'vida máx +20', 'Força +2', 'nível 32']],
+    ['Braços', 'Braçadeiras de novato', ['CA +4', 'Int +1']],
+    ['Mãos', 'Luvas de couro', ['muito gasto']],
+    ['Pulso esquerdo', 'Bracelete de prata e ouro', ['mana máx +25', 'Dano -3']],
+    ['Pulso direito', 'Rosário', ['CA melhor em 5', 'Força +1', 'Acerto +1', 'nível 20']],
+    ['Dedo esquerdo', 'Anel de rubi do Cardeal', ['CA +4', 'Acerto +2', 'mana máx +50', 'nível 30']],
+    ['Dedo direito', 'Anel dourado', ['Acerto +1', 'Dano +1']],
+    ['Escudo', 'Escudo de aço', ['CA +35']],
+    ['Cintura', 'Belo cinturão de rodeio', ['CA +22', 'Acerto +5', 'Dano +5', 'Des +1', 'Car +1', 'anti-DT']],
+    ['Pernas', 'Calça de couro', ['vida máx +3', 'muito gasto']],
+    ['Pés', 'Resistentes botas negras', ['CA +13', 'nível 20']],
+    ['Arma', 'Lâmina de ferro', ['4D3 (média 8)', 'ferroar', 'nível 30']],
+    ['Na mão', 'Cajado retorcido', ['sleep, 3 de 3 cargas']]
+  ];
+  document.getElementById('slots').innerHTML = S.map(function (s) {
+    var tags = s[2].map(function (t) { return '<span class="tag">' + t + '</span>'; }).join('');
+    return '<div class="slot"><div class="s">' + s[0] + '</div><div class="i">' + s[1] + '</div>' + (tags ? '<div class="b">' + tags + '</div>' : '') + '</div>';
+  }).join('');
+
+  // grimório
+  var C = { atq: 'Ataque', ctl: 'Controle', buf: 'Proteção', per: 'Percepção', uti: 'Utilidade', prx: 'Próximas' };
+  var M = [
+    { id: 'lightning bolt', pt: 'Raio', cat: 'atq', p: 99, nv: '20', man: 'Mago 9', cu: '~30 mn', du: 'Instantânea',
+      sum: 'O dano principal da maga. Salvaguarda reduz à metade.',
+      ef: 'Descarga elétrica no alvo. O manual a coloca acima do choque elétrico.',
+      me: 'Contra o Rei Negro (com Santuário) deu 45 a 101 por raio. Em morcegos pequenos, 59 a 84. Mata o Rei na última ida do kite.',
+      us: 'Finalizador do kite: 1 raio e recall imediato. Acorda quem estiver dormindo, porque é dano.' },
+    { id: 'magic missile', pt: 'Míssil Mágico', cat: 'atq', p: 99, nv: '1', man: 'Mago 1', cu: '10 a 15 mn', du: 'Instantânea',
+      sum: 'Dardo barato de energia. A reserva de mana.',
+      ef: 'Bolt de energia lançado das mãos. Salvaguarda reduz à metade.',
+      me: 'Duas medições: 10 mn (Dia 156) e 15 mn (comentário do milharal_v2, que o usa no lugar do raio de 30 mn quando falta pouco para matar).',
+      us: 'Rematar alvos fracos economizando mana.' },
+    { id: 'burning hands', pt: 'Mãos Flamejantes', cat: 'atq', p: 99, nv: '5', man: 'Mago 5', cu: '~10 mn', du: 'Instantânea',
+      sum: 'Dano de fogo de curta distância, o melhor em níveis baixos.',
+      ef: 'Mais forte que o toque gélido. Salvaguarda reduz à metade.',
+      me: 'Entre 12 e 41 de dano no nível 15 (diretiva §2). Hoje o raio rende bem mais.',
+      us: 'Ficou como alternativa barata; o raio assumiu o papel principal.' },
+    { id: 'chill touch', pt: 'Toque Gélido', cat: 'atq', p: 95, nv: '—', man: 'Mago 3', cu: '—', du: 'Instantânea',
+      sum: 'Dano de frio que também enfraquece a Força do alvo.',
+      ef: 'Mais forte que o míssil mágico. Se o alvo falhar a salvaguarda, perde 1 ponto de Força.',
+      me: 'Sem medições novas nos registros.',
+      us: 'Serve contra alvos resistentes a fogo.' },
+    { id: 'shocking grasp', pt: 'Choque Elétrico', cat: 'atq', p: 95, nv: '—', man: 'Mago 7', cu: '—', du: 'Instantânea',
+      sum: 'Dano elétrico, acima das mãos flamejantes no manual.',
+      ef: 'Salvaguarda reduz à metade.',
+      me: 'Estava a 10% e marcada como "não usar" até o treino; hoje está em 95%.',
+      us: 'Reserva; o raio faz o mesmo trabalho com mais dano.' },
+    { id: 'blast', pt: 'Blast', cat: 'atq', p: 95, nv: '—', man: 'sem verbete', cu: '—', du: '—',
+      sum: 'Habilidade do servidor sem texto no manual importado.',
+      ef: 'Não consta em maquina/spells.md.',
+      me: 'Está no practice com 95%, mas nenhuma sessão registrou o efeito nem o custo.',
+      us: 'Ainda não usada. Vale um teste curto, com consider, antes de qualquer luta.' },
+
+    { id: 'sleep', pt: 'Sono', cat: 'ctl', p: 99, nv: '—', man: 'sem verbete', cu: '—', du: 'varia',
+      sum: 'Põe o alvo para dormir. A base do kite no Rei e do preparo na Rainha.',
+      ef: 'O alvo "vai dormir" e para de lutar. O cajado retorcido guarda 3 cargas da mesma magia.',
+      me: 'Funciona no Rei Negro, na Rainha e nas peças do tabuleiro. Só pega fora de combate ("Você não conseguiu se concentrar"). Rende EXP por lance: 750 a 900.',
+      us: 'Sempre o primeiro lance. Na Rainha, antes de destrancar a porta da Tesouraria. Não usar com o Rei já acordado: cada tentativa custa uma rodada.' },
+    { id: 'blindness', pt: 'Cegueira', cat: 'ctl', p: 95, nv: '—', man: 'Mago 9', cu: '—', du: '2 horas',
+      sum: 'Cega o alvo: -4 de acerto e -4 de CA.',
+      ef: 'Alvo que falhar a salvaguarda fica cego pelo tempo da magia.',
+      me: 'Neutralizou os golpes da Rainha Negra no Capítulo 11. ACORDA mob dormindo (§75). Rende ~780 de EXP por lance.',
+      us: 'Depois da maldição e antes dos raios numa luta acordada. Nunca em alvo que dorme.' },
+    { id: 'curse', pt: 'Maldição', cat: 'ctl', p: 95, nv: '21', man: 'Mago 14', cu: '—', du: '7 dias',
+      sum: 'Reduz acerto e dano do alvo em 1, e a salvaguarda também.',
+      ef: 'Acumula. Em objeto, o torna impossível de largar: não usar em itens.',
+      me: 'Não acorda mob dormindo. Rende o maior EXP por lance entre as magias de controle: ~1.680.',
+      us: 'Segunda magia da ida na Rainha (curse e blindness, depois raios).' },
+    { id: 'poison', pt: 'Veneno', cat: 'ctl', p: 95, nv: '—', man: 'Mago 14', cu: '—', du: 'nível em horas',
+      sum: 'Envenena: dano por hora e perda de Força.',
+      ef: 'Em comida ou bebida, vira armadilha permanente.',
+      me: 'No Rei Negro só reduz a Força em 2, sem dano: inútil na luta. Não acorda mob dormindo. ~960 de EXP por lance.',
+      us: 'Sem uso na campanha além dos testes.' },
+    { id: 'charm person', pt: 'Enfeitiçar', cat: 'ctl', p: 95, nv: '33', man: 'Mago 16', cu: '—', du: '432 / INT horas',
+      sum: 'O alvo passa a seguir a maga e não pode atacá-la.',
+      ef: 'Não vale em alvo já enfeitiçado nem de nível maior que o seu. Com `order` o alvo obedece.',
+      me: 'Funcionou em Cavaleiro e Bispo Negro (nível até 33). A Rainha e o Rei têm Santuário e não encantam. Treino: de 10% a 95% em 2 sessões.',
+      us: 'Ideia aberta: mandar uma peça atacar o Rei. Não testada.' },
+
+    { id: 'armor', pt: 'Armadura Mística', cat: 'buf', p: 99, nv: '—', man: 'Mago 4', cu: '~21 mn', du: '24 h (visto até 42 h)',
+      sum: 'A defesa nº 1. Sobe a CA em cerca de 37.',
+      ef: 'O manual diz +2 de CA; no servidor o `score tudo` mostra "+37 em ARMADURA".',
+      me: 'A morte a derruba. O Templo bloqueia magia: lançar na Praça. O auditor exige CA acima de 140 antes de lutar.',
+      us: 'Ligada antes de qualquer saída. O `cuidar.py` confere e relança.' },
+    { id: 'invisibility', pt: 'Invisibilidade', cat: 'buf', p: 99, nv: '—', man: 'Mago 4', cu: '~18 mn', du: '24 h',
+      sum: 'Some para quem não detecta invisível. Anula o aggro dos mobs comuns.',
+      ef: 'Atacar quebra a magia. Acumula a duração.',
+      me: 'Passa pelo Rei e pela Rainha sem ser atacada. Bloqueia comércio: "Não negocio com quem não vejo!" (`visible` antes de comprar).',
+      us: 'Entrada no tabuleiro e na Tesouraria. Nunca por E1: o Rei Branco cancela a Xeque-mate mesmo assim.' },
+    { id: 'champions strength', pt: 'Força do Campeão', cat: 'buf', p: 99, nv: '—', man: 'sem verbete', cu: '—', du: '—',
+      sum: 'Dá +3 de Força, +5 de dano e +55 kg de capacidade.',
+      ef: 'Valores do cabeçalho do `milharal_v2.py`.',
+      me: 'Lançada junto da armadura na Praça do Templo antes de caçar.',
+      us: 'Preparo de caça. O milharal está banido por moral; fica para outro alvo.' },
+
+    { id: 'detect invisibility', pt: 'Detectar Invisibilidade', cat: 'per', p: 99, nv: '—', man: 'Mago 2', cu: '~16 mn', du: '12 h + nível/4',
+      sum: 'Revela itens e criaturas invisíveis. Resolveu o enigma do cetro.',
+      ef: 'Acumula a duração.',
+      me: 'O Cetro e a Chave do Tesouro Negro do Rei são invisíveis: sem a magia o corpo parece vazio. Falha dentro do Templo.',
+      us: 'Lançar ao entrar em sala onde se procura espólio, chave ou item de missão.' },
+    { id: 'detect magic', pt: 'Detectar Magia', cat: 'per', p: 95, nv: '—', man: 'Mago 2', cu: '—', du: '12 h + nível',
+      sum: 'Mostra a aura mágica dos objetos.',
+      ef: 'É o que escreve "Isso tem uma pequena aura" no inventário.',
+      me: 'Só mostra que há magia no item. Quem diz se é maldito é o identify.',
+      us: 'Sem uso registrado além do que aparece no inventário.' },
+    { id: 'detect poison', pt: 'Detectar Veneno', cat: 'per', p: 95, nv: '16', man: 'Mago 10', cu: '—', du: 'Instantânea',
+      sum: 'Diz se comida, bebida ou pessoa está envenenada.',
+      ef: 'Alvo: criatura, comida ou recipiente.', me: 'Sem medições novas.', us: 'Sem uso registrado na campanha.' },
+    { id: 'infravision', pt: 'Infravisão', cat: 'per', p: 95, nv: '—', man: 'Mago 3', cu: '—', du: '12 h + nível',
+      sum: 'Enxerga o calor dos objetos no escuro.',
+      ef: 'Acumula a duração.', me: 'Sem medições novas.', us: 'Sem uso registrado na campanha.' },
+    { id: 'identify', pt: 'Identificar', cat: 'per', p: 95, nv: '22', man: 'sem verbete', cu: 'comando grátis', du: 'Instantânea',
+      sum: 'Revela as propriedades de um item antes de pegar ou vestir.',
+      ef: 'Também existe como comando `identify <item>`, sem custo, até o nível 80.',
+      me: 'Falha em sala sem magia, como a Tesouraria Negra. Mostrou que os dois anéis estão limpos.',
+      us: 'Regra da diretiva §15: identify antes de qualquer `get` de item de tabuleiro.' },
+    { id: 'locate object', pt: 'Localizar Objeto', cat: 'per', p: 0, nv: '34', man: 'Mago 6', cu: '—', du: 'Instantânea',
+      sum: 'Diz onde está um objeto, ou quem o usa. Aprendida no nível 34.',
+      ef: 'Limite: nível dividido por 2 objetos ao mesmo tempo (17 agora).',
+      me: 'No servidor só conjura a partir de um espelho localizador (Albernathy, em Silverthorne).',
+      us: 'Parada até achar o espelho. Proficiência não conferida.' },
+
+    { id: 'enchant weapon', pt: 'Encantar Arma', cat: 'uti', p: 95, nv: '—', man: 'Mago 26', cu: '—', du: 'Permanente',
+      sum: 'Dá bônus permanente a uma arma comum.',
+      ef: 'Nível 20 ou mais: +2 de acerto e +2 de dano. Só vale em arma sem modificadores.',
+      me: 'Não há registro de uso nas sessões.',
+      us: 'Ideia: a lâmina de ferro. Um identify antes confirma se ela aceita o encanto.' },
+    { id: 'swim', pt: 'Nadar', cat: 'uti', p: 99, nv: '—', man: 'habilidade', cu: '—', du: '—',
+      sum: 'Atravessar água sem se afogar.', ef: '—', me: 'Sem medições novas.', us: 'Sem uso registrado na campanha.' },
+
+    { id: 'color spray', pt: 'Spray Colorido', cat: 'prx', p: 0, nv: '36', man: 'Mago 11', cu: '—', du: 'Instantânea', nxt: 1,
+      sum: 'Libera no nível 36. Acima do raio no manual.',
+      ef: 'Dano de 9d16+9, cerca de 85 por acerto. Salvaguarda reduz à metade.',
+      me: 'Pouco acima do raio de ~70 contra o Rei (conhecimento §73).', us: 'Prática na Mestre da Guilda dos Magos, no Laboratório.' },
+    { id: 'fireball', pt: 'Bola de Fogo', cat: 'prx', p: 0, nv: '45', man: 'Mago 15', cu: '—', du: 'Instantânea', nxt: 1,
+      sum: 'Libera no nível 45. A mais forte do manual.',
+      ef: 'Salvaguarda reduz à metade.', me: 'Só no nível 45 (conhecimento §73).', us: 'Meta distante.' }
+  ];
+
+  var filtro = 'todas', termo = '';
+  var chips = [['todas', 'Todas']].concat(Object.keys(C).map(function (k) { return [k, C[k]]; }));
+  var box = document.getElementById('filtros');
+  box.style.display = 'flex'; box.style.flexWrap = 'wrap'; box.style.gap = '8px';
+  box.innerHTML = chips.map(function (c) { return '<button type="button" class="fchip" data-f="' + c[0] + '" aria-pressed="' + (c[0] === 'todas') + '">' + c[1] + '</button>'; }).join('');
+
+  function fact(k, v) { return '<div class="fact"><div class="k">' + k + '</div><div class="v">' + v + '</div></div>'; }
+  function card(m) {
+    var prof = m.p ? '<span class="glyph">' + glyph(m.p, 100) + '</span><span>' + m.p + '%</span>' : '<span>proficiência não conferida</span>';
+    return '<details class="spell' + (m.nxt ? ' next' : '') + '" data-c="' + m.cat + '">' +
+      '<summary><div class="hd"><span class="nm">' + m.pt + '</span><span class="en">' + m.id + '</span></div>' +
+      '<div class="pf"><span class="cat">' + C[m.cat] + '</span>' + prof + '</div><div class="sum">' + m.sum + '</div></summary>' +
+      '<div class="body"><div class="facts">' +
+      fact('Nível no servidor', m.nv) + fact('Manual', m.man) + fact('Custo medido', m.cu) + fact('Duração', m.du) + '</div>' +
+      '<div><h3>O que faz</h3><p>' + m.ef + '</p></div>' +
+      '<div><h3>Medido no jogo</h3><p>' + m.me + '</p></div>' +
+      '<div><h3>Como usamos</h3><p>' + m.us + '</p></div></div></details>';
+  }
+  function norm(s) { return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
+  function render() {
+    var lista = M.filter(function (m) {
+      return (filtro === 'todas' || m.cat === filtro) && (!termo || norm(m.pt + ' ' + m.id).indexOf(termo) >= 0);
+    });
+    document.getElementById('spells').innerHTML = lista.length ? lista.map(card).join('') : '<div class="empty">Nenhuma magia com esse nome.</div>';
+  }
+  box.addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    filtro = b.getAttribute('data-f');
+    Array.prototype.forEach.call(box.children, function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+    render();
+  });
+  document.getElementById('busca').addEventListener('input', function (e) { termo = norm(e.target.value.trim()); render(); });
+  render();
+
+  // tema: segue o sistema; o botão força claro ou escuro
+  var root = document.documentElement, btn = document.getElementById('tema');
+  try { var salvo = localStorage.getItem('ficha-tema'); if (salvo) root.setAttribute('data-theme', salvo); } catch (e) {}
+  btn.addEventListener('click', function () {
+    var atual = root.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    var novo = atual === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', novo);
+    try { localStorage.setItem('ficha-tema', novo); } catch (e) {}
+  });
+})();
+</script>
+</body>
+</html>

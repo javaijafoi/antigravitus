@@ -40,6 +40,9 @@ CA_COM_ARMOR = 140   # sem a magia `armor` a CA e' 112; com ela, 148 a 157
 OFENSIVAS = ('burning hands', 'magic missile', 'chill touch', 'shocking grasp', 'lightning bolt',
              'color spray', 'fireball', 'sleep', 'curse', 'blindness', 'poison', 'charm person')
 ORIGENS_A_MAO = {'play'}
+# Bichos que ja' conhecemos: o consider so' e' cobrado de bicho NOVO (decisao do autor, 2026-10-22, DECISOES §14).
+# As pecas do tabuleiro de xadrez ja' foram medidas muitas vezes (conhecimento §58, §76, §84, §91).
+CONHECIDOS = {'peao', 'peão', 'bispo', 'cavaleiro', 'cavalo', 'torre', 'rainha', 'rei'}
 # revisão de 16 a 20/10: ~80 mil comandos à mão e nenhuma rotina supervisionada
 LIMITE_MOV_A_MAO = 80
 LIMITE_ATAQUE_A_MAO = 30
@@ -111,6 +114,7 @@ def auditar(regs):
     mov_mao = ataque_mao = 0
     ca_atual = None
     avisou_fome = avisou_sede = avisou_ca = False
+    armor_ativa = False
 
     for n, (i, r) in enumerate(comandos):
         cmd = (r.get('cmd') or '').strip()
@@ -145,6 +149,10 @@ def auditar(regs):
         m_ca = _CA.search(texto)
         if m_ca:
             ca_atual = int(m_ca.group(1))
+        # O que prova a armadura e' a magia ativa no `score` (`armor ( 43 horas )`), nao o limiar de CA: a CA base muda
+        # com o equipamento (Dia 161: 121 com `armor`, sem botas nem `invisibility`) e o limiar velho dava falso alarme.
+        if 'Dura' in texto and '[' in texto:
+            armor_ativa = bool(re.search(r'armor\s*\(\s*\d+\s*horas?', texto, re.I))
         if FOME in texto.lower() and not avisou_fome:
             avisou_fome = True
             achar(FALHA, 'fome-em-sessao (diretiva §26)', i,
@@ -154,7 +162,7 @@ def auditar(regs):
             avisou_sede = True
             achar(FALHA, 'sede-em-sessao (diretiva §26)', i,
                   'a personagem passou sede: o `cuidar.py` bebe antes de sair')
-        if atacado and ca_atual is not None and ca_atual < CA_COM_ARMOR and not avisou_ca:
+        if atacado and ca_atual is not None and ca_atual < CA_COM_ARMOR and not avisou_ca and not armor_ativa:
             avisou_ca = True
             achar(FALHA, 'armadura-ausente (diretiva §26)', i,
                   'ataque com CA %d (< %d): a magia `armor` estava caída; o portão da §26 '
@@ -197,7 +205,7 @@ def auditar(regs):
         # 5. atacar sem consider (diretiva §2, §22): FALHA uma vez por alvo nunca considerado na sessão
         if p == 'consider':
             consideradas.add(_alvo(alvo))
-        if atacado and atacado not in consideradas and atacado not in cobradas:
+        if atacado and atacado not in consideradas and atacado not in cobradas and atacado not in CONHECIDOS:
             cobradas.add(atacado)
             achar(FALHA, 'ataque-sem-consider (diretiva §2/§22)', i,
                   '%r sem consider prévio de %s nesta sessão' % (cmd, atacado))

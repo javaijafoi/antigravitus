@@ -104,6 +104,12 @@ VALIDADE_MAGIAS_SEGUNDOS = int(horas_de_jogo_para_segundos_reais(24) * MARGEM_MA
 # ESCOLHER A ROTA, evitando as salas de risco alto, em vez de se esconder.
 USAR_INVISIBILIDADE = False
 
+# --- detect invisibility: SEMPRE ligado (ordem do autor, 2026-10-22) ---
+# O espolio do Rei Negro (Cetro e Chave do Tesouro Negro) e' invisivel e so' aparece com a magia; "muitos itens de
+# missao do DeBo sao invisiveis" (conhecimento §88). Custa ~16 mana por lance e dura 12 h de jogo + nivel/4 (~20 a
+# 25 min reais), e a duracao SOMA ao relancar: barato. O `cuidar.py` mantem pelas horas do `score`, como o armor.
+MANTER_DETECT_INVISIBILITY = True
+
 # Codigos de risco que a rota deve evitar. Vem do campo `risk_code` do mapa.
 RISCO_A_EVITAR = ('danger', 'high', 'fatal', 'critical')
 
@@ -128,6 +134,14 @@ SAQUE_PARA_COMPRAR = 300
 #               Coroa da Rainha Negra (ANTI-BOM, nao NODROP).
 # Item que nao esta nas duas listas: `cast 'identify'` no chao antes do `get`.
 ESPOLIOS_PROIBIDOS = ('torre negra',)
+
+# Moral (diretiva do autor, Dia 161, diretiva_de_jogo.md §27): NADA que abaixe o alinhamento pode ser abatido,
+# mesmo que seja hostil. O milharal_v2 derrubou o alinhamento de 415 para 312 em 17 abates (monstro esfomeado,
+# agressivo e invasor): fica banido ate' o autor liberar. turno.py e trabalhar.py recusam estas rotinas.
+ROTINAS_BANIDAS_POR_MORAL = {
+    'milharal_v2': 'abates do milharal derrubaram o alinhamento de 415 para 312 no Dia 161 (diretiva §27)',
+    'milharal': 'mesmos monstros do milharal_v2: derrubam o alinhamento (diretiva §27)',
+}
 ESPOLIOS_LIMPOS = ('lanca do cavaleiro', 'armadura de um peao', 'armadura do peao',
                    'espada do peao', 'coroa da rainha')
 FLAGS_DE_MALDICAO = ('amaldi', 'nodrop', 'no-drop', 'nao-largar', 'nao-doar')

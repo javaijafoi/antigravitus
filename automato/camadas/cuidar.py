@@ -174,7 +174,7 @@ def sair_da_area_sem_magia():
     return True, nome
 
 
-RX_BUFF = re.compile(r"(armor|invisibility|invisibilidade)\s*\(\s*(\d+)\s*horas?\s*\)", re.I)
+RX_BUFF = re.compile(r"(detect invisibility|armor|invisibility|invisibilidade)\s*\(\s*(\d+)\s*horas?\s*\)", re.I)
 # Abaixo disto, re-conjura. 4 horas de JOGO ~ 5 min reais (1 h de jogo ~ 75 s).
 HORAS_MINIMAS_MAGIA = 4
 
@@ -203,25 +203,27 @@ def manter_magias(forcar=False):
     texto = situacao()['texto']
     arm_h = horas_restantes(texto, 'armor')
     inv_h = horas_restantes(texto, 'invisibility')
+    det_h = horas_restantes(texto, 'detect invisibility')
+    falta_det = config.MANTER_DETECT_INVISIBILITY and (forcar or det_h is None or det_h < HORAS_MINIMAS_MAGIA)
     falta_arm = forcar or arm_h is None or arm_h < HORAS_MINIMAS_MAGIA
     falta_inv = forcar or (config.USAR_INVISIBILIDADE
                            and (inv_h is None or inv_h < HORAS_MINIMAS_MAGIA))
-    if not falta_arm and not falta_inv:
+    if not falta_arm and not falta_inv and not falta_det:
         if not config.USAR_INVISIBILIDADE:
             # Comercio exige personagem visivel; `visible` e' inofensivo quando ja' esta'.
             run('visible')
-        return {'armadura': True, 'invisibilidade': True, 'local': _MAGIAS['local'],
+        return {'armadura': True, 'invisibilidade': True, 'detect': True, 'local': _MAGIAS['local'],
                 'motivo': '', 'cache': True,
-                'horas': {'armor': arm_h, 'invisibility': inv_h}}
+                'horas': {'armor': arm_h, 'invisibility': inv_h, 'detect invisibility': det_h}}
 
     onde = sala_atual()
     if AREA_SEM_MAGIA in onde and PRACA not in onde:
         ok, onde = sair_da_area_sem_magia()
         if not ok:
-            return {'armadura': False, 'invisibilidade': False, 'local': onde,
+            return {'armadura': False, 'invisibilidade': False, 'detect': False, 'local': onde,
                     'motivo': 'area sem magia (o Templo recusa conjuracao)', 'cache': False}
     if vida_frac() < 0.35:
-        return {'armadura': False, 'invisibilidade': False, 'local': onde,
+        return {'armadura': False, 'invisibilidade': False, 'detect': False, 'local': onde,
                 'motivo': 'vida baixa demais para gastar mana', 'cache': False}
 
     if falta_arm:
@@ -239,17 +241,27 @@ def manter_magias(forcar=False):
         # `visible` e' inofensivo quando ja' esta' visivel, entao roda sempre.
         t, _, _ = run('visible')
         inv, resp_i = True, ' '.join(sem_acento(t).split())[:90]
+    # detect invisibility: a prova e' o `score` (a resposta de sucesso ainda nao foi medida em texto)
+    if not config.MANTER_DETECT_INVISIBILITY:
+        det, resp_d = True, 'desligado em config'
+    elif falta_det:
+        _conjurar('detect invisibility', (), JA_ATIVA)
+        det = horas_restantes(situacao()['texto'], 'detect invisibility') is not None
+        resp_d = 'conjurado; no score: %s' % ('sim' if det else 'nao')
+    else:
+        det, resp_d = True, 'ainda ativa (%s horas no score)' % det_h
     _MAGIAS.update({'armadura': arm, 'invisibilidade': inv, 'em': time.time(), 'local': onde,
                     'respostas': {'armor': ' '.join(resp_a.split())[:160],
                                   'invisibility': ' '.join(resp_i.split())[:160]}})
     print('[CUIDAR] armor=%s (%s) | invisibility=%s (%s)'
           % ('ok' if arm else 'nao', ' '.join(resp_a.split())[:60],
              'ok' if inv else 'nao', ' '.join(resp_i.split())[:60]), flush=True)
-    return {'armadura': arm, 'invisibilidade': inv, 'local': onde, 'cache': False,
-            'horas': {'armor': arm_h, 'invisibility': inv_h},
+    return {'armadura': arm, 'invisibilidade': inv, 'detect': det, 'local': onde, 'cache': False,
+            'horas': {'armor': arm_h, 'invisibility': inv_h, 'detect invisibility': det_h},
+            'resposta_detect': resp_d,
             'resposta_armor': _MAGIAS['respostas']['armor'],
             'resposta_invisibility': _MAGIAS['respostas']['invisibility'],
-            'motivo': '' if (arm and inv) else 'conjuracao nao confirmada'}
+            'motivo': '' if (arm and inv and det) else 'conjuracao nao confirmada'}
 
 
 def cuidar(forcar_magias=False):
@@ -279,9 +291,9 @@ def cuidar(forcar_magias=False):
             motivos.append('sede sem agua no cantil')
 
     magias = manter_magias(forcar=forcar_magias)
-    acoes.append('magias:' + ('ok' if (magias['armadura'] and magias['invisibilidade'])
-                              else 'incompletas'))
-    if not (magias['armadura'] and magias['invisibilidade']):
+    magias_ok = magias['armadura'] and magias['invisibilidade'] and magias.get('detect', True)
+    acoes.append('magias:' + ('ok' if magias_ok else 'incompletas'))
+    if not magias_ok:
         motivos.append(magias['motivo'] or 'magias incompletas')
 
     fim = situacao()

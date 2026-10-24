@@ -3,6 +3,7 @@
 import sys
 import unittest
 from pathlib import Path
+from unittest import mock
 
 RAIZ = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(RAIZ / 'automato' / 'acoes'))
@@ -20,6 +21,26 @@ G7 = ("Uma Casa Preta\nVocê está em um quadrado de mármore preto. Esta normal
 MEIO = "Uma Casa Branca\n   Você está em um quadrado de mármore branco.  \n[ Saídas: norte, leste, sul e oeste ]"
 D8 = ("Uma Casa Preta\n   Você está em um quadrado de mármore preto. Esta normalmente é a casa   \n"
       "da Rainha Negra.   \n[ Saídas: leste, sul, oeste e !baixo ]")
+
+
+class TestComerBeberPeloPadrao(unittest.TestCase):
+    """Pao e agua vao pelas tarefas padrao do aproveitar_tempo (prepara), nao por gambiarra (ordem do autor, Dia 163)."""
+
+    def test_usa_as_tarefas_do_prepara_e_volta_ao_templo(self):
+        ctx = xc.Ctx.__new__(xc.Ctx)
+        ctx.garantir_templo = mock.Mock(return_value=True)
+        with mock.patch('aproveitar_tempo.aproveitar') as ap:
+            xc.Ctx.comer_beber(ctx)
+        nomes = [t.nome for t in ap.call_args.kwargs['tarefas']]
+        self.assertEqual(nomes, ['comer_beber', 'repor_pao', 'encher_cantil'])
+        ctx.garantir_templo.assert_called_once()
+
+    def test_falha_da_tarefa_nao_derruba_a_etapa(self):
+        ctx = xc.Ctx.__new__(xc.Ctx)
+        ctx.garantir_templo = mock.Mock(return_value=True)
+        with mock.patch('aproveitar_tempo.aproveitar', side_effect=RuntimeError('x')):
+            xc.Ctx.comer_beber(ctx)
+        ctx.garantir_templo.assert_called_once()
 
 
 class TestVerificacao(unittest.TestCase):

@@ -363,3 +363,36 @@ O monitoramento mecânico do alinhamento moral atua apenas como última camada d
 **O que é novo entra estruturado (c):** ferramenta, rotina ou modo novo só entra com linha na tabela "Ferramentas" do `automato/README.md`, decisão em `automato/DECISOES.md`, ID em `docs/agentes/catraca.json` e teste em `scripts/test_*.py`, no mesmo commit. Sem isso, é invenção sem base e o `check_project.py` acusa.
 
 **Verificação no código:** `navegar.cuidado_antes()`; `turno.py` (socorrer antes do laço); `auditar_sessao.py` (`fome-em-sessao`, `sede-em-sessao`, `armadura-ausente`); `mandabala.pre_voo()`.
+
+
+## 27. MORAL: NADA QUE ABAIXE O ALINHAMENTO É ABATIDO, E `consider` SÓ PARA BICHO NOVO (diretivas do autor, 2026-10-22)
+
+> *"não podemos matar nada que abaixe nossa moral, mesmo que for hostil"* · *"consider é importante quando achamos bixos novos"* · *"vc já conhece todos os bixos do tabuleiro, para que dar consider?"*
+
+- **Moral vence rendimento.** Hostil não basta: se o abate derruba o alinhamento (`score tudo`, campo Alinhamento), o alvo é banido. Caso real: `milharal_v2` no Dia 161, 415 para 312 em 17 abates (monstro esfomeado, agressivo, invasor). `milharal_v2` e `milharal` estão em `config.ROTINAS_BANIDAS_POR_MORAL`; `turno.py` e `trabalhar.py` recusam (código 6). O `turno.py` também para (código 7) se o alinhamento cair entre dois turnos.
+- **`consider`** continua obrigatório para bicho **novo**. Para as peças do tabuleiro (peão, bispo, cavaleiro, torre, rainha, rei) o auditor não cobra mais (`CONHECIDOS` em `scripts/auditar_sessao.py`).
+- **O que ainda vale a §22:** parar, auditar a causa no log e banir a reincidência. Caçar XP agora exige alvo cujo abate não derrube o alinhamento: testar um alvo novo com `consider` e conferir o `score tudo` antes e depois do primeiro abate.
+- Registro e custo: `automato/DECISOES.md` §14.
+- **EXCEÇÃO do autor (2026-10-22, `DECISOES.md` §17):** o Rei Branco (E1) pode ser morto **uma vez** ("todo rei é um tirano"), para abrir o Tesouro Branco; vale também o combate de defesa contra peças NPC brancas que o defendam. Não cobre jogadores, animais nem NPCs pacíficos.
+
+
+## 28. A FICHA DE RPG ACOMPANHA O NÍVEL (diretiva do autor, 2026-10-22)
+
+> *"atualiza ela a cada vez que subir de level, no minimo, ta?"*
+
+- A ficha em HTML fica em `data/heroes/<id>/observacoes/ficha_rpg_dia<N>.html` (a de Grebolius nasceu no Dia 161). **A cada subida de nível, no mínimo**, atualize: nível, EXP, vitais, atributos, equipamento, bolsa, ouro e grimório (magias novas, proficiências, custos e medições). Pode atualizar mais vezes; menos, não.
+- Ao atualizar, renomeie com o dia (`ficha_rpg_dia<N>.html`) e confira os dados contra o `score tudo`, não contra a memória. O que não foi conferido fica marcado na própria ficha.
+- Verificação: `scripts/devolutiva.py` (ID `ficha.rpg_no_nivel`) dá FALHA se o nível da ficha for menor que o do `state.json`. Teste em `scripts/test_devolutiva.py`.
+
+
+## 29. IDENTIFICAR TODOS OS ITENS QUE TEMOS, SEMPRE (diretiva do autor, 2026-10-22)
+
+> *"obrigação sempre identificar todos os itens que temos"*
+
+- **Todo item que a personagem carrega ou veste** (inventário, vestidos e o que está dentro da mochila) tem de ter `identify` registrado em `data/heroes/<id>/itens.json`: tipo, flags (maldição, NODROP, ANTI-*), peso, valor, nível e o que afeta. O comando `identify <item>` é gratuito (não gasta mana) e funciona sem a magia; `cast 'identify'` falha em sala sem magia.
+- **Quando:** ao pegar o item (antes de vestir, vender ou doar), depois de cada morte (o equipamento volta ao inventário) e no começo de cada sessão. Item sem registro não se veste, não se vende e não se doa.
+- **Como:** `python automato/acoes/identificar_itens.py` identifica o inventário e os vestidos e grava o catálogo. Item de dentro da mochila: `remove mochila`, `get <item> mochila`, rodar a ferramenta, guardar de volta e `wear mochila`.
+- **O que o catálogo responde:** se vale vestir, se é amaldiçoado (nunca vestir nem empunhar; AGENTS #10), por que dois itens do mesmo slot diferem. Comparações de equipamento saem dele, não de memória.
+- **Depois de identificar, o que não está em uso vai para a mochila vestida (`base.guardar_na_mochila`), nunca solto no corpo:** o peso total decide se dá para pegar o Tesouro Negro e para lutar (Dia 163). Pão e água sempre pelo `prepara`/`cuidar`.
+- **Verificação:** `scripts/devolutiva.py` (ID `itens.identificados`) dá FALHA se um item do `state.json` não estiver em `itens.json`. Testes em `scripts/test_identificar_itens.py` e `scripts/test_devolutiva.py`.
+

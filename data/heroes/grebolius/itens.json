@@ -1,0 +1,1060 @@
+{
+  "schema_version": 1,
+  "hero_id": "grebolius",
+  "itens": [
+    {
+      "nome": "um pão recheado",
+      "chave": "pao recheado",
+      "tipo": "COMIDA",
+      "flags": [
+        "NOBITS",
+        "NOBITS"
+      ],
+      "peso": 1,
+      "valor": 5,
+      "aluguel": 5,
+      "nivel": 0,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR"
+      ],
+      "efeitos": [],
+      "linhas": [
+        "Você se sente informado:"
+      ],
+      "amaldicoado": false,
+      "onde": "inventario",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "uma Cruz Ansada",
+      "chave": "cruz ansada",
+      "tipo": "WORN",
+      "flags": [
+        "BRILHO",
+        "ANTI-NEUTRO",
+        "NOBITS"
+      ],
+      "peso": 3,
+      "valor": 5000,
+      "aluguel": 2000,
+      "nivel": 0,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR",
+        "PESCOÇO"
+      ],
+      "efeitos": [
+        "Modifica: MÁX-MANA por 10",
+        "Modifica: MÁX-VIDA por 5"
+      ],
+      "linhas": [
+        "Você se sente informado:",
+        "Isto pode te afetar :",
+        "Modifica: MÁX-MANA por 10",
+        "Modifica: MÁX-VIDA por 5"
+      ],
+      "amaldicoado": false,
+      "onde": "inventario",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "um tomo da sabedoria druídica",
+      "chave": "tomo da sabedoria druidica",
+      "tipo": "SPELLBOOK REMORT",
+      "flags": [
+        "NÃO-DOAR",
+        "NÃO-INVISÍVEL",
+        "ABENÇOADO",
+        "NÃO-VENDER",
+        "ANTI-LOCATE",
+        "NÃO-GUARDAR"
+      ],
+      "peso": 5,
+      "valor": 200000,
+      "aluguel": 0,
+      "nivel": 37,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR"
+      ],
+      "efeitos": [],
+      "linhas": [
+        "Você se sente informado:",
+        "Classe Permitida: Druida",
+        "Este livro faz seu animate plant melhorar em 1%."
+      ],
+      "amaldicoado": false,
+      "onde": "inventario",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "um manto de pano",
+      "chave": "manto de pano",
+      "tipo": "ARMADURA",
+      "flags": [
+        "NOBITS",
+        "NOBITS"
+      ],
+      "peso": 5,
+      "valor": 0,
+      "aluguel": 0,
+      "nivel": 0,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR",
+        "SOBRE"
+      ],
+      "efeitos": [
+        "Melhora sua armadura por 30."
+      ],
+      "linhas": [
+        "Você se sente informado:",
+        "Melhora sua armadura por 30."
+      ],
+      "amaldicoado": false,
+      "onde": "inventario",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "o Cetro do Rei Negro",
+      "chave": "cetro do rei negro",
+      "tipo": "TESOURO",
+      "flags": [
+        "ZUMBIDO",
+        "INVISÍVEL",
+        "MÁGICO",
+        "ANTI-BOM",
+        "NOBITS"
+      ],
+      "peso": 10,
+      "valor": 85000,
+      "aluguel": 1,
+      "nivel": 26,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR",
+        "SEGURAR"
+      ],
+      "efeitos": [
+        "Modifica: FORÇA por 1",
+        "Modifica: ACERTO por 2",
+        "Modifica: DANO por 2",
+        "Modifica: ARMADURA por -2"
+      ],
+      "linhas": [
+        "Você se sente informado:",
+        "Isto pode te afetar :",
+        "Modifica: FORÇA por 1",
+        "Modifica: ACERTO por 2",
+        "Modifica: DANO por 2",
+        "Modifica: ARMADURA por -2"
+      ],
+      "amaldicoado": false,
+      "onde": "inventario",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "a Lança do Cavaleiro Negro",
+      "chave": "lanca do cavaleiro negro",
+      "tipo": "ARMA",
+      "flags": [
+        "ZUMBIDO",
+        "AMALDIÇOADO",
+        "ANTI-BOM",
+        "NOBITS"
+      ],
+      "peso": 18,
+      "valor": 10000,
+      "aluguel": 3,
+      "nivel": 15,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR",
+        "EMPUNHAR"
+      ],
+      "efeitos": [
+        "Modifica: DANO por 2",
+        "Modifica: SAVING-BREATH por 5"
+      ],
+      "linhas": [
+        "Você se sente informado:",
+        "Dano: 6D4 tendo um dano médio de: 15.0.",
+        "Tipo de dano: TRITURAR",
+        "Isto pode te afetar :",
+        "Modifica: DANO por 2",
+        "Modifica: SAVING-BREATH por 5"
+      ],
+      "amaldicoado": true,
+      "onde": "inventario",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "um cajado retorcido",
+      "chave": "cajado retorcido",
+      "tipo": "BASTAO",
+      "flags": [
+        "MÁGICO",
+        "NOBITS"
+      ],
+      "peso": 17,
+      "valor": 16400,
+      "aluguel": 5000,
+      "nivel": 10,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR"
+      ],
+      "efeitos": [],
+      "linhas": [
+        "Você se sente informado:",
+        "Este BASTAO conjura:  sleep",
+        "Cargas: 3 de 3."
+      ],
+      "amaldicoado": false,
+      "onde": "vestido: segurando",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "um cantil",
+      "chave": "cantil",
+      "tipo": "RECIPIENTE",
+      "flags": [
+        "NOBITS",
+        "NOBITS"
+      ],
+      "peso": 40,
+      "valor": 45,
+      "aluguel": 15,
+      "nivel": 1,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR"
+      ],
+      "efeitos": [],
+      "linhas": [
+        "Você se sente informado:",
+        "Capacidade: 20/20, Líquido: água cristalina"
+      ],
+      "amaldicoado": false,
+      "onde": "inventario",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "a Coroa da Rainha Branca",
+      "chave": "coroa da rainha branca",
+      "tipo": "ARMADURA",
+      "flags": [
+        "ZUMBIDO",
+        "MÁGICO",
+        "ANTI-MAU",
+        "NOBITS"
+      ],
+      "peso": 4,
+      "valor": 3000,
+      "aluguel": 5,
+      "nivel": 18,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR",
+        "CABEÇA"
+      ],
+      "efeitos": [
+        "Melhora sua armadura por 25.",
+        "Modifica: INTELIGÊNCIA por 1",
+        "Modifica: SABEDORIA por 1",
+        "Modifica: CARISMA por 2"
+      ],
+      "linhas": [
+        "Você se sente informado:",
+        "Melhora sua armadura por 25.",
+        "Isto pode te afetar :",
+        "Modifica: INTELIGÊNCIA por 1",
+        "Modifica: SABEDORIA por 1",
+        "Modifica: CARISMA por 2"
+      ],
+      "amaldicoado": false,
+      "onde": "vestido: na cabeça",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "um diminuto brinco de novato",
+      "chave": "diminuto brinco de novato",
+      "tipo": "ARMADURA",
+      "flags": [
+        "BRILHO",
+        "NÃO-DOAR",
+        "NÃO-INVISÍVEL",
+        "NÃO-VENDER",
+        "ANTI-DT",
+        "ENTALHADO"
+      ],
+      "peso": 1,
+      "valor": 25000,
+      "aluguel": 0,
+      "nivel": 0,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR",
+        "ORELHA"
+      ],
+      "efeitos": [
+        "Melhora sua armadura por 0.",
+        "Modifica: MÁX-VIDA por 15",
+        "Modifica: MÁX-MOVIMENTO por 15",
+        "Modifica: ACERTO por 1",
+        "Modifica: DANO por 1"
+      ],
+      "linhas": [
+        "Você se sente informado:",
+        "Pertence a: você",
+        "Melhora sua armadura por 0.",
+        "Isto pode te afetar :",
+        "Modifica: MÁX-VIDA por 15",
+        "Modifica: MÁX-MOVIMENTO por 15",
+        "Modifica: ACERTO por 1",
+        "Modifica: DANO por 1"
+      ],
+      "amaldicoado": false,
+      "onde": "vestido: na orelha direita",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "um colar com uma pedra púrpura",
+      "chave": "colar com uma pedra purpura",
+      "tipo": "ARMADURA",
+      "flags": [
+        "BRILHO",
+        "MÁGICO",
+        "ABENÇOADO",
+        "NÃO-VENDER",
+        "ANTI-DT",
+        "ENTALHADO"
+      ],
+      "peso": 1,
+      "valor": 20000000,
+      "aluguel": 2000000,
+      "nivel": 10,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR",
+        "PESCOÇO"
+      ],
+      "efeitos": [
+        "Melhora sua armadura por 10.",
+        "Modifica: ACERTO por 1",
+        "Modifica: DANO por 1",
+        "Modifica: DESTREZA por 1",
+        "Modifica: MÁX-MANA por 25"
+      ],
+      "linhas": [
+        "Você se sente informado:",
+        "Pertence a: você",
+        "Melhora sua armadura por 10.",
+        "Isto pode te afetar :",
+        "Modifica: ACERTO por 1",
+        "Modifica: DANO por 1",
+        "Modifica: DESTREZA por 1",
+        "Modifica: MÁX-MANA por 25"
+      ],
+      "amaldicoado": false,
+      "onde": "vestido: no pescoço",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "a mochila de Pellinore",
+      "chave": "mochila de pellinore",
+      "tipo": "CONTÊINER",
+      "flags": [
+        "NÃO-DOAR",
+        "NÃO-VENDER",
+        "ANTI-LOCATE"
+      ],
+      "peso": 88,
+      "valor": 300000,
+      "aluguel": 30000,
+      "nivel": 0,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR",
+        "SOBRE"
+      ],
+      "efeitos": [],
+      "linhas": [
+        "Você se sente informado:",
+        "Capacidade: 88kg/650kg"
+      ],
+      "amaldicoado": false,
+      "onde": "vestido: sobre o corpo",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "um par de braçadeiras de novato",
+      "chave": "par de bracadeiras de novato",
+      "tipo": "ARMADURA",
+      "flags": [
+        "NOBITS",
+        "NOBITS"
+      ],
+      "peso": 3,
+      "valor": 400,
+      "aluguel": 0,
+      "nivel": 0,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR",
+        "BRAÇOS"
+      ],
+      "efeitos": [
+        "Melhora sua armadura por 4.",
+        "Modifica: INTELIGÊNCIA por 1"
+      ],
+      "linhas": [
+        "Você se sente informado:",
+        "Melhora sua armadura por 4.",
+        "Isto pode te afetar :",
+        "Modifica: INTELIGÊNCIA por 1"
+      ],
+      "amaldicoado": false,
+      "onde": "vestido: nos braços",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "um par de luvas de couro",
+      "chave": "par de luvas de couro",
+      "tipo": "ARMADURA",
+      "flags": [
+        "NOBITS",
+        "NOBITS"
+      ],
+      "peso": 3,
+      "valor": 75,
+      "aluguel": 10,
+      "nivel": 0,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR",
+        "MÃOS"
+      ],
+      "efeitos": [],
+      "linhas": [
+        "Você se sente informado:",
+        "Atualmente, melhora sua armadura por -12, mas melhora por 3 em seu melhor estado."
+      ],
+      "amaldicoado": false,
+      "onde": "vestido: nas mãos",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "um bracelete de prata e ouro",
+      "chave": "bracelete de prata e ouro",
+      "tipo": "WORN",
+      "flags": [
+        "ZUMBIDO",
+        "NOBITS"
+      ],
+      "peso": 14,
+      "valor": 10000,
+      "aluguel": 8000,
+      "nivel": 3,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR",
+        "PULSO"
+      ],
+      "efeitos": [
+        "Modifica: MÁX-MANA por 25",
+        "Modifica: DANO por -3"
+      ],
+      "linhas": [
+        "Você se sente informado:",
+        "Isto pode te afetar :",
+        "Modifica: MÁX-MANA por 25",
+        "Modifica: DANO por -3"
+      ],
+      "amaldicoado": false,
+      "onde": "vestido: no pulso esquerdo",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "um rosário",
+      "chave": "rosario",
+      "tipo": "WORN",
+      "flags": [
+        "BRILHO",
+        "ANTI-LADRÃO",
+        "NOBITS"
+      ],
+      "peso": 3,
+      "valor": 853,
+      "aluguel": 28,
+      "nivel": 20,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR",
+        "PESCOÇO",
+        "PULSO"
+      ],
+      "efeitos": [
+        "Modifica: ARMADURA por -5",
+        "Modifica: FORÇA por 1",
+        "Modifica: ACERTO por 1"
+      ],
+      "linhas": [
+        "Você se sente informado:",
+        "Isto pode te afetar :",
+        "Modifica: ARMADURA por -5",
+        "Modifica: FORÇA por 1",
+        "Modifica: ACERTO por 1"
+      ],
+      "amaldicoado": false,
+      "onde": "vestido: no pulso direito",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "um anel dourado",
+      "chave": "anel dourado",
+      "tipo": "WORN",
+      "flags": [
+        "MÁGICO",
+        "NOBITS"
+      ],
+      "peso": 1,
+      "valor": 10000,
+      "aluguel": 10000,
+      "nivel": 0,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR",
+        "DEDO"
+      ],
+      "efeitos": [
+        "Modifica: ACERTO por 1",
+        "Modifica: DANO por 1"
+      ],
+      "linhas": [
+        "Você se sente informado:",
+        "Isto pode te afetar :",
+        "Modifica: ACERTO por 1",
+        "Modifica: DANO por 1"
+      ],
+      "amaldicoado": false,
+      "onde": "vestido: no dedo direito",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "um escudo de aço",
+      "chave": "escudo de aco",
+      "tipo": "ARMADURA",
+      "flags": [
+        "NOBITS",
+        "NOBITS"
+      ],
+      "peso": 11,
+      "valor": 2500,
+      "aluguel": 1200,
+      "nivel": 0,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR",
+        "ESCUDO"
+      ],
+      "efeitos": [
+        "Melhora sua armadura por 35."
+      ],
+      "linhas": [
+        "Você se sente informado:",
+        "Melhora sua armadura por 35."
+      ],
+      "amaldicoado": false,
+      "onde": "vestido: como escudo",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "um belo cinturão de rodeio",
+      "chave": "belo cinturao de rodeio",
+      "tipo": "ARMADURA",
+      "flags": [
+        "BRILHO",
+        "NÃO-DOAR",
+        "NÃO-VENDER",
+        "ANTI-DT",
+        "ENTALHADO"
+      ],
+      "peso": 8,
+      "valor": 6042,
+      "aluguel": 600,
+      "nivel": 10,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR",
+        "CINTURA"
+      ],
+      "efeitos": [
+        "Melhora sua armadura por 22.",
+        "Modifica: ACERTO por 5",
+        "Modifica: DANO por 5",
+        "Modifica: DESTREZA por 1",
+        "Modifica: CARISMA por 1"
+      ],
+      "linhas": [
+        "Você se sente informado:",
+        "Pertence a: você",
+        "Melhora sua armadura por 22.",
+        "Isto pode te afetar :",
+        "Modifica: ACERTO por 5",
+        "Modifica: DANO por 5",
+        "Modifica: DESTREZA por 1",
+        "Modifica: CARISMA por 1"
+      ],
+      "amaldicoado": false,
+      "onde": "vestido: na cintura",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "uma calça de couro",
+      "chave": "calca de couro",
+      "tipo": "ARMADURA",
+      "flags": [
+        "NOBITS",
+        "NOBITS"
+      ],
+      "peso": 8,
+      "valor": 150,
+      "aluguel": 10,
+      "nivel": 0,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR",
+        "PERNAS"
+      ],
+      "efeitos": [
+        "Modifica: MÁX-VIDA por 3"
+      ],
+      "linhas": [
+        "Você se sente informado:",
+        "Atualmente, melhora sua armadura por -3, mas melhora por 2 em seu melhor estado.",
+        "Isto pode te afetar :",
+        "Modifica: MÁX-VIDA por 3"
+      ],
+      "amaldicoado": false,
+      "onde": "vestido: nas pernas",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "uma lâmina de ferro",
+      "chave": "lamina de ferro",
+      "tipo": "ARMA",
+      "flags": [
+        "NOBITS",
+        "NOBITS"
+      ],
+      "peso": 6,
+      "valor": 2000,
+      "aluguel": 10,
+      "nivel": 30,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR",
+        "EMPUNHAR"
+      ],
+      "efeitos": [],
+      "linhas": [
+        "Você se sente informado:",
+        "Dano: 4D3 tendo um dano médio de: 8.0.",
+        "Tipo de dano: FERROAR"
+      ],
+      "amaldicoado": false,
+      "onde": "vestido: empunhando",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "o anel de rubi do Cardeal",
+      "chave": "anel de rubi do cardeal",
+      "tipo": "ARMADURA",
+      "flags": [
+        "BRILHO",
+        "ANTI-LADRÃO",
+        "NOBITS"
+      ],
+      "peso": 2,
+      "valor": 5500,
+      "aluguel": 250,
+      "nivel": 30,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR",
+        "DEDO"
+      ],
+      "efeitos": [
+        "Melhora sua armadura por 4.",
+        "Modifica: ACERTO por 2",
+        "Modifica: MÁX-MANA por 50",
+        "Modifica: ARMADURA por -5"
+      ],
+      "linhas": [
+        "Você se sente informado:",
+        "Melhora sua armadura por 4.",
+        "Isto pode te afetar :",
+        "Modifica: ACERTO por 2",
+        "Modifica: MÁX-MANA por 50",
+        "Modifica: ARMADURA por -5"
+      ],
+      "amaldicoado": false,
+      "onde": "vestido: no dedo esquerdo",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "uma veste de escamas de metal",
+      "chave": "veste de escamas de metal",
+      "tipo": "ARMADURA",
+      "flags": [
+        "BRILHO",
+        "ANTI-CLERIGO",
+        "ANTI-HALFLING",
+        "NOBITS"
+      ],
+      "peso": 14,
+      "valor": 10,
+      "aluguel": 0,
+      "nivel": 32,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR",
+        "CORPO"
+      ],
+      "efeitos": [
+        "Modifica: MÁX-VIDA por 20",
+        "Modifica: FORÇA por 2"
+      ],
+      "linhas": [
+        "Você se sente informado:",
+        "Atualmente, melhora sua armadura por -2, mas melhora por 8 em seu melhor estado.",
+        "Isto pode te afetar :",
+        "Modifica: MÁX-VIDA por 20",
+        "Modifica: FORÇA por 2"
+      ],
+      "amaldicoado": false,
+      "onde": "vestido: no corpo",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "a Armadura da Torre Branca",
+      "chave": "armadura da torre branca",
+      "tipo": "ARMADURA",
+      "flags": [
+        "BRILHO",
+        "MÁGICO",
+        "ANTI-MAU",
+        "NOBITS"
+      ],
+      "peso": 60,
+      "valor": 17000,
+      "aluguel": 5,
+      "nivel": 17,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR",
+        "CORPO"
+      ],
+      "efeitos": [
+        "Melhora sua armadura por 21.",
+        "Modifica: ARMADURA por -2",
+        "Modifica: CONSTITUIÇÃO por 1"
+      ],
+      "linhas": [
+        "Você se sente informado:",
+        "Melhora sua armadura por 21.",
+        "Isto pode te afetar :",
+        "Modifica: ARMADURA por -2",
+        "Modifica: CONSTITUIÇÃO por 1"
+      ],
+      "amaldicoado": false,
+      "onde": "mochila de Pellinore",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "a coleira do dragão de estimação",
+      "chave": "coleira do dragao de estimacao",
+      "tipo": "ARMADURA",
+      "flags": [
+        "MÁGICO",
+        "NOBITS"
+      ],
+      "peso": 1,
+      "valor": 0,
+      "aluguel": 0,
+      "nivel": 0,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR",
+        "PESCOÇO"
+      ],
+      "efeitos": [
+        "Melhora sua armadura por 1.",
+        "Modifica: ACERTO por 1"
+      ],
+      "linhas": [
+        "Você se sente informado:",
+        "Melhora sua armadura por 1.",
+        "Isto pode te afetar :",
+        "Modifica: ACERTO por 1"
+      ],
+      "amaldicoado": false,
+      "onde": "vestido: no pescoço",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "a bainha de Excalibur",
+      "chave": "bainha de excalibur",
+      "tipo": "ARMADURA",
+      "flags": [
+        "BRILHO",
+        "MÁGICO",
+        "ANTI-MAU",
+        "NÃO-VENDER",
+        "ANTI-LOCATE"
+      ],
+      "peso": 4,
+      "valor": 540,
+      "aluguel": 50,
+      "nivel": 85,
+      "encarnacao": 17,
+      "vestir_em": [
+        "PEGAR",
+        "CINTURA"
+      ],
+      "efeitos": [
+        "Melhora sua armadura por 65.",
+        "Modifica: MÁX-VIDA por 125",
+        "Modifica: DANO por 8",
+        "Modifica: ACERTO por 8",
+        "Modifica: CARISMA por 1"
+      ],
+      "linhas": [
+        "Você se sente informado:",
+        "Melhora sua armadura por 65.",
+        "Isto pode te afetar :",
+        "Modifica: MÁX-VIDA por 125",
+        "Modifica: DANO por 8",
+        "Modifica: ACERTO por 8",
+        "Modifica: CARISMA por 1"
+      ],
+      "amaldicoado": false,
+      "onde": "mochila de Pellinore",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "uma túnica dourada",
+      "chave": "tunica dourada",
+      "tipo": "ARMADURA",
+      "flags": [
+        "NOBITS",
+        "NOBITS"
+      ],
+      "peso": 4,
+      "valor": 158,
+      "aluguel": 10,
+      "nivel": 20,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR",
+        "CORPO"
+      ],
+      "efeitos": [
+        "Melhora sua armadura por 18."
+      ],
+      "linhas": [
+        "Você se sente informado:",
+        "Melhora sua armadura por 18."
+      ],
+      "amaldicoado": false,
+      "onde": "inventario",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "a Chave do Tesouro Negro",
+      "chave": "chave do tesouro negro",
+      "tipo": "CHAVE",
+      "flags": [
+        "DETERIORA",
+        "NÃO-DOAR",
+        "INVISÍVEL",
+        "NÃO-VENDER",
+        "NOBITS"
+      ],
+      "peso": 1,
+      "valor": 1000,
+      "aluguel": 300,
+      "nivel": 1,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR",
+        "SEGURAR"
+      ],
+      "efeitos": [],
+      "linhas": [
+        "Você se sente informado:"
+      ],
+      "amaldicoado": false,
+      "onde": "inventario",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "resistentes botas negras",
+      "chave": "resistentes botas negras",
+      "tipo": "ARMADURA",
+      "flags": [
+        "NOBITS",
+        "NOBITS"
+      ],
+      "peso": 3,
+      "valor": 200,
+      "aluguel": 10,
+      "nivel": 20,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR",
+        "PÉS"
+      ],
+      "efeitos": [
+        "Melhora sua armadura por 13."
+      ],
+      "linhas": [
+        "Você se sente informado:",
+        "Melhora sua armadura por 13."
+      ],
+      "amaldicoado": false,
+      "onde": "vestido: nos pés",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "o Cetro do Bispo Negro",
+      "chave": "cetro do bispo negro",
+      "tipo": "BASTAO",
+      "flags": [
+        "BRILHO",
+        "MÁGICO",
+        "ANTI-BOM",
+        "NOBITS"
+      ],
+      "peso": 3,
+      "valor": 20000,
+      "aluguel": 6,
+      "nivel": 13,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR",
+        "SEGURAR"
+      ],
+      "efeitos": [
+        "Modifica: DANO por 1",
+        "Modifica: MÁX-MANA por 5",
+        "Modifica: ARMADURA por -1"
+      ],
+      "linhas": [
+        "Você se sente informado:",
+        "Este BASTAO conjura:  sanctuary",
+        "Cargas: 5 de 5.",
+        "Isto pode te afetar :",
+        "Modifica: DANO por 1",
+        "Modifica: MÁX-MANA por 5",
+        "Modifica: ARMADURA por -1"
+      ],
+      "amaldicoado": false,
+      "onde": "inventario",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "uma espada com punho de quartzo",
+      "chave": "espada com punho de quartzo",
+      "tipo": "ARMA",
+      "flags": [
+        "NOBITS",
+        "NÃO-GUARDAR"
+      ],
+      "peso": 8,
+      "valor": 550,
+      "aluguel": 10,
+      "nivel": 23,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR",
+        "EMPUNHAR"
+      ],
+      "efeitos": [
+        "Modifica: ACERTO por 1"
+      ],
+      "linhas": [
+        "Você se sente informado:",
+        "Dano: 6D7 tendo um dano médio de: 24.0.",
+        "Tipo de dano: CORTAR",
+        "Isto pode te afetar :",
+        "Modifica: ACERTO por 1"
+      ],
+      "amaldicoado": false,
+      "onde": "inventario",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    },
+    {
+      "nome": "a Armadura do Peão Negro",
+      "chave": "armadura do peao negro",
+      "tipo": "ARMADURA",
+      "flags": [
+        "ANTI-BOM",
+        "NOBITS"
+      ],
+      "peso": 13,
+      "valor": 300,
+      "aluguel": 1,
+      "nivel": 12,
+      "encarnacao": 1,
+      "vestir_em": [
+        "PEGAR",
+        "CORPO"
+      ],
+      "efeitos": [
+        "Melhora sua armadura por 16."
+      ],
+      "linhas": [
+        "Você se sente informado:",
+        "Melhora sua armadura por 16."
+      ],
+      "amaldicoado": false,
+      "onde": "inventario",
+      "identificado_em": "2026-10-22",
+      "agente": "Claude Sonnet 5.5 (claude-sonnet-5-5)"
+    }
+  ]
+}

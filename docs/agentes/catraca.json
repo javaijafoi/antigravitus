@@ -493,6 +493,54 @@
       "arquivo": "automato/rotinas/vender_espolio.py",
       "desde": "2026-10-21",
       "regra": "venda consulta `value` antes do `sell`, so vende whitelist de armas/armaduras/escudos e para quando o caixa do comerciante seca"
+    },
+    {
+      "id": "ROTINAS_BANIDAS_POR_MORAL",
+      "arquivo": "automato/camadas/turno.py",
+      "desde": "2026-10-22",
+      "regra": "rotina cujos abates derrubam o alinhamento não roda (diretiva do autor, diretiva_de_jogo §27)"
+    },
+    {
+      "id": "CODIGO_MORAL",
+      "arquivo": "automato/camadas/turno.py",
+      "desde": "2026-10-22",
+      "regra": "o turno para se o alinhamento cair entre turnos (diretiva §22/§27)"
+    },
+    {
+      "id": "CONHECIDOS",
+      "arquivo": "scripts/auditar_sessao.py",
+      "desde": "2026-10-22",
+      "regra": "consider só é cobrado de bicho novo; as peças do tabuleiro estão isentas (decisão do autor, DECISOES §14)"
+    },
+    {
+      "id": "ficha.rpg_no_nivel",
+      "arquivo": "scripts/devolutiva.py",
+      "desde": "2026-10-22",
+      "regra": "a ficha de RPG em HTML (observacoes/ficha_rpg_*.html) acompanha o nível do state.json (pedido do autor)"
+    },
+    {
+      "id": "MANTER_DETECT_INVISIBILITY",
+      "arquivo": "automato/camadas/cuidar.py",
+      "desde": "2026-10-22",
+      "regra": "o cuidar mantém detect invisibility ligado pelas horas do score (ordem do autor)"
+    },
+    {
+      "id": "itens.identificados",
+      "arquivo": "scripts/devolutiva.py",
+      "desde": "2026-10-22",
+      "regra": "todo item do state.json está identificado em itens.json (ordem do autor, diretiva §29)"
+    },
+    {
+      "id": "def identificar",
+      "arquivo": "automato/acoes/identificar_itens.py",
+      "desde": "2026-10-22",
+      "regra": "identify de cada item, conferindo o nome devolvido; grava itens.json"
+    },
+    {
+      "id": "def uma_ida",
+      "arquivo": "automato/acoes/tesouro_negro.py",
+      "desde": "2026-10-22",
+      "regra": "rotina do Tesouro Negro: ida completa sem passar por E8, mede o reset e aproveita o tempo ocioso"
     }
   ]
 }

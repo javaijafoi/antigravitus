@@ -44,6 +44,11 @@ def main():
             except Exception as e:
                 print(f'  {nome:10s} (nao carregou: {e})')
         return 0
+    import config
+    motivo = config.ROTINAS_BANIDAS_POR_MORAL.get(args.rotina)
+    if motivo:
+        print(f'[trabalhar] rotina={args.rotina} BANIDA pela moral: {motivo}', flush=True)
+        return 6
     mod = carregar(args.rotina)
     import guarda_cota
     if not guarda_cota.checar_guarda():
