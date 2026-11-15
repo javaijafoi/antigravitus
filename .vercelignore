@@ -1,0 +1,30 @@
+# O site só precisa das páginas, de css/js/assets/audio e dos dados que o site lê.
+# Tudo abaixo fica no GitHub, mas não é publicado na Vercel.
+
+# Instruções de agentes e documentos internos
+/AGENTS.md
+/CLAUDE.md
+/GEMINI.md
+/README.md
+/TEMPLATE_NOVO_HEROI.md
+/TEST_READY.md
+/relatorio_auditoria_grebolius.html
+
+# Código do robô, scripts e ferramentas
+/automato/
+/maquina/
+/scripts/
+/skills/
+/docs/
+*.py
+.claude/
+.agents/
+
+# Bastidores dos heróis (logs de sessão, planos, observações, notas)
+/data/*.md
+/data/heroes/*/evidence/
+/data/heroes/*/planos/
+/data/heroes/*/observacoes/
+/data/heroes/_template/
+/data/heroes/**/*.md
+!/data/heroes/*/ficha.md
