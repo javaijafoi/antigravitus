@@ -83,7 +83,7 @@ O **Capítulo 06** (*"Quem Quer Ser Rainha Não Fica Parada"*) teve sua primeira
 - `python automato/camadas/cuidar.py`: recupera vitais, come, bebe e conjura armaduras.
 - `python automato/camadas/prepara.py --forcar`: recarga de pães na padaria, água na fonte e banco.
 - `python automato/acoes/ressuscitar.py`: resolve o labirinto do Além e reanima na Fonte da Vida.
-- `$env:MUD_CTRL_TOKEN="dsh-ctrl-7f3a91"; python automato/nucleo/driver/play.py "<comando>"`: executa comandos diretos com token válido.
+- `$env:MUD_CTRL_TOKEN="<token de automato/runtime/.controller>"; python automato/nucleo/driver/play.py "<comando>"`: executa comandos diretos com token válido.
 
 ---
 
