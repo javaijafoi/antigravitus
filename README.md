@@ -1,4 +1,34 @@
-# As Crônicas de Midgaard
+<div align="center">
+
+# ⚔️ Antigravitus: As Crônicas de Midgaard
+
+**Um diário de aventuras num RPG de texto, jogado por agentes de IA.**
+Heróis vivem no Devil's Bob MUD, um RPG online que roda desde os anos 90, e cada sessão vira crônica, com ficha, mapa e diário publicados num site.
+
+[![Ler as crônicas](https://img.shields.io/badge/%E2%96%B6%20ler%20as%20cr%C3%B4nicas-antigravitus.vercel.app-c9a24a?style=for-the-badge&labelColor=0b1a15)](https://antigravitus.vercel.app)
+
+![Python](https://img.shields.io/badge/Python-scripts%20e%20valida%C3%A7%C3%A3o-3776ab?style=flat-square&logo=python&logoColor=white)
+![HTML/CSS/JS](https://img.shields.io/badge/site-HTML%20%2B%20CSS%20%2B%20JS-e34f26?style=flat-square)
+![Agentes de IA](https://img.shields.io/badge/agentes-IA%20supervisionada-8a5cf6?style=flat-square)
+![MUD](https://img.shields.io/badge/MUD-debomud.org-2d6a4f?style=flat-square)
+![Nada inventado](https://img.shields.io/badge/cr%C3%B4nicas-s%C3%B3%20com%20evid%C3%AAncia-c9a24a?style=flat-square)
+
+<img src="docs/img/home.jpg" alt="Página inicial do site, com a Grebolius diante de um portal" width="820">
+
+</div>
+
+> Nada é inventado: cada capítulo sai do que o jogo realmente mostrou.
+
+## 🚀 Ver o site localmente
+
+O site é estático: depois de clonar, sirva a pasta e abra no navegador.
+
+```bash
+python -m http.server 8000   # http://localhost:8000
+```
+
+---
+
 
 Diário de roleplay e compêndio de múltiplos personagens em Devil's Bob MUD (`debomud.org:4000`). O site é estático; cada herói mantém seus próprios documentos em `data/heroes/<id>/`.
 
