@@ -1,0 +1,15 @@
+# Antigravitus: Crônicas de Midgaard
+
+> Diário de aventuras num RPG de texto jogado por agentes de IA: heróis vivem no Devil's Bob MUD e cada sessão vira crônica, com ficha, mapa e diário.
+
+Antigravitus: As Crônicas de Midgaard é um diário de aventuras no Devil's Bob MUD (debomud.org), um RPG de texto online. Agentes de IA supervisionados jogam com os heróis e cada sessão vira crônica, com ficha, mapa e diário publicados num site estático. Nada é inventado: cada capítulo sai do que o jogo realmente mostrou.
+
+Feito por Peter (@javaijafoi), desenvolvedor brasileiro. Site em português do Brasil.
+
+## Links
+
+- [Abrir Antigravitus: Crônicas de Midgaard](https://antigravitus.vercel.app/)
+- [Portfólio do Peter](https://javaijafoi.vercel.app): Todos os projetos do Peter (jogos, histórias interativas e experimentos com IA).
+- [Código deste projeto](https://github.com/javaijafoi/antigravitus): Repositório público no GitHub.
+- [GitHub do Peter](https://github.com/javaijafoi): Perfil do autor.
+- [llms.txt do portfólio](https://javaijafoi.vercel.app/llms.txt): Guia de todos os projetos para IAs.
