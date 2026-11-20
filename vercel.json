@@ -20,5 +20,18 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "antigravitus.vercel.app"
+        }
+      ],
+      "destination": "https://antigravitus.javaijafoi.dev/:path*",
+      "statusCode": 301
+    }
   ]
 }
