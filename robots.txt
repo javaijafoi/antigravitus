@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://antigravitus.vercel.app/sitemap.xml
+Sitemap: https://antigravitus.javaijafoi.dev/sitemap.xml

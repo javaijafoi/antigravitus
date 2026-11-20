@@ -5,7 +5,7 @@
 **Um diário de aventuras num RPG de texto, jogado por agentes de IA.**
 Heróis vivem no Devil's Bob MUD, um RPG online que roda desde os anos 90, e cada sessão vira crônica, com ficha, mapa e diário publicados num site.
 
-[![Ler as crônicas](https://img.shields.io/badge/%E2%96%B6%20ler%20as%20cr%C3%B4nicas-antigravitus.vercel.app-c9a24a?style=for-the-badge&labelColor=0b1a15)](https://antigravitus.vercel.app)
+[![Ler as crônicas](https://img.shields.io/badge/%E2%96%B6%20ler%20as%20cr%C3%B4nicas-antigravitus.vercel.app-c9a24a?style=for-the-badge&labelColor=0b1a15)](https://antigravitus.javaijafoi.dev)
 
 ![Python](https://img.shields.io/badge/Python-scripts%20e%20valida%C3%A7%C3%A3o-3776ab?style=flat-square&logo=python&logoColor=white)
 ![HTML/CSS/JS](https://img.shields.io/badge/site-HTML%20%2B%20CSS%20%2B%20JS-e34f26?style=flat-square)
@@ -158,21 +158,21 @@ o que mudou na ferramenta, por quê, com que verificação e a que custo.
 
 ## 🌴 Mais do Peter
 
-Este projeto faz parte do [**portfólio do Peter**](https://javaijafoi.vercel.app), uma vitrine de jogos, histórias interativas e experimentos com IA, todos no ar. Perfil no GitHub: [@javaijafoi](https://github.com/javaijafoi).
+Este projeto faz parte do [**portfólio do Peter**](https://javaijafoi.dev), uma vitrine de jogos, histórias interativas e experimentos com IA, todos no ar. Perfil no GitHub: [@javaijafoi](https://github.com/javaijafoi).
 
 | Projeto | No ar | Código |
 | --- | --- | --- |
-| **Picotron Arena**: Dez modos de arcade num computador de fantasia | [abrir](https://picotron-arena.vercel.app) | [repo](https://github.com/javaijafoi/picotron-arcade) |
-| **Jogo do Davi**: Jogo para crianças aprenderem a ler e a contar | [abrir](https://jogo-davi.vercel.app) | [repo](https://github.com/javaijafoi/Jogo-davi) |
-| **Matusalém**: História interativa de mistério no Bixiga | [abrir](https://matusalem-six.vercel.app) | — |
-| **Era Vargas: O Equilibrista**: Jogo 3D de decisões sobre o Brasil de 1930 a 1945 | [abrir](https://era-vargas-seliga.vercel.app) | [repo](https://github.com/javaijafoi/era-vargas-seliga) |
-| **Pinta-Kara**: Desenhe no ar com as mãos, só com a webcam | [abrir](https://pinta-kara.vercel.app) | [repo](https://github.com/javaijafoi/pinta-kara) |
-| **Rolador**: Dados para qualquer RPG de mesa, com cara de PICO-8 | [abrir](https://rolador-javaijafoi.vercel.app) | [repo](https://github.com/javaijafoi/rolador) |
-| **iFone**: Celular de mentira para mesas de #iHunt | [abrir](https://ifone-javaijafoi.vercel.app) | [repo](https://github.com/javaijafoi/ifone) |
-| **Pico Poetry**: Poemas em pixel para sortear e compartilhar como imagem | [abrir](https://pico-poetry.vercel.app) | — |
-| **#iHunt Chronicle**: Mesa virtual para o RPG #iHunt (em pausa) | [abrir](https://ihunt-chronicle.vercel.app) | — |
+| **Picotron Arena**: Dez modos de arcade num computador de fantasia | [abrir](https://picotron.javaijafoi.dev) | [repo](https://github.com/javaijafoi/picotron-arcade) |
+| **Jogo do Davi**: Jogo para crianças aprenderem a ler e a contar | [abrir](https://jogodavi.javaijafoi.dev) | [repo](https://github.com/javaijafoi/Jogo-davi) |
+| **Matusalém**: História interativa de mistério no Bixiga | [abrir](https://matusalem.javaijafoi.dev) | — |
+| **Era Vargas: O Equilibrista**: Jogo 3D de decisões sobre o Brasil de 1930 a 1945 | [abrir](https://equilibrista.javaijafoi.dev) | [repo](https://github.com/javaijafoi/era-vargas-seliga) |
+| **Pinta-Kara**: Desenhe no ar com as mãos, só com a webcam | [abrir](https://pintakara.javaijafoi.dev) | [repo](https://github.com/javaijafoi/pinta-kara) |
+| **Rolador**: Dados para qualquer RPG de mesa, com cara de PICO-8 | [abrir](https://rolador.javaijafoi.dev) | [repo](https://github.com/javaijafoi/rolador) |
+| **iFone**: Celular de mentira para mesas de #iHunt | [abrir](https://ifone.javaijafoi.dev) | [repo](https://github.com/javaijafoi/ifone) |
+| **Pico Poetry**: Poemas em pixel para sortear e compartilhar como imagem | [abrir](https://poesia.javaijafoi.dev) | — |
+| **#iHunt Chronicle**: Mesa virtual para o RPG #iHunt (em pausa) | [abrir](https://ihunt.javaijafoi.dev) | — |
 | **iHunt App**: Fork do Fari App (Fate) para mesas de #iHunt | — | [repo](https://github.com/javaijafoi/iHunt-app) |
 
 ---
 
-Feito por [@javaijafoi](https://github.com/javaijafoi) · parte do [portfólio](https://javaijafoi.vercel.app).
+Feito por [@javaijafoi](https://github.com/javaijafoi) · parte do [portfólio](https://javaijafoi.dev).
