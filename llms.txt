@@ -8,8 +8,8 @@ Feito por Peter (@javaijafoi), desenvolvedor brasileiro. Site em português do B
 
 ## Links
 
-- [Abrir Antigravitus: Crônicas de Midgaard](https://antigravitus.vercel.app/)
-- [Portfólio do Peter](https://javaijafoi.vercel.app): Todos os projetos do Peter (jogos, histórias interativas e experimentos com IA).
+- [Abrir Antigravitus: Crônicas de Midgaard](https://antigravitus.javaijafoi.dev/)
+- [Portfólio do Peter](https://javaijafoi.dev): Todos os projetos do Peter (jogos, histórias interativas e experimentos com IA).
 - [Código deste projeto](https://github.com/javaijafoi/antigravitus): Repositório público no GitHub.
 - [GitHub do Peter](https://github.com/javaijafoi): Perfil do autor.
-- [llms.txt do portfólio](https://javaijafoi.vercel.app/llms.txt): Guia de todos os projetos para IAs.
+- [llms.txt do portfólio](https://javaijafoi.dev/llms.txt): Guia de todos os projetos para IAs.
