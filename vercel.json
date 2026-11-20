@@ -23,14 +23,14 @@
   ],
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "antigravitus.vercel.app"
         }
       ],
-      "destination": "https://antigravitus.javaijafoi.dev/:path*",
+      "destination": "https://antigravitus.javaijafoi.dev/$1",
       "statusCode": 301
     }
   ]
