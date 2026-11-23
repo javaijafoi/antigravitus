@@ -222,15 +222,15 @@ document.addEventListener("DOMContentLoaded", async () => {
       aboutSubEl.textContent = parts.join(" • ");
     }
     if (aboutIntroEl) {
-      aboutIntroEl.innerHTML = `A personalidade de <strong>${hero.name}</strong> não é reescrita do zero a cada dia; ela é <strong>esculpida e desafiada</strong> diante da realidade. Suas escolhas emergem da tensão viva entre cinco perguntas fundamentais:`;
+      aboutIntroEl.innerHTML = `A personalidade de <strong>${escapeHtml(hero.name)}</strong> não é reescrita do zero a cada dia; ela é <strong>esculpida e desafiada</strong> diante da realidade. Suas escolhas emergem da tensão viva entre cinco perguntas fundamentais:`;
     }
 
     if (hero.questions) {
-      if (q1El) q1El.innerHTML = `<strong>${hero.questions.q1}</strong>`;
-      if (q2El) q2El.innerHTML = `<strong>${hero.questions.q2}</strong>`;
-      if (q3El) q3El.innerHTML = `<strong>${hero.questions.q3}</strong>`;
-      if (q4El) q4El.innerHTML = `<strong>${hero.questions.q4}</strong>`;
-      if (q5El) q5El.innerHTML = `<strong>${hero.questions.q5}</strong>`;
+      if (q1El) q1El.innerHTML = `<strong>${escapeHtml(hero.questions.q1)}</strong>`;
+      if (q2El) q2El.innerHTML = `<strong>${escapeHtml(hero.questions.q2)}</strong>`;
+      if (q3El) q3El.innerHTML = `<strong>${escapeHtml(hero.questions.q3)}</strong>`;
+      if (q4El) q4El.innerHTML = `<strong>${escapeHtml(hero.questions.q4)}</strong>`;
+      if (q5El) q5El.innerHTML = `<strong>${escapeHtml(hero.questions.q5)}</strong>`;
     }
     document.querySelectorAll("[data-hero-document]").forEach(el => {
       el.textContent = `data/heroes/${hero.id}/${el.dataset.heroDocument}`;
@@ -273,39 +273,39 @@ document.addEventListener("DOMContentLoaded", async () => {
     heroQuickStatsEl.innerHTML = `
       <div class="quick-stats-header">
         <div class="quick-stats-title">
-          <span>${hero.avatar || "⚔️"}</span>
-          <strong>${hero.name}</strong>
-          <span style="font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted);">${qs.level_badge || ""}</span>
+          <span>${escapeHtml(hero.avatar || "⚔️")}</span>
+          <strong>${escapeHtml(hero.name)}</strong>
+          <span style="font-family: var(--font-sans); font-size: 0.8rem; color: var(--text-muted);">${escapeHtml(qs.level_badge || "")}</span>
         </div>
-        <a href="ficha.html?hero=${hero.id}" class="quick-stats-link">Ver Ficha Completa →</a>
+        <a href="ficha.html?hero=${encodeURIComponent(hero.id)}" class="quick-stats-link">Ver Ficha Completa →</a>
       </div>
       <div class="quick-stats-grid">
         <div class="stat-pill pill-hp">
           <span class="pill-label">❤️ Vida</span>
-          <span class="pill-value">${qs.hp || "—"}</span>
+          <span class="pill-value">${escapeHtml(qs.hp || "—")}</span>
         </div>
         <div class="stat-pill pill-mana">
           <span class="pill-label">⚡ Mana</span>
-          <span class="pill-value">${qs.mana || "—"}</span>
+          <span class="pill-value">${escapeHtml(qs.mana || "—")}</span>
         </div>
         <div class="stat-pill pill-mv">
           <span class="pill-label">👟 Fôlego</span>
-          <span class="pill-value">${qs.mv || "—"}</span>
+          <span class="pill-value">${escapeHtml(qs.mv || "—")}</span>
         </div>
         <div class="stat-pill pill-ac">
           <span class="pill-label">🛡️ Armadura</span>
-          <span class="pill-value">${qs.ac || "—"}</span>
+          <span class="pill-value">${escapeHtml(qs.ac || "—")}</span>
         </div>
         <div class="stat-pill">
-          <span class="pill-label">${qs.weapon_icon || "🗡️"} Empunhado</span>
-          <span class="pill-value" style="font-size: 0.82rem;">${qs.weapon || "—"}</span>
+          <span class="pill-label">${escapeHtml(qs.weapon_icon || "🗡️")} Empunhado</span>
+          <span class="pill-value" style="font-size: 0.82rem;">${escapeHtml(qs.weapon || "—")}</span>
         </div>
         <div class="stat-pill">
-          <span class="pill-label">📍 ${locationLabel}</span>
+          <span class="pill-label">📍 ${escapeHtml(locationLabel)}</span>
           <span class="pill-value" style="font-size: 0.82rem;">${escapeHtml(locationName)}</span>
         </div>
       </div>
-      <p class="document-status">${state ? `Registro documental até o Dia ${state.as_of.day}; conferir mudanças no jogo.` : "Dados do catálogo documental; sem consulta ao servidor nesta página."}</p>
+      <p class="document-status">${state ? `Registro documental até o Dia ${escapeHtml(String(state.as_of.day))}; conferir mudanças no jogo.` : "Dados do catálogo documental; sem consulta ao servidor nesta página."}</p>
     `;
   }
 
@@ -991,15 +991,15 @@ document.addEventListener("DOMContentLoaded", async () => {
         <article class="post-card ${isLatest ? "post-card-latest" : ""}" id="post-${post.id}">
           <header class="post-header">
             ${isLatest ? `<div class="latest-feed-ribbon">★ ÚLTIMO PUBLICADO</div>` : ""}
-            <span class="post-day-badge">${post.day || `Dia ${post.id}`}</span>
+            <span class="post-day-badge">${escapeHtml(post.day || `Dia ${post.id}`)}</span>
             <div class="post-dates">
-              <span>${post.date || ""}</span>
+              <span>${escapeHtml(post.date || "")}</span>
             </div>
           </header>
 
-          <h2 class="post-title">${post.title}</h2>
+          <h2 class="post-title">${escapeHtml(post.title)}</h2>
           <div class="post-location">
-            <span>🏛️ ${post.in_game_time || ""}</span>
+            <span>🏛️ ${escapeHtml(post.in_game_time || "")}</span>
           </div>
 
           ${audioSrc ? `<div class="post-narration-bar" id="narration-bar-${post.id}">
